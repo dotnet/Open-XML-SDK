@@ -77,7 +77,7 @@
         {
           "QName": "o:connecttype",
           "PropertyName": "ConnectionPointType",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Office.ConnectValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Office.VML.ConnectValues\u003E",
           "PropertyComments": "Connection Point Type"
         },
         {
@@ -1026,7 +1026,7 @@
         {
           "QName": "o:hralign",
           "PropertyName": "HorizontalAlignment",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Office.VML.HorizontalRuleAlignmentValues\u003E",
           "PropertyComments": "Horizontal Rule Alignment"
         },
         {
@@ -1092,7 +1092,7 @@
         {
           "QName": "o:insetmode",
           "PropertyName": "InsetMode",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Office.InsetMarginValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Office.VML.InsetMarginValues\u003E",
           "PropertyComments": "Text Inset Mode"
         },
         {
@@ -1158,25 +1158,25 @@
         {
           "QName": "o:connectortype",
           "PropertyName": "ConnectorType",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Office.ConnectorValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Office.VML.ConnectorValues\u003E",
           "PropertyComments": "Shape Connector Type"
         },
         {
           "QName": "o:bwmode",
           "PropertyName": "BlackWhiteMode",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Office.VML.BlackAndWhiteModeValues\u003E",
           "PropertyComments": "Black-and-White Mode"
         },
         {
           "QName": "o:bwpure",
           "PropertyName": "PureBlackWhiteMode",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Office.VML.BlackAndWhiteModeValues\u003E",
           "PropertyComments": "Pure Black-and-White Mode"
         },
         {
           "QName": "o:bwnormal",
           "PropertyName": "NormalBlackWhiteMode",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Office.VML.BlackAndWhiteModeValues\u003E",
           "PropertyComments": "Normal Black-and-White Mode"
         },
         {
@@ -1570,7 +1570,7 @@
         {
           "QName": "o:hralign",
           "PropertyName": "HorizontalAlignment",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Office.VML.HorizontalRuleAlignmentValues\u003E",
           "PropertyComments": "Horizontal Rule Alignment"
         },
         {
@@ -1636,7 +1636,7 @@
         {
           "QName": "o:insetmode",
           "PropertyName": "InsetMode",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Office.InsetMarginValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Office.VML.InsetMarginValues\u003E",
           "PropertyComments": "Text Inset Mode"
         },
         {
@@ -1702,25 +1702,25 @@
         {
           "QName": "o:connectortype",
           "PropertyName": "ConnectorType",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Office.ConnectorValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Office.VML.ConnectorValues\u003E",
           "PropertyComments": "Shape Connector Type"
         },
         {
           "QName": "o:bwmode",
           "PropertyName": "BlackWhiteMode",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Office.VML.BlackAndWhiteModeValues\u003E",
           "PropertyComments": "Black-and-White Mode"
         },
         {
           "QName": "o:bwpure",
           "PropertyName": "PureBlackWhiteMode",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Office.VML.BlackAndWhiteModeValues\u003E",
           "PropertyComments": "Pure Black-and-White Mode"
         },
         {
           "QName": "o:bwnormal",
           "PropertyName": "NormalBlackWhiteMode",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Office.VML.BlackAndWhiteModeValues\u003E",
           "PropertyComments": "Normal Black-and-White Mode"
         },
         {
@@ -2099,7 +2099,7 @@
         {
           "QName": "o:hralign",
           "PropertyName": "HorizontalAlignment",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Office.VML.HorizontalRuleAlignmentValues\u003E",
           "PropertyComments": "hralign"
         },
         {
@@ -2141,7 +2141,7 @@
         {
           "QName": "o:insetmode",
           "PropertyName": "InsetMode",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Office.InsetMarginValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Office.VML.InsetMarginValues\u003E",
           "PropertyComments": "insetmode"
         },
         {
@@ -2334,25 +2334,25 @@
         {
           "QName": "o:bwmode",
           "PropertyName": "BlackWhiteMode",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Office.VML.BlackAndWhiteModeValues\u003E",
           "PropertyComments": "Black-and-White Mode"
         },
         {
           "QName": "o:bwpure",
           "PropertyName": "PureBlackWhiteMode",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Office.VML.BlackAndWhiteModeValues\u003E",
           "PropertyComments": "Pure Black-and-White Mode"
         },
         {
           "QName": "o:bwnormal",
           "PropertyName": "NormalBlackWhiteMode",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Office.VML.BlackAndWhiteModeValues\u003E",
           "PropertyComments": "Normal Black-and-White Mode"
         },
         {
           "QName": "o:targetscreensize",
           "PropertyName": "TargetScreenSize",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Office.ScreenSizeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Office.VML.ScreenSizeValues\u003E",
           "PropertyComments": "Target Screen Size"
         }
       ],
@@ -2451,7 +2451,7 @@
         {
           "QName": "o:hralign",
           "PropertyName": "HorizontalAlignment",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Office.VML.HorizontalRuleAlignmentValues\u003E",
           "PropertyComments": "Horizontal Rule Alignment"
         },
         {
@@ -2517,7 +2517,7 @@
         {
           "QName": "o:insetmode",
           "PropertyName": "InsetMode",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Office.InsetMarginValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Office.VML.InsetMarginValues\u003E",
           "PropertyComments": "Text Inset Mode"
         },
         {
@@ -2583,25 +2583,25 @@
         {
           "QName": "o:connectortype",
           "PropertyName": "ConnectorType",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Office.ConnectorValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Office.VML.ConnectorValues\u003E",
           "PropertyComments": "Shape Connector Type"
         },
         {
           "QName": "o:bwmode",
           "PropertyName": "BlackWhiteMode",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Office.VML.BlackAndWhiteModeValues\u003E",
           "PropertyComments": "Black-and-White Mode"
         },
         {
           "QName": "o:bwpure",
           "PropertyName": "PureBlackWhiteMode",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Office.VML.BlackAndWhiteModeValues\u003E",
           "PropertyComments": "Pure Black-and-White Mode"
         },
         {
           "QName": "o:bwnormal",
           "PropertyName": "NormalBlackWhiteMode",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Office.VML.BlackAndWhiteModeValues\u003E",
           "PropertyComments": "Normal Black-and-White Mode"
         },
         {
@@ -3046,7 +3046,7 @@
         {
           "QName": "o:hralign",
           "PropertyName": "HorizontalAlignment",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Office.VML.HorizontalRuleAlignmentValues\u003E",
           "PropertyComments": "Horizontal Rule Alignment"
         },
         {
@@ -3112,7 +3112,7 @@
         {
           "QName": "o:insetmode",
           "PropertyName": "InsetMode",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Office.InsetMarginValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Office.VML.InsetMarginValues\u003E",
           "PropertyComments": "Text Inset Mode"
         },
         {
@@ -3178,25 +3178,25 @@
         {
           "QName": "o:connectortype",
           "PropertyName": "ConnectorType",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Office.ConnectorValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Office.VML.ConnectorValues\u003E",
           "PropertyComments": "Shape Connector Type"
         },
         {
           "QName": "o:bwmode",
           "PropertyName": "BlackWhiteMode",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Office.VML.BlackAndWhiteModeValues\u003E",
           "PropertyComments": "Black-and-White Mode"
         },
         {
           "QName": "o:bwpure",
           "PropertyName": "PureBlackWhiteMode",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Office.VML.BlackAndWhiteModeValues\u003E",
           "PropertyComments": "Pure Black-and-White Mode"
         },
         {
           "QName": "o:bwnormal",
           "PropertyName": "NormalBlackWhiteMode",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Office.VML.BlackAndWhiteModeValues\u003E",
           "PropertyComments": "Normal Black-and-White Mode"
         },
         {
@@ -3569,7 +3569,7 @@
         {
           "QName": "o:hralign",
           "PropertyName": "HorizontalAlignment",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Office.VML.HorizontalRuleAlignmentValues\u003E",
           "PropertyComments": "Horizontal Rule Alignment"
         },
         {
@@ -3635,7 +3635,7 @@
         {
           "QName": "o:insetmode",
           "PropertyName": "InsetMode",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Office.InsetMarginValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Office.VML.InsetMarginValues\u003E",
           "PropertyComments": "Text Inset Mode"
         },
         {
@@ -3701,25 +3701,25 @@
         {
           "QName": "o:connectortype",
           "PropertyName": "ConnectorType",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Office.ConnectorValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Office.VML.ConnectorValues\u003E",
           "PropertyComments": "Shape Connector Type"
         },
         {
           "QName": "o:bwmode",
           "PropertyName": "BlackWhiteMode",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Office.VML.BlackAndWhiteModeValues\u003E",
           "PropertyComments": "Black-and-White Mode"
         },
         {
           "QName": "o:bwpure",
           "PropertyName": "PureBlackWhiteMode",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Office.VML.BlackAndWhiteModeValues\u003E",
           "PropertyComments": "Pure Black-and-White Mode"
         },
         {
           "QName": "o:bwnormal",
           "PropertyName": "NormalBlackWhiteMode",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Office.VML.BlackAndWhiteModeValues\u003E",
           "PropertyComments": "Normal Black-and-White Mode"
         },
         {
@@ -4134,7 +4134,7 @@
         {
           "QName": "o:hralign",
           "PropertyName": "HorizontalAlignment",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Office.VML.HorizontalRuleAlignmentValues\u003E",
           "PropertyComments": "Horizontal Rule Alignment"
         },
         {
@@ -4200,7 +4200,7 @@
         {
           "QName": "o:insetmode",
           "PropertyName": "InsetMode",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Office.InsetMarginValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Office.VML.InsetMarginValues\u003E",
           "PropertyComments": "Text Inset Mode"
         },
         {
@@ -4266,25 +4266,25 @@
         {
           "QName": "o:connectortype",
           "PropertyName": "ConnectorType",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Office.ConnectorValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Office.VML.ConnectorValues\u003E",
           "PropertyComments": "Shape Connector Type"
         },
         {
           "QName": "o:bwmode",
           "PropertyName": "BlackWhiteMode",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Office.VML.BlackAndWhiteModeValues\u003E",
           "PropertyComments": "Black-and-White Mode"
         },
         {
           "QName": "o:bwpure",
           "PropertyName": "PureBlackWhiteMode",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Office.VML.BlackAndWhiteModeValues\u003E",
           "PropertyComments": "Pure Black-and-White Mode"
         },
         {
           "QName": "o:bwnormal",
           "PropertyName": "NormalBlackWhiteMode",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Office.VML.BlackAndWhiteModeValues\u003E",
           "PropertyComments": "Normal Black-and-White Mode"
         },
         {
@@ -4651,7 +4651,7 @@
         {
           "QName": "o:hralign",
           "PropertyName": "HorizontalAlignment",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Office.VML.HorizontalRuleAlignmentValues\u003E",
           "PropertyComments": "Horizontal Rule Alignment"
         },
         {
@@ -4717,7 +4717,7 @@
         {
           "QName": "o:insetmode",
           "PropertyName": "InsetMode",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Office.InsetMarginValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Office.VML.InsetMarginValues\u003E",
           "PropertyComments": "Text Inset Mode"
         },
         {
@@ -4783,25 +4783,25 @@
         {
           "QName": "o:connectortype",
           "PropertyName": "ConnectorType",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Office.ConnectorValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Office.VML.ConnectorValues\u003E",
           "PropertyComments": "Shape Connector Type"
         },
         {
           "QName": "o:bwmode",
           "PropertyName": "BlackWhiteMode",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Office.VML.BlackAndWhiteModeValues\u003E",
           "PropertyComments": "Black-and-White Mode"
         },
         {
           "QName": "o:bwpure",
           "PropertyName": "PureBlackWhiteMode",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Office.VML.BlackAndWhiteModeValues\u003E",
           "PropertyComments": "Pure Black-and-White Mode"
         },
         {
           "QName": "o:bwnormal",
           "PropertyName": "NormalBlackWhiteMode",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Office.VML.BlackAndWhiteModeValues\u003E",
           "PropertyComments": "Normal Black-and-White Mode"
         },
         {
@@ -5161,7 +5161,7 @@
         {
           "QName": "o:hralign",
           "PropertyName": "HorizontalAlignment",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Office.VML.HorizontalRuleAlignmentValues\u003E",
           "PropertyComments": "Horizontal Rule Alignment"
         },
         {
@@ -5227,7 +5227,7 @@
         {
           "QName": "o:insetmode",
           "PropertyName": "InsetMode",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Office.InsetMarginValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Office.VML.InsetMarginValues\u003E",
           "PropertyComments": "Text Inset Mode"
         },
         {
@@ -5293,25 +5293,25 @@
         {
           "QName": "o:connectortype",
           "PropertyName": "ConnectorType",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Office.ConnectorValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Office.VML.ConnectorValues\u003E",
           "PropertyComments": "Shape Connector Type"
         },
         {
           "QName": "o:bwmode",
           "PropertyName": "BlackWhiteMode",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Office.VML.BlackAndWhiteModeValues\u003E",
           "PropertyComments": "Black-and-White Mode"
         },
         {
           "QName": "o:bwpure",
           "PropertyName": "PureBlackWhiteMode",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Office.VML.BlackAndWhiteModeValues\u003E",
           "PropertyComments": "Pure Black-and-White Mode"
         },
         {
           "QName": "o:bwnormal",
           "PropertyName": "NormalBlackWhiteMode",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Office.VML.BlackAndWhiteModeValues\u003E",
           "PropertyComments": "Normal Black-and-White Mode"
         },
         {
@@ -5678,7 +5678,7 @@
         {
           "QName": "o:hralign",
           "PropertyName": "HorizontalAlignment",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Office.VML.HorizontalRuleAlignmentValues\u003E",
           "PropertyComments": "Horizontal Rule Alignment"
         },
         {
@@ -5744,7 +5744,7 @@
         {
           "QName": "o:insetmode",
           "PropertyName": "InsetMode",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Office.InsetMarginValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Office.VML.InsetMarginValues\u003E",
           "PropertyComments": "Text Inset Mode"
         },
         {
@@ -5810,25 +5810,25 @@
         {
           "QName": "o:connectortype",
           "PropertyName": "ConnectorType",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Office.ConnectorValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Office.VML.ConnectorValues\u003E",
           "PropertyComments": "Shape Connector Type"
         },
         {
           "QName": "o:bwmode",
           "PropertyName": "BlackWhiteMode",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Office.VML.BlackAndWhiteModeValues\u003E",
           "PropertyComments": "Black-and-White Mode"
         },
         {
           "QName": "o:bwpure",
           "PropertyName": "PureBlackWhiteMode",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Office.VML.BlackAndWhiteModeValues\u003E",
           "PropertyComments": "Pure Black-and-White Mode"
         },
         {
           "QName": "o:bwnormal",
           "PropertyName": "NormalBlackWhiteMode",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Office.VML.BlackAndWhiteModeValues\u003E",
           "PropertyComments": "Normal Black-and-White Mode"
         },
         {
@@ -6182,7 +6182,7 @@
         {
           "QName": "o:hralign",
           "PropertyName": "HorizontalAlignment",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Office.VML.HorizontalRuleAlignmentValues\u003E",
           "PropertyComments": "Horizontal Rule Alignment"
         },
         {
@@ -6248,7 +6248,7 @@
         {
           "QName": "o:insetmode",
           "PropertyName": "InsetMode",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Office.InsetMarginValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Office.VML.InsetMarginValues\u003E",
           "PropertyComments": "Text Inset Mode"
         },
         {
@@ -6314,25 +6314,25 @@
         {
           "QName": "o:connectortype",
           "PropertyName": "ConnectorType",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Office.ConnectorValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Office.VML.ConnectorValues\u003E",
           "PropertyComments": "Shape Connector Type"
         },
         {
           "QName": "o:bwmode",
           "PropertyName": "BlackWhiteMode",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Office.VML.BlackAndWhiteModeValues\u003E",
           "PropertyComments": "Black-and-White Mode"
         },
         {
           "QName": "o:bwpure",
           "PropertyName": "PureBlackWhiteMode",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Office.VML.BlackAndWhiteModeValues\u003E",
           "PropertyComments": "Pure Black-and-White Mode"
         },
         {
           "QName": "o:bwnormal",
           "PropertyName": "NormalBlackWhiteMode",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Office.VML.BlackAndWhiteModeValues\u003E",
           "PropertyComments": "Normal Black-and-White Mode"
         },
         {

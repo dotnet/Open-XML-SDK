@@ -85,7 +85,7 @@
         {
           "QName": ":sortBy",
           "PropertyName": "SortBy",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.SortByValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.SortByValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "sortBy"
         },
@@ -556,7 +556,7 @@
         {
           "QName": ":type",
           "PropertyName": "Type",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.DynamicFilterValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.DynamicFilterValues\u003E",
           "PropertyComments": "Dynamic filter type",
           "Validators": [
             {
@@ -744,7 +744,7 @@
         {
           "QName": ":dateTimeGrouping",
           "PropertyName": "DateTimeGrouping",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.DateTimeGroupingValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.DateTimeGroupingValues\u003E",
           "PropertyComments": "Date Time Grouping",
           "Validators": [
             {
@@ -771,7 +771,7 @@
         {
           "QName": ":operator",
           "PropertyName": "Operator",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.FilterOperatorValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.FilterOperatorValues\u003E",
           "PropertyComments": "Filter Comparison Operator"
         },
         {

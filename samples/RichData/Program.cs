@@ -6,12 +6,12 @@ using DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData;
 using DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2;
 using DocumentFormat.OpenXml.Office.SpreadSheetML.Y2020.RichDataWebImage;
 using DocumentFormat.OpenXml.Packaging;
-using DocumentFormat.OpenXml.Spreadsheet;
+using DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-using NumberingFormat = DocumentFormat.OpenXml.Spreadsheet.NumberingFormat;
+using NumberingFormat = DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.NumberingFormat;
 using Value = DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData.Value;
 
 namespace RichData

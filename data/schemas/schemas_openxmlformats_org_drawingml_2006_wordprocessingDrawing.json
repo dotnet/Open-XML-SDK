@@ -18,7 +18,7 @@
         {
           "QName": ":wrapText",
           "PropertyName": "WrapText",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.Wordprocessing.WrapTextValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.WordprocessingDrawing.WrapTextValues\u003E",
           "PropertyComments": "Text Wrapping Location",
           "Validators": [
             {
@@ -93,7 +93,7 @@
         {
           "QName": ":wrapText",
           "PropertyName": "WrapText",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.Wordprocessing.WrapTextValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.WordprocessingDrawing.WrapTextValues\u003E",
           "PropertyComments": "Text Wrapping Location",
           "Validators": [
             {
@@ -151,7 +151,7 @@
         {
           "QName": ":wrapText",
           "PropertyName": "WrapText",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.Wordprocessing.WrapTextValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.WordprocessingDrawing.WrapTextValues\u003E",
           "PropertyComments": "Text Wrapping Location",
           "Validators": [
             {
@@ -942,7 +942,7 @@
         {
           "QName": ":relativeFrom",
           "PropertyName": "RelativeFrom",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.Wordprocessing.HorizontalRelativePositionValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.WordprocessingDrawing.HorizontalRelativePositionValues\u003E",
           "PropertyComments": "Horizontal Position Relative Base",
           "Validators": [
             {
@@ -1014,7 +1014,7 @@
         {
           "QName": ":relativeFrom",
           "PropertyName": "RelativeFrom",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.Wordprocessing.VerticalRelativePositionValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.WordprocessingDrawing.VerticalRelativePositionValues\u003E",
           "PropertyComments": "Vertical Position Relative Base",
           "Validators": [
             {

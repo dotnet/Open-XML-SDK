@@ -5,7 +5,7 @@ using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Office.Tasks.Y2019.DocumentTasks;
 using DocumentFormat.OpenXml.Packaging;
-using DocumentFormat.OpenXml.Wordprocessing;
+using DocumentFormat.OpenXml.WordprocessingML.Y2006.Main;
 using System;
 using System.Collections.Generic;
 using System.IO;

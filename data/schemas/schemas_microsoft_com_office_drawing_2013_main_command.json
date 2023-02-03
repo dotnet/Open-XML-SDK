@@ -1384,7 +1384,7 @@
         {
           "QName": ":algn",
           "PropertyName": "Alignment",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.TextAlignmentTypeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.TextAlignmentTypeValues\u003E",
           "PropertyComments": "Alignment",
           "Validators": [
             {
@@ -1421,7 +1421,7 @@
         {
           "QName": ":fontAlgn",
           "PropertyName": "FontAlignment",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.TextFontAlignmentValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.TextFontAlignmentValues\u003E",
           "PropertyComments": "Font Alignment",
           "Validators": [
             {
@@ -1679,7 +1679,7 @@
         {
           "QName": ":vertOverflow",
           "PropertyName": "VerticalOverflow",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.TextVerticalOverflowValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.TextVerticalOverflowValues\u003E",
           "PropertyComments": "Text Vertical Overflow",
           "Validators": [
             {
@@ -1698,7 +1698,7 @@
         {
           "QName": ":horzOverflow",
           "PropertyName": "HorizontalOverflow",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.TextHorizontalOverflowValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.TextHorizontalOverflowValues\u003E",
           "PropertyComments": "Text Horizontal Overflow",
           "Validators": [
             {
@@ -1717,7 +1717,7 @@
         {
           "QName": ":vert",
           "PropertyName": "Vertical",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.TextVerticalValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.TextVerticalValues\u003E",
           "PropertyComments": "Vertical Text",
           "Validators": [
             {
@@ -1736,7 +1736,7 @@
         {
           "QName": ":wrap",
           "PropertyName": "Wrap",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.TextWrappingValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.TextWrappingValues\u003E",
           "PropertyComments": "Text Wrapping Type",
           "Validators": [
             {
@@ -1834,7 +1834,7 @@
         {
           "QName": ":anchor",
           "PropertyName": "Anchor",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.TextAnchoringTypeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.TextAnchoringTypeValues\u003E",
           "PropertyComments": "Anchor",
           "Validators": [
             {
@@ -2089,7 +2089,7 @@
         {
           "QName": ":bwMode",
           "PropertyName": "BlackWhiteMode",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.BlackWhiteModeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.BlackWhiteModeValues\u003E",
           "PropertyComments": "Black and White Mode",
           "Validators": [
             {
@@ -2978,7 +2978,7 @@
         {
           "QName": ":idx",
           "PropertyName": "Index",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.FontCollectionIndexValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.FontCollectionIndexValues\u003E",
           "PropertyComments": "Identifier",
           "Validators": [
             {
@@ -3432,7 +3432,7 @@
         {
           "QName": ":bwMode",
           "PropertyName": "BlackWhiteMode",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.BlackWhiteModeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.BlackWhiteModeValues\u003E",
           "PropertyComments": "Black and White Mode",
           "Validators": [
             {
@@ -4190,7 +4190,7 @@
         },
         {
           "QName": ":cstate",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.BlipCompressionValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.BlipCompressionValues\u003E",
           "Version": "Office2016",
           "PropertyComments": "cstate",
           "Validators": [
@@ -4485,7 +4485,7 @@
         {
           "QName": ":cap",
           "PropertyName": "CapType",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.LineCapValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.LineCapValues\u003E",
           "PropertyComments": "line cap",
           "Validators": [
             {
@@ -4504,7 +4504,7 @@
         {
           "QName": ":cmpd",
           "PropertyName": "CompoundLineType",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.CompoundLineValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.CompoundLineValues\u003E",
           "PropertyComments": "compound line type",
           "Validators": [
             {
@@ -4523,7 +4523,7 @@
         {
           "QName": ":algn",
           "PropertyName": "Alignment",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.PenAlignmentValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.PenAlignmentValues\u003E",
           "PropertyComments": "pen alignment",
           "Validators": [
             {

@@ -19,7 +19,7 @@ namespace DocumentFormat.OpenXml.Packaging
     {
         internal const string ContentTypeConstant = "application/xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/xmlMaps";
-        private DocumentFormat.OpenXml.Spreadsheet.MapInfo? _rootElement;
+        private DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.MapInfo? _rootElement;
 
         /// <summary>
         /// Creates an instance of the CustomXmlMappingsPart OpenXmlType
@@ -40,20 +40,20 @@ namespace DocumentFormat.OpenXml.Packaging
 
             set
             {
-                _rootElement = value as DocumentFormat.OpenXml.Spreadsheet.MapInfo;
+                _rootElement = value as DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.MapInfo;
             }
         }
 
         /// <summary>
         /// Gets or sets the root element of this part.
         /// </summary>
-        public DocumentFormat.OpenXml.Spreadsheet.MapInfo MapInfo
+        public DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.MapInfo MapInfo
         {
             get
             {
                 if (_rootElement is null)
                 {
-                    LoadDomTree<DocumentFormat.OpenXml.Spreadsheet.MapInfo>();
+                    LoadDomTree<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.MapInfo>();
                 }
 
                 return _rootElement!;

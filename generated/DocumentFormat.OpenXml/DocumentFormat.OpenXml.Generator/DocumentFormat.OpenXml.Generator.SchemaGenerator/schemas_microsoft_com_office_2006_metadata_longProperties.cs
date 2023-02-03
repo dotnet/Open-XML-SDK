@@ -14,7 +14,7 @@ using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.Office.LongProperties
+namespace DocumentFormat.OpenXml.Office.Y2006.MetaData.LongProperties
 {
     /// <summary>
     /// <para>Defines the LongProperties Class.</para>
@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Office.LongProperties
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.LongProperties.LongProperty" /> <c>&lt;lp:LongProp></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2006.MetaData.LongProperties.LongProperty" /> <c>&lt;lp:LongProp></c></description></item>
     /// </list>
     /// </remark>
     public partial class LongProperties : TypedOpenXmlCompositeElement
@@ -64,10 +64,10 @@ namespace DocumentFormat.OpenXml.Office.LongProperties
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("lp:LongProperties");
-            builder.AddChild<DocumentFormat.OpenXml.Office.LongProperties.LongProperty>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Y2006.MetaData.LongProperties.LongProperty>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.LongProperties.LongProperty), 0, 0)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Y2006.MetaData.LongProperties.LongProperty), 0, 0)
             };
         }
 

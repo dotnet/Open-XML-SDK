@@ -2,15 +2,15 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Packaging;
-using DocumentFormat.OpenXml.Wordprocessing;
+using DocumentFormat.OpenXml.WordprocessingML.Y2006.Main;
 using System.IO;
 
-using A = DocumentFormat.OpenXml.Drawing;
-using Ap = DocumentFormat.OpenXml.ExtendedProperties;
-using M = DocumentFormat.OpenXml.Math;
-using Ovml = DocumentFormat.OpenXml.Vml.Office;
+using A = DocumentFormat.OpenXml.DrawingML.Y2006.Main;
+using Ap = DocumentFormat.OpenXml.OfficeDocument.Y2006.Extended_Properties;
+using M = DocumentFormat.OpenXml.OfficeDocument.Y2006.Math;
+using Ovml = DocumentFormat.OpenXml.Office.Office.VML;
 using V = DocumentFormat.OpenXml.Vml;
-using Vt = DocumentFormat.OpenXml.VariantTypes;
+using Vt = DocumentFormat.OpenXml.OfficeDocument.Y2006.DocPropsVTypes;
 using W15 = DocumentFormat.OpenXml.Office.Word.Y2012.WordML;
 
 namespace DocumentFormat.OpenXml.Tests.ContentControlClass

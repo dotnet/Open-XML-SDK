@@ -3,7 +3,7 @@
 
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Tests.ContentControlClass;
-using DocumentFormat.OpenXml.Wordprocessing;
+using DocumentFormat.OpenXml.WordprocessingML.Y2006.Main;
 using System.IO;
 using System.Linq;
 using Xunit;

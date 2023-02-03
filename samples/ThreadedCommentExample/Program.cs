@@ -7,7 +7,7 @@ using DocumentFormat.OpenXml.Office.SpreadSheetML.Y2018.ThreadedComments;
 using DocumentFormat.OpenXml.Packaging;
 
 // WORKBOOK
-using DocumentFormat.OpenXml.Spreadsheet;
+using DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main;
 using System;
 using System.IO;
 
@@ -91,8 +91,8 @@ namespace ThreadedCommentsExample
                         new Authors(
                             new Author("tc=" + tcId)), new CommentList(
                                 new Comment(
-                                    new DocumentFormat.OpenXml.Spreadsheet.CommentText(
-                                        new DocumentFormat.OpenXml.Spreadsheet.Text("Comment: Ok, here's a comment!")))
+                                    new CommentText(
+                                        new Text("Comment: Ok, here's a comment!")))
 
                                 // Comment attributes
                                 { Reference = reference, AuthorId = 0, ShapeId = 0, Guid = tcId }));

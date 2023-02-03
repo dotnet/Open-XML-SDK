@@ -2,10 +2,17 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Packaging;
-using DocumentFormat.OpenXml.Wordprocessing;
+using DocumentFormat.OpenXml.WordprocessingML.Y2006.Main;
 using Xunit;
 
-using W = DocumentFormat.OpenXml.Wordprocessing;
+using CP = DocumentFormat.OpenXml.OfficeDocument.Y2006.Custom_Properties;
+using D = DocumentFormat.OpenXml.DrawingML.Y2006.Main;
+using DLC = DocumentFormat.OpenXml.DrawingML.Y2006.LockedCanvas;
+using DW = DocumentFormat.OpenXml.DrawingML.Y2006.WordprocessingDrawing;
+using EP = DocumentFormat.OpenXml.OfficeDocument.Y2006.Extended_Properties;
+using S = DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main;
+using VP = DocumentFormat.OpenXml.OfficeDocument.Y2006.DocPropsVTypes;
+using W = DocumentFormat.OpenXml.WordprocessingML.Y2006.Main;
 
 namespace DocumentFormat.OpenXml.Tests
 {
@@ -100,16 +107,16 @@ namespace DocumentFormat.OpenXml.Tests
 
             W.Drawing drawing = new W.Drawing(outerXml);
 
-            Assert.IsType<DocumentFormat.OpenXml.Drawing.Wordprocessing.Inline>(drawing.FirstChild);
-            Assert.IsType<DocumentFormat.OpenXml.Drawing.Graphic>(drawing.FirstChild.FirstChild);
-            Assert.IsType<DocumentFormat.OpenXml.Drawing.GraphicData>(drawing.FirstChild.FirstChild.FirstChild);
-            Assert.IsType<DocumentFormat.OpenXml.Drawing.LockedCanvas.LockedCanvas>(drawing.FirstChild.FirstChild.FirstChild.FirstChild);
+            Assert.IsType<DW.Inline>(drawing.FirstChild);
+            Assert.IsType<D.Graphic>(drawing.FirstChild.FirstChild);
+            Assert.IsType<D.GraphicData>(drawing.FirstChild.FirstChild.FirstChild);
+            Assert.IsType<DLC.LockedCanvas>(drawing.FirstChild.FirstChild.FirstChild.FirstChild);
 
-            DocumentFormat.OpenXml.Drawing.LockedCanvas.LockedCanvas lockedCanvas = drawing.FirstChild.FirstChild.FirstChild.FirstChild as DocumentFormat.OpenXml.Drawing.LockedCanvas.LockedCanvas;
+            DLC.LockedCanvas lockedCanvas = drawing.FirstChild.FirstChild.FirstChild.FirstChild as DLC.LockedCanvas;
 
-            Assert.IsType<DocumentFormat.OpenXml.Drawing.Run>(lockedCanvas.FirstChild.FirstChild.FirstChild.FirstChild.FirstChild);
+            Assert.IsType<D.Run>(lockedCanvas.FirstChild.FirstChild.FirstChild.FirstChild.FirstChild);
 
-            DocumentFormat.OpenXml.Drawing.Run run = lockedCanvas.FirstChild.FirstChild.FirstChild.FirstChild.FirstChild as DocumentFormat.OpenXml.Drawing.Run;
+            D.Run run = lockedCanvas.FirstChild.FirstChild.FirstChild.FirstChild.FirstChild as D.Run;
 
             Assert.Equal("Text in drawing.", run.Text.Text);
             Assert.Equal("Text in drawing.", run.InnerText);
@@ -190,12 +197,12 @@ namespace DocumentFormat.OpenXml.Tests
                                         "</ap:TitlesOfParts>" +
                                     "</ap:Properties>";
 
-            var properties = new DocumentFormat.OpenXml.ExtendedProperties.Properties();
-            var property = properties.AppendChild(new DocumentFormat.OpenXml.ExtendedProperties.TitlesOfParts());
-            property.VTVector = new DocumentFormat.OpenXml.VariantTypes.VTVector();
-            property.VTVector.BaseType = DocumentFormat.OpenXml.VariantTypes.VectorBaseValues.Lpstr;
+            var properties = new EP.Properties();
+            var property = properties.AppendChild(new EP.TitlesOfParts());
+            property.VTVector = new VP.VTVector();
+            property.VTVector.BaseType = VP.VectorBaseValues.Lpstr;
             property.VTVector.Size = 1;
-            property.VTVector.AppendChild(new DocumentFormat.OpenXml.VariantTypes.VTLPSTR());
+            property.VTVector.AppendChild(new VP.VTLPSTR());
 
             Assert.Equal(propertiesXml, properties.OuterXml);
 
@@ -205,8 +212,8 @@ namespace DocumentFormat.OpenXml.Tests
                             "</op:property>" +
                             "</op:Properties>";
 
-            var customProperties = new DocumentFormat.OpenXml.CustomProperties.Properties();
-            var foo = new DocumentFormat.OpenXml.CustomProperties.CustomDocumentProperty();
+            var customProperties = new CP.Properties();
+            var foo = new CP.CustomDocumentProperty();
             foo.Name = "crap";
 
             // format id is required, i copied this from a Word document.
@@ -214,7 +221,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             // property id is required.
             foo.PropertyId = 2;
-            foo.VTBool = new DocumentFormat.OpenXml.VariantTypes.VTBool("true");
+            foo.VTBool = new VP.VTBool("true");
             customProperties.AppendChild(foo);
 
             Assert.Equal(propertiesXml, customProperties.OuterXml);
@@ -228,15 +235,15 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void WorksheetElementsAddInRightOrder()
         {
-            var ws = new Spreadsheet.Worksheet();
+            var ws = new S.Worksheet();
 
-            ws.AppendChild(new Spreadsheet.SheetData());
-            ws.SheetViews = new Spreadsheet.SheetViews();
+            ws.AppendChild(new S.SheetData());
+            ws.SheetViews = new S.SheetViews();
 
             Assert.Collection(
                 ws.ChildElements,
-                e => Assert.IsType<Spreadsheet.SheetViews>(e),
-                e => Assert.IsType<Spreadsheet.SheetData>(e));
+                e => Assert.IsType<S.SheetViews>(e),
+                e => Assert.IsType<S.SheetData>(e));
         }
     }
 }

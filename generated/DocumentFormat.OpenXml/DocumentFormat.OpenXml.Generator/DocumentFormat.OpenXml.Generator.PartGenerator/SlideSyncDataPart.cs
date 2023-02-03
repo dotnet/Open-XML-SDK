@@ -19,7 +19,7 @@ namespace DocumentFormat.OpenXml.Packaging
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.presentationml.slideUpdateInfo+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideUpdateInfo";
-        private DocumentFormat.OpenXml.Presentation.SlideSyncProperties? _rootElement;
+        private DocumentFormat.OpenXml.PresentationML.Y2006.Main.SlideSyncProperties? _rootElement;
 
         /// <summary>
         /// Creates an instance of the SlideSyncDataPart OpenXmlType
@@ -40,7 +40,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             set
             {
-                _rootElement = value as DocumentFormat.OpenXml.Presentation.SlideSyncProperties;
+                _rootElement = value as DocumentFormat.OpenXml.PresentationML.Y2006.Main.SlideSyncProperties;
             }
         }
 
@@ -52,13 +52,13 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets or sets the root element of this part.
         /// </summary>
-        public DocumentFormat.OpenXml.Presentation.SlideSyncProperties SlideSyncProperties
+        public DocumentFormat.OpenXml.PresentationML.Y2006.Main.SlideSyncProperties SlideSyncProperties
         {
             get
             {
                 if (_rootElement is null)
                 {
-                    LoadDomTree<DocumentFormat.OpenXml.Presentation.SlideSyncProperties>();
+                    LoadDomTree<DocumentFormat.OpenXml.PresentationML.Y2006.Main.SlideSyncProperties>();
                 }
 
                 return _rootElement!;

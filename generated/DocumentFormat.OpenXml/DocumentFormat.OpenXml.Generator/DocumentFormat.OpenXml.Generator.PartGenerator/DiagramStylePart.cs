@@ -19,7 +19,7 @@ namespace DocumentFormat.OpenXml.Packaging
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.drawingml.diagramStyle+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramQuickStyle";
-        private DocumentFormat.OpenXml.Drawing.Diagrams.StyleDefinition? _rootElement;
+        private DocumentFormat.OpenXml.DrawingML.Y2006.Diagram.StyleDefinition? _rootElement;
 
         /// <summary>
         /// Creates an instance of the DiagramStylePart OpenXmlType
@@ -40,7 +40,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             set
             {
-                _rootElement = value as DocumentFormat.OpenXml.Drawing.Diagrams.StyleDefinition;
+                _rootElement = value as DocumentFormat.OpenXml.DrawingML.Y2006.Diagram.StyleDefinition;
             }
         }
 
@@ -52,13 +52,13 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets or sets the root element of this part.
         /// </summary>
-        public DocumentFormat.OpenXml.Drawing.Diagrams.StyleDefinition StyleDefinition
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Diagram.StyleDefinition StyleDefinition
         {
             get
             {
                 if (_rootElement is null)
                 {
-                    LoadDomTree<DocumentFormat.OpenXml.Drawing.Diagrams.StyleDefinition>();
+                    LoadDomTree<DocumentFormat.OpenXml.DrawingML.Y2006.Diagram.StyleDefinition>();
                 }
 
                 return _rootElement!;

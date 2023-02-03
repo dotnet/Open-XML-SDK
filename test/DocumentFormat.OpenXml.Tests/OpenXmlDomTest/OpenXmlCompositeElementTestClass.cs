@@ -2,7 +2,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Packaging;
-using DocumentFormat.OpenXml.Wordprocessing;
+using DocumentFormat.OpenXml.WordprocessingML.Y2006.Main;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -2173,7 +2173,7 @@ namespace DocumentFormat.OpenXml.Tests
                 "<mc:Fallback><w:pict><v:textbox/></w:pict></mc:Fallback>" +
                 "</mc:AlternateContent></w:r>" +
                 "</w:p>";
-                var p = new DocumentFormat.OpenXml.Wordprocessing.Paragraph(xml);
+                var p = new Paragraph(xml);
                 Log.Comment("Constructed Paragraph without issues.");
 
                 Log.Comment("Accessing first child of Paragraph...");
@@ -2268,7 +2268,7 @@ namespace DocumentFormat.OpenXml.Tests
                 + "xmlns:w14=\"http://schemas.microsoft.com/office/word/2007/5/30/wordml\" "
                 + "xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" "
                 + "w14:paraId=\"017B6C57\" w14:editId=\"32F17AD3\" w:rsidR=\"00A35C47\"  />";
-            var p = new DocumentFormat.OpenXml.Wordprocessing.Paragraph(paragraphXml);
+            var p = new Paragraph(paragraphXml);
             Assert.NotNull(p.MCAttributes);
             Log.VerifyValue(3, p.NamespaceDeclarations.Count(), "mc, w14, w");    // mc, w14, w
             Log.VerifyValue(4, p.GetAttributes().Count, "w:rsidR, w14:paraId, w14:editId, mc:Ignorable");        // w:rsidR, w14:paraId, w14:editId, mc:Ignorable

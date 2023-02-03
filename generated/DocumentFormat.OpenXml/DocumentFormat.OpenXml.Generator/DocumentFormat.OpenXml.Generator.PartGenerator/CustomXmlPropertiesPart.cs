@@ -19,7 +19,7 @@ namespace DocumentFormat.OpenXml.Packaging
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.customXmlProperties+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXmlProps";
-        private DocumentFormat.OpenXml.CustomXmlDataProperties.DataStoreItem? _rootElement;
+        private DocumentFormat.OpenXml.OfficeDocument.Y2006.CustomXml.DataStoreItem? _rootElement;
 
         /// <summary>
         /// Creates an instance of the CustomXmlPropertiesPart OpenXmlType
@@ -34,13 +34,13 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets or sets the root element of this part.
         /// </summary>
-        public DocumentFormat.OpenXml.CustomXmlDataProperties.DataStoreItem DataStoreItem
+        public DocumentFormat.OpenXml.OfficeDocument.Y2006.CustomXml.DataStoreItem DataStoreItem
         {
             get
             {
                 if (_rootElement is null)
                 {
-                    LoadDomTree<DocumentFormat.OpenXml.CustomXmlDataProperties.DataStoreItem>();
+                    LoadDomTree<DocumentFormat.OpenXml.OfficeDocument.Y2006.CustomXml.DataStoreItem>();
                 }
 
                 return _rootElement!;
@@ -66,7 +66,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             set
             {
-                _rootElement = value as DocumentFormat.OpenXml.CustomXmlDataProperties.DataStoreItem;
+                _rootElement = value as DocumentFormat.OpenXml.OfficeDocument.Y2006.CustomXml.DataStoreItem;
             }
         }
 

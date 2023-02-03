@@ -14,7 +14,7 @@ using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.Vml.Wordprocessing
+namespace DocumentFormat.OpenXml.Office.Word.VML
 {
     /// <summary>
     /// <para>Top Border.</para>
@@ -130,9 +130,9 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
         /// <para>Border Style</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.BorderValues>? Type
+        public EnumValue<DocumentFormat.OpenXml.Office.Word.VML.BorderValues>? Type
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.BorderValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.Word.VML.BorderValues>>();
             set => SetAttribute(value);
         }
 
@@ -187,9 +187,9 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
         /// <para>Wrapping type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.WrapValues>? Type
+        public EnumValue<DocumentFormat.OpenXml.Office.Word.VML.WrapValues>? Type
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.WrapValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.Word.VML.WrapValues>>();
             set => SetAttribute(value);
         }
 
@@ -197,9 +197,9 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
         /// <para>Wrapping side</para>
         /// <para>Represents the following attribute in the schema: side</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.WrapSideValues>? Side
+        public EnumValue<DocumentFormat.OpenXml.Office.Word.VML.WrapSideValues>? Side
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.WrapSideValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.Word.VML.WrapSideValues>>();
             set => SetAttribute(value);
         }
 
@@ -207,9 +207,9 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
         /// <para>Horizontal Positioning Base</para>
         /// <para>Represents the following attribute in the schema: anchorx</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.HorizontalAnchorValues>? AnchorX
+        public EnumValue<DocumentFormat.OpenXml.Office.Word.VML.HorizontalAnchorValues>? AnchorX
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.HorizontalAnchorValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.Word.VML.HorizontalAnchorValues>>();
             set => SetAttribute(value);
         }
 
@@ -217,9 +217,9 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
         /// <para>Vertical Positioning Base</para>
         /// <para>Represents the following attribute in the schema: anchory</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.VerticalAnchorValues>? AnchorY
+        public EnumValue<DocumentFormat.OpenXml.Office.Word.VML.VerticalAnchorValues>? AnchorY
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.VerticalAnchorValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.Word.VML.VerticalAnchorValues>>();
             set => SetAttribute(value);
         }
 

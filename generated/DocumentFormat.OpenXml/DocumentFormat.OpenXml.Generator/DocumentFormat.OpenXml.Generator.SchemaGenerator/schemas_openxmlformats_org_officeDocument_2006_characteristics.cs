@@ -14,7 +14,7 @@ using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.AdditionalCharacteristics
+namespace DocumentFormat.OpenXml.OfficeDocument.Y2006.Characteristics
 {
     /// <summary>
     /// <para>Set of Additional Characteristics.</para>
@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.AdditionalCharacteristics
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.AdditionalCharacteristics.Characteristic" /> <c>&lt;ac:characteristic></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Characteristics.Characteristic" /> <c>&lt;ac:characteristic></c></description></item>
     /// </list>
     /// </remark>
     public partial class AdditionalCharacteristicsInfo : TypedOpenXmlPartRootElement
@@ -64,10 +64,10 @@ namespace DocumentFormat.OpenXml.AdditionalCharacteristics
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("ac:additionalCharacteristics");
-            builder.AddChild<DocumentFormat.OpenXml.AdditionalCharacteristics.Characteristic>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Characteristics.Characteristic>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.AdditionalCharacteristics.Characteristic), 0, 0)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Characteristics.Characteristic), 0, 0)
             };
         }
 
@@ -103,9 +103,9 @@ namespace DocumentFormat.OpenXml.AdditionalCharacteristics
         /// <para>Relationship of Value to Name</para>
         /// <para>Represents the following attribute in the schema: relation</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.AdditionalCharacteristics.RelationValues>? Relation
+        public EnumValue<DocumentFormat.OpenXml.OfficeDocument.Y2006.Characteristics.RelationValues>? Relation
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.AdditionalCharacteristics.RelationValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.OfficeDocument.Y2006.Characteristics.RelationValues>>();
             set => SetAttribute(value);
         }
 

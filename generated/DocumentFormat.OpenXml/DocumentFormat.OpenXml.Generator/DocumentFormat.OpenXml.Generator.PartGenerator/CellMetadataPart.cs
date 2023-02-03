@@ -19,7 +19,7 @@ namespace DocumentFormat.OpenXml.Packaging
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheetMetadata+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/sheetMetadata";
-        private DocumentFormat.OpenXml.Spreadsheet.Metadata? _rootElement;
+        private DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Metadata? _rootElement;
 
         /// <summary>
         /// Creates an instance of the CellMetadataPart OpenXmlType
@@ -40,20 +40,20 @@ namespace DocumentFormat.OpenXml.Packaging
 
             set
             {
-                _rootElement = value as DocumentFormat.OpenXml.Spreadsheet.Metadata;
+                _rootElement = value as DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Metadata;
             }
         }
 
         /// <summary>
         /// Gets or sets the root element of this part.
         /// </summary>
-        public DocumentFormat.OpenXml.Spreadsheet.Metadata Metadata
+        public DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Metadata Metadata
         {
             get
             {
                 if (_rootElement is null)
                 {
-                    LoadDomTree<DocumentFormat.OpenXml.Spreadsheet.Metadata>();
+                    LoadDomTree<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Metadata>();
                 }
 
                 return _rootElement!;

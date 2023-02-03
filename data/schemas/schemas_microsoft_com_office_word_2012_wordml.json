@@ -42,7 +42,7 @@
         {
           "QName": "w:themeColor",
           "PropertyName": "ThemeColor",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.ThemeColorValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.ThemeColorValues\u003E",
           "PropertyComments": "Run Content Theme Color"
         },
         {

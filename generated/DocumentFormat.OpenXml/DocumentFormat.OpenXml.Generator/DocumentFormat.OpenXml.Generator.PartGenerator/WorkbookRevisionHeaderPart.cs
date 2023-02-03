@@ -19,7 +19,7 @@ namespace DocumentFormat.OpenXml.Packaging
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.spreadsheetml.revisionHeaders+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/revisionHeaders";
-        private DocumentFormat.OpenXml.Spreadsheet.Headers? _rootElement;
+        private DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Headers? _rootElement;
 
         /// <summary>
         /// Creates an instance of the WorkbookRevisionHeaderPart OpenXmlType
@@ -34,13 +34,13 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets or sets the root element of this part.
         /// </summary>
-        public DocumentFormat.OpenXml.Spreadsheet.Headers Headers
+        public DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Headers Headers
         {
             get
             {
                 if (_rootElement is null)
                 {
-                    LoadDomTree<DocumentFormat.OpenXml.Spreadsheet.Headers>();
+                    LoadDomTree<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Headers>();
                 }
 
                 return _rootElement!;
@@ -66,7 +66,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             set
             {
-                _rootElement = value as DocumentFormat.OpenXml.Spreadsheet.Headers;
+                _rootElement = value as DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Headers;
             }
         }
 

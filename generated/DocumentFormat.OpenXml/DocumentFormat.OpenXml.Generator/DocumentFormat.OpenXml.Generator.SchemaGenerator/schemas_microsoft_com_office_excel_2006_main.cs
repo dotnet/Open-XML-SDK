@@ -9,13 +9,13 @@ using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Packaging;
-using DocumentFormat.OpenXml.Spreadsheet;
+using DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main;
 using DocumentFormat.OpenXml.Validation.Schema;
 using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.Office.Excel
+namespace DocumentFormat.OpenXml.Office.Excel.Y2006.Main
 {
     /// <summary>
     /// <para>Defines the Macrosheet Class.</para>
@@ -25,33 +25,33 @@ namespace DocumentFormat.OpenXml.Office.Excel
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.AutoFilter" /> <c>&lt;x:autoFilter></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Columns" /> <c>&lt;x:cols></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ConditionalFormatting" /> <c>&lt;x:conditionalFormatting></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CustomProperties" /> <c>&lt;x:customProperties></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CustomSheetViews" /> <c>&lt;x:customSheetViews></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DataConsolidate" /> <c>&lt;x:dataConsolidate></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Drawing" /> <c>&lt;x:drawing></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DrawingHeaderFooter" /> <c>&lt;x:drawingHF></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.HeaderFooter" /> <c>&lt;x:headerFooter></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.LegacyDrawing" /> <c>&lt;x:legacyDrawing></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.LegacyDrawingHeaderFooter" /> <c>&lt;x:legacyDrawingHF></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.OleObjects" /> <c>&lt;x:oleObjects></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.RowBreaks" /> <c>&lt;x:rowBreaks></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ColumnBreaks" /> <c>&lt;x:colBreaks></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PageMargins" /> <c>&lt;x:pageMargins></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PageSetup" /> <c>&lt;x:pageSetup></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PhoneticProperties" /> <c>&lt;x:phoneticPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PrintOptions" /> <c>&lt;x:printOptions></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Picture" /> <c>&lt;x:picture></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.SheetData" /> <c>&lt;x:sheetData></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.SheetDimension" /> <c>&lt;x:dimension></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.SheetFormatProperties" /> <c>&lt;x:sheetFormatPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.SheetProperties" /> <c>&lt;x:sheetPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.SheetProtection" /> <c>&lt;x:sheetProtection></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.SheetViews" /> <c>&lt;x:sheetViews></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.SortState" /> <c>&lt;x:sortState></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.AutoFilter" /> <c>&lt;x:autoFilter></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Columns" /> <c>&lt;x:cols></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.ConditionalFormatting" /> <c>&lt;x:conditionalFormatting></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.CustomProperties" /> <c>&lt;x:customProperties></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.CustomSheetViews" /> <c>&lt;x:customSheetViews></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.DataConsolidate" /> <c>&lt;x:dataConsolidate></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Drawing" /> <c>&lt;x:drawing></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.DrawingHeaderFooter" /> <c>&lt;x:drawingHF></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.HeaderFooter" /> <c>&lt;x:headerFooter></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.LegacyDrawing" /> <c>&lt;x:legacyDrawing></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.LegacyDrawingHeaderFooter" /> <c>&lt;x:legacyDrawingHF></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.OleObjects" /> <c>&lt;x:oleObjects></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.RowBreaks" /> <c>&lt;x:rowBreaks></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.ColumnBreaks" /> <c>&lt;x:colBreaks></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.PageMargins" /> <c>&lt;x:pageMargins></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.PageSetup" /> <c>&lt;x:pageSetup></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.PhoneticProperties" /> <c>&lt;x:phoneticPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.PrintOptions" /> <c>&lt;x:printOptions></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Picture" /> <c>&lt;x:picture></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.SheetData" /> <c>&lt;x:sheetData></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.SheetDimension" /> <c>&lt;x:dimension></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.SheetFormatProperties" /> <c>&lt;x:sheetFormatPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.SheetProperties" /> <c>&lt;x:sheetPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.SheetProtection" /> <c>&lt;x:sheetProtection></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.SheetViews" /> <c>&lt;x:sheetViews></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.SortState" /> <c>&lt;x:sortState></c></description></item>
     /// </list>
     /// </remark>
     public partial class Macrosheet : TypedOpenXmlPartRootElement
@@ -91,62 +91,62 @@ namespace DocumentFormat.OpenXml.Office.Excel
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("xne:macrosheet");
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.AutoFilter>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Columns>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ConditionalFormatting>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CustomProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CustomSheetViews>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DataConsolidate>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Drawing>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DrawingHeaderFooter>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.HeaderFooter>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.LegacyDrawing>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.LegacyDrawingHeaderFooter>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.OleObjects>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RowBreaks>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ColumnBreaks>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PageMargins>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PageSetup>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PhoneticProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PrintOptions>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Picture>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SheetData>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SheetDimension>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SheetFormatProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SheetProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SheetProtection>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SheetViews>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SortState>();
+            builder.AddChild<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.AutoFilter>();
+            builder.AddChild<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Columns>();
+            builder.AddChild<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.ConditionalFormatting>();
+            builder.AddChild<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.CustomProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.CustomSheetViews>();
+            builder.AddChild<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.DataConsolidate>();
+            builder.AddChild<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Drawing>();
+            builder.AddChild<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.DrawingHeaderFooter>();
+            builder.AddChild<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.HeaderFooter>();
+            builder.AddChild<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.LegacyDrawing>();
+            builder.AddChild<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.LegacyDrawingHeaderFooter>();
+            builder.AddChild<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.OleObjects>();
+            builder.AddChild<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.RowBreaks>();
+            builder.AddChild<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.ColumnBreaks>();
+            builder.AddChild<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.PageMargins>();
+            builder.AddChild<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.PageSetup>();
+            builder.AddChild<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.PhoneticProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.PrintOptions>();
+            builder.AddChild<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Picture>();
+            builder.AddChild<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.SheetData>();
+            builder.AddChild<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.SheetDimension>();
+            builder.AddChild<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.SheetFormatProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.SheetProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.SheetProtection>();
+            builder.AddChild<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.SheetViews>();
+            builder.AddChild<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.SortState>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SheetProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SheetDimension), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SheetViews), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SheetFormatProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Columns), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SheetData), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SheetProtection), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.AutoFilter), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SortState), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DataConsolidate), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CustomSheetViews), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PhoneticProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ConditionalFormatting), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PrintOptions), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PageMargins), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PageSetup), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.HeaderFooter), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RowBreaks), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ColumnBreaks), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CustomProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Drawing), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.LegacyDrawing), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.LegacyDrawingHeaderFooter), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Picture), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.OleObjects), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DrawingHeaderFooter), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.SheetProperties), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.SheetDimension), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.SheetViews), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.SheetFormatProperties), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Columns), 0, 0),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.SheetData), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.SheetProtection), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.AutoFilter), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.SortState), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.DataConsolidate), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.CustomSheetViews), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.PhoneticProperties), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.ConditionalFormatting), 0, 0),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.PrintOptions), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.PageMargins), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.PageSetup), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.HeaderFooter), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.RowBreaks), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.ColumnBreaks), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.CustomProperties), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Drawing), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.LegacyDrawing), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.LegacyDrawingHeaderFooter), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Picture), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.OleObjects), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.DrawingHeaderFooter), 0, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.ExtensionList), 0, 1)
             };
         }
 
@@ -157,9 +157,9 @@ namespace DocumentFormat.OpenXml.Office.Excel
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.SheetProperties? SheetProperties
+        public DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.SheetProperties? SheetProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetProperties>();
+            get => GetElement<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.SheetProperties>();
             set => SetElement(value);
         }
 
@@ -170,9 +170,9 @@ namespace DocumentFormat.OpenXml.Office.Excel
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.SheetDimension? SheetDimension
+        public DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.SheetDimension? SheetDimension
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetDimension>();
+            get => GetElement<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.SheetDimension>();
             set => SetElement(value);
         }
 
@@ -183,9 +183,9 @@ namespace DocumentFormat.OpenXml.Office.Excel
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.SheetViews? SheetViews
+        public DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.SheetViews? SheetViews
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetViews>();
+            get => GetElement<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.SheetViews>();
             set => SetElement(value);
         }
 
@@ -196,9 +196,9 @@ namespace DocumentFormat.OpenXml.Office.Excel
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.SheetFormatProperties? SheetFormatProperties
+        public DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.SheetFormatProperties? SheetFormatProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetFormatProperties>();
+            get => GetElement<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.SheetFormatProperties>();
             set => SetElement(value);
         }
 
@@ -245,8 +245,8 @@ namespace DocumentFormat.OpenXml.Office.Excel
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.ColumnSortMap" /> <c>&lt;xne:colSortMap></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.RowSortMap" /> <c>&lt;xne:rowSortMap></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.Y2006.Main.ColumnSortMap" /> <c>&lt;xne:colSortMap></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.Y2006.Main.RowSortMap" /> <c>&lt;xne:rowSortMap></c></description></item>
     /// </list>
     /// </remark>
     public partial class WorksheetSortMap : TypedOpenXmlPartRootElement
@@ -286,12 +286,12 @@ namespace DocumentFormat.OpenXml.Office.Excel
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("xne:worksheetSortMap");
-            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.ColumnSortMap>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.RowSortMap>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.Y2006.Main.ColumnSortMap>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.Y2006.Main.RowSortMap>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.RowSortMap), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.ColumnSortMap), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.Y2006.Main.RowSortMap), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.Y2006.Main.ColumnSortMap), 0, 1)
             };
         }
 
@@ -302,9 +302,9 @@ namespace DocumentFormat.OpenXml.Office.Excel
         /// <remark>
         /// xmlns:xne = http://schemas.microsoft.com/office/excel/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Office.Excel.RowSortMap? RowSortMap
+        public DocumentFormat.OpenXml.Office.Excel.Y2006.Main.RowSortMap? RowSortMap
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Excel.RowSortMap>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Excel.Y2006.Main.RowSortMap>();
             set => SetElement(value);
         }
 
@@ -315,9 +315,9 @@ namespace DocumentFormat.OpenXml.Office.Excel
         /// <remark>
         /// xmlns:xne = http://schemas.microsoft.com/office/excel/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Office.Excel.ColumnSortMap? ColumnSortMap
+        public DocumentFormat.OpenXml.Office.Excel.Y2006.Main.ColumnSortMap? ColumnSortMap
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Excel.ColumnSortMap>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Excel.Y2006.Main.ColumnSortMap>();
             set => SetElement(value);
         }
 
@@ -441,7 +441,7 @@ namespace DocumentFormat.OpenXml.Office.Excel
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.RowSortMapItem" /> <c>&lt;xne:row></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.Y2006.Main.RowSortMapItem" /> <c>&lt;xne:row></c></description></item>
     /// </list>
     /// </remark>
     public partial class RowSortMap : TypedOpenXmlCompositeElement
@@ -501,7 +501,7 @@ namespace DocumentFormat.OpenXml.Office.Excel
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("xne:rowSortMap");
-            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.RowSortMapItem>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.Y2006.Main.RowSortMapItem>();
             builder.AddElement<RowSortMap>()
                 .AddAttribute("ref", a => a.Ref, aBuilder =>
                 {
@@ -513,7 +513,7 @@ namespace DocumentFormat.OpenXml.Office.Excel
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.RowSortMapItem), 1, 536870910)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.Y2006.Main.RowSortMapItem), 1, 536870910)
             };
         }
 
@@ -529,7 +529,7 @@ namespace DocumentFormat.OpenXml.Office.Excel
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.ColumnSortMapItem" /> <c>&lt;xne:col></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.Y2006.Main.ColumnSortMapItem" /> <c>&lt;xne:col></c></description></item>
     /// </list>
     /// </remark>
     public partial class ColumnSortMap : TypedOpenXmlCompositeElement
@@ -589,7 +589,7 @@ namespace DocumentFormat.OpenXml.Office.Excel
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("xne:colSortMap");
-            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.ColumnSortMapItem>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.Y2006.Main.ColumnSortMapItem>();
             builder.AddElement<ColumnSortMap>()
                 .AddAttribute("ref", a => a.Ref, aBuilder =>
                 {
@@ -601,7 +601,7 @@ namespace DocumentFormat.OpenXml.Office.Excel
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.ColumnSortMapItem), 1, 536870910)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.Y2006.Main.ColumnSortMapItem), 1, 536870910)
             };
         }
 

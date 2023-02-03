@@ -19,7 +19,7 @@ namespace DocumentFormat.OpenXml.Packaging
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.spreadsheetml.styles+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles";
-        private DocumentFormat.OpenXml.Spreadsheet.Stylesheet? _rootElement;
+        private DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Stylesheet? _rootElement;
 
         /// <summary>
         /// Creates an instance of the WorkbookStylesPart OpenXmlType
@@ -40,7 +40,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             set
             {
-                _rootElement = value as DocumentFormat.OpenXml.Spreadsheet.Stylesheet;
+                _rootElement = value as DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Stylesheet;
             }
         }
 
@@ -52,13 +52,13 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets or sets the root element of this part.
         /// </summary>
-        public DocumentFormat.OpenXml.Spreadsheet.Stylesheet Stylesheet
+        public DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Stylesheet Stylesheet
         {
             get
             {
                 if (_rootElement is null)
                 {
-                    LoadDomTree<DocumentFormat.OpenXml.Spreadsheet.Stylesheet>();
+                    LoadDomTree<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Stylesheet>();
                 }
 
                 return _rootElement!;

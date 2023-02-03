@@ -1,14 +1,15 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using DocumentFormat.OpenXml.Wordprocessing;
+using DocumentFormat.OpenXml.WordprocessingML.Y2006.Main;
 using System;
 using System.Globalization;
 using Xunit;
 
 #pragma warning disable CS8981
-using M = DocumentFormat.OpenXml.Math;
-using xvml = DocumentFormat.OpenXml.Vml.Spreadsheet;
+using M = DocumentFormat.OpenXml.OfficeDocument.Y2006.Math;
+using ovml = DocumentFormat.OpenXml.Office.Office.VML;
+using xvml = DocumentFormat.OpenXml.Office.Excel.VML;
 #pragma warning restore CS8981
 
 namespace DocumentFormat.OpenXml.Tests
@@ -601,8 +602,8 @@ namespace DocumentFormat.OpenXml.Tests
             b.Val.InnerText = "off";
             Assert.False(b.Val);
 
-            DocumentFormat.OpenXml.Vml.Office.ShapeDefaults sd =
-                new DocumentFormat.OpenXml.Vml.Office.ShapeDefaults();
+            ovml.ShapeDefaults sd =
+                new ovml.ShapeDefaults();
             sd.BeFilled = true;
             Assert.True(sd.BeFilled);
             sd.BeFilled.InnerText = "f";
@@ -614,7 +615,7 @@ namespace DocumentFormat.OpenXml.Tests
             h.Switch.InnerText = string.Empty;
             Assert.False(h.Switch);
 
-            DocumentFormat.OpenXml.Vml.Office.Proxy p = new DocumentFormat.OpenXml.Vml.Office.Proxy();
+            ovml.Proxy p = new ovml.Proxy();
             p.Start = true;
             Assert.True(p.Start);
             p.Start.InnerText = "false";

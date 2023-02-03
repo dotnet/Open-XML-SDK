@@ -19,7 +19,7 @@ namespace DocumentFormat.OpenXml.Packaging
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.presentationml.handoutMaster+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/handoutMaster";
-        private DocumentFormat.OpenXml.Presentation.HandoutMaster? _rootElement;
+        private DocumentFormat.OpenXml.PresentationML.Y2006.Main.HandoutMaster? _rootElement;
 
         /// <summary>
         /// Creates an instance of the HandoutMasterPart OpenXmlType
@@ -89,13 +89,13 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets or sets the root element of this part.
         /// </summary>
-        public DocumentFormat.OpenXml.Presentation.HandoutMaster HandoutMaster
+        public DocumentFormat.OpenXml.PresentationML.Y2006.Main.HandoutMaster HandoutMaster
         {
             get
             {
                 if (_rootElement is null)
                 {
-                    LoadDomTree<DocumentFormat.OpenXml.Presentation.HandoutMaster>();
+                    LoadDomTree<DocumentFormat.OpenXml.PresentationML.Y2006.Main.HandoutMaster>();
                 }
 
                 return _rootElement!;
@@ -126,7 +126,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             set
             {
-                _rootElement = value as DocumentFormat.OpenXml.Presentation.HandoutMaster;
+                _rootElement = value as DocumentFormat.OpenXml.PresentationML.Y2006.Main.HandoutMaster;
             }
         }
 

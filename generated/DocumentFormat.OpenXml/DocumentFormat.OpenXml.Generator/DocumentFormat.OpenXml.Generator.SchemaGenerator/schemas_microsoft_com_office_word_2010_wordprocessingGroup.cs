@@ -6,8 +6,8 @@
 #nullable enable
 
 using DocumentFormat.OpenXml;
-using DocumentFormat.OpenXml.Drawing;
-using DocumentFormat.OpenXml.Drawing.Pictures;
+using DocumentFormat.OpenXml.DrawingML.Y2006.Main;
+using DocumentFormat.OpenXml.DrawingML.Y2006.Picture;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Office.Word.Y2010.WordML;
@@ -32,7 +32,7 @@ namespace DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup.NonVisualDrawingProperties" /> <c>&lt;wpg:cNvPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup.NonVisualGroupDrawingShapeProperties" /> <c>&lt;wpg:cNvGrpSpPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup.OfficeArtExtensionList" /> <c>&lt;wpg:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Pictures.Picture" /> <c>&lt;pic:pic></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Picture.Picture" /> <c>&lt;pic:pic></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.ContentPart" /> <c>&lt;w14:contentPart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup.GraphicFrame" /> <c>&lt;wpg:graphicFrame></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup.GroupShape" /> <c>&lt;wpg:grpSp></c></description></item>
@@ -87,7 +87,7 @@ namespace DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingShape.WordprocessingShape), 1, 1, version: FileFormatVersions.Office2010),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup.GroupShape), 1, 1, version: FileFormatVersions.Office2010),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup.GraphicFrame), 1, 1, version: FileFormatVersions.Office2010),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Pictures.Picture), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Picture.Picture), 1, 1),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.ContentPart), 1, 1, version: FileFormatVersions.Office2010)
                 },
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2010)
@@ -110,7 +110,7 @@ namespace DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup.NonVisualDrawingProperties" /> <c>&lt;wpg:cNvPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup.NonVisualGroupDrawingShapeProperties" /> <c>&lt;wpg:cNvGrpSpPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup.OfficeArtExtensionList" /> <c>&lt;wpg:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Pictures.Picture" /> <c>&lt;pic:pic></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Picture.Picture" /> <c>&lt;pic:pic></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.ContentPart" /> <c>&lt;w14:contentPart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup.GraphicFrame" /> <c>&lt;wpg:graphicFrame></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup.GroupShape" /> <c>&lt;wpg:grpSp></c></description></item>
@@ -165,7 +165,7 @@ namespace DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingShape.WordprocessingShape), 1, 1, version: FileFormatVersions.Office2010),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup.GroupShape), 1, 1, version: FileFormatVersions.Office2010),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup.GraphicFrame), 1, 1, version: FileFormatVersions.Office2010),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Pictures.Picture), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Picture.Picture), 1, 1),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.ContentPart), 1, 1, version: FileFormatVersions.Office2010)
                 },
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2010)
@@ -188,7 +188,7 @@ namespace DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup.NonVisualDrawingProperties" /> <c>&lt;wpg:cNvPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup.NonVisualGroupDrawingShapeProperties" /> <c>&lt;wpg:cNvGrpSpPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup.OfficeArtExtensionList" /> <c>&lt;wpg:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Pictures.Picture" /> <c>&lt;pic:pic></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Picture.Picture" /> <c>&lt;pic:pic></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.ContentPart" /> <c>&lt;w14:contentPart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup.GraphicFrame" /> <c>&lt;wpg:graphicFrame></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup.GroupShape" /> <c>&lt;wpg:grpSp></c></description></item>
@@ -235,7 +235,7 @@ namespace DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup
             builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup.NonVisualDrawingProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup.NonVisualGroupDrawingShapeProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup.OfficeArtExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Pictures.Picture>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Picture.Picture>();
             builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.ContentPart>();
             builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup.GraphicFrame>();
             builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup.GroupShape>();
@@ -290,9 +290,9 @@ namespace DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HyperlinkOnClick" /> <c>&lt;a:hlinkClick></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HyperlinkOnHover" /> <c>&lt;a:hlinkHover></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList" /> <c>&lt;a:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.HyperlinkOnClick" /> <c>&lt;a:hlinkClick></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.HyperlinkOnHover" /> <c>&lt;a:hlinkHover></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.NonVisualDrawingPropertiesExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remark>
     public partial class NonVisualDrawingProperties : TypedOpenXmlCompositeElement
@@ -383,9 +383,9 @@ namespace DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup
             base.ConfigureMetadata(builder);
             builder.SetSchema("wpg:cNvPr");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.HyperlinkOnClick>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.HyperlinkOnHover>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.NonVisualDrawingPropertiesExtensionList>();
             builder.AddElement<NonVisualDrawingProperties>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
                 {
@@ -400,9 +400,9 @@ namespace DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup
                 .AddAttribute("title", a => a.Title);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnClick), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnHover), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.HyperlinkOnClick), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.HyperlinkOnHover), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.NonVisualDrawingPropertiesExtensionList), 0, 1)
             };
         }
 
@@ -413,9 +413,9 @@ namespace DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.HyperlinkOnClick? HyperlinkOnClick
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Main.HyperlinkOnClick? HyperlinkOnClick
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Main.HyperlinkOnClick>();
             set => SetElement(value);
         }
 
@@ -426,9 +426,9 @@ namespace DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.HyperlinkOnHover? HyperlinkOnHover
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Main.HyperlinkOnHover? HyperlinkOnHover
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Main.HyperlinkOnHover>();
             set => SetElement(value);
         }
 
@@ -439,9 +439,9 @@ namespace DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList? NonVisualDrawingPropertiesExtensionList
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Main.NonVisualDrawingPropertiesExtensionList? NonVisualDrawingPropertiesExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Main.NonVisualDrawingPropertiesExtensionList>();
             set => SetElement(value);
         }
 
@@ -457,8 +457,8 @@ namespace DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.GraphicFrameLocks" /> <c>&lt;a:graphicFrameLocks></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.GraphicFrameLocks" /> <c>&lt;a:graphicFrameLocks></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remark>
     public partial class NonVisualGraphicFrameProperties : TypedOpenXmlCompositeElement
@@ -499,12 +499,12 @@ namespace DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup
             base.ConfigureMetadata(builder);
             builder.SetSchema("wpg:cNvFrPr");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.GraphicFrameLocks>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.GraphicFrameLocks>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.ExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GraphicFrameLocks), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.GraphicFrameLocks), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.ExtensionList), 0, 1)
             };
         }
 
@@ -515,9 +515,9 @@ namespace DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.GraphicFrameLocks? GraphicFrameLocks
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Main.GraphicFrameLocks? GraphicFrameLocks
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.GraphicFrameLocks>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Main.GraphicFrameLocks>();
             set => SetElement(value);
         }
 
@@ -528,9 +528,9 @@ namespace DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Main.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Main.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -546,8 +546,8 @@ namespace DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Offset" /> <c>&lt;a:off></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extents" /> <c>&lt;a:ext></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.Offset" /> <c>&lt;a:off></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.Extents" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
     public partial class Transform2D : TypedOpenXmlCompositeElement
@@ -618,16 +618,16 @@ namespace DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup
             base.ConfigureMetadata(builder);
             builder.SetSchema("wpg:xfrm");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Offset>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Extents>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.Offset>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.Extents>();
             builder.AddElement<Transform2D>()
                 .AddAttribute("rot", a => a.Rotation)
                 .AddAttribute("flipH", a => a.HorizontalFlip)
                 .AddAttribute("flipV", a => a.VerticalFlip);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Offset), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Extents), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.Offset), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.Extents), 0, 1)
             };
         }
 
@@ -638,9 +638,9 @@ namespace DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Offset? Offset
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Main.Offset? Offset
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Offset>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Main.Offset>();
             set => SetElement(value);
         }
 
@@ -651,9 +651,9 @@ namespace DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Extents? Extents
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Main.Extents? Extents
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Extents>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Main.Extents>();
             set => SetElement(value);
         }
 
@@ -669,7 +669,7 @@ namespace DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extension" /> <c>&lt;a:ext></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.Extension" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
     public partial class OfficeArtExtensionList : TypedOpenXmlCompositeElement
@@ -710,14 +710,14 @@ namespace DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup
             base.ConfigureMetadata(builder);
             builder.SetSchema("wpg:extLst");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Extension>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.Extension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Extension), 0, 0)
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.Extension), 0, 0)
                     }
                 }
             };
@@ -735,8 +735,8 @@ namespace DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.GroupShapeLocks" /> <c>&lt;a:grpSpLocks></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList" /> <c>&lt;a:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.GroupShapeLocks" /> <c>&lt;a:grpSpLocks></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.NonVisualGroupDrawingShapePropsExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remark>
     public partial class NonVisualGroupDrawingShapeProperties : TypedOpenXmlCompositeElement
@@ -777,12 +777,12 @@ namespace DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup
             base.ConfigureMetadata(builder);
             builder.SetSchema("wpg:cNvGrpSpPr");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.GroupShapeLocks>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.GroupShapeLocks>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.NonVisualGroupDrawingShapePropsExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GroupShapeLocks), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.GroupShapeLocks), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.NonVisualGroupDrawingShapePropsExtensionList), 0, 1)
             };
         }
 
@@ -793,9 +793,9 @@ namespace DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.GroupShapeLocks? GroupShapeLocks
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Main.GroupShapeLocks? GroupShapeLocks
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.GroupShapeLocks>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Main.GroupShapeLocks>();
             set => SetElement(value);
         }
 
@@ -806,9 +806,9 @@ namespace DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList? NonVisualGroupDrawingShapePropsExtensionList
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Main.NonVisualGroupDrawingShapePropsExtensionList? NonVisualGroupDrawingShapePropsExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Main.NonVisualGroupDrawingShapePropsExtensionList>();
             set => SetElement(value);
         }
 
@@ -824,17 +824,17 @@ namespace DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.BlipFill" /> <c>&lt;a:blipFill></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.EffectDag" /> <c>&lt;a:effectDag></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.EffectList" /> <c>&lt;a:effectLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.GradientFill" /> <c>&lt;a:gradFill></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.GroupFill" /> <c>&lt;a:grpFill></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.TransformGroup" /> <c>&lt;a:xfrm></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NoFill" /> <c>&lt;a:noFill></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PatternFill" /> <c>&lt;a:pattFill></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Scene3DType" /> <c>&lt;a:scene3d></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SolidFill" /> <c>&lt;a:solidFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.BlipFill" /> <c>&lt;a:blipFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.EffectDag" /> <c>&lt;a:effectDag></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.EffectList" /> <c>&lt;a:effectLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.GradientFill" /> <c>&lt;a:gradFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.GroupFill" /> <c>&lt;a:grpFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.TransformGroup" /> <c>&lt;a:xfrm></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.NoFill" /> <c>&lt;a:noFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.PatternFill" /> <c>&lt;a:pattFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.Scene3DType" /> <c>&lt;a:scene3d></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.SolidFill" /> <c>&lt;a:solidFill></c></description></item>
     /// </list>
     /// </remark>
     public partial class GroupShapeProperties : TypedOpenXmlCompositeElement
@@ -874,9 +874,9 @@ namespace DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup
         /// <para>Black and White Mode</para>
         /// <para>Represents the following attribute in the schema: bwMode</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>? BlackWhiteMode
+        public EnumValue<DocumentFormat.OpenXml.DrawingML.Y2006.Main.BlackWhiteModeValues>? BlackWhiteMode
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.DrawingML.Y2006.Main.BlackWhiteModeValues>>();
             set => SetAttribute(value);
         }
 
@@ -885,17 +885,17 @@ namespace DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup
             base.ConfigureMetadata(builder);
             builder.SetSchema("wpg:grpSpPr");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.BlipFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectDag>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.GradientFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.GroupFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.TransformGroup>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.NoFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PatternFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Scene3DType>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.BlipFill>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.EffectDag>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.EffectList>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.GradientFill>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.GroupFill>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.TransformGroup>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.NoFill>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.PatternFill>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.Scene3DType>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.SolidFill>();
             builder.AddElement<GroupShapeProperties>()
                 .AddAttribute("bwMode", a => a.BlackWhiteMode, aBuilder =>
                 {
@@ -903,29 +903,29 @@ namespace DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TransformGroup), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.TransformGroup), 0, 1),
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NoFill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SolidFill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GradientFill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BlipFill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PatternFill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GroupFill), 1, 1)
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.NoFill), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.SolidFill), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.GradientFill), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.BlipFill), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.PatternFill), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.GroupFill), 1, 1)
                     }
                 },
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectList), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectDag), 1, 1)
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.EffectList), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.EffectDag), 1, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Scene3DType), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.Scene3DType), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.ExtensionList), 0, 1)
             };
         }
 
@@ -936,9 +936,9 @@ namespace DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.TransformGroup? TransformGroup
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Main.TransformGroup? TransformGroup
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.TransformGroup>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Main.TransformGroup>();
             set => SetElement(value);
         }
 
@@ -954,7 +954,7 @@ namespace DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Graphic" /> <c>&lt;a:graphic></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.Graphic" /> <c>&lt;a:graphic></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup.NonVisualDrawingProperties" /> <c>&lt;wpg:cNvPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup.NonVisualGraphicFrameProperties" /> <c>&lt;wpg:cNvFrPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup.OfficeArtExtensionList" /> <c>&lt;wpg:extLst></c></description></item>
@@ -999,7 +999,7 @@ namespace DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup
             base.ConfigureMetadata(builder);
             builder.SetSchema("wpg:graphicFrame");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Graphic>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.Graphic>();
             builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup.NonVisualDrawingProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup.NonVisualGraphicFrameProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup.OfficeArtExtensionList>();
@@ -1009,7 +1009,7 @@ namespace DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup.NonVisualDrawingProperties), 1, 1, version: FileFormatVersions.Office2010),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup.NonVisualGraphicFrameProperties), 1, 1, version: FileFormatVersions.Office2010),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup.Transform2D), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Graphic), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.Graphic), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup.OfficeArtExtensionList), 0, 1, version: FileFormatVersions.Office2010)
             };
         }
@@ -1060,9 +1060,9 @@ namespace DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Graphic? Graphic
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Main.Graphic? Graphic
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Graphic>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Main.Graphic>();
             set => SetElement(value);
         }
 

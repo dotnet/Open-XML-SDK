@@ -4,8 +4,10 @@
 using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Validation;
 using DocumentFormat.OpenXml.Validation.Schema;
-using DocumentFormat.OpenXml.Wordprocessing;
+using DocumentFormat.OpenXml.WordprocessingML.Y2006.Main;
 using Xunit;
+
+using D = DocumentFormat.OpenXml.DrawingML.Y2006.Main;
 
 namespace DocumentFormat.OpenXml.Tests
 {
@@ -361,7 +363,7 @@ namespace DocumentFormat.OpenXml.Tests
             ValidationContext validationContext = new ValidationContext(new OpenXmlNamespaceResolver());
             OpenXmlElement errorChild;
 
-            Drawing.Blip blip = new Drawing.Blip();
+            D.Blip blip = new D.Blip();
             var particleConstraint = blip.Metadata.Particle.Particle.Build(Version);
             var target = particleConstraint.ParticleValidator as ParticleValidator;
             validationContext.Stack.Push(element: blip);
@@ -399,34 +401,34 @@ namespace DocumentFormat.OpenXml.Tests
             target.Validate(validationContext);
             Assert.True(validationContext.Valid);
 
-            blip.AppendChild(new Drawing.LuminanceEffect());
+            blip.AppendChild(new D.LuminanceEffect());
             target.Validate(validationContext);
             Assert.True(validationContext.Valid);
 
-            blip.AppendChild(new Drawing.LuminanceEffect());
+            blip.AppendChild(new D.LuminanceEffect());
             target.Validate(validationContext);
             Assert.True(validationContext.Valid);
 
-            blip.AppendChild(new Drawing.AlphaBiLevel());
+            blip.AppendChild(new D.AlphaBiLevel());
             target.Validate(validationContext);
             Assert.True(validationContext.Valid);
 
-            blip.AppendChild(new Drawing.Blur());
+            blip.AppendChild(new D.Blur());
             target.Validate(validationContext);
             Assert.True(validationContext.Valid);
 
-            blip.AppendChild(new Drawing.BiLevel());
+            blip.AppendChild(new D.BiLevel());
             target.Validate(validationContext);
             Assert.True(validationContext.Valid);
 
-            blip.AppendChild(new Drawing.BlipExtensionList());
+            blip.AppendChild(new D.BlipExtensionList());
             target.Validate(validationContext);
             Assert.True(validationContext.Valid);
 
             // ***** error case ******
             // ExtensionList can not be the first
             errorChild = blip.FirstChild;
-            blip.PrependChild(new Drawing.BlipExtensionList());
+            blip.PrependChild(new D.BlipExtensionList());
             target.Validate(validationContext);
             Assert.False(validationContext.Valid);
             Assert.Single(validationContext.Errors);
@@ -440,7 +442,7 @@ namespace DocumentFormat.OpenXml.Tests
             validationContext.Clear();
 
             // can only have one ExtensionList at last
-            errorChild = blip.AppendChild(new Drawing.BlipExtensionList());
+            errorChild = blip.AppendChild(new D.BlipExtensionList());
             target.Validate(validationContext);
             Assert.False(validationContext.Valid);
             Assert.Single(validationContext.Errors);

@@ -19,7 +19,7 @@ namespace DocumentFormat.OpenXml.Packaging
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.custom-properties+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/custom-properties";
-        private DocumentFormat.OpenXml.CustomProperties.Properties? _rootElement;
+        private DocumentFormat.OpenXml.OfficeDocument.Y2006.Custom_Properties.Properties? _rootElement;
 
         /// <summary>
         /// Creates an instance of the CustomFilePropertiesPart OpenXmlType
@@ -40,7 +40,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             set
             {
-                _rootElement = value as DocumentFormat.OpenXml.CustomProperties.Properties;
+                _rootElement = value as DocumentFormat.OpenXml.OfficeDocument.Y2006.Custom_Properties.Properties;
             }
         }
 
@@ -49,13 +49,13 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets or sets the root element of this part.
         /// </summary>
-        public DocumentFormat.OpenXml.CustomProperties.Properties Properties
+        public DocumentFormat.OpenXml.OfficeDocument.Y2006.Custom_Properties.Properties Properties
         {
             get
             {
                 if (_rootElement is null)
                 {
-                    LoadDomTree<DocumentFormat.OpenXml.CustomProperties.Properties>();
+                    LoadDomTree<DocumentFormat.OpenXml.OfficeDocument.Y2006.Custom_Properties.Properties>();
                 }
 
                 return _rootElement!;

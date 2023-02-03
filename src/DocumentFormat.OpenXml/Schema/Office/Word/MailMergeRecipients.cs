@@ -3,7 +3,7 @@
 
 using DocumentFormat.OpenXml.Packaging;
 
-namespace DocumentFormat.OpenXml.Office.Word
+namespace DocumentFormat.OpenXml.Office.Word.Y2006.WordML
 {
     /// <summary>
     /// Defines MailMergeRecipients.

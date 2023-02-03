@@ -2720,7 +2720,7 @@
       "Attributes": [
         {
           "QName": ":t",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.CellValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.CellValues\u003E",
           "Version": "Office2016",
           "PropertyComments": "t"
         },
@@ -3903,25 +3903,25 @@
         {
           "QName": ":type",
           "PropertyName": "Type",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.DataValidationValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.DataValidationValues\u003E",
           "PropertyComments": "type"
         },
         {
           "QName": ":errorStyle",
           "PropertyName": "ErrorStyle",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.DataValidationErrorStyleValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.DataValidationErrorStyleValues\u003E",
           "PropertyComments": "errorStyle"
         },
         {
           "QName": ":imeMode",
           "PropertyName": "ImeMode",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.DataValidationImeModeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.DataValidationImeModeValues\u003E",
           "PropertyComments": "imeMode"
         },
         {
           "QName": ":operator",
           "PropertyName": "Operator",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.DataValidationOperatorValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.DataValidationOperatorValues\u003E",
           "PropertyComments": "operator"
         },
         {

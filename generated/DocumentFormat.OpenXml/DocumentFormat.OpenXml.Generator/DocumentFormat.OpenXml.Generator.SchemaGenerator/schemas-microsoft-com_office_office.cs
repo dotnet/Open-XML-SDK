@@ -16,7 +16,7 @@ using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.Vml.Office
+namespace DocumentFormat.OpenXml.Office.Office.VML
 {
     /// <summary>
     /// <para>New Shape Defaults.</para>
@@ -26,12 +26,12 @@ namespace DocumentFormat.OpenXml.Vml.Office
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.Callout" /> <c>&lt;o:callout></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.ColorMenu" /> <c>&lt;o:colormenu></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.ColorMostRecentlyUsed" /> <c>&lt;o:colormru></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.Extrusion" /> <c>&lt;o:extrusion></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.Lock" /> <c>&lt;o:lock></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.Skew" /> <c>&lt;o:skew></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Office.VML.Callout" /> <c>&lt;o:callout></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Office.VML.ColorMenu" /> <c>&lt;o:colormenu></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Office.VML.ColorMostRecentlyUsed" /> <c>&lt;o:colormru></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Office.VML.Extrusion" /> <c>&lt;o:extrusion></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Office.VML.Lock" /> <c>&lt;o:lock></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Office.VML.Skew" /> <c>&lt;o:skew></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Fill" /> <c>&lt;v:fill></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.ImageData" /> <c>&lt;v:imagedata></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Shadow" /> <c>&lt;v:shadow></c></description></item>
@@ -178,9 +178,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>? InsetMode
+        public EnumValue<DocumentFormat.OpenXml.Office.Office.VML.InsetMarginValues>? InsetMode
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.Office.VML.InsetMarginValues>>();
             set => SetAttribute(value);
         }
 
@@ -188,12 +188,12 @@ namespace DocumentFormat.OpenXml.Vml.Office
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("o:shapedefaults");
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Callout>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.ColorMenu>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.ColorMostRecentlyUsed>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Extrusion>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Lock>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Skew>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Office.VML.Callout>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Office.VML.ColorMenu>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Office.VML.ColorMostRecentlyUsed>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Office.VML.Extrusion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Office.VML.Lock>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Office.VML.Skew>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Fill>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.ImageData>();
             builder.AddChild<DocumentFormat.OpenXml.Vml.Shadow>();
@@ -217,12 +217,12 @@ namespace DocumentFormat.OpenXml.Vml.Office
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Stroke), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.TextBox), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Shadow), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Skew), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Extrusion), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Callout), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Lock), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.ColorMostRecentlyUsed), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.ColorMenu), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Office.VML.Skew), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Office.VML.Extrusion), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Office.VML.Callout), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Office.VML.Lock), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Office.VML.ColorMostRecentlyUsed), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Office.VML.ColorMenu), 0, 1)
             };
         }
 
@@ -298,9 +298,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:o = urn:schemas-microsoft-com:office:office
         /// </remark>
-        public DocumentFormat.OpenXml.Vml.Office.Skew? Skew
+        public DocumentFormat.OpenXml.Office.Office.VML.Skew? Skew
         {
-            get => GetElement<DocumentFormat.OpenXml.Vml.Office.Skew>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Office.VML.Skew>();
             set => SetElement(value);
         }
 
@@ -311,9 +311,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:o = urn:schemas-microsoft-com:office:office
         /// </remark>
-        public DocumentFormat.OpenXml.Vml.Office.Extrusion? Extrusion
+        public DocumentFormat.OpenXml.Office.Office.VML.Extrusion? Extrusion
         {
-            get => GetElement<DocumentFormat.OpenXml.Vml.Office.Extrusion>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Office.VML.Extrusion>();
             set => SetElement(value);
         }
 
@@ -324,9 +324,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:o = urn:schemas-microsoft-com:office:office
         /// </remark>
-        public DocumentFormat.OpenXml.Vml.Office.Callout? Callout
+        public DocumentFormat.OpenXml.Office.Office.VML.Callout? Callout
         {
-            get => GetElement<DocumentFormat.OpenXml.Vml.Office.Callout>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Office.VML.Callout>();
             set => SetElement(value);
         }
 
@@ -337,9 +337,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:o = urn:schemas-microsoft-com:office:office
         /// </remark>
-        public DocumentFormat.OpenXml.Vml.Office.Lock? Lock
+        public DocumentFormat.OpenXml.Office.Office.VML.Lock? Lock
         {
-            get => GetElement<DocumentFormat.OpenXml.Vml.Office.Lock>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Office.VML.Lock>();
             set => SetElement(value);
         }
 
@@ -350,9 +350,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:o = urn:schemas-microsoft-com:office:office
         /// </remark>
-        public DocumentFormat.OpenXml.Vml.Office.ColorMostRecentlyUsed? ColorMostRecentlyUsed
+        public DocumentFormat.OpenXml.Office.Office.VML.ColorMostRecentlyUsed? ColorMostRecentlyUsed
         {
-            get => GetElement<DocumentFormat.OpenXml.Vml.Office.ColorMostRecentlyUsed>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Office.VML.ColorMostRecentlyUsed>();
             set => SetElement(value);
         }
 
@@ -363,9 +363,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:o = urn:schemas-microsoft-com:office:office
         /// </remark>
-        public DocumentFormat.OpenXml.Vml.Office.ColorMenu? ColorMenu
+        public DocumentFormat.OpenXml.Office.Office.VML.ColorMenu? ColorMenu
         {
-            get => GetElement<DocumentFormat.OpenXml.Vml.Office.ColorMenu>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Office.VML.ColorMenu>();
             set => SetElement(value);
         }
 
@@ -381,9 +381,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.ShapeIdMap" /> <c>&lt;o:idmap></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.RegroupTable" /> <c>&lt;o:regrouptable></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.Rules" /> <c>&lt;o:rules></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Office.VML.ShapeIdMap" /> <c>&lt;o:idmap></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Office.VML.RegroupTable" /> <c>&lt;o:regrouptable></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Office.VML.Rules" /> <c>&lt;o:rules></c></description></item>
     /// </list>
     /// </remark>
     public partial class ShapeLayout : TypedOpenXmlCompositeElement
@@ -436,16 +436,16 @@ namespace DocumentFormat.OpenXml.Vml.Office
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("o:shapelayout");
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.ShapeIdMap>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.RegroupTable>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Rules>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Office.VML.ShapeIdMap>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Office.VML.RegroupTable>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Office.VML.Rules>();
             builder.AddElement<ShapeLayout>()
                 .AddAttribute("v:ext", a => a.Extension);
             builder.Particle = new CompositeParticle.Builder(ParticleType.All, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.ShapeIdMap), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.RegroupTable), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Rules), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Office.VML.ShapeIdMap), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Office.VML.RegroupTable), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Office.VML.Rules), 0, 1)
             };
         }
 
@@ -456,9 +456,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:o = urn:schemas-microsoft-com:office:office
         /// </remark>
-        public DocumentFormat.OpenXml.Vml.Office.ShapeIdMap? ShapeIdMap
+        public DocumentFormat.OpenXml.Office.Office.VML.ShapeIdMap? ShapeIdMap
         {
-            get => GetElement<DocumentFormat.OpenXml.Vml.Office.ShapeIdMap>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Office.VML.ShapeIdMap>();
             set => SetElement(value);
         }
 
@@ -469,9 +469,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:o = urn:schemas-microsoft-com:office:office
         /// </remark>
-        public DocumentFormat.OpenXml.Vml.Office.RegroupTable? RegroupTable
+        public DocumentFormat.OpenXml.Office.Office.VML.RegroupTable? RegroupTable
         {
-            get => GetElement<DocumentFormat.OpenXml.Vml.Office.RegroupTable>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Office.VML.RegroupTable>();
             set => SetElement(value);
         }
 
@@ -482,9 +482,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:o = urn:schemas-microsoft-com:office:office
         /// </remark>
-        public DocumentFormat.OpenXml.Vml.Office.Rules? Rules
+        public DocumentFormat.OpenXml.Office.Office.VML.Rules? Rules
         {
-            get => GetElement<DocumentFormat.OpenXml.Vml.Office.Rules>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Office.VML.Rules>();
             set => SetElement(value);
         }
 
@@ -734,7 +734,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.RelationTable" /> <c>&lt;o:relationtable></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Office.VML.RelationTable" /> <c>&lt;o:relationtable></c></description></item>
     /// </list>
     /// </remark>
     public partial class Diagram : TypedOpenXmlCompositeElement
@@ -877,7 +877,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("o:diagram");
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.RelationTable>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Office.VML.RelationTable>();
             builder.AddElement<Diagram>()
                 .AddAttribute("v:ext", a => a.Extension)
                 .AddAttribute("dgmstyle", a => a.Style)
@@ -891,7 +891,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
                 .AddAttribute("dgmbasetextscale", a => a.BaseTextScale);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.RelationTable), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Office.VML.RelationTable), 0, 1)
             };
         }
 
@@ -902,9 +902,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:o = urn:schemas-microsoft-com:office:office
         /// </remark>
-        public DocumentFormat.OpenXml.Vml.Office.RelationTable? RelationTable
+        public DocumentFormat.OpenXml.Office.Office.VML.RelationTable? RelationTable
         {
-            get => GetElement<DocumentFormat.OpenXml.Vml.Office.RelationTable>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Office.VML.RelationTable>();
             set => SetElement(value);
         }
 
@@ -1047,9 +1047,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Extrusion Type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.ExtrusionValues>? Type
+        public EnumValue<DocumentFormat.OpenXml.Office.Office.VML.ExtrusionValues>? Type
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.ExtrusionValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.Office.VML.ExtrusionValues>>();
             set => SetAttribute(value);
         }
 
@@ -1057,9 +1057,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Extrusion Render Mode</para>
         /// <para>Represents the following attribute in the schema: render</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.ExtrusionRenderValues>? Render
+        public EnumValue<DocumentFormat.OpenXml.Office.Office.VML.ExtrusionRenderValues>? Render
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.ExtrusionRenderValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.Office.VML.ExtrusionRenderValues>>();
             set => SetAttribute(value);
         }
 
@@ -1440,9 +1440,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Callout angle</para>
         /// <para>Represents the following attribute in the schema: angle</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.AngleValues>? Angle
+        public EnumValue<DocumentFormat.OpenXml.Office.Office.VML.AngleValues>? Angle
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.AngleValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.Office.VML.AngleValues>>();
             set => SetAttribute(value);
         }
 
@@ -1730,9 +1730,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.LinkType" /> <c>&lt;o:LinkType></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.LockedField" /> <c>&lt;o:LockedField></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.FieldCodes" /> <c>&lt;o:FieldCodes></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Office.VML.LinkType" /> <c>&lt;o:LinkType></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Office.VML.LockedField" /> <c>&lt;o:LockedField></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Office.VML.FieldCodes" /> <c>&lt;o:FieldCodes></c></description></item>
     /// </list>
     /// </remark>
     public partial class OleObject : TypedOpenXmlCompositeElement
@@ -1772,9 +1772,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>OLE Object Type</para>
         /// <para>Represents the following attribute in the schema: Type</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.OleValues>? Type
+        public EnumValue<DocumentFormat.OpenXml.Office.Office.VML.OleValues>? Type
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.OleValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.Office.VML.OleValues>>();
             set => SetAttribute(value);
         }
 
@@ -1802,9 +1802,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>OLE Object Representation</para>
         /// <para>Represents the following attribute in the schema: DrawAspect</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.OleDrawAspectValues>? DrawAspect
+        public EnumValue<DocumentFormat.OpenXml.Office.Office.VML.OleDrawAspectValues>? DrawAspect
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.OleDrawAspectValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.Office.VML.OleDrawAspectValues>>();
             set => SetAttribute(value);
         }
 
@@ -1835,9 +1835,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>OLE Update Mode</para>
         /// <para>Represents the following attribute in the schema: UpdateMode</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.OleUpdateModeValues>? UpdateMode
+        public EnumValue<DocumentFormat.OpenXml.Office.Office.VML.OleUpdateModeValues>? UpdateMode
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.OleUpdateModeValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.Office.VML.OleUpdateModeValues>>();
             set => SetAttribute(value);
         }
 
@@ -1845,9 +1845,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("o:OLEObject");
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.LinkType>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.LockedField>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.FieldCodes>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Office.VML.LinkType>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Office.VML.LockedField>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Office.VML.FieldCodes>();
             builder.AddElement<OleObject>()
                 .AddAttribute("Type", a => a.Type)
                 .AddAttribute("ProgID", a => a.ProgId)
@@ -1858,9 +1858,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
                 .AddAttribute("UpdateMode", a => a.UpdateMode);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.LinkType), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.LockedField), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.FieldCodes), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Office.VML.LinkType), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Office.VML.LockedField), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Office.VML.FieldCodes), 0, 1)
             };
             builder.AddConstraint(new AttributeValuePatternConstraint(builder.CreateQName("ovml:ObjectID"), @"_(\d{1,9}|1\d{9}|20\d{8}|21[0-3]\d{7}|214[0-6]\d{6}|2147[0-3]\d{5}|21474[0-7]\d{4}|214748[0-2]\d{3}|2147483[0-5]\d{2}|21474836[0-3]\d|214748364[0-7])"));
             builder.AddConstraint(new ReferenceExistConstraint(builder.CreateQName(":ShapeID"), ".", builder.CreateQName("v:shape"), "v:shape", builder.CreateQName(":id")));
@@ -1873,9 +1873,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:o = urn:schemas-microsoft-com:office:office
         /// </remark>
-        public DocumentFormat.OpenXml.Vml.Office.LinkType? LinkType
+        public DocumentFormat.OpenXml.Office.Office.VML.LinkType? LinkType
         {
-            get => GetElement<DocumentFormat.OpenXml.Vml.Office.LinkType>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Office.VML.LinkType>();
             set => SetElement(value);
         }
 
@@ -1886,9 +1886,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:o = urn:schemas-microsoft-com:office:office
         /// </remark>
-        public DocumentFormat.OpenXml.Vml.Office.LockedField? LockedField
+        public DocumentFormat.OpenXml.Office.Office.VML.LockedField? LockedField
         {
-            get => GetElement<DocumentFormat.OpenXml.Vml.Office.LockedField>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Office.VML.LockedField>();
             set => SetElement(value);
         }
 
@@ -1899,9 +1899,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <remark>
         /// xmlns:o = urn:schemas-microsoft-com:office:office
         /// </remark>
-        public DocumentFormat.OpenXml.Vml.Office.FieldCodes? FieldCodes
+        public DocumentFormat.OpenXml.Office.Office.VML.FieldCodes? FieldCodes
         {
-            get => GetElement<DocumentFormat.OpenXml.Vml.Office.FieldCodes>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Office.VML.FieldCodes>();
             set => SetElement(value);
         }
 
@@ -2477,9 +2477,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Fill Type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.FillValues>? Type
+        public EnumValue<DocumentFormat.OpenXml.Office.Office.VML.FillValues>? Type
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.FillValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.Office.VML.FillValues>>();
             set => SetAttribute(value);
         }
 
@@ -2554,7 +2554,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.Entry" /> <c>&lt;o:entry></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Office.VML.Entry" /> <c>&lt;o:entry></c></description></item>
     /// </list>
     /// </remark>
     public partial class RegroupTable : TypedOpenXmlCompositeElement
@@ -2607,12 +2607,12 @@ namespace DocumentFormat.OpenXml.Vml.Office
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("o:regrouptable");
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Entry>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Office.VML.Entry>();
             builder.AddElement<RegroupTable>()
                 .AddAttribute("v:ext", a => a.Extension);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Entry), 0, 0)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Office.VML.Entry), 0, 0)
             };
         }
 
@@ -2628,7 +2628,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.Rule" /> <c>&lt;o:r></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Office.VML.Rule" /> <c>&lt;o:r></c></description></item>
     /// </list>
     /// </remark>
     public partial class Rules : TypedOpenXmlCompositeElement
@@ -2681,12 +2681,12 @@ namespace DocumentFormat.OpenXml.Vml.Office
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("o:rules");
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Rule>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Office.VML.Rule>();
             builder.AddElement<Rules>()
                 .AddAttribute("v:ext", a => a.Extension);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Rule), 0, 0)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Office.VML.Rule), 0, 0)
             };
         }
 
@@ -2749,7 +2749,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.Proxy" /> <c>&lt;o:proxy></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Office.VML.Proxy" /> <c>&lt;o:proxy></c></description></item>
     /// </list>
     /// </remark>
     public partial class Rule : TypedOpenXmlCompositeElement
@@ -2799,9 +2799,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Rule Type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.RuleValues>? Type
+        public EnumValue<DocumentFormat.OpenXml.Office.Office.VML.RuleValues>? Type
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.RuleValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.Office.VML.RuleValues>>();
             set => SetAttribute(value);
         }
 
@@ -2809,9 +2809,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Alignment Rule Type</para>
         /// <para>Represents the following attribute in the schema: how</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Vml.Office.AlignmentValues>? How
+        public EnumValue<DocumentFormat.OpenXml.Office.Office.VML.AlignmentValues>? How
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.AlignmentValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.Office.VML.AlignmentValues>>();
             set => SetAttribute(value);
         }
 
@@ -2829,7 +2829,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("o:r");
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Proxy>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Office.VML.Proxy>();
             builder.AddElement<Rule>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
                 {
@@ -2843,7 +2843,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Proxy), 0, 0)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Office.VML.Proxy), 0, 0)
             };
         }
 
@@ -2859,7 +2859,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.Relation" /> <c>&lt;o:rel></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Office.VML.Relation" /> <c>&lt;o:rel></c></description></item>
     /// </list>
     /// </remark>
     public partial class RelationTable : TypedOpenXmlCompositeElement
@@ -2912,12 +2912,12 @@ namespace DocumentFormat.OpenXml.Vml.Office
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("o:relationtable");
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Office.Relation>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Office.VML.Relation>();
             builder.AddElement<RelationTable>()
                 .AddAttribute("v:ext", a => a.Extension);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Office.Relation), 0, 0)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Office.VML.Relation), 0, 0)
             };
         }
 
@@ -3030,13 +3030,13 @@ namespace DocumentFormat.OpenXml.Vml.Office
 
         internal override OpenXmlSimpleType InnerTextToValue(string text)
         {
-            return new EnumValue<DocumentFormat.OpenXml.Vml.Office.OleLinkValues> { InnerText = text };
+            return new EnumValue<DocumentFormat.OpenXml.Office.Office.VML.OleLinkValues> { InnerText = text };
         }
 
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Office.OleLinkValues>>(EnumValidator.Instance);
+            builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Office.Office.VML.OleLinkValues>>(EnumValidator.Instance);
             builder.SetSchema("o:LinkType");
         }
 

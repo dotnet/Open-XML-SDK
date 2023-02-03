@@ -2,15 +2,24 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Packaging;
-using DocumentFormat.OpenXml.Presentation;
+using DocumentFormat.OpenXml.PresentationML.Y2006.Main;
 using DocumentFormat.OpenXml.Validation;
-using DocumentFormat.OpenXml.Wordprocessing;
+using DocumentFormat.OpenXml.WordprocessingML.Y2006.Main;
 using System;
 using System.Linq;
 using Xunit;
 using Xunit.Abstractions;
 
 using static DocumentFormat.OpenXml.Tests.TestAssets;
+
+using D = DocumentFormat.OpenXml.DrawingML.Y2006.Main;
+using DC = DocumentFormat.OpenXml.DrawingML.Y2006.Chart;
+using Dgm = DocumentFormat.OpenXml.DrawingML.Y2006.Diagram;
+using DS = DocumentFormat.OpenXml.DrawingML.Y2006.SpreadSheetDrawing;
+using DW = DocumentFormat.OpenXml.DrawingML.Y2006.WordprocessingDrawing;
+using EP = DocumentFormat.OpenXml.OfficeDocument.Y2006.Extended_Properties;
+using S = DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main;
+using W = DocumentFormat.OpenXml.WordprocessingML.Y2006.Main;
 
 namespace DocumentFormat.OpenXml.Tests
 {
@@ -34,7 +43,7 @@ namespace DocumentFormat.OpenXml.Tests
             //    <xsd:element name="color" type="x:CT_Color" minOccurs="2" maxOccurs="unbounded">
             //  </xsd:sequence>
             // </xsd:complexType>
-            DocumentFormat.OpenXml.Spreadsheet.ColorScale colorScale = new DocumentFormat.OpenXml.Spreadsheet.ColorScale(
+            S.ColorScale colorScale = new S.ColorScale(
 "<x:colorScale xmlns:x=\"http://schemas.openxmlformats.org/spreadsheetml/2006/main\">" +
 "    <x:cfvo type=\"min\" val=\"0\" />" +
 "    <x:color theme=\"4\" />" +
@@ -46,11 +55,11 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal("Sch_UnexpectedElementContentExpectingComplex", results.First().Id);
             Assert.EndsWith(":cfvo>.", results.First().Description);
 
-            colorScale.PrependChild(new DocumentFormat.OpenXml.Spreadsheet.ConditionalFormatValueObject() { Type = DocumentFormat.OpenXml.Spreadsheet.ConditionalFormatValueObjectValues.Min });
+            colorScale.PrependChild(new S.ConditionalFormatValueObject() { Type = S.ConditionalFormatValueObjectValues.Min });
             results = validator.Validate(colorScale);
             Assert.Empty(results);
 
-            colorScale.PrependChild(new DocumentFormat.OpenXml.Spreadsheet.ConditionalFormatValueObject() { Type = DocumentFormat.OpenXml.Spreadsheet.ConditionalFormatValueObjectValues.Max });
+            colorScale.PrependChild(new S.ConditionalFormatValueObject() { Type = S.ConditionalFormatValueObjectValues.Max });
             results = validator.Validate(colorScale);
             Assert.Empty(results);
 
@@ -60,8 +69,8 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal("Sch_IncompleteContentExpectingComplex", results.First().Id);
             Assert.EndsWith(":color>.", results.First().Description);
 
-            colorScale.Append(new DocumentFormat.OpenXml.Spreadsheet.Color());
-            colorScale.Append(new DocumentFormat.OpenXml.Spreadsheet.Color());
+            colorScale.Append(new S.Color());
+            colorScale.Append(new S.Color());
             results = validator.Validate(colorScale);
             Assert.Empty(results);
         }
@@ -87,7 +96,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             // one error, w:rPr should before the w:t
             p.AppendChild(new Run(
-                new DocumentFormat.OpenXml.Wordprocessing.Text() { Text = "Acb" },
+                new W.Text() { Text = "Acb" },
                 new RunProperties(new RunFonts() { Hint = FontTypeHintValues.EastAsia })));
 
             // an empty "AlternateContent"
@@ -128,7 +137,7 @@ namespace DocumentFormat.OpenXml.Tests
         {
             var validator = new OpenXmlValidator(version);
 
-            var element = new DocumentFormat.OpenXml.Presentation.ModificationVerifier();
+            var element = new ModificationVerifier();
             element.SaltData = "8fkqu/A/6B1OQrRX1Vb3oQ";
 
             var errors = validator.Validate(element);
@@ -150,7 +159,7 @@ namespace DocumentFormat.OpenXml.Tests
         {
             var validator = new OpenXmlValidator(version);
 
-            var element = new DocumentFormat.OpenXml.Presentation.ModificationVerifier();
+            var element = new ModificationVerifier();
             element.SaltData = "8fkqu/A/6B1OQrRX1Vb3oQ";
 
             var errors = validator.Validate(element);
@@ -244,7 +253,7 @@ namespace DocumentFormat.OpenXml.Tests
         {
             var validator = new OpenXmlValidator(version);
 
-            DocumentFormat.OpenXml.Wordprocessing.StatusText st = new StatusText();
+            StatusText st = new StatusText();
             st.Val = "111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111";
 
             var errors = validator.Validate(st);
@@ -266,7 +275,7 @@ namespace DocumentFormat.OpenXml.Tests
         {
             var validator = new OpenXmlValidator(version);
 
-            DocumentFormat.OpenXml.Ink.Y2010.Main.ContextNode cn = new DocumentFormat.OpenXml.Ink.Y2010.Main.ContextNode() { Type = "root" };
+            Ink.Y2010.Main.ContextNode cn = new Ink.Y2010.Main.ContextNode() { Type = "root" };
 
             cn.RotatedBoundingBox = new ListValue<StringValue>();
             cn.RotatedBoundingBox.Items.Add("aaa");
@@ -291,7 +300,7 @@ namespace DocumentFormat.OpenXml.Tests
         {
             var validator = new OpenXmlValidator(version);
 
-            DocumentFormat.OpenXml.Wordprocessing.StylePaneSortMethods spsm = new StylePaneSortMethods();
+            StylePaneSortMethods spsm = new StylePaneSortMethods();
             spsm.Val = new StringValue();
             spsm.Val.Value = "aaaaaa";
 
@@ -316,7 +325,7 @@ namespace DocumentFormat.OpenXml.Tests
         {
             var validator = new OpenXmlValidator(version);
 
-            DocumentFormat.OpenXml.Wordprocessing.StylePaneSortMethods spsm = new StylePaneSortMethods();
+            StylePaneSortMethods spsm = new StylePaneSortMethods();
             spsm.Val = new StringValue();
             spsm.Val.Value = "aaaaaa";
 
@@ -339,12 +348,12 @@ namespace DocumentFormat.OpenXml.Tests
         {
             var validator = new OpenXmlValidator(version);
 
-            DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.FormControlProperties fp = new DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.FormControlProperties();
+            Office.SpreadSheetML.Y2009.M09.Main.FormControlProperties fp = new Office.SpreadSheetML.Y2009.M09.Main.FormControlProperties();
 
             var errors = validator.Validate(fp);
             Assert.Empty(errors);
 
-            fp.AppendChild(new DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.BorderColor());
+            fp.AppendChild(new Office.SpreadSheetML.Y2009.M09.Main.BorderColor());
             errors = validator.Validate(fp);
             Assert.Single(errors);
             Assert.Equal(ValidationErrorType.Schema, errors.First().ErrorType);
@@ -357,10 +366,10 @@ namespace DocumentFormat.OpenXml.Tests
         {
             var validator = new OpenXmlValidator(version);
 
-            var element = new DocumentFormat.OpenXml.Spreadsheet.OleObject() { ShapeId = 1 };
+            var element = new S.OleObject() { ShapeId = 1 };
 
             // the EmbeddedObjectProperties is only valid in Office2010.
-            element.EmbeddedObjectProperties = new DocumentFormat.OpenXml.Spreadsheet.EmbeddedObjectProperties();
+            element.EmbeddedObjectProperties = new S.EmbeddedObjectProperties();
 
             // In Office2007, the OleObject has no children.
             var errors = validator.Validate(element);
@@ -384,11 +393,13 @@ namespace DocumentFormat.OpenXml.Tests
         {
             var validator = new OpenXmlValidator(version);
 
-            DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapSquare element = new DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapSquare();
+            DW.WrapSquare element = new();
 
-            element.WrapText = DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapTextValues.Left;
-            element.DistanceFromLeft = new UInt32Value();
-            element.DistanceFromLeft.InnerText = "Foo";
+            element.WrapText = DW.WrapTextValues.Left;
+            element.DistanceFromLeft = new UInt32Value
+            {
+                InnerText = "Foo",
+            };
 
             var errors = validator.Validate(element);
             Assert.Single(errors);
@@ -441,8 +452,8 @@ namespace DocumentFormat.OpenXml.Tests
         {
             var validator = new OpenXmlValidator(version);
 
-            var shape = new DocumentFormat.OpenXml.Drawing.Spreadsheet.Shape();
-            shape.TextBody = new DocumentFormat.OpenXml.Drawing.Spreadsheet.TextBody();
+            var shape = new DS.Shape();
+            shape.TextBody = new DS.TextBody();
             var errors = validator.Validate(shape);
 
             Assert.Collection(
@@ -471,7 +482,7 @@ namespace DocumentFormat.OpenXml.Tests
         {
             var validator = new OpenXmlValidator(version);
 
-            DocumentFormat.OpenXml.ExtendedProperties.DocumentSecurity docsecurity = new DocumentFormat.OpenXml.ExtendedProperties.DocumentSecurity();
+            EP.DocumentSecurity docsecurity = new EP.DocumentSecurity();
 
             var errors = validator.Validate(docsecurity);
 
@@ -512,8 +523,8 @@ namespace DocumentFormat.OpenXml.Tests
         {
             var validator = new OpenXmlValidator(version);
 
-            DocumentFormat.OpenXml.Drawing.Charts.Trendline tl = new DocumentFormat.OpenXml.Drawing.Charts.Trendline();
-            tl.AppendChild(new DocumentFormat.OpenXml.Drawing.Diagrams.ShapeProperties());
+            DC.Trendline tl = new DC.Trendline();
+            tl.AppendChild(new Dgm.ShapeProperties());
             var errors = validator.Validate(tl);
             Assert.Single(errors);
             Assert.Same(tl, errors.First().Node);
@@ -525,7 +536,7 @@ namespace DocumentFormat.OpenXml.Tests
         {
             var validator = new OpenXmlValidator(version);
 
-            var p = new Paragraph(new DocumentFormat.OpenXml.Wordprocessing.SectionProperties());
+            var p = new Paragraph(new SectionProperties());
             var errors = validator.Validate(p);
             Assert.Single(errors);
             Assert.Same(p, errors.First().Node);
@@ -553,12 +564,12 @@ namespace DocumentFormat.OpenXml.Tests
             var validator = new OpenXmlValidator(version);
 
             // change <xsd:any > to <xsd:any minOccurs=0 in CT_OfficeArtExtension"
-            DocumentFormat.OpenXml.Drawing.Extension ext = new DocumentFormat.OpenXml.Drawing.Extension() { Uri = "test" };
+            D.Extension ext = new D.Extension() { Uri = "test" };
             var errors = validator.Validate(ext);
             Assert.Empty(errors);
 
             // CT_Extension in PPT, <xsd:any > without minOccurs
-            var pext = new DocumentFormat.OpenXml.Presentation.Extension();
+            var pext = new Extension();
             pext.Uri = "http://www.live.com";
             errors = validator.Validate(pext);
             Assert.Single(errors);
@@ -571,7 +582,7 @@ namespace DocumentFormat.OpenXml.Tests
         {
             var validator = new OpenXmlValidator(version);
 
-            var element = new DocumentFormat.OpenXml.Drawing.Spreadsheet.Shape();
+            var element = new DS.Shape();
             var errors = validator.Validate(element);
             Assert.Single(errors);
             Assert.Equal("The element has incomplete content.".Length, errors.First().Description.LastIndexOf(" List of possible elements expected:"));
@@ -583,12 +594,12 @@ namespace DocumentFormat.OpenXml.Tests
         {
             var validator = new OpenXmlValidator(version);
 
-            var element = new DocumentFormat.OpenXml.Drawing.Spreadsheet.Shape();
+            var element = new DS.Shape();
             var errors = validator.Validate(element);
             Assert.Single(errors);
             Assert.Equal("The element has incomplete content.".Length, errors.First().Description.LastIndexOf(" List of possible elements expected:"));
 
-            element.AppendChild(new DocumentFormat.OpenXml.Drawing.Spreadsheet.TextBody());
+            element.AppendChild(new DS.TextBody());
             var errors2 = validator.Validate(element);
             Assert.Equal(2, errors2.Count());
 
@@ -604,14 +615,14 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Bug448241()
         {
-            DocumentFormat.OpenXml.Wordprocessing.TableCellMarginDefault tablecellmar = new DocumentFormat.OpenXml.Wordprocessing.TableCellMarginDefault();
-            var wrongChild = tablecellmar.AppendChild(new DocumentFormat.OpenXml.Wordprocessing.LeftMargin());
+            TableCellMarginDefault tablecellmar = new TableCellMarginDefault();
+            var wrongChild = tablecellmar.AppendChild(new LeftMargin());
             var leftmar = tablecellmar.TableCellLeftMargin;
 
             // should be null, as the correct child should be TableCellLeftMargin
             Assert.Null(leftmar);
 
-            tablecellmar.AppendChild(new DocumentFormat.OpenXml.Wordprocessing.BottomMargin());
+            tablecellmar.AppendChild(new BottomMargin());
             Assert.Null(leftmar);
 
             // **** Set a correct left.
@@ -641,13 +652,13 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Same(wrongChild, tablecellmar.FirstChild.NextSibling());
 
             // =========== case for xsd:choice ==============
-            var shapeTaget = new DocumentFormat.OpenXml.Presentation.ShapeTarget();
-            var wrongBg = shapeTaget.AppendChild(new DocumentFormat.OpenXml.Presentation.Background());
+            var shapeTaget = new ShapeTarget();
+            var wrongBg = shapeTaget.AppendChild(new Background());
 
             Assert.Null(shapeTaget.BackgroundAnimation);
 
             // **** set a correct one.
-            var correctBg = shapeTaget.BackgroundAnimation = new DocumentFormat.OpenXml.Presentation.BackgroundAnimation();
+            var correctBg = shapeTaget.BackgroundAnimation = new BackgroundAnimation();
 
             Assert.Equal(2, shapeTaget.ChildElements.Count);
             Assert.Same(correctBg, shapeTaget.BackgroundAnimation);
@@ -668,7 +679,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 part.Recipients = new Recipients();
 
-                Assert.Throws<InvalidOperationException>(() => part.MailMergeRecipients = new DocumentFormat.OpenXml.Office.Word.MailMergeRecipients());
+                Assert.Throws<InvalidOperationException>(() => part.MailMergeRecipients = new Office.Word.Y2006.WordML.MailMergeRecipients());
             }
         }
 
@@ -694,7 +705,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Bug544244()
         {
-            var pageMargins = new DocumentFormat.OpenXml.Spreadsheet.PageMargins();
+            var pageMargins = new S.PageMargins();
             pageMargins.Header = new DoubleValue();
             pageMargins.Header.InnerText = "0.51200000000000001";
             pageMargins.Top = 1;
@@ -708,7 +719,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Bug665268()
         {
-            var comment = new DocumentFormat.OpenXml.Wordprocessing.Comment();
+            var comment = new W.Comment();
             comment.Date = new DateTimeValue();
             comment.Date.InnerText = "2007-04-24T15:42:11.037";
             Assert.True(comment.Date.HasValue);

@@ -11,7 +11,7 @@ using Xunit;
 
 using static DocumentFormat.OpenXml.Tests.TestAssets;
 
-using A = DocumentFormat.OpenXml.Drawing;
+using A = DocumentFormat.OpenXml.DrawingML.Y2006.Main;
 using We = DocumentFormat.OpenXml.Office.WebExtensions.WebExtensions.Y2010.M11;
 using Wetp = DocumentFormat.OpenXml.Office.WebExtensions.TaskPanes.Y2010.M11;
 

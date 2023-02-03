@@ -1189,7 +1189,7 @@
         {
           "QName": ":growShrinkType",
           "PropertyName": "GrowShrinkType",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.GrowShrinkValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.GrowShrinkValues\u003E",
           "PropertyComments": "growShrinkType"
         },
         {
@@ -2857,7 +2857,7 @@
         {
           "QName": ":tableType",
           "PropertyName": "TableType",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.TableValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.TableValues\u003E",
           "PropertyComments": "Table Type"
         },
         {
@@ -3072,7 +3072,7 @@
         {
           "QName": ":conformance",
           "PropertyName": "Conformance",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.ConformanceClass\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.ConformanceClass\u003E",
           "PropertyComments": "conformance"
         }
       ],
@@ -3472,7 +3472,7 @@
         {
           "QName": ":sortMethod",
           "PropertyName": "SortMethod",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.SortMethodValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.SortMethodValues\u003E",
           "PropertyComments": "Sort Method"
         },
         {
@@ -3581,7 +3581,7 @@
         {
           "QName": ":operator",
           "PropertyName": "Operator",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.FilterOperatorValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.FilterOperatorValues\u003E",
           "PropertyComments": "Filter Comparison Operator"
         },
         {
@@ -4279,7 +4279,7 @@
         {
           "QName": ":credentials",
           "PropertyName": "Credentials",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.CredentialsMethodValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.CredentialsMethodValues\u003E",
           "PropertyComments": "credentials"
         },
         {
@@ -4435,7 +4435,7 @@
         {
           "QName": ":parameterType",
           "PropertyName": "ParameterType",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.ParameterValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.ParameterValues\u003E",
           "PropertyComments": "Parameter Type"
         },
         {
@@ -4539,7 +4539,7 @@
         {
           "QName": ":type",
           "PropertyName": "Type",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.ExternalConnectionValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.ExternalConnectionValues\u003E",
           "PropertyComments": "Field Type"
         },
         {
@@ -6259,7 +6259,7 @@
         {
           "QName": ":sortType",
           "PropertyName": "SortType",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.SortValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.SortValues\u003E",
           "PropertyComments": "Set Sort Order"
         },
         {
@@ -6402,7 +6402,7 @@
         {
           "QName": ":type",
           "PropertyName": "Type",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.PivotAreaValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.PivotAreaValues\u003E",
           "PropertyComments": "Rule Type"
         },
         {
@@ -6456,7 +6456,7 @@
         {
           "QName": ":axis",
           "PropertyName": "Axis",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.PivotTableAxisValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.PivotTableAxisValues\u003E",
           "PropertyComments": "Axis"
         },
         {
@@ -6601,7 +6601,7 @@
         {
           "QName": ":axis",
           "PropertyName": "Axis",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.PivotTableAxisValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.PivotTableAxisValues\u003E",
           "PropertyComments": "Axis"
         },
         {
@@ -6763,7 +6763,7 @@
         {
           "QName": ":sortType",
           "PropertyName": "SortType",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.FieldSortValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.FieldSortValues\u003E",
           "PropertyComments": "Auto Sort Type"
         },
         {
@@ -6944,7 +6944,7 @@
         {
           "QName": ":t",
           "PropertyName": "ItemType",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.ItemValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.ItemValues\u003E",
           "PropertyComments": "Item Type"
         },
         {
@@ -7030,13 +7030,13 @@
         {
           "QName": ":subtotal",
           "PropertyName": "Subtotal",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.DataConsolidateFunctionValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.DataConsolidateFunctionValues\u003E",
           "PropertyComments": "subtotal"
         },
         {
           "QName": ":showDataAs",
           "PropertyName": "ShowDataAs",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.ShowDataAsValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.ShowDataAsValues\u003E",
           "PropertyComments": "showDataAs"
         },
         {
@@ -7087,7 +7087,7 @@
         {
           "QName": ":t",
           "PropertyName": "ItemType",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.ItemValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.ItemValues\u003E",
           "PropertyComments": "Item Type"
         },
         {
@@ -7150,7 +7150,7 @@
         {
           "QName": ":action",
           "PropertyName": "Action",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.FormatActionValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.FormatActionValues\u003E",
           "PropertyComments": "Format Action"
         },
         {
@@ -7199,13 +7199,13 @@
         {
           "QName": ":scope",
           "PropertyName": "Scope",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.ScopeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.ScopeValues\u003E",
           "PropertyComments": "Conditional Formatting Scope"
         },
         {
           "QName": ":type",
           "PropertyName": "Type",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.RuleValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.RuleValues\u003E",
           "PropertyComments": "Conditional Formatting Rule Type"
         },
         {
@@ -7707,7 +7707,7 @@
         {
           "QName": ":type",
           "PropertyName": "Type",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.PivotFilterValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.PivotFilterValues\u003E",
           "PropertyComments": "type",
           "Validators": [
             {
@@ -8012,7 +8012,7 @@
         {
           "QName": ":groupBy",
           "PropertyName": "GroupBy",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.GroupByValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.GroupByValues\u003E",
           "PropertyComments": "Group By"
         },
         {
@@ -8837,7 +8837,7 @@
         {
           "QName": ":val",
           "PropertyName": "Val",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.UnderlineValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.UnderlineValues\u003E",
           "PropertyComments": "Underline Value"
         }
       ]
@@ -8852,7 +8852,7 @@
         {
           "QName": ":val",
           "PropertyName": "Val",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.VerticalAlignmentRunValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.VerticalAlignmentRunValues\u003E",
           "PropertyComments": "Value",
           "Validators": [
             {
@@ -9034,7 +9034,7 @@
         {
           "QName": ":val",
           "PropertyName": "Val",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.FontSchemeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.FontSchemeValues\u003E",
           "PropertyComments": "Font Scheme",
           "Validators": [
             {
@@ -9329,13 +9329,13 @@
         {
           "QName": ":type",
           "PropertyName": "Type",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.PhoneticValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.PhoneticValues\u003E",
           "PropertyComments": "Character Type"
         },
         {
           "QName": ":alignment",
           "PropertyName": "Alignment",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.PhoneticAlignmentValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.PhoneticAlignmentValues\u003E",
           "PropertyComments": "Alignment"
         }
       ]
@@ -9532,7 +9532,7 @@
         {
           "QName": ":action",
           "PropertyName": "Action",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.RowColumnActionValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.RowColumnActionValues\u003E",
           "PropertyComments": "User Action",
           "Validators": [
             {
@@ -9729,7 +9729,7 @@
         {
           "QName": ":action",
           "PropertyName": "Action",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.RevisionActionValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.RevisionActionValues\u003E",
           "PropertyComments": "User Action",
           "Validators": [
             {
@@ -10484,7 +10484,7 @@
         {
           "QName": ":action",
           "PropertyName": "Action",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.RevisionActionValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.RevisionActionValues\u003E",
           "PropertyComments": "User Action"
         },
         {
@@ -10722,7 +10722,7 @@
         {
           "QName": ":exp",
           "PropertyName": "Expression",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.FormulaExpressionValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.FormulaExpressionValues\u003E",
           "PropertyComments": "Expression",
           "Validators": [
             {
@@ -10948,7 +10948,7 @@
         {
           "QName": ":t",
           "PropertyName": "DataType",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.CellValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.CellValues\u003E",
           "PropertyComments": "Cell Data Type"
         },
         {
@@ -11026,7 +11026,7 @@
         {
           "QName": ":t",
           "PropertyName": "DataType",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.CellValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.CellValues\u003E",
           "PropertyComments": "Cell Data Type"
         },
         {
@@ -11510,7 +11510,7 @@
         {
           "QName": ":t",
           "PropertyName": "FormulaType",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.CellFormulaValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.CellFormulaValues\u003E",
           "PropertyComments": "Formula Type"
         },
         {
@@ -11961,13 +11961,13 @@
         {
           "QName": ":activePane",
           "PropertyName": "ActivePane",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.PaneValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.PaneValues\u003E",
           "PropertyComments": "Active Pane"
         },
         {
           "QName": ":state",
           "PropertyName": "State",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.PaneStateValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.PaneStateValues\u003E",
           "PropertyComments": "Split State"
         }
       ]
@@ -11982,7 +11982,7 @@
         {
           "QName": ":pane",
           "PropertyName": "Pane",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.PaneValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.PaneValues\u003E",
           "PropertyComments": "Pane"
         },
         {
@@ -12015,7 +12015,7 @@
         {
           "QName": ":pane",
           "PropertyName": "Pane",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.PaneValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.PaneValues\u003E",
           "PropertyComments": "Pane"
         },
         {
@@ -12051,7 +12051,7 @@
         {
           "QName": ":axis",
           "PropertyName": "Axis",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.PivotTableAxisValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.PivotTableAxisValues\u003E",
           "PropertyComments": "Axis"
         },
         {
@@ -12437,13 +12437,13 @@
         {
           "QName": ":pageOrder",
           "PropertyName": "PageOrder",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.PageOrderValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.PageOrderValues\u003E",
           "PropertyComments": "Page Order"
         },
         {
           "QName": ":orientation",
           "PropertyName": "Orientation",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.OrientationValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.OrientationValues\u003E",
           "PropertyComments": "Orientation"
         },
         {
@@ -12467,7 +12467,7 @@
         {
           "QName": ":cellComments",
           "PropertyName": "CellComments",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.CellCommentsValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.CellCommentsValues\u003E",
           "PropertyComments": "Print Cell Comments"
         },
         {
@@ -12479,7 +12479,7 @@
         {
           "QName": ":errors",
           "PropertyName": "Errors",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.PrintErrorValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.PrintErrorValues\u003E",
           "PropertyComments": "Print Error Handling"
         },
         {
@@ -12687,7 +12687,7 @@
         {
           "QName": ":type",
           "PropertyName": "Type",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.ConditionalFormatValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.ConditionalFormatValues\u003E",
           "PropertyComments": "Type",
           "Validators": [
             {
@@ -12739,7 +12739,7 @@
         {
           "QName": ":operator",
           "PropertyName": "Operator",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.ConditionalFormattingOperatorValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.ConditionalFormattingOperatorValues\u003E",
           "PropertyComments": "Operator"
         },
         {
@@ -12751,7 +12751,7 @@
         {
           "QName": ":timePeriod",
           "PropertyName": "TimePeriod",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.TimePeriodValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.TimePeriodValues\u003E",
           "PropertyComments": "Time Period"
         },
         {
@@ -12890,7 +12890,7 @@
         {
           "QName": ":type",
           "PropertyName": "Type",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.ConditionalFormatValueObjectValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.ConditionalFormatValueObjectValues\u003E",
           "PropertyComments": "Type",
           "Validators": [
             {
@@ -13121,7 +13121,7 @@
         {
           "QName": ":orientation",
           "PropertyName": "Orientation",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.OrientationValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.OrientationValues\u003E",
           "PropertyComments": "Orientation"
         },
         {
@@ -13237,7 +13237,7 @@
         {
           "QName": ":sourceType",
           "PropertyName": "SourceType",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.WebSourceValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.WebSourceValues\u003E",
           "PropertyComments": "Web Source Type",
           "Validators": [
             {
@@ -13402,7 +13402,7 @@
         {
           "QName": ":state",
           "PropertyName": "State",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.SheetStateValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.SheetStateValues\u003E",
           "PropertyComments": "Visible State"
         },
         {
@@ -13667,25 +13667,25 @@
         {
           "QName": ":type",
           "PropertyName": "Type",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.DataValidationValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.DataValidationValues\u003E",
           "PropertyComments": "type"
         },
         {
           "QName": ":errorStyle",
           "PropertyName": "ErrorStyle",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.DataValidationErrorStyleValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.DataValidationErrorStyleValues\u003E",
           "PropertyComments": "errorStyle"
         },
         {
           "QName": ":imeMode",
           "PropertyName": "ImeMode",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.DataValidationImeModeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.DataValidationImeModeValues\u003E",
           "PropertyComments": "imeMode"
         },
         {
           "QName": ":operator",
           "PropertyName": "Operator",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.DataValidationOperatorValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.DataValidationOperatorValues\u003E",
           "PropertyComments": "operator"
         },
         {
@@ -13869,7 +13869,7 @@
         {
           "QName": ":view",
           "PropertyName": "View",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.SheetViewValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.SheetViewValues\u003E",
           "PropertyComments": "View Type"
         },
         {
@@ -14095,7 +14095,7 @@
         {
           "QName": ":state",
           "PropertyName": "State",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.SheetStateValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.SheetStateValues\u003E",
           "PropertyComments": "Visible State"
         },
         {
@@ -14107,7 +14107,7 @@
         {
           "QName": ":view",
           "PropertyName": "View",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.SheetViewValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.SheetViewValues\u003E",
           "PropertyComments": "View Type"
         },
         {
@@ -14276,7 +14276,7 @@
         {
           "QName": ":dvAspect",
           "PropertyName": "DataOrViewAspect",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.DataViewAspectValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.DataViewAspectValues\u003E",
           "PropertyComments": "Data or View Aspect"
         },
         {
@@ -14288,7 +14288,7 @@
         {
           "QName": ":oleUpdate",
           "PropertyName": "OleUpdate",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.OleUpdateValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.OleUpdateValues\u003E",
           "PropertyComments": "OLE Update"
         },
         {
@@ -14847,7 +14847,7 @@
         {
           "QName": ":f",
           "PropertyName": "CubeFunction",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.MdxFunctionValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.MdxFunctionValues\u003E",
           "PropertyComments": "Cube Function Tag",
           "Validators": [
             {
@@ -15032,7 +15032,7 @@
         {
           "QName": ":o",
           "PropertyName": "SortingOrder",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.MdxSetOrderValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.MdxSetOrderValues\u003E",
           "PropertyComments": "Set Sort Order"
         }
       ],
@@ -15116,7 +15116,7 @@
         {
           "QName": ":p",
           "PropertyName": "KpiProperty",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.MdxKPIPropertyValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.MdxKPIPropertyValues\u003E",
           "PropertyComments": "KPI Property",
           "Validators": [
             {
@@ -15313,7 +15313,7 @@
         {
           "QName": ":xmlDataType",
           "PropertyName": "XmlDataType",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.XmlDataValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.XmlDataValues\u003E",
           "PropertyComments": "XML Data Type",
           "Validators": [
             {
@@ -15353,7 +15353,7 @@
         {
           "QName": ":patternType",
           "PropertyName": "PatternType",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.PatternValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.PatternValues\u003E",
           "PropertyComments": "Pattern Type"
         }
       ],
@@ -15400,7 +15400,7 @@
         {
           "QName": ":type",
           "PropertyName": "Type",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.GradientValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.GradientValues\u003E",
           "PropertyComments": "Gradient Fill Type"
         },
         {
@@ -15527,13 +15527,13 @@
         {
           "QName": ":horizontal",
           "PropertyName": "Horizontal",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.HorizontalAlignmentValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.HorizontalAlignmentValues\u003E",
           "PropertyComments": "Horizontal Alignment"
         },
         {
           "QName": ":vertical",
           "PropertyName": "Vertical",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.VerticalAlignmentValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.VerticalAlignmentValues\u003E",
           "PropertyComments": "Vertical Alignment"
         },
         {
@@ -16456,7 +16456,7 @@
         {
           "QName": ":type",
           "PropertyName": "Type",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.TableStyleValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.TableStyleValues\u003E",
           "PropertyComments": "Table Style Type",
           "Validators": [
             {
@@ -16607,7 +16607,7 @@
         {
           "QName": ":t",
           "PropertyName": "DataType",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.CellValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.CellValues\u003E",
           "PropertyComments": "Type"
         },
         {
@@ -16761,7 +16761,7 @@
         {
           "QName": ":t",
           "PropertyName": "ValueType",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.DdeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.DdeValues\u003E",
           "PropertyComments": "DDE Value Type"
         }
       ],
@@ -17052,7 +17052,7 @@
         {
           "QName": ":totalsRowFunction",
           "PropertyName": "TotalsRowFunction",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.TotalsRowFunctionValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.TotalsRowFunctionValues\u003E",
           "PropertyComments": "Totals Row Function"
         },
         {
@@ -17240,7 +17240,7 @@
         {
           "QName": ":xmlDataType",
           "PropertyName": "XmlDataType",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.XmlDataValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.XmlDataValues\u003E",
           "PropertyComments": "XML Data Type",
           "Validators": [
             {
@@ -17279,7 +17279,7 @@
         {
           "QName": ":type",
           "PropertyName": "Type",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.VolatileDependencyValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.VolatileDependencyValues\u003E",
           "PropertyComments": "Type",
           "Validators": [
             {
@@ -17354,7 +17354,7 @@
         {
           "QName": ":t",
           "PropertyName": "ValueType",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.VolatileValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.VolatileValues\u003E",
           "PropertyComments": "Type"
         }
       ],
@@ -17709,13 +17709,13 @@
         {
           "QName": ":showComments",
           "PropertyName": "ShowComments",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.CommentsValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.CommentsValues\u003E",
           "PropertyComments": "Show Comments"
         },
         {
           "QName": ":showObjects",
           "PropertyName": "ShowObjects",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.ObjectDisplayValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.ObjectDisplayValues\u003E",
           "PropertyComments": "Show Objects"
         }
       ],
@@ -17771,7 +17771,7 @@
         {
           "QName": ":state",
           "PropertyName": "State",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.SheetStateValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.SheetStateValues\u003E",
           "PropertyComments": "Visible State"
         },
         {
@@ -17797,7 +17797,7 @@
         {
           "QName": ":visibility",
           "PropertyName": "Visibility",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.VisibilityValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.VisibilityValues\u003E",
           "PropertyComments": "Visibility"
         },
         {
@@ -18854,7 +18854,7 @@
         {
           "QName": ":style",
           "PropertyName": "Style",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.BorderStyleValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.BorderStyleValues\u003E",
           "PropertyComments": "Line Style"
         }
       ],
@@ -19530,7 +19530,7 @@
         {
           "QName": ":iconSet",
           "PropertyName": "IconSetValue",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.IconSetValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.IconSetValues\u003E",
           "PropertyComments": "Icon Set"
         },
         {
@@ -20151,7 +20151,7 @@
         {
           "QName": ":function",
           "PropertyName": "Function",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.DataConsolidateFunctionValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.DataConsolidateFunctionValues\u003E",
           "PropertyComments": "Function Index"
         },
         {
@@ -20601,12 +20601,12 @@
         },
         {
           "QName": ":textHAlign",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.TextHorizontalAlignmentValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.TextHorizontalAlignmentValues\u003E",
           "PropertyComments": "textHAlign"
         },
         {
           "QName": ":textVAlign",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.TextVerticalAlignmentValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.TextVerticalAlignmentValues\u003E",
           "PropertyComments": "textVAlign"
         },
         {
@@ -20667,7 +20667,7 @@
         {
           "QName": ":sortBy",
           "PropertyName": "SortBy",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.SortByValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.SortByValues\u003E",
           "PropertyComments": "Sort By"
         },
         {
@@ -20696,7 +20696,7 @@
         {
           "QName": ":iconSet",
           "PropertyName": "IconSet",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.IconSetValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.IconSetValues\u003E",
           "PropertyComments": "Icon Set"
         },
         {
@@ -20778,7 +20778,7 @@
         {
           "QName": ":dateTimeGrouping",
           "PropertyName": "DateTimeGrouping",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.DateTimeGroupingValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.DateTimeGroupingValues\u003E",
           "PropertyComments": "Date Time Grouping",
           "Validators": [
             {
@@ -20803,7 +20803,7 @@
         {
           "QName": ":calendarType",
           "PropertyName": "CalendarType",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.CalendarValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.CalendarValues\u003E",
           "PropertyComments": "Calendar Type"
         }
       ],
@@ -20924,7 +20924,7 @@
         {
           "QName": ":type",
           "PropertyName": "Type",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.DynamicFilterValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.DynamicFilterValues\u003E",
           "PropertyComments": "Dynamic filter type",
           "Validators": [
             {
@@ -21018,7 +21018,7 @@
         {
           "QName": ":iconSet",
           "PropertyName": "IconSet",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.IconSetValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.IconSetValues\u003E",
           "PropertyComments": "Icon Set",
           "Validators": [
             {
@@ -21391,7 +21391,7 @@
         {
           "QName": ":htmlFormat",
           "PropertyName": "HtmlFormat",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.HtmlFormattingValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.HtmlFormattingValues\u003E",
           "PropertyComments": "HTML Formatting Handling"
         },
         {
@@ -21438,7 +21438,7 @@
         {
           "QName": ":fileType",
           "PropertyName": "FileType",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.FileTypeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.FileTypeValues\u003E",
           "PropertyComments": "fileType"
         },
         {
@@ -21516,7 +21516,7 @@
         {
           "QName": ":qualifier",
           "PropertyName": "Qualifier",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.QualifierValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.QualifierValues\u003E",
           "PropertyComments": "qualifier"
         },
         {
@@ -23454,7 +23454,7 @@
         {
           "QName": ":showObjects",
           "PropertyName": "ShowObjects",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.ObjectDisplayValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.ObjectDisplayValues\u003E",
           "PropertyComments": "Show Objects"
         },
         {
@@ -23496,7 +23496,7 @@
         {
           "QName": ":updateLinks",
           "PropertyName": "UpdateLinks",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.UpdateLinksBehaviorValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.UpdateLinksBehaviorValues\u003E",
           "PropertyComments": "Update Links Behavior"
         },
         {
@@ -23817,7 +23817,7 @@
         {
           "QName": ":calcMode",
           "PropertyName": "CalculationMode",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.CalculateModeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.CalculateModeValues\u003E",
           "PropertyComments": "Calculation Mode"
         },
         {
@@ -23829,7 +23829,7 @@
         {
           "QName": ":refMode",
           "PropertyName": "ReferenceMode",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.ReferenceModeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.ReferenceModeValues\u003E",
           "PropertyComments": "Reference Mode"
         },
         {
@@ -23996,7 +23996,7 @@
         {
           "QName": ":targetScreenSize",
           "PropertyName": "TargetScreenSize",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.TargetScreenSizeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.TargetScreenSizeValues\u003E",
           "PropertyComments": "targetScreenSize"
         },
         {
@@ -24905,7 +24905,7 @@
         {
           "QName": ":type",
           "PropertyName": "Type",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.SourceValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.SourceValues\u003E",
           "PropertyComments": "type",
           "Validators": [
             {

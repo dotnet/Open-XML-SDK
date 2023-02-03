@@ -9,7 +9,7 @@ using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Packaging;
-using DocumentFormat.OpenXml.Spreadsheet;
+using DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main;
 using DocumentFormat.OpenXml.Validation.Schema;
 using System;
 using System.Collections.Generic;
@@ -224,7 +224,7 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2020.RichDataWebImage
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Extension" /> <c>&lt;x:ext></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Extension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
     /// </remark>
     public partial class ExtensionList : TypedOpenXmlCompositeElement
@@ -265,14 +265,14 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2020.RichDataWebImage
             base.ConfigureMetadata(builder);
             builder.SetSchema("xlrdwi:extLst");
             builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Extension>();
+            builder.AddChild<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Extension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Extension), 0, 0)
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Extension), 0, 0)
                     }
                 }
             };

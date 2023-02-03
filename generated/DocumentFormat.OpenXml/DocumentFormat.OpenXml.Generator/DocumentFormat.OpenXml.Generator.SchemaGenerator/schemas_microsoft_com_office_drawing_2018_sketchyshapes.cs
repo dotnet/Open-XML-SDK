@@ -6,7 +6,7 @@
 #nullable enable
 
 using DocumentFormat.OpenXml;
-using DocumentFormat.OpenXml.Drawing;
+using DocumentFormat.OpenXml.DrawingML.Y2006.Main;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Packaging;
@@ -145,9 +145,9 @@ namespace DocumentFormat.OpenXml.Office.Drawing.Y2018.SketchyShapes
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.CustomGeometry" /> <c>&lt;a:custGeom></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.CustomGeometry" /> <c>&lt;a:custGeom></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2018.SketchyShapes.OfficeArtExtensionList" /> <c>&lt;ask:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PresetGeometry" /> <c>&lt;a:prstGeom></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.PresetGeometry" /> <c>&lt;a:prstGeom></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2018.SketchyShapes.LineSketchTypeProperties" /> <c>&lt;ask:type></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2018.SketchyShapes.LineSketchSeed" /> <c>&lt;ask:seed></c></description></item>
     /// </list>
@@ -200,9 +200,9 @@ namespace DocumentFormat.OpenXml.Office.Drawing.Y2018.SketchyShapes
             base.ConfigureMetadata(builder);
             builder.SetSchema("ask:lineSketchStyleProps");
             builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.CustomGeometry>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.CustomGeometry>();
             builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2018.SketchyShapes.OfficeArtExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetGeometry>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.PresetGeometry>();
             builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2018.SketchyShapes.LineSketchTypeProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2018.SketchyShapes.LineSketchSeed>();
             builder.AddElement<LineSketchStyleProperties>()
@@ -213,8 +213,8 @@ namespace DocumentFormat.OpenXml.Office.Drawing.Y2018.SketchyShapes
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.CustomGeometry), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetGeometry), 1, 1)
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.CustomGeometry), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.PresetGeometry), 1, 1)
                     }
                 },
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2018.SketchyShapes.LineSketchTypeProperties), 0, 1, version: FileFormatVersions.Office2021),
@@ -401,7 +401,7 @@ namespace DocumentFormat.OpenXml.Office.Drawing.Y2018.SketchyShapes
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extension" /> <c>&lt;a:ext></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.Extension" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
     public partial class OfficeArtExtensionList : TypedOpenXmlCompositeElement
@@ -442,14 +442,14 @@ namespace DocumentFormat.OpenXml.Office.Drawing.Y2018.SketchyShapes
             base.ConfigureMetadata(builder);
             builder.SetSchema("ask:extLst");
             builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Extension>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.Extension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Extension), 0, 0)
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.Extension), 0, 0)
                     }
                 }
             };

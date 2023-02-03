@@ -3094,7 +3094,7 @@ namespace DocumentFormat.OpenXml.Tests
                         var host = part
                             .RootElement()
                             .Descendants()
-                            .PickFirst(d => d is Wordprocessing.Run && d.HasChildren && d.ChildElements.Count == 1);
+                            .PickFirst(d => d is WordprocessingML.Y2006.Main.Run && d.HasChildren && d.ChildElements.Count == 1);
 
                         var children = new List<OpenXmlElement>();
                         var acb = WrapEachChildWithChoice_LeadingFallback(host, children).CloneNode(true);
@@ -3132,7 +3132,7 @@ namespace DocumentFormat.OpenXml.Tests
                         var host = part
                             .RootElement()
                             .Descendants()
-                            .PickFirst(d => d is Wordprocessing.Run && d.HasChildren && d.ChildElements.Count == 1);
+                            .PickFirst(d => d is WordprocessingML.Y2006.Main.Run && d.HasChildren && d.ChildElements.Count == 1);
 
                         var childrenList = new List<OpenXmlElement>();
                         var acb = WrapEachChildWithChoice_LeadingFallback(host, childrenList).CloneNode(true);
@@ -3168,7 +3168,7 @@ namespace DocumentFormat.OpenXml.Tests
                 var dom = part.RootElement();
                 var host = dom
                     .Descendants()
-                    .OfType<Wordprocessing.Run>()
+                    .OfType<WordprocessingML.Y2006.Main.Run>()
                     .FirstOrDefault(d => d.HasChildren && d.ChildElements.Count == 1);
                 var children = new List<OpenXmlElement>();
 

@@ -2,12 +2,12 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml;
-using DocumentFormat.OpenXml.Drawing;
+using DocumentFormat.OpenXml.DrawingML.Y2006.Main;
 using DocumentFormat.OpenXml.Packaging;
-using DocumentFormat.OpenXml.Presentation;
+using DocumentFormat.OpenXml.PresentationML.Y2006.Main;
 
-using D = DocumentFormat.OpenXml.Drawing;
-using P = DocumentFormat.OpenXml.Presentation;
+using D = DocumentFormat.OpenXml.DrawingML.Y2006.Main;
+using P = DocumentFormat.OpenXml.PresentationML.Y2006.Main;
 
 namespace Common
 {

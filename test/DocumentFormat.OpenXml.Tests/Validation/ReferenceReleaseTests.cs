@@ -2,9 +2,10 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Packaging;
-using DocumentFormat.OpenXml.Spreadsheet;
+using DocumentFormat.OpenXml.PresentationML.Y2006.Main;
+using DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main;
 using DocumentFormat.OpenXml.Validation;
-using DocumentFormat.OpenXml.Wordprocessing;
+using DocumentFormat.OpenXml.WordprocessingML.Y2006.Main;
 using System;
 using System.IO;
 using System.Runtime.CompilerServices;
@@ -95,7 +96,7 @@ namespace DocumentFormat.OpenXml.Tests.Validation
                 using (var presentation = PresentationDocument.Create(ms, PresentationDocumentType.Presentation))
                 {
                     var presentationPart = presentation.AddPresentationPart();
-                    presentationPart.Presentation = new Presentation.Presentation();
+                    presentationPart.Presentation = new Presentation();
                 }
 
                 using (var presentation = PresentationDocument.Open(ms, false))

@@ -19,7 +19,7 @@ namespace DocumentFormat.OpenXml.Packaging
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.spreadsheetml.volatileDependencies+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/volatileDependencies";
-        private DocumentFormat.OpenXml.Spreadsheet.VolatileTypes? _rootElement;
+        private DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.VolatileTypes? _rootElement;
 
         /// <summary>
         /// Creates an instance of the VolatileDependenciesPart OpenXmlType
@@ -40,7 +40,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             set
             {
-                _rootElement = value as DocumentFormat.OpenXml.Spreadsheet.VolatileTypes;
+                _rootElement = value as DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.VolatileTypes;
             }
         }
 
@@ -52,13 +52,13 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets or sets the root element of this part.
         /// </summary>
-        public DocumentFormat.OpenXml.Spreadsheet.VolatileTypes VolatileTypes
+        public DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.VolatileTypes VolatileTypes
         {
             get
             {
                 if (_rootElement is null)
                 {
-                    LoadDomTree<DocumentFormat.OpenXml.Spreadsheet.VolatileTypes>();
+                    LoadDomTree<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.VolatileTypes>();
                 }
 
                 return _rootElement!;

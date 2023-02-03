@@ -3,7 +3,7 @@
 
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation;
-using DocumentFormat.OpenXml.Wordprocessing;
+using DocumentFormat.OpenXml.WordprocessingML.Y2006.Main;
 using System.IO;
 using System.Linq;
 using Xunit;
@@ -101,7 +101,7 @@ namespace DocumentFormat.OpenXml.Tests
                 using (var testDocument = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document))
                 {
                     var mainPart = testDocument.AddMainDocumentPart();
-                    var paragraph = new DocumentFormat.OpenXml.Wordprocessing.Paragraph(new Body());
+                    var paragraph = new Paragraph(new Body());
                     mainPart.Document = new Document(new Body(paragraph));
                     mainPart.Document.Save();
 

@@ -19,7 +19,7 @@ namespace DocumentFormat.OpenXml.Packaging
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.wordprocessingml.numbering+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/numbering";
-        private DocumentFormat.OpenXml.Wordprocessing.Numbering? _rootElement;
+        private DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.Numbering? _rootElement;
 
         /// <summary>
         /// Creates an instance of the NumberingDefinitionsPart OpenXmlType
@@ -45,20 +45,20 @@ namespace DocumentFormat.OpenXml.Packaging
 
             set
             {
-                _rootElement = value as DocumentFormat.OpenXml.Wordprocessing.Numbering;
+                _rootElement = value as DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.Numbering;
             }
         }
 
         /// <summary>
         /// Gets or sets the root element of this part.
         /// </summary>
-        public DocumentFormat.OpenXml.Wordprocessing.Numbering Numbering
+        public DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.Numbering Numbering
         {
             get
             {
                 if (_rootElement is null)
                 {
-                    LoadDomTree<DocumentFormat.OpenXml.Wordprocessing.Numbering>();
+                    LoadDomTree<DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.Numbering>();
                 }
 
                 return _rootElement!;

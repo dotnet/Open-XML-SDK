@@ -1156,7 +1156,7 @@
         {
           "QName": ":meth",
           "PropertyName": "Method",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.Diagrams.ColorApplicationMethodValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Diagram.ColorApplicationMethodValues\u003E",
           "PropertyComments": "Color Application Method Type",
           "Validators": [
             {
@@ -1175,7 +1175,7 @@
         {
           "QName": ":hueDir",
           "PropertyName": "HueDirection",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.Diagrams.HueDirectionValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Diagram.HueDirectionValues\u003E",
           "PropertyComments": "Hue Direction",
           "Validators": [
             {
@@ -1486,7 +1486,7 @@
         {
           "QName": ":type",
           "PropertyName": "Type",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.Diagrams.PointValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Diagram.PointValues\u003E",
           "PropertyComments": "Point Type",
           "Validators": [
             {
@@ -1627,7 +1627,7 @@
         {
           "QName": ":type",
           "PropertyName": "Type",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.Diagrams.ConnectionValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Diagram.ConnectionValues\u003E",
           "PropertyComments": "Point Type",
           "Validators": [
             {
@@ -1812,7 +1812,7 @@
         {
           "QName": ":type",
           "PropertyName": "Type",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.Diagrams.ConstraintValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Diagram.ConstraintValues\u003E",
           "PropertyComments": "Constraint Type",
           "Validators": [
             {
@@ -1834,7 +1834,7 @@
         {
           "QName": ":for",
           "PropertyName": "For",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.Diagrams.ConstraintRelationshipValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Diagram.ConstraintRelationshipValues\u003E",
           "PropertyComments": "For",
           "Validators": [
             {
@@ -1859,7 +1859,7 @@
         {
           "QName": ":ptType",
           "PropertyName": "PointType",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.Diagrams.ElementValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Diagram.ElementValues\u003E",
           "PropertyComments": "Data Point Type",
           "Validators": [
             {
@@ -1878,7 +1878,7 @@
         {
           "QName": ":refType",
           "PropertyName": "ReferenceType",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.Diagrams.ConstraintValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Diagram.ConstraintValues\u003E",
           "PropertyComments": "Reference Type",
           "Validators": [
             {
@@ -1897,7 +1897,7 @@
         {
           "QName": ":refFor",
           "PropertyName": "ReferenceFor",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.Diagrams.ConstraintRelationshipValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Diagram.ConstraintRelationshipValues\u003E",
           "PropertyComments": "Reference For",
           "Validators": [
             {
@@ -1922,7 +1922,7 @@
         {
           "QName": ":refPtType",
           "PropertyName": "ReferencePointType",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.Diagrams.ElementValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Diagram.ElementValues\u003E",
           "PropertyComments": "Reference Point Type",
           "Validators": [
             {
@@ -1941,7 +1941,7 @@
         {
           "QName": ":op",
           "PropertyName": "Operator",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.Diagrams.BoolOperatorValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Diagram.BoolOperatorValues\u003E",
           "PropertyComments": "Operator",
           "Validators": [
             {
@@ -2000,7 +2000,7 @@
         {
           "QName": ":type",
           "PropertyName": "Type",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.Diagrams.ConstraintValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Diagram.ConstraintValues\u003E",
           "PropertyComments": "Constraint Type",
           "Validators": [
             {
@@ -2022,7 +2022,7 @@
         {
           "QName": ":for",
           "PropertyName": "For",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.Diagrams.ConstraintRelationshipValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Diagram.ConstraintRelationshipValues\u003E",
           "PropertyComments": "For",
           "Validators": [
             {
@@ -2047,7 +2047,7 @@
         {
           "QName": ":ptType",
           "PropertyName": "PointType",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.Diagrams.ElementValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Diagram.ElementValues\u003E",
           "PropertyComments": "Data Point Type",
           "Validators": [
             {
@@ -2176,7 +2176,7 @@
         {
           "QName": ":type",
           "PropertyName": "Type",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.Diagrams.ParameterIdValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Diagram.ParameterIdValues\u003E",
           "PropertyComments": "Parameter Type",
           "Validators": [
             {
@@ -2429,7 +2429,7 @@
         {
           "QName": ":type",
           "PropertyName": "Type",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.Diagrams.AlgorithmValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Diagram.AlgorithmValues\u003E",
           "PropertyComments": "Algorithm Type",
           "Validators": [
             {
@@ -2590,13 +2590,13 @@
         {
           "QName": ":axis",
           "PropertyName": "Axis",
-          "Type": "ListValue\u003CEnumValue\u003CDocumentFormat.OpenXml.Drawing.Diagrams.AxisValues\u003E\u003E",
+          "Type": "ListValue\u003CEnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Diagram.AxisValues\u003E\u003E",
           "PropertyComments": "Axis"
         },
         {
           "QName": ":ptType",
           "PropertyName": "PointType",
-          "Type": "ListValue\u003CEnumValue\u003CDocumentFormat.OpenXml.Drawing.Diagrams.ElementValues\u003E\u003E",
+          "Type": "ListValue\u003CEnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Diagram.ElementValues\u003E\u003E",
           "PropertyComments": "Data Point Type"
         },
         {
@@ -3039,13 +3039,13 @@
         {
           "QName": ":axis",
           "PropertyName": "Axis",
-          "Type": "ListValue\u003CEnumValue\u003CDocumentFormat.OpenXml.Drawing.Diagrams.AxisValues\u003E\u003E",
+          "Type": "ListValue\u003CEnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Diagram.AxisValues\u003E\u003E",
           "PropertyComments": "Axis"
         },
         {
           "QName": ":ptType",
           "PropertyName": "PointType",
-          "Type": "ListValue\u003CEnumValue\u003CDocumentFormat.OpenXml.Drawing.Diagrams.ElementValues\u003E\u003E",
+          "Type": "ListValue\u003CEnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Diagram.ElementValues\u003E\u003E",
           "PropertyComments": "Data Point Type"
         },
         {
@@ -3189,7 +3189,7 @@
         {
           "QName": ":chOrder",
           "PropertyName": "ChildOrder",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.Diagrams.ChildOrderValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Diagram.ChildOrderValues\u003E",
           "PropertyComments": "Child Order",
           "Validators": [
             {
@@ -3376,13 +3376,13 @@
         {
           "QName": ":axis",
           "PropertyName": "Axis",
-          "Type": "ListValue\u003CEnumValue\u003CDocumentFormat.OpenXml.Drawing.Diagrams.AxisValues\u003E\u003E",
+          "Type": "ListValue\u003CEnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Diagram.AxisValues\u003E\u003E",
           "PropertyComments": "Axis"
         },
         {
           "QName": ":ptType",
           "PropertyName": "PointType",
-          "Type": "ListValue\u003CEnumValue\u003CDocumentFormat.OpenXml.Drawing.Diagrams.ElementValues\u003E\u003E",
+          "Type": "ListValue\u003CEnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Diagram.ElementValues\u003E\u003E",
           "PropertyComments": "Data Point Type"
         },
         {
@@ -3412,7 +3412,7 @@
         {
           "QName": ":func",
           "PropertyName": "Function",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.Diagrams.FunctionValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Diagram.FunctionValues\u003E",
           "PropertyComments": "Function",
           "Validators": [
             {
@@ -3448,7 +3448,7 @@
         {
           "QName": ":op",
           "PropertyName": "Operator",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.Diagrams.FunctionOperatorValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Diagram.FunctionOperatorValues\u003E",
           "PropertyComments": "Operator",
           "Validators": [
             {
@@ -4052,7 +4052,7 @@
         {
           "QName": ":val",
           "PropertyName": "Val",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.Diagrams.DirectionValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Diagram.DirectionValues\u003E",
           "PropertyComments": "Diagram Direction Value",
           "Validators": [
             {
@@ -4080,7 +4080,7 @@
         {
           "QName": ":val",
           "PropertyName": "Val",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.Diagrams.HierarchyBranchStyleValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Diagram.HierarchyBranchStyleValues\u003E",
           "PropertyComments": "Organization Chart Branch Style Value",
           "Validators": [
             {
@@ -4108,7 +4108,7 @@
         {
           "QName": ":val",
           "PropertyName": "Val",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.Diagrams.AnimateOneByOneValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Diagram.AnimateOneByOneValues\u003E",
           "PropertyComments": "One By One Animation Value",
           "Validators": [
             {
@@ -4136,7 +4136,7 @@
         {
           "QName": ":val",
           "PropertyName": "Val",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.Diagrams.AnimationLevelStringValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Diagram.AnimationLevelStringValues\u003E",
           "PropertyComments": "Level Animation Value",
           "Validators": [
             {
@@ -4164,7 +4164,7 @@
         {
           "QName": ":val",
           "PropertyName": "Val",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.Diagrams.ResizeHandlesStringValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Diagram.ResizeHandlesStringValues\u003E",
           "PropertyComments": "Shape Resize Style Type",
           "Validators": [
             {
@@ -4361,7 +4361,7 @@
         {
           "QName": ":prstMaterial",
           "PropertyName": "PresetMaterial",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.PresetMaterialTypeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.PresetMaterialTypeValues\u003E",
           "PropertyComments": "Preset Material Type",
           "Validators": [
             {
@@ -5114,7 +5114,7 @@
         {
           "QName": ":bwMode",
           "PropertyName": "BlackWhiteMode",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.BlackWhiteModeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.BlackWhiteModeValues\u003E",
           "PropertyComments": "Black and White Mode",
           "Validators": [
             {

@@ -3,7 +3,7 @@
 
 using DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main;
 using DocumentFormat.OpenXml.Packaging;
-using DocumentFormat.OpenXml.Spreadsheet;
+using DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main;
 using System;
 using System.IO;
 using System.Linq;

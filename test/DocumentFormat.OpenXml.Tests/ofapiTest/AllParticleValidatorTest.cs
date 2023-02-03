@@ -1,11 +1,11 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using DocumentFormat.OpenXml.ExtendedProperties;
 using DocumentFormat.OpenXml.Features;
+using DocumentFormat.OpenXml.Office.Office.VML;
+using DocumentFormat.OpenXml.OfficeDocument.Y2006.Extended_Properties;
 using DocumentFormat.OpenXml.Validation;
 using DocumentFormat.OpenXml.Validation.Schema;
-using DocumentFormat.OpenXml.Vml.Office;
 using Xunit;
 
 namespace DocumentFormat.OpenXml.Tests

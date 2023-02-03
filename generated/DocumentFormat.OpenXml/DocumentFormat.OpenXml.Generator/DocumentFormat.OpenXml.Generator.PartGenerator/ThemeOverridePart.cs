@@ -19,7 +19,7 @@ namespace DocumentFormat.OpenXml.Packaging
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.themeOverride+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/themeOverride";
-        private DocumentFormat.OpenXml.Drawing.ThemeOverride? _rootElement;
+        private DocumentFormat.OpenXml.DrawingML.Y2006.Main.ThemeOverride? _rootElement;
 
         /// <summary>
         /// Creates an instance of the ThemeOverridePart OpenXmlType
@@ -45,7 +45,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             set
             {
-                _rootElement = value as DocumentFormat.OpenXml.Drawing.ThemeOverride;
+                _rootElement = value as DocumentFormat.OpenXml.DrawingML.Y2006.Main.ThemeOverride;
             }
         }
 
@@ -57,13 +57,13 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets or sets the root element of this part.
         /// </summary>
-        public DocumentFormat.OpenXml.Drawing.ThemeOverride ThemeOverride
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Main.ThemeOverride ThemeOverride
         {
             get
             {
                 if (_rootElement is null)
                 {
-                    LoadDomTree<DocumentFormat.OpenXml.Drawing.ThemeOverride>();
+                    LoadDomTree<DocumentFormat.OpenXml.DrawingML.Y2006.Main.ThemeOverride>();
                 }
 
                 return _rootElement!;

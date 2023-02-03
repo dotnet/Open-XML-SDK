@@ -2,13 +2,15 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Packaging;
-using DocumentFormat.OpenXml.Wordprocessing;
+using DocumentFormat.OpenXml.WordprocessingML.Y2006.Main;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using Xunit;
 
 using static DocumentFormat.OpenXml.Tests.TestAssets;
+
+using D = DocumentFormat.OpenXml.DrawingML.Y2006.Main;
 
 namespace DocumentFormat.OpenXml.Tests
 {
@@ -215,25 +217,25 @@ namespace DocumentFormat.OpenXml.Tests
                 OpenXmlPartRootElement root = target.RootElement;
 
                 var ele = root.FirstChild;
-                Assert.IsType<Drawing.TableStyleEntry>(ele);
+                Assert.IsType<D.TableStyleEntry>(ele);
                 var attr = ele.GetAttribute("myattr", "http://schemas.microsoft.com/office/word/2008/9/16/wordprocessingDrawing");
                 Assert.Equal("1", attr.Value);
-                Assert.IsType<Drawing.TableStyleEntry>(ele);
+                Assert.IsType<D.TableStyleEntry>(ele);
 
                 ele = ele.NextSibling();
                 attr = ele.GetAttribute("myattr", "http://schemas.microsoft.com/office/word/2008/9/16/wordprocessingDrawing");
                 Assert.Equal("2", attr.Value);
-                Assert.IsType<Drawing.TableStyleEntry>(ele);
+                Assert.IsType<D.TableStyleEntry>(ele);
 
                 ele = ele.NextSibling();
                 attr = ele.GetAttribute("myattr", "http://schemas.microsoft.com/office/word/2008/9/16/wordprocessingDrawing");
                 Assert.Equal("3", attr.Value);
-                Assert.IsType<Drawing.TableStyleEntry>(ele);
+                Assert.IsType<D.TableStyleEntry>(ele);
 
                 ele = ele.NextSibling();
                 attr = ele.GetAttribute("myattr", "http://schemas.microsoft.com/office/word/2008/9/16/wordprocessingDrawing");
                 Assert.Equal("4", attr.Value);
-                Assert.IsType<Drawing.TableStyleEntry>(ele);
+                Assert.IsType<D.TableStyleEntry>(ele);
 
                 ele = ele.NextSibling();
                 Assert.Null(ele);

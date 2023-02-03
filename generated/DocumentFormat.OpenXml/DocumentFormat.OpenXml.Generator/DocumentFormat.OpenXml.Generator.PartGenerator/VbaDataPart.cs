@@ -19,7 +19,7 @@ namespace DocumentFormat.OpenXml.Packaging
     {
         internal const string ContentTypeConstant = "application/vnd.ms-word.vbaData+xml";
         internal const string RelationshipTypeConstant = "http://schemas.microsoft.com/office/2006/relationships/wordVbaData";
-        private DocumentFormat.OpenXml.Office.Word.VbaSuppData? _rootElement;
+        private DocumentFormat.OpenXml.Office.Word.Y2006.WordML.VbaSuppData? _rootElement;
 
         /// <summary>
         /// Creates an instance of the VbaDataPart OpenXmlType
@@ -40,7 +40,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             set
             {
-                _rootElement = value as DocumentFormat.OpenXml.Office.Word.VbaSuppData;
+                _rootElement = value as DocumentFormat.OpenXml.Office.Word.Y2006.WordML.VbaSuppData;
             }
         }
 
@@ -52,13 +52,13 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets or sets the root element of this part.
         /// </summary>
-        public DocumentFormat.OpenXml.Office.Word.VbaSuppData VbaSuppData
+        public DocumentFormat.OpenXml.Office.Word.Y2006.WordML.VbaSuppData VbaSuppData
         {
             get
             {
                 if (_rootElement is null)
                 {
-                    LoadDomTree<DocumentFormat.OpenXml.Office.Word.VbaSuppData>();
+                    LoadDomTree<DocumentFormat.OpenXml.Office.Word.Y2006.WordML.VbaSuppData>();
                 }
 
                 return _rootElement!;

@@ -2,7 +2,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using BenchmarkDotNet.Attributes;
-using DocumentFormat.OpenXml.Drawing.ChartDrawing;
+using DocumentFormat.OpenXml.DrawingML.Y2006.ChartDrawing;
 
 namespace DocumentFormat.OpenXml.Benchmarks
 {

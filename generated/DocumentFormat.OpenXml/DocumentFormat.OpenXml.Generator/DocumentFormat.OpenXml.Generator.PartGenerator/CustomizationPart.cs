@@ -19,7 +19,7 @@ namespace DocumentFormat.OpenXml.Packaging
     {
         internal const string ContentTypeConstant = "application/vnd.ms-word.keyMapCustomizations+xml";
         internal const string RelationshipTypeConstant = "http://schemas.microsoft.com/office/2006/relationships/keyMapCustomizations";
-        private DocumentFormat.OpenXml.Office.Word.TemplateCommandGroup? _rootElement;
+        private DocumentFormat.OpenXml.Office.Word.Y2006.WordML.TemplateCommandGroup? _rootElement;
 
         /// <summary>
         /// Creates an instance of the CustomizationPart OpenXmlType
@@ -40,7 +40,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             set
             {
-                _rootElement = value as DocumentFormat.OpenXml.Office.Word.TemplateCommandGroup;
+                _rootElement = value as DocumentFormat.OpenXml.Office.Word.Y2006.WordML.TemplateCommandGroup;
             }
         }
 
@@ -52,13 +52,13 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets or sets the root element of this part.
         /// </summary>
-        public DocumentFormat.OpenXml.Office.Word.TemplateCommandGroup TemplateCommandGroup
+        public DocumentFormat.OpenXml.Office.Word.Y2006.WordML.TemplateCommandGroup TemplateCommandGroup
         {
             get
             {
                 if (_rootElement is null)
                 {
-                    LoadDomTree<DocumentFormat.OpenXml.Office.Word.TemplateCommandGroup>();
+                    LoadDomTree<DocumentFormat.OpenXml.Office.Word.Y2006.WordML.TemplateCommandGroup>();
                 }
 
                 return _rootElement!;

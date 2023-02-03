@@ -5,7 +5,7 @@ using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Validation.Schema;
 
-namespace DocumentFormat.OpenXml.Wordprocessing
+namespace DocumentFormat.OpenXml.WordprocessingML.Y2006.Main
 {
     /// <summary>
     /// Defines CustomXmlElement - the base class for the customXml elements.

@@ -4,64 +4,40 @@
     "Namespace": "DocumentFormat.OpenXml"
   },
   {
-    "Prefix": "ac",
-    "Namespace": "DocumentFormat.OpenXml.AdditionalCharacteristics"
-  },
-  {
-    "Prefix": "b",
-    "Namespace": "DocumentFormat.OpenXml.Bibliography"
-  },
-  {
-    "Prefix": "op",
-    "Namespace": "DocumentFormat.OpenXml.CustomProperties"
-  },
-  {
-    "Prefix": "ds",
-    "Namespace": "DocumentFormat.OpenXml.CustomXmlDataProperties"
-  },
-  {
-    "Prefix": "sl",
-    "Namespace": "DocumentFormat.OpenXml.CustomXmlSchemaReferences"
-  },
-  {
-    "Prefix": "a",
-    "Namespace": "DocumentFormat.OpenXml.Drawing"
+    "Prefix": "c",
+    "Namespace": "DocumentFormat.OpenXml.DrawingML.Y2006.Chart"
   },
   {
     "Prefix": "cdr",
-    "Namespace": "DocumentFormat.OpenXml.Drawing.ChartDrawing"
-  },
-  {
-    "Prefix": "c",
-    "Namespace": "DocumentFormat.OpenXml.Drawing.Charts"
-  },
-  {
-    "Prefix": "dgm",
-    "Namespace": "DocumentFormat.OpenXml.Drawing.Diagrams"
+    "Namespace": "DocumentFormat.OpenXml.DrawingML.Y2006.ChartDrawing"
   },
   {
     "Prefix": "comp",
-    "Namespace": "DocumentFormat.OpenXml.Drawing.LegacyCompatibility"
+    "Namespace": "DocumentFormat.OpenXml.DrawingML.Y2006.Compatibility"
+  },
+  {
+    "Prefix": "dgm",
+    "Namespace": "DocumentFormat.OpenXml.DrawingML.Y2006.Diagram"
   },
   {
     "Prefix": "lc",
-    "Namespace": "DocumentFormat.OpenXml.Drawing.LockedCanvas"
+    "Namespace": "DocumentFormat.OpenXml.DrawingML.Y2006.LockedCanvas"
+  },
+  {
+    "Prefix": "a",
+    "Namespace": "DocumentFormat.OpenXml.DrawingML.Y2006.Main"
   },
   {
     "Prefix": "pic",
-    "Namespace": "DocumentFormat.OpenXml.Drawing.Pictures"
+    "Namespace": "DocumentFormat.OpenXml.DrawingML.Y2006.Picture"
   },
   {
     "Prefix": "xdr",
-    "Namespace": "DocumentFormat.OpenXml.Drawing.Spreadsheet"
+    "Namespace": "DocumentFormat.OpenXml.DrawingML.Y2006.SpreadSheetDrawing"
   },
   {
     "Prefix": "wp",
-    "Namespace": "DocumentFormat.OpenXml.Drawing.Wordprocessing"
-  },
-  {
-    "Prefix": "ap",
-    "Namespace": "DocumentFormat.OpenXml.ExtendedProperties"
+    "Namespace": "DocumentFormat.OpenXml.DrawingML.Y2006.WordprocessingDrawing"
   },
   {
     "Prefix": "msink",
@@ -70,34 +46,6 @@
   {
     "Prefix": "mc",
     "Namespace": "DocumentFormat.OpenXml.Markup-Compatibility.Y2006"
-  },
-  {
-    "Prefix": "m",
-    "Namespace": "DocumentFormat.OpenXml.Math"
-  },
-  {
-    "Prefix": "ax",
-    "Namespace": "DocumentFormat.OpenXml.Office.ActiveX"
-  },
-  {
-    "Prefix": "ct",
-    "Namespace": "DocumentFormat.OpenXml.Office.ContentType"
-  },
-  {
-    "Prefix": "cppr",
-    "Namespace": "DocumentFormat.OpenXml.Office.CoverPageProps"
-  },
-  {
-    "Prefix": "cdip",
-    "Namespace": "DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel"
-  },
-  {
-    "Prefix": "mso",
-    "Namespace": "DocumentFormat.OpenXml.Office.CustomUI"
-  },
-  {
-    "Prefix": "ntns",
-    "Namespace": "DocumentFormat.OpenXml.Office.CustomXsn"
   },
   {
     "Prefix": "c14",
@@ -232,20 +180,24 @@
     "Namespace": "DocumentFormat.OpenXml.Office.Drawing.Y2021.ScriptLink"
   },
   {
+    "Prefix": "xvml",
+    "Namespace": "DocumentFormat.OpenXml.Office.Excel.VML"
+  },
+  {
     "Prefix": "xne",
-    "Namespace": "DocumentFormat.OpenXml.Office.Excel"
+    "Namespace": "DocumentFormat.OpenXml.Office.Excel.Y2006.Main"
   },
   {
     "Prefix": "xdr14",
     "Namespace": "DocumentFormat.OpenXml.Office.Excel.Y2010.SpreadSheetDrawing"
   },
   {
-    "Prefix": "lp",
-    "Namespace": "DocumentFormat.OpenXml.Office.LongProperties"
+    "Prefix": "o",
+    "Namespace": "DocumentFormat.OpenXml.Office.Office.VML"
   },
   {
-    "Prefix": "ma",
-    "Namespace": "DocumentFormat.OpenXml.Office.MetaAttributes"
+    "Prefix": "pvml",
+    "Namespace": "DocumentFormat.OpenXml.Office.PowerPoint.VML"
   },
   {
     "Prefix": "p14",
@@ -440,8 +392,12 @@
     "Namespace": "DocumentFormat.OpenXml.Office.WebExtensions.WebExtensions.Y2010.M11"
   },
   {
+    "Prefix": "w10",
+    "Namespace": "DocumentFormat.OpenXml.Office.Word.VML"
+  },
+  {
     "Prefix": "wne",
-    "Namespace": "DocumentFormat.OpenXml.Office.Word"
+    "Namespace": "DocumentFormat.OpenXml.Office.Word.Y2006.WordML"
   },
   {
     "Prefix": "w14",
@@ -492,6 +448,38 @@
     "Namespace": "DocumentFormat.OpenXml.Office.Word.Y2020.WordML.SdtDataHash"
   },
   {
+    "Prefix": "ax",
+    "Namespace": "DocumentFormat.OpenXml.Office.Y2006.ActiveX"
+  },
+  {
+    "Prefix": "cppr",
+    "Namespace": "DocumentFormat.OpenXml.Office.Y2006.CoverPageProps"
+  },
+  {
+    "Prefix": "cdip",
+    "Namespace": "DocumentFormat.OpenXml.Office.Y2006.CustomDocumentInformationPanel"
+  },
+  {
+    "Prefix": "mso",
+    "Namespace": "DocumentFormat.OpenXml.Office.Y2006.M01.CustomUI"
+  },
+  {
+    "Prefix": "ct",
+    "Namespace": "DocumentFormat.OpenXml.Office.Y2006.MetaData.ContentType"
+  },
+  {
+    "Prefix": "ntns",
+    "Namespace": "DocumentFormat.OpenXml.Office.Y2006.MetaData.CustomXsn"
+  },
+  {
+    "Prefix": "lp",
+    "Namespace": "DocumentFormat.OpenXml.Office.Y2006.MetaData.LongProperties"
+  },
+  {
+    "Prefix": "ma",
+    "Namespace": "DocumentFormat.OpenXml.Office.Y2006.MetaData.Properties.MetaAttributes"
+  },
+  {
     "Prefix": "mso14",
     "Namespace": "DocumentFormat.OpenXml.Office.Y2009.M07.CustomUI"
   },
@@ -508,44 +496,56 @@
     "Namespace": "DocumentFormat.OpenXml.Office.Y2020.MipLabelMetaData"
   },
   {
-    "Prefix": "p",
-    "Namespace": "DocumentFormat.OpenXml.Presentation"
+    "Prefix": "b",
+    "Namespace": "DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography"
   },
   {
-    "Prefix": "r",
-    "Namespace": "DocumentFormat.OpenXml.Relationships"
+    "Prefix": "ac",
+    "Namespace": "DocumentFormat.OpenXml.OfficeDocument.Y2006.Characteristics"
   },
   {
-    "Prefix": "x",
-    "Namespace": "DocumentFormat.OpenXml.Spreadsheet"
+    "Prefix": "op",
+    "Namespace": "DocumentFormat.OpenXml.OfficeDocument.Y2006.Custom_Properties"
+  },
+  {
+    "Prefix": "ds",
+    "Namespace": "DocumentFormat.OpenXml.OfficeDocument.Y2006.CustomXml"
   },
   {
     "Prefix": "vt",
-    "Namespace": "DocumentFormat.OpenXml.VariantTypes"
+    "Namespace": "DocumentFormat.OpenXml.OfficeDocument.Y2006.DocPropsVTypes"
+  },
+  {
+    "Prefix": "ap",
+    "Namespace": "DocumentFormat.OpenXml.OfficeDocument.Y2006.Extended_Properties"
+  },
+  {
+    "Prefix": "m",
+    "Namespace": "DocumentFormat.OpenXml.OfficeDocument.Y2006.Math"
+  },
+  {
+    "Prefix": "r",
+    "Namespace": "DocumentFormat.OpenXml.OfficeDocument.Y2006.Relationships"
+  },
+  {
+    "Prefix": "p",
+    "Namespace": "DocumentFormat.OpenXml.PresentationML.Y2006.Main"
+  },
+  {
+    "Prefix": "sl",
+    "Namespace": "DocumentFormat.OpenXml.SchemaLibrary.Y2006.Main"
+  },
+  {
+    "Prefix": "x",
+    "Namespace": "DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main"
   },
   {
     "Prefix": "v",
     "Namespace": "DocumentFormat.OpenXml.Vml"
   },
   {
-    "Prefix": "o",
-    "Namespace": "DocumentFormat.OpenXml.Vml.Office"
-  },
-  {
-    "Prefix": "pvml",
-    "Namespace": "DocumentFormat.OpenXml.Vml.Presentation"
-  },
-  {
-    "Prefix": "xvml",
-    "Namespace": "DocumentFormat.OpenXml.Vml.Spreadsheet"
-  },
-  {
-    "Prefix": "w10",
-    "Namespace": "DocumentFormat.OpenXml.Vml.Wordprocessing"
-  },
-  {
     "Prefix": "w",
-    "Namespace": "DocumentFormat.OpenXml.Wordprocessing"
+    "Namespace": "DocumentFormat.OpenXml.WordprocessingML.Y2006.Main"
   },
   {
     "Prefix": "inkml",

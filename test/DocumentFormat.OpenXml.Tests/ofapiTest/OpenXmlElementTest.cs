@@ -2,7 +2,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Packaging;
-using DocumentFormat.OpenXml.Wordprocessing;
+using DocumentFormat.OpenXml.WordprocessingML.Y2006.Main;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -408,7 +408,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void PrefixTest()
         {
-            var target = new DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap();
+            var target = new Office.Word.VML.TextWrap();
 
             Assert.Equal("urn:schemas-microsoft-com:office:word", target.NamespaceUri);
             Assert.Equal("w10", target.Prefix);
@@ -624,17 +624,17 @@ namespace DocumentFormat.OpenXml.Tests
         {
             // Check bug #484153.
             var outerXmlWithXmlDecl = "<?xml version=\"1.0\" encoding=\"utf-8\"?><customUI  xmlns=\"http://schemas.microsoft.com/office/2006/01/customui\"></customUI>";
-            var ex1 = Assert.Throws<ArgumentException>(() => new DocumentFormat.OpenXml.Office.CustomUI.CustomUI(outerXmlWithXmlDecl));
+            var ex1 = Assert.Throws<ArgumentException>(() => new Office.Y2006.M01.CustomUI.CustomUI(outerXmlWithXmlDecl));
             Assert.StartsWith(ExceptionMessages.InvalidOuterXml, ex1.Message);
 
             // Valid outer xml
             var validOuterXml = "<customUI  xmlns=\"http://schemas.microsoft.com/office/2006/01/customui\"></customUI>";
-            var cUi2 = new DocumentFormat.OpenXml.Office.CustomUI.CustomUI(validOuterXml);
+            var cUi2 = new Office.Y2006.M01.CustomUI.CustomUI(validOuterXml);
             Assert.Equal(validOuterXml, cUi2.OuterXml);
 
             // Valid outer xml but starting with whitespace.
             var validOuterXmlWithWhitespaces = "     <customUI  xmlns=\"http://schemas.microsoft.com/office/2006/01/customui\"></customUI>";
-            var cUi3 = new DocumentFormat.OpenXml.Office.CustomUI.CustomUI(validOuterXmlWithWhitespaces);
+            var cUi3 = new Office.Y2006.M01.CustomUI.CustomUI(validOuterXmlWithWhitespaces);
 
             // The whitespace should be trimmed when getting OuterXml.
             Assert.Equal(validOuterXml, cUi2.OuterXml);
@@ -928,7 +928,7 @@ namespace DocumentFormat.OpenXml.Tests
                 // Well, if CommentEx is not integrated in the SDK, we can't even compile this unit test project...
 
                 // Check if CommentEx is available.
-                var commentEx = new DocumentFormat.OpenXml.Office.Word.Y2012.WordML.CommentEx();
+                var commentEx = new Office.Word.Y2012.WordML.CommentEx();
                 Assert.NotNull(commentEx);
             }
             catch

@@ -304,7 +304,7 @@
         {
           "QName": ":baseType",
           "PropertyName": "BaseType",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.VariantTypes.VectorBaseValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.OfficeDocument.Y2006.DocPropsVTypes.VectorBaseValues\u003E",
           "PropertyComments": "Vector Base Type",
           "Validators": [
             {
@@ -494,7 +494,7 @@
         {
           "QName": ":baseType",
           "PropertyName": "BaseType",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.VariantTypes.ArrayBaseValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.OfficeDocument.Y2006.DocPropsVTypes.ArrayBaseValues\u003E",
           "PropertyComments": "Array Base Type",
           "Validators": [
             {

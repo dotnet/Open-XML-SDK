@@ -14,7 +14,7 @@ using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.Office.MetaAttributes
+namespace DocumentFormat.OpenXml.Office.Y2006.MetaData.Properties.MetaAttributes
 {
     /// <summary>
     /// <para>Defines the Dummy Class.</para>
@@ -174,9 +174,9 @@ namespace DocumentFormat.OpenXml.Office.MetaAttributes
         /// <para>root</para>
         /// <para>Represents the following attribute in the schema: root</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office.MetaAttributes.TrueOnlyValues>? Root
+        public EnumValue<DocumentFormat.OpenXml.Office.Y2006.MetaData.Properties.MetaAttributes.TrueOnlyValues>? Root
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.MetaAttributes.TrueOnlyValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.Y2006.MetaData.Properties.MetaAttributes.TrueOnlyValues>>();
             set => SetAttribute(value);
         }
 

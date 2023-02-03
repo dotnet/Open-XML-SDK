@@ -6,7 +6,7 @@
 #nullable enable
 
 using DocumentFormat.OpenXml;
-using DocumentFormat.OpenXml.Drawing;
+using DocumentFormat.OpenXml.DrawingML.Y2006.Main;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Office.Drawing.Y2010.Main;
@@ -16,7 +16,7 @@ using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.Drawing.LockedCanvas
+namespace DocumentFormat.OpenXml.DrawingML.Y2006.LockedCanvas
 {
     /// <summary>
     /// <para>Locked Canvas Container.</para>
@@ -26,15 +26,15 @@ namespace DocumentFormat.OpenXml.Drawing.LockedCanvas
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.VisualGroupShapeProperties" /> <c>&lt;a:grpSpPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ConnectionShape" /> <c>&lt;a:cxnSp></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.GraphicFrame" /> <c>&lt;a:graphicFrame></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.GroupShape" /> <c>&lt;a:grpSp></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.GvmlGroupShapeExtensionList" /> <c>&lt;a:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NonVisualGroupShapeProperties" /> <c>&lt;a:nvGrpSpPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Picture" /> <c>&lt;a:pic></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Shape" /> <c>&lt;a:sp></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.TextShape" /> <c>&lt;a:txSp></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.VisualGroupShapeProperties" /> <c>&lt;a:grpSpPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.ConnectionShape" /> <c>&lt;a:cxnSp></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.GraphicFrame" /> <c>&lt;a:graphicFrame></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.GroupShape" /> <c>&lt;a:grpSp></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.GvmlGroupShapeExtensionList" /> <c>&lt;a:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.NonVisualGroupShapeProperties" /> <c>&lt;a:nvGrpSpPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.Picture" /> <c>&lt;a:pic></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.Shape" /> <c>&lt;a:sp></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.TextShape" /> <c>&lt;a:txSp></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.GvmlContentPart" /> <c>&lt;a14:contentPart></c></description></item>
     /// </list>
     /// </remark>
@@ -75,31 +75,31 @@ namespace DocumentFormat.OpenXml.Drawing.LockedCanvas
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("lc:lockedCanvas");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.VisualGroupShapeProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.ConnectionShape>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.GraphicFrame>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.GroupShape>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.GvmlGroupShapeExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.NonVisualGroupShapeProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Picture>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Shape>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.TextShape>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.VisualGroupShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.ConnectionShape>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.GraphicFrame>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.GroupShape>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.GvmlGroupShapeExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.NonVisualGroupShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.Picture>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.Shape>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.TextShape>();
             builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.GvmlContentPart>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NonVisualGroupShapeProperties), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.VisualGroupShapeProperties), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.NonVisualGroupShapeProperties), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.VisualGroupShapeProperties), 1, 1),
                 new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.TextShape), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Shape), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ConnectionShape), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Picture), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.TextShape), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.Shape), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.ConnectionShape), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.Picture), 1, 1),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2010.Main.GvmlContentPart), 1, 1, version: FileFormatVersions.Office2010),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GraphicFrame), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GroupShape), 1, 1)
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.GraphicFrame), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.GroupShape), 1, 1)
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GvmlGroupShapeExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.GvmlGroupShapeExtensionList), 0, 1)
             };
         }
 
@@ -110,9 +110,9 @@ namespace DocumentFormat.OpenXml.Drawing.LockedCanvas
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.NonVisualGroupShapeProperties? NonVisualGroupShapeProperties
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Main.NonVisualGroupShapeProperties? NonVisualGroupShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualGroupShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Main.NonVisualGroupShapeProperties>();
             set => SetElement(value);
         }
 
@@ -123,9 +123,9 @@ namespace DocumentFormat.OpenXml.Drawing.LockedCanvas
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.VisualGroupShapeProperties? VisualGroupShapeProperties
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Main.VisualGroupShapeProperties? VisualGroupShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.VisualGroupShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Main.VisualGroupShapeProperties>();
             set => SetElement(value);
         }
 

@@ -8,9 +8,9 @@
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
-using DocumentFormat.OpenXml.Office.Excel;
+using DocumentFormat.OpenXml.Office.Excel.Y2006.Main;
 using DocumentFormat.OpenXml.Packaging;
-using DocumentFormat.OpenXml.Spreadsheet;
+using DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main;
 using DocumentFormat.OpenXml.Validation.Schema;
 using DocumentFormat.OpenXml.Validation.Semantic;
 using System;
@@ -497,7 +497,7 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotCache" /> <c>&lt;x:pivotCache></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.PivotCache" /> <c>&lt;x:pivotCache></c></description></item>
     /// </list>
     /// </remark>
     public partial class PivotCaches : TypedOpenXmlCompositeElement
@@ -538,10 +538,10 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main
             base.ConfigureMetadata(builder);
             builder.SetSchema("x14:pivotCaches");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotCache>();
+            builder.AddChild<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.PivotCache>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotCache), 1, 0)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.PivotCache), 1, 0)
             };
         }
 
@@ -1562,7 +1562,7 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat" /> <c>&lt;x:dxf></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.DifferentialFormat" /> <c>&lt;x:dxf></c></description></item>
     /// </list>
     /// </remark>
     public partial class DifferentialFormats : TypedOpenXmlCompositeElement
@@ -1613,12 +1613,12 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main
             base.ConfigureMetadata(builder);
             builder.SetSchema("x14:dxfs");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat>();
+            builder.AddChild<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.DifferentialFormat>();
             builder.AddElement<DifferentialFormats>()
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat), 0, 0)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.DifferentialFormat), 0, 0)
             };
         }
 
@@ -2051,9 +2051,9 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main
         /// <para>sortBy, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: sortBy</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.SortByValues>? SortBy
+        public EnumValue<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.SortByValues>? SortBy
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.SortByValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.SortByValues>>();
             set => SetAttribute(value);
         }
 
@@ -3040,7 +3040,7 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.ExtensionList" /> <c>&lt;x14:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.ConditionalFormattingRule" /> <c>&lt;x14:cfRule></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.ReferenceSequence" /> <c>&lt;xne:sqref></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.Y2006.Main.ReferenceSequence" /> <c>&lt;xne:sqref></c></description></item>
     /// </list>
     /// </remark>
     public partial class ConditionalFormatting : TypedOpenXmlCompositeElement
@@ -3093,13 +3093,13 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.ExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.ConditionalFormattingRule>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.ReferenceSequence>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.Y2006.Main.ReferenceSequence>();
             builder.AddElement<ConditionalFormatting>()
                 .AddAttribute("pivot", a => a.Pivot);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.ConditionalFormattingRule), 0, 0, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.ReferenceSequence), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.Y2006.Main.ReferenceSequence), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.ExtensionList), 0, 1, version: FileFormatVersions.Office2010)
             };
         }
@@ -3118,7 +3118,7 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.DifferentialType" /> <c>&lt;x14:dxf></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.ExtensionList" /> <c>&lt;x14:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.Formula" /> <c>&lt;xne:f></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.Y2006.Main.Formula" /> <c>&lt;xne:f></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.ColorScale" /> <c>&lt;x14:colorScale></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.DataBar" /> <c>&lt;x14:dataBar></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.IconSet" /> <c>&lt;x14:iconSet></c></description></item>
@@ -3161,9 +3161,9 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main
         /// <para>type, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.ConditionalFormatValues>? Type
+        public EnumValue<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.ConditionalFormatValues>? Type
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.ConditionalFormatValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.ConditionalFormatValues>>();
             set => SetAttribute(value);
         }
 
@@ -3221,9 +3221,9 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main
         /// <para>operator, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: operator</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.ConditionalFormattingOperatorValues>? Operator
+        public EnumValue<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.ConditionalFormattingOperatorValues>? Operator
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.ConditionalFormattingOperatorValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.ConditionalFormattingOperatorValues>>();
             set => SetAttribute(value);
         }
 
@@ -3241,9 +3241,9 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main
         /// <para>timePeriod, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: timePeriod</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.TimePeriodValues>? TimePeriod
+        public EnumValue<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.TimePeriodValues>? TimePeriod
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.TimePeriodValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.TimePeriodValues>>();
             set => SetAttribute(value);
         }
 
@@ -3304,7 +3304,7 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.DifferentialType>();
             builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.Formula>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.Y2006.Main.Formula>();
             builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.ColorScale>();
             builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.DataBar>();
             builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.IconSet>();
@@ -3328,7 +3328,7 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.Formula), 0, 3),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.Y2006.Main.Formula), 0, 3),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.ColorScale), 0, 1, version: FileFormatVersions.Office2010),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.DataBar), 0, 1, version: FileFormatVersions.Office2010),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.IconSet), 0, 1, version: FileFormatVersions.Office2010),
@@ -3358,7 +3358,7 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Extension" /> <c>&lt;x:ext></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Extension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
     /// </remark>
     public partial class ExtensionList : TypedOpenXmlCompositeElement
@@ -3399,14 +3399,14 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main
             base.ConfigureMetadata(builder);
             builder.SetSchema("x14:extLst");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Extension>();
+            builder.AddChild<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Extension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Extension), 0, 0)
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Extension), 0, 0)
                     }
                 }
             };
@@ -3426,7 +3426,7 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.DataValidationForumla1" /> <c>&lt;x14:formula1></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.DataValidationForumla2" /> <c>&lt;x14:formula2></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.ReferenceSequence" /> <c>&lt;xne:sqref></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.Y2006.Main.ReferenceSequence" /> <c>&lt;xne:sqref></c></description></item>
     /// </list>
     /// </remark>
     public partial class DataValidation : TypedOpenXmlCompositeElement
@@ -3466,9 +3466,9 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main
         /// <para>type, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationValues>? Type
+        public EnumValue<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.DataValidationValues>? Type
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.DataValidationValues>>();
             set => SetAttribute(value);
         }
 
@@ -3476,9 +3476,9 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main
         /// <para>errorStyle, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: errorStyle</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationErrorStyleValues>? ErrorStyle
+        public EnumValue<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.DataValidationErrorStyleValues>? ErrorStyle
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationErrorStyleValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.DataValidationErrorStyleValues>>();
             set => SetAttribute(value);
         }
 
@@ -3486,9 +3486,9 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main
         /// <para>imeMode, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: imeMode</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationImeModeValues>? ImeMode
+        public EnumValue<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.DataValidationImeModeValues>? ImeMode
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationImeModeValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.DataValidationImeModeValues>>();
             set => SetAttribute(value);
         }
 
@@ -3496,9 +3496,9 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main
         /// <para>operator, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: operator</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationOperatorValues>? Operator
+        public EnumValue<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.DataValidationOperatorValues>? Operator
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationOperatorValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.DataValidationOperatorValues>>();
             set => SetAttribute(value);
         }
 
@@ -3589,7 +3589,7 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.DataValidationForumla1>();
             builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.DataValidationForumla2>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.ReferenceSequence>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.Y2006.Main.ReferenceSequence>();
             builder.AddElement<DataValidation>()
                 .AddAttribute("type", a => a.Type)
                 .AddAttribute("errorStyle", a => a.ErrorStyle)
@@ -3607,7 +3607,7 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.DataValidationForumla1), 0, 1, version: FileFormatVersions.Office2010),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.DataValidationForumla2), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.ReferenceSequence), 1, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.Y2006.Main.ReferenceSequence), 1, 1)
             };
             builder.AddConstraint(new AttributeValueLengthConstraint(builder.CreateQName("x14:error"), 0, 225) { Version = FileFormatVersions.Office2010 });
             builder.AddConstraint(new AttributeValueLengthConstraint(builder.CreateQName("x14:promptTitle"), 0, 32) { Version = FileFormatVersions.Office2010 });
@@ -3647,9 +3647,9 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main
         /// <remark>
         /// xmlns:xne = http://schemas.microsoft.com/office/excel/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Office.Excel.ReferenceSequence? ReferenceSequence
+        public DocumentFormat.OpenXml.Office.Excel.Y2006.Main.ReferenceSequence? ReferenceSequence
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Excel.ReferenceSequence>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Excel.Y2006.Main.ReferenceSequence>();
             set => SetElement(value);
         }
 
@@ -3665,7 +3665,7 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.Formula" /> <c>&lt;xne:f></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.Y2006.Main.Formula" /> <c>&lt;xne:f></c></description></item>
     /// </list>
     /// </remark>
     public partial class DataValidationForumla1 : DataValidationFormulaType
@@ -3708,7 +3708,7 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main
             builder.Availability = FileFormatVersions.Office2010;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.Formula), 1, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.Y2006.Main.Formula), 1, 1)
             };
         }
 
@@ -3724,7 +3724,7 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.Formula" /> <c>&lt;xne:f></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.Y2006.Main.Formula" /> <c>&lt;xne:f></c></description></item>
     /// </list>
     /// </remark>
     public partial class DataValidationForumla2 : DataValidationFormulaType
@@ -3767,7 +3767,7 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main
             builder.Availability = FileFormatVersions.Office2010;
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.Formula), 1, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.Y2006.Main.Formula), 1, 1)
             };
         }
 
@@ -3783,7 +3783,7 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.Formula" /> <c>&lt;xne:f></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.Y2006.Main.Formula" /> <c>&lt;xne:f></c></description></item>
     /// </list>
     /// </remark>
     public abstract partial class DataValidationFormulaType : TypedOpenXmlCompositeElement
@@ -3822,7 +3822,7 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.Formula>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.Y2006.Main.Formula>();
         }
 
         /// <summary>
@@ -3832,9 +3832,9 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main
         /// <remark>
         /// xmlns:xne = http://schemas.microsoft.com/office/excel/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Office.Excel.Formula? Formula
+        public DocumentFormat.OpenXml.Office.Excel.Y2006.Main.Formula? Formula
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Excel.Formula>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Excel.Y2006.Main.Formula>();
             set => SetElement(value);
         }
     }
@@ -3855,7 +3855,7 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.LastMarkerColor" /> <c>&lt;x14:colorLast></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.HighMarkerColor" /> <c>&lt;x14:colorHigh></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.LowMarkerColor" /> <c>&lt;x14:colorLow></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.Formula" /> <c>&lt;xne:f></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.Y2006.Main.Formula" /> <c>&lt;xne:f></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.Sparklines" /> <c>&lt;x14:sparklines></c></description></item>
     /// </list>
     /// </remark>
@@ -4075,7 +4075,7 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main
             builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.LastMarkerColor>();
             builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.HighMarkerColor>();
             builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.LowMarkerColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.Formula>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.Y2006.Main.Formula>();
             builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.Sparklines>();
             builder.AddElement<SparklineGroup>()
                 .AddAttribute("manualMax", a => a.ManualMax)
@@ -4105,7 +4105,7 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.LastMarkerColor), 0, 1, version: FileFormatVersions.Office2010),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.HighMarkerColor), 0, 1, version: FileFormatVersions.Office2010),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.LowMarkerColor), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.Formula), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.Y2006.Main.Formula), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.Sparklines), 1, 1, version: FileFormatVersions.Office2010)
             };
             builder.AddConstraint(new AttributeValueConditionToAnother(builder.CreateQName("x14:manualMin"), builder.CreateQName("x14:minAxisType"), new string[] { "0" }, new string[] { "individual", "group" }) { Version = FileFormatVersions.Office2010 });
@@ -4223,9 +4223,9 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main
         /// <remark>
         /// xmlns:xne = http://schemas.microsoft.com/office/excel/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Office.Excel.Formula? Formula
+        public DocumentFormat.OpenXml.Office.Excel.Y2006.Main.Formula? Formula
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Excel.Formula>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Excel.Y2006.Main.Formula>();
             set => SetElement(value);
         }
 
@@ -4750,8 +4750,8 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.Formula" /> <c>&lt;xne:f></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.ReferenceSequence" /> <c>&lt;xne:sqref></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.Y2006.Main.Formula" /> <c>&lt;xne:f></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.Y2006.Main.ReferenceSequence" /> <c>&lt;xne:sqref></c></description></item>
     /// </list>
     /// </remark>
     public partial class Sparkline : TypedOpenXmlCompositeElement
@@ -4792,12 +4792,12 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main
             base.ConfigureMetadata(builder);
             builder.SetSchema("x14:sparkline");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.Formula>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.ReferenceSequence>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.Y2006.Main.Formula>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.Y2006.Main.ReferenceSequence>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.Formula), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.ReferenceSequence), 1, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.Y2006.Main.Formula), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.Y2006.Main.ReferenceSequence), 1, 1)
             };
         }
 
@@ -4808,9 +4808,9 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main
         /// <remark>
         /// xmlns:xne = http://schemas.microsoft.com/office/excel/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Office.Excel.Formula? Formula
+        public DocumentFormat.OpenXml.Office.Excel.Y2006.Main.Formula? Formula
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Excel.Formula>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Excel.Y2006.Main.Formula>();
             set => SetElement(value);
         }
 
@@ -4821,9 +4821,9 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main
         /// <remark>
         /// xmlns:xne = http://schemas.microsoft.com/office/excel/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Office.Excel.ReferenceSequence? ReferenceSequence
+        public DocumentFormat.OpenXml.Office.Excel.Y2006.Main.ReferenceSequence? ReferenceSequence
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Excel.ReferenceSequence>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Excel.Y2006.Main.ReferenceSequence>();
             set => SetElement(value);
         }
 
@@ -6010,13 +6010,13 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Border" /> <c>&lt;x:border></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Alignment" /> <c>&lt;x:alignment></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Protection" /> <c>&lt;x:protection></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Fill" /> <c>&lt;x:fill></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Font" /> <c>&lt;x:font></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.NumberingFormat" /> <c>&lt;x:numFmt></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Border" /> <c>&lt;x:border></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Alignment" /> <c>&lt;x:alignment></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Protection" /> <c>&lt;x:protection></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Fill" /> <c>&lt;x:fill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Font" /> <c>&lt;x:font></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.NumberingFormat" /> <c>&lt;x:numFmt></c></description></item>
     /// </list>
     /// </remark>
     public partial class DifferentialType : TypedOpenXmlCompositeElement
@@ -6057,22 +6057,22 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main
             base.ConfigureMetadata(builder);
             builder.SetSchema("x14:dxf");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Border>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Alignment>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Protection>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Fill>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Font>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.NumberingFormat>();
+            builder.AddChild<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Border>();
+            builder.AddChild<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Alignment>();
+            builder.AddChild<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Protection>();
+            builder.AddChild<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Fill>();
+            builder.AddChild<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Font>();
+            builder.AddChild<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.NumberingFormat>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Font), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.NumberingFormat), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Fill), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Alignment), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Border), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Protection), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Font), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.NumberingFormat), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Fill), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Alignment), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Border), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Protection), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.ExtensionList), 0, 1)
             };
         }
 
@@ -6083,9 +6083,9 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.Font? Font
+        public DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Font? Font
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Font>();
+            get => GetElement<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Font>();
             set => SetElement(value);
         }
 
@@ -6096,9 +6096,9 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.NumberingFormat? NumberingFormat
+        public DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.NumberingFormat? NumberingFormat
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.NumberingFormat>();
+            get => GetElement<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.NumberingFormat>();
             set => SetElement(value);
         }
 
@@ -6109,9 +6109,9 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.Fill? Fill
+        public DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Fill? Fill
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Fill>();
+            get => GetElement<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Fill>();
             set => SetElement(value);
         }
 
@@ -6122,9 +6122,9 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.Alignment? Alignment
+        public DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Alignment? Alignment
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Alignment>();
+            get => GetElement<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Alignment>();
             set => SetElement(value);
         }
 
@@ -6135,9 +6135,9 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.Border? Border
+        public DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Border? Border
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Border>();
+            get => GetElement<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Border>();
             set => SetElement(value);
         }
 
@@ -6148,9 +6148,9 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.Protection? Protection
+        public DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Protection? Protection
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Protection>();
+            get => GetElement<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Protection>();
             set => SetElement(value);
         }
 
@@ -6161,9 +6161,9 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -6180,7 +6180,7 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.ExtensionList" /> <c>&lt;x14:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.Formula" /> <c>&lt;xne:f></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.Y2006.Main.Formula" /> <c>&lt;xne:f></c></description></item>
     /// </list>
     /// </remark>
     public partial class ConditionalFormattingValueObject : TypedOpenXmlCompositeElement
@@ -6242,7 +6242,7 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main
             builder.SetSchema("x14:cfvo");
             builder.Availability = FileFormatVersions.Office2010;
             builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.Formula>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.Y2006.Main.Formula>();
             builder.AddElement<ConditionalFormattingValueObject>()
                 .AddAttribute("type", a => a.Type, aBuilder =>
                 {
@@ -6251,7 +6251,7 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main
                 .AddAttribute("gte", a => a.GreaterThanOrEqual);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.Formula), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.Y2006.Main.Formula), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.ExtensionList), 0, 1, version: FileFormatVersions.Office2010)
             };
         }
@@ -6263,9 +6263,9 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main
         /// <remark>
         /// xmlns:xne = http://schemas.microsoft.com/office/excel/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Office.Excel.Formula? Formula
+        public DocumentFormat.OpenXml.Office.Excel.Y2006.Main.Formula? Formula
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Excel.Formula>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Excel.Y2006.Main.Formula>();
             set => SetElement(value);
         }
 
@@ -6540,7 +6540,7 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CalculatedMember" /> <c>&lt;x:calculatedMember></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.CalculatedMember" /> <c>&lt;x:calculatedMember></c></description></item>
     /// </list>
     /// </remark>
     public partial class CalculatedMembers : TypedOpenXmlCompositeElement
@@ -6591,12 +6591,12 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main
             base.ConfigureMetadata(builder);
             builder.SetSchema("x14:calculatedMembers");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CalculatedMember>();
+            builder.AddChild<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.CalculatedMember>();
             builder.AddElement<CalculatedMembers>()
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CalculatedMember), 1, 0)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.CalculatedMember), 1, 0)
             };
         }
 
@@ -6733,7 +6733,7 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.Formula" /> <c>&lt;xne:f></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.Y2006.Main.Formula" /> <c>&lt;xne:f></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.PivotEditValue" /> <c>&lt;x14:editValue></c></description></item>
     /// </list>
     /// </remark>
@@ -6775,11 +6775,11 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main
             base.ConfigureMetadata(builder);
             builder.SetSchema("x14:userEdit");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.Formula>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.Y2006.Main.Formula>();
             builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.PivotEditValue>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.Formula), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.Y2006.Main.Formula), 1, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.PivotEditValue), 1, 1, version: FileFormatVersions.Office2010)
             };
         }
@@ -6791,9 +6791,9 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main
         /// <remark>
         /// xmlns:xne = http://schemas.microsoft.com/office/excel/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Office.Excel.Formula? Formula
+        public DocumentFormat.OpenXml.Office.Excel.Y2006.Main.Formula? Formula
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Excel.Formula>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Excel.Y2006.Main.Formula>();
             set => SetElement(value);
         }
 
@@ -6882,8 +6882,8 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotAreaReferences" /> <c>&lt;x:references></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.PivotAreaReferences" /> <c>&lt;x:references></c></description></item>
     /// </list>
     /// </remark>
     public partial class PivotArea : TypedOpenXmlCompositeElement
@@ -6933,9 +6933,9 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main
         /// <para>Rule Type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.PivotAreaValues>? Type
+        public EnumValue<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.PivotAreaValues>? Type
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.PivotAreaValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.PivotAreaValues>>();
             set => SetAttribute(value);
         }
 
@@ -7023,9 +7023,9 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main
         /// <para>Axis</para>
         /// <para>Represents the following attribute in the schema: axis</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.PivotTableAxisValues>? Axis
+        public EnumValue<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.PivotTableAxisValues>? Axis
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.PivotTableAxisValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.PivotTableAxisValues>>();
             set => SetAttribute(value);
         }
 
@@ -7044,8 +7044,8 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main
             base.ConfigureMetadata(builder);
             builder.SetSchema("x14:pivotArea");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotAreaReferences>();
+            builder.AddChild<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.PivotAreaReferences>();
             builder.AddElement<PivotArea>()
                 .AddAttribute("field", a => a.Field)
                 .AddAttribute("type", a => a.Type)
@@ -7061,8 +7061,8 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main
                 .AddAttribute("fieldPosition", a => a.FieldPosition);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotAreaReferences), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.PivotAreaReferences), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.ExtensionList), 0, 1)
             };
         }
 
@@ -7073,9 +7073,9 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.PivotAreaReferences? PivotAreaReferences
+        public DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.PivotAreaReferences? PivotAreaReferences
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotAreaReferences>();
+            get => GetElement<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.PivotAreaReferences>();
             set => SetElement(value);
         }
 
@@ -7086,9 +7086,9 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -7385,7 +7385,7 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Value" /> <c>&lt;x:value></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Value" /> <c>&lt;x:value></c></description></item>
     /// </list>
     /// </remark>
     public partial class DdeValues : TypedOpenXmlCompositeElement
@@ -7446,13 +7446,13 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main
             base.ConfigureMetadata(builder);
             builder.SetSchema("x14:values");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Value>();
+            builder.AddChild<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Value>();
             builder.AddElement<DdeValues>()
                 .AddAttribute("rows", a => a.Rows)
                 .AddAttribute("cols", a => a.Columns);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Value), 1, 0)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Value), 1, 0)
             };
         }
 
@@ -7509,9 +7509,9 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main
         /// <para>scope, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: scope</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.ScopeValues>? Scope
+        public EnumValue<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.ScopeValues>? Scope
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.ScopeValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.ScopeValues>>();
             set => SetAttribute(value);
         }
 
@@ -7519,9 +7519,9 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main
         /// <para>type, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.RuleValues>? Type
+        public EnumValue<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.RuleValues>? Type
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.RuleValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.RuleValues>>();
             set => SetAttribute(value);
         }
 
@@ -7609,7 +7609,7 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotArea" /> <c>&lt;x:pivotArea></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.PivotArea" /> <c>&lt;x:pivotArea></c></description></item>
     /// </list>
     /// </remark>
     public partial class PivotAreas : TypedOpenXmlCompositeElement
@@ -7660,12 +7660,12 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main
             base.ConfigureMetadata(builder);
             builder.SetSchema("x14:pivotAreas");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotArea>();
+            builder.AddChild<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.PivotArea>();
             builder.AddElement<PivotAreas>()
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotArea), 0, 0)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.PivotArea), 0, 0)
             };
         }
 
@@ -7825,7 +7825,7 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.ReferenceSequence" /> <c>&lt;xne:sqref></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.Y2006.Main.ReferenceSequence" /> <c>&lt;xne:sqref></c></description></item>
     /// </list>
     /// </remark>
     public partial class IgnoredError : TypedOpenXmlCompositeElement
@@ -7956,7 +7956,7 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main
             base.ConfigureMetadata(builder);
             builder.SetSchema("x14:ignoredError");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.ReferenceSequence>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.Y2006.Main.ReferenceSequence>();
             builder.AddElement<IgnoredError>()
                 .AddAttribute("evalError", a => a.EvalError)
                 .AddAttribute("twoDigitTextYear", a => a.TwoDigitTextYear)
@@ -7969,7 +7969,7 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main
                 .AddAttribute("calculatedColumn", a => a.CalculatedColumn);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.ReferenceSequence), 1, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.Y2006.Main.ReferenceSequence), 1, 1)
             };
         }
 
@@ -7980,9 +7980,9 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main
         /// <remark>
         /// xmlns:xne = http://schemas.microsoft.com/office/excel/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Office.Excel.ReferenceSequence? ReferenceSequence
+        public DocumentFormat.OpenXml.Office.Excel.Y2006.Main.ReferenceSequence? ReferenceSequence
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Excel.ReferenceSequence>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Excel.Y2006.Main.ReferenceSequence>();
             set => SetElement(value);
         }
 
@@ -7998,7 +7998,7 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.ReferenceSequence" /> <c>&lt;xne:sqref></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.Y2006.Main.ReferenceSequence" /> <c>&lt;xne:sqref></c></description></item>
     /// </list>
     /// </remark>
     public partial class ProtectedRange : TypedOpenXmlCompositeElement
@@ -8109,7 +8109,7 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main
             base.ConfigureMetadata(builder);
             builder.SetSchema("x14:protectedRange");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.ReferenceSequence>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.Y2006.Main.ReferenceSequence>();
             builder.AddElement<ProtectedRange>()
                 .AddAttribute("password", a => a.Password, aBuilder =>
                 {
@@ -8126,7 +8126,7 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main
                 .AddAttribute("securityDescriptor", a => a.SecurityDescriptor);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.ReferenceSequence), 1, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.Y2006.Main.ReferenceSequence), 1, 1)
             };
             builder.AddConstraint(new AttributeMutualExclusive(builder.CreateQName("x14:password"), builder.CreateQName("x14:algorithmName")) { Version = FileFormatVersions.Office2010 });
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("x14:spinCount"), true, double.NegativeInfinity, true, 10000000, true) { Version = FileFormatVersions.Office2010 });
@@ -8140,9 +8140,9 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main
         /// <remark>
         /// xmlns:xne = http://schemas.microsoft.com/office/excel/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Office.Excel.ReferenceSequence? ReferenceSequence
+        public DocumentFormat.OpenXml.Office.Excel.Y2006.Main.ReferenceSequence? ReferenceSequence
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Excel.ReferenceSequence>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Excel.Y2006.Main.ReferenceSequence>();
             set => SetElement(value);
         }
 
@@ -8168,9 +8168,9 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main
         /// <para>operator, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: operator</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.FilterOperatorValues>? Operator
+        public EnumValue<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.FilterOperatorValues>? Operator
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.FilterOperatorValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.FilterOperatorValues>>();
             set => SetAttribute(value);
         }
 
@@ -9743,7 +9743,7 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.SlicerCacheDefinitionExtension" /> <c>&lt;x:ext></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.SlicerCacheDefinitionExtension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
     /// </remark>
     public partial class SlicerCacheDefinitionExtensionList : TypedOpenXmlCompositeElement
@@ -9784,10 +9784,10 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main
             base.ConfigureMetadata(builder);
             builder.SetSchema("x14:extLst");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.SlicerCacheDefinitionExtension>();
+            builder.AddChild<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.SlicerCacheDefinitionExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.SlicerCacheDefinitionExtension), 0, 0)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.SlicerCacheDefinitionExtension), 0, 0)
             };
         }
 

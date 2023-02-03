@@ -2,23 +2,19 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml;
-using DocumentFormat.OpenXml.Drawing;
+using DocumentFormat.OpenXml.DrawingML.Y2006.Main;
 using DocumentFormat.OpenXml.Office.Drawing.Y2016.SVG.Main;
 using DocumentFormat.OpenXml.Packaging;
-using DocumentFormat.OpenXml.Presentation;
+using DocumentFormat.OpenXml.PresentationML.Y2006.Main;
 using Svg;
 using System;
-using System.CodeDom.Compiler;
 using System.Collections.Generic;
-using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
-using System.Text;
 
-using BlipFill = DocumentFormat.OpenXml.Drawing.BlipFill;
-using Extension = DocumentFormat.OpenXml.Drawing.Extension;
-using Picture = DocumentFormat.OpenXml.Drawing.Picture;
+using Extension = DocumentFormat.OpenXml.DrawingML.Y2006.Main.Extension;
+using P = DocumentFormat.OpenXml.PresentationML.Y2006.Main;
 
 namespace SVGExample
 {
@@ -78,21 +74,21 @@ namespace SVGExample
                         creationId.AddNamespaceDeclaration("a16", "http://schemas.microsoft.com/office/drawing/2014/main");
                         creationId.Id = "{E36DC281-2F17-44E3-80EA-AB5BFA90E4D7}";
 
-                        var picture = new DocumentFormat.OpenXml.Presentation.Picture();
+                        var picture = new P.Picture();
 
                         // add non visual properties to picture
-                        picture.NonVisualPictureProperties = new DocumentFormat.OpenXml.Presentation.NonVisualPictureProperties();
-                        picture.NonVisualPictureProperties.NonVisualDrawingProperties = new DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties() { Id = new UInt32Value((uint)++partsCount), Name = "Picture 1" };
-                        picture.NonVisualPictureProperties.NonVisualDrawingProperties.AppendChild(new DocumentFormat.OpenXml.Drawing.ExtensionList(
+                        picture.NonVisualPictureProperties = new P.NonVisualPictureProperties();
+                        picture.NonVisualPictureProperties.NonVisualDrawingProperties = new P.NonVisualDrawingProperties() { Id = new UInt32Value((uint)++partsCount), Name = "Picture 1" };
+                        picture.NonVisualPictureProperties.NonVisualDrawingProperties.AppendChild(new DocumentFormat.OpenXml.DrawingML.Y2006.Main.ExtensionList(
                                     new Extension(
                                         creationId)
                                     { Uri = "{FF2B5EF4-FFF2-40B4-BE49-F238E27FC236}" }));
-                        picture.NonVisualPictureProperties.NonVisualPictureDrawingProperties = new DocumentFormat.OpenXml.Presentation.NonVisualPictureDrawingProperties();
+                        picture.NonVisualPictureProperties.NonVisualPictureDrawingProperties = new P.NonVisualPictureDrawingProperties();
                         picture.NonVisualPictureProperties.ApplicationNonVisualDrawingProperties = new ApplicationNonVisualDrawingProperties();
                         picture.NonVisualPictureProperties.NonVisualPictureDrawingProperties.PictureLocks = new PictureLocks() { NoChangeAspect = true };
 
                         // add blipfill
-                        picture.BlipFill = new DocumentFormat.OpenXml.Presentation.BlipFill();
+                        picture.BlipFill = new P.BlipFill();
                         picture.BlipFill.Blip = new Blip() { Embed = svgId };
                         picture.BlipFill.AppendChild(new Stretch(
                                 new FillRectangle()));
@@ -101,7 +97,7 @@ namespace SVGExample
                         ext.Uri = string.Empty;
                         ext.AppendChild(new SVGBlip());
                         picture.BlipFill.Blip.AppendChild(blipExtensionList);
-                        picture.ShapeProperties = new DocumentFormat.OpenXml.Presentation.ShapeProperties();
+                        picture.ShapeProperties = new P.ShapeProperties();
                         picture.ShapeProperties.Transform2D = new Transform2D();
                         picture.ShapeProperties.Transform2D.Offset = new Offset();
                         picture.ShapeProperties.Transform2D.Offset.X = new Int64Value(5638800L);

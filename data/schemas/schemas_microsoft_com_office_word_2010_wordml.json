@@ -3789,7 +3789,7 @@
         {
           "QName": "w14:bwMode",
           "PropertyName": "BlackWhiteMode",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.BlackWhiteModeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.BlackWhiteModeValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "bwMode",
           "Validators": [

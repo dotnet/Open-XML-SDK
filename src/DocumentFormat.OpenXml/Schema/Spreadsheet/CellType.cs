@@ -5,7 +5,7 @@ using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Validation;
 using System.Globalization;
 
-namespace DocumentFormat.OpenXml.Spreadsheet
+namespace DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main
 {
     public partial class CellType : IValidator
     {

@@ -75,7 +75,7 @@
         {
           "QName": ":bwMode",
           "PropertyName": "BlackWhiteMode",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.BlackWhiteModeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.BlackWhiteModeValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "bwMode",
           "Validators": [
@@ -272,7 +272,7 @@
         {
           "QName": ":cap",
           "PropertyName": "CapType",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.LineCapValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.LineCapValues\u003E",
           "PropertyComments": "line cap",
           "Validators": [
             {
@@ -291,7 +291,7 @@
         {
           "QName": ":cmpd",
           "PropertyName": "CompoundLineType",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.CompoundLineValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.CompoundLineValues\u003E",
           "PropertyComments": "compound line type",
           "Validators": [
             {
@@ -310,7 +310,7 @@
         {
           "QName": ":algn",
           "PropertyName": "Alignment",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.PenAlignmentValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.PenAlignmentValues\u003E",
           "PropertyComments": "pen alignment",
           "Validators": [
             {
@@ -647,7 +647,7 @@
         {
           "QName": ":prstMaterial",
           "PropertyName": "PresetMaterial",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.PresetMaterialTypeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.PresetMaterialTypeValues\u003E",
           "PropertyComments": "Preset Material Type",
           "Validators": [
             {

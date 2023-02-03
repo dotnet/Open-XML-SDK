@@ -1,9 +1,10 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.WordprocessingML.Y2006.Main;
 using Xunit;
 
-namespace DocumentFormat.OpenXml.Wordprocessing
+namespace DocumentFormat.OpenXml.Tests.Wordprocessing
 {
     public class TabStopTests
     {

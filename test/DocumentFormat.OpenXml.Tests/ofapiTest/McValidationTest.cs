@@ -4,7 +4,7 @@
 using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Validation;
 using DocumentFormat.OpenXml.Validation.Schema;
-using DocumentFormat.OpenXml.Wordprocessing;
+using DocumentFormat.OpenXml.WordprocessingML.Y2006.Main;
 using Xunit;
 
 namespace DocumentFormat.OpenXml.Tests

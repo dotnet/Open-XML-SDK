@@ -10,7 +10,7 @@
         {
           "QName": ":ObjectType",
           "PropertyName": "ObjectType",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Spreadsheet.ObjectValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Excel.VML.ObjectValues\u003E",
           "PropertyComments": "Object type",
           "Validators": [
             {

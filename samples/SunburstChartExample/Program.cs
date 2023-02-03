@@ -3,10 +3,10 @@
 
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Packaging;
-using DocumentFormat.OpenXml.Presentation;
+using DocumentFormat.OpenXml.PresentationML.Y2006.Main;
 
-using A = DocumentFormat.OpenXml.Drawing;
-using C = DocumentFormat.OpenXml.Drawing.Charts;
+using A = DocumentFormat.OpenXml.DrawingML.Y2006.Main;
+using C = DocumentFormat.OpenXml.DrawingML.Y2006.Chart;
 using C16 = DocumentFormat.OpenXml.Office.Drawing.Y2014.ChartEx;
 using Cs = DocumentFormat.OpenXml.Office.Drawing.Y2012.ChartStyle;
 using P14 = DocumentFormat.OpenXml.Office.PowerPoint.Y2010.Main;
@@ -1492,7 +1492,7 @@ namespace CreatePresentationDocument
             var extents3 = new A.Extents { Cx = 8128000, Cy = 5418667 };
             tform1.Append(toff1);
             tform1.Append(extents3);
-            var prstGeom1 = new A.PresetGeometry { Preset = DocumentFormat.OpenXml.Drawing.ShapeTypeValues.Rectangle };
+            var prstGeom1 = new A.PresetGeometry { Preset = A.ShapeTypeValues.Rectangle };
             var avLst1 = new A.AdjustValueList();
             prstGeom1.Append(avLst1);
             spPr.Append(tform1);

@@ -267,7 +267,7 @@
         {
           "QName": ":bg1",
           "PropertyName": "Background1",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.ColorSchemeIndexValues\u003E",
           "PropertyComments": "Background 1",
           "Validators": [
             {
@@ -289,7 +289,7 @@
         {
           "QName": ":tx1",
           "PropertyName": "Text1",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.ColorSchemeIndexValues\u003E",
           "PropertyComments": "Text 1",
           "Validators": [
             {
@@ -311,7 +311,7 @@
         {
           "QName": ":bg2",
           "PropertyName": "Background2",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.ColorSchemeIndexValues\u003E",
           "PropertyComments": "Background 2",
           "Validators": [
             {
@@ -333,7 +333,7 @@
         {
           "QName": ":tx2",
           "PropertyName": "Text2",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.ColorSchemeIndexValues\u003E",
           "PropertyComments": "Text 2",
           "Validators": [
             {
@@ -355,7 +355,7 @@
         {
           "QName": ":accent1",
           "PropertyName": "Accent1",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.ColorSchemeIndexValues\u003E",
           "PropertyComments": "Accent 1",
           "Validators": [
             {
@@ -377,7 +377,7 @@
         {
           "QName": ":accent2",
           "PropertyName": "Accent2",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.ColorSchemeIndexValues\u003E",
           "PropertyComments": "Accent 2",
           "Validators": [
             {
@@ -399,7 +399,7 @@
         {
           "QName": ":accent3",
           "PropertyName": "Accent3",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.ColorSchemeIndexValues\u003E",
           "PropertyComments": "Accent 3",
           "Validators": [
             {
@@ -421,7 +421,7 @@
         {
           "QName": ":accent4",
           "PropertyName": "Accent4",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.ColorSchemeIndexValues\u003E",
           "PropertyComments": "Accent 4",
           "Validators": [
             {
@@ -443,7 +443,7 @@
         {
           "QName": ":accent5",
           "PropertyName": "Accent5",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.ColorSchemeIndexValues\u003E",
           "PropertyComments": "Accent 5",
           "Validators": [
             {
@@ -465,7 +465,7 @@
         {
           "QName": ":accent6",
           "PropertyName": "Accent6",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.ColorSchemeIndexValues\u003E",
           "PropertyComments": "Accent 6",
           "Validators": [
             {
@@ -487,7 +487,7 @@
         {
           "QName": ":hlink",
           "PropertyName": "Hyperlink",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.ColorSchemeIndexValues\u003E",
           "PropertyComments": "Hyperlink",
           "Validators": [
             {
@@ -509,7 +509,7 @@
         {
           "QName": ":folHlink",
           "PropertyName": "FollowedHyperlink",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.ColorSchemeIndexValues\u003E",
           "PropertyComments": "Followed Hyperlink",
           "Validators": [
             {
@@ -1038,7 +1038,7 @@
         {
           "QName": ":conformance",
           "PropertyName": "Conformance",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Presentation.ConformanceClassValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.PresentationML.Y2006.Main.ConformanceClassValues\u003E",
           "PropertyComments": "conformance"
         }
       ],
@@ -1440,7 +1440,7 @@
         {
           "QName": ":type",
           "PropertyName": "Type",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Presentation.SlideLayoutValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.PresentationML.Y2006.Main.SlideLayoutValues\u003E",
           "PropertyComments": "type",
           "Validators": [
             {
@@ -1993,7 +1993,7 @@
         {
           "QName": ":lastView",
           "PropertyName": "LastView",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Presentation.ViewValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.PresentationML.Y2006.Main.ViewValues\u003E",
           "PropertyComments": "Last View",
           "Validators": [
             {
@@ -2142,7 +2142,7 @@
       "Attributes": [
         {
           "QName": "p14:bwMode",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.BlackWhiteModeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.BlackWhiteModeValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "bwMode",
           "Validators": [
@@ -2454,7 +2454,7 @@
         {
           "QName": ":val",
           "PropertyName": "Val",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Presentation.TriggerRuntimeNodeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.PresentationML.Y2006.Main.TriggerRuntimeNodeValues\u003E",
           "PropertyComments": "Value",
           "Validators": [
             {
@@ -2574,7 +2574,7 @@
         {
           "QName": ":evt",
           "PropertyName": "Event",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Presentation.TriggerEventValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.PresentationML.Y2006.Main.TriggerEventValues\u003E",
           "PropertyComments": "Trigger Event",
           "Validators": [
             {
@@ -2685,7 +2685,7 @@
         {
           "QName": ":prevAc",
           "PropertyName": "PreviousAction",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Presentation.PreviousActionValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.PresentationML.Y2006.Main.PreviousActionValues\u003E",
           "PropertyComments": "Previous Action",
           "Validators": [
             {
@@ -2704,7 +2704,7 @@
         {
           "QName": ":nextAc",
           "PropertyName": "NextAction",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Presentation.NextActionValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.PresentationML.Y2006.Main.NextActionValues\u003E",
           "PropertyComments": "Next Action",
           "Validators": [
             {
@@ -2813,7 +2813,7 @@
         {
           "QName": ":calcmode",
           "PropertyName": "CalculationMode",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Presentation.AnimateBehaviorCalculateModeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.PresentationML.Y2006.Main.AnimateBehaviorCalculateModeValues\u003E",
           "PropertyComments": "calcmode",
           "Validators": [
             {
@@ -2832,7 +2832,7 @@
         {
           "QName": ":valueType",
           "PropertyName": "ValueType",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Presentation.AnimateBehaviorValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.PresentationML.Y2006.Main.AnimateBehaviorValues\u003E",
           "PropertyComments": "valueType",
           "Validators": [
             {
@@ -2920,7 +2920,7 @@
         {
           "QName": ":clrSpc",
           "PropertyName": "ColorSpace",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Presentation.AnimateColorSpaceValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.PresentationML.Y2006.Main.AnimateColorSpaceValues\u003E",
           "PropertyComments": "Color Space",
           "Validators": [
             {
@@ -2939,7 +2939,7 @@
         {
           "QName": ":dir",
           "PropertyName": "Direction",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Presentation.AnimateColorDirectionValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.PresentationML.Y2006.Main.AnimateColorDirectionValues\u003E",
           "PropertyComments": "Direction",
           "Validators": [
             {
@@ -3020,7 +3020,7 @@
         {
           "QName": ":transition",
           "PropertyName": "Transition",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Presentation.AnimateEffectTransitionValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.PresentationML.Y2006.Main.AnimateEffectTransitionValues\u003E",
           "PropertyComments": "Transition",
           "Validators": [
             {
@@ -3087,7 +3087,7 @@
         {
           "QName": ":origin",
           "PropertyName": "Origin",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Presentation.AnimateMotionBehaviorOriginValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.PresentationML.Y2006.Main.AnimateMotionBehaviorOriginValues\u003E",
           "PropertyComments": "origin",
           "Validators": [
             {
@@ -3112,7 +3112,7 @@
         {
           "QName": ":pathEditMode",
           "PropertyName": "PathEditMode",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Presentation.AnimateMotionPathEditModeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.PresentationML.Y2006.Main.AnimateMotionPathEditModeValues\u003E",
           "PropertyComments": "pathEditMode",
           "Validators": [
             {
@@ -3422,7 +3422,7 @@
         {
           "QName": ":type",
           "PropertyName": "Type",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Presentation.CommandValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.PresentationML.Y2006.Main.CommandValues\u003E",
           "PropertyComments": "Command Type",
           "Validators": [
             {
@@ -3577,7 +3577,7 @@
         {
           "QName": ":presetClass",
           "PropertyName": "PresetClass",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Presentation.TimeNodePresetClassValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.PresentationML.Y2006.Main.TimeNodePresetClassValues\u003E",
           "PropertyComments": "presetClass",
           "Validators": [
             {
@@ -3680,7 +3680,7 @@
         {
           "QName": ":restart",
           "PropertyName": "Restart",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Presentation.TimeNodeRestartValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.PresentationML.Y2006.Main.TimeNodeRestartValues\u003E",
           "PropertyComments": "restart",
           "Validators": [
             {
@@ -3699,7 +3699,7 @@
         {
           "QName": ":fill",
           "PropertyName": "Fill",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Presentation.TimeNodeFillValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.PresentationML.Y2006.Main.TimeNodeFillValues\u003E",
           "PropertyComments": "fill",
           "Validators": [
             {
@@ -3718,7 +3718,7 @@
         {
           "QName": ":syncBehavior",
           "PropertyName": "SyncBehavior",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Presentation.TimeNodeSyncValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.PresentationML.Y2006.Main.TimeNodeSyncValues\u003E",
           "PropertyComments": "syncBehavior",
           "Validators": [
             {
@@ -3755,7 +3755,7 @@
         {
           "QName": ":masterRel",
           "PropertyName": "MasterRelation",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Presentation.TimeNodeMasterRelationValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.PresentationML.Y2006.Main.TimeNodeMasterRelationValues\u003E",
           "PropertyComments": "masterRel",
           "Validators": [
             {
@@ -3792,7 +3792,7 @@
         {
           "QName": ":nodeType",
           "PropertyName": "NodeType",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Presentation.TimeNodeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.PresentationML.Y2006.Main.TimeNodeValues\u003E",
           "PropertyComments": "nodeType",
           "Validators": [
             {
@@ -4599,7 +4599,7 @@
         {
           "QName": ":additive",
           "PropertyName": "Additive",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Presentation.BehaviorAdditiveValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.PresentationML.Y2006.Main.BehaviorAdditiveValues\u003E",
           "PropertyComments": "Additive",
           "Validators": [
             {
@@ -4618,7 +4618,7 @@
         {
           "QName": ":accumulate",
           "PropertyName": "Accumulate",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Presentation.BehaviorAccumulateValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.PresentationML.Y2006.Main.BehaviorAccumulateValues\u003E",
           "PropertyComments": "Accumulate",
           "Validators": [
             {
@@ -4637,7 +4637,7 @@
         {
           "QName": ":xfrmType",
           "PropertyName": "TransformType",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Presentation.BehaviorTransformValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.PresentationML.Y2006.Main.BehaviorTransformValues\u003E",
           "PropertyComments": "Transform Type",
           "Validators": [
             {
@@ -4680,7 +4680,7 @@
         {
           "QName": ":override",
           "PropertyName": "Override",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Presentation.BehaviorOverrideValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.PresentationML.Y2006.Main.BehaviorOverrideValues\u003E",
           "PropertyComments": "Override",
           "Validators": [
             {
@@ -5138,7 +5138,7 @@
         {
           "QName": ":build",
           "PropertyName": "Build",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Presentation.ParagraphBuildValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.PresentationML.Y2006.Main.ParagraphBuildValues\u003E",
           "PropertyComments": "Build Types",
           "Validators": [
             {
@@ -5286,7 +5286,7 @@
         {
           "QName": ":bld",
           "PropertyName": "Build",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Presentation.DiagramBuildValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.PresentationML.Y2006.Main.DiagramBuildValues\u003E",
           "PropertyComments": "Diagram Build Types",
           "Validators": [
             {
@@ -5357,7 +5357,7 @@
         {
           "QName": ":bld",
           "PropertyName": "Build",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Presentation.OleChartBuildValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.PresentationML.Y2006.Main.OleChartBuildValues\u003E",
           "PropertyComments": "Build",
           "Validators": [
             {
@@ -6873,7 +6873,7 @@
         {
           "QName": ":bwMode",
           "PropertyName": "BlackWhiteMode",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.BlackWhiteModeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.BlackWhiteModeValues\u003E",
           "PropertyComments": "Black and White Mode",
           "Validators": [
             {
@@ -8886,7 +8886,7 @@
         {
           "QName": ":orient",
           "PropertyName": "Orientation",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Presentation.DirectionValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.PresentationML.Y2006.Main.DirectionValues\u003E",
           "PropertyComments": "Guide Orientation",
           "Validators": [
             {
@@ -9014,7 +9014,7 @@
         {
           "QName": ":vertBarState",
           "PropertyName": "VerticalBarState",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Presentation.SplitterBarStateValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.PresentationML.Y2006.Main.SplitterBarStateValues\u003E",
           "PropertyComments": "State of the Vertical Splitter Bar",
           "Validators": [
             {
@@ -9033,7 +9033,7 @@
         {
           "QName": ":horzBarState",
           "PropertyName": "HorizontalBarState",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Presentation.SplitterBarStateValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.PresentationML.Y2006.Main.SplitterBarStateValues\u003E",
           "PropertyComments": "State of the Horizontal Splitter Bar",
           "Validators": [
             {
@@ -9621,7 +9621,7 @@
         {
           "QName": ":followColorScheme",
           "PropertyName": "FollowColorScheme",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Presentation.OleObjectFollowColorSchemeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.PresentationML.Y2006.Main.OleObjectFollowColorSchemeValues\u003E",
           "PropertyComments": "Color Scheme Properties for OLE Object",
           "Validators": [
             {
@@ -9701,7 +9701,7 @@
         {
           "QName": ":spd",
           "PropertyName": "Speed",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Presentation.TransitionSpeedValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.PresentationML.Y2006.Main.TransitionSpeedValues\u003E",
           "PropertyComments": "spd",
           "Validators": [
             {
@@ -10153,7 +10153,7 @@
         {
           "QName": ":bwMode",
           "PropertyName": "BlackWhiteMode",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.BlackWhiteModeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.BlackWhiteModeValues\u003E",
           "PropertyComments": "Black and White Mode",
           "Validators": [
             {
@@ -10560,7 +10560,7 @@
         {
           "QName": ":bwMode",
           "PropertyName": "BlackWhiteMode",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.BlackWhiteModeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.BlackWhiteModeValues\u003E",
           "PropertyComments": "Black and White Mode",
           "Validators": [
             {
@@ -11357,7 +11357,7 @@
         {
           "QName": ":type",
           "PropertyName": "Type",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Presentation.PlaceholderValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.PresentationML.Y2006.Main.PlaceholderValues\u003E",
           "PropertyComments": "Placeholder Type",
           "Validators": [
             {
@@ -11376,7 +11376,7 @@
         {
           "QName": ":orient",
           "PropertyName": "Orientation",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Presentation.DirectionValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.PresentationML.Y2006.Main.DirectionValues\u003E",
           "PropertyComments": "Placeholder Orientation",
           "Validators": [
             {
@@ -11395,7 +11395,7 @@
         {
           "QName": ":sz",
           "PropertyName": "Size",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Presentation.PlaceholderSizeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.PresentationML.Y2006.Main.PlaceholderSizeValues\u003E",
           "PropertyComments": "Placeholder Size",
           "Validators": [
             {
@@ -11536,7 +11536,7 @@
         {
           "QName": ":type",
           "PropertyName": "Type",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Presentation.IterateValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.PresentationML.Y2006.Main.IterateValues\u003E",
           "PropertyComments": "Iterate Type",
           "Validators": [
             {
@@ -12132,7 +12132,7 @@
         {
           "QName": ":type",
           "PropertyName": "Type",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Presentation.SlideSizeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.PresentationML.Y2006.Main.SlideSizeValues\u003E",
           "PropertyComments": "Type of Size",
           "Validators": [
             {
@@ -12216,7 +12216,7 @@
         {
           "QName": ":layout",
           "PropertyName": "Layout",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Presentation.PhotoAlbumLayoutValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.PresentationML.Y2006.Main.PhotoAlbumLayoutValues\u003E",
           "PropertyComments": "Photo Album Layout",
           "Validators": [
             {
@@ -12235,7 +12235,7 @@
         {
           "QName": ":frame",
           "PropertyName": "Frame",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Presentation.PhotoAlbumFrameShapeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.PresentationML.Y2006.Main.PhotoAlbumFrameShapeValues\u003E",
           "PropertyComments": "Frame Type",
           "Validators": [
             {
@@ -12319,7 +12319,7 @@
         {
           "QName": ":cryptProviderType",
           "PropertyName": "CryptographicProviderType",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Presentation.CryptProviderValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.PresentationML.Y2006.Main.CryptProviderValues\u003E",
           "PropertyComments": "Cryptographic Provider Type",
           "Validators": [
             {
@@ -12343,7 +12343,7 @@
         {
           "QName": ":cryptAlgorithmClass",
           "PropertyName": "CryptographicAlgorithmClass",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Presentation.CryptAlgorithmClassValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.PresentationML.Y2006.Main.CryptAlgorithmClassValues\u003E",
           "PropertyComments": "Cryptographic Algorithm Class",
           "Validators": [
             {
@@ -12367,7 +12367,7 @@
         {
           "QName": ":cryptAlgorithmType",
           "PropertyName": "CryptographicAlgorithmType",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Presentation.CryptAlgorithmValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.PresentationML.Y2006.Main.CryptAlgorithmValues\u003E",
           "PropertyComments": "Cryptographic Algorithm Type",
           "Validators": [
             {
@@ -12701,7 +12701,7 @@
         {
           "QName": ":pubBrowser",
           "PropertyName": "TargetBrowser",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Presentation.HtmlPublishWebBrowserSupportValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.PresentationML.Y2006.Main.HtmlPublishWebBrowserSupportValues\u003E",
           "PropertyComments": "Browser Support Target",
           "Validators": [
             {
@@ -12822,7 +12822,7 @@
         {
           "QName": ":imgSz",
           "PropertyName": "ImageSize",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Presentation.WebScreenSizeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.PresentationML.Y2006.Main.WebScreenSizeValues\u003E",
           "PropertyComments": "Image size for HTML output",
           "Validators": [
             {
@@ -12847,7 +12847,7 @@
         {
           "QName": ":clr",
           "PropertyName": "Color",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Presentation.WebColorValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.PresentationML.Y2006.Main.WebColorValues\u003E",
           "PropertyComments": "Slide Navigation Colors for HTML output",
           "Validators": [
             {
@@ -12894,7 +12894,7 @@
         {
           "QName": ":prnWhat",
           "PropertyName": "PrintWhat",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Presentation.PrintOutputValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.PresentationML.Y2006.Main.PrintOutputValues\u003E",
           "PropertyComments": "Print Output",
           "Validators": [
             {
@@ -12913,7 +12913,7 @@
         {
           "QName": ":clrMode",
           "PropertyName": "ColorMode",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Presentation.PrintColorModeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.PresentationML.Y2006.Main.PrintColorModeValues\u003E",
           "PropertyComments": "Print Color Mode",
           "Validators": [
             {
@@ -13505,7 +13505,7 @@
         {
           "QName": ":type",
           "PropertyName": "Type",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Presentation.ChartSubElementValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.PresentationML.Y2006.Main.ChartSubElementValues\u003E",
           "PropertyComments": "Type",
           "Validators": [
             {
@@ -13640,7 +13640,7 @@
         {
           "QName": ":dir",
           "PropertyName": "Direction",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Presentation.DirectionValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.PresentationML.Y2006.Main.DirectionValues\u003E",
           "PropertyComments": "Transition Direction",
           "Validators": [
             {
@@ -13763,7 +13763,7 @@
         {
           "QName": ":dir",
           "PropertyName": "Direction",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Presentation.TransitionSlideDirectionValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.PresentationML.Y2006.Main.TransitionSlideDirectionValues\u003E",
           "PropertyComments": "Direction",
           "Validators": [
             {
@@ -13791,7 +13791,7 @@
         {
           "QName": ":orient",
           "PropertyName": "Orientation",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Presentation.DirectionValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.PresentationML.Y2006.Main.DirectionValues\u003E",
           "PropertyComments": "Orientation",
           "Validators": [
             {
@@ -13810,7 +13810,7 @@
         {
           "QName": ":dir",
           "PropertyName": "Direction",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Presentation.TransitionInOutDirectionValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.PresentationML.Y2006.Main.TransitionInOutDirectionValues\u003E",
           "PropertyComments": "Direction",
           "Validators": [
             {
@@ -13838,7 +13838,7 @@
         {
           "QName": ":dir",
           "PropertyName": "Direction",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Presentation.TransitionCornerDirectionValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.PresentationML.Y2006.Main.TransitionCornerDirectionValues\u003E",
           "PropertyComments": "Direction",
           "Validators": [
             {
@@ -13881,7 +13881,7 @@
         {
           "QName": ":dir",
           "PropertyName": "Direction",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Presentation.TransitionInOutDirectionValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.PresentationML.Y2006.Main.TransitionInOutDirectionValues\u003E",
           "PropertyComments": "Direction",
           "Validators": [
             {

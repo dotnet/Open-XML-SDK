@@ -2,31 +2,31 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Packaging;
-using DocumentFormat.OpenXml.Wordprocessing;
+using DocumentFormat.OpenXml.WordprocessingML.Y2006.Main;
 using System.IO;
 using System.Xml;
 
-using A = DocumentFormat.OpenXml.Drawing;
+using A = DocumentFormat.OpenXml.DrawingML.Y2006.Main;
 using A14 = DocumentFormat.OpenXml.Office.Drawing.Y2010.Main;
-using Ap = DocumentFormat.OpenXml.ExtendedProperties;
-using C = DocumentFormat.OpenXml.Drawing.Charts;
+using Ap = DocumentFormat.OpenXml.OfficeDocument.Y2006.Extended_Properties;
+using C = DocumentFormat.OpenXml.DrawingML.Y2006.Chart;
 using C14 = DocumentFormat.OpenXml.Office.Drawing.Y2007.M08.D02.Chart;
-using Dgm = DocumentFormat.OpenXml.Drawing.Diagrams;
-using Ds = DocumentFormat.OpenXml.CustomXmlDataProperties;
+using Dgm = DocumentFormat.OpenXml.DrawingML.Y2006.Diagram;
+using Ds = DocumentFormat.OpenXml.OfficeDocument.Y2006.CustomXml;
 using Dsp = DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram;
-using M = DocumentFormat.OpenXml.Math;
-using Ovml = DocumentFormat.OpenXml.Vml.Office;
-using Pic = DocumentFormat.OpenXml.Drawing.Pictures;
+using M = DocumentFormat.OpenXml.OfficeDocument.Y2006.Math;
+using Ovml = DocumentFormat.OpenXml.Office.Office.VML;
+using Pic = DocumentFormat.OpenXml.DrawingML.Y2006.Picture;
 using Thm15 = DocumentFormat.OpenXml.Office.ThemeML.Y2012.Main;
 using V = DocumentFormat.OpenXml.Vml;
-using Vt = DocumentFormat.OpenXml.VariantTypes;
-using W = DocumentFormat.OpenXml.Wordprocessing;
+using Vt = DocumentFormat.OpenXml.OfficeDocument.Y2006.DocPropsVTypes;
+using W = DocumentFormat.OpenXml.WordprocessingML.Y2006.Main;
 using W14 = DocumentFormat.OpenXml.Office.Word.Y2010.WordML;
 using W15 = DocumentFormat.OpenXml.Office.Word.Y2012.WordML;
-using Wp = DocumentFormat.OpenXml.Drawing.Wordprocessing;
+using Wp = DocumentFormat.OpenXml.DrawingML.Y2006.WordprocessingDrawing;
 using Wp14 = DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingDrawing;
 using Wps = DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingShape;
-using Wvml = DocumentFormat.OpenXml.Vml.Wordprocessing;
+using Wvml = DocumentFormat.OpenXml.Office.Word.VML;
 
 namespace DocumentFormat.OpenXml.Tests
 {
@@ -20089,7 +20089,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             ruleList1.Append(rule1);
 
-            Dgm.ForEach forEach1 = new Dgm.ForEach() { Name = "Name3", Axis = new ListValue<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.AxisValues>> { InnerText = "ch" }, PointType = new ListValue<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ElementValues>> { InnerText = "node" } };
+            Dgm.ForEach forEach1 = new Dgm.ForEach() { Name = "Name3", Axis = new ListValue<EnumValue<Dgm.AxisValues>> { InnerText = "ch" }, PointType = new ListValue<EnumValue<Dgm.ElementValues>> { InnerText = "node" } };
 
             Dgm.LayoutNode layoutNode2 = new Dgm.LayoutNode() { Name = "parentLin" };
 
@@ -20141,7 +20141,7 @@ namespace DocumentFormat.OpenXml.Tests
             Dgm.AdjustList adjustList3 = new Dgm.AdjustList();
 
             shape17.Append(adjustList3);
-            Dgm.PresentationOf presentationOf3 = new Dgm.PresentationOf() { Axis = new ListValue<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.AxisValues>> { InnerText = "self" } };
+            Dgm.PresentationOf presentationOf3 = new Dgm.PresentationOf() { Axis = new ListValue<EnumValue<Dgm.AxisValues>> { InnerText = "self" } };
 
             Dgm.Constraints constraints3 = new Dgm.Constraints();
             Dgm.Constraint constraint21 = new Dgm.Constraint() { Type = Dgm.ConstraintValues.Height };
@@ -20196,7 +20196,7 @@ namespace DocumentFormat.OpenXml.Tests
             Dgm.AdjustList adjustList4 = new Dgm.AdjustList();
 
             shape18.Append(adjustList4);
-            Dgm.PresentationOf presentationOf4 = new Dgm.PresentationOf() { Axis = new ListValue<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.AxisValues>> { InnerText = "self" }, PointType = new ListValue<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ElementValues>> { InnerText = "node" } };
+            Dgm.PresentationOf presentationOf4 = new Dgm.PresentationOf() { Axis = new ListValue<EnumValue<Dgm.AxisValues>> { InnerText = "self" }, PointType = new ListValue<EnumValue<Dgm.ElementValues>> { InnerText = "node" } };
 
             Dgm.Constraints constraints4 = new Dgm.Constraints();
             Dgm.Constraint constraint22 = new Dgm.Constraint() { Type = Dgm.ConstraintValues.TopMargin };
@@ -20256,7 +20256,7 @@ namespace DocumentFormat.OpenXml.Tests
             Dgm.AdjustList adjustList6 = new Dgm.AdjustList();
 
             shape20.Append(adjustList6);
-            Dgm.PresentationOf presentationOf6 = new Dgm.PresentationOf() { Axis = new ListValue<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.AxisValues>> { InnerText = "des" }, PointType = new ListValue<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ElementValues>> { InnerText = "node" } };
+            Dgm.PresentationOf presentationOf6 = new Dgm.PresentationOf() { Axis = new ListValue<EnumValue<Dgm.AxisValues>> { InnerText = "des" }, PointType = new ListValue<EnumValue<Dgm.ElementValues>> { InnerText = "node" } };
 
             Dgm.Constraints constraints6 = new Dgm.Constraints();
             Dgm.Constraint constraint24 = new Dgm.Constraint() { Type = Dgm.ConstraintValues.SecondaryFontSize, ReferenceType = Dgm.ConstraintValues.PrimaryFontSize };
@@ -20275,7 +20275,7 @@ namespace DocumentFormat.OpenXml.Tests
             layoutNode6.Append(constraints6);
             layoutNode6.Append(ruleList6);
 
-            Dgm.ForEach forEach2 = new Dgm.ForEach() { Name = "Name10", Axis = new ListValue<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.AxisValues>> { InnerText = "followSib" }, PointType = new ListValue<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ElementValues>> { InnerText = "sibTrans" }, Count = new ListValue<UInt32Value>() { InnerText = "1" } };
+            Dgm.ForEach forEach2 = new Dgm.ForEach() { Name = "Name10", Axis = new ListValue<EnumValue<Dgm.AxisValues>> { InnerText = "followSib" }, PointType = new ListValue<EnumValue<Dgm.ElementValues>> { InnerText = "sibTrans" }, Count = new ListValue<UInt32Value>() { InnerText = "1" } };
 
             Dgm.LayoutNode layoutNode7 = new Dgm.LayoutNode() { Name = "spaceBetweenRectangles" };
             Dgm.Algorithm algorithm10 = new Dgm.Algorithm() { Type = Dgm.AlgorithmValues.Space };

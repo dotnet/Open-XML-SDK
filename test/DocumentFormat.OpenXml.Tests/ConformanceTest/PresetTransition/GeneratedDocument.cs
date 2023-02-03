@@ -2,16 +2,16 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Packaging;
-using DocumentFormat.OpenXml.Presentation;
+using DocumentFormat.OpenXml.PresentationML.Y2006.Main;
 using System.IO;
 
-using A = DocumentFormat.OpenXml.Drawing;
-using Ap = DocumentFormat.OpenXml.ExtendedProperties;
-using P = DocumentFormat.OpenXml.Presentation;
+using A = DocumentFormat.OpenXml.DrawingML.Y2006.Main;
+using Ap = DocumentFormat.OpenXml.OfficeDocument.Y2006.Extended_Properties;
+using P = DocumentFormat.OpenXml.PresentationML.Y2006.Main;
 using P14 = DocumentFormat.OpenXml.Office.PowerPoint.Y2010.Main;
 using P15 = DocumentFormat.OpenXml.Office.PowerPoint.Y2012.Main;
 using Thm15 = DocumentFormat.OpenXml.Office.ThemeML.Y2012.Main;
-using Vt = DocumentFormat.OpenXml.VariantTypes;
+using Vt = DocumentFormat.OpenXml.OfficeDocument.Y2006.DocPropsVTypes;
 
 namespace DocumentFormat.OpenXml.Tests.PresetTransitionClass
 {

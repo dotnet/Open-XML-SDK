@@ -4,7 +4,7 @@
 using System;
 using System.Globalization;
 
-namespace DocumentFormat.OpenXml.Spreadsheet
+namespace DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main
 {
     /// <summary>
     /// This provides additional constructors than in the generated files.

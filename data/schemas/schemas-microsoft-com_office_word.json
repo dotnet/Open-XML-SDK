@@ -44,7 +44,7 @@
         {
           "QName": ":type",
           "PropertyName": "Type",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Wordprocessing.BorderValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Word.VML.BorderValues\u003E",
           "PropertyComments": "Border Style"
         },
         {
@@ -84,25 +84,25 @@
         {
           "QName": ":type",
           "PropertyName": "Type",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Wordprocessing.WrapValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Word.VML.WrapValues\u003E",
           "PropertyComments": "Wrapping type"
         },
         {
           "QName": ":side",
           "PropertyName": "Side",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Wordprocessing.WrapSideValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Word.VML.WrapSideValues\u003E",
           "PropertyComments": "Wrapping side"
         },
         {
           "QName": ":anchorx",
           "PropertyName": "AnchorX",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Wordprocessing.HorizontalAnchorValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Word.VML.HorizontalAnchorValues\u003E",
           "PropertyComments": "Horizontal Positioning Base"
         },
         {
           "QName": ":anchory",
           "PropertyName": "AnchorY",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Wordprocessing.VerticalAnchorValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Word.VML.VerticalAnchorValues\u003E",
           "PropertyComments": "Vertical Positioning Base"
         }
       ]

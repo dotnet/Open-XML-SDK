@@ -2,14 +2,14 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Packaging;
-using DocumentFormat.OpenXml.Wordprocessing;
+using DocumentFormat.OpenXml.WordprocessingML.Y2006.Main;
 using System.Linq;
 using Xunit;
 using Xunit.Abstractions;
 
 using static DocumentFormat.OpenXml.Tests.TestAssets;
 
-using Dr = DocumentFormat.OpenXml.Drawing;
+using Dr = DocumentFormat.OpenXml.DrawingML.Y2006.Main;
 
 namespace DocumentFormat.OpenXml.Tests
 {

@@ -1215,7 +1215,7 @@
         {
           "QName": ":bwMode",
           "PropertyName": "BlackWhiteMode",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.BlackWhiteModeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.BlackWhiteModeValues\u003E",
           "PropertyComments": "Black and White Mode",
           "Validators": [
             {
@@ -5409,7 +5409,7 @@
         {
           "QName": ":bg1",
           "PropertyName": "Background1",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.ColorSchemeIndexValues\u003E",
           "PropertyComments": "Background 1",
           "Validators": [
             {
@@ -5431,7 +5431,7 @@
         {
           "QName": ":tx1",
           "PropertyName": "Text1",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.ColorSchemeIndexValues\u003E",
           "PropertyComments": "Text 1",
           "Validators": [
             {
@@ -5453,7 +5453,7 @@
         {
           "QName": ":bg2",
           "PropertyName": "Background2",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.ColorSchemeIndexValues\u003E",
           "PropertyComments": "Background 2",
           "Validators": [
             {
@@ -5475,7 +5475,7 @@
         {
           "QName": ":tx2",
           "PropertyName": "Text2",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.ColorSchemeIndexValues\u003E",
           "PropertyComments": "Text 2",
           "Validators": [
             {
@@ -5497,7 +5497,7 @@
         {
           "QName": ":accent1",
           "PropertyName": "Accent1",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.ColorSchemeIndexValues\u003E",
           "PropertyComments": "Accent 1",
           "Validators": [
             {
@@ -5519,7 +5519,7 @@
         {
           "QName": ":accent2",
           "PropertyName": "Accent2",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.ColorSchemeIndexValues\u003E",
           "PropertyComments": "Accent 2",
           "Validators": [
             {
@@ -5541,7 +5541,7 @@
         {
           "QName": ":accent3",
           "PropertyName": "Accent3",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.ColorSchemeIndexValues\u003E",
           "PropertyComments": "Accent 3",
           "Validators": [
             {
@@ -5563,7 +5563,7 @@
         {
           "QName": ":accent4",
           "PropertyName": "Accent4",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.ColorSchemeIndexValues\u003E",
           "PropertyComments": "Accent 4",
           "Validators": [
             {
@@ -5585,7 +5585,7 @@
         {
           "QName": ":accent5",
           "PropertyName": "Accent5",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.ColorSchemeIndexValues\u003E",
           "PropertyComments": "Accent 5",
           "Validators": [
             {
@@ -5607,7 +5607,7 @@
         {
           "QName": ":accent6",
           "PropertyName": "Accent6",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.ColorSchemeIndexValues\u003E",
           "PropertyComments": "Accent 6",
           "Validators": [
             {
@@ -5629,7 +5629,7 @@
         {
           "QName": ":hlink",
           "PropertyName": "Hyperlink",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.ColorSchemeIndexValues\u003E",
           "PropertyComments": "Hyperlink",
           "Validators": [
             {
@@ -5651,7 +5651,7 @@
         {
           "QName": ":folHlink",
           "PropertyName": "FollowedHyperlink",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.ColorSchemeIndexValues\u003E",
           "PropertyComments": "Followed Hyperlink",
           "Validators": [
             {

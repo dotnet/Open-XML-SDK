@@ -382,7 +382,7 @@
         {
           "QName": ":orient",
           "PropertyName": "Orientation",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Presentation.DirectionValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.PresentationML.Y2006.Main.DirectionValues\u003E",
           "Version": "Office2013",
           "PropertyComments": "orient",
           "Validators": [

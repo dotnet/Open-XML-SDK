@@ -5,7 +5,7 @@ using DocumentFormat.OpenXml.Framework;
 using System;
 using System.Collections.Generic;
 
-namespace DocumentFormat.OpenXml.Wordprocessing
+namespace DocumentFormat.OpenXml.WordprocessingML.Y2006.Main
 {
     public partial class ConditionalFormatStyle
     {

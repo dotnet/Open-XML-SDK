@@ -6,15 +6,15 @@
 #nullable enable
 
 using DocumentFormat.OpenXml;
-using DocumentFormat.OpenXml.Drawing;
+using DocumentFormat.OpenXml.DrawingML.Y2006.Main;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
-using DocumentFormat.OpenXml.Math;
 using DocumentFormat.OpenXml.Office.Drawing.Y2010.Main;
+using DocumentFormat.OpenXml.OfficeDocument.Y2006.Math;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
 using DocumentFormat.OpenXml.Validation.Semantic;
-using DocumentFormat.OpenXml.Wordprocessing;
+using DocumentFormat.OpenXml.WordprocessingML.Y2006.Main;
 using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
@@ -29,60 +29,60 @@ namespace DocumentFormat.OpenXml.Office.Word.Y2010.WordML
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Accent" /> <c>&lt;m:acc></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Bar" /> <c>&lt;m:bar></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.BorderBox" /> <c>&lt;m:borderBox></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Box" /> <c>&lt;m:box></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Delimiter" /> <c>&lt;m:d></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.EquationArray" /> <c>&lt;m:eqArr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Fraction" /> <c>&lt;m:f></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.MathFunction" /> <c>&lt;m:func></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.GroupChar" /> <c>&lt;m:groupChr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.LimitLower" /> <c>&lt;m:limLow></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.LimitUpper" /> <c>&lt;m:limUpp></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Matrix" /> <c>&lt;m:m></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Nary" /> <c>&lt;m:nary></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.OfficeMath" /> <c>&lt;m:oMath></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Paragraph" /> <c>&lt;m:oMathPara></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Phantom" /> <c>&lt;m:phant></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Run" /> <c>&lt;m:r></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Radical" /> <c>&lt;m:rad></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.PreSubSuper" /> <c>&lt;m:sPre></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Subscript" /> <c>&lt;m:sSub></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.SubSuperscript" /> <c>&lt;m:sSubSup></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Superscript" /> <c>&lt;m:sSup></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.BidirectionalOverride" /> <c>&lt;w:bdo></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.BookmarkStart" /> <c>&lt;w:bookmarkStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.ContentPart" /> <c>&lt;w:contentPart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.BidirectionalEmbedding" /> <c>&lt;w:dir></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd" /> <c>&lt;w:customXmlInsRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd" /> <c>&lt;w:customXmlDelRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd" /> <c>&lt;w:customXmlMoveFromRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd" /> <c>&lt;w:customXmlMoveToRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.Accent" /> <c>&lt;m:acc></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.Bar" /> <c>&lt;m:bar></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.BorderBox" /> <c>&lt;m:borderBox></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.Box" /> <c>&lt;m:box></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.Delimiter" /> <c>&lt;m:d></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.EquationArray" /> <c>&lt;m:eqArr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.Fraction" /> <c>&lt;m:f></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.MathFunction" /> <c>&lt;m:func></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.GroupChar" /> <c>&lt;m:groupChr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.LimitLower" /> <c>&lt;m:limLow></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.LimitUpper" /> <c>&lt;m:limUpp></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.Matrix" /> <c>&lt;m:m></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.Nary" /> <c>&lt;m:nary></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.OfficeMath" /> <c>&lt;m:oMath></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.Paragraph" /> <c>&lt;m:oMathPara></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.Phantom" /> <c>&lt;m:phant></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.Run" /> <c>&lt;m:r></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.Radical" /> <c>&lt;m:rad></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.PreSubSuper" /> <c>&lt;m:sPre></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.Subscript" /> <c>&lt;m:sSub></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.SubSuperscript" /> <c>&lt;m:sSubSup></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.Superscript" /> <c>&lt;m:sSup></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.BidirectionalOverride" /> <c>&lt;w:bdo></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.BookmarkStart" /> <c>&lt;w:bookmarkStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.ContentPart" /> <c>&lt;w:contentPart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.BidirectionalEmbedding" /> <c>&lt;w:dir></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.CustomXmlInsRangeEnd" /> <c>&lt;w:customXmlInsRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.CustomXmlDelRangeEnd" /> <c>&lt;w:customXmlDelRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.CustomXmlMoveFromRangeEnd" /> <c>&lt;w:customXmlMoveFromRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.CustomXmlMoveToRangeEnd" /> <c>&lt;w:customXmlMoveToRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd" /> <c>&lt;w14:customXmlConflictInsRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd" /> <c>&lt;w14:customXmlConflictDelRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd" /> <c>&lt;w:bookmarkEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart" /> <c>&lt;w:commentRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd" /> <c>&lt;w:commentRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd" /> <c>&lt;w:moveFromRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd" /> <c>&lt;w:moveToRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart" /> <c>&lt;w:moveFromRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart" /> <c>&lt;w:moveToRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.PermEnd" /> <c>&lt;w:permEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.PermStart" /> <c>&lt;w:permStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.ProofError" /> <c>&lt;w:proofErr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Run" /> <c>&lt;w:r></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.InsertedRun" /> <c>&lt;w:ins></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DeletedRun" /> <c>&lt;w:del></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveFromRun" /> <c>&lt;w:moveFrom></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveToRun" /> <c>&lt;w:moveTo></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.BookmarkEnd" /> <c>&lt;w:bookmarkEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.CommentRangeStart" /> <c>&lt;w:commentRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.CommentRangeEnd" /> <c>&lt;w:commentRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.MoveFromRangeEnd" /> <c>&lt;w:moveFromRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.MoveToRangeEnd" /> <c>&lt;w:moveToRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.MoveFromRangeStart" /> <c>&lt;w:moveFromRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.MoveToRangeStart" /> <c>&lt;w:moveToRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.PermEnd" /> <c>&lt;w:permEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.PermStart" /> <c>&lt;w:permStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.ProofError" /> <c>&lt;w:proofErr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.Run" /> <c>&lt;w:r></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.InsertedRun" /> <c>&lt;w:ins></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.DeletedRun" /> <c>&lt;w:del></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.MoveFromRun" /> <c>&lt;w:moveFrom></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.MoveToRun" /> <c>&lt;w:moveTo></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion" /> <c>&lt;w14:conflictIns></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion" /> <c>&lt;w14:conflictDel></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.SdtRun" /> <c>&lt;w:sdt></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart" /> <c>&lt;w:customXmlInsRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart" /> <c>&lt;w:customXmlDelRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart" /> <c>&lt;w:customXmlMoveFromRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart" /> <c>&lt;w:customXmlMoveToRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.SdtRun" /> <c>&lt;w:sdt></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.CustomXmlInsRangeStart" /> <c>&lt;w:customXmlInsRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.CustomXmlDelRangeStart" /> <c>&lt;w:customXmlDelRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.CustomXmlMoveFromRangeStart" /> <c>&lt;w:customXmlMoveFromRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.CustomXmlMoveToRangeStart" /> <c>&lt;w:customXmlMoveToRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
@@ -137,7 +137,7 @@ namespace DocumentFormat.OpenXml.Office.Word.Y2010.WordML
                             {
                                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                 {
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtRun), 1, 1),
+                                    new ElementParticle(typeof(DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.SdtRun), 1, 1),
                                     new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                     {
                                         new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
@@ -150,9 +150,9 @@ namespace DocumentFormat.OpenXml.Office.Word.Y2010.WordML
                                                     {
                                                         new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                         {
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ProofError), 0, 1),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermStart), 0, 1),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermEnd), 0, 1)
+                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.ProofError), 0, 1),
+                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.PermStart), 0, 1),
+                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.PermEnd), 0, 1)
                                                         }
                                                     },
                                                     new CompositeParticle.Builder(ParticleType.Group, 0, 0)
@@ -163,28 +163,28 @@ namespace DocumentFormat.OpenXml.Office.Word.Y2010.WordML
                                                             {
                                                                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                                 {
-                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart), 1, 1),
-                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd), 1, 1),
-                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart), 1, 1),
-                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd), 1, 1)
+                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.BookmarkStart), 1, 1),
+                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.BookmarkEnd), 1, 1),
+                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.CommentRangeStart), 1, 1),
+                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.CommentRangeEnd), 1, 1)
                                                                 }
                                                             },
                                                             new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                                             {
                                                                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                                 {
-                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart), 1, 1),
-                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd), 1, 1),
-                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart), 1, 1),
-                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd), 1, 1),
-                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart), 1, 1),
-                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd), 1, 1),
-                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart), 1, 1),
-                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd), 1, 1),
-                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart), 1, 1),
-                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd), 1, 1),
-                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart), 1, 1),
-                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd), 1, 1)
+                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.MoveFromRangeStart), 1, 1),
+                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.MoveFromRangeEnd), 1, 1),
+                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.MoveToRangeStart), 1, 1),
+                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.MoveToRangeEnd), 1, 1),
+                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.CustomXmlInsRangeStart), 1, 1),
+                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.CustomXmlInsRangeEnd), 1, 1),
+                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.CustomXmlDelRangeStart), 1, 1),
+                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.CustomXmlDelRangeEnd), 1, 1),
+                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.CustomXmlMoveFromRangeStart), 1, 1),
+                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.CustomXmlMoveFromRangeEnd), 1, 1),
+                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.CustomXmlMoveToRangeStart), 1, 1),
+                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.CustomXmlMoveToRangeEnd), 1, 1)
                                                                 }
                                                             },
                                                             new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
@@ -193,11 +193,11 @@ namespace DocumentFormat.OpenXml.Office.Word.Y2010.WordML
                                                             new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd), 0, 1, version: FileFormatVersions.Office2010)
                                                         }
                                                     },
-                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.InsertedRun), 0, 1),
-                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DeletedRun), 0, 1),
-                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun), 1, 1),
-                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRun), 1, 1),
-                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ContentPart), 0, 0, version: FileFormatVersions.Office2010),
+                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.InsertedRun), 0, 1),
+                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.DeletedRun), 0, 1),
+                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.MoveFromRun), 1, 1),
+                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.MoveToRun), 1, 1),
+                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.ContentPart), 0, 0, version: FileFormatVersions.Office2010),
                                                     new CompositeParticle.Builder(ParticleType.Group, 0, 1, version: FileFormatVersions.Office2010)
                                                     {
                                                         new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -212,36 +212,36 @@ namespace DocumentFormat.OpenXml.Office.Word.Y2010.WordML
                                             {
                                                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                 {
-                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Paragraph), 1, 1),
-                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.OfficeMath), 1, 1),
+                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.Paragraph), 1, 1),
+                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.OfficeMath), 1, 1),
                                                     new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                                                     {
                                                         new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                         {
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Accent), 1, 1),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Bar), 1, 1),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Box), 1, 1),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.BorderBox), 1, 1),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Delimiter), 1, 1),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.EquationArray), 1, 1),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Fraction), 1, 1),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.MathFunction), 1, 1),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.GroupChar), 1, 1),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.LimitLower), 1, 1),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.LimitUpper), 1, 1),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Matrix), 1, 1),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Nary), 1, 1),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Phantom), 1, 1),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Radical), 1, 1),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.PreSubSuper), 1, 1),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Subscript), 1, 1),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.SubSuperscript), 1, 1),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Superscript), 1, 1),
+                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.Accent), 1, 1),
+                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.Bar), 1, 1),
+                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.Box), 1, 1),
+                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.BorderBox), 1, 1),
+                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.Delimiter), 1, 1),
+                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.EquationArray), 1, 1),
+                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.Fraction), 1, 1),
+                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.MathFunction), 1, 1),
+                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.GroupChar), 1, 1),
+                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.LimitLower), 1, 1),
+                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.LimitUpper), 1, 1),
+                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.Matrix), 1, 1),
+                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.Nary), 1, 1),
+                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.Phantom), 1, 1),
+                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.Radical), 1, 1),
+                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.PreSubSuper), 1, 1),
+                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.Subscript), 1, 1),
+                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.SubSuperscript), 1, 1),
+                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.Superscript), 1, 1),
                                                             new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                                                             {
                                                                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                                 {
-                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Run), 1, 1)
+                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.Run), 1, 1)
                                                                 }
                                                             }
                                                         }
@@ -256,11 +256,11 @@ namespace DocumentFormat.OpenXml.Office.Word.Y2010.WordML
                             {
                                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                 {
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Run), 1, 1)
+                                    new ElementParticle(typeof(DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.Run), 1, 1)
                                 }
                             },
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BidirectionalOverride), 0, 1, version: FileFormatVersions.Office2010),
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BidirectionalEmbedding), 0, 1, version: FileFormatVersions.Office2010)
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.BidirectionalOverride), 0, 1, version: FileFormatVersions.Office2010),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.BidirectionalEmbedding), 0, 1, version: FileFormatVersions.Office2010)
                         }
                     }
                 }
@@ -279,60 +279,60 @@ namespace DocumentFormat.OpenXml.Office.Word.Y2010.WordML
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Accent" /> <c>&lt;m:acc></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Bar" /> <c>&lt;m:bar></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.BorderBox" /> <c>&lt;m:borderBox></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Box" /> <c>&lt;m:box></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Delimiter" /> <c>&lt;m:d></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.EquationArray" /> <c>&lt;m:eqArr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Fraction" /> <c>&lt;m:f></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.MathFunction" /> <c>&lt;m:func></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.GroupChar" /> <c>&lt;m:groupChr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.LimitLower" /> <c>&lt;m:limLow></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.LimitUpper" /> <c>&lt;m:limUpp></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Matrix" /> <c>&lt;m:m></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Nary" /> <c>&lt;m:nary></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.OfficeMath" /> <c>&lt;m:oMath></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Paragraph" /> <c>&lt;m:oMathPara></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Phantom" /> <c>&lt;m:phant></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Run" /> <c>&lt;m:r></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Radical" /> <c>&lt;m:rad></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.PreSubSuper" /> <c>&lt;m:sPre></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Subscript" /> <c>&lt;m:sSub></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.SubSuperscript" /> <c>&lt;m:sSubSup></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Superscript" /> <c>&lt;m:sSup></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.BidirectionalOverride" /> <c>&lt;w:bdo></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.BookmarkStart" /> <c>&lt;w:bookmarkStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.ContentPart" /> <c>&lt;w:contentPart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.BidirectionalEmbedding" /> <c>&lt;w:dir></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd" /> <c>&lt;w:customXmlInsRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd" /> <c>&lt;w:customXmlDelRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd" /> <c>&lt;w:customXmlMoveFromRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd" /> <c>&lt;w:customXmlMoveToRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.Accent" /> <c>&lt;m:acc></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.Bar" /> <c>&lt;m:bar></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.BorderBox" /> <c>&lt;m:borderBox></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.Box" /> <c>&lt;m:box></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.Delimiter" /> <c>&lt;m:d></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.EquationArray" /> <c>&lt;m:eqArr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.Fraction" /> <c>&lt;m:f></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.MathFunction" /> <c>&lt;m:func></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.GroupChar" /> <c>&lt;m:groupChr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.LimitLower" /> <c>&lt;m:limLow></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.LimitUpper" /> <c>&lt;m:limUpp></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.Matrix" /> <c>&lt;m:m></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.Nary" /> <c>&lt;m:nary></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.OfficeMath" /> <c>&lt;m:oMath></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.Paragraph" /> <c>&lt;m:oMathPara></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.Phantom" /> <c>&lt;m:phant></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.Run" /> <c>&lt;m:r></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.Radical" /> <c>&lt;m:rad></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.PreSubSuper" /> <c>&lt;m:sPre></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.Subscript" /> <c>&lt;m:sSub></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.SubSuperscript" /> <c>&lt;m:sSubSup></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.Superscript" /> <c>&lt;m:sSup></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.BidirectionalOverride" /> <c>&lt;w:bdo></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.BookmarkStart" /> <c>&lt;w:bookmarkStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.ContentPart" /> <c>&lt;w:contentPart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.BidirectionalEmbedding" /> <c>&lt;w:dir></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.CustomXmlInsRangeEnd" /> <c>&lt;w:customXmlInsRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.CustomXmlDelRangeEnd" /> <c>&lt;w:customXmlDelRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.CustomXmlMoveFromRangeEnd" /> <c>&lt;w:customXmlMoveFromRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.CustomXmlMoveToRangeEnd" /> <c>&lt;w:customXmlMoveToRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd" /> <c>&lt;w14:customXmlConflictInsRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd" /> <c>&lt;w14:customXmlConflictDelRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd" /> <c>&lt;w:bookmarkEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart" /> <c>&lt;w:commentRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd" /> <c>&lt;w:commentRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd" /> <c>&lt;w:moveFromRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd" /> <c>&lt;w:moveToRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart" /> <c>&lt;w:moveFromRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart" /> <c>&lt;w:moveToRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.PermEnd" /> <c>&lt;w:permEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.PermStart" /> <c>&lt;w:permStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.ProofError" /> <c>&lt;w:proofErr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Run" /> <c>&lt;w:r></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.InsertedRun" /> <c>&lt;w:ins></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DeletedRun" /> <c>&lt;w:del></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveFromRun" /> <c>&lt;w:moveFrom></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveToRun" /> <c>&lt;w:moveTo></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.BookmarkEnd" /> <c>&lt;w:bookmarkEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.CommentRangeStart" /> <c>&lt;w:commentRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.CommentRangeEnd" /> <c>&lt;w:commentRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.MoveFromRangeEnd" /> <c>&lt;w:moveFromRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.MoveToRangeEnd" /> <c>&lt;w:moveToRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.MoveFromRangeStart" /> <c>&lt;w:moveFromRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.MoveToRangeStart" /> <c>&lt;w:moveToRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.PermEnd" /> <c>&lt;w:permEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.PermStart" /> <c>&lt;w:permStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.ProofError" /> <c>&lt;w:proofErr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.Run" /> <c>&lt;w:r></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.InsertedRun" /> <c>&lt;w:ins></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.DeletedRun" /> <c>&lt;w:del></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.MoveFromRun" /> <c>&lt;w:moveFrom></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.MoveToRun" /> <c>&lt;w:moveTo></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion" /> <c>&lt;w14:conflictIns></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion" /> <c>&lt;w14:conflictDel></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.SdtRun" /> <c>&lt;w:sdt></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart" /> <c>&lt;w:customXmlInsRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart" /> <c>&lt;w:customXmlDelRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart" /> <c>&lt;w:customXmlMoveFromRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart" /> <c>&lt;w:customXmlMoveToRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.SdtRun" /> <c>&lt;w:sdt></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.CustomXmlInsRangeStart" /> <c>&lt;w:customXmlInsRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.CustomXmlDelRangeStart" /> <c>&lt;w:customXmlDelRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.CustomXmlMoveFromRangeStart" /> <c>&lt;w:customXmlMoveFromRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.CustomXmlMoveToRangeStart" /> <c>&lt;w:customXmlMoveToRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
@@ -387,7 +387,7 @@ namespace DocumentFormat.OpenXml.Office.Word.Y2010.WordML
                             {
                                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                 {
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.SdtRun), 1, 1),
+                                    new ElementParticle(typeof(DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.SdtRun), 1, 1),
                                     new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                     {
                                         new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
@@ -400,9 +400,9 @@ namespace DocumentFormat.OpenXml.Office.Word.Y2010.WordML
                                                     {
                                                         new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                         {
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ProofError), 0, 1),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermStart), 0, 1),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.PermEnd), 0, 1)
+                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.ProofError), 0, 1),
+                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.PermStart), 0, 1),
+                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.PermEnd), 0, 1)
                                                         }
                                                     },
                                                     new CompositeParticle.Builder(ParticleType.Group, 0, 0)
@@ -413,28 +413,28 @@ namespace DocumentFormat.OpenXml.Office.Word.Y2010.WordML
                                                             {
                                                                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                                 {
-                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkStart), 1, 1),
-                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd), 1, 1),
-                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart), 1, 1),
-                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd), 1, 1)
+                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.BookmarkStart), 1, 1),
+                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.BookmarkEnd), 1, 1),
+                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.CommentRangeStart), 1, 1),
+                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.CommentRangeEnd), 1, 1)
                                                                 }
                                                             },
                                                             new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                                                             {
                                                                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                                 {
-                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart), 1, 1),
-                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd), 1, 1),
-                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart), 1, 1),
-                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd), 1, 1),
-                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart), 1, 1),
-                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd), 1, 1),
-                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart), 1, 1),
-                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd), 1, 1),
-                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart), 1, 1),
-                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd), 1, 1),
-                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart), 1, 1),
-                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd), 1, 1)
+                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.MoveFromRangeStart), 1, 1),
+                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.MoveFromRangeEnd), 1, 1),
+                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.MoveToRangeStart), 1, 1),
+                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.MoveToRangeEnd), 1, 1),
+                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.CustomXmlInsRangeStart), 1, 1),
+                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.CustomXmlInsRangeEnd), 1, 1),
+                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.CustomXmlDelRangeStart), 1, 1),
+                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.CustomXmlDelRangeEnd), 1, 1),
+                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.CustomXmlMoveFromRangeStart), 1, 1),
+                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.CustomXmlMoveFromRangeEnd), 1, 1),
+                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.CustomXmlMoveToRangeStart), 1, 1),
+                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.CustomXmlMoveToRangeEnd), 1, 1)
                                                                 }
                                                             },
                                                             new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart), 0, 1, version: FileFormatVersions.Office2010),
@@ -443,11 +443,11 @@ namespace DocumentFormat.OpenXml.Office.Word.Y2010.WordML
                                                             new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd), 0, 1, version: FileFormatVersions.Office2010)
                                                         }
                                                     },
-                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.InsertedRun), 0, 1),
-                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.DeletedRun), 0, 1),
-                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveFromRun), 1, 1),
-                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToRun), 1, 1),
-                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.ContentPart), 0, 0, version: FileFormatVersions.Office2010),
+                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.InsertedRun), 0, 1),
+                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.DeletedRun), 0, 1),
+                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.MoveFromRun), 1, 1),
+                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.MoveToRun), 1, 1),
+                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.ContentPart), 0, 0, version: FileFormatVersions.Office2010),
                                                     new CompositeParticle.Builder(ParticleType.Group, 0, 1, version: FileFormatVersions.Office2010)
                                                     {
                                                         new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -462,36 +462,36 @@ namespace DocumentFormat.OpenXml.Office.Word.Y2010.WordML
                                             {
                                                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                 {
-                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Paragraph), 1, 1),
-                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.OfficeMath), 1, 1),
+                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.Paragraph), 1, 1),
+                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.OfficeMath), 1, 1),
                                                     new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                                                     {
                                                         new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                         {
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Accent), 1, 1),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Bar), 1, 1),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Box), 1, 1),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.BorderBox), 1, 1),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Delimiter), 1, 1),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.EquationArray), 1, 1),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Fraction), 1, 1),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.MathFunction), 1, 1),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.GroupChar), 1, 1),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.LimitLower), 1, 1),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.LimitUpper), 1, 1),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Matrix), 1, 1),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Nary), 1, 1),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Phantom), 1, 1),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Radical), 1, 1),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.PreSubSuper), 1, 1),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Subscript), 1, 1),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.SubSuperscript), 1, 1),
-                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Superscript), 1, 1),
+                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.Accent), 1, 1),
+                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.Bar), 1, 1),
+                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.Box), 1, 1),
+                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.BorderBox), 1, 1),
+                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.Delimiter), 1, 1),
+                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.EquationArray), 1, 1),
+                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.Fraction), 1, 1),
+                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.MathFunction), 1, 1),
+                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.GroupChar), 1, 1),
+                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.LimitLower), 1, 1),
+                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.LimitUpper), 1, 1),
+                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.Matrix), 1, 1),
+                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.Nary), 1, 1),
+                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.Phantom), 1, 1),
+                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.Radical), 1, 1),
+                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.PreSubSuper), 1, 1),
+                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.Subscript), 1, 1),
+                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.SubSuperscript), 1, 1),
+                                                            new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.Superscript), 1, 1),
                                                             new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                                                             {
                                                                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                                                 {
-                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Math.Run), 1, 1)
+                                                                    new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.Run), 1, 1)
                                                                 }
                                                             }
                                                         }
@@ -506,11 +506,11 @@ namespace DocumentFormat.OpenXml.Office.Word.Y2010.WordML
                             {
                                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                                 {
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.Run), 1, 1)
+                                    new ElementParticle(typeof(DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.Run), 1, 1)
                                 }
                             },
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BidirectionalOverride), 0, 1, version: FileFormatVersions.Office2010),
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Wordprocessing.BidirectionalEmbedding), 0, 1, version: FileFormatVersions.Office2010)
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.BidirectionalOverride), 0, 1, version: FileFormatVersions.Office2010),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.BidirectionalEmbedding), 0, 1, version: FileFormatVersions.Office2010)
                         }
                     }
                 }
@@ -529,60 +529,60 @@ namespace DocumentFormat.OpenXml.Office.Word.Y2010.WordML
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Accent" /> <c>&lt;m:acc></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Bar" /> <c>&lt;m:bar></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.BorderBox" /> <c>&lt;m:borderBox></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Box" /> <c>&lt;m:box></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Delimiter" /> <c>&lt;m:d></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.EquationArray" /> <c>&lt;m:eqArr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Fraction" /> <c>&lt;m:f></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.MathFunction" /> <c>&lt;m:func></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.GroupChar" /> <c>&lt;m:groupChr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.LimitLower" /> <c>&lt;m:limLow></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.LimitUpper" /> <c>&lt;m:limUpp></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Matrix" /> <c>&lt;m:m></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Nary" /> <c>&lt;m:nary></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.OfficeMath" /> <c>&lt;m:oMath></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Paragraph" /> <c>&lt;m:oMathPara></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Phantom" /> <c>&lt;m:phant></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Run" /> <c>&lt;m:r></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Radical" /> <c>&lt;m:rad></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.PreSubSuper" /> <c>&lt;m:sPre></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Subscript" /> <c>&lt;m:sSub></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.SubSuperscript" /> <c>&lt;m:sSubSup></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Superscript" /> <c>&lt;m:sSup></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.BidirectionalOverride" /> <c>&lt;w:bdo></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.BookmarkStart" /> <c>&lt;w:bookmarkStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.ContentPart" /> <c>&lt;w:contentPart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.BidirectionalEmbedding" /> <c>&lt;w:dir></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd" /> <c>&lt;w:customXmlInsRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd" /> <c>&lt;w:customXmlDelRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd" /> <c>&lt;w:customXmlMoveFromRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd" /> <c>&lt;w:customXmlMoveToRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.Accent" /> <c>&lt;m:acc></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.Bar" /> <c>&lt;m:bar></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.BorderBox" /> <c>&lt;m:borderBox></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.Box" /> <c>&lt;m:box></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.Delimiter" /> <c>&lt;m:d></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.EquationArray" /> <c>&lt;m:eqArr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.Fraction" /> <c>&lt;m:f></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.MathFunction" /> <c>&lt;m:func></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.GroupChar" /> <c>&lt;m:groupChr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.LimitLower" /> <c>&lt;m:limLow></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.LimitUpper" /> <c>&lt;m:limUpp></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.Matrix" /> <c>&lt;m:m></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.Nary" /> <c>&lt;m:nary></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.OfficeMath" /> <c>&lt;m:oMath></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.Paragraph" /> <c>&lt;m:oMathPara></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.Phantom" /> <c>&lt;m:phant></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.Run" /> <c>&lt;m:r></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.Radical" /> <c>&lt;m:rad></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.PreSubSuper" /> <c>&lt;m:sPre></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.Subscript" /> <c>&lt;m:sSub></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.SubSuperscript" /> <c>&lt;m:sSubSup></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.Superscript" /> <c>&lt;m:sSup></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.BidirectionalOverride" /> <c>&lt;w:bdo></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.BookmarkStart" /> <c>&lt;w:bookmarkStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.ContentPart" /> <c>&lt;w:contentPart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.BidirectionalEmbedding" /> <c>&lt;w:dir></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.CustomXmlInsRangeEnd" /> <c>&lt;w:customXmlInsRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.CustomXmlDelRangeEnd" /> <c>&lt;w:customXmlDelRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.CustomXmlMoveFromRangeEnd" /> <c>&lt;w:customXmlMoveFromRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.CustomXmlMoveToRangeEnd" /> <c>&lt;w:customXmlMoveToRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd" /> <c>&lt;w14:customXmlConflictInsRangeEnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd" /> <c>&lt;w14:customXmlConflictDelRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd" /> <c>&lt;w:bookmarkEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart" /> <c>&lt;w:commentRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd" /> <c>&lt;w:commentRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd" /> <c>&lt;w:moveFromRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd" /> <c>&lt;w:moveToRangeEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart" /> <c>&lt;w:moveFromRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart" /> <c>&lt;w:moveToRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.PermEnd" /> <c>&lt;w:permEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.PermStart" /> <c>&lt;w:permStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.ProofError" /> <c>&lt;w:proofErr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Run" /> <c>&lt;w:r></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.InsertedRun" /> <c>&lt;w:ins></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DeletedRun" /> <c>&lt;w:del></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveFromRun" /> <c>&lt;w:moveFrom></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MoveToRun" /> <c>&lt;w:moveTo></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.BookmarkEnd" /> <c>&lt;w:bookmarkEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.CommentRangeStart" /> <c>&lt;w:commentRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.CommentRangeEnd" /> <c>&lt;w:commentRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.MoveFromRangeEnd" /> <c>&lt;w:moveFromRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.MoveToRangeEnd" /> <c>&lt;w:moveToRangeEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.MoveFromRangeStart" /> <c>&lt;w:moveFromRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.MoveToRangeStart" /> <c>&lt;w:moveToRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.PermEnd" /> <c>&lt;w:permEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.PermStart" /> <c>&lt;w:permStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.ProofError" /> <c>&lt;w:proofErr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.Run" /> <c>&lt;w:r></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.InsertedRun" /> <c>&lt;w:ins></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.DeletedRun" /> <c>&lt;w:del></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.MoveFromRun" /> <c>&lt;w:moveFrom></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.MoveToRun" /> <c>&lt;w:moveTo></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion" /> <c>&lt;w14:conflictIns></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion" /> <c>&lt;w14:conflictDel></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.SdtRun" /> <c>&lt;w:sdt></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart" /> <c>&lt;w:customXmlInsRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart" /> <c>&lt;w:customXmlDelRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart" /> <c>&lt;w:customXmlMoveFromRangeStart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart" /> <c>&lt;w:customXmlMoveToRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.SdtRun" /> <c>&lt;w:sdt></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.CustomXmlInsRangeStart" /> <c>&lt;w:customXmlInsRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.CustomXmlDelRangeStart" /> <c>&lt;w:customXmlDelRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.CustomXmlMoveFromRangeStart" /> <c>&lt;w:customXmlMoveFromRangeStart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.CustomXmlMoveToRangeStart" /> <c>&lt;w:customXmlMoveToRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
@@ -662,60 +662,60 @@ namespace DocumentFormat.OpenXml.Office.Word.Y2010.WordML
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddChild<DocumentFormat.OpenXml.Math.Accent>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Bar>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.BorderBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Box>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Delimiter>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.EquationArray>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Fraction>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.MathFunction>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.GroupChar>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.LimitLower>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.LimitUpper>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Matrix>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Nary>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.OfficeMath>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Paragraph>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Phantom>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Run>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Radical>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.PreSubSuper>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Subscript>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.SubSuperscript>();
-            builder.AddChild<DocumentFormat.OpenXml.Math.Superscript>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BidirectionalOverride>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ContentPart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BidirectionalEmbedding>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.Accent>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.Bar>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.BorderBox>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.Box>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.Delimiter>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.EquationArray>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.Fraction>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.MathFunction>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.GroupChar>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.LimitLower>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.LimitUpper>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.Matrix>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.Nary>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.OfficeMath>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.Paragraph>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.Phantom>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.Run>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.Radical>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.PreSubSuper>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.Subscript>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.SubSuperscript>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Math.Superscript>();
+            builder.AddChild<DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.BidirectionalOverride>();
+            builder.AddChild<DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.BookmarkStart>();
+            builder.AddChild<DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.ContentPart>();
+            builder.AddChild<DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.BidirectionalEmbedding>();
+            builder.AddChild<DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.CustomXmlInsRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.CustomXmlDelRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.CustomXmlMoveFromRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.CustomXmlMoveToRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeEnd>();
             builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PermEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.PermStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.ProofError>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.Run>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.InsertedRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.DeletedRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveFromRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.MoveToRun>();
+            builder.AddChild<DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.BookmarkEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.CommentRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.CommentRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.MoveFromRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.MoveToRangeEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.MoveFromRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.MoveToRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.PermEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.PermStart>();
+            builder.AddChild<DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.ProofError>();
+            builder.AddChild<DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.Run>();
+            builder.AddChild<DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.InsertedRun>();
+            builder.AddChild<DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.DeletedRun>();
+            builder.AddChild<DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.MoveFromRun>();
+            builder.AddChild<DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.MoveToRun>();
             builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictInsertion>();
             builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.RunConflictDeletion>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.SdtRun>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart>();
-            builder.AddChild<DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.SdtRun>();
+            builder.AddChild<DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.CustomXmlInsRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.CustomXmlDelRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.CustomXmlMoveFromRangeStart>();
+            builder.AddChild<DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.CustomXmlMoveToRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictInsertionRangeStart>();
             builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordML.CustomXmlConflictDeletionRangeStart>();
             builder.AddElement<RunTrackChangeType>()
@@ -3558,9 +3558,9 @@ namespace DocumentFormat.OpenXml.Office.Word.Y2010.WordML
         /// <remark>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>? BlackWhiteMode
+        public EnumValue<DocumentFormat.OpenXml.DrawingML.Y2006.Main.BlackWhiteModeValues>? BlackWhiteMode
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.DrawingML.Y2006.Main.BlackWhiteModeValues>>();
             set => SetAttribute(value);
         }
 
@@ -4957,9 +4957,9 @@ namespace DocumentFormat.OpenXml.Office.Word.Y2010.WordML
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HyperlinkOnClick" /> <c>&lt;a:hlinkClick></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HyperlinkOnHover" /> <c>&lt;a:hlinkHover></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList" /> <c>&lt;a:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.HyperlinkOnClick" /> <c>&lt;a:hlinkClick></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.HyperlinkOnHover" /> <c>&lt;a:hlinkHover></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.NonVisualDrawingPropertiesExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remark>
     public partial class NonVisualDrawingProperties : TypedOpenXmlCompositeElement
@@ -5050,9 +5050,9 @@ namespace DocumentFormat.OpenXml.Office.Word.Y2010.WordML
             base.ConfigureMetadata(builder);
             builder.SetSchema("w14:cNvPr");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.HyperlinkOnClick>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.HyperlinkOnHover>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.NonVisualDrawingPropertiesExtensionList>();
             builder.AddElement<NonVisualDrawingProperties>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
                 {
@@ -5067,9 +5067,9 @@ namespace DocumentFormat.OpenXml.Office.Word.Y2010.WordML
                 .AddAttribute("title", a => a.Title);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnClick), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnHover), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.HyperlinkOnClick), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.HyperlinkOnHover), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.NonVisualDrawingPropertiesExtensionList), 0, 1)
             };
         }
 
@@ -5080,9 +5080,9 @@ namespace DocumentFormat.OpenXml.Office.Word.Y2010.WordML
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.HyperlinkOnClick? HyperlinkOnClick
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Main.HyperlinkOnClick? HyperlinkOnClick
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Main.HyperlinkOnClick>();
             set => SetElement(value);
         }
 
@@ -5093,9 +5093,9 @@ namespace DocumentFormat.OpenXml.Office.Word.Y2010.WordML
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.HyperlinkOnHover? HyperlinkOnHover
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Main.HyperlinkOnHover? HyperlinkOnHover
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Main.HyperlinkOnHover>();
             set => SetElement(value);
         }
 
@@ -5106,9 +5106,9 @@ namespace DocumentFormat.OpenXml.Office.Word.Y2010.WordML
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList? NonVisualDrawingPropertiesExtensionList
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Main.NonVisualDrawingPropertiesExtensionList? NonVisualDrawingPropertiesExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Main.NonVisualDrawingPropertiesExtensionList>();
             set => SetElement(value);
         }
 
@@ -5314,8 +5314,8 @@ namespace DocumentFormat.OpenXml.Office.Word.Y2010.WordML
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Offset" /> <c>&lt;a:off></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extents" /> <c>&lt;a:ext></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.Offset" /> <c>&lt;a:off></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.Extents" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
     public partial class Transform2D : TypedOpenXmlCompositeElement
@@ -5386,16 +5386,16 @@ namespace DocumentFormat.OpenXml.Office.Word.Y2010.WordML
             base.ConfigureMetadata(builder);
             builder.SetSchema("w14:xfrm");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Offset>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Extents>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.Offset>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.Extents>();
             builder.AddElement<Transform2D>()
                 .AddAttribute("rot", a => a.Rotation)
                 .AddAttribute("flipH", a => a.HorizontalFlip)
                 .AddAttribute("flipV", a => a.VerticalFlip);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Offset), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Extents), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.Offset), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.Extents), 0, 1)
             };
         }
 
@@ -5406,9 +5406,9 @@ namespace DocumentFormat.OpenXml.Office.Word.Y2010.WordML
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Offset? Offset
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Main.Offset? Offset
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Offset>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Main.Offset>();
             set => SetElement(value);
         }
 
@@ -5419,9 +5419,9 @@ namespace DocumentFormat.OpenXml.Office.Word.Y2010.WordML
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Extents? Extents
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Main.Extents? Extents
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Extents>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Main.Extents>();
             set => SetElement(value);
         }
 
@@ -5437,7 +5437,7 @@ namespace DocumentFormat.OpenXml.Office.Word.Y2010.WordML
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extension" /> <c>&lt;a:ext></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.Extension" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
     public partial class OfficeArtExtensionList : TypedOpenXmlCompositeElement
@@ -5478,14 +5478,14 @@ namespace DocumentFormat.OpenXml.Office.Word.Y2010.WordML
             base.ConfigureMetadata(builder);
             builder.SetSchema("w14:extLst");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Extension>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.Extension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Extension), 0, 0)
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.Extension), 0, 0)
                     }
                 }
             };

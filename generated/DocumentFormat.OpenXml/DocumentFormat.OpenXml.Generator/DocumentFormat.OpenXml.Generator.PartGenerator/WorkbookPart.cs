@@ -18,7 +18,7 @@ namespace DocumentFormat.OpenXml.Packaging
     public partial class WorkbookPart : TypedOpenXmlPart
     {
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument";
-        private DocumentFormat.OpenXml.Spreadsheet.Workbook? _rootElement;
+        private DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Workbook? _rootElement;
 
         /// <summary>
         /// Creates an instance of the WorkbookPart OpenXmlType
@@ -91,7 +91,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             set
             {
-                _rootElement = value as DocumentFormat.OpenXml.Spreadsheet.Workbook;
+                _rootElement = value as DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Workbook;
             }
         }
 
@@ -188,13 +188,13 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets or sets the root element of this part.
         /// </summary>
-        public DocumentFormat.OpenXml.Spreadsheet.Workbook Workbook
+        public DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Workbook Workbook
         {
             get
             {
                 if (_rootElement is null)
                 {
-                    LoadDomTree<DocumentFormat.OpenXml.Spreadsheet.Workbook>();
+                    LoadDomTree<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Workbook>();
                 }
 
                 return _rootElement!;

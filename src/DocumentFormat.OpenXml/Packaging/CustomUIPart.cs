@@ -11,7 +11,7 @@ namespace DocumentFormat.OpenXml.Packaging
     public abstract partial class CustomUIPart : TypedOpenXmlPart
     {
         [System.Diagnostics.DebuggerBrowsable(System.Diagnostics.DebuggerBrowsableState.Never)]
-        private Office.CustomUI.CustomUI? _rootEle;
+        private Office.Y2006.M01.CustomUI.CustomUI? _rootEle;
 
         /// <inheritdoc/>
         private protected override OpenXmlPartRootElement? InternalRootElement
@@ -23,7 +23,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             set
             {
-                _rootEle = value as Office.CustomUI.CustomUI;
+                _rootEle = value as Office.Y2006.M01.CustomUI.CustomUI;
             }
         }
 
@@ -39,13 +39,13 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets or sets the root element of this part.
         /// </summary>
-        public Office.CustomUI.CustomUI? CustomUI
+        public Office.Y2006.M01.CustomUI.CustomUI? CustomUI
         {
             get
             {
                 if (_rootEle is null)
                 {
-                    LoadDomTree<Office.CustomUI.CustomUI>();
+                    LoadDomTree<Office.Y2006.M01.CustomUI.CustomUI>();
                 }
 
                 return _rootEle;

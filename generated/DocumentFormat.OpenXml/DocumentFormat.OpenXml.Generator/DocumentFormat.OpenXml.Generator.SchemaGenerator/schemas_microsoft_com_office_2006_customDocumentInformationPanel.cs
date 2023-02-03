@@ -14,7 +14,7 @@ using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
+namespace DocumentFormat.OpenXml.Office.Y2006.CustomDocumentInformationPanel
 {
     /// <summary>
     /// <para>Defines the CustomPropertyEditors Class.</para>
@@ -24,9 +24,9 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.CustomPropertyEditor" /> <c>&lt;cdip:customPropertyEditor></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.DefaultPropertyEditorNamespace" /> <c>&lt;cdip:defaultPropertyEditorNamespace></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.ShowOnOpen" /> <c>&lt;cdip:showOnOpen></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2006.CustomDocumentInformationPanel.CustomPropertyEditor" /> <c>&lt;cdip:customPropertyEditor></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2006.CustomDocumentInformationPanel.DefaultPropertyEditorNamespace" /> <c>&lt;cdip:defaultPropertyEditorNamespace></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2006.CustomDocumentInformationPanel.ShowOnOpen" /> <c>&lt;cdip:showOnOpen></c></description></item>
     /// </list>
     /// </remark>
     public partial class CustomPropertyEditors : TypedOpenXmlCompositeElement
@@ -66,14 +66,14 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("cdip:customPropertyEditors");
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.CustomPropertyEditor>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.DefaultPropertyEditorNamespace>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.ShowOnOpen>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Y2006.CustomDocumentInformationPanel.CustomPropertyEditor>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Y2006.CustomDocumentInformationPanel.DefaultPropertyEditorNamespace>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Y2006.CustomDocumentInformationPanel.ShowOnOpen>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.ShowOnOpen), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.DefaultPropertyEditorNamespace), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.CustomPropertyEditor), 1, 0)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Y2006.CustomDocumentInformationPanel.ShowOnOpen), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Y2006.CustomDocumentInformationPanel.DefaultPropertyEditorNamespace), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Y2006.CustomDocumentInformationPanel.CustomPropertyEditor), 1, 0)
             };
         }
 
@@ -84,9 +84,9 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
         /// <remark>
         /// xmlns:cdip = http://schemas.microsoft.com/office/2006/customDocumentInformationPanel
         /// </remark>
-        public DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.ShowOnOpen? ShowOnOpen
+        public DocumentFormat.OpenXml.Office.Y2006.CustomDocumentInformationPanel.ShowOnOpen? ShowOnOpen
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.ShowOnOpen>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Y2006.CustomDocumentInformationPanel.ShowOnOpen>();
             set => SetElement(value);
         }
 
@@ -97,9 +97,9 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
         /// <remark>
         /// xmlns:cdip = http://schemas.microsoft.com/office/2006/customDocumentInformationPanel
         /// </remark>
-        public DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.DefaultPropertyEditorNamespace? DefaultPropertyEditorNamespace
+        public DocumentFormat.OpenXml.Office.Y2006.CustomDocumentInformationPanel.DefaultPropertyEditorNamespace? DefaultPropertyEditorNamespace
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.DefaultPropertyEditorNamespace>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Y2006.CustomDocumentInformationPanel.DefaultPropertyEditorNamespace>();
             set => SetElement(value);
         }
 
@@ -266,8 +266,8 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.PropertyEditorNamespace" /> <c>&lt;cdip:XMLNamespace></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.XsnFileLocation" /> <c>&lt;cdip:XSNLocation></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2006.CustomDocumentInformationPanel.PropertyEditorNamespace" /> <c>&lt;cdip:XMLNamespace></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2006.CustomDocumentInformationPanel.XsnFileLocation" /> <c>&lt;cdip:XSNLocation></c></description></item>
     /// </list>
     /// </remark>
     public partial class CustomPropertyEditor : TypedOpenXmlCompositeElement
@@ -307,12 +307,12 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("cdip:customPropertyEditor");
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.PropertyEditorNamespace>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.XsnFileLocation>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Y2006.CustomDocumentInformationPanel.PropertyEditorNamespace>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Y2006.CustomDocumentInformationPanel.XsnFileLocation>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.PropertyEditorNamespace), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.XsnFileLocation), 1, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Y2006.CustomDocumentInformationPanel.PropertyEditorNamespace), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Y2006.CustomDocumentInformationPanel.XsnFileLocation), 1, 1)
             };
         }
 
@@ -323,9 +323,9 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
         /// <remark>
         /// xmlns:cdip = http://schemas.microsoft.com/office/2006/customDocumentInformationPanel
         /// </remark>
-        public DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.PropertyEditorNamespace? PropertyEditorNamespace
+        public DocumentFormat.OpenXml.Office.Y2006.CustomDocumentInformationPanel.PropertyEditorNamespace? PropertyEditorNamespace
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.PropertyEditorNamespace>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Y2006.CustomDocumentInformationPanel.PropertyEditorNamespace>();
             set => SetElement(value);
         }
 
@@ -336,9 +336,9 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
         /// <remark>
         /// xmlns:cdip = http://schemas.microsoft.com/office/2006/customDocumentInformationPanel
         /// </remark>
-        public DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.XsnFileLocation? XsnFileLocation
+        public DocumentFormat.OpenXml.Office.Y2006.CustomDocumentInformationPanel.XsnFileLocation? XsnFileLocation
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.XsnFileLocation>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Y2006.CustomDocumentInformationPanel.XsnFileLocation>();
             set => SetElement(value);
         }
 

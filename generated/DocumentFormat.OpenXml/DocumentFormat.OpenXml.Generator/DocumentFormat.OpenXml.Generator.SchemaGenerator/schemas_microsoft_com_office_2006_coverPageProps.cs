@@ -14,7 +14,7 @@ using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.Office.CoverPageProps
+namespace DocumentFormat.OpenXml.Office.Y2006.CoverPageProps
 {
     /// <summary>
     /// <para>Defines the CoverPageProperties Class.</para>
@@ -24,12 +24,12 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CoverPageProps.PublishDate" /> <c>&lt;cppr:PublishDate></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CoverPageProps.DocumentAbstract" /> <c>&lt;cppr:Abstract></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CoverPageProps.CompanyAddress" /> <c>&lt;cppr:CompanyAddress></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CoverPageProps.CompanyPhoneNumber" /> <c>&lt;cppr:CompanyPhone></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CoverPageProps.CompanyFaxNumber" /> <c>&lt;cppr:CompanyFax></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CoverPageProps.CompanyEmailAddress" /> <c>&lt;cppr:CompanyEmail></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2006.CoverPageProps.PublishDate" /> <c>&lt;cppr:PublishDate></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2006.CoverPageProps.DocumentAbstract" /> <c>&lt;cppr:Abstract></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2006.CoverPageProps.CompanyAddress" /> <c>&lt;cppr:CompanyAddress></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2006.CoverPageProps.CompanyPhoneNumber" /> <c>&lt;cppr:CompanyPhone></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2006.CoverPageProps.CompanyFaxNumber" /> <c>&lt;cppr:CompanyFax></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2006.CoverPageProps.CompanyEmailAddress" /> <c>&lt;cppr:CompanyEmail></c></description></item>
     /// </list>
     /// </remark>
     public partial class CoverPageProperties : TypedOpenXmlCompositeElement
@@ -69,20 +69,20 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("cppr:CoverPageProperties");
-            builder.AddChild<DocumentFormat.OpenXml.Office.CoverPageProps.PublishDate>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CoverPageProps.DocumentAbstract>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CoverPageProps.CompanyAddress>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CoverPageProps.CompanyPhoneNumber>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CoverPageProps.CompanyFaxNumber>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CoverPageProps.CompanyEmailAddress>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Y2006.CoverPageProps.PublishDate>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Y2006.CoverPageProps.DocumentAbstract>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Y2006.CoverPageProps.CompanyAddress>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Y2006.CoverPageProps.CompanyPhoneNumber>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Y2006.CoverPageProps.CompanyFaxNumber>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Y2006.CoverPageProps.CompanyEmailAddress>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CoverPageProps.PublishDate), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CoverPageProps.DocumentAbstract), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CoverPageProps.CompanyAddress), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CoverPageProps.CompanyPhoneNumber), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CoverPageProps.CompanyFaxNumber), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CoverPageProps.CompanyEmailAddress), 1, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Y2006.CoverPageProps.PublishDate), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Y2006.CoverPageProps.DocumentAbstract), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Y2006.CoverPageProps.CompanyAddress), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Y2006.CoverPageProps.CompanyPhoneNumber), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Y2006.CoverPageProps.CompanyFaxNumber), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Y2006.CoverPageProps.CompanyEmailAddress), 1, 1)
             };
         }
 
@@ -93,9 +93,9 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
         /// <remark>
         /// xmlns:cppr = http://schemas.microsoft.com/office/2006/coverPageProps
         /// </remark>
-        public DocumentFormat.OpenXml.Office.CoverPageProps.PublishDate? PublishDate
+        public DocumentFormat.OpenXml.Office.Y2006.CoverPageProps.PublishDate? PublishDate
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.CoverPageProps.PublishDate>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Y2006.CoverPageProps.PublishDate>();
             set => SetElement(value);
         }
 
@@ -106,9 +106,9 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
         /// <remark>
         /// xmlns:cppr = http://schemas.microsoft.com/office/2006/coverPageProps
         /// </remark>
-        public DocumentFormat.OpenXml.Office.CoverPageProps.DocumentAbstract? DocumentAbstract
+        public DocumentFormat.OpenXml.Office.Y2006.CoverPageProps.DocumentAbstract? DocumentAbstract
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.CoverPageProps.DocumentAbstract>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Y2006.CoverPageProps.DocumentAbstract>();
             set => SetElement(value);
         }
 
@@ -119,9 +119,9 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
         /// <remark>
         /// xmlns:cppr = http://schemas.microsoft.com/office/2006/coverPageProps
         /// </remark>
-        public DocumentFormat.OpenXml.Office.CoverPageProps.CompanyAddress? CompanyAddress
+        public DocumentFormat.OpenXml.Office.Y2006.CoverPageProps.CompanyAddress? CompanyAddress
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.CoverPageProps.CompanyAddress>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Y2006.CoverPageProps.CompanyAddress>();
             set => SetElement(value);
         }
 
@@ -132,9 +132,9 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
         /// <remark>
         /// xmlns:cppr = http://schemas.microsoft.com/office/2006/coverPageProps
         /// </remark>
-        public DocumentFormat.OpenXml.Office.CoverPageProps.CompanyPhoneNumber? CompanyPhoneNumber
+        public DocumentFormat.OpenXml.Office.Y2006.CoverPageProps.CompanyPhoneNumber? CompanyPhoneNumber
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.CoverPageProps.CompanyPhoneNumber>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Y2006.CoverPageProps.CompanyPhoneNumber>();
             set => SetElement(value);
         }
 
@@ -145,9 +145,9 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
         /// <remark>
         /// xmlns:cppr = http://schemas.microsoft.com/office/2006/coverPageProps
         /// </remark>
-        public DocumentFormat.OpenXml.Office.CoverPageProps.CompanyFaxNumber? CompanyFaxNumber
+        public DocumentFormat.OpenXml.Office.Y2006.CoverPageProps.CompanyFaxNumber? CompanyFaxNumber
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.CoverPageProps.CompanyFaxNumber>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Y2006.CoverPageProps.CompanyFaxNumber>();
             set => SetElement(value);
         }
 
@@ -158,9 +158,9 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
         /// <remark>
         /// xmlns:cppr = http://schemas.microsoft.com/office/2006/coverPageProps
         /// </remark>
-        public DocumentFormat.OpenXml.Office.CoverPageProps.CompanyEmailAddress? CompanyEmailAddress
+        public DocumentFormat.OpenXml.Office.Y2006.CoverPageProps.CompanyEmailAddress? CompanyEmailAddress
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.CoverPageProps.CompanyEmailAddress>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Y2006.CoverPageProps.CompanyEmailAddress>();
             set => SetElement(value);
         }
 

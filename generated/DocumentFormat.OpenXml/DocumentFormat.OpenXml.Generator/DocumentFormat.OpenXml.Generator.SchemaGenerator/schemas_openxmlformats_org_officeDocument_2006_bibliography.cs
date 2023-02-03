@@ -14,7 +14,7 @@ using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.Bibliography
+namespace DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography
 {
     /// <summary>
     /// <para>Sources.</para>
@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Source" /> <c>&lt;b:Source></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Source" /> <c>&lt;b:Source></c></description></item>
     /// </list>
     /// </remark>
     public partial class Sources : TypedOpenXmlPartRootElement
@@ -94,7 +94,7 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("b:Sources");
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Source>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Source>();
             builder.AddElement<Sources>()
                 .AddAttribute("SelectedStyle", a => a.SelectedStyle, aBuilder =>
                 {
@@ -110,7 +110,7 @@ namespace DocumentFormat.OpenXml.Bibliography
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Source), 0, 0)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Source), 0, 0)
             };
         }
 
@@ -126,9 +126,9 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Last" /> <c>&lt;b:Last></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.First" /> <c>&lt;b:First></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Middle" /> <c>&lt;b:Middle></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Last" /> <c>&lt;b:Last></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.First" /> <c>&lt;b:First></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Middle" /> <c>&lt;b:Middle></c></description></item>
     /// </list>
     /// </remark>
     public partial class Person : TypedOpenXmlCompositeElement
@@ -168,14 +168,14 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("b:Person");
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Last>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.First>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Middle>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Last>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.First>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Middle>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Last), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.First), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Middle), 0, 0)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Last), 0, 0),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.First), 0, 0),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Middle), 0, 0)
             };
         }
 
@@ -2243,7 +2243,7 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Person" /> <c>&lt;b:Person></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Person" /> <c>&lt;b:Person></c></description></item>
     /// </list>
     /// </remark>
     public partial class NameList : TypedOpenXmlCompositeElement
@@ -2283,10 +2283,10 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("b:NameList");
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Person>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Person>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Person), 1, 0)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Person), 1, 0)
             };
         }
 
@@ -2302,7 +2302,7 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
     /// </list>
     /// </remark>
     public partial class Artist : NameType
@@ -2344,7 +2344,7 @@ namespace DocumentFormat.OpenXml.Bibliography
             builder.SetSchema("b:Artist");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.NameList), 1, 1)
             };
         }
 
@@ -2360,7 +2360,7 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
     /// </list>
     /// </remark>
     public partial class BookAuthor : NameType
@@ -2402,7 +2402,7 @@ namespace DocumentFormat.OpenXml.Bibliography
             builder.SetSchema("b:BookAuthor");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.NameList), 1, 1)
             };
         }
 
@@ -2418,7 +2418,7 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
     /// </list>
     /// </remark>
     public partial class Compiler : NameType
@@ -2460,7 +2460,7 @@ namespace DocumentFormat.OpenXml.Bibliography
             builder.SetSchema("b:Compiler");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.NameList), 1, 1)
             };
         }
 
@@ -2476,7 +2476,7 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
     /// </list>
     /// </remark>
     public partial class Composer : NameType
@@ -2518,7 +2518,7 @@ namespace DocumentFormat.OpenXml.Bibliography
             builder.SetSchema("b:Composer");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.NameList), 1, 1)
             };
         }
 
@@ -2534,7 +2534,7 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
     /// </list>
     /// </remark>
     public partial class Conductor : NameType
@@ -2576,7 +2576,7 @@ namespace DocumentFormat.OpenXml.Bibliography
             builder.SetSchema("b:Conductor");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.NameList), 1, 1)
             };
         }
 
@@ -2592,7 +2592,7 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
     /// </list>
     /// </remark>
     public partial class Counsel : NameType
@@ -2634,7 +2634,7 @@ namespace DocumentFormat.OpenXml.Bibliography
             builder.SetSchema("b:Counsel");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.NameList), 1, 1)
             };
         }
 
@@ -2650,7 +2650,7 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
     /// </list>
     /// </remark>
     public partial class Director : NameType
@@ -2692,7 +2692,7 @@ namespace DocumentFormat.OpenXml.Bibliography
             builder.SetSchema("b:Director");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.NameList), 1, 1)
             };
         }
 
@@ -2708,7 +2708,7 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
     /// </list>
     /// </remark>
     public partial class Editor : NameType
@@ -2750,7 +2750,7 @@ namespace DocumentFormat.OpenXml.Bibliography
             builder.SetSchema("b:Editor");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.NameList), 1, 1)
             };
         }
 
@@ -2766,7 +2766,7 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
     /// </list>
     /// </remark>
     public partial class Interviewee : NameType
@@ -2808,7 +2808,7 @@ namespace DocumentFormat.OpenXml.Bibliography
             builder.SetSchema("b:Interviewee");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.NameList), 1, 1)
             };
         }
 
@@ -2824,7 +2824,7 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
     /// </list>
     /// </remark>
     public partial class Interviewer : NameType
@@ -2866,7 +2866,7 @@ namespace DocumentFormat.OpenXml.Bibliography
             builder.SetSchema("b:Interviewer");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.NameList), 1, 1)
             };
         }
 
@@ -2882,7 +2882,7 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
     /// </list>
     /// </remark>
     public partial class Inventor : NameType
@@ -2924,7 +2924,7 @@ namespace DocumentFormat.OpenXml.Bibliography
             builder.SetSchema("b:Inventor");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.NameList), 1, 1)
             };
         }
 
@@ -2940,7 +2940,7 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
     /// </list>
     /// </remark>
     public partial class ProducerName : NameType
@@ -2982,7 +2982,7 @@ namespace DocumentFormat.OpenXml.Bibliography
             builder.SetSchema("b:ProducerName");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.NameList), 1, 1)
             };
         }
 
@@ -2998,7 +2998,7 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
     /// </list>
     /// </remark>
     public partial class Translator : NameType
@@ -3040,7 +3040,7 @@ namespace DocumentFormat.OpenXml.Bibliography
             builder.SetSchema("b:Translator");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.NameList), 1, 1)
             };
         }
 
@@ -3056,7 +3056,7 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
     /// </list>
     /// </remark>
     public partial class Writer : NameType
@@ -3098,7 +3098,7 @@ namespace DocumentFormat.OpenXml.Bibliography
             builder.SetSchema("b:Writer");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.NameList), 1, 1)
             };
         }
 
@@ -3114,7 +3114,7 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
     /// </list>
     /// </remark>
     public abstract partial class NameType : TypedOpenXmlCompositeElement
@@ -3153,7 +3153,7 @@ namespace DocumentFormat.OpenXml.Bibliography
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.NameList>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.NameList>();
         }
 
         /// <summary>
@@ -3163,9 +3163,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public DocumentFormat.OpenXml.Bibliography.NameList? NameList
+        public DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.NameList? NameList
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.NameList>();
+            get => GetElement<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.NameList>();
             set => SetElement(value);
         }
     }
@@ -3178,8 +3178,8 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Corporate" /> <c>&lt;b:Corporate></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Corporate" /> <c>&lt;b:Corporate></c></description></item>
     /// </list>
     /// </remark>
     public partial class Author : NameOrCorporateType
@@ -3223,8 +3223,8 @@ namespace DocumentFormat.OpenXml.Bibliography
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Corporate), 1, 1)
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.NameList), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Corporate), 1, 1)
                 }
             };
         }
@@ -3241,8 +3241,8 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Corporate" /> <c>&lt;b:Corporate></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Corporate" /> <c>&lt;b:Corporate></c></description></item>
     /// </list>
     /// </remark>
     public partial class Performer : NameOrCorporateType
@@ -3286,8 +3286,8 @@ namespace DocumentFormat.OpenXml.Bibliography
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NameList), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Corporate), 1, 1)
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.NameList), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Corporate), 1, 1)
                 }
             };
         }
@@ -3304,8 +3304,8 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Corporate" /> <c>&lt;b:Corporate></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Corporate" /> <c>&lt;b:Corporate></c></description></item>
     /// </list>
     /// </remark>
     public abstract partial class NameOrCorporateType : TypedOpenXmlCompositeElement
@@ -3344,8 +3344,8 @@ namespace DocumentFormat.OpenXml.Bibliography
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.NameList>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Corporate>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.NameList>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Corporate>();
         }
 
         /// <summary>
@@ -3355,9 +3355,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public DocumentFormat.OpenXml.Bibliography.NameList? NameList
+        public DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.NameList? NameList
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.NameList>();
+            get => GetElement<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.NameList>();
             set => SetElement(value);
         }
 
@@ -3368,9 +3368,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public DocumentFormat.OpenXml.Bibliography.Corporate? Corporate
+        public DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Corporate? Corporate
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Corporate>();
+            get => GetElement<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Corporate>();
             set => SetElement(value);
         }
     }
@@ -3383,22 +3383,22 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Author" /> <c>&lt;b:Author></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Performer" /> <c>&lt;b:Performer></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Artist" /> <c>&lt;b:Artist></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.BookAuthor" /> <c>&lt;b:BookAuthor></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Compiler" /> <c>&lt;b:Compiler></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Composer" /> <c>&lt;b:Composer></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Conductor" /> <c>&lt;b:Conductor></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Counsel" /> <c>&lt;b:Counsel></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Director" /> <c>&lt;b:Director></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Editor" /> <c>&lt;b:Editor></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Interviewee" /> <c>&lt;b:Interviewee></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Interviewer" /> <c>&lt;b:Interviewer></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Inventor" /> <c>&lt;b:Inventor></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.ProducerName" /> <c>&lt;b:ProducerName></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Translator" /> <c>&lt;b:Translator></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Writer" /> <c>&lt;b:Writer></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Author" /> <c>&lt;b:Author></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Performer" /> <c>&lt;b:Performer></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Artist" /> <c>&lt;b:Artist></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.BookAuthor" /> <c>&lt;b:BookAuthor></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Compiler" /> <c>&lt;b:Compiler></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Composer" /> <c>&lt;b:Composer></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Conductor" /> <c>&lt;b:Conductor></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Counsel" /> <c>&lt;b:Counsel></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Director" /> <c>&lt;b:Director></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Editor" /> <c>&lt;b:Editor></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Interviewee" /> <c>&lt;b:Interviewee></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Interviewer" /> <c>&lt;b:Interviewer></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Inventor" /> <c>&lt;b:Inventor></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.ProducerName" /> <c>&lt;b:ProducerName></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Translator" /> <c>&lt;b:Translator></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Writer" /> <c>&lt;b:Writer></c></description></item>
     /// </list>
     /// </remark>
     public partial class AuthorList : TypedOpenXmlCompositeElement
@@ -3438,42 +3438,42 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("b:Author");
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Author>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Performer>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Artist>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.BookAuthor>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Compiler>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Composer>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Conductor>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Counsel>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Director>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Editor>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Interviewee>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Interviewer>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Inventor>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.ProducerName>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Translator>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Writer>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Author>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Performer>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Artist>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.BookAuthor>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Compiler>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Composer>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Conductor>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Counsel>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Director>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Editor>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Interviewee>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Interviewer>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Inventor>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.ProducerName>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Translator>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Writer>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Artist), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Author), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.BookAuthor), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Compiler), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Composer), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Conductor), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Counsel), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Director), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Editor), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Interviewee), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Interviewer), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Inventor), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Performer), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.ProducerName), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Translator), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Writer), 1, 1)
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Artist), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Author), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.BookAuthor), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Compiler), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Composer), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Conductor), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Counsel), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Director), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Editor), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Interviewee), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Interviewer), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Inventor), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Performer), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.ProducerName), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Translator), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Writer), 1, 1)
                 }
             };
         }
@@ -3485,9 +3485,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public DocumentFormat.OpenXml.Bibliography.Artist? Artist
+        public DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Artist? Artist
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Artist>();
+            get => GetElement<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Artist>();
             set => SetElement(value);
         }
 
@@ -3498,9 +3498,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public DocumentFormat.OpenXml.Bibliography.Author? Author
+        public DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Author? Author
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Author>();
+            get => GetElement<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Author>();
             set => SetElement(value);
         }
 
@@ -3511,9 +3511,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public DocumentFormat.OpenXml.Bibliography.BookAuthor? BookAuthor
+        public DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.BookAuthor? BookAuthor
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.BookAuthor>();
+            get => GetElement<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.BookAuthor>();
             set => SetElement(value);
         }
 
@@ -3524,9 +3524,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public DocumentFormat.OpenXml.Bibliography.Compiler? Compiler
+        public DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Compiler? Compiler
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Compiler>();
+            get => GetElement<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Compiler>();
             set => SetElement(value);
         }
 
@@ -3537,9 +3537,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public DocumentFormat.OpenXml.Bibliography.Composer? Composer
+        public DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Composer? Composer
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Composer>();
+            get => GetElement<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Composer>();
             set => SetElement(value);
         }
 
@@ -3550,9 +3550,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public DocumentFormat.OpenXml.Bibliography.Conductor? Conductor
+        public DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Conductor? Conductor
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Conductor>();
+            get => GetElement<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Conductor>();
             set => SetElement(value);
         }
 
@@ -3563,9 +3563,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public DocumentFormat.OpenXml.Bibliography.Counsel? Counsel
+        public DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Counsel? Counsel
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Counsel>();
+            get => GetElement<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Counsel>();
             set => SetElement(value);
         }
 
@@ -3576,9 +3576,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public DocumentFormat.OpenXml.Bibliography.Director? Director
+        public DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Director? Director
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Director>();
+            get => GetElement<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Director>();
             set => SetElement(value);
         }
 
@@ -3589,9 +3589,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public DocumentFormat.OpenXml.Bibliography.Editor? Editor
+        public DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Editor? Editor
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Editor>();
+            get => GetElement<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Editor>();
             set => SetElement(value);
         }
 
@@ -3602,9 +3602,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public DocumentFormat.OpenXml.Bibliography.Interviewee? Interviewee
+        public DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Interviewee? Interviewee
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Interviewee>();
+            get => GetElement<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Interviewee>();
             set => SetElement(value);
         }
 
@@ -3615,9 +3615,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public DocumentFormat.OpenXml.Bibliography.Interviewer? Interviewer
+        public DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Interviewer? Interviewer
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Interviewer>();
+            get => GetElement<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Interviewer>();
             set => SetElement(value);
         }
 
@@ -3628,9 +3628,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public DocumentFormat.OpenXml.Bibliography.Inventor? Inventor
+        public DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Inventor? Inventor
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Inventor>();
+            get => GetElement<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Inventor>();
             set => SetElement(value);
         }
 
@@ -3641,9 +3641,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public DocumentFormat.OpenXml.Bibliography.Performer? Performer
+        public DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Performer? Performer
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Performer>();
+            get => GetElement<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Performer>();
             set => SetElement(value);
         }
 
@@ -3654,9 +3654,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public DocumentFormat.OpenXml.Bibliography.ProducerName? ProducerName
+        public DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.ProducerName? ProducerName
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.ProducerName>();
+            get => GetElement<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.ProducerName>();
             set => SetElement(value);
         }
 
@@ -3667,9 +3667,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public DocumentFormat.OpenXml.Bibliography.Translator? Translator
+        public DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Translator? Translator
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Translator>();
+            get => GetElement<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Translator>();
             set => SetElement(value);
         }
 
@@ -3680,9 +3680,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public DocumentFormat.OpenXml.Bibliography.Writer? Writer
+        public DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Writer? Writer
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Writer>();
+            get => GetElement<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Writer>();
             set => SetElement(value);
         }
 
@@ -3714,13 +3714,13 @@ namespace DocumentFormat.OpenXml.Bibliography
 
         internal override OpenXmlSimpleType InnerTextToValue(string text)
         {
-            return new EnumValue<DocumentFormat.OpenXml.Bibliography.DataSourceValues> { InnerText = text };
+            return new EnumValue<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.DataSourceValues> { InnerText = text };
         }
 
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Bibliography.DataSourceValues>>(EnumValidator.Instance);
+            builder.AddValidator<EnumValue<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.DataSourceValues>>(EnumValidator.Instance);
             builder.SetSchema("b:SourceType");
         }
 
@@ -3736,58 +3736,58 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.AuthorList" /> <c>&lt;b:Author></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.SourceType" /> <c>&lt;b:SourceType></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.AbbreviatedCaseNumber" /> <c>&lt;b:AbbreviatedCaseNumber></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.AlbumTitle" /> <c>&lt;b:AlbumTitle></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.BookTitle" /> <c>&lt;b:BookTitle></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Broadcaster" /> <c>&lt;b:Broadcaster></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.BroadcastTitle" /> <c>&lt;b:BroadcastTitle></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.CaseNumber" /> <c>&lt;b:CaseNumber></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.ChapterNumber" /> <c>&lt;b:ChapterNumber></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.City" /> <c>&lt;b:City></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Comments" /> <c>&lt;b:Comments></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.ConferenceName" /> <c>&lt;b:ConferenceName></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.CountryRegion" /> <c>&lt;b:CountryRegion></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Court" /> <c>&lt;b:Court></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Day" /> <c>&lt;b:Day></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.DayAccessed" /> <c>&lt;b:DayAccessed></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Department" /> <c>&lt;b:Department></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Distributor" /> <c>&lt;b:Distributor></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Edition" /> <c>&lt;b:Edition></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.GuidString" /> <c>&lt;b:Guid></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Institution" /> <c>&lt;b:Institution></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.InternetSiteTitle" /> <c>&lt;b:InternetSiteTitle></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Issue" /> <c>&lt;b:Issue></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.JournalName" /> <c>&lt;b:JournalName></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.LcId" /> <c>&lt;b:LCID></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Medium" /> <c>&lt;b:Medium></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Month" /> <c>&lt;b:Month></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.MonthAccessed" /> <c>&lt;b:MonthAccessed></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.NumberVolumes" /> <c>&lt;b:NumberVolumes></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Pages" /> <c>&lt;b:Pages></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.PatentNumber" /> <c>&lt;b:PatentNumber></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.PeriodicalTitle" /> <c>&lt;b:PeriodicalTitle></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.ProductionCompany" /> <c>&lt;b:ProductionCompany></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.PublicationTitle" /> <c>&lt;b:PublicationTitle></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Publisher" /> <c>&lt;b:Publisher></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.RecordingNumber" /> <c>&lt;b:RecordingNumber></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.ReferenceOrder" /> <c>&lt;b:RefOrder></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Reporter" /> <c>&lt;b:Reporter></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.ShortTitle" /> <c>&lt;b:ShortTitle></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.StandardNumber" /> <c>&lt;b:StandardNumber></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.StateProvince" /> <c>&lt;b:StateProvince></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Station" /> <c>&lt;b:Station></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Tag" /> <c>&lt;b:Tag></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Theater" /> <c>&lt;b:Theater></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.ThesisType" /> <c>&lt;b:ThesisType></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Title" /> <c>&lt;b:Title></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.PatentType" /> <c>&lt;b:Type></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.UrlString" /> <c>&lt;b:URL></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Version" /> <c>&lt;b:Version></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Volume" /> <c>&lt;b:Volume></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Year" /> <c>&lt;b:Year></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.YearAccessed" /> <c>&lt;b:YearAccessed></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.AuthorList" /> <c>&lt;b:Author></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.SourceType" /> <c>&lt;b:SourceType></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.AbbreviatedCaseNumber" /> <c>&lt;b:AbbreviatedCaseNumber></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.AlbumTitle" /> <c>&lt;b:AlbumTitle></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.BookTitle" /> <c>&lt;b:BookTitle></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Broadcaster" /> <c>&lt;b:Broadcaster></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.BroadcastTitle" /> <c>&lt;b:BroadcastTitle></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.CaseNumber" /> <c>&lt;b:CaseNumber></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.ChapterNumber" /> <c>&lt;b:ChapterNumber></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.City" /> <c>&lt;b:City></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Comments" /> <c>&lt;b:Comments></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.ConferenceName" /> <c>&lt;b:ConferenceName></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.CountryRegion" /> <c>&lt;b:CountryRegion></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Court" /> <c>&lt;b:Court></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Day" /> <c>&lt;b:Day></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.DayAccessed" /> <c>&lt;b:DayAccessed></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Department" /> <c>&lt;b:Department></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Distributor" /> <c>&lt;b:Distributor></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Edition" /> <c>&lt;b:Edition></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.GuidString" /> <c>&lt;b:Guid></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Institution" /> <c>&lt;b:Institution></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.InternetSiteTitle" /> <c>&lt;b:InternetSiteTitle></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Issue" /> <c>&lt;b:Issue></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.JournalName" /> <c>&lt;b:JournalName></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.LcId" /> <c>&lt;b:LCID></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Medium" /> <c>&lt;b:Medium></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Month" /> <c>&lt;b:Month></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.MonthAccessed" /> <c>&lt;b:MonthAccessed></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.NumberVolumes" /> <c>&lt;b:NumberVolumes></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Pages" /> <c>&lt;b:Pages></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.PatentNumber" /> <c>&lt;b:PatentNumber></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.PeriodicalTitle" /> <c>&lt;b:PeriodicalTitle></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.ProductionCompany" /> <c>&lt;b:ProductionCompany></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.PublicationTitle" /> <c>&lt;b:PublicationTitle></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Publisher" /> <c>&lt;b:Publisher></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.RecordingNumber" /> <c>&lt;b:RecordingNumber></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.ReferenceOrder" /> <c>&lt;b:RefOrder></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Reporter" /> <c>&lt;b:Reporter></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.ShortTitle" /> <c>&lt;b:ShortTitle></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.StandardNumber" /> <c>&lt;b:StandardNumber></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.StateProvince" /> <c>&lt;b:StateProvince></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Station" /> <c>&lt;b:Station></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Tag" /> <c>&lt;b:Tag></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Theater" /> <c>&lt;b:Theater></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.ThesisType" /> <c>&lt;b:ThesisType></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Title" /> <c>&lt;b:Title></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.PatentType" /> <c>&lt;b:Type></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.UrlString" /> <c>&lt;b:URL></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Version" /> <c>&lt;b:Version></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Volume" /> <c>&lt;b:Volume></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Year" /> <c>&lt;b:Year></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.YearAccessed" /> <c>&lt;b:YearAccessed></c></description></item>
     /// </list>
     /// </remark>
     public partial class Source : TypedOpenXmlCompositeElement
@@ -3827,114 +3827,114 @@ namespace DocumentFormat.OpenXml.Bibliography
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("b:Source");
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.AuthorList>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.SourceType>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.AbbreviatedCaseNumber>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.AlbumTitle>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.BookTitle>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Broadcaster>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.BroadcastTitle>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.CaseNumber>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.ChapterNumber>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.City>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Comments>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.ConferenceName>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.CountryRegion>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Court>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Day>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.DayAccessed>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Department>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Distributor>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Edition>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.GuidString>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Institution>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.InternetSiteTitle>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Issue>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.JournalName>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.LcId>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Medium>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Month>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.MonthAccessed>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.NumberVolumes>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Pages>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.PatentNumber>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.PeriodicalTitle>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.ProductionCompany>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.PublicationTitle>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Publisher>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.RecordingNumber>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.ReferenceOrder>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Reporter>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.ShortTitle>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.StandardNumber>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.StateProvince>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Station>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Tag>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Theater>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.ThesisType>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Title>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.PatentType>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.UrlString>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Version>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Volume>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.Year>();
-            builder.AddChild<DocumentFormat.OpenXml.Bibliography.YearAccessed>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.AuthorList>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.SourceType>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.AbbreviatedCaseNumber>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.AlbumTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.BookTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Broadcaster>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.BroadcastTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.CaseNumber>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.ChapterNumber>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.City>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Comments>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.ConferenceName>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.CountryRegion>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Court>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Day>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.DayAccessed>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Department>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Distributor>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Edition>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.GuidString>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Institution>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.InternetSiteTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Issue>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.JournalName>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.LcId>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Medium>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Month>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.MonthAccessed>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.NumberVolumes>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Pages>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.PatentNumber>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.PeriodicalTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.ProductionCompany>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.PublicationTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Publisher>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.RecordingNumber>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.ReferenceOrder>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Reporter>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.ShortTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.StandardNumber>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.StateProvince>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Station>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Tag>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Theater>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.ThesisType>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Title>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.PatentType>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.UrlString>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Version>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Volume>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Year>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.YearAccessed>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.AbbreviatedCaseNumber), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.AlbumTitle), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.AuthorList), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.BookTitle), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Broadcaster), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.BroadcastTitle), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.CaseNumber), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.ChapterNumber), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.City), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Comments), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.ConferenceName), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.CountryRegion), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Court), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Day), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.DayAccessed), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Department), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Distributor), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Edition), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.GuidString), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Institution), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.InternetSiteTitle), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Issue), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.JournalName), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.LcId), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Medium), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Month), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.MonthAccessed), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.NumberVolumes), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Pages), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.PatentNumber), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.PeriodicalTitle), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.ProductionCompany), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.PublicationTitle), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Publisher), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.RecordingNumber), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.ReferenceOrder), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Reporter), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.SourceType), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.ShortTitle), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.StandardNumber), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.StateProvince), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Station), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Tag), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Theater), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.ThesisType), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Title), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.PatentType), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.UrlString), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Version), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Volume), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.Year), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Bibliography.YearAccessed), 1, 1)
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.AbbreviatedCaseNumber), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.AlbumTitle), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.AuthorList), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.BookTitle), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Broadcaster), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.BroadcastTitle), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.CaseNumber), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.ChapterNumber), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.City), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Comments), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.ConferenceName), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.CountryRegion), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Court), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Day), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.DayAccessed), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Department), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Distributor), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Edition), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.GuidString), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Institution), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.InternetSiteTitle), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Issue), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.JournalName), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.LcId), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Medium), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Month), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.MonthAccessed), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.NumberVolumes), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Pages), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.PatentNumber), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.PeriodicalTitle), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.ProductionCompany), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.PublicationTitle), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Publisher), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.RecordingNumber), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.ReferenceOrder), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Reporter), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.SourceType), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.ShortTitle), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.StandardNumber), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.StateProvince), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Station), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Tag), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Theater), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.ThesisType), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Title), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.PatentType), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.UrlString), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Version), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Volume), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Year), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.YearAccessed), 1, 1)
                 }
             };
         }
@@ -3946,9 +3946,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public DocumentFormat.OpenXml.Bibliography.AbbreviatedCaseNumber? AbbreviatedCaseNumber
+        public DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.AbbreviatedCaseNumber? AbbreviatedCaseNumber
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.AbbreviatedCaseNumber>();
+            get => GetElement<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.AbbreviatedCaseNumber>();
             set => SetElement(value);
         }
 
@@ -3959,9 +3959,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public DocumentFormat.OpenXml.Bibliography.AlbumTitle? AlbumTitle
+        public DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.AlbumTitle? AlbumTitle
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.AlbumTitle>();
+            get => GetElement<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.AlbumTitle>();
             set => SetElement(value);
         }
 
@@ -3972,9 +3972,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public DocumentFormat.OpenXml.Bibliography.AuthorList? AuthorList
+        public DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.AuthorList? AuthorList
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.AuthorList>();
+            get => GetElement<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.AuthorList>();
             set => SetElement(value);
         }
 
@@ -3985,9 +3985,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public DocumentFormat.OpenXml.Bibliography.BookTitle? BookTitle
+        public DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.BookTitle? BookTitle
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.BookTitle>();
+            get => GetElement<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.BookTitle>();
             set => SetElement(value);
         }
 
@@ -3998,9 +3998,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public DocumentFormat.OpenXml.Bibliography.Broadcaster? Broadcaster
+        public DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Broadcaster? Broadcaster
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Broadcaster>();
+            get => GetElement<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Broadcaster>();
             set => SetElement(value);
         }
 
@@ -4011,9 +4011,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public DocumentFormat.OpenXml.Bibliography.BroadcastTitle? BroadcastTitle
+        public DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.BroadcastTitle? BroadcastTitle
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.BroadcastTitle>();
+            get => GetElement<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.BroadcastTitle>();
             set => SetElement(value);
         }
 
@@ -4024,9 +4024,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public DocumentFormat.OpenXml.Bibliography.CaseNumber? CaseNumber
+        public DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.CaseNumber? CaseNumber
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.CaseNumber>();
+            get => GetElement<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.CaseNumber>();
             set => SetElement(value);
         }
 
@@ -4037,9 +4037,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public DocumentFormat.OpenXml.Bibliography.ChapterNumber? ChapterNumber
+        public DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.ChapterNumber? ChapterNumber
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.ChapterNumber>();
+            get => GetElement<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.ChapterNumber>();
             set => SetElement(value);
         }
 
@@ -4050,9 +4050,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public DocumentFormat.OpenXml.Bibliography.City? City
+        public DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.City? City
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.City>();
+            get => GetElement<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.City>();
             set => SetElement(value);
         }
 
@@ -4063,9 +4063,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public DocumentFormat.OpenXml.Bibliography.Comments? Comments
+        public DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Comments? Comments
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Comments>();
+            get => GetElement<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Comments>();
             set => SetElement(value);
         }
 
@@ -4076,9 +4076,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public DocumentFormat.OpenXml.Bibliography.ConferenceName? ConferenceName
+        public DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.ConferenceName? ConferenceName
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.ConferenceName>();
+            get => GetElement<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.ConferenceName>();
             set => SetElement(value);
         }
 
@@ -4089,9 +4089,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public DocumentFormat.OpenXml.Bibliography.CountryRegion? CountryRegion
+        public DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.CountryRegion? CountryRegion
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.CountryRegion>();
+            get => GetElement<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.CountryRegion>();
             set => SetElement(value);
         }
 
@@ -4102,9 +4102,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public DocumentFormat.OpenXml.Bibliography.Court? Court
+        public DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Court? Court
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Court>();
+            get => GetElement<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Court>();
             set => SetElement(value);
         }
 
@@ -4115,9 +4115,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public DocumentFormat.OpenXml.Bibliography.Day? Day
+        public DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Day? Day
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Day>();
+            get => GetElement<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Day>();
             set => SetElement(value);
         }
 
@@ -4128,9 +4128,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public DocumentFormat.OpenXml.Bibliography.DayAccessed? DayAccessed
+        public DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.DayAccessed? DayAccessed
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.DayAccessed>();
+            get => GetElement<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.DayAccessed>();
             set => SetElement(value);
         }
 
@@ -4141,9 +4141,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public DocumentFormat.OpenXml.Bibliography.Department? Department
+        public DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Department? Department
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Department>();
+            get => GetElement<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Department>();
             set => SetElement(value);
         }
 
@@ -4154,9 +4154,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public DocumentFormat.OpenXml.Bibliography.Distributor? Distributor
+        public DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Distributor? Distributor
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Distributor>();
+            get => GetElement<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Distributor>();
             set => SetElement(value);
         }
 
@@ -4167,9 +4167,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public DocumentFormat.OpenXml.Bibliography.Edition? Edition
+        public DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Edition? Edition
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Edition>();
+            get => GetElement<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Edition>();
             set => SetElement(value);
         }
 
@@ -4180,9 +4180,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public DocumentFormat.OpenXml.Bibliography.GuidString? GuidString
+        public DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.GuidString? GuidString
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.GuidString>();
+            get => GetElement<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.GuidString>();
             set => SetElement(value);
         }
 
@@ -4193,9 +4193,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public DocumentFormat.OpenXml.Bibliography.Institution? Institution
+        public DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Institution? Institution
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Institution>();
+            get => GetElement<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Institution>();
             set => SetElement(value);
         }
 
@@ -4206,9 +4206,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public DocumentFormat.OpenXml.Bibliography.InternetSiteTitle? InternetSiteTitle
+        public DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.InternetSiteTitle? InternetSiteTitle
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.InternetSiteTitle>();
+            get => GetElement<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.InternetSiteTitle>();
             set => SetElement(value);
         }
 
@@ -4219,9 +4219,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public DocumentFormat.OpenXml.Bibliography.Issue? Issue
+        public DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Issue? Issue
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Issue>();
+            get => GetElement<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Issue>();
             set => SetElement(value);
         }
 
@@ -4232,9 +4232,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public DocumentFormat.OpenXml.Bibliography.JournalName? JournalName
+        public DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.JournalName? JournalName
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.JournalName>();
+            get => GetElement<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.JournalName>();
             set => SetElement(value);
         }
 
@@ -4245,9 +4245,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public DocumentFormat.OpenXml.Bibliography.LcId? LcId
+        public DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.LcId? LcId
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.LcId>();
+            get => GetElement<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.LcId>();
             set => SetElement(value);
         }
 
@@ -4258,9 +4258,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public DocumentFormat.OpenXml.Bibliography.Medium? Medium
+        public DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Medium? Medium
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Medium>();
+            get => GetElement<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Medium>();
             set => SetElement(value);
         }
 
@@ -4271,9 +4271,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public DocumentFormat.OpenXml.Bibliography.Month? Month
+        public DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Month? Month
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Month>();
+            get => GetElement<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Month>();
             set => SetElement(value);
         }
 
@@ -4284,9 +4284,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public DocumentFormat.OpenXml.Bibliography.MonthAccessed? MonthAccessed
+        public DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.MonthAccessed? MonthAccessed
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.MonthAccessed>();
+            get => GetElement<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.MonthAccessed>();
             set => SetElement(value);
         }
 
@@ -4297,9 +4297,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public DocumentFormat.OpenXml.Bibliography.NumberVolumes? NumberVolumes
+        public DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.NumberVolumes? NumberVolumes
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.NumberVolumes>();
+            get => GetElement<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.NumberVolumes>();
             set => SetElement(value);
         }
 
@@ -4310,9 +4310,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public DocumentFormat.OpenXml.Bibliography.Pages? Pages
+        public DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Pages? Pages
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Pages>();
+            get => GetElement<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Pages>();
             set => SetElement(value);
         }
 
@@ -4323,9 +4323,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public DocumentFormat.OpenXml.Bibliography.PatentNumber? PatentNumber
+        public DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.PatentNumber? PatentNumber
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.PatentNumber>();
+            get => GetElement<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.PatentNumber>();
             set => SetElement(value);
         }
 
@@ -4336,9 +4336,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public DocumentFormat.OpenXml.Bibliography.PeriodicalTitle? PeriodicalTitle
+        public DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.PeriodicalTitle? PeriodicalTitle
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.PeriodicalTitle>();
+            get => GetElement<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.PeriodicalTitle>();
             set => SetElement(value);
         }
 
@@ -4349,9 +4349,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public DocumentFormat.OpenXml.Bibliography.ProductionCompany? ProductionCompany
+        public DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.ProductionCompany? ProductionCompany
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.ProductionCompany>();
+            get => GetElement<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.ProductionCompany>();
             set => SetElement(value);
         }
 
@@ -4362,9 +4362,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public DocumentFormat.OpenXml.Bibliography.PublicationTitle? PublicationTitle
+        public DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.PublicationTitle? PublicationTitle
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.PublicationTitle>();
+            get => GetElement<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.PublicationTitle>();
             set => SetElement(value);
         }
 
@@ -4375,9 +4375,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public DocumentFormat.OpenXml.Bibliography.Publisher? Publisher
+        public DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Publisher? Publisher
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Publisher>();
+            get => GetElement<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Publisher>();
             set => SetElement(value);
         }
 
@@ -4388,9 +4388,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public DocumentFormat.OpenXml.Bibliography.RecordingNumber? RecordingNumber
+        public DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.RecordingNumber? RecordingNumber
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.RecordingNumber>();
+            get => GetElement<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.RecordingNumber>();
             set => SetElement(value);
         }
 
@@ -4401,9 +4401,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public DocumentFormat.OpenXml.Bibliography.ReferenceOrder? ReferenceOrder
+        public DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.ReferenceOrder? ReferenceOrder
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.ReferenceOrder>();
+            get => GetElement<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.ReferenceOrder>();
             set => SetElement(value);
         }
 
@@ -4414,9 +4414,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public DocumentFormat.OpenXml.Bibliography.Reporter? Reporter
+        public DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Reporter? Reporter
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Reporter>();
+            get => GetElement<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Reporter>();
             set => SetElement(value);
         }
 
@@ -4427,9 +4427,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public DocumentFormat.OpenXml.Bibliography.SourceType? SourceType
+        public DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.SourceType? SourceType
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.SourceType>();
+            get => GetElement<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.SourceType>();
             set => SetElement(value);
         }
 
@@ -4440,9 +4440,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public DocumentFormat.OpenXml.Bibliography.ShortTitle? ShortTitle
+        public DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.ShortTitle? ShortTitle
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.ShortTitle>();
+            get => GetElement<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.ShortTitle>();
             set => SetElement(value);
         }
 
@@ -4453,9 +4453,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public DocumentFormat.OpenXml.Bibliography.StandardNumber? StandardNumber
+        public DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.StandardNumber? StandardNumber
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.StandardNumber>();
+            get => GetElement<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.StandardNumber>();
             set => SetElement(value);
         }
 
@@ -4466,9 +4466,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public DocumentFormat.OpenXml.Bibliography.StateProvince? StateProvince
+        public DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.StateProvince? StateProvince
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.StateProvince>();
+            get => GetElement<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.StateProvince>();
             set => SetElement(value);
         }
 
@@ -4479,9 +4479,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public DocumentFormat.OpenXml.Bibliography.Station? Station
+        public DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Station? Station
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Station>();
+            get => GetElement<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Station>();
             set => SetElement(value);
         }
 
@@ -4492,9 +4492,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public DocumentFormat.OpenXml.Bibliography.Tag? Tag
+        public DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Tag? Tag
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Tag>();
+            get => GetElement<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Tag>();
             set => SetElement(value);
         }
 
@@ -4505,9 +4505,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public DocumentFormat.OpenXml.Bibliography.Theater? Theater
+        public DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Theater? Theater
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Theater>();
+            get => GetElement<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Theater>();
             set => SetElement(value);
         }
 
@@ -4518,9 +4518,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public DocumentFormat.OpenXml.Bibliography.ThesisType? ThesisType
+        public DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.ThesisType? ThesisType
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.ThesisType>();
+            get => GetElement<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.ThesisType>();
             set => SetElement(value);
         }
 
@@ -4531,9 +4531,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public DocumentFormat.OpenXml.Bibliography.Title? Title
+        public DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Title? Title
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Title>();
+            get => GetElement<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Title>();
             set => SetElement(value);
         }
 
@@ -4544,9 +4544,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public DocumentFormat.OpenXml.Bibliography.PatentType? PatentType
+        public DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.PatentType? PatentType
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.PatentType>();
+            get => GetElement<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.PatentType>();
             set => SetElement(value);
         }
 
@@ -4557,9 +4557,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public DocumentFormat.OpenXml.Bibliography.UrlString? UrlString
+        public DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.UrlString? UrlString
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.UrlString>();
+            get => GetElement<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.UrlString>();
             set => SetElement(value);
         }
 
@@ -4570,9 +4570,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public DocumentFormat.OpenXml.Bibliography.Version? Version
+        public DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Version? Version
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Version>();
+            get => GetElement<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Version>();
             set => SetElement(value);
         }
 
@@ -4583,9 +4583,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public DocumentFormat.OpenXml.Bibliography.Volume? Volume
+        public DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Volume? Volume
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Volume>();
+            get => GetElement<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Volume>();
             set => SetElement(value);
         }
 
@@ -4596,9 +4596,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public DocumentFormat.OpenXml.Bibliography.Year? Year
+        public DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Year? Year
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.Year>();
+            get => GetElement<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.Year>();
             set => SetElement(value);
         }
 
@@ -4609,9 +4609,9 @@ namespace DocumentFormat.OpenXml.Bibliography
         /// <remark>
         /// xmlns:b = http://schemas.openxmlformats.org/officeDocument/2006/bibliography
         /// </remark>
-        public DocumentFormat.OpenXml.Bibliography.YearAccessed? YearAccessed
+        public DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.YearAccessed? YearAccessed
         {
-            get => GetElement<DocumentFormat.OpenXml.Bibliography.YearAccessed>();
+            get => GetElement<DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography.YearAccessed>();
             set => SetElement(value);
         }
 

@@ -19,7 +19,7 @@ namespace DocumentFormat.OpenXml.Packaging
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.extended-properties+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/extended-properties";
-        private DocumentFormat.OpenXml.ExtendedProperties.Properties? _rootElement;
+        private DocumentFormat.OpenXml.OfficeDocument.Y2006.Extended_Properties.Properties? _rootElement;
 
         /// <summary>
         /// Creates an instance of the ExtendedFilePropertiesPart OpenXmlType
@@ -40,7 +40,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             set
             {
-                _rootElement = value as DocumentFormat.OpenXml.ExtendedProperties.Properties;
+                _rootElement = value as DocumentFormat.OpenXml.OfficeDocument.Y2006.Extended_Properties.Properties;
             }
         }
 
@@ -49,13 +49,13 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets or sets the root element of this part.
         /// </summary>
-        public DocumentFormat.OpenXml.ExtendedProperties.Properties Properties
+        public DocumentFormat.OpenXml.OfficeDocument.Y2006.Extended_Properties.Properties Properties
         {
             get
             {
                 if (_rootElement is null)
                 {
-                    LoadDomTree<DocumentFormat.OpenXml.ExtendedProperties.Properties>();
+                    LoadDomTree<DocumentFormat.OpenXml.OfficeDocument.Y2006.Extended_Properties.Properties>();
                 }
 
                 return _rootElement!;

@@ -14,7 +14,7 @@ using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.Vml.Presentation
+namespace DocumentFormat.OpenXml.Office.PowerPoint.VML
 {
     /// <summary>
     /// <para>Ink Annotation Flag.</para>

@@ -2,13 +2,13 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Packaging;
-using DocumentFormat.OpenXml.Presentation;
+using DocumentFormat.OpenXml.PresentationML.Y2006.Main;
 using LogUtil;
 using System;
 using System.IO;
 using System.Linq;
 
-using A = DocumentFormat.OpenXml.Drawing;
+using A = DocumentFormat.OpenXml.DrawingML.Y2006.Main;
 using P15 = DocumentFormat.OpenXml.Office.PowerPoint.Y2012.Main;
 
 namespace DocumentFormat.OpenXml.Tests.GuideTest

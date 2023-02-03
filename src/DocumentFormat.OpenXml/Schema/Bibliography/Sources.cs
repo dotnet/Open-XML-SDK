@@ -5,7 +5,7 @@ using DocumentFormat.OpenXml.Packaging;
 
 #pragma warning disable CA1724
 
-namespace DocumentFormat.OpenXml.Bibliography
+namespace DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography
 {
     /// <summary>
     /// Defines Sources.

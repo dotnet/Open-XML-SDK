@@ -6,7 +6,7 @@
 #nullable enable
 
 using DocumentFormat.OpenXml;
-using DocumentFormat.OpenXml.Drawing;
+using DocumentFormat.OpenXml.DrawingML.Y2006.Main;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Packaging;
@@ -85,10 +85,10 @@ namespace DocumentFormat.OpenXml.Office.Drawing.Y2016.M11.Diagram
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.AutoNumberedBullet" /> <c>&lt;a:buAutoNum></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PictureBullet" /> <c>&lt;a:buBlip></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.CharacterBullet" /> <c>&lt;a:buChar></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NoBullet" /> <c>&lt;a:buNone></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.AutoNumberedBullet" /> <c>&lt;a:buAutoNum></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.PictureBullet" /> <c>&lt;a:buBlip></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.CharacterBullet" /> <c>&lt;a:buChar></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.NoBullet" /> <c>&lt;a:buNone></c></description></item>
     /// </list>
     /// </remark>
     public partial class DiagramAutoBullet : TypedOpenXmlCompositeElement
@@ -149,10 +149,10 @@ namespace DocumentFormat.OpenXml.Office.Drawing.Y2016.M11.Diagram
             base.ConfigureMetadata(builder);
             builder.SetSchema("dgm1611:buPr");
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.AutoNumberedBullet>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PictureBullet>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.CharacterBullet>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.NoBullet>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.AutoNumberedBullet>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.PictureBullet>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.CharacterBullet>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.NoBullet>();
             builder.AddElement<DiagramAutoBullet>()
                 .AddAttribute("prefix", a => a.AutoBulletPrefix)
                 .AddAttribute("leadZeros", a => a.LeadZeros);
@@ -160,10 +160,10 @@ namespace DocumentFormat.OpenXml.Office.Drawing.Y2016.M11.Diagram
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NoBullet), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.AutoNumberedBullet), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.CharacterBullet), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PictureBullet), 1, 1)
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.NoBullet), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.AutoNumberedBullet), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.CharacterBullet), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.PictureBullet), 1, 1)
                 }
             };
         }
@@ -175,9 +175,9 @@ namespace DocumentFormat.OpenXml.Office.Drawing.Y2016.M11.Diagram
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.NoBullet? NoBullet
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Main.NoBullet? NoBullet
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.NoBullet>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Main.NoBullet>();
             set => SetElement(value);
         }
 
@@ -188,9 +188,9 @@ namespace DocumentFormat.OpenXml.Office.Drawing.Y2016.M11.Diagram
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.AutoNumberedBullet? AutoNumberedBullet
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Main.AutoNumberedBullet? AutoNumberedBullet
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.AutoNumberedBullet>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Main.AutoNumberedBullet>();
             set => SetElement(value);
         }
 
@@ -201,9 +201,9 @@ namespace DocumentFormat.OpenXml.Office.Drawing.Y2016.M11.Diagram
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.CharacterBullet? CharacterBullet
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Main.CharacterBullet? CharacterBullet
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.CharacterBullet>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Main.CharacterBullet>();
             set => SetElement(value);
         }
 
@@ -214,9 +214,9 @@ namespace DocumentFormat.OpenXml.Office.Drawing.Y2016.M11.Diagram
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.PictureBullet? PictureBullet
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Main.PictureBullet? PictureBullet
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.PictureBullet>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Main.PictureBullet>();
             set => SetElement(value);
         }
 

@@ -3,7 +3,7 @@
 
 using DocumentFormat.OpenXml.Packaging;
 
-namespace DocumentFormat.OpenXml.Wordprocessing
+namespace DocumentFormat.OpenXml.WordprocessingML.Y2006.Main
 {
     /// <summary>
     /// Defines Styles.

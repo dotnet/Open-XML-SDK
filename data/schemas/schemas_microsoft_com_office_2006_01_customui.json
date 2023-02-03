@@ -4600,7 +4600,7 @@
         {
           "QName": ":itemSize",
           "PropertyName": "ItemSize",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.CustomUI.ItemSizeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Y2006.M01.CustomUI.ItemSizeValues\u003E",
           "PropertyComments": "itemSize"
         },
         {
@@ -6724,7 +6724,7 @@
         {
           "QName": ":itemSize",
           "PropertyName": "ItemSize",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.CustomUI.ItemSizeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Y2006.M01.CustomUI.ItemSizeValues\u003E",
           "PropertyComments": "itemSize"
         },
         {
@@ -7408,7 +7408,7 @@
         {
           "QName": ":size",
           "PropertyName": "Size",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.CustomUI.SizeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Y2006.M01.CustomUI.SizeValues\u003E",
           "PropertyComments": "size"
         },
         {
@@ -8602,7 +8602,7 @@
         {
           "QName": ":size",
           "PropertyName": "Size",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.CustomUI.SizeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Y2006.M01.CustomUI.SizeValues\u003E",
           "PropertyComments": "size"
         },
         {
@@ -9364,7 +9364,7 @@
         {
           "QName": ":size",
           "PropertyName": "Size",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.CustomUI.SizeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Y2006.M01.CustomUI.SizeValues\u003E",
           "PropertyComments": "size"
         },
         {
@@ -12794,7 +12794,7 @@
         {
           "QName": ":size",
           "PropertyName": "Size",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.CustomUI.SizeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Y2006.M01.CustomUI.SizeValues\u003E",
           "PropertyComments": "size"
         },
         {
@@ -13997,7 +13997,7 @@
         {
           "QName": ":size",
           "PropertyName": "Size",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.CustomUI.SizeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Y2006.M01.CustomUI.SizeValues\u003E",
           "PropertyComments": "size"
         },
         {
@@ -14027,7 +14027,7 @@
         {
           "QName": ":itemSize",
           "PropertyName": "ItemSize",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.CustomUI.ItemSizeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Y2006.M01.CustomUI.ItemSizeValues\u003E",
           "PropertyComments": "itemSize"
         },
         {
@@ -14842,7 +14842,7 @@
         {
           "QName": ":size",
           "PropertyName": "Size",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.CustomUI.SizeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Y2006.M01.CustomUI.SizeValues\u003E",
           "PropertyComments": "size"
         },
         {
@@ -15612,7 +15612,7 @@
         {
           "QName": ":size",
           "PropertyName": "Size",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.CustomUI.SizeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Y2006.M01.CustomUI.SizeValues\u003E",
           "PropertyComments": "size"
         },
         {
@@ -16319,7 +16319,7 @@
         {
           "QName": ":boxStyle",
           "PropertyName": "BoxStyle",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.CustomUI.BoxStyleValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Y2006.M01.CustomUI.BoxStyleValues\u003E",
           "PropertyComments": "boxStyle"
         }
       ],
@@ -16773,7 +16773,7 @@
         {
           "QName": ":itemSize",
           "PropertyName": "ItemSize",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.CustomUI.ItemSizeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Y2006.M01.CustomUI.ItemSizeValues\u003E",
           "PropertyComments": "itemSize"
         }
       ],
@@ -19674,7 +19674,7 @@
         {
           "QName": ":size",
           "PropertyName": "Size",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.CustomUI.SizeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Y2006.M01.CustomUI.SizeValues\u003E",
           "PropertyComments": "size"
         },
         {

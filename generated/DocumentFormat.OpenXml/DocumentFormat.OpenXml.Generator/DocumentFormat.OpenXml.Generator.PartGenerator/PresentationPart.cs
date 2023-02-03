@@ -18,7 +18,7 @@ namespace DocumentFormat.OpenXml.Packaging
     public partial class PresentationPart : TypedOpenXmlPart
     {
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument";
-        private DocumentFormat.OpenXml.Presentation.Presentation? _rootElement;
+        private DocumentFormat.OpenXml.PresentationML.Y2006.Main.Presentation? _rootElement;
 
         /// <summary>
         /// Creates an instance of the PresentationPart OpenXmlType
@@ -66,7 +66,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             set
             {
-                _rootElement = value as DocumentFormat.OpenXml.Presentation.Presentation;
+                _rootElement = value as DocumentFormat.OpenXml.PresentationML.Y2006.Main.Presentation;
             }
         }
 
@@ -85,13 +85,13 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets or sets the root element of this part.
         /// </summary>
-        public DocumentFormat.OpenXml.Presentation.Presentation Presentation
+        public DocumentFormat.OpenXml.PresentationML.Y2006.Main.Presentation Presentation
         {
             get
             {
                 if (_rootElement is null)
                 {
-                    LoadDomTree<DocumentFormat.OpenXml.Presentation.Presentation>();
+                    LoadDomTree<DocumentFormat.OpenXml.PresentationML.Y2006.Main.Presentation>();
                 }
 
                 return _rootElement!;

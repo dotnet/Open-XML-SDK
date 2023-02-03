@@ -65,7 +65,7 @@
         {
           "QName": "o:insetmode",
           "PropertyName": "InsetMode",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Office.InsetMarginValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Office.VML.InsetMarginValues\u003E",
           "PropertyComments": "insetmode"
         }
       ],
@@ -579,13 +579,13 @@
         {
           "QName": ":type",
           "PropertyName": "Type",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Office.ExtrusionValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Office.VML.ExtrusionValues\u003E",
           "PropertyComments": "Extrusion Type"
         },
         {
           "QName": ":render",
           "PropertyName": "Render",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Office.ExtrusionRenderValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Office.VML.ExtrusionRenderValues\u003E",
           "PropertyComments": "Extrusion Render Mode"
         },
         {
@@ -786,7 +786,7 @@
         {
           "QName": ":angle",
           "PropertyName": "Angle",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Office.AngleValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Office.VML.AngleValues\u003E",
           "PropertyComments": "Callout angle"
         },
         {
@@ -936,7 +936,7 @@
         {
           "QName": ":Type",
           "PropertyName": "Type",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Office.OleValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Office.VML.OleValues\u003E",
           "PropertyComments": "OLE Object Type"
         },
         {
@@ -954,7 +954,7 @@
         {
           "QName": ":DrawAspect",
           "PropertyName": "DrawAspect",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Office.OleDrawAspectValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Office.VML.OleDrawAspectValues\u003E",
           "PropertyComments": "OLE Object Representation"
         },
         {
@@ -972,7 +972,7 @@
         {
           "QName": ":UpdateMode",
           "PropertyName": "UpdateMode",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Office.OleUpdateModeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Office.VML.OleUpdateModeValues\u003E",
           "PropertyComments": "OLE Update Mode"
         }
       ],
@@ -1286,7 +1286,7 @@
         {
           "QName": ":type",
           "PropertyName": "Type",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Office.FillValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Office.VML.FillValues\u003E",
           "PropertyComments": "Fill Type"
         }
       ]
@@ -1413,13 +1413,13 @@
         {
           "QName": ":type",
           "PropertyName": "Type",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Office.RuleValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Office.VML.RuleValues\u003E",
           "PropertyComments": "Rule Type"
         },
         {
           "QName": ":how",
           "PropertyName": "How",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Vml.Office.AlignmentValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.Office.VML.AlignmentValues\u003E",
           "PropertyComments": "Alignment Rule Type"
         },
         {

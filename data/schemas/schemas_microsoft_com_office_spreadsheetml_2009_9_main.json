@@ -1019,7 +1019,7 @@
         {
           "QName": ":sortBy",
           "PropertyName": "SortBy",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.SortByValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.SortByValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "sortBy"
         },
@@ -1629,7 +1629,7 @@
         {
           "QName": ":type",
           "PropertyName": "Type",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.ConditionalFormatValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.ConditionalFormatValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "type"
         },
@@ -1671,7 +1671,7 @@
         {
           "QName": ":operator",
           "PropertyName": "Operator",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.ConditionalFormattingOperatorValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.ConditionalFormattingOperatorValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "operator"
         },
@@ -1685,7 +1685,7 @@
         {
           "QName": ":timePeriod",
           "PropertyName": "TimePeriod",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.TimePeriodValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.TimePeriodValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "timePeriod"
         },
@@ -1871,28 +1871,28 @@
         {
           "QName": ":type",
           "PropertyName": "Type",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.DataValidationValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.DataValidationValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "type"
         },
         {
           "QName": ":errorStyle",
           "PropertyName": "ErrorStyle",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.DataValidationErrorStyleValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.DataValidationErrorStyleValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "errorStyle"
         },
         {
           "QName": ":imeMode",
           "PropertyName": "ImeMode",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.DataValidationImeModeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.DataValidationImeModeValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "imeMode"
         },
         {
           "QName": ":operator",
           "PropertyName": "Operator",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.DataValidationOperatorValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.DataValidationOperatorValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "operator"
         },
@@ -3641,7 +3641,7 @@
         {
           "QName": ":type",
           "PropertyName": "Type",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.PivotAreaValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.PivotAreaValues\u003E",
           "PropertyComments": "Rule Type"
         },
         {
@@ -3695,7 +3695,7 @@
         {
           "QName": ":axis",
           "PropertyName": "Axis",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.PivotTableAxisValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.PivotTableAxisValues\u003E",
           "PropertyComments": "Axis"
         },
         {
@@ -3905,14 +3905,14 @@
         {
           "QName": ":scope",
           "PropertyName": "Scope",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.ScopeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.ScopeValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "scope"
         },
         {
           "QName": ":type",
           "PropertyName": "Type",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.RuleValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.RuleValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "type"
         },
@@ -4277,7 +4277,7 @@
         {
           "QName": ":operator",
           "PropertyName": "Operator",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.FilterOperatorValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.FilterOperatorValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "operator"
         },

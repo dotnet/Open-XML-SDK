@@ -6,8 +6,8 @@ using DocumentFormat.OpenXml.Validation;
 using DocumentFormat.OpenXml.Validation.Semantic;
 using Xunit;
 
-using Excel = DocumentFormat.OpenXml.Spreadsheet;
-using Word = DocumentFormat.OpenXml.Wordprocessing;
+using Excel = DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main;
+using Word = DocumentFormat.OpenXml.WordprocessingML.Y2006.Main;
 
 namespace DocumentFormat.OpenXml.Tests
 {

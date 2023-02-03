@@ -2,12 +2,13 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Features;
+using DocumentFormat.OpenXml.WordprocessingML.Y2006.Main;
 using System;
 using System.IO;
 using System.Xml;
 using Xunit;
 
-namespace DocumentFormat.OpenXml.Wordprocessing
+namespace DocumentFormat.OpenXml.Tests.Wordprocessing
 {
     public class ConditionalFormatStyleTests
     {

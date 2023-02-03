@@ -3,7 +3,7 @@
 #nullable enable
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Packaging;
-using DocumentFormat.OpenXml.Spreadsheet;
+using DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -198,7 +198,7 @@ namespace Common
                 }
 
                 // The text does not exist in the part. Create the SharedStringItem and return its index.
-                shareStringPart.SharedStringTable.AppendChild(new SharedStringItem(new DocumentFormat.OpenXml.Spreadsheet.Text(text)));
+                shareStringPart.SharedStringTable.AppendChild(new SharedStringItem(new Text(text)));
                 shareStringPart.SharedStringTable.Save();
             }
 

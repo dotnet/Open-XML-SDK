@@ -19,7 +19,7 @@ namespace DocumentFormat.OpenXml.Packaging
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.presentationml.comments+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/comments";
-        private DocumentFormat.OpenXml.Presentation.CommentList? _rootElement;
+        private DocumentFormat.OpenXml.PresentationML.Y2006.Main.CommentList? _rootElement;
 
         /// <summary>
         /// Creates an instance of the SlideCommentsPart OpenXmlType
@@ -31,13 +31,13 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets or sets the root element of this part.
         /// </summary>
-        public DocumentFormat.OpenXml.Presentation.CommentList CommentList
+        public DocumentFormat.OpenXml.PresentationML.Y2006.Main.CommentList CommentList
         {
             get
             {
                 if (_rootElement is null)
                 {
-                    LoadDomTree<DocumentFormat.OpenXml.Presentation.CommentList>();
+                    LoadDomTree<DocumentFormat.OpenXml.PresentationML.Y2006.Main.CommentList>();
                 }
 
                 return _rootElement!;
@@ -66,7 +66,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             set
             {
-                _rootElement = value as DocumentFormat.OpenXml.Presentation.CommentList;
+                _rootElement = value as DocumentFormat.OpenXml.PresentationML.Y2006.Main.CommentList;
             }
         }
 

@@ -19,7 +19,7 @@ namespace DocumentFormat.OpenXml.Packaging
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.wordprocessingml.footnotes+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/footnotes";
-        private DocumentFormat.OpenXml.Wordprocessing.Footnotes? _rootElement;
+        private DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.Footnotes? _rootElement;
 
         /// <summary>
         /// Creates an instance of the FootnotesPart OpenXmlType
@@ -89,13 +89,13 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets or sets the root element of this part.
         /// </summary>
-        public DocumentFormat.OpenXml.Wordprocessing.Footnotes Footnotes
+        public DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.Footnotes Footnotes
         {
             get
             {
                 if (_rootElement is null)
                 {
-                    LoadDomTree<DocumentFormat.OpenXml.Wordprocessing.Footnotes>();
+                    LoadDomTree<DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.Footnotes>();
                 }
 
                 return _rootElement!;
@@ -126,7 +126,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             set
             {
-                _rootElement = value as DocumentFormat.OpenXml.Wordprocessing.Footnotes;
+                _rootElement = value as DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.Footnotes;
             }
         }
 

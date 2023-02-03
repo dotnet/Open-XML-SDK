@@ -3,18 +3,18 @@
 
 using Common;
 using DocumentFormat.OpenXml;
-using DocumentFormat.OpenXml.Drawing;
+using DocumentFormat.OpenXml.DrawingML.Y2006.Main;
 using DocumentFormat.OpenXml.Office.PowerPoint.Y2013.Main.Command;
 using DocumentFormat.OpenXml.Office.PowerPoint.Y2018.M08.Main;
 using DocumentFormat.OpenXml.Packaging;
-using DocumentFormat.OpenXml.Presentation;
+using DocumentFormat.OpenXml.PresentationML.Y2006.Main;
 using System;
 using System.IO;
 using System.Linq;
 
 using Comment = DocumentFormat.OpenXml.Office.PowerPoint.Y2018.M08.Main.Comment;
 using CommentList = DocumentFormat.OpenXml.Office.PowerPoint.Y2018.M08.Main.CommentList;
-using Text = DocumentFormat.OpenXml.Drawing.Text;
+using Text = DocumentFormat.OpenXml.DrawingML.Y2006.Main.Text;
 
 namespace PowerPointModernCommentSample
 {

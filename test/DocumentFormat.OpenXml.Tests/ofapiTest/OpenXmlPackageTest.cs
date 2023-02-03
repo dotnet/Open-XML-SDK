@@ -2,7 +2,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Packaging;
-using DocumentFormat.OpenXml.Wordprocessing;
+using DocumentFormat.OpenXml.WordprocessingML.Y2006.Main;
 using System;
 using System.IO;
 using System.Linq;
@@ -11,11 +11,11 @@ using Xunit;
 using static DocumentFormat.OpenXml.Tests.TestAssets;
 
 #pragma warning disable CS8981
-using a = DocumentFormat.OpenXml.Drawing;
-using pic = DocumentFormat.OpenXml.Drawing.Pictures;
-using w = DocumentFormat.OpenXml.Wordprocessing;
-using wp = DocumentFormat.OpenXml.Drawing.Wordprocessing;
-using x = DocumentFormat.OpenXml.Spreadsheet;
+using a = DocumentFormat.OpenXml.DrawingML.Y2006.Main;
+using pic = DocumentFormat.OpenXml.DrawingML.Y2006.Picture;
+using w = DocumentFormat.OpenXml.WordprocessingML.Y2006.Main;
+using wp = DocumentFormat.OpenXml.DrawingML.Y2006.WordprocessingDrawing;
+using x = DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main;
 #pragma warning restore CS8981
 
 namespace DocumentFormat.OpenXml.Tests

@@ -19,7 +19,7 @@ namespace DocumentFormat.OpenXml.Packaging
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.spreadsheetml.revisionLog+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/revisionLog";
-        private DocumentFormat.OpenXml.Spreadsheet.Revisions? _rootElement;
+        private DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Revisions? _rootElement;
 
         /// <summary>
         /// Creates an instance of the WorkbookRevisionLogPart OpenXmlType
@@ -40,7 +40,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             set
             {
-                _rootElement = value as DocumentFormat.OpenXml.Spreadsheet.Revisions;
+                _rootElement = value as DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Revisions;
             }
         }
 
@@ -52,13 +52,13 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets or sets the root element of this part.
         /// </summary>
-        public DocumentFormat.OpenXml.Spreadsheet.Revisions Revisions
+        public DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Revisions Revisions
         {
             get
             {
                 if (_rootElement is null)
                 {
-                    LoadDomTree<DocumentFormat.OpenXml.Spreadsheet.Revisions>();
+                    LoadDomTree<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Revisions>();
                 }
 
                 return _rootElement!;

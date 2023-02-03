@@ -19,7 +19,7 @@ namespace DocumentFormat.OpenXml.Packaging
     {
         internal const string ContentTypeConstant = "application/vnd.ms-excel.macrosheet+xml";
         internal const string RelationshipTypeConstant = "http://schemas.microsoft.com/office/2006/relationships/xlMacrosheet";
-        private DocumentFormat.OpenXml.Office.Excel.Macrosheet? _rootElement;
+        private DocumentFormat.OpenXml.Office.Excel.Y2006.Main.Macrosheet? _rootElement;
 
         /// <summary>
         /// Creates an instance of the MacroSheetPart OpenXmlType
@@ -65,20 +65,20 @@ namespace DocumentFormat.OpenXml.Packaging
 
             set
             {
-                _rootElement = value as DocumentFormat.OpenXml.Office.Excel.Macrosheet;
+                _rootElement = value as DocumentFormat.OpenXml.Office.Excel.Y2006.Main.Macrosheet;
             }
         }
 
         /// <summary>
         /// Gets or sets the root element of this part.
         /// </summary>
-        public DocumentFormat.OpenXml.Office.Excel.Macrosheet Macrosheet
+        public DocumentFormat.OpenXml.Office.Excel.Y2006.Main.Macrosheet Macrosheet
         {
             get
             {
                 if (_rootElement is null)
                 {
-                    LoadDomTree<DocumentFormat.OpenXml.Office.Excel.Macrosheet>();
+                    LoadDomTree<DocumentFormat.OpenXml.Office.Excel.Y2006.Main.Macrosheet>();
                 }
 
                 return _rootElement!;

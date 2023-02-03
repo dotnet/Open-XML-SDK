@@ -3,7 +3,7 @@
 
 using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Packaging;
-using DocumentFormat.OpenXml.Wordprocessing;
+using DocumentFormat.OpenXml.WordprocessingML.Y2006.Main;
 using NSubstitute;
 using System.IO;
 using System.IO.Packaging;
@@ -16,7 +16,7 @@ using Xunit;
 
 using static DocumentFormat.OpenXml.Tests.TestAssets;
 
-using Text = DocumentFormat.OpenXml.Wordprocessing.Text;
+using Text = DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.Text;
 
 namespace DocumentFormat.OpenXml.Tests
 {
@@ -356,10 +356,10 @@ namespace DocumentFormat.OpenXml.Tests
                 using (var source = SpreadsheetDocument.Create(stream, SpreadsheetDocumentType.Workbook))
                 {
                     source.AddWorkbookPart();
-                    source.WorkbookPart.Workbook = new Spreadsheet.Workbook();
-                    source.WorkbookPart.Workbook.AppendChild(new Spreadsheet.Sheets());
+                    source.WorkbookPart.Workbook = new SpreadsheetML.Y2006.Main.Workbook();
+                    source.WorkbookPart.Workbook.AppendChild(new SpreadsheetML.Y2006.Main.Sheets());
                     source.Save();
-                    source.WorkbookPart.Workbook.AppendChild(new Spreadsheet.Sheets());
+                    source.WorkbookPart.Workbook.AppendChild(new SpreadsheetML.Y2006.Main.Sheets());
 
                     Assert.Equal(2, source.WorkbookPart.Workbook.ChildElements.Count);
 

@@ -19,7 +19,7 @@ namespace DocumentFormat.OpenXml.Packaging
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.presentationml.viewProps+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/viewProps";
-        private DocumentFormat.OpenXml.Presentation.ViewProperties? _rootElement;
+        private DocumentFormat.OpenXml.PresentationML.Y2006.Main.ViewProperties? _rootElement;
 
         /// <summary>
         /// Creates an instance of the ViewPropertiesPart OpenXmlType
@@ -40,7 +40,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             set
             {
-                _rootElement = value as DocumentFormat.OpenXml.Presentation.ViewProperties;
+                _rootElement = value as DocumentFormat.OpenXml.PresentationML.Y2006.Main.ViewProperties;
             }
         }
 
@@ -57,13 +57,13 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets or sets the root element of this part.
         /// </summary>
-        public DocumentFormat.OpenXml.Presentation.ViewProperties ViewProperties
+        public DocumentFormat.OpenXml.PresentationML.Y2006.Main.ViewProperties ViewProperties
         {
             get
             {
                 if (_rootElement is null)
                 {
-                    LoadDomTree<DocumentFormat.OpenXml.Presentation.ViewProperties>();
+                    LoadDomTree<DocumentFormat.OpenXml.PresentationML.Y2006.Main.ViewProperties>();
                 }
 
                 return _rootElement!;

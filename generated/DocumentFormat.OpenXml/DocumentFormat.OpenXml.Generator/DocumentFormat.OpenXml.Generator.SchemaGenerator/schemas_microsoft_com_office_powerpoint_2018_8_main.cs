@@ -6,13 +6,13 @@
 #nullable enable
 
 using DocumentFormat.OpenXml;
-using DocumentFormat.OpenXml.Drawing;
+using DocumentFormat.OpenXml.DrawingML.Y2006.Main;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Office.Drawing.Y2013.Main.Command;
 using DocumentFormat.OpenXml.Office.PowerPoint.Y2013.Main.Command;
 using DocumentFormat.OpenXml.Packaging;
-using DocumentFormat.OpenXml.Presentation;
+using DocumentFormat.OpenXml.PresentationML.Y2006.Main;
 using DocumentFormat.OpenXml.Validation.Schema;
 using System;
 using System.Collections.Generic;
@@ -28,9 +28,9 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2018.M08.Main
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.BodyProperties" /> <c>&lt;a:bodyPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ListStyle" /> <c>&lt;a:lstStyle></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Paragraph" /> <c>&lt;a:p></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.BodyProperties" /> <c>&lt;a:bodyPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.ListStyle" /> <c>&lt;a:lstStyle></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.Paragraph" /> <c>&lt;a:p></c></description></item>
     /// </list>
     /// </remark>
     public partial class TextBodyType : TypedOpenXmlCompositeElement
@@ -71,14 +71,14 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2018.M08.Main
             base.ConfigureMetadata(builder);
             builder.SetSchema("p188:txBody");
             builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.BodyProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.ListStyle>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Paragraph>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.BodyProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.ListStyle>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.Paragraph>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BodyProperties), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ListStyle), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Paragraph), 1, 0)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.BodyProperties), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.ListStyle), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.Paragraph), 1, 0)
             };
         }
 
@@ -89,9 +89,9 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2018.M08.Main
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.BodyProperties? BodyProperties
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Main.BodyProperties? BodyProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.BodyProperties>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Main.BodyProperties>();
             set => SetElement(value);
         }
 
@@ -102,9 +102,9 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2018.M08.Main
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.ListStyle? ListStyle
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Main.ListStyle? ListStyle
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.ListStyle>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Main.ListStyle>();
             set => SetElement(value);
         }
 
@@ -120,7 +120,7 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2018.M08.Main
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Extension" /> <c>&lt;p:ext></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.PresentationML.Y2006.Main.Extension" /> <c>&lt;p:ext></c></description></item>
     /// </list>
     /// </remark>
     public partial class ExtensionList : TypedOpenXmlCompositeElement
@@ -161,14 +161,14 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2018.M08.Main
             base.ConfigureMetadata(builder);
             builder.SetSchema("p188:extLst");
             builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.Extension>();
+            builder.AddChild<DocumentFormat.OpenXml.PresentationML.Y2006.Main.Extension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Extension), 0, 0)
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.PresentationML.Y2006.Main.Extension), 0, 0)
                     }
                 }
             };

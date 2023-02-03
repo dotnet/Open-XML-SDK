@@ -1188,7 +1188,7 @@
         {
           "QName": ":idx",
           "PropertyName": "Index",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.FontCollectionIndexValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.FontCollectionIndexValues\u003E",
           "Version": "Office2013",
           "PropertyComments": "idx",
           "Validators": [
@@ -1298,7 +1298,7 @@
         {
           "QName": ":bwMode",
           "PropertyName": "BlackWhiteMode",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.BlackWhiteModeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.BlackWhiteModeValues\u003E",
           "PropertyComments": "Black and White Mode",
           "Validators": [
             {
@@ -1550,7 +1550,7 @@
         {
           "QName": ":u",
           "PropertyName": "Underline",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.TextUnderlineValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.TextUnderlineValues\u003E",
           "PropertyComments": "u",
           "Validators": [
             {
@@ -1569,7 +1569,7 @@
         {
           "QName": ":strike",
           "PropertyName": "Strike",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.TextStrikeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.TextStrikeValues\u003E",
           "PropertyComments": "strike",
           "Validators": [
             {
@@ -1612,7 +1612,7 @@
         {
           "QName": ":cap",
           "PropertyName": "Capital",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.TextCapsValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.TextCapsValues\u003E",
           "PropertyComments": "cap",
           "Validators": [
             {
@@ -1980,7 +1980,7 @@
         {
           "QName": ":vertOverflow",
           "PropertyName": "VerticalOverflow",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.TextVerticalOverflowValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.TextVerticalOverflowValues\u003E",
           "PropertyComments": "Text Vertical Overflow",
           "Validators": [
             {
@@ -1999,7 +1999,7 @@
         {
           "QName": ":horzOverflow",
           "PropertyName": "HorizontalOverflow",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.TextHorizontalOverflowValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.TextHorizontalOverflowValues\u003E",
           "PropertyComments": "Text Horizontal Overflow",
           "Validators": [
             {
@@ -2018,7 +2018,7 @@
         {
           "QName": ":vert",
           "PropertyName": "Vertical",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.TextVerticalValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.TextVerticalValues\u003E",
           "PropertyComments": "Vertical Text",
           "Validators": [
             {
@@ -2037,7 +2037,7 @@
         {
           "QName": ":wrap",
           "PropertyName": "Wrap",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.TextWrappingValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.TextWrappingValues\u003E",
           "PropertyComments": "Text Wrapping Type",
           "Validators": [
             {
@@ -2135,7 +2135,7 @@
         {
           "QName": ":anchor",
           "PropertyName": "Anchor",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.TextAnchoringTypeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.TextAnchoringTypeValues\u003E",
           "PropertyComments": "Anchor",
           "Validators": [
             {

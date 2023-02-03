@@ -15,7 +15,7 @@ using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.CustomXmlSchemaReferences
+namespace DocumentFormat.OpenXml.SchemaLibrary.Y2006.Main
 {
     /// <summary>
     /// <para>Embedded Custom XML Schema Supplementary Data.</para>
@@ -25,7 +25,7 @@ namespace DocumentFormat.OpenXml.CustomXmlSchemaReferences
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.CustomXmlSchemaReferences.Schema" /> <c>&lt;sl:schema></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.SchemaLibrary.Y2006.Main.Schema" /> <c>&lt;sl:schema></c></description></item>
     /// </list>
     /// </remark>
     public partial class SchemaLibrary : TypedOpenXmlCompositeElement
@@ -65,10 +65,10 @@ namespace DocumentFormat.OpenXml.CustomXmlSchemaReferences
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("sl:schemaLibrary");
-            builder.AddChild<DocumentFormat.OpenXml.CustomXmlSchemaReferences.Schema>();
+            builder.AddChild<DocumentFormat.OpenXml.SchemaLibrary.Y2006.Main.Schema>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.CustomXmlSchemaReferences.Schema), 0, 0)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.SchemaLibrary.Y2006.Main.Schema), 0, 0)
             };
         }
 

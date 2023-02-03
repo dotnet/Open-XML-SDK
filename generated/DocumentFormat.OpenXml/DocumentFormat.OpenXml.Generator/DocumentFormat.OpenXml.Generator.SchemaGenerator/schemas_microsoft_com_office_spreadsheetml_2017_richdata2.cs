@@ -9,7 +9,7 @@ using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Packaging;
-using DocumentFormat.OpenXml.Spreadsheet;
+using DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main;
 using DocumentFormat.OpenXml.Validation.Schema;
 using System;
 using System.Collections.Generic;
@@ -192,9 +192,9 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2
         /// <para>sortBy, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: sortBy</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.SortByValues>? SortBy
+        public EnumValue<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.SortByValues>? SortBy
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.SortByValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.SortByValues>>();
             set => SetAttribute(value);
         }
 
@@ -1153,9 +1153,9 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2
         /// <para>Dynamic filter type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DynamicFilterValues>? Type
+        public EnumValue<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.DynamicFilterValues>? Type
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.DynamicFilterValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.DynamicFilterValues>>();
             set => SetAttribute(value);
         }
 
@@ -1234,7 +1234,7 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Extension" /> <c>&lt;x:ext></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Extension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
     /// </remark>
     public partial class ExtensionList : TypedOpenXmlCompositeElement
@@ -1275,14 +1275,14 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2
             base.ConfigureMetadata(builder);
             builder.SetSchema("xlrd2:extLst");
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Extension>();
+            builder.AddChild<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Extension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Extension), 0, 0)
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Extension), 0, 0)
                     }
                 }
             };
@@ -1450,9 +1450,9 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2
         /// <para>Date Time Grouping</para>
         /// <para>Represents the following attribute in the schema: dateTimeGrouping</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DateTimeGroupingValues>? DateTimeGrouping
+        public EnumValue<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.DateTimeGroupingValues>? DateTimeGrouping
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.DateTimeGroupingValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.DateTimeGroupingValues>>();
             set => SetAttribute(value);
         }
 
@@ -1510,9 +1510,9 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2
         /// <para>Filter Comparison Operator</para>
         /// <para>Represents the following attribute in the schema: operator</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.FilterOperatorValues>? Operator
+        public EnumValue<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.FilterOperatorValues>? Operator
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.FilterOperatorValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.FilterOperatorValues>>();
             set => SetAttribute(value);
         }
 
@@ -2190,7 +2190,7 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat" /> <c>&lt;x:dxf></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.DifferentialFormat" /> <c>&lt;x:dxf></c></description></item>
     /// </list>
     /// </remark>
     public partial class Dxfs : TypedOpenXmlCompositeElement
@@ -2241,12 +2241,12 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2
             base.ConfigureMetadata(builder);
             builder.SetSchema("xlrd2:dxfs");
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat>();
+            builder.AddChild<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.DifferentialFormat>();
             builder.AddElement<Dxfs>()
                 .AddAttribute("count", a => a.Count);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat), 0, 0)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.DifferentialFormat), 0, 0)
             };
         }
 

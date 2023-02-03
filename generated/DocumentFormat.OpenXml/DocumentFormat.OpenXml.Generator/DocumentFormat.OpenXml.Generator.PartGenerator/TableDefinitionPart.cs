@@ -19,7 +19,7 @@ namespace DocumentFormat.OpenXml.Packaging
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.spreadsheetml.table+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/table";
-        private DocumentFormat.OpenXml.Spreadsheet.Table? _rootElement;
+        private DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Table? _rootElement;
 
         /// <summary>
         /// Creates an instance of the TableDefinitionPart OpenXmlType
@@ -40,7 +40,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             set
             {
-                _rootElement = value as DocumentFormat.OpenXml.Spreadsheet.Table;
+                _rootElement = value as DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Table;
             }
         }
 
@@ -57,13 +57,13 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets or sets the root element of this part.
         /// </summary>
-        public DocumentFormat.OpenXml.Spreadsheet.Table Table
+        public DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Table Table
         {
             get
             {
                 if (_rootElement is null)
                 {
-                    LoadDomTree<DocumentFormat.OpenXml.Spreadsheet.Table>();
+                    LoadDomTree<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Table>();
                 }
 
                 return _rootElement!;

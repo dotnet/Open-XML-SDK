@@ -2,23 +2,23 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Packaging;
-using DocumentFormat.OpenXml.Spreadsheet;
+using DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main;
 using System.IO;
 using System.Xml;
 
-using A = DocumentFormat.OpenXml.Drawing;
+using A = DocumentFormat.OpenXml.DrawingML.Y2006.Main;
 using A14 = DocumentFormat.OpenXml.Office.Drawing.Y2010.Main;
-using Ap = DocumentFormat.OpenXml.ExtendedProperties;
-using C = DocumentFormat.OpenXml.Drawing.Charts;
+using Ap = DocumentFormat.OpenXml.OfficeDocument.Y2006.Extended_Properties;
+using C = DocumentFormat.OpenXml.DrawingML.Y2006.Chart;
 using C14 = DocumentFormat.OpenXml.Office.Drawing.Y2007.M08.D02.Chart;
 using Cs = DocumentFormat.OpenXml.Office.Drawing.Y2012.ChartStyle;
-using Dgm = DocumentFormat.OpenXml.Drawing.Diagrams;
+using Dgm = DocumentFormat.OpenXml.DrawingML.Y2006.Diagram;
 using Dsp = DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram;
-using S = DocumentFormat.OpenXml.Spreadsheet;
-using Vt = DocumentFormat.OpenXml.VariantTypes;
+using S = DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main;
+using Vt = DocumentFormat.OpenXml.OfficeDocument.Y2006.DocPropsVTypes;
 using X14 = DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main;
 using X15 = DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main;
-using Xdr = DocumentFormat.OpenXml.Drawing.Spreadsheet;
+using Xdr = DocumentFormat.OpenXml.DrawingML.Y2006.SpreadSheetDrawing;
 
 namespace DocumentFormat.OpenXml.Tests
 {
@@ -3594,7 +3594,7 @@ namespace DocumentFormat.OpenXml.Tests
             constraints1.Append(constraint5);
             Dgm.RuleList ruleList1 = new Dgm.RuleList();
 
-            Dgm.ForEach forEach1 = new Dgm.ForEach() { Name = "Name3", Axis = new ListValue<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.AxisValues>> { InnerText = "ch" }, PointType = new ListValue<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ElementValues>> { InnerText = "node" } };
+            Dgm.ForEach forEach1 = new Dgm.ForEach() { Name = "Name3", Axis = new ListValue<EnumValue<Dgm.AxisValues>> { InnerText = "ch" }, PointType = new ListValue<EnumValue<Dgm.ElementValues>> { InnerText = "node" } };
 
             Dgm.LayoutNode layoutNode2 = new Dgm.LayoutNode() { Name = "node" };
 
@@ -3609,7 +3609,7 @@ namespace DocumentFormat.OpenXml.Tests
             Dgm.AdjustList adjustList2 = new Dgm.AdjustList();
 
             shape4.Append(adjustList2);
-            Dgm.PresentationOf presentationOf2 = new Dgm.PresentationOf() { Axis = new ListValue<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.AxisValues>> { InnerText = "desOrSelf" }, PointType = new ListValue<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ElementValues>> { InnerText = "node" } };
+            Dgm.PresentationOf presentationOf2 = new Dgm.PresentationOf() { Axis = new ListValue<EnumValue<Dgm.AxisValues>> { InnerText = "desOrSelf" }, PointType = new ListValue<EnumValue<Dgm.ElementValues>> { InnerText = "node" } };
 
             Dgm.Constraints constraints2 = new Dgm.Constraints();
             Dgm.Constraint constraint6 = new Dgm.Constraint() { Type = Dgm.ConstraintValues.LeftMargin, ReferenceType = Dgm.ConstraintValues.PrimaryFontSize, Fact = 0.3D };
@@ -3634,7 +3634,7 @@ namespace DocumentFormat.OpenXml.Tests
             layoutNode2.Append(constraints2);
             layoutNode2.Append(ruleList2);
 
-            Dgm.ForEach forEach2 = new Dgm.ForEach() { Name = "Name4", Axis = new ListValue<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.AxisValues>> { InnerText = "followSib" }, PointType = new ListValue<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ElementValues>> { InnerText = "sibTrans" }, Count = new ListValue<UInt32Value>() { InnerText = "1" } };
+            Dgm.ForEach forEach2 = new Dgm.ForEach() { Name = "Name4", Axis = new ListValue<EnumValue<Dgm.AxisValues>> { InnerText = "followSib" }, PointType = new ListValue<EnumValue<Dgm.ElementValues>> { InnerText = "sibTrans" }, Count = new ListValue<UInt32Value>() { InnerText = "1" } };
 
             Dgm.LayoutNode layoutNode3 = new Dgm.LayoutNode() { Name = "sibTrans" };
             Dgm.Algorithm algorithm4 = new Dgm.Algorithm() { Type = Dgm.AlgorithmValues.Space };

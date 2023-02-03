@@ -1,7 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using DocumentFormat.OpenXml.Spreadsheet;
+using DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main;
 using DocumentFormat.OpenXml.Validation;
 using System.Collections.Generic;
 using Xunit;
@@ -54,7 +54,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void UT4Bug683087()
         {
-            DocumentFormat.OpenXml.Spreadsheet.ServerFormat sf = new DocumentFormat.OpenXml.Spreadsheet.ServerFormat();
+            ServerFormat sf = new ServerFormat();
             sf.Culture = "test";
             sf.Format = "test";
             var errors = new OpenXmlValidator(FileFormatVersions.Office2010).Validate(sf);

@@ -19,7 +19,7 @@ namespace DocumentFormat.OpenXml.Packaging
     {
         internal const string ContentTypeConstant = "application/vnd.ms-excel.wsSortMap+xml";
         internal const string RelationshipTypeConstant = "http://schemas.microsoft.com/office/2006/relationships/wsSortMap";
-        private DocumentFormat.OpenXml.Office.Excel.WorksheetSortMap? _rootElement;
+        private DocumentFormat.OpenXml.Office.Excel.Y2006.Main.WorksheetSortMap? _rootElement;
 
         /// <summary>
         /// Creates an instance of the WorksheetSortMapPart OpenXmlType
@@ -40,7 +40,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             set
             {
-                _rootElement = value as DocumentFormat.OpenXml.Office.Excel.WorksheetSortMap;
+                _rootElement = value as DocumentFormat.OpenXml.Office.Excel.Y2006.Main.WorksheetSortMap;
             }
         }
 
@@ -52,13 +52,13 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets or sets the root element of this part.
         /// </summary>
-        public DocumentFormat.OpenXml.Office.Excel.WorksheetSortMap WorksheetSortMap
+        public DocumentFormat.OpenXml.Office.Excel.Y2006.Main.WorksheetSortMap WorksheetSortMap
         {
             get
             {
                 if (_rootElement is null)
                 {
-                    LoadDomTree<DocumentFormat.OpenXml.Office.Excel.WorksheetSortMap>();
+                    LoadDomTree<DocumentFormat.OpenXml.Office.Excel.Y2006.Main.WorksheetSortMap>();
                 }
 
                 return _rootElement!;

@@ -337,7 +337,7 @@
       "Attributes": [
         {
           "QName": ":sortMethod",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.SortMethodValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.SortMethodValues\u003E",
           "Version": "Office2021",
           "PropertyComments": "sortMethod"
         },
@@ -764,7 +764,7 @@
         {
           "QName": ":sortBy",
           "PropertyName": "SortBy",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.SortByValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.SortByValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "sortBy"
         },
@@ -834,7 +834,7 @@
         {
           "QName": ":sortBy",
           "PropertyName": "SortBy",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Spreadsheet.SortByValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.SortByValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "sortBy"
         },

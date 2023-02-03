@@ -6,7 +6,7 @@
 #nullable enable
 
 using DocumentFormat.OpenXml;
-using DocumentFormat.OpenXml.Drawing.Charts;
+using DocumentFormat.OpenXml.DrawingML.Y2006.Chart;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Packaging;
@@ -25,9 +25,9 @@ namespace DocumentFormat.OpenXml.Office.Drawing.Y2014.Chart.Ac
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ExtensionList" /> <c>&lt;c:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Level" /> <c>&lt;c:lvl></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PointCount" /> <c>&lt;c:ptCount></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList" /> <c>&lt;c:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Level" /> <c>&lt;c:lvl></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PointCount" /> <c>&lt;c:ptCount></c></description></item>
     /// </list>
     /// </remark>
     public partial class MultiLvlStrData : TypedOpenXmlCompositeElement
@@ -68,14 +68,14 @@ namespace DocumentFormat.OpenXml.Office.Drawing.Y2014.Chart.Ac
             base.ConfigureMetadata(builder);
             builder.SetSchema("c16ac:multiLvlStrLit");
             builder.Availability = FileFormatVersions.Office2016;
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Level>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PointCount>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Level>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PointCount>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PointCount), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Level), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PointCount), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Level), 0, 0),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList), 0, 1)
             };
         }
 
@@ -86,9 +86,9 @@ namespace DocumentFormat.OpenXml.Office.Drawing.Y2014.Chart.Ac
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.PointCount? PointCount
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PointCount? PointCount
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PointCount>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PointCount>();
             set => SetElement(value);
         }
 

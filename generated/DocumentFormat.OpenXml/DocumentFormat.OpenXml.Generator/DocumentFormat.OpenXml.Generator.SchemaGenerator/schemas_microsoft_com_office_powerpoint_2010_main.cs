@@ -6,12 +6,12 @@
 #nullable enable
 
 using DocumentFormat.OpenXml;
-using DocumentFormat.OpenXml.Drawing;
+using DocumentFormat.OpenXml.DrawingML.Y2006.Main;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Office.Drawing.Y2010.Main;
 using DocumentFormat.OpenXml.Packaging;
-using DocumentFormat.OpenXml.Presentation;
+using DocumentFormat.OpenXml.PresentationML.Y2006.Main;
 using DocumentFormat.OpenXml.Validation.Schema;
 using DocumentFormat.OpenXml.Validation.Semantic;
 using System;
@@ -133,8 +133,8 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2010.Main
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Offset" /> <c>&lt;a:off></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extents" /> <c>&lt;a:ext></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.Offset" /> <c>&lt;a:off></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.Extents" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
     public partial class Transform2D : TypedOpenXmlCompositeElement
@@ -205,16 +205,16 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2010.Main
             base.ConfigureMetadata(builder);
             builder.SetSchema("p14:xfrm");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Offset>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Extents>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.Offset>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.Extents>();
             builder.AddElement<Transform2D>()
                 .AddAttribute("rot", a => a.Rotation)
                 .AddAttribute("flipH", a => a.HorizontalFlip)
                 .AddAttribute("flipV", a => a.VerticalFlip);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Offset), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Extents), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.Offset), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.Extents), 0, 1)
             };
         }
 
@@ -225,9 +225,9 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2010.Main
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Offset? Offset
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Main.Offset? Offset
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Offset>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Main.Offset>();
             set => SetElement(value);
         }
 
@@ -238,9 +238,9 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2010.Main
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Extents? Extents
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Main.Extents? Extents
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Extents>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Main.Extents>();
             set => SetElement(value);
         }
 
@@ -256,7 +256,7 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2010.Main
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Extension" /> <c>&lt;p:ext></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.PresentationML.Y2006.Main.Extension" /> <c>&lt;p:ext></c></description></item>
     /// </list>
     /// </remark>
     public partial class ExtensionListModify : TypedOpenXmlCompositeElement
@@ -307,7 +307,7 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2010.Main
             base.ConfigureMetadata(builder);
             builder.SetSchema("p14:extLst");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.Extension>();
+            builder.AddChild<DocumentFormat.OpenXml.PresentationML.Y2006.Main.Extension>();
             builder.AddElement<ExtensionListModify>()
                 .AddAttribute("mod", a => a.Modify);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -316,7 +316,7 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2010.Main
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Extension), 0, 0)
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.PresentationML.Y2006.Main.Extension), 0, 0)
                     }
                 }
             };
@@ -546,9 +546,9 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2010.Main
         /// <para>Direction</para>
         /// <para>Represents the following attribute in the schema: dir</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Presentation.TransitionSlideDirectionValues>? Direction
+        public EnumValue<DocumentFormat.OpenXml.PresentationML.Y2006.Main.TransitionSlideDirectionValues>? Direction
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.TransitionSlideDirectionValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.PresentationML.Y2006.Main.TransitionSlideDirectionValues>>();
             set => SetAttribute(value);
         }
 
@@ -757,7 +757,7 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2010.Main
                 {
                     aBuilder.AddUnion(union =>
                     {
-                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.Presentation.TransitionCornerDirectionValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.PresentationML.Y2006.Main.TransitionCornerDirectionValues>>(EnumValidator.Instance);
                         union.AddValidator<EnumValue<DocumentFormat.OpenXml.Office.PowerPoint.Y2010.Main.TransitionCenterDirectionTypeValues>>(EnumValidator.Instance);
                     });
                 });
@@ -855,9 +855,9 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2010.Main
         /// <para>dir, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: dir</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Presentation.TransitionSlideDirectionValues>? Direction
+        public EnumValue<DocumentFormat.OpenXml.PresentationML.Y2006.Main.TransitionSlideDirectionValues>? Direction
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.TransitionSlideDirectionValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.PresentationML.Y2006.Main.TransitionSlideDirectionValues>>();
             set => SetAttribute(value);
         }
 
@@ -967,9 +967,9 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2010.Main
         /// <para>Transition Direction</para>
         /// <para>Represents the following attribute in the schema: dir</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Presentation.DirectionValues>? Direction
+        public EnumValue<DocumentFormat.OpenXml.PresentationML.Y2006.Main.DirectionValues>? Direction
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.DirectionValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.PresentationML.Y2006.Main.DirectionValues>>();
             set => SetAttribute(value);
         }
 
@@ -1002,9 +1002,9 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2010.Main
         /// <para>dir, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: dir</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Presentation.TransitionSlideDirectionValues>? Direction
+        public EnumValue<DocumentFormat.OpenXml.PresentationML.Y2006.Main.TransitionSlideDirectionValues>? Direction
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.TransitionSlideDirectionValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.PresentationML.Y2006.Main.TransitionSlideDirectionValues>>();
             set => SetAttribute(value);
         }
 
@@ -1056,9 +1056,9 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2010.Main
         /// <para>Direction</para>
         /// <para>Represents the following attribute in the schema: dir</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Presentation.TransitionInOutDirectionValues>? Direction
+        public EnumValue<DocumentFormat.OpenXml.PresentationML.Y2006.Main.TransitionInOutDirectionValues>? Direction
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.TransitionInOutDirectionValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.PresentationML.Y2006.Main.TransitionInOutDirectionValues>>();
             set => SetAttribute(value);
         }
 
@@ -1096,9 +1096,9 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2010.Main
         /// <para>dir, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: dir</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Presentation.TransitionInOutDirectionValues>? Direction
+        public EnumValue<DocumentFormat.OpenXml.PresentationML.Y2006.Main.TransitionInOutDirectionValues>? Direction
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.TransitionInOutDirectionValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.PresentationML.Y2006.Main.TransitionInOutDirectionValues>>();
             set => SetAttribute(value);
         }
 
@@ -1157,9 +1157,9 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2010.Main
         /// <para>dir, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: dir</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Presentation.TransitionInOutDirectionValues>? Direction
+        public EnumValue<DocumentFormat.OpenXml.PresentationML.Y2006.Main.TransitionInOutDirectionValues>? Direction
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.TransitionInOutDirectionValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.PresentationML.Y2006.Main.TransitionInOutDirectionValues>>();
             set => SetAttribute(value);
         }
 
@@ -1490,12 +1490,12 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2010.Main
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HslColor" /> <c>&lt;a:hslClr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PresetColor" /> <c>&lt;a:prstClr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SchemeColor" /> <c>&lt;a:schemeClr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage" /> <c>&lt;a:scrgbClr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.RgbColorModelHex" /> <c>&lt;a:srgbClr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SystemColor" /> <c>&lt;a:sysClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.HslColor" /> <c>&lt;a:hslClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.PresetColor" /> <c>&lt;a:prstClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.SchemeColor" /> <c>&lt;a:schemeClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.RgbColorModelPercentage" /> <c>&lt;a:scrgbClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.RgbColorModelHex" /> <c>&lt;a:srgbClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.SystemColor" /> <c>&lt;a:sysClr></c></description></item>
     /// </list>
     /// </remark>
     public partial class LaserColor : TypedOpenXmlCompositeElement
@@ -1536,24 +1536,24 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2010.Main
             base.ConfigureMetadata(builder);
             builder.SetSchema("p14:laserClr");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.HslColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.SchemeColor>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.RgbColorModelHex>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.SystemColor>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.HslColor>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.PresetColor>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.SchemeColor>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.RgbColorModelPercentage>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.RgbColorModelHex>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.SystemColor>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.RgbColorModelHex), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HslColor), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SystemColor), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SchemeColor), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetColor), 1, 1)
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.RgbColorModelPercentage), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.RgbColorModelHex), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.HslColor), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.SystemColor), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.SchemeColor), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.PresetColor), 1, 1)
                     }
                 }
             };
@@ -1566,9 +1566,9 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2010.Main
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage? RgbColorModelPercentage
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Main.RgbColorModelPercentage? RgbColorModelPercentage
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Main.RgbColorModelPercentage>();
             set => SetElement(value);
         }
 
@@ -1579,9 +1579,9 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2010.Main
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.RgbColorModelHex? RgbColorModelHex
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Main.RgbColorModelHex? RgbColorModelHex
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelHex>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Main.RgbColorModelHex>();
             set => SetElement(value);
         }
 
@@ -1592,9 +1592,9 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2010.Main
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.HslColor? HslColor
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Main.HslColor? HslColor
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.HslColor>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Main.HslColor>();
             set => SetElement(value);
         }
 
@@ -1605,9 +1605,9 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2010.Main
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.SystemColor? SystemColor
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Main.SystemColor? SystemColor
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.SystemColor>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Main.SystemColor>();
             set => SetElement(value);
         }
 
@@ -1618,9 +1618,9 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2010.Main
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.SchemeColor? SchemeColor
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Main.SchemeColor? SchemeColor
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.SchemeColor>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Main.SchemeColor>();
             set => SetElement(value);
         }
 
@@ -1631,9 +1631,9 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2010.Main
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.PresetColor? PresetColor
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Main.PresetColor? PresetColor
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.PresetColor>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Main.PresetColor>();
             set => SetElement(value);
         }
 
@@ -2086,9 +2086,9 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2010.Main
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HyperlinkOnClick" /> <c>&lt;a:hlinkClick></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HyperlinkOnHover" /> <c>&lt;a:hlinkHover></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList" /> <c>&lt;a:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.HyperlinkOnClick" /> <c>&lt;a:hlinkClick></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.HyperlinkOnHover" /> <c>&lt;a:hlinkHover></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.NonVisualDrawingPropertiesExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remark>
     public partial class NonVisualDrawingProperties : TypedOpenXmlCompositeElement
@@ -2179,9 +2179,9 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2010.Main
             base.ConfigureMetadata(builder);
             builder.SetSchema("p14:cNvPr");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.HyperlinkOnClick>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.HyperlinkOnHover>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.NonVisualDrawingPropertiesExtensionList>();
             builder.AddElement<NonVisualDrawingProperties>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
                 {
@@ -2196,9 +2196,9 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2010.Main
                 .AddAttribute("title", a => a.Title);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnClick), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.HyperlinkOnHover), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.HyperlinkOnClick), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.HyperlinkOnHover), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.NonVisualDrawingPropertiesExtensionList), 0, 1)
             };
         }
 
@@ -2209,9 +2209,9 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2010.Main
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.HyperlinkOnClick? HyperlinkOnClick
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Main.HyperlinkOnClick? HyperlinkOnClick
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Main.HyperlinkOnClick>();
             set => SetElement(value);
         }
 
@@ -2222,9 +2222,9 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2010.Main
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.HyperlinkOnHover? HyperlinkOnHover
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Main.HyperlinkOnHover? HyperlinkOnHover
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Main.HyperlinkOnHover>();
             set => SetElement(value);
         }
 
@@ -2235,9 +2235,9 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2010.Main
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList? NonVisualDrawingPropertiesExtensionList
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Main.NonVisualDrawingPropertiesExtensionList? NonVisualDrawingPropertiesExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Main.NonVisualDrawingPropertiesExtensionList>();
             set => SetElement(value);
         }
 
@@ -2354,14 +2354,14 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2010.Main
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.AudioFromCD" /> <c>&lt;a:audioCd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.AudioFromFile" /> <c>&lt;a:audioFile></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.WaveAudioFile" /> <c>&lt;a:wavAudioFile></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.QuickTimeFromFile" /> <c>&lt;a:quickTimeFile></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.VideoFromFile" /> <c>&lt;a:videoFile></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingPropertiesExtensionList" /> <c>&lt;p:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CustomerDataList" /> <c>&lt;p:custDataLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.PlaceholderShape" /> <c>&lt;p:ph></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.AudioFromCD" /> <c>&lt;a:audioCd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.AudioFromFile" /> <c>&lt;a:audioFile></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.WaveAudioFile" /> <c>&lt;a:wavAudioFile></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.QuickTimeFromFile" /> <c>&lt;a:quickTimeFile></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.VideoFromFile" /> <c>&lt;a:videoFile></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.PresentationML.Y2006.Main.ApplicationNonVisualDrawingPropertiesExtensionList" /> <c>&lt;p:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.PresentationML.Y2006.Main.CustomerDataList" /> <c>&lt;p:custDataLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.PresentationML.Y2006.Main.PlaceholderShape" /> <c>&lt;p:ph></c></description></item>
     /// </list>
     /// </remark>
     public partial class ApplicationNonVisualDrawingProperties : TypedOpenXmlCompositeElement
@@ -2422,33 +2422,33 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2010.Main
             base.ConfigureMetadata(builder);
             builder.SetSchema("p14:nvPr");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.AudioFromCD>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.AudioFromFile>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.WaveAudioFile>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.QuickTimeFromFile>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.VideoFromFile>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingPropertiesExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.CustomerDataList>();
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.PlaceholderShape>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.AudioFromCD>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.AudioFromFile>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.WaveAudioFile>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.QuickTimeFromFile>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.VideoFromFile>();
+            builder.AddChild<DocumentFormat.OpenXml.PresentationML.Y2006.Main.ApplicationNonVisualDrawingPropertiesExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.PresentationML.Y2006.Main.CustomerDataList>();
+            builder.AddChild<DocumentFormat.OpenXml.PresentationML.Y2006.Main.PlaceholderShape>();
             builder.AddElement<ApplicationNonVisualDrawingProperties>()
                 .AddAttribute("isPhoto", a => a.IsPhoto)
                 .AddAttribute("userDrawn", a => a.UserDrawn);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.PlaceholderShape), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.PresentationML.Y2006.Main.PlaceholderShape), 0, 1),
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.AudioFromCD), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.WaveAudioFile), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.AudioFromFile), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.VideoFromFile), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.QuickTimeFromFile), 1, 1)
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.AudioFromCD), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.WaveAudioFile), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.AudioFromFile), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.VideoFromFile), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.QuickTimeFromFile), 1, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CustomerDataList), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingPropertiesExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.PresentationML.Y2006.Main.CustomerDataList), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.PresentationML.Y2006.Main.ApplicationNonVisualDrawingPropertiesExtensionList), 0, 1)
             };
         }
 
@@ -2459,9 +2459,9 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2010.Main
         /// <remark>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Presentation.PlaceholderShape? PlaceholderShape
+        public DocumentFormat.OpenXml.PresentationML.Y2006.Main.PlaceholderShape? PlaceholderShape
         {
-            get => GetElement<DocumentFormat.OpenXml.Presentation.PlaceholderShape>();
+            get => GetElement<DocumentFormat.OpenXml.PresentationML.Y2006.Main.PlaceholderShape>();
             set => SetElement(value);
         }
 
@@ -2683,7 +2683,7 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2010.Main
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Extension" /> <c>&lt;p:ext></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.PresentationML.Y2006.Main.Extension" /> <c>&lt;p:ext></c></description></item>
     /// </list>
     /// </remark>
     public partial class ExtensionList : TypedOpenXmlCompositeElement
@@ -2724,14 +2724,14 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2010.Main
             base.ConfigureMetadata(builder);
             builder.SetSchema("p14:extLst");
             builder.Availability = FileFormatVersions.Office2010;
-            builder.AddChild<DocumentFormat.OpenXml.Presentation.Extension>();
+            builder.AddChild<DocumentFormat.OpenXml.PresentationML.Y2006.Main.Extension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.Extension), 0, 0)
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.PresentationML.Y2006.Main.Extension), 0, 0)
                     }
                 }
             };
@@ -3218,9 +3218,9 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2010.Main
         /// <para>type, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Presentation.TriggerEventValues>? Type
+        public EnumValue<DocumentFormat.OpenXml.PresentationML.Y2006.Main.TriggerEventValues>? Type
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Presentation.TriggerEventValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.PresentationML.Y2006.Main.TriggerEventValues>>();
             set => SetAttribute(value);
         }
 

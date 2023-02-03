@@ -14,7 +14,7 @@ using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.Office.ContentType
+namespace DocumentFormat.OpenXml.Office.Y2006.MetaData.ContentType
 {
     /// <summary>
     /// <para>Defines the ContentTypeSchema Class.</para>

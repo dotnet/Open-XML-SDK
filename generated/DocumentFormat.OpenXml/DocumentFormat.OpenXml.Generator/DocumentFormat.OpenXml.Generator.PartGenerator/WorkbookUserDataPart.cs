@@ -19,7 +19,7 @@ namespace DocumentFormat.OpenXml.Packaging
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.spreadsheetml.userNames+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/usernames";
-        private DocumentFormat.OpenXml.Spreadsheet.Users? _rootElement;
+        private DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Users? _rootElement;
 
         /// <summary>
         /// Creates an instance of the WorkbookUserDataPart OpenXmlType
@@ -40,7 +40,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             set
             {
-                _rootElement = value as DocumentFormat.OpenXml.Spreadsheet.Users;
+                _rootElement = value as DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Users;
             }
         }
 
@@ -52,13 +52,13 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets or sets the root element of this part.
         /// </summary>
-        public DocumentFormat.OpenXml.Spreadsheet.Users Users
+        public DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Users Users
         {
             get
             {
                 if (_rootElement is null)
                 {
-                    LoadDomTree<DocumentFormat.OpenXml.Spreadsheet.Users>();
+                    LoadDomTree<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Users>();
                 }
 
                 return _rootElement!;

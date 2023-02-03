@@ -10,13 +10,13 @@ namespace DocumentFormat.OpenXml.Packaging
     /// </summary>
     public abstract partial class StylesPart : TypedOpenXmlPart
     {
-        private Wordprocessing.Styles? _rootEle;
+        private WordprocessingML.Y2006.Main.Styles? _rootEle;
 
         /// <inheritdoc/>
         private protected override OpenXmlPartRootElement? InternalRootElement
         {
             get => _rootEle;
-            set => _rootEle = value as Wordprocessing.Styles;
+            set => _rootEle = value as WordprocessingML.Y2006.Main.Styles;
         }
 
         /// <summary>
@@ -27,13 +27,13 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets or sets the root element of this part.
         /// </summary>
-        public Wordprocessing.Styles? Styles
+        public WordprocessingML.Y2006.Main.Styles? Styles
         {
             get
             {
                 if (_rootEle is null)
                 {
-                    LoadDomTree<Wordprocessing.Styles>();
+                    LoadDomTree<WordprocessingML.Y2006.Main.Styles>();
                 }
 
                 return _rootEle;

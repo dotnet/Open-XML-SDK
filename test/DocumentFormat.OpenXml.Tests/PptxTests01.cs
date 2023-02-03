@@ -10,8 +10,8 @@ using Xunit;
 
 using static DocumentFormat.OpenXml.Tests.TestAssets;
 
-using D = DocumentFormat.OpenXml.Drawing;
-using P = DocumentFormat.OpenXml.Presentation;
+using D = DocumentFormat.OpenXml.DrawingML.Y2006.Main;
+using P = DocumentFormat.OpenXml.PresentationML.Y2006.Main;
 
 namespace DocumentFormat.OpenXml.Tests
 {

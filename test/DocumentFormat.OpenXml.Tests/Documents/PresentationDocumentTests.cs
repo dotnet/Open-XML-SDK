@@ -2,6 +2,8 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.PresentationML.Y2006.Main;
+
 using System.IO;
 using System.IO.Packaging;
 using System.Xml.Linq;
@@ -14,7 +16,7 @@ namespace DocumentFormat.OpenXml.Tests
 
         protected override void AddMainPart(PresentationDocument source)
         {
-            source.AddPresentationPart().Presentation = new Presentation.Presentation();
+            source.AddPresentationPart().Presentation = new Presentation();
         }
 
         protected override PresentationDocument Create(Stream stream, bool isEditable) => PresentationDocument.Create(stream, PresentationDocumentType.Presentation, isEditable);
@@ -24,7 +26,7 @@ namespace DocumentFormat.OpenXml.Tests
         protected override void DuplicateMainPart(PresentationDocument source, PresentationDocument result)
         {
             var part = result.AddPresentationPart();
-            part.Presentation = new Presentation.Presentation(source.PresentationPart.Presentation.OuterXml);
+            part.Presentation = new Presentation(source.PresentationPart.Presentation.OuterXml);
         }
 
         protected override PresentationDocument FromFlatOpcDocument(XDocument document) => PresentationDocument.FromFlatOpcDocument(document);

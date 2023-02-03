@@ -14,7 +14,7 @@ using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.CustomXmlDataProperties
+namespace DocumentFormat.OpenXml.OfficeDocument.Y2006.CustomXml
 {
     /// <summary>
     /// <para>Custom XML Data Properties.</para>
@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.CustomXmlDataProperties
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.CustomXmlDataProperties.SchemaReferences" /> <c>&lt;ds:schemaRefs></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.CustomXml.SchemaReferences" /> <c>&lt;ds:schemaRefs></c></description></item>
     /// </list>
     /// </remark>
     public partial class DataStoreItem : TypedOpenXmlPartRootElement
@@ -77,7 +77,7 @@ namespace DocumentFormat.OpenXml.CustomXmlDataProperties
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("ds:datastoreItem");
-            builder.AddChild<DocumentFormat.OpenXml.CustomXmlDataProperties.SchemaReferences>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.CustomXml.SchemaReferences>();
             builder.AddElement<DataStoreItem>()
                 .AddAttribute("ds:itemID", a => a.ItemId, aBuilder =>
                 {
@@ -86,7 +86,7 @@ namespace DocumentFormat.OpenXml.CustomXmlDataProperties
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.CustomXmlDataProperties.SchemaReferences), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.CustomXml.SchemaReferences), 0, 1)
             };
         }
 
@@ -97,9 +97,9 @@ namespace DocumentFormat.OpenXml.CustomXmlDataProperties
         /// <remark>
         /// xmlns:ds = http://schemas.openxmlformats.org/officeDocument/2006/customXml
         /// </remark>
-        public DocumentFormat.OpenXml.CustomXmlDataProperties.SchemaReferences? SchemaReferences
+        public DocumentFormat.OpenXml.OfficeDocument.Y2006.CustomXml.SchemaReferences? SchemaReferences
         {
-            get => GetElement<DocumentFormat.OpenXml.CustomXmlDataProperties.SchemaReferences>();
+            get => GetElement<DocumentFormat.OpenXml.OfficeDocument.Y2006.CustomXml.SchemaReferences>();
             set => SetElement(value);
         }
 
@@ -188,7 +188,7 @@ namespace DocumentFormat.OpenXml.CustomXmlDataProperties
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.CustomXmlDataProperties.SchemaReference" /> <c>&lt;ds:schemaRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.OfficeDocument.Y2006.CustomXml.SchemaReference" /> <c>&lt;ds:schemaRef></c></description></item>
     /// </list>
     /// </remark>
     public partial class SchemaReferences : TypedOpenXmlCompositeElement
@@ -228,10 +228,10 @@ namespace DocumentFormat.OpenXml.CustomXmlDataProperties
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("ds:schemaRefs");
-            builder.AddChild<DocumentFormat.OpenXml.CustomXmlDataProperties.SchemaReference>();
+            builder.AddChild<DocumentFormat.OpenXml.OfficeDocument.Y2006.CustomXml.SchemaReference>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.CustomXmlDataProperties.SchemaReference), 0, 0)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.OfficeDocument.Y2006.CustomXml.SchemaReference), 0, 0)
             };
         }
 

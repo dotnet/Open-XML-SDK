@@ -19,7 +19,7 @@ namespace DocumentFormat.OpenXml.Packaging
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet";
-        private DocumentFormat.OpenXml.Spreadsheet.Worksheet? _rootElement;
+        private DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Worksheet? _rootElement;
 
         /// <summary>
         /// Creates an instance of the WorksheetPart OpenXmlType
@@ -80,7 +80,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             set
             {
-                _rootElement = value as DocumentFormat.OpenXml.Spreadsheet.Worksheet;
+                _rootElement = value as DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Worksheet;
             }
         }
 
@@ -142,13 +142,13 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets or sets the root element of this part.
         /// </summary>
-        public DocumentFormat.OpenXml.Spreadsheet.Worksheet Worksheet
+        public DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Worksheet Worksheet
         {
             get
             {
                 if (_rootElement is null)
                 {
-                    LoadDomTree<DocumentFormat.OpenXml.Spreadsheet.Worksheet>();
+                    LoadDomTree<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Worksheet>();
                 }
 
                 return _rootElement!;

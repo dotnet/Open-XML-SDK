@@ -15,7 +15,7 @@ using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.Drawing.LegacyCompatibility
+namespace DocumentFormat.OpenXml.DrawingML.Y2006.Compatibility
 {
     /// <summary>
     /// <para>Legacy Drawing Object.</para>

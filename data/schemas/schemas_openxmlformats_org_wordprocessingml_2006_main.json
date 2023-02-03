@@ -166,13 +166,13 @@
         {
           "QName": "w:vMerge",
           "PropertyName": "VerticalMerge",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.VerticalMergeRevisionValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.VerticalMergeRevisionValues\u003E",
           "PropertyComments": "vMerge"
         },
         {
           "QName": "w:vMergeOrig",
           "PropertyName": "VerticalMergeOriginal",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.VerticalMergeRevisionValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.VerticalMergeRevisionValues\u003E",
           "PropertyComments": "vMergeOrig"
         },
         {
@@ -286,7 +286,7 @@
         {
           "QName": "w:displacedByCustomXml",
           "PropertyName": "DisplacedByCustomXml",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.DisplacedByCustomXmlValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.DisplacedByCustomXmlValues\u003E",
           "PropertyComments": "displacedByCustomXml"
         },
         {
@@ -379,7 +379,7 @@
         {
           "QName": "w:displacedByCustomXml",
           "PropertyName": "DisplacedByCustomXml",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.DisplacedByCustomXmlValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.DisplacedByCustomXmlValues\u003E",
           "PropertyComments": "displacedByCustomXml"
         },
         {
@@ -504,7 +504,7 @@
         {
           "QName": "w:displacedByCustomXml",
           "PropertyName": "DisplacedByCustomXml",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.DisplacedByCustomXmlValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.DisplacedByCustomXmlValues\u003E",
           "PropertyComments": "displacedByCustomXml"
         },
         {
@@ -2378,7 +2378,7 @@
         {
           "QName": "w:dropCap",
           "PropertyName": "DropCap",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.DropCapLocationValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.DropCapLocationValues\u003E",
           "PropertyComments": "Drop Cap Frame"
         },
         {
@@ -2526,19 +2526,19 @@
         {
           "QName": "w:wrap",
           "PropertyName": "Wrap",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.TextWrappingValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.TextWrappingValues\u003E",
           "PropertyComments": "Text Wrapping Around Frame"
         },
         {
           "QName": "w:hAnchor",
           "PropertyName": "HorizontalPosition",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.HorizontalAnchorValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.HorizontalAnchorValues\u003E",
           "PropertyComments": "Frame Horizontal Positioning Base"
         },
         {
           "QName": "w:vAnchor",
           "PropertyName": "VerticalPosition",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.VerticalAnchorValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.VerticalAnchorValues\u003E",
           "PropertyComments": "Frame Vertical Positioning Base"
         },
         {
@@ -2577,7 +2577,7 @@
         {
           "QName": "w:xAlign",
           "PropertyName": "XAlign",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.HorizontalAlignmentValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.HorizontalAlignmentValues\u003E",
           "PropertyComments": "Relative Horizontal Position"
         },
         {
@@ -2616,13 +2616,13 @@
         {
           "QName": "w:yAlign",
           "PropertyName": "YAlign",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.VerticalAlignmentValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.VerticalAlignmentValues\u003E",
           "PropertyComments": "Relative Vertical Position"
         },
         {
           "QName": "w:hRule",
           "PropertyName": "HeightType",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.HeightRuleValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.HeightRuleValues\u003E",
           "PropertyComments": "Frame Height Type"
         },
         {
@@ -2801,7 +2801,7 @@
         {
           "QName": "w:val",
           "PropertyName": "Val",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.ShadingPatternValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.ShadingPatternValues\u003E",
           "PropertyComments": "Shading Pattern",
           "Validators": [
             {
@@ -2839,7 +2839,7 @@
         {
           "QName": "w:themeColor",
           "PropertyName": "ThemeColor",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.ThemeColorValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.ThemeColorValues\u003E",
           "PropertyComments": "Shading Pattern Theme Color"
         },
         {
@@ -2930,7 +2930,7 @@
         {
           "QName": "w:themeFill",
           "PropertyName": "ThemeFill",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.ThemeColorValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.ThemeColorValues\u003E",
           "PropertyComments": "Shading Background Theme Color"
         },
         {
@@ -3150,7 +3150,7 @@
         {
           "QName": "w:lineRule",
           "PropertyName": "LineRule",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.LineSpacingRuleValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.LineSpacingRuleValues\u003E",
           "PropertyComments": "Type of Spacing Between Lines"
         }
       ]
@@ -3452,7 +3452,7 @@
         {
           "QName": "w:val",
           "PropertyName": "Val",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.JustificationValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.JustificationValues\u003E",
           "PropertyComments": "Alignment Type",
           "Validators": [
             {
@@ -3472,7 +3472,7 @@
         {
           "QName": "w:val",
           "PropertyName": "Val",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.TextDirectionValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.TextDirectionValues\u003E",
           "PropertyComments": "Direction of Text Flow",
           "Validators": [
             {
@@ -3492,7 +3492,7 @@
         {
           "QName": "w:val",
           "PropertyName": "Val",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignmentValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.VerticalTextAlignmentValues\u003E",
           "PropertyComments": "Vertical Character Alignment Position",
           "Validators": [
             {
@@ -3512,7 +3512,7 @@
         {
           "QName": "w:val",
           "PropertyName": "Val",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.TextBoxTightWrapValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.TextBoxTightWrapValues\u003E",
           "PropertyComments": "Lines to Tight Wrap to Paragraph Extents",
           "Validators": [
             {
@@ -3768,7 +3768,7 @@
         {
           "QName": "w:type",
           "PropertyName": "Type",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.HeaderFooterValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.HeaderFooterValues\u003E",
           "PropertyComments": "type",
           "Validators": [
             {
@@ -3799,13 +3799,13 @@
         {
           "QName": "w:type",
           "PropertyName": "Type",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.BreakValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.BreakValues\u003E",
           "PropertyComments": "Break Type"
         },
         {
           "QName": "w:clear",
           "PropertyName": "Clear",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.BreakTextRestartLocationValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.BreakTextRestartLocationValues\u003E",
           "PropertyComments": "Restart Location For Text Wrapping Break"
         }
       ]
@@ -4469,7 +4469,7 @@
         {
           "QName": "w:fldCharType",
           "PropertyName": "FieldCharType",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.FieldCharValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.FieldCharValues\u003E",
           "PropertyComments": "Field Character Type",
           "Validators": [
             {
@@ -4674,7 +4674,7 @@
         {
           "QName": "w:alignment",
           "PropertyName": "Alignment",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.AbsolutePositionTabAlignmentValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.AbsolutePositionTabAlignmentValues\u003E",
           "PropertyComments": "Positional Tab Stop Alignment",
           "Validators": [
             {
@@ -4685,7 +4685,7 @@
         {
           "QName": "w:relativeTo",
           "PropertyName": "RelativeTo",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.AbsolutePositionTabPositioningBaseValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.AbsolutePositionTabPositioningBaseValues\u003E",
           "PropertyComments": "Positional Tab Base",
           "Validators": [
             {
@@ -4696,7 +4696,7 @@
         {
           "QName": "w:leader",
           "PropertyName": "Leader",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.AbsolutePositionTabLeaderCharValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.AbsolutePositionTabLeaderCharValues\u003E",
           "PropertyComments": "Tab Leader Character",
           "Validators": [
             {
@@ -4844,7 +4844,7 @@
         {
           "QName": "w:hint",
           "PropertyName": "Hint",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.FontTypeHintValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.FontTypeHintValues\u003E",
           "PropertyComments": "Font Content Type"
         },
         {
@@ -4926,25 +4926,25 @@
         {
           "QName": "w:asciiTheme",
           "PropertyName": "AsciiTheme",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.ThemeFontValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.ThemeFontValues\u003E",
           "PropertyComments": "ASCII Theme Font"
         },
         {
           "QName": "w:hAnsiTheme",
           "PropertyName": "HighAnsiTheme",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.ThemeFontValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.ThemeFontValues\u003E",
           "PropertyComments": "High ANSI Theme Font"
         },
         {
           "QName": "w:eastAsiaTheme",
           "PropertyName": "EastAsiaTheme",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.ThemeFontValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.ThemeFontValues\u003E",
           "PropertyComments": "East Asian Theme Font"
         },
         {
           "QName": "w:cstheme",
           "PropertyName": "ComplexScriptTheme",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.ThemeFontValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.ThemeFontValues\u003E",
           "PropertyComments": "Complex Script Theme Font"
         }
       ]
@@ -4989,7 +4989,7 @@
         {
           "QName": "w:themeColor",
           "PropertyName": "ThemeColor",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.ThemeColorValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.ThemeColorValues\u003E",
           "PropertyComments": "Run Content Theme Color"
         },
         {
@@ -5310,7 +5310,7 @@
         {
           "QName": "w:val",
           "PropertyName": "Val",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.HighlightColorValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.HighlightColorValues\u003E",
           "PropertyComments": "Highlighting Color",
           "Validators": [
             {
@@ -5330,7 +5330,7 @@
         {
           "QName": "w:val",
           "PropertyName": "Val",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.UnderlineValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.UnderlineValues\u003E",
           "PropertyComments": "Underline Style"
         },
         {
@@ -5363,7 +5363,7 @@
         {
           "QName": "w:themeColor",
           "PropertyName": "ThemeColor",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.ThemeColorValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.ThemeColorValues\u003E",
           "PropertyComments": "Underline Theme Color"
         },
         {
@@ -5436,7 +5436,7 @@
         {
           "QName": "w:val",
           "PropertyName": "Val",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.TextEffectValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.TextEffectValues\u003E",
           "PropertyComments": "Animated Text Effect Type",
           "Validators": [
             {
@@ -5563,7 +5563,7 @@
         {
           "QName": "w:val",
           "PropertyName": "Val",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.BorderValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.BorderValues\u003E",
           "PropertyComments": "Border Style",
           "Validators": [
             {
@@ -5601,7 +5601,7 @@
         {
           "QName": "w:themeColor",
           "PropertyName": "ThemeColor",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.ThemeColorValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.ThemeColorValues\u003E",
           "PropertyComments": "Border Theme Color"
         },
         {
@@ -5753,7 +5753,7 @@
         {
           "QName": "w:val",
           "PropertyName": "Val",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.VerticalPositionValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.VerticalPositionValues\u003E",
           "PropertyComments": "Subscript/Superscript Value",
           "Validators": [
             {
@@ -5773,7 +5773,7 @@
         {
           "QName": "w:val",
           "PropertyName": "Val",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.EmphasisMarkValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.EmphasisMarkValues\u003E",
           "PropertyComments": "Emphasis Mark Type",
           "Validators": [
             {
@@ -5888,7 +5888,7 @@
         {
           "QName": "w:combineBrackets",
           "PropertyName": "CombineBrackets",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.CombineBracketValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.CombineBracketValues\u003E",
           "PropertyComments": "Display Brackets Around Two Lines in One"
         },
         {
@@ -9719,7 +9719,7 @@
         {
           "QName": "w:type",
           "PropertyName": "Type",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.ProofingErrorValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.ProofingErrorValues\u003E",
           "PropertyComments": "Proofing Error Anchor Type",
           "Validators": [
             {
@@ -9739,7 +9739,7 @@
         {
           "QName": "w:edGrp",
           "PropertyName": "EditorGroup",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.RangePermissionEditingGroupValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.RangePermissionEditingGroupValues\u003E",
           "PropertyComments": "edGrp"
         },
         {
@@ -9800,7 +9800,7 @@
         {
           "QName": "w:displacedByCustomXml",
           "PropertyName": "DisplacedByCustomXml",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.DisplacedByCustomXmlValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.DisplacedByCustomXmlValues\u003E",
           "PropertyComments": "Annotation Displaced By Custom XML Markup"
         }
       ]
@@ -9826,7 +9826,7 @@
         {
           "QName": "w:displacedByCustomXml",
           "PropertyName": "DisplacedByCustomXml",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.DisplacedByCustomXmlValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.DisplacedByCustomXmlValues\u003E",
           "PropertyComments": "Annotation Displaced By Custom XML Markup"
         }
       ]
@@ -19007,7 +19007,7 @@
       "Attributes": [
         {
           "QName": "w:val",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.DirectionValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.DirectionValues\u003E",
           "PropertyComments": "val"
         }
       ],
@@ -19652,7 +19652,7 @@
       "Attributes": [
         {
           "QName": "w:val",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.DirectionValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.DirectionValues\u003E",
           "PropertyComments": "val"
         }
       ],
@@ -20802,7 +20802,7 @@
         {
           "QName": "w:type",
           "PropertyName": "Type",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.TableWidthUnitValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.TableWidthUnitValues\u003E",
           "PropertyComments": "Table Width Type"
         }
       ]
@@ -20817,7 +20817,7 @@
         {
           "QName": "w:val",
           "PropertyName": "Val",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.MergedCellValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.MergedCellValues\u003E",
           "PropertyComments": "Horizontal Merge Type"
         }
       ]
@@ -20832,7 +20832,7 @@
         {
           "QName": "w:val",
           "PropertyName": "Val",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.MergedCellValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.MergedCellValues\u003E",
           "PropertyComments": "Vertical Merge Type"
         }
       ]
@@ -21144,7 +21144,7 @@
         {
           "QName": "w:val",
           "PropertyName": "Val",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.OnOffOnlyValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.OnOffOnlyValues\u003E",
           "PropertyComments": "val"
         }
       ]
@@ -21251,7 +21251,7 @@
         {
           "QName": "w:val",
           "PropertyName": "Val",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.TableVerticalAlignmentValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.TableVerticalAlignmentValues\u003E",
           "PropertyComments": "val",
           "Validators": [
             {
@@ -21336,7 +21336,7 @@
         {
           "QName": "w:hRule",
           "PropertyName": "HeightType",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.HeightRuleValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.HeightRuleValues\u003E",
           "PropertyComments": "Table Row Height Type"
         }
       ]
@@ -21351,7 +21351,7 @@
         {
           "QName": "w:val",
           "PropertyName": "Val",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.TableRowAlignmentValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.TableRowAlignmentValues\u003E",
           "PropertyComments": "val",
           "Validators": [
             {
@@ -21447,19 +21447,19 @@
         {
           "QName": "w:vertAnchor",
           "PropertyName": "VerticalAnchor",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.VerticalAnchorValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.VerticalAnchorValues\u003E",
           "PropertyComments": "Table Vertical Anchor"
         },
         {
           "QName": "w:horzAnchor",
           "PropertyName": "HorizontalAnchor",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.HorizontalAnchorValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.HorizontalAnchorValues\u003E",
           "PropertyComments": "Table Horizontal Anchor"
         },
         {
           "QName": "w:tblpXSpec",
           "PropertyName": "TablePositionXAlignment",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.HorizontalAlignmentValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.HorizontalAlignmentValues\u003E",
           "PropertyComments": "Relative Horizontal Alignment From Anchor"
         },
         {
@@ -21489,7 +21489,7 @@
         {
           "QName": "w:tblpYSpec",
           "PropertyName": "TablePositionYAlignment",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.VerticalAlignmentValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.VerticalAlignmentValues\u003E",
           "PropertyComments": "Relative Vertical Alignment from Anchor"
         },
         {
@@ -21528,7 +21528,7 @@
         {
           "QName": "w:val",
           "PropertyName": "Val",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.TableOverlapValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.TableOverlapValues\u003E",
           "PropertyComments": "Floating Table Overlap Setting",
           "Validators": [
             {
@@ -21607,7 +21607,7 @@
         {
           "QName": "w:type",
           "PropertyName": "Type",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.TableWidthUnitValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.TableWidthUnitValues\u003E",
           "PropertyComments": "type"
         }
       ]
@@ -21740,7 +21740,7 @@
         {
           "QName": "w:type",
           "PropertyName": "Type",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.TableLayoutValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.TableLayoutValues\u003E",
           "PropertyComments": "Table Layout Setting"
         }
       ]
@@ -21867,7 +21867,7 @@
         {
           "QName": "w:val",
           "PropertyName": "Val",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.RestartNumberValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.RestartNumberValues\u003E",
           "PropertyComments": "Automatic Numbering Restart Value",
           "Validators": [
             {
@@ -22219,7 +22219,7 @@
         {
           "QName": "w:val",
           "PropertyName": "Val",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.SectionMarkValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.SectionMarkValues\u003E",
           "PropertyComments": "Section Type Setting",
           "Validators": [
             {
@@ -22277,7 +22277,7 @@
         {
           "QName": "w:orient",
           "PropertyName": "Orient",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.PageOrientationValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.PageOrientationValues\u003E",
           "PropertyComments": "Page Orientation"
         },
         {
@@ -22471,19 +22471,19 @@
         {
           "QName": "w:zOrder",
           "PropertyName": "ZOrder",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.PageBorderZOrderValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.PageBorderZOrderValues\u003E",
           "PropertyComments": "Z-Ordering of Page Border"
         },
         {
           "QName": "w:display",
           "PropertyName": "Display",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.PageBorderDisplayValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.PageBorderDisplayValues\u003E",
           "PropertyComments": "Pages to Display Page Borders"
         },
         {
           "QName": "w:offsetFrom",
           "PropertyName": "OffsetFrom",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.PageBorderOffsetValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.PageBorderOffsetValues\u003E",
           "PropertyComments": "Page Border Positioning"
         }
       ],
@@ -22633,7 +22633,7 @@
         {
           "QName": "w:restart",
           "PropertyName": "Restart",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.LineNumberRestartValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.LineNumberRestartValues\u003E",
           "PropertyComments": "Line Numbering Restart Setting"
         }
       ]
@@ -22648,7 +22648,7 @@
         {
           "QName": "w:fmt",
           "PropertyName": "Format",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.NumberFormatValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.NumberFormatValues\u003E",
           "PropertyComments": "Page Number Format"
         },
         {
@@ -22679,7 +22679,7 @@
         {
           "QName": "w:chapSep",
           "PropertyName": "ChapterSeparator",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.ChapterSeparatorValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.ChapterSeparatorValues\u003E",
           "PropertyComments": "Chapter Separator Character"
         }
       ]
@@ -22795,7 +22795,7 @@
         {
           "QName": "w:val",
           "PropertyName": "Val",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.VerticalJustificationValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.VerticalJustificationValues\u003E",
           "PropertyComments": "Vertical Alignment Setting",
           "Validators": [
             {
@@ -22815,7 +22815,7 @@
         {
           "QName": "w:type",
           "PropertyName": "Type",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.DocGridValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.DocGridValues\u003E",
           "PropertyComments": "Document Grid Type"
         },
         {
@@ -25897,7 +25897,7 @@
       "Attributes": [
         {
           "QName": "w:conformance",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.DocumentConformance\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.DocumentConformance\u003E",
           "PropertyComments": "conformance"
         }
       ],
@@ -29420,7 +29420,7 @@
         {
           "QName": "w:val",
           "PropertyName": "Val",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.TabStopValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.TabStopValues\u003E",
           "PropertyComments": "Tab Stop Type",
           "Validators": [
             {
@@ -29431,7 +29431,7 @@
         {
           "QName": "w:leader",
           "PropertyName": "Leader",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.TabStopLeaderCharValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.TabStopLeaderCharValues\u003E",
           "PropertyComments": "Tab Leader Character"
         },
         {
@@ -30881,7 +30881,7 @@
         {
           "QName": "w:type",
           "PropertyName": "Type",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.InfoTextValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.InfoTextValues\u003E",
           "PropertyComments": "Help Text Type"
         },
         {
@@ -30915,7 +30915,7 @@
         {
           "QName": "w:type",
           "PropertyName": "Type",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.InfoTextValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.InfoTextValues\u003E",
           "PropertyComments": "Status Text Type"
         },
         {
@@ -31222,7 +31222,7 @@
         {
           "QName": "w:val",
           "PropertyName": "Val",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.TextBoxFormFieldValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.TextBoxFormFieldValues\u003E",
           "PropertyComments": "Text Box Form Field Type Values",
           "Validators": [
             {
@@ -31599,7 +31599,7 @@
         {
           "QName": "w:val",
           "PropertyName": "Val",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.RubyAlignValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.RubyAlignValues\u003E",
           "PropertyComments": "Phonetic Guide Text Alignment Value",
           "Validators": [
             {
@@ -33088,7 +33088,7 @@
         {
           "QName": "w:val",
           "PropertyName": "Val",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.DateFormatValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.DateFormatValues\u003E",
           "PropertyComments": "Date Storage Type"
         }
       ]
@@ -33103,7 +33103,7 @@
         {
           "QName": "w:val",
           "PropertyName": "Val",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.CalendarValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.CalendarValues\u003E",
           "PropertyComments": "Calendar Type Value"
         }
       ]
@@ -36981,7 +36981,7 @@
         {
           "QName": "w:val",
           "PropertyName": "Val",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.FootnotePositionValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.FootnotePositionValues\u003E",
           "PropertyComments": "Footnote Position Type",
           "Validators": [
             {
@@ -37001,7 +37001,7 @@
         {
           "QName": "w:val",
           "PropertyName": "Val",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.NumberFormatValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.NumberFormatValues\u003E",
           "PropertyComments": "Numbering Format Type",
           "Validators": [
             {
@@ -37039,7 +37039,7 @@
         {
           "QName": "w:val",
           "PropertyName": "Val",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.EndnotePositionValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.EndnotePositionValues\u003E",
           "PropertyComments": "Endnote Position Type",
           "Validators": [
             {
@@ -37212,7 +37212,7 @@
         {
           "QName": "w:val",
           "PropertyName": "Val",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.MailMergeOdsoFieldValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.MailMergeOdsoFieldValues\u003E",
           "PropertyComments": "Merge Field Mapping Type",
           "Validators": [
             {
@@ -37232,7 +37232,7 @@
         {
           "QName": "w:val",
           "PropertyName": "Val",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.MailMergeSourceValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.MailMergeSourceValues\u003E",
           "PropertyComments": "Data Source Type Value",
           "Validators": [
             {
@@ -37344,7 +37344,7 @@
         {
           "QName": "w:val",
           "PropertyName": "Val",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.MailMergeDocumentValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.MailMergeDocumentValues\u003E",
           "PropertyComments": "Mail Merge Source Document Type",
           "Validators": [
             {
@@ -37364,7 +37364,7 @@
         {
           "QName": "w:val",
           "PropertyName": "Val",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.MailMergeDataValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.MailMergeDataValues\u003E",
           "PropertyComments": "Value",
           "Validators": [
             {
@@ -37384,7 +37384,7 @@
         {
           "QName": "w:val",
           "PropertyName": "Val",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.MailMergeDestinationValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.MailMergeDestinationValues\u003E",
           "PropertyComments": "Mail Merge Merged Document Type",
           "Validators": [
             {
@@ -38605,7 +38605,7 @@
         {
           "QName": "w:val",
           "PropertyName": "Val",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.FrameScrollbarVisibilityValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.FrameScrollbarVisibilityValues\u003E",
           "PropertyComments": "Scrollbar Display Option Value",
           "Validators": [
             {
@@ -38785,7 +38785,7 @@
         {
           "QName": "w:val",
           "PropertyName": "Val",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.FrameLayoutValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.FrameLayoutValues\u003E",
           "PropertyComments": "Frameset Layout Value",
           "Validators": [
             {
@@ -39003,7 +39003,7 @@
         {
           "QName": "w:val",
           "PropertyName": "Val",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.LevelSuffixValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.LevelSuffixValues\u003E",
           "PropertyComments": "Character Type Between Numbering and Text",
           "Validators": [
             {
@@ -39124,7 +39124,7 @@
       "Attributes": [
         {
           "QName": "w:val",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.LevelJustificationValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.LevelJustificationValues\u003E",
           "PropertyComments": "Alignment Type",
           "Validators": [
             {
@@ -40066,7 +40066,7 @@
         {
           "QName": "w:val",
           "PropertyName": "Val",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.MultiLevelValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.MultiLevelValues\u003E",
           "PropertyComments": "Abstract Numbering Definition Type",
           "Validators": [
             {
@@ -42102,7 +42102,7 @@
         {
           "QName": "w:type",
           "PropertyName": "Type",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.TableStyleOverrideValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.TableStyleOverrideValues\u003E",
           "PropertyComments": "Table Style Conditional Formatting Type",
           "Validators": [
             {
@@ -42380,7 +42380,7 @@
         {
           "QName": "w:type",
           "PropertyName": "Type",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.StyleValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.StyleValues\u003E",
           "PropertyComments": "Style Type"
         },
         {
@@ -44412,7 +44412,7 @@
         {
           "QName": "w:type",
           "PropertyName": "Type",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.FootnoteEndnoteValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.FootnoteEndnoteValues\u003E",
           "PropertyComments": "Footnote/Endnote Type"
         },
         {
@@ -44598,7 +44598,7 @@
         {
           "QName": "w:val",
           "PropertyName": "Val",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.DocPartBehaviorValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.DocPartBehaviorValues\u003E",
           "PropertyComments": "Insertion Behavior Value",
           "Validators": [
             {
@@ -44618,7 +44618,7 @@
         {
           "QName": "w:val",
           "PropertyName": "Val",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.DocPartValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.DocPartValues\u003E",
           "PropertyComments": "Type Value",
           "Validators": [
             {
@@ -44638,7 +44638,7 @@
         {
           "QName": "w:val",
           "PropertyName": "Val",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.DocPartGalleryValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.DocPartGalleryValues\u003E",
           "PropertyComments": "Gallery Value",
           "Validators": [
             {
@@ -44733,7 +44733,7 @@
         {
           "QName": "w:pos",
           "PropertyName": "Position",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.CaptionPositionValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.CaptionPositionValues\u003E",
           "PropertyComments": "Automatic Caption Placement"
         },
         {
@@ -44757,13 +44757,13 @@
         {
           "QName": "w:numFmt",
           "PropertyName": "NumberFormat",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.NumberFormatValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.NumberFormatValues\u003E",
           "PropertyComments": "Caption Numbering Format"
         },
         {
           "QName": "w:sep",
           "PropertyName": "Separator",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.ChapterSeparatorValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.ChapterSeparatorValues\u003E",
           "PropertyComments": "Chapter Number/Item Index Separator"
         }
       ]
@@ -44829,7 +44829,7 @@
         {
           "QName": "w:themeColor",
           "PropertyName": "ThemeColor",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.ThemeColorValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.ThemeColorValues\u003E",
           "PropertyComments": "themeColor"
         },
         {
@@ -46304,7 +46304,7 @@
       "Attributes": [
         {
           "QName": "w:name",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.CompatSettingNameValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.CompatSettingNameValues\u003E",
           "PropertyComments": "name",
           "Validators": [
             {
@@ -46383,7 +46383,7 @@
         {
           "QName": "w:type",
           "PropertyName": "Type",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.TableWidthValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.TableWidthValues\u003E",
           "PropertyComments": "type",
           "Validators": [
             {
@@ -47485,7 +47485,7 @@
         {
           "QName": "w:drawAspect",
           "PropertyName": "drawAspect",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.ObjectDrawAspect\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.ObjectDrawAspect\u003E",
           "PropertyComments": "drawAspect"
         },
         {
@@ -47528,7 +47528,7 @@
         {
           "QName": "w:updateMode",
           "PropertyName": "UpdateMode",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.ObjectUpdateMode\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.ObjectUpdateMode\u003E",
           "PropertyComments": "updateMode",
           "Validators": [
             {
@@ -47545,7 +47545,7 @@
         {
           "QName": "w:drawAspect",
           "PropertyName": "drawAspect",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.ObjectDrawAspect\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.ObjectDrawAspect\u003E",
           "PropertyComments": "drawAspect"
         },
         {
@@ -47588,7 +47588,7 @@
         {
           "QName": "w:val",
           "PropertyName": "Val",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.LockingValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.LockingValues\u003E",
           "PropertyComments": "Locking Type"
         }
       ]
@@ -47955,19 +47955,19 @@
         {
           "QName": "w:cryptProviderType",
           "PropertyName": "CryptographicProviderType",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.CryptProviderValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.CryptProviderValues\u003E",
           "PropertyComments": "Cryptographic Provider Type"
         },
         {
           "QName": "w:cryptAlgorithmClass",
           "PropertyName": "CryptographicAlgorithmClass",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.CryptAlgorithmClassValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.CryptAlgorithmClassValues\u003E",
           "PropertyComments": "Cryptographic Algorithm Class"
         },
         {
           "QName": "w:cryptAlgorithmType",
           "PropertyName": "CryptographicAlgorithmType",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.CryptAlgorithmValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.CryptAlgorithmValues\u003E",
           "PropertyComments": "Cryptographic Algorithm Type"
         },
         {
@@ -48147,7 +48147,7 @@
         {
           "QName": "w:val",
           "PropertyName": "Val",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.ViewValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.ViewValues\u003E",
           "PropertyComments": "Document View Setting  Value",
           "Validators": [
             {
@@ -48167,7 +48167,7 @@
         {
           "QName": "w:val",
           "PropertyName": "Val",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.PresetZoomValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.PresetZoomValues\u003E",
           "PropertyComments": "Zoom Type"
         },
         {
@@ -48325,13 +48325,13 @@
         {
           "QName": "w:spelling",
           "PropertyName": "Spelling",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.ProofingStateValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.ProofingStateValues\u003E",
           "PropertyComments": "Spell Checking State"
         },
         {
           "QName": "w:grammar",
           "PropertyName": "Grammar",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.ProofingStateValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.ProofingStateValues\u003E",
           "PropertyComments": "Grammatical Checking State"
         }
       ]
@@ -48680,7 +48680,7 @@
         {
           "QName": "w:val",
           "PropertyName": "Val",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.DocumentTypeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.DocumentTypeValues\u003E",
           "PropertyComments": "Document Classification Value",
           "Validators": [
             {
@@ -48956,7 +48956,7 @@
         {
           "QName": "w:edit",
           "PropertyName": "Edit",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.DocumentProtectionValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.DocumentProtectionValues\u003E",
           "PropertyComments": "Document Editing Restrictions"
         },
         {
@@ -48974,19 +48974,19 @@
         {
           "QName": "w:cryptProviderType",
           "PropertyName": "CryptographicProviderType",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.CryptProviderValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.CryptProviderValues\u003E",
           "PropertyComments": "Cryptographic Provider Type"
         },
         {
           "QName": "w:cryptAlgorithmClass",
           "PropertyName": "CryptographicAlgorithmClass",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.CryptAlgorithmClassValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.CryptAlgorithmClassValues\u003E",
           "PropertyComments": "Cryptographic Algorithm Class"
         },
         {
           "QName": "w:cryptAlgorithmType",
           "PropertyName": "CryptographicAlgorithmType",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.CryptAlgorithmValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.CryptAlgorithmValues\u003E",
           "PropertyComments": "Cryptographic Algorithm Type"
         },
         {
@@ -49323,7 +49323,7 @@
         {
           "QName": "w:val",
           "PropertyName": "Val",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.CharacterSpacingValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.CharacterSpacingValues\u003E",
           "PropertyComments": "Value",
           "Validators": [
             {
@@ -50677,73 +50677,73 @@
         {
           "QName": "w:bg1",
           "PropertyName": "Background1",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.ColorSchemeIndexValues\u003E",
           "PropertyComments": "Background 1 Theme Color Mapping"
         },
         {
           "QName": "w:t1",
           "PropertyName": "Text1",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.ColorSchemeIndexValues\u003E",
           "PropertyComments": "Text 1 Theme Color Mapping"
         },
         {
           "QName": "w:bg2",
           "PropertyName": "Background2",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.ColorSchemeIndexValues\u003E",
           "PropertyComments": "Background 2 Theme Color Mapping"
         },
         {
           "QName": "w:t2",
           "PropertyName": "Text2",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.ColorSchemeIndexValues\u003E",
           "PropertyComments": "Text 2 Theme Color Mapping"
         },
         {
           "QName": "w:accent1",
           "PropertyName": "Accent1",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.ColorSchemeIndexValues\u003E",
           "PropertyComments": "Accent 1 Theme Color Mapping"
         },
         {
           "QName": "w:accent2",
           "PropertyName": "Accent2",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.ColorSchemeIndexValues\u003E",
           "PropertyComments": "Accent 2 Theme Color Mapping"
         },
         {
           "QName": "w:accent3",
           "PropertyName": "Accent3",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.ColorSchemeIndexValues\u003E",
           "PropertyComments": "Accent3 Theme Color Mapping"
         },
         {
           "QName": "w:accent4",
           "PropertyName": "Accent4",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.ColorSchemeIndexValues\u003E",
           "PropertyComments": "Accent4 Theme Color Mapping"
         },
         {
           "QName": "w:accent5",
           "PropertyName": "Accent5",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.ColorSchemeIndexValues\u003E",
           "PropertyComments": "Accent5 Theme Color Mapping"
         },
         {
           "QName": "w:accent6",
           "PropertyName": "Accent6",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.ColorSchemeIndexValues\u003E",
           "PropertyComments": "Accent6 Theme Color Mapping"
         },
         {
           "QName": "w:hyperlink",
           "PropertyName": "Hyperlink",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.ColorSchemeIndexValues\u003E",
           "PropertyComments": "Hyperlink Theme Color Mapping"
         },
         {
           "QName": "w:followedHyperlink",
           "PropertyName": "FollowedHyperlink",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.ColorSchemeIndexValues\u003E",
           "PropertyComments": "Followed Hyperlink Theme Color Mapping"
         }
       ]
@@ -50884,7 +50884,7 @@
         {
           "QName": "w:val",
           "PropertyName": "Val",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.TargetScreenSizeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.TargetScreenSizeValues\u003E",
           "PropertyComments": "Target Screen Size Value",
           "Validators": [
             {
@@ -51044,7 +51044,7 @@
         {
           "QName": "w:characterSet",
           "PropertyName": "StrictCharacterSet",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.StrictCharacterSet\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.StrictCharacterSet\u003E",
           "PropertyComments": "characterSet"
         }
       ]
@@ -51059,7 +51059,7 @@
         {
           "QName": "w:val",
           "PropertyName": "Val",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.FontFamilyValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.FontFamilyValues\u003E",
           "PropertyComments": "Font Family Value",
           "Validators": [
             {
@@ -51079,7 +51079,7 @@
         {
           "QName": "w:val",
           "PropertyName": "Val",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Wordprocessing.FontPitchValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.WordprocessingML.Y2006.Main.FontPitchValues\u003E",
           "PropertyComments": "Value",
           "Validators": [
             {

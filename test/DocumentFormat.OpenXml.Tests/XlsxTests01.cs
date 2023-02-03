@@ -10,7 +10,7 @@ using Xunit;
 
 using static DocumentFormat.OpenXml.Tests.TestAssets;
 
-using S = DocumentFormat.OpenXml.Spreadsheet;
+using S = DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main;
 
 namespace DocumentFormat.OpenXml.Tests
 {

@@ -11,7 +11,7 @@ using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main;
 using DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2;
 using DocumentFormat.OpenXml.Packaging;
-using DocumentFormat.OpenXml.Spreadsheet;
+using DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main;
 using DocumentFormat.OpenXml.Validation.Schema;
 using System;
 using System.Collections.Generic;
@@ -214,7 +214,7 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2019.NamedSheetViews
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Extension" /> <c>&lt;x:ext></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Extension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
     /// </remark>
     public partial class ExtensionList : TypedOpenXmlCompositeElement
@@ -255,14 +255,14 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2019.NamedSheetViews
             base.ConfigureMetadata(builder);
             builder.SetSchema("xnsv:extLst");
             builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Extension>();
+            builder.AddChild<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Extension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Extension), 0, 0)
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Extension), 0, 0)
                     }
                 }
             };
@@ -533,9 +533,9 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2019.NamedSheetViews
         /// <para>sortMethod, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: sortMethod</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.SortMethodValues>? SortMethod
+        public EnumValue<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.SortMethodValues>? SortMethod
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.SortMethodValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.SortMethodValues>>();
             set => SetAttribute(value);
         }
 
@@ -578,13 +578,13 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2019.NamedSheetViews
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Border" /> <c>&lt;x:border></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Alignment" /> <c>&lt;x:alignment></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Protection" /> <c>&lt;x:protection></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Fill" /> <c>&lt;x:fill></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Font" /> <c>&lt;x:font></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.NumberingFormat" /> <c>&lt;x:numFmt></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Border" /> <c>&lt;x:border></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Alignment" /> <c>&lt;x:alignment></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Protection" /> <c>&lt;x:protection></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Fill" /> <c>&lt;x:fill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Font" /> <c>&lt;x:font></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.NumberingFormat" /> <c>&lt;x:numFmt></c></description></item>
     /// </list>
     /// </remark>
     public partial class DifferentialFormatType : TypedOpenXmlCompositeElement
@@ -625,22 +625,22 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2019.NamedSheetViews
             base.ConfigureMetadata(builder);
             builder.SetSchema("xnsv:dxf");
             builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Border>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Alignment>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Protection>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Fill>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Font>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.NumberingFormat>();
+            builder.AddChild<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Border>();
+            builder.AddChild<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Alignment>();
+            builder.AddChild<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Protection>();
+            builder.AddChild<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Fill>();
+            builder.AddChild<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Font>();
+            builder.AddChild<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.NumberingFormat>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Font), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.NumberingFormat), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Fill), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Alignment), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Border), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Protection), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Font), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.NumberingFormat), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Fill), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Alignment), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Border), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Protection), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.ExtensionList), 0, 1)
             };
         }
 
@@ -651,9 +651,9 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2019.NamedSheetViews
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.Font? Font
+        public DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Font? Font
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Font>();
+            get => GetElement<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Font>();
             set => SetElement(value);
         }
 
@@ -664,9 +664,9 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2019.NamedSheetViews
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.NumberingFormat? NumberingFormat
+        public DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.NumberingFormat? NumberingFormat
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.NumberingFormat>();
+            get => GetElement<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.NumberingFormat>();
             set => SetElement(value);
         }
 
@@ -677,9 +677,9 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2019.NamedSheetViews
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.Fill? Fill
+        public DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Fill? Fill
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Fill>();
+            get => GetElement<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Fill>();
             set => SetElement(value);
         }
 
@@ -690,9 +690,9 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2019.NamedSheetViews
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.Alignment? Alignment
+        public DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Alignment? Alignment
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Alignment>();
+            get => GetElement<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Alignment>();
             set => SetElement(value);
         }
 
@@ -703,9 +703,9 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2019.NamedSheetViews
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.Border? Border
+        public DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Border? Border
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Border>();
+            get => GetElement<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Border>();
             set => SetElement(value);
         }
 
@@ -716,9 +716,9 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2019.NamedSheetViews
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.Protection? Protection
+        public DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Protection? Protection
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Protection>();
+            get => GetElement<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Protection>();
             set => SetElement(value);
         }
 
@@ -729,9 +729,9 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2019.NamedSheetViews
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -747,13 +747,13 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2019.NamedSheetViews
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ColorFilter" /> <c>&lt;x:colorFilter></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CustomFilters" /> <c>&lt;x:customFilters></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DynamicFilter" /> <c>&lt;x:dynamicFilter></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Filters" /> <c>&lt;x:filters></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.IconFilter" /> <c>&lt;x:iconFilter></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Top10" /> <c>&lt;x:top10></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.ColorFilter" /> <c>&lt;x:colorFilter></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.CustomFilters" /> <c>&lt;x:customFilters></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.DynamicFilter" /> <c>&lt;x:dynamicFilter></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Filters" /> <c>&lt;x:filters></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.IconFilter" /> <c>&lt;x:iconFilter></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Top10" /> <c>&lt;x:top10></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.CustomFilters" /> <c>&lt;x14:customFilters></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.IconFilter" /> <c>&lt;x14:iconFilter></c></description></item>
     /// </list>
@@ -826,13 +826,13 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2019.NamedSheetViews
             base.ConfigureMetadata(builder);
             builder.SetSchema("xnsv:filter");
             builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ColorFilter>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CustomFilters>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DynamicFilter>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Filters>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.IconFilter>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Top10>();
+            builder.AddChild<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.ColorFilter>();
+            builder.AddChild<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.CustomFilters>();
+            builder.AddChild<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.DynamicFilter>();
+            builder.AddChild<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Filters>();
+            builder.AddChild<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.IconFilter>();
+            builder.AddChild<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Top10>();
             builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.CustomFilters>();
             builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.IconFilter>();
             builder.AddElement<FilterColumn>()
@@ -844,15 +844,15 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2019.NamedSheetViews
                 .AddAttribute("showButton", a => a.ShowButton);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Filters), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Top10), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Filters), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Top10), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.CustomFilters), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CustomFilters), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DynamicFilter), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ColorFilter), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.CustomFilters), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.DynamicFilter), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.ColorFilter), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.IconFilter), 0, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.IconFilter), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.IconFilter), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.ExtensionList), 0, 1)
             };
         }
 
@@ -863,9 +863,9 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2019.NamedSheetViews
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.Filters? Filters
+        public DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Filters? Filters
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Filters>();
+            get => GetElement<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Filters>();
             set => SetElement(value);
         }
 
@@ -876,9 +876,9 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2019.NamedSheetViews
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.Top10? Top10
+        public DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Top10? Top10
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Top10>();
+            get => GetElement<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Top10>();
             set => SetElement(value);
         }
 
@@ -902,9 +902,9 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2019.NamedSheetViews
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.CustomFilters? CustomFilters
+        public DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.CustomFilters? CustomFilters
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CustomFilters>();
+            get => GetElement<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.CustomFilters>();
             set => SetElement(value);
         }
 
@@ -915,9 +915,9 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2019.NamedSheetViews
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.DynamicFilter? DynamicFilter
+        public DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.DynamicFilter? DynamicFilter
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.DynamicFilter>();
+            get => GetElement<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.DynamicFilter>();
             set => SetElement(value);
         }
 
@@ -928,9 +928,9 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2019.NamedSheetViews
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.ColorFilter? ColorFilter
+        public DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.ColorFilter? ColorFilter
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ColorFilter>();
+            get => GetElement<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.ColorFilter>();
             set => SetElement(value);
         }
 
@@ -954,9 +954,9 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2019.NamedSheetViews
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.IconFilter? IconFilter
+        public DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.IconFilter? IconFilter
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.IconFilter>();
+            get => GetElement<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.IconFilter>();
             set => SetElement(value);
         }
 
@@ -967,9 +967,9 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2019.NamedSheetViews
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -1116,9 +1116,9 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2019.NamedSheetViews
         /// <para>sortBy, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: sortBy</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.SortByValues>? SortBy
+        public EnumValue<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.SortByValues>? SortBy
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.SortByValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.SortByValues>>();
             set => SetAttribute(value);
         }
 
@@ -1232,9 +1232,9 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2019.NamedSheetViews
         /// <para>sortBy, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: sortBy</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.SortByValues>? SortBy
+        public EnumValue<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.SortByValues>? SortBy
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.SortByValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.SortByValues>>();
             set => SetAttribute(value);
         }
 

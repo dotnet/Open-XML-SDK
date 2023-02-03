@@ -11,7 +11,7 @@ using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
 using DocumentFormat.OpenXml.Validation.Semantic;
-using DocumentFormat.OpenXml.Wordprocessing;
+using DocumentFormat.OpenXml.WordprocessingML.Y2006.Main;
 using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
@@ -52,9 +52,9 @@ namespace DocumentFormat.OpenXml.Office.Word.Y2012.WordML
         /// <remark>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues>? ThemeColor
+        public EnumValue<DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.ThemeColorValues>? ThemeColor
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.ThemeColorValues>>();
             set => SetAttribute(value);
         }
 
@@ -95,7 +95,7 @@ namespace DocumentFormat.OpenXml.Office.Word.Y2012.WordML
                     aBuilder.AddValidator(RequiredValidator.Instance);
                     aBuilder.AddUnion(union =>
                     {
-                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.Wordprocessing.AutomaticColorValues>>(EnumValidator.Instance);
+                        union.AddValidator<EnumValue<DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.AutomaticColorValues>>(EnumValidator.Instance);
                         union.AddValidator<HexBinaryValue>(new StringValidator() { Length = (3L) });
                     });
                 })

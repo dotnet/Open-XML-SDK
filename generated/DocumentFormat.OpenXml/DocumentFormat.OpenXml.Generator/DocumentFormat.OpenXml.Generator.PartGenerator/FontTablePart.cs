@@ -19,7 +19,7 @@ namespace DocumentFormat.OpenXml.Packaging
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.wordprocessingml.fontTable+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/fontTable";
-        private DocumentFormat.OpenXml.Wordprocessing.Fonts? _rootElement;
+        private DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.Fonts? _rootElement;
 
         /// <summary>
         /// Creates an instance of the FontTablePart OpenXmlType
@@ -39,13 +39,13 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets or sets the root element of this part.
         /// </summary>
-        public DocumentFormat.OpenXml.Wordprocessing.Fonts Fonts
+        public DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.Fonts Fonts
         {
             get
             {
                 if (_rootElement is null)
                 {
-                    LoadDomTree<DocumentFormat.OpenXml.Wordprocessing.Fonts>();
+                    LoadDomTree<DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.Fonts>();
                 }
 
                 return _rootElement!;
@@ -71,7 +71,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             set
             {
-                _rootElement = value as DocumentFormat.OpenXml.Wordprocessing.Fonts;
+                _rootElement = value as DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.Fonts;
             }
         }
 

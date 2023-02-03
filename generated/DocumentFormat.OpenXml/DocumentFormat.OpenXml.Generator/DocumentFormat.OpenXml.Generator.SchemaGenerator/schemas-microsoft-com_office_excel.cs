@@ -15,7 +15,7 @@ using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.Vml.Spreadsheet
+namespace DocumentFormat.OpenXml.Office.Excel.VML
 {
     /// <summary>
     /// <para>Attached Object Data.</para>
@@ -25,73 +25,73 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.CommentRowTarget" /> <c>&lt;xvml:Row></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.CommentColumnTarget" /> <c>&lt;xvml:Column></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.InputValidationType" /> <c>&lt;xvml:VTEdit></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.MinDropDownWidth" /> <c>&lt;xvml:WidthMin></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.SelectionEntry" /> <c>&lt;xvml:Sel></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.DropLines" /> <c>&lt;xvml:DropLines></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.Checked" /> <c>&lt;xvml:Checked></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.ScrollBarPosition" /> <c>&lt;xvml:Val></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.ScrollBarMin" /> <c>&lt;xvml:Min></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.ScrollBarMax" /> <c>&lt;xvml:Max></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.ScrollBarIncrement" /> <c>&lt;xvml:Inc></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.ScrollBarPageIncrement" /> <c>&lt;xvml:Page></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.ScrollBarWidth" /> <c>&lt;xvml:Dx></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.ScriptLanguage" /> <c>&lt;xvml:ScriptLanguage></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.ScriptLocation" /> <c>&lt;xvml:ScriptLocation></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.Anchor" /> <c>&lt;xvml:Anchor></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.HorizontalTextAlignment" /> <c>&lt;xvml:TextHAlign></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.VerticalTextAlignment" /> <c>&lt;xvml:TextVAlign></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.FormulaRange" /> <c>&lt;xvml:FmlaRange></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.SelectionType" /> <c>&lt;xvml:SelType></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.MultiSelections" /> <c>&lt;xvml:MultiSel></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.ListBoxCallbackType" /> <c>&lt;xvml:LCT></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.ListItem" /> <c>&lt;xvml:ListItem></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.DropStyle" /> <c>&lt;xvml:DropStyle></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.FormulaLink" /> <c>&lt;xvml:FmlaLink></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.FormulaPicture" /> <c>&lt;xvml:FmlaPict></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.FormulaGroup" /> <c>&lt;xvml:FmlaGroup></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.ScriptText" /> <c>&lt;xvml:ScriptText></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.ScriptExtended" /> <c>&lt;xvml:ScriptExtended></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.FormulaTextBox" /> <c>&lt;xvml:FmlaTxbx></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.AcceleratorPrimary" /> <c>&lt;xvml:Accel></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.AcceleratorSecondary" /> <c>&lt;xvml:Accel2></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.ClipboardFormat" /> <c>&lt;xvml:CF></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.FormulaMacro" /> <c>&lt;xvml:FmlaMacro></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.MoveWithCells" /> <c>&lt;xvml:MoveWithCells></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.ResizeWithCells" /> <c>&lt;xvml:SizeWithCells></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.Locked" /> <c>&lt;xvml:Locked></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.DefaultSize" /> <c>&lt;xvml:DefaultSize></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.PrintObject" /> <c>&lt;xvml:PrintObject></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.Disabled" /> <c>&lt;xvml:Disabled></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.AutoFill" /> <c>&lt;xvml:AutoFill></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.AutoLine" /> <c>&lt;xvml:AutoLine></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.AutoSizePicture" /> <c>&lt;xvml:AutoPict></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.LockText" /> <c>&lt;xvml:LockText></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.JustifyLastLine" /> <c>&lt;xvml:JustLastX></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.SecretEdit" /> <c>&lt;xvml:SecretEdit></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.DefaultButton" /> <c>&lt;xvml:Default></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.HelpButton" /> <c>&lt;xvml:Help></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.CancelButton" /> <c>&lt;xvml:Cancel></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.DismissButton" /> <c>&lt;xvml:Dismiss></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.Visible" /> <c>&lt;xvml:Visible></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.RowHidden" /> <c>&lt;xvml:RowHidden></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.ColumnHidden" /> <c>&lt;xvml:ColHidden></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.MultiLine" /> <c>&lt;xvml:MultiLine></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.VerticalScrollBar" /> <c>&lt;xvml:VScroll></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.ValidIds" /> <c>&lt;xvml:ValidIds></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.Disable3DForListBoxAndDropDown" /> <c>&lt;xvml:NoThreeD2></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.Colored" /> <c>&lt;xvml:Colored></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.Disable3D" /> <c>&lt;xvml:NoThreeD></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.FirstButton" /> <c>&lt;xvml:FirstButton></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.HorizontalScrollBar" /> <c>&lt;xvml:Horiz></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.MapOcxControl" /> <c>&lt;xvml:MapOCX></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.CameraObject" /> <c>&lt;xvml:Camera></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.RecalculateAlways" /> <c>&lt;xvml:RecalcAlways></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.AutoScaleFont" /> <c>&lt;xvml:AutoScale></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.DdeObject" /> <c>&lt;xvml:DDE></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.UIObject" /> <c>&lt;xvml:UIObj></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.VML.CommentRowTarget" /> <c>&lt;xvml:Row></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.VML.CommentColumnTarget" /> <c>&lt;xvml:Column></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.VML.InputValidationType" /> <c>&lt;xvml:VTEdit></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.VML.MinDropDownWidth" /> <c>&lt;xvml:WidthMin></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.VML.SelectionEntry" /> <c>&lt;xvml:Sel></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.VML.DropLines" /> <c>&lt;xvml:DropLines></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.VML.Checked" /> <c>&lt;xvml:Checked></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.VML.ScrollBarPosition" /> <c>&lt;xvml:Val></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.VML.ScrollBarMin" /> <c>&lt;xvml:Min></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.VML.ScrollBarMax" /> <c>&lt;xvml:Max></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.VML.ScrollBarIncrement" /> <c>&lt;xvml:Inc></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.VML.ScrollBarPageIncrement" /> <c>&lt;xvml:Page></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.VML.ScrollBarWidth" /> <c>&lt;xvml:Dx></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.VML.ScriptLanguage" /> <c>&lt;xvml:ScriptLanguage></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.VML.ScriptLocation" /> <c>&lt;xvml:ScriptLocation></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.VML.Anchor" /> <c>&lt;xvml:Anchor></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.VML.HorizontalTextAlignment" /> <c>&lt;xvml:TextHAlign></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.VML.VerticalTextAlignment" /> <c>&lt;xvml:TextVAlign></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.VML.FormulaRange" /> <c>&lt;xvml:FmlaRange></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.VML.SelectionType" /> <c>&lt;xvml:SelType></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.VML.MultiSelections" /> <c>&lt;xvml:MultiSel></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.VML.ListBoxCallbackType" /> <c>&lt;xvml:LCT></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.VML.ListItem" /> <c>&lt;xvml:ListItem></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.VML.DropStyle" /> <c>&lt;xvml:DropStyle></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.VML.FormulaLink" /> <c>&lt;xvml:FmlaLink></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.VML.FormulaPicture" /> <c>&lt;xvml:FmlaPict></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.VML.FormulaGroup" /> <c>&lt;xvml:FmlaGroup></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.VML.ScriptText" /> <c>&lt;xvml:ScriptText></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.VML.ScriptExtended" /> <c>&lt;xvml:ScriptExtended></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.VML.FormulaTextBox" /> <c>&lt;xvml:FmlaTxbx></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.VML.AcceleratorPrimary" /> <c>&lt;xvml:Accel></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.VML.AcceleratorSecondary" /> <c>&lt;xvml:Accel2></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.VML.ClipboardFormat" /> <c>&lt;xvml:CF></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.VML.FormulaMacro" /> <c>&lt;xvml:FmlaMacro></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.VML.MoveWithCells" /> <c>&lt;xvml:MoveWithCells></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.VML.ResizeWithCells" /> <c>&lt;xvml:SizeWithCells></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.VML.Locked" /> <c>&lt;xvml:Locked></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.VML.DefaultSize" /> <c>&lt;xvml:DefaultSize></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.VML.PrintObject" /> <c>&lt;xvml:PrintObject></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.VML.Disabled" /> <c>&lt;xvml:Disabled></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.VML.AutoFill" /> <c>&lt;xvml:AutoFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.VML.AutoLine" /> <c>&lt;xvml:AutoLine></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.VML.AutoSizePicture" /> <c>&lt;xvml:AutoPict></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.VML.LockText" /> <c>&lt;xvml:LockText></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.VML.JustifyLastLine" /> <c>&lt;xvml:JustLastX></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.VML.SecretEdit" /> <c>&lt;xvml:SecretEdit></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.VML.DefaultButton" /> <c>&lt;xvml:Default></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.VML.HelpButton" /> <c>&lt;xvml:Help></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.VML.CancelButton" /> <c>&lt;xvml:Cancel></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.VML.DismissButton" /> <c>&lt;xvml:Dismiss></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.VML.Visible" /> <c>&lt;xvml:Visible></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.VML.RowHidden" /> <c>&lt;xvml:RowHidden></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.VML.ColumnHidden" /> <c>&lt;xvml:ColHidden></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.VML.MultiLine" /> <c>&lt;xvml:MultiLine></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.VML.VerticalScrollBar" /> <c>&lt;xvml:VScroll></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.VML.ValidIds" /> <c>&lt;xvml:ValidIds></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.VML.Disable3DForListBoxAndDropDown" /> <c>&lt;xvml:NoThreeD2></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.VML.Colored" /> <c>&lt;xvml:Colored></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.VML.Disable3D" /> <c>&lt;xvml:NoThreeD></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.VML.FirstButton" /> <c>&lt;xvml:FirstButton></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.VML.HorizontalScrollBar" /> <c>&lt;xvml:Horiz></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.VML.MapOcxControl" /> <c>&lt;xvml:MapOCX></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.VML.CameraObject" /> <c>&lt;xvml:Camera></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.VML.RecalculateAlways" /> <c>&lt;xvml:RecalcAlways></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.VML.AutoScaleFont" /> <c>&lt;xvml:AutoScale></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.VML.DdeObject" /> <c>&lt;xvml:DDE></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.VML.UIObject" /> <c>&lt;xvml:UIObj></c></description></item>
     /// </list>
     /// </remark>
     public partial class ClientData : TypedOpenXmlCompositeElement
@@ -131,9 +131,9 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         /// <para>Object type</para>
         /// <para>Represents the following attribute in the schema: ObjectType</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.ObjectValues>? ObjectType
+        public EnumValue<DocumentFormat.OpenXml.Office.Excel.VML.ObjectValues>? ObjectType
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.ObjectValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.Excel.VML.ObjectValues>>();
             set => SetAttribute(value);
         }
 
@@ -141,73 +141,73 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("xvml:ClientData");
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.CommentRowTarget>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.CommentColumnTarget>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.InputValidationType>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.MinDropDownWidth>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.SelectionEntry>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.DropLines>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.Checked>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ScrollBarPosition>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ScrollBarMin>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ScrollBarMax>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ScrollBarIncrement>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ScrollBarPageIncrement>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ScrollBarWidth>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ScriptLanguage>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ScriptLocation>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.Anchor>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.HorizontalTextAlignment>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.VerticalTextAlignment>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.FormulaRange>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.SelectionType>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.MultiSelections>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ListBoxCallbackType>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ListItem>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.DropStyle>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.FormulaLink>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.FormulaPicture>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.FormulaGroup>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ScriptText>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ScriptExtended>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.FormulaTextBox>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.AcceleratorPrimary>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.AcceleratorSecondary>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ClipboardFormat>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.FormulaMacro>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.MoveWithCells>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ResizeWithCells>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.Locked>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.DefaultSize>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.PrintObject>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.Disabled>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.AutoFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.AutoLine>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.AutoSizePicture>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.LockText>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.JustifyLastLine>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.SecretEdit>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.DefaultButton>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.HelpButton>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.CancelButton>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.DismissButton>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.Visible>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.RowHidden>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ColumnHidden>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.MultiLine>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.VerticalScrollBar>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.ValidIds>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.Disable3DForListBoxAndDropDown>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.Colored>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.Disable3D>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.FirstButton>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.HorizontalScrollBar>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.MapOcxControl>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.CameraObject>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.RecalculateAlways>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.AutoScaleFont>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.DdeObject>();
-            builder.AddChild<DocumentFormat.OpenXml.Vml.Spreadsheet.UIObject>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.VML.CommentRowTarget>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.VML.CommentColumnTarget>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.VML.InputValidationType>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.VML.MinDropDownWidth>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.VML.SelectionEntry>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.VML.DropLines>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.VML.Checked>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.VML.ScrollBarPosition>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.VML.ScrollBarMin>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.VML.ScrollBarMax>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.VML.ScrollBarIncrement>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.VML.ScrollBarPageIncrement>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.VML.ScrollBarWidth>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.VML.ScriptLanguage>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.VML.ScriptLocation>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.VML.Anchor>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.VML.HorizontalTextAlignment>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.VML.VerticalTextAlignment>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.VML.FormulaRange>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.VML.SelectionType>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.VML.MultiSelections>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.VML.ListBoxCallbackType>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.VML.ListItem>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.VML.DropStyle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.VML.FormulaLink>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.VML.FormulaPicture>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.VML.FormulaGroup>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.VML.ScriptText>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.VML.ScriptExtended>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.VML.FormulaTextBox>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.VML.AcceleratorPrimary>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.VML.AcceleratorSecondary>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.VML.ClipboardFormat>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.VML.FormulaMacro>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.VML.MoveWithCells>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.VML.ResizeWithCells>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.VML.Locked>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.VML.DefaultSize>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.VML.PrintObject>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.VML.Disabled>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.VML.AutoFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.VML.AutoLine>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.VML.AutoSizePicture>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.VML.LockText>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.VML.JustifyLastLine>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.VML.SecretEdit>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.VML.DefaultButton>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.VML.HelpButton>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.VML.CancelButton>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.VML.DismissButton>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.VML.Visible>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.VML.RowHidden>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.VML.ColumnHidden>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.VML.MultiLine>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.VML.VerticalScrollBar>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.VML.ValidIds>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.VML.Disable3DForListBoxAndDropDown>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.VML.Colored>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.VML.Disable3D>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.VML.FirstButton>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.VML.HorizontalScrollBar>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.VML.MapOcxControl>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.VML.CameraObject>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.VML.RecalculateAlways>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.VML.AutoScaleFont>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.VML.DdeObject>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.VML.UIObject>();
             builder.AddElement<ClientData>()
                 .AddAttribute("ObjectType", a => a.ObjectType, aBuilder =>
                 {
@@ -215,73 +215,73 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 0)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.MoveWithCells), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ResizeWithCells), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.Anchor), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.Locked), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.DefaultSize), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.PrintObject), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.Disabled), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.AutoFill), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.AutoLine), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.AutoSizePicture), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.FormulaMacro), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.HorizontalTextAlignment), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.VerticalTextAlignment), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.LockText), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.JustifyLastLine), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.SecretEdit), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.DefaultButton), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.HelpButton), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.CancelButton), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.DismissButton), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.AcceleratorPrimary), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.AcceleratorSecondary), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.CommentRowTarget), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.CommentColumnTarget), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.Visible), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.RowHidden), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ColumnHidden), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.InputValidationType), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.MultiLine), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.VerticalScrollBar), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ValidIds), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.FormulaRange), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.MinDropDownWidth), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.SelectionEntry), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.Disable3DForListBoxAndDropDown), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.SelectionType), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.MultiSelections), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ListBoxCallbackType), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ListItem), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.DropStyle), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.Colored), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.DropLines), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.Checked), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.FormulaLink), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.FormulaPicture), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.Disable3D), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.FirstButton), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.FormulaGroup), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ScrollBarPosition), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ScrollBarMin), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ScrollBarMax), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ScrollBarIncrement), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ScrollBarPageIncrement), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.HorizontalScrollBar), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ScrollBarWidth), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.MapOcxControl), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClipboardFormat), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.CameraObject), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.RecalculateAlways), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.AutoScaleFont), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.DdeObject), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.UIObject), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ScriptText), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ScriptExtended), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ScriptLanguage), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ScriptLocation), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.FormulaTextBox), 1, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.VML.MoveWithCells), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.VML.ResizeWithCells), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.VML.Anchor), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.VML.Locked), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.VML.DefaultSize), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.VML.PrintObject), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.VML.Disabled), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.VML.AutoFill), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.VML.AutoLine), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.VML.AutoSizePicture), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.VML.FormulaMacro), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.VML.HorizontalTextAlignment), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.VML.VerticalTextAlignment), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.VML.LockText), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.VML.JustifyLastLine), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.VML.SecretEdit), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.VML.DefaultButton), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.VML.HelpButton), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.VML.CancelButton), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.VML.DismissButton), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.VML.AcceleratorPrimary), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.VML.AcceleratorSecondary), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.VML.CommentRowTarget), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.VML.CommentColumnTarget), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.VML.Visible), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.VML.RowHidden), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.VML.ColumnHidden), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.VML.InputValidationType), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.VML.MultiLine), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.VML.VerticalScrollBar), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.VML.ValidIds), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.VML.FormulaRange), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.VML.MinDropDownWidth), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.VML.SelectionEntry), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.VML.Disable3DForListBoxAndDropDown), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.VML.SelectionType), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.VML.MultiSelections), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.VML.ListBoxCallbackType), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.VML.ListItem), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.VML.DropStyle), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.VML.Colored), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.VML.DropLines), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.VML.Checked), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.VML.FormulaLink), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.VML.FormulaPicture), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.VML.Disable3D), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.VML.FirstButton), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.VML.FormulaGroup), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.VML.ScrollBarPosition), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.VML.ScrollBarMin), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.VML.ScrollBarMax), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.VML.ScrollBarIncrement), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.VML.ScrollBarPageIncrement), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.VML.HorizontalScrollBar), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.VML.ScrollBarWidth), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.VML.MapOcxControl), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.VML.ClipboardFormat), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.VML.CameraObject), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.VML.RecalculateAlways), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.VML.AutoScaleFont), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.VML.DdeObject), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.VML.UIObject), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.VML.ScriptText), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.VML.ScriptExtended), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.VML.ScriptLanguage), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.VML.ScriptLocation), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Excel.VML.FormulaTextBox), 1, 1)
             };
             builder.AddConstraint(new AttributeValueSetConstraint(builder.CreateQName("xvml:ObjectType"), false, new string[] { "Movie" }) { Application = ApplicationType.Excel });
             builder.AddConstraint(new AttributeValueSetConstraint(builder.CreateQName("x:ObjectType"), false, new string[] { "LineA", "RectA" }) { Application = ApplicationType.Excel });
@@ -315,13 +315,13 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
 
         internal override OpenXmlSimpleType InnerTextToValue(string text)
         {
-            return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
+            return new EnumValue<DocumentFormat.OpenXml.Office.Excel.VML.BooleanEntryWithBlankValues> { InnerText = text };
         }
 
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
+            builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Office.Excel.VML.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
             builder.SetSchema("xvml:MoveWithCells");
         }
 
@@ -353,13 +353,13 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
 
         internal override OpenXmlSimpleType InnerTextToValue(string text)
         {
-            return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
+            return new EnumValue<DocumentFormat.OpenXml.Office.Excel.VML.BooleanEntryWithBlankValues> { InnerText = text };
         }
 
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
+            builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Office.Excel.VML.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
             builder.SetSchema("xvml:SizeWithCells");
         }
 
@@ -391,13 +391,13 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
 
         internal override OpenXmlSimpleType InnerTextToValue(string text)
         {
-            return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
+            return new EnumValue<DocumentFormat.OpenXml.Office.Excel.VML.BooleanEntryWithBlankValues> { InnerText = text };
         }
 
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
+            builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Office.Excel.VML.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
             builder.SetSchema("xvml:Locked");
         }
 
@@ -429,13 +429,13 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
 
         internal override OpenXmlSimpleType InnerTextToValue(string text)
         {
-            return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
+            return new EnumValue<DocumentFormat.OpenXml.Office.Excel.VML.BooleanEntryWithBlankValues> { InnerText = text };
         }
 
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
+            builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Office.Excel.VML.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
             builder.SetSchema("xvml:DefaultSize");
         }
 
@@ -467,13 +467,13 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
 
         internal override OpenXmlSimpleType InnerTextToValue(string text)
         {
-            return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
+            return new EnumValue<DocumentFormat.OpenXml.Office.Excel.VML.BooleanEntryWithBlankValues> { InnerText = text };
         }
 
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
+            builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Office.Excel.VML.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
             builder.SetSchema("xvml:PrintObject");
         }
 
@@ -505,13 +505,13 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
 
         internal override OpenXmlSimpleType InnerTextToValue(string text)
         {
-            return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
+            return new EnumValue<DocumentFormat.OpenXml.Office.Excel.VML.BooleanEntryWithBlankValues> { InnerText = text };
         }
 
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
+            builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Office.Excel.VML.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
             builder.SetSchema("xvml:Disabled");
         }
 
@@ -543,13 +543,13 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
 
         internal override OpenXmlSimpleType InnerTextToValue(string text)
         {
-            return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
+            return new EnumValue<DocumentFormat.OpenXml.Office.Excel.VML.BooleanEntryWithBlankValues> { InnerText = text };
         }
 
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
+            builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Office.Excel.VML.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
             builder.SetSchema("xvml:AutoFill");
         }
 
@@ -581,13 +581,13 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
 
         internal override OpenXmlSimpleType InnerTextToValue(string text)
         {
-            return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
+            return new EnumValue<DocumentFormat.OpenXml.Office.Excel.VML.BooleanEntryWithBlankValues> { InnerText = text };
         }
 
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
+            builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Office.Excel.VML.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
             builder.SetSchema("xvml:AutoLine");
         }
 
@@ -619,13 +619,13 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
 
         internal override OpenXmlSimpleType InnerTextToValue(string text)
         {
-            return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
+            return new EnumValue<DocumentFormat.OpenXml.Office.Excel.VML.BooleanEntryWithBlankValues> { InnerText = text };
         }
 
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
+            builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Office.Excel.VML.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
             builder.SetSchema("xvml:AutoPict");
         }
 
@@ -657,13 +657,13 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
 
         internal override OpenXmlSimpleType InnerTextToValue(string text)
         {
-            return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
+            return new EnumValue<DocumentFormat.OpenXml.Office.Excel.VML.BooleanEntryWithBlankValues> { InnerText = text };
         }
 
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
+            builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Office.Excel.VML.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
             builder.SetSchema("xvml:LockText");
         }
 
@@ -695,13 +695,13 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
 
         internal override OpenXmlSimpleType InnerTextToValue(string text)
         {
-            return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
+            return new EnumValue<DocumentFormat.OpenXml.Office.Excel.VML.BooleanEntryWithBlankValues> { InnerText = text };
         }
 
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
+            builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Office.Excel.VML.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
             builder.SetSchema("xvml:JustLastX");
         }
 
@@ -733,13 +733,13 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
 
         internal override OpenXmlSimpleType InnerTextToValue(string text)
         {
-            return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
+            return new EnumValue<DocumentFormat.OpenXml.Office.Excel.VML.BooleanEntryWithBlankValues> { InnerText = text };
         }
 
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
+            builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Office.Excel.VML.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
             builder.SetSchema("xvml:SecretEdit");
         }
 
@@ -771,13 +771,13 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
 
         internal override OpenXmlSimpleType InnerTextToValue(string text)
         {
-            return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
+            return new EnumValue<DocumentFormat.OpenXml.Office.Excel.VML.BooleanEntryWithBlankValues> { InnerText = text };
         }
 
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
+            builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Office.Excel.VML.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
             builder.SetSchema("xvml:Default");
         }
 
@@ -809,13 +809,13 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
 
         internal override OpenXmlSimpleType InnerTextToValue(string text)
         {
-            return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
+            return new EnumValue<DocumentFormat.OpenXml.Office.Excel.VML.BooleanEntryWithBlankValues> { InnerText = text };
         }
 
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
+            builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Office.Excel.VML.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
             builder.SetSchema("xvml:Help");
         }
 
@@ -847,13 +847,13 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
 
         internal override OpenXmlSimpleType InnerTextToValue(string text)
         {
-            return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
+            return new EnumValue<DocumentFormat.OpenXml.Office.Excel.VML.BooleanEntryWithBlankValues> { InnerText = text };
         }
 
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
+            builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Office.Excel.VML.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
             builder.SetSchema("xvml:Cancel");
         }
 
@@ -885,13 +885,13 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
 
         internal override OpenXmlSimpleType InnerTextToValue(string text)
         {
-            return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
+            return new EnumValue<DocumentFormat.OpenXml.Office.Excel.VML.BooleanEntryWithBlankValues> { InnerText = text };
         }
 
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
+            builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Office.Excel.VML.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
             builder.SetSchema("xvml:Dismiss");
         }
 
@@ -923,13 +923,13 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
 
         internal override OpenXmlSimpleType InnerTextToValue(string text)
         {
-            return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
+            return new EnumValue<DocumentFormat.OpenXml.Office.Excel.VML.BooleanEntryWithBlankValues> { InnerText = text };
         }
 
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
+            builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Office.Excel.VML.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
             builder.SetSchema("xvml:Visible");
         }
 
@@ -961,13 +961,13 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
 
         internal override OpenXmlSimpleType InnerTextToValue(string text)
         {
-            return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
+            return new EnumValue<DocumentFormat.OpenXml.Office.Excel.VML.BooleanEntryWithBlankValues> { InnerText = text };
         }
 
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
+            builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Office.Excel.VML.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
             builder.SetSchema("xvml:RowHidden");
         }
 
@@ -999,13 +999,13 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
 
         internal override OpenXmlSimpleType InnerTextToValue(string text)
         {
-            return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
+            return new EnumValue<DocumentFormat.OpenXml.Office.Excel.VML.BooleanEntryWithBlankValues> { InnerText = text };
         }
 
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
+            builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Office.Excel.VML.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
             builder.SetSchema("xvml:ColHidden");
         }
 
@@ -1037,13 +1037,13 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
 
         internal override OpenXmlSimpleType InnerTextToValue(string text)
         {
-            return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
+            return new EnumValue<DocumentFormat.OpenXml.Office.Excel.VML.BooleanEntryWithBlankValues> { InnerText = text };
         }
 
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
+            builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Office.Excel.VML.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
             builder.SetSchema("xvml:MultiLine");
         }
 
@@ -1075,13 +1075,13 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
 
         internal override OpenXmlSimpleType InnerTextToValue(string text)
         {
-            return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
+            return new EnumValue<DocumentFormat.OpenXml.Office.Excel.VML.BooleanEntryWithBlankValues> { InnerText = text };
         }
 
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
+            builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Office.Excel.VML.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
             builder.SetSchema("xvml:VScroll");
         }
 
@@ -1113,13 +1113,13 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
 
         internal override OpenXmlSimpleType InnerTextToValue(string text)
         {
-            return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
+            return new EnumValue<DocumentFormat.OpenXml.Office.Excel.VML.BooleanEntryWithBlankValues> { InnerText = text };
         }
 
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
+            builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Office.Excel.VML.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
             builder.SetSchema("xvml:ValidIds");
         }
 
@@ -1151,13 +1151,13 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
 
         internal override OpenXmlSimpleType InnerTextToValue(string text)
         {
-            return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
+            return new EnumValue<DocumentFormat.OpenXml.Office.Excel.VML.BooleanEntryWithBlankValues> { InnerText = text };
         }
 
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
+            builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Office.Excel.VML.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
             builder.SetSchema("xvml:NoThreeD2");
         }
 
@@ -1189,13 +1189,13 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
 
         internal override OpenXmlSimpleType InnerTextToValue(string text)
         {
-            return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
+            return new EnumValue<DocumentFormat.OpenXml.Office.Excel.VML.BooleanEntryWithBlankValues> { InnerText = text };
         }
 
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
+            builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Office.Excel.VML.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
             builder.SetSchema("xvml:Colored");
         }
 
@@ -1227,13 +1227,13 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
 
         internal override OpenXmlSimpleType InnerTextToValue(string text)
         {
-            return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
+            return new EnumValue<DocumentFormat.OpenXml.Office.Excel.VML.BooleanEntryWithBlankValues> { InnerText = text };
         }
 
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
+            builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Office.Excel.VML.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
             builder.SetSchema("xvml:NoThreeD");
         }
 
@@ -1265,13 +1265,13 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
 
         internal override OpenXmlSimpleType InnerTextToValue(string text)
         {
-            return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
+            return new EnumValue<DocumentFormat.OpenXml.Office.Excel.VML.BooleanEntryWithBlankValues> { InnerText = text };
         }
 
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
+            builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Office.Excel.VML.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
             builder.SetSchema("xvml:FirstButton");
         }
 
@@ -1303,13 +1303,13 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
 
         internal override OpenXmlSimpleType InnerTextToValue(string text)
         {
-            return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
+            return new EnumValue<DocumentFormat.OpenXml.Office.Excel.VML.BooleanEntryWithBlankValues> { InnerText = text };
         }
 
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
+            builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Office.Excel.VML.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
             builder.SetSchema("xvml:Horiz");
         }
 
@@ -1341,13 +1341,13 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
 
         internal override OpenXmlSimpleType InnerTextToValue(string text)
         {
-            return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
+            return new EnumValue<DocumentFormat.OpenXml.Office.Excel.VML.BooleanEntryWithBlankValues> { InnerText = text };
         }
 
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
+            builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Office.Excel.VML.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
             builder.SetSchema("xvml:MapOCX");
         }
 
@@ -1379,13 +1379,13 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
 
         internal override OpenXmlSimpleType InnerTextToValue(string text)
         {
-            return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
+            return new EnumValue<DocumentFormat.OpenXml.Office.Excel.VML.BooleanEntryWithBlankValues> { InnerText = text };
         }
 
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
+            builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Office.Excel.VML.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
             builder.SetSchema("xvml:Camera");
         }
 
@@ -1417,13 +1417,13 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
 
         internal override OpenXmlSimpleType InnerTextToValue(string text)
         {
-            return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
+            return new EnumValue<DocumentFormat.OpenXml.Office.Excel.VML.BooleanEntryWithBlankValues> { InnerText = text };
         }
 
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
+            builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Office.Excel.VML.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
             builder.SetSchema("xvml:RecalcAlways");
         }
 
@@ -1455,13 +1455,13 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
 
         internal override OpenXmlSimpleType InnerTextToValue(string text)
         {
-            return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
+            return new EnumValue<DocumentFormat.OpenXml.Office.Excel.VML.BooleanEntryWithBlankValues> { InnerText = text };
         }
 
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
+            builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Office.Excel.VML.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
             builder.SetSchema("xvml:AutoScale");
         }
 
@@ -1493,13 +1493,13 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
 
         internal override OpenXmlSimpleType InnerTextToValue(string text)
         {
-            return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
+            return new EnumValue<DocumentFormat.OpenXml.Office.Excel.VML.BooleanEntryWithBlankValues> { InnerText = text };
         }
 
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
+            builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Office.Excel.VML.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
             builder.SetSchema("xvml:DDE");
         }
 
@@ -1531,13 +1531,13 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
 
         internal override OpenXmlSimpleType InnerTextToValue(string text)
         {
-            return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues> { InnerText = text };
+            return new EnumValue<DocumentFormat.OpenXml.Office.Excel.VML.BooleanEntryWithBlankValues> { InnerText = text };
         }
 
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
+            builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Office.Excel.VML.BooleanEntryWithBlankValues>>(EnumValidator.Instance);
             builder.SetSchema("xvml:UIObj");
         }
 
@@ -2732,13 +2732,13 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
 
         internal override OpenXmlSimpleType InnerTextToValue(string text)
         {
-            return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.ClipboardFormatValues> { InnerText = text };
+            return new EnumValue<DocumentFormat.OpenXml.Office.Excel.VML.ClipboardFormatValues> { InnerText = text };
         }
 
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.ClipboardFormatValues>>(EnumValidator.Instance);
+            builder.AddValidator<EnumValue<DocumentFormat.OpenXml.Office.Excel.VML.ClipboardFormatValues>>(EnumValidator.Instance);
             builder.SetSchema("xvml:CF");
         }
 

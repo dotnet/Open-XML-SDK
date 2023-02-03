@@ -3,8 +3,8 @@
 
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Packaging;
-using DocumentFormat.OpenXml.Spreadsheet;
-using DocumentFormat.OpenXml.Wordprocessing;
+using DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main;
+using DocumentFormat.OpenXml.WordprocessingML.Y2006.Main;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -285,9 +285,9 @@ namespace DocumentFormat.OpenXml.Tests
 
         /// <summary>Gets paragraph with text run only.</summary>
         internal GetTargetElement GetTextParagraph =>
-            e => e.Descendants<DocumentFormat.OpenXml.Wordprocessing.Paragraph>()
-                .Where(p => p.ChildElements.Count(c => !(c is DocumentFormat.OpenXml.Wordprocessing.ParagraphProperties)) == 1)
-                .Where(p => p.Descendants<DocumentFormat.OpenXml.Wordprocessing.Text>().Count() == 1)
+            e => e.Descendants<Paragraph>()
+                .Where(p => p.ChildElements.Count(c => !(c is ParagraphProperties)) == 1)
+                .Where(p => p.Descendants<WordprocessingML.Y2006.Main.Text>().Count() == 1)
                 .PickSecond();
 
         /// <summary>Gets descendant element of pass-in OpenXmlElement that has both leaf and composite child elements</summary>
@@ -365,12 +365,12 @@ namespace DocumentFormat.OpenXml.Tests
 
         /// <summary>Gets any TextBody of given slide.</summary>
         internal GetTargetElement GetSlideTextBody =>
-            e => e.Descendants<DocumentFormat.OpenXml.Presentation.TextBody>().PickSecond();
+            e => e.Descendants<PresentationML.Y2006.Main.TextBody>().PickSecond();
 
         /// <summary>Gets any Paragraph of any TextBody.</summary>
         internal GetTargetElement GetSlideTextParagraph =>
-            e => e.Descendants<DocumentFormat.OpenXml.Presentation.TextBody>().PickSecond()
-            .Descendants<DocumentFormat.OpenXml.Drawing.Paragraph>().PickSecond();
+            e => e.Descendants<PresentationML.Y2006.Main.TextBody>().PickSecond()
+            .Descendants<DrawingML.Y2006.Main.Paragraph>().PickSecond();
 
         /// <summary>Gets any SheetData of given worksheet.</summary>
         internal GetTargetElement GetSheetData =>
@@ -440,10 +440,10 @@ namespace DocumentFormat.OpenXml.Tests
                     switch (operationType)
                     {
                         case AppendCollectionType.Array:
-                            hostElement.Append(importHost.ChildElements.Select(c => c.CloneNode(true)).ToArray<OpenXmlElement>());
+                            hostElement.Append(importHost.ChildElements.Select(c => c.CloneNode(true)).ToArray());
                             break;
                         case AppendCollectionType.IEnumerable:
-                            hostElement.Append(importHost.ChildElements.Select(c => c.CloneNode(true)).AsEnumerable<OpenXmlElement>());
+                            hostElement.Append(importHost.ChildElements.Select(c => c.CloneNode(true)).AsEnumerable());
                             break;
                         default:
                             throw new InvalidOperationException("Invalid Operation Specified!");
@@ -806,7 +806,7 @@ namespace DocumentFormat.OpenXml.Tests
                             throw new InvalidOperationException("Operation specified is invalid!!");
                     }
 
-                    result = hostElement.InsertAt<OpenXmlElement>(importElement.Clone() as OpenXmlElement, expectPos);
+                    result = hostElement.InsertAt(importElement.Clone() as OpenXmlElement, expectPos);
 
                     Log.Comment("Saving changes...");
                     main.Save();
@@ -888,11 +888,11 @@ namespace DocumentFormat.OpenXml.Tests
                     {
                         case InsertRel.AfterSelf:
                             expectPos = hostElement.Index() + 1;
-                            result = hostElement.InsertAfterSelf<OpenXmlElement>(importElement.Clone() as OpenXmlElement);
+                            result = hostElement.InsertAfterSelf(importElement.Clone() as OpenXmlElement);
                             break;
                         case InsertRel.BeforeSelf:
                             expectPos = hostElement.Index();
-                            result = hostElement.InsertBeforeSelf<OpenXmlElement>(importElement.Clone() as OpenXmlElement);
+                            result = hostElement.InsertBeforeSelf(importElement.Clone() as OpenXmlElement);
                             break;
                         default:
                             throw new InvalidOperationException("Invalid Operation Specified!");
@@ -1070,7 +1070,7 @@ namespace DocumentFormat.OpenXml.Tests
                     XElement xBefore = ConvertToXElement(hostPart, hostElement);
 
                     Log.Comment("Removing specified child element...");
-                    OpenXmlElement result = hostElement.RemoveChild<OpenXmlElement>(deleteElement);
+                    OpenXmlElement result = hostElement.RemoveChild(deleteElement);
 
                     Log.Comment("Save the changes");
                     main.Save();

@@ -2,20 +2,20 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Packaging;
-using DocumentFormat.OpenXml.Spreadsheet;
+using DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main;
 using System.IO;
 
-using A = DocumentFormat.OpenXml.Drawing;
-using Ap = DocumentFormat.OpenXml.ExtendedProperties;
-using S = DocumentFormat.OpenXml.Spreadsheet;
+using A = DocumentFormat.OpenXml.DrawingML.Y2006.Main;
+using Ap = DocumentFormat.OpenXml.OfficeDocument.Y2006.Extended_Properties;
+using S = DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main;
 using Thm15 = DocumentFormat.OpenXml.Office.ThemeML.Y2012.Main;
-using Vt = DocumentFormat.OpenXml.VariantTypes;
+using Vt = DocumentFormat.OpenXml.OfficeDocument.Y2006.DocPropsVTypes;
 using We = DocumentFormat.OpenXml.Office.WebExtensions.WebExtensions.Y2010.M11;
 using Wetp = DocumentFormat.OpenXml.Office.WebExtensions.TaskPanes.Y2010.M11;
 using X14 = DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main;
 using X15 = DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main;
 using X15ac = DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Ac;
-using Xdr = DocumentFormat.OpenXml.Drawing.Spreadsheet;
+using Xdr = DocumentFormat.OpenXml.DrawingML.Y2006.SpreadSheetDrawing;
 
 namespace DocumentFormat.OpenXml.Tests.WebExtensionClass
 {

@@ -14,7 +14,7 @@ using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.Office.ActiveX
+namespace DocumentFormat.OpenXml.Office.Y2006.ActiveX
 {
     /// <summary>
     /// <para>Defines the ActiveXControlData Class.</para>
@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.ActiveX.ActiveXObjectProperty" /> <c>&lt;ax:ocxPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2006.ActiveX.ActiveXObjectProperty" /> <c>&lt;ax:ocxPr></c></description></item>
     /// </list>
     /// </remark>
     public partial class ActiveXControlData : TypedOpenXmlCompositeElement
@@ -106,9 +106,9 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
         /// <remark>
         /// xmlns:ax=http://schemas.microsoft.com/office/2006/activeX
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Office.ActiveX.PersistenceValues>? Persistence
+        public EnumValue<DocumentFormat.OpenXml.Office.Y2006.ActiveX.PersistenceValues>? Persistence
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.ActiveX.PersistenceValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.Y2006.ActiveX.PersistenceValues>>();
             set => SetAttribute(value);
         }
 
@@ -116,7 +116,7 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("ax:ocx");
-            builder.AddChild<DocumentFormat.OpenXml.Office.ActiveX.ActiveXObjectProperty>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Y2006.ActiveX.ActiveXObjectProperty>();
             builder.AddElement<ActiveXControlData>()
                 .AddAttribute("ax:classid", a => a.ActiveXControlClassId, aBuilder =>
                 {
@@ -130,7 +130,7 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.ActiveX.ActiveXObjectProperty), 0, 0)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Y2006.ActiveX.ActiveXObjectProperty), 0, 0)
             };
         }
 
@@ -146,8 +146,8 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.ActiveX.SharedComFont" /> <c>&lt;ax:font></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.ActiveX.SharedComPicture" /> <c>&lt;ax:picture></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2006.ActiveX.SharedComFont" /> <c>&lt;ax:font></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2006.ActiveX.SharedComPicture" /> <c>&lt;ax:picture></c></description></item>
     /// </list>
     /// </remark>
     public partial class ActiveXObjectProperty : TypedOpenXmlCompositeElement
@@ -213,8 +213,8 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("ax:ocxPr");
-            builder.AddChild<DocumentFormat.OpenXml.Office.ActiveX.SharedComFont>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.ActiveX.SharedComPicture>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Y2006.ActiveX.SharedComFont>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Y2006.ActiveX.SharedComPicture>();
             builder.AddElement<ActiveXObjectProperty>()
                 .AddAttribute("ax:name", a => a.Name, aBuilder =>
                 {
@@ -225,8 +225,8 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.ActiveX.SharedComFont), 0, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.ActiveX.SharedComPicture), 0, 1)
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Y2006.ActiveX.SharedComFont), 0, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Y2006.ActiveX.SharedComPicture), 0, 1)
                 }
             };
         }
@@ -238,9 +238,9 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
         /// <remark>
         /// xmlns:ax = http://schemas.microsoft.com/office/2006/activeX
         /// </remark>
-        public DocumentFormat.OpenXml.Office.ActiveX.SharedComFont? SharedComFont
+        public DocumentFormat.OpenXml.Office.Y2006.ActiveX.SharedComFont? SharedComFont
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.ActiveX.SharedComFont>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Y2006.ActiveX.SharedComFont>();
             set => SetElement(value);
         }
 
@@ -251,9 +251,9 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
         /// <remark>
         /// xmlns:ax = http://schemas.microsoft.com/office/2006/activeX
         /// </remark>
-        public DocumentFormat.OpenXml.Office.ActiveX.SharedComPicture? SharedComPicture
+        public DocumentFormat.OpenXml.Office.Y2006.ActiveX.SharedComPicture? SharedComPicture
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.ActiveX.SharedComPicture>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Y2006.ActiveX.SharedComPicture>();
             set => SetElement(value);
         }
 
@@ -269,7 +269,7 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.ActiveX.ActiveXObjectProperty" /> <c>&lt;ax:ocxPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2006.ActiveX.ActiveXObjectProperty" /> <c>&lt;ax:ocxPr></c></description></item>
     /// </list>
     /// </remark>
     public partial class SharedComFont : TypedOpenXmlCompositeElement
@@ -312,9 +312,9 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
         /// <remark>
         /// xmlns:ax=http://schemas.microsoft.com/office/2006/activeX
         /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.Office.ActiveX.PersistenceValues>? Persistence
+        public EnumValue<DocumentFormat.OpenXml.Office.Y2006.ActiveX.PersistenceValues>? Persistence
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.ActiveX.PersistenceValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.Y2006.ActiveX.PersistenceValues>>();
             set => SetAttribute(value);
         }
 
@@ -335,13 +335,13 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("ax:font");
-            builder.AddChild<DocumentFormat.OpenXml.Office.ActiveX.ActiveXObjectProperty>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Y2006.ActiveX.ActiveXObjectProperty>();
             builder.AddElement<SharedComFont>()
                 .AddAttribute("ax:persistence", a => a.Persistence)
                 .AddAttribute("r:id", a => a.Id);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.ActiveX.ActiveXObjectProperty), 0, 0)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Y2006.ActiveX.ActiveXObjectProperty), 0, 0)
             };
         }
 

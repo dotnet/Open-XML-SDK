@@ -19,7 +19,7 @@ namespace DocumentFormat.OpenXml.Packaging
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.presentationml.notesMaster+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/notesMaster";
-        private DocumentFormat.OpenXml.Presentation.NotesMaster? _rootElement;
+        private DocumentFormat.OpenXml.PresentationML.Y2006.Main.NotesMaster? _rootElement;
 
         /// <summary>
         /// Creates an instance of the NotesMasterPart OpenXmlType
@@ -100,7 +100,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             set
             {
-                _rootElement = value as DocumentFormat.OpenXml.Presentation.NotesMaster;
+                _rootElement = value as DocumentFormat.OpenXml.PresentationML.Y2006.Main.NotesMaster;
             }
         }
 
@@ -112,13 +112,13 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets or sets the root element of this part.
         /// </summary>
-        public DocumentFormat.OpenXml.Presentation.NotesMaster NotesMaster
+        public DocumentFormat.OpenXml.PresentationML.Y2006.Main.NotesMaster NotesMaster
         {
             get
             {
                 if (_rootElement is null)
                 {
-                    LoadDomTree<DocumentFormat.OpenXml.Presentation.NotesMaster>();
+                    LoadDomTree<DocumentFormat.OpenXml.PresentationML.Y2006.Main.NotesMaster>();
                 }
 
                 return _rootElement!;

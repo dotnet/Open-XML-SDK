@@ -19,7 +19,7 @@ namespace DocumentFormat.OpenXml.Packaging
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.spreadsheetml.sharedStrings+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/sharedStrings";
-        private DocumentFormat.OpenXml.Spreadsheet.SharedStringTable? _rootElement;
+        private DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.SharedStringTable? _rootElement;
 
         /// <summary>
         /// Creates an instance of the SharedStringTablePart OpenXmlType
@@ -40,7 +40,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             set
             {
-                _rootElement = value as DocumentFormat.OpenXml.Spreadsheet.SharedStringTable;
+                _rootElement = value as DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.SharedStringTable;
             }
         }
 
@@ -52,13 +52,13 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets or sets the root element of this part.
         /// </summary>
-        public DocumentFormat.OpenXml.Spreadsheet.SharedStringTable SharedStringTable
+        public DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.SharedStringTable SharedStringTable
         {
             get
             {
                 if (_rootElement is null)
                 {
-                    LoadDomTree<DocumentFormat.OpenXml.Spreadsheet.SharedStringTable>();
+                    LoadDomTree<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.SharedStringTable>();
                 }
 
                 return _rootElement!;

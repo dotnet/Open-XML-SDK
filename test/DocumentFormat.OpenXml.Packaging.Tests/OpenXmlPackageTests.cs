@@ -1,9 +1,9 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using DocumentFormat.OpenXml.Presentation;
-using DocumentFormat.OpenXml.Spreadsheet;
-using DocumentFormat.OpenXml.Wordprocessing;
+using DocumentFormat.OpenXml.PresentationML.Y2006.Main;
+using DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main;
+using DocumentFormat.OpenXml.WordprocessingML.Y2006.Main;
 using NSubstitute.ExceptionExtensions;
 using System;
 using System.Collections.Generic;
@@ -14,8 +14,8 @@ using Xunit;
 
 using static DocumentFormat.OpenXml.Tests.TestAssets;
 
-using Run = DocumentFormat.OpenXml.Wordprocessing.Run;
-using Text = DocumentFormat.OpenXml.Wordprocessing.Text;
+using Run = DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.Run;
+using Text = DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.Text;
 
 namespace DocumentFormat.OpenXml.Packaging.Tests
 {
@@ -230,7 +230,7 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
                 var dataPartReferenceRelationship = DataPartReferenceRelationship.Create(slidePart, dataPart, MediaReferenceRelationship.RelationshipTypeConst, "rId2");
                 slidePart.AddDataPartReferenceRelationship(dataPartReferenceRelationship);
                 slide.Save(slidePart);
-                mainPart.Presentation = new Presentation.Presentation(slide);
+                mainPart.Presentation = new Presentation(slide);
                 mainPart.Presentation.Save();
             }
 

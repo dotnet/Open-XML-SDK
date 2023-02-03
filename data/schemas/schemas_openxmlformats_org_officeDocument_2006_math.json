@@ -11,7 +11,7 @@
         {
           "QName": "m:val",
           "PropertyName": "Val",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Math.ScriptValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.OfficeDocument.Y2006.Math.ScriptValues\u003E",
           "PropertyComments": "Value",
           "Validators": [
             {
@@ -31,7 +31,7 @@
         {
           "QName": "m:val",
           "PropertyName": "Val",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Math.StyleValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.OfficeDocument.Y2006.Math.StyleValues\u003E",
           "PropertyComments": "Value",
           "Validators": [
             {
@@ -2739,7 +2739,7 @@
         {
           "QName": "m:val",
           "PropertyName": "Val",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Math.BooleanValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.OfficeDocument.Y2006.Math.BooleanValues\u003E",
           "PropertyComments": "value"
         }
       ]
@@ -8980,7 +8980,7 @@
         {
           "QName": "m:val",
           "PropertyName": "Val",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Math.VerticalJustificationValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.OfficeDocument.Y2006.Math.VerticalJustificationValues\u003E",
           "PropertyComments": "Value",
           "Validators": [
             {
@@ -9260,7 +9260,7 @@
         {
           "QName": "m:val",
           "PropertyName": "Val",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Math.ShapeDelimiterValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.OfficeDocument.Y2006.Math.ShapeDelimiterValues\u003E",
           "PropertyComments": "Value",
           "Validators": [
             {
@@ -9371,7 +9371,7 @@
         {
           "QName": "m:val",
           "PropertyName": "Val",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Math.VerticalAlignmentValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.OfficeDocument.Y2006.Math.VerticalAlignmentValues\u003E",
           "PropertyComments": "Value",
           "Validators": [
             {
@@ -9572,7 +9572,7 @@
         {
           "QName": "m:val",
           "PropertyName": "Val",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Math.FractionTypeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.OfficeDocument.Y2006.Math.FractionTypeValues\u003E",
           "PropertyComments": "Value",
           "Validators": [
             {
@@ -9810,7 +9810,7 @@
         {
           "QName": "m:val",
           "PropertyName": "Val",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Math.HorizontalAlignmentValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.OfficeDocument.Y2006.Math.HorizontalAlignmentValues\u003E",
           "PropertyComments": "Value",
           "Validators": [
             {
@@ -10198,7 +10198,7 @@
         {
           "QName": "m:val",
           "PropertyName": "Val",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Math.LimitLocationValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.OfficeDocument.Y2006.Math.LimitLocationValues\u003E",
           "PropertyComments": "Value",
           "Validators": [
             {
@@ -10636,7 +10636,7 @@
         {
           "QName": "m:val",
           "PropertyName": "Val",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Math.JustificationValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.OfficeDocument.Y2006.Math.JustificationValues\u003E",
           "PropertyComments": "Value",
           "Validators": [
             {
@@ -10687,7 +10687,7 @@
         {
           "QName": "m:val",
           "PropertyName": "Val",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Math.BreakBinaryOperatorValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.OfficeDocument.Y2006.Math.BreakBinaryOperatorValues\u003E",
           "PropertyComments": "Value"
         }
       ]
@@ -10702,7 +10702,7 @@
         {
           "QName": "m:val",
           "PropertyName": "Val",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Math.BreakBinarySubtractionValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.OfficeDocument.Y2006.Math.BreakBinarySubtractionValues\u003E",
           "PropertyComments": "Value",
           "Validators": [
             {

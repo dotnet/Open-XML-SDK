@@ -263,7 +263,7 @@ namespace DocumentFormat.OpenXml.Tests
                 + "</w:p>\n";
 
             Log.Comment(rawxml);
-            var para = new DocumentFormat.OpenXml.Wordprocessing.Paragraph(rawxml);
+            var para = new WordprocessingML.Y2006.Main.Paragraph(rawxml);
             Log.VerifyValue(para.NamespaceDeclarations.Count(), 2, "Count of returned Namespace Declarations does NOT match expectation.");
             var run = para.FirstChild;
             Log.VerifyValue(run.NamespaceDeclarations.Count(), 1, "Count of returned Namespace Declarations does NOT match expectation.");

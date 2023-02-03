@@ -15,7 +15,7 @@ using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.Office.Word
+namespace DocumentFormat.OpenXml.Office.Word.Y2006.WordML
 {
     /// <summary>
     /// <para>Defines the TemplateCommandGroup Class.</para>
@@ -25,10 +25,10 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.AllocatedCommands" /> <c>&lt;wne:acds></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.KeyMapCustomizations" /> <c>&lt;wne:keymaps></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.MismatchedKeyMapCustomization" /> <c>&lt;wne:keymapsBad></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Toolbars" /> <c>&lt;wne:toolbars></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2006.WordML.AllocatedCommands" /> <c>&lt;wne:acds></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2006.WordML.KeyMapCustomizations" /> <c>&lt;wne:keymaps></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2006.WordML.MismatchedKeyMapCustomization" /> <c>&lt;wne:keymapsBad></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2006.WordML.Toolbars" /> <c>&lt;wne:toolbars></c></description></item>
     /// </list>
     /// </remark>
     public partial class TemplateCommandGroup : TypedOpenXmlPartRootElement
@@ -68,16 +68,16 @@ namespace DocumentFormat.OpenXml.Office.Word
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("wne:tcg");
-            builder.AddChild<DocumentFormat.OpenXml.Office.Word.AllocatedCommands>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.Word.KeyMapCustomizations>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.Word.MismatchedKeyMapCustomization>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Toolbars>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2006.WordML.AllocatedCommands>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2006.WordML.KeyMapCustomizations>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2006.WordML.MismatchedKeyMapCustomization>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2006.WordML.Toolbars>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.KeyMapCustomizations), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.MismatchedKeyMapCustomization), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Toolbars), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.AllocatedCommands), 0, 0)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2006.WordML.KeyMapCustomizations), 0, 0),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2006.WordML.MismatchedKeyMapCustomization), 0, 0),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2006.WordML.Toolbars), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2006.WordML.AllocatedCommands), 0, 0)
             };
         }
 
@@ -124,7 +124,7 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Mcd" /> <c>&lt;wne:mcd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2006.WordML.Mcd" /> <c>&lt;wne:mcd></c></description></item>
     /// </list>
     /// </remark>
     public partial class Mcds : TypedOpenXmlCompositeElement
@@ -164,10 +164,10 @@ namespace DocumentFormat.OpenXml.Office.Word
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("wne:mcds");
-            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Mcd>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2006.WordML.Mcd>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Mcd), 0, 0)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2006.WordML.Mcd), 0, 0)
             };
         }
 
@@ -183,8 +183,8 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.DocEvents" /> <c>&lt;wne:docEvents></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Mcds" /> <c>&lt;wne:mcds></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2006.WordML.DocEvents" /> <c>&lt;wne:docEvents></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2006.WordML.Mcds" /> <c>&lt;wne:mcds></c></description></item>
     /// </list>
     /// </remark>
     public partial class VbaSuppData : TypedOpenXmlPartRootElement
@@ -224,12 +224,12 @@ namespace DocumentFormat.OpenXml.Office.Word
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("wne:vbaSuppData");
-            builder.AddChild<DocumentFormat.OpenXml.Office.Word.DocEvents>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Mcds>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2006.WordML.DocEvents>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2006.WordML.Mcds>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.DocEvents), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Mcds), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2006.WordML.DocEvents), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2006.WordML.Mcds), 0, 1)
             };
         }
 
@@ -240,9 +240,9 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <remark>
         /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
-        public DocumentFormat.OpenXml.Office.Word.DocEvents? DocEvents
+        public DocumentFormat.OpenXml.Office.Word.Y2006.WordML.DocEvents? DocEvents
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Word.DocEvents>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Word.Y2006.WordML.DocEvents>();
             set => SetElement(value);
         }
 
@@ -253,9 +253,9 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <remark>
         /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
-        public DocumentFormat.OpenXml.Office.Word.Mcds? Mcds
+        public DocumentFormat.OpenXml.Office.Word.Y2006.WordML.Mcds? Mcds
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Word.Mcds>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Word.Y2006.WordML.Mcds>();
             set => SetElement(value);
         }
 
@@ -302,7 +302,7 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.SingleDataSourceRecord" /> <c>&lt;wne:recipientData></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2006.WordML.SingleDataSourceRecord" /> <c>&lt;wne:recipientData></c></description></item>
     /// </list>
     /// </remark>
     public partial class MailMergeRecipients : TypedOpenXmlPartRootElement
@@ -342,10 +342,10 @@ namespace DocumentFormat.OpenXml.Office.Word
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("wne:recipients");
-            builder.AddChild<DocumentFormat.OpenXml.Office.Word.SingleDataSourceRecord>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2006.WordML.SingleDataSourceRecord>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.SingleDataSourceRecord), 1, 0)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2006.WordML.SingleDataSourceRecord), 1, 0)
             };
         }
 
@@ -643,11 +643,11 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.AllocatedCommandKeyboardCustomization" /> <c>&lt;wne:acd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.FixedCommandKeyboardCustomization" /> <c>&lt;wne:fci></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.CharacterInsertion" /> <c>&lt;wne:wch></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.MacroKeyboardCustomization" /> <c>&lt;wne:macro></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.WllMacroKeyboardCustomization" /> <c>&lt;wne:wll></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2006.WordML.AllocatedCommandKeyboardCustomization" /> <c>&lt;wne:acd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2006.WordML.FixedCommandKeyboardCustomization" /> <c>&lt;wne:fci></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2006.WordML.CharacterInsertion" /> <c>&lt;wne:wch></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2006.WordML.MacroKeyboardCustomization" /> <c>&lt;wne:macro></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2006.WordML.WllMacroKeyboardCustomization" /> <c>&lt;wne:wll></c></description></item>
     /// </list>
     /// </remark>
     public partial class KeyMapEntry : TypedOpenXmlCompositeElement
@@ -752,11 +752,11 @@ namespace DocumentFormat.OpenXml.Office.Word
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("wne:keymap");
-            builder.AddChild<DocumentFormat.OpenXml.Office.Word.AllocatedCommandKeyboardCustomization>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.Word.FixedCommandKeyboardCustomization>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.Word.CharacterInsertion>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.Word.MacroKeyboardCustomization>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.Word.WllMacroKeyboardCustomization>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2006.WordML.AllocatedCommandKeyboardCustomization>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2006.WordML.FixedCommandKeyboardCustomization>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2006.WordML.CharacterInsertion>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2006.WordML.MacroKeyboardCustomization>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2006.WordML.WllMacroKeyboardCustomization>();
             builder.AddElement<KeyMapEntry>()
                 .AddAttribute("wne:chmPrimary", a => a.CharacterMapPrimary, aBuilder =>
                 {
@@ -777,11 +777,11 @@ namespace DocumentFormat.OpenXml.Office.Word
                 .AddAttribute("wne:mask", a => a.Mask);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.FixedCommandKeyboardCustomization), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.MacroKeyboardCustomization), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.AllocatedCommandKeyboardCustomization), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.WllMacroKeyboardCustomization), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.CharacterInsertion), 1, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2006.WordML.FixedCommandKeyboardCustomization), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2006.WordML.MacroKeyboardCustomization), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2006.WordML.AllocatedCommandKeyboardCustomization), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2006.WordML.WllMacroKeyboardCustomization), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2006.WordML.CharacterInsertion), 1, 1)
             };
         }
 
@@ -792,9 +792,9 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <remark>
         /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
-        public DocumentFormat.OpenXml.Office.Word.FixedCommandKeyboardCustomization? FixedCommandKeyboardCustomization
+        public DocumentFormat.OpenXml.Office.Word.Y2006.WordML.FixedCommandKeyboardCustomization? FixedCommandKeyboardCustomization
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Word.FixedCommandKeyboardCustomization>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Word.Y2006.WordML.FixedCommandKeyboardCustomization>();
             set => SetElement(value);
         }
 
@@ -805,9 +805,9 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <remark>
         /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
-        public DocumentFormat.OpenXml.Office.Word.MacroKeyboardCustomization? MacroKeyboardCustomization
+        public DocumentFormat.OpenXml.Office.Word.Y2006.WordML.MacroKeyboardCustomization? MacroKeyboardCustomization
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Word.MacroKeyboardCustomization>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Word.Y2006.WordML.MacroKeyboardCustomization>();
             set => SetElement(value);
         }
 
@@ -818,9 +818,9 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <remark>
         /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
-        public DocumentFormat.OpenXml.Office.Word.AllocatedCommandKeyboardCustomization? AllocatedCommandKeyboardCustomization
+        public DocumentFormat.OpenXml.Office.Word.Y2006.WordML.AllocatedCommandKeyboardCustomization? AllocatedCommandKeyboardCustomization
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Word.AllocatedCommandKeyboardCustomization>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Word.Y2006.WordML.AllocatedCommandKeyboardCustomization>();
             set => SetElement(value);
         }
 
@@ -831,9 +831,9 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <remark>
         /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
-        public DocumentFormat.OpenXml.Office.Word.WllMacroKeyboardCustomization? WllMacroKeyboardCustomization
+        public DocumentFormat.OpenXml.Office.Word.Y2006.WordML.WllMacroKeyboardCustomization? WllMacroKeyboardCustomization
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Word.WllMacroKeyboardCustomization>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Word.Y2006.WordML.WllMacroKeyboardCustomization>();
             set => SetElement(value);
         }
 
@@ -844,9 +844,9 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <remark>
         /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
-        public DocumentFormat.OpenXml.Office.Word.CharacterInsertion? CharacterInsertion
+        public DocumentFormat.OpenXml.Office.Word.Y2006.WordML.CharacterInsertion? CharacterInsertion
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Word.CharacterInsertion>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Word.Y2006.WordML.CharacterInsertion>();
             set => SetElement(value);
         }
 
@@ -1531,19 +1531,19 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.EventDocNewXsdString" /> <c>&lt;wne:eventDocNew></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.EventDocOpenXsdString" /> <c>&lt;wne:eventDocOpen></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.EventDocCloseXsdString" /> <c>&lt;wne:eventDocClose></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.EventDocSyncXsdString" /> <c>&lt;wne:eventDocSync></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.EventDocXmlAfterInsertXsdString" /> <c>&lt;wne:eventDocXmlAfterInsert></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.EventDocXmlBeforeDeleteXsdString" /> <c>&lt;wne:eventDocXmlBeforeDelete></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.EventDocContentControlAfterInsertXsdString" /> <c>&lt;wne:eventDocContentControlAfterInsert></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.EventDocContentControlBeforeDeleteXsdString" /> <c>&lt;wne:eventDocContentControlBeforeDelete></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.EventDocContentControlOnExistXsdString" /> <c>&lt;wne:eventDocContentControlOnExit></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.EventDocContentControlOnEnterXsdString" /> <c>&lt;wne:eventDocContentControlOnEnter></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.EventDocStoreUpdateXsdString" /> <c>&lt;wne:eventDocStoreUpdate></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.EventDocContentControlUpdateXsdString" /> <c>&lt;wne:eventDocContentControlContentUpdate></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.EventDocBuildingBlockAfterInsertXsdString" /> <c>&lt;wne:eventDocBuildingBlockAfterInsert></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2006.WordML.EventDocNewXsdString" /> <c>&lt;wne:eventDocNew></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2006.WordML.EventDocOpenXsdString" /> <c>&lt;wne:eventDocOpen></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2006.WordML.EventDocCloseXsdString" /> <c>&lt;wne:eventDocClose></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2006.WordML.EventDocSyncXsdString" /> <c>&lt;wne:eventDocSync></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2006.WordML.EventDocXmlAfterInsertXsdString" /> <c>&lt;wne:eventDocXmlAfterInsert></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2006.WordML.EventDocXmlBeforeDeleteXsdString" /> <c>&lt;wne:eventDocXmlBeforeDelete></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2006.WordML.EventDocContentControlAfterInsertXsdString" /> <c>&lt;wne:eventDocContentControlAfterInsert></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2006.WordML.EventDocContentControlBeforeDeleteXsdString" /> <c>&lt;wne:eventDocContentControlBeforeDelete></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2006.WordML.EventDocContentControlOnExistXsdString" /> <c>&lt;wne:eventDocContentControlOnExit></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2006.WordML.EventDocContentControlOnEnterXsdString" /> <c>&lt;wne:eventDocContentControlOnEnter></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2006.WordML.EventDocStoreUpdateXsdString" /> <c>&lt;wne:eventDocStoreUpdate></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2006.WordML.EventDocContentControlUpdateXsdString" /> <c>&lt;wne:eventDocContentControlContentUpdate></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2006.WordML.EventDocBuildingBlockAfterInsertXsdString" /> <c>&lt;wne:eventDocBuildingBlockAfterInsert></c></description></item>
     /// </list>
     /// </remark>
     public partial class DocEvents : TypedOpenXmlCompositeElement
@@ -1583,34 +1583,34 @@ namespace DocumentFormat.OpenXml.Office.Word
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("wne:docEvents");
-            builder.AddChild<DocumentFormat.OpenXml.Office.Word.EventDocNewXsdString>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.Word.EventDocOpenXsdString>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.Word.EventDocCloseXsdString>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.Word.EventDocSyncXsdString>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.Word.EventDocXmlAfterInsertXsdString>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.Word.EventDocXmlBeforeDeleteXsdString>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.Word.EventDocContentControlAfterInsertXsdString>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.Word.EventDocContentControlBeforeDeleteXsdString>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.Word.EventDocContentControlOnExistXsdString>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.Word.EventDocContentControlOnEnterXsdString>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.Word.EventDocStoreUpdateXsdString>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.Word.EventDocContentControlUpdateXsdString>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.Word.EventDocBuildingBlockAfterInsertXsdString>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2006.WordML.EventDocNewXsdString>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2006.WordML.EventDocOpenXsdString>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2006.WordML.EventDocCloseXsdString>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2006.WordML.EventDocSyncXsdString>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2006.WordML.EventDocXmlAfterInsertXsdString>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2006.WordML.EventDocXmlBeforeDeleteXsdString>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2006.WordML.EventDocContentControlAfterInsertXsdString>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2006.WordML.EventDocContentControlBeforeDeleteXsdString>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2006.WordML.EventDocContentControlOnExistXsdString>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2006.WordML.EventDocContentControlOnEnterXsdString>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2006.WordML.EventDocStoreUpdateXsdString>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2006.WordML.EventDocContentControlUpdateXsdString>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2006.WordML.EventDocBuildingBlockAfterInsertXsdString>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.EventDocNewXsdString), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.EventDocOpenXsdString), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.EventDocCloseXsdString), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.EventDocSyncXsdString), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.EventDocXmlAfterInsertXsdString), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.EventDocXmlBeforeDeleteXsdString), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.EventDocContentControlAfterInsertXsdString), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.EventDocContentControlBeforeDeleteXsdString), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.EventDocContentControlOnExistXsdString), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.EventDocContentControlOnEnterXsdString), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.EventDocStoreUpdateXsdString), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.EventDocContentControlUpdateXsdString), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.EventDocBuildingBlockAfterInsertXsdString), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2006.WordML.EventDocNewXsdString), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2006.WordML.EventDocOpenXsdString), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2006.WordML.EventDocCloseXsdString), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2006.WordML.EventDocSyncXsdString), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2006.WordML.EventDocXmlAfterInsertXsdString), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2006.WordML.EventDocXmlBeforeDeleteXsdString), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2006.WordML.EventDocContentControlAfterInsertXsdString), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2006.WordML.EventDocContentControlBeforeDeleteXsdString), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2006.WordML.EventDocContentControlOnExistXsdString), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2006.WordML.EventDocContentControlOnEnterXsdString), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2006.WordML.EventDocStoreUpdateXsdString), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2006.WordML.EventDocContentControlUpdateXsdString), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2006.WordML.EventDocBuildingBlockAfterInsertXsdString), 0, 1)
             };
         }
 
@@ -1621,9 +1621,9 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <remark>
         /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
-        public DocumentFormat.OpenXml.Office.Word.EventDocNewXsdString? EventDocNewXsdString
+        public DocumentFormat.OpenXml.Office.Word.Y2006.WordML.EventDocNewXsdString? EventDocNewXsdString
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Word.EventDocNewXsdString>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Word.Y2006.WordML.EventDocNewXsdString>();
             set => SetElement(value);
         }
 
@@ -1634,9 +1634,9 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <remark>
         /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
-        public DocumentFormat.OpenXml.Office.Word.EventDocOpenXsdString? EventDocOpenXsdString
+        public DocumentFormat.OpenXml.Office.Word.Y2006.WordML.EventDocOpenXsdString? EventDocOpenXsdString
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Word.EventDocOpenXsdString>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Word.Y2006.WordML.EventDocOpenXsdString>();
             set => SetElement(value);
         }
 
@@ -1647,9 +1647,9 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <remark>
         /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
-        public DocumentFormat.OpenXml.Office.Word.EventDocCloseXsdString? EventDocCloseXsdString
+        public DocumentFormat.OpenXml.Office.Word.Y2006.WordML.EventDocCloseXsdString? EventDocCloseXsdString
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Word.EventDocCloseXsdString>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Word.Y2006.WordML.EventDocCloseXsdString>();
             set => SetElement(value);
         }
 
@@ -1660,9 +1660,9 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <remark>
         /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
-        public DocumentFormat.OpenXml.Office.Word.EventDocSyncXsdString? EventDocSyncXsdString
+        public DocumentFormat.OpenXml.Office.Word.Y2006.WordML.EventDocSyncXsdString? EventDocSyncXsdString
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Word.EventDocSyncXsdString>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Word.Y2006.WordML.EventDocSyncXsdString>();
             set => SetElement(value);
         }
 
@@ -1673,9 +1673,9 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <remark>
         /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
-        public DocumentFormat.OpenXml.Office.Word.EventDocXmlAfterInsertXsdString? EventDocXmlAfterInsertXsdString
+        public DocumentFormat.OpenXml.Office.Word.Y2006.WordML.EventDocXmlAfterInsertXsdString? EventDocXmlAfterInsertXsdString
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Word.EventDocXmlAfterInsertXsdString>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Word.Y2006.WordML.EventDocXmlAfterInsertXsdString>();
             set => SetElement(value);
         }
 
@@ -1686,9 +1686,9 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <remark>
         /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
-        public DocumentFormat.OpenXml.Office.Word.EventDocXmlBeforeDeleteXsdString? EventDocXmlBeforeDeleteXsdString
+        public DocumentFormat.OpenXml.Office.Word.Y2006.WordML.EventDocXmlBeforeDeleteXsdString? EventDocXmlBeforeDeleteXsdString
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Word.EventDocXmlBeforeDeleteXsdString>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Word.Y2006.WordML.EventDocXmlBeforeDeleteXsdString>();
             set => SetElement(value);
         }
 
@@ -1699,9 +1699,9 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <remark>
         /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
-        public DocumentFormat.OpenXml.Office.Word.EventDocContentControlAfterInsertXsdString? EventDocContentControlAfterInsertXsdString
+        public DocumentFormat.OpenXml.Office.Word.Y2006.WordML.EventDocContentControlAfterInsertXsdString? EventDocContentControlAfterInsertXsdString
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Word.EventDocContentControlAfterInsertXsdString>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Word.Y2006.WordML.EventDocContentControlAfterInsertXsdString>();
             set => SetElement(value);
         }
 
@@ -1712,9 +1712,9 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <remark>
         /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
-        public DocumentFormat.OpenXml.Office.Word.EventDocContentControlBeforeDeleteXsdString? EventDocContentControlBeforeDeleteXsdString
+        public DocumentFormat.OpenXml.Office.Word.Y2006.WordML.EventDocContentControlBeforeDeleteXsdString? EventDocContentControlBeforeDeleteXsdString
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Word.EventDocContentControlBeforeDeleteXsdString>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Word.Y2006.WordML.EventDocContentControlBeforeDeleteXsdString>();
             set => SetElement(value);
         }
 
@@ -1725,9 +1725,9 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <remark>
         /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
-        public DocumentFormat.OpenXml.Office.Word.EventDocContentControlOnExistXsdString? EventDocContentControlOnExistXsdString
+        public DocumentFormat.OpenXml.Office.Word.Y2006.WordML.EventDocContentControlOnExistXsdString? EventDocContentControlOnExistXsdString
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Word.EventDocContentControlOnExistXsdString>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Word.Y2006.WordML.EventDocContentControlOnExistXsdString>();
             set => SetElement(value);
         }
 
@@ -1738,9 +1738,9 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <remark>
         /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
-        public DocumentFormat.OpenXml.Office.Word.EventDocContentControlOnEnterXsdString? EventDocContentControlOnEnterXsdString
+        public DocumentFormat.OpenXml.Office.Word.Y2006.WordML.EventDocContentControlOnEnterXsdString? EventDocContentControlOnEnterXsdString
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Word.EventDocContentControlOnEnterXsdString>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Word.Y2006.WordML.EventDocContentControlOnEnterXsdString>();
             set => SetElement(value);
         }
 
@@ -1751,9 +1751,9 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <remark>
         /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
-        public DocumentFormat.OpenXml.Office.Word.EventDocStoreUpdateXsdString? EventDocStoreUpdateXsdString
+        public DocumentFormat.OpenXml.Office.Word.Y2006.WordML.EventDocStoreUpdateXsdString? EventDocStoreUpdateXsdString
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Word.EventDocStoreUpdateXsdString>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Word.Y2006.WordML.EventDocStoreUpdateXsdString>();
             set => SetElement(value);
         }
 
@@ -1764,9 +1764,9 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <remark>
         /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
-        public DocumentFormat.OpenXml.Office.Word.EventDocContentControlUpdateXsdString? EventDocContentControlUpdateXsdString
+        public DocumentFormat.OpenXml.Office.Word.Y2006.WordML.EventDocContentControlUpdateXsdString? EventDocContentControlUpdateXsdString
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Word.EventDocContentControlUpdateXsdString>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Word.Y2006.WordML.EventDocContentControlUpdateXsdString>();
             set => SetElement(value);
         }
 
@@ -1777,9 +1777,9 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <remark>
         /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
-        public DocumentFormat.OpenXml.Office.Word.EventDocBuildingBlockAfterInsertXsdString? EventDocBuildingBlockAfterInsertXsdString
+        public DocumentFormat.OpenXml.Office.Word.Y2006.WordML.EventDocBuildingBlockAfterInsertXsdString? EventDocBuildingBlockAfterInsertXsdString
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Word.EventDocBuildingBlockAfterInsertXsdString>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Word.Y2006.WordML.EventDocBuildingBlockAfterInsertXsdString>();
             set => SetElement(value);
         }
 
@@ -1795,7 +1795,7 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.AllocatedCommandManifestEntry" /> <c>&lt;wne:acdEntry></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2006.WordML.AllocatedCommandManifestEntry" /> <c>&lt;wne:acdEntry></c></description></item>
     /// </list>
     /// </remark>
     public partial class AllocatedCommandManifest : TypedOpenXmlCompositeElement
@@ -1835,10 +1835,10 @@ namespace DocumentFormat.OpenXml.Office.Word
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("wne:acdManifest");
-            builder.AddChild<DocumentFormat.OpenXml.Office.Word.AllocatedCommandManifestEntry>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2006.WordML.AllocatedCommandManifestEntry>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.AllocatedCommandManifestEntry), 0, 0)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2006.WordML.AllocatedCommandManifestEntry), 0, 0)
             };
         }
 
@@ -1896,7 +1896,7 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.KeyMapEntry" /> <c>&lt;wne:keymap></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2006.WordML.KeyMapEntry" /> <c>&lt;wne:keymap></c></description></item>
     /// </list>
     /// </remark>
     public partial class KeyMapCustomizations : KeymapsType
@@ -1938,7 +1938,7 @@ namespace DocumentFormat.OpenXml.Office.Word
             builder.SetSchema("wne:keymaps");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.KeyMapEntry), 0, 0)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2006.WordML.KeyMapEntry), 0, 0)
             };
         }
 
@@ -1954,7 +1954,7 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.KeyMapEntry" /> <c>&lt;wne:keymap></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2006.WordML.KeyMapEntry" /> <c>&lt;wne:keymap></c></description></item>
     /// </list>
     /// </remark>
     public partial class MismatchedKeyMapCustomization : KeymapsType
@@ -1996,7 +1996,7 @@ namespace DocumentFormat.OpenXml.Office.Word
             builder.SetSchema("wne:keymapsBad");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.KeyMapEntry), 0, 0)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2006.WordML.KeyMapEntry), 0, 0)
             };
         }
 
@@ -2012,7 +2012,7 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.KeyMapEntry" /> <c>&lt;wne:keymap></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2006.WordML.KeyMapEntry" /> <c>&lt;wne:keymap></c></description></item>
     /// </list>
     /// </remark>
     public abstract partial class KeymapsType : TypedOpenXmlCompositeElement
@@ -2051,7 +2051,7 @@ namespace DocumentFormat.OpenXml.Office.Word
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddChild<DocumentFormat.OpenXml.Office.Word.KeyMapEntry>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2006.WordML.KeyMapEntry>();
         }
     }
 
@@ -2063,8 +2063,8 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.AllocatedCommandManifest" /> <c>&lt;wne:acdManifest></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.ToolbarData" /> <c>&lt;wne:toolbarData></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2006.WordML.AllocatedCommandManifest" /> <c>&lt;wne:acdManifest></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2006.WordML.ToolbarData" /> <c>&lt;wne:toolbarData></c></description></item>
     /// </list>
     /// </remark>
     public partial class Toolbars : TypedOpenXmlCompositeElement
@@ -2104,12 +2104,12 @@ namespace DocumentFormat.OpenXml.Office.Word
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("wne:toolbars");
-            builder.AddChild<DocumentFormat.OpenXml.Office.Word.AllocatedCommandManifest>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.Word.ToolbarData>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2006.WordML.AllocatedCommandManifest>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2006.WordML.ToolbarData>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.AllocatedCommandManifest), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.ToolbarData), 0, 0)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2006.WordML.AllocatedCommandManifest), 0, 0),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2006.WordML.ToolbarData), 0, 0)
             };
         }
 
@@ -2125,7 +2125,7 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.AllocatedCommand" /> <c>&lt;wne:acd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2006.WordML.AllocatedCommand" /> <c>&lt;wne:acd></c></description></item>
     /// </list>
     /// </remark>
     public partial class AllocatedCommands : TypedOpenXmlCompositeElement
@@ -2165,10 +2165,10 @@ namespace DocumentFormat.OpenXml.Office.Word
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("wne:acds");
-            builder.AddChild<DocumentFormat.OpenXml.Office.Word.AllocatedCommand>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2006.WordML.AllocatedCommand>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.AllocatedCommand), 0, 0)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2006.WordML.AllocatedCommand), 0, 0)
             };
         }
 
@@ -2265,8 +2265,8 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.RecordHashCode" /> <c>&lt;wne:hash></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.RecordIncluded" /> <c>&lt;wne:active></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2006.WordML.RecordHashCode" /> <c>&lt;wne:hash></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2006.WordML.RecordIncluded" /> <c>&lt;wne:active></c></description></item>
     /// </list>
     /// </remark>
     public partial class SingleDataSourceRecord : TypedOpenXmlCompositeElement
@@ -2306,12 +2306,12 @@ namespace DocumentFormat.OpenXml.Office.Word
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("wne:recipientData");
-            builder.AddChild<DocumentFormat.OpenXml.Office.Word.RecordHashCode>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.Word.RecordIncluded>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2006.WordML.RecordHashCode>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2006.WordML.RecordIncluded>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.RecordIncluded), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.RecordHashCode), 1, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2006.WordML.RecordIncluded), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Word.Y2006.WordML.RecordHashCode), 1, 1)
             };
         }
 
@@ -2322,9 +2322,9 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <remark>
         /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
-        public DocumentFormat.OpenXml.Office.Word.RecordIncluded? RecordIncluded
+        public DocumentFormat.OpenXml.Office.Word.Y2006.WordML.RecordIncluded? RecordIncluded
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Word.RecordIncluded>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Word.Y2006.WordML.RecordIncluded>();
             set => SetElement(value);
         }
 
@@ -2335,9 +2335,9 @@ namespace DocumentFormat.OpenXml.Office.Word
         /// <remark>
         /// xmlns:wne = http://schemas.microsoft.com/office/word/2006/wordml
         /// </remark>
-        public DocumentFormat.OpenXml.Office.Word.RecordHashCode? RecordHashCode
+        public DocumentFormat.OpenXml.Office.Word.Y2006.WordML.RecordHashCode? RecordHashCode
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.Word.RecordHashCode>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Word.Y2006.WordML.RecordHashCode>();
             set => SetElement(value);
         }
 

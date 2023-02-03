@@ -18,7 +18,7 @@ namespace DocumentFormat.OpenXml.Packaging
     public partial class MainDocumentPart : TypedOpenXmlPart
     {
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument";
-        private DocumentFormat.OpenXml.Wordprocessing.Document? _rootElement;
+        private DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.Document? _rootElement;
 
         /// <summary>
         /// Creates an instance of the MainDocumentPart OpenXmlType
@@ -75,13 +75,13 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets or sets the root element of this part.
         /// </summary>
-        public DocumentFormat.OpenXml.Wordprocessing.Document Document
+        public DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.Document Document
         {
             get
             {
                 if (_rootElement is null)
                 {
-                    LoadDomTree<DocumentFormat.OpenXml.Wordprocessing.Document>();
+                    LoadDomTree<DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.Document>();
                 }
 
                 return _rootElement!;
@@ -172,7 +172,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             set
             {
-                _rootElement = value as DocumentFormat.OpenXml.Wordprocessing.Document;
+                _rootElement = value as DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.Document;
             }
         }
 

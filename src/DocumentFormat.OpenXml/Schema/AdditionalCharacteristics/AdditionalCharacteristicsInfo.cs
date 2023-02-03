@@ -3,7 +3,7 @@
 
 using DocumentFormat.OpenXml.Packaging;
 
-namespace DocumentFormat.OpenXml.AdditionalCharacteristics
+namespace DocumentFormat.OpenXml.OfficeDocument.Y2006.Characteristics
 {
     /// <summary>
     /// Defines AdditionalCharacteristics.

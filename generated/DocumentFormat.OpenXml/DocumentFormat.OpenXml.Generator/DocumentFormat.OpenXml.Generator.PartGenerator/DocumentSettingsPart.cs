@@ -19,7 +19,7 @@ namespace DocumentFormat.OpenXml.Packaging
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.wordprocessingml.settings+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/settings";
-        private DocumentFormat.OpenXml.Wordprocessing.Settings? _rootElement;
+        private DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.Settings? _rootElement;
 
         /// <summary>
         /// Creates an instance of the DocumentSettingsPart OpenXmlType
@@ -45,7 +45,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             set
             {
-                _rootElement = value as DocumentFormat.OpenXml.Wordprocessing.Settings;
+                _rootElement = value as DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.Settings;
             }
         }
 
@@ -62,13 +62,13 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets or sets the root element of this part.
         /// </summary>
-        public DocumentFormat.OpenXml.Wordprocessing.Settings Settings
+        public DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.Settings Settings
         {
             get
             {
                 if (_rootElement is null)
                 {
-                    LoadDomTree<DocumentFormat.OpenXml.Wordprocessing.Settings>();
+                    LoadDomTree<DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.Settings>();
                 }
 
                 return _rootElement!;

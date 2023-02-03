@@ -2,9 +2,9 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Packaging;
-using DocumentFormat.OpenXml.Presentation;
-using DocumentFormat.OpenXml.Spreadsheet;
-using DocumentFormat.OpenXml.Wordprocessing;
+using DocumentFormat.OpenXml.PresentationML.Y2006.Main;
+using DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main;
+using DocumentFormat.OpenXml.WordprocessingML.Y2006.Main;
 using System;
 using System.Linq;
 using System.Xml.Linq;
@@ -290,7 +290,7 @@ namespace DocumentFormat.OpenXml.Tests
                 TestTraverseDown<Paragraph>(doc.MainDocumentPart, body);
 
                 Log.Comment("      <<<<<< traversing Paragraph >>>>>>");
-                TestTraverseDown<DocumentFormat.OpenXml.Wordprocessing.Run>(doc.MainDocumentPart, body.GetFirstChild<Paragraph>());
+                TestTraverseDown<WordprocessingML.Y2006.Main.Run>(doc.MainDocumentPart, body.GetFirstChild<Paragraph>());
 
                 Log.Comment("<<<<<<<<<<<< Traverse Up >>>>>>>>>>>>>>");
                 TestTraverseUp<Paragraph>(doc.MainDocumentPart, body.LastChild);

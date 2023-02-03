@@ -12,10 +12,10 @@ using Xunit;
 
 using static DocumentFormat.OpenXml.Tests.TestAssets;
 
-using A = DocumentFormat.OpenXml.Drawing;
-using DW = DocumentFormat.OpenXml.Drawing.Wordprocessing;
-using PIC = DocumentFormat.OpenXml.Drawing.Pictures;
-using W = DocumentFormat.OpenXml.Wordprocessing;
+using A = DocumentFormat.OpenXml.DrawingML.Y2006.Main;
+using DW = DocumentFormat.OpenXml.DrawingML.Y2006.WordprocessingDrawing;
+using PIC = DocumentFormat.OpenXml.DrawingML.Y2006.Picture;
+using W = DocumentFormat.OpenXml.WordprocessingML.Y2006.Main;
 
 namespace DocumentFormat.OpenXml.Tests
 {

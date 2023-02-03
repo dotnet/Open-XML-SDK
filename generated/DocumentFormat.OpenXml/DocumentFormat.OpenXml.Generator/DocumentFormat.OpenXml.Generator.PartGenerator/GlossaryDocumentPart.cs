@@ -19,7 +19,7 @@ namespace DocumentFormat.OpenXml.Packaging
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.wordprocessingml.document.glossary+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/glossaryDocument";
-        private DocumentFormat.OpenXml.Wordprocessing.GlossaryDocument? _rootElement;
+        private DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.GlossaryDocument? _rootElement;
 
         /// <summary>
         /// Creates an instance of the GlossaryDocumentPart OpenXmlType
@@ -124,13 +124,13 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets or sets the root element of this part.
         /// </summary>
-        public DocumentFormat.OpenXml.Wordprocessing.GlossaryDocument GlossaryDocument
+        public DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.GlossaryDocument GlossaryDocument
         {
             get
             {
                 if (_rootElement is null)
                 {
-                    LoadDomTree<DocumentFormat.OpenXml.Wordprocessing.GlossaryDocument>();
+                    LoadDomTree<DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.GlossaryDocument>();
                 }
 
                 return _rootElement!;
@@ -166,7 +166,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             set
             {
-                _rootElement = value as DocumentFormat.OpenXml.Wordprocessing.GlossaryDocument;
+                _rootElement = value as DocumentFormat.OpenXml.WordprocessingML.Y2006.Main.GlossaryDocument;
             }
         }
 

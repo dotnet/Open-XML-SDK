@@ -19,7 +19,7 @@ namespace DocumentFormat.OpenXml.Packaging
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.spreadsheetml.chartsheet+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/chartsheet";
-        private DocumentFormat.OpenXml.Spreadsheet.Chartsheet? _rootElement;
+        private DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Chartsheet? _rootElement;
 
         /// <summary>
         /// Creates an instance of the ChartsheetPart OpenXmlType
@@ -31,13 +31,13 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets or sets the root element of this part.
         /// </summary>
-        public DocumentFormat.OpenXml.Spreadsheet.Chartsheet Chartsheet
+        public DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Chartsheet Chartsheet
         {
             get
             {
                 if (_rootElement is null)
                 {
-                    LoadDomTree<DocumentFormat.OpenXml.Spreadsheet.Chartsheet>();
+                    LoadDomTree<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Chartsheet>();
                 }
 
                 return _rootElement!;
@@ -76,7 +76,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             set
             {
-                _rootElement = value as DocumentFormat.OpenXml.Spreadsheet.Chartsheet;
+                _rootElement = value as DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Chartsheet;
             }
         }
 

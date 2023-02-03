@@ -1361,7 +1361,7 @@
         {
           "QName": ":val",
           "PropertyName": "Val",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.SystemColorValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.SystemColorValues\u003E",
           "PropertyComments": "Value",
           "Validators": [
             {
@@ -1598,7 +1598,7 @@
         {
           "QName": ":val",
           "PropertyName": "Val",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.SchemeColorValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.SchemeColorValues\u003E",
           "PropertyComments": "Value",
           "Validators": [
             {
@@ -1816,7 +1816,7 @@
         {
           "QName": ":val",
           "PropertyName": "Val",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.PresetColorValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.PresetColorValues\u003E",
           "PropertyComments": "Value",
           "Validators": [
             {
@@ -2107,7 +2107,7 @@
         {
           "QName": ":prstMaterial",
           "PropertyName": "PresetMaterial",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.PresetMaterialTypeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.PresetMaterialTypeValues\u003E",
           "PropertyComments": "Preset Material Type",
           "Validators": [
             {
@@ -2278,7 +2278,7 @@
         {
           "QName": ":path",
           "PropertyName": "Path",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.PathShadeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.PathShadeValues\u003E",
           "PropertyComments": "Gradient Fill Path",
           "Validators": [
             {
@@ -2386,7 +2386,7 @@
         {
           "QName": ":flip",
           "PropertyName": "Flip",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.TileFlipValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.TileFlipValues\u003E",
           "PropertyComments": "Tile Flipping",
           "Validators": [
             {
@@ -2405,7 +2405,7 @@
         {
           "QName": ":algn",
           "PropertyName": "Alignment",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.RectangleAlignmentValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.RectangleAlignmentValues\u003E",
           "PropertyComments": "Alignment",
           "Validators": [
             {
@@ -2544,7 +2544,7 @@
         {
           "QName": ":flip",
           "PropertyName": "Flip",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.TileFlipValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.TileFlipValues\u003E",
           "PropertyComments": "Tile Flip",
           "Validators": [
             {
@@ -2716,7 +2716,7 @@
         {
           "QName": ":prst",
           "PropertyName": "Preset",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.PresetPatternValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.PresetPatternValues\u003E",
           "PropertyComments": "Preset Pattern",
           "Validators": [
             {
@@ -3188,7 +3188,7 @@
         {
           "QName": ":type",
           "PropertyName": "Type",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.EffectContainerValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.EffectContainerValues\u003E",
           "PropertyComments": "Effect Container Type",
           "Validators": [
             {
@@ -3668,7 +3668,7 @@
         {
           "QName": ":blend",
           "PropertyName": "BlendMode",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.BlendModeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.BlendModeValues\u003E",
           "PropertyComments": "Blend Mode",
           "Validators": [
             {
@@ -3996,7 +3996,7 @@
         {
           "QName": ":blend",
           "PropertyName": "Blend",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.BlendModeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.BlendModeValues\u003E",
           "PropertyComments": "Blend",
           "Validators": [
             {
@@ -4609,7 +4609,7 @@
         {
           "QName": ":algn",
           "PropertyName": "Alignment",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.RectangleAlignmentValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.RectangleAlignmentValues\u003E",
           "PropertyComments": "Shadow Alignment",
           "Validators": [
             {
@@ -4708,7 +4708,7 @@
         {
           "QName": ":prst",
           "PropertyName": "Preset",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.PresetShadowValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.PresetShadowValues\u003E",
           "PropertyComments": "Preset Shadow",
           "Validators": [
             {
@@ -5104,7 +5104,7 @@
         {
           "QName": ":algn",
           "PropertyName": "Alignment",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.RectangleAlignmentValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.RectangleAlignmentValues\u003E",
           "PropertyComments": "Shadow Alignment",
           "Validators": [
             {
@@ -5567,7 +5567,7 @@
         {
           "QName": ":prst",
           "PropertyName": "Preset",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.ShapeTypeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.ShapeTypeValues\u003E",
           "PropertyComments": "Preset Shape",
           "Validators": [
             {
@@ -5618,7 +5618,7 @@
         {
           "QName": ":prst",
           "PropertyName": "Preset",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.TextShapeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.TextShapeValues\u003E",
           "PropertyComments": "Preset Warp Shape",
           "Validators": [
             {
@@ -5711,7 +5711,7 @@
         {
           "QName": ":val",
           "PropertyName": "Val",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.PresetLineDashValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.PresetLineDashValues\u003E",
           "PropertyComments": "Value",
           "Validators": [
             {
@@ -6379,7 +6379,7 @@
         {
           "QName": ":idx",
           "PropertyName": "Index",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.FontCollectionIndexValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.FontCollectionIndexValues\u003E",
           "PropertyComments": "Identifier",
           "Validators": [
             {
@@ -7370,7 +7370,7 @@
         {
           "QName": ":type",
           "PropertyName": "Type",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.TextAutoNumberSchemeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.TextAutoNumberSchemeValues\u003E",
           "PropertyComments": "Bullet Autonumbering Type",
           "Validators": [
             {
@@ -8666,7 +8666,7 @@
         {
           "QName": ":cap",
           "PropertyName": "CapType",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.LineCapValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.LineCapValues\u003E",
           "PropertyComments": "line cap",
           "Validators": [
             {
@@ -8685,7 +8685,7 @@
         {
           "QName": ":cmpd",
           "PropertyName": "CompoundLineType",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.CompoundLineValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.CompoundLineValues\u003E",
           "PropertyComments": "compound line type",
           "Validators": [
             {
@@ -8704,7 +8704,7 @@
         {
           "QName": ":algn",
           "PropertyName": "Alignment",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.PenAlignmentValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.PenAlignmentValues\u003E",
           "PropertyComments": "pen alignment",
           "Validators": [
             {
@@ -9036,7 +9036,7 @@
         {
           "QName": ":cstate",
           "PropertyName": "CompressionState",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.BlipCompressionValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.BlipCompressionValues\u003E",
           "PropertyComments": "Compression state for blips.",
           "Validators": [
             {
@@ -12805,7 +12805,7 @@
         {
           "QName": ":bldStep",
           "PropertyName": "BuildStep",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.DiagramBuildStepValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.DiagramBuildStepValues\u003E",
           "PropertyComments": "Animation Build Step",
           "Validators": [
             {
@@ -12845,7 +12845,7 @@
         {
           "QName": ":bldStep",
           "PropertyName": "BuildStep",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.ChartBuildStepValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.ChartBuildStepValues\u003E",
           "PropertyComments": "Animation Build Step",
           "Validators": [
             {
@@ -13230,7 +13230,7 @@
         {
           "QName": ":bwMode",
           "PropertyName": "BlackWhiteMode",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.BlackWhiteModeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.BlackWhiteModeValues\u003E",
           "PropertyComments": "Black and White Mode",
           "Validators": [
             {
@@ -13886,7 +13886,7 @@
         {
           "QName": ":prst",
           "PropertyName": "Preset",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.PresetCameraValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.PresetCameraValues\u003E",
           "PropertyComments": "Preset Camera Type",
           "Validators": [
             {
@@ -13980,7 +13980,7 @@
         {
           "QName": ":rig",
           "PropertyName": "Rig",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.LightRigValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.LightRigValues\u003E",
           "PropertyComments": "Rig Preset",
           "Validators": [
             {
@@ -14002,7 +14002,7 @@
         {
           "QName": ":dir",
           "PropertyName": "Direction",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.LightRigDirectionValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.LightRigDirectionValues\u003E",
           "PropertyComments": "Direction",
           "Validators": [
             {
@@ -14373,7 +14373,7 @@
         {
           "QName": ":prst",
           "PropertyName": "Preset",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.BevelPresetValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.BevelPresetValues\u003E",
           "PropertyComments": "Preset Bevel",
           "Validators": [
             {
@@ -15391,7 +15391,7 @@
         {
           "QName": ":fill",
           "PropertyName": "Fill",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.PathFillModeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.PathFillModeValues\u003E",
           "PropertyComments": "Path Fill",
           "Validators": [
             {
@@ -15906,7 +15906,7 @@
         {
           "QName": ":vertOverflow",
           "PropertyName": "VerticalOverflow",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.TextVerticalOverflowValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.TextVerticalOverflowValues\u003E",
           "PropertyComments": "Text Vertical Overflow",
           "Validators": [
             {
@@ -15925,7 +15925,7 @@
         {
           "QName": ":horzOverflow",
           "PropertyName": "HorizontalOverflow",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.TextHorizontalOverflowValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.TextHorizontalOverflowValues\u003E",
           "PropertyComments": "Text Horizontal Overflow",
           "Validators": [
             {
@@ -15944,7 +15944,7 @@
         {
           "QName": ":vert",
           "PropertyName": "Vertical",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.TextVerticalValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.TextVerticalValues\u003E",
           "PropertyComments": "Vertical Text",
           "Validators": [
             {
@@ -15963,7 +15963,7 @@
         {
           "QName": ":wrap",
           "PropertyName": "Wrap",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.TextWrappingValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.TextWrappingValues\u003E",
           "PropertyComments": "Text Wrapping Type",
           "Validators": [
             {
@@ -16061,7 +16061,7 @@
         {
           "QName": ":anchor",
           "PropertyName": "Anchor",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.TextAnchoringTypeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.TextAnchoringTypeValues\u003E",
           "PropertyComments": "Anchor",
           "Validators": [
             {
@@ -16647,7 +16647,7 @@
         {
           "QName": ":bg1",
           "PropertyName": "Background1",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.ColorSchemeIndexValues\u003E",
           "PropertyComments": "Background 1",
           "Validators": [
             {
@@ -16669,7 +16669,7 @@
         {
           "QName": ":tx1",
           "PropertyName": "Text1",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.ColorSchemeIndexValues\u003E",
           "PropertyComments": "Text 1",
           "Validators": [
             {
@@ -16691,7 +16691,7 @@
         {
           "QName": ":bg2",
           "PropertyName": "Background2",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.ColorSchemeIndexValues\u003E",
           "PropertyComments": "Background 2",
           "Validators": [
             {
@@ -16713,7 +16713,7 @@
         {
           "QName": ":tx2",
           "PropertyName": "Text2",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.ColorSchemeIndexValues\u003E",
           "PropertyComments": "Text 2",
           "Validators": [
             {
@@ -16735,7 +16735,7 @@
         {
           "QName": ":accent1",
           "PropertyName": "Accent1",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.ColorSchemeIndexValues\u003E",
           "PropertyComments": "Accent 1",
           "Validators": [
             {
@@ -16757,7 +16757,7 @@
         {
           "QName": ":accent2",
           "PropertyName": "Accent2",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.ColorSchemeIndexValues\u003E",
           "PropertyComments": "Accent 2",
           "Validators": [
             {
@@ -16779,7 +16779,7 @@
         {
           "QName": ":accent3",
           "PropertyName": "Accent3",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.ColorSchemeIndexValues\u003E",
           "PropertyComments": "Accent 3",
           "Validators": [
             {
@@ -16801,7 +16801,7 @@
         {
           "QName": ":accent4",
           "PropertyName": "Accent4",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.ColorSchemeIndexValues\u003E",
           "PropertyComments": "Accent 4",
           "Validators": [
             {
@@ -16823,7 +16823,7 @@
         {
           "QName": ":accent5",
           "PropertyName": "Accent5",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.ColorSchemeIndexValues\u003E",
           "PropertyComments": "Accent 5",
           "Validators": [
             {
@@ -16845,7 +16845,7 @@
         {
           "QName": ":accent6",
           "PropertyName": "Accent6",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.ColorSchemeIndexValues\u003E",
           "PropertyComments": "Accent 6",
           "Validators": [
             {
@@ -16867,7 +16867,7 @@
         {
           "QName": ":hlink",
           "PropertyName": "Hyperlink",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.ColorSchemeIndexValues\u003E",
           "PropertyComments": "Hyperlink",
           "Validators": [
             {
@@ -16889,7 +16889,7 @@
         {
           "QName": ":folHlink",
           "PropertyName": "FollowedHyperlink",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.ColorSchemeIndexValues\u003E",
           "PropertyComments": "Followed Hyperlink",
           "Validators": [
             {
@@ -17011,7 +17011,7 @@
         {
           "QName": ":prstMaterial",
           "PropertyName": "PresetMaterial",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.PresetMaterialTypeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.PresetMaterialTypeValues\u003E",
           "PropertyComments": "Preset Material",
           "Validators": [
             {
@@ -17103,7 +17103,7 @@
         {
           "QName": ":vert",
           "PropertyName": "Vertical",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.TextVerticalValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.TextVerticalValues\u003E",
           "PropertyComments": "Text Direction",
           "Validators": [
             {
@@ -17122,7 +17122,7 @@
         {
           "QName": ":anchor",
           "PropertyName": "Anchor",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.TextAnchoringTypeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.TextAnchoringTypeValues\u003E",
           "PropertyComments": "Anchor",
           "Validators": [
             {
@@ -17147,7 +17147,7 @@
         {
           "QName": ":horzOverflow",
           "PropertyName": "HorizontalOverflow",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.TextHorizontalOverflowValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.TextHorizontalOverflowValues\u003E",
           "PropertyComments": "Horizontal Overflow",
           "Validators": [
             {
@@ -18699,7 +18699,7 @@
         {
           "QName": ":b",
           "PropertyName": "Bold",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.BooleanStyleValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.BooleanStyleValues\u003E",
           "PropertyComments": "Bold",
           "Validators": [
             {
@@ -18718,7 +18718,7 @@
         {
           "QName": ":i",
           "PropertyName": "Italic",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.BooleanStyleValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.BooleanStyleValues\u003E",
           "PropertyComments": "Italic",
           "Validators": [
             {
@@ -21971,7 +21971,7 @@
         {
           "QName": ":algn",
           "PropertyName": "Alignment",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.TextAlignmentTypeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.TextAlignmentTypeValues\u003E",
           "PropertyComments": "Alignment",
           "Validators": [
             {
@@ -22008,7 +22008,7 @@
         {
           "QName": ":fontAlgn",
           "PropertyName": "FontAlignment",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.TextFontAlignmentValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.TextFontAlignmentValues\u003E",
           "PropertyComments": "Font Alignment",
           "Validators": [
             {
@@ -22970,7 +22970,7 @@
         {
           "QName": ":u",
           "PropertyName": "Underline",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.TextUnderlineValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.TextUnderlineValues\u003E",
           "PropertyComments": "u",
           "Validators": [
             {
@@ -22989,7 +22989,7 @@
         {
           "QName": ":strike",
           "PropertyName": "Strike",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.TextStrikeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.TextStrikeValues\u003E",
           "PropertyComments": "strike",
           "Validators": [
             {
@@ -23032,7 +23032,7 @@
         {
           "QName": ":cap",
           "PropertyName": "Capital",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.TextCapsValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.TextCapsValues\u003E",
           "PropertyComments": "cap",
           "Validators": [
             {
@@ -23307,7 +23307,7 @@
         {
           "QName": ":algn",
           "PropertyName": "Alignment",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.TextTabAlignmentValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.TextTabAlignmentValues\u003E",
           "PropertyComments": "Tab Alignment",
           "Validators": [
             {
@@ -23750,7 +23750,7 @@
         {
           "QName": ":bwMode",
           "PropertyName": "BlackWhiteMode",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.BlackWhiteModeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.BlackWhiteModeValues\u003E",
           "PropertyComments": "Black and White Mode",
           "Validators": [
             {
@@ -25134,7 +25134,7 @@
         {
           "QName": ":type",
           "PropertyName": "Type",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.LineEndValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.LineEndValues\u003E",
           "PropertyComments": "Line Head/End Type",
           "Validators": [
             {
@@ -25153,7 +25153,7 @@
         {
           "QName": ":w",
           "PropertyName": "Width",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.LineEndWidthValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.LineEndWidthValues\u003E",
           "PropertyComments": "Width of Head/End",
           "Validators": [
             {
@@ -25172,7 +25172,7 @@
         {
           "QName": ":len",
           "PropertyName": "Length",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.LineEndLengthValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.Main.LineEndLengthValues\u003E",
           "PropertyComments": "Length of Head/End",
           "Validators": [
             {

@@ -19,7 +19,7 @@ namespace DocumentFormat.OpenXml.Packaging
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.spreadsheetml.queryTable+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/queryTable";
-        private DocumentFormat.OpenXml.Spreadsheet.QueryTable? _rootElement;
+        private DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.QueryTable? _rootElement;
 
         /// <summary>
         /// Creates an instance of the QueryTablePart OpenXmlType
@@ -40,7 +40,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             set
             {
-                _rootElement = value as DocumentFormat.OpenXml.Spreadsheet.QueryTable;
+                _rootElement = value as DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.QueryTable;
             }
         }
 
@@ -49,13 +49,13 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets or sets the root element of this part.
         /// </summary>
-        public DocumentFormat.OpenXml.Spreadsheet.QueryTable QueryTable
+        public DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.QueryTable QueryTable
         {
             get
             {
                 if (_rootElement is null)
                 {
-                    LoadDomTree<DocumentFormat.OpenXml.Spreadsheet.QueryTable>();
+                    LoadDomTree<DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.QueryTable>();
                 }
 
                 return _rootElement!;

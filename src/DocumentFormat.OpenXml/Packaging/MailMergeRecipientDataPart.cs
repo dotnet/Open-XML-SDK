@@ -1,7 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using DocumentFormat.OpenXml.Office.Word;
+using DocumentFormat.OpenXml.Office.Word.Y2006.WordML;
 using System;
 
 namespace DocumentFormat.OpenXml.Packaging
@@ -40,12 +40,12 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets or sets the part's root element when the part's content type is MailMergeRecipientDataPartType.OpenXmlMailMergeRecipientData.
         /// Setting this property will throw InvalidOperationException if the MailMergeRecipients property is not null.
         /// </summary>
-        public Wordprocessing.Recipients? Recipients
+        public WordprocessingML.Y2006.Main.Recipients? Recipients
         {
             get
             {
                 TryLoadRootElement();
-                return _rootEle as Wordprocessing.Recipients;
+                return _rootEle as WordprocessingML.Y2006.Main.Recipients;
             }
 
             set
@@ -98,7 +98,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 try
                 {
-                    LoadDomTree<Wordprocessing.Recipients>();
+                    LoadDomTree<WordprocessingML.Y2006.Main.Recipients>();
                 }
                 catch (System.IO.InvalidDataException)
                 {

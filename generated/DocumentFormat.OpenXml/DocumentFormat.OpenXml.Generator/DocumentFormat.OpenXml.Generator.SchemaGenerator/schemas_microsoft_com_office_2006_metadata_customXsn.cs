@@ -14,7 +14,7 @@ using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.Office.CustomXsn
+namespace DocumentFormat.OpenXml.Office.Y2006.MetaData.CustomXsn
 {
     /// <summary>
     /// <para>Defines the CustomXsn Class.</para>
@@ -24,10 +24,10 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CustomXsn.XsnLocation" /> <c>&lt;ntns:xsnLocation></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CustomXsn.CachedView" /> <c>&lt;ntns:cached></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CustomXsn.OpenByDefault" /> <c>&lt;ntns:openByDefault></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CustomXsn.Scope" /> <c>&lt;ntns:xsnScope></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2006.MetaData.CustomXsn.XsnLocation" /> <c>&lt;ntns:xsnLocation></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2006.MetaData.CustomXsn.CachedView" /> <c>&lt;ntns:cached></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2006.MetaData.CustomXsn.OpenByDefault" /> <c>&lt;ntns:openByDefault></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2006.MetaData.CustomXsn.Scope" /> <c>&lt;ntns:xsnScope></c></description></item>
     /// </list>
     /// </remark>
     public partial class CustomXsn : TypedOpenXmlCompositeElement
@@ -67,16 +67,16 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("ntns:customXsn");
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomXsn.XsnLocation>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomXsn.CachedView>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomXsn.OpenByDefault>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.CustomXsn.Scope>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Y2006.MetaData.CustomXsn.XsnLocation>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Y2006.MetaData.CustomXsn.CachedView>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Y2006.MetaData.CustomXsn.OpenByDefault>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Y2006.MetaData.CustomXsn.Scope>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomXsn.XsnLocation), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomXsn.CachedView), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomXsn.OpenByDefault), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.CustomXsn.Scope), 1, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Y2006.MetaData.CustomXsn.XsnLocation), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Y2006.MetaData.CustomXsn.CachedView), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Y2006.MetaData.CustomXsn.OpenByDefault), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Y2006.MetaData.CustomXsn.Scope), 1, 1)
             };
         }
 
@@ -87,9 +87,9 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
         /// <remark>
         /// xmlns:ntns = http://schemas.microsoft.com/office/2006/metadata/customXsn
         /// </remark>
-        public DocumentFormat.OpenXml.Office.CustomXsn.XsnLocation? XsnLocation
+        public DocumentFormat.OpenXml.Office.Y2006.MetaData.CustomXsn.XsnLocation? XsnLocation
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.CustomXsn.XsnLocation>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Y2006.MetaData.CustomXsn.XsnLocation>();
             set => SetElement(value);
         }
 
@@ -100,9 +100,9 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
         /// <remark>
         /// xmlns:ntns = http://schemas.microsoft.com/office/2006/metadata/customXsn
         /// </remark>
-        public DocumentFormat.OpenXml.Office.CustomXsn.CachedView? CachedView
+        public DocumentFormat.OpenXml.Office.Y2006.MetaData.CustomXsn.CachedView? CachedView
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.CustomXsn.CachedView>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Y2006.MetaData.CustomXsn.CachedView>();
             set => SetElement(value);
         }
 
@@ -113,9 +113,9 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
         /// <remark>
         /// xmlns:ntns = http://schemas.microsoft.com/office/2006/metadata/customXsn
         /// </remark>
-        public DocumentFormat.OpenXml.Office.CustomXsn.OpenByDefault? OpenByDefault
+        public DocumentFormat.OpenXml.Office.Y2006.MetaData.CustomXsn.OpenByDefault? OpenByDefault
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.CustomXsn.OpenByDefault>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Y2006.MetaData.CustomXsn.OpenByDefault>();
             set => SetElement(value);
         }
 
@@ -126,9 +126,9 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
         /// <remark>
         /// xmlns:ntns = http://schemas.microsoft.com/office/2006/metadata/customXsn
         /// </remark>
-        public DocumentFormat.OpenXml.Office.CustomXsn.Scope? Scope
+        public DocumentFormat.OpenXml.Office.Y2006.MetaData.CustomXsn.Scope? Scope
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.CustomXsn.Scope>();
+            get => GetElement<DocumentFormat.OpenXml.Office.Y2006.MetaData.CustomXsn.Scope>();
             set => SetElement(value);
         }
 

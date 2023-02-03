@@ -6,8 +6,8 @@
 #nullable enable
 
 using DocumentFormat.OpenXml;
-using DocumentFormat.OpenXml.Drawing;
-using DocumentFormat.OpenXml.Drawing.ChartDrawing;
+using DocumentFormat.OpenXml.DrawingML.Y2006.ChartDrawing;
+using DocumentFormat.OpenXml.DrawingML.Y2006.Main;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Office.Drawing.Y2007.M08.D02.Chart;
@@ -20,7 +20,7 @@ using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.Drawing.Charts
+namespace DocumentFormat.OpenXml.DrawingML.Y2006.Chart
 {
     /// <summary>
     /// <para>Number Format.</para>
@@ -80,20 +80,20 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.BlipFill" /> <c>&lt;a:blipFill></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.CustomGeometry" /> <c>&lt;a:custGeom></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.EffectDag" /> <c>&lt;a:effectDag></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.EffectList" /> <c>&lt;a:effectLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.GradientFill" /> <c>&lt;a:gradFill></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Outline" /> <c>&lt;a:ln></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NoFill" /> <c>&lt;a:noFill></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PatternFill" /> <c>&lt;a:pattFill></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PresetGeometry" /> <c>&lt;a:prstGeom></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Scene3DType" /> <c>&lt;a:scene3d></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Shape3DType" /> <c>&lt;a:sp3d></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SolidFill" /> <c>&lt;a:solidFill></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Transform2D" /> <c>&lt;a:xfrm></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.BlipFill" /> <c>&lt;a:blipFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.CustomGeometry" /> <c>&lt;a:custGeom></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.EffectDag" /> <c>&lt;a:effectDag></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.EffectList" /> <c>&lt;a:effectLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.GradientFill" /> <c>&lt;a:gradFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.Outline" /> <c>&lt;a:ln></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.NoFill" /> <c>&lt;a:noFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.PatternFill" /> <c>&lt;a:pattFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.PresetGeometry" /> <c>&lt;a:prstGeom></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.Scene3DType" /> <c>&lt;a:scene3d></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.Shape3DType" /> <c>&lt;a:sp3d></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.SolidFill" /> <c>&lt;a:solidFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.Transform2D" /> <c>&lt;a:xfrm></c></description></item>
     /// </list>
     /// </remark>
     public partial class ChartShapeProperties : TypedOpenXmlCompositeElement
@@ -133,9 +133,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Black and White Mode</para>
         /// <para>Represents the following attribute in the schema: bwMode</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>? BlackWhiteMode
+        public EnumValue<DocumentFormat.OpenXml.DrawingML.Y2006.Main.BlackWhiteModeValues>? BlackWhiteMode
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.DrawingML.Y2006.Main.BlackWhiteModeValues>>();
             set => SetAttribute(value);
         }
 
@@ -143,20 +143,20 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:spPr");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.BlipFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.CustomGeometry>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectDag>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.GradientFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Outline>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.NoFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PatternFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetGeometry>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Scene3DType>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Shape3DType>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Transform2D>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.BlipFill>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.CustomGeometry>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.EffectDag>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.EffectList>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.GradientFill>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.Outline>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.NoFill>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.PatternFill>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.PresetGeometry>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.Scene3DType>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.Shape3DType>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.SolidFill>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.Transform2D>();
             builder.AddElement<ChartShapeProperties>()
                 .AddAttribute("bwMode", a => a.BlackWhiteMode, aBuilder =>
                 {
@@ -164,35 +164,35 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Transform2D), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.Transform2D), 0, 1),
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.CustomGeometry), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetGeometry), 1, 1)
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.CustomGeometry), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.PresetGeometry), 1, 1)
                     }
                 },
                 new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NoFill), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SolidFill), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GradientFill), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BlipFill), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PatternFill), 1, 1)
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.NoFill), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.SolidFill), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.GradientFill), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.BlipFill), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.PatternFill), 1, 1)
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Outline), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.Outline), 0, 1),
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectList), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectDag), 1, 1)
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.EffectList), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.EffectDag), 1, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Scene3DType), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Shape3DType), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.Scene3DType), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.Shape3DType), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.ExtensionList), 0, 1)
             };
         }
 
@@ -203,9 +203,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Transform2D? Transform2D
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Main.Transform2D? Transform2D
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Transform2D>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Main.Transform2D>();
             set => SetElement(value);
         }
 
@@ -221,9 +221,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.BodyProperties" /> <c>&lt;a:bodyPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ListStyle" /> <c>&lt;a:lstStyle></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Paragraph" /> <c>&lt;a:p></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.BodyProperties" /> <c>&lt;a:bodyPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.ListStyle" /> <c>&lt;a:lstStyle></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.Paragraph" /> <c>&lt;a:p></c></description></item>
     /// </list>
     /// </remark>
     public partial class TextProperties : TextBodyType
@@ -265,9 +265,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             builder.SetSchema("c:txPr");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BodyProperties), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ListStyle), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Paragraph), 1, 0)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.BodyProperties), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.ListStyle), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.Paragraph), 1, 0)
             };
         }
 
@@ -283,9 +283,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.BodyProperties" /> <c>&lt;a:bodyPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ListStyle" /> <c>&lt;a:lstStyle></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Paragraph" /> <c>&lt;a:p></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.BodyProperties" /> <c>&lt;a:bodyPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.ListStyle" /> <c>&lt;a:lstStyle></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.Paragraph" /> <c>&lt;a:p></c></description></item>
     /// </list>
     /// </remark>
     public partial class RichText : TextBodyType
@@ -327,9 +327,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             builder.SetSchema("c:rich");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BodyProperties), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ListStyle), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Paragraph), 1, 0)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.BodyProperties), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.ListStyle), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.Paragraph), 1, 0)
             };
         }
 
@@ -345,9 +345,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.BodyProperties" /> <c>&lt;a:bodyPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ListStyle" /> <c>&lt;a:lstStyle></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Paragraph" /> <c>&lt;a:p></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.BodyProperties" /> <c>&lt;a:bodyPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.ListStyle" /> <c>&lt;a:lstStyle></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.Paragraph" /> <c>&lt;a:p></c></description></item>
     /// </list>
     /// </remark>
     public abstract partial class TextBodyType : TypedOpenXmlCompositeElement
@@ -386,9 +386,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.BodyProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.ListStyle>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Paragraph>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.BodyProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.ListStyle>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.Paragraph>();
         }
 
         /// <summary>
@@ -398,9 +398,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.BodyProperties? BodyProperties
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Main.BodyProperties? BodyProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.BodyProperties>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Main.BodyProperties>();
             set => SetElement(value);
         }
 
@@ -411,9 +411,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.ListStyle? ListStyle
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Main.ListStyle? ListStyle
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.ListStyle>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Main.ListStyle>();
             set => SetElement(value);
         }
     }
@@ -436,9 +436,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Data Label Position Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.DataLabelPositionValues>? Val
+        public EnumValue<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataLabelPositionValues>? Val
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.DataLabelPositionValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataLabelPositionValues>>();
             set => SetAttribute(value);
         }
 
@@ -1568,8 +1568,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ExtensionList" /> <c>&lt;c:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ManualLayout" /> <c>&lt;c:manualLayout></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList" /> <c>&lt;c:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ManualLayout" /> <c>&lt;c:manualLayout></c></description></item>
     /// </list>
     /// </remark>
     public partial class Layout : TypedOpenXmlCompositeElement
@@ -1609,12 +1609,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:layout");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ManualLayout>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ManualLayout>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ManualLayout), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ManualLayout), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList), 0, 1)
             };
         }
 
@@ -1625,9 +1625,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.ManualLayout? ManualLayout
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ManualLayout? ManualLayout
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ManualLayout>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ManualLayout>();
             set => SetElement(value);
         }
 
@@ -1638,9 +1638,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -1656,9 +1656,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.RichText" /> <c>&lt;c:rich></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.StringLiteral" /> <c>&lt;c:strLit></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.StringReference" /> <c>&lt;c:strRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.RichText" /> <c>&lt;c:rich></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.StringLiteral" /> <c>&lt;c:strLit></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.StringReference" /> <c>&lt;c:strRef></c></description></item>
     /// </list>
     /// </remark>
     public partial class ChartText : TypedOpenXmlCompositeElement
@@ -1698,16 +1698,16 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:tx");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.RichText>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.StringLiteral>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.StringReference>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.RichText>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.StringLiteral>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.StringReference>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.StringReference), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.RichText), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.StringLiteral), 1, 1)
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.StringReference), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.RichText), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.StringLiteral), 1, 1)
                 }
             };
         }
@@ -1719,9 +1719,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.StringReference? StringReference
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.StringReference? StringReference
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.StringReference>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.StringReference>();
             set => SetElement(value);
         }
 
@@ -1732,9 +1732,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.RichText? RichText
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.RichText? RichText
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.RichText>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.RichText>();
             set => SetElement(value);
         }
 
@@ -1745,9 +1745,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.StringLiteral? StringLiteral
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.StringLiteral? StringLiteral
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.StringLiteral>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.StringLiteral>();
             set => SetElement(value);
         }
 
@@ -1763,7 +1763,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
     /// </list>
     /// </remark>
     public partial class LeaderLines : ChartLinesType
@@ -1805,7 +1805,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             builder.SetSchema("c:leaderLines");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties), 0, 1)
             };
         }
 
@@ -1821,7 +1821,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
     /// </list>
     /// </remark>
     public partial class DropLines : ChartLinesType
@@ -1863,7 +1863,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             builder.SetSchema("c:dropLines");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties), 0, 1)
             };
         }
 
@@ -1879,7 +1879,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
     /// </list>
     /// </remark>
     public partial class MajorGridlines : ChartLinesType
@@ -1921,7 +1921,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             builder.SetSchema("c:majorGridlines");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties), 0, 1)
             };
         }
 
@@ -1937,7 +1937,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
     /// </list>
     /// </remark>
     public partial class MinorGridlines : ChartLinesType
@@ -1979,7 +1979,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             builder.SetSchema("c:minorGridlines");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties), 0, 1)
             };
         }
 
@@ -1995,7 +1995,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
     /// </list>
     /// </remark>
     public partial class SeriesLines : ChartLinesType
@@ -2037,7 +2037,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             builder.SetSchema("c:serLines");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties), 0, 1)
             };
         }
 
@@ -2053,7 +2053,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
     /// </list>
     /// </remark>
     public partial class HighLowLines : ChartLinesType
@@ -2095,7 +2095,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             builder.SetSchema("c:hiLowLines");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties), 0, 1)
             };
         }
 
@@ -2111,7 +2111,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
     /// </list>
     /// </remark>
     public abstract partial class ChartLinesType : TypedOpenXmlCompositeElement
@@ -2150,7 +2150,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties>();
         }
 
         /// <summary>
@@ -2160,9 +2160,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties? ChartShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties>();
             set => SetElement(value);
         }
     }
@@ -2410,8 +2410,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.StringReference" /> <c>&lt;c:strRef></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.NumericValue" /> <c>&lt;c:v></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.StringReference" /> <c>&lt;c:strRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumericValue" /> <c>&lt;c:v></c></description></item>
     /// </list>
     /// </remark>
     public partial class SeriesText : TypedOpenXmlCompositeElement
@@ -2451,14 +2451,14 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:tx");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.StringReference>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.NumericValue>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.StringReference>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumericValue>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.StringReference), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumericValue), 1, 1)
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.StringReference), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumericValue), 1, 1)
                 }
             };
         }
@@ -2470,9 +2470,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.StringReference? StringReference
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.StringReference? StringReference
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.StringReference>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.StringReference>();
             set => SetElement(value);
         }
 
@@ -2483,9 +2483,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.NumericValue? NumericValue
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumericValue? NumericValue
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.NumericValue>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumericValue>();
             set => SetElement(value);
         }
 
@@ -2511,9 +2511,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Grouping Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.GroupingValues>? Val
+        public EnumValue<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.GroupingValues>? Val
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.GroupingValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.GroupingValues>>();
             set => SetAttribute(value);
         }
 
@@ -2537,20 +2537,20 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData" /> <c>&lt;c:cat></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Smooth" /> <c>&lt;c:smooth></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.DataLabels" /> <c>&lt;c:dLbls></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.DataPoint" /> <c>&lt;c:dPt></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ErrorBars" /> <c>&lt;c:errBars></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.LineSerExtensionList" /> <c>&lt;c:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Marker" /> <c>&lt;c:marker></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Values" /> <c>&lt;c:val></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PictureOptions" /> <c>&lt;c:pictureOptions></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.SeriesText" /> <c>&lt;c:tx></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Trendline" /> <c>&lt;c:trendline></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Index" /> <c>&lt;c:idx></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Order" /> <c>&lt;c:order></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.CategoryAxisData" /> <c>&lt;c:cat></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Smooth" /> <c>&lt;c:smooth></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataLabels" /> <c>&lt;c:dLbls></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataPoint" /> <c>&lt;c:dPt></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ErrorBars" /> <c>&lt;c:errBars></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.LineSerExtensionList" /> <c>&lt;c:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Marker" /> <c>&lt;c:marker></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Values" /> <c>&lt;c:val></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PictureOptions" /> <c>&lt;c:pictureOptions></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SeriesText" /> <c>&lt;c:tx></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Trendline" /> <c>&lt;c:trendline></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Index" /> <c>&lt;c:idx></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Order" /> <c>&lt;c:order></c></description></item>
     /// </list>
     /// </remark>
     public partial class LineChartSeries : TypedOpenXmlCompositeElement
@@ -2590,42 +2590,42 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:ser");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Smooth>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataLabels>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataPoint>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ErrorBars>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.LineSerExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Marker>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Values>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PictureOptions>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.SeriesText>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Trendline>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Index>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Order>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.CategoryAxisData>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Smooth>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataLabels>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataPoint>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ErrorBars>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.LineSerExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Marker>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Values>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PictureOptions>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SeriesText>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Trendline>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Index>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Order>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Index), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Order), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.SeriesText), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1)
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Index), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Order), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SeriesText), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties), 0, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Marker), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PictureOptions), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataPoint), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataLabels), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Trendline), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ErrorBars), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Values), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Smooth), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.LineSerExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Marker), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PictureOptions), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataPoint), 0, 0),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataLabels), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Trendline), 0, 0),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ErrorBars), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.CategoryAxisData), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Values), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Smooth), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.LineSerExtensionList), 0, 1)
             };
         }
 
@@ -2636,9 +2636,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.Index? Index
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Index? Index
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Index>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Index>();
             set => SetElement(value);
         }
 
@@ -2649,9 +2649,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.Order? Order
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Order? Order
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Order>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Order>();
             set => SetElement(value);
         }
 
@@ -2662,9 +2662,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.SeriesText? SeriesText
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SeriesText? SeriesText
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.SeriesText>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SeriesText>();
             set => SetElement(value);
         }
 
@@ -2675,9 +2675,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties? ChartShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties>();
             set => SetElement(value);
         }
 
@@ -2688,9 +2688,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.Marker? Marker
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Marker? Marker
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Marker>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Marker>();
             set => SetElement(value);
         }
 
@@ -2701,9 +2701,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.PictureOptions? PictureOptions
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PictureOptions? PictureOptions
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PictureOptions>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PictureOptions>();
             set => SetElement(value);
         }
 
@@ -2719,22 +2719,22 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.TextProperties" /> <c>&lt;c:txPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Delete" /> <c>&lt;c:delete></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ShowLegendKey" /> <c>&lt;c:showLegendKey></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ShowValue" /> <c>&lt;c:showVal></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ShowCategoryName" /> <c>&lt;c:showCatName></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ShowSeriesName" /> <c>&lt;c:showSerName></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ShowPercent" /> <c>&lt;c:showPercent></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ShowBubbleSize" /> <c>&lt;c:showBubbleSize></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ShowLeaderLines" /> <c>&lt;c:showLeaderLines></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.LeaderLines" /> <c>&lt;c:leaderLines></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.DataLabel" /> <c>&lt;c:dLbl></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.DataLabelPosition" /> <c>&lt;c:dLblPos></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.DLblsExtensionList" /> <c>&lt;c:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat" /> <c>&lt;c:numFmt></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Separator" /> <c>&lt;c:separator></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TextProperties" /> <c>&lt;c:txPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Delete" /> <c>&lt;c:delete></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ShowLegendKey" /> <c>&lt;c:showLegendKey></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ShowValue" /> <c>&lt;c:showVal></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ShowCategoryName" /> <c>&lt;c:showCatName></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ShowSeriesName" /> <c>&lt;c:showSerName></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ShowPercent" /> <c>&lt;c:showPercent></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ShowBubbleSize" /> <c>&lt;c:showBubbleSize></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ShowLeaderLines" /> <c>&lt;c:showLeaderLines></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.LeaderLines" /> <c>&lt;c:leaderLines></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataLabel" /> <c>&lt;c:dLbl></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataLabelPosition" /> <c>&lt;c:dLblPos></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DLblsExtensionList" /> <c>&lt;c:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumberingFormat" /> <c>&lt;c:numFmt></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Separator" /> <c>&lt;c:separator></c></description></item>
     /// </list>
     /// </remark>
     public partial class DataLabels : TypedOpenXmlCompositeElement
@@ -2774,28 +2774,28 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:dLbls");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.TextProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Delete>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ShowLegendKey>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ShowValue>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ShowCategoryName>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ShowSeriesName>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ShowPercent>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ShowBubbleSize>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ShowLeaderLines>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.LeaderLines>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataLabel>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataLabelPosition>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DLblsExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Separator>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TextProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Delete>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ShowLegendKey>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ShowValue>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ShowCategoryName>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ShowSeriesName>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ShowPercent>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ShowBubbleSize>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ShowLeaderLines>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.LeaderLines>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataLabel>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataLabelPosition>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DLblsExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumberingFormat>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Separator>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataLabel), 0, 0),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataLabel), 0, 0),
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Delete), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Delete), 1, 1),
                     new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                     {
                         new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
@@ -2804,25 +2804,25 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                             {
                                 new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                                 {
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat), 0, 1),
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1),
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.TextProperties), 0, 1),
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataLabelPosition), 0, 1),
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowLegendKey), 0, 1),
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowValue), 0, 1),
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowCategoryName), 0, 1),
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowSeriesName), 0, 1),
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowPercent), 0, 1),
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowBubbleSize), 0, 1),
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Separator), 0, 1)
+                                    new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumberingFormat), 0, 1),
+                                    new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties), 0, 1),
+                                    new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TextProperties), 0, 1),
+                                    new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataLabelPosition), 0, 1),
+                                    new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ShowLegendKey), 0, 1),
+                                    new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ShowValue), 0, 1),
+                                    new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ShowCategoryName), 0, 1),
+                                    new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ShowSeriesName), 0, 1),
+                                    new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ShowPercent), 0, 1),
+                                    new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ShowBubbleSize), 0, 1),
+                                    new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Separator), 0, 1)
                                 }
                             },
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowLeaderLines), 0, 1),
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.LeaderLines), 0, 1)
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ShowLeaderLines), 0, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.LeaderLines), 0, 1)
                         }
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DLblsExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DLblsExtensionList), 0, 1)
             };
         }
 
@@ -2848,9 +2848,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Bar Direction Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.BarDirectionValues>? Val
+        public EnumValue<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.BarDirectionValues>? Val
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.BarDirectionValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.BarDirectionValues>>();
             set => SetAttribute(value);
         }
 
@@ -2887,9 +2887,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Bar Grouping Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.BarGroupingValues>? Val
+        public EnumValue<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.BarGroupingValues>? Val
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.BarGroupingValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.BarGroupingValues>>();
             set => SetAttribute(value);
         }
 
@@ -2913,20 +2913,20 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData" /> <c>&lt;c:cat></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.BarSerExtensionList" /> <c>&lt;c:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.InvertIfNegative" /> <c>&lt;c:invertIfNegative></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.DataLabels" /> <c>&lt;c:dLbls></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.DataPoint" /> <c>&lt;c:dPt></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ErrorBars" /> <c>&lt;c:errBars></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Values" /> <c>&lt;c:val></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PictureOptions" /> <c>&lt;c:pictureOptions></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.SeriesText" /> <c>&lt;c:tx></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Shape" /> <c>&lt;c:shape></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Trendline" /> <c>&lt;c:trendline></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Index" /> <c>&lt;c:idx></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Order" /> <c>&lt;c:order></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.CategoryAxisData" /> <c>&lt;c:cat></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.BarSerExtensionList" /> <c>&lt;c:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.InvertIfNegative" /> <c>&lt;c:invertIfNegative></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataLabels" /> <c>&lt;c:dLbls></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataPoint" /> <c>&lt;c:dPt></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ErrorBars" /> <c>&lt;c:errBars></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Values" /> <c>&lt;c:val></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PictureOptions" /> <c>&lt;c:pictureOptions></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SeriesText" /> <c>&lt;c:tx></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Shape" /> <c>&lt;c:shape></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Trendline" /> <c>&lt;c:trendline></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Index" /> <c>&lt;c:idx></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Order" /> <c>&lt;c:order></c></description></item>
     /// </list>
     /// </remark>
     public partial class BarChartSeries : TypedOpenXmlCompositeElement
@@ -2966,42 +2966,42 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:ser");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.BarSerExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.InvertIfNegative>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataLabels>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataPoint>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ErrorBars>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Values>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PictureOptions>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.SeriesText>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Shape>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Trendline>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Index>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Order>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.CategoryAxisData>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.BarSerExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.InvertIfNegative>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataLabels>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataPoint>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ErrorBars>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Values>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PictureOptions>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SeriesText>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Shape>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Trendline>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Index>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Order>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Index), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Order), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.SeriesText), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1)
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Index), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Order), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SeriesText), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties), 0, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.InvertIfNegative), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PictureOptions), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataPoint), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataLabels), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Trendline), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ErrorBars), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Values), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Shape), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.BarSerExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.InvertIfNegative), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PictureOptions), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataPoint), 0, 0),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataLabels), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Trendline), 0, 0),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ErrorBars), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.CategoryAxisData), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Values), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Shape), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.BarSerExtensionList), 0, 1)
             };
         }
 
@@ -3012,9 +3012,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.Index? Index
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Index? Index
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Index>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Index>();
             set => SetElement(value);
         }
 
@@ -3025,9 +3025,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.Order? Order
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Order? Order
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Order>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Order>();
             set => SetElement(value);
         }
 
@@ -3038,9 +3038,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.SeriesText? SeriesText
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SeriesText? SeriesText
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.SeriesText>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SeriesText>();
             set => SetElement(value);
         }
 
@@ -3051,9 +3051,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties? ChartShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties>();
             set => SetElement(value);
         }
 
@@ -3064,9 +3064,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.InvertIfNegative? InvertIfNegative
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.InvertIfNegative? InvertIfNegative
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.InvertIfNegative>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.InvertIfNegative>();
             set => SetElement(value);
         }
 
@@ -3077,9 +3077,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.PictureOptions? PictureOptions
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PictureOptions? PictureOptions
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PictureOptions>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PictureOptions>();
             set => SetElement(value);
         }
 
@@ -3095,18 +3095,18 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.AreaSerExtensionList" /> <c>&lt;c:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData" /> <c>&lt;c:cat></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.DataLabels" /> <c>&lt;c:dLbls></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.DataPoint" /> <c>&lt;c:dPt></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ErrorBars" /> <c>&lt;c:errBars></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Values" /> <c>&lt;c:val></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PictureOptions" /> <c>&lt;c:pictureOptions></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.SeriesText" /> <c>&lt;c:tx></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Trendline" /> <c>&lt;c:trendline></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Index" /> <c>&lt;c:idx></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Order" /> <c>&lt;c:order></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AreaSerExtensionList" /> <c>&lt;c:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.CategoryAxisData" /> <c>&lt;c:cat></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataLabels" /> <c>&lt;c:dLbls></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataPoint" /> <c>&lt;c:dPt></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ErrorBars" /> <c>&lt;c:errBars></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Values" /> <c>&lt;c:val></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PictureOptions" /> <c>&lt;c:pictureOptions></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SeriesText" /> <c>&lt;c:tx></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Trendline" /> <c>&lt;c:trendline></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Index" /> <c>&lt;c:idx></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Order" /> <c>&lt;c:order></c></description></item>
     /// </list>
     /// </remark>
     public partial class AreaChartSeries : TypedOpenXmlCompositeElement
@@ -3146,38 +3146,38 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:ser");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.AreaSerExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataLabels>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataPoint>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ErrorBars>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Values>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PictureOptions>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.SeriesText>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Trendline>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Index>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Order>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AreaSerExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.CategoryAxisData>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataLabels>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataPoint>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ErrorBars>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Values>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PictureOptions>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SeriesText>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Trendline>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Index>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Order>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Index), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Order), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.SeriesText), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1)
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Index), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Order), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SeriesText), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties), 0, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PictureOptions), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataPoint), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataLabels), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Trendline), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ErrorBars), 0, 2),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Values), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.AreaSerExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PictureOptions), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataPoint), 0, 0),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataLabels), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Trendline), 0, 0),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ErrorBars), 0, 2),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.CategoryAxisData), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Values), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AreaSerExtensionList), 0, 1)
             };
         }
 
@@ -3188,9 +3188,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.Index? Index
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Index? Index
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Index>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Index>();
             set => SetElement(value);
         }
 
@@ -3201,9 +3201,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.Order? Order
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Order? Order
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Order>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Order>();
             set => SetElement(value);
         }
 
@@ -3214,9 +3214,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.SeriesText? SeriesText
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SeriesText? SeriesText
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.SeriesText>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SeriesText>();
             set => SetElement(value);
         }
 
@@ -3227,9 +3227,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties? ChartShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties>();
             set => SetElement(value);
         }
 
@@ -3240,9 +3240,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.PictureOptions? PictureOptions
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PictureOptions? PictureOptions
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PictureOptions>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PictureOptions>();
             set => SetElement(value);
         }
 
@@ -3258,17 +3258,17 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData" /> <c>&lt;c:cat></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.DataLabels" /> <c>&lt;c:dLbls></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.DataPoint" /> <c>&lt;c:dPt></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Values" /> <c>&lt;c:val></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PictureOptions" /> <c>&lt;c:pictureOptions></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PieSerExtensionList" /> <c>&lt;c:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.SeriesText" /> <c>&lt;c:tx></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Index" /> <c>&lt;c:idx></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Order" /> <c>&lt;c:order></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Explosion" /> <c>&lt;c:explosion></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.CategoryAxisData" /> <c>&lt;c:cat></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataLabels" /> <c>&lt;c:dLbls></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataPoint" /> <c>&lt;c:dPt></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Values" /> <c>&lt;c:val></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PictureOptions" /> <c>&lt;c:pictureOptions></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PieSerExtensionList" /> <c>&lt;c:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SeriesText" /> <c>&lt;c:tx></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Index" /> <c>&lt;c:idx></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Order" /> <c>&lt;c:order></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Explosion" /> <c>&lt;c:explosion></c></description></item>
     /// </list>
     /// </remark>
     public partial class PieChartSeries : TypedOpenXmlCompositeElement
@@ -3308,36 +3308,36 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:ser");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataLabels>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataPoint>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Values>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PictureOptions>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PieSerExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.SeriesText>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Index>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Order>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Explosion>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.CategoryAxisData>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataLabels>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataPoint>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Values>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PictureOptions>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PieSerExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SeriesText>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Index>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Order>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Explosion>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Index), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Order), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.SeriesText), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1)
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Index), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Order), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SeriesText), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties), 0, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PictureOptions), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Explosion), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataPoint), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataLabels), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Values), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PieSerExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PictureOptions), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Explosion), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataPoint), 0, 0),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataLabels), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.CategoryAxisData), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Values), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PieSerExtensionList), 0, 1)
             };
         }
 
@@ -3348,9 +3348,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.Index? Index
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Index? Index
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Index>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Index>();
             set => SetElement(value);
         }
 
@@ -3361,9 +3361,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.Order? Order
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Order? Order
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Order>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Order>();
             set => SetElement(value);
         }
 
@@ -3374,9 +3374,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.SeriesText? SeriesText
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SeriesText? SeriesText
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.SeriesText>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SeriesText>();
             set => SetElement(value);
         }
 
@@ -3387,9 +3387,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties? ChartShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties>();
             set => SetElement(value);
         }
 
@@ -3400,9 +3400,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.PictureOptions? PictureOptions
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PictureOptions? PictureOptions
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PictureOptions>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PictureOptions>();
             set => SetElement(value);
         }
 
@@ -3413,9 +3413,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.Explosion? Explosion
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Explosion? Explosion
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Explosion>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Explosion>();
             set => SetElement(value);
         }
 
@@ -3431,15 +3431,15 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData" /> <c>&lt;c:cat></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Bubble3D" /> <c>&lt;c:bubble3D></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Values" /> <c>&lt;c:val></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PictureOptions" /> <c>&lt;c:pictureOptions></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.SeriesText" /> <c>&lt;c:tx></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.SurfaceSerExtensionList" /> <c>&lt;c:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Index" /> <c>&lt;c:idx></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Order" /> <c>&lt;c:order></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.CategoryAxisData" /> <c>&lt;c:cat></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Bubble3D" /> <c>&lt;c:bubble3D></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Values" /> <c>&lt;c:val></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PictureOptions" /> <c>&lt;c:pictureOptions></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SeriesText" /> <c>&lt;c:tx></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SurfaceSerExtensionList" /> <c>&lt;c:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Index" /> <c>&lt;c:idx></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Order" /> <c>&lt;c:order></c></description></item>
     /// </list>
     /// </remark>
     public partial class SurfaceChartSeries : TypedOpenXmlCompositeElement
@@ -3479,32 +3479,32 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:ser");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Bubble3D>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Values>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PictureOptions>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.SeriesText>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.SurfaceSerExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Index>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Order>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.CategoryAxisData>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Bubble3D>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Values>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PictureOptions>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SeriesText>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SurfaceSerExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Index>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Order>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Index), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Order), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.SeriesText), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1)
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Index), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Order), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SeriesText), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties), 0, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PictureOptions), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Values), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Bubble3D), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.SurfaceSerExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PictureOptions), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.CategoryAxisData), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Values), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Bubble3D), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SurfaceSerExtensionList), 0, 1)
             };
         }
 
@@ -3515,9 +3515,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.Index? Index
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Index? Index
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Index>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Index>();
             set => SetElement(value);
         }
 
@@ -3528,9 +3528,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.Order? Order
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Order? Order
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Order>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Order>();
             set => SetElement(value);
         }
 
@@ -3541,9 +3541,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.SeriesText? SeriesText
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SeriesText? SeriesText
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.SeriesText>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SeriesText>();
             set => SetElement(value);
         }
 
@@ -3554,9 +3554,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties? ChartShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties>();
             set => SetElement(value);
         }
 
@@ -3567,9 +3567,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.PictureOptions? PictureOptions
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PictureOptions? PictureOptions
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PictureOptions>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PictureOptions>();
             set => SetElement(value);
         }
 
@@ -3580,9 +3580,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData? CategoryAxisData
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.CategoryAxisData? CategoryAxisData
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.CategoryAxisData>();
             set => SetElement(value);
         }
 
@@ -3593,9 +3593,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.Values? Values
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Values? Values
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Values>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Values>();
             set => SetElement(value);
         }
 
@@ -3606,9 +3606,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.Bubble3D? Bubble3D
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Bubble3D? Bubble3D
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Bubble3D>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Bubble3D>();
             set => SetElement(value);
         }
 
@@ -3619,9 +3619,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.SurfaceSerExtensionList? SurfaceSerExtensionList
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SurfaceSerExtensionList? SurfaceSerExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.SurfaceSerExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SurfaceSerExtensionList>();
             set => SetElement(value);
         }
 
@@ -3637,7 +3637,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.BandFormat" /> <c>&lt;c:bandFmt></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.BandFormat" /> <c>&lt;c:bandFmt></c></description></item>
     /// </list>
     /// </remark>
     public partial class BandFormats : TypedOpenXmlCompositeElement
@@ -3677,10 +3677,10 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:bandFmts");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.BandFormat>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.BandFormat>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.BandFormat), 0, 0)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.BandFormat), 0, 0)
             };
         }
 
@@ -3696,11 +3696,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.MaxAxisValue" /> <c>&lt;c:max></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.MinAxisValue" /> <c>&lt;c:min></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ExtensionList" /> <c>&lt;c:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.LogBase" /> <c>&lt;c:logBase></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Orientation" /> <c>&lt;c:orientation></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MaxAxisValue" /> <c>&lt;c:max></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MinAxisValue" /> <c>&lt;c:min></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList" /> <c>&lt;c:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.LogBase" /> <c>&lt;c:logBase></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Orientation" /> <c>&lt;c:orientation></c></description></item>
     /// </list>
     /// </remark>
     public partial class Scaling : TypedOpenXmlCompositeElement
@@ -3740,18 +3740,18 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:scaling");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.MaxAxisValue>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.MinAxisValue>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.LogBase>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Orientation>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MaxAxisValue>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MinAxisValue>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.LogBase>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Orientation>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.LogBase), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Orientation), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.MaxAxisValue), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.MinAxisValue), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.LogBase), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Orientation), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MaxAxisValue), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MinAxisValue), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList), 0, 1)
             };
         }
 
@@ -3762,9 +3762,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.LogBase? LogBase
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.LogBase? LogBase
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.LogBase>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.LogBase>();
             set => SetElement(value);
         }
 
@@ -3775,9 +3775,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.Orientation? Orientation
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Orientation? Orientation
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Orientation>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Orientation>();
             set => SetElement(value);
         }
 
@@ -3788,9 +3788,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.MaxAxisValue? MaxAxisValue
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MaxAxisValue? MaxAxisValue
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.MaxAxisValue>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MaxAxisValue>();
             set => SetElement(value);
         }
 
@@ -3801,9 +3801,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.MinAxisValue? MinAxisValue
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MinAxisValue? MinAxisValue
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.MinAxisValue>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MinAxisValue>();
             set => SetElement(value);
         }
 
@@ -3814,9 +3814,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -3842,9 +3842,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Axis Position Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.AxisPositionValues>? Val
+        public EnumValue<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AxisPositionValues>? Val
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.AxisPositionValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AxisPositionValues>>();
             set => SetAttribute(value);
         }
 
@@ -3871,12 +3871,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.TextProperties" /> <c>&lt;c:txPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Overlay" /> <c>&lt;c:overlay></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ExtensionList" /> <c>&lt;c:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Layout" /> <c>&lt;c:layout></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartText" /> <c>&lt;c:tx></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TextProperties" /> <c>&lt;c:txPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Overlay" /> <c>&lt;c:overlay></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList" /> <c>&lt;c:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Layout" /> <c>&lt;c:layout></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartText" /> <c>&lt;c:tx></c></description></item>
     /// </list>
     /// </remark>
     public partial class Title : TypedOpenXmlCompositeElement
@@ -3916,20 +3916,20 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:title");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.TextProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Overlay>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Layout>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartText>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TextProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Overlay>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Layout>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartText>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartText), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Layout), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Overlay), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.TextProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartText), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Layout), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Overlay), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TextProperties), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList), 0, 1)
             };
         }
 
@@ -3940,9 +3940,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.ChartText? ChartText
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartText? ChartText
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartText>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartText>();
             set => SetElement(value);
         }
 
@@ -3953,9 +3953,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.Layout? Layout
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Layout? Layout
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Layout>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Layout>();
             set => SetElement(value);
         }
 
@@ -3966,9 +3966,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.Overlay? Overlay
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Overlay? Overlay
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Overlay>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Overlay>();
             set => SetElement(value);
         }
 
@@ -3979,9 +3979,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties? ChartShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties>();
             set => SetElement(value);
         }
 
@@ -3992,9 +3992,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.TextProperties? TextProperties
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TextProperties? TextProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.TextProperties>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TextProperties>();
             set => SetElement(value);
         }
 
@@ -4005,9 +4005,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -4081,9 +4081,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Tick Mark Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.TickMarkValues>? Val
+        public EnumValue<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TickMarkValues>? Val
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.TickMarkValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TickMarkValues>>();
             set => SetAttribute(value);
         }
 
@@ -4113,9 +4113,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Tick Label Position Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.TickLabelPositionValues>? Val
+        public EnumValue<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TickLabelPositionValues>? Val
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.TickLabelPositionValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TickLabelPositionValues>>();
             set => SetAttribute(value);
         }
 
@@ -4149,9 +4149,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Crosses Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.CrossesValues>? Val
+        public EnumValue<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.CrossesValues>? Val
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.CrossesValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.CrossesValues>>();
             set => SetAttribute(value);
         }
 
@@ -4531,20 +4531,20 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ColorMapOverride" /> <c>&lt;c:clrMapOvr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ShapeProperties" /> <c>&lt;c:spPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.TextProperties" /> <c>&lt;c:txPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Date1904" /> <c>&lt;c:date1904></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.RoundedCorners" /> <c>&lt;c:roundedCorners></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Chart" /> <c>&lt;c:chart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartSpaceExtensionList" /> <c>&lt;c:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ExternalData" /> <c>&lt;c:externalData></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PivotSource" /> <c>&lt;c:pivotSource></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PrintSettings" /> <c>&lt;c:printSettings></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Protection" /> <c>&lt;c:protection></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.UserShapesReference" /> <c>&lt;c:userShapes></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Style" /> <c>&lt;c:style></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.EditingLanguage" /> <c>&lt;c:lang></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ColorMapOverride" /> <c>&lt;c:clrMapOvr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ShapeProperties" /> <c>&lt;c:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TextProperties" /> <c>&lt;c:txPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Date1904" /> <c>&lt;c:date1904></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.RoundedCorners" /> <c>&lt;c:roundedCorners></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Chart" /> <c>&lt;c:chart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartSpaceExtensionList" /> <c>&lt;c:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExternalData" /> <c>&lt;c:externalData></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PivotSource" /> <c>&lt;c:pivotSource></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PrintSettings" /> <c>&lt;c:printSettings></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Protection" /> <c>&lt;c:protection></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.UserShapesReference" /> <c>&lt;c:userShapes></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Style" /> <c>&lt;c:style></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.EditingLanguage" /> <c>&lt;c:lang></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2007.M08.D02.Chart.Style" /> <c>&lt;c14:style></c></description></item>
     /// </list>
     /// </remark>
@@ -4585,41 +4585,41 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:chartSpace");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ColorMapOverride>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ShapeProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.TextProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Date1904>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.RoundedCorners>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Chart>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartSpaceExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ExternalData>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PivotSource>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PrintSettings>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Protection>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.UserShapesReference>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Style>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.EditingLanguage>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ColorMapOverride>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TextProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Date1904>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.RoundedCorners>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Chart>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartSpaceExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExternalData>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PivotSource>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PrintSettings>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Protection>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.UserShapesReference>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Style>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.EditingLanguage>();
             builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2007.M08.D02.Chart.Style>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Date1904), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.EditingLanguage), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.RoundedCorners), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Date1904), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.EditingLanguage), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.RoundedCorners), 0, 1),
                 new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
                 {
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2007.M08.D02.Chart.Style), 1, 1, version: FileFormatVersions.Office2010),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Style), 1, 1)
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Style), 1, 1)
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ColorMapOverride), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PivotSource), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Protection), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Chart), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShapeProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.TextProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExternalData), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PrintSettings), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.UserShapesReference), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartSpaceExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ColorMapOverride), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PivotSource), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Protection), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Chart), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ShapeProperties), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TextProperties), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExternalData), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PrintSettings), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.UserShapesReference), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartSpaceExtensionList), 0, 1)
             };
         }
 
@@ -4630,9 +4630,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.Date1904? Date1904
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Date1904? Date1904
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Date1904>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Date1904>();
             set => SetElement(value);
         }
 
@@ -4643,9 +4643,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.EditingLanguage? EditingLanguage
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.EditingLanguage? EditingLanguage
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.EditingLanguage>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.EditingLanguage>();
             set => SetElement(value);
         }
 
@@ -4656,9 +4656,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.RoundedCorners? RoundedCorners
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.RoundedCorners? RoundedCorners
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.RoundedCorners>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.RoundedCorners>();
             set => SetElement(value);
         }
 
@@ -4705,8 +4705,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ChartDrawing.AbsoluteAnchorSize" /> <c>&lt;cdr:absSizeAnchor></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ChartDrawing.RelativeAnchorSize" /> <c>&lt;cdr:relSizeAnchor></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.ChartDrawing.AbsoluteAnchorSize" /> <c>&lt;cdr:absSizeAnchor></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.ChartDrawing.RelativeAnchorSize" /> <c>&lt;cdr:relSizeAnchor></c></description></item>
     /// </list>
     /// </remark>
     public partial class UserShapes : TypedOpenXmlPartRootElement
@@ -4746,16 +4746,16 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:userShapes");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.ChartDrawing.AbsoluteAnchorSize>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.ChartDrawing.RelativeAnchorSize>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.ChartDrawing.AbsoluteAnchorSize>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.ChartDrawing.RelativeAnchorSize>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 0, 0)
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ChartDrawing.RelativeAnchorSize), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ChartDrawing.AbsoluteAnchorSize), 1, 1)
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.ChartDrawing.RelativeAnchorSize), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.ChartDrawing.AbsoluteAnchorSize), 1, 1)
                     }
                 }
             };
@@ -5315,7 +5315,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.NumericValue" /> <c>&lt;c:v></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumericValue" /> <c>&lt;c:v></c></description></item>
     /// </list>
     /// </remark>
     public partial class NumericPoint : TypedOpenXmlCompositeElement
@@ -5375,7 +5375,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:pt");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.NumericValue>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumericValue>();
             builder.AddElement<NumericPoint>()
                 .AddAttribute("idx", a => a.Index, aBuilder =>
                 {
@@ -5384,7 +5384,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 .AddAttribute("formatCode", a => a.FormatCode);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumericValue), 1, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumericValue), 1, 1)
             };
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("c:idx"), true, double.NegativeInfinity, true, 2147483647, true));
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("c:idx"), true, 0, true, 2147483647, true));
@@ -5397,9 +5397,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.NumericValue? NumericValue
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumericValue? NumericValue
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.NumericValue>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumericValue>();
             set => SetElement(value);
         }
 
@@ -5415,7 +5415,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Extension" /> <c>&lt;c:ext></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Extension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
     public partial class ExtensionList : TypedOpenXmlCompositeElement
@@ -5455,10 +5455,10 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:extLst");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Extension>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Extension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Extension), 0, 0)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Extension), 0, 0)
             };
         }
 
@@ -5474,9 +5474,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.NumberingCache" /> <c>&lt;c:numCache></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.NumRefExtensionList" /> <c>&lt;c:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Formula" /> <c>&lt;c:f></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumberingCache" /> <c>&lt;c:numCache></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumRefExtensionList" /> <c>&lt;c:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Formula" /> <c>&lt;c:f></c></description></item>
     /// </list>
     /// </remark>
     public partial class NumberReference : TypedOpenXmlCompositeElement
@@ -5516,14 +5516,14 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:numRef");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.NumberingCache>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.NumRefExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Formula>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumberingCache>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumRefExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Formula>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Formula), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumberingCache), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumRefExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Formula), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumberingCache), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumRefExtensionList), 0, 1)
             };
         }
 
@@ -5534,9 +5534,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.Formula? Formula
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Formula? Formula
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Formula>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Formula>();
             set => SetElement(value);
         }
 
@@ -5547,9 +5547,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.NumberingCache? NumberingCache
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumberingCache? NumberingCache
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.NumberingCache>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumberingCache>();
             set => SetElement(value);
         }
 
@@ -5560,9 +5560,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.NumRefExtensionList? NumRefExtensionList
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumRefExtensionList? NumRefExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.NumRefExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumRefExtensionList>();
             set => SetElement(value);
         }
 
@@ -5578,10 +5578,10 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ExtensionList" /> <c>&lt;c:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.NumericPoint" /> <c>&lt;c:pt></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PointCount" /> <c>&lt;c:ptCount></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.FormatCode" /> <c>&lt;c:formatCode></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList" /> <c>&lt;c:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumericPoint" /> <c>&lt;c:pt></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PointCount" /> <c>&lt;c:ptCount></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.FormatCode" /> <c>&lt;c:formatCode></c></description></item>
     /// </list>
     /// </remark>
     public partial class NumberLiteral : NumberDataType
@@ -5623,10 +5623,10 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             builder.SetSchema("c:numLit");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.FormatCode), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PointCount), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumericPoint), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.FormatCode), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PointCount), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumericPoint), 0, 0),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList), 0, 1)
             };
         }
 
@@ -5642,10 +5642,10 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ExtensionList" /> <c>&lt;c:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.NumericPoint" /> <c>&lt;c:pt></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PointCount" /> <c>&lt;c:ptCount></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.FormatCode" /> <c>&lt;c:formatCode></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList" /> <c>&lt;c:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumericPoint" /> <c>&lt;c:pt></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PointCount" /> <c>&lt;c:ptCount></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.FormatCode" /> <c>&lt;c:formatCode></c></description></item>
     /// </list>
     /// </remark>
     public partial class NumberingCache : NumberDataType
@@ -5687,10 +5687,10 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             builder.SetSchema("c:numCache");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.FormatCode), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PointCount), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumericPoint), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.FormatCode), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PointCount), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumericPoint), 0, 0),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList), 0, 1)
             };
         }
 
@@ -5706,10 +5706,10 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ExtensionList" /> <c>&lt;c:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.NumericPoint" /> <c>&lt;c:pt></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PointCount" /> <c>&lt;c:ptCount></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.FormatCode" /> <c>&lt;c:formatCode></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList" /> <c>&lt;c:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumericPoint" /> <c>&lt;c:pt></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PointCount" /> <c>&lt;c:ptCount></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.FormatCode" /> <c>&lt;c:formatCode></c></description></item>
     /// </list>
     /// </remark>
     public abstract partial class NumberDataType : TypedOpenXmlCompositeElement
@@ -5748,10 +5748,10 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.NumericPoint>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PointCount>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.FormatCode>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumericPoint>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PointCount>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.FormatCode>();
         }
 
         /// <summary>
@@ -5761,9 +5761,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.FormatCode? FormatCode
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.FormatCode? FormatCode
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.FormatCode>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.FormatCode>();
             set => SetElement(value);
         }
 
@@ -5774,9 +5774,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.PointCount? PointCount
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PointCount? PointCount
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PointCount>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PointCount>();
             set => SetElement(value);
         }
     }
@@ -5789,7 +5789,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.StringPoint" /> <c>&lt;c:pt></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.StringPoint" /> <c>&lt;c:pt></c></description></item>
     /// </list>
     /// </remark>
     public partial class Level : TypedOpenXmlCompositeElement
@@ -5829,10 +5829,10 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:lvl");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.StringPoint>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.StringPoint>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.StringPoint), 0, 0)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.StringPoint), 0, 0)
             };
         }
 
@@ -5848,9 +5848,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.MultiLevelStringCache" /> <c>&lt;c:multiLvlStrCache></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.MultiLvlStrRefExtensionList" /> <c>&lt;c:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Formula" /> <c>&lt;c:f></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MultiLevelStringCache" /> <c>&lt;c:multiLvlStrCache></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MultiLvlStrRefExtensionList" /> <c>&lt;c:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Formula" /> <c>&lt;c:f></c></description></item>
     /// </list>
     /// </remark>
     public partial class MultiLevelStringReference : TypedOpenXmlCompositeElement
@@ -5890,14 +5890,14 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:multiLvlStrRef");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.MultiLevelStringCache>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.MultiLvlStrRefExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Formula>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MultiLevelStringCache>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MultiLvlStrRefExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Formula>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Formula), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.MultiLevelStringCache), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.MultiLvlStrRefExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Formula), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MultiLevelStringCache), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MultiLvlStrRefExtensionList), 0, 1)
             };
         }
 
@@ -5908,9 +5908,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.Formula? Formula
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Formula? Formula
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Formula>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Formula>();
             set => SetElement(value);
         }
 
@@ -5921,9 +5921,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.MultiLevelStringCache? MultiLevelStringCache
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MultiLevelStringCache? MultiLevelStringCache
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.MultiLevelStringCache>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MultiLevelStringCache>();
             set => SetElement(value);
         }
 
@@ -5934,9 +5934,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.MultiLvlStrRefExtensionList? MultiLvlStrRefExtensionList
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MultiLvlStrRefExtensionList? MultiLvlStrRefExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.MultiLvlStrRefExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MultiLvlStrRefExtensionList>();
             set => SetElement(value);
         }
 
@@ -5952,9 +5952,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.StringCache" /> <c>&lt;c:strCache></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.StrRefExtensionList" /> <c>&lt;c:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Formula" /> <c>&lt;c:f></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.StringCache" /> <c>&lt;c:strCache></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.StrRefExtensionList" /> <c>&lt;c:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Formula" /> <c>&lt;c:f></c></description></item>
     /// </list>
     /// </remark>
     public partial class StringReference : TypedOpenXmlCompositeElement
@@ -5994,14 +5994,14 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:strRef");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.StringCache>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.StrRefExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Formula>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.StringCache>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.StrRefExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Formula>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Formula), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.StringCache), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.StrRefExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Formula), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.StringCache), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.StrRefExtensionList), 0, 1)
             };
         }
 
@@ -6012,9 +6012,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.Formula? Formula
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Formula? Formula
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Formula>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Formula>();
             set => SetElement(value);
         }
 
@@ -6025,9 +6025,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.StringCache? StringCache
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.StringCache? StringCache
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.StringCache>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.StringCache>();
             set => SetElement(value);
         }
 
@@ -6038,9 +6038,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.StrRefExtensionList? StrRefExtensionList
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.StrRefExtensionList? StrRefExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.StrRefExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.StrRefExtensionList>();
             set => SetElement(value);
         }
 
@@ -6056,9 +6056,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.StrDataExtensionList" /> <c>&lt;c:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.StringPoint" /> <c>&lt;c:pt></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PointCount" /> <c>&lt;c:ptCount></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.StrDataExtensionList" /> <c>&lt;c:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.StringPoint" /> <c>&lt;c:pt></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PointCount" /> <c>&lt;c:ptCount></c></description></item>
     /// </list>
     /// </remark>
     public partial class StringLiteral : StringDataType
@@ -6100,9 +6100,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             builder.SetSchema("c:strLit");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PointCount), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.StringPoint), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.StrDataExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PointCount), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.StringPoint), 0, 0),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.StrDataExtensionList), 0, 1)
             };
         }
 
@@ -6118,9 +6118,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.StrDataExtensionList" /> <c>&lt;c:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.StringPoint" /> <c>&lt;c:pt></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PointCount" /> <c>&lt;c:ptCount></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.StrDataExtensionList" /> <c>&lt;c:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.StringPoint" /> <c>&lt;c:pt></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PointCount" /> <c>&lt;c:ptCount></c></description></item>
     /// </list>
     /// </remark>
     public partial class StringCache : StringDataType
@@ -6162,9 +6162,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             builder.SetSchema("c:strCache");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PointCount), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.StringPoint), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.StrDataExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PointCount), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.StringPoint), 0, 0),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.StrDataExtensionList), 0, 1)
             };
         }
 
@@ -6180,9 +6180,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.StrDataExtensionList" /> <c>&lt;c:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.StringPoint" /> <c>&lt;c:pt></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PointCount" /> <c>&lt;c:ptCount></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.StrDataExtensionList" /> <c>&lt;c:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.StringPoint" /> <c>&lt;c:pt></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PointCount" /> <c>&lt;c:ptCount></c></description></item>
     /// </list>
     /// </remark>
     public abstract partial class StringDataType : TypedOpenXmlCompositeElement
@@ -6221,9 +6221,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.StrDataExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.StringPoint>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PointCount>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.StrDataExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.StringPoint>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PointCount>();
         }
 
         /// <summary>
@@ -6233,9 +6233,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.PointCount? PointCount
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PointCount? PointCount
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PointCount>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PointCount>();
             set => SetElement(value);
         }
     }
@@ -6258,9 +6258,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Layout Target Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.LayoutTargetValues>? Val
+        public EnumValue<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.LayoutTargetValues>? Val
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.LayoutTargetValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.LayoutTargetValues>>();
             set => SetAttribute(value);
         }
 
@@ -6390,9 +6390,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Layout Mode Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.LayoutModeValues>? Val
+        public EnumValue<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.LayoutModeValues>? Val
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.LayoutModeValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.LayoutModeValues>>();
             set => SetAttribute(value);
         }
 
@@ -6412,16 +6412,16 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Left" /> <c>&lt;c:x></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Top" /> <c>&lt;c:y></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Width" /> <c>&lt;c:w></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Height" /> <c>&lt;c:h></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ExtensionList" /> <c>&lt;c:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.LeftMode" /> <c>&lt;c:xMode></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.TopMode" /> <c>&lt;c:yMode></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.WidthMode" /> <c>&lt;c:wMode></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.HeightMode" /> <c>&lt;c:hMode></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.LayoutTarget" /> <c>&lt;c:layoutTarget></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Left" /> <c>&lt;c:x></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Top" /> <c>&lt;c:y></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Width" /> <c>&lt;c:w></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Height" /> <c>&lt;c:h></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList" /> <c>&lt;c:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.LeftMode" /> <c>&lt;c:xMode></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TopMode" /> <c>&lt;c:yMode></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.WidthMode" /> <c>&lt;c:wMode></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.HeightMode" /> <c>&lt;c:hMode></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.LayoutTarget" /> <c>&lt;c:layoutTarget></c></description></item>
     /// </list>
     /// </remark>
     public partial class ManualLayout : TypedOpenXmlCompositeElement
@@ -6461,28 +6461,28 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:manualLayout");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Left>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Top>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Width>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Height>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.LeftMode>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.TopMode>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.WidthMode>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.HeightMode>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.LayoutTarget>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Left>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Top>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Width>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Height>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.LeftMode>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TopMode>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.WidthMode>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.HeightMode>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.LayoutTarget>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.LayoutTarget), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.LeftMode), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.TopMode), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.WidthMode), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.HeightMode), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Left), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Top), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Width), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Height), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.LayoutTarget), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.LeftMode), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TopMode), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.WidthMode), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.HeightMode), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Left), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Top), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Width), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Height), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList), 0, 1)
             };
         }
 
@@ -6493,9 +6493,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.LayoutTarget? LayoutTarget
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.LayoutTarget? LayoutTarget
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.LayoutTarget>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.LayoutTarget>();
             set => SetElement(value);
         }
 
@@ -6506,9 +6506,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.LeftMode? LeftMode
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.LeftMode? LeftMode
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.LeftMode>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.LeftMode>();
             set => SetElement(value);
         }
 
@@ -6519,9 +6519,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.TopMode? TopMode
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TopMode? TopMode
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.TopMode>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TopMode>();
             set => SetElement(value);
         }
 
@@ -6532,9 +6532,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.WidthMode? WidthMode
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.WidthMode? WidthMode
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.WidthMode>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.WidthMode>();
             set => SetElement(value);
         }
 
@@ -6545,9 +6545,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.HeightMode? HeightMode
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.HeightMode? HeightMode
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.HeightMode>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.HeightMode>();
             set => SetElement(value);
         }
 
@@ -6558,9 +6558,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.Left? Left
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Left? Left
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Left>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Left>();
             set => SetElement(value);
         }
 
@@ -6571,9 +6571,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.Top? Top
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Top? Top
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Top>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Top>();
             set => SetElement(value);
         }
 
@@ -6584,9 +6584,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.Width? Width
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Width? Width
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Width>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Width>();
             set => SetElement(value);
         }
 
@@ -6597,9 +6597,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.Height? Height
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Height? Height
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Height>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Height>();
             set => SetElement(value);
         }
 
@@ -6610,9 +6610,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -6833,9 +6833,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Marker Style Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.MarkerStyleValues>? Val
+        public EnumValue<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MarkerStyleValues>? Val
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.MarkerStyleValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MarkerStyleValues>>();
             set => SetAttribute(value);
         }
 
@@ -6901,10 +6901,10 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ExtensionList" /> <c>&lt;c:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Size" /> <c>&lt;c:size></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Symbol" /> <c>&lt;c:symbol></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList" /> <c>&lt;c:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Size" /> <c>&lt;c:size></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Symbol" /> <c>&lt;c:symbol></c></description></item>
     /// </list>
     /// </remark>
     public partial class Marker : TypedOpenXmlCompositeElement
@@ -6944,16 +6944,16 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:marker");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Size>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Symbol>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Size>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Symbol>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Symbol), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Size), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Symbol), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Size), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList), 0, 1)
             };
         }
 
@@ -6964,9 +6964,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.Symbol? Symbol
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Symbol? Symbol
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Symbol>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Symbol>();
             set => SetElement(value);
         }
 
@@ -6977,9 +6977,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.Size? Size
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Size? Size
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Size>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Size>();
             set => SetElement(value);
         }
 
@@ -6990,9 +6990,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties? ChartShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties>();
             set => SetElement(value);
         }
 
@@ -7003,9 +7003,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -7021,11 +7021,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ApplyToFront" /> <c>&lt;c:applyToFront></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ApplyToSides" /> <c>&lt;c:applyToSides></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ApplyToEnd" /> <c>&lt;c:applyToEnd></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PictureFormat" /> <c>&lt;c:pictureFormat></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PictureStackUnit" /> <c>&lt;c:pictureStackUnit></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ApplyToFront" /> <c>&lt;c:applyToFront></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ApplyToSides" /> <c>&lt;c:applyToSides></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ApplyToEnd" /> <c>&lt;c:applyToEnd></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PictureFormat" /> <c>&lt;c:pictureFormat></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PictureStackUnit" /> <c>&lt;c:pictureStackUnit></c></description></item>
     /// </list>
     /// </remark>
     public partial class PictureOptions : TypedOpenXmlCompositeElement
@@ -7065,18 +7065,18 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:pictureOptions");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ApplyToFront>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ApplyToSides>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ApplyToEnd>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PictureFormat>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PictureStackUnit>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ApplyToFront>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ApplyToSides>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ApplyToEnd>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PictureFormat>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PictureStackUnit>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ApplyToFront), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ApplyToSides), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ApplyToEnd), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PictureFormat), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PictureStackUnit), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ApplyToFront), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ApplyToSides), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ApplyToEnd), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PictureFormat), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PictureStackUnit), 0, 1)
             };
         }
 
@@ -7087,9 +7087,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.ApplyToFront? ApplyToFront
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ApplyToFront? ApplyToFront
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ApplyToFront>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ApplyToFront>();
             set => SetElement(value);
         }
 
@@ -7100,9 +7100,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.ApplyToSides? ApplyToSides
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ApplyToSides? ApplyToSides
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ApplyToSides>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ApplyToSides>();
             set => SetElement(value);
         }
 
@@ -7113,9 +7113,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.ApplyToEnd? ApplyToEnd
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ApplyToEnd? ApplyToEnd
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ApplyToEnd>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ApplyToEnd>();
             set => SetElement(value);
         }
 
@@ -7126,9 +7126,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.PictureFormat? PictureFormat
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PictureFormat? PictureFormat
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PictureFormat>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PictureFormat>();
             set => SetElement(value);
         }
 
@@ -7139,9 +7139,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.PictureStackUnit? PictureStackUnit
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PictureStackUnit? PictureStackUnit
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PictureStackUnit>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PictureStackUnit>();
             set => SetElement(value);
         }
 
@@ -7167,9 +7167,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Trendline Type Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.TrendlineValues>? Val
+        public EnumValue<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TrendlineValues>? Val
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.TrendlineValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TrendlineValues>>();
             set => SetAttribute(value);
         }
 
@@ -7274,12 +7274,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.TextProperties" /> <c>&lt;c:txPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ExtensionList" /> <c>&lt;c:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Layout" /> <c>&lt;c:layout></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat" /> <c>&lt;c:numFmt></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartText" /> <c>&lt;c:tx></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TextProperties" /> <c>&lt;c:txPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList" /> <c>&lt;c:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Layout" /> <c>&lt;c:layout></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumberingFormat" /> <c>&lt;c:numFmt></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartText" /> <c>&lt;c:tx></c></description></item>
     /// </list>
     /// </remark>
     public partial class TrendlineLabel : TypedOpenXmlCompositeElement
@@ -7319,20 +7319,20 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:trendlineLbl");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.TextProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Layout>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartText>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TextProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Layout>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumberingFormat>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartText>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Layout), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartText), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.TextProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Layout), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartText), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumberingFormat), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TextProperties), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList), 0, 1)
             };
         }
 
@@ -7343,9 +7343,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.Layout? Layout
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Layout? Layout
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Layout>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Layout>();
             set => SetElement(value);
         }
 
@@ -7356,9 +7356,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.ChartText? ChartText
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartText? ChartText
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartText>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartText>();
             set => SetElement(value);
         }
 
@@ -7369,9 +7369,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat? NumberingFormat
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumberingFormat? NumberingFormat
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumberingFormat>();
             set => SetElement(value);
         }
 
@@ -7382,9 +7382,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties? ChartShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties>();
             set => SetElement(value);
         }
 
@@ -7395,9 +7395,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.TextProperties? TextProperties
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TextProperties? TextProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.TextProperties>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TextProperties>();
             set => SetElement(value);
         }
 
@@ -7408,9 +7408,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -7436,9 +7436,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Error Bar Direction Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.ErrorBarDirectionValues>? Val
+        public EnumValue<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ErrorBarDirectionValues>? Val
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.ErrorBarDirectionValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ErrorBarDirectionValues>>();
             set => SetAttribute(value);
         }
 
@@ -7475,9 +7475,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Error Bar Type Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.ErrorBarValues>? Val
+        public EnumValue<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ErrorBarValues>? Val
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.ErrorBarValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ErrorBarValues>>();
             set => SetAttribute(value);
         }
 
@@ -7514,9 +7514,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Error Bar Type Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.ErrorValues>? Val
+        public EnumValue<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ErrorValues>? Val
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.ErrorValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ErrorValues>>();
             set => SetAttribute(value);
         }
 
@@ -7543,8 +7543,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral" /> <c>&lt;c:numLit></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.NumberReference" /> <c>&lt;c:numRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumberLiteral" /> <c>&lt;c:numLit></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumberReference" /> <c>&lt;c:numRef></c></description></item>
     /// </list>
     /// </remark>
     public partial class Plus : NumberDataSourceType
@@ -7588,8 +7588,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumberReference), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral), 1, 1)
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumberReference), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumberLiteral), 1, 1)
                 }
             };
         }
@@ -7606,8 +7606,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral" /> <c>&lt;c:numLit></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.NumberReference" /> <c>&lt;c:numRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumberLiteral" /> <c>&lt;c:numLit></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumberReference" /> <c>&lt;c:numRef></c></description></item>
     /// </list>
     /// </remark>
     public partial class Minus : NumberDataSourceType
@@ -7651,8 +7651,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumberReference), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral), 1, 1)
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumberReference), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumberLiteral), 1, 1)
                 }
             };
         }
@@ -7669,8 +7669,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral" /> <c>&lt;c:numLit></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.NumberReference" /> <c>&lt;c:numRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumberLiteral" /> <c>&lt;c:numLit></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumberReference" /> <c>&lt;c:numRef></c></description></item>
     /// </list>
     /// </remark>
     public partial class Values : NumberDataSourceType
@@ -7714,8 +7714,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumberReference), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral), 1, 1)
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumberReference), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumberLiteral), 1, 1)
                 }
             };
         }
@@ -7732,8 +7732,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral" /> <c>&lt;c:numLit></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.NumberReference" /> <c>&lt;c:numRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumberLiteral" /> <c>&lt;c:numLit></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumberReference" /> <c>&lt;c:numRef></c></description></item>
     /// </list>
     /// </remark>
     public partial class YValues : NumberDataSourceType
@@ -7777,8 +7777,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumberReference), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral), 1, 1)
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumberReference), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumberLiteral), 1, 1)
                 }
             };
         }
@@ -7795,8 +7795,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral" /> <c>&lt;c:numLit></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.NumberReference" /> <c>&lt;c:numRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumberLiteral" /> <c>&lt;c:numLit></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumberReference" /> <c>&lt;c:numRef></c></description></item>
     /// </list>
     /// </remark>
     public partial class BubbleSize : NumberDataSourceType
@@ -7840,8 +7840,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumberReference), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral), 1, 1)
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumberReference), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumberLiteral), 1, 1)
                 }
             };
         }
@@ -7858,8 +7858,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral" /> <c>&lt;c:numLit></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.NumberReference" /> <c>&lt;c:numRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumberLiteral" /> <c>&lt;c:numLit></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumberReference" /> <c>&lt;c:numRef></c></description></item>
     /// </list>
     /// </remark>
     public abstract partial class NumberDataSourceType : TypedOpenXmlCompositeElement
@@ -7898,8 +7898,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.NumberReference>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumberLiteral>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumberReference>();
         }
 
         /// <summary>
@@ -7909,9 +7909,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.NumberReference? NumberReference
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumberReference? NumberReference
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.NumberReference>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumberReference>();
             set => SetElement(value);
         }
 
@@ -7922,9 +7922,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral? NumberLiteral
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumberLiteral? NumberLiteral
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumberLiteral>();
             set => SetElement(value);
         }
     }
@@ -8020,7 +8020,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
     /// </list>
     /// </remark>
     public partial class UpBars : UpDownBarType
@@ -8062,7 +8062,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             builder.SetSchema("c:upBars");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties), 0, 1)
             };
         }
 
@@ -8078,7 +8078,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
     /// </list>
     /// </remark>
     public partial class DownBars : UpDownBarType
@@ -8120,7 +8120,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             builder.SetSchema("c:downBars");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties), 0, 1)
             };
         }
 
@@ -8136,7 +8136,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
     /// </list>
     /// </remark>
     public abstract partial class UpDownBarType : TypedOpenXmlCompositeElement
@@ -8175,7 +8175,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties>();
         }
 
         /// <summary>
@@ -8185,9 +8185,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties? ChartShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties>();
             set => SetElement(value);
         }
     }
@@ -8210,9 +8210,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Pie of Pie or Bar of Pie Type Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.OfPieValues>? Val
+        public EnumValue<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.OfPieValues>? Val
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.OfPieValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.OfPieValues>>();
             set => SetAttribute(value);
         }
 
@@ -8249,9 +8249,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Split Type Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.SplitValues>? Val
+        public EnumValue<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SplitValues>? Val
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.SplitValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SplitValues>>();
             set => SetAttribute(value);
         }
 
@@ -8278,7 +8278,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.SecondPiePoint" /> <c>&lt;c:secondPiePt></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SecondPiePoint" /> <c>&lt;c:secondPiePt></c></description></item>
     /// </list>
     /// </remark>
     public partial class CustomSplit : TypedOpenXmlCompositeElement
@@ -8318,10 +8318,10 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:custSplit");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.SecondPiePoint>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SecondPiePoint>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.SecondPiePoint), 0, 0)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SecondPiePoint), 0, 0)
             };
         }
 
@@ -8376,8 +8376,8 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Index" /> <c>&lt;c:idx></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Index" /> <c>&lt;c:idx></c></description></item>
     /// </list>
     /// </remark>
     public partial class BandFormat : TypedOpenXmlCompositeElement
@@ -8417,12 +8417,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:bandFmt");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Index>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Index>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Index), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Index), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties), 0, 1)
             };
         }
 
@@ -8433,9 +8433,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.Index? Index
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Index? Index
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Index>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Index>();
             set => SetElement(value);
         }
 
@@ -8446,9 +8446,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties? ChartShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties>();
             set => SetElement(value);
         }
 
@@ -8474,9 +8474,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Picture Format Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.PictureFormatValues>? Val
+        public EnumValue<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PictureFormatValues>? Val
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.PictureFormatValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PictureFormatValues>>();
             set => SetAttribute(value);
         }
 
@@ -8553,9 +8553,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Built In Unit Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.BuiltInUnitValues>? Val
+        public EnumValue<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.BuiltInUnitValues>? Val
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.BuiltInUnitValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.BuiltInUnitValues>>();
             set => SetAttribute(value);
         }
 
@@ -8579,10 +8579,10 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.TextProperties" /> <c>&lt;c:txPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Layout" /> <c>&lt;c:layout></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartText" /> <c>&lt;c:tx></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TextProperties" /> <c>&lt;c:txPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Layout" /> <c>&lt;c:layout></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartText" /> <c>&lt;c:tx></c></description></item>
     /// </list>
     /// </remark>
     public partial class DisplayUnitsLabel : TypedOpenXmlCompositeElement
@@ -8622,16 +8622,16 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:dispUnitsLbl");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.TextProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Layout>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartText>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TextProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Layout>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartText>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Layout), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartText), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.TextProperties), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Layout), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartText), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TextProperties), 0, 1)
             };
         }
 
@@ -8642,9 +8642,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.Layout? Layout
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Layout? Layout
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Layout>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Layout>();
             set => SetElement(value);
         }
 
@@ -8655,9 +8655,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.ChartText? ChartText
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartText? ChartText
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartText>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartText>();
             set => SetElement(value);
         }
 
@@ -8668,9 +8668,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties? ChartShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties>();
             set => SetElement(value);
         }
 
@@ -8681,9 +8681,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.TextProperties? TextProperties
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TextProperties? TextProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.TextProperties>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TextProperties>();
             set => SetElement(value);
         }
 
@@ -8749,9 +8749,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Orientation Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.OrientationValues>? Val
+        public EnumValue<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.OrientationValues>? Val
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.OrientationValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.OrientationValues>>();
             set => SetAttribute(value);
         }
 
@@ -8775,11 +8775,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ShapeProperties" /> <c>&lt;c:spPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.DataLabel" /> <c>&lt;c:dLbl></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ExtensionList" /> <c>&lt;c:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Marker" /> <c>&lt;c:marker></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Index" /> <c>&lt;c:idx></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ShapeProperties" /> <c>&lt;c:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataLabel" /> <c>&lt;c:dLbl></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList" /> <c>&lt;c:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Marker" /> <c>&lt;c:marker></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Index" /> <c>&lt;c:idx></c></description></item>
     /// </list>
     /// </remark>
     public partial class PivotFormat : TypedOpenXmlCompositeElement
@@ -8819,18 +8819,18 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:pivotFmt");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ShapeProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataLabel>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Marker>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Index>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataLabel>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Marker>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Index>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Index), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShapeProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Marker), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataLabel), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Index), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ShapeProperties), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Marker), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataLabel), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList), 0, 1)
             };
         }
 
@@ -8841,9 +8841,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.Index? Index
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Index? Index
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Index>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Index>();
             set => SetElement(value);
         }
 
@@ -8854,9 +8854,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.ShapeProperties? ShapeProperties
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ShapeProperties? ShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ShapeProperties>();
             set => SetElement(value);
         }
 
@@ -8867,9 +8867,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.Marker? Marker
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Marker? Marker
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Marker>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Marker>();
             set => SetElement(value);
         }
 
@@ -8880,9 +8880,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.DataLabel? DataLabel
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataLabel? DataLabel
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.DataLabel>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataLabel>();
             set => SetElement(value);
         }
 
@@ -8893,9 +8893,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -8921,9 +8921,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Legend Position Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.LegendPositionValues>? Val
+        public EnumValue<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.LegendPositionValues>? Val
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.LegendPositionValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.LegendPositionValues>>();
             set => SetAttribute(value);
         }
 
@@ -8947,10 +8947,10 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.TextProperties" /> <c>&lt;c:txPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Delete" /> <c>&lt;c:delete></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ExtensionList" /> <c>&lt;c:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Index" /> <c>&lt;c:idx></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TextProperties" /> <c>&lt;c:txPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Delete" /> <c>&lt;c:delete></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList" /> <c>&lt;c:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Index" /> <c>&lt;c:idx></c></description></item>
     /// </list>
     /// </remark>
     public partial class LegendEntry : TypedOpenXmlCompositeElement
@@ -8990,25 +8990,25 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:legendEntry");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.TextProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Delete>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Index>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TextProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Delete>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Index>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Index), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Index), 1, 1),
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Delete), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Delete), 1, 1),
                     new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                     {
                         new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                         {
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.TextProperties), 0, 1)
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TextProperties), 0, 1)
                         }
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList), 0, 1)
             };
         }
 
@@ -9019,9 +9019,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.Index? Index
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Index? Index
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Index>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Index>();
             set => SetElement(value);
         }
 
@@ -9037,12 +9037,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.OddHeader" /> <c>&lt;c:oddHeader></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.OddFooter" /> <c>&lt;c:oddFooter></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.EvenHeader" /> <c>&lt;c:evenHeader></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.EvenFooter" /> <c>&lt;c:evenFooter></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.FirstHeader" /> <c>&lt;c:firstHeader></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.FirstFooter" /> <c>&lt;c:firstFooter></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.OddHeader" /> <c>&lt;c:oddHeader></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.OddFooter" /> <c>&lt;c:oddFooter></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.EvenHeader" /> <c>&lt;c:evenHeader></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.EvenFooter" /> <c>&lt;c:evenFooter></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.FirstHeader" /> <c>&lt;c:firstHeader></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.FirstFooter" /> <c>&lt;c:firstFooter></c></description></item>
     /// </list>
     /// </remark>
     public partial class HeaderFooter : TypedOpenXmlCompositeElement
@@ -9112,24 +9112,24 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:headerFooter");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.OddHeader>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.OddFooter>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.EvenHeader>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.EvenFooter>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.FirstHeader>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.FirstFooter>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.OddHeader>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.OddFooter>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.EvenHeader>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.EvenFooter>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.FirstHeader>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.FirstFooter>();
             builder.AddElement<HeaderFooter>()
                 .AddAttribute("alignWithMargins", a => a.AlignWithMargins)
                 .AddAttribute("differentOddEven", a => a.DifferentOddEven)
                 .AddAttribute("differentFirst", a => a.DifferentFirst);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.OddHeader), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.OddFooter), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.EvenHeader), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.EvenFooter), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.FirstHeader), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.FirstFooter), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.OddHeader), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.OddFooter), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.EvenHeader), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.EvenFooter), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.FirstHeader), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.FirstFooter), 0, 1)
             };
         }
 
@@ -9140,9 +9140,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.OddHeader? OddHeader
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.OddHeader? OddHeader
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.OddHeader>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.OddHeader>();
             set => SetElement(value);
         }
 
@@ -9153,9 +9153,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.OddFooter? OddFooter
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.OddFooter? OddFooter
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.OddFooter>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.OddFooter>();
             set => SetElement(value);
         }
 
@@ -9166,9 +9166,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.EvenHeader? EvenHeader
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.EvenHeader? EvenHeader
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.EvenHeader>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.EvenHeader>();
             set => SetElement(value);
         }
 
@@ -9179,9 +9179,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.EvenFooter? EvenFooter
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.EvenFooter? EvenFooter
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.EvenFooter>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.EvenFooter>();
             set => SetElement(value);
         }
 
@@ -9192,9 +9192,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.FirstHeader? FirstHeader
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.FirstHeader? FirstHeader
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.FirstHeader>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.FirstHeader>();
             set => SetElement(value);
         }
 
@@ -9205,9 +9205,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.FirstFooter? FirstFooter
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.FirstFooter? FirstFooter
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.FirstFooter>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.FirstFooter>();
             set => SetElement(value);
         }
 
@@ -9368,9 +9368,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Orientation</para>
         /// <para>Represents the following attribute in the schema: orientation</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.PageSetupOrientationValues>? Orientation
+        public EnumValue<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PageSetupOrientationValues>? Orientation
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.PageSetupOrientationValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PageSetupOrientationValues>>();
             set => SetAttribute(value);
         }
 
@@ -9464,21 +9464,21 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.BlipFill" /> <c>&lt;a:blipFill></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.CustomGeometry" /> <c>&lt;a:custGeom></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.EffectDag" /> <c>&lt;a:effectDag></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.EffectList" /> <c>&lt;a:effectLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.GradientFill" /> <c>&lt;a:gradFill></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.GroupFill" /> <c>&lt;a:grpFill></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Outline" /> <c>&lt;a:ln></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NoFill" /> <c>&lt;a:noFill></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PatternFill" /> <c>&lt;a:pattFill></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PresetGeometry" /> <c>&lt;a:prstGeom></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Scene3DType" /> <c>&lt;a:scene3d></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Shape3DType" /> <c>&lt;a:sp3d></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList" /> <c>&lt;a:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SolidFill" /> <c>&lt;a:solidFill></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Transform2D" /> <c>&lt;a:xfrm></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.BlipFill" /> <c>&lt;a:blipFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.CustomGeometry" /> <c>&lt;a:custGeom></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.EffectDag" /> <c>&lt;a:effectDag></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.EffectList" /> <c>&lt;a:effectLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.GradientFill" /> <c>&lt;a:gradFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.GroupFill" /> <c>&lt;a:grpFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.Outline" /> <c>&lt;a:ln></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.NoFill" /> <c>&lt;a:noFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.PatternFill" /> <c>&lt;a:pattFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.PresetGeometry" /> <c>&lt;a:prstGeom></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.Scene3DType" /> <c>&lt;a:scene3d></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.Shape3DType" /> <c>&lt;a:sp3d></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.ShapePropertiesExtensionList" /> <c>&lt;a:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.SolidFill" /> <c>&lt;a:solidFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.Transform2D" /> <c>&lt;a:xfrm></c></description></item>
     /// </list>
     /// </remark>
     public partial class ShapeProperties : TypedOpenXmlCompositeElement
@@ -9518,9 +9518,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Black and White Mode</para>
         /// <para>Represents the following attribute in the schema: bwMode</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>? BlackWhiteMode
+        public EnumValue<DocumentFormat.OpenXml.DrawingML.Y2006.Main.BlackWhiteModeValues>? BlackWhiteMode
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.DrawingML.Y2006.Main.BlackWhiteModeValues>>();
             set => SetAttribute(value);
         }
 
@@ -9528,21 +9528,21 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:spPr");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.BlipFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.CustomGeometry>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectDag>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.EffectList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.GradientFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.GroupFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Outline>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.NoFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PatternFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetGeometry>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Scene3DType>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Shape3DType>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.SolidFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Transform2D>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.BlipFill>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.CustomGeometry>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.EffectDag>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.EffectList>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.GradientFill>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.GroupFill>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.Outline>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.NoFill>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.PatternFill>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.PresetGeometry>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.Scene3DType>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.Shape3DType>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.ShapePropertiesExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.SolidFill>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.Transform2D>();
             builder.AddElement<ShapeProperties>()
                 .AddAttribute("bwMode", a => a.BlackWhiteMode, aBuilder =>
                 {
@@ -9550,39 +9550,39 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Transform2D), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.Transform2D), 0, 1),
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.CustomGeometry), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetGeometry), 1, 1)
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.CustomGeometry), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.PresetGeometry), 1, 1)
                     }
                 },
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.NoFill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.SolidFill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GradientFill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.BlipFill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PatternFill), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.GroupFill), 1, 1)
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.NoFill), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.SolidFill), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.GradientFill), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.BlipFill), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.PatternFill), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.GroupFill), 1, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Outline), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.Outline), 0, 1),
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectList), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.EffectDag), 1, 1)
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.EffectList), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.EffectDag), 1, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Scene3DType), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Shape3DType), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.Scene3DType), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.Shape3DType), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.ShapePropertiesExtensionList), 0, 1)
             };
         }
 
@@ -9593,9 +9593,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Transform2D? Transform2D
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Main.Transform2D? Transform2D
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Transform2D>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Main.Transform2D>();
             set => SetElement(value);
         }
 
@@ -9611,22 +9611,22 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.TextProperties" /> <c>&lt;c:txPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Delete" /> <c>&lt;c:delete></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ShowLegendKey" /> <c>&lt;c:showLegendKey></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ShowValue" /> <c>&lt;c:showVal></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ShowCategoryName" /> <c>&lt;c:showCatName></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ShowSeriesName" /> <c>&lt;c:showSerName></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ShowPercent" /> <c>&lt;c:showPercent></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ShowBubbleSize" /> <c>&lt;c:showBubbleSize></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.DLblExtensionList" /> <c>&lt;c:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.DataLabelPosition" /> <c>&lt;c:dLblPos></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Layout" /> <c>&lt;c:layout></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat" /> <c>&lt;c:numFmt></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartText" /> <c>&lt;c:tx></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Index" /> <c>&lt;c:idx></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Separator" /> <c>&lt;c:separator></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TextProperties" /> <c>&lt;c:txPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Delete" /> <c>&lt;c:delete></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ShowLegendKey" /> <c>&lt;c:showLegendKey></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ShowValue" /> <c>&lt;c:showVal></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ShowCategoryName" /> <c>&lt;c:showCatName></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ShowSeriesName" /> <c>&lt;c:showSerName></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ShowPercent" /> <c>&lt;c:showPercent></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ShowBubbleSize" /> <c>&lt;c:showBubbleSize></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DLblExtensionList" /> <c>&lt;c:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataLabelPosition" /> <c>&lt;c:dLblPos></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Layout" /> <c>&lt;c:layout></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumberingFormat" /> <c>&lt;c:numFmt></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartText" /> <c>&lt;c:tx></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Index" /> <c>&lt;c:idx></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Separator" /> <c>&lt;c:separator></c></description></item>
     /// </list>
     /// </remark>
     public partial class DataLabel : TypedOpenXmlCompositeElement
@@ -9666,55 +9666,55 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:dLbl");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.TextProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Delete>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ShowLegendKey>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ShowValue>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ShowCategoryName>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ShowSeriesName>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ShowPercent>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ShowBubbleSize>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DLblExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataLabelPosition>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Layout>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartText>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Index>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Separator>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TextProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Delete>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ShowLegendKey>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ShowValue>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ShowCategoryName>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ShowSeriesName>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ShowPercent>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ShowBubbleSize>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DLblExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataLabelPosition>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Layout>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumberingFormat>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartText>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Index>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Separator>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Index), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Index), 1, 1),
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Delete), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Delete), 1, 1),
                     new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                     {
                         new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                         {
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Layout), 0, 1),
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartText), 0, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Layout), 0, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartText), 0, 1),
                             new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                             {
                                 new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                                 {
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat), 0, 1),
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1),
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.TextProperties), 0, 1),
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataLabelPosition), 0, 1),
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowLegendKey), 0, 1),
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowValue), 0, 1),
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowCategoryName), 0, 1),
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowSeriesName), 0, 1),
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowPercent), 0, 1),
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowBubbleSize), 0, 1),
-                                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Separator), 0, 1)
+                                    new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumberingFormat), 0, 1),
+                                    new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties), 0, 1),
+                                    new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TextProperties), 0, 1),
+                                    new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataLabelPosition), 0, 1),
+                                    new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ShowLegendKey), 0, 1),
+                                    new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ShowValue), 0, 1),
+                                    new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ShowCategoryName), 0, 1),
+                                    new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ShowSeriesName), 0, 1),
+                                    new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ShowPercent), 0, 1),
+                                    new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ShowBubbleSize), 0, 1),
+                                    new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Separator), 0, 1)
                                 }
                             }
                         }
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DLblExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DLblExtensionList), 0, 1)
             };
         }
 
@@ -9725,9 +9725,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.Index? Index
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Index? Index
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Index>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Index>();
             set => SetElement(value);
         }
 
@@ -9743,13 +9743,13 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.AreaChartExtensionList" /> <c>&lt;c:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.AreaChartSeries" /> <c>&lt;c:ser></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.VaryColors" /> <c>&lt;c:varyColors></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.DropLines" /> <c>&lt;c:dropLines></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.DataLabels" /> <c>&lt;c:dLbls></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Grouping" /> <c>&lt;c:grouping></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.AxisId" /> <c>&lt;c:axId></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AreaChartExtensionList" /> <c>&lt;c:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AreaChartSeries" /> <c>&lt;c:ser></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.VaryColors" /> <c>&lt;c:varyColors></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DropLines" /> <c>&lt;c:dropLines></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataLabels" /> <c>&lt;c:dLbls></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Grouping" /> <c>&lt;c:grouping></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AxisId" /> <c>&lt;c:axId></c></description></item>
     /// </list>
     /// </remark>
     public partial class AreaChart : TypedOpenXmlCompositeElement
@@ -9789,28 +9789,28 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:areaChart");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.AreaChartExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.AreaChartSeries>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DropLines>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataLabels>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Grouping>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.AxisId>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AreaChartExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AreaChartSeries>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.VaryColors>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DropLines>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataLabels>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Grouping>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AxisId>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Grouping), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.VaryColors), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.AreaChartSeries), 0, 0),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataLabels), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DropLines), 0, 1)
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Grouping), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.VaryColors), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AreaChartSeries), 0, 0),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataLabels), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DropLines), 0, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.AxisId), 2, 2),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.AreaChartExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AxisId), 2, 2),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AreaChartExtensionList), 0, 1)
             };
         }
 
@@ -9821,9 +9821,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.Grouping? Grouping
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Grouping? Grouping
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Grouping>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Grouping>();
             set => SetElement(value);
         }
 
@@ -9834,9 +9834,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.VaryColors? VaryColors
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.VaryColors? VaryColors
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.VaryColors>();
             set => SetElement(value);
         }
 
@@ -9852,14 +9852,14 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Area3DChartExtensionList" /> <c>&lt;c:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.AreaChartSeries" /> <c>&lt;c:ser></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.VaryColors" /> <c>&lt;c:varyColors></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.DropLines" /> <c>&lt;c:dropLines></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.DataLabels" /> <c>&lt;c:dLbls></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.GapDepth" /> <c>&lt;c:gapDepth></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Grouping" /> <c>&lt;c:grouping></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.AxisId" /> <c>&lt;c:axId></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Area3DChartExtensionList" /> <c>&lt;c:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AreaChartSeries" /> <c>&lt;c:ser></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.VaryColors" /> <c>&lt;c:varyColors></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DropLines" /> <c>&lt;c:dropLines></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataLabels" /> <c>&lt;c:dLbls></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.GapDepth" /> <c>&lt;c:gapDepth></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Grouping" /> <c>&lt;c:grouping></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AxisId" /> <c>&lt;c:axId></c></description></item>
     /// </list>
     /// </remark>
     public partial class Area3DChart : TypedOpenXmlCompositeElement
@@ -9899,30 +9899,30 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:area3DChart");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Area3DChartExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.AreaChartSeries>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DropLines>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataLabels>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.GapDepth>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Grouping>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.AxisId>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Area3DChartExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AreaChartSeries>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.VaryColors>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DropLines>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataLabels>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.GapDepth>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Grouping>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AxisId>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Grouping), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.VaryColors), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.AreaChartSeries), 0, 0),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataLabels), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DropLines), 0, 1)
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Grouping), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.VaryColors), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AreaChartSeries), 0, 0),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataLabels), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DropLines), 0, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.GapDepth), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.AxisId), 2, 3),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Area3DChartExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.GapDepth), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AxisId), 2, 3),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Area3DChartExtensionList), 0, 1)
             };
         }
 
@@ -9933,9 +9933,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.Grouping? Grouping
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Grouping? Grouping
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Grouping>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Grouping>();
             set => SetElement(value);
         }
 
@@ -9946,9 +9946,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.VaryColors? VaryColors
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.VaryColors? VaryColors
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.VaryColors>();
             set => SetElement(value);
         }
 
@@ -9964,17 +9964,17 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.VaryColors" /> <c>&lt;c:varyColors></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ShowMarker" /> <c>&lt;c:marker></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Smooth" /> <c>&lt;c:smooth></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.DropLines" /> <c>&lt;c:dropLines></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.HighLowLines" /> <c>&lt;c:hiLowLines></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.DataLabels" /> <c>&lt;c:dLbls></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Grouping" /> <c>&lt;c:grouping></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.LineChartExtensionList" /> <c>&lt;c:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.LineChartSeries" /> <c>&lt;c:ser></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.AxisId" /> <c>&lt;c:axId></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.UpDownBars" /> <c>&lt;c:upDownBars></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.VaryColors" /> <c>&lt;c:varyColors></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ShowMarker" /> <c>&lt;c:marker></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Smooth" /> <c>&lt;c:smooth></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DropLines" /> <c>&lt;c:dropLines></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.HighLowLines" /> <c>&lt;c:hiLowLines></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataLabels" /> <c>&lt;c:dLbls></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Grouping" /> <c>&lt;c:grouping></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.LineChartExtensionList" /> <c>&lt;c:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.LineChartSeries" /> <c>&lt;c:ser></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AxisId" /> <c>&lt;c:axId></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.UpDownBars" /> <c>&lt;c:upDownBars></c></description></item>
     /// </list>
     /// </remark>
     public partial class LineChart : TypedOpenXmlCompositeElement
@@ -10014,36 +10014,36 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:lineChart");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ShowMarker>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Smooth>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DropLines>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.HighLowLines>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataLabels>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Grouping>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.LineChartExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.LineChartSeries>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.AxisId>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.UpDownBars>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.VaryColors>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ShowMarker>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Smooth>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DropLines>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.HighLowLines>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataLabels>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Grouping>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.LineChartExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.LineChartSeries>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AxisId>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.UpDownBars>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Grouping), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.VaryColors), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.LineChartSeries), 0, 0),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataLabels), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DropLines), 0, 1)
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Grouping), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.VaryColors), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.LineChartSeries), 0, 0),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataLabels), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DropLines), 0, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.HighLowLines), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.UpDownBars), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowMarker), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Smooth), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.AxisId), 2, 2),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.LineChartExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.HighLowLines), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.UpDownBars), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ShowMarker), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Smooth), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AxisId), 2, 2),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.LineChartExtensionList), 0, 1)
             };
         }
 
@@ -10054,9 +10054,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.Grouping? Grouping
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Grouping? Grouping
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Grouping>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Grouping>();
             set => SetElement(value);
         }
 
@@ -10067,9 +10067,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.VaryColors? VaryColors
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.VaryColors? VaryColors
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.VaryColors>();
             set => SetElement(value);
         }
 
@@ -10085,14 +10085,14 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.VaryColors" /> <c>&lt;c:varyColors></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.DropLines" /> <c>&lt;c:dropLines></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.DataLabels" /> <c>&lt;c:dLbls></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.GapDepth" /> <c>&lt;c:gapDepth></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Grouping" /> <c>&lt;c:grouping></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Line3DChartExtensionList" /> <c>&lt;c:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.LineChartSeries" /> <c>&lt;c:ser></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.AxisId" /> <c>&lt;c:axId></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.VaryColors" /> <c>&lt;c:varyColors></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DropLines" /> <c>&lt;c:dropLines></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataLabels" /> <c>&lt;c:dLbls></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.GapDepth" /> <c>&lt;c:gapDepth></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Grouping" /> <c>&lt;c:grouping></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Line3DChartExtensionList" /> <c>&lt;c:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.LineChartSeries" /> <c>&lt;c:ser></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AxisId" /> <c>&lt;c:axId></c></description></item>
     /// </list>
     /// </remark>
     public partial class Line3DChart : TypedOpenXmlCompositeElement
@@ -10132,30 +10132,30 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:line3DChart");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DropLines>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataLabels>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.GapDepth>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Grouping>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Line3DChartExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.LineChartSeries>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.AxisId>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.VaryColors>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DropLines>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataLabels>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.GapDepth>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Grouping>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Line3DChartExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.LineChartSeries>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AxisId>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Grouping), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.VaryColors), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.LineChartSeries), 0, 0),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataLabels), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DropLines), 0, 1)
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Grouping), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.VaryColors), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.LineChartSeries), 0, 0),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataLabels), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DropLines), 0, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.GapDepth), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.AxisId), 3, 3),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Line3DChartExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.GapDepth), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AxisId), 3, 3),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Line3DChartExtensionList), 0, 1)
             };
         }
 
@@ -10166,9 +10166,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.Grouping? Grouping
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Grouping? Grouping
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Grouping>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Grouping>();
             set => SetElement(value);
         }
 
@@ -10179,9 +10179,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.VaryColors? VaryColors
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.VaryColors? VaryColors
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.VaryColors>();
             set => SetElement(value);
         }
 
@@ -10197,13 +10197,13 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.DropLines" /> <c>&lt;c:dropLines></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.HighLowLines" /> <c>&lt;c:hiLowLines></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.DataLabels" /> <c>&lt;c:dLbls></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.LineChartSeries" /> <c>&lt;c:ser></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.StockChartExtensionList" /> <c>&lt;c:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.AxisId" /> <c>&lt;c:axId></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.UpDownBars" /> <c>&lt;c:upDownBars></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DropLines" /> <c>&lt;c:dropLines></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.HighLowLines" /> <c>&lt;c:hiLowLines></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataLabels" /> <c>&lt;c:dLbls></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.LineChartSeries" /> <c>&lt;c:ser></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.StockChartExtensionList" /> <c>&lt;c:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AxisId" /> <c>&lt;c:axId></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.UpDownBars" /> <c>&lt;c:upDownBars></c></description></item>
     /// </list>
     /// </remark>
     public partial class StockChart : TypedOpenXmlCompositeElement
@@ -10243,22 +10243,22 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:stockChart");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DropLines>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.HighLowLines>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataLabels>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.LineChartSeries>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.StockChartExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.AxisId>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.UpDownBars>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DropLines>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.HighLowLines>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataLabels>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.LineChartSeries>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.StockChartExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AxisId>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.UpDownBars>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.LineChartSeries), 3, 4),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataLabels), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DropLines), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.HighLowLines), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.UpDownBars), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.AxisId), 2, 2),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.StockChartExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.LineChartSeries), 3, 4),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataLabels), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DropLines), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.HighLowLines), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.UpDownBars), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AxisId), 2, 2),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.StockChartExtensionList), 0, 1)
             };
         }
 
@@ -10274,12 +10274,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.VaryColors" /> <c>&lt;c:varyColors></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.DataLabels" /> <c>&lt;c:dLbls></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.RadarChartExtensionList" /> <c>&lt;c:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.RadarChartSeries" /> <c>&lt;c:ser></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.RadarStyle" /> <c>&lt;c:radarStyle></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.AxisId" /> <c>&lt;c:axId></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.VaryColors" /> <c>&lt;c:varyColors></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataLabels" /> <c>&lt;c:dLbls></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.RadarChartExtensionList" /> <c>&lt;c:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.RadarChartSeries" /> <c>&lt;c:ser></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.RadarStyle" /> <c>&lt;c:radarStyle></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AxisId" /> <c>&lt;c:axId></c></description></item>
     /// </list>
     /// </remark>
     public partial class RadarChart : TypedOpenXmlCompositeElement
@@ -10319,20 +10319,20 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:radarChart");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataLabels>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.RadarChartExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.RadarChartSeries>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.RadarStyle>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.AxisId>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.VaryColors>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataLabels>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.RadarChartExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.RadarChartSeries>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.RadarStyle>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AxisId>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.RadarStyle), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.VaryColors), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.RadarChartSeries), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataLabels), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.AxisId), 2, 2),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.RadarChartExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.RadarStyle), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.VaryColors), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.RadarChartSeries), 0, 0),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataLabels), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AxisId), 2, 2),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.RadarChartExtensionList), 0, 1)
             };
         }
 
@@ -10343,9 +10343,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.RadarStyle? RadarStyle
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.RadarStyle? RadarStyle
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.RadarStyle>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.RadarStyle>();
             set => SetElement(value);
         }
 
@@ -10356,9 +10356,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.VaryColors? VaryColors
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.VaryColors? VaryColors
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.VaryColors>();
             set => SetElement(value);
         }
 
@@ -10374,12 +10374,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.VaryColors" /> <c>&lt;c:varyColors></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.DataLabels" /> <c>&lt;c:dLbls></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ScatterChartExtensionList" /> <c>&lt;c:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ScatterChartSeries" /> <c>&lt;c:ser></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ScatterStyle" /> <c>&lt;c:scatterStyle></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.AxisId" /> <c>&lt;c:axId></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.VaryColors" /> <c>&lt;c:varyColors></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataLabels" /> <c>&lt;c:dLbls></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ScatterChartExtensionList" /> <c>&lt;c:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ScatterChartSeries" /> <c>&lt;c:ser></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ScatterStyle" /> <c>&lt;c:scatterStyle></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AxisId" /> <c>&lt;c:axId></c></description></item>
     /// </list>
     /// </remark>
     public partial class ScatterChart : TypedOpenXmlCompositeElement
@@ -10419,20 +10419,20 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:scatterChart");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataLabels>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ScatterChartExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ScatterChartSeries>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ScatterStyle>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.AxisId>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.VaryColors>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataLabels>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ScatterChartExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ScatterChartSeries>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ScatterStyle>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AxisId>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ScatterStyle), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.VaryColors), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ScatterChartSeries), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataLabels), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.AxisId), 2, 2),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ScatterChartExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ScatterStyle), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.VaryColors), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ScatterChartSeries), 0, 0),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataLabels), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AxisId), 2, 2),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ScatterChartExtensionList), 0, 1)
             };
         }
 
@@ -10443,9 +10443,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.ScatterStyle? ScatterStyle
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ScatterStyle? ScatterStyle
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ScatterStyle>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ScatterStyle>();
             set => SetElement(value);
         }
 
@@ -10456,9 +10456,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.VaryColors? VaryColors
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.VaryColors? VaryColors
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.VaryColors>();
             set => SetElement(value);
         }
 
@@ -10474,11 +10474,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.VaryColors" /> <c>&lt;c:varyColors></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.DataLabels" /> <c>&lt;c:dLbls></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.FirstSliceAngle" /> <c>&lt;c:firstSliceAng></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PieChartExtensionList" /> <c>&lt;c:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PieChartSeries" /> <c>&lt;c:ser></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.VaryColors" /> <c>&lt;c:varyColors></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataLabels" /> <c>&lt;c:dLbls></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.FirstSliceAngle" /> <c>&lt;c:firstSliceAng></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PieChartExtensionList" /> <c>&lt;c:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PieChartSeries" /> <c>&lt;c:ser></c></description></item>
     /// </list>
     /// </remark>
     public partial class PieChart : TypedOpenXmlCompositeElement
@@ -10518,24 +10518,24 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:pieChart");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataLabels>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.FirstSliceAngle>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PieChartExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PieChartSeries>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.VaryColors>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataLabels>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.FirstSliceAngle>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PieChartExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PieChartSeries>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.VaryColors), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PieChartSeries), 0, 0),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataLabels), 0, 1)
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.VaryColors), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PieChartSeries), 0, 0),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataLabels), 0, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.FirstSliceAngle), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PieChartExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.FirstSliceAngle), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PieChartExtensionList), 0, 1)
             };
         }
 
@@ -10546,9 +10546,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.VaryColors? VaryColors
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.VaryColors? VaryColors
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.VaryColors>();
             set => SetElement(value);
         }
 
@@ -10564,10 +10564,10 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.VaryColors" /> <c>&lt;c:varyColors></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.DataLabels" /> <c>&lt;c:dLbls></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Pie3DChartExtensionList" /> <c>&lt;c:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PieChartSeries" /> <c>&lt;c:ser></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.VaryColors" /> <c>&lt;c:varyColors></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataLabels" /> <c>&lt;c:dLbls></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Pie3DChartExtensionList" /> <c>&lt;c:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PieChartSeries" /> <c>&lt;c:ser></c></description></item>
     /// </list>
     /// </remark>
     public partial class Pie3DChart : TypedOpenXmlCompositeElement
@@ -10607,22 +10607,22 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:pie3DChart");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataLabels>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Pie3DChartExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PieChartSeries>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.VaryColors>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataLabels>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Pie3DChartExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PieChartSeries>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.VaryColors), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PieChartSeries), 0, 0),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataLabels), 0, 1)
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.VaryColors), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PieChartSeries), 0, 0),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataLabels), 0, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Pie3DChartExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Pie3DChartExtensionList), 0, 1)
             };
         }
 
@@ -10633,9 +10633,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.VaryColors? VaryColors
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.VaryColors? VaryColors
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.VaryColors>();
             set => SetElement(value);
         }
 
@@ -10651,12 +10651,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.VaryColors" /> <c>&lt;c:varyColors></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.DataLabels" /> <c>&lt;c:dLbls></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ExtensionList" /> <c>&lt;c:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.FirstSliceAngle" /> <c>&lt;c:firstSliceAng></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.HoleSize" /> <c>&lt;c:holeSize></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PieChartSeries" /> <c>&lt;c:ser></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.VaryColors" /> <c>&lt;c:varyColors></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataLabels" /> <c>&lt;c:dLbls></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList" /> <c>&lt;c:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.FirstSliceAngle" /> <c>&lt;c:firstSliceAng></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.HoleSize" /> <c>&lt;c:holeSize></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PieChartSeries" /> <c>&lt;c:ser></c></description></item>
     /// </list>
     /// </remark>
     public partial class DoughnutChart : TypedOpenXmlCompositeElement
@@ -10696,26 +10696,26 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:doughnutChart");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataLabels>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.FirstSliceAngle>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.HoleSize>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PieChartSeries>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.VaryColors>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataLabels>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.FirstSliceAngle>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.HoleSize>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PieChartSeries>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.VaryColors), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PieChartSeries), 0, 0),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataLabels), 0, 1)
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.VaryColors), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PieChartSeries), 0, 0),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataLabels), 0, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.FirstSliceAngle), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.HoleSize), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.FirstSliceAngle), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.HoleSize), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList), 0, 1)
             };
         }
 
@@ -10726,9 +10726,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.VaryColors? VaryColors
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.VaryColors? VaryColors
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.VaryColors>();
             set => SetElement(value);
         }
 
@@ -10744,16 +10744,16 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.BarChartExtensionList" /> <c>&lt;c:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.BarDirection" /> <c>&lt;c:barDir></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.BarGrouping" /> <c>&lt;c:grouping></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.BarChartSeries" /> <c>&lt;c:ser></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.VaryColors" /> <c>&lt;c:varyColors></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.SeriesLines" /> <c>&lt;c:serLines></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.DataLabels" /> <c>&lt;c:dLbls></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.GapWidth" /> <c>&lt;c:gapWidth></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Overlap" /> <c>&lt;c:overlap></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.AxisId" /> <c>&lt;c:axId></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.BarChartExtensionList" /> <c>&lt;c:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.BarDirection" /> <c>&lt;c:barDir></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.BarGrouping" /> <c>&lt;c:grouping></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.BarChartSeries" /> <c>&lt;c:ser></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.VaryColors" /> <c>&lt;c:varyColors></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SeriesLines" /> <c>&lt;c:serLines></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataLabels" /> <c>&lt;c:dLbls></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.GapWidth" /> <c>&lt;c:gapWidth></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Overlap" /> <c>&lt;c:overlap></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AxisId" /> <c>&lt;c:axId></c></description></item>
     /// </list>
     /// </remark>
     public partial class BarChart : TypedOpenXmlCompositeElement
@@ -10793,34 +10793,34 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:barChart");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.BarChartExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.BarDirection>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.BarGrouping>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.BarChartSeries>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.SeriesLines>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataLabels>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.GapWidth>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Overlap>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.AxisId>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.BarChartExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.BarDirection>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.BarGrouping>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.BarChartSeries>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.VaryColors>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SeriesLines>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataLabels>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.GapWidth>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Overlap>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AxisId>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.BarDirection), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.BarGrouping), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.VaryColors), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.BarChartSeries), 0, 0),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataLabels), 0, 1)
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.BarDirection), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.BarGrouping), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.VaryColors), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.BarChartSeries), 0, 0),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataLabels), 0, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.GapWidth), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Overlap), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.SeriesLines), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.AxisId), 2, 2),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.BarChartExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.GapWidth), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Overlap), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SeriesLines), 0, 0),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AxisId), 2, 2),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.BarChartExtensionList), 0, 1)
             };
         }
 
@@ -10831,9 +10831,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.BarDirection? BarDirection
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.BarDirection? BarDirection
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.BarDirection>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.BarDirection>();
             set => SetElement(value);
         }
 
@@ -10844,9 +10844,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.BarGrouping? BarGrouping
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.BarGrouping? BarGrouping
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.BarGrouping>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.BarGrouping>();
             set => SetElement(value);
         }
 
@@ -10857,9 +10857,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.VaryColors? VaryColors
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.VaryColors? VaryColors
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.VaryColors>();
             set => SetElement(value);
         }
 
@@ -10875,16 +10875,16 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Bar3DChartExtensionList" /> <c>&lt;c:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.BarDirection" /> <c>&lt;c:barDir></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.BarGrouping" /> <c>&lt;c:grouping></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.BarChartSeries" /> <c>&lt;c:ser></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.VaryColors" /> <c>&lt;c:varyColors></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.DataLabels" /> <c>&lt;c:dLbls></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.GapWidth" /> <c>&lt;c:gapWidth></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.GapDepth" /> <c>&lt;c:gapDepth></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Shape" /> <c>&lt;c:shape></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.AxisId" /> <c>&lt;c:axId></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Bar3DChartExtensionList" /> <c>&lt;c:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.BarDirection" /> <c>&lt;c:barDir></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.BarGrouping" /> <c>&lt;c:grouping></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.BarChartSeries" /> <c>&lt;c:ser></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.VaryColors" /> <c>&lt;c:varyColors></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataLabels" /> <c>&lt;c:dLbls></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.GapWidth" /> <c>&lt;c:gapWidth></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.GapDepth" /> <c>&lt;c:gapDepth></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Shape" /> <c>&lt;c:shape></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AxisId" /> <c>&lt;c:axId></c></description></item>
     /// </list>
     /// </remark>
     public partial class Bar3DChart : TypedOpenXmlCompositeElement
@@ -10924,34 +10924,34 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:bar3DChart");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Bar3DChartExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.BarDirection>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.BarGrouping>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.BarChartSeries>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataLabels>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.GapWidth>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.GapDepth>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Shape>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.AxisId>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Bar3DChartExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.BarDirection>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.BarGrouping>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.BarChartSeries>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.VaryColors>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataLabels>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.GapWidth>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.GapDepth>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Shape>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AxisId>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.BarDirection), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.BarGrouping), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.VaryColors), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.BarChartSeries), 0, 0),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataLabels), 0, 1)
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.BarDirection), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.BarGrouping), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.VaryColors), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.BarChartSeries), 0, 0),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataLabels), 0, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.GapWidth), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.GapDepth), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Shape), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.AxisId), 2, 3),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Bar3DChartExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.GapWidth), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.GapDepth), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Shape), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AxisId), 2, 3),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Bar3DChartExtensionList), 0, 1)
             };
         }
 
@@ -10962,9 +10962,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.BarDirection? BarDirection
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.BarDirection? BarDirection
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.BarDirection>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.BarDirection>();
             set => SetElement(value);
         }
 
@@ -10975,9 +10975,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.BarGrouping? BarGrouping
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.BarGrouping? BarGrouping
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.BarGrouping>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.BarGrouping>();
             set => SetElement(value);
         }
 
@@ -10988,9 +10988,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.VaryColors? VaryColors
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.VaryColors? VaryColors
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.VaryColors>();
             set => SetElement(value);
         }
 
@@ -11006,17 +11006,17 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.VaryColors" /> <c>&lt;c:varyColors></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.SeriesLines" /> <c>&lt;c:serLines></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.CustomSplit" /> <c>&lt;c:custSplit></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.DataLabels" /> <c>&lt;c:dLbls></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.SplitPosition" /> <c>&lt;c:splitPos></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ExtensionList" /> <c>&lt;c:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.GapWidth" /> <c>&lt;c:gapWidth></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.OfPieType" /> <c>&lt;c:ofPieType></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PieChartSeries" /> <c>&lt;c:ser></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.SecondPieSize" /> <c>&lt;c:secondPieSize></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.SplitType" /> <c>&lt;c:splitType></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.VaryColors" /> <c>&lt;c:varyColors></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SeriesLines" /> <c>&lt;c:serLines></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.CustomSplit" /> <c>&lt;c:custSplit></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataLabels" /> <c>&lt;c:dLbls></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SplitPosition" /> <c>&lt;c:splitPos></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList" /> <c>&lt;c:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.GapWidth" /> <c>&lt;c:gapWidth></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.OfPieType" /> <c>&lt;c:ofPieType></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PieChartSeries" /> <c>&lt;c:ser></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SecondPieSize" /> <c>&lt;c:secondPieSize></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SplitType" /> <c>&lt;c:splitType></c></description></item>
     /// </list>
     /// </remark>
     public partial class OfPieChart : TypedOpenXmlCompositeElement
@@ -11056,36 +11056,36 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:ofPieChart");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.SeriesLines>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.CustomSplit>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataLabels>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.SplitPosition>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.GapWidth>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.OfPieType>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PieChartSeries>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.SecondPieSize>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.SplitType>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.VaryColors>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SeriesLines>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.CustomSplit>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataLabels>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SplitPosition>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.GapWidth>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.OfPieType>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PieChartSeries>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SecondPieSize>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SplitType>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.OfPieType), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.OfPieType), 1, 1),
                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.VaryColors), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PieChartSeries), 0, 0),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataLabels), 0, 1)
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.VaryColors), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PieChartSeries), 0, 0),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataLabels), 0, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.GapWidth), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.SplitType), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.SplitPosition), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.CustomSplit), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.SecondPieSize), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.SeriesLines), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.GapWidth), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SplitType), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SplitPosition), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.CustomSplit), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SecondPieSize), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SeriesLines), 0, 0),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList), 0, 1)
             };
         }
 
@@ -11096,9 +11096,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.OfPieType? OfPieType
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.OfPieType? OfPieType
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.OfPieType>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.OfPieType>();
             set => SetElement(value);
         }
 
@@ -11109,9 +11109,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.VaryColors? VaryColors
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.VaryColors? VaryColors
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.VaryColors>();
             set => SetElement(value);
         }
 
@@ -11127,11 +11127,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.BandFormats" /> <c>&lt;c:bandFmts></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Wireframe" /> <c>&lt;c:wireframe></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.SurfaceChartExtensionList" /> <c>&lt;c:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.SurfaceChartSeries" /> <c>&lt;c:ser></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.AxisId" /> <c>&lt;c:axId></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.BandFormats" /> <c>&lt;c:bandFmts></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Wireframe" /> <c>&lt;c:wireframe></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SurfaceChartExtensionList" /> <c>&lt;c:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SurfaceChartSeries" /> <c>&lt;c:ser></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AxisId" /> <c>&lt;c:axId></c></description></item>
     /// </list>
     /// </remark>
     public partial class SurfaceChart : TypedOpenXmlCompositeElement
@@ -11171,24 +11171,24 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:surfaceChart");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.BandFormats>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Wireframe>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.SurfaceChartExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.SurfaceChartSeries>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.AxisId>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.BandFormats>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Wireframe>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SurfaceChartExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SurfaceChartSeries>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AxisId>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Wireframe), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.SurfaceChartSeries), 0, 0),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.BandFormats), 0, 1)
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Wireframe), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SurfaceChartSeries), 0, 0),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.BandFormats), 0, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.AxisId), 2, 3),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.SurfaceChartExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AxisId), 2, 3),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SurfaceChartExtensionList), 0, 1)
             };
         }
 
@@ -11199,9 +11199,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.Wireframe? Wireframe
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Wireframe? Wireframe
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Wireframe>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Wireframe>();
             set => SetElement(value);
         }
 
@@ -11217,12 +11217,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.BandFormats" /> <c>&lt;c:bandFmts></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Wireframe" /> <c>&lt;c:wireframe></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.VaryColors" /> <c>&lt;c:varyColors></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Surface3DChartExtensionList" /> <c>&lt;c:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.SurfaceChartSeries" /> <c>&lt;c:ser></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.AxisId" /> <c>&lt;c:axId></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.BandFormats" /> <c>&lt;c:bandFmts></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Wireframe" /> <c>&lt;c:wireframe></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.VaryColors" /> <c>&lt;c:varyColors></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Surface3DChartExtensionList" /> <c>&lt;c:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SurfaceChartSeries" /> <c>&lt;c:ser></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AxisId" /> <c>&lt;c:axId></c></description></item>
     /// </list>
     /// </remark>
     public partial class Surface3DChart : TypedOpenXmlCompositeElement
@@ -11262,20 +11262,20 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:surface3DChart");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.BandFormats>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Wireframe>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Surface3DChartExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.SurfaceChartSeries>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.AxisId>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.BandFormats>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Wireframe>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.VaryColors>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Surface3DChartExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SurfaceChartSeries>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AxisId>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Wireframe), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.VaryColors), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.SurfaceChartSeries), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.BandFormats), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.AxisId), 3, 3),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Surface3DChartExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Wireframe), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.VaryColors), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SurfaceChartSeries), 0, 0),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.BandFormats), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AxisId), 3, 3),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Surface3DChartExtensionList), 0, 1)
             };
         }
 
@@ -11286,9 +11286,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.Wireframe? Wireframe
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Wireframe? Wireframe
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Wireframe>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Wireframe>();
             set => SetElement(value);
         }
 
@@ -11299,9 +11299,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.VaryColors? VaryColors
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.VaryColors? VaryColors
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.VaryColors>();
             set => SetElement(value);
         }
 
@@ -11317,15 +11317,15 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.VaryColors" /> <c>&lt;c:varyColors></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Bubble3D" /> <c>&lt;c:bubble3D></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ShowNegativeBubbles" /> <c>&lt;c:showNegBubbles></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.BubbleChartExtensionList" /> <c>&lt;c:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.BubbleScale" /> <c>&lt;c:bubbleScale></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.BubbleChartSeries" /> <c>&lt;c:ser></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.DataLabels" /> <c>&lt;c:dLbls></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.SizeRepresents" /> <c>&lt;c:sizeRepresents></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.AxisId" /> <c>&lt;c:axId></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.VaryColors" /> <c>&lt;c:varyColors></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Bubble3D" /> <c>&lt;c:bubble3D></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ShowNegativeBubbles" /> <c>&lt;c:showNegBubbles></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.BubbleChartExtensionList" /> <c>&lt;c:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.BubbleScale" /> <c>&lt;c:bubbleScale></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.BubbleChartSeries" /> <c>&lt;c:ser></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataLabels" /> <c>&lt;c:dLbls></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SizeRepresents" /> <c>&lt;c:sizeRepresents></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AxisId" /> <c>&lt;c:axId></c></description></item>
     /// </list>
     /// </remark>
     public partial class BubbleChart : TypedOpenXmlCompositeElement
@@ -11365,26 +11365,26 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:bubbleChart");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Bubble3D>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ShowNegativeBubbles>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.BubbleChartExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.BubbleScale>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.BubbleChartSeries>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataLabels>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.SizeRepresents>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.AxisId>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.VaryColors>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Bubble3D>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ShowNegativeBubbles>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.BubbleChartExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.BubbleScale>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.BubbleChartSeries>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataLabels>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SizeRepresents>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AxisId>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.VaryColors), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.BubbleChartSeries), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataLabels), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Bubble3D), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.BubbleScale), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowNegativeBubbles), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.SizeRepresents), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.AxisId), 2, 2),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.BubbleChartExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.VaryColors), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.BubbleChartSeries), 0, 0),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataLabels), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Bubble3D), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.BubbleScale), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ShowNegativeBubbles), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SizeRepresents), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AxisId), 2, 2),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.BubbleChartExtensionList), 0, 1)
             };
         }
 
@@ -11395,9 +11395,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.VaryColors? VaryColors
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.VaryColors? VaryColors
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.VaryColors>();
             set => SetElement(value);
         }
 
@@ -11413,27 +11413,27 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.TextProperties" /> <c>&lt;c:txPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.MajorUnit" /> <c>&lt;c:majorUnit></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.MinorUnit" /> <c>&lt;c:minorUnit></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.AxisPosition" /> <c>&lt;c:axPos></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Delete" /> <c>&lt;c:delete></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.MajorGridlines" /> <c>&lt;c:majorGridlines></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.MinorGridlines" /> <c>&lt;c:minorGridlines></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.CrossBetween" /> <c>&lt;c:crossBetween></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Crosses" /> <c>&lt;c:crosses></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.DisplayUnits" /> <c>&lt;c:dispUnits></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.CrossesAt" /> <c>&lt;c:crossesAt></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat" /> <c>&lt;c:numFmt></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Scaling" /> <c>&lt;c:scaling></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.TickLabelPosition" /> <c>&lt;c:tickLblPos></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.MajorTickMark" /> <c>&lt;c:majorTickMark></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.MinorTickMark" /> <c>&lt;c:minorTickMark></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Title" /> <c>&lt;c:title></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.AxisId" /> <c>&lt;c:axId></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.CrossingAxis" /> <c>&lt;c:crossAx></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ValAxExtensionList" /> <c>&lt;c:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TextProperties" /> <c>&lt;c:txPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MajorUnit" /> <c>&lt;c:majorUnit></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MinorUnit" /> <c>&lt;c:minorUnit></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AxisPosition" /> <c>&lt;c:axPos></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Delete" /> <c>&lt;c:delete></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MajorGridlines" /> <c>&lt;c:majorGridlines></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MinorGridlines" /> <c>&lt;c:minorGridlines></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.CrossBetween" /> <c>&lt;c:crossBetween></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Crosses" /> <c>&lt;c:crosses></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DisplayUnits" /> <c>&lt;c:dispUnits></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.CrossesAt" /> <c>&lt;c:crossesAt></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumberingFormat" /> <c>&lt;c:numFmt></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Scaling" /> <c>&lt;c:scaling></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TickLabelPosition" /> <c>&lt;c:tickLblPos></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MajorTickMark" /> <c>&lt;c:majorTickMark></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MinorTickMark" /> <c>&lt;c:minorTickMark></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Title" /> <c>&lt;c:title></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AxisId" /> <c>&lt;c:axId></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.CrossingAxis" /> <c>&lt;c:crossAx></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ValAxExtensionList" /> <c>&lt;c:extLst></c></description></item>
     /// </list>
     /// </remark>
     public partial class ValueAxis : TypedOpenXmlCompositeElement
@@ -11473,59 +11473,59 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:valAx");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.TextProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.MajorUnit>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.MinorUnit>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.AxisPosition>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Delete>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.MajorGridlines>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.MinorGridlines>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.CrossBetween>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Crosses>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DisplayUnits>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.CrossesAt>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Scaling>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.TickLabelPosition>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.MajorTickMark>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.MinorTickMark>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Title>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.AxisId>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.CrossingAxis>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ValAxExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TextProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MajorUnit>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MinorUnit>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AxisPosition>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Delete>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MajorGridlines>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MinorGridlines>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.CrossBetween>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Crosses>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DisplayUnits>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.CrossesAt>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumberingFormat>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Scaling>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TickLabelPosition>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MajorTickMark>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MinorTickMark>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Title>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AxisId>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.CrossingAxis>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ValAxExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.AxisId), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Scaling), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Delete), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.AxisPosition), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.MajorGridlines), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.MinorGridlines), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Title), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.MajorTickMark), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.MinorTickMark), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.TickLabelPosition), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.TextProperties), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.CrossingAxis), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AxisId), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Scaling), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Delete), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AxisPosition), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MajorGridlines), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MinorGridlines), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Title), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumberingFormat), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MajorTickMark), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MinorTickMark), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TickLabelPosition), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TextProperties), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.CrossingAxis), 1, 1),
                         new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
                         {
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Crosses), 1, 1),
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.CrossesAt), 1, 1)
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Crosses), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.CrossesAt), 1, 1)
                         }
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.CrossBetween), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.MajorUnit), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.MinorUnit), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DisplayUnits), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ValAxExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.CrossBetween), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MajorUnit), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MinorUnit), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DisplayUnits), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ValAxExtensionList), 0, 1)
             };
         }
 
@@ -11536,9 +11536,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.AxisId? AxisId
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AxisId? AxisId
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.AxisId>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AxisId>();
             set => SetElement(value);
         }
 
@@ -11549,9 +11549,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.Scaling? Scaling
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Scaling? Scaling
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Scaling>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Scaling>();
             set => SetElement(value);
         }
 
@@ -11562,9 +11562,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.Delete? Delete
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Delete? Delete
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Delete>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Delete>();
             set => SetElement(value);
         }
 
@@ -11575,9 +11575,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.AxisPosition? AxisPosition
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AxisPosition? AxisPosition
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.AxisPosition>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AxisPosition>();
             set => SetElement(value);
         }
 
@@ -11588,9 +11588,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.MajorGridlines? MajorGridlines
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MajorGridlines? MajorGridlines
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.MajorGridlines>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MajorGridlines>();
             set => SetElement(value);
         }
 
@@ -11601,9 +11601,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.MinorGridlines? MinorGridlines
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MinorGridlines? MinorGridlines
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.MinorGridlines>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MinorGridlines>();
             set => SetElement(value);
         }
 
@@ -11614,9 +11614,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.Title? Title
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Title? Title
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Title>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Title>();
             set => SetElement(value);
         }
 
@@ -11627,9 +11627,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat? NumberingFormat
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumberingFormat? NumberingFormat
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumberingFormat>();
             set => SetElement(value);
         }
 
@@ -11640,9 +11640,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.MajorTickMark? MajorTickMark
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MajorTickMark? MajorTickMark
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.MajorTickMark>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MajorTickMark>();
             set => SetElement(value);
         }
 
@@ -11653,9 +11653,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.MinorTickMark? MinorTickMark
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MinorTickMark? MinorTickMark
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.MinorTickMark>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MinorTickMark>();
             set => SetElement(value);
         }
 
@@ -11666,9 +11666,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.TickLabelPosition? TickLabelPosition
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TickLabelPosition? TickLabelPosition
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.TickLabelPosition>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TickLabelPosition>();
             set => SetElement(value);
         }
 
@@ -11679,9 +11679,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties? ChartShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties>();
             set => SetElement(value);
         }
 
@@ -11692,9 +11692,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.TextProperties? TextProperties
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TextProperties? TextProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.TextProperties>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TextProperties>();
             set => SetElement(value);
         }
 
@@ -11705,9 +11705,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.CrossingAxis? CrossingAxis
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.CrossingAxis? CrossingAxis
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.CrossingAxis>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.CrossingAxis>();
             set => SetElement(value);
         }
 
@@ -11723,29 +11723,29 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.TextProperties" /> <c>&lt;c:txPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.AxisPosition" /> <c>&lt;c:axPos></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Delete" /> <c>&lt;c:delete></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.AutoLabeled" /> <c>&lt;c:auto></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.NoMultiLevelLabels" /> <c>&lt;c:noMultiLvlLbl></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.CatAxExtensionList" /> <c>&lt;c:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.MajorGridlines" /> <c>&lt;c:majorGridlines></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.MinorGridlines" /> <c>&lt;c:minorGridlines></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Crosses" /> <c>&lt;c:crosses></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.CrossesAt" /> <c>&lt;c:crossesAt></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.LabelAlignment" /> <c>&lt;c:lblAlgn></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.LabelOffset" /> <c>&lt;c:lblOffset></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat" /> <c>&lt;c:numFmt></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Scaling" /> <c>&lt;c:scaling></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.TickLabelSkip" /> <c>&lt;c:tickLblSkip></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.TickMarkSkip" /> <c>&lt;c:tickMarkSkip></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.TickLabelPosition" /> <c>&lt;c:tickLblPos></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.MajorTickMark" /> <c>&lt;c:majorTickMark></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.MinorTickMark" /> <c>&lt;c:minorTickMark></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Title" /> <c>&lt;c:title></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.AxisId" /> <c>&lt;c:axId></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.CrossingAxis" /> <c>&lt;c:crossAx></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TextProperties" /> <c>&lt;c:txPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AxisPosition" /> <c>&lt;c:axPos></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Delete" /> <c>&lt;c:delete></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AutoLabeled" /> <c>&lt;c:auto></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NoMultiLevelLabels" /> <c>&lt;c:noMultiLvlLbl></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.CatAxExtensionList" /> <c>&lt;c:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MajorGridlines" /> <c>&lt;c:majorGridlines></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MinorGridlines" /> <c>&lt;c:minorGridlines></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Crosses" /> <c>&lt;c:crosses></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.CrossesAt" /> <c>&lt;c:crossesAt></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.LabelAlignment" /> <c>&lt;c:lblAlgn></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.LabelOffset" /> <c>&lt;c:lblOffset></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumberingFormat" /> <c>&lt;c:numFmt></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Scaling" /> <c>&lt;c:scaling></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TickLabelSkip" /> <c>&lt;c:tickLblSkip></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TickMarkSkip" /> <c>&lt;c:tickMarkSkip></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TickLabelPosition" /> <c>&lt;c:tickLblPos></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MajorTickMark" /> <c>&lt;c:majorTickMark></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MinorTickMark" /> <c>&lt;c:minorTickMark></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Title" /> <c>&lt;c:title></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AxisId" /> <c>&lt;c:axId></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.CrossingAxis" /> <c>&lt;c:crossAx></c></description></item>
     /// </list>
     /// </remark>
     public partial class CategoryAxis : TypedOpenXmlCompositeElement
@@ -11785,63 +11785,63 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:catAx");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.TextProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.AxisPosition>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Delete>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.AutoLabeled>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.NoMultiLevelLabels>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.CatAxExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.MajorGridlines>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.MinorGridlines>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Crosses>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.CrossesAt>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.LabelAlignment>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.LabelOffset>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Scaling>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.TickLabelSkip>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.TickMarkSkip>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.TickLabelPosition>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.MajorTickMark>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.MinorTickMark>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Title>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.AxisId>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.CrossingAxis>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TextProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AxisPosition>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Delete>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AutoLabeled>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NoMultiLevelLabels>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.CatAxExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MajorGridlines>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MinorGridlines>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Crosses>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.CrossesAt>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.LabelAlignment>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.LabelOffset>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumberingFormat>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Scaling>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TickLabelSkip>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TickMarkSkip>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TickLabelPosition>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MajorTickMark>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MinorTickMark>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Title>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AxisId>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.CrossingAxis>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.AxisId), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Scaling), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Delete), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.AxisPosition), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.MajorGridlines), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.MinorGridlines), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Title), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.MajorTickMark), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.MinorTickMark), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.TickLabelPosition), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.TextProperties), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.CrossingAxis), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AxisId), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Scaling), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Delete), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AxisPosition), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MajorGridlines), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MinorGridlines), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Title), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumberingFormat), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MajorTickMark), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MinorTickMark), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TickLabelPosition), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TextProperties), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.CrossingAxis), 1, 1),
                         new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
                         {
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Crosses), 1, 1),
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.CrossesAt), 1, 1)
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Crosses), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.CrossesAt), 1, 1)
                         }
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.AutoLabeled), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.LabelAlignment), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.LabelOffset), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.TickLabelSkip), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.TickMarkSkip), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NoMultiLevelLabels), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.CatAxExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AutoLabeled), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.LabelAlignment), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.LabelOffset), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TickLabelSkip), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TickMarkSkip), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NoMultiLevelLabels), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.CatAxExtensionList), 0, 1)
             };
         }
 
@@ -11852,9 +11852,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.AxisId? AxisId
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AxisId? AxisId
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.AxisId>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AxisId>();
             set => SetElement(value);
         }
 
@@ -11865,9 +11865,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.Scaling? Scaling
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Scaling? Scaling
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Scaling>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Scaling>();
             set => SetElement(value);
         }
 
@@ -11878,9 +11878,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.Delete? Delete
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Delete? Delete
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Delete>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Delete>();
             set => SetElement(value);
         }
 
@@ -11891,9 +11891,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.AxisPosition? AxisPosition
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AxisPosition? AxisPosition
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.AxisPosition>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AxisPosition>();
             set => SetElement(value);
         }
 
@@ -11904,9 +11904,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.MajorGridlines? MajorGridlines
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MajorGridlines? MajorGridlines
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.MajorGridlines>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MajorGridlines>();
             set => SetElement(value);
         }
 
@@ -11917,9 +11917,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.MinorGridlines? MinorGridlines
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MinorGridlines? MinorGridlines
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.MinorGridlines>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MinorGridlines>();
             set => SetElement(value);
         }
 
@@ -11930,9 +11930,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.Title? Title
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Title? Title
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Title>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Title>();
             set => SetElement(value);
         }
 
@@ -11943,9 +11943,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat? NumberingFormat
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumberingFormat? NumberingFormat
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumberingFormat>();
             set => SetElement(value);
         }
 
@@ -11956,9 +11956,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.MajorTickMark? MajorTickMark
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MajorTickMark? MajorTickMark
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.MajorTickMark>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MajorTickMark>();
             set => SetElement(value);
         }
 
@@ -11969,9 +11969,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.MinorTickMark? MinorTickMark
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MinorTickMark? MinorTickMark
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.MinorTickMark>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MinorTickMark>();
             set => SetElement(value);
         }
 
@@ -11982,9 +11982,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.TickLabelPosition? TickLabelPosition
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TickLabelPosition? TickLabelPosition
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.TickLabelPosition>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TickLabelPosition>();
             set => SetElement(value);
         }
 
@@ -11995,9 +11995,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties? ChartShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties>();
             set => SetElement(value);
         }
 
@@ -12008,9 +12008,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.TextProperties? TextProperties
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TextProperties? TextProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.TextProperties>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TextProperties>();
             set => SetElement(value);
         }
 
@@ -12021,9 +12021,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.CrossingAxis? CrossingAxis
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.CrossingAxis? CrossingAxis
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.CrossingAxis>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.CrossingAxis>();
             set => SetElement(value);
         }
 
@@ -12039,30 +12039,30 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.TextProperties" /> <c>&lt;c:txPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.MajorUnit" /> <c>&lt;c:majorUnit></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.MinorUnit" /> <c>&lt;c:minorUnit></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.AxisPosition" /> <c>&lt;c:axPos></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Delete" /> <c>&lt;c:delete></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.AutoLabeled" /> <c>&lt;c:auto></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.MajorGridlines" /> <c>&lt;c:majorGridlines></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.MinorGridlines" /> <c>&lt;c:minorGridlines></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Crosses" /> <c>&lt;c:crosses></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.DateAxExtensionList" /> <c>&lt;c:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.CrossesAt" /> <c>&lt;c:crossesAt></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.LabelOffset" /> <c>&lt;c:lblOffset></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat" /> <c>&lt;c:numFmt></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Scaling" /> <c>&lt;c:scaling></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.TickLabelPosition" /> <c>&lt;c:tickLblPos></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.MajorTickMark" /> <c>&lt;c:majorTickMark></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.MinorTickMark" /> <c>&lt;c:minorTickMark></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.BaseTimeUnit" /> <c>&lt;c:baseTimeUnit></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.MajorTimeUnit" /> <c>&lt;c:majorTimeUnit></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.MinorTimeUnit" /> <c>&lt;c:minorTimeUnit></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Title" /> <c>&lt;c:title></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.AxisId" /> <c>&lt;c:axId></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.CrossingAxis" /> <c>&lt;c:crossAx></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TextProperties" /> <c>&lt;c:txPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MajorUnit" /> <c>&lt;c:majorUnit></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MinorUnit" /> <c>&lt;c:minorUnit></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AxisPosition" /> <c>&lt;c:axPos></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Delete" /> <c>&lt;c:delete></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AutoLabeled" /> <c>&lt;c:auto></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MajorGridlines" /> <c>&lt;c:majorGridlines></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MinorGridlines" /> <c>&lt;c:minorGridlines></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Crosses" /> <c>&lt;c:crosses></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DateAxExtensionList" /> <c>&lt;c:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.CrossesAt" /> <c>&lt;c:crossesAt></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.LabelOffset" /> <c>&lt;c:lblOffset></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumberingFormat" /> <c>&lt;c:numFmt></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Scaling" /> <c>&lt;c:scaling></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TickLabelPosition" /> <c>&lt;c:tickLblPos></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MajorTickMark" /> <c>&lt;c:majorTickMark></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MinorTickMark" /> <c>&lt;c:minorTickMark></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.BaseTimeUnit" /> <c>&lt;c:baseTimeUnit></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MajorTimeUnit" /> <c>&lt;c:majorTimeUnit></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MinorTimeUnit" /> <c>&lt;c:minorTimeUnit></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Title" /> <c>&lt;c:title></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AxisId" /> <c>&lt;c:axId></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.CrossingAxis" /> <c>&lt;c:crossAx></c></description></item>
     /// </list>
     /// </remark>
     public partial class DateAxis : TypedOpenXmlCompositeElement
@@ -12102,65 +12102,65 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:dateAx");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.TextProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.MajorUnit>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.MinorUnit>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.AxisPosition>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Delete>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.AutoLabeled>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.MajorGridlines>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.MinorGridlines>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Crosses>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DateAxExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.CrossesAt>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.LabelOffset>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Scaling>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.TickLabelPosition>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.MajorTickMark>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.MinorTickMark>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.BaseTimeUnit>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.MajorTimeUnit>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.MinorTimeUnit>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Title>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.AxisId>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.CrossingAxis>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TextProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MajorUnit>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MinorUnit>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AxisPosition>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Delete>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AutoLabeled>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MajorGridlines>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MinorGridlines>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Crosses>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DateAxExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.CrossesAt>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.LabelOffset>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumberingFormat>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Scaling>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TickLabelPosition>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MajorTickMark>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MinorTickMark>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.BaseTimeUnit>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MajorTimeUnit>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MinorTimeUnit>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Title>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AxisId>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.CrossingAxis>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.AxisId), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Scaling), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Delete), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.AxisPosition), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.MajorGridlines), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.MinorGridlines), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Title), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.MajorTickMark), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.MinorTickMark), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.TickLabelPosition), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.TextProperties), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.CrossingAxis), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AxisId), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Scaling), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Delete), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AxisPosition), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MajorGridlines), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MinorGridlines), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Title), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumberingFormat), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MajorTickMark), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MinorTickMark), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TickLabelPosition), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TextProperties), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.CrossingAxis), 1, 1),
                         new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
                         {
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Crosses), 1, 1),
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.CrossesAt), 1, 1)
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Crosses), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.CrossesAt), 1, 1)
                         }
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.AutoLabeled), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.LabelOffset), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.BaseTimeUnit), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.MajorUnit), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.MajorTimeUnit), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.MinorUnit), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.MinorTimeUnit), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DateAxExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AutoLabeled), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.LabelOffset), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.BaseTimeUnit), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MajorUnit), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MajorTimeUnit), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MinorUnit), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MinorTimeUnit), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DateAxExtensionList), 0, 1)
             };
         }
 
@@ -12171,9 +12171,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.AxisId? AxisId
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AxisId? AxisId
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.AxisId>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AxisId>();
             set => SetElement(value);
         }
 
@@ -12184,9 +12184,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.Scaling? Scaling
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Scaling? Scaling
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Scaling>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Scaling>();
             set => SetElement(value);
         }
 
@@ -12197,9 +12197,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.Delete? Delete
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Delete? Delete
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Delete>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Delete>();
             set => SetElement(value);
         }
 
@@ -12210,9 +12210,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.AxisPosition? AxisPosition
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AxisPosition? AxisPosition
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.AxisPosition>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AxisPosition>();
             set => SetElement(value);
         }
 
@@ -12223,9 +12223,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.MajorGridlines? MajorGridlines
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MajorGridlines? MajorGridlines
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.MajorGridlines>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MajorGridlines>();
             set => SetElement(value);
         }
 
@@ -12236,9 +12236,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.MinorGridlines? MinorGridlines
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MinorGridlines? MinorGridlines
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.MinorGridlines>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MinorGridlines>();
             set => SetElement(value);
         }
 
@@ -12249,9 +12249,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.Title? Title
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Title? Title
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Title>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Title>();
             set => SetElement(value);
         }
 
@@ -12262,9 +12262,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat? NumberingFormat
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumberingFormat? NumberingFormat
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumberingFormat>();
             set => SetElement(value);
         }
 
@@ -12275,9 +12275,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.MajorTickMark? MajorTickMark
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MajorTickMark? MajorTickMark
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.MajorTickMark>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MajorTickMark>();
             set => SetElement(value);
         }
 
@@ -12288,9 +12288,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.MinorTickMark? MinorTickMark
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MinorTickMark? MinorTickMark
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.MinorTickMark>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MinorTickMark>();
             set => SetElement(value);
         }
 
@@ -12301,9 +12301,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.TickLabelPosition? TickLabelPosition
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TickLabelPosition? TickLabelPosition
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.TickLabelPosition>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TickLabelPosition>();
             set => SetElement(value);
         }
 
@@ -12314,9 +12314,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties? ChartShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties>();
             set => SetElement(value);
         }
 
@@ -12327,9 +12327,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.TextProperties? TextProperties
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TextProperties? TextProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.TextProperties>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TextProperties>();
             set => SetElement(value);
         }
 
@@ -12340,9 +12340,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.CrossingAxis? CrossingAxis
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.CrossingAxis? CrossingAxis
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.CrossingAxis>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.CrossingAxis>();
             set => SetElement(value);
         }
 
@@ -12358,25 +12358,25 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.TextProperties" /> <c>&lt;c:txPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.AxisPosition" /> <c>&lt;c:axPos></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Delete" /> <c>&lt;c:delete></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.MajorGridlines" /> <c>&lt;c:majorGridlines></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.MinorGridlines" /> <c>&lt;c:minorGridlines></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Crosses" /> <c>&lt;c:crosses></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.CrossesAt" /> <c>&lt;c:crossesAt></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat" /> <c>&lt;c:numFmt></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Scaling" /> <c>&lt;c:scaling></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.SerAxExtensionList" /> <c>&lt;c:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.TickLabelSkip" /> <c>&lt;c:tickLblSkip></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.TickMarkSkip" /> <c>&lt;c:tickMarkSkip></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.TickLabelPosition" /> <c>&lt;c:tickLblPos></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.MajorTickMark" /> <c>&lt;c:majorTickMark></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.MinorTickMark" /> <c>&lt;c:minorTickMark></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Title" /> <c>&lt;c:title></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.AxisId" /> <c>&lt;c:axId></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.CrossingAxis" /> <c>&lt;c:crossAx></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TextProperties" /> <c>&lt;c:txPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AxisPosition" /> <c>&lt;c:axPos></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Delete" /> <c>&lt;c:delete></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MajorGridlines" /> <c>&lt;c:majorGridlines></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MinorGridlines" /> <c>&lt;c:minorGridlines></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Crosses" /> <c>&lt;c:crosses></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.CrossesAt" /> <c>&lt;c:crossesAt></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumberingFormat" /> <c>&lt;c:numFmt></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Scaling" /> <c>&lt;c:scaling></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SerAxExtensionList" /> <c>&lt;c:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TickLabelSkip" /> <c>&lt;c:tickLblSkip></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TickMarkSkip" /> <c>&lt;c:tickMarkSkip></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TickLabelPosition" /> <c>&lt;c:tickLblPos></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MajorTickMark" /> <c>&lt;c:majorTickMark></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MinorTickMark" /> <c>&lt;c:minorTickMark></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Title" /> <c>&lt;c:title></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AxisId" /> <c>&lt;c:axId></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.CrossingAxis" /> <c>&lt;c:crossAx></c></description></item>
     /// </list>
     /// </remark>
     public partial class SeriesAxis : TypedOpenXmlCompositeElement
@@ -12416,55 +12416,55 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:serAx");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.TextProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.AxisPosition>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Delete>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.MajorGridlines>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.MinorGridlines>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Crosses>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.CrossesAt>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Scaling>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.SerAxExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.TickLabelSkip>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.TickMarkSkip>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.TickLabelPosition>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.MajorTickMark>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.MinorTickMark>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Title>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.AxisId>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.CrossingAxis>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TextProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AxisPosition>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Delete>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MajorGridlines>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MinorGridlines>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Crosses>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.CrossesAt>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumberingFormat>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Scaling>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SerAxExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TickLabelSkip>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TickMarkSkip>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TickLabelPosition>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MajorTickMark>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MinorTickMark>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Title>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AxisId>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.CrossingAxis>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.AxisId), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Scaling), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Delete), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.AxisPosition), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.MajorGridlines), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.MinorGridlines), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Title), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.MajorTickMark), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.MinorTickMark), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.TickLabelPosition), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.TextProperties), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.CrossingAxis), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AxisId), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Scaling), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Delete), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AxisPosition), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MajorGridlines), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MinorGridlines), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Title), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumberingFormat), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MajorTickMark), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MinorTickMark), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TickLabelPosition), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TextProperties), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.CrossingAxis), 1, 1),
                         new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
                         {
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Crosses), 1, 1),
-                            new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.CrossesAt), 1, 1)
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Crosses), 1, 1),
+                            new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.CrossesAt), 1, 1)
                         }
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.TickLabelSkip), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.TickMarkSkip), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.SerAxExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TickLabelSkip), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TickMarkSkip), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SerAxExtensionList), 0, 1)
             };
         }
 
@@ -12475,9 +12475,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.AxisId? AxisId
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AxisId? AxisId
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.AxisId>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AxisId>();
             set => SetElement(value);
         }
 
@@ -12488,9 +12488,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.Scaling? Scaling
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Scaling? Scaling
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Scaling>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Scaling>();
             set => SetElement(value);
         }
 
@@ -12501,9 +12501,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.Delete? Delete
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Delete? Delete
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Delete>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Delete>();
             set => SetElement(value);
         }
 
@@ -12514,9 +12514,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.AxisPosition? AxisPosition
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AxisPosition? AxisPosition
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.AxisPosition>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AxisPosition>();
             set => SetElement(value);
         }
 
@@ -12527,9 +12527,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.MajorGridlines? MajorGridlines
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MajorGridlines? MajorGridlines
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.MajorGridlines>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MajorGridlines>();
             set => SetElement(value);
         }
 
@@ -12540,9 +12540,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.MinorGridlines? MinorGridlines
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MinorGridlines? MinorGridlines
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.MinorGridlines>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MinorGridlines>();
             set => SetElement(value);
         }
 
@@ -12553,9 +12553,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.Title? Title
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Title? Title
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Title>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Title>();
             set => SetElement(value);
         }
 
@@ -12566,9 +12566,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat? NumberingFormat
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumberingFormat? NumberingFormat
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumberingFormat>();
             set => SetElement(value);
         }
 
@@ -12579,9 +12579,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.MajorTickMark? MajorTickMark
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MajorTickMark? MajorTickMark
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.MajorTickMark>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MajorTickMark>();
             set => SetElement(value);
         }
 
@@ -12592,9 +12592,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.MinorTickMark? MinorTickMark
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MinorTickMark? MinorTickMark
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.MinorTickMark>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MinorTickMark>();
             set => SetElement(value);
         }
 
@@ -12605,9 +12605,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.TickLabelPosition? TickLabelPosition
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TickLabelPosition? TickLabelPosition
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.TickLabelPosition>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TickLabelPosition>();
             set => SetElement(value);
         }
 
@@ -12618,9 +12618,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties? ChartShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties>();
             set => SetElement(value);
         }
 
@@ -12631,9 +12631,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.TextProperties? TextProperties
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TextProperties? TextProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.TextProperties>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TextProperties>();
             set => SetElement(value);
         }
 
@@ -12644,9 +12644,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.CrossingAxis? CrossingAxis
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.CrossingAxis? CrossingAxis
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.CrossingAxis>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.CrossingAxis>();
             set => SetElement(value);
         }
 
@@ -12662,13 +12662,13 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.TextProperties" /> <c>&lt;c:txPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ShowHorizontalBorder" /> <c>&lt;c:showHorzBorder></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ShowVerticalBorder" /> <c>&lt;c:showVertBorder></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ShowOutlineBorder" /> <c>&lt;c:showOutline></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ShowKeys" /> <c>&lt;c:showKeys></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ExtensionList" /> <c>&lt;c:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TextProperties" /> <c>&lt;c:txPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ShowHorizontalBorder" /> <c>&lt;c:showHorzBorder></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ShowVerticalBorder" /> <c>&lt;c:showVertBorder></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ShowOutlineBorder" /> <c>&lt;c:showOutline></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ShowKeys" /> <c>&lt;c:showKeys></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList" /> <c>&lt;c:extLst></c></description></item>
     /// </list>
     /// </remark>
     public partial class DataTable : TypedOpenXmlCompositeElement
@@ -12708,22 +12708,22 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:dTable");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.TextProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ShowHorizontalBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ShowVerticalBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ShowOutlineBorder>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ShowKeys>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TextProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ShowHorizontalBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ShowVerticalBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ShowOutlineBorder>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ShowKeys>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowHorizontalBorder), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowVerticalBorder), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowOutlineBorder), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowKeys), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.TextProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ShowHorizontalBorder), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ShowVerticalBorder), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ShowOutlineBorder), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ShowKeys), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TextProperties), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList), 0, 1)
             };
         }
 
@@ -12734,9 +12734,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.ShowHorizontalBorder? ShowHorizontalBorder
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ShowHorizontalBorder? ShowHorizontalBorder
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ShowHorizontalBorder>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ShowHorizontalBorder>();
             set => SetElement(value);
         }
 
@@ -12747,9 +12747,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.ShowVerticalBorder? ShowVerticalBorder
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ShowVerticalBorder? ShowVerticalBorder
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ShowVerticalBorder>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ShowVerticalBorder>();
             set => SetElement(value);
         }
 
@@ -12760,9 +12760,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.ShowOutlineBorder? ShowOutlineBorder
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ShowOutlineBorder? ShowOutlineBorder
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ShowOutlineBorder>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ShowOutlineBorder>();
             set => SetElement(value);
         }
 
@@ -12773,9 +12773,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.ShowKeys? ShowKeys
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ShowKeys? ShowKeys
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ShowKeys>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ShowKeys>();
             set => SetElement(value);
         }
 
@@ -12786,9 +12786,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties? ChartShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties>();
             set => SetElement(value);
         }
 
@@ -12799,9 +12799,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.TextProperties? TextProperties
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TextProperties? TextProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.TextProperties>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TextProperties>();
             set => SetElement(value);
         }
 
@@ -12812,9 +12812,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -12909,7 +12909,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.NumericValue" /> <c>&lt;c:v></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumericValue" /> <c>&lt;c:v></c></description></item>
     /// </list>
     /// </remark>
     public partial class StringPoint : TypedOpenXmlCompositeElement
@@ -12959,7 +12959,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:pt");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.NumericValue>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumericValue>();
             builder.AddElement<StringPoint>()
                 .AddAttribute("idx", a => a.Index, aBuilder =>
                 {
@@ -12967,7 +12967,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumericValue), 1, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumericValue), 1, 1)
             };
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("c:idx"), true, double.NegativeInfinity, true, 2147483647, true));
             builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("c:idx"), true, 0, true, 2147483647, true));
@@ -12980,9 +12980,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.NumericValue? NumericValue
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumericValue? NumericValue
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.NumericValue>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumericValue>();
             set => SetElement(value);
         }
 
@@ -15416,10 +15416,10 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ExtensionList" /> <c>&lt;c:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.GapWidth" /> <c>&lt;c:gapWidth></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.UpBars" /> <c>&lt;c:upBars></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.DownBars" /> <c>&lt;c:downBars></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList" /> <c>&lt;c:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.GapWidth" /> <c>&lt;c:gapWidth></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.UpBars" /> <c>&lt;c:upBars></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DownBars" /> <c>&lt;c:downBars></c></description></item>
     /// </list>
     /// </remark>
     public partial class UpDownBars : TypedOpenXmlCompositeElement
@@ -15459,16 +15459,16 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:upDownBars");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.GapWidth>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.UpBars>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DownBars>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.GapWidth>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.UpBars>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DownBars>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.GapWidth), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.UpBars), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DownBars), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.GapWidth), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.UpBars), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DownBars), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList), 0, 1)
             };
         }
 
@@ -15479,9 +15479,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.GapWidth? GapWidth
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.GapWidth? GapWidth
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.GapWidth>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.GapWidth>();
             set => SetElement(value);
         }
 
@@ -15492,9 +15492,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.UpBars? UpBars
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.UpBars? UpBars
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.UpBars>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.UpBars>();
             set => SetElement(value);
         }
 
@@ -15505,9 +15505,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.DownBars? DownBars
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DownBars? DownBars
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.DownBars>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DownBars>();
             set => SetElement(value);
         }
 
@@ -15518,9 +15518,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -15536,7 +15536,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.StockChartExtension" /> <c>&lt;c:ext></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.StockChartExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
     public partial class StockChartExtensionList : TypedOpenXmlCompositeElement
@@ -15576,10 +15576,10 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:extLst");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.StockChartExtension>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.StockChartExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.StockChartExtension), 0, 0)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.StockChartExtension), 0, 0)
             };
         }
 
@@ -15595,7 +15595,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PieChartExtension" /> <c>&lt;c:ext></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PieChartExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
     public partial class PieChartExtensionList : TypedOpenXmlCompositeElement
@@ -15635,10 +15635,10 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:extLst");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PieChartExtension>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PieChartExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PieChartExtension), 0, 0)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PieChartExtension), 0, 0)
             };
         }
 
@@ -15654,7 +15654,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Pie3DChartExtension" /> <c>&lt;c:ext></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Pie3DChartExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
     public partial class Pie3DChartExtensionList : TypedOpenXmlCompositeElement
@@ -15694,10 +15694,10 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:extLst");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Pie3DChartExtension>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Pie3DChartExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Pie3DChartExtension), 0, 0)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Pie3DChartExtension), 0, 0)
             };
         }
 
@@ -15713,7 +15713,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.NumRefExtension" /> <c>&lt;c:ext></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumRefExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
     public partial class NumRefExtensionList : TypedOpenXmlCompositeElement
@@ -15753,10 +15753,10 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:extLst");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.NumRefExtension>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumRefExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumRefExtension), 0, 0)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumRefExtension), 0, 0)
             };
         }
 
@@ -15772,7 +15772,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.StrDataExtension" /> <c>&lt;c:ext></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.StrDataExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
     public partial class StrDataExtensionList : TypedOpenXmlCompositeElement
@@ -15812,10 +15812,10 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:extLst");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.StrDataExtension>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.StrDataExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.StrDataExtension), 0, 0)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.StrDataExtension), 0, 0)
             };
         }
 
@@ -15831,7 +15831,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.StrRefExtension" /> <c>&lt;c:ext></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.StrRefExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
     public partial class StrRefExtensionList : TypedOpenXmlCompositeElement
@@ -15871,10 +15871,10 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:extLst");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.StrRefExtension>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.StrRefExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.StrRefExtension), 0, 0)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.StrRefExtension), 0, 0)
             };
         }
 
@@ -15890,9 +15890,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ExtensionList" /> <c>&lt;c:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Level" /> <c>&lt;c:lvl></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PointCount" /> <c>&lt;c:ptCount></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList" /> <c>&lt;c:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Level" /> <c>&lt;c:lvl></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PointCount" /> <c>&lt;c:ptCount></c></description></item>
     /// </list>
     /// </remark>
     public partial class MultiLevelStringCache : TypedOpenXmlCompositeElement
@@ -15932,14 +15932,14 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:multiLvlStrCache");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Level>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PointCount>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Level>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PointCount>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PointCount), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Level), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PointCount), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Level), 0, 0),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList), 0, 1)
             };
         }
 
@@ -15950,9 +15950,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.PointCount? PointCount
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PointCount? PointCount
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PointCount>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PointCount>();
             set => SetElement(value);
         }
 
@@ -15968,7 +15968,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.MultiLvlStrRefExtension" /> <c>&lt;c:ext></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MultiLvlStrRefExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
     public partial class MultiLvlStrRefExtensionList : TypedOpenXmlCompositeElement
@@ -16008,10 +16008,10 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:extLst");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.MultiLvlStrRefExtension>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MultiLvlStrRefExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.MultiLvlStrRefExtension), 0, 0)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MultiLvlStrRefExtension), 0, 0)
             };
         }
 
@@ -16027,7 +16027,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.DLblExtension" /> <c>&lt;c:ext></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DLblExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
     public partial class DLblExtensionList : TypedOpenXmlCompositeElement
@@ -16067,10 +16067,10 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:extLst");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DLblExtension>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DLblExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DLblExtension), 0, 0)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DLblExtension), 0, 0)
             };
         }
 
@@ -16086,7 +16086,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.DLblsExtension" /> <c>&lt;c:ext></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DLblsExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
     public partial class DLblsExtensionList : TypedOpenXmlCompositeElement
@@ -16126,10 +16126,10 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:extLst");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DLblsExtension>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DLblsExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DLblsExtension), 0, 0)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DLblsExtension), 0, 0)
             };
         }
 
@@ -16145,14 +16145,14 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.InvertIfNegative" /> <c>&lt;c:invertIfNegative></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Bubble3D" /> <c>&lt;c:bubble3D></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ExtensionList" /> <c>&lt;c:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Marker" /> <c>&lt;c:marker></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PictureOptions" /> <c>&lt;c:pictureOptions></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Index" /> <c>&lt;c:idx></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Explosion" /> <c>&lt;c:explosion></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.InvertIfNegative" /> <c>&lt;c:invertIfNegative></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Bubble3D" /> <c>&lt;c:bubble3D></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList" /> <c>&lt;c:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Marker" /> <c>&lt;c:marker></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PictureOptions" /> <c>&lt;c:pictureOptions></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Index" /> <c>&lt;c:idx></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Explosion" /> <c>&lt;c:explosion></c></description></item>
     /// </list>
     /// </remark>
     public partial class DataPoint : TypedOpenXmlCompositeElement
@@ -16192,24 +16192,24 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:dPt");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.InvertIfNegative>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Bubble3D>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Marker>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PictureOptions>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Index>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Explosion>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.InvertIfNegative>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Bubble3D>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Marker>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PictureOptions>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Index>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Explosion>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Index), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.InvertIfNegative), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Marker), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Bubble3D), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Explosion), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PictureOptions), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Index), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.InvertIfNegative), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Marker), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Bubble3D), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Explosion), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PictureOptions), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList), 0, 1)
             };
         }
 
@@ -16220,9 +16220,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.Index? Index
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Index? Index
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Index>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Index>();
             set => SetElement(value);
         }
 
@@ -16233,9 +16233,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.InvertIfNegative? InvertIfNegative
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.InvertIfNegative? InvertIfNegative
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.InvertIfNegative>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.InvertIfNegative>();
             set => SetElement(value);
         }
 
@@ -16246,9 +16246,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.Marker? Marker
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Marker? Marker
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Marker>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Marker>();
             set => SetElement(value);
         }
 
@@ -16259,9 +16259,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.Bubble3D? Bubble3D
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Bubble3D? Bubble3D
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Bubble3D>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Bubble3D>();
             set => SetElement(value);
         }
 
@@ -16272,9 +16272,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.Explosion? Explosion
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Explosion? Explosion
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Explosion>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Explosion>();
             set => SetElement(value);
         }
 
@@ -16285,9 +16285,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties? ChartShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties>();
             set => SetElement(value);
         }
 
@@ -16298,9 +16298,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.PictureOptions? PictureOptions
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PictureOptions? PictureOptions
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PictureOptions>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PictureOptions>();
             set => SetElement(value);
         }
 
@@ -16311,9 +16311,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -16329,18 +16329,18 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.DisplayRSquaredValue" /> <c>&lt;c:dispRSqr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.DisplayEquation" /> <c>&lt;c:dispEq></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Forward" /> <c>&lt;c:forward></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Backward" /> <c>&lt;c:backward></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Intercept" /> <c>&lt;c:intercept></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ExtensionList" /> <c>&lt;c:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PolynomialOrder" /> <c>&lt;c:order></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Period" /> <c>&lt;c:period></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.TrendlineLabel" /> <c>&lt;c:trendlineLbl></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.TrendlineType" /> <c>&lt;c:trendlineType></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.TrendlineName" /> <c>&lt;c:name></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DisplayRSquaredValue" /> <c>&lt;c:dispRSqr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DisplayEquation" /> <c>&lt;c:dispEq></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Forward" /> <c>&lt;c:forward></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Backward" /> <c>&lt;c:backward></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Intercept" /> <c>&lt;c:intercept></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList" /> <c>&lt;c:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PolynomialOrder" /> <c>&lt;c:order></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Period" /> <c>&lt;c:period></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TrendlineLabel" /> <c>&lt;c:trendlineLbl></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TrendlineType" /> <c>&lt;c:trendlineType></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TrendlineName" /> <c>&lt;c:name></c></description></item>
     /// </list>
     /// </remark>
     public partial class Trendline : TypedOpenXmlCompositeElement
@@ -16380,32 +16380,32 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:trendline");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DisplayRSquaredValue>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DisplayEquation>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Forward>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Backward>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Intercept>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PolynomialOrder>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Period>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.TrendlineLabel>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.TrendlineType>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.TrendlineName>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DisplayRSquaredValue>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DisplayEquation>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Forward>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Backward>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Intercept>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PolynomialOrder>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Period>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TrendlineLabel>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TrendlineType>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TrendlineName>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.TrendlineName), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.TrendlineType), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PolynomialOrder), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Period), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Forward), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Backward), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Intercept), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DisplayRSquaredValue), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DisplayEquation), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.TrendlineLabel), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TrendlineName), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TrendlineType), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PolynomialOrder), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Period), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Forward), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Backward), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Intercept), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DisplayRSquaredValue), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DisplayEquation), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TrendlineLabel), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList), 0, 1)
             };
         }
 
@@ -16416,9 +16416,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.TrendlineName? TrendlineName
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TrendlineName? TrendlineName
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.TrendlineName>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TrendlineName>();
             set => SetElement(value);
         }
 
@@ -16429,9 +16429,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties? ChartShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties>();
             set => SetElement(value);
         }
 
@@ -16442,9 +16442,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.TrendlineType? TrendlineType
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TrendlineType? TrendlineType
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.TrendlineType>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TrendlineType>();
             set => SetElement(value);
         }
 
@@ -16455,9 +16455,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.PolynomialOrder? PolynomialOrder
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PolynomialOrder? PolynomialOrder
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PolynomialOrder>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PolynomialOrder>();
             set => SetElement(value);
         }
 
@@ -16468,9 +16468,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.Period? Period
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Period? Period
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Period>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Period>();
             set => SetElement(value);
         }
 
@@ -16481,9 +16481,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.Forward? Forward
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Forward? Forward
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Forward>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Forward>();
             set => SetElement(value);
         }
 
@@ -16494,9 +16494,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.Backward? Backward
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Backward? Backward
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Backward>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Backward>();
             set => SetElement(value);
         }
 
@@ -16507,9 +16507,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.Intercept? Intercept
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Intercept? Intercept
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Intercept>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Intercept>();
             set => SetElement(value);
         }
 
@@ -16520,9 +16520,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.DisplayRSquaredValue? DisplayRSquaredValue
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DisplayRSquaredValue? DisplayRSquaredValue
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.DisplayRSquaredValue>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DisplayRSquaredValue>();
             set => SetElement(value);
         }
 
@@ -16533,9 +16533,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.DisplayEquation? DisplayEquation
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DisplayEquation? DisplayEquation
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.DisplayEquation>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DisplayEquation>();
             set => SetElement(value);
         }
 
@@ -16546,9 +16546,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.TrendlineLabel? TrendlineLabel
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TrendlineLabel? TrendlineLabel
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.TrendlineLabel>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TrendlineLabel>();
             set => SetElement(value);
         }
 
@@ -16559,9 +16559,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -16577,15 +16577,15 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.NoEndCap" /> <c>&lt;c:noEndCap></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ErrorBarValue" /> <c>&lt;c:val></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ErrorBarType" /> <c>&lt;c:errBarType></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ErrorDirection" /> <c>&lt;c:errDir></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ErrorBarValueType" /> <c>&lt;c:errValType></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ExtensionList" /> <c>&lt;c:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Plus" /> <c>&lt;c:plus></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Minus" /> <c>&lt;c:minus></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NoEndCap" /> <c>&lt;c:noEndCap></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ErrorBarValue" /> <c>&lt;c:val></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ErrorBarType" /> <c>&lt;c:errBarType></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ErrorDirection" /> <c>&lt;c:errDir></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ErrorBarValueType" /> <c>&lt;c:errValType></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList" /> <c>&lt;c:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Plus" /> <c>&lt;c:plus></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Minus" /> <c>&lt;c:minus></c></description></item>
     /// </list>
     /// </remark>
     public partial class ErrorBars : TypedOpenXmlCompositeElement
@@ -16625,26 +16625,26 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:errBars");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.NoEndCap>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ErrorBarValue>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ErrorBarType>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ErrorDirection>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ErrorBarValueType>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Plus>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Minus>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NoEndCap>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ErrorBarValue>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ErrorBarType>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ErrorDirection>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ErrorBarValueType>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Plus>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Minus>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ErrorDirection), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ErrorBarType), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ErrorBarValueType), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NoEndCap), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Plus), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Minus), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ErrorBarValue), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ErrorDirection), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ErrorBarType), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ErrorBarValueType), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NoEndCap), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Plus), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Minus), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ErrorBarValue), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList), 0, 1)
             };
         }
 
@@ -16655,9 +16655,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.ErrorDirection? ErrorDirection
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ErrorDirection? ErrorDirection
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ErrorDirection>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ErrorDirection>();
             set => SetElement(value);
         }
 
@@ -16668,9 +16668,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.ErrorBarType? ErrorBarType
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ErrorBarType? ErrorBarType
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ErrorBarType>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ErrorBarType>();
             set => SetElement(value);
         }
 
@@ -16681,9 +16681,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.ErrorBarValueType? ErrorBarValueType
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ErrorBarValueType? ErrorBarValueType
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ErrorBarValueType>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ErrorBarValueType>();
             set => SetElement(value);
         }
 
@@ -16694,9 +16694,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.NoEndCap? NoEndCap
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NoEndCap? NoEndCap
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.NoEndCap>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NoEndCap>();
             set => SetElement(value);
         }
 
@@ -16707,9 +16707,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.Plus? Plus
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Plus? Plus
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Plus>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Plus>();
             set => SetElement(value);
         }
 
@@ -16720,9 +16720,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.Minus? Minus
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Minus? Minus
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Minus>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Minus>();
             set => SetElement(value);
         }
 
@@ -16733,9 +16733,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.ErrorBarValue? ErrorBarValue
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ErrorBarValue? ErrorBarValue
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ErrorBarValue>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ErrorBarValue>();
             set => SetElement(value);
         }
 
@@ -16746,9 +16746,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties? ChartShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties>();
             set => SetElement(value);
         }
 
@@ -16759,9 +16759,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -16777,11 +16777,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.MultiLevelStringReference" /> <c>&lt;c:multiLvlStrRef></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral" /> <c>&lt;c:numLit></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.NumberReference" /> <c>&lt;c:numRef></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.StringLiteral" /> <c>&lt;c:strLit></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.StringReference" /> <c>&lt;c:strRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MultiLevelStringReference" /> <c>&lt;c:multiLvlStrRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumberLiteral" /> <c>&lt;c:numLit></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumberReference" /> <c>&lt;c:numRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.StringLiteral" /> <c>&lt;c:strLit></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.StringReference" /> <c>&lt;c:strRef></c></description></item>
     /// </list>
     /// </remark>
     public partial class CategoryAxisData : AxisDataSourceType
@@ -16825,11 +16825,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.MultiLevelStringReference), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumberReference), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.StringReference), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.StringLiteral), 1, 1)
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MultiLevelStringReference), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumberReference), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumberLiteral), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.StringReference), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.StringLiteral), 1, 1)
                 }
             };
         }
@@ -16846,11 +16846,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.MultiLevelStringReference" /> <c>&lt;c:multiLvlStrRef></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral" /> <c>&lt;c:numLit></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.NumberReference" /> <c>&lt;c:numRef></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.StringLiteral" /> <c>&lt;c:strLit></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.StringReference" /> <c>&lt;c:strRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MultiLevelStringReference" /> <c>&lt;c:multiLvlStrRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumberLiteral" /> <c>&lt;c:numLit></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumberReference" /> <c>&lt;c:numRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.StringLiteral" /> <c>&lt;c:strLit></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.StringReference" /> <c>&lt;c:strRef></c></description></item>
     /// </list>
     /// </remark>
     public partial class XValues : AxisDataSourceType
@@ -16894,11 +16894,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.MultiLevelStringReference), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumberReference), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.StringReference), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.StringLiteral), 1, 1)
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MultiLevelStringReference), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumberReference), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumberLiteral), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.StringReference), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.StringLiteral), 1, 1)
                 }
             };
         }
@@ -16915,11 +16915,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.MultiLevelStringReference" /> <c>&lt;c:multiLvlStrRef></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral" /> <c>&lt;c:numLit></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.NumberReference" /> <c>&lt;c:numRef></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.StringLiteral" /> <c>&lt;c:strLit></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.StringReference" /> <c>&lt;c:strRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MultiLevelStringReference" /> <c>&lt;c:multiLvlStrRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumberLiteral" /> <c>&lt;c:numLit></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumberReference" /> <c>&lt;c:numRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.StringLiteral" /> <c>&lt;c:strLit></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.StringReference" /> <c>&lt;c:strRef></c></description></item>
     /// </list>
     /// </remark>
     public abstract partial class AxisDataSourceType : TypedOpenXmlCompositeElement
@@ -16958,11 +16958,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.MultiLevelStringReference>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.NumberReference>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.StringLiteral>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.StringReference>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MultiLevelStringReference>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumberLiteral>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumberReference>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.StringLiteral>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.StringReference>();
         }
 
         /// <summary>
@@ -16972,9 +16972,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.MultiLevelStringReference? MultiLevelStringReference
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MultiLevelStringReference? MultiLevelStringReference
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.MultiLevelStringReference>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.MultiLevelStringReference>();
             set => SetElement(value);
         }
 
@@ -16985,9 +16985,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.NumberReference? NumberReference
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumberReference? NumberReference
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.NumberReference>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumberReference>();
             set => SetElement(value);
         }
 
@@ -16998,9 +16998,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral? NumberLiteral
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumberLiteral? NumberLiteral
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.NumberLiteral>();
             set => SetElement(value);
         }
 
@@ -17011,9 +17011,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.StringReference? StringReference
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.StringReference? StringReference
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.StringReference>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.StringReference>();
             set => SetElement(value);
         }
 
@@ -17024,9 +17024,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.StringLiteral? StringLiteral
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.StringLiteral? StringLiteral
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.StringLiteral>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.StringLiteral>();
             set => SetElement(value);
         }
     }
@@ -17039,7 +17039,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.LineSerExtension" /> <c>&lt;c:ext></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.LineSerExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
     public partial class LineSerExtensionList : TypedOpenXmlCompositeElement
@@ -17079,10 +17079,10 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:extLst");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.LineSerExtension>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.LineSerExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.LineSerExtension), 0, 0)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.LineSerExtension), 0, 0)
             };
         }
 
@@ -17098,7 +17098,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ScatterSerExtension" /> <c>&lt;c:ext></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ScatterSerExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
     public partial class ScatterSerExtensionList : TypedOpenXmlCompositeElement
@@ -17138,10 +17138,10 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:extLst");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ScatterSerExtension>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ScatterSerExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ScatterSerExtension), 0, 0)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ScatterSerExtension), 0, 0)
             };
         }
 
@@ -17157,7 +17157,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.RadarSerExtension" /> <c>&lt;c:ext></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.RadarSerExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
     public partial class RadarSerExtensionList : TypedOpenXmlCompositeElement
@@ -17197,10 +17197,10 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:extLst");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.RadarSerExtension>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.RadarSerExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.RadarSerExtension), 0, 0)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.RadarSerExtension), 0, 0)
             };
         }
 
@@ -17226,9 +17226,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Shape Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.ShapeValues>? Val
+        public EnumValue<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ShapeValues>? Val
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.ShapeValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ShapeValues>>();
             set => SetAttribute(value);
         }
 
@@ -17252,7 +17252,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.BarSerExtension" /> <c>&lt;c:ext></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.BarSerExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
     public partial class BarSerExtensionList : TypedOpenXmlCompositeElement
@@ -17292,10 +17292,10 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:extLst");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.BarSerExtension>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.BarSerExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.BarSerExtension), 0, 0)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.BarSerExtension), 0, 0)
             };
         }
 
@@ -17399,7 +17399,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.AreaSerExtension" /> <c>&lt;c:ext></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AreaSerExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
     public partial class AreaSerExtensionList : TypedOpenXmlCompositeElement
@@ -17439,10 +17439,10 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:extLst");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.AreaSerExtension>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AreaSerExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.AreaSerExtension), 0, 0)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AreaSerExtension), 0, 0)
             };
         }
 
@@ -17458,7 +17458,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PieSerExtension" /> <c>&lt;c:ext></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PieSerExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
     public partial class PieSerExtensionList : TypedOpenXmlCompositeElement
@@ -17498,10 +17498,10 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:extLst");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PieSerExtension>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PieSerExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PieSerExtension), 0, 0)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PieSerExtension), 0, 0)
             };
         }
 
@@ -17517,7 +17517,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.BubbleSerExtension" /> <c>&lt;c:ext></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.BubbleSerExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
     public partial class BubbleSerExtensionList : TypedOpenXmlCompositeElement
@@ -17557,10 +17557,10 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:extLst");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.BubbleSerExtension>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.BubbleSerExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.BubbleSerExtension), 0, 0)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.BubbleSerExtension), 0, 0)
             };
         }
 
@@ -17661,7 +17661,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.SurfaceSerExtension" /> <c>&lt;c:ext></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SurfaceSerExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
     public partial class SurfaceSerExtensionList : TypedOpenXmlCompositeElement
@@ -17701,10 +17701,10 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:extLst");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.SurfaceSerExtension>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SurfaceSerExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.SurfaceSerExtension), 0, 0)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SurfaceSerExtension), 0, 0)
             };
         }
 
@@ -17720,7 +17720,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.LineChartExtension" /> <c>&lt;c:ext></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.LineChartExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
     public partial class LineChartExtensionList : TypedOpenXmlCompositeElement
@@ -17760,10 +17760,10 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:extLst");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.LineChartExtension>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.LineChartExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.LineChartExtension), 0, 0)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.LineChartExtension), 0, 0)
             };
         }
 
@@ -17779,7 +17779,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Line3DChartExtension" /> <c>&lt;c:ext></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Line3DChartExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
     public partial class Line3DChartExtensionList : TypedOpenXmlCompositeElement
@@ -17819,10 +17819,10 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:extLst");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Line3DChartExtension>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Line3DChartExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Line3DChartExtension), 0, 0)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Line3DChartExtension), 0, 0)
             };
         }
 
@@ -17848,9 +17848,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Scatter Style Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.ScatterStyleValues>? Val
+        public EnumValue<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ScatterStyleValues>? Val
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.ScatterStyleValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ScatterStyleValues>>();
             set => SetAttribute(value);
         }
 
@@ -17874,19 +17874,19 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.XValues" /> <c>&lt;c:xVal></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Smooth" /> <c>&lt;c:smooth></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.DataLabels" /> <c>&lt;c:dLbls></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.DataPoint" /> <c>&lt;c:dPt></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ErrorBars" /> <c>&lt;c:errBars></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Marker" /> <c>&lt;c:marker></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.YValues" /> <c>&lt;c:yVal></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ScatterSerExtensionList" /> <c>&lt;c:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.SeriesText" /> <c>&lt;c:tx></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Trendline" /> <c>&lt;c:trendline></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Index" /> <c>&lt;c:idx></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Order" /> <c>&lt;c:order></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.XValues" /> <c>&lt;c:xVal></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Smooth" /> <c>&lt;c:smooth></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataLabels" /> <c>&lt;c:dLbls></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataPoint" /> <c>&lt;c:dPt></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ErrorBars" /> <c>&lt;c:errBars></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Marker" /> <c>&lt;c:marker></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.YValues" /> <c>&lt;c:yVal></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ScatterSerExtensionList" /> <c>&lt;c:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SeriesText" /> <c>&lt;c:tx></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Trendline" /> <c>&lt;c:trendline></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Index" /> <c>&lt;c:idx></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Order" /> <c>&lt;c:order></c></description></item>
     /// </list>
     /// </remark>
     public partial class ScatterChartSeries : TypedOpenXmlCompositeElement
@@ -17926,40 +17926,40 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:ser");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.XValues>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Smooth>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataLabels>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataPoint>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ErrorBars>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Marker>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.YValues>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ScatterSerExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.SeriesText>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Trendline>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Index>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Order>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.XValues>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Smooth>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataLabels>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataPoint>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ErrorBars>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Marker>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.YValues>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ScatterSerExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SeriesText>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Trendline>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Index>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Order>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Index), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Order), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.SeriesText), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1)
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Index), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Order), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SeriesText), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties), 0, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Marker), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataPoint), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataLabels), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Trendline), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ErrorBars), 0, 2),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.XValues), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.YValues), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Smooth), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ScatterSerExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Marker), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataPoint), 0, 0),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataLabels), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Trendline), 0, 0),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ErrorBars), 0, 2),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.XValues), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.YValues), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Smooth), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ScatterSerExtensionList), 0, 1)
             };
         }
 
@@ -17970,9 +17970,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.Index? Index
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Index? Index
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Index>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Index>();
             set => SetElement(value);
         }
 
@@ -17983,9 +17983,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.Order? Order
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Order? Order
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Order>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Order>();
             set => SetElement(value);
         }
 
@@ -17996,9 +17996,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.SeriesText? SeriesText
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SeriesText? SeriesText
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.SeriesText>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SeriesText>();
             set => SetElement(value);
         }
 
@@ -18009,9 +18009,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties? ChartShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties>();
             set => SetElement(value);
         }
 
@@ -18022,9 +18022,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.Marker? Marker
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Marker? Marker
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Marker>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Marker>();
             set => SetElement(value);
         }
 
@@ -18040,7 +18040,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ScatterChartExtension" /> <c>&lt;c:ext></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ScatterChartExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
     public partial class ScatterChartExtensionList : TypedOpenXmlCompositeElement
@@ -18080,10 +18080,10 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:extLst");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ScatterChartExtension>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ScatterChartExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ScatterChartExtension), 0, 0)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ScatterChartExtension), 0, 0)
             };
         }
 
@@ -18109,9 +18109,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Radar Style Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.RadarStyleValues>? Val
+        public EnumValue<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.RadarStyleValues>? Val
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.RadarStyleValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.RadarStyleValues>>();
             set => SetAttribute(value);
         }
 
@@ -18138,17 +18138,17 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData" /> <c>&lt;c:cat></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.DataLabels" /> <c>&lt;c:dLbls></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.DataPoint" /> <c>&lt;c:dPt></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Marker" /> <c>&lt;c:marker></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Values" /> <c>&lt;c:val></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PictureOptions" /> <c>&lt;c:pictureOptions></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.RadarSerExtensionList" /> <c>&lt;c:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.SeriesText" /> <c>&lt;c:tx></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Index" /> <c>&lt;c:idx></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Order" /> <c>&lt;c:order></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.CategoryAxisData" /> <c>&lt;c:cat></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataLabels" /> <c>&lt;c:dLbls></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataPoint" /> <c>&lt;c:dPt></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Marker" /> <c>&lt;c:marker></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Values" /> <c>&lt;c:val></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PictureOptions" /> <c>&lt;c:pictureOptions></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.RadarSerExtensionList" /> <c>&lt;c:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SeriesText" /> <c>&lt;c:tx></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Index" /> <c>&lt;c:idx></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Order" /> <c>&lt;c:order></c></description></item>
     /// </list>
     /// </remark>
     public partial class RadarChartSeries : TypedOpenXmlCompositeElement
@@ -18188,36 +18188,36 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:ser");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataLabels>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataPoint>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Marker>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Values>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PictureOptions>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.RadarSerExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.SeriesText>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Index>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Order>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.CategoryAxisData>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataLabels>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataPoint>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Marker>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Values>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PictureOptions>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.RadarSerExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SeriesText>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Index>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Order>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Index), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Order), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.SeriesText), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1)
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Index), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Order), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SeriesText), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties), 0, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PictureOptions), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Marker), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataPoint), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataLabels), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Values), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.RadarSerExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PictureOptions), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Marker), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataPoint), 0, 0),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataLabels), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.CategoryAxisData), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Values), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.RadarSerExtensionList), 0, 1)
             };
         }
 
@@ -18228,9 +18228,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.Index? Index
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Index? Index
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Index>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Index>();
             set => SetElement(value);
         }
 
@@ -18241,9 +18241,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.Order? Order
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Order? Order
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Order>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Order>();
             set => SetElement(value);
         }
 
@@ -18254,9 +18254,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.SeriesText? SeriesText
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SeriesText? SeriesText
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.SeriesText>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SeriesText>();
             set => SetElement(value);
         }
 
@@ -18267,9 +18267,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties? ChartShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties>();
             set => SetElement(value);
         }
 
@@ -18280,9 +18280,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.PictureOptions? PictureOptions
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PictureOptions? PictureOptions
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PictureOptions>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PictureOptions>();
             set => SetElement(value);
         }
 
@@ -18293,9 +18293,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.Marker? Marker
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Marker? Marker
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Marker>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Marker>();
             set => SetElement(value);
         }
 
@@ -18311,7 +18311,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.RadarChartExtension" /> <c>&lt;c:ext></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.RadarChartExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
     public partial class RadarChartExtensionList : TypedOpenXmlCompositeElement
@@ -18351,10 +18351,10 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:extLst");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.RadarChartExtension>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.RadarChartExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.RadarChartExtension), 0, 0)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.RadarChartExtension), 0, 0)
             };
         }
 
@@ -18409,7 +18409,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.BarChartExtension" /> <c>&lt;c:ext></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.BarChartExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
     public partial class BarChartExtensionList : TypedOpenXmlCompositeElement
@@ -18449,10 +18449,10 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:extLst");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.BarChartExtension>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.BarChartExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.BarChartExtension), 0, 0)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.BarChartExtension), 0, 0)
             };
         }
 
@@ -18468,7 +18468,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Bar3DChartExtension" /> <c>&lt;c:ext></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Bar3DChartExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
     public partial class Bar3DChartExtensionList : TypedOpenXmlCompositeElement
@@ -18508,10 +18508,10 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:extLst");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Bar3DChartExtension>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Bar3DChartExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Bar3DChartExtension), 0, 0)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Bar3DChartExtension), 0, 0)
             };
         }
 
@@ -18527,7 +18527,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.AreaChartExtension" /> <c>&lt;c:ext></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AreaChartExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
     public partial class AreaChartExtensionList : TypedOpenXmlCompositeElement
@@ -18567,10 +18567,10 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:extLst");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.AreaChartExtension>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AreaChartExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.AreaChartExtension), 0, 0)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AreaChartExtension), 0, 0)
             };
         }
 
@@ -18586,7 +18586,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Area3DChartExtension" /> <c>&lt;c:ext></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Area3DChartExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
     public partial class Area3DChartExtensionList : TypedOpenXmlCompositeElement
@@ -18626,10 +18626,10 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:extLst");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Area3DChartExtension>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Area3DChartExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Area3DChartExtension), 0, 0)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Area3DChartExtension), 0, 0)
             };
         }
 
@@ -18645,21 +18645,21 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.XValues" /> <c>&lt;c:xVal></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.InvertIfNegative" /> <c>&lt;c:invertIfNegative></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Bubble3D" /> <c>&lt;c:bubble3D></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.BubbleSerExtensionList" /> <c>&lt;c:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.DataLabels" /> <c>&lt;c:dLbls></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.DataPoint" /> <c>&lt;c:dPt></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ErrorBars" /> <c>&lt;c:errBars></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.YValues" /> <c>&lt;c:yVal></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.BubbleSize" /> <c>&lt;c:bubbleSize></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PictureOptions" /> <c>&lt;c:pictureOptions></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.SeriesText" /> <c>&lt;c:tx></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Trendline" /> <c>&lt;c:trendline></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Index" /> <c>&lt;c:idx></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Order" /> <c>&lt;c:order></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.XValues" /> <c>&lt;c:xVal></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.InvertIfNegative" /> <c>&lt;c:invertIfNegative></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Bubble3D" /> <c>&lt;c:bubble3D></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.BubbleSerExtensionList" /> <c>&lt;c:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataLabels" /> <c>&lt;c:dLbls></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataPoint" /> <c>&lt;c:dPt></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ErrorBars" /> <c>&lt;c:errBars></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.YValues" /> <c>&lt;c:yVal></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.BubbleSize" /> <c>&lt;c:bubbleSize></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PictureOptions" /> <c>&lt;c:pictureOptions></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SeriesText" /> <c>&lt;c:tx></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Trendline" /> <c>&lt;c:trendline></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Index" /> <c>&lt;c:idx></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Order" /> <c>&lt;c:order></c></description></item>
     /// </list>
     /// </remark>
     public partial class BubbleChartSeries : TypedOpenXmlCompositeElement
@@ -18699,44 +18699,44 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:ser");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.XValues>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.InvertIfNegative>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Bubble3D>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.BubbleSerExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataLabels>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataPoint>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ErrorBars>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.YValues>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.BubbleSize>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PictureOptions>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.SeriesText>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Trendline>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Index>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Order>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.XValues>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.InvertIfNegative>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Bubble3D>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.BubbleSerExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataLabels>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataPoint>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ErrorBars>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.YValues>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.BubbleSize>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PictureOptions>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SeriesText>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Trendline>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Index>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Order>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Group, 1, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
                     {
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Index), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Order), 1, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.SeriesText), 0, 1),
-                        new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1)
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Index), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Order), 1, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SeriesText), 0, 1),
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties), 0, 1)
                     }
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PictureOptions), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.InvertIfNegative), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataPoint), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataLabels), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Trendline), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ErrorBars), 0, 2),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.XValues), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.YValues), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.BubbleSize), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Bubble3D), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.BubbleSerExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PictureOptions), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.InvertIfNegative), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataPoint), 0, 0),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataLabels), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Trendline), 0, 0),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ErrorBars), 0, 2),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.XValues), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.YValues), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.BubbleSize), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Bubble3D), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.BubbleSerExtensionList), 0, 1)
             };
         }
 
@@ -18747,9 +18747,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.Index? Index
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Index? Index
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Index>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Index>();
             set => SetElement(value);
         }
 
@@ -18760,9 +18760,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.Order? Order
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Order? Order
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Order>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Order>();
             set => SetElement(value);
         }
 
@@ -18773,9 +18773,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.SeriesText? SeriesText
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SeriesText? SeriesText
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.SeriesText>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SeriesText>();
             set => SetElement(value);
         }
 
@@ -18786,9 +18786,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties? ChartShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties>();
             set => SetElement(value);
         }
 
@@ -18799,9 +18799,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.PictureOptions? PictureOptions
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PictureOptions? PictureOptions
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PictureOptions>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PictureOptions>();
             set => SetElement(value);
         }
 
@@ -18812,9 +18812,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.InvertIfNegative? InvertIfNegative
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.InvertIfNegative? InvertIfNegative
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.InvertIfNegative>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.InvertIfNegative>();
             set => SetElement(value);
         }
 
@@ -18879,9 +18879,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Size Represents Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.SizeRepresentsValues>? Val
+        public EnumValue<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SizeRepresentsValues>? Val
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.SizeRepresentsValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SizeRepresentsValues>>();
             set => SetAttribute(value);
         }
 
@@ -18905,7 +18905,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.BubbleChartExtension" /> <c>&lt;c:ext></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.BubbleChartExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
     public partial class BubbleChartExtensionList : TypedOpenXmlCompositeElement
@@ -18945,10 +18945,10 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:extLst");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.BubbleChartExtension>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.BubbleChartExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.BubbleChartExtension), 0, 0)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.BubbleChartExtension), 0, 0)
             };
         }
 
@@ -18964,7 +18964,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.SurfaceChartExtension" /> <c>&lt;c:ext></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SurfaceChartExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
     public partial class SurfaceChartExtensionList : TypedOpenXmlCompositeElement
@@ -19004,10 +19004,10 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:extLst");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.SurfaceChartExtension>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SurfaceChartExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.SurfaceChartExtension), 0, 0)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SurfaceChartExtension), 0, 0)
             };
         }
 
@@ -19023,7 +19023,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Surface3DChartExtension" /> <c>&lt;c:ext></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Surface3DChartExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
     public partial class Surface3DChartExtensionList : TypedOpenXmlCompositeElement
@@ -19063,10 +19063,10 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:extLst");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Surface3DChartExtension>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Surface3DChartExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Surface3DChartExtension), 0, 0)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Surface3DChartExtension), 0, 0)
             };
         }
 
@@ -19092,9 +19092,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Label Alignment Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.LabelAlignmentValues>? Val
+        public EnumValue<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.LabelAlignmentValues>? Val
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.LabelAlignmentValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.LabelAlignmentValues>>();
             set => SetAttribute(value);
         }
 
@@ -19244,7 +19244,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.CatAxExtension" /> <c>&lt;c:ext></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.CatAxExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
     public partial class CatAxExtensionList : TypedOpenXmlCompositeElement
@@ -19284,10 +19284,10 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:extLst");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.CatAxExtension>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.CatAxExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.CatAxExtension), 0, 0)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.CatAxExtension), 0, 0)
             };
         }
 
@@ -19385,9 +19385,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Time Unit Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.TimeUnitValues>? Val
+        public EnumValue<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TimeUnitValues>? Val
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.TimeUnitValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TimeUnitValues>>();
             set => SetAttribute(value);
         }
 
@@ -19491,7 +19491,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.DateAxExtension" /> <c>&lt;c:ext></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DateAxExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
     public partial class DateAxExtensionList : TypedOpenXmlCompositeElement
@@ -19531,10 +19531,10 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:extLst");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DateAxExtension>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DateAxExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DateAxExtension), 0, 0)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DateAxExtension), 0, 0)
             };
         }
 
@@ -19550,7 +19550,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.SerAxExtension" /> <c>&lt;c:ext></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SerAxExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
     public partial class SerAxExtensionList : TypedOpenXmlCompositeElement
@@ -19590,10 +19590,10 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:extLst");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.SerAxExtension>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SerAxExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.SerAxExtension), 0, 0)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SerAxExtension), 0, 0)
             };
         }
 
@@ -19619,9 +19619,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Cross Between Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.CrossBetweenValues>? Val
+        public EnumValue<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.CrossBetweenValues>? Val
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.CrossBetweenValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.CrossBetweenValues>>();
             set => SetAttribute(value);
         }
 
@@ -19648,10 +19648,10 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.BuiltInUnit" /> <c>&lt;c:builtInUnit></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.DisplayUnitsLabel" /> <c>&lt;c:dispUnitsLbl></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.CustomDisplayUnit" /> <c>&lt;c:custUnit></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ExtensionList" /> <c>&lt;c:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.BuiltInUnit" /> <c>&lt;c:builtInUnit></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DisplayUnitsLabel" /> <c>&lt;c:dispUnitsLbl></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.CustomDisplayUnit" /> <c>&lt;c:custUnit></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList" /> <c>&lt;c:extLst></c></description></item>
     /// </list>
     /// </remark>
     public partial class DisplayUnits : TypedOpenXmlCompositeElement
@@ -19691,19 +19691,19 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:dispUnits");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.BuiltInUnit>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DisplayUnitsLabel>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.CustomDisplayUnit>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.BuiltInUnit>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DisplayUnitsLabel>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.CustomDisplayUnit>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.CustomDisplayUnit), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.BuiltInUnit), 1, 1)
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.CustomDisplayUnit), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.BuiltInUnit), 1, 1)
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DisplayUnitsLabel), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DisplayUnitsLabel), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList), 0, 1)
             };
         }
 
@@ -19719,7 +19719,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ValAxExtension" /> <c>&lt;c:ext></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ValAxExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
     public partial class ValAxExtensionList : TypedOpenXmlCompositeElement
@@ -19759,10 +19759,10 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:extLst");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ValAxExtension>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ValAxExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ValAxExtension), 0, 0)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ValAxExtension), 0, 0)
             };
         }
 
@@ -19856,7 +19856,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Main.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remark>
     public partial class ColorMapOverride : TypedOpenXmlCompositeElement
@@ -19896,9 +19896,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Background 1</para>
         /// <para>Represents the following attribute in the schema: bg1</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>? Background1
+        public EnumValue<DocumentFormat.OpenXml.DrawingML.Y2006.Main.ColorSchemeIndexValues>? Background1
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.DrawingML.Y2006.Main.ColorSchemeIndexValues>>();
             set => SetAttribute(value);
         }
 
@@ -19906,9 +19906,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Text 1</para>
         /// <para>Represents the following attribute in the schema: tx1</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>? Text1
+        public EnumValue<DocumentFormat.OpenXml.DrawingML.Y2006.Main.ColorSchemeIndexValues>? Text1
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.DrawingML.Y2006.Main.ColorSchemeIndexValues>>();
             set => SetAttribute(value);
         }
 
@@ -19916,9 +19916,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Background 2</para>
         /// <para>Represents the following attribute in the schema: bg2</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>? Background2
+        public EnumValue<DocumentFormat.OpenXml.DrawingML.Y2006.Main.ColorSchemeIndexValues>? Background2
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.DrawingML.Y2006.Main.ColorSchemeIndexValues>>();
             set => SetAttribute(value);
         }
 
@@ -19926,9 +19926,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Text 2</para>
         /// <para>Represents the following attribute in the schema: tx2</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>? Text2
+        public EnumValue<DocumentFormat.OpenXml.DrawingML.Y2006.Main.ColorSchemeIndexValues>? Text2
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.DrawingML.Y2006.Main.ColorSchemeIndexValues>>();
             set => SetAttribute(value);
         }
 
@@ -19936,9 +19936,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Accent 1</para>
         /// <para>Represents the following attribute in the schema: accent1</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>? Accent1
+        public EnumValue<DocumentFormat.OpenXml.DrawingML.Y2006.Main.ColorSchemeIndexValues>? Accent1
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.DrawingML.Y2006.Main.ColorSchemeIndexValues>>();
             set => SetAttribute(value);
         }
 
@@ -19946,9 +19946,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Accent 2</para>
         /// <para>Represents the following attribute in the schema: accent2</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>? Accent2
+        public EnumValue<DocumentFormat.OpenXml.DrawingML.Y2006.Main.ColorSchemeIndexValues>? Accent2
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.DrawingML.Y2006.Main.ColorSchemeIndexValues>>();
             set => SetAttribute(value);
         }
 
@@ -19956,9 +19956,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Accent 3</para>
         /// <para>Represents the following attribute in the schema: accent3</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>? Accent3
+        public EnumValue<DocumentFormat.OpenXml.DrawingML.Y2006.Main.ColorSchemeIndexValues>? Accent3
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.DrawingML.Y2006.Main.ColorSchemeIndexValues>>();
             set => SetAttribute(value);
         }
 
@@ -19966,9 +19966,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Accent 4</para>
         /// <para>Represents the following attribute in the schema: accent4</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>? Accent4
+        public EnumValue<DocumentFormat.OpenXml.DrawingML.Y2006.Main.ColorSchemeIndexValues>? Accent4
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.DrawingML.Y2006.Main.ColorSchemeIndexValues>>();
             set => SetAttribute(value);
         }
 
@@ -19976,9 +19976,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Accent 5</para>
         /// <para>Represents the following attribute in the schema: accent5</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>? Accent5
+        public EnumValue<DocumentFormat.OpenXml.DrawingML.Y2006.Main.ColorSchemeIndexValues>? Accent5
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.DrawingML.Y2006.Main.ColorSchemeIndexValues>>();
             set => SetAttribute(value);
         }
 
@@ -19986,9 +19986,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Accent 6</para>
         /// <para>Represents the following attribute in the schema: accent6</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>? Accent6
+        public EnumValue<DocumentFormat.OpenXml.DrawingML.Y2006.Main.ColorSchemeIndexValues>? Accent6
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.DrawingML.Y2006.Main.ColorSchemeIndexValues>>();
             set => SetAttribute(value);
         }
 
@@ -19996,9 +19996,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Hyperlink</para>
         /// <para>Represents the following attribute in the schema: hlink</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>? Hyperlink
+        public EnumValue<DocumentFormat.OpenXml.DrawingML.Y2006.Main.ColorSchemeIndexValues>? Hyperlink
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.DrawingML.Y2006.Main.ColorSchemeIndexValues>>();
             set => SetAttribute(value);
         }
 
@@ -20006,9 +20006,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Followed Hyperlink</para>
         /// <para>Represents the following attribute in the schema: folHlink</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>? FollowedHyperlink
+        public EnumValue<DocumentFormat.OpenXml.DrawingML.Y2006.Main.ColorSchemeIndexValues>? FollowedHyperlink
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.ColorSchemeIndexValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.DrawingML.Y2006.Main.ColorSchemeIndexValues>>();
             set => SetAttribute(value);
         }
 
@@ -20016,7 +20016,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:clrMapOvr");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Main.ExtensionList>();
             builder.AddElement<ColorMapOverride>()
                 .AddAttribute("bg1", a => a.Background1, aBuilder =>
                 {
@@ -20080,7 +20080,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Main.ExtensionList), 0, 1)
             };
         }
 
@@ -20091,9 +20091,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Main.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Main.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -20109,9 +20109,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ExtensionList" /> <c>&lt;c:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.FormatId" /> <c>&lt;c:fmtId></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PivotTableName" /> <c>&lt;c:name></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList" /> <c>&lt;c:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.FormatId" /> <c>&lt;c:fmtId></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PivotTableName" /> <c>&lt;c:name></c></description></item>
     /// </list>
     /// </remark>
     public partial class PivotSource : TypedOpenXmlCompositeElement
@@ -20151,14 +20151,14 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:pivotSource");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.FormatId>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PivotTableName>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.FormatId>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PivotTableName>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PivotTableName), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.FormatId), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PivotTableName), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.FormatId), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList), 0, 1)
             };
         }
 
@@ -20169,9 +20169,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.PivotTableName? PivotTableName
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PivotTableName? PivotTableName
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PivotTableName>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PivotTableName>();
             set => SetElement(value);
         }
 
@@ -20182,9 +20182,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.FormatId? FormatId
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.FormatId? FormatId
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.FormatId>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.FormatId>();
             set => SetElement(value);
         }
 
@@ -20195,9 +20195,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -20213,11 +20213,11 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartObject" /> <c>&lt;c:chartObject></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Data" /> <c>&lt;c:data></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Formatting" /> <c>&lt;c:formatting></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Selection" /> <c>&lt;c:selection></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.UserInterface" /> <c>&lt;c:userInterface></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartObject" /> <c>&lt;c:chartObject></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Data" /> <c>&lt;c:data></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Formatting" /> <c>&lt;c:formatting></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Selection" /> <c>&lt;c:selection></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.UserInterface" /> <c>&lt;c:userInterface></c></description></item>
     /// </list>
     /// </remark>
     public partial class Protection : TypedOpenXmlCompositeElement
@@ -20257,18 +20257,18 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:protection");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartObject>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Data>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Formatting>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Selection>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.UserInterface>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartObject>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Data>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Formatting>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Selection>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.UserInterface>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartObject), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Data), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Formatting), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Selection), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.UserInterface), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartObject), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Data), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Formatting), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Selection), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.UserInterface), 0, 1)
             };
         }
 
@@ -20279,9 +20279,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.ChartObject? ChartObject
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartObject? ChartObject
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartObject>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartObject>();
             set => SetElement(value);
         }
 
@@ -20292,9 +20292,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.Data? Data
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Data? Data
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Data>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Data>();
             set => SetElement(value);
         }
 
@@ -20305,9 +20305,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.Formatting? Formatting
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Formatting? Formatting
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Formatting>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Formatting>();
             set => SetElement(value);
         }
 
@@ -20318,9 +20318,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.Selection? Selection
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Selection? Selection
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Selection>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Selection>();
             set => SetElement(value);
         }
 
@@ -20331,9 +20331,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.UserInterface? UserInterface
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.UserInterface? UserInterface
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.UserInterface>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.UserInterface>();
             set => SetElement(value);
         }
 
@@ -20349,19 +20349,19 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.AutoTitleDeleted" /> <c>&lt;c:autoTitleDeleted></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PlotVisibleOnly" /> <c>&lt;c:plotVisOnly></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ShowDataLabelsOverMaximum" /> <c>&lt;c:showDLblsOverMax></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartExtensionList" /> <c>&lt;c:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.DisplayBlanksAs" /> <c>&lt;c:dispBlanksAs></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Legend" /> <c>&lt;c:legend></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PivotFormats" /> <c>&lt;c:pivotFmts></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PlotArea" /> <c>&lt;c:plotArea></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Floor" /> <c>&lt;c:floor></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.SideWall" /> <c>&lt;c:sideWall></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.BackWall" /> <c>&lt;c:backWall></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Title" /> <c>&lt;c:title></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.View3D" /> <c>&lt;c:view3D></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AutoTitleDeleted" /> <c>&lt;c:autoTitleDeleted></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PlotVisibleOnly" /> <c>&lt;c:plotVisOnly></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ShowDataLabelsOverMaximum" /> <c>&lt;c:showDLblsOverMax></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartExtensionList" /> <c>&lt;c:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DisplayBlanksAs" /> <c>&lt;c:dispBlanksAs></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Legend" /> <c>&lt;c:legend></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PivotFormats" /> <c>&lt;c:pivotFmts></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PlotArea" /> <c>&lt;c:plotArea></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Floor" /> <c>&lt;c:floor></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SideWall" /> <c>&lt;c:sideWall></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.BackWall" /> <c>&lt;c:backWall></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Title" /> <c>&lt;c:title></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.View3D" /> <c>&lt;c:view3D></c></description></item>
     /// </list>
     /// </remark>
     public partial class Chart : TypedOpenXmlCompositeElement
@@ -20401,34 +20401,34 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:chart");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.AutoTitleDeleted>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PlotVisibleOnly>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ShowDataLabelsOverMaximum>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DisplayBlanksAs>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Legend>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PivotFormats>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PlotArea>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Floor>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.SideWall>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.BackWall>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Title>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.View3D>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AutoTitleDeleted>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PlotVisibleOnly>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ShowDataLabelsOverMaximum>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DisplayBlanksAs>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Legend>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PivotFormats>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PlotArea>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Floor>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SideWall>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.BackWall>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Title>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.View3D>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Title), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.AutoTitleDeleted), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PivotFormats), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.View3D), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Floor), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.SideWall), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.BackWall), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PlotArea), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Legend), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PlotVisibleOnly), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DisplayBlanksAs), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShowDataLabelsOverMaximum), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Title), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AutoTitleDeleted), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PivotFormats), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.View3D), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Floor), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SideWall), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.BackWall), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PlotArea), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Legend), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PlotVisibleOnly), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DisplayBlanksAs), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ShowDataLabelsOverMaximum), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartExtensionList), 0, 1)
             };
             builder.AddConstraint(new RelationshipExistConstraint(builder.CreateQName("r:id")));
         }
@@ -20440,9 +20440,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.Title? Title
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Title? Title
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Title>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Title>();
             set => SetElement(value);
         }
 
@@ -20453,9 +20453,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.AutoTitleDeleted? AutoTitleDeleted
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AutoTitleDeleted? AutoTitleDeleted
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.AutoTitleDeleted>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AutoTitleDeleted>();
             set => SetElement(value);
         }
 
@@ -20466,9 +20466,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.PivotFormats? PivotFormats
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PivotFormats? PivotFormats
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PivotFormats>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PivotFormats>();
             set => SetElement(value);
         }
 
@@ -20479,9 +20479,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.View3D? View3D
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.View3D? View3D
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.View3D>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.View3D>();
             set => SetElement(value);
         }
 
@@ -20492,9 +20492,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.Floor? Floor
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Floor? Floor
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Floor>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Floor>();
             set => SetElement(value);
         }
 
@@ -20505,9 +20505,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.SideWall? SideWall
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SideWall? SideWall
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.SideWall>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SideWall>();
             set => SetElement(value);
         }
 
@@ -20518,9 +20518,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.BackWall? BackWall
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.BackWall? BackWall
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.BackWall>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.BackWall>();
             set => SetElement(value);
         }
 
@@ -20531,9 +20531,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.PlotArea? PlotArea
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PlotArea? PlotArea
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PlotArea>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PlotArea>();
             set => SetElement(value);
         }
 
@@ -20544,9 +20544,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.Legend? Legend
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Legend? Legend
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Legend>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Legend>();
             set => SetElement(value);
         }
 
@@ -20557,9 +20557,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.PlotVisibleOnly? PlotVisibleOnly
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PlotVisibleOnly? PlotVisibleOnly
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PlotVisibleOnly>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PlotVisibleOnly>();
             set => SetElement(value);
         }
 
@@ -20570,9 +20570,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.DisplayBlanksAs? DisplayBlanksAs
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DisplayBlanksAs? DisplayBlanksAs
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.DisplayBlanksAs>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DisplayBlanksAs>();
             set => SetElement(value);
         }
 
@@ -20583,9 +20583,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.ShowDataLabelsOverMaximum? ShowDataLabelsOverMaximum
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ShowDataLabelsOverMaximum? ShowDataLabelsOverMaximum
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ShowDataLabelsOverMaximum>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ShowDataLabelsOverMaximum>();
             set => SetElement(value);
         }
 
@@ -20596,9 +20596,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.ChartExtensionList? ChartExtensionList
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartExtensionList? ChartExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartExtensionList>();
             set => SetElement(value);
         }
 
@@ -20614,7 +20614,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.AutoUpdate" /> <c>&lt;c:autoUpdate></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AutoUpdate" /> <c>&lt;c:autoUpdate></c></description></item>
     /// </list>
     /// </remark>
     public partial class ExternalData : TypedOpenXmlCompositeElement
@@ -20667,7 +20667,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:externalData");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.AutoUpdate>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AutoUpdate>();
             builder.AddElement<ExternalData>()
                 .AddAttribute("r:id", a => a.Id, aBuilder =>
                 {
@@ -20675,7 +20675,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.AutoUpdate), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AutoUpdate), 0, 1)
             };
             builder.AddConstraint(new RelationshipExistConstraint(builder.CreateQName("r:id")));
         }
@@ -20687,9 +20687,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.AutoUpdate? AutoUpdate
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AutoUpdate? AutoUpdate
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.AutoUpdate>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AutoUpdate>();
             set => SetElement(value);
         }
 
@@ -20705,10 +20705,10 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.HeaderFooter" /> <c>&lt;c:headerFooter></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PageMargins" /> <c>&lt;c:pageMargins></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PageSetup" /> <c>&lt;c:pageSetup></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.LegacyDrawingHeaderFooter" /> <c>&lt;c:legacyDrawingHF></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.HeaderFooter" /> <c>&lt;c:headerFooter></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PageMargins" /> <c>&lt;c:pageMargins></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PageSetup" /> <c>&lt;c:pageSetup></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.LegacyDrawingHeaderFooter" /> <c>&lt;c:legacyDrawingHF></c></description></item>
     /// </list>
     /// </remark>
     public partial class PrintSettings : TypedOpenXmlCompositeElement
@@ -20748,16 +20748,16 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:printSettings");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.HeaderFooter>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PageMargins>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PageSetup>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.LegacyDrawingHeaderFooter>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.HeaderFooter>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PageMargins>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PageSetup>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.LegacyDrawingHeaderFooter>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.HeaderFooter), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PageMargins), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PageSetup), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.LegacyDrawingHeaderFooter), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.HeaderFooter), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PageMargins), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PageSetup), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.LegacyDrawingHeaderFooter), 0, 1)
             };
         }
 
@@ -20768,9 +20768,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.HeaderFooter? HeaderFooter
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.HeaderFooter? HeaderFooter
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.HeaderFooter>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.HeaderFooter>();
             set => SetElement(value);
         }
 
@@ -20781,9 +20781,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.PageMargins? PageMargins
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PageMargins? PageMargins
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PageMargins>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PageMargins>();
             set => SetElement(value);
         }
 
@@ -20794,9 +20794,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.PageSetup? PageSetup
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PageSetup? PageSetup
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PageSetup>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PageSetup>();
             set => SetElement(value);
         }
 
@@ -20807,9 +20807,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.LegacyDrawingHeaderFooter? LegacyDrawingHeaderFooter
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.LegacyDrawingHeaderFooter? LegacyDrawingHeaderFooter
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.LegacyDrawingHeaderFooter>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.LegacyDrawingHeaderFooter>();
             set => SetElement(value);
         }
 
@@ -20825,7 +20825,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartSpaceExtension" /> <c>&lt;c:ext></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartSpaceExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
     public partial class ChartSpaceExtensionList : TypedOpenXmlCompositeElement
@@ -20865,10 +20865,10 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:extLst");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartSpaceExtension>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartSpaceExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartSpaceExtension), 0, 0)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartSpaceExtension), 0, 0)
             };
         }
 
@@ -21039,7 +21039,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PivotFormat" /> <c>&lt;c:pivotFmt></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PivotFormat" /> <c>&lt;c:pivotFmt></c></description></item>
     /// </list>
     /// </remark>
     public partial class PivotFormats : TypedOpenXmlCompositeElement
@@ -21079,10 +21079,10 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:pivotFmts");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PivotFormat>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PivotFormat>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PivotFormat), 0, 0)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PivotFormat), 0, 0)
             };
         }
 
@@ -21098,13 +21098,13 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.RightAngleAxes" /> <c>&lt;c:rAngAx></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.DepthPercent" /> <c>&lt;c:depthPercent></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ExtensionList" /> <c>&lt;c:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.HeightPercent" /> <c>&lt;c:hPercent></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Perspective" /> <c>&lt;c:perspective></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.RotateX" /> <c>&lt;c:rotX></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.RotateY" /> <c>&lt;c:rotY></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.RightAngleAxes" /> <c>&lt;c:rAngAx></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DepthPercent" /> <c>&lt;c:depthPercent></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList" /> <c>&lt;c:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.HeightPercent" /> <c>&lt;c:hPercent></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Perspective" /> <c>&lt;c:perspective></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.RotateX" /> <c>&lt;c:rotX></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.RotateY" /> <c>&lt;c:rotY></c></description></item>
     /// </list>
     /// </remark>
     public partial class View3D : TypedOpenXmlCompositeElement
@@ -21144,22 +21144,22 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:view3D");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.RightAngleAxes>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DepthPercent>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.HeightPercent>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Perspective>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.RotateX>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.RotateY>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.RightAngleAxes>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DepthPercent>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.HeightPercent>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Perspective>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.RotateX>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.RotateY>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.RotateX), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.HeightPercent), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.RotateY), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DepthPercent), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.RightAngleAxes), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Perspective), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.RotateX), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.HeightPercent), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.RotateY), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DepthPercent), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.RightAngleAxes), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Perspective), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList), 0, 1)
             };
         }
 
@@ -21170,9 +21170,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.RotateX? RotateX
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.RotateX? RotateX
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.RotateX>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.RotateX>();
             set => SetElement(value);
         }
 
@@ -21183,9 +21183,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.HeightPercent? HeightPercent
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.HeightPercent? HeightPercent
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.HeightPercent>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.HeightPercent>();
             set => SetElement(value);
         }
 
@@ -21196,9 +21196,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.RotateY? RotateY
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.RotateY? RotateY
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.RotateY>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.RotateY>();
             set => SetElement(value);
         }
 
@@ -21209,9 +21209,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.DepthPercent? DepthPercent
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DepthPercent? DepthPercent
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.DepthPercent>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DepthPercent>();
             set => SetElement(value);
         }
 
@@ -21222,9 +21222,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.RightAngleAxes? RightAngleAxes
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.RightAngleAxes? RightAngleAxes
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.RightAngleAxes>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.RightAngleAxes>();
             set => SetElement(value);
         }
 
@@ -21235,9 +21235,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.Perspective? Perspective
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Perspective? Perspective
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Perspective>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Perspective>();
             set => SetElement(value);
         }
 
@@ -21248,9 +21248,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -21266,10 +21266,10 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ShapeProperties" /> <c>&lt;c:spPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ExtensionList" /> <c>&lt;c:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PictureOptions" /> <c>&lt;c:pictureOptions></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Thickness" /> <c>&lt;c:thickness></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ShapeProperties" /> <c>&lt;c:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList" /> <c>&lt;c:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PictureOptions" /> <c>&lt;c:pictureOptions></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Thickness" /> <c>&lt;c:thickness></c></description></item>
     /// </list>
     /// </remark>
     public partial class Floor : SurfaceType
@@ -21311,10 +21311,10 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             builder.SetSchema("c:floor");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Thickness), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShapeProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PictureOptions), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Thickness), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ShapeProperties), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PictureOptions), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList), 0, 1)
             };
         }
 
@@ -21330,10 +21330,10 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ShapeProperties" /> <c>&lt;c:spPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ExtensionList" /> <c>&lt;c:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PictureOptions" /> <c>&lt;c:pictureOptions></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Thickness" /> <c>&lt;c:thickness></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ShapeProperties" /> <c>&lt;c:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList" /> <c>&lt;c:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PictureOptions" /> <c>&lt;c:pictureOptions></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Thickness" /> <c>&lt;c:thickness></c></description></item>
     /// </list>
     /// </remark>
     public partial class SideWall : SurfaceType
@@ -21375,10 +21375,10 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             builder.SetSchema("c:sideWall");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Thickness), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShapeProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PictureOptions), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Thickness), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ShapeProperties), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PictureOptions), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList), 0, 1)
             };
         }
 
@@ -21394,10 +21394,10 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ShapeProperties" /> <c>&lt;c:spPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ExtensionList" /> <c>&lt;c:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PictureOptions" /> <c>&lt;c:pictureOptions></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Thickness" /> <c>&lt;c:thickness></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ShapeProperties" /> <c>&lt;c:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList" /> <c>&lt;c:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PictureOptions" /> <c>&lt;c:pictureOptions></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Thickness" /> <c>&lt;c:thickness></c></description></item>
     /// </list>
     /// </remark>
     public partial class BackWall : SurfaceType
@@ -21439,10 +21439,10 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
             builder.SetSchema("c:backWall");
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Thickness), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShapeProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PictureOptions), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Thickness), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ShapeProperties), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PictureOptions), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList), 0, 1)
             };
         }
 
@@ -21458,10 +21458,10 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ShapeProperties" /> <c>&lt;c:spPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ExtensionList" /> <c>&lt;c:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PictureOptions" /> <c>&lt;c:pictureOptions></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Thickness" /> <c>&lt;c:thickness></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ShapeProperties" /> <c>&lt;c:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList" /> <c>&lt;c:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PictureOptions" /> <c>&lt;c:pictureOptions></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Thickness" /> <c>&lt;c:thickness></c></description></item>
     /// </list>
     /// </remark>
     public abstract partial class SurfaceType : TypedOpenXmlCompositeElement
@@ -21500,10 +21500,10 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ShapeProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PictureOptions>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Thickness>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PictureOptions>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Thickness>();
         }
 
         /// <summary>
@@ -21513,9 +21513,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.Thickness? Thickness
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Thickness? Thickness
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Thickness>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Thickness>();
             set => SetElement(value);
         }
 
@@ -21526,9 +21526,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.ShapeProperties? ShapeProperties
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ShapeProperties? ShapeProperties
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ShapeProperties>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ShapeProperties>();
             set => SetElement(value);
         }
 
@@ -21539,9 +21539,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.PictureOptions? PictureOptions
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PictureOptions? PictureOptions
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PictureOptions>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PictureOptions>();
             set => SetElement(value);
         }
 
@@ -21552,9 +21552,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList>();
             set => SetElement(value);
         }
     }
@@ -21567,30 +21567,30 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ShapeProperties" /> <c>&lt;c:spPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Area3DChart" /> <c>&lt;c:area3DChart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.AreaChart" /> <c>&lt;c:areaChart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Bar3DChart" /> <c>&lt;c:bar3DChart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.BarChart" /> <c>&lt;c:barChart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.BubbleChart" /> <c>&lt;c:bubbleChart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.CategoryAxis" /> <c>&lt;c:catAx></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.DateAxis" /> <c>&lt;c:dateAx></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.DoughnutChart" /> <c>&lt;c:doughnutChart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.DataTable" /> <c>&lt;c:dTable></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ExtensionList" /> <c>&lt;c:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Layout" /> <c>&lt;c:layout></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Line3DChart" /> <c>&lt;c:line3DChart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.LineChart" /> <c>&lt;c:lineChart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.OfPieChart" /> <c>&lt;c:ofPieChart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Pie3DChart" /> <c>&lt;c:pie3DChart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PieChart" /> <c>&lt;c:pieChart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.RadarChart" /> <c>&lt;c:radarChart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ScatterChart" /> <c>&lt;c:scatterChart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.SeriesAxis" /> <c>&lt;c:serAx></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.StockChart" /> <c>&lt;c:stockChart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Surface3DChart" /> <c>&lt;c:surface3DChart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.SurfaceChart" /> <c>&lt;c:surfaceChart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ValueAxis" /> <c>&lt;c:valAx></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ShapeProperties" /> <c>&lt;c:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Area3DChart" /> <c>&lt;c:area3DChart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AreaChart" /> <c>&lt;c:areaChart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Bar3DChart" /> <c>&lt;c:bar3DChart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.BarChart" /> <c>&lt;c:barChart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.BubbleChart" /> <c>&lt;c:bubbleChart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.CategoryAxis" /> <c>&lt;c:catAx></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DateAxis" /> <c>&lt;c:dateAx></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DoughnutChart" /> <c>&lt;c:doughnutChart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataTable" /> <c>&lt;c:dTable></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList" /> <c>&lt;c:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Layout" /> <c>&lt;c:layout></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Line3DChart" /> <c>&lt;c:line3DChart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.LineChart" /> <c>&lt;c:lineChart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.OfPieChart" /> <c>&lt;c:ofPieChart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Pie3DChart" /> <c>&lt;c:pie3DChart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PieChart" /> <c>&lt;c:pieChart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.RadarChart" /> <c>&lt;c:radarChart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ScatterChart" /> <c>&lt;c:scatterChart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SeriesAxis" /> <c>&lt;c:serAx></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.StockChart" /> <c>&lt;c:stockChart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Surface3DChart" /> <c>&lt;c:surface3DChart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SurfaceChart" /> <c>&lt;c:surfaceChart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ValueAxis" /> <c>&lt;c:valAx></c></description></item>
     /// </list>
     /// </remark>
     public partial class PlotArea : TypedOpenXmlCompositeElement
@@ -21630,62 +21630,62 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:plotArea");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ShapeProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Area3DChart>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.AreaChart>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Bar3DChart>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.BarChart>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.BubbleChart>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.CategoryAxis>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DateAxis>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DoughnutChart>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataTable>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Layout>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Line3DChart>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.LineChart>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.OfPieChart>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Pie3DChart>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PieChart>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.RadarChart>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ScatterChart>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.SeriesAxis>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.StockChart>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Surface3DChart>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.SurfaceChart>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ValueAxis>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Area3DChart>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AreaChart>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Bar3DChart>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.BarChart>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.BubbleChart>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.CategoryAxis>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DateAxis>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DoughnutChart>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataTable>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Layout>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Line3DChart>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.LineChart>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.OfPieChart>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Pie3DChart>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PieChart>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.RadarChart>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ScatterChart>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SeriesAxis>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.StockChart>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Surface3DChart>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SurfaceChart>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ValueAxis>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Layout), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Layout), 0, 1),
                 new CompositeParticle.Builder(ParticleType.Choice, 1, 0)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.AreaChart), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Area3DChart), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.LineChart), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Line3DChart), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.StockChart), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.RadarChart), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ScatterChart), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PieChart), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Pie3DChart), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DoughnutChart), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.BarChart), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Bar3DChart), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.OfPieChart), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.SurfaceChart), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Surface3DChart), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.BubbleChart), 1, 1)
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.AreaChart), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Area3DChart), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.LineChart), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Line3DChart), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.StockChart), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.RadarChart), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ScatterChart), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.PieChart), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Pie3DChart), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DoughnutChart), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.BarChart), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Bar3DChart), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.OfPieChart), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SurfaceChart), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Surface3DChart), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.BubbleChart), 1, 1)
                 },
                 new CompositeParticle.Builder(ParticleType.Choice, 0, 4)
                 {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ValueAxis), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.CategoryAxis), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DateAxis), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.SeriesAxis), 1, 1)
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ValueAxis), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.CategoryAxis), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DateAxis), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.SeriesAxis), 1, 1)
                 },
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataTable), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ShapeProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataTable), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ShapeProperties), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList), 0, 1)
             };
         }
 
@@ -21696,9 +21696,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.Layout? Layout
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Layout? Layout
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Layout>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Layout>();
             set => SetElement(value);
         }
 
@@ -21714,13 +21714,13 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.TextProperties" /> <c>&lt;c:txPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Overlay" /> <c>&lt;c:overlay></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ExtensionList" /> <c>&lt;c:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Layout" /> <c>&lt;c:layout></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.LegendEntry" /> <c>&lt;c:legendEntry></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.LegendPosition" /> <c>&lt;c:legendPos></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TextProperties" /> <c>&lt;c:txPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Overlay" /> <c>&lt;c:overlay></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList" /> <c>&lt;c:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Layout" /> <c>&lt;c:layout></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.LegendEntry" /> <c>&lt;c:legendEntry></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.LegendPosition" /> <c>&lt;c:legendPos></c></description></item>
     /// </list>
     /// </remark>
     public partial class Legend : TypedOpenXmlCompositeElement
@@ -21760,22 +21760,22 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:legend");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.TextProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Overlay>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Layout>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.LegendEntry>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.LegendPosition>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TextProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Overlay>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Layout>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.LegendEntry>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.LegendPosition>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.LegendPosition), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.LegendEntry), 0, 0),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Layout), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Overlay), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.TextProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.LegendPosition), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.LegendEntry), 0, 0),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Layout), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.Overlay), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ChartShapeProperties), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.TextProperties), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.ExtensionList), 0, 1)
             };
         }
 
@@ -21786,9 +21786,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <remark>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.LegendPosition? LegendPosition
+        public DocumentFormat.OpenXml.DrawingML.Y2006.Chart.LegendPosition? LegendPosition
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.LegendPosition>();
+            get => GetElement<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.LegendPosition>();
             set => SetElement(value);
         }
 
@@ -21814,9 +21814,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Display Blanks As Value</para>
         /// <para>Represents the following attribute in the schema: val</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.DisplayBlanksAsValues>? Val
+        public EnumValue<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DisplayBlanksAsValues>? Val
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.DisplayBlanksAsValues>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DisplayBlanksAsValues>>();
             set => SetAttribute(value);
         }
 
@@ -21840,7 +21840,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.DataDisplayOptions16" /> <c>&lt;c:ext></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataDisplayOptions16" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
     public partial class ChartExtensionList : TypedOpenXmlCompositeElement
@@ -21880,10 +21880,10 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("c:extLst");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DataDisplayOptions16>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataDisplayOptions16>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DataDisplayOptions16), 0, 0, version: FileFormatVersions.Office2019)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.DrawingML.Y2006.Chart.DataDisplayOptions16), 0, 0, version: FileFormatVersions.Office2019)
             };
         }
 

@@ -5,7 +5,7 @@ using DocumentFormat.OpenXml.Packaging;
 
 #pragma warning disable CA1724
 
-namespace DocumentFormat.OpenXml.Office.CustomUI
+namespace DocumentFormat.OpenXml.Office.Y2006.M01.CustomUI
 {
     /// <summary>
     /// Defines CustomUI.

@@ -2,12 +2,14 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Features;
-using DocumentFormat.OpenXml.Presentation;
-using DocumentFormat.OpenXml.Spreadsheet;
+using DocumentFormat.OpenXml.PresentationML.Y2006.Main;
+using DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main;
 using DocumentFormat.OpenXml.Validation;
 using DocumentFormat.OpenXml.Validation.Schema;
-using DocumentFormat.OpenXml.Wordprocessing;
+using DocumentFormat.OpenXml.WordprocessingML.Y2006.Main;
 using Xunit;
+
+using D = DocumentFormat.OpenXml.DrawingML.Y2006.Main;
 
 namespace DocumentFormat.OpenXml.Tests
 {
@@ -251,12 +253,12 @@ namespace DocumentFormat.OpenXml.Tests
             // </xsd:complexType>
 
             // ***** good case ******
-            bldSub.AppendChild(new Drawing.BuildChart());
+            bldSub.AppendChild(new D.BuildChart());
             target.Validate(validationContext);
             Assert.True(validationContext.Valid);
 
             bldSub.RemoveAllChildren();
-            bldSub.AppendChild(new Drawing.BuildDiagram());
+            bldSub.AppendChild(new D.BuildDiagram());
             target.Validate(validationContext);
             Assert.True(validationContext.Valid);
 
@@ -276,7 +278,7 @@ namespace DocumentFormat.OpenXml.Tests
             validationContext.Clear();
 
             // both element are exist
-            bldSub.Append(new Drawing.BuildChart(), new Drawing.BuildDiagram());
+            bldSub.Append(new D.BuildChart(), new D.BuildDiagram());
             errorChild = bldSub.LastChild;
             target.Validate(validationContext);
             Assert.False(validationContext.Valid);

@@ -1,11 +1,15 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using DocumentFormat.OpenXml.Bibliography;
-using DocumentFormat.OpenXml.Drawing;
+using DocumentFormat.OpenXml.DrawingML.Y2006.Chart;
+using DocumentFormat.OpenXml.DrawingML.Y2006.Main;
+using DocumentFormat.OpenXml.DrawingML.Y2006.SpreadSheetDrawing;
+using DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography;
+using DocumentFormat.OpenXml.OfficeDocument.Y2006.DocPropsVTypes;
 using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.PresentationML.Y2006.Main;
 using DocumentFormat.OpenXml.Validation;
-using DocumentFormat.OpenXml.Wordprocessing;
+using DocumentFormat.OpenXml.WordprocessingML.Y2006.Main;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -14,6 +18,9 @@ using System.Xml;
 using Xunit;
 
 using static DocumentFormat.OpenXml.Tests.TestAssets;
+
+using Dgm = DocumentFormat.OpenXml.DrawingML.Y2006.Diagram;
+using W = DocumentFormat.OpenXml.WordprocessingML.Y2006.Main;
 
 namespace DocumentFormat.OpenXml.Tests
 {
@@ -41,7 +48,7 @@ namespace DocumentFormat.OpenXml.Tests
             // <xsd:complexType name="CT_Boolean">
             //  <xsd:attribute name="val" type="xsd:boolean" use="optional" default="true">
             // </xsd:complexType>
-            var element = new DocumentFormat.OpenXml.Drawing.Charts.Overlay();
+            var element = new Overlay();
 
             // ***** good case ******
             element.Val = true;
@@ -114,7 +121,7 @@ namespace DocumentFormat.OpenXml.Tests
             // <xsd:complexType name="CT_RotX">
             //  <xsd:attribute name="val" type="ST_RotX" default="0">
             // </xsd:complexType>
-            var element = new DocumentFormat.OpenXml.Drawing.Charts.RotateX();
+            var element = new RotateX();
 
             // ***** good case ******
             element.Val = 0;
@@ -188,7 +195,7 @@ namespace DocumentFormat.OpenXml.Tests
             // <xsd:complexType name="CT_HoleSize">
             //  <xsd:attribute name="val" type="ST_HoleSize" default="10">
             // </xsd:complexType>
-            var element = new DocumentFormat.OpenXml.Drawing.Charts.HoleSize();
+            var element = new HoleSize();
 
             // ***** good case ******
             element.Val = 2;
@@ -256,7 +263,7 @@ namespace DocumentFormat.OpenXml.Tests
         {
             // no such attribute in Ecma376
             // only one in element
-            var element = new DocumentFormat.OpenXml.VariantTypes.VTShort();
+            var element = new VTShort();
 
             // ***** good case ******
             element.Text = "20";
@@ -319,7 +326,7 @@ namespace DocumentFormat.OpenXml.Tests
             // <xsd:complexType name="CT_HPercent">
             //  <xsd:attribute name="val" type="ST_HPercent" default="100">
             // </xsd:complexType>
-            var element = new DocumentFormat.OpenXml.Drawing.Charts.HeightPercent();
+            var element = new HeightPercent();
 
             // ***** good case ******
             element.Val = 20;
@@ -620,7 +627,7 @@ namespace DocumentFormat.OpenXml.Tests
             //      <xsd:element name="rowOff" type="a:ST_Coordinate">
             //    </xsd:sequence>
             //  </xsd:complexType>
-            var element = new DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnId();
+            var element = new ColumnId();
 
             // ***** good case ******
             element.Text = "0";
@@ -682,7 +689,7 @@ namespace DocumentFormat.OpenXml.Tests
             // <xsd:complexType name="CT_BubbleScale">
             //  <xsd:attribute name="val" type="ST_BubbleScale" default="100">
             // </xsd:complexType>
-            var element = new DocumentFormat.OpenXml.Drawing.Charts.BubbleScale();
+            var element = new BubbleScale();
 
             // ***** good case ******
             element.Val = 0;
@@ -749,7 +756,7 @@ namespace DocumentFormat.OpenXml.Tests
             //  <xsd:attribute name="cy" type="ST_SlideSizeCoordinate" use="required">
             //  <xsd:attribute name="type" type="ST_SlideSizeType" use="optional" default="custom">
             // </xsd:complexType>
-            var element = new DocumentFormat.OpenXml.Presentation.SlideSize();
+            var element = new SlideSize();
             element.Cy = 914400;
 
             // ***** good case ******
@@ -851,7 +858,7 @@ namespace DocumentFormat.OpenXml.Tests
             //   <xs:attribute name="cx" type="ST_PositiveCoordinate" use="required">
             //   <xs:attribute name="cy" type="ST_PositiveCoordinate" use="required">
             // </xs:complexType>
-            var element = new DocumentFormat.OpenXml.Drawing.ChildExtents();
+            var element = new ChildExtents();
             element.Cy = 914400;
 
             // ***** good case ******
@@ -928,7 +935,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void UInt64ValueValidationTest()
         {
             // only one in element
-            var element = new DocumentFormat.OpenXml.VariantTypes.VTUnsignedInt64();
+            var element = new VTUnsignedInt64();
 
             // ***** good case ******
             element.Text = "20";
@@ -989,7 +996,7 @@ namespace DocumentFormat.OpenXml.Tests
             // <xsd:complexType name="CT_TLAnimVariantFloatVal">
             //  <xsd:attribute name="val" type="xsd:float" use="required">
             // </xsd:complexType>
-            var element = new DocumentFormat.OpenXml.Presentation.FloatVariantValue();
+            var element = new FloatVariantValue();
 
             // ***** good case ******
             element.Val = float.MinValue;
@@ -1067,7 +1074,7 @@ namespace DocumentFormat.OpenXml.Tests
             // <xsd:complexType name="CT_AxisUnit">
             //  <xsd:attribute name="val" type="ST_AxisUnit" use="required">
             // </xsd:complexType>
-            var element = new DocumentFormat.OpenXml.Drawing.Charts.MajorUnit();
+            var element = new MajorUnit();
 
             // ***** good case ******
             element.Val = 10000.001;
@@ -1154,7 +1161,7 @@ namespace DocumentFormat.OpenXml.Tests
             // <xsd:complexType name="CT_LogBase">
             //  <xsd:attribute name="val" type="ST_LogBase" use="required">
             // </xsd:complexType>
-            var logBase = new DocumentFormat.OpenXml.Drawing.Charts.LogBase();
+            var logBase = new LogBase();
 
             // ***** good case ******
             logBase.Val = 2.0;
@@ -1215,7 +1222,7 @@ namespace DocumentFormat.OpenXml.Tests
             //  <xsd:attribute name="startAngle" type="xsd:decimal" use="optional">
             //  <xsd:attribute name="endAngle" type="xsd:decimal" use="optional">
             // </xsd:complexType>
-            var element = new DocumentFormat.OpenXml.Vml.Arc();
+            var element = new Vml.Arc();
 
             // ***** good case ******
             element.StartAngle = decimal.MaxValue;
@@ -1290,10 +1297,11 @@ namespace DocumentFormat.OpenXml.Tests
             // <xsd:complexType name="CT_Integer2">
             //  <xsd:attribute name="val" type="ST_Integer2" use="required">
             // </xsd:complexType>
-            var element = new DocumentFormat.OpenXml.Math.ArgumentSize();
-
-            // ***** good case ******
-            element.Val = -2;
+            var element = new OfficeDocument.Y2006.Math.ArgumentSize
+            {
+                // ***** good case ******
+                Val = -2,
+            };
             var actual = O12Validator.Validate(element);
             Assert.Empty(actual);
 
@@ -1335,7 +1343,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void NonNegativeIntegerValueValidationTest()
         {
             // <xsd:element name="ScriptLanguage" type="xsd:nonNegativeInteger">
-            var element = new DocumentFormat.OpenXml.Vml.Spreadsheet.ScriptLanguage();
+            var element = new DocumentFormat.OpenXml.Office.Excel.VML.ScriptLanguage();
 
             // ***** good case ******
             element.Text = "20";
@@ -1387,7 +1395,7 @@ namespace DocumentFormat.OpenXml.Tests
             //  <xsd:attribute name="width" type="xsd:positiveInteger" use="optional">
             //  <xsd:attribute name="shadow" type="ST_BorderShadow" use="optional">
             // </xsd:complexType>
-            var element = new DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder();
+            var element = new DocumentFormat.OpenXml.Office.Word.VML.TopBorder();
 
             // ***** good case ******
             element.Width = 1;
@@ -1437,7 +1445,7 @@ namespace DocumentFormat.OpenXml.Tests
             //  </xsd:annotation>
             //  <xsd:restriction base="xsd:dateTime" />
             // </xsd:simpleType>
-            var element = new DocumentFormat.OpenXml.Wordprocessing.SdtContentDate();
+            var element = new SdtContentDate();
 
             // ***** good case ******
             element.FullDate = DateTime.MinValue;
@@ -1588,7 +1596,7 @@ namespace DocumentFormat.OpenXml.Tests
             //    <xsd:enumeration value="Misc">
             //  </xsd:restriction>
             // </xsd:simpleType>
-            var element = new DocumentFormat.OpenXml.Bibliography.SourceType();
+            var element = new SourceType();
 
             // ***** good case ******
             element.Text = "ArticleInAPeriodical";
@@ -1760,7 +1768,7 @@ namespace DocumentFormat.OpenXml.Tests
             //    <xsd:pattern value="\s*[0-9]*\.[0-9]{4}\s*" />
             //  </xsd:restriction>
             // </xsd:simpleType>
-            var element = new DocumentFormat.OpenXml.VariantTypes.VTCurrency();
+            var element = new VTCurrency();
 
             // ***** good case ******
             element.Text = ".1234";
@@ -2128,7 +2136,7 @@ namespace DocumentFormat.OpenXml.Tests
             // </xsd:complexType>
 
             // ***** good case ******
-            var element = new DocumentFormat.OpenXml.Drawing.Diagrams.Category();
+            var element = new Dgm.Category();
             element.Priority = 1;
 
             element.Type = string.Empty;
@@ -2204,7 +2212,7 @@ namespace DocumentFormat.OpenXml.Tests
             // </xsd:complexType>
 
             // ***** good case ******
-            var element = new DocumentFormat.OpenXml.Office.CustomUI.Item();
+            var element = new Office.Y2006.M01.CustomUI.Item();
 
             element.Id = "A";
             var actual = O12Validator.Validate(element);
@@ -2288,7 +2296,7 @@ namespace DocumentFormat.OpenXml.Tests
             // </xsd:complexType>
 
             // ***** good case ******
-            var element = new DocumentFormat.OpenXml.Office.CustomUI.QuickAccessToolbarControlClone();
+            var element = new Office.Y2006.M01.CustomUI.QuickAccessToolbarControlClone();
             element.AddNamespaceDeclaration("A", "http://test");
 
             element.IdQ = "A";
@@ -2380,7 +2388,7 @@ namespace DocumentFormat.OpenXml.Tests
             //  </xsd:annotation>
             //  <xsd:list itemType="ST_AxisType" />
             // </xsd:simpleType>
-            var element = new DocumentFormat.OpenXml.Drawing.Diagrams.PresentationOf();
+            var element = new Dgm.PresentationOf();
 
             // <xsd:simpleType name="ST_CellSpan">
             //  <xsd:restriction base="xsd:string" />
@@ -2389,7 +2397,7 @@ namespace DocumentFormat.OpenXml.Tests
             // <xsd:simpleType name="ST_CellSpans">
             //  <xsd:list itemType="ST_CellSpan" />
             // </xsd:simpleType>
-            var row = new DocumentFormat.OpenXml.Spreadsheet.Row();
+            var row = new DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.Row();
 
             // ***** good case ******
             row.Spans = new ListValue<StringValue>();
@@ -2516,7 +2524,7 @@ namespace DocumentFormat.OpenXml.Tests
             //    <xsd:attribute name="themeTint" type="ST_UcharHexNumber" use="optional">
             //    <xsd:attribute name="themeShade" type="ST_UcharHexNumber" use="optional">
             //  </xsd:complexType>
-            var element = new DocumentFormat.OpenXml.Wordprocessing.Color();
+            var element = new Color();
             element.Val = new StringValue();
 
             // ***** good case ******
@@ -2584,7 +2592,7 @@ namespace DocumentFormat.OpenXml.Tests
             //    <xsd:maxInclusive value="-1" />
             //  </xsd:restriction>
             // </xsd:simpleType>
-            var element = new DocumentFormat.OpenXml.Wordprocessing.DivId();
+            var element = new DivId();
             element.Val = new StringValue();
 
             // ***** good case ******
@@ -2738,7 +2746,7 @@ namespace DocumentFormat.OpenXml.Tests
             //    </xsd:enumeration>
             //  </xsd:restriction>
             // </xsd:simpleType>
-            var element = new DocumentFormat.OpenXml.Vml.ShapeHandle();
+            var element = new Vml.ShapeHandle();
 
             // ***** good case ******
             var actual = O12Validator.Validate(element);
@@ -3033,7 +3041,7 @@ namespace DocumentFormat.OpenXml.Tests
                 using (var testDocument = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document))
                 {
                     var mainDocPart = testDocument.AddMainDocumentPart();
-                    var paragraph = new DocumentFormat.OpenXml.Wordprocessing.Paragraph(new Body());
+                    var paragraph = new W.Paragraph(new Body());
                     var document = new Document(new Body(paragraph));
 
                     IEnumerable<ValidationErrorInfo> actual;
@@ -3072,7 +3080,7 @@ namespace DocumentFormat.OpenXml.Tests
                     mainPart.Document.Save();
 
                     var commentsPart = mainPart.AddNewPart<WordprocessingCommentsPart>();
-                    commentsPart.Comments = new DocumentFormat.OpenXml.Wordprocessing.Comments();
+                    commentsPart.Comments = new W.Comments();
                     commentsPart.Comments.Save();
 
                     var commentsPart2 = mainPart.AddExtendedPart(WordprocessingCommentsPart.RelationshipTypeConstant, WordprocessingCommentsPart.ContentTypeConstant, "xml");
@@ -3115,7 +3123,7 @@ namespace DocumentFormat.OpenXml.Tests
                 using (var pptdoc = PresentationDocument.Create(stream, PresentationDocumentType.Presentation))
                 {
                     var presettationPart = pptdoc.AddPresentationPart();
-                    presettationPart.Presentation = new DocumentFormat.OpenXml.Presentation.Presentation();
+                    presettationPart.Presentation = new Presentation();
                     presettationPart.Presentation.Save();
 
                     // must have a SlideMasterPart.
@@ -3147,7 +3155,7 @@ namespace DocumentFormat.OpenXml.Tests
                     mainPart.Document.Save();
 
                     var commentsPart = mainPart.AddNewPart<WordprocessingCommentsPart>();
-                    var comments = new DocumentFormat.OpenXml.Wordprocessing.Comments();
+                    var comments = new W.Comments();
 
                     using (var sw = new StreamWriter(commentsPart.GetStream()))
                     {
@@ -3233,12 +3241,12 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void DspInDiagramTest()
         {
-            DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.Drawing element = new DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.Drawing();
-            element.ShapeTree = new DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.ShapeTree(
-                                                new DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.GroupShapeNonVisualProperties(
-                                                        new DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.NonVisualDrawingProperties() { Id = 0, Name = string.Empty },
-                                                        new DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.NonVisualGroupDrawingShapeProperties()),
-                                                new DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram.GroupShapeProperties());
+            Office.Drawing.Y2008.Diagram.Drawing element = new Office.Drawing.Y2008.Diagram.Drawing();
+            element.ShapeTree = new Office.Drawing.Y2008.Diagram.ShapeTree(
+                                                new Office.Drawing.Y2008.Diagram.GroupShapeNonVisualProperties(
+                                                        new Office.Drawing.Y2008.Diagram.NonVisualDrawingProperties() { Id = 0, Name = string.Empty },
+                                                        new Office.Drawing.Y2008.Diagram.NonVisualGroupDrawingShapeProperties()),
+                                                new Office.Drawing.Y2008.Diagram.GroupShapeProperties());
 
             // ***** good case ******
             var actual = O14Validator.Validate(element);
@@ -3251,7 +3259,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void ExpectedExceptionOnValidate1Test()
         {
-            Assert.Throws<System.InvalidOperationException>(() =>
+            Assert.Throws<InvalidOperationException>(() =>
             {
                 using (var stream = new MemoryStream())
                 {
@@ -3272,9 +3280,9 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void ExpectedExceptionOnValidate2Test()
         {
-            Assert.Throws<System.InvalidOperationException>(() =>
+            Assert.Throws<InvalidOperationException>(() =>
             {
-                var o14Element = new DocumentFormat.OpenXml.Wordprocessing.StartBorder();
+                var o14Element = new StartBorder();
                 var actual = O12Validator.Validate(o14Element);
             });
         }
@@ -3300,8 +3308,8 @@ namespace DocumentFormat.OpenXml.Tests
               </xs:complexType>
                *********************/
 
-            var borders = new DocumentFormat.OpenXml.Wordprocessing.TableBorders();
-            borders.TopBorder = new DocumentFormat.OpenXml.Wordprocessing.TopBorder() { Val = BorderValues.Apples };
+            var borders = new TableBorders();
+            borders.TopBorder = new W.TopBorder() { Val = BorderValues.Apples };
 
             var actual = O12Validator.Validate(borders);
             Assert.Empty(actual);
@@ -3322,7 +3330,7 @@ namespace DocumentFormat.OpenXml.Tests
             actual = O14Validator.Validate(borders);
             Assert.Empty(actual);
 
-            borders.RightBorder = new DocumentFormat.OpenXml.Wordprocessing.RightBorder() { Val = BorderValues.BabyPacifier };
+            borders.RightBorder = new W.RightBorder() { Val = BorderValues.BabyPacifier };
 
             actual = O12Validator.Validate(borders);
 
@@ -3372,7 +3380,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void EnumValidationO14SupportTest()
         {
-            var element = new DocumentFormat.OpenXml.Wordprocessing.LeftBorder();
+            var element = new W.LeftBorder();
 
             // ***** good case ******
 
@@ -3628,7 +3636,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void SchemaValidationO14SupportTest2()
         {
             var element = new TableLook();
-            var tblPr = new DocumentFormat.OpenXml.Wordprocessing.TableProperties(element);
+            var tblPr = new W.TableProperties(element);
 
             // ***** good case ******
 
@@ -3755,7 +3763,7 @@ namespace DocumentFormat.OpenXml.Tests
             "xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" mc:Ignorable=\"w14\"><w:body><w:p w:rsidR=\"00A35C47\" w14:paraId=\"017B6C57\" w14:editId=\"32F17AD3\" /></w:body></w:document>";
 
             var element = new Document(xml);
-            var p = element.Body.FirstChild as DocumentFormat.OpenXml.Wordprocessing.Paragraph;
+            var p = element.Body.FirstChild as W.Paragraph;
             Assert.Null(p.ParagraphId); // the w14:paraId in the xml has different namespace than expected.
             Assert.Equal(xml, element.OuterXml);
 
@@ -3779,7 +3787,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             string outerxml = element.OuterXml;
             Document newElement = new Document(outerxml);
-            p = element.Body.FirstChild as DocumentFormat.OpenXml.Wordprocessing.Paragraph;
+            p = element.Body.FirstChild as W.Paragraph;
             Assert.Null(p.TextId);
             Assert.NotNull(p.ParagraphId);
 
@@ -3810,7 +3818,7 @@ namespace DocumentFormat.OpenXml.Tests
                     Assert.Single(actual); // The value 'actual' should contain one validation error for 'doNotEmbedSmartTags' in the test document.
 
                     // the following line should throw exception.
-                    Assert.Throws<System.InvalidOperationException>(() =>
+                    Assert.Throws<InvalidOperationException>(() =>
                     {
                         actual = O12Validator.Validate(wordTestDocument);
                     });
@@ -3830,7 +3838,7 @@ namespace DocumentFormat.OpenXml.Tests
                 var actual = O12Validator.Validate(wordTestDocument.MainDocumentPart);
                 Assert.Empty(actual);
 
-                Assert.Throws<System.InvalidOperationException>(() => O14Validator.Validate(wordTestDocument.MainDocumentPart));
+                Assert.Throws<InvalidOperationException>(() => O14Validator.Validate(wordTestDocument.MainDocumentPart));
             }
         }
     }

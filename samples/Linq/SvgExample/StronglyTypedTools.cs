@@ -9,8 +9,8 @@ using System;
 using System.IO;
 using System.Linq;
 
-using Drawing = DocumentFormat.OpenXml.Drawing;
-using Presentation = DocumentFormat.OpenXml.Presentation;
+using Drawing = DocumentFormat.OpenXml.DrawingML.Y2006.Main;
+using Presentation = DocumentFormat.OpenXml.PresentationML.Y2006.Main;
 
 namespace SvgExample
 {

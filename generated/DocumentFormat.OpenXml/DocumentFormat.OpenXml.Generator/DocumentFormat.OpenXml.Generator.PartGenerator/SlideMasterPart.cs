@@ -19,7 +19,7 @@ namespace DocumentFormat.OpenXml.Packaging
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.presentationml.slideMaster+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideMaster";
-        private DocumentFormat.OpenXml.Presentation.SlideMaster? _rootElement;
+        private DocumentFormat.OpenXml.PresentationML.Y2006.Main.SlideMaster? _rootElement;
 
         /// <summary>
         /// Creates an instance of the SlideMasterPart OpenXmlType
@@ -105,7 +105,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             set
             {
-                _rootElement = value as DocumentFormat.OpenXml.Presentation.SlideMaster;
+                _rootElement = value as DocumentFormat.OpenXml.PresentationML.Y2006.Main.SlideMaster;
             }
         }
 
@@ -127,13 +127,13 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets or sets the root element of this part.
         /// </summary>
-        public DocumentFormat.OpenXml.Presentation.SlideMaster SlideMaster
+        public DocumentFormat.OpenXml.PresentationML.Y2006.Main.SlideMaster SlideMaster
         {
             get
             {
                 if (_rootElement is null)
                 {
-                    LoadDomTree<DocumentFormat.OpenXml.Presentation.SlideMaster>();
+                    LoadDomTree<DocumentFormat.OpenXml.PresentationML.Y2006.Main.SlideMaster>();
                 }
 
                 return _rootElement!;

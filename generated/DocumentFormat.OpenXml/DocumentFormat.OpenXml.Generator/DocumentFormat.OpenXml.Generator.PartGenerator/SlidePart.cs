@@ -19,7 +19,7 @@ namespace DocumentFormat.OpenXml.Packaging
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.presentationml.slide+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/slide";
-        private DocumentFormat.OpenXml.Presentation.Slide? _rootElement;
+        private DocumentFormat.OpenXml.PresentationML.Y2006.Main.Slide? _rootElement;
 
         /// <summary>
         /// Creates an instance of the SlidePart OpenXmlType
@@ -110,7 +110,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             set
             {
-                _rootElement = value as DocumentFormat.OpenXml.Presentation.Slide;
+                _rootElement = value as DocumentFormat.OpenXml.PresentationML.Y2006.Main.Slide;
             }
         }
 
@@ -132,13 +132,13 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets or sets the root element of this part.
         /// </summary>
-        public DocumentFormat.OpenXml.Presentation.Slide Slide
+        public DocumentFormat.OpenXml.PresentationML.Y2006.Main.Slide Slide
         {
             get
             {
                 if (_rootElement is null)
                 {
-                    LoadDomTree<DocumentFormat.OpenXml.Presentation.Slide>();
+                    LoadDomTree<DocumentFormat.OpenXml.PresentationML.Y2006.Main.Slide>();
                 }
 
                 return _rootElement!;
