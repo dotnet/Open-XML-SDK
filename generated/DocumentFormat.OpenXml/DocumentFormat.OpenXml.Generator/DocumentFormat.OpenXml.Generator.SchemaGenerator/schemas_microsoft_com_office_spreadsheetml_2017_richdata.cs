@@ -15,7 +15,7 @@ using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData
+namespace DocumentFormat.OpenXml.Office.SpreadsheetML.Y2017.RichData
 {
     /// <summary>
     /// <para>Defines the RichValueBlock Class.</para>
@@ -65,8 +65,8 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData.ExtensionList" /> <c>&lt;xlrd:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData.RichValue" /> <c>&lt;xlrd:rv></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadsheetML.Y2017.RichData.ExtensionList" /> <c>&lt;xlrd:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadsheetML.Y2017.RichData.RichValue" /> <c>&lt;xlrd:rv></c></description></item>
     /// </list>
     /// </remark>
     public partial class RichValueData : TypedOpenXmlPartRootElement
@@ -117,8 +117,8 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData
             base.ConfigureMetadata(builder);
             builder.SetSchema("xlrd:rvData");
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData.RichValue>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadsheetML.Y2017.RichData.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadsheetML.Y2017.RichData.RichValue>();
             builder.AddElement<RichValueData>()
                 .AddAttribute("count", a => a.Count, aBuilder =>
                 {
@@ -126,8 +126,8 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData.RichValue), 0, 0, version: FileFormatVersions.Office2019),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData.ExtensionList), 0, 1, version: FileFormatVersions.Office2019)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadsheetML.Y2017.RichData.RichValue), 0, 0, version: FileFormatVersions.Office2019),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadsheetML.Y2017.RichData.ExtensionList), 0, 1, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -174,8 +174,8 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData.ExtensionList" /> <c>&lt;xlrd:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData.RichValueStructure" /> <c>&lt;xlrd:s></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadsheetML.Y2017.RichData.ExtensionList" /> <c>&lt;xlrd:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadsheetML.Y2017.RichData.RichValueStructure" /> <c>&lt;xlrd:s></c></description></item>
     /// </list>
     /// </remark>
     public partial class RichValueStructures : TypedOpenXmlPartRootElement
@@ -226,8 +226,8 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData
             base.ConfigureMetadata(builder);
             builder.SetSchema("xlrd:rvStructures");
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData.RichValueStructure>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadsheetML.Y2017.RichData.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadsheetML.Y2017.RichData.RichValueStructure>();
             builder.AddElement<RichValueStructures>()
                 .AddAttribute("count", a => a.Count, aBuilder =>
                 {
@@ -235,8 +235,8 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData.RichValueStructure), 0, 0, version: FileFormatVersions.Office2019),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData.ExtensionList), 0, 1, version: FileFormatVersions.Office2019)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadsheetML.Y2017.RichData.RichValueStructure), 0, 0, version: FileFormatVersions.Office2019),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadsheetML.Y2017.RichData.ExtensionList), 0, 1, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -283,8 +283,8 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData.RichValueFallback" /> <c>&lt;xlrd:fb></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData.Value" /> <c>&lt;xlrd:v></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadsheetML.Y2017.RichData.RichValueFallback" /> <c>&lt;xlrd:fb></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadsheetML.Y2017.RichData.Value" /> <c>&lt;xlrd:v></c></description></item>
     /// </list>
     /// </remark>
     public partial class RichValue : TypedOpenXmlCompositeElement
@@ -335,8 +335,8 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData
             base.ConfigureMetadata(builder);
             builder.SetSchema("xlrd:rv");
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData.RichValueFallback>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData.Value>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadsheetML.Y2017.RichData.RichValueFallback>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadsheetML.Y2017.RichData.Value>();
             builder.AddElement<RichValue>()
                 .AddAttribute("s", a => a.S, aBuilder =>
                 {
@@ -344,8 +344,8 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData.RichValueFallback), 0, 1, version: FileFormatVersions.Office2019),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData.Value), 1, 0, version: FileFormatVersions.Office2019)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadsheetML.Y2017.RichData.RichValueFallback), 0, 1, version: FileFormatVersions.Office2019),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadsheetML.Y2017.RichData.Value), 1, 0, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -356,9 +356,9 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData
         /// <remark>
         /// xmlns:xlrd = http://schemas.microsoft.com/office/spreadsheetml/2017/richdata
         /// </remark>
-        public DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData.RichValueFallback? RichValueFallback
+        public DocumentFormat.OpenXml.Office.SpreadsheetML.Y2017.RichData.RichValueFallback? RichValueFallback
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData.RichValueFallback>();
+            get => GetElement<DocumentFormat.OpenXml.Office.SpreadsheetML.Y2017.RichData.RichValueFallback>();
             set => SetElement(value);
         }
 
@@ -463,9 +463,9 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData
         /// <para>t, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: t</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData.RichValueFallbackType>? T
+        public EnumValue<DocumentFormat.OpenXml.Office.SpreadsheetML.Y2017.RichData.RichValueFallbackType>? T
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData.RichValueFallbackType>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.SpreadsheetML.Y2017.RichData.RichValueFallbackType>>();
             set => SetAttribute(value);
         }
 
@@ -528,7 +528,7 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData.Key" /> <c>&lt;xlrd:k></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadsheetML.Y2017.RichData.Key" /> <c>&lt;xlrd:k></c></description></item>
     /// </list>
     /// </remark>
     public partial class RichValueStructure : TypedOpenXmlCompositeElement
@@ -579,7 +579,7 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData
             base.ConfigureMetadata(builder);
             builder.SetSchema("xlrd:s");
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData.Key>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadsheetML.Y2017.RichData.Key>();
             builder.AddElement<RichValueStructure>()
                 .AddAttribute("t", a => a.T, aBuilder =>
                 {
@@ -587,7 +587,7 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData.Key), 1, 0, version: FileFormatVersions.Office2019)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadsheetML.Y2017.RichData.Key), 1, 0, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -623,9 +623,9 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData
         /// <para>t, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: t</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData.RichValueValueType>? T
+        public EnumValue<DocumentFormat.OpenXml.Office.SpreadsheetML.Y2017.RichData.RichValueValueType>? T
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData.RichValueValueType>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.SpreadsheetML.Y2017.RichData.RichValueValueType>>();
             set => SetAttribute(value);
         }
 

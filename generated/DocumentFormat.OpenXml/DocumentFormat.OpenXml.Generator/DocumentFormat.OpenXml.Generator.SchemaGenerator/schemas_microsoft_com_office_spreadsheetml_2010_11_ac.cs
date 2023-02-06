@@ -15,7 +15,7 @@ using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Ac
+namespace DocumentFormat.OpenXml.Office.SpreadsheetML.Y2010.M11.Ac
 {
     /// <summary>
     /// <para>Defines the AbsolutePath Class.</para>

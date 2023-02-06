@@ -3,7 +3,7 @@
 #nullable enable
 
 using Common;
-using DocumentFormat.OpenXml.Office.SpreadSheetML.Y2018.ThreadedComments;
+using DocumentFormat.OpenXml.Office.SpreadsheetML.Y2018.ThreadedComments;
 using DocumentFormat.OpenXml.Packaging;
 
 // WORKBOOK

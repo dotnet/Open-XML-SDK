@@ -14,7 +14,7 @@ using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2011.M01.Ac
+namespace DocumentFormat.OpenXml.Office.SpreadsheetML.Y2011.M01.Ac
 {
     /// <summary>
     /// <para>Defines the List Class.</para>

@@ -14,7 +14,7 @@ using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2020.RichValueRefresh
+namespace DocumentFormat.OpenXml.Office.SpreadsheetML.Y2020.RichValueRefresh
 {
     /// <summary>
     /// <para>Defines the RichValueRefreshIntervals Class.</para>
@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2020.RichValueRefresh
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2020.RichValueRefresh.RichValueRefreshInterval" /> <c>&lt;xlrvr:refreshInterval></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadsheetML.Y2020.RichValueRefresh.RichValueRefreshInterval" /> <c>&lt;xlrvr:refreshInterval></c></description></item>
     /// </list>
     /// </remark>
     public partial class RichValueRefreshIntervals : TypedOpenXmlCompositeElement
@@ -65,10 +65,10 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2020.RichValueRefresh
             base.ConfigureMetadata(builder);
             builder.SetSchema("xlrvr:refreshIntervals");
             builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2020.RichValueRefresh.RichValueRefreshInterval>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadsheetML.Y2020.RichValueRefresh.RichValueRefreshInterval>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2020.RichValueRefresh.RichValueRefreshInterval), 1, 0, version: FileFormatVersions.Office2021)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadsheetML.Y2020.RichValueRefresh.RichValueRefreshInterval), 1, 0, version: FileFormatVersions.Office2021)
             };
         }
 

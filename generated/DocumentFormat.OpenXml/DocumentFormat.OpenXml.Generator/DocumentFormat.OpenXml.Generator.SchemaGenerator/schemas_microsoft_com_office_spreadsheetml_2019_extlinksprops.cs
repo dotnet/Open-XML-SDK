@@ -14,7 +14,7 @@ using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2019.ExtLinksProps
+namespace DocumentFormat.OpenXml.Office.SpreadsheetML.Y2019.ExtLinksProps
 {
     /// <summary>
     /// <para>Defines the ExternalLinksPr Class.</para>

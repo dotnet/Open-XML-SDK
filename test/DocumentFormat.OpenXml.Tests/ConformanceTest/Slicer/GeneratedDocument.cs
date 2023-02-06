@@ -11,10 +11,10 @@ using S = DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main;
 using Sle = DocumentFormat.OpenXml.Office.Drawing.Y2010.Slicer;
 using Thm15 = DocumentFormat.OpenXml.Office.ThemeML.Y2012.Main;
 using Vt = DocumentFormat.OpenXml.OfficeDocument.Y2006.DocPropsVTypes;
-using X14 = DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main;
-using X15 = DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main;
-using X15ac = DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Ac;
-using Xdr = DocumentFormat.OpenXml.DrawingML.Y2006.SpreadSheetDrawing;
+using X14 = DocumentFormat.OpenXml.Office.SpreadsheetML.Y2009.M09.Main;
+using X15 = DocumentFormat.OpenXml.Office.SpreadsheetML.Y2010.M11.Main;
+using X15ac = DocumentFormat.OpenXml.Office.SpreadsheetML.Y2010.M11.Ac;
+using Xdr = DocumentFormat.OpenXml.DrawingML.Y2006.SpreadsheetDrawing;
 
 namespace DocumentFormat.OpenXml.Tests.SlicerClass
 {

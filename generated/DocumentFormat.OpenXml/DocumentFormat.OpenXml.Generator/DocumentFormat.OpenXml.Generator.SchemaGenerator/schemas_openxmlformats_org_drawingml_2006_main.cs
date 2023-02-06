@@ -15647,9 +15647,9 @@ namespace DocumentFormat.OpenXml.DrawingML.Y2006.Main
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingCanvas.WordprocessingCanvas" /> <c>&lt;wpc:wpc></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup.WordprocessingGroup" /> <c>&lt;wpg:wgp></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingShape.WordprocessingShape" /> <c>&lt;wps:wsp></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.SpreadSheetDrawing.WorksheetDrawing" /> <c>&lt;xdr:wsDr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.SpreadSheetDrawing.ContentPart" /> <c>&lt;xdr:contentPart></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.Y2010.SpreadSheetDrawing.ContentPart" /> <c>&lt;xdr14:contentPart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.SpreadsheetDrawing.WorksheetDrawing" /> <c>&lt;xdr:wsDr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.DrawingML.Y2006.SpreadsheetDrawing.ContentPart" /> <c>&lt;xdr:contentPart></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.Y2010.SpreadsheetDrawing.ContentPart" /> <c>&lt;xdr14:contentPart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.VML.ClientData" /> <c>&lt;xvml:ClientData></c></description></item>
     /// </list>
     /// </remark>
@@ -16031,9 +16031,9 @@ namespace DocumentFormat.OpenXml.DrawingML.Y2006.Main
             builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingCanvas.WordprocessingCanvas>();
             builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingGroup.WordprocessingGroup>();
             builder.AddChild<DocumentFormat.OpenXml.Office.Word.Y2010.WordprocessingShape.WordprocessingShape>();
-            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.SpreadSheetDrawing.WorksheetDrawing>();
-            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.SpreadSheetDrawing.ContentPart>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.Y2010.SpreadSheetDrawing.ContentPart>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.SpreadsheetDrawing.WorksheetDrawing>();
+            builder.AddChild<DocumentFormat.OpenXml.DrawingML.Y2006.SpreadsheetDrawing.ContentPart>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Excel.Y2010.SpreadsheetDrawing.ContentPart>();
             builder.AddChild<DocumentFormat.OpenXml.Office.Excel.VML.ClientData>();
             builder.AddElement<GraphicData>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>

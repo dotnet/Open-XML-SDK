@@ -15,7 +15,7 @@ using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2018.ThreadedComments
+namespace DocumentFormat.OpenXml.Office.SpreadsheetML.Y2018.ThreadedComments
 {
     /// <summary>
     /// <para>Defines the PersonList Class.</para>
@@ -25,8 +25,8 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2018.ThreadedComments
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2018.ThreadedComments.ExtensionList" /> <c>&lt;xltc:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2018.ThreadedComments.Person" /> <c>&lt;xltc:person></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadsheetML.Y2018.ThreadedComments.ExtensionList" /> <c>&lt;xltc:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadsheetML.Y2018.ThreadedComments.Person" /> <c>&lt;xltc:person></c></description></item>
     /// </list>
     /// </remark>
     public partial class PersonList : TypedOpenXmlPartRootElement
@@ -67,12 +67,12 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2018.ThreadedComments
             base.ConfigureMetadata(builder);
             builder.SetSchema("xltc:personList");
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2018.ThreadedComments.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2018.ThreadedComments.Person>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadsheetML.Y2018.ThreadedComments.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadsheetML.Y2018.ThreadedComments.Person>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2018.ThreadedComments.Person), 0, 0, version: FileFormatVersions.Office2019),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2018.ThreadedComments.ExtensionList), 0, 1, version: FileFormatVersions.Office2019)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadsheetML.Y2018.ThreadedComments.Person), 0, 0, version: FileFormatVersions.Office2019),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadsheetML.Y2018.ThreadedComments.ExtensionList), 0, 1, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -119,8 +119,8 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2018.ThreadedComments
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2018.ThreadedComments.ExtensionList" /> <c>&lt;xltc:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2018.ThreadedComments.ThreadedComment" /> <c>&lt;xltc:threadedComment></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadsheetML.Y2018.ThreadedComments.ExtensionList" /> <c>&lt;xltc:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadsheetML.Y2018.ThreadedComments.ThreadedComment" /> <c>&lt;xltc:threadedComment></c></description></item>
     /// </list>
     /// </remark>
     public partial class ThreadedComments : TypedOpenXmlPartRootElement
@@ -161,12 +161,12 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2018.ThreadedComments
             base.ConfigureMetadata(builder);
             builder.SetSchema("xltc:ThreadedComments");
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2018.ThreadedComments.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2018.ThreadedComments.ThreadedComment>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadsheetML.Y2018.ThreadedComments.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadsheetML.Y2018.ThreadedComments.ThreadedComment>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2018.ThreadedComments.ThreadedComment), 0, 0, version: FileFormatVersions.Office2019),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2018.ThreadedComments.ExtensionList), 0, 1, version: FileFormatVersions.Office2019)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadsheetML.Y2018.ThreadedComments.ThreadedComment), 0, 0, version: FileFormatVersions.Office2019),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadsheetML.Y2018.ThreadedComments.ExtensionList), 0, 1, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -213,7 +213,7 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2018.ThreadedComments
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2018.ThreadedComments.ExtensionList" /> <c>&lt;xltc:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadsheetML.Y2018.ThreadedComments.ExtensionList" /> <c>&lt;xltc:extLst></c></description></item>
     /// </list>
     /// </remark>
     public partial class Person : TypedOpenXmlCompositeElement
@@ -294,7 +294,7 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2018.ThreadedComments
             base.ConfigureMetadata(builder);
             builder.SetSchema("xltc:person");
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2018.ThreadedComments.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadsheetML.Y2018.ThreadedComments.ExtensionList>();
             builder.AddElement<Person>()
                 .AddAttribute("displayName", a => a.DisplayName, aBuilder =>
                 {
@@ -309,7 +309,7 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2018.ThreadedComments
                 .AddAttribute("providerId", a => a.ProviderId);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2018.ThreadedComments.ExtensionList), 0, 1, version: FileFormatVersions.Office2019)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadsheetML.Y2018.ThreadedComments.ExtensionList), 0, 1, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -320,9 +320,9 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2018.ThreadedComments
         /// <remark>
         /// xmlns:xltc = http://schemas.microsoft.com/office/spreadsheetml/2018/threadedcomments
         /// </remark>
-        public DocumentFormat.OpenXml.Office.SpreadSheetML.Y2018.ThreadedComments.ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Office.SpreadsheetML.Y2018.ThreadedComments.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2018.ThreadedComments.ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office.SpreadsheetML.Y2018.ThreadedComments.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -404,9 +404,9 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2018.ThreadedComments
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2018.ThreadedComments.ExtensionList" /> <c>&lt;xltc:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2018.ThreadedComments.ThreadedCommentText" /> <c>&lt;xltc:text></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2018.ThreadedComments.ThreadedCommentMentions" /> <c>&lt;xltc:mentions></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadsheetML.Y2018.ThreadedComments.ExtensionList" /> <c>&lt;xltc:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadsheetML.Y2018.ThreadedComments.ThreadedCommentText" /> <c>&lt;xltc:text></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadsheetML.Y2018.ThreadedComments.ThreadedCommentMentions" /> <c>&lt;xltc:mentions></c></description></item>
     /// </list>
     /// </remark>
     public partial class ThreadedComment : TypedOpenXmlCompositeElement
@@ -507,9 +507,9 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2018.ThreadedComments
             base.ConfigureMetadata(builder);
             builder.SetSchema("xltc:threadedComment");
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2018.ThreadedComments.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2018.ThreadedComments.ThreadedCommentText>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2018.ThreadedComments.ThreadedCommentMentions>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadsheetML.Y2018.ThreadedComments.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadsheetML.Y2018.ThreadedComments.ThreadedCommentText>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadsheetML.Y2018.ThreadedComments.ThreadedCommentMentions>();
             builder.AddElement<ThreadedComment>()
                 .AddAttribute("ref", a => a.Ref)
                 .AddAttribute("dT", a => a.DT)
@@ -530,9 +530,9 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2018.ThreadedComments
                 .AddAttribute("done", a => a.Done);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2018.ThreadedComments.ThreadedCommentText), 0, 1, version: FileFormatVersions.Office2019),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2018.ThreadedComments.ThreadedCommentMentions), 0, 1, version: FileFormatVersions.Office2019),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2018.ThreadedComments.ExtensionList), 0, 1, version: FileFormatVersions.Office2019)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadsheetML.Y2018.ThreadedComments.ThreadedCommentText), 0, 1, version: FileFormatVersions.Office2019),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadsheetML.Y2018.ThreadedComments.ThreadedCommentMentions), 0, 1, version: FileFormatVersions.Office2019),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadsheetML.Y2018.ThreadedComments.ExtensionList), 0, 1, version: FileFormatVersions.Office2019)
             };
         }
 
@@ -543,9 +543,9 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2018.ThreadedComments
         /// <remark>
         /// xmlns:xltc = http://schemas.microsoft.com/office/spreadsheetml/2018/threadedcomments
         /// </remark>
-        public DocumentFormat.OpenXml.Office.SpreadSheetML.Y2018.ThreadedComments.ThreadedCommentText? ThreadedCommentText
+        public DocumentFormat.OpenXml.Office.SpreadsheetML.Y2018.ThreadedComments.ThreadedCommentText? ThreadedCommentText
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2018.ThreadedComments.ThreadedCommentText>();
+            get => GetElement<DocumentFormat.OpenXml.Office.SpreadsheetML.Y2018.ThreadedComments.ThreadedCommentText>();
             set => SetElement(value);
         }
 
@@ -556,9 +556,9 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2018.ThreadedComments
         /// <remark>
         /// xmlns:xltc = http://schemas.microsoft.com/office/spreadsheetml/2018/threadedcomments
         /// </remark>
-        public DocumentFormat.OpenXml.Office.SpreadSheetML.Y2018.ThreadedComments.ThreadedCommentMentions? ThreadedCommentMentions
+        public DocumentFormat.OpenXml.Office.SpreadsheetML.Y2018.ThreadedComments.ThreadedCommentMentions? ThreadedCommentMentions
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2018.ThreadedComments.ThreadedCommentMentions>();
+            get => GetElement<DocumentFormat.OpenXml.Office.SpreadsheetML.Y2018.ThreadedComments.ThreadedCommentMentions>();
             set => SetElement(value);
         }
 
@@ -569,9 +569,9 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2018.ThreadedComments
         /// <remark>
         /// xmlns:xltc = http://schemas.microsoft.com/office/spreadsheetml/2018/threadedcomments
         /// </remark>
-        public DocumentFormat.OpenXml.Office.SpreadSheetML.Y2018.ThreadedComments.ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Office.SpreadsheetML.Y2018.ThreadedComments.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2018.ThreadedComments.ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office.SpreadsheetML.Y2018.ThreadedComments.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -625,7 +625,7 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2018.ThreadedComments
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2018.ThreadedComments.Mention" /> <c>&lt;xltc:mention></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadsheetML.Y2018.ThreadedComments.Mention" /> <c>&lt;xltc:mention></c></description></item>
     /// </list>
     /// </remark>
     public partial class ThreadedCommentMentions : TypedOpenXmlCompositeElement
@@ -666,10 +666,10 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2018.ThreadedComments
             base.ConfigureMetadata(builder);
             builder.SetSchema("xltc:mentions");
             builder.Availability = FileFormatVersions.Office2019;
-            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2018.ThreadedComments.Mention>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadsheetML.Y2018.ThreadedComments.Mention>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2018.ThreadedComments.Mention), 0, 0, version: FileFormatVersions.Office2019)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadsheetML.Y2018.ThreadedComments.Mention), 0, 0, version: FileFormatVersions.Office2019)
             };
         }
 

@@ -118,7 +118,7 @@
         {
           "QName": ":iconSet",
           "PropertyName": "IconSet",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.IconSetTypeValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.SpreadsheetML.Y2009.M09.Main.IconSetTypeValues\u003E",
           "Version": "Office2010",
           "PropertyComments": "iconSet"
         },
@@ -974,7 +974,7 @@
         },
         {
           "QName": ":t",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.SupportingPropertyBagValueType\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.SpreadsheetML.Y2017.RichData2.SupportingPropertyBagValueType\u003E",
           "Version": "Office2019",
           "PropertyComments": "t"
         }
@@ -1029,7 +1029,7 @@
       "Attributes": [
         {
           "QName": ":t",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.SupportingPropertyBagArrayValueType\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.SpreadsheetML.Y2017.RichData2.SupportingPropertyBagArrayValueType\u003E",
           "Version": "Office2019",
           "PropertyComments": "t"
         }
@@ -1090,7 +1090,7 @@
       "Attributes": [
         {
           "QName": ":t",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.ArrayValueType\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.SpreadsheetML.Y2017.RichData2.ArrayValueType\u003E",
           "Version": "Office2019",
           "PropertyComments": "t"
         }
@@ -1200,7 +1200,7 @@
         },
         {
           "QName": ":t",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.RichFormatPropertyType\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.SpreadsheetML.Y2017.RichData2.RichFormatPropertyType\u003E",
           "Version": "Office2019",
           "PropertyComments": "t",
           "Validators": [

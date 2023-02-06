@@ -9,9 +9,9 @@ using A = DocumentFormat.OpenXml.DrawingML.Y2006.Main;
 using Ap = DocumentFormat.OpenXml.OfficeDocument.Y2006.Extended_Properties;
 using Thm15 = DocumentFormat.OpenXml.Office.ThemeML.Y2012.Main;
 using Vt = DocumentFormat.OpenXml.OfficeDocument.Y2006.DocPropsVTypes;
-using X14 = DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main;
-using X15 = DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main;
-using X15ac = DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Ac;
+using X14 = DocumentFormat.OpenXml.Office.SpreadsheetML.Y2009.M09.Main;
+using X15 = DocumentFormat.OpenXml.Office.SpreadsheetML.Y2010.M11.Main;
+using X15ac = DocumentFormat.OpenXml.Office.SpreadsheetML.Y2010.M11.Ac;
 
 namespace DocumentFormat.OpenXml.Tests.WorkBookPrClass
 {

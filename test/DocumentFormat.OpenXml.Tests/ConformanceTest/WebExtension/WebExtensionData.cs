@@ -12,10 +12,10 @@ using Thm15 = DocumentFormat.OpenXml.Office.ThemeML.Y2012.Main;
 using Vt = DocumentFormat.OpenXml.OfficeDocument.Y2006.DocPropsVTypes;
 using We = DocumentFormat.OpenXml.Office.WebExtensions.WebExtensions.Y2010.M11;
 using Wetp = DocumentFormat.OpenXml.Office.WebExtensions.TaskPanes.Y2010.M11;
-using X14 = DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main;
-using X15 = DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main;
-using X15ac = DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Ac;
-using Xdr = DocumentFormat.OpenXml.DrawingML.Y2006.SpreadSheetDrawing;
+using X14 = DocumentFormat.OpenXml.Office.SpreadsheetML.Y2009.M09.Main;
+using X15 = DocumentFormat.OpenXml.Office.SpreadsheetML.Y2010.M11.Main;
+using X15ac = DocumentFormat.OpenXml.Office.SpreadsheetML.Y2010.M11.Ac;
+using Xdr = DocumentFormat.OpenXml.DrawingML.Y2006.SpreadsheetDrawing;
 
 namespace DocumentFormat.OpenXml.Tests.WebExtensionClass
 {

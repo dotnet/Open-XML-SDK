@@ -19,7 +19,7 @@ namespace DocumentFormat.OpenXml.Packaging
     {
         internal const string ContentTypeConstant = "application/vnd.ms-excel.slicer+xml";
         internal const string RelationshipTypeConstant = "http://schemas.microsoft.com/office/2007/relationships/slicer";
-        private DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.Slicers? _rootElement;
+        private DocumentFormat.OpenXml.Office.SpreadsheetML.Y2009.M09.Main.Slicers? _rootElement;
 
         /// <summary>
         /// Creates an instance of the SlicersPart OpenXmlType
@@ -40,7 +40,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             set
             {
-                _rootElement = value as DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.Slicers;
+                _rootElement = value as DocumentFormat.OpenXml.Office.SpreadsheetML.Y2009.M09.Main.Slicers;
             }
         }
 
@@ -52,13 +52,13 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets or sets the root element of this part.
         /// </summary>
-        public DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.Slicers Slicers
+        public DocumentFormat.OpenXml.Office.SpreadsheetML.Y2009.M09.Main.Slicers Slicers
         {
             get
             {
                 if (_rootElement is null)
                 {
-                    LoadDomTree<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.Slicers>();
+                    LoadDomTree<DocumentFormat.OpenXml.Office.SpreadsheetML.Y2009.M09.Main.Slicers>();
                 }
 
                 return _rootElement!;

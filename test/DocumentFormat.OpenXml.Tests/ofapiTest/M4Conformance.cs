@@ -48,7 +48,7 @@ namespace DocumentFormat.OpenXml.Tests
             using (var doc = SpreadsheetDocument.Open(stream, false))
             {
                 var ele14 = doc.WorkbookPart.RootElement.LastChild.First().First();
-                Assert.True(ele14 is DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main.WorkbookProperties);
+                Assert.True(ele14 is DocumentFormat.OpenXml.Office.SpreadsheetML.Y2009.M09.Main.WorkbookProperties);
             }
         }
 

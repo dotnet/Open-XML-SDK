@@ -14,7 +14,7 @@ using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotRichData
+namespace DocumentFormat.OpenXml.Office.SpreadsheetML.Y2022.PivotRichData
 {
     /// <summary>
     /// <para>Defines the RichDataPivotCacheGuid Class.</para>

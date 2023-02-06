@@ -3,7 +3,7 @@
 
 using DocumentFormat.OpenXml.DrawingML.Y2006.Chart;
 using DocumentFormat.OpenXml.DrawingML.Y2006.Main;
-using DocumentFormat.OpenXml.DrawingML.Y2006.SpreadSheetDrawing;
+using DocumentFormat.OpenXml.DrawingML.Y2006.SpreadsheetDrawing;
 using DocumentFormat.OpenXml.OfficeDocument.Y2006.Bibliography;
 using DocumentFormat.OpenXml.OfficeDocument.Y2006.DocPropsVTypes;
 using DocumentFormat.OpenXml.Packaging;

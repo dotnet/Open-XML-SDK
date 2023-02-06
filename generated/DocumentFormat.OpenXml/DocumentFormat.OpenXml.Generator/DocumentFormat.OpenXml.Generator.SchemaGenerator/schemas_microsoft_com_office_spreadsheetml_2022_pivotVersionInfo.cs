@@ -14,7 +14,7 @@ using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo
+namespace DocumentFormat.OpenXml.Office.SpreadsheetML.Y2022.PivotVersionInfo
 {
     /// <summary>
     /// <para>Defines the CacheVersionInfo Class.</para>
@@ -24,8 +24,8 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo.RequiredFeatureXsdstring" /> <c>&lt;xxpvi:requiredFeature></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo.LastRefreshFeatureXsdstring" /> <c>&lt;xxpvi:lastRefreshFeature></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadsheetML.Y2022.PivotVersionInfo.RequiredFeatureXsdstring" /> <c>&lt;xxpvi:requiredFeature></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadsheetML.Y2022.PivotVersionInfo.LastRefreshFeatureXsdstring" /> <c>&lt;xxpvi:lastRefreshFeature></c></description></item>
     /// </list>
     /// </remark>
     public partial class CacheVersionInfo : TypedOpenXmlCompositeElement
@@ -66,12 +66,12 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo
             base.ConfigureMetadata(builder);
             builder.SetSchema("xxpvi:cacheVersionInfo");
             builder.Availability = FileFormatVersions.Microsoft365;
-            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo.RequiredFeatureXsdstring>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo.LastRefreshFeatureXsdstring>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadsheetML.Y2022.PivotVersionInfo.RequiredFeatureXsdstring>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadsheetML.Y2022.PivotVersionInfo.LastRefreshFeatureXsdstring>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo.RequiredFeatureXsdstring), 0, 0, version: FileFormatVersions.Microsoft365),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo.LastRefreshFeatureXsdstring), 0, 0, version: FileFormatVersions.Microsoft365)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadsheetML.Y2022.PivotVersionInfo.RequiredFeatureXsdstring), 0, 0, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadsheetML.Y2022.PivotVersionInfo.LastRefreshFeatureXsdstring), 0, 0, version: FileFormatVersions.Microsoft365)
             };
         }
 
@@ -87,8 +87,8 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo.RequiredFeatureXsdstring" /> <c>&lt;xxpvi:requiredFeature></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo.LastUpdateFeatureXsdstring" /> <c>&lt;xxpvi:lastUpdateFeature></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadsheetML.Y2022.PivotVersionInfo.RequiredFeatureXsdstring" /> <c>&lt;xxpvi:requiredFeature></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadsheetML.Y2022.PivotVersionInfo.LastUpdateFeatureXsdstring" /> <c>&lt;xxpvi:lastUpdateFeature></c></description></item>
     /// </list>
     /// </remark>
     public partial class PivotVersionInfo : TypedOpenXmlCompositeElement
@@ -129,12 +129,12 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo
             base.ConfigureMetadata(builder);
             builder.SetSchema("xxpvi:pivotVersionInfo");
             builder.Availability = FileFormatVersions.Microsoft365;
-            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo.RequiredFeatureXsdstring>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo.LastUpdateFeatureXsdstring>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadsheetML.Y2022.PivotVersionInfo.RequiredFeatureXsdstring>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadsheetML.Y2022.PivotVersionInfo.LastUpdateFeatureXsdstring>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo.RequiredFeatureXsdstring), 0, 0, version: FileFormatVersions.Microsoft365),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo.LastUpdateFeatureXsdstring), 0, 0, version: FileFormatVersions.Microsoft365)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadsheetML.Y2022.PivotVersionInfo.RequiredFeatureXsdstring), 0, 0, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadsheetML.Y2022.PivotVersionInfo.LastUpdateFeatureXsdstring), 0, 0, version: FileFormatVersions.Microsoft365)
             };
         }
 

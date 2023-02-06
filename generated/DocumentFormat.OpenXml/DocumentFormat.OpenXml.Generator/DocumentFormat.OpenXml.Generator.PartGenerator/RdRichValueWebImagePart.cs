@@ -19,7 +19,7 @@ namespace DocumentFormat.OpenXml.Packaging
     {
         internal const string ContentTypeConstant = "application/vnd.ms-excel.rdrichvaluewebimage+xml";
         internal const string RelationshipTypeConstant = "http://schemas.microsoft.com/office/2020/07/relationships/rdrichvaluewebimage";
-        private DocumentFormat.OpenXml.Office.SpreadSheetML.Y2020.RichDataWebImage.WebImagesSupportingRichData? _rootElement;
+        private DocumentFormat.OpenXml.Office.SpreadsheetML.Y2020.RichDataWebImage.WebImagesSupportingRichData? _rootElement;
 
         /// <summary>
         /// Creates an instance of the RdRichValueWebImagePart OpenXmlType
@@ -40,7 +40,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             set
             {
-                _rootElement = value as DocumentFormat.OpenXml.Office.SpreadSheetML.Y2020.RichDataWebImage.WebImagesSupportingRichData;
+                _rootElement = value as DocumentFormat.OpenXml.Office.SpreadsheetML.Y2020.RichDataWebImage.WebImagesSupportingRichData;
             }
         }
 
@@ -52,13 +52,13 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets or sets the root element of this part.
         /// </summary>
-        public DocumentFormat.OpenXml.Office.SpreadSheetML.Y2020.RichDataWebImage.WebImagesSupportingRichData WebImagesSupportingRichData
+        public DocumentFormat.OpenXml.Office.SpreadsheetML.Y2020.RichDataWebImage.WebImagesSupportingRichData WebImagesSupportingRichData
         {
             get
             {
                 if (_rootElement is null)
                 {
-                    LoadDomTree<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2020.RichDataWebImage.WebImagesSupportingRichData>();
+                    LoadDomTree<DocumentFormat.OpenXml.Office.SpreadsheetML.Y2020.RichDataWebImage.WebImagesSupportingRichData>();
                 }
 
                 return _rootElement!;

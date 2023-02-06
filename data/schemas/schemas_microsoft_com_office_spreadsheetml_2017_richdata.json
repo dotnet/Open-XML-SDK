@@ -223,7 +223,7 @@
       "Attributes": [
         {
           "QName": ":t",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData.RichValueFallbackType\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.SpreadsheetML.Y2017.RichData.RichValueFallbackType\u003E",
           "Version": "Office2019",
           "PropertyComments": "t"
         }
@@ -297,7 +297,7 @@
         },
         {
           "QName": ":t",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData.RichValueValueType\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.SpreadsheetML.Y2017.RichData.RichValueValueType\u003E",
           "Version": "Office2019",
           "PropertyComments": "t"
         }

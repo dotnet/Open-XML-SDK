@@ -33,7 +33,7 @@
   },
   {
     "Prefix": "xdr",
-    "Namespace": "DocumentFormat.OpenXml.DrawingML.Y2006.SpreadSheetDrawing"
+    "Namespace": "DocumentFormat.OpenXml.DrawingML.Y2006.SpreadsheetDrawing"
   },
   {
     "Prefix": "wp",
@@ -189,7 +189,7 @@
   },
   {
     "Prefix": "xdr14",
-    "Namespace": "DocumentFormat.OpenXml.Office.Excel.Y2010.SpreadSheetDrawing"
+    "Namespace": "DocumentFormat.OpenXml.Office.Excel.Y2010.SpreadsheetDrawing"
   },
   {
     "Prefix": "o",
@@ -253,127 +253,127 @@
   },
   {
     "Prefix": "x14",
-    "Namespace": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main"
+    "Namespace": "DocumentFormat.OpenXml.Office.SpreadsheetML.Y2009.M09.Main"
   },
   {
     "Prefix": "x15ac",
-    "Namespace": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Ac"
+    "Namespace": "DocumentFormat.OpenXml.Office.SpreadsheetML.Y2010.M11.Ac"
   },
   {
     "Prefix": "x15",
-    "Namespace": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main"
+    "Namespace": "DocumentFormat.OpenXml.Office.SpreadsheetML.Y2010.M11.Main"
   },
   {
     "Prefix": "x12ac",
-    "Namespace": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2011.M01.Ac"
+    "Namespace": "DocumentFormat.OpenXml.Office.SpreadsheetML.Y2011.M01.Ac"
   },
   {
     "Prefix": "x16",
-    "Namespace": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2014.M11.Main"
+    "Namespace": "DocumentFormat.OpenXml.Office.SpreadsheetML.Y2014.M11.Main"
   },
   {
     "Prefix": "xr",
-    "Namespace": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2014.Revision"
+    "Namespace": "DocumentFormat.OpenXml.Office.SpreadsheetML.Y2014.Revision"
   },
   {
     "Prefix": "x16r2",
-    "Namespace": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2015.M02.Main"
+    "Namespace": "DocumentFormat.OpenXml.Office.SpreadsheetML.Y2015.M02.Main"
   },
   {
     "Prefix": "xr2",
-    "Namespace": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2015.Revision2"
+    "Namespace": "DocumentFormat.OpenXml.Office.SpreadsheetML.Y2015.Revision2"
   },
   {
     "Prefix": "xlPr",
-    "Namespace": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2016.M01.Main"
+    "Namespace": "DocumentFormat.OpenXml.Office.SpreadsheetML.Y2016.M01.Main"
   },
   {
     "Prefix": "xpdl",
-    "Namespace": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2016.PivotDefaultLayout"
+    "Namespace": "DocumentFormat.OpenXml.Office.SpreadsheetML.Y2016.PivotDefaultLayout"
   },
   {
     "Prefix": "xr10",
-    "Namespace": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2016.Revision10"
+    "Namespace": "DocumentFormat.OpenXml.Office.SpreadsheetML.Y2016.Revision10"
   },
   {
     "Prefix": "xr3",
-    "Namespace": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2016.Revision3"
+    "Namespace": "DocumentFormat.OpenXml.Office.SpreadsheetML.Y2016.Revision3"
   },
   {
     "Prefix": "xr5",
-    "Namespace": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2016.Revision5"
+    "Namespace": "DocumentFormat.OpenXml.Office.SpreadsheetML.Y2016.Revision5"
   },
   {
     "Prefix": "xr6",
-    "Namespace": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2016.Revision6"
+    "Namespace": "DocumentFormat.OpenXml.Office.SpreadsheetML.Y2016.Revision6"
   },
   {
     "Prefix": "xr9",
-    "Namespace": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2016.Revision9"
+    "Namespace": "DocumentFormat.OpenXml.Office.SpreadsheetML.Y2016.Revision9"
   },
   {
     "Prefix": "xda",
-    "Namespace": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.DynamicArray"
+    "Namespace": "DocumentFormat.OpenXml.Office.SpreadsheetML.Y2017.DynamicArray"
   },
   {
     "Prefix": "xr16",
-    "Namespace": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.Revision16"
+    "Namespace": "DocumentFormat.OpenXml.Office.SpreadsheetML.Y2017.Revision16"
   },
   {
     "Prefix": "xlrd",
-    "Namespace": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData"
+    "Namespace": "DocumentFormat.OpenXml.Office.SpreadsheetML.Y2017.RichData"
   },
   {
     "Prefix": "xlrd2",
-    "Namespace": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2"
+    "Namespace": "DocumentFormat.OpenXml.Office.SpreadsheetML.Y2017.RichData2"
   },
   {
     "Prefix": "xcalcf",
-    "Namespace": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2018.CalcFeatures"
+    "Namespace": "DocumentFormat.OpenXml.Office.SpreadsheetML.Y2018.CalcFeatures"
   },
   {
     "Prefix": "x16r3",
-    "Namespace": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2018.M08.Main"
+    "Namespace": "DocumentFormat.OpenXml.Office.SpreadsheetML.Y2018.M08.Main"
   },
   {
     "Prefix": "xltc",
-    "Namespace": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2018.ThreadedComments"
+    "Namespace": "DocumentFormat.OpenXml.Office.SpreadsheetML.Y2018.ThreadedComments"
   },
   {
     "Prefix": "xxlnp",
-    "Namespace": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2019.ExtLinksProps"
+    "Namespace": "DocumentFormat.OpenXml.Office.SpreadsheetML.Y2019.ExtLinksProps"
   },
   {
     "Prefix": "xnsv",
-    "Namespace": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2019.NamedSheetViews"
+    "Namespace": "DocumentFormat.OpenXml.Office.SpreadsheetML.Y2019.NamedSheetViews"
   },
   {
     "Prefix": "xxpim",
-    "Namespace": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2020.PivotNov2020"
+    "Namespace": "DocumentFormat.OpenXml.Office.SpreadsheetML.Y2020.PivotNov2020"
   },
   {
     "Prefix": "xlrdwi",
-    "Namespace": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2020.RichDataWebImage"
+    "Namespace": "DocumentFormat.OpenXml.Office.SpreadsheetML.Y2020.RichDataWebImage"
   },
   {
     "Prefix": "xlrvr",
-    "Namespace": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2020.RichValueRefresh"
+    "Namespace": "DocumentFormat.OpenXml.Office.SpreadsheetML.Y2020.RichValueRefresh"
   },
   {
     "Prefix": "xltc2",
-    "Namespace": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2020.ThreadedComments2"
+    "Namespace": "DocumentFormat.OpenXml.Office.SpreadsheetML.Y2020.ThreadedComments2"
   },
   {
     "Prefix": "xxl21",
-    "Namespace": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021"
+    "Namespace": "DocumentFormat.OpenXml.Office.SpreadsheetML.Y2021.ExtLinks2021"
   },
   {
     "Prefix": "xprd",
-    "Namespace": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotRichData"
+    "Namespace": "DocumentFormat.OpenXml.Office.SpreadsheetML.Y2022.PivotRichData"
   },
   {
     "Prefix": "xxpvi",
-    "Namespace": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo"
+    "Namespace": "DocumentFormat.OpenXml.Office.SpreadsheetML.Y2022.PivotVersionInfo"
   },
   {
     "Prefix": "t",

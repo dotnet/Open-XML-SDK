@@ -11,7 +11,7 @@
         {
           "QName": ":editAs",
           "PropertyName": "EditAs",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.SpreadSheetDrawing.EditAsValues\u003E",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.DrawingML.Y2006.SpreadsheetDrawing.EditAsValues\u003E",
           "PropertyComments": "Positioning and Resizing Behaviors",
           "Validators": [
             {

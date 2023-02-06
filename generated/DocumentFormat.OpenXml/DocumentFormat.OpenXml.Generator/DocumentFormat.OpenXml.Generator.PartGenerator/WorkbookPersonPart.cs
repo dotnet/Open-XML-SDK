@@ -19,7 +19,7 @@ namespace DocumentFormat.OpenXml.Packaging
     {
         internal const string ContentTypeConstant = "application/vnd.ms-excel.person+xml";
         internal const string RelationshipTypeConstant = "http://schemas.microsoft.com/office/2017/10/relationships/person";
-        private DocumentFormat.OpenXml.Office.SpreadSheetML.Y2018.ThreadedComments.PersonList? _rootElement;
+        private DocumentFormat.OpenXml.Office.SpreadsheetML.Y2018.ThreadedComments.PersonList? _rootElement;
 
         /// <summary>
         /// Creates an instance of the WorkbookPersonPart OpenXmlType
@@ -40,7 +40,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             set
             {
-                _rootElement = value as DocumentFormat.OpenXml.Office.SpreadSheetML.Y2018.ThreadedComments.PersonList;
+                _rootElement = value as DocumentFormat.OpenXml.Office.SpreadsheetML.Y2018.ThreadedComments.PersonList;
             }
         }
 
@@ -49,13 +49,13 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets or sets the root element of this part.
         /// </summary>
-        public DocumentFormat.OpenXml.Office.SpreadSheetML.Y2018.ThreadedComments.PersonList PersonList
+        public DocumentFormat.OpenXml.Office.SpreadsheetML.Y2018.ThreadedComments.PersonList PersonList
         {
             get
             {
                 if (_rootElement is null)
                 {
-                    LoadDomTree<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2018.ThreadedComments.PersonList>();
+                    LoadDomTree<DocumentFormat.OpenXml.Office.SpreadsheetML.Y2018.ThreadedComments.PersonList>();
                 }
 
                 return _rootElement!;

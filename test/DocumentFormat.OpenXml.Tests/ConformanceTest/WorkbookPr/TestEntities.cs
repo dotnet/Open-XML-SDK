@@ -9,8 +9,8 @@ using System.IO;
 using System.Linq;
 using Xunit;
 
-using X15 = DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main;
-using X15ac = DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Ac;
+using X15 = DocumentFormat.OpenXml.Office.SpreadsheetML.Y2010.M11.Main;
+using X15ac = DocumentFormat.OpenXml.Office.SpreadsheetML.Y2010.M11.Ac;
 
 namespace DocumentFormat.OpenXml.Tests.WorkBookPr
 {

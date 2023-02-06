@@ -8,7 +8,7 @@ using System;
 using System.IO;
 using System.Linq;
 
-using X15 = DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main;
+using X15 = DocumentFormat.OpenXml.Office.SpreadsheetML.Y2010.M11.Main;
 
 namespace DocumentFormat.OpenXml.Tests.Pivot
 {

@@ -14,7 +14,7 @@ using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021
+namespace DocumentFormat.OpenXml.Office.SpreadsheetML.Y2021.ExtLinks2021
 {
     /// <summary>
     /// <para>Defines the ExternalBookAlternateUrls Class.</para>
@@ -24,8 +24,8 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021.AbsoluteUrlAlternateUrl" /> <c>&lt;xxl21:absoluteUrl></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021.RelativeUrlAlternateUrl" /> <c>&lt;xxl21:relativeUrl></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadsheetML.Y2021.ExtLinks2021.AbsoluteUrlAlternateUrl" /> <c>&lt;xxl21:absoluteUrl></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadsheetML.Y2021.ExtLinks2021.RelativeUrlAlternateUrl" /> <c>&lt;xxl21:relativeUrl></c></description></item>
     /// </list>
     /// </remark>
     public partial class ExternalBookAlternateUrls : TypedOpenXmlCompositeElement
@@ -86,15 +86,15 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021
             base.ConfigureMetadata(builder);
             builder.SetSchema("xxl21:alternateUrls");
             builder.Availability = FileFormatVersions.Microsoft365;
-            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021.AbsoluteUrlAlternateUrl>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021.RelativeUrlAlternateUrl>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadsheetML.Y2021.ExtLinks2021.AbsoluteUrlAlternateUrl>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadsheetML.Y2021.ExtLinks2021.RelativeUrlAlternateUrl>();
             builder.AddElement<ExternalBookAlternateUrls>()
                 .AddAttribute("driveId", a => a.DriveId)
                 .AddAttribute("itemId", a => a.ItemId);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021.AbsoluteUrlAlternateUrl), 0, 1, version: FileFormatVersions.Microsoft365),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021.RelativeUrlAlternateUrl), 0, 1, version: FileFormatVersions.Microsoft365)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadsheetML.Y2021.ExtLinks2021.AbsoluteUrlAlternateUrl), 0, 1, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadsheetML.Y2021.ExtLinks2021.RelativeUrlAlternateUrl), 0, 1, version: FileFormatVersions.Microsoft365)
             };
         }
 
@@ -105,9 +105,9 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021
         /// <remark>
         /// xmlns:xxl21 = http://schemas.microsoft.com/office/spreadsheetml/2021/extlinks2021
         /// </remark>
-        public DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021.AbsoluteUrlAlternateUrl? AbsoluteUrlAlternateUrl
+        public DocumentFormat.OpenXml.Office.SpreadsheetML.Y2021.ExtLinks2021.AbsoluteUrlAlternateUrl? AbsoluteUrlAlternateUrl
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021.AbsoluteUrlAlternateUrl>();
+            get => GetElement<DocumentFormat.OpenXml.Office.SpreadsheetML.Y2021.ExtLinks2021.AbsoluteUrlAlternateUrl>();
             set => SetElement(value);
         }
 
@@ -118,9 +118,9 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021
         /// <remark>
         /// xmlns:xxl21 = http://schemas.microsoft.com/office/spreadsheetml/2021/extlinks2021
         /// </remark>
-        public DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021.RelativeUrlAlternateUrl? RelativeUrlAlternateUrl
+        public DocumentFormat.OpenXml.Office.SpreadsheetML.Y2021.ExtLinks2021.RelativeUrlAlternateUrl? RelativeUrlAlternateUrl
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021.RelativeUrlAlternateUrl>();
+            get => GetElement<DocumentFormat.OpenXml.Office.SpreadsheetML.Y2021.ExtLinks2021.RelativeUrlAlternateUrl>();
             set => SetElement(value);
         }
 

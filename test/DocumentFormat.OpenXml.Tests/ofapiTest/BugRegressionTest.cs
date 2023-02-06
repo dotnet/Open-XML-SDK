@@ -15,7 +15,7 @@ using static DocumentFormat.OpenXml.Tests.TestAssets;
 using D = DocumentFormat.OpenXml.DrawingML.Y2006.Main;
 using DC = DocumentFormat.OpenXml.DrawingML.Y2006.Chart;
 using Dgm = DocumentFormat.OpenXml.DrawingML.Y2006.Diagram;
-using DS = DocumentFormat.OpenXml.DrawingML.Y2006.SpreadSheetDrawing;
+using DS = DocumentFormat.OpenXml.DrawingML.Y2006.SpreadsheetDrawing;
 using DW = DocumentFormat.OpenXml.DrawingML.Y2006.WordprocessingDrawing;
 using EP = DocumentFormat.OpenXml.OfficeDocument.Y2006.Extended_Properties;
 using S = DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main;
@@ -348,12 +348,12 @@ namespace DocumentFormat.OpenXml.Tests
         {
             var validator = new OpenXmlValidator(version);
 
-            Office.SpreadSheetML.Y2009.M09.Main.FormControlProperties fp = new Office.SpreadSheetML.Y2009.M09.Main.FormControlProperties();
+            Office.SpreadsheetML.Y2009.M09.Main.FormControlProperties fp = new Office.SpreadsheetML.Y2009.M09.Main.FormControlProperties();
 
             var errors = validator.Validate(fp);
             Assert.Empty(errors);
 
-            fp.AppendChild(new Office.SpreadSheetML.Y2009.M09.Main.BorderColor());
+            fp.AppendChild(new Office.SpreadsheetML.Y2009.M09.Main.BorderColor());
             errors = validator.Validate(fp);
             Assert.Single(errors);
             Assert.Equal(ValidationErrorType.Schema, errors.First().ErrorType);

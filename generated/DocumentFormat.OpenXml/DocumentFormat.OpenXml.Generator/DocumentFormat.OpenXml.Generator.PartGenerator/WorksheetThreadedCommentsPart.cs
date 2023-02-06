@@ -19,7 +19,7 @@ namespace DocumentFormat.OpenXml.Packaging
     {
         internal const string ContentTypeConstant = "application/vnd.ms-excel.threadedcomments+xml";
         internal const string RelationshipTypeConstant = "http://schemas.microsoft.com/office/2017/10/relationships/threadedComment";
-        private DocumentFormat.OpenXml.Office.SpreadSheetML.Y2018.ThreadedComments.ThreadedComments? _rootElement;
+        private DocumentFormat.OpenXml.Office.SpreadsheetML.Y2018.ThreadedComments.ThreadedComments? _rootElement;
 
         /// <summary>
         /// Creates an instance of the WorksheetThreadedCommentsPart OpenXmlType
@@ -40,7 +40,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             set
             {
-                _rootElement = value as DocumentFormat.OpenXml.Office.SpreadSheetML.Y2018.ThreadedComments.ThreadedComments;
+                _rootElement = value as DocumentFormat.OpenXml.Office.SpreadsheetML.Y2018.ThreadedComments.ThreadedComments;
             }
         }
 
@@ -52,13 +52,13 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets or sets the root element of this part.
         /// </summary>
-        public DocumentFormat.OpenXml.Office.SpreadSheetML.Y2018.ThreadedComments.ThreadedComments ThreadedComments
+        public DocumentFormat.OpenXml.Office.SpreadsheetML.Y2018.ThreadedComments.ThreadedComments ThreadedComments
         {
             get
             {
                 if (_rootElement is null)
                 {
-                    LoadDomTree<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2018.ThreadedComments.ThreadedComments>();
+                    LoadDomTree<DocumentFormat.OpenXml.Office.SpreadsheetML.Y2018.ThreadedComments.ThreadedComments>();
                 }
 
                 return _rootElement!;

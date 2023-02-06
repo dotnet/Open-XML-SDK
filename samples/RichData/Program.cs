@@ -2,9 +2,9 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml;
-using DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData;
-using DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2;
-using DocumentFormat.OpenXml.Office.SpreadSheetML.Y2020.RichDataWebImage;
+using DocumentFormat.OpenXml.Office.SpreadsheetML.Y2017.RichData;
+using DocumentFormat.OpenXml.Office.SpreadsheetML.Y2017.RichData2;
+using DocumentFormat.OpenXml.Office.SpreadsheetML.Y2020.RichDataWebImage;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main;
 using System;
@@ -12,7 +12,7 @@ using System.Collections.Generic;
 using System.Linq;
 
 using NumberingFormat = DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main.NumberingFormat;
-using Value = DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData.Value;
+using Value = DocumentFormat.OpenXml.Office.SpreadsheetML.Y2017.RichData.Value;
 
 namespace RichData
 {
@@ -264,10 +264,10 @@ namespace RichData
             RdArrayPart rdArrayPart = workbookPart.AddNewPart<RdArrayPart>();
 
             rdArrayPart.ArrayData = new ArrayData(
-                new DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.Array(
+                new DocumentFormat.OpenXml.Office.SpreadsheetML.Y2017.RichData2.Array(
                     new ArrayValue("7") { T = ArrayValueType.R })
                 { R = 1 },
-                new DocumentFormat.OpenXml.Office.SpreadSheetML.Y2017.RichData2.Array(
+                new DocumentFormat.OpenXml.Office.SpreadsheetML.Y2017.RichData2.Array(
                     new ArrayValue("Pacific Time Zone") { T = ArrayValueType.S })
                 { R = 1 })
             { Count = 2 };

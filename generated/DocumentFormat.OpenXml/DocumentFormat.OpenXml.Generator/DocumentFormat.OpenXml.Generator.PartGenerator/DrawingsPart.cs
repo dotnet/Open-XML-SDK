@@ -19,7 +19,7 @@ namespace DocumentFormat.OpenXml.Packaging
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.drawing+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/drawing";
-        private DocumentFormat.OpenXml.DrawingML.Y2006.SpreadSheetDrawing.WorksheetDrawing? _rootElement;
+        private DocumentFormat.OpenXml.DrawingML.Y2006.SpreadsheetDrawing.WorksheetDrawing? _rootElement;
 
         /// <summary>
         /// Creates an instance of the DrawingsPart OpenXmlType
@@ -85,7 +85,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             set
             {
-                _rootElement = value as DocumentFormat.OpenXml.DrawingML.Y2006.SpreadSheetDrawing.WorksheetDrawing;
+                _rootElement = value as DocumentFormat.OpenXml.DrawingML.Y2006.SpreadsheetDrawing.WorksheetDrawing;
             }
         }
 
@@ -102,13 +102,13 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets or sets the root element of this part.
         /// </summary>
-        public DocumentFormat.OpenXml.DrawingML.Y2006.SpreadSheetDrawing.WorksheetDrawing WorksheetDrawing
+        public DocumentFormat.OpenXml.DrawingML.Y2006.SpreadsheetDrawing.WorksheetDrawing WorksheetDrawing
         {
             get
             {
                 if (_rootElement is null)
                 {
-                    LoadDomTree<DocumentFormat.OpenXml.DrawingML.Y2006.SpreadSheetDrawing.WorksheetDrawing>();
+                    LoadDomTree<DocumentFormat.OpenXml.DrawingML.Y2006.SpreadsheetDrawing.WorksheetDrawing>();
                 }
 
                 return _rootElement!;

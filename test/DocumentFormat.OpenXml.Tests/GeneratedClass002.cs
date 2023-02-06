@@ -16,9 +16,9 @@ using Dgm = DocumentFormat.OpenXml.DrawingML.Y2006.Diagram;
 using Dsp = DocumentFormat.OpenXml.Office.Drawing.Y2008.Diagram;
 using S = DocumentFormat.OpenXml.SpreadsheetML.Y2006.Main;
 using Vt = DocumentFormat.OpenXml.OfficeDocument.Y2006.DocPropsVTypes;
-using X14 = DocumentFormat.OpenXml.Office.SpreadSheetML.Y2009.M09.Main;
-using X15 = DocumentFormat.OpenXml.Office.SpreadSheetML.Y2010.M11.Main;
-using Xdr = DocumentFormat.OpenXml.DrawingML.Y2006.SpreadSheetDrawing;
+using X14 = DocumentFormat.OpenXml.Office.SpreadsheetML.Y2009.M09.Main;
+using X15 = DocumentFormat.OpenXml.Office.SpreadsheetML.Y2010.M11.Main;
+using Xdr = DocumentFormat.OpenXml.DrawingML.Y2006.SpreadsheetDrawing;
 
 namespace DocumentFormat.OpenXml.Tests
 {
