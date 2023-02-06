@@ -47,6 +47,8 @@ namespace DocumentFormat.OpenXml.Tests
             using var stream = GetStream(TestFiles.Strict01, true);
             using (var doc = WordprocessingDocument.Open(stream, true))
             {
+                Assert.True(doc.StrictRelationshipFound);
+
                 var body = doc.MainDocumentPart.Document.Body;
                 var para = body.Elements<W.Paragraph>().First();
                 var newPara = new W.Paragraph(

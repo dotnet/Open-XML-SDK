@@ -11,6 +11,7 @@ namespace DocumentFormat.OpenXml.Packaging
     public class OpenSettings
     {
         private MarkupCompatibilityProcessSettings? _mcSettings;
+        private CompatibilityLevel _compatibilityLevel;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="OpenSettings"/> class.
@@ -31,6 +32,7 @@ namespace DocumentFormat.OpenXml.Packaging
             MarkupCompatibilityProcessSettings.TargetFileFormatVersions = other.MarkupCompatibilityProcessSettings.TargetFileFormatVersions;
             MaxCharactersInPart = other.MaxCharactersInPart;
             IgnoreExceptionOnCalcChainPartMissing = other.IgnoreExceptionOnCalcChainPartMissing;
+            CompatibilityLevel = other.CompatibilityLevel;
         }
 
         /// <summary>
@@ -38,6 +40,15 @@ namespace DocumentFormat.OpenXml.Packaging
         /// The default value is true.
         /// </summary>
         public bool AutoSave { get; set; } = true;
+
+        /// <summary>
+        /// Gets or sets a version to keep compat to
+        /// </summary>
+        public CompatibilityLevel CompatibilityLevel
+        {
+            get => _compatibilityLevel == CompatibilityLevel.Default ? CompatibilityLevel.Version_3_0 : _compatibilityLevel;
+            set => _compatibilityLevel = value;
+        }
 
         /// <summary>
         /// Gets or sets the value of the markup compatibility processing mode.
