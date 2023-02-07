@@ -68,3 +68,10 @@ dotnet_diagnostic.CA1065.severity = suggestion
 
 # CA1054: URI-like parameters should not be strings
 dotnet_diagnostic.CA1054.severity = suggestion
+
+# RS0022: Constructor make noninheritable base class inheritable
+dotnet_diagnostic.RS0022.severity = silent
+
+# RS0026: Do not add multiple public overloads with optional parameters
+dotnet_diagnostic.RS0026.severity = none
+

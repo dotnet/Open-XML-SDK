@@ -85,6 +85,13 @@
   </Choose>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.CodeAnalysis.PublicApiAnalyzers">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Update="Resources\ExceptionMessages.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -107,6 +114,13 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>ValidationResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <AdditionalFiles Include="PublicApis\PublicAPI.Shipped.txt" />
+    <AdditionalFiles Include="PublicApis\PublicAPI.Unshipped.txt" />
+    <AdditionalFiles Condition="Exists('PublicApis/PublicAPI.$(TargetFramework).Shipped.txt')" Include="PublicApis\PublicAPI.$(TargetFramework).Shipped.txt" />
+    <AdditionalFiles Condition="Exists('PublicApis/PublicAPI.$(TargetFramework).Unshipped.txt')" Include="PublicApis\PublicAPI.$(TargetFramework).Unshipped.txt" />
   </ItemGroup>
 
   <Import Condition=" '$(GenerateReferences)' == 'true' " Project="$(MSBuildThisFileDirectory)\GenerateReferences.targets" />
