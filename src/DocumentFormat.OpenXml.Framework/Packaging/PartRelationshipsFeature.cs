@@ -135,24 +135,10 @@ internal sealed class PartRelationshipsFeature :
         _referenceRelationships = new(StringComparer.Ordinal);
         _parts = new(StringComparer.Ordinal);
 
-        Dictionary<string, bool> partsToIgnore = new()
-        {
-            // Fix bug https://github.com/OfficeDev/Open-XML-SDK/issues/1281
-            { @"http://schemas.openxmlformats.org/officeDocument/2006/relationships/calcChain", openXmlPackage.OpenSettings.IgnoreExceptionOnCalcChainPartMissing },
-
-            // Fix bug https://github.com/OfficeDev/Open-XML-SDK/issues/1205
-            { @"http://schemas.microsoft.com/office/2006/relationships/recovered", true },
-        };
-
         var relationships = sourcePart?.PackagePart.Relationships ?? openXmlPackage.Package.Relationships;
 
         foreach (var relationship in relationships)
         {
-            if (partsToIgnore.TryGetValue(relationship.RelationshipType, out bool value) && value)
-            {
-                continue;
-            }
-
             if (relationship.RelationshipType == HyperlinkRelationship.RelationshipTypeConst)
             {
                 // Fix bug #517956 - both internal and external hyperlinks should be loaded as HyperlinkRelationship.

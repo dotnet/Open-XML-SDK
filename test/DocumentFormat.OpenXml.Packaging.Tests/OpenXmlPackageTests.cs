@@ -311,7 +311,7 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
             using var stmSpd = GetStream(TestFiles.MissingCalcChainPart, false);
             using var doc = SpreadsheetDocument.Open(stmSpd, false);
 
-            Assert.Throws<InvalidOperationException>(() => doc.GetAllParts().ToList());
+            Assert.Throws<InvalidOperationException>(() => doc.LoadAllParts());
         }
 
         // When opening a workbook (SpreadsheetDocument.Open) with a missing calcChain part and OpenSettings
@@ -322,7 +322,12 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
         {
             Stream stmSpd = GetStream(TestFiles.MissingCalcChainPart, false);
 
-            using SpreadsheetDocument spd = SpreadsheetDocument.Open(stmSpd, false, new OpenSettings() { IgnoreExceptionOnCalcChainPartMissing = true });
+            using SpreadsheetDocument spd = SpreadsheetDocument.Open(stmSpd, false);
+
+            spd.IgnoreCalculationChainPartRelationship();
+
+            spd.LoadAllParts();
+
             Assert.NotNull(spd);
         }
     }

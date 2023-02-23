@@ -47,4 +47,6 @@ internal sealed class PackageRelationshipBuilder : IPackageRelationship
     /// Gets or sets the target uri.
     /// </summary>
     public Uri TargetUri { get; set; }
+
+    internal bool IsRemoved { get; set; }
 }
