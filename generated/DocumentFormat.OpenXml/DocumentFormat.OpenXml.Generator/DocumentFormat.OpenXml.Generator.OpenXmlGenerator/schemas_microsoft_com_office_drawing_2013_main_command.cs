@@ -8037,50 +8037,78 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <summary>
     /// Defines the ResourceLinkage enumeration.
     /// </summary>
-    public enum ResourceLinkage
+    public readonly record struct ResourceLinkage : IEnumValue, IEnumValueFactory<ResourceLinkage>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new ResourceLinkage enum instance
+        /// </summary>
+        public ResourceLinkage(string value) => _value = value;
+        ResourceLinkage IEnumValueFactory<ResourceLinkage>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "embed" => true,
+            "link" => true,
+            "linkAndEmbed" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "embed";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2016;
         /// <summary>
         /// embed.
         /// <para>When the item is serialized out as xml, its value is "embed".</para>
         /// </summary>
-        [EnumString("embed")]
-        Embed,
+        public static ResourceLinkage Embed => new("embed");
         /// <summary>
         /// link.
         /// <para>When the item is serialized out as xml, its value is "link".</para>
         /// </summary>
-        [EnumString("link")]
-        Link,
+        public static ResourceLinkage Link => new("link");
         /// <summary>
         /// linkAndEmbed.
         /// <para>When the item is serialized out as xml, its value is "linkAndEmbed".</para>
         /// </summary>
-        [EnumString("linkAndEmbed")]
-        LinkAndEmbed
+        public static ResourceLinkage LinkAndEmbed => new("linkAndEmbed");
+    
     }
 
     /// <summary>
     /// Defines the DetachConnection enumeration.
     /// </summary>
-    public enum DetachConnection
+    public readonly record struct DetachConnection : IEnumValue, IEnumValueFactory<DetachConnection>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new DetachConnection enum instance
+        /// </summary>
+        public DetachConnection(string value) => _value = value;
+        DetachConnection IEnumValueFactory<DetachConnection>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "start" => true,
+            "end" => true,
+            "both" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "start";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2016;
         /// <summary>
         /// start.
         /// <para>When the item is serialized out as xml, its value is "start".</para>
         /// </summary>
-        [EnumString("start")]
-        Start,
+        public static DetachConnection Start => new("start");
         /// <summary>
         /// end.
         /// <para>When the item is serialized out as xml, its value is "end".</para>
         /// </summary>
-        [EnumString("end")]
-        End,
+        public static DetachConnection End => new("end");
         /// <summary>
         /// both.
         /// <para>When the item is serialized out as xml, its value is "both".</para>
         /// </summary>
-        [EnumString("both")]
-        Both
+        public static DetachConnection Both => new("both");
+    
     }
 }

@@ -11,7 +11,6 @@
 [assembly:System.Runtime.CompilerServices.TypeForwardedTo(typeof(DocumentFormat.OpenXml.DecimalValue))]
 [assembly:System.Runtime.CompilerServices.TypeForwardedTo(typeof(DocumentFormat.OpenXml.DoubleValue))]
 [assembly:System.Runtime.CompilerServices.TypeForwardedTo(typeof(DocumentFormat.OpenXml.ElementEventArgs))]
-[assembly:System.Runtime.CompilerServices.TypeForwardedTo(typeof(DocumentFormat.OpenXml.EnumStringAttribute))]
 [assembly:System.Runtime.CompilerServices.TypeForwardedTo(typeof(DocumentFormat.OpenXml.EnumValue<>))]
 [assembly:System.Runtime.CompilerServices.TypeForwardedTo(typeof(DocumentFormat.OpenXml.FileFormatVersions))]
 [assembly:System.Runtime.CompilerServices.TypeForwardedTo(typeof(DocumentFormat.OpenXml.HexBinaryValue))]

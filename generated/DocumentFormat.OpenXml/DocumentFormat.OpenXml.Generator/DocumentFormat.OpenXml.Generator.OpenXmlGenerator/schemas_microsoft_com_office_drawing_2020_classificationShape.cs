@@ -59,31 +59,45 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.DocumentClassification
     /// <summary>
     /// Defines the ClassificationOutcomeType enumeration.
     /// </summary>
-    public enum ClassificationOutcomeType
+    public readonly record struct ClassificationOutcomeType : IEnumValue, IEnumValueFactory<ClassificationOutcomeType>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new ClassificationOutcomeType enum instance
+        /// </summary>
+        public ClassificationOutcomeType(string value) => _value = value;
+        ClassificationOutcomeType IEnumValueFactory<ClassificationOutcomeType>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "none" => true,
+            "hdr" => true,
+            "ftr" => true,
+            "watermark" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "none";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2021;
         /// <summary>
         /// none.
         /// <para>When the item is serialized out as xml, its value is "none".</para>
         /// </summary>
-        [EnumString("none")]
-        None,
+        public static ClassificationOutcomeType None => new("none");
         /// <summary>
         /// hdr.
         /// <para>When the item is serialized out as xml, its value is "hdr".</para>
         /// </summary>
-        [EnumString("hdr")]
-        Hdr,
+        public static ClassificationOutcomeType Hdr => new("hdr");
         /// <summary>
         /// ftr.
         /// <para>When the item is serialized out as xml, its value is "ftr".</para>
         /// </summary>
-        [EnumString("ftr")]
-        Ftr,
+        public static ClassificationOutcomeType Ftr => new("ftr");
         /// <summary>
         /// watermark.
         /// <para>When the item is serialized out as xml, its value is "watermark".</para>
         /// </summary>
-        [EnumString("watermark")]
-        Watermark
+        public static ClassificationOutcomeType Watermark => new("watermark");
+    
     }
 }

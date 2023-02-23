@@ -5877,307 +5877,405 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <summary>
     /// Defines the TimelineStyleType enumeration.
     /// </summary>
-    public enum TimelineStyleType
+    public readonly record struct TimelineStyleType : IEnumValue, IEnumValueFactory<TimelineStyleType>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new TimelineStyleType enum instance
+        /// </summary>
+        public TimelineStyleType(string value) => _value = value;
+        TimelineStyleType IEnumValueFactory<TimelineStyleType>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "selectionLabel" => true,
+            "timeLevel" => true,
+            "periodLabel1" => true,
+            "periodLabel2" => true,
+            "selectedTimeBlock" => true,
+            "unselectedTimeBlock" => true,
+            "selectedTimeBlockSpace" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "selectionLabel";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2013;
         /// <summary>
         /// selectionLabel.
         /// <para>When the item is serialized out as xml, its value is "selectionLabel".</para>
         /// </summary>
-        [EnumString("selectionLabel")]
-        SelectionLabel,
+        public static TimelineStyleType SelectionLabel => new("selectionLabel");
         /// <summary>
         /// timeLevel.
         /// <para>When the item is serialized out as xml, its value is "timeLevel".</para>
         /// </summary>
-        [EnumString("timeLevel")]
-        TimeLevel,
+        public static TimelineStyleType TimeLevel => new("timeLevel");
         /// <summary>
         /// periodLabel1.
         /// <para>When the item is serialized out as xml, its value is "periodLabel1".</para>
         /// </summary>
-        [EnumString("periodLabel1")]
-        PeriodLabel1,
+        public static TimelineStyleType PeriodLabel1 => new("periodLabel1");
         /// <summary>
         /// periodLabel2.
         /// <para>When the item is serialized out as xml, its value is "periodLabel2".</para>
         /// </summary>
-        [EnumString("periodLabel2")]
-        PeriodLabel2,
+        public static TimelineStyleType PeriodLabel2 => new("periodLabel2");
         /// <summary>
         /// selectedTimeBlock.
         /// <para>When the item is serialized out as xml, its value is "selectedTimeBlock".</para>
         /// </summary>
-        [EnumString("selectedTimeBlock")]
-        SelectedTimeBlock,
+        public static TimelineStyleType SelectedTimeBlock => new("selectedTimeBlock");
         /// <summary>
         /// unselectedTimeBlock.
         /// <para>When the item is serialized out as xml, its value is "unselectedTimeBlock".</para>
         /// </summary>
-        [EnumString("unselectedTimeBlock")]
-        UnselectedTimeBlock,
+        public static TimelineStyleType UnselectedTimeBlock => new("unselectedTimeBlock");
         /// <summary>
         /// selectedTimeBlockSpace.
         /// <para>When the item is serialized out as xml, its value is "selectedTimeBlockSpace".</para>
         /// </summary>
-        [EnumString("selectedTimeBlockSpace")]
-        SelectedTimeBlockSpace
+        public static TimelineStyleType SelectedTimeBlockSpace => new("selectedTimeBlockSpace");
+    
     }
 
     /// <summary>
     /// Defines the CalculatedMemberNumberFormat enumeration.
     /// </summary>
-    public enum CalculatedMemberNumberFormat
+    public readonly record struct CalculatedMemberNumberFormat : IEnumValue, IEnumValueFactory<CalculatedMemberNumberFormat>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new CalculatedMemberNumberFormat enum instance
+        /// </summary>
+        public CalculatedMemberNumberFormat(string value) => _value = value;
+        CalculatedMemberNumberFormat IEnumValueFactory<CalculatedMemberNumberFormat>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "default" => true,
+            "number" => true,
+            "percent" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "default";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2013;
         /// <summary>
         /// default.
         /// <para>When the item is serialized out as xml, its value is "default".</para>
         /// </summary>
-        [EnumString("default")]
-        Default,
+        public static CalculatedMemberNumberFormat Default => new("default");
         /// <summary>
         /// number.
         /// <para>When the item is serialized out as xml, its value is "number".</para>
         /// </summary>
-        [EnumString("number")]
-        Number,
+        public static CalculatedMemberNumberFormat Number => new("number");
         /// <summary>
         /// percent.
         /// <para>When the item is serialized out as xml, its value is "percent".</para>
         /// </summary>
-        [EnumString("percent")]
-        Percent
+        public static CalculatedMemberNumberFormat Percent => new("percent");
+    
     }
 
     /// <summary>
     /// Defines the SXVCellType enumeration.
     /// </summary>
-    public enum SXVCellType
+    public readonly record struct SXVCellType : IEnumValue, IEnumValueFactory<SXVCellType>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new SXVCellType enum instance
+        /// </summary>
+        public SXVCellType(string value) => _value = value;
+        SXVCellType IEnumValueFactory<SXVCellType>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "b" => true,
+            "n" => true,
+            "e" => true,
+            "str" => true,
+            "d" => true,
+            "bl" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "b";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2013;
         /// <summary>
         /// b.
         /// <para>When the item is serialized out as xml, its value is "b".</para>
         /// </summary>
-        [EnumString("b")]
-        Boolean,
+        public static SXVCellType Boolean => new("b");
         /// <summary>
         /// n.
         /// <para>When the item is serialized out as xml, its value is "n".</para>
         /// </summary>
-        [EnumString("n")]
-        Number,
+        public static SXVCellType Number => new("n");
         /// <summary>
         /// e.
         /// <para>When the item is serialized out as xml, its value is "e".</para>
         /// </summary>
-        [EnumString("e")]
-        Error,
+        public static SXVCellType Error => new("e");
         /// <summary>
         /// str.
         /// <para>When the item is serialized out as xml, its value is "str".</para>
         /// </summary>
-        [EnumString("str")]
-        String,
+        public static SXVCellType String => new("str");
         /// <summary>
         /// d.
         /// <para>When the item is serialized out as xml, its value is "d".</para>
         /// </summary>
-        [EnumString("d")]
-        Date,
+        public static SXVCellType Date => new("d");
         /// <summary>
         /// bl.
         /// <para>When the item is serialized out as xml, its value is "bl".</para>
         /// </summary>
-        [EnumString("bl")]
-        Blank
+        public static SXVCellType Blank => new("bl");
+    
     }
 
     /// <summary>
     /// Defines the MovingPeriodStep enumeration.
     /// </summary>
-    public enum MovingPeriodStep
+    public readonly record struct MovingPeriodStep : IEnumValue, IEnumValueFactory<MovingPeriodStep>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new MovingPeriodStep enum instance
+        /// </summary>
+        public MovingPeriodStep(string value) => _value = value;
+        MovingPeriodStep IEnumValueFactory<MovingPeriodStep>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "year" => true,
+            "quarter" => true,
+            "month" => true,
+            "week" => true,
+            "day" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "year";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2013;
         /// <summary>
         /// year.
         /// <para>When the item is serialized out as xml, its value is "year".</para>
         /// </summary>
-        [EnumString("year")]
-        Year,
+        public static MovingPeriodStep Year => new("year");
         /// <summary>
         /// quarter.
         /// <para>When the item is serialized out as xml, its value is "quarter".</para>
         /// </summary>
-        [EnumString("quarter")]
-        Quarter,
+        public static MovingPeriodStep Quarter => new("quarter");
         /// <summary>
         /// month.
         /// <para>When the item is serialized out as xml, its value is "month".</para>
         /// </summary>
-        [EnumString("month")]
-        Month,
+        public static MovingPeriodStep Month => new("month");
         /// <summary>
         /// week.
         /// <para>When the item is serialized out as xml, its value is "week".</para>
         /// </summary>
-        [EnumString("week")]
-        Week,
+        public static MovingPeriodStep Week => new("week");
         /// <summary>
         /// day.
         /// <para>When the item is serialized out as xml, its value is "day".</para>
         /// </summary>
-        [EnumString("day")]
-        Day
+        public static MovingPeriodStep Day => new("day");
+    
     }
 
     /// <summary>
     /// Defines the QuestionType enumeration.
     /// </summary>
-    public enum QuestionType
+    public readonly record struct QuestionType : IEnumValue, IEnumValueFactory<QuestionType>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new QuestionType enum instance
+        /// </summary>
+        public QuestionType(string value) => _value = value;
+        QuestionType IEnumValueFactory<QuestionType>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "checkBox" => true,
+            "choice" => true,
+            "date" => true,
+            "time" => true,
+            "multipleLinesOfText" => true,
+            "number" => true,
+            "singleLineOfText" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "checkBox";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2013;
         /// <summary>
         /// checkBox.
         /// <para>When the item is serialized out as xml, its value is "checkBox".</para>
         /// </summary>
-        [EnumString("checkBox")]
-        CheckBox,
+        public static QuestionType CheckBox => new("checkBox");
         /// <summary>
         /// choice.
         /// <para>When the item is serialized out as xml, its value is "choice".</para>
         /// </summary>
-        [EnumString("choice")]
-        Choice,
+        public static QuestionType Choice => new("choice");
         /// <summary>
         /// date.
         /// <para>When the item is serialized out as xml, its value is "date".</para>
         /// </summary>
-        [EnumString("date")]
-        Date,
+        public static QuestionType Date => new("date");
         /// <summary>
         /// time.
         /// <para>When the item is serialized out as xml, its value is "time".</para>
         /// </summary>
-        [EnumString("time")]
-        Time,
+        public static QuestionType Time => new("time");
         /// <summary>
         /// multipleLinesOfText.
         /// <para>When the item is serialized out as xml, its value is "multipleLinesOfText".</para>
         /// </summary>
-        [EnumString("multipleLinesOfText")]
-        MultipleLinesOfText,
+        public static QuestionType MultipleLinesOfText => new("multipleLinesOfText");
         /// <summary>
         /// number.
         /// <para>When the item is serialized out as xml, its value is "number".</para>
         /// </summary>
-        [EnumString("number")]
-        Number,
+        public static QuestionType Number => new("number");
         /// <summary>
         /// singleLineOfText.
         /// <para>When the item is serialized out as xml, its value is "singleLineOfText".</para>
         /// </summary>
-        [EnumString("singleLineOfText")]
-        SingleLineOfText
+        public static QuestionType SingleLineOfText => new("singleLineOfText");
+    
     }
 
     /// <summary>
     /// Defines the QuestionFormat enumeration.
     /// </summary>
-    public enum QuestionFormat
+    public readonly record struct QuestionFormat : IEnumValue, IEnumValueFactory<QuestionFormat>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new QuestionFormat enum instance
+        /// </summary>
+        public QuestionFormat(string value) => _value = value;
+        QuestionFormat IEnumValueFactory<QuestionFormat>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "generalDate" => true,
+            "longDate" => true,
+            "shortDate" => true,
+            "longTime" => true,
+            "shortTime" => true,
+            "generalNumber" => true,
+            "standard" => true,
+            "fixed" => true,
+            "percent" => true,
+            "currency" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "generalDate";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2013;
         /// <summary>
         /// generalDate.
         /// <para>When the item is serialized out as xml, its value is "generalDate".</para>
         /// </summary>
-        [EnumString("generalDate")]
-        GeneralDate,
+        public static QuestionFormat GeneralDate => new("generalDate");
         /// <summary>
         /// longDate.
         /// <para>When the item is serialized out as xml, its value is "longDate".</para>
         /// </summary>
-        [EnumString("longDate")]
-        LongDate,
+        public static QuestionFormat LongDate => new("longDate");
         /// <summary>
         /// shortDate.
         /// <para>When the item is serialized out as xml, its value is "shortDate".</para>
         /// </summary>
-        [EnumString("shortDate")]
-        ShortDate,
+        public static QuestionFormat ShortDate => new("shortDate");
         /// <summary>
         /// longTime.
         /// <para>When the item is serialized out as xml, its value is "longTime".</para>
         /// </summary>
-        [EnumString("longTime")]
-        LongTime,
+        public static QuestionFormat LongTime => new("longTime");
         /// <summary>
         /// shortTime.
         /// <para>When the item is serialized out as xml, its value is "shortTime".</para>
         /// </summary>
-        [EnumString("shortTime")]
-        ShortTime,
+        public static QuestionFormat ShortTime => new("shortTime");
         /// <summary>
         /// generalNumber.
         /// <para>When the item is serialized out as xml, its value is "generalNumber".</para>
         /// </summary>
-        [EnumString("generalNumber")]
-        GeneralNumber,
+        public static QuestionFormat GeneralNumber => new("generalNumber");
         /// <summary>
         /// standard.
         /// <para>When the item is serialized out as xml, its value is "standard".</para>
         /// </summary>
-        [EnumString("standard")]
-        Standard,
+        public static QuestionFormat Standard => new("standard");
         /// <summary>
         /// fixed.
         /// <para>When the item is serialized out as xml, its value is "fixed".</para>
         /// </summary>
-        [EnumString("fixed")]
-        Fixed,
+        public static QuestionFormat Fixed => new("fixed");
         /// <summary>
         /// percent.
         /// <para>When the item is serialized out as xml, its value is "percent".</para>
         /// </summary>
-        [EnumString("percent")]
-        Percent,
+        public static QuestionFormat Percent => new("percent");
         /// <summary>
         /// currency.
         /// <para>When the item is serialized out as xml, its value is "currency".</para>
         /// </summary>
-        [EnumString("currency")]
-        Currency
+        public static QuestionFormat Currency => new("currency");
+    
     }
 
     /// <summary>
     /// Defines the SurveyPosition enumeration.
     /// </summary>
-    public enum SurveyPosition
+    public readonly record struct SurveyPosition : IEnumValue, IEnumValueFactory<SurveyPosition>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new SurveyPosition enum instance
+        /// </summary>
+        public SurveyPosition(string value) => _value = value;
+        SurveyPosition IEnumValueFactory<SurveyPosition>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "absolute" => true,
+            "fixed" => true,
+            "relative" => true,
+            "static" => true,
+            "inherit" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "absolute";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2013;
         /// <summary>
         /// absolute.
         /// <para>When the item is serialized out as xml, its value is "absolute".</para>
         /// </summary>
-        [EnumString("absolute")]
-        Absolute,
+        public static SurveyPosition Absolute => new("absolute");
         /// <summary>
         /// fixed.
         /// <para>When the item is serialized out as xml, its value is "fixed".</para>
         /// </summary>
-        [EnumString("fixed")]
-        Fixed,
+        public static SurveyPosition Fixed => new("fixed");
         /// <summary>
         /// relative.
         /// <para>When the item is serialized out as xml, its value is "relative".</para>
         /// </summary>
-        [EnumString("relative")]
-        Relative,
+        public static SurveyPosition Relative => new("relative");
         /// <summary>
         /// static.
         /// <para>When the item is serialized out as xml, its value is "static".</para>
         /// </summary>
-        [EnumString("static")]
-        Static,
+        public static SurveyPosition Static => new("static");
         /// <summary>
         /// inherit.
         /// <para>When the item is serialized out as xml, its value is "inherit".</para>
         /// </summary>
-        [EnumString("inherit")]
-        Inherit
+        public static SurveyPosition Inherit => new("inherit");
+    
     }
 }

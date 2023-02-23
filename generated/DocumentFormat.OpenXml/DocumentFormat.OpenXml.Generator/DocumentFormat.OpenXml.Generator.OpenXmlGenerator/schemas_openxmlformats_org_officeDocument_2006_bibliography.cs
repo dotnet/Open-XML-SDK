@@ -4622,109 +4622,123 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <summary>
     /// Bibliographic Data Source Types
     /// </summary>
-    public enum DataSourceValues
+    public readonly record struct DataSourceValues : IEnumValue, IEnumValueFactory<DataSourceValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new DataSourceValues enum instance
+        /// </summary>
+        public DataSourceValues(string value) => _value = value;
+        DataSourceValues IEnumValueFactory<DataSourceValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "ArticleInAPeriodical" => true,
+            "Book" => true,
+            "BookSection" => true,
+            "JournalArticle" => true,
+            "ConferenceProceedings" => true,
+            "Report" => true,
+            "SoundRecording" => true,
+            "Performance" => true,
+            "Art" => true,
+            "DocumentFromInternetSite" => true,
+            "InternetSite" => true,
+            "Film" => true,
+            "Interview" => true,
+            "Patent" => true,
+            "ElectronicSource" => true,
+            "Case" => true,
+            "Misc" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "ArticleInAPeriodical";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// Article in a Periodical.
         /// <para>When the item is serialized out as xml, its value is "ArticleInAPeriodical".</para>
         /// </summary>
-        [EnumString("ArticleInAPeriodical")]
-        ArticleInAPeriodical,
+        public static DataSourceValues ArticleInAPeriodical => new("ArticleInAPeriodical");
         /// <summary>
         /// Book.
         /// <para>When the item is serialized out as xml, its value is "Book".</para>
         /// </summary>
-        [EnumString("Book")]
-        Book,
+        public static DataSourceValues Book => new("Book");
         /// <summary>
         /// Book Section.
         /// <para>When the item is serialized out as xml, its value is "BookSection".</para>
         /// </summary>
-        [EnumString("BookSection")]
-        BookSection,
+        public static DataSourceValues BookSection => new("BookSection");
         /// <summary>
         /// Journal Article.
         /// <para>When the item is serialized out as xml, its value is "JournalArticle".</para>
         /// </summary>
-        [EnumString("JournalArticle")]
-        JournalArticle,
+        public static DataSourceValues JournalArticle => new("JournalArticle");
         /// <summary>
         /// Conference Proceedings.
         /// <para>When the item is serialized out as xml, its value is "ConferenceProceedings".</para>
         /// </summary>
-        [EnumString("ConferenceProceedings")]
-        ConferenceProceedings,
+        public static DataSourceValues ConferenceProceedings => new("ConferenceProceedings");
         /// <summary>
         /// Reporter.
         /// <para>When the item is serialized out as xml, its value is "Report".</para>
         /// </summary>
-        [EnumString("Report")]
-        Report,
+        public static DataSourceValues Report => new("Report");
         /// <summary>
         /// Sound Recording.
         /// <para>When the item is serialized out as xml, its value is "SoundRecording".</para>
         /// </summary>
-        [EnumString("SoundRecording")]
-        SoundRecording,
+        public static DataSourceValues SoundRecording => new("SoundRecording");
         /// <summary>
         /// Performance.
         /// <para>When the item is serialized out as xml, its value is "Performance".</para>
         /// </summary>
-        [EnumString("Performance")]
-        Performance,
+        public static DataSourceValues Performance => new("Performance");
         /// <summary>
         /// Art.
         /// <para>When the item is serialized out as xml, its value is "Art".</para>
         /// </summary>
-        [EnumString("Art")]
-        Art,
+        public static DataSourceValues Art => new("Art");
         /// <summary>
         /// Document from Internet Site.
         /// <para>When the item is serialized out as xml, its value is "DocumentFromInternetSite".</para>
         /// </summary>
-        [EnumString("DocumentFromInternetSite")]
-        DocumentFromInternetSite,
+        public static DataSourceValues DocumentFromInternetSite => new("DocumentFromInternetSite");
         /// <summary>
         /// Internet Site.
         /// <para>When the item is serialized out as xml, its value is "InternetSite".</para>
         /// </summary>
-        [EnumString("InternetSite")]
-        InternetSite,
+        public static DataSourceValues InternetSite => new("InternetSite");
         /// <summary>
         /// Film.
         /// <para>When the item is serialized out as xml, its value is "Film".</para>
         /// </summary>
-        [EnumString("Film")]
-        Film,
+        public static DataSourceValues Film => new("Film");
         /// <summary>
         /// Interview.
         /// <para>When the item is serialized out as xml, its value is "Interview".</para>
         /// </summary>
-        [EnumString("Interview")]
-        Interview,
+        public static DataSourceValues Interview => new("Interview");
         /// <summary>
         /// Patent.
         /// <para>When the item is serialized out as xml, its value is "Patent".</para>
         /// </summary>
-        [EnumString("Patent")]
-        Patent,
+        public static DataSourceValues Patent => new("Patent");
         /// <summary>
         /// Electronic Source.
         /// <para>When the item is serialized out as xml, its value is "ElectronicSource".</para>
         /// </summary>
-        [EnumString("ElectronicSource")]
-        ElectronicSource,
+        public static DataSourceValues ElectronicSource => new("ElectronicSource");
         /// <summary>
         /// Case.
         /// <para>When the item is serialized out as xml, its value is "Case".</para>
         /// </summary>
-        [EnumString("Case")]
-        Case,
+        public static DataSourceValues Case => new("Case");
         /// <summary>
         /// Miscellaneous.
         /// <para>When the item is serialized out as xml, its value is "Misc".</para>
         /// </summary>
-        [EnumString("Misc")]
-        Miscellaneous
+        public static DataSourceValues Miscellaneous => new("Misc");
+    
     }
 }

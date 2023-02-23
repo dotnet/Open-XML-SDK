@@ -3543,70 +3543,126 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <summary>
     /// Defines the TransitionPatternValues enumeration.
     /// </summary>
-    public enum TransitionPatternValues
+    public readonly record struct TransitionPatternValues : IEnumValue, IEnumValueFactory<TransitionPatternValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new TransitionPatternValues enum instance
+        /// </summary>
+        public TransitionPatternValues(string value) => _value = value;
+        TransitionPatternValues IEnumValueFactory<TransitionPatternValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "diamond" => true,
+            "hexagon" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "diamond";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2010;
         /// <summary>
         /// diamond.
         /// <para>When the item is serialized out as xml, its value is "diamond".</para>
         /// </summary>
-        [EnumString("diamond")]
-        Diamond,
+        public static TransitionPatternValues Diamond => new("diamond");
         /// <summary>
         /// hexagon.
         /// <para>When the item is serialized out as xml, its value is "hexagon".</para>
         /// </summary>
-        [EnumString("hexagon")]
-        Hexagon
+        public static TransitionPatternValues Hexagon => new("hexagon");
+    
     }
 
     /// <summary>
     /// Defines the TransitionCenterDirectionTypeValues enumeration.
     /// </summary>
-    public enum TransitionCenterDirectionTypeValues
+    public readonly record struct TransitionCenterDirectionTypeValues : IEnumValue, IEnumValueFactory<TransitionCenterDirectionTypeValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new TransitionCenterDirectionTypeValues enum instance
+        /// </summary>
+        public TransitionCenterDirectionTypeValues(string value) => _value = value;
+        TransitionCenterDirectionTypeValues IEnumValueFactory<TransitionCenterDirectionTypeValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "center" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "center";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2010;
         /// <summary>
         /// center.
         /// <para>When the item is serialized out as xml, its value is "center".</para>
         /// </summary>
-        [EnumString("center")]
-        Center
+        public static TransitionCenterDirectionTypeValues Center => new("center");
+    
     }
 
     /// <summary>
     /// Defines the TransitionShredPatternValues enumeration.
     /// </summary>
-    public enum TransitionShredPatternValues
+    public readonly record struct TransitionShredPatternValues : IEnumValue, IEnumValueFactory<TransitionShredPatternValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new TransitionShredPatternValues enum instance
+        /// </summary>
+        public TransitionShredPatternValues(string value) => _value = value;
+        TransitionShredPatternValues IEnumValueFactory<TransitionShredPatternValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "strip" => true,
+            "rectangle" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "strip";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2010;
         /// <summary>
         /// strip.
         /// <para>When the item is serialized out as xml, its value is "strip".</para>
         /// </summary>
-        [EnumString("strip")]
-        Strip,
+        public static TransitionShredPatternValues Strip => new("strip");
         /// <summary>
         /// rectangle.
         /// <para>When the item is serialized out as xml, its value is "rectangle".</para>
         /// </summary>
-        [EnumString("rectangle")]
-        Rectangle
+        public static TransitionShredPatternValues Rectangle => new("rectangle");
+    
     }
 
     /// <summary>
     /// Defines the TransitionLeftRightDirectionTypeValues enumeration.
     /// </summary>
-    public enum TransitionLeftRightDirectionTypeValues
+    public readonly record struct TransitionLeftRightDirectionTypeValues : IEnumValue, IEnumValueFactory<TransitionLeftRightDirectionTypeValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new TransitionLeftRightDirectionTypeValues enum instance
+        /// </summary>
+        public TransitionLeftRightDirectionTypeValues(string value) => _value = value;
+        TransitionLeftRightDirectionTypeValues IEnumValueFactory<TransitionLeftRightDirectionTypeValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "l" => true,
+            "r" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "l";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2010;
         /// <summary>
         /// l.
         /// <para>When the item is serialized out as xml, its value is "l".</para>
         /// </summary>
-        [EnumString("l")]
-        Left,
+        public static TransitionLeftRightDirectionTypeValues Left => new("l");
         /// <summary>
         /// r.
         /// <para>When the item is serialized out as xml, its value is "r".</para>
         /// </summary>
-        [EnumString("r")]
-        Right
+        public static TransitionLeftRightDirectionTypeValues Right => new("r");
+    
     }
 }

@@ -391,31 +391,45 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
     /// <summary>
     /// Defines the PersistenceValues enumeration.
     /// </summary>
-    public enum PersistenceValues
+    public readonly record struct PersistenceValues : IEnumValue, IEnumValueFactory<PersistenceValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new PersistenceValues enum instance
+        /// </summary>
+        public PersistenceValues(string value) => _value = value;
+        PersistenceValues IEnumValueFactory<PersistenceValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "persistPropertyBag" => true,
+            "persistStream" => true,
+            "persistStreamInit" => true,
+            "persistStorage" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "persistPropertyBag";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// persistPropertyBag.
         /// <para>When the item is serialized out as xml, its value is "persistPropertyBag".</para>
         /// </summary>
-        [EnumString("persistPropertyBag")]
-        PersistPropertyBag,
+        public static PersistenceValues PersistPropertyBag => new("persistPropertyBag");
         /// <summary>
         /// persistStream.
         /// <para>When the item is serialized out as xml, its value is "persistStream".</para>
         /// </summary>
-        [EnumString("persistStream")]
-        PersistStream,
+        public static PersistenceValues PersistStream => new("persistStream");
         /// <summary>
         /// persistStreamInit.
         /// <para>When the item is serialized out as xml, its value is "persistStreamInit".</para>
         /// </summary>
-        [EnumString("persistStreamInit")]
-        PersistStreamInit,
+        public static PersistenceValues PersistStreamInit => new("persistStreamInit");
         /// <summary>
         /// persistStorage.
         /// <para>When the item is serialized out as xml, its value is "persistStorage".</para>
         /// </summary>
-        [EnumString("persistStorage")]
-        PersistStorage
+        public static PersistenceValues PersistStorage => new("persistStorage");
+    
     }
 }

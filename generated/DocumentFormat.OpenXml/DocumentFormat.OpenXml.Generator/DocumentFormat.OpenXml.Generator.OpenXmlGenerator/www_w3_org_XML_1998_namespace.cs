@@ -19,19 +19,33 @@ namespace DocumentFormat.OpenXml
     /// <summary>
     /// Defines the SpaceProcessingModeValues enumeration.
     /// </summary>
-    public enum SpaceProcessingModeValues
+    public readonly record struct SpaceProcessingModeValues : IEnumValue, IEnumValueFactory<SpaceProcessingModeValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new SpaceProcessingModeValues enum instance
+        /// </summary>
+        public SpaceProcessingModeValues(string value) => _value = value;
+        SpaceProcessingModeValues IEnumValueFactory<SpaceProcessingModeValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "default" => true,
+            "preserve" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "default";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// default.
         /// <para>When the item is serialized out as xml, its value is "default".</para>
         /// </summary>
-        [EnumString("default")]
-        Default,
+        public static SpaceProcessingModeValues Default => new("default");
         /// <summary>
         /// preserve.
         /// <para>When the item is serialized out as xml, its value is "preserve".</para>
         /// </summary>
-        [EnumString("preserve")]
-        Preserve
+        public static SpaceProcessingModeValues Preserve => new("preserve");
+    
     }
 }

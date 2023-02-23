@@ -3690,25 +3690,39 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     /// <summary>
     /// Resizing Behaviors
     /// </summary>
-    public enum EditAsValues
+    public readonly record struct EditAsValues : IEnumValue, IEnumValueFactory<EditAsValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new EditAsValues enum instance
+        /// </summary>
+        public EditAsValues(string value) => _value = value;
+        EditAsValues IEnumValueFactory<EditAsValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "twoCell" => true,
+            "oneCell" => true,
+            "absolute" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "twoCell";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// Move and Resize With Anchor Cells.
         /// <para>When the item is serialized out as xml, its value is "twoCell".</para>
         /// </summary>
-        [EnumString("twoCell")]
-        TwoCell,
+        public static EditAsValues TwoCell => new("twoCell");
         /// <summary>
         /// Move With Cells but Do Not Resize.
         /// <para>When the item is serialized out as xml, its value is "oneCell".</para>
         /// </summary>
-        [EnumString("oneCell")]
-        OneCell,
+        public static EditAsValues OneCell => new("oneCell");
         /// <summary>
         /// Do Not Move or Resize With Underlying Rows/Columns.
         /// <para>When the item is serialized out as xml, its value is "absolute".</para>
         /// </summary>
-        [EnumString("absolute")]
-        Absolute
+        public static EditAsValues Absolute => new("absolute");
+    
     }
 }

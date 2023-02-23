@@ -33,21 +33,11 @@ namespace DocumentFormat.OpenXml.Tests
             tablecellmar.AppendChild(new DocumentFormat.OpenXml.Wordprocessing.LeftMargin());
             var leftmar = tablecellmar.TableCellLeftMargin;
 
-            // public enum HeaderFooterValues
-            // {
-            //    [EnumString("even")]
-            //    Even=0,
-            //    [EnumString("default")]
-            //    Default=1,
-            //    [EnumString("first")]
-            //    First=2,
-            // }
-            // EnumValue<HeaderFooterValues>
             HeaderFooterValues defaultValue = default(HeaderFooterValues);
             HeaderFooterValues validValue = HeaderFooterValues.Even;
             HeaderFooterValues validValue1 = HeaderFooterValues.Default;
             HeaderFooterValues validValue2 = HeaderFooterValues.First;
-            HeaderFooterValues validValue0i = 0;
+            HeaderFooterValues validValue0i = default;
 
             string validString0 = "even";
             string validString1 = "default";
@@ -61,7 +51,7 @@ namespace DocumentFormat.OpenXml.Tests
             string invalidString0 = validString0.ToUpper();
             string invalidString1 = validString1 + "," + validString0;
             string invalidString2 = "undefined";
-            HeaderFooterValues invalidValue3i = (HeaderFooterValues)3;
+            HeaderFooterValues invalidValue3i = new HeaderFooterValues("invalid");
 
             Log.Comment("Testing default value...");
             string expectedText = defaultValue.ToString();
@@ -191,7 +181,7 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         private void InvalidOperation<T1, T2>(EnumValue<T1> a, T2 expectedValue, Action<EnumValue<T1>, T2> action)
-            where T1 : struct
+            where T1 : struct, IEnumValue, IEnumValueFactory<T1>
         {
             try
             {
@@ -206,7 +196,7 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         private void ActionOfCompare<T1, T2>(EnumValue<T1> a, T2 expectedValue)
-            where T1 : struct
+            where T1 : struct, IEnumValue, IEnumValueFactory<T1>
         {
             Log.Comment(string.Format("ObjectA {0} value.", a.HasValue ? "HAS" : "has NO"));
             Log.Verify(expectedValue.Equals(a.InnerText), "Instance constructed with invalid value does NOT keep the text.");
@@ -214,7 +204,7 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         private void SimpleValueValidTest<T>(EnumValue<T> oxObj, T expectedValue, string expectedText)
-            where T : struct
+            where T : struct, IEnumValue, IEnumValueFactory<T>
         {
             Log.Comment("Entering Non-Generic Test Method...");
 

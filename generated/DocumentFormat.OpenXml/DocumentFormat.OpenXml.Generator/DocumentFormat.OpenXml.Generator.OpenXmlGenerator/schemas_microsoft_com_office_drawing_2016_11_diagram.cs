@@ -330,19 +330,33 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram11
     /// <summary>
     /// Defines the STorageType enumeration.
     /// </summary>
-    public enum STorageType
+    public readonly record struct STorageType : IEnumValue, IEnumValueFactory<STorageType>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new STorageType enum instance
+        /// </summary>
+        public STorageType(string value) => _value = value;
+        STorageType IEnumValueFactory<STorageType>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "sibTrans" => true,
+            "parTrans" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "sibTrans";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2019;
         /// <summary>
         /// sibTrans.
         /// <para>When the item is serialized out as xml, its value is "sibTrans".</para>
         /// </summary>
-        [EnumString("sibTrans")]
-        SibTrans,
+        public static STorageType SibTrans => new("sibTrans");
         /// <summary>
         /// parTrans.
         /// <para>When the item is serialized out as xml, its value is "parTrans".</para>
         /// </summary>
-        [EnumString("parTrans")]
-        ParTrans
+        public static STorageType ParTrans => new("parTrans");
+    
     }
 }

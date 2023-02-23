@@ -2025,215 +2025,285 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
     /// <summary>
     /// Text Wrapping Location
     /// </summary>
-    public enum WrapTextValues
+    public readonly record struct WrapTextValues : IEnumValue, IEnumValueFactory<WrapTextValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new WrapTextValues enum instance
+        /// </summary>
+        public WrapTextValues(string value) => _value = value;
+        WrapTextValues IEnumValueFactory<WrapTextValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "bothSides" => true,
+            "left" => true,
+            "right" => true,
+            "largest" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "bothSides";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// Both Sides.
         /// <para>When the item is serialized out as xml, its value is "bothSides".</para>
         /// </summary>
-        [EnumString("bothSides")]
-        BothSides,
+        public static WrapTextValues BothSides => new("bothSides");
         /// <summary>
         /// Left Side Only.
         /// <para>When the item is serialized out as xml, its value is "left".</para>
         /// </summary>
-        [EnumString("left")]
-        Left,
+        public static WrapTextValues Left => new("left");
         /// <summary>
         /// Right Side Only.
         /// <para>When the item is serialized out as xml, its value is "right".</para>
         /// </summary>
-        [EnumString("right")]
-        Right,
+        public static WrapTextValues Right => new("right");
         /// <summary>
         /// Largest Side Only.
         /// <para>When the item is serialized out as xml, its value is "largest".</para>
         /// </summary>
-        [EnumString("largest")]
-        Largest
+        public static WrapTextValues Largest => new("largest");
+    
     }
 
     /// <summary>
     /// Relative Horizontal Alignment Positions
     /// </summary>
-    public enum HorizontalAlignmentValues
+    public readonly record struct HorizontalAlignmentValues : IEnumValue, IEnumValueFactory<HorizontalAlignmentValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new HorizontalAlignmentValues enum instance
+        /// </summary>
+        public HorizontalAlignmentValues(string value) => _value = value;
+        HorizontalAlignmentValues IEnumValueFactory<HorizontalAlignmentValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "left" => true,
+            "right" => true,
+            "center" => true,
+            "inside" => true,
+            "outside" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "left";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// Left Alignment.
         /// <para>When the item is serialized out as xml, its value is "left".</para>
         /// </summary>
-        [EnumString("left")]
-        Left,
+        public static HorizontalAlignmentValues Left => new("left");
         /// <summary>
         /// Right Alignment.
         /// <para>When the item is serialized out as xml, its value is "right".</para>
         /// </summary>
-        [EnumString("right")]
-        Right,
+        public static HorizontalAlignmentValues Right => new("right");
         /// <summary>
         /// Center Alignment.
         /// <para>When the item is serialized out as xml, its value is "center".</para>
         /// </summary>
-        [EnumString("center")]
-        Center,
+        public static HorizontalAlignmentValues Center => new("center");
         /// <summary>
         /// Inside.
         /// <para>When the item is serialized out as xml, its value is "inside".</para>
         /// </summary>
-        [EnumString("inside")]
-        Inside,
+        public static HorizontalAlignmentValues Inside => new("inside");
         /// <summary>
         /// Outside.
         /// <para>When the item is serialized out as xml, its value is "outside".</para>
         /// </summary>
-        [EnumString("outside")]
-        Outside
+        public static HorizontalAlignmentValues Outside => new("outside");
+    
     }
 
     /// <summary>
     /// Horizontal Relative Positioning
     /// </summary>
-    public enum HorizontalRelativePositionValues
+    public readonly record struct HorizontalRelativePositionValues : IEnumValue, IEnumValueFactory<HorizontalRelativePositionValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new HorizontalRelativePositionValues enum instance
+        /// </summary>
+        public HorizontalRelativePositionValues(string value) => _value = value;
+        HorizontalRelativePositionValues IEnumValueFactory<HorizontalRelativePositionValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "margin" => true,
+            "page" => true,
+            "column" => true,
+            "character" => true,
+            "leftMargin" => true,
+            "rightMargin" => true,
+            "insideMargin" => true,
+            "outsideMargin" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "margin";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// Page Margin.
         /// <para>When the item is serialized out as xml, its value is "margin".</para>
         /// </summary>
-        [EnumString("margin")]
-        Margin,
+        public static HorizontalRelativePositionValues Margin => new("margin");
         /// <summary>
         /// Page Edge.
         /// <para>When the item is serialized out as xml, its value is "page".</para>
         /// </summary>
-        [EnumString("page")]
-        Page,
+        public static HorizontalRelativePositionValues Page => new("page");
         /// <summary>
         /// Column.
         /// <para>When the item is serialized out as xml, its value is "column".</para>
         /// </summary>
-        [EnumString("column")]
-        Column,
+        public static HorizontalRelativePositionValues Column => new("column");
         /// <summary>
         /// Character.
         /// <para>When the item is serialized out as xml, its value is "character".</para>
         /// </summary>
-        [EnumString("character")]
-        Character,
+        public static HorizontalRelativePositionValues Character => new("character");
         /// <summary>
         /// Left Margin.
         /// <para>When the item is serialized out as xml, its value is "leftMargin".</para>
         /// </summary>
-        [EnumString("leftMargin")]
-        LeftMargin,
+        public static HorizontalRelativePositionValues LeftMargin => new("leftMargin");
         /// <summary>
         /// Right Margin.
         /// <para>When the item is serialized out as xml, its value is "rightMargin".</para>
         /// </summary>
-        [EnumString("rightMargin")]
-        RightMargin,
+        public static HorizontalRelativePositionValues RightMargin => new("rightMargin");
         /// <summary>
         /// Inside Margin.
         /// <para>When the item is serialized out as xml, its value is "insideMargin".</para>
         /// </summary>
-        [EnumString("insideMargin")]
-        InsideMargin,
+        public static HorizontalRelativePositionValues InsideMargin => new("insideMargin");
         /// <summary>
         /// Outside Margin.
         /// <para>When the item is serialized out as xml, its value is "outsideMargin".</para>
         /// </summary>
-        [EnumString("outsideMargin")]
-        OutsideMargin
+        public static HorizontalRelativePositionValues OutsideMargin => new("outsideMargin");
+    
     }
 
     /// <summary>
     /// Vertical Alignment Definition
     /// </summary>
-    public enum VerticalAlignmentValues
+    public readonly record struct VerticalAlignmentValues : IEnumValue, IEnumValueFactory<VerticalAlignmentValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new VerticalAlignmentValues enum instance
+        /// </summary>
+        public VerticalAlignmentValues(string value) => _value = value;
+        VerticalAlignmentValues IEnumValueFactory<VerticalAlignmentValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "top" => true,
+            "bottom" => true,
+            "center" => true,
+            "inside" => true,
+            "outside" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "top";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// Top.
         /// <para>When the item is serialized out as xml, its value is "top".</para>
         /// </summary>
-        [EnumString("top")]
-        Top,
+        public static VerticalAlignmentValues Top => new("top");
         /// <summary>
         /// Bottom.
         /// <para>When the item is serialized out as xml, its value is "bottom".</para>
         /// </summary>
-        [EnumString("bottom")]
-        Bottom,
+        public static VerticalAlignmentValues Bottom => new("bottom");
         /// <summary>
         /// Center Alignment.
         /// <para>When the item is serialized out as xml, its value is "center".</para>
         /// </summary>
-        [EnumString("center")]
-        Center,
+        public static VerticalAlignmentValues Center => new("center");
         /// <summary>
         /// Inside.
         /// <para>When the item is serialized out as xml, its value is "inside".</para>
         /// </summary>
-        [EnumString("inside")]
-        Inside,
+        public static VerticalAlignmentValues Inside => new("inside");
         /// <summary>
         /// Outside.
         /// <para>When the item is serialized out as xml, its value is "outside".</para>
         /// </summary>
-        [EnumString("outside")]
-        Outside
+        public static VerticalAlignmentValues Outside => new("outside");
+    
     }
 
     /// <summary>
     /// Vertical Relative Positioning
     /// </summary>
-    public enum VerticalRelativePositionValues
+    public readonly record struct VerticalRelativePositionValues : IEnumValue, IEnumValueFactory<VerticalRelativePositionValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new VerticalRelativePositionValues enum instance
+        /// </summary>
+        public VerticalRelativePositionValues(string value) => _value = value;
+        VerticalRelativePositionValues IEnumValueFactory<VerticalRelativePositionValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "margin" => true,
+            "page" => true,
+            "paragraph" => true,
+            "line" => true,
+            "topMargin" => true,
+            "bottomMargin" => true,
+            "insideMargin" => true,
+            "outsideMargin" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "margin";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// Page Margin.
         /// <para>When the item is serialized out as xml, its value is "margin".</para>
         /// </summary>
-        [EnumString("margin")]
-        Margin,
+        public static VerticalRelativePositionValues Margin => new("margin");
         /// <summary>
         /// Page Edge.
         /// <para>When the item is serialized out as xml, its value is "page".</para>
         /// </summary>
-        [EnumString("page")]
-        Page,
+        public static VerticalRelativePositionValues Page => new("page");
         /// <summary>
         /// Paragraph.
         /// <para>When the item is serialized out as xml, its value is "paragraph".</para>
         /// </summary>
-        [EnumString("paragraph")]
-        Paragraph,
+        public static VerticalRelativePositionValues Paragraph => new("paragraph");
         /// <summary>
         /// Line.
         /// <para>When the item is serialized out as xml, its value is "line".</para>
         /// </summary>
-        [EnumString("line")]
-        Line,
+        public static VerticalRelativePositionValues Line => new("line");
         /// <summary>
         /// Top Margin.
         /// <para>When the item is serialized out as xml, its value is "topMargin".</para>
         /// </summary>
-        [EnumString("topMargin")]
-        TopMargin,
+        public static VerticalRelativePositionValues TopMargin => new("topMargin");
         /// <summary>
         /// Bottom Margin.
         /// <para>When the item is serialized out as xml, its value is "bottomMargin".</para>
         /// </summary>
-        [EnumString("bottomMargin")]
-        BottomMargin,
+        public static VerticalRelativePositionValues BottomMargin => new("bottomMargin");
         /// <summary>
         /// Inside Margin.
         /// <para>When the item is serialized out as xml, its value is "insideMargin".</para>
         /// </summary>
-        [EnumString("insideMargin")]
-        InsideMargin,
+        public static VerticalRelativePositionValues InsideMargin => new("insideMargin");
         /// <summary>
         /// Outside Margin.
         /// <para>When the item is serialized out as xml, its value is "outsideMargin".</para>
         /// </summary>
-        [EnumString("outsideMargin")]
-        OutsideMargin
+        public static VerticalRelativePositionValues OutsideMargin => new("outsideMargin");
+    
     }
 }

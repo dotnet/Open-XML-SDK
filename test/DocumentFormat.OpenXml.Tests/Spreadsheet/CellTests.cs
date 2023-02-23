@@ -9,36 +9,43 @@ namespace DocumentFormat.OpenXml.Tests
 {
     public class CellTests
     {
+        public enum Value
+        {
+            Number,
+            Boolean,
+            Date,
+        }
+
         // Numbers
-        [InlineData("StringValue", CellValues.Number, false)]
-        [InlineData("1", CellValues.Number, true)]
-        [InlineData("1.0", CellValues.Number, true)]
-        [InlineData("-1.0", CellValues.Number, true)]
-        [InlineData("9.999E+307", CellValues.Number, true)]
-        [InlineData("-2.4E-6", CellValues.Number, true)]
+        [InlineData("StringValue", Value.Number, false)]
+        [InlineData("1", Value.Number, true)]
+        [InlineData("1.0", Value.Number, true)]
+        [InlineData("-1.0", Value.Number, true)]
+        [InlineData("9.999E+307", Value.Number, true)]
+        [InlineData("-2.4E-6", Value.Number, true)]
 
         // Boolean
-        [InlineData("false", CellValues.Boolean, true)]
-        [InlineData("False", CellValues.Boolean, false)]
-        [InlineData("true", CellValues.Boolean, true)]
-        [InlineData("True", CellValues.Boolean, false)]
-        [InlineData("other", CellValues.Boolean, false)]
-        [InlineData("0", CellValues.Boolean, true)]
-        [InlineData("1", CellValues.Boolean, true)]
+        [InlineData("false", Value.Boolean, true)]
+        [InlineData("False", Value.Boolean, false)]
+        [InlineData("true", Value.Boolean, true)]
+        [InlineData("True", Value.Boolean, false)]
+        [InlineData("other", Value.Boolean, false)]
+        [InlineData("0", Value.Boolean, true)]
+        [InlineData("1", Value.Boolean, true)]
 
         // Dates
-        [InlineData("DateValue", CellValues.Date, false)]
-        [InlineData("2017-11-28T12:25:02.123+00:00", CellValues.Date, true)]
-        [InlineData("2017-11-28T12:25:02.123", CellValues.Date, true)]
-        [InlineData("2017-11-28T12:25:02.000", CellValues.Date, true)]
-        [InlineData("2017-11-28T12:25:02.000+00:00", CellValues.Date, true)]
+        [InlineData("DateValue", Value.Date, false)]
+        [InlineData("2017-11-28T12:25:02.123+00:00", Value.Date, true)]
+        [InlineData("2017-11-28T12:25:02.123", Value.Date, true)]
+        [InlineData("2017-11-28T12:25:02.000", Value.Date, true)]
+        [InlineData("2017-11-28T12:25:02.000+00:00", Value.Date, true)]
         [Theory]
-        public void CellValidationTest(string value, CellValues type, bool isValid)
+        public void CellValidationTest(string value, Value type, bool isValid)
         {
             var cell = new Cell
             {
                 CellValue = new CellValue(value),
-                DataType = type,
+                DataType = GetCellValue(type),
             };
 
             var validator = new OpenXmlValidator();
@@ -54,16 +61,24 @@ namespace DocumentFormat.OpenXml.Tests
             }
         }
 
+        private static CellValues GetCellValue(Value value) => value switch
+        {
+            Value.Number => CellValues.Number,
+            Value.Boolean => CellValues.Boolean,
+            Value.Date => CellValues.Date,
+            _ => throw new System.NotImplementedException(),
+        };
+
         // Boolean
-        [InlineData(false, CellValues.Boolean, true)]
-        [InlineData(true, CellValues.Boolean, true)]
+        [InlineData(false, Value.Boolean, true)]
+        [InlineData(true, Value.Boolean, true)]
         [Theory]
-        public void CellBooleanValueValidationTest(bool value, CellValues type, bool isValid)
+        public void CellBooleanValueValidationTest(bool value, Value type, bool isValid)
         {
             var cell = new Cell
             {
                 CellValue = new CellValue(value),
-                DataType = type,
+                DataType = GetCellValue(type),
             };
 
             var validator = new OpenXmlValidator();

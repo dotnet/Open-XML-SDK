@@ -20,9 +20,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             {
                 var success = DataType.Value switch
                 {
-                    CellValues.Boolean => value.TryGetBoolean(out _),
-                    CellValues.Date => value.TryGetDateTimeOffset(out _) || value.TryGetDateTime(out _),
-                    CellValues.Number => value.TryGetInt(out _) || value.TryGetDouble(out _) || value.TryGetDecimal(out _),
+                    var b when b == CellValues.Boolean => value.TryGetBoolean(out _),
+                    var d when d == CellValues.Date => value.TryGetDateTimeOffset(out _) || value.TryGetDateTime(out _),
+                    var n when n == CellValues.Number => value.TryGetInt(out _) || value.TryGetDouble(out _) || value.TryGetDecimal(out _),
                     _ => true,
                 };
 

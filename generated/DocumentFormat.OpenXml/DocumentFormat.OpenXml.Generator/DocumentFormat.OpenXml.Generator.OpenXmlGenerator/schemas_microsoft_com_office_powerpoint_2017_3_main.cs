@@ -261,19 +261,33 @@ namespace DocumentFormat.OpenXml.Office2019.Presentation
     /// <summary>
     /// Defines the DisplayLocation enumeration.
     /// </summary>
-    public enum DisplayLocation
+    public readonly record struct DisplayLocation : IEnumValue, IEnumValueFactory<DisplayLocation>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new DisplayLocation enum instance
+        /// </summary>
+        public DisplayLocation(string value) => _value = value;
+        DisplayLocation IEnumValueFactory<DisplayLocation>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "media" => true,
+            "slide" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "media";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2019;
         /// <summary>
         /// media.
         /// <para>When the item is serialized out as xml, its value is "media".</para>
         /// </summary>
-        [EnumString("media")]
-        Media,
+        public static DisplayLocation Media => new("media");
         /// <summary>
         /// slide.
         /// <para>When the item is serialized out as xml, its value is "slide".</para>
         /// </summary>
-        [EnumString("slide")]
-        Slide
+        public static DisplayLocation Slide => new("slide");
+    
     }
 }

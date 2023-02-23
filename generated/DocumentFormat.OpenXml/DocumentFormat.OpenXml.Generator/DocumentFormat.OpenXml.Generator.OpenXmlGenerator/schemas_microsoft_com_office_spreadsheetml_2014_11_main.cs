@@ -264,61 +264,75 @@ namespace DocumentFormat.OpenXml.Office2016.ExcelAc
     /// <summary>
     /// Defines the ModelTimeGroupingContentType enumeration.
     /// </summary>
-    public enum ModelTimeGroupingContentType
+    public readonly record struct ModelTimeGroupingContentType : IEnumValue, IEnumValueFactory<ModelTimeGroupingContentType>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new ModelTimeGroupingContentType enum instance
+        /// </summary>
+        public ModelTimeGroupingContentType(string value) => _value = value;
+        ModelTimeGroupingContentType IEnumValueFactory<ModelTimeGroupingContentType>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "years" => true,
+            "quarters" => true,
+            "monthsindex" => true,
+            "months" => true,
+            "daysindex" => true,
+            "days" => true,
+            "hours" => true,
+            "minutes" => true,
+            "seconds" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "years";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2016;
         /// <summary>
         /// years.
         /// <para>When the item is serialized out as xml, its value is "years".</para>
         /// </summary>
-        [EnumString("years")]
-        Years,
+        public static ModelTimeGroupingContentType Years => new("years");
         /// <summary>
         /// quarters.
         /// <para>When the item is serialized out as xml, its value is "quarters".</para>
         /// </summary>
-        [EnumString("quarters")]
-        Quarters,
+        public static ModelTimeGroupingContentType Quarters => new("quarters");
         /// <summary>
         /// monthsindex.
         /// <para>When the item is serialized out as xml, its value is "monthsindex".</para>
         /// </summary>
-        [EnumString("monthsindex")]
-        Monthsindex,
+        public static ModelTimeGroupingContentType Monthsindex => new("monthsindex");
         /// <summary>
         /// months.
         /// <para>When the item is serialized out as xml, its value is "months".</para>
         /// </summary>
-        [EnumString("months")]
-        Months,
+        public static ModelTimeGroupingContentType Months => new("months");
         /// <summary>
         /// daysindex.
         /// <para>When the item is serialized out as xml, its value is "daysindex".</para>
         /// </summary>
-        [EnumString("daysindex")]
-        Daysindex,
+        public static ModelTimeGroupingContentType Daysindex => new("daysindex");
         /// <summary>
         /// days.
         /// <para>When the item is serialized out as xml, its value is "days".</para>
         /// </summary>
-        [EnumString("days")]
-        Days,
+        public static ModelTimeGroupingContentType Days => new("days");
         /// <summary>
         /// hours.
         /// <para>When the item is serialized out as xml, its value is "hours".</para>
         /// </summary>
-        [EnumString("hours")]
-        Hours,
+        public static ModelTimeGroupingContentType Hours => new("hours");
         /// <summary>
         /// minutes.
         /// <para>When the item is serialized out as xml, its value is "minutes".</para>
         /// </summary>
-        [EnumString("minutes")]
-        Minutes,
+        public static ModelTimeGroupingContentType Minutes => new("minutes");
         /// <summary>
         /// seconds.
         /// <para>When the item is serialized out as xml, its value is "seconds".</para>
         /// </summary>
-        [EnumString("seconds")]
-        Seconds
+        public static ModelTimeGroupingContentType Seconds => new("seconds");
+    
     }
 }

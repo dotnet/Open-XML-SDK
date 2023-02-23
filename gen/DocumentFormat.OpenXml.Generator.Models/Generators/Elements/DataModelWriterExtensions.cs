@@ -420,16 +420,75 @@ public static class DataModelWriterExtensions
     private static void WriteEnumType(this IndentedTextWriter writer, SchemaEnum som)
     {
         writer.WriteDocumentationComment(som.Summary);
-        writer.Write("public enum ");
-        writer.WriteLine(som.Name);
+        writer.Write("public readonly record struct ");
+        writer.Write(som.Name);
+        writer.Write(" : IEnumValue, IEnumValueFactory<");
+        writer.Write(som.Name);
+        writer.WriteLine(">");
 
         using (writer.AddBlock(new() { AddNewLineBeforeClosing = true, IncludeTrailingNewline = false }))
         {
-            var delimiter = writer.TrackDelimiter(newLineCount: 1);
+            writer.WriteLine("private readonly string? _value;");
+
+            writer.WriteDocumentationComment($"Creates a new {som.Name} enum instance");
+            writer.Write("public ");
+            writer.Write(som.Name);
+            writer.WriteLine("(string value) => _value = value;");
+
+            writer.Write(som.Name);
+            writer.Write(" IEnumValueFactory<");
+            writer.Write(som.Name);
+            writer.WriteLine(">.Create(string name) => new(name);");
+
+            writer.WriteLine("bool IEnumValue.IsValid => InternalValue switch");
+
+            using (writer.AddBlock(new() { IncludeSemiColon = true }))
+            {
+                foreach (var f in som.Facets)
+                {
+                    writer.WriteString(f.Value, isConstant: true);
+                    writer.WriteLine(" => true,");
+                }
+
+                writer.WriteLine("_ => false");
+            }
+
+            writer.WriteLine("string IEnumValue.Value => InternalValue;");
+
+            writer.Write("private string InternalValue => _value ?? ");
+            writer.WriteString(som.Facets.First().Value);
+            writer.WriteLine(";");
+
+            if (som.Facets.Any(f => f.Version > som.Version))
+            {
+                writer.WriteLine("FileFormatVersions IEnumValue.Version => InternalValue switch");
+                using (writer.AddBlock(new() { IncludeSemiColon = true }))
+                {
+                    foreach (var f in som.Facets)
+                    {
+                        if (f.Version > som.Version)
+                        {
+                            writer.WriteString(f.Value, isConstant: true);
+                            writer.Write(" => ");
+                            writer.WriteEnum("FileFormatVersions", f.Version);
+                            writer.WriteLine(",");
+                        }
+                    }
+
+                    writer.Write("_ => ");
+                    writer.WriteEnum("FileFormatVersions", som.Version);
+                    writer.WriteLine(",");
+                }
+            }
+            else
+            {
+                writer.Write("FileFormatVersions IEnumValue.Version => ");
+                writer.WriteEnum("FileFormatVersions", som.Version);
+                writer.WriteLine(";");
+            }
 
             foreach (var f in som.Facets)
             {
-                delimiter.AddDelimiter();
                 writer.WriteDocumentationComment(new DocumentCommentOptions()
                 {
                     Summary = new(false)
@@ -440,18 +499,20 @@ public static class DataModelWriterExtensions
                     },
                 });
 
-                writer.Write("[EnumString(");
-                writer.WriteItem(f.Value, isConstant: true);
-                writer.WriteLine(")]");
-
-                if (f.Version > som.Version)
-                {
-                    writer.Write("[OfficeAvailability(");
-                    writer.WriteItem(som.Version);
-                    writer.WriteLine(")]");
-                }
+                writer.Write("public static ");
+                writer.Write(som.Name);
+                writer.Write(" ");
 
                 writer.Write(f.Name);
+
+                if (som.Name == f.Name)
+                {
+                    writer.Write("Value ");
+                }
+
+                writer.Write(" => new(");
+                writer.WriteString(f.Value);
+                writer.WriteLine(");");
             }
         }
     }

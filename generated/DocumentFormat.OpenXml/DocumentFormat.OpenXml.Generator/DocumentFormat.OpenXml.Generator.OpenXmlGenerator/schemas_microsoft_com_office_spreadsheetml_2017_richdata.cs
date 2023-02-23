@@ -649,86 +649,114 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData
     /// <summary>
     /// Defines the RichValueFallbackType enumeration.
     /// </summary>
-    public enum RichValueFallbackType
+    public readonly record struct RichValueFallbackType : IEnumValue, IEnumValueFactory<RichValueFallbackType>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new RichValueFallbackType enum instance
+        /// </summary>
+        public RichValueFallbackType(string value) => _value = value;
+        RichValueFallbackType IEnumValueFactory<RichValueFallbackType>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "b" => true,
+            "n" => true,
+            "e" => true,
+            "s" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "b";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2019;
         /// <summary>
         /// b.
         /// <para>When the item is serialized out as xml, its value is "b".</para>
         /// </summary>
-        [EnumString("b")]
-        B,
+        public static RichValueFallbackType B => new("b");
         /// <summary>
         /// n.
         /// <para>When the item is serialized out as xml, its value is "n".</para>
         /// </summary>
-        [EnumString("n")]
-        N,
+        public static RichValueFallbackType N => new("n");
         /// <summary>
         /// e.
         /// <para>When the item is serialized out as xml, its value is "e".</para>
         /// </summary>
-        [EnumString("e")]
-        E,
+        public static RichValueFallbackType E => new("e");
         /// <summary>
         /// s.
         /// <para>When the item is serialized out as xml, its value is "s".</para>
         /// </summary>
-        [EnumString("s")]
-        S
+        public static RichValueFallbackType S => new("s");
+    
     }
 
     /// <summary>
     /// Defines the RichValueValueType enumeration.
     /// </summary>
-    public enum RichValueValueType
+    public readonly record struct RichValueValueType : IEnumValue, IEnumValueFactory<RichValueValueType>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new RichValueValueType enum instance
+        /// </summary>
+        public RichValueValueType(string value) => _value = value;
+        RichValueValueType IEnumValueFactory<RichValueValueType>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "d" => true,
+            "i" => true,
+            "b" => true,
+            "e" => true,
+            "s" => true,
+            "r" => true,
+            "a" => true,
+            "spb" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "d";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2019;
         /// <summary>
         /// d.
         /// <para>When the item is serialized out as xml, its value is "d".</para>
         /// </summary>
-        [EnumString("d")]
-        D,
+        public static RichValueValueType D => new("d");
         /// <summary>
         /// i.
         /// <para>When the item is serialized out as xml, its value is "i".</para>
         /// </summary>
-        [EnumString("i")]
-        I,
+        public static RichValueValueType I => new("i");
         /// <summary>
         /// b.
         /// <para>When the item is serialized out as xml, its value is "b".</para>
         /// </summary>
-        [EnumString("b")]
-        B,
+        public static RichValueValueType B => new("b");
         /// <summary>
         /// e.
         /// <para>When the item is serialized out as xml, its value is "e".</para>
         /// </summary>
-        [EnumString("e")]
-        E,
+        public static RichValueValueType E => new("e");
         /// <summary>
         /// s.
         /// <para>When the item is serialized out as xml, its value is "s".</para>
         /// </summary>
-        [EnumString("s")]
-        S,
+        public static RichValueValueType S => new("s");
         /// <summary>
         /// r.
         /// <para>When the item is serialized out as xml, its value is "r".</para>
         /// </summary>
-        [EnumString("r")]
-        R,
+        public static RichValueValueType R => new("r");
         /// <summary>
         /// a.
         /// <para>When the item is serialized out as xml, its value is "a".</para>
         /// </summary>
-        [EnumString("a")]
-        A,
+        public static RichValueValueType A => new("a");
         /// <summary>
         /// spb.
         /// <para>When the item is serialized out as xml, its value is "spb".</para>
         /// </summary>
-        [EnumString("spb")]
-        Spb
+        public static RichValueValueType Spb => new("spb");
+    
     }
 }

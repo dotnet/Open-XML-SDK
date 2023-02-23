@@ -361,73 +361,87 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing
     /// <summary>
     /// Defines the TargetScreenSize enumeration.
     /// </summary>
-    public enum TargetScreenSize
+    public readonly record struct TargetScreenSize : IEnumValue, IEnumValueFactory<TargetScreenSize>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new TargetScreenSize enum instance
+        /// </summary>
+        public TargetScreenSize(string value) => _value = value;
+        TargetScreenSize IEnumValueFactory<TargetScreenSize>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "544x376" => true,
+            "640x480" => true,
+            "720x512" => true,
+            "800x600" => true,
+            "1024x768" => true,
+            "1152x882" => true,
+            "1152x900" => true,
+            "1280x1024" => true,
+            "1600x1200" => true,
+            "1800x1440" => true,
+            "1920x1200" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "544x376";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2013;
         /// <summary>
         /// 544x376.
         /// <para>When the item is serialized out as xml, its value is "544x376".</para>
         /// </summary>
-        [EnumString("544x376")]
-        Sz544x376,
+        public static TargetScreenSize Sz544x376 => new("544x376");
         /// <summary>
         /// 640x480.
         /// <para>When the item is serialized out as xml, its value is "640x480".</para>
         /// </summary>
-        [EnumString("640x480")]
-        Sz640x480,
+        public static TargetScreenSize Sz640x480 => new("640x480");
         /// <summary>
         /// 720x512.
         /// <para>When the item is serialized out as xml, its value is "720x512".</para>
         /// </summary>
-        [EnumString("720x512")]
-        Sz720x512,
+        public static TargetScreenSize Sz720x512 => new("720x512");
         /// <summary>
         /// 800x600.
         /// <para>When the item is serialized out as xml, its value is "800x600".</para>
         /// </summary>
-        [EnumString("800x600")]
-        Sz800x600,
+        public static TargetScreenSize Sz800x600 => new("800x600");
         /// <summary>
         /// 1024x768.
         /// <para>When the item is serialized out as xml, its value is "1024x768".</para>
         /// </summary>
-        [EnumString("1024x768")]
-        Sz1024x768,
+        public static TargetScreenSize Sz1024x768 => new("1024x768");
         /// <summary>
         /// 1152x882.
         /// <para>When the item is serialized out as xml, its value is "1152x882".</para>
         /// </summary>
-        [EnumString("1152x882")]
-        Sz1152x882,
+        public static TargetScreenSize Sz1152x882 => new("1152x882");
         /// <summary>
         /// 1152x900.
         /// <para>When the item is serialized out as xml, its value is "1152x900".</para>
         /// </summary>
-        [EnumString("1152x900")]
-        Sz1152x900,
+        public static TargetScreenSize Sz1152x900 => new("1152x900");
         /// <summary>
         /// 1280x1024.
         /// <para>When the item is serialized out as xml, its value is "1280x1024".</para>
         /// </summary>
-        [EnumString("1280x1024")]
-        Sz1280x1024,
+        public static TargetScreenSize Sz1280x1024 => new("1280x1024");
         /// <summary>
         /// 1600x1200.
         /// <para>When the item is serialized out as xml, its value is "1600x1200".</para>
         /// </summary>
-        [EnumString("1600x1200")]
-        Sz1600x1200,
+        public static TargetScreenSize Sz1600x1200 => new("1600x1200");
         /// <summary>
         /// 1800x1440.
         /// <para>When the item is serialized out as xml, its value is "1800x1440".</para>
         /// </summary>
-        [EnumString("1800x1440")]
-        Sz1800x1440,
+        public static TargetScreenSize Sz1800x1440 => new("1800x1440");
         /// <summary>
         /// 1920x1200.
         /// <para>When the item is serialized out as xml, its value is "1920x1200".</para>
         /// </summary>
-        [EnumString("1920x1200")]
-        Sz1920x1200
+        public static TargetScreenSize Sz1920x1200 => new("1920x1200");
+    
     }
 }

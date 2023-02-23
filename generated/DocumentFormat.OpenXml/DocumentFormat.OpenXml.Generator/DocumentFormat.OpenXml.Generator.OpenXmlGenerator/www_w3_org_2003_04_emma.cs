@@ -3023,106 +3023,162 @@ namespace DocumentFormat.OpenXml.EMMA
     /// <summary>
     /// Defines the EndPointRoleValues enumeration.
     /// </summary>
-    public enum EndPointRoleValues
+    public readonly record struct EndPointRoleValues : IEnumValue, IEnumValueFactory<EndPointRoleValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new EndPointRoleValues enum instance
+        /// </summary>
+        public EndPointRoleValues(string value) => _value = value;
+        EndPointRoleValues IEnumValueFactory<EndPointRoleValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "source" => true,
+            "sink" => true,
+            "reply-to" => true,
+            "router" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "source";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// source.
         /// <para>When the item is serialized out as xml, its value is "source".</para>
         /// </summary>
-        [EnumString("source")]
-        Source,
+        public static EndPointRoleValues Source => new("source");
         /// <summary>
         /// sink.
         /// <para>When the item is serialized out as xml, its value is "sink".</para>
         /// </summary>
-        [EnumString("sink")]
-        Sink,
+        public static EndPointRoleValues Sink => new("sink");
         /// <summary>
         /// reply-to.
         /// <para>When the item is serialized out as xml, its value is "reply-to".</para>
         /// </summary>
-        [EnumString("reply-to")]
-        Replyto,
+        public static EndPointRoleValues Replyto => new("reply-to");
         /// <summary>
         /// router.
         /// <para>When the item is serialized out as xml, its value is "router".</para>
         /// </summary>
-        [EnumString("router")]
-        Router
+        public static EndPointRoleValues Router => new("router");
+    
     }
 
     /// <summary>
     /// Defines the MediumValues enumeration.
     /// </summary>
-    public enum MediumValues
+    public readonly record struct MediumValues : IEnumValue, IEnumValueFactory<MediumValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new MediumValues enum instance
+        /// </summary>
+        public MediumValues(string value) => _value = value;
+        MediumValues IEnumValueFactory<MediumValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "acoustic" => true,
+            "tactile" => true,
+            "visual" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "acoustic";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// acoustic.
         /// <para>When the item is serialized out as xml, its value is "acoustic".</para>
         /// </summary>
-        [EnumString("acoustic")]
-        Acoustic,
+        public static MediumValues Acoustic => new("acoustic");
         /// <summary>
         /// tactile.
         /// <para>When the item is serialized out as xml, its value is "tactile".</para>
         /// </summary>
-        [EnumString("tactile")]
-        Tactile,
+        public static MediumValues Tactile => new("tactile");
         /// <summary>
         /// visual.
         /// <para>When the item is serialized out as xml, its value is "visual".</para>
         /// </summary>
-        [EnumString("visual")]
-        Visual
+        public static MediumValues Visual => new("visual");
+    
     }
 
     /// <summary>
     /// Defines the AnchorPointValues enumeration.
     /// </summary>
-    public enum AnchorPointValues
+    public readonly record struct AnchorPointValues : IEnumValue, IEnumValueFactory<AnchorPointValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new AnchorPointValues enum instance
+        /// </summary>
+        public AnchorPointValues(string value) => _value = value;
+        AnchorPointValues IEnumValueFactory<AnchorPointValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "start" => true,
+            "end" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "start";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// start.
         /// <para>When the item is serialized out as xml, its value is "start".</para>
         /// </summary>
-        [EnumString("start")]
-        Start,
+        public static AnchorPointValues Start => new("start");
         /// <summary>
         /// end.
         /// <para>When the item is serialized out as xml, its value is "end".</para>
         /// </summary>
-        [EnumString("end")]
-        End
+        public static AnchorPointValues End => new("end");
+    
     }
 
     /// <summary>
     /// Defines the DisjunctionTypeValues enumeration.
     /// </summary>
-    public enum DisjunctionTypeValues
+    public readonly record struct DisjunctionTypeValues : IEnumValue, IEnumValueFactory<DisjunctionTypeValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new DisjunctionTypeValues enum instance
+        /// </summary>
+        public DisjunctionTypeValues(string value) => _value = value;
+        DisjunctionTypeValues IEnumValueFactory<DisjunctionTypeValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "recognition" => true,
+            "understanding" => true,
+            "multi-device" => true,
+            "multi-process" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "recognition";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// recognition.
         /// <para>When the item is serialized out as xml, its value is "recognition".</para>
         /// </summary>
-        [EnumString("recognition")]
-        Recognition,
+        public static DisjunctionTypeValues Recognition => new("recognition");
         /// <summary>
         /// understanding.
         /// <para>When the item is serialized out as xml, its value is "understanding".</para>
         /// </summary>
-        [EnumString("understanding")]
-        Understanding,
+        public static DisjunctionTypeValues Understanding => new("understanding");
         /// <summary>
         /// multi-device.
         /// <para>When the item is serialized out as xml, its value is "multi-device".</para>
         /// </summary>
-        [EnumString("multi-device")]
-        Multidevice,
+        public static DisjunctionTypeValues Multidevice => new("multi-device");
         /// <summary>
         /// multi-process.
         /// <para>When the item is serialized out as xml, its value is "multi-process".</para>
         /// </summary>
-        [EnumString("multi-process")]
-        Multiprocess
+        public static DisjunctionTypeValues Multiprocess => new("multi-process");
+    
     }
 }

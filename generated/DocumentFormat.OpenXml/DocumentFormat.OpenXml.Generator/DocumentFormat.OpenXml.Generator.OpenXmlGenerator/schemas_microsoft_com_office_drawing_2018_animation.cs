@@ -247,13 +247,27 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation
     /// <summary>
     /// Defines the Indefinite enumeration.
     /// </summary>
-    public enum Indefinite
+    public readonly record struct Indefinite : IEnumValue, IEnumValueFactory<Indefinite>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new Indefinite enum instance
+        /// </summary>
+        public Indefinite(string value) => _value = value;
+        Indefinite IEnumValueFactory<Indefinite>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "indefinite" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "indefinite";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2019;
         /// <summary>
         /// indefinite.
         /// <para>When the item is serialized out as xml, its value is "indefinite".</para>
         /// </summary>
-        [EnumString("indefinite")]
-        Indefinite
+        public static Indefinite IndefiniteValue  => new("indefinite");
+    
     }
 }

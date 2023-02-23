@@ -65,8 +65,8 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void EnumValueOutOfRangeTest()
         {
-            var value = (M.BooleanValues)10;
-            Assert.False(Enum.IsDefined(typeof(M.BooleanValues), value));
+            var value = new M.BooleanValues("somevalue");
+            Assert.False(((IEnumValue)value).IsValid);
 
             Assert.Throws<ArgumentOutOfRangeException>(() => new EnumValue<M.BooleanValues>(value));
 
