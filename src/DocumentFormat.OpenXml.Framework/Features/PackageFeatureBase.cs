@@ -236,7 +236,11 @@ internal abstract class PackageFeatureBase : IPackage, IPackageFeature, IRelatio
                 {
                     var wrapped = new PackageRelationshipBuilder(Uri, relationship);
                     Feature.RunFilter(wrapped);
-                    _relationships.Add(wrapped.Id, wrapped);
+
+                    if (!wrapped.IsRemoved)
+                    {
+                        _relationships.Add(wrapped.Id, wrapped);
+                    }
                 }
             }
         }

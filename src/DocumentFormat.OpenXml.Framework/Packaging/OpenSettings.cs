@@ -31,7 +31,6 @@ namespace DocumentFormat.OpenXml.Packaging
             MarkupCompatibilityProcessSettings.ProcessMode = other.MarkupCompatibilityProcessSettings.ProcessMode;
             MarkupCompatibilityProcessSettings.TargetFileFormatVersions = other.MarkupCompatibilityProcessSettings.TargetFileFormatVersions;
             MaxCharactersInPart = other.MaxCharactersInPart;
-            IgnoreExceptionOnCalcChainPartMissing = other.IgnoreExceptionOnCalcChainPartMissing;
             CompatibilityLevel = other.CompatibilityLevel;
         }
 
@@ -75,11 +74,5 @@ namespace DocumentFormat.OpenXml.Packaging
         /// This property allows you to mitigate denial of service attacks where the attacker submits a package with an extremely large Open XML part. By limiting the size of the part, you can detect the attack and recover reliably.
         /// </remarks>
         public long MaxCharactersInPart { get; set; }
-
-        /// <summary>
-        /// Gets or sets a value indicating whether to ignore an exception if the calcChain part is missing.
-        /// The default value is false which means missing calcChain part will throw an exception upon package open.
-        /// </summary>
-        public bool IgnoreExceptionOnCalcChainPartMissing { get; set; }
     }
 }
