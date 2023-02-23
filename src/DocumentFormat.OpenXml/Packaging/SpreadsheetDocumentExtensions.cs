@@ -13,6 +13,6 @@ public static class SpreadsheetDocumentExtensions
     /// <summary>
     /// Sets up the <paramref name="spreadsheet"/> to ignore any <see cref="CalculationChainPart"/> relationships if the part is not there.
     /// </summary>
-    public static void IgnoreCalcChainIfMissing(this SpreadsheetDocument spreadsheet)
-        => spreadsheet.UseIgnoreRelationship("http://schemas.openxmlformats.org/officeDocument/2006/relationships/calcChain");
+    public static void IgnoreCalculationChainPartRelationship(this SpreadsheetDocument spreadsheet)
+        => spreadsheet.IgnoreRelationship(CalculationChainPart.RelationshipTypeConstant);
 }

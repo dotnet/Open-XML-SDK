@@ -324,7 +324,7 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
 
             using SpreadsheetDocument spd = SpreadsheetDocument.Open(stmSpd, false);
 
-            spd.IgnoreCalcChainIfMissing();
+            spd.IgnoreCalculationChainPartRelationship();
 
             spd.LoadAllParts();
 

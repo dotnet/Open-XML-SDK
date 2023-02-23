@@ -9,7 +9,7 @@ namespace DocumentFormat.OpenXml.Features;
 
 internal static class RelationshipFilterExtensions
 {
-    internal static void UseIgnoreRelationship(this OpenXmlPackage package, string relationshipType)
+    internal static void IgnoreRelationship(this OpenXmlPackage package, string relationshipType)
     {
         if (package.Features.Get<Relationships>() is not { } relationships)
         {

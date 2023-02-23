@@ -52,7 +52,7 @@ internal static class PackageStorageExtensions
         var compatLevel = package.OpenSettings.CompatibilityLevel;
 
         package.UseTransitionalRelationshipNamespaces();
-        package.UseIgnoreRelationship("http://schemas.microsoft.com/office/2006/relationships/recovered");
+        package.IgnoreRelationship("http://schemas.microsoft.com/office/2006/relationships/recovered");
 
         if (compatLevel >= CompatibilityLevel.Version_3_0)
         {
