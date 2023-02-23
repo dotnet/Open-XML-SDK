@@ -9,7 +9,12 @@ namespace DocumentFormat.OpenXml.Features;
 
 internal interface IPartRelationshipsFeature : IEnumerable<KeyValuePair<string, OpenXmlPart>>
 {
-    void Add(string id, OpenXmlPart part);
+    /// <summary>
+    /// Adds a part to the relationship collection. If an <paramref name="id"/> is provided, it will be used, otherwise a random id will be generated.
+    /// </summary>
+    /// <param name="part">Part to add to relationship collection.</param>
+    /// <param name="id">Id of part if supplied.</param>
+    void Add(OpenXmlPart part, string? id = null);
 
     bool Contains(string id);
 

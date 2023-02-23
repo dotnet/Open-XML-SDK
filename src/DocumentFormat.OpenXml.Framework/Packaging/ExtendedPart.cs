@@ -92,9 +92,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             newPart.CreateInternal(InternalOpenXmlPackage, ThisOpenXmlPart, contentType, targetExt: null);
 
-            var relationshipId = AttachChild(newPart, id);
-
-            ChildrenRelationshipParts.Add(relationshipId, newPart);
+            ChildrenRelationshipParts.Add(newPart, id);
         }
 
         /// <inheritdoc/>

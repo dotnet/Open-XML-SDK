@@ -55,8 +55,8 @@ internal static class StrictNamespaceExtensions
                     {
                         foreach (var toReplace in list)
                         {
-                            package.DeleteRelationship(toReplace.Id);
-                            package.CreateRelationship(toReplace.TargetUri, toReplace.TargetMode, toReplace.RelationshipType, toReplace.Id);
+                            package.Relationships.Remove(toReplace.Id);
+                            package.Relationships.Create(toReplace.TargetUri, toReplace.TargetMode, toReplace.RelationshipType, toReplace.Id);
                         }
 
                         alteredRelationships.Remove(OpenXmlPackage.Uri);
@@ -68,8 +68,8 @@ internal static class StrictNamespaceExtensions
                     {
                         foreach (var toReplace in list)
                         {
-                            part.DeleteRelationship(toReplace.Id);
-                            part.CreateRelationship(toReplace.TargetUri, toReplace.TargetMode, toReplace.RelationshipType, toReplace.Id);
+                            part.Relationships.Remove(toReplace.Id);
+                            part.Relationships.Create(toReplace.TargetUri, toReplace.TargetMode, toReplace.RelationshipType, toReplace.Id);
                         }
 
                         alteredRelationships.Remove(part.Uri);
