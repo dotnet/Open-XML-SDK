@@ -76,7 +76,7 @@ internal sealed class PartRelationshipsFeature :
                 events.OnChange(kv.Value, EventType.Removed);
             }
 #else
-            var parts = InternalParts;
+            var parts = RelationshipMap;
 
             foreach (var kv in parts)
             {
