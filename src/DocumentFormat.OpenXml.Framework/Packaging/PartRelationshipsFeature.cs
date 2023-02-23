@@ -276,11 +276,11 @@ internal sealed class PartRelationshipsFeature :
     {
         if (_owner is OpenXmlPart part)
         {
-            return part.Features.GetRequired<IPackagePartFeature>().Part.Relationships.CreateRelationship(externalUri, mode, relationshipType, id);
+            return part.Features.GetRequired<IPackagePartFeature>().Part.Relationships.Create(externalUri, mode, relationshipType, id);
         }
         else if (_owner is OpenXmlPackage package)
         {
-            return package.Features.GetRequired<IPackageFeature>().Package.Relationships.CreateRelationship(externalUri, mode, relationshipType, id);
+            return package.Features.GetRequired<IPackageFeature>().Package.Relationships.Create(externalUri, mode, relationshipType, id);
         }
         else
         {
@@ -297,12 +297,12 @@ internal sealed class PartRelationshipsFeature :
 
             if (_owner is OpenXmlPart part)
             {
-                part.Features.GetRequired<IPackagePartFeature>().Part.Relationships.DeleteRelationship(id);
+                part.Features.GetRequired<IPackagePartFeature>().Part.Relationships.Remove(id);
                 return true;
             }
             else if (_owner is OpenXmlPackage package)
             {
-                package.Features.GetRequired<IPackageFeature>().Package.Relationships.DeleteRelationship(id);
+                package.Features.GetRequired<IPackageFeature>().Package.Relationships.Remove(id);
                 return true;
             }
         }

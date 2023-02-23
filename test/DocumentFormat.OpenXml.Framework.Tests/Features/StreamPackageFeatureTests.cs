@@ -138,8 +138,8 @@ public class StreamPackageFeatureTests
         var package = (IPackage)feature;
 
         // Act
-        var relationship1 = package.Relationships.GetRelationship(Relationship1.Id);
-        var relationship2 = package.Relationships.GetRelationship(Relationship1.Id);
+        var relationship1 = package.Relationships[Relationship1.Id];
+        var relationship2 = package.Relationships[Relationship1.Id];
 
         // Assert
         Assert.Same(relationship1, relationship2);
@@ -154,9 +154,9 @@ public class StreamPackageFeatureTests
         var package = (IPackage)feature;
 
         // Act/Assert
-        Assert.NotNull(package.Relationships.GetRelationship(Relationship1.Id)); // This will cache the relationship
-        package.Relationships.DeleteRelationship(Relationship1.Id);
-        Assert.Throws<InvalidOperationException>(() => package.Relationships.GetRelationship(Relationship1.Id));
+        Assert.NotNull(package.Relationships[Relationship1.Id]); // This will cache the relationship
+        package.Relationships.Remove(Relationship1.Id);
+        Assert.Throws<InvalidOperationException>(() => package.Relationships[Relationship1.Id]);
     }
 
     [Fact]
@@ -315,7 +315,7 @@ public class StreamPackageFeatureTests
         var part = feature.Package.GetPart(Part1.Uri);
 
         // Act
-        var relationship = part.Relationships.GetRelationship(Part1Relationship1.Id);
+        var relationship = part.Relationships[Part1Relationship1.Id];
 
         // Assert
         Assert.Equal(Part1Relationship1.Id, relationship.Id);
@@ -334,9 +334,9 @@ public class StreamPackageFeatureTests
         var part = feature.Package.GetPart(Part1.Uri);
 
         // Act/Assert
-        Assert.NotNull(part.Relationships.GetRelationship(Part1Relationship1.Id)); // This will cache the relationship
-        part.Relationships.DeleteRelationship(Part1Relationship1.Id);
-        Assert.Throws<InvalidOperationException>(() => part.Relationships.GetRelationship(Part1Relationship1.Id));
+        Assert.NotNull(part.Relationships[Part1Relationship1.Id]); // This will cache the relationship
+        part.Relationships.Remove(Part1Relationship1.Id);
+        Assert.Throws<InvalidOperationException>(() => part.Relationships[Part1Relationship1.Id]);
     }
 
     [Fact]
@@ -374,7 +374,7 @@ public class StreamPackageFeatureTests
 
         // Act
         var relationshipFromEnumerable = part.Relationships.Single();
-        var relationship = part.Relationships.GetRelationship(Part1Relationship1.Id);
+        var relationship = part.Relationships[Part1Relationship1.Id];
 
         // Assert
         Assert.Same(relationship, relationshipFromEnumerable);
@@ -390,9 +390,9 @@ public class StreamPackageFeatureTests
         var part = feature.Package.GetPart(Part1.Uri);
 
         // Act
-        var relationshipBefore = part.Relationships.GetRelationship(Part1Relationship1.Id);
+        var relationshipBefore = part.Relationships[Part1Relationship1.Id];
         feature.Reload();
-        var relationshipAfter = part.Relationships.GetRelationship(Part1Relationship1.Id);
+        var relationshipAfter = part.Relationships[Part1Relationship1.Id];
 
         // Assert
         Assert.Same(relationshipBefore, relationshipAfter);

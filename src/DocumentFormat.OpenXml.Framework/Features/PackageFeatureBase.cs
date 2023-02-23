@@ -249,7 +249,7 @@ internal abstract class PackageFeatureBase : IPackage, IPackageFeature, IRelatio
 
         protected abstract PackageRelationship CreateRelationshipInternal(Uri targetUri, TargetMode targetMode, string relationshipType, string? id = null);
 
-        public IPackageRelationship CreateRelationship(Uri targetUri, TargetMode targetMode, string relationshipType, string? id = null)
+        public IPackageRelationship Create(Uri targetUri, TargetMode targetMode, string relationshipType, string? id = null)
         {
             Load();
 
@@ -258,16 +258,16 @@ internal abstract class PackageFeatureBase : IPackage, IPackageFeature, IRelatio
             return relationship;
         }
 
-        public void DeleteRelationship(string id)
+        public void Remove(string id)
         {
             Relationships.Remove(id);
             Delete(id);
         }
 
-        public IPackageRelationship GetRelationship(string id)
-            => Relationships[id];
+        public IPackageRelationship this[string id]
+            => Relationships.TryGetValue(id, out var existing) ? existing : throw new InvalidOperationException();
 
-        public bool RelationshipExists(string id)
+        public bool Contains(string id)
             => Relationships.ContainsKey(id);
 
         public IEnumerator<IPackageRelationship> GetEnumerator()
