@@ -16,57 +16,17 @@ namespace DocumentFormat.OpenXml.Packaging
     /// </summary>
     public abstract partial class OpenXmlPackage : OpenXmlPartContainer, IDisposable
     {
-        private protected const string DoNotUseParameterlessConstructor = "The parameterless constructor never initialized anything. This will be removed in future updates.";
-
-        private readonly LinkedList<DataPart> _dataPartList = new LinkedList<DataPart>();
+        internal static Uri Uri { get; } = new Uri("/", UriKind.Relative);
 
         private bool _isDisposed;
+        private OpenSettings? _settings;
 
         /// <summary>
         /// Initializes a new instance of the OpenXmlPackage class.
         /// </summary>
-        [Obsolete(DoNotUseParameterlessConstructor, error: true)]
         protected OpenXmlPackage()
             : base()
         {
-            OpenSettings = null!;
-        }
-
-        /// <summary>
-        /// Create an <see cref="OpenXmlPackage"/>.
-        /// </summary>
-        /// <param name="packageFeature">Underlying package feature.</param>
-        /// <param name="settings">Settings to use</param>
-        private protected OpenXmlPackage(IPackageFeature packageFeature, OpenSettings? settings = null)
-            : base()
-        {
-            if (packageFeature is null)
-            {
-                throw new ArgumentNullException(nameof(packageFeature));
-            }
-
-            if (packageFeature.Package.FileOpenAccess == FileAccess.Write)
-            {
-                throw new OpenXmlPackageException(ExceptionMessages.PackageMustCanBeRead);
-            }
-
-            if (settings is not null &&
-                settings.MarkupCompatibilityProcessSettings.ProcessMode != MarkupCompatibilityProcessMode.NoProcess &&
-                !settings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions.Any())
-            {
-                throw new ArgumentException(ExceptionMessages.InvalidMCMode);
-            }
-
-            OpenSettings = new OpenSettings(settings);
-
-            Features.Set<IPackageFeature>(packageFeature);
-
-            if (packageFeature is IDisposable disposable)
-            {
-                Features.GetRequired<IDisposableFeature>().Register(disposable);
-            }
-
-            Load(packageFeature.Package);
         }
 
         /// <summary>
@@ -74,83 +34,16 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         public virtual OpenXmlPart? RootPart => Features.GetRequired<IMainPartFeature>().Part;
 
-        /// <summary>
-        /// Loads the package. This method must be called in the constructor of a derived class.
-        /// </summary>
-        private void Load(IPackage package)
+        internal OpenSettings OpenSettings
         {
-            try
-            {
-                var relationshipCollection = new PackageRelationshipPropertyCollection(package, Features.GetNamespaceResolver());
-
-                if (relationshipCollection.Count == 0)
-                {
-                    return;
-                }
-
-                var loadedParts = new Dictionary<Uri, OpenXmlPart>();
-                var hasMainPart = false;
-
-                // relationCollection.StrictRelationshipFound is true when this collection contains Transitional relationships converted from Strict.
-                StrictRelationshipFound = relationshipCollection.StrictRelationshipFound;
-
-                var handler = OpenSettings.RelationshipErrorHandlerFactory?.Invoke(this);
-
-                handler?.Handle(package);
-
-                // AutoSave must be false when opening ISO Strict doc as editable.
-                // (Attention: #2545529. Now we disable this code until we finally decide to go with this. Instead, we take an alternative approach that is added in the SavePartContents() method
-                // which we ignore AutoSave when this.StrictRelationshipFound is true to keep consistency in the document.)
-                // if (this.StrictRelationshipFound && (this._accessMode == FileAccess.ReadWrite || this._accessMode == FileAccess.Write) && !this.AutoSave)
-                // {
-                //    OpenXmlPackageException exception = new OpenXmlPackageException(ExceptionMessages.StrictEditNeedsAutoSave);
-                //    throw exception;
-                // }
-                var mainPartFeature = Features.GetRequired<IMainPartFeature>();
-
-                // auto detect document type (main part type for Transitional)
-                foreach (var relationship in relationshipCollection)
-                {
-                    if (relationship.RelationshipType == mainPartFeature.RelationshipType)
-                    {
-                        hasMainPart = true;
-
-                        var uriTarget = PackUriHelper.ResolvePartUri(new Uri("/", UriKind.Relative), relationship.TargetUri);
-                        var metroPart = package.GetPart(uriTarget);
-
-                        mainPartFeature.ContentType = metroPart.ContentType;
-                        break;
-                    }
-                }
-
-                if (!hasMainPart)
-                {
-                    throw new OpenXmlPackageException(ExceptionMessages.NoMainPart);
-                }
-
-                LoadReferencedPartsAndRelationships(this, null, relationshipCollection, loadedParts);
-
-                handler?.OnPackageLoaded();
-            }
-            catch (UriFormatException exception)
-            {
-                // UriFormatException is wrapped here in an OpenXmlPackageException
-                Close();
-                throw new OpenXmlPackageException(ExceptionMessages.InvalidUriFormat, exception);
-            }
-            catch (Exception)
-            {
-                Close();
-                throw;
-            }
+            get => _settings ??= new();
+            set => _settings = value;
         }
-
-        internal OpenSettings OpenSettings { get; set; }
 
         /// <summary>
         /// Gets a value indicating whether this package contains Transitional relationships converted from Strict.
         /// </summary>
-        public bool StrictRelationshipFound { get; private set; }
+        public bool StrictRelationshipFound => Features.Get<IStrictNamespaceFeature>()?.Found ?? false;
 
         internal IPackage Package => Features.GetRequired<IPackageFeature>().Package;
 
@@ -194,7 +87,23 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets all the <see cref="DataPart"/> parts in the document package.
         /// </summary>
-        public IEnumerable<DataPart> DataParts => _dataPartList;
+        public IEnumerable<DataPart> DataParts
+        {
+            get
+            {
+                LoadAllParts();
+                return Features.GetRequired<IDataPartsFeature>().Parts;
+            }
+        }
+
+        internal void LoadAllParts()
+        {
+            foreach (var part in this.GetAllParts())
+            {
+                // Force it to load
+                _ = part.ChildrenRelationshipParts.Count;
+            }
+        }
 
         #region public methods
 
@@ -216,9 +125,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentNullException(nameof(part));
             }
 
-            var mainPart = Features.GetRequired<IMainPartFeature>();
-
-            if (part.RelationshipType == mainPart.RelationshipType && part.ContentType != mainPart.ContentType)
+            if (Features.Get<IMainPartFeature>() is { } mainPart && part.RelationshipType == mainPart.RelationshipType && part.ContentType != mainPart.ContentType)
             {
                 throw new ArgumentOutOfRangeException(ExceptionMessages.MainPartIsDifferent);
             }
@@ -264,7 +171,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             var mediaDataPart = new MediaDataPart(InternalOpenXmlPackage, contentType, extension: null);
 
-            _dataPartList.AddLast(mediaDataPart);
+            Features.GetRequired<IDataPartsFeature>().Add(mediaDataPart);
 
             return mediaDataPart;
         }
@@ -293,7 +200,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             var mediaDataPart = new MediaDataPart(InternalOpenXmlPackage, contentType, extension);
 
-            _dataPartList.AddLast(mediaDataPart);
+            Features.GetRequired<IDataPartsFeature>().Add(mediaDataPart);
 
             return mediaDataPart;
         }
@@ -309,7 +216,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             var mediaDataPart = new MediaDataPart(InternalOpenXmlPackage, mediaDataPartType);
 
-            _dataPartList.AddLast(mediaDataPart);
+            Features.GetRequired<IDataPartsFeature>().Add(mediaDataPart);
 
             return mediaDataPart;
         }
@@ -338,7 +245,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 // delete the part from the package
                 dataPart.Destroy();
-                return _dataPartList.Remove(dataPart);
+                return Features.GetRequired<IDataPartsFeature>().Remove(dataPart);
             }
             else
             {
@@ -384,10 +291,8 @@ namespace DocumentFormat.OpenXml.Packaging
                 SavePartContents(AutoSave);
                 DeleteUnusedDataPartOnClose();
 
-                ChildrenRelationshipParts.Clear();
-                ReferenceRelationshipList.Clear();
-
                 Features.Get<IContainerDisposableFeature>()?.Dispose();
+
                 closing?.OnChange(this, EventType.Closed);
                 _isDisposed = true;
             }
@@ -423,27 +328,6 @@ namespace DocumentFormat.OpenXml.Packaging
                 }
             }
         }
-
-        // internal FileFormatVersions MCTargetFormat
-        // {
-        //    get
-        //    {
-        //        if (MarkupCompatibilityProcessSettings.ProcessMode == MarkupCompatibilityProcessMode.NoProcess)
-        //            return (FileFormatVersions.Office2007 | FileFormatVersions.Office2010);
-        //        else
-        //        {
-        //            return MarkupCompatibilityProcessSettings.TargetFileFormatVersions;
-        //        }
-        //    }
-        // }
-
-        // internal bool ProcessMCInWholePackage
-        // {
-        //    get
-        //    {
-        //        return MarkupCompatibilityProcessSettings.ProcessMode == MarkupCompatibilityProcessMode.ProcessAllParts;
-        //    }
-        // }
         #endregion
 
         #region Auto-Save functions
@@ -457,8 +341,6 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             var package = Features.GetRequired<IPackageFeature>().Package;
 
-            bool isAnyPartChanged;
-
             if (package.FileOpenAccess == FileAccess.Read)
             {
                 return package; // do nothing if the package is open in read-only mode.
@@ -470,38 +352,15 @@ namespace DocumentFormat.OpenXml.Packaging
                 return package; // do nothing if saving is false.
             }
 
-            // Traversal the whole package and save changed contents.
-            isAnyPartChanged = false;
+            var saveFeature = Features.Get<ISaveFeature>();
 
-            // If a part is in the state of 'loaded', something in the part should've been changed.
-            // When all the part is not loaded yet, we can skip saving all parts' contents and updating Package relationship types.
+            saveFeature?.Save(this);
+
             foreach (var part in this.GetAllParts())
             {
-                if (part.IsRootElementLoaded)
-                {
-                    isAnyPartChanged = true;
-                    break;
-                }
-            }
+                saveFeature?.Save(part);
 
-            // We update parts and relationship types only when any one of the parts was changed (i.e. loaded).
-            if (isAnyPartChanged)
-            {
-                foreach (var part in this.GetAllParts())
-                {
-                    TrySavePartContent(part);
-                }
-
-                if (StrictRelationshipFound)
-                {
-                    RelationshipCollection relationshipCollection;
-
-                    // For Package: Invoking UpdateRelationshipTypesInPackage() changes the relationship types in the package.
-                    // We need to new PackageRelationshipPropertyCollection to read through the package contents right here
-                    // because some operation may have updated the package before we get here.
-                    relationshipCollection = new PackageRelationshipPropertyCollection(package, Features.GetNamespaceResolver());
-                    relationshipCollection.UpdateRelationshipTypesInPackage();
-                }
+                TrySavePartContent(part);
             }
 
             return package;
@@ -513,14 +372,6 @@ namespace DocumentFormat.OpenXml.Packaging
             // If StrictRelationshipFound is true, we need to update the part anyway.
             if (part.OpenXmlPackage.StrictRelationshipFound)
             {
-                RelationshipCollection relationshipCollection;
-
-                // For PackagePart: Invoking UpdateRelationshipTypesInPackage() changes the relationship types in the package part.
-                // We need to new PackageRelationshipPropertyCollection to read through the package part contents right here
-                // because some operation may have updated the package part before we get here.
-                relationshipCollection = new PackagePartRelationshipPropertyCollection(part.Features.GetRequired<IPackagePartFeature>().Part, part.Features.GetNamespaceResolver());
-                relationshipCollection.UpdateRelationshipTypesInPackage();
-
                 // For ISO Strict documents, we read and save the part anyway to translate the contents. The contents are translated when PartRootElement is being loaded.
                 if (part.PartRootElement is not null)
                 {
@@ -558,13 +409,9 @@ namespace DocumentFormat.OpenXml.Packaging
 
         #region internal methods related main part
 
-        /// <summary>
-        /// Gets or sets the content type of the main part of the package.
-        /// </summary>
         internal string MainPartContentType
         {
             get => Features.GetRequired<IMainPartFeature>().ContentType;
-            set => Features.GetRequired<IMainPartFeature>().ContentType = value;
         }
 
         /// <summary>
@@ -597,7 +444,7 @@ namespace DocumentFormat.OpenXml.Packaging
                         childParts.Add(idPartPair.Key, idPartPair.Value);
                     }
 
-                    ReferenceRelationship[] referenceRelationships = mainPart.ReferenceRelationshipList.ToArray();
+                    var referenceRelationships = mainPart.Features.GetRequired<IReferenceRelationshipsFeature>().Relationships.ToArray();
 
                     Uri uri = mainPart.Uri;
                     string id = GetIdOfPart(mainPart);
@@ -727,10 +574,12 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         private void DeleteUnusedDataPartOnClose()
         {
-            if (_dataPartList.Count > 0)
+            var dataParts = Features.GetRequired<IDataPartsFeature>();
+
+            if (dataParts.Count > 0)
             {
                 HashSet<DataPart> dataPartSet = new HashSet<DataPart>();
-                foreach (var dataPart in DataParts)
+                foreach (var dataPart in dataParts.Parts)
                 {
                     dataPartSet.Add(dataPart);
                 }
@@ -764,32 +613,14 @@ namespace DocumentFormat.OpenXml.Packaging
                 {
                     // delete the part from the package
                     dataPart.Destroy();
-                    _dataPartList.Remove(dataPart);
+                    Features.GetRequired<IDataPartsFeature>().Remove(dataPart);
                 }
             }
-        }
-
-        /// <summary>
-        /// Finds the DataPart that has the specified part URI.
-        /// </summary>
-        /// <param name="partUri">The part URI.</param>
-        /// <returns>Returns null if there is no DataPart with the specified URI.</returns>
-        internal DataPart? FindDataPart(Uri partUri)
-        {
-            foreach (var dataPart in DataParts)
-            {
-                if (dataPart.Uri == partUri)
-                {
-                    return dataPart;
-                }
-            }
-
-            return null;
         }
 
         internal DataPart AddDataPartToList(DataPart dataPart)
         {
-            _dataPartList.AddLast(dataPart);
+            Features.GetRequired<IDataPartsFeature>().Add(dataPart);
             return dataPart;
         }
 
@@ -1131,79 +962,5 @@ namespace DocumentFormat.OpenXml.Packaging
 
         /// <inheritdoc/>
         public override IFeatureCollection Features => _features ??= new PackageFeatureCollection(this, FeatureCollection.Default);
-
-        private protected partial class PackageFeatureCollection :
-            IFeatureCollection,
-            IContainerFeature<OpenXmlPackage>,
-            IPartFactoryFeature,
-            IApplicationTypeFeature,
-            IDisposableFeature,
-            IContainerDisposableFeature
-        {
-            private readonly IFeatureCollection? _parent;
-
-            private Action? _disposable;
-            private FeatureContainer _container;
-
-            public PackageFeatureCollection(OpenXmlPackage package, IFeatureCollection? parent)
-            {
-                Package = package;
-                _parent = parent;
-            }
-
-            protected OpenXmlPackage Package { get; }
-
-            public bool IsReadOnly => false;
-
-            public int Revision => _container.Revision + (_parent?.Revision ?? 0);
-
-            OpenXmlPackage IContainerFeature<OpenXmlPackage>.Value => Package;
-
-            ApplicationType IApplicationTypeFeature.Type => ApplicationType.None;
-
-            public TFeature? Get<TFeature>()
-            {
-                if (_container.Get<TFeature>() is { } other)
-                {
-                    return other;
-                }
-
-                if (this is TFeature @this)
-                {
-                    return @this;
-                }
-
-                if (GetInternal<TFeature>() is { } @internal)
-                {
-                    return @internal;
-                }
-
-                if (_parent is { } p && p.Get<TFeature>() is { } parent)
-                {
-                    return parent;
-                }
-
-                return default;
-            }
-
-            [KnownFeature(typeof(IPartUriFeature), Factory = nameof(CreatePartUri))]
-            [KnownFeature(typeof(AnnotationsFeature))]
-            [KnownFeature(typeof(IPartExtensionFeature), typeof(PartExtensionProvider))]
-            [KnownFeature(typeof(IChildPartFeatures), Factory = nameof(CreateChildParts))]
-            private partial T? GetInternal<T>();
-
-            private IChildPartFeatures CreateChildParts() => new PartDictionary(this);
-
-            private IPartUriFeature CreatePartUri() => new PackagePartUriHelper(this.GetRequired<IPackageFeature>().Package);
-
-            public void Set<TFeature>(TFeature? instance)
-                => _container.Set(instance);
-
-            OpenXmlPart? IPartFactoryFeature.Create(string relationshipType) => null;
-
-            void IDisposableFeature.Register(IDisposable disposable) => _disposable += disposable.Dispose;
-
-            void IContainerDisposableFeature.Dispose() => _disposable?.Invoke();
-        }
     }
 }

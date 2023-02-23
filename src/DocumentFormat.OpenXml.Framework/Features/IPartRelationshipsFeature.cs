@@ -7,11 +7,11 @@ using System.Diagnostics.CodeAnalysis;
 
 namespace DocumentFormat.OpenXml.Features;
 
-internal interface IChildPartFeatures : IEnumerable<KeyValuePair<string, OpenXmlPart>>
+internal interface IPartRelationshipsFeature : IEnumerable<KeyValuePair<string, OpenXmlPart>>
 {
-    void Add(string uri, OpenXmlPart part);
+    void Add(string id, OpenXmlPart part);
 
-    bool Contains(string uri);
+    bool Contains(string id);
 
     bool Contains(OpenXmlPart part);
 
@@ -19,9 +19,9 @@ internal interface IChildPartFeatures : IEnumerable<KeyValuePair<string, OpenXml
 
     IEnumerable<OpenXmlPart> Parts { get; }
 
-    void Remove(string uri);
+    void Remove(string id);
 
     void Clear();
 
-    bool TryGetPart(string uri, [MaybeNullWhen(false)] out OpenXmlPart part);
+    bool TryGetPart(string id, [MaybeNullWhen(false)] out OpenXmlPart part);
 }

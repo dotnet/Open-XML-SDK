@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 namespace DocumentFormat.OpenXml.Features
 {
-    internal class ParagraphIdCollectionFeature : IParagraphIdCollectionFeature
+    internal sealed class ParagraphIdCollectionFeature : IParagraphIdCollectionFeature
     {
         internal static readonly StringComparer Comparer = StringComparer.OrdinalIgnoreCase;
 

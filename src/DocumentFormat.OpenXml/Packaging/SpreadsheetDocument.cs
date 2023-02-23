@@ -2,6 +2,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Features;
+using DocumentFormat.OpenXml.Packaging.Builder;
 using System;
 using System.IO;
 using System.IO.Packaging;
@@ -12,19 +13,11 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines SpreadsheetDocument - an OpenXmlPackage represents a Spreadsheet document.
     /// </summary>
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Reliability", "CA2000:Dispose objects before losing scope", Justification = "Disposable is returned")]
     public partial class SpreadsheetDocument : TypedOpenXmlPackage
     {
-        /// <summary>
-        /// Creates a SpreadsheetDocument.
-        /// </summary>
-        [Obsolete(DoNotUseParameterlessConstructor)]
-        protected SpreadsheetDocument()
+        private SpreadsheetDocument()
             : base()
-        {
-        }
-
-        private SpreadsheetDocument(IPackageFeature package, OpenSettings settings)
-            : base(package, settings)
         {
         }
 
@@ -87,10 +80,11 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <returns>A new instance of SpreadsheetDocument.</returns>
         /// <exception cref="ArgumentNullException">Thrown when "path" is null reference.</exception>
         public static SpreadsheetDocument Create(string path, SpreadsheetDocumentType type, bool autoSave)
-            => new SpreadsheetDocument(new FilePackageFeature(path, PackageOpenMode.Create), new OpenSettings { AutoSave = autoSave })
-            {
-                DocumentType = type,
-            };
+            => new SpreadsheetDocument()
+                .WithAutosave(autoSave)
+                .WithStorage(path, PackageOpenMode.Create)
+                .AddAction(p => p.DocumentType = type)
+                .UseDefaultBehavior();
 
         /// <summary>
         /// Creates a new instance of the SpreadsheetDocument class from the IO stream.
@@ -102,10 +96,11 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="ArgumentNullException">Thrown when "stream" is null reference.</exception>
         /// <exception cref="IOException">Thrown when "stream" is not opened with Write access.</exception>
         public static SpreadsheetDocument Create(Stream stream, SpreadsheetDocumentType type, bool autoSave)
-            => new SpreadsheetDocument(new StreamPackageFeature(stream, PackageOpenMode.Create), new OpenSettings { AutoSave = autoSave })
-            {
-                DocumentType = type,
-            };
+            => new SpreadsheetDocument()
+                .WithAutosave(autoSave)
+                .WithStorage(stream, PackageOpenMode.Create)
+                .AddAction(p => p.DocumentType = type)
+                .UseDefaultBehavior();
 
         /// <summary>
         /// Creates a new instance of the SpreadsheetDocument class from the specified package.
@@ -117,10 +112,11 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="ArgumentNullException">Thrown when "package" is null reference.</exception>
         /// <exception cref="IOException">Thrown when "package" is not opened with Write access.</exception>
         public static SpreadsheetDocument Create(Package package, SpreadsheetDocumentType type, bool autoSave)
-            => new SpreadsheetDocument(new PackageFeature(package), new OpenSettings { AutoSave = autoSave })
-            {
-                DocumentType = type,
-            };
+            => new SpreadsheetDocument()
+                .WithAutosave(autoSave)
+                .WithStorage(package)
+                .AddAction(p => p.DocumentType = type)
+                .UseDefaultBehavior();
 
         /// <summary>
         /// Creates an editable SpreadsheetDocument from a template, opened on
@@ -177,7 +173,10 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="OpenXmlPackageException">Thrown when the package is not valid Open XML SpreadsheetDocument.</exception>
         /// <exception cref="ArgumentException">Thrown when specified to process the markup compatibility but the given target FileFormatVersion is incorrect.</exception>
         public static SpreadsheetDocument Open(string path, bool isEditable, OpenSettings openSettings)
-            => new SpreadsheetDocument(new FilePackageFeature(path, isEditable ? PackageOpenMode.ReadWrite : PackageOpenMode.Read), openSettings);
+            => new SpreadsheetDocument()
+                .WithSettings(openSettings)
+                .WithStorage(path, isEditable ? PackageOpenMode.ReadWrite : PackageOpenMode.Read)
+                .UseDefaultBehavior();
 
         /// <summary>
         /// Creates a new instance of the SpreadsheetDocument class from the IO stream.
@@ -191,7 +190,10 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="OpenXmlPackageException">Thrown when the package is not valid Open XML SpreadsheetDocument.</exception>
         /// <exception cref="ArgumentException">Thrown when specified to process the markup compatibility but the given target FileFormatVersion is incorrect.</exception>
         public static SpreadsheetDocument Open(Stream stream, bool isEditable, OpenSettings openSettings)
-            => new SpreadsheetDocument(new StreamPackageFeature(stream, isEditable ? PackageOpenMode.ReadWrite : PackageOpenMode.Read), openSettings);
+            => new SpreadsheetDocument()
+                .WithSettings(openSettings)
+                .WithStorage(stream, isEditable ? PackageOpenMode.ReadWrite : PackageOpenMode.Read)
+                .UseDefaultBehavior();
 
         /// <summary>
         /// Creates a new instance of the SpreadsheetDocument class from the specified package.
@@ -204,7 +206,10 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="OpenXmlPackageException">Thrown when the package is not a valid Open XML document.</exception>
         /// <exception cref="ArgumentException">Thrown when specified to process the markup compatibility but the given target FileFormatVersion is incorrect.</exception>
         public static SpreadsheetDocument Open(Package package, OpenSettings openSettings)
-            => new SpreadsheetDocument(new PackageFeature(package), openSettings);
+            => new SpreadsheetDocument()
+                .WithSettings(openSettings)
+                .WithStorage(package)
+                .UseDefaultBehavior();
 
         /// <summary>
         /// Creates a new instance of the SpreadsheetDocument class from the specified file.

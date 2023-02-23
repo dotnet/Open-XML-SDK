@@ -44,18 +44,53 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void W054_Load_Save_Strict()
         {
-            using (var stream = GetStream(TestFiles.Strict01, true))
+            using var stream = GetStream(TestFiles.Strict01, true);
             using (var doc = WordprocessingDocument.Open(stream, true))
             {
+                Assert.True(doc.StrictRelationshipFound);
+
                 var body = doc.MainDocumentPart.Document.Body;
                 var para = body.Elements<W.Paragraph>().First();
                 var newPara = new W.Paragraph(
                     new W.Run(
                         new W.Text("Test")));
                 para.InsertBeforeSelf(newPara);
+            }
 
-                var v = new OpenXmlValidator(FileFormatVersions.Office2013);
-                var errs = v.Validate(doc);
+            ValidateRelationshipTypes(stream);
+        }
+
+        private void ValidateRelationshipTypes(Stream stream)
+        {
+            using (var package = Package.Open(stream))
+            {
+                var part = package.GetPart(new Uri("/word/charts/chart1.xml", UriKind.Relative));
+
+                Assert.Collection(
+                    part.GetRelationships(),
+                    r =>
+                    {
+                        Assert.Equal("rId1", r.Id);
+                        Assert.Equal("http://schemas.openxmlformats.org/officeDocument/2006/relationships/package", r.RelationshipType);
+                    });
+
+                Assert.Collection(
+                    package.GetRelationships().OrderBy(r => r.Id),
+                    r =>
+                    {
+                        Assert.Equal("rId1", r.Id);
+                        Assert.Equal("http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument", r.RelationshipType);
+                    },
+                    r =>
+                    {
+                        Assert.Equal("rId2", r.Id);
+                        Assert.Equal("http://schemas.openxmlformats.org/package/2006/relationships/metadata/core-properties", r.RelationshipType);
+                    },
+                    r =>
+                    {
+                        Assert.Equal("rId3", r.Id);
+                        Assert.Equal("http://schemas.openxmlformats.org/officeDocument/2006/relationships/extended-properties", r.RelationshipType);
+                    });
             }
         }
 

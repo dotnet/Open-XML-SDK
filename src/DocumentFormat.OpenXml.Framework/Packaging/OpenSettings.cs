@@ -11,6 +11,7 @@ namespace DocumentFormat.OpenXml.Packaging
     public class OpenSettings
     {
         private MarkupCompatibilityProcessSettings? _mcSettings;
+        private CompatibilityLevel _compatibilityLevel;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="OpenSettings"/> class.
@@ -30,8 +31,8 @@ namespace DocumentFormat.OpenXml.Packaging
             MarkupCompatibilityProcessSettings.ProcessMode = other.MarkupCompatibilityProcessSettings.ProcessMode;
             MarkupCompatibilityProcessSettings.TargetFileFormatVersions = other.MarkupCompatibilityProcessSettings.TargetFileFormatVersions;
             MaxCharactersInPart = other.MaxCharactersInPart;
-            RelationshipErrorHandlerFactory = other.RelationshipErrorHandlerFactory;
             IgnoreExceptionOnCalcChainPartMissing = other.IgnoreExceptionOnCalcChainPartMissing;
+            CompatibilityLevel = other.CompatibilityLevel;
         }
 
         /// <summary>
@@ -39,6 +40,15 @@ namespace DocumentFormat.OpenXml.Packaging
         /// The default value is true.
         /// </summary>
         public bool AutoSave { get; set; } = true;
+
+        /// <summary>
+        /// Gets or sets a version to keep compat to
+        /// </summary>
+        public CompatibilityLevel CompatibilityLevel
+        {
+            get => _compatibilityLevel == CompatibilityLevel.Default ? CompatibilityLevel.Version_3_0 : _compatibilityLevel;
+            set => _compatibilityLevel = value;
+        }
 
         /// <summary>
         /// Gets or sets the value of the markup compatibility processing mode.
@@ -65,11 +75,6 @@ namespace DocumentFormat.OpenXml.Packaging
         /// This property allows you to mitigate denial of service attacks where the attacker submits a package with an extremely large Open XML part. By limiting the size of the part, you can detect the attack and recover reliably.
         /// </remarks>
         public long MaxCharactersInPart { get; set; }
-
-        /// <summary>
-        /// Gets or sets a delegate that is used to create a handler to rewrite relationships that are malformed. On platforms after .NET 4.5, <see cref="Uri"/> parsing will fail on malformed strings.
-        /// </summary>
-        public Func<OpenXmlPackage, RelationshipErrorHandler>? RelationshipErrorHandlerFactory { get; set; }
 
         /// <summary>
         /// Gets or sets a value indicating whether to ignore an exception if the calcChain part is missing.

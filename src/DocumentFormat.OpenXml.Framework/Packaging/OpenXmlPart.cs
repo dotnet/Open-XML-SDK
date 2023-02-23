@@ -22,12 +22,12 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Create an instance of <see cref="OpenXmlPart"/>
         /// </summary>
-        protected internal OpenXmlPart()
+        protected OpenXmlPart()
             : base()
         {
         }
 
-        internal void Load(OpenXmlPackage? openXmlPackage, OpenXmlPart? parent, Uri uriTarget, string id, Dictionary<Uri, OpenXmlPart> loadedParts)
+        internal void Load(OpenXmlPackage? openXmlPackage, OpenXmlPart? parent, Uri uriTarget, string id)
         {
             if (uriTarget is null)
             {
@@ -40,8 +40,6 @@ namespace DocumentFormat.OpenXml.Packaging
             }
 
             SetPackage(openXmlPackage, parent);
-
-            Debug.Assert(loadedParts.ContainsKey(uriTarget));
 
             // TODO: should we delay load?
             var part = _openXmlPackage.Features.GetRequired<IPackageFeature>().Package.GetPart(uriTarget);
@@ -61,10 +59,6 @@ namespace DocumentFormat.OpenXml.Packaging
 
             // add the _uri to be reserved
             Features.GetRequired<IPartUriFeature>().ReserveUri(ContentType, Uri);
-
-            // load recursively
-            var relationshipCollection = new PackagePartRelationshipPropertyCollection(Features.GetRequired<IPackagePartFeature>().Part, Features.GetNamespaceResolver());
-            LoadReferencedPartsAndRelationships(_openXmlPackage, this, relationshipCollection, loadedParts);
         }
 
         internal void CreateInternal(OpenXmlPackage? openXmlPackage, OpenXmlPart? parent, string contentType, string? targetExt)
@@ -517,11 +511,8 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             OpenXmlPackage.Package.DeletePart(Uri);
 
-            ChildrenRelationshipParts.Clear();
-            ReferenceRelationshipList.Clear();
             _openXmlPackage = null;
 
-            // this._ownerPart = null;
             if (InternalRootElement is not null)
             {
                 InternalRootElement.OpenXmlPart = null;

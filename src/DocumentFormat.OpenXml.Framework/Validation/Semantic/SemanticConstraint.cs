@@ -16,6 +16,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
     /// <summary>
     /// Base class for each semantic constraint category.
     /// </summary>
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Performance", "CA1851:Possible multiple enumerations of 'IEnumerable' collection", Justification = "https://github.com/dotnet/Open-XML-SDK/issues/1325")]
     internal abstract class SemanticConstraint : IValidator
     {
         public SemanticConstraint(SemanticValidationLevel level)

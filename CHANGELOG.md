@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [3.0.0]
 
+## Added
+- Packages can now be saved on .NET Core and .NET 5+ if constructed with a path or stream (#1307).
+- Packages can now support malformed URIs (such as relationships with a URI such as `mailto:person@`)
+
 ## Changed
 - When validation finds incorrect part, it will now include the relationship type rather than a class name
 
@@ -13,8 +17,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - .NET Standard 1.3 is no longer a supported platform. .NET Standard 2.0 is the lowest .NET Standard supported.
 
 ### Breaking change
+- OpenXmlPackage.CanSave is now an instance method (#1307)
+- Remove `OpenXmlSettings.RelationshipErrorHandlerFactory` and associated types.
+- IdPartPair is now a readonly struct rather than a class
 - IDisposableFeature is now a part of the framework package and is available by default on a package. Extension methods to manage this feature have been removed as it no longer needs to be opted into. It now registers all disposable actions to be done at the package level instead of adding support at the part level.
-- OpenXmlPackage.CanSave is now an instance method
 - Core infrastructure is now contained in a new package DocumentFormat.OpenXml.Framework. Typed classes are still in DocumentFormat.OpenXml. This means that you may reference DocumentFormat.OpenXml and still compile the same types, but if you want a smaller package, you may rely on just the framework package. 
 - Removed `OpenXmlPackage.Package` property. A `OpenXmlPackage` is now backed by a `IPackage` instead of `System.IO.Packaging.Package`. This can be retrieved by `OpenXmlPackage.Features.Get<IPackageFeature>()`
 - Renamed PartExtensionProvider to IPartExtensionFeature and reduced its surface area to only two methods (instead of a full Dictionary<,>). The property to access this off of OpenXmlPackage has been removed, but may be accessed via `Features.Get<IPartExtensionFeature>()` if needed.
@@ -22,12 +28,19 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Removed unused `ChildElementInfoAttribute`
 - Removed `OpenXmlSimpleType.TextValue`. This property was never meant to be used externally
 - Removed obsolete validation logic from v1 of the SDK
+- Removed obsoleted methods from 2.x
 - Removed mutable properties on OpenXmlAttribute and marked as `readonly`
+
+### Fixed
+- Fixed incorrect file extensions for vbaProject files (#1292)
 
 ## [2.20.0]
 
 ### Changed
 - Marked all obsoleted APIs as compile as error. These will be removed in the next release
+
+### Fixed
+- Fixed incorrect file extensions for vbaProject files (#1292)
 
 ## [2.19.0] - 2022-12-14
 
@@ -367,3 +380,36 @@ Thanks to the following for their contributions:
 ## [2.6.0] - 2015-06-29
 ### Added
 - Incorporated a replacement `System.IO.Packaging` that fixes some serious (but exceptional) bugs found in the WindowsBase implementation
+
+[3.0.0]: https://github.com/dotnet/Open-XML-SDK/compare/v2.20.0...v3.0.0
+[2.20.0]: https://github.com/dotnet/Open-XML-SDK/compare/v2.19.0...v2.20.0
+[2.19.0]: https://github.com/dotnet/Open-XML-SDK/compare/v2.18.0...v2.19.0
+[2.18.0]: https://github.com/dotnet/Open-XML-SDK/compare/v2.17.1...v2.18.0
+[2.17.1]: https://github.com/dotnet/Open-XML-SDK/compare/v2.17.0...v2.17.1
+[2.17.0]: https://github.com/dotnet/Open-XML-SDK/compare/v2.16.0...v2.17.0
+[2.16.0]: https://github.com/dotnet/Open-XML-SDK/compare/v2.15.0...v2.16.0
+[2.15.0]: https://github.com/dotnet/Open-XML-SDK/compare/v2.14.0...v2.15.0
+[2.14.0]: https://github.com/dotnet/Open-XML-SDK/compare/v2.14.0-beta1...v2.14.0
+[2.14.0-beta1]: https://github.com/dotnet/Open-XML-SDK/compare/v2.13.1...v2.14.0-beta1
+[2.13.1]: https://github.com/dotnet/Open-XML-SDK/compare/v2.13.0...v2.13.1
+[2.13.0]: https://github.com/dotnet/Open-XML-SDK/compare/v2.13.0...v2.13.0
+[2.13.0-beta2]: https://github.com/dotnet/Open-XML-SDK/compare/v2.13.0-beta2...v2.13.0-beta2
+[2.13.0-beta1]: https://github.com/dotnet/Open-XML-SDK/compare/2.12.3...v2.13.0-beta1
+[2.12.3]: https://github.com/dotnet/Open-XML-SDK/compare/v2.12.3...v2.12.1
+[2.12.1]: https://github.com/dotnet/Open-XML-SDK/compare/v2.12.1...v2.12.0
+[2.12.0]: https://github.com/dotnet/Open-XML-SDK/compare/v2.12.0...v2.11.3
+[2.11.3]: https://github.com/dotnet/Open-XML-SDK/compare/v2.11.3...v2.11.2
+[2.11.2]: https://github.com/dotnet/Open-XML-SDK/compare/v2.11.2...v2.11.1
+[2.11.1]: https://github.com/dotnet/Open-XML-SDK/compare/v2.11.1...v2.11.0
+[2.11.0]: https://github.com/dotnet/Open-XML-SDK/compare/v2.11.0...v2.10.1
+[2.10.1]: https://github.com/dotnet/Open-XML-SDK/compare/v2.10.1...v2.10.0
+[2.10.0]: https://github.com/dotnet/Open-XML-SDK/compare/v2.10.0...v2.9.1
+[2.9.1]: https://github.com/dotnet/Open-XML-SDK/compare/v2.9.1...v2.9.0
+[2.9.0]: https://github.com/dotnet/Open-XML-SDK/compare/v2.9.0...v2.8.1
+[2.8.1]: https://github.com/dotnet/Open-XML-SDK/compare/v2.8.1...v2.8.0
+[2.8.0]: https://github.com/dotnet/Open-XML-SDK/compare/v2.8.0...v2.7.2
+[2.7.2]: https://github.com/dotnet/Open-XML-SDK/compare/v2.7.1...v2.7.2
+[2.7.1]: https://github.com/dotnet/Open-XML-SDK/compare/v2.7.0...v2.7.1
+[2.7.0]: https://github.com/dotnet/Open-XML-SDK/compare/v2.6.1...v2.7.0
+[2.6.1]: https://github.com/dotnet/Open-XML-SDK/compare/v2.6.0...v2.6.1
+[2.6.0]: https://github.com/dotnet/Open-XML-SDK/compare/v2.5.0...v2.6.0

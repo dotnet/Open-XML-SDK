@@ -2,6 +2,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Packaging.Builder;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -10,10 +11,18 @@ using System.IO.Packaging;
 
 namespace DocumentFormat.OpenXml.Features;
 
-internal abstract class PackageFeatureBase : IPackage, IPackageFeature
+internal abstract class PackageFeatureBase : IPackage, IPackageFeature, IRelationshipFilterFeature
 {
+    private static readonly Uri _packageUri = new("/", UriKind.Relative);
+
+    private Action<PackageRelationshipBuilder>? _relationshipFilter;
     private RelationshipCache _relationships;
     private Dictionary<Uri, PackagePart>? _parts;
+
+    protected PackageFeatureBase()
+    {
+        _relationships = new(this);
+    }
 
     protected abstract Package Package { get; }
 
@@ -42,9 +51,34 @@ internal abstract class PackageFeatureBase : IPackage, IPackageFeature
             return;
         }
 
+#if !NET6_0_OR_GREATER
+        List<Uri>? unused = null;
+#endif
+
         foreach (var part in _parts)
         {
-            part.Value.Part = Package.GetPart(part.Key);
+            if (Package.PartExists(part.Key))
+            {
+                part.Value.Part = Package.GetPart(part.Key);
+            }
+            else
+            {
+#if NET6_0_OR_GREATER
+                _parts.Remove(part.Key);
+#else
+                (unused ??= new()).Add(part.Key);
+#endif
+            }
+
+#if !NET6_0_OR_GREATER
+            if (unused is not null)
+            {
+                foreach (var uri in unused)
+                {
+                    _parts.Remove(uri);
+                }
+            }
+#endif
         }
     }
 
@@ -67,7 +101,7 @@ internal abstract class PackageFeatureBase : IPackage, IPackageFeature
     void IPackage.Save() => Package.Flush();
 
     public IPackageRelationship CreateRelationship(Uri targetUri, TargetMode targetMode, string? relationshipType, string? id)
-        => _relationships.GetOrCreate(Package.CreateRelationship(targetUri, targetMode, relationshipType, id));
+        => _relationships.GetOrCreate(_packageUri, Package.CreateRelationship(targetUri, targetMode, relationshipType, id));
 
     void IPackage.DeleteRelationship(string id)
     {
@@ -79,7 +113,7 @@ internal abstract class PackageFeatureBase : IPackage, IPackageFeature
     {
         foreach (var relationship in Package.GetRelationships())
         {
-            yield return _relationships.GetOrCreate(relationship);
+            yield return _relationships.GetOrCreate(_packageUri, relationship);
         }
     }
 
@@ -94,7 +128,7 @@ internal abstract class PackageFeatureBase : IPackage, IPackageFeature
     }
 
     public IPackageRelationship GetRelationship(string id)
-        => _relationships.GetOrCreate(Package.GetRelationship(id));
+        => _relationships.GetOrCreate(_packageUri, Package.GetRelationship(id));
 
     IPackage IPackageFeature.Package => this;
 
@@ -104,32 +138,43 @@ internal abstract class PackageFeatureBase : IPackage, IPackageFeature
         {
             // ZipArchive.Flush only exists on .NET Framework (https://github.com/dotnet/runtime/issues/24149)
 #if NETFRAMEWORK
-            var isReadOnly = !Package.FileOpenAccess.HasFlagFast(FileAccess.Write);
-            return (isReadOnly ? PackageCapabilities.None : PackageCapabilities.Save) | PackageCapabilities.Cached | PackageCapabilities.LargePartStreams;
+            var canSave = Package.FileOpenAccess.HasFlagFast(FileAccess.Write) ? PackageCapabilities.Save : PackageCapabilities.None;
+            var uriSupport = GetSupportsMalformedUri() ? PackageCapabilities.MalformedUri : PackageCapabilities.None;
+
+            return canSave | uriSupport | PackageCapabilities.Cached | PackageCapabilities.LargePartStreams;
 #else
             return PackageCapabilities.Cached;
 #endif
         }
     }
 
+#if NETFRAMEWORK
+    private static bool GetSupportsMalformedUri()
+        => Uri.TryCreate("mailto:one@", UriKind.RelativeOrAbsolute, out _);
+#endif
+
     public virtual void Reload(FileMode? mode = null, FileAccess? access = null)
         => throw new NotSupportedException();
 
+    internal void RunFilter(PackageRelationshipBuilder builder) => _relationshipFilter?.Invoke(builder);
+
+    void IRelationshipFilterFeature.AddFilter(Action<PackageRelationshipBuilder> action)
+        => _relationshipFilter += action;
+
     private sealed class PackagePart : IPackagePart
     {
-        private readonly PackageFeatureBase _package;
-
         private RelationshipCache _relationships;
 
         public PackagePart(PackageFeatureBase package, System.IO.Packaging.PackagePart part)
         {
-            _package = package;
+            _relationships = new(package);
+
             Part = part;
         }
 
         public System.IO.Packaging.PackagePart Part { get; set; }
 
-        public IPackage Package => _package;
+        IPackage IPackagePart.Package => _relationships.Feature;
 
         public Uri Uri => Part.Uri;
 
@@ -145,7 +190,7 @@ internal abstract class PackageFeatureBase : IPackage, IPackageFeature
         {
             foreach (var relationship in Part.GetRelationships())
             {
-                yield return _relationships.GetOrCreate(relationship);
+                yield return _relationships.GetOrCreate(Part.Uri, relationship);
             }
         }
 
@@ -153,54 +198,37 @@ internal abstract class PackageFeatureBase : IPackage, IPackageFeature
             => Part.GetStream(open, write);
 
         public IPackageRelationship CreateRelationship(Uri targetUri, TargetMode targetMode, string relationshipType, string? id)
-            => _relationships.GetOrCreate(Part.CreateRelationship(targetUri, targetMode, relationshipType, id));
+            => _relationships.GetOrCreate(Part.Uri, Part.CreateRelationship(targetUri, targetMode, relationshipType, id));
 
         public bool RelationshipExists(string relationship)
             => Part.RelationshipExists(relationship);
 
         public IPackageRelationship GetRelationship(string id)
-            => _relationships.GetOrCreate(Part.GetRelationship(id));
-    }
-
-    private sealed class PackageRelationship : IPackageRelationship
-    {
-        public PackageRelationship(System.IO.Packaging.PackageRelationship relationship)
-        {
-            Id = relationship.Id;
-            RelationshipType = relationship.RelationshipType;
-            SourceUri = relationship.SourceUri;
-            TargetMode = relationship.TargetMode;
-            TargetUri = relationship.TargetUri;
-        }
-
-        public string Id { get; }
-
-        public string RelationshipType { get; }
-
-        public Uri SourceUri { get; }
-
-        public TargetMode TargetMode { get; }
-
-        public Uri TargetUri { get; }
+            => _relationships.GetOrCreate(Part.Uri, Part.GetRelationship(id));
     }
 
     private struct RelationshipCache
     {
-        private Dictionary<string, PackageRelationship>? _relationships;
+        private Dictionary<string, PackageRelationshipBuilder>? _relationships;
 
-        public IPackageRelationship GetOrCreate(System.IO.Packaging.PackageRelationship relationship)
+        public RelationshipCache(PackageFeatureBase feature)
+        {
+            Feature = feature;
+        }
+
+        public PackageFeatureBase Feature { get; }
+
+        public IPackageRelationship GetOrCreate(Uri partUri, PackageRelationship relationship)
         {
             if (_relationships is not null && _relationships.TryGetValue(relationship.Id, out var existing))
             {
                 return existing;
             }
 
-            if (_relationships is null)
-            {
-                _relationships = new Dictionary<string, PackageRelationship>();
-            }
+            _relationships ??= new Dictionary<string, PackageRelationshipBuilder>();
 
-            var newItem = new PackageRelationship(relationship);
+            var newItem = new PackageRelationshipBuilder(partUri, relationship);
+            Feature.RunFilter(newItem);
             _relationships[relationship.Id] = newItem;
             return newItem;
         }
