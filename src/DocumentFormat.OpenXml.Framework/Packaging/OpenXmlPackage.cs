@@ -537,21 +537,21 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             ThrowIfObjectDisposed();
 
-            Package.DeleteRelationship(id);
+            Package.Relationships.Remove(id);
         }
 
         internal sealed override IPackageRelationship CreateRelationship(Uri targetUri, TargetMode targetMode, string relationshipType)
         {
             ThrowIfObjectDisposed();
 
-            return Features.GetRequired<IPackageFeature>().Package.CreateRelationship(targetUri, targetMode, relationshipType);
+            return Features.GetRequired<IPackageFeature>().Package.Relationships.Create(targetUri, targetMode, relationshipType);
         }
 
         internal sealed override IPackageRelationship CreateRelationship(Uri targetUri, TargetMode targetMode, string relationshipType, string id)
         {
             ThrowIfObjectDisposed();
 
-            return Features.GetRequired<IPackageFeature>().Package.CreateRelationship(targetUri, targetMode, relationshipType, id);
+            return Features.GetRequired<IPackageFeature>().Package.Relationships.Create(targetUri, targetMode, relationshipType, id);
         }
 
         // create the metro part in the package with the CompressionOption

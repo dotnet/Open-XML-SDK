@@ -67,7 +67,7 @@ namespace DocumentFormat.OpenXml.Packaging
             var altChunkPartUris = new HashSet<Uri>(
                 package.GetParts()
                     .Where(part => part.ContentType != RelationshipContentType)
-                    .SelectMany(part => part.GetRelationships().Where(r => string.Equals(r.RelationshipType, AltChunkRelationshipType, StringComparison.Ordinal)))
+                    .SelectMany(part => part.Relationships.Where(r => string.Equals(r.RelationshipType, AltChunkRelationshipType, StringComparison.Ordinal)))
                     .Select(pr => PackUriHelper.ResolvePartUri(pr.SourceUri, pr.TargetUri)));
 
             // Create an XML document with a standalone declaration, processing

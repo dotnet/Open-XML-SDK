@@ -144,7 +144,7 @@ internal sealed class PartRelationshipsFeature :
             { @"http://schemas.microsoft.com/office/2006/relationships/recovered", true },
         };
 
-        var relationships = sourcePart?.PackagePart.GetRelationships() ?? openXmlPackage.Package.GetRelationships();
+        var relationships = sourcePart?.PackagePart.Relationships ?? openXmlPackage.Package.Relationships;
 
         foreach (var relationship in relationships)
         {
@@ -276,11 +276,11 @@ internal sealed class PartRelationshipsFeature :
     {
         if (_owner is OpenXmlPart part)
         {
-            return part.Features.GetRequired<IPackagePartFeature>().Part.CreateRelationship(externalUri, mode, relationshipType, id);
+            return part.Features.GetRequired<IPackagePartFeature>().Part.Relationships.Create(externalUri, mode, relationshipType, id);
         }
         else if (_owner is OpenXmlPackage package)
         {
-            return package.Features.GetRequired<IPackageFeature>().Package.CreateRelationship(externalUri, mode, relationshipType, id);
+            return package.Features.GetRequired<IPackageFeature>().Package.Relationships.Create(externalUri, mode, relationshipType, id);
         }
         else
         {
@@ -297,12 +297,12 @@ internal sealed class PartRelationshipsFeature :
 
             if (_owner is OpenXmlPart part)
             {
-                part.Features.GetRequired<IPackagePartFeature>().Part.DeleteRelationship(id);
+                part.Features.GetRequired<IPackagePartFeature>().Part.Relationships.Remove(id);
                 return true;
             }
             else if (_owner is OpenXmlPackage package)
             {
-                package.Features.GetRequired<IPackageFeature>().Package.DeleteRelationship(id);
+                package.Features.GetRequired<IPackageFeature>().Package.Relationships.Remove(id);
                 return true;
             }
         }

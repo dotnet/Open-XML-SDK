@@ -96,11 +96,11 @@ public class PackageUriHandlingTests
 
         if (expected)
         {
-            Assert.Throws<UriFormatException>(() => part.GetRelationships());
+            Assert.Throws<UriFormatException>(() => part.Relationships);
         }
         else
         {
-            Assert.NotNull(part.GetRelationships());
+            Assert.NotNull(part.Relationships);
         }
     }
 
@@ -121,7 +121,7 @@ public class PackageUriHandlingTests
 
         // Act
         var part = package.Package.GetPart(Part1.Uri);
-        var relationships = part.GetRelationships().ToList();
+        var relationships = part.Relationships;
 
         // Assert
         Assert.Collection(
@@ -154,7 +154,7 @@ public class PackageUriHandlingTests
 
             // Act
             var part = package.Package.GetPart(Part1.Uri);
-            _ = part.GetRelationships().ToList();
+            _ = part.Relationships;
         }
 
         // Assert

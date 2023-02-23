@@ -47,7 +47,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 return null;
             }
 
-            if (current.Part.PackagePart.RelationshipExists(attribute.Value.InnerText))
+            if (current.Part.PackagePart.Relationships.Contains(attribute.Value.InnerText))
             {
                 return null;
             }

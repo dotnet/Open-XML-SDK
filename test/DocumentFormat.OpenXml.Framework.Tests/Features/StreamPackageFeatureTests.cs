@@ -90,7 +90,7 @@ public class StreamPackageFeatureTests
         var package = (IPackage)feature;
 
         // Act
-        var relationships = package.GetRelationships().ToList();
+        var relationships = package.Relationships.ToList();
 
         Assert.Collection(
             relationships,
@@ -119,8 +119,8 @@ public class StreamPackageFeatureTests
         var package = (IPackage)feature;
 
         // Act
-        var relationships1 = package.GetRelationships().ToList();
-        var relationships2 = package.GetRelationships().ToList();
+        var relationships1 = package.Relationships.ToList();
+        var relationships2 = package.Relationships.ToList();
 
         // Assert
         Assert.Equal(2, relationships1.Count);
@@ -138,8 +138,8 @@ public class StreamPackageFeatureTests
         var package = (IPackage)feature;
 
         // Act
-        var relationship1 = package.GetRelationship(Relationship1.Id);
-        var relationship2 = package.GetRelationship(Relationship1.Id);
+        var relationship1 = package.Relationships[Relationship1.Id];
+        var relationship2 = package.Relationships[Relationship1.Id];
 
         // Assert
         Assert.Same(relationship1, relationship2);
@@ -154,9 +154,9 @@ public class StreamPackageFeatureTests
         var package = (IPackage)feature;
 
         // Act/Assert
-        Assert.NotNull(package.GetRelationship(Relationship1.Id)); // This will cache the relationship
-        package.DeleteRelationship(Relationship1.Id);
-        Assert.Throws<InvalidOperationException>(() => package.GetRelationship(Relationship1.Id));
+        Assert.NotNull(package.Relationships[Relationship1.Id]); // This will cache the relationship
+        package.Relationships.Remove(Relationship1.Id);
+        Assert.Throws<InvalidOperationException>(() => package.Relationships[Relationship1.Id]);
     }
 
     [Fact]
@@ -291,9 +291,9 @@ public class StreamPackageFeatureTests
         var feature = (IPackageFeature)streamFeature;
 
         // Act
-        var relationshipsBefore = feature.Package.GetRelationships().ToList();
+        var relationshipsBefore = feature.Package.Relationships.ToList();
         feature.Reload();
-        var relationshipsAfter = feature.Package.GetRelationships().ToList();
+        var relationshipsAfter = feature.Package.Relationships.ToList();
 
         // Assert
         Assert.Same(relationshipsBefore[0], relationshipsAfter[0]);
@@ -315,7 +315,7 @@ public class StreamPackageFeatureTests
         var part = feature.Package.GetPart(Part1.Uri);
 
         // Act
-        var relationship = part.GetRelationship(Part1Relationship1.Id);
+        var relationship = part.Relationships[Part1Relationship1.Id];
 
         // Assert
         Assert.Equal(Part1Relationship1.Id, relationship.Id);
@@ -334,9 +334,9 @@ public class StreamPackageFeatureTests
         var part = feature.Package.GetPart(Part1.Uri);
 
         // Act/Assert
-        Assert.NotNull(part.GetRelationship(Part1Relationship1.Id)); // This will cache the relationship
-        part.DeleteRelationship(Part1Relationship1.Id);
-        Assert.Throws<InvalidOperationException>(() => part.GetRelationship(Part1Relationship1.Id));
+        Assert.NotNull(part.Relationships[Part1Relationship1.Id]); // This will cache the relationship
+        part.Relationships.Remove(Part1Relationship1.Id);
+        Assert.Throws<InvalidOperationException>(() => part.Relationships[Part1Relationship1.Id]);
     }
 
     [Fact]
@@ -349,7 +349,7 @@ public class StreamPackageFeatureTests
         var part = feature.Package.GetPart(Part1.Uri);
 
         // Act
-        var relationships = part.GetRelationships();
+        var relationships = part.Relationships;
 
         // Assert
         Assert.Collection(
@@ -373,8 +373,8 @@ public class StreamPackageFeatureTests
         var part = feature.Package.GetPart(Part1.Uri);
 
         // Act
-        var relationshipFromEnumerable = part.GetRelationships().Single();
-        var relationship = part.GetRelationship(Part1Relationship1.Id);
+        var relationshipFromEnumerable = part.Relationships.Single();
+        var relationship = part.Relationships[Part1Relationship1.Id];
 
         // Assert
         Assert.Same(relationship, relationshipFromEnumerable);
@@ -390,9 +390,9 @@ public class StreamPackageFeatureTests
         var part = feature.Package.GetPart(Part1.Uri);
 
         // Act
-        var relationshipBefore = part.GetRelationship(Part1Relationship1.Id);
+        var relationshipBefore = part.Relationships[Part1Relationship1.Id];
         feature.Reload();
-        var relationshipAfter = part.GetRelationship(Part1Relationship1.Id);
+        var relationshipAfter = part.Relationships[Part1Relationship1.Id];
 
         // Assert
         Assert.Same(relationshipBefore, relationshipAfter);

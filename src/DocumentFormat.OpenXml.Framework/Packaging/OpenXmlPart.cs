@@ -554,21 +554,21 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             ThrowIfObjectDisposed();
 
-            PackagePart.DeleteRelationship(id);
+            PackagePart.Relationships.Remove(id);
         }
 
         internal sealed override IPackageRelationship CreateRelationship(Uri targetUri, TargetMode targetMode, string relationshipType)
         {
             ThrowIfObjectDisposed();
 
-            return PackagePart.CreateRelationship(targetUri, targetMode, relationshipType);
+            return PackagePart.Relationships.Create(targetUri, targetMode, relationshipType);
         }
 
         internal sealed override IPackageRelationship CreateRelationship(Uri targetUri, TargetMode targetMode, string relationshipType, string id)
         {
             ThrowIfObjectDisposed();
 
-            return PackagePart.CreateRelationship(targetUri, targetMode, relationshipType, id);
+            return PackagePart.Relationships.Create(targetUri, targetMode, relationshipType, id);
         }
 
         #endregion

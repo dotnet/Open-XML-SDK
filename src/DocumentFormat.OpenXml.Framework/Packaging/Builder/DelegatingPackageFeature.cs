@@ -29,29 +29,19 @@ internal abstract class DelegatingPackageFeature : IPackage, IPackageFeature
     public virtual IPackagePart CreatePart(Uri partUri, string contentType, CompressionOption compressionOption)
         => Package.CreatePart(partUri, contentType, compressionOption);
 
-    public virtual IPackageRelationship CreateRelationship(Uri targetUri, TargetMode targetMode, string relationshipType, string? id = null)
-        => Package.CreateRelationship(targetUri, targetMode, relationshipType, id);
-
     public virtual void DeletePart(Uri uri) => Package.DeletePart(uri);
-
-    public virtual void DeleteRelationship(string id) => Package.DeleteRelationship(id);
 
     public virtual IPackagePart GetPart(Uri uriTarget) => Package.GetPart(uriTarget);
 
     public virtual IEnumerable<IPackagePart> GetParts() => Package.GetParts();
 
-    public virtual IPackageRelationship GetRelationship(string id)
-        => Package.GetRelationship(id);
-
-    public virtual IEnumerable<IPackageRelationship> GetRelationships() => Package.GetRelationships();
-
     public virtual bool PartExists(Uri partUri) => Package.PartExists(partUri);
-
-    public virtual bool RelationshipExists(string id) => Package.RelationshipExists(id);
 
     public virtual void Save() => Package.Save();
 
     public virtual PackageCapabilities Capabilities => Feature.Capabilities;
+
+    public virtual IRelationshipCollection Relationships => Package.Relationships;
 
     public void Reload(FileMode? mode = null, FileAccess? access = null)
         => Feature.Reload(mode, access);
