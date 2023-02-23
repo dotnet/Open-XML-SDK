@@ -12,7 +12,6 @@ public abstract partial class OpenXmlPart
 {
     private protected partial class PartFeatureCollection :
         IFeatureCollection,
-        IContainerFeature<OpenXmlPart>,
         ITargetFeature,
         IPartConstraintFeature,
         IKnownDataPartFeature
@@ -29,8 +28,6 @@ public abstract partial class OpenXmlPart
         public bool IsReadOnly => false;
 
         public int Revision => _container.Revision + (Parent?.Revision ?? 0);
-
-        OpenXmlPart IContainerFeature<OpenXmlPart>.Value => _part;
 
         private IFeatureCollection? Parent => _part?._openXmlPackage?.Features;
 
