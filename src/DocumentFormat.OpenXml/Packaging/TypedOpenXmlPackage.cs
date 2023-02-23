@@ -46,12 +46,12 @@ public abstract partial class TypedOpenXmlPackage : OpenXmlPackage
                     var hasRelationships = false;
                     var package = this.GetRequired<IPackageFeature>().Package;
 
-                    foreach (var relationship in package.GetRelationships())
+                    foreach (var relationship in package.Relationships)
                     {
                         hasRelationships = true;
                         if (relationship.RelationshipType == RelationshipType)
                         {
-                            var uriTarget = PackUriHelper.ResolvePartUri(new Uri("/", UriKind.Relative), relationship.TargetUri);
+                            var uriTarget = PackUriHelper.ResolvePartUri(OpenXmlPackage.Uri, relationship.TargetUri);
                             var metroPart = package.GetPart(uriTarget);
 
                             _documentType = GetType(metroPart.ContentType);

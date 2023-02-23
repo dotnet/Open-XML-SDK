@@ -107,7 +107,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                     var newUri = new System.Uri("#New", System.UriKind.Relative);
                     var ridnew = mainPart.AddHyperlinkRelationship(newUri, false);
-                    var newRel = mainPart.PackagePart.GetRelationship(ridnew.Id);
+                    var newRel = mainPart.PackagePart.Relationships.GetRelationship(ridnew.Id);
                     Assert.Equal(System.IO.Packaging.TargetMode.Internal, newRel.TargetMode);
                     Assert.Equal(ridnew.Id, newRel.Id);
                     Assert.Equal(newUri, newRel.TargetUri);
@@ -118,7 +118,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                     newUri = new System.Uri("http://microsoft.com", System.UriKind.Absolute);
                     ridnew = mainPart.AddHyperlinkRelationship(newUri, true, ridnew.Id);
-                    newRel = mainPart.PackagePart.GetRelationship(ridnew.Id);
+                    newRel = mainPart.PackagePart.Relationships.GetRelationship(ridnew.Id);
                     Assert.Equal(System.IO.Packaging.TargetMode.External, newRel.TargetMode);
                     Assert.Equal(ridnew.Id, newRel.Id);
                     Assert.Equal(newUri, newRel.TargetUri);

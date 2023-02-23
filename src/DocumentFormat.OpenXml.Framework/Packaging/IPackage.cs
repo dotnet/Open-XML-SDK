@@ -8,6 +8,39 @@ using System.IO.Packaging;
 
 namespace DocumentFormat.OpenXml.Packaging;
 
+internal interface IRelationshipCollection : IEnumerable<IPackageRelationship>, IReadOnlyCollection<IPackageRelationship>
+{
+    /// <summary>
+    /// Creates a relationship to a part with a given URI, target mode, relationship type, and (optional) identifier.
+    /// </summary>
+    /// <param name="targetUri">The URI of the target part</param>
+    /// <param name="targetMode">Indicates if the target part is internal or external to the package.</param>
+    /// <param name="relationshipType">A URI that uniquely defines the role of the relationship</param>
+    /// <param name="id">A unique XML identifier</param>
+    /// <returns>The relationship to the specified part.</returns>
+    IPackageRelationship CreateRelationship(Uri targetUri, TargetMode targetMode, string relationshipType, string? id = null);
+
+    /// <summary>
+    /// Deletes the specified relationship.
+    /// </summary>
+    /// <param name="id">The id of the relationship.</param>
+    void DeleteRelationship(string id);
+
+    /// <summary>
+    /// Gets a relationship by id.
+    /// </summary>
+    /// <param name="id">Id of relationship</param>
+    /// <returns>A package relationship</returns>
+    IPackageRelationship GetRelationship(string id);
+
+    /// <summary>
+    /// Indicates whether a relationship with a given ID is defined.
+    /// </summary>
+    /// <param name="id">The id of the relationship</param>
+    /// <returns>true if a relationship exists; otherwise, no.</returns>
+    bool RelationshipExists(string id);
+}
+
 /// <summary>
 /// An abstraction similar to <see cref="System.IO.Packaging.Package"/> that allows for pass through implementations
 /// </summary>
@@ -64,38 +97,7 @@ internal interface IPackage
     void DeletePart(Uri uri);
 
     /// <summary>
-    /// Creates a relationship to a part with a given URI, target mode, relationship type, and (optional) identifier.
-    /// </summary>
-    /// <param name="targetUri">The URI of the target part</param>
-    /// <param name="targetMode">Indicates if the target part is internal or external to the package.</param>
-    /// <param name="relationshipType">A URI that uniquely defines the role of the relationship</param>
-    /// <param name="id">A unique XML identifier</param>
-    /// <returns>The relationship to the specified part.</returns>
-    IPackageRelationship CreateRelationship(Uri targetUri, TargetMode targetMode, string relationshipType, string? id = null);
-
-    /// <summary>
-    /// Deletes the specified relationship.
-    /// </summary>
-    /// <param name="id">The id of the relationship.</param>
-    void DeleteRelationship(string id);
-
-    /// <summary>
     /// Gets the relationships of the package.
     /// </summary>
-    /// <returns>The relationships for package.</returns>
-    IEnumerable<IPackageRelationship> GetRelationships();
-
-    /// <summary>
-    /// Gets a relationship by id.
-    /// </summary>
-    /// <param name="id">Id of relationship</param>
-    /// <returns>A package relationship</returns>
-    IPackageRelationship GetRelationship(string id);
-
-    /// <summary>
-    /// Indicates whether a relationship with a given ID is defined.
-    /// </summary>
-    /// <param name="id">The id of the relationship</param>
-    /// <returns>true if a relationship exists; otherwise, no.</returns>
-    bool RelationshipExists(string id);
+    IRelationshipCollection Relationships { get; }
 }
