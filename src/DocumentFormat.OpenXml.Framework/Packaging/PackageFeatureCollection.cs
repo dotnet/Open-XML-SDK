@@ -11,7 +11,6 @@ namespace DocumentFormat.OpenXml.Packaging;
 
 internal partial class PackageFeatureCollection :
     IFeatureCollection,
-    IContainerFeature<OpenXmlPackage>,
     IPartFactoryFeature,
     IApplicationTypeFeature,
     IDisposableFeature,
@@ -39,8 +38,6 @@ internal partial class PackageFeatureCollection :
     public bool IsReadOnly => false;
 
     public int Revision => _container.Revision + (_parent?.Revision ?? 0);
-
-    OpenXmlPackage IContainerFeature<OpenXmlPackage>.Value => Package;
 
     ApplicationType IApplicationTypeFeature.Type => ApplicationType.None;
 
