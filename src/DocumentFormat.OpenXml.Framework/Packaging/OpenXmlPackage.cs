@@ -451,16 +451,13 @@ namespace DocumentFormat.OpenXml.Packaging
 
                     // remove the old part
                     ChildrenRelationshipParts.Remove(id);
-                    DeleteRelationship(id);
                     mainPart.Destroy();
 
                     // do not call this.InitPart( ).  copy the code here
                     newMainPart.CreateInternal(this, null, MainPartContentType, uri);
 
                     // add it and get the id
-                    string relationshipId = AttachChild(newMainPart, id);
-
-                    ChildrenRelationshipParts.Add(relationshipId, newMainPart);
+                    ChildrenRelationshipParts.Add(newMainPart, id);
 
                     // copy the stream back
                     memoryStream.Position = 0;
@@ -469,9 +466,7 @@ namespace DocumentFormat.OpenXml.Packaging
                     // add back all relationships
                     foreach (KeyValuePair<string, OpenXmlPart> idPartPair in childParts)
                     {
-                        // just call AttachChild( ) is OK. No need to call AddPart( ... )
-                        newMainPart.AttachChild(idPartPair.Value, idPartPair.Key);
-                        newMainPart.ChildrenRelationshipParts.Add(idPartPair.Key, idPartPair.Value);
+                        newMainPart.ChildrenRelationshipParts.Add(idPartPair.Value, idPartPair.Key);
                     }
 
                     foreach (ExternalRelationship externalRel in referenceRelationships.OfType<ExternalRelationship>())
@@ -492,7 +487,6 @@ namespace DocumentFormat.OpenXml.Packaging
                     // delete the temp part
                     id = GetIdOfPart(tempPart);
                     ChildrenRelationshipParts.Remove(id);
-                    DeleteRelationship(id);
                     tempPart.Destroy();
                 }
             }
@@ -514,6 +508,8 @@ namespace DocumentFormat.OpenXml.Packaging
 
         internal sealed override OpenXmlPart? ThisOpenXmlPart => null;
 
+        internal override IRelationshipCollection Relationships => Package.Relationships;
+
         // find all reachable parts from the package root, the dictionary also used for cycle reference defense
         internal sealed override void FindAllReachableParts(IDictionary<OpenXmlPart, bool> reachableParts)
         {
@@ -531,27 +527,6 @@ namespace DocumentFormat.OpenXml.Packaging
                     part.FindAllReachableParts(reachableParts);
                 }
             }
-        }
-
-        internal sealed override void DeleteRelationship(string id)
-        {
-            ThrowIfObjectDisposed();
-
-            Package.Relationships.Remove(id);
-        }
-
-        internal sealed override IPackageRelationship CreateRelationship(Uri targetUri, TargetMode targetMode, string relationshipType)
-        {
-            ThrowIfObjectDisposed();
-
-            return Features.GetRequired<IPackageFeature>().Package.Relationships.Create(targetUri, targetMode, relationshipType);
-        }
-
-        internal sealed override IPackageRelationship CreateRelationship(Uri targetUri, TargetMode targetMode, string relationshipType, string id)
-        {
-            ThrowIfObjectDisposed();
-
-            return Features.GetRequired<IPackageFeature>().Package.Relationships.Create(targetUri, targetMode, relationshipType, id);
         }
 
         // create the metro part in the package with the CompressionOption

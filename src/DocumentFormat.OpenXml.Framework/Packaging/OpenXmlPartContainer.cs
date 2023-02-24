@@ -596,10 +596,7 @@ namespace DocumentFormat.OpenXml.Packaging
             }
 
             // Add a new relationship, and then remove the old relationship
-            CreateRelationship(part.Uri, TargetMode.Internal, part.RelationshipType, newRelationshipId);
-            ChildrenRelationshipParts.Add(newRelationshipId, part);
-
-            DeleteRelationship(oldId);
+            ChildrenRelationshipParts.Add(part, newRelationshipId);
             ChildrenRelationshipParts.Remove(oldId);
 
             return oldId;
@@ -795,10 +792,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             child.CreateInternal(InternalOpenXmlPackage, ThisOpenXmlPart, contentType, targetExt);
 
-            // add it
-            var relationshipId = AttachChild(child, rId);
-
-            ChildrenRelationshipParts.Add(relationshipId, child);
+            ChildrenRelationshipParts.Add(child, rId);
 
             return child;
         }
@@ -1121,9 +1115,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
                 newPart.CreateInternal(InternalOpenXmlPackage, ThisOpenXmlPart, contentType, targetExt: null);
 
-                var relationshipId = AttachChild(newPart, id);
-
-                ChildrenRelationshipParts.Add(relationshipId, newPart);
+                ChildrenRelationshipParts.Add(newPart, id);
 
                 return;
             }
@@ -1250,9 +1242,7 @@ namespace DocumentFormat.OpenXml.Packaging
             if (part.OpenXmlPackage == InternalOpenXmlPackage)
             {
                 // it is a part shared in the same package
-                var relationshipId = AttachChild(part, rId);
-
-                ChildrenRelationshipParts.Add(relationshipId, part);
+                ChildrenRelationshipParts.Add(part, rId);
 
                 return part;
             }
@@ -1291,11 +1281,7 @@ namespace DocumentFormat.OpenXml.Packaging
             if (partDictionary.TryGetValue(part, out var child))
             {
                 // already processed
-                string relationshipId;
-
-                relationshipId = AttachChild(child, rId);
-
-                ChildrenRelationshipParts.Add(relationshipId, child);
+                ChildrenRelationshipParts.Add(child, rId);
 
                 return child;
             }
@@ -1324,9 +1310,7 @@ namespace DocumentFormat.OpenXml.Packaging
                     child.FeedData(stream);
                 }
 
-                var relationshipId = AttachChild(child, rId);
-
-                ChildrenRelationshipParts.Add(relationshipId, child);
+                ChildrenRelationshipParts.Add(child, rId);
 
                 // add to processed node list
                 partDictionary.Add(part, child);
@@ -1427,26 +1411,6 @@ namespace DocumentFormat.OpenXml.Packaging
 #endif
 
         /// <summary>
-        /// Attaches the child to the package (create the relationship)
-        /// </summary>
-        /// <param name="part">The part to be attached.</param>
-        /// <param name="rId">The desired relationship ID.</param>
-        /// <returns>The relationship ID.</returns>
-        internal string AttachChild(OpenXmlPart part, string? rId)
-        {
-            if (rId is null)
-            {
-                var relationship = CreateRelationship(part.Uri, TargetMode.Internal, part.RelationshipType);
-                return relationship.Id;
-            }
-            else
-            {
-                var relationship = CreateRelationship(part.Uri, TargetMode.Internal, part.RelationshipType, rId);
-                return relationship.Id;
-            }
-        }
-
-        /// <summary>
         /// Deletes the specified part in the package root layer.
         /// </summary>
         /// <param name="id">The relationship ID of the part to be deleted.</param>
@@ -1487,7 +1451,7 @@ namespace DocumentFormat.OpenXml.Packaging
             if (toBeDeletedParts.Count == 0)
             {
                 // the child part is shared by other part, just delete the relationship
-                DeleteRelationship(id);
+                Relationships.Remove(id);
             }
             else
             {
@@ -1495,7 +1459,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
                 child.DeleteAllParts(processedParts, toBeDeletedParts);
 
-                DeleteRelationship(id);
+                Relationships.Remove(id);
 
                 if (toBeDeletedParts.TryGetValue(child, out var partRemoved))
                 {
@@ -1584,7 +1548,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
                     // else, already processed, just delete the relationship
                     // TODO: is this necessary? Will Package.DeletePart also delete it's .rels?
-                    DeleteRelationship(idPartPair.Key);
+                    Relationships.Remove(idPartPair.Key);
                 }
 
                 ChildrenRelationshipParts.Clear();
@@ -1684,11 +1648,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         protected abstract void ThrowIfObjectDisposed();
 
-        internal abstract void DeleteRelationship(string id);
-
-        internal abstract IPackageRelationship CreateRelationship(Uri targetUri, TargetMode targetMode, string relationshipType);
-
-        internal abstract IPackageRelationship CreateRelationship(Uri targetUri, TargetMode targetMode, string relationshipType, string id);
+        internal abstract IRelationshipCollection Relationships { get; }
 
         // find all reachable parts from the package root, the dictionary also used for cycle reference defense
         internal abstract void FindAllReachableParts(IDictionary<OpenXmlPart, bool> reachableParts);

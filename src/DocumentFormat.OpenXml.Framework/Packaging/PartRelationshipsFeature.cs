@@ -26,13 +26,13 @@ internal sealed class PartRelationshipsFeature :
 
     private IPartEventsFeature? Events => _owner.Features.Get<IPartEventsFeature>();
 
-    IEnumerable<OpenXmlPart> IPartRelationshipsFeature.Parts => InternalParts.Values;
+    IEnumerable<OpenXmlPart> IPartRelationshipsFeature.Parts => RelationshipMap.Values;
 
     private IDataPartsFeature LoadedDataParts => _owner.Features.GetRequired<IDataPartsFeature>();
 
     private IPartsFeature LoadedParts => _owner.Features.GetRequired<IPartsFeature>();
 
-    void IPartRelationshipsFeature.Add(string id, OpenXmlPart part)
+    void IPartRelationshipsFeature.Add(OpenXmlPart part, string? id)
     {
         var loaded = LoadedParts;
 
@@ -41,9 +41,15 @@ internal sealed class PartRelationshipsFeature :
             loaded.Add(part.Uri, part);
         }
 
+        if (id is null || !_owner.Relationships.Contains(id))
+        {
+            var relationship = _owner.Relationships.Create(part.Uri, TargetMode.Internal, part.RelationshipType, id);
+            id = relationship.Id;
+        }
+
         Events?.OnChange(part, EventType.Creating);
 
-        InternalParts[id] = part;
+        RelationshipMap[id] = part;
 
         Events?.OnChange(part, EventType.Created);
     }
@@ -63,14 +69,14 @@ internal sealed class PartRelationshipsFeature :
         {
             // On .NET 5.0 and later, we can remove keys while enumerating. Before that, it would throw at runtime.
 #if NET5_0_OR_GREATER
-            foreach (var kv in InternalParts)
+            foreach (var kv in RelationshipMap)
             {
                 events.OnChange(kv.Value, EventType.Removing);
-                InternalParts.Remove(kv.Key);
+                RelationshipMap.Remove(kv.Key);
                 events.OnChange(kv.Value, EventType.Removed);
             }
 #else
-            var parts = InternalParts;
+            var parts = RelationshipMap;
 
             foreach (var kv in parts)
             {
@@ -80,19 +86,19 @@ internal sealed class PartRelationshipsFeature :
 #endif
         }
 
-        InternalParts.Clear();
+        RelationshipMap.Clear();
     }
 
-    int IPartRelationshipsFeature.Count => InternalParts.Count;
+    int IPartRelationshipsFeature.Count => RelationshipMap.Count;
 
-    bool IPartRelationshipsFeature.Contains(OpenXmlPart part) => InternalParts.ContainsValue(part);
+    bool IPartRelationshipsFeature.Contains(OpenXmlPart part) => RelationshipMap.ContainsValue(part);
 
-    bool IPartRelationshipsFeature.Contains(string id) => InternalParts.ContainsKey(id);
+    bool IPartRelationshipsFeature.Contains(string id) => RelationshipMap.ContainsKey(id);
 
     bool IPartRelationshipsFeature.TryGetPart(string id, [MaybeNullWhen(false)] out OpenXmlPart part)
-        => InternalParts.TryGetValue(id, out part);
+        => RelationshipMap.TryGetValue(id, out part);
 
-    private Dictionary<string, OpenXmlPart> InternalParts
+    private Dictionary<string, OpenXmlPart> RelationshipMap
     {
         get
         {
@@ -105,14 +111,16 @@ internal sealed class PartRelationshipsFeature :
         }
     }
 
-    public IEnumerator<KeyValuePair<string, OpenXmlPart>> GetEnumerator() => InternalParts.GetEnumerator();
+    public IEnumerator<KeyValuePair<string, OpenXmlPart>> GetEnumerator() => RelationshipMap.GetEnumerator();
 
-    void IPartRelationshipsFeature.Remove(string uri)
+    void IPartRelationshipsFeature.Remove(string id)
     {
-        if (InternalParts.TryGetValue(uri, out var part))
+        if (RelationshipMap.TryGetValue(id, out var part))
         {
+            _owner.Relationships.Remove(id);
+
             Events?.OnChange(part, EventType.Removing);
-            InternalParts.Remove(uri);
+            RelationshipMap.Remove(id);
             Events?.OnChange(part, EventType.Removed);
         }
     }
@@ -135,7 +143,7 @@ internal sealed class PartRelationshipsFeature :
         _referenceRelationships = new(StringComparer.Ordinal);
         _parts = new(StringComparer.Ordinal);
 
-        var relationships = sourcePart?.PackagePart.Relationships ?? openXmlPackage.Package.Relationships;
+        var relationships = sourcePart?.Relationships ?? openXmlPackage.Relationships;
 
         foreach (var relationship in relationships)
         {

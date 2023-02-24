@@ -536,6 +536,8 @@ namespace DocumentFormat.OpenXml.Packaging
             }
         }
 
+        internal override IRelationshipCollection Relationships => PackagePart.Relationships;
+
         internal sealed override OpenXmlPackage InternalOpenXmlPackage
         {
             get
@@ -548,27 +550,6 @@ namespace DocumentFormat.OpenXml.Packaging
         internal sealed override OpenXmlPart ThisOpenXmlPart
         {
             get { return this; }
-        }
-
-        internal sealed override void DeleteRelationship(string id)
-        {
-            ThrowIfObjectDisposed();
-
-            PackagePart.Relationships.Remove(id);
-        }
-
-        internal sealed override IPackageRelationship CreateRelationship(Uri targetUri, TargetMode targetMode, string relationshipType)
-        {
-            ThrowIfObjectDisposed();
-
-            return PackagePart.Relationships.Create(targetUri, targetMode, relationshipType);
-        }
-
-        internal sealed override IPackageRelationship CreateRelationship(Uri targetUri, TargetMode targetMode, string relationshipType, string id)
-        {
-            ThrowIfObjectDisposed();
-
-            return PackagePart.Relationships.Create(targetUri, targetMode, relationshipType, id);
         }
 
         #endregion

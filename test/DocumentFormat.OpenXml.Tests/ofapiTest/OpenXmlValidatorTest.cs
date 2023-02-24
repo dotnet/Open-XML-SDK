@@ -3078,7 +3078,7 @@ namespace DocumentFormat.OpenXml.Tests
                     var commentsPart2 = mainPart.AddExtendedPart(WordprocessingCommentsPart.RelationshipTypeConstant, WordprocessingCommentsPart.ContentTypeConstant, "xml");
                     commentsPart.Comments.SaveToPart(commentsPart2);
 
-                    mainPart.CreateRelationship(mainPart.Uri, System.IO.Packaging.TargetMode.Internal, mainPart.RelationshipType);
+                    mainPart.Relationships.Create(mainPart.Uri, System.IO.Packaging.TargetMode.Internal, mainPart.RelationshipType);
 
                     wordDoc.Close();
                 }
