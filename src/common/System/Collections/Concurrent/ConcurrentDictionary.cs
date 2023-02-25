@@ -3,9 +3,11 @@
 
 using System.Collections.Generic;
 
+#pragma warning disable CA1812
+
 namespace System.Collections.Concurrent
 {
-    internal class ConcurrentDictionary<TKey, TValue>
+    internal sealed class ConcurrentDictionary<TKey, TValue>
     {
         private readonly Dictionary<TKey, TValue> _dictionary;
 
