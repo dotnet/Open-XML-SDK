@@ -35,6 +35,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
+        /// <item><description>has the following parent XML elements: <see cref="A.graphicData" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="author" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: AuthorList.</description></item>
         /// </list>
@@ -61,11 +62,25 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
+        /// <item><description>has the following parent XML elements: <see cref="A.graphicData" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="cm" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: CommentList.</description></item>
         /// </list>
         /// </remarks>
         public static readonly XName cmLst = p188 + "cmLst";
+
+        /// <summary>
+        /// Represents the p188:commentRel XML element.
+        /// </summary>
+        /// <remarks>
+        /// <para>As an XML element, it:</para>
+        /// <list type="bullet">
+        /// <item><description>has the following parent XML elements: <see cref="A.graphicData" />, <see cref="P.ext" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="R.id" />.</description></item>
+        /// <item><description>corresponds to the following strongly-typed classes: CommentRelationship.</description></item>
+        /// </list>
+        /// </remarks>
+        public static readonly XName commentRel = p188 + "commentRel";
 
         /// <summary>
         /// Represents the p188:extLst XML element.

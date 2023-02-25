@@ -197,6 +197,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
+        /// <item><description>has the following parent XML elements: <see cref="A.graphicData" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="annotation" />, <see cref="annotationXML" />, <see cref="context" />, <see cref="definitions" />, <see cref="trace" />, <see cref="traceGroup" />, <see cref="traceView" />.</description></item>
         /// <item><description>has the following XML attributes: <see cref="NoNamespace.documentID" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: Ink.</description></item>

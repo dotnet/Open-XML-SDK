@@ -3493,6 +3493,18 @@ namespace DocumentFormat.OpenXml.Linq
         public static readonly XName dstrike = w + "dstrike";
 
         /// <summary>
+        /// Represents the w:durableId XML attribute.
+        /// </summary>
+        /// <remarks>
+        /// <para>As an XML attribute, it:</para>
+        /// <list type="bullet">
+        /// <item><description>is contained in the following XML elements: <see cref="num" />.</description></item>
+        /// <item><description>corresponds to the following strongly-typed properties: NumberingInstance.DurableId.</description></item>
+        /// </list>
+        /// </remarks>
+        public static readonly XName durableId = w + "durableId";
+
+        /// <summary>
         /// Represents the w:dxaOrig XML attribute.
         /// </summary>
         /// <remarks>
@@ -6612,7 +6624,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="numbering" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="abstractNumId" />, <see cref="lvlOverride" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="numId" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="durableId" />, <see cref="numId" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: NumberingInstance.</description></item>
         /// </list>
         /// <para>As an XML attribute, it:</para>
