@@ -26,6 +26,7 @@ public static class GeneratorExtensions
     private const string OptionsGeneratePart = $"{OptionsPrefix}Parts";
     private const string OptionsGenerateSchemas = $"{OptionsPrefix}Schemas";
     private const string OptionsGenerateFactories = $"{OptionsPrefix}Factories";
+    private const string OptionsGenerateLinq = $"{OptionsPrefix}Linq";
 
     public static IncrementalValueProvider<OpenXmlGeneratorOptions> GetOpenXmlOptions(this IncrementalGeneratorInitializationContext context)
         => context.AnalyzerConfigOptionsProvider.Select((options, token) =>
@@ -36,6 +37,7 @@ public static class GeneratorExtensions
                 GenerateParts = IsEnabled(options, OptionsGeneratePart),
                 GenerateSchema = IsEnabled(options, OptionsGenerateSchemas),
                 GenerateFactories = IsEnabled(options, OptionsGenerateFactories),
+                GenerateLinq = IsEnabled(options, OptionsGenerateLinq),
             };
 
             static bool IsEnabled(AnalyzerConfigOptionsProvider options, string name)

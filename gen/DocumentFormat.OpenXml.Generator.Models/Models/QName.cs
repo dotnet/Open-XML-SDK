@@ -3,7 +3,7 @@
 
 namespace DocumentFormat.OpenXml.Generator.Models;
 
-public class QName
+public class QName : IComparable<QName>
 {
     public QName(string prefix, string name)
     {
@@ -49,6 +49,18 @@ public class QName
         }
 
         return new(input.Substring(0, idx), input.Substring(idx + 1));
+    }
+
+    public int CompareTo(QName other)
+    {
+        var prefix = Prefix.CompareTo(other.Prefix);
+
+        if (prefix != 0)
+        {
+            return prefix;
+        }
+
+        return Name.CompareTo(other.Name);
     }
 
     public static implicit operator string(QName qname) => qname.ToString();
