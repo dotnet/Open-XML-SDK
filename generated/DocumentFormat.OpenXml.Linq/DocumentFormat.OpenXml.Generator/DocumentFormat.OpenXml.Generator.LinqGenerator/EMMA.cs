@@ -417,6 +417,18 @@ namespace DocumentFormat.OpenXml.Linq
         public static readonly XName model_ref = emma + "model-ref";
 
         /// <summary>
+        /// Represents the emma:no-input XML attribute.
+        /// </summary>
+        /// <remarks>
+        /// <para>As an XML attribute, it:</para>
+        /// <list type="bullet">
+        /// <item><description>is contained in the following XML elements: <see cref="interpretation" />.</description></item>
+        /// <item><description>corresponds to the following strongly-typed properties: Interpretation.NoInput.</description></item>
+        /// </list>
+        /// </remarks>
+        public static readonly XName no_input = emma + "no-input";
+
+        /// <summary>
         /// Represents the emma:node XML element.
         /// </summary>
         /// <remarks>
@@ -429,18 +441,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// </list>
         /// </remarks>
         public static readonly XName node = emma + "node";
-
-        /// <summary>
-        /// Represents the emma:no-input XML attribute.
-        /// </summary>
-        /// <remarks>
-        /// <para>As an XML attribute, it:</para>
-        /// <list type="bullet">
-        /// <item><description>is contained in the following XML elements: <see cref="interpretation" />.</description></item>
-        /// <item><description>corresponds to the following strongly-typed properties: Interpretation.NoInput.</description></item>
-        /// </list>
-        /// </remarks>
-        public static readonly XName no_input = emma + "no-input";
 
         /// <summary>
         /// Represents the emma:offset-to-start XML attributes.
