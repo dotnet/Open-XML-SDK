@@ -117,7 +117,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 var extensions = Features.GetRequired<IPartExtensionFeature>();
 
-                if (!extensions.TryGetExtension(contentType, out var found))
+                if (extensions.TryGetExtension(contentType, out var found))
                 {
                     targetExt = found;
                 }
