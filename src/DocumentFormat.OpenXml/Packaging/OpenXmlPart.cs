@@ -134,7 +134,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             if (!IsContentTypeFixed)
             {
-                if (!openXmlPackage.PartExtensionProvider.TryGetValue(contentType, out var found))
+                if (openXmlPackage.PartExtensionProvider.TryGetValue(contentType, out var found))
                 {
                     targetExt = found;
                 }
