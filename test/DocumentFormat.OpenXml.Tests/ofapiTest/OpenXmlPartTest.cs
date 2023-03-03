@@ -259,7 +259,6 @@ namespace DocumentFormat.OpenXml.Tests
 
                     var extendedPart = doc.AddExtendedPart("http://temp", "text/xml", ".xml", "tempId");
 
-
                     // can add parts
                     OpenXmlPart subPart = extendedPart.AddPart(doc.MainDocumentPart);
                     Assert.Same(subPart, doc.MainDocumentPart);
