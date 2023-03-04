@@ -29,8 +29,6 @@ namespace DocumentFormat.OpenXml.Generator.Linq
         /// <param name="args">The command line arguments.</param>
         public static int Main(string[] args)
         {
-            args = new[] { @"W:\openxml\sdk\src\DocumentFormat.OpenXml.Linq\GeneratedCode\" };
-
             if (args.Length != 1)
             {
                 Console.WriteLine("Please supply a directory");
