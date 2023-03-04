@@ -1038,6 +1038,10 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="numDim" />, <see cref="strDim" />.</description></item>
+<<<<<<< HEAD:generated/DocumentFormat.OpenXml.Linq/DocumentFormat.OpenXml.Generator/DocumentFormat.OpenXml.Generator.OpenXmlGenerator/Linq.CX.g.cs
+=======
+        /// <item><description>has the following XML attributes: <see cref="NoNamespace.dir" />.</description></item>
+>>>>>>> update-linq:src/DocumentFormat.OpenXml.Linq/GeneratedCode/CX.g.cs
         /// <item><description>corresponds to the following strongly-typed classes: NfFormula.</description></item>
         /// </list>
         /// </remarks>
