@@ -434,23 +434,6 @@ namespace DocumentFormat.OpenXml.Linq
         public static readonly XName no_input = emma + "no-input";
 
         /// <summary>
-<<<<<<< HEAD:generated/DocumentFormat.OpenXml.Linq/DocumentFormat.OpenXml.Generator/DocumentFormat.OpenXml.Generator.OpenXmlGenerator/Linq.EMMA.g.cs
-=======
-        /// Represents the emma:node XML element.
-        /// </summary>
-        /// <remarks>
-        /// <para>As an XML element, it:</para>
-        /// <list type="bullet">
-        /// <item><description>has the following parent XML elements: <see cref="A.graphicData" />, <see cref="lattice" />.</description></item>
-        /// <item><description>has the following child XML elements: <see cref="info" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="confidence" />, <see cref="cost" />, <see cref="NoNamespace.node_number" />.</description></item>
-        /// <item><description>corresponds to the following strongly-typed classes: Node.</description></item>
-        /// </list>
-        /// </remarks>
-        public static readonly XName node = emma + "node";
-
-        /// <summary>
->>>>>>> upstream/main:src/DocumentFormat.OpenXml.Linq/GeneratedCode/EMMA.g.cs
         /// Represents the emma:offset-to-start XML attributes.
         /// </summary>
         /// <remarks>
