@@ -84,8 +84,6 @@ public static class LinqGeneratorExtensions
         output.WriteLine("using System.Xml.Linq;");
 
         output.WriteLine();
-
-        output.WriteLine();
         output.WriteLine("namespace DocumentFormat.OpenXml.Linq");
         output.WriteLine("{");
     }

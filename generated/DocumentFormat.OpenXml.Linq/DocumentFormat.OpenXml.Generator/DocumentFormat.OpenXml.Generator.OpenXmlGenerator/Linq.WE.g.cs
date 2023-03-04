@@ -3,7 +3,6 @@
 
 using System.Xml.Linq;
 
-
 namespace DocumentFormat.OpenXml.Linq
 {
     /// <summary>
