@@ -3,40 +3,26 @@
 
 using DocumentFormat.OpenXml.Generator.Editor;
 using DocumentFormat.OpenXml.Generator.Generators.Elements;
+using DocumentFormat.OpenXml.Generator.Models;
 using Microsoft.CodeAnalysis;
 using System.CodeDom.Compiler;
 using System.Text;
 
 namespace DocumentFormat.OpenXml.Generator;
 
-[Generator]
-public class SchemaGenerator : IIncrementalGenerator
+public static class SchemaGenerator
 {
-    public void Initialize(IncrementalGeneratorInitializationContext context)
+    public static void WriteSchemaFiles(SourceProductionContext context, OpenXmlGeneratorServices openXml, SchemaNamespace namespaces)
     {
-        var openXmlContext = context.GetOpenXmlGeneratorContext();
-        var ns = openXmlContext.SelectMany((s, _) => s.Namespaces);
-        var services = openXmlContext.GetOpenXmlServices();
-        var options = context.GetOpenXmlOptions().Select(static (o, _) => o.GenerateSchema);
+        var sw = new StringWriter();
+        var writer = new IndentedTextWriter(sw);
 
-        context.RegisterSourceOutput(ns.Combine(services).Combine(options), (context, data) =>
+        writer.WriteFileHeader();
+
+        if (writer.GetDataModelSyntax(openXml, namespaces))
         {
-            if (!data.Right)
-            {
-                return;
-            }
-
-            var openXml = data.Left.Right;
-            var sw = new StringWriter();
-            var writer = new IndentedTextWriter(sw);
-
-            writer.WriteFileHeader();
-
-            if (writer.GetDataModelSyntax(openXml, data.Left.Left))
-            {
-                context.AddSource(GetPath(data.Left.Left.TargetNamespace), sw.ToString());
-            }
-        });
+            context.AddSource(GetPath(namespaces.TargetNamespace), sw.ToString());
+        }
     }
 
     private static string GetPath(string ns)

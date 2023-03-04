@@ -8,43 +8,9 @@ using System.Collections.Immutable;
 
 namespace DocumentFormat.OpenXml.Generator;
 
-[Generator]
-public class FactoryGenerator : IIncrementalGenerator
+public static class FactoryGenerator
 {
-    public void Initialize(IncrementalGeneratorInitializationContext context)
-    {
-        var openXml = context.GetOpenXmlGeneratorContext()
-            .GetOpenXmlServices();
-        var options = context.GetOpenXmlOptions().Select(static (o, _) => o.GenerateFactories);
-        var factories = openXml.Combine(options);
-
-        var packageFactories = openXml.GetPackageFactories().Combine(options);
-
-        context.RegisterSourceOutput(packageFactories, (context, factories) =>
-        {
-            if (!factories.Right)
-            {
-                return;
-            }
-
-            GenerateDocumentSpecificPartFeature(context, factories.Left);
-        });
-
-        context.RegisterSourceOutput(factories, (context, factories) =>
-        {
-            if (!factories.Right)
-            {
-                return;
-            }
-
-            var openXml = factories.Left;
-
-            GeneratePartFactory(context, openXml);
-            GenerateRootActivator(context, openXml);
-        });
-    }
-
-    private static void GenerateDocumentSpecificPartFeature(SourceProductionContext context, ImmutableArray<PackageInformation> packages)
+    public static void GenerateDocumentSpecificPartFeature(SourceProductionContext context, ImmutableArray<PackageInformation> packages)
     {
         foreach (var package in packages)
         {
@@ -91,7 +57,7 @@ public class FactoryGenerator : IIncrementalGenerator
         }
     }
 
-    private static void GeneratePartFactory(SourceProductionContext context, OpenXmlGeneratorServices openXml)
+    public static void GeneratePartFactory(SourceProductionContext context, OpenXmlGeneratorServices openXml)
     {
         using var sw = new StringWriter();
         using var writer = new IndentedTextWriter(sw);
@@ -145,7 +111,7 @@ public class FactoryGenerator : IIncrementalGenerator
         context.AddSource("TypedPartFactory", sw.ToString());
     }
 
-    private static void GenerateRootActivator(SourceProductionContext context, OpenXmlGeneratorServices openXml)
+    public static void GenerateRootActivator(SourceProductionContext context, OpenXmlGeneratorServices openXml)
     {
         using var sw = new StringWriter();
         using var writer = new IndentedTextWriter(sw);
