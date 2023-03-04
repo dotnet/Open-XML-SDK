@@ -1,33 +1,30 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Generator.Models;
 using Microsoft.CodeAnalysis;
+using System.Collections.Immutable;
 
 namespace DocumentFormat.OpenXml.Generator.NamespaceGeneration;
 
-[Generator]
-public class NamespaceGenerator : IIncrementalGenerator
+public static class NamespaceGenerator
 {
     private static readonly DiagnosticDescriptor MalformedDataFileDescriptor = new("OOX3000", "Malformed data file", "Failed to load data file", "Data", DiagnosticSeverity.Error, isEnabledByDefault: true);
 
-    public void Initialize(IncrementalGeneratorInitializationContext context)
+    public static void WriteNamespaces(SourceProductionContext context, ImmutableArray<NamespaceInfo> namespaces)
     {
-        var namespaces = context.GetOpenXmlDataFiles().GetKnownNamespaces();
-        var shouldGenerate = context.GetOpenXmlOptions().Select(static (o, _) => o.GenerateNamespaces);
-
-        context.RegisterSourceOutput(namespaces.Combine(shouldGenerate), static (context, data) =>
+        if (namespaces.IsDefaultOrEmpty)
         {
-            try
-            {
-                if (data.Right)
-                {
-                    context.AddSource("Namespaces", data.Left.Generate());
-                }
-            }
-            catch (Exception)
-            {
-                context.ReportDiagnostic(Diagnostic.Create(MalformedDataFileDescriptor, location: null));
-            }
-        });
+            return;
+        }
+
+        try
+        {
+            context.AddSource("Namespaces", namespaces.Generate());
+        }
+        catch (Exception)
+        {
+            context.ReportDiagnostic(Diagnostic.Create(MalformedDataFileDescriptor, location: null));
+        }
     }
 }

@@ -28,6 +28,11 @@ public static class GeneratorExtensions
     private const string OptionsGenerateFactories = $"{OptionsPrefix}Factories";
     private const string OptionsGenerateLinq = $"{OptionsPrefix}Linq";
 
+    public static IncrementalValueProvider<T?> When<T>(this IncrementalValueProvider<T> services, IncrementalValueProvider<OpenXmlGeneratorOptions> options, Func<OpenXmlGeneratorOptions, bool> predicate)
+        where T : class
+        => services.Combine(options)
+            .Select((t, _) => predicate(t.Right) ? t.Left : null);
+
     public static IncrementalValueProvider<OpenXmlGeneratorOptions> GetOpenXmlOptions(this IncrementalGeneratorInitializationContext context)
         => context.AnalyzerConfigOptionsProvider.Select((options, token) =>
         {
@@ -84,9 +89,8 @@ public static class GeneratorExtensions
             .SelectMany((s, _) => s ?? Enumerable.Empty<StronglyTypedNamespace>())
             .Collect();
 
-    public static IncrementalValueProvider<OpenXmlGeneratorContext> GetOpenXmlGeneratorContext(this IncrementalGeneratorInitializationContext context)
+    public static IncrementalValueProvider<OpenXmlGeneratorContext> GetOpenXmlGeneratorContext(this IncrementalOpenXmlTextValuesProvider openXmlFiles)
     {
-        var openXmlFiles = context.GetOpenXmlDataFiles();
         var namespaces = openXmlFiles.GetKnownNamespaces();
         var namespaceTypes = openXmlFiles.GetNamespaceTypes();
         var parts = openXmlFiles.GetParts();
@@ -124,9 +128,14 @@ public static class GeneratorExtensions
                 })
                 .Where(args => args != default);
 
-    public static IncrementalValueProvider<ImmutableArray<PackageInformation>> GetPackageFactories(this IncrementalValueProvider<OpenXmlGeneratorServices> services)
+    public static IncrementalValueProvider<ImmutableArray<PackageInformation>> GetPackageFactories(this IncrementalValueProvider<OpenXmlGeneratorServices?> services)
         => services.Select((o, token) =>
         {
+            if (o is null)
+            {
+                return ImmutableArray.Create<PackageInformation>();
+            }
+
             // Some parts serve in multiple places and end up getting pulled in here unintentionally
             var invalidParts = new Dictionary<string, HashSet<string>>
             {
