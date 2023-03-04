@@ -76,19 +76,6 @@ public static class LinqGeneratorExtensions
         return string.IsNullOrEmpty(prefix) ? EmptyNamespace : prefix.ToUpperInvariant();
     }
 
-    private static readonly string[] DisabledWarnings = new[]
-    {
-        "SA1307",
-        "SA1308",
-        "SA1310",
-        "SA1311",
-        "SA1505",
-        "CA1707",
-        "CA1711",
-        "CA1720",
-        "CA1724",
-    };
-
     private static void GenerateClassFilePreamble(TextWriter output)
     {
         output.WriteLine("// Copyright (c) Microsoft. All rights reserved.");
@@ -97,12 +84,6 @@ public static class LinqGeneratorExtensions
         output.WriteLine("using System.Xml.Linq;");
 
         output.WriteLine();
-
-        foreach (var warning in DisabledWarnings)
-        {
-            output.Write("#pragma warning disable ");
-            output.WriteLine(warning);
-        }
 
         output.WriteLine();
         output.WriteLine("namespace DocumentFormat.OpenXml.Linq");
