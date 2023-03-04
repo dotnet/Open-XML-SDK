@@ -10,6 +10,7 @@ using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Text;
 
 namespace DocumentFormat.OpenXml.Generator.Linq
 {
@@ -28,6 +29,8 @@ namespace DocumentFormat.OpenXml.Generator.Linq
         /// <param name="args">The command line arguments.</param>
         public static int Main(string[] args)
         {
+            args = new[] { @"W:\openxml\sdk\src\DocumentFormat.OpenXml.Linq\GeneratedCode\" };
+
             if (args.Length != 1)
             {
                 Console.WriteLine("Please supply a directory");
@@ -97,7 +100,7 @@ namespace DocumentFormat.OpenXml.Generator.Linq
                 Console.WriteLine($@"Generating class {className} ...");
 
                 using var stream = new FileStream(path, FileMode.Create);
-                using var output = new StreamWriter(stream);
+                using var output = new StreamWriter(stream, new UTF8Encoding(encoderShouldEmitUTF8Identifier: true));
 
                 GenerateClassFilePreamble(output);
                 GenerateClass(output, prefix, namespaceName, classFieldInfos, fieldInfos);

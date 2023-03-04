@@ -1,4 +1,4 @@
-// Copyright (c) Microsoft. All rights reserved.
+﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using System.Xml.Linq;
@@ -21,7 +21,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
-        /// <item><description>has the following parent XML elements: <see cref="lattice" />.</description></item>
+        /// <item><description>has the following parent XML elements: <see cref="A.graphicData" />, <see cref="lattice" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="info" />.</description></item>
         /// <item><description>has the following XML attributes: <see cref="confidence" />, <see cref="cost" />, <see cref="duration" />, <see cref="end" />, <see cref="lang" />, <see cref="medium" />, <see cref="mode" />, <see cref="offset_to_start" />, <see cref="source" />, <see cref="start" />, <see cref="NoNamespace.from" />, <see cref="NoNamespace.to" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: Arc.</description></item>
@@ -59,7 +59,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
-        /// <item><description>has the following parent XML elements: <see cref="emma_" />.</description></item>
+        /// <item><description>has the following parent XML elements: <see cref="A.graphicData" />, <see cref="emma_" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="group" />, <see cref="interpretation" />, <see cref="one_of" />, <see cref="sequence" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: Derivation.</description></item>
         /// </list>
@@ -72,7 +72,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
-        /// <item><description>has the following parent XML elements: <see cref="group" />, <see cref="interpretation" />, <see cref="one_of" />, <see cref="sequence" />.</description></item>
+        /// <item><description>has the following parent XML elements: <see cref="A.graphicData" />, <see cref="group" />, <see cref="interpretation" />, <see cref="one_of" />, <see cref="sequence" />.</description></item>
         /// <item><description>has the following XML attributes: <see cref="NoNamespace.composite" />, <see cref="NoNamespace.resource" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: DerivedFrom.</description></item>
         /// </list>
@@ -109,7 +109,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
-        /// <item><description>has the following parent XML elements: <see cref="INKML.annotationXML" />.</description></item>
+        /// <item><description>has the following parent XML elements: <see cref="A.graphicData" />, <see cref="INKML.annotationXML" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="derivation" />, <see cref="endpoint_info" />, <see cref="grammar" />, <see cref="group" />, <see cref="info" />, <see cref="interpretation" />, <see cref="model" />, <see cref="one_of" />, <see cref="sequence" />.</description></item>
         /// <item><description>has the following XML attributes: <see cref="NoNamespace.version" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: Emma.</description></item>
@@ -135,7 +135,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
-        /// <item><description>has the following parent XML elements: <see cref="endpoint_info" />.</description></item>
+        /// <item><description>has the following parent XML elements: <see cref="A.graphicData" />, <see cref="endpoint_info" />.</description></item>
         /// <item><description>has the following XML attributes: <see cref="endpoint_address" />, <see cref="endpoint_pair_ref" />, <see cref="endpoint_role" />, <see cref="media_type" />, <see cref="medium" />, <see cref="message_id" />, <see cref="mode" />, <see cref="port_num" />, <see cref="port_type" />, <see cref="service_name" />, <see cref="NoNamespace.id" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: EndPoint.</description></item>
         /// </list>
@@ -160,7 +160,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
-        /// <item><description>has the following parent XML elements: <see cref="emma_" />.</description></item>
+        /// <item><description>has the following parent XML elements: <see cref="A.graphicData" />, <see cref="emma_" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="endpoint" />.</description></item>
         /// <item><description>has the following XML attributes: <see cref="NoNamespace.id" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: EndPointInfo.</description></item>
@@ -222,7 +222,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
-        /// <item><description>has the following parent XML elements: <see cref="emma_" />.</description></item>
+        /// <item><description>has the following parent XML elements: <see cref="A.graphicData" />, <see cref="emma_" />.</description></item>
         /// <item><description>has the following XML attributes: <see cref="NoNamespace.id" />, <see cref="NoNamespace.@ref" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: Grammar.</description></item>
         /// </list>
@@ -247,7 +247,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
-        /// <item><description>has the following parent XML elements: <see cref="derivation" />, <see cref="emma_" />, <see cref="group" />, <see cref="one_of" />, <see cref="sequence" />.</description></item>
+        /// <item><description>has the following parent XML elements: <see cref="A.graphicData" />, <see cref="derivation" />, <see cref="emma_" />, <see cref="group" />, <see cref="one_of" />, <see cref="sequence" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="derived_from" />, <see cref="group" />, <see cref="group_info" />, <see cref="info" />, <see cref="interpretation" />, <see cref="one_of" />, <see cref="sequence" />.</description></item>
         /// <item><description>has the following XML attributes: <see cref="confidence" />, <see cref="cost" />, <see cref="dialog_turn" />, <see cref="duration" />, <see cref="end" />, <see cref="endpoint_info_ref" />, <see cref="function" />, <see cref="grammar_ref" />, <see cref="lang" />, <see cref="media_type" />, <see cref="medium" />, <see cref="mode" />, <see cref="model_ref" />, <see cref="offset_to_start" />, <see cref="process" />, <see cref="signal" />, <see cref="signal_size" />, <see cref="source" />, <see cref="start" />, <see cref="time_ref_anchor_point" />, <see cref="time_ref_uri" />, <see cref="tokens" />, <see cref="verbal" />, <see cref="NoNamespace.id" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: Group.</description></item>
@@ -261,7 +261,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
-        /// <item><description>has the following parent XML elements: <see cref="group" />.</description></item>
+        /// <item><description>has the following parent XML elements: <see cref="A.graphicData" />, <see cref="group" />.</description></item>
         /// <item><description>has the following XML attributes: <see cref="NoNamespace.@ref" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: GroupInfo.</description></item>
         /// </list>
@@ -274,7 +274,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
-        /// <item><description>has the following parent XML elements: <see cref="arc" />, <see cref="emma_" />, <see cref="group" />, <see cref="interpretation" />, <see cref="node" />, <see cref="one_of" />, <see cref="sequence" />.</description></item>
+        /// <item><description>has the following parent XML elements: <see cref="A.graphicData" />, <see cref="arc" />, <see cref="emma_" />, <see cref="group" />, <see cref="interpretation" />, <see cref="node" />, <see cref="one_of" />, <see cref="sequence" />.</description></item>
         /// <item><description>has the following XML attributes: <see cref="NoNamespace.id" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: Info.</description></item>
         /// </list>
@@ -287,7 +287,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
-        /// <item><description>has the following parent XML elements: <see cref="derivation" />, <see cref="emma_" />, <see cref="group" />, <see cref="one_of" />, <see cref="sequence" />.</description></item>
+        /// <item><description>has the following parent XML elements: <see cref="A.graphicData" />, <see cref="derivation" />, <see cref="emma_" />, <see cref="group" />, <see cref="one_of" />, <see cref="sequence" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="derived_from" />, <see cref="info" />, <see cref="lattice" />, <see cref="literal" />, <see cref="MSINK.context" />.</description></item>
         /// <item><description>has the following XML attributes: <see cref="confidence" />, <see cref="cost" />, <see cref="dialog_turn" />, <see cref="duration" />, <see cref="end" />, <see cref="endpoint_info_ref" />, <see cref="function" />, <see cref="grammar_ref" />, <see cref="lang" />, <see cref="media_type" />, <see cref="medium" />, <see cref="mode" />, <see cref="model_ref" />, <see cref="no_input" />, <see cref="offset_to_start" />, <see cref="process" />, <see cref="signal" />, <see cref="signal_size" />, <see cref="source" />, <see cref="start" />, <see cref="time_ref_anchor_point" />, <see cref="time_ref_uri" />, <see cref="tokens" />, <see cref="uninterpreted" />, <see cref="verbal" />, <see cref="NoNamespace.id" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: Interpretation.</description></item>
@@ -313,7 +313,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
-        /// <item><description>has the following parent XML elements: <see cref="interpretation" />.</description></item>
+        /// <item><description>has the following parent XML elements: <see cref="A.graphicData" />, <see cref="interpretation" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="arc" />, <see cref="node" />.</description></item>
         /// <item><description>has the following XML attributes: <see cref="time_ref_anchor_point" />, <see cref="time_ref_uri" />, <see cref="NoNamespace.final" />, <see cref="NoNamespace.initial" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: Lattice.</description></item>
@@ -327,7 +327,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
-        /// <item><description>has the following parent XML elements: <see cref="interpretation" />.</description></item>
+        /// <item><description>has the following parent XML elements: <see cref="A.graphicData" />, <see cref="interpretation" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: Literal.</description></item>
         /// </list>
         /// </remarks>
@@ -387,7 +387,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
-        /// <item><description>has the following parent XML elements: <see cref="emma_" />.</description></item>
+        /// <item><description>has the following parent XML elements: <see cref="A.graphicData" />, <see cref="emma_" />.</description></item>
         /// <item><description>has the following XML attributes: <see cref="NoNamespace.id" />, <see cref="NoNamespace.@ref" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: Model.</description></item>
         /// </list>
@@ -424,7 +424,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
-        /// <item><description>has the following parent XML elements: <see cref="lattice" />.</description></item>
+        /// <item><description>has the following parent XML elements: <see cref="A.graphicData" />, <see cref="lattice" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="info" />.</description></item>
         /// <item><description>has the following XML attributes: <see cref="confidence" />, <see cref="cost" />, <see cref="NoNamespace.node_number" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: Node.</description></item>
@@ -450,7 +450,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
-        /// <item><description>has the following parent XML elements: <see cref="derivation" />, <see cref="emma_" />, <see cref="group" />, <see cref="one_of" />, <see cref="sequence" />.</description></item>
+        /// <item><description>has the following parent XML elements: <see cref="A.graphicData" />, <see cref="derivation" />, <see cref="emma_" />, <see cref="group" />, <see cref="one_of" />, <see cref="sequence" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="derived_from" />, <see cref="group" />, <see cref="info" />, <see cref="interpretation" />, <see cref="one_of" />, <see cref="sequence" />.</description></item>
         /// <item><description>has the following XML attributes: <see cref="NoNamespace.disjunction_type" />, <see cref="confidence" />, <see cref="cost" />, <see cref="dialog_turn" />, <see cref="duration" />, <see cref="end" />, <see cref="endpoint_info_ref" />, <see cref="function" />, <see cref="grammar_ref" />, <see cref="lang" />, <see cref="media_type" />, <see cref="medium" />, <see cref="mode" />, <see cref="model_ref" />, <see cref="offset_to_start" />, <see cref="process" />, <see cref="signal" />, <see cref="signal_size" />, <see cref="source" />, <see cref="start" />, <see cref="time_ref_anchor_point" />, <see cref="time_ref_uri" />, <see cref="tokens" />, <see cref="verbal" />, <see cref="NoNamespace.id" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: OneOf.</description></item>
@@ -500,7 +500,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
-        /// <item><description>has the following parent XML elements: <see cref="derivation" />, <see cref="emma_" />, <see cref="group" />, <see cref="one_of" />, <see cref="sequence" />.</description></item>
+        /// <item><description>has the following parent XML elements: <see cref="A.graphicData" />, <see cref="derivation" />, <see cref="emma_" />, <see cref="group" />, <see cref="one_of" />, <see cref="sequence" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="derived_from" />, <see cref="group" />, <see cref="info" />, <see cref="interpretation" />, <see cref="one_of" />, <see cref="sequence" />.</description></item>
         /// <item><description>has the following XML attributes: <see cref="confidence" />, <see cref="cost" />, <see cref="dialog_turn" />, <see cref="duration" />, <see cref="end" />, <see cref="endpoint_info_ref" />, <see cref="function" />, <see cref="grammar_ref" />, <see cref="lang" />, <see cref="media_type" />, <see cref="medium" />, <see cref="mode" />, <see cref="model_ref" />, <see cref="offset_to_start" />, <see cref="process" />, <see cref="signal" />, <see cref="signal_size" />, <see cref="source" />, <see cref="start" />, <see cref="time_ref_anchor_point" />, <see cref="time_ref_uri" />, <see cref="tokens" />, <see cref="verbal" />, <see cref="NoNamespace.id" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: Sequence.</description></item>
