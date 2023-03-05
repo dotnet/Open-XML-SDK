@@ -197,6 +197,10 @@ public static class LinqGeneratorExtensions
 
                     return $"<see cref=\"{reference}\" />";
                 }
+                else if (string.IsNullOrEmpty(qName.Prefix))
+                {
+                    return $"<see cref=\"{EmptyNamespace}.{qName.Name}\" />";
+                }
                 else
                 {
                     return $"<see cref=\"{qName}\" />";

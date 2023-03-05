@@ -680,7 +680,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="endCondLst" />, <see cref="nextCondLst" />, <see cref="prevCondLst" />, <see cref="stCondLst" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="rtn" />, <see cref="tgtEl" />, <see cref="tn" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="delay" />, <see cref="evt" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="NoNamespace.delay" />, <see cref="NoNamespace.evt" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: Condition.</description></item>
         /// </list>
         /// </remarks>
@@ -985,7 +985,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="cTn" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="rtn" />, <see cref="tgtEl" />, <see cref="tn" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="delay" />, <see cref="evt" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="NoNamespace.delay" />, <see cref="NoNamespace.evt" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: EndSync.</description></item>
         /// </list>
         /// </remarks>
@@ -1922,7 +1922,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="normalViewPr" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="autoAdjust" />, <see cref="NoNamespace.sz" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="NoNamespace.autoAdjust" />, <see cref="NoNamespace.sz" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: RestoredLeft.</description></item>
         /// </list>
         /// </remarks>
@@ -1935,7 +1935,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="normalViewPr" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="autoAdjust" />, <see cref="NoNamespace.sz" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="NoNamespace.autoAdjust" />, <see cref="NoNamespace.sz" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: RestoredTop.</description></item>
         /// </list>
         /// </remarks>
@@ -2241,7 +2241,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="stSnd" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="builtIn" />, <see cref="NoNamespace.name" />, <see cref="R.embed" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="NoNamespace.builtIn" />, <see cref="NoNamespace.name" />, <see cref="R.embed" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: Sound.</description></item>
         /// </list>
         /// </remarks>
@@ -2267,7 +2267,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="tgtEl" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="builtIn" />, <see cref="NoNamespace.name" />, <see cref="R.embed" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="NoNamespace.builtIn" />, <see cref="NoNamespace.name" />, <see cref="R.embed" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: SoundTarget.</description></item>
         /// </list>
         /// </remarks>

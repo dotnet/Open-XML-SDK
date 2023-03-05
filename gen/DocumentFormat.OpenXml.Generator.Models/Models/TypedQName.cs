@@ -3,7 +3,7 @@
 
 namespace DocumentFormat.OpenXml.Generator.Models;
 
-public sealed record class TypedQName 
+public sealed record class TypedQName
 {
     public TypedQName(QName type, QName name)
     {

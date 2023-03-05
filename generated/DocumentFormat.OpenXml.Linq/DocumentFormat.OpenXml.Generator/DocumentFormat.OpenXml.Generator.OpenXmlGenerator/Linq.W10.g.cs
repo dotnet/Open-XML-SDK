@@ -34,7 +34,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="A.graphicData" />, <see cref="V.arc" />, <see cref="V.curve" />, <see cref="V.image" />, <see cref="V.line" />, <see cref="V.oval" />, <see cref="V.polyline" />, <see cref="V.rect" />, <see cref="V.roundrect" />, <see cref="V.shape" />, <see cref="V.shapetype" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="shadow" />, <see cref="NoNamespace.type" />, <see cref="NoNamespace.width" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="NoNamespace.shadow" />, <see cref="NoNamespace.type" />, <see cref="NoNamespace.width" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: BottomBorder.</description></item>
         /// </list>
         /// </remarks>
@@ -47,7 +47,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="A.graphicData" />, <see cref="V.arc" />, <see cref="V.curve" />, <see cref="V.image" />, <see cref="V.line" />, <see cref="V.oval" />, <see cref="V.polyline" />, <see cref="V.rect" />, <see cref="V.roundrect" />, <see cref="V.shape" />, <see cref="V.shapetype" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="shadow" />, <see cref="NoNamespace.type" />, <see cref="NoNamespace.width" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="NoNamespace.shadow" />, <see cref="NoNamespace.type" />, <see cref="NoNamespace.width" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: LeftBorder.</description></item>
         /// </list>
         /// </remarks>
@@ -60,7 +60,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="A.graphicData" />, <see cref="V.arc" />, <see cref="V.curve" />, <see cref="V.image" />, <see cref="V.line" />, <see cref="V.oval" />, <see cref="V.polyline" />, <see cref="V.rect" />, <see cref="V.roundrect" />, <see cref="V.shape" />, <see cref="V.shapetype" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="shadow" />, <see cref="NoNamespace.type" />, <see cref="NoNamespace.width" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="NoNamespace.shadow" />, <see cref="NoNamespace.type" />, <see cref="NoNamespace.width" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: RightBorder.</description></item>
         /// </list>
         /// </remarks>
@@ -73,7 +73,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="A.graphicData" />, <see cref="V.arc" />, <see cref="V.curve" />, <see cref="V.image" />, <see cref="V.line" />, <see cref="V.oval" />, <see cref="V.polyline" />, <see cref="V.rect" />, <see cref="V.roundrect" />, <see cref="V.shape" />, <see cref="V.shapetype" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="shadow" />, <see cref="NoNamespace.type" />, <see cref="NoNamespace.width" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="NoNamespace.shadow" />, <see cref="NoNamespace.type" />, <see cref="NoNamespace.width" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: TopBorder.</description></item>
         /// </list>
         /// </remarks>
