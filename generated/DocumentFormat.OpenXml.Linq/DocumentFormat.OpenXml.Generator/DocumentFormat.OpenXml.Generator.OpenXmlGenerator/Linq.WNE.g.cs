@@ -35,6 +35,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="acdManifest" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="acdName" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: AllocatedCommandManifestEntry.</description></item>
         /// </list>
         /// </remarks>
@@ -465,6 +466,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="keymap" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="macroName" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: MacroKeyboardCustomization.</description></item>
         /// </list>
         /// </remarks>
@@ -663,6 +665,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="keymap" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="macroName" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: WllMacroKeyboardCustomization.</description></item>
         /// </list>
         /// </remarks>

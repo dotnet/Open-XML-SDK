@@ -3,6 +3,7 @@
 
 using DocumentFormat.OpenXml.Generator.Models;
 using DocumentFormat.OpenXml.Generator.Schematron;
+using System.Diagnostics;
 
 namespace DocumentFormat.OpenXml.Generator;
 
@@ -12,6 +13,7 @@ public class OpenXmlGeneratorServices
     private readonly Dictionary<string, NamespaceInfo> _namespacesByUri;
     private readonly Dictionary<string, string> _prefixToApi;
     private readonly Dictionary<TypedQName, StronglyTypedElement> _lookup;
+    private readonly ILookup<(string ClassName, string Prefix), StronglyTypedElement> _classNameLookup;
     private readonly Dictionary<(QName Type, string), StronglyTypedElement> _partLookup;
     private readonly Dictionary<QName, (SchemaEnum, string)> _enums;
     private readonly Dictionary<string, Part> _parts;
@@ -23,6 +25,7 @@ public class OpenXmlGeneratorServices
         _namespacesByPrefix = context.KnownNamespaces.ToDictionary(i => i.Prefix);
         _namespacesByUri = context.KnownNamespaces.ToDictionary(i => i.Uri);
         _lookup = context.TypedClasses.ToDictionary(t => t.Name);
+        _classNameLookup = context.TypedClasses.ToLookup(t => (t.ClassName, t.Name.Type.Prefix));
 
         _types = context.Namespaces
             .SelectMany(t => t.Types)
@@ -103,5 +106,27 @@ public class OpenXmlGeneratorServices
         }
 
         return typeInfo.ClassName;
+    }
+
+    internal SchemaType? GetTypeFromClassName(string prefix, string baseClass)
+    {
+        var options = Context.TypedClasses
+            .Where(t => t.ClassName == baseClass)
+            .Select(t => t.Name)
+            .Where(t => t.Type.Prefix == prefix)
+            .Where(t => t.QName.IsEmpty)
+            .ToList();
+
+        if (options.Count > 1)
+        {
+            Debugger.Break();
+        }
+
+        if (options.FirstOrDefault() is { } key && Context.Namespaces.SelectMany(n => n.Types).Where(t => t.Name.Equals(key)).FirstOrDefault() is { } result)
+        {
+            return result;
+        }
+
+        return null;
     }
 }

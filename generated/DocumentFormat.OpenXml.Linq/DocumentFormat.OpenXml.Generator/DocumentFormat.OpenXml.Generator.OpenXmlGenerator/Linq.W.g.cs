@@ -36,6 +36,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="num" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: AbstractNumId.</description></item>
         /// </list>
         /// <para>As an XML attribute, it:</para>
@@ -125,6 +126,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="recipientData" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: Active.</description></item>
         /// </list>
         /// </remarks>
@@ -137,6 +139,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="mailMerge" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: ActiveRecord.</description></item>
         /// </list>
         /// </remarks>
@@ -174,6 +177,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="mailMerge" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: AddressFieldName.</description></item>
         /// </list>
         /// </remarks>
@@ -186,6 +190,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="compat" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: AdjustLineHeightInTable.</description></item>
         /// </list>
         /// </remarks>
@@ -198,6 +203,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="pPr" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: AdjustRightIndent.</description></item>
         /// </list>
         /// </remarks>
@@ -282,6 +288,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="style" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: Aliases.</description></item>
         /// </list>
         /// </remarks>
@@ -294,6 +301,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="settings" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: AlignBorderAndEdges.</description></item>
         /// </list>
         /// </remarks>
@@ -318,6 +326,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="compat" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: AlignTablesRowByRow.</description></item>
         /// </list>
         /// </remarks>
@@ -342,6 +351,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="webSettings" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: AllowPNG.</description></item>
         /// </list>
         /// </remarks>
@@ -354,6 +364,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="compat" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: AllowSpaceOfSameStyleInTable.</description></item>
         /// </list>
         /// </remarks>
@@ -417,6 +428,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="font" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: AltName.</description></item>
         /// </list>
         /// </remarks>
@@ -429,6 +441,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="settings" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: AlwaysMergeEmptyNamespace.</description></item>
         /// </list>
         /// </remarks>
@@ -441,6 +454,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="settings" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: AlwaysShowPlaceholderText.</description></item>
         /// </list>
         /// </remarks>
@@ -489,6 +503,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="compat" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: ApplyBreakingRules.</description></item>
         /// </list>
         /// </remarks>
@@ -537,6 +552,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="settings" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: AttachedSchema.</description></item>
         /// </list>
         /// </remarks>
@@ -549,6 +565,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="settings" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="R.id" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: AttachedTemplate.</description></item>
         /// </list>
         /// </remarks>
@@ -599,6 +616,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="compat" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: AutofitToFirstFixedWidthCell.</description></item>
         /// </list>
         /// </remarks>
@@ -611,6 +629,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="settings" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: AutoFormatOverride.</description></item>
         /// </list>
         /// </remarks>
@@ -623,6 +642,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="settings" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: AutoHyphenation.</description></item>
         /// </list>
         /// </remarks>
@@ -635,6 +655,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="style" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: AutoRedefine.</description></item>
         /// </list>
         /// </remarks>
@@ -647,6 +668,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="pPr" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: AutoSpaceDE.</description></item>
         /// </list>
         /// </remarks>
@@ -659,6 +681,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="pPr" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: AutoSpaceDN.</description></item>
         /// </list>
         /// </remarks>
@@ -671,6 +694,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="compat" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: AutoSpaceLikeWord95.</description></item>
         /// </list>
         /// </remarks>
@@ -683,6 +707,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="rPr" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: Bold.</description></item>
         /// </list>
         /// </remarks>
@@ -709,6 +734,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="compat" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: BalanceSingleByteDoubleByteWidth.</description></item>
         /// </list>
         /// </remarks>
@@ -721,6 +747,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="pBdr" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="color" />, <see cref="frame" />, <see cref="shadow" />, <see cref="space" />, <see cref="sz" />, <see cref="themeColor" />, <see cref="themeShade" />, <see cref="themeTint" />, <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: BarBorder.</description></item>
         /// </list>
         /// </remarks>
@@ -733,6 +760,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="style" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: BasedOn.</description></item>
         /// </list>
         /// </remarks>
@@ -745,6 +773,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="rPr" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: BoldComplexScript.</description></item>
         /// </list>
         /// </remarks>
@@ -771,6 +800,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="rPr" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="color" />, <see cref="frame" />, <see cref="shadow" />, <see cref="space" />, <see cref="sz" />, <see cref="themeColor" />, <see cref="themeShade" />, <see cref="themeTint" />, <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: Border.</description></item>
         /// </list>
         /// </remarks>
@@ -845,6 +875,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="pBdr" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="color" />, <see cref="frame" />, <see cref="shadow" />, <see cref="space" />, <see cref="sz" />, <see cref="themeColor" />, <see cref="themeShade" />, <see cref="themeTint" />, <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: BetweenBorder.</description></item>
         /// </list>
         /// </remarks>
@@ -881,6 +912,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="pPr" />, <see cref="sectPr" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: BiDi.</description></item>
         /// </list>
         /// </remarks>
@@ -893,6 +925,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="tblPr" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: BiDiVisual.</description></item>
         /// </list>
         /// </remarks>
@@ -905,6 +938,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="div" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: BlockQuote.</description></item>
         /// </list>
         /// </remarks>
@@ -930,6 +964,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="div" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: BodyDiv.</description></item>
         /// </list>
         /// </remarks>
@@ -942,6 +977,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="settings" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: BookFoldPrinting.</description></item>
         /// </list>
         /// </remarks>
@@ -954,6 +990,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="settings" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: BookFoldPrintingSheets.</description></item>
         /// </list>
         /// </remarks>
@@ -966,6 +1003,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="settings" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: BookFoldReversePrinting.</description></item>
         /// </list>
         /// </remarks>
@@ -978,6 +1016,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="M.deg" />, <see cref="M.den" />, <see cref="M.e" />, <see cref="M.fName" />, <see cref="M.lim" />, <see cref="M.num" />, <see cref="M.oMath" />, <see cref="M.oMathPara" />, <see cref="M.sub" />, <see cref="M.sup" />, <see cref="bdo" />, <see cref="body" />, <see cref="comment" />, <see cref="customXml" />, <see cref="del" />, <see cref="dir" />, <see cref="docPartBody" />, <see cref="endnote" />, <see cref="fldSimple" />, <see cref="footnote" />, <see cref="ftr" />, <see cref="hdr" />, <see cref="hyperlink" />, <see cref="ins" />, <see cref="moveFrom" />, <see cref="moveTo" />, <see cref="p" />, <see cref="rt" />, <see cref="rubyBase" />, <see cref="sdt" />, <see cref="sdtContent" />, <see cref="tbl" />, <see cref="tc" />, <see cref="tr" />, <see cref="txbxContent" />, <see cref="W14.conflictDel" />, <see cref="W14.conflictIns" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="displacedByCustomXml" />, <see cref="id" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: BookmarkEnd.</description></item>
         /// </list>
         /// </remarks>
@@ -1003,6 +1042,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="settings" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: BordersDoNotSurroundFooter.</description></item>
         /// </list>
         /// </remarks>
@@ -1015,6 +1055,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="settings" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: BordersDoNotSurroundHeader.</description></item>
         /// </list>
         /// </remarks>
@@ -1027,6 +1068,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="divBdr" />, <see cref="pBdr" />, <see cref="pgBorders" />, <see cref="tblBorders" />, <see cref="tblCellMar" />, <see cref="tcBorders" />, <see cref="tcMar" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="color" />, <see cref="frame" />, <see cref="shadow" />, <see cref="space" />, <see cref="sz" />, <see cref="themeColor" />, <see cref="themeShade" />, <see cref="themeTint" />, <see cref="type" />, <see cref="val" />, <see cref="w_" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: BottomBorder, BottomMargin.</description></item>
         /// </list>
         /// <para>As an XML attribute, it:</para>
@@ -1069,6 +1111,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="compat" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: CachedColumnBalance.</description></item>
         /// </list>
         /// </remarks>
@@ -1081,6 +1124,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="ffData" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: CalculateOnExit.</description></item>
         /// </list>
         /// </remarks>
@@ -1093,6 +1137,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="trPr" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: CantSplit.</description></item>
         /// </list>
         /// </remarks>
@@ -1105,6 +1150,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="rPr" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: Caps.</description></item>
         /// </list>
         /// </remarks>
@@ -1161,6 +1207,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="tcPr" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="author" />, <see cref="date" />, <see cref="id" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: CellDeletion.</description></item>
         /// </list>
         /// </remarks>
@@ -1173,6 +1220,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="tcPr" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="author" />, <see cref="date" />, <see cref="id" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: CellInsertion.</description></item>
         /// </list>
         /// </remarks>
@@ -1309,6 +1357,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="checkBox" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: Checked.</description></item>
         /// </list>
         /// </remarks>
@@ -1321,6 +1370,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="mailMerge" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: CheckErrors.</description></item>
         /// </list>
         /// </remarks>
@@ -1369,6 +1419,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="settings" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: ClickAndTypeStyle.</description></item>
         /// </list>
         /// </remarks>
@@ -1432,6 +1483,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="odso" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: ColumnDelimiter.</description></item>
         /// </list>
         /// </remarks>
@@ -1500,6 +1552,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="fieldMapData" />, <see cref="recipientData" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: ColumnIndex.</description></item>
         /// </list>
         /// </remarks>
@@ -1550,6 +1603,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="M.deg" />, <see cref="M.den" />, <see cref="M.e" />, <see cref="M.fName" />, <see cref="M.lim" />, <see cref="M.num" />, <see cref="M.oMath" />, <see cref="M.oMathPara" />, <see cref="M.sub" />, <see cref="M.sup" />, <see cref="bdo" />, <see cref="body" />, <see cref="comment" />, <see cref="customXml" />, <see cref="del" />, <see cref="dir" />, <see cref="docPartBody" />, <see cref="endnote" />, <see cref="fldSimple" />, <see cref="footnote" />, <see cref="ftr" />, <see cref="hdr" />, <see cref="hyperlink" />, <see cref="ins" />, <see cref="moveFrom" />, <see cref="moveTo" />, <see cref="p" />, <see cref="rt" />, <see cref="rubyBase" />, <see cref="sdt" />, <see cref="sdtContent" />, <see cref="tbl" />, <see cref="tc" />, <see cref="tr" />, <see cref="txbxContent" />, <see cref="W14.conflictDel" />, <see cref="W14.conflictIns" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="displacedByCustomXml" />, <see cref="id" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: CommentRangeEnd.</description></item>
         /// </list>
         /// </remarks>
@@ -1562,6 +1616,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="M.deg" />, <see cref="M.den" />, <see cref="M.e" />, <see cref="M.fName" />, <see cref="M.lim" />, <see cref="M.num" />, <see cref="M.oMath" />, <see cref="M.oMathPara" />, <see cref="M.sub" />, <see cref="M.sup" />, <see cref="bdo" />, <see cref="body" />, <see cref="comment" />, <see cref="customXml" />, <see cref="del" />, <see cref="dir" />, <see cref="docPartBody" />, <see cref="endnote" />, <see cref="fldSimple" />, <see cref="footnote" />, <see cref="ftr" />, <see cref="hdr" />, <see cref="hyperlink" />, <see cref="ins" />, <see cref="moveFrom" />, <see cref="moveTo" />, <see cref="p" />, <see cref="rt" />, <see cref="rubyBase" />, <see cref="sdt" />, <see cref="sdtContent" />, <see cref="tbl" />, <see cref="tc" />, <see cref="tr" />, <see cref="txbxContent" />, <see cref="W14.conflictDel" />, <see cref="W14.conflictIns" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="displacedByCustomXml" />, <see cref="id" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: CommentRangeStart.</description></item>
         /// </list>
         /// </remarks>
@@ -1574,6 +1629,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="M.r" />, <see cref="r" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="id" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: CommentReference.</description></item>
         /// </list>
         /// </remarks>
@@ -1642,6 +1698,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="mailMerge" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: ConnectString.</description></item>
         /// </list>
         /// </remarks>
@@ -1680,6 +1737,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="pPr" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: ContextualSpacing.</description></item>
         /// </list>
         /// </remarks>
@@ -1717,6 +1775,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="compat" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: ConvertMailMergeEscape.</description></item>
         /// </list>
         /// </remarks>
@@ -1861,6 +1920,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="rPr" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: ComplexScript.</description></item>
         /// </list>
         /// <para>As an XML attribute, it:</para>
@@ -1951,6 +2011,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="M.deg" />, <see cref="M.den" />, <see cref="M.e" />, <see cref="M.fName" />, <see cref="M.lim" />, <see cref="M.num" />, <see cref="M.oMath" />, <see cref="M.oMathPara" />, <see cref="M.sub" />, <see cref="M.sup" />, <see cref="bdo" />, <see cref="body" />, <see cref="customXml" />, <see cref="del" />, <see cref="dir" />, <see cref="docPartBody" />, <see cref="endnote" />, <see cref="fldSimple" />, <see cref="footnote" />, <see cref="ftr" />, <see cref="hdr" />, <see cref="hyperlink" />, <see cref="ins" />, <see cref="moveFrom" />, <see cref="moveTo" />, <see cref="p" />, <see cref="rt" />, <see cref="rubyBase" />, <see cref="sdt" />, <see cref="sdtContent" />, <see cref="tbl" />, <see cref="tc" />, <see cref="tr" />, <see cref="txbxContent" />, <see cref="W14.conflictDel" />, <see cref="W14.conflictIns" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="id" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: CustomXmlDelRangeEnd.</description></item>
         /// </list>
         /// </remarks>
@@ -1963,6 +2024,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="M.deg" />, <see cref="M.den" />, <see cref="M.e" />, <see cref="M.fName" />, <see cref="M.lim" />, <see cref="M.num" />, <see cref="M.oMath" />, <see cref="M.oMathPara" />, <see cref="M.sub" />, <see cref="M.sup" />, <see cref="bdo" />, <see cref="body" />, <see cref="customXml" />, <see cref="del" />, <see cref="dir" />, <see cref="docPartBody" />, <see cref="endnote" />, <see cref="fldSimple" />, <see cref="footnote" />, <see cref="ftr" />, <see cref="hdr" />, <see cref="hyperlink" />, <see cref="ins" />, <see cref="moveFrom" />, <see cref="moveTo" />, <see cref="p" />, <see cref="rt" />, <see cref="rubyBase" />, <see cref="sdt" />, <see cref="sdtContent" />, <see cref="tbl" />, <see cref="tc" />, <see cref="tr" />, <see cref="txbxContent" />, <see cref="W14.conflictDel" />, <see cref="W14.conflictIns" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="author" />, <see cref="date" />, <see cref="id" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: CustomXmlDelRangeStart.</description></item>
         /// </list>
         /// </remarks>
@@ -1975,6 +2037,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="M.deg" />, <see cref="M.den" />, <see cref="M.e" />, <see cref="M.fName" />, <see cref="M.lim" />, <see cref="M.num" />, <see cref="M.oMath" />, <see cref="M.oMathPara" />, <see cref="M.sub" />, <see cref="M.sup" />, <see cref="bdo" />, <see cref="body" />, <see cref="customXml" />, <see cref="del" />, <see cref="dir" />, <see cref="docPartBody" />, <see cref="endnote" />, <see cref="fldSimple" />, <see cref="footnote" />, <see cref="ftr" />, <see cref="hdr" />, <see cref="hyperlink" />, <see cref="ins" />, <see cref="moveFrom" />, <see cref="moveTo" />, <see cref="p" />, <see cref="rt" />, <see cref="rubyBase" />, <see cref="sdt" />, <see cref="sdtContent" />, <see cref="tbl" />, <see cref="tc" />, <see cref="tr" />, <see cref="txbxContent" />, <see cref="W14.conflictDel" />, <see cref="W14.conflictIns" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="id" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: CustomXmlInsRangeEnd.</description></item>
         /// </list>
         /// </remarks>
@@ -1987,6 +2050,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="M.deg" />, <see cref="M.den" />, <see cref="M.e" />, <see cref="M.fName" />, <see cref="M.lim" />, <see cref="M.num" />, <see cref="M.oMath" />, <see cref="M.oMathPara" />, <see cref="M.sub" />, <see cref="M.sup" />, <see cref="bdo" />, <see cref="body" />, <see cref="customXml" />, <see cref="del" />, <see cref="dir" />, <see cref="docPartBody" />, <see cref="endnote" />, <see cref="fldSimple" />, <see cref="footnote" />, <see cref="ftr" />, <see cref="hdr" />, <see cref="hyperlink" />, <see cref="ins" />, <see cref="moveFrom" />, <see cref="moveTo" />, <see cref="p" />, <see cref="rt" />, <see cref="rubyBase" />, <see cref="sdt" />, <see cref="sdtContent" />, <see cref="tbl" />, <see cref="tc" />, <see cref="tr" />, <see cref="txbxContent" />, <see cref="W14.conflictDel" />, <see cref="W14.conflictIns" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="author" />, <see cref="date" />, <see cref="id" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: CustomXmlInsRangeStart.</description></item>
         /// </list>
         /// </remarks>
@@ -1999,6 +2063,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="M.deg" />, <see cref="M.den" />, <see cref="M.e" />, <see cref="M.fName" />, <see cref="M.lim" />, <see cref="M.num" />, <see cref="M.oMath" />, <see cref="M.oMathPara" />, <see cref="M.sub" />, <see cref="M.sup" />, <see cref="bdo" />, <see cref="body" />, <see cref="customXml" />, <see cref="del" />, <see cref="dir" />, <see cref="docPartBody" />, <see cref="endnote" />, <see cref="fldSimple" />, <see cref="footnote" />, <see cref="ftr" />, <see cref="hdr" />, <see cref="hyperlink" />, <see cref="ins" />, <see cref="moveFrom" />, <see cref="moveTo" />, <see cref="p" />, <see cref="rt" />, <see cref="rubyBase" />, <see cref="sdt" />, <see cref="sdtContent" />, <see cref="tbl" />, <see cref="tc" />, <see cref="tr" />, <see cref="txbxContent" />, <see cref="W14.conflictDel" />, <see cref="W14.conflictIns" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="id" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: CustomXmlMoveFromRangeEnd.</description></item>
         /// </list>
         /// </remarks>
@@ -2011,6 +2076,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="M.deg" />, <see cref="M.den" />, <see cref="M.e" />, <see cref="M.fName" />, <see cref="M.lim" />, <see cref="M.num" />, <see cref="M.oMath" />, <see cref="M.oMathPara" />, <see cref="M.sub" />, <see cref="M.sup" />, <see cref="bdo" />, <see cref="body" />, <see cref="customXml" />, <see cref="del" />, <see cref="dir" />, <see cref="docPartBody" />, <see cref="endnote" />, <see cref="fldSimple" />, <see cref="footnote" />, <see cref="ftr" />, <see cref="hdr" />, <see cref="hyperlink" />, <see cref="ins" />, <see cref="moveFrom" />, <see cref="moveTo" />, <see cref="p" />, <see cref="rt" />, <see cref="rubyBase" />, <see cref="sdt" />, <see cref="sdtContent" />, <see cref="tbl" />, <see cref="tc" />, <see cref="tr" />, <see cref="txbxContent" />, <see cref="W14.conflictDel" />, <see cref="W14.conflictIns" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="author" />, <see cref="date" />, <see cref="id" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: CustomXmlMoveFromRangeStart.</description></item>
         /// </list>
         /// </remarks>
@@ -2023,6 +2089,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="M.deg" />, <see cref="M.den" />, <see cref="M.e" />, <see cref="M.fName" />, <see cref="M.lim" />, <see cref="M.num" />, <see cref="M.oMath" />, <see cref="M.oMathPara" />, <see cref="M.sub" />, <see cref="M.sup" />, <see cref="bdo" />, <see cref="body" />, <see cref="customXml" />, <see cref="del" />, <see cref="dir" />, <see cref="docPartBody" />, <see cref="endnote" />, <see cref="fldSimple" />, <see cref="footnote" />, <see cref="ftr" />, <see cref="hdr" />, <see cref="hyperlink" />, <see cref="ins" />, <see cref="moveFrom" />, <see cref="moveTo" />, <see cref="p" />, <see cref="rt" />, <see cref="rubyBase" />, <see cref="sdt" />, <see cref="sdtContent" />, <see cref="tbl" />, <see cref="tc" />, <see cref="tr" />, <see cref="txbxContent" />, <see cref="W14.conflictDel" />, <see cref="W14.conflictIns" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="id" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: CustomXmlMoveToRangeEnd.</description></item>
         /// </list>
         /// </remarks>
@@ -2035,6 +2102,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="M.deg" />, <see cref="M.den" />, <see cref="M.e" />, <see cref="M.fName" />, <see cref="M.lim" />, <see cref="M.num" />, <see cref="M.oMath" />, <see cref="M.oMathPara" />, <see cref="M.sub" />, <see cref="M.sup" />, <see cref="bdo" />, <see cref="body" />, <see cref="customXml" />, <see cref="del" />, <see cref="dir" />, <see cref="docPartBody" />, <see cref="endnote" />, <see cref="fldSimple" />, <see cref="footnote" />, <see cref="ftr" />, <see cref="hdr" />, <see cref="hyperlink" />, <see cref="ins" />, <see cref="moveFrom" />, <see cref="moveTo" />, <see cref="p" />, <see cref="rt" />, <see cref="rubyBase" />, <see cref="sdt" />, <see cref="sdtContent" />, <see cref="tbl" />, <see cref="tc" />, <see cref="tr" />, <see cref="txbxContent" />, <see cref="W14.conflictDel" />, <see cref="W14.conflictIns" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="author" />, <see cref="date" />, <see cref="id" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: CustomXmlMoveToRangeStart.</description></item>
         /// </list>
         /// </remarks>
@@ -2047,6 +2115,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="mailMerge" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="R.id" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: DataSourceReference.</description></item>
         /// </list>
         /// </remarks>
@@ -2121,6 +2190,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="settings" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: DecimalSymbol.</description></item>
         /// </list>
         /// </remarks>
@@ -2163,6 +2233,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="settings" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: DefaultTableStyle.</description></item>
         /// </list>
         /// </remarks>
@@ -2175,6 +2246,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="settings" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: DefaultTabStop.</description></item>
         /// </list>
         /// </remarks>
@@ -2261,6 +2333,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="M.r" />, <see cref="r" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="XML.space" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: DeletedFieldCode.</description></item>
         /// </list>
         /// </remarks>
@@ -2273,6 +2346,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="M.r" />, <see cref="r" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="XML.space" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: DeletedText.</description></item>
         /// </list>
         /// </remarks>
@@ -2285,6 +2359,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="docPartPr" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: Description.</description></item>
         /// </list>
         /// </remarks>
@@ -2372,6 +2447,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="rubyPr" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: Dirty.</description></item>
         /// </list>
         /// <para>As an XML attribute, it:</para>
@@ -2413,6 +2489,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="settings" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: DisplayBackgroundShape.</description></item>
         /// </list>
         /// </remarks>
@@ -2425,6 +2502,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="compat" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: DisplayHangulFixedWidth.</description></item>
         /// </list>
         /// </remarks>
@@ -2437,6 +2515,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="settings" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: DisplayHorizontalDrawingGrid.</description></item>
         /// </list>
         /// </remarks>
@@ -2449,6 +2528,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="settings" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: DisplayVerticalDrawingGrid.</description></item>
         /// </list>
         /// </remarks>
@@ -2707,6 +2787,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="settings" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: DoNotAutoCompressPictures.</description></item>
         /// </list>
         /// </remarks>
@@ -2719,6 +2800,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="compat" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: DoNotAutofitConstrainedTables.</description></item>
         /// </list>
         /// </remarks>
@@ -2731,6 +2813,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="compat" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: DoNotBreakConstrainedForcedTable.</description></item>
         /// </list>
         /// </remarks>
@@ -2743,6 +2826,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="compat" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: DoNotBreakWrappedTables.</description></item>
         /// </list>
         /// </remarks>
@@ -2755,6 +2839,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="settings" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: DoNotDemarcateInvalidXml.</description></item>
         /// </list>
         /// </remarks>
@@ -2767,6 +2852,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="settings" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: DoNotDisplayPageBoundaries.</description></item>
         /// </list>
         /// </remarks>
@@ -2779,6 +2865,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="compat" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: DoNotExpandShiftReturn.</description></item>
         /// </list>
         /// </remarks>
@@ -2791,6 +2878,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="settings" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: DoNotHyphenateCaps.</description></item>
         /// </list>
         /// </remarks>
@@ -2803,6 +2891,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="settings" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: DoNotIncludeSubdocsInStats.</description></item>
         /// </list>
         /// </remarks>
@@ -2815,6 +2904,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="compat" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: DoNotLeaveBackslashAlone.</description></item>
         /// </list>
         /// </remarks>
@@ -2827,6 +2917,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="webSettings" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: DoNotOrganizeInFolder.</description></item>
         /// </list>
         /// </remarks>
@@ -2839,6 +2930,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="webSettings" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: DoNotRelyOnCSS.</description></item>
         /// </list>
         /// </remarks>
@@ -2851,6 +2943,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="webSettings" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: DoNotSaveAsSingleFile.</description></item>
         /// </list>
         /// </remarks>
@@ -2863,6 +2956,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="settings" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: DoNotShadeFormData.</description></item>
         /// </list>
         /// </remarks>
@@ -2875,6 +2969,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="compat" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: DoNotSnapToGridInCell.</description></item>
         /// </list>
         /// </remarks>
@@ -2887,6 +2982,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="mailMerge" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: DoNotSuppressBlankLines.</description></item>
         /// </list>
         /// </remarks>
@@ -2899,6 +2995,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="compat" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: DoNotSuppressIndentation.</description></item>
         /// </list>
         /// </remarks>
@@ -2911,6 +3008,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="compat" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: DoNotSuppressParagraphBorders.</description></item>
         /// </list>
         /// </remarks>
@@ -2923,6 +3021,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="settings" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: DoNotTrackFormatting.</description></item>
         /// </list>
         /// </remarks>
@@ -2935,6 +3034,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="settings" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: DoNotTrackMoves.</description></item>
         /// </list>
         /// </remarks>
@@ -2947,6 +3047,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="compat" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: DoNotUseEastAsianBreakRules.</description></item>
         /// </list>
         /// </remarks>
@@ -2959,6 +3060,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="compat" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: DoNotUseHTMLParagraphAutoSpacing.</description></item>
         /// </list>
         /// </remarks>
@@ -2971,6 +3073,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="compat" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: DoNotUseIndentAsNumberingTabStop.</description></item>
         /// </list>
         /// </remarks>
@@ -2983,6 +3086,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="webSettings" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: DoNotUseLongFileNames.</description></item>
         /// </list>
         /// </remarks>
@@ -2995,6 +3099,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="settings" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: DoNotUseMarginsForDrawingGridOrigin.</description></item>
         /// </list>
         /// </remarks>
@@ -3007,6 +3112,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="settings" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: DoNotValidateAgainstSchema.</description></item>
         /// </list>
         /// </remarks>
@@ -3019,6 +3125,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="compat" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: DoNotVerticallyAlignCellWithShape.</description></item>
         /// </list>
         /// </remarks>
@@ -3031,6 +3138,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="compat" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: DoNotVerticallyAlignInTextBox.</description></item>
         /// </list>
         /// </remarks>
@@ -3043,6 +3151,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="compat" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: DoNotWrapTextWithPunctuation.</description></item>
         /// </list>
         /// </remarks>
@@ -3080,6 +3189,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="settings" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: DrawingGridHorizontalOrigin.</description></item>
         /// </list>
         /// </remarks>
@@ -3092,6 +3202,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="settings" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: DrawingGridHorizontalSpacing.</description></item>
         /// </list>
         /// </remarks>
@@ -3104,6 +3215,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="settings" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: DrawingGridVerticalOrigin.</description></item>
         /// </list>
         /// </remarks>
@@ -3116,6 +3228,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="settings" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: DrawingGridVerticalSpacing.</description></item>
         /// </list>
         /// </remarks>
@@ -3140,6 +3253,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="rPr" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: DoubleStrike.</description></item>
         /// </list>
         /// </remarks>
@@ -3188,6 +3302,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="fieldMapData" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: DynamicAddress.</description></item>
         /// </list>
         /// </remarks>
@@ -3299,6 +3414,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="font" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="R.id" />, <see cref="w:fontKey" />, <see cref="w:subsetted" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: EmbedBoldFont.</description></item>
         /// </list>
         /// </remarks>
@@ -3311,6 +3427,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="font" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="R.id" />, <see cref="w:fontKey" />, <see cref="w:subsetted" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: EmbedBoldItalicFont.</description></item>
         /// </list>
         /// </remarks>
@@ -3323,6 +3440,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="font" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="R.id" />, <see cref="w:fontKey" />, <see cref="w:subsetted" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: EmbedItalicFont.</description></item>
         /// </list>
         /// </remarks>
@@ -3335,6 +3453,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="font" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="R.id" />, <see cref="w:fontKey" />, <see cref="w:subsetted" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: EmbedRegularFont.</description></item>
         /// </list>
         /// </remarks>
@@ -3347,6 +3466,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="settings" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: EmbedSystemFonts.</description></item>
         /// </list>
         /// </remarks>
@@ -3359,6 +3479,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="settings" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: EmbedTrueTypeFonts.</description></item>
         /// </list>
         /// </remarks>
@@ -3371,6 +3492,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="rPr" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: Emboss.</description></item>
         /// </list>
         /// </remarks>
@@ -3383,6 +3505,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="ffData" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: Enabled.</description></item>
         /// </list>
         /// </remarks>
@@ -3395,6 +3518,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="webSettings" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: WebPageEncoding.</description></item>
         /// </list>
         /// </remarks>
@@ -3407,6 +3531,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="tblBorders" />, <see cref="tblCellMar" />, <see cref="tcBorders" />, <see cref="tcMar" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="color" />, <see cref="frame" />, <see cref="shadow" />, <see cref="space" />, <see cref="sz" />, <see cref="themeColor" />, <see cref="themeShade" />, <see cref="themeTint" />, <see cref="type" />, <see cref="val" />, <see cref="w_" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: EndBorder, EndMargin.</description></item>
         /// </list>
         /// <para>As an XML attribute, it:</para>
@@ -3437,6 +3562,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="endnotePr" />, <see cref="endnotes" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="altChunk" />, <see cref="bookmarkEnd" />, <see cref="bookmarkStart" />, <see cref="commentRangeEnd" />, <see cref="commentRangeStart" />, <see cref="contentPart" />, <see cref="customXml" />, <see cref="customXmlDelRangeEnd" />, <see cref="customXmlDelRangeStart" />, <see cref="customXmlInsRangeEnd" />, <see cref="customXmlInsRangeStart" />, <see cref="customXmlMoveFromRangeEnd" />, <see cref="customXmlMoveFromRangeStart" />, <see cref="customXmlMoveToRangeEnd" />, <see cref="customXmlMoveToRangeStart" />, <see cref="del" />, <see cref="ins" />, <see cref="moveFrom" />, <see cref="moveFromRangeEnd" />, <see cref="moveFromRangeStart" />, <see cref="moveTo" />, <see cref="moveToRangeEnd" />, <see cref="moveToRangeStart" />, <see cref="p" />, <see cref="permEnd" />, <see cref="permStart" />, <see cref="proofErr" />, <see cref="sdt" />, <see cref="tbl" />, <see cref="W14.conflictDel" />, <see cref="W14.conflictIns" />, <see cref="W14.customXmlConflictDelRangeEnd" />, <see cref="W14.customXmlConflictDelRangeStart" />, <see cref="W14.customXmlConflictInsRangeEnd" />, <see cref="W14.customXmlConflictInsRangeStart" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="id" />, <see cref="type" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: Endnote, EndnoteSpecialReference.</description></item>
         /// </list>
         /// </remarks>
@@ -3474,6 +3600,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="M.r" />, <see cref="r" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="w:customMarkFollows" />, <see cref="id" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: EndnoteReference.</description></item>
         /// </list>
         /// </remarks>
@@ -3511,6 +3638,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="ffData" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: EntryMacro.</description></item>
         /// </list>
         /// </remarks>
@@ -3535,6 +3663,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="settings" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: EvenAndOddHeaders.</description></item>
         /// </list>
         /// </remarks>
@@ -3571,6 +3700,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="ffData" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: ExitMacro.</description></item>
         /// </list>
         /// </remarks>
@@ -3609,6 +3739,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="odso" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: FirstRowHeader.</description></item>
         /// </list>
         /// </remarks>
@@ -3755,6 +3886,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="framesetSplitbar" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: FlatBorders.</description></item>
         /// </list>
         /// </remarks>
@@ -3911,6 +4043,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="sectPr" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="R.id" />, <see cref="type" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: FooterReference.</description></item>
         /// </list>
         /// </remarks>
@@ -3924,6 +4057,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="footnotePr" />, <see cref="footnotes" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="altChunk" />, <see cref="bookmarkEnd" />, <see cref="bookmarkStart" />, <see cref="commentRangeEnd" />, <see cref="commentRangeStart" />, <see cref="contentPart" />, <see cref="customXml" />, <see cref="customXmlDelRangeEnd" />, <see cref="customXmlDelRangeStart" />, <see cref="customXmlInsRangeEnd" />, <see cref="customXmlInsRangeStart" />, <see cref="customXmlMoveFromRangeEnd" />, <see cref="customXmlMoveFromRangeStart" />, <see cref="customXmlMoveToRangeEnd" />, <see cref="customXmlMoveToRangeStart" />, <see cref="del" />, <see cref="ins" />, <see cref="moveFrom" />, <see cref="moveFromRangeEnd" />, <see cref="moveFromRangeStart" />, <see cref="moveTo" />, <see cref="moveToRangeEnd" />, <see cref="moveToRangeStart" />, <see cref="p" />, <see cref="permEnd" />, <see cref="permStart" />, <see cref="proofErr" />, <see cref="sdt" />, <see cref="tbl" />, <see cref="W14.conflictDel" />, <see cref="W14.conflictIns" />, <see cref="W14.customXmlConflictDelRangeEnd" />, <see cref="W14.customXmlConflictDelRangeStart" />, <see cref="W14.customXmlConflictInsRangeEnd" />, <see cref="W14.customXmlConflictInsRangeStart" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="id" />, <see cref="type" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: Footnote, FootnoteSpecialReference.</description></item>
         /// </list>
         /// </remarks>
@@ -3936,6 +4070,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="compat" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: FootnoteLayoutLikeWord8.</description></item>
         /// </list>
         /// </remarks>
@@ -3973,6 +4108,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="M.r" />, <see cref="r" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="w:customMarkFollows" />, <see cref="id" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: FootnoteReference.</description></item>
         /// </list>
         /// </remarks>
@@ -4010,6 +4146,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="compat" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: ForgetLastTabAlignment.</description></item>
         /// </list>
         /// </remarks>
@@ -4052,6 +4189,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="sectPr" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: FormProtection.</description></item>
         /// </list>
         /// </remarks>
@@ -4064,6 +4202,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="settings" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: FormsDesign.</description></item>
         /// </list>
         /// </remarks>
@@ -4192,6 +4331,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="trPr" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: GridAfter.</description></item>
         /// </list>
         /// </remarks>
@@ -4204,6 +4344,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="trPr" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: GridBefore.</description></item>
         /// </list>
         /// </remarks>
@@ -4229,6 +4370,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="tcPr" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: GridSpan.</description></item>
         /// </list>
         /// </remarks>
@@ -4241,6 +4383,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="compat" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: GrowAutofit.</description></item>
         /// </list>
         /// </remarks>
@@ -4278,6 +4421,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="settings" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: GutterAtTop.</description></item>
         /// </list>
         /// </remarks>
@@ -4424,6 +4568,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="sectPr" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="R.id" />, <see cref="type" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: HeaderReference.</description></item>
         /// </list>
         /// </remarks>
@@ -4436,6 +4581,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="mailMerge" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="R.id" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: HeaderSource.</description></item>
         /// </list>
         /// </remarks>
@@ -4485,6 +4631,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="style" />, <see cref="trPr" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: Hidden, StyleHidden.</description></item>
         /// </list>
         /// </remarks>
@@ -4497,6 +4644,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="settings" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: HideGrammaticalErrors.</description></item>
         /// </list>
         /// </remarks>
@@ -4509,6 +4657,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="tcPr" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: HideMark.</description></item>
         /// </list>
         /// </remarks>
@@ -4521,6 +4670,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="settings" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: HideSpellingErrors.</description></item>
         /// </list>
         /// </remarks>
@@ -4595,6 +4745,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="rubyPr" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: PhoneticGuideTextFontSize.</description></item>
         /// </list>
         /// </remarks>
@@ -4607,6 +4758,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="rubyPr" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: PhoneticGuideBaseTextSize.</description></item>
         /// </list>
         /// </remarks>
@@ -4675,6 +4827,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="settings" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: HyphenationZone.</description></item>
         /// </list>
         /// </remarks>
@@ -4687,6 +4840,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="rPr" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: Italic.</description></item>
         /// </list>
         /// </remarks>
@@ -4699,6 +4853,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="rPr" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: ItalicComplexScript.</description></item>
         /// </list>
         /// </remarks>
@@ -4723,6 +4878,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="settings" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: IgnoreMixedContent.</description></item>
         /// </list>
         /// </remarks>
@@ -4753,6 +4909,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="rPr" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: Imprint.</description></item>
         /// </list>
         /// </remarks>
@@ -4828,6 +4985,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="tblBorders" />, <see cref="tcBorders" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="color" />, <see cref="frame" />, <see cref="shadow" />, <see cref="space" />, <see cref="sz" />, <see cref="themeColor" />, <see cref="themeShade" />, <see cref="themeTint" />, <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: InsideHorizontalBorder.</description></item>
         /// </list>
         /// </remarks>
@@ -4840,6 +4998,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="tblBorders" />, <see cref="tcBorders" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="color" />, <see cref="frame" />, <see cref="shadow" />, <see cref="space" />, <see cref="sz" />, <see cref="themeColor" />, <see cref="themeShade" />, <see cref="themeTint" />, <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: InsideVerticalBorder.</description></item>
         /// </list>
         /// </remarks>
@@ -4864,6 +5023,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="M.r" />, <see cref="r" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="XML.space" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: FieldCode.</description></item>
         /// </list>
         /// </remarks>
@@ -4876,6 +5036,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="lvl" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: IsLegalNumberingStyle.</description></item>
         /// </list>
         /// </remarks>
@@ -4901,6 +5062,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="pPr" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: KeepLines.</description></item>
         /// </list>
         /// </remarks>
@@ -4913,6 +5075,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="pPr" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: KeepNext.</description></item>
         /// </list>
         /// </remarks>
@@ -4938,6 +5101,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="pPr" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: Kinsoku.</description></item>
         /// </list>
         /// </remarks>
@@ -4950,6 +5114,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="rPr" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="bidi" />, <see cref="eastAsia" />, <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: Languages.</description></item>
         /// </list>
         /// <para>As an XML attribute, it:</para>
@@ -5046,6 +5211,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="compat" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: LayoutRawTableWidth.</description></item>
         /// </list>
         /// </remarks>
@@ -5058,6 +5224,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="compat" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: LayoutTableRowsApart.</description></item>
         /// </list>
         /// </remarks>
@@ -5082,6 +5249,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="divBdr" />, <see cref="pBdr" />, <see cref="pgBorders" />, <see cref="tblBorders" />, <see cref="tblCellMar" />, <see cref="tcBorders" />, <see cref="tcMar" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="color" />, <see cref="frame" />, <see cref="shadow" />, <see cref="space" />, <see cref="sz" />, <see cref="themeColor" />, <see cref="themeShade" />, <see cref="themeTint" />, <see cref="type" />, <see cref="val" />, <see cref="w_" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: LeftBorder, LeftMargin, TableCellLeftMargin.</description></item>
         /// </list>
         /// <para>As an XML attribute, it:</para>
@@ -5226,6 +5394,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="compat" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: LineWrapLikeWord6.</description></item>
         /// </list>
         /// </remarks>
@@ -5238,6 +5407,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="style" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: LinkedStyle.</description></item>
         /// </list>
         /// </remarks>
@@ -5250,6 +5420,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="frame" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: LinkedToFile.</description></item>
         /// </list>
         /// </remarks>
@@ -5262,6 +5433,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="settings" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: LinkStyles.</description></item>
         /// </list>
         /// </remarks>
@@ -5274,6 +5446,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="mailMerge" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: LinkToQuery.</description></item>
         /// </list>
         /// </remarks>
@@ -5286,6 +5459,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="ddList" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: ListEntryFormField.</description></item>
         /// </list>
         /// </remarks>
@@ -5298,6 +5472,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="settings" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: ListSeparator.</description></item>
         /// </list>
         /// </remarks>
@@ -5323,6 +5498,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="style" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: Locked.</description></item>
         /// </list>
         /// <para>As an XML attribute, it:</para>
@@ -5406,6 +5582,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="lvl" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: LevelPictureBulletId.</description></item>
         /// </list>
         /// </remarks>
@@ -5418,6 +5595,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="lvl" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: LevelRestart.</description></item>
         /// </list>
         /// </remarks>
@@ -5443,6 +5621,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="mailMerge" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: MailAsAttachment.</description></item>
         /// </list>
         /// </remarks>
@@ -5468,6 +5647,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="mailMerge" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: MailSubject.</description></item>
         /// </list>
         /// </remarks>
@@ -5493,6 +5673,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="fieldMapData" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: MappedName.</description></item>
         /// </list>
         /// </remarks>
@@ -5505,6 +5686,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="div" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: BottomMarginDiv.</description></item>
         /// </list>
         /// </remarks>
@@ -5517,6 +5699,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="frame" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: MarginHeight.</description></item>
         /// </list>
         /// </remarks>
@@ -5541,6 +5724,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="div" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: LeftMarginDiv.</description></item>
         /// </list>
         /// </remarks>
@@ -5553,6 +5737,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="div" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: RightMarginDiv.</description></item>
         /// </list>
         /// </remarks>
@@ -5565,6 +5750,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="div" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: TopMarginDiv.</description></item>
         /// </list>
         /// </remarks>
@@ -5577,6 +5763,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="frame" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: MarginWidth.</description></item>
         /// </list>
         /// </remarks>
@@ -5589,6 +5776,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="altChunkPr" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: MatchSource.</description></item>
         /// </list>
         /// </remarks>
@@ -5614,6 +5802,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="pPr" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: MirrorIndents.</description></item>
         /// </list>
         /// </remarks>
@@ -5626,6 +5815,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="settings" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: MirrorMargins.</description></item>
         /// </list>
         /// </remarks>
@@ -5663,6 +5853,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="M.ctrlPr" />, <see cref="M.deg" />, <see cref="M.den" />, <see cref="M.e" />, <see cref="M.fName" />, <see cref="M.lim" />, <see cref="M.num" />, <see cref="M.oMath" />, <see cref="M.oMathPara" />, <see cref="M.sub" />, <see cref="M.sup" />, <see cref="bdo" />, <see cref="body" />, <see cref="customXml" />, <see cref="del" />, <see cref="dir" />, <see cref="docPartBody" />, <see cref="endnote" />, <see cref="fldSimple" />, <see cref="footnote" />, <see cref="ftr" />, <see cref="hdr" />, <see cref="hyperlink" />, <see cref="ins" />, <see cref="moveFrom" />, <see cref="moveTo" />, <see cref="p" />, <see cref="rPr" />, <see cref="rt" />, <see cref="rubyBase" />, <see cref="sdtContent" />, <see cref="tbl" />, <see cref="tc" />, <see cref="tr" />, <see cref="txbxContent" />, <see cref="W14.conflictDel" />, <see cref="W14.conflictIns" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="M.acc" />, <see cref="M.bar" />, <see cref="M.borderBox" />, <see cref="M.box" />, <see cref="M.d" />, <see cref="M.eqArr" />, <see cref="M.f" />, <see cref="M.func" />, <see cref="M.groupChr" />, <see cref="M.limLow" />, <see cref="M.limUpp" />, <see cref="M.m_" />, <see cref="M.nary" />, <see cref="M.oMath" />, <see cref="M.oMathPara" />, <see cref="M.phant" />, <see cref="M.r" />, <see cref="M.rad" />, <see cref="M.sPre" />, <see cref="M.sSub" />, <see cref="M.sSubSup" />, <see cref="M.sSup" />, <see cref="bdo" />, <see cref="bookmarkEnd" />, <see cref="bookmarkStart" />, <see cref="commentRangeEnd" />, <see cref="commentRangeStart" />, <see cref="contentPart" />, <see cref="customXmlDelRangeEnd" />, <see cref="customXmlDelRangeStart" />, <see cref="customXmlInsRangeEnd" />, <see cref="customXmlInsRangeStart" />, <see cref="customXmlMoveFromRangeEnd" />, <see cref="customXmlMoveFromRangeStart" />, <see cref="customXmlMoveToRangeEnd" />, <see cref="customXmlMoveToRangeStart" />, <see cref="del" />, <see cref="dir" />, <see cref="ins" />, <see cref="moveFrom" />, <see cref="moveFromRangeEnd" />, <see cref="moveFromRangeStart" />, <see cref="moveTo" />, <see cref="moveToRangeEnd" />, <see cref="moveToRangeStart" />, <see cref="permEnd" />, <see cref="permStart" />, <see cref="proofErr" />, <see cref="r" />, <see cref="rPr" />, <see cref="sdt" />, <see cref="W14.conflictDel" />, <see cref="W14.conflictIns" />, <see cref="W14.customXmlConflictDelRangeEnd" />, <see cref="W14.customXmlConflictDelRangeStart" />, <see cref="W14.customXmlConflictInsRangeEnd" />, <see cref="W14.customXmlConflictInsRangeStart" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="author" />, <see cref="date" />, <see cref="id" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: MoveFrom, MoveFromMathControl, MoveFromRun.</description></item>
         /// </list>
         /// </remarks>
@@ -5675,6 +5866,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="M.deg" />, <see cref="M.den" />, <see cref="M.e" />, <see cref="M.fName" />, <see cref="M.lim" />, <see cref="M.num" />, <see cref="M.oMath" />, <see cref="M.oMathPara" />, <see cref="M.sub" />, <see cref="M.sup" />, <see cref="bdo" />, <see cref="body" />, <see cref="customXml" />, <see cref="del" />, <see cref="dir" />, <see cref="docPartBody" />, <see cref="endnote" />, <see cref="fldSimple" />, <see cref="footnote" />, <see cref="ftr" />, <see cref="hdr" />, <see cref="hyperlink" />, <see cref="ins" />, <see cref="moveFrom" />, <see cref="moveTo" />, <see cref="p" />, <see cref="rt" />, <see cref="rubyBase" />, <see cref="sdt" />, <see cref="sdtContent" />, <see cref="tbl" />, <see cref="tc" />, <see cref="tr" />, <see cref="txbxContent" />, <see cref="W14.conflictDel" />, <see cref="W14.conflictIns" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="displacedByCustomXml" />, <see cref="id" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: MoveFromRangeEnd.</description></item>
         /// </list>
         /// </remarks>
@@ -5687,6 +5879,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="M.deg" />, <see cref="M.den" />, <see cref="M.e" />, <see cref="M.fName" />, <see cref="M.lim" />, <see cref="M.num" />, <see cref="M.oMath" />, <see cref="M.oMathPara" />, <see cref="M.sub" />, <see cref="M.sup" />, <see cref="bdo" />, <see cref="body" />, <see cref="customXml" />, <see cref="del" />, <see cref="dir" />, <see cref="docPartBody" />, <see cref="endnote" />, <see cref="fldSimple" />, <see cref="footnote" />, <see cref="ftr" />, <see cref="hdr" />, <see cref="hyperlink" />, <see cref="ins" />, <see cref="moveFrom" />, <see cref="moveTo" />, <see cref="p" />, <see cref="rt" />, <see cref="rubyBase" />, <see cref="sdt" />, <see cref="sdtContent" />, <see cref="tbl" />, <see cref="tc" />, <see cref="tr" />, <see cref="txbxContent" />, <see cref="W14.conflictDel" />, <see cref="W14.conflictIns" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="author" />, <see cref="colFirst" />, <see cref="colLast" />, <see cref="date" />, <see cref="displacedByCustomXml" />, <see cref="id" />, <see cref="name" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: MoveFromRangeStart.</description></item>
         /// </list>
         /// </remarks>
@@ -5700,6 +5893,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="M.ctrlPr" />, <see cref="M.deg" />, <see cref="M.den" />, <see cref="M.e" />, <see cref="M.fName" />, <see cref="M.lim" />, <see cref="M.num" />, <see cref="M.oMath" />, <see cref="M.oMathPara" />, <see cref="M.sub" />, <see cref="M.sup" />, <see cref="bdo" />, <see cref="body" />, <see cref="customXml" />, <see cref="del" />, <see cref="dir" />, <see cref="docPartBody" />, <see cref="endnote" />, <see cref="fldSimple" />, <see cref="footnote" />, <see cref="ftr" />, <see cref="hdr" />, <see cref="hyperlink" />, <see cref="ins" />, <see cref="moveFrom" />, <see cref="moveTo" />, <see cref="p" />, <see cref="rPr" />, <see cref="rt" />, <see cref="rubyBase" />, <see cref="sdtContent" />, <see cref="tbl" />, <see cref="tc" />, <see cref="tr" />, <see cref="txbxContent" />, <see cref="W14.conflictDel" />, <see cref="W14.conflictIns" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="M.acc" />, <see cref="M.bar" />, <see cref="M.borderBox" />, <see cref="M.box" />, <see cref="M.d" />, <see cref="M.eqArr" />, <see cref="M.f" />, <see cref="M.func" />, <see cref="M.groupChr" />, <see cref="M.limLow" />, <see cref="M.limUpp" />, <see cref="M.m_" />, <see cref="M.nary" />, <see cref="M.oMath" />, <see cref="M.oMathPara" />, <see cref="M.phant" />, <see cref="M.r" />, <see cref="M.rad" />, <see cref="M.sPre" />, <see cref="M.sSub" />, <see cref="M.sSubSup" />, <see cref="M.sSup" />, <see cref="bdo" />, <see cref="bookmarkEnd" />, <see cref="bookmarkStart" />, <see cref="commentRangeEnd" />, <see cref="commentRangeStart" />, <see cref="contentPart" />, <see cref="customXmlDelRangeEnd" />, <see cref="customXmlDelRangeStart" />, <see cref="customXmlInsRangeEnd" />, <see cref="customXmlInsRangeStart" />, <see cref="customXmlMoveFromRangeEnd" />, <see cref="customXmlMoveFromRangeStart" />, <see cref="customXmlMoveToRangeEnd" />, <see cref="customXmlMoveToRangeStart" />, <see cref="del" />, <see cref="dir" />, <see cref="ins" />, <see cref="moveFrom" />, <see cref="moveFromRangeEnd" />, <see cref="moveFromRangeStart" />, <see cref="moveTo" />, <see cref="moveToRangeEnd" />, <see cref="moveToRangeStart" />, <see cref="permEnd" />, <see cref="permStart" />, <see cref="proofErr" />, <see cref="r" />, <see cref="rPr" />, <see cref="sdt" />, <see cref="W14.conflictDel" />, <see cref="W14.conflictIns" />, <see cref="W14.customXmlConflictDelRangeEnd" />, <see cref="W14.customXmlConflictDelRangeStart" />, <see cref="W14.customXmlConflictInsRangeEnd" />, <see cref="W14.customXmlConflictInsRangeStart" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="author" />, <see cref="date" />, <see cref="id" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: MoveTo, MoveToMathControl, MoveToRun.</description></item>
         /// </list>
         /// </remarks>
@@ -5712,6 +5906,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="M.deg" />, <see cref="M.den" />, <see cref="M.e" />, <see cref="M.fName" />, <see cref="M.lim" />, <see cref="M.num" />, <see cref="M.oMath" />, <see cref="M.oMathPara" />, <see cref="M.sub" />, <see cref="M.sup" />, <see cref="bdo" />, <see cref="body" />, <see cref="customXml" />, <see cref="del" />, <see cref="dir" />, <see cref="docPartBody" />, <see cref="endnote" />, <see cref="fldSimple" />, <see cref="footnote" />, <see cref="ftr" />, <see cref="hdr" />, <see cref="hyperlink" />, <see cref="ins" />, <see cref="moveFrom" />, <see cref="moveTo" />, <see cref="p" />, <see cref="rt" />, <see cref="rubyBase" />, <see cref="sdt" />, <see cref="sdtContent" />, <see cref="tbl" />, <see cref="tc" />, <see cref="tr" />, <see cref="txbxContent" />, <see cref="W14.conflictDel" />, <see cref="W14.conflictIns" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="displacedByCustomXml" />, <see cref="id" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: MoveToRangeEnd.</description></item>
         /// </list>
         /// </remarks>
@@ -5724,6 +5919,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="M.deg" />, <see cref="M.den" />, <see cref="M.e" />, <see cref="M.fName" />, <see cref="M.lim" />, <see cref="M.num" />, <see cref="M.oMath" />, <see cref="M.oMathPara" />, <see cref="M.sub" />, <see cref="M.sup" />, <see cref="bdo" />, <see cref="body" />, <see cref="customXml" />, <see cref="del" />, <see cref="dir" />, <see cref="docPartBody" />, <see cref="endnote" />, <see cref="fldSimple" />, <see cref="footnote" />, <see cref="ftr" />, <see cref="hdr" />, <see cref="hyperlink" />, <see cref="ins" />, <see cref="moveFrom" />, <see cref="moveTo" />, <see cref="p" />, <see cref="rt" />, <see cref="rubyBase" />, <see cref="sdt" />, <see cref="sdtContent" />, <see cref="tbl" />, <see cref="tc" />, <see cref="tr" />, <see cref="txbxContent" />, <see cref="W14.conflictDel" />, <see cref="W14.conflictIns" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="author" />, <see cref="colFirst" />, <see cref="colLast" />, <see cref="date" />, <see cref="displacedByCustomXml" />, <see cref="id" />, <see cref="name" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: MoveToRangeStart.</description></item>
         /// </list>
         /// </remarks>
@@ -5736,6 +5932,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="pict" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="R.id" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: MovieReference.</description></item>
         /// </list>
         /// </remarks>
@@ -5761,6 +5958,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="compat" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: MacWordSmallCaps.</description></item>
         /// </list>
         /// </remarks>
@@ -5791,6 +5989,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="style" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: NextParagraphStyle.</description></item>
         /// </list>
         /// </remarks>
@@ -5815,6 +6014,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="framesetSplitbar" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: NoBorder.</description></item>
         /// </list>
         /// </remarks>
@@ -5839,6 +6039,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="compat" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: NoColumnBalance.</description></item>
         /// </list>
         /// </remarks>
@@ -5851,6 +6052,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="sectPr" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: NoEndnote.</description></item>
         /// </list>
         /// </remarks>
@@ -5863,6 +6065,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="compat" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: NoExtraLineSpacing.</description></item>
         /// </list>
         /// </remarks>
@@ -5899,6 +6102,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="compat" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: NoLeading.</description></item>
         /// </list>
         /// </remarks>
@@ -5937,6 +6141,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="rPr" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: NoProof.</description></item>
         /// </list>
         /// </remarks>
@@ -5949,6 +6154,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="settings" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: NoPunctuationKerning.</description></item>
         /// </list>
         /// </remarks>
@@ -5961,6 +6167,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="frame" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: NoResizeAllowed.</description></item>
         /// </list>
         /// </remarks>
@@ -5973,6 +6180,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="compat" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: NoSpaceRaiseLower.</description></item>
         /// </list>
         /// </remarks>
@@ -5985,6 +6193,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="compat" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: NoTabHangIndent.</description></item>
         /// </list>
         /// </remarks>
@@ -5997,6 +6206,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="font" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: NotTrueType.</description></item>
         /// </list>
         /// </remarks>
@@ -6021,6 +6231,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="tcPr" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: NoWrap.</description></item>
         /// </list>
         /// </remarks>
@@ -6033,6 +6244,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="abstractNum" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: Nsid.</description></item>
         /// </list>
         /// </remarks>
@@ -6132,6 +6344,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="numPr" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: NumberingId.</description></item>
         /// </list>
         /// <para>As an XML attribute, it:</para>
@@ -6149,6 +6362,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="numbering" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: NumberingIdMacAtCleanup.</description></item>
         /// </list>
         /// </remarks>
@@ -6226,6 +6440,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="abstractNum" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: NumberingStyleLink.</description></item>
         /// </list>
         /// </remarks>
@@ -6327,6 +6542,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="rPr" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: OfficeMath.</description></item>
         /// </list>
         /// </remarks>
@@ -6339,6 +6555,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="webSettings" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: OptimizeForBrowser.</description></item>
         /// </list>
         /// </remarks>
@@ -6387,6 +6604,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="rPr" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: Outline.</description></item>
         /// </list>
         /// </remarks>
@@ -6399,6 +6617,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="pPr" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: OutlineLevel.</description></item>
         /// </list>
         /// </remarks>
@@ -6411,6 +6630,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="pPr" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: OverflowPunctuation.</description></item>
         /// </list>
         /// </remarks>
@@ -6437,6 +6657,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="pPr" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: PageBreakBefore.</description></item>
         /// </list>
         /// </remarks>
@@ -6526,6 +6747,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="style" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: Personal.</description></item>
         /// </list>
         /// </remarks>
@@ -6538,6 +6760,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="style" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: PersonalCompose.</description></item>
         /// </list>
         /// </remarks>
@@ -6550,6 +6773,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="style" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: PersonalReply.</description></item>
         /// </list>
         /// </remarks>
@@ -6654,6 +6878,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="webSettings" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: PixelsPerInch.</description></item>
         /// </list>
         /// </remarks>
@@ -6749,6 +6974,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="compat" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: PrintBodyTextBeforeHeader.</description></item>
         /// </list>
         /// </remarks>
@@ -6761,6 +6987,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="compat" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: PrintColorBlackWhite.</description></item>
         /// </list>
         /// </remarks>
@@ -6773,6 +7000,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="sectPr" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="R.id" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: PrinterSettingsReference.</description></item>
         /// </list>
         /// </remarks>
@@ -6785,6 +7013,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="settings" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: PrintFormsData.</description></item>
         /// </list>
         /// </remarks>
@@ -6797,6 +7026,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="settings" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: PrintFractionalCharacterWidth.</description></item>
         /// </list>
         /// </remarks>
@@ -6809,6 +7039,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="settings" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: PrintPostScriptOverText.</description></item>
         /// </list>
         /// </remarks>
@@ -6821,6 +7052,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="settings" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: PrintTwoOnOne.</description></item>
         /// </list>
         /// </remarks>
@@ -6871,6 +7103,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="lvl" />, <see cref="pPr" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: ParagraphStyleId, ParagraphStyleIdInLevel.</description></item>
         /// </list>
         /// </remarks>
@@ -6896,6 +7129,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="style" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: PrimaryStyle.</description></item>
         /// </list>
         /// <para>As an XML attribute, it:</para>
@@ -6913,6 +7147,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="mailMerge" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: Query.</description></item>
         /// </list>
         /// </remarks>
@@ -6953,6 +7188,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="odso" />, <see cref="recipients" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="active" />, <see cref="column" />, <see cref="uniqueTag" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="R.id" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: RecipientData, RecipientDataReference.</description></item>
         /// </list>
         /// </remarks>
@@ -7002,6 +7238,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="webSettings" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: RelyOnVML.</description></item>
         /// </list>
         /// </remarks>
@@ -7014,6 +7251,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="settings" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: RemoveDateAndTime.</description></item>
         /// </list>
         /// </remarks>
@@ -7026,6 +7264,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="settings" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: RemovePersonalInformation.</description></item>
         /// </list>
         /// </remarks>
@@ -7050,6 +7289,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="ddList" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: DropDownListSelection.</description></item>
         /// </list>
         /// </remarks>
@@ -7088,6 +7328,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="divBdr" />, <see cref="pBdr" />, <see cref="pgBorders" />, <see cref="tblBorders" />, <see cref="tblCellMar" />, <see cref="tcBorders" />, <see cref="tcMar" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="color" />, <see cref="frame" />, <see cref="shadow" />, <see cref="space" />, <see cref="sz" />, <see cref="themeColor" />, <see cref="themeShade" />, <see cref="themeTint" />, <see cref="type" />, <see cref="val" />, <see cref="w_" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: RightBorder, RightMargin, TableCellRightMargin.</description></item>
         /// </list>
         /// <para>As an XML attribute, it:</para>
@@ -7169,6 +7410,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="rsids" />, <see cref="style" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: Rsid.</description></item>
         /// </list>
         /// </remarks>
@@ -7229,6 +7471,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="rsids" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: RsidRoot.</description></item>
         /// </list>
         /// </remarks>
@@ -7290,6 +7533,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="rPr" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: RunStyle.</description></item>
         /// </list>
         /// </remarks>
@@ -7315,6 +7559,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="rPr" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: RightToLeftText.</description></item>
         /// </list>
         /// </remarks>
@@ -7327,6 +7572,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="sectPr" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: GutterOnRight.</description></item>
         /// </list>
         /// </remarks>
@@ -7415,6 +7661,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="settings" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: SaveFormsData.</description></item>
         /// </list>
         /// </remarks>
@@ -7427,6 +7674,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="settings" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: SaveInvalidXml.</description></item>
         /// </list>
         /// </remarks>
@@ -7439,6 +7687,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="settings" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: SavePreviewPicture.</description></item>
         /// </list>
         /// </remarks>
@@ -7451,6 +7700,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="settings" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: SaveSubsetFonts.</description></item>
         /// </list>
         /// </remarks>
@@ -7476,6 +7726,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="settings" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: SaveXmlDataOnly.</description></item>
         /// </list>
         /// </remarks>
@@ -7555,6 +7806,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="compat" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: SelectFieldWithFirstOrLastChar.</description></item>
         /// </list>
         /// </remarks>
@@ -7567,6 +7819,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="style" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: SemiHidden.</description></item>
         /// </list>
         /// <para>As an XML attribute, it:</para>
@@ -7621,6 +7874,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="rPr" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: Shadow.</description></item>
         /// </list>
         /// </remarks>
@@ -7670,6 +7924,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="compat" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: ShapeLayoutLikeWord8.</description></item>
         /// </list>
         /// </remarks>
@@ -7695,6 +7950,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="compat" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: ShowBreaksInFrames.</description></item>
         /// </list>
         /// </remarks>
@@ -7707,6 +7963,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="settings" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: ShowEnvelope.</description></item>
         /// </list>
         /// </remarks>
@@ -7719,6 +7976,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="settings" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: ShowXmlTags.</description></item>
         /// </list>
         /// </remarks>
@@ -7744,6 +8002,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="checkBox" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: FormFieldSize.</description></item>
         /// </list>
         /// </remarks>
@@ -7756,6 +8015,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="checkBox" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: AutomaticallySizeFormField.</description></item>
         /// </list>
         /// </remarks>
@@ -7768,6 +8028,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="rPr" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: SmallCaps.</description></item>
         /// </list>
         /// </remarks>
@@ -7780,6 +8041,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="pPr" />, <see cref="rPr" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: SnapToGrid.</description></item>
         /// </list>
         /// </remarks>
@@ -7816,6 +8078,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="frame" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="R.id" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: SourceFileReference.</description></item>
         /// </list>
         /// </remarks>
@@ -7840,6 +8103,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="compat" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: SpaceForUnderline.</description></item>
         /// </list>
         /// </remarks>
@@ -7865,6 +8129,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="compat" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: SpacingInWholePoints.</description></item>
         /// </list>
         /// </remarks>
@@ -7877,6 +8142,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="rPr" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: SpecVanish.</description></item>
         /// </list>
         /// </remarks>
@@ -7913,6 +8179,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="compat" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: SplitPageBreakAndParagraphMark.</description></item>
         /// </list>
         /// </remarks>
@@ -7925,6 +8192,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="odso" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="R.id" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: SourceReference.</description></item>
         /// </list>
         /// </remarks>
@@ -7937,6 +8205,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="lvl" />, <see cref="tblBorders" />, <see cref="tblCellMar" />, <see cref="tcBorders" />, <see cref="tcMar" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="color" />, <see cref="frame" />, <see cref="shadow" />, <see cref="space" />, <see cref="sz" />, <see cref="themeColor" />, <see cref="themeShade" />, <see cref="themeTint" />, <see cref="type" />, <see cref="val" />, <see cref="w_" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: StartBorder, StartMargin, StartNumberingValue.</description></item>
         /// </list>
         /// <para>As an XML attribute, it:</para>
@@ -7966,6 +8235,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="lvlOverride" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: StartOverrideNumberingValue.</description></item>
         /// </list>
         /// </remarks>
@@ -8003,6 +8273,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="settings" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: StrictFirstAndLastChars.</description></item>
         /// </list>
         /// </remarks>
@@ -8015,6 +8286,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="rPr" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: Strike.</description></item>
         /// </list>
         /// </remarks>
@@ -8028,7 +8300,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="docPartPr" />, <see cref="styles" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="aliases" />, <see cref="autoRedefine" />, <see cref="basedOn" />, <see cref="hidden" />, <see cref="link" />, <see cref="locked" />, <see cref="name" />, <see cref="next" />, <see cref="personal" />, <see cref="personalCompose" />, <see cref="personalReply" />, <see cref="pPr" />, <see cref="qFormat" />, <see cref="rPr" />, <see cref="rsid" />, <see cref="semiHidden" />, <see cref="tblPr" />, <see cref="tblStylePr" />, <see cref="tcPr" />, <see cref="trPr" />, <see cref="uiPriority" />, <see cref="unhideWhenUsed" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="customStyle" />, <see cref="@default" />, <see cref="styleId" />, <see cref="type" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="customStyle" />, <see cref="@default" />, <see cref="styleId" />, <see cref="type" />, <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: Style, StyleId.</description></item>
         /// </list>
         /// </remarks>
@@ -8053,6 +8325,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="abstractNum" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: StyleLink.</description></item>
         /// </list>
         /// </remarks>
@@ -8065,6 +8338,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="settings" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: StyleLockStylesPart.</description></item>
         /// </list>
         /// </remarks>
@@ -8077,6 +8351,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="settings" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: StyleLockThemesPart.</description></item>
         /// </list>
         /// </remarks>
@@ -8140,6 +8415,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="bdo" />, <see cref="customXml" />, <see cref="dir" />, <see cref="fldSimple" />, <see cref="hyperlink" />, <see cref="p" />, <see cref="sdtContent" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="R.id" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: SubDocumentReference.</description></item>
         /// </list>
         /// </remarks>
@@ -8152,6 +8428,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="compat" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: SubFontBySize.</description></item>
         /// </list>
         /// </remarks>
@@ -8190,6 +8467,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="pPr" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: SuppressAutoHyphens.</description></item>
         /// </list>
         /// </remarks>
@@ -8202,6 +8480,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="compat" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: SuppressBottomSpacing.</description></item>
         /// </list>
         /// </remarks>
@@ -8214,6 +8493,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="pPr" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: SuppressLineNumbers.</description></item>
         /// </list>
         /// </remarks>
@@ -8226,6 +8506,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="pPr" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: SuppressOverlap.</description></item>
         /// </list>
         /// </remarks>
@@ -8238,6 +8519,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="compat" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: SuppressSpacingAtTopOfPage.</description></item>
         /// </list>
         /// </remarks>
@@ -8250,6 +8532,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="compat" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: SuppressSpacingBeforeAfterPageBreak.</description></item>
         /// </list>
         /// </remarks>
@@ -8262,6 +8545,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="compat" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: SuppressTopSpacing.</description></item>
         /// </list>
         /// </remarks>
@@ -8274,6 +8558,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="compat" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: SuppressTopSpacingWordPerfect.</description></item>
         /// </list>
         /// </remarks>
@@ -8286,6 +8571,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="compat" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: SwapBordersFacingPages.</description></item>
         /// </list>
         /// </remarks>
@@ -8311,6 +8597,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="frame" />, <see cref="frameset" />, <see cref="rPr" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: FontSize, FrameSize.</description></item>
         /// </list>
         /// </remarks>
@@ -8323,6 +8610,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="rPr" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: FontSizeComplexScript.</description></item>
         /// </list>
         /// </remarks>
@@ -8335,6 +8623,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="M.r" />, <see cref="r" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="XML.space" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: Text.</description></item>
         /// </list>
         /// </remarks>
@@ -8384,6 +8673,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="odso" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: DataSourceTableName.</description></item>
         /// </list>
         /// </remarks>
@@ -8460,6 +8750,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="tblPr" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: TableCaption.</description></item>
         /// </list>
         /// </remarks>
@@ -8485,6 +8776,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="tblPr" />, <see cref="tblPrEx" />, <see cref="trPr" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="type" />, <see cref="w_" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: TableCellSpacing.</description></item>
         /// </list>
         /// </remarks>
@@ -8497,6 +8789,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="tblPr" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: TableDescription.</description></item>
         /// </list>
         /// </remarks>
@@ -8536,6 +8829,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="trPr" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: TableHeader.</description></item>
         /// </list>
         /// </remarks>
@@ -8715,6 +9009,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="tblPr" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: TableStyle.</description></item>
         /// </list>
         /// </remarks>
@@ -8727,6 +9022,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="tblPr" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: TableStyleColumnBandSize.</description></item>
         /// </list>
         /// </remarks>
@@ -8753,6 +9049,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="tblPr" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: TableStyleRowBandSize.</description></item>
         /// </list>
         /// </remarks>
@@ -8765,6 +9062,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="tblPr" />, <see cref="tblPrEx" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="type" />, <see cref="w_" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: TableWidth.</description></item>
         /// </list>
         /// </remarks>
@@ -8803,6 +9101,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="tcPr" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: TableCellFitText.</description></item>
         /// </list>
         /// </remarks>
@@ -8855,6 +9154,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="tcPr" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="type" />, <see cref="w_" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: TableCellWidth.</description></item>
         /// </list>
         /// </remarks>
@@ -8991,6 +9291,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="settings" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="bidi" />, <see cref="eastAsia" />, <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: ThemeFontLanguages.</description></item>
         /// </list>
         /// </remarks>
@@ -9027,6 +9328,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="sectPr" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: TitlePage.</description></item>
         /// </list>
         /// </remarks>
@@ -9039,6 +9341,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="tcBorders" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="color" />, <see cref="frame" />, <see cref="shadow" />, <see cref="space" />, <see cref="sz" />, <see cref="themeColor" />, <see cref="themeShade" />, <see cref="themeTint" />, <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: TopLeftToBottomRightCellBorder.</description></item>
         /// </list>
         /// </remarks>
@@ -9051,6 +9354,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="abstractNum" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: TemplateCode.</description></item>
         /// </list>
         /// </remarks>
@@ -9075,6 +9379,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="divBdr" />, <see cref="pBdr" />, <see cref="pgBorders" />, <see cref="tblBorders" />, <see cref="tblCellMar" />, <see cref="tcBorders" />, <see cref="tcMar" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="color" />, <see cref="frame" />, <see cref="shadow" />, <see cref="space" />, <see cref="sz" />, <see cref="themeColor" />, <see cref="themeShade" />, <see cref="themeTint" />, <see cref="type" />, <see cref="val" />, <see cref="w_" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: TopBorder, TopMargin.</description></item>
         /// </list>
         /// <para>As an XML attribute, it:</para>
@@ -9116,6 +9421,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="pPr" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: TopLinePunctuation.</description></item>
         /// </list>
         /// </remarks>
@@ -9154,6 +9460,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="tcBorders" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="color" />, <see cref="frame" />, <see cref="shadow" />, <see cref="space" />, <see cref="sz" />, <see cref="themeColor" />, <see cref="themeShade" />, <see cref="themeTint" />, <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: TopRightToBottomLeftCellBorder.</description></item>
         /// </list>
         /// </remarks>
@@ -9166,6 +9473,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="settings" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: TrackRevisions.</description></item>
         /// </list>
         /// </remarks>
@@ -9218,6 +9526,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="compat" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: TruncateFontHeightsLikeWordPerfect.</description></item>
         /// </list>
         /// </remarks>
@@ -9288,6 +9597,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="odso" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: UdlConnectionString.</description></item>
         /// </list>
         /// </remarks>
@@ -9300,6 +9610,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="settings" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: UICompatibleWith97To2003.</description></item>
         /// </list>
         /// </remarks>
@@ -9330,6 +9641,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="compat" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: UnderlineTrailingSpaces.</description></item>
         /// </list>
         /// </remarks>
@@ -9342,6 +9654,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="compat" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: UnderlineTabInNumberingList.</description></item>
         /// </list>
         /// </remarks>
@@ -9354,6 +9667,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="style" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: UnhideWhenUsed.</description></item>
         /// </list>
         /// <para>As an XML attribute, it:</para>
@@ -9384,6 +9698,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="settings" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: UpdateFieldsOnOpen.</description></item>
         /// </list>
         /// </remarks>
@@ -9468,6 +9783,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="compat" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: UseAltKinsokuLineBreakRules.</description></item>
         /// </list>
         /// </remarks>
@@ -9480,6 +9796,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="compat" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: UseAnsiKerningPairs.</description></item>
         /// </list>
         /// </remarks>
@@ -9492,6 +9809,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="compat" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: UseFarEastLayout.</description></item>
         /// </list>
         /// </remarks>
@@ -9504,6 +9822,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="compat" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: UseNormalStyleForList.</description></item>
         /// </list>
         /// </remarks>
@@ -9516,6 +9835,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="compat" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: UsePrinterMetrics.</description></item>
         /// </list>
         /// </remarks>
@@ -9528,6 +9848,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="compat" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: UseSingleBorderForContiguousCells.</description></item>
         /// </list>
         /// </remarks>
@@ -9540,6 +9861,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="compat" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: UseWord2002TableStyleRules.</description></item>
         /// </list>
         /// </remarks>
@@ -9552,6 +9874,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="compat" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: UseWord97LineBreakRules.</description></item>
         /// </list>
         /// </remarks>
@@ -9564,6 +9887,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="settings" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: UseXsltWhenSaving.</description></item>
         /// </list>
         /// </remarks>
@@ -9613,6 +9937,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="rPr" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: Vanish.</description></item>
         /// </list>
         /// </remarks>
@@ -9699,6 +10024,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="mailMerge" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: ViewMergedData.</description></item>
         /// </list>
         /// </remarks>
@@ -9783,6 +10109,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="trPr" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="type" />, <see cref="w_" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: WidthAfterTableRow.</description></item>
         /// </list>
         /// </remarks>
@@ -9795,6 +10122,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="trPr" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="type" />, <see cref="w_" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: WidthBeforeTableRow.</description></item>
         /// </list>
         /// </remarks>
@@ -9807,6 +10135,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="rPr" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: WebHidden.</description></item>
         /// </list>
         /// </remarks>
@@ -9832,6 +10161,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="pPr" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: WidowControl.</description></item>
         /// </list>
         /// </remarks>
@@ -9844,6 +10174,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="pPr" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: WordWrap.</description></item>
         /// </list>
         /// </remarks>
@@ -9856,6 +10187,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="compat" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: WordPerfectJustification.</description></item>
         /// </list>
         /// </remarks>
@@ -9868,6 +10200,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="compat" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: WordPerfectSpaceWidth.</description></item>
         /// </list>
         /// </remarks>
@@ -9892,6 +10225,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="compat" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: WrapTrailSpaces.</description></item>
         /// </list>
         /// </remarks>

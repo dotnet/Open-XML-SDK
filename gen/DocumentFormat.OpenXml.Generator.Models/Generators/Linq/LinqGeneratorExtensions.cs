@@ -189,12 +189,18 @@ public static class LinqGeneratorExtensions
 
             string See(QName qName)
             {
-                FieldInfo fieldInfo = fieldInfos[qName];
-                string reference = fieldInfo.Prefix == prefix
-                    ? fieldInfo.FieldName
-                    : fieldInfo.QualifiedFieldName;
+                if (fieldInfos.TryGetValue(qName, out var fieldInfo))
+                {
+                    string reference = fieldInfo.Prefix == prefix
+                        ? fieldInfo.FieldName
+                        : fieldInfo.QualifiedFieldName;
 
-                return $"<see cref=\"{reference}\" />";
+                    return $"<see cref=\"{reference}\" />";
+                }
+                else
+                {
+                    return $"<see cref=\"{qName}\" />";
+                }
             }
 
             bool hasRemarks = elements != string.Empty || attributes != string.Empty;
@@ -411,6 +417,20 @@ public static class LinqGeneratorExtensions
         /// </summary>
         public string QualifiedName => string.IsNullOrEmpty(Prefix) ? LocalName : Prefix + ":" + LocalName;
 
+        private IEnumerable<SchemaType> GetAttributes()
+        {
+            foreach (var e in _elementMetadata)
+            {
+                var current = e;
+
+                while (current is not null)
+                {
+                    yield return current;
+                    current = _services.GetTypeFromClassName(current.Name.Type.Prefix, current.BaseClass);
+                }
+            }
+        }
+
         public IEnumerable<QName> ParentQualifiedNames =>
             _parentMetadata
                 .OrderBy(GetQualifiedName)
@@ -430,7 +450,7 @@ public static class LinqGeneratorExtensions
                 .Distinct();
 
         public IEnumerable<QName> ElementAttributeQualifiedNames =>
-            _elementMetadata
+            GetAttributes()
                 .SelectMany(em => em.Attributes)
                 .OrderBy(GetQualifiedName)
                 .Select(am => am.QName)
@@ -492,9 +512,7 @@ public static class LinqGeneratorExtensions
 
         /// <inheritdoc />
         public bool Equals(FieldInfo? other)
-        {
-            return QName.Equals(other?.QName);
-        }
+            => other is not null && QName.Equals(other.QName);
 
         /// <inheritdoc />
         public override bool Equals(object? obj)

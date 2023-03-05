@@ -35,6 +35,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="Event" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="NoNamespace.userId" />, <see cref="NoNamespace.userName" />, <see cref="userProvider" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: AssignTaskUser.</description></item>
         /// </list>
         /// </remarks>
@@ -47,6 +48,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="Event" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="NoNamespace.userId" />, <see cref="NoNamespace.userName" />, <see cref="userProvider" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: AttributionTaskUser.</description></item>
         /// </list>
         /// </remarks>
@@ -214,6 +216,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="Event" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="NoNamespace.userId" />, <see cref="NoNamespace.userName" />, <see cref="userProvider" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: UnassignTaskUser.</description></item>
         /// </list>
         /// </remarks>
