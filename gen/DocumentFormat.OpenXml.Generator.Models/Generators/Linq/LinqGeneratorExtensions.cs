@@ -199,7 +199,7 @@ public static class LinqGeneratorExtensions
                 }
                 else if (string.IsNullOrEmpty(qName.Prefix))
                 {
-                    return $"<see cref=\"{EmptyNamespace}.{qName.Name}\" />";
+                    return $"<see cref=\"{EmptyNamespace}.{qName.Name.Trim('_')}\" />";
                 }
                 else
                 {
@@ -421,7 +421,7 @@ public static class LinqGeneratorExtensions
         /// </summary>
         public string QualifiedName => string.IsNullOrEmpty(Prefix) ? LocalName : Prefix + ":" + LocalName;
 
-        private IEnumerable<SchemaType> GetAttributes()
+        private IEnumerable<SchemaType> GetHierarchy()
         {
             foreach (var e in _elementMetadata)
             {
@@ -454,14 +454,14 @@ public static class LinqGeneratorExtensions
                 .Distinct();
 
         public IEnumerable<QName> ElementAttributeQualifiedNames =>
-            GetAttributes()
+            GetHierarchy()
                 .SelectMany(em => em.Attributes)
                 .OrderBy(GetQualifiedName)
                 .Select(am => am.QName)
                 .Distinct();
 
         public IEnumerable<string> ElementClassNames =>
-            _elementMetadata
+           _elementMetadata
                 .Select(e => _services.FindClassName(e.Name, fullyQualified: false))
                 .Distinct()
                 .OrderBy(name => name);
