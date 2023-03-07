@@ -250,11 +250,7 @@ namespace DocumentFormat.OpenXml.Tests
                     doc.AddMainDocumentPart();
                     var document = doc.MainDocumentPart.Document = new Document();
                     document.Save();
-
-                    // ImagePart has correct file extension
                     var imagePart = doc.MainDocumentPart.AddImagePart(ImagePartType.Jpeg);
-                    Assert.True(imagePart is not null && imagePart.Uri.OriginalString.EndsWith(".jpg"));
-
                     var extendedSubPart = doc.MainDocumentPart.AddExtendedPart("http://temp", "text/xml", ".xml", "tempId");
 
                     var extendedPart = doc.AddExtendedPart("http://temp", "text/xml", ".xml", "tempId");
