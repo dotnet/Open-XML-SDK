@@ -9,30 +9,15 @@ using System.Text;
 
 namespace DocumentFormat.OpenXml.Generator;
 
-[Generator]
-public class PartGenerator : IIncrementalGenerator
+public static class PartGenerator
 {
-    public void Initialize(IncrementalGeneratorInitializationContext context)
+    public static void WritePartFiles(SourceProductionContext context, OpenXmlGeneratorServices? openXml)
     {
-        var openXml = context.GetOpenXmlGeneratorContext().GetOpenXmlServices();
-        var options = context.GetOpenXmlOptions().Select(static (o, _) => o.GenerateParts);
-        var parts = openXml.Combine(options);
-
-        context.RegisterSourceOutput(parts, (context, data) =>
+        if (openXml is null)
         {
-            if (!data.Right)
-            {
-                return;
-            }
+            return;
+        }
 
-            var openXml = data.Left;
-
-            WritePartFiles(context, openXml);
-        });
-    }
-
-    private static void WritePartFiles(SourceProductionContext context, OpenXmlGeneratorServices openXml)
-    {
         var sb = new StringBuilder();
         var sw = new StringWriter(sb);
         var writer = new IndentedTextWriter(sw);
@@ -44,7 +29,7 @@ public class PartGenerator : IIncrementalGenerator
             writer.WriteFileHeader();
             writer.WritePart(openXml, part);
 
-            context.AddSource(part.Name, sb.ToString());
+            context.AddSource($"Part_{part.Name}", sb.ToString());
         }
     }
 }
