@@ -106,7 +106,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="A.graphicData" />, <see cref="V.stroke" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.color" />, <see cref="NoNamespace.color2" />, <see cref="NoNamespace.dashstyle" />, <see cref="NoNamespace.endarrow" />, <see cref="NoNamespace.endarrowlength" />, <see cref="NoNamespace.endarrowwidth" />, <see cref="NoNamespace.endcap" />, <see cref="NoNamespace.filltype" />, <see cref="NoNamespace.imagealignshape" />, <see cref="NoNamespace.imageaspect" />, <see cref="NoNamespace.imagesize" />, <see cref="NoNamespace.insetpen" />, <see cref="NoNamespace.joinstyle" />, <see cref="NoNamespace.linestyle" />, <see cref="NoNamespace.miterlimit" />, <see cref="althref" />, <see cref="forcedash" />, <see cref="href" />, <see cref="title" />, <see cref="NoNamespace.on" />, <see cref="NoNamespace.opacity" />, <see cref="NoNamespace.src" />, <see cref="NoNamespace.startarrow" />, <see cref="NoNamespace.startarrowlength" />, <see cref="NoNamespace.startarrowwidth" />, <see cref="V.ext" />, <see cref="NoNamespace.weight" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: BottomStroke.</description></item>
         /// </list>
         /// </remarks>
@@ -255,7 +254,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="A.graphicData" />, <see cref="V.stroke" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.color" />, <see cref="NoNamespace.color2" />, <see cref="NoNamespace.dashstyle" />, <see cref="NoNamespace.endarrow" />, <see cref="NoNamespace.endarrowlength" />, <see cref="NoNamespace.endarrowwidth" />, <see cref="NoNamespace.endcap" />, <see cref="NoNamespace.filltype" />, <see cref="NoNamespace.imagealignshape" />, <see cref="NoNamespace.imageaspect" />, <see cref="NoNamespace.imagesize" />, <see cref="NoNamespace.insetpen" />, <see cref="NoNamespace.joinstyle" />, <see cref="NoNamespace.linestyle" />, <see cref="NoNamespace.miterlimit" />, <see cref="althref" />, <see cref="forcedash" />, <see cref="href" />, <see cref="title" />, <see cref="NoNamespace.on" />, <see cref="NoNamespace.opacity" />, <see cref="NoNamespace.src" />, <see cref="NoNamespace.startarrow" />, <see cref="NoNamespace.startarrowlength" />, <see cref="NoNamespace.startarrowwidth" />, <see cref="V.ext" />, <see cref="NoNamespace.weight" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: ColumnStroke.</description></item>
         /// </list>
         /// </remarks>
@@ -600,7 +598,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="A.graphicData" />, <see cref="V.stroke" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.color" />, <see cref="NoNamespace.color2" />, <see cref="NoNamespace.dashstyle" />, <see cref="NoNamespace.endarrow" />, <see cref="NoNamespace.endarrowlength" />, <see cref="NoNamespace.endarrowwidth" />, <see cref="NoNamespace.endcap" />, <see cref="NoNamespace.filltype" />, <see cref="NoNamespace.imagealignshape" />, <see cref="NoNamespace.imageaspect" />, <see cref="NoNamespace.imagesize" />, <see cref="NoNamespace.insetpen" />, <see cref="NoNamespace.joinstyle" />, <see cref="NoNamespace.linestyle" />, <see cref="NoNamespace.miterlimit" />, <see cref="althref" />, <see cref="forcedash" />, <see cref="href" />, <see cref="title" />, <see cref="NoNamespace.on" />, <see cref="NoNamespace.opacity" />, <see cref="NoNamespace.src" />, <see cref="NoNamespace.startarrow" />, <see cref="NoNamespace.startarrowlength" />, <see cref="NoNamespace.startarrowwidth" />, <see cref="V.ext" />, <see cref="NoNamespace.weight" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: LeftStroke.</description></item>
         /// </list>
         /// </remarks>
@@ -828,7 +825,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="A.graphicData" />, <see cref="V.stroke" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.color" />, <see cref="NoNamespace.color2" />, <see cref="NoNamespace.dashstyle" />, <see cref="NoNamespace.endarrow" />, <see cref="NoNamespace.endarrowlength" />, <see cref="NoNamespace.endarrowwidth" />, <see cref="NoNamespace.endcap" />, <see cref="NoNamespace.filltype" />, <see cref="NoNamespace.imagealignshape" />, <see cref="NoNamespace.imageaspect" />, <see cref="NoNamespace.imagesize" />, <see cref="NoNamespace.insetpen" />, <see cref="NoNamespace.joinstyle" />, <see cref="NoNamespace.linestyle" />, <see cref="NoNamespace.miterlimit" />, <see cref="althref" />, <see cref="forcedash" />, <see cref="href" />, <see cref="title" />, <see cref="NoNamespace.on" />, <see cref="NoNamespace.opacity" />, <see cref="NoNamespace.src" />, <see cref="NoNamespace.startarrow" />, <see cref="NoNamespace.startarrowlength" />, <see cref="NoNamespace.startarrowwidth" />, <see cref="V.ext" />, <see cref="NoNamespace.weight" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: RightStroke.</description></item>
         /// </list>
         /// </remarks>
@@ -1029,7 +1025,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="A.graphicData" />, <see cref="V.stroke" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.color" />, <see cref="NoNamespace.color2" />, <see cref="NoNamespace.dashstyle" />, <see cref="NoNamespace.endarrow" />, <see cref="NoNamespace.endarrowlength" />, <see cref="NoNamespace.endarrowwidth" />, <see cref="NoNamespace.endcap" />, <see cref="NoNamespace.filltype" />, <see cref="NoNamespace.imagealignshape" />, <see cref="NoNamespace.imageaspect" />, <see cref="NoNamespace.imagesize" />, <see cref="NoNamespace.insetpen" />, <see cref="NoNamespace.joinstyle" />, <see cref="NoNamespace.linestyle" />, <see cref="NoNamespace.miterlimit" />, <see cref="althref" />, <see cref="forcedash" />, <see cref="href" />, <see cref="title" />, <see cref="NoNamespace.on" />, <see cref="NoNamespace.opacity" />, <see cref="NoNamespace.src" />, <see cref="NoNamespace.startarrow" />, <see cref="NoNamespace.startarrowlength" />, <see cref="NoNamespace.startarrowwidth" />, <see cref="V.ext" />, <see cref="NoNamespace.weight" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: TopStroke.</description></item>
         /// </list>
         /// </remarks>

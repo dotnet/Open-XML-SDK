@@ -22,7 +22,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="colSortMap" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.newVal" />, <see cref="NoNamespace.oldVal" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: ColumnSortMapItem.</description></item>
         /// </list>
         /// </remarks>
@@ -73,7 +72,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="rowSortMap" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.newVal" />, <see cref="NoNamespace.oldVal" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: RowSortMapItem.</description></item>
         /// </list>
         /// </remarks>

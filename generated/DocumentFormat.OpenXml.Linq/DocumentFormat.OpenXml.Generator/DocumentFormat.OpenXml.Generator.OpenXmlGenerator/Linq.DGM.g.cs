@@ -181,7 +181,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="layoutDef" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="dataModel" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.useDef" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: ColorData.</description></item>
         /// </list>
         /// </remarks>
@@ -329,7 +328,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="styleLbl" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="A.hslClr" />, <see cref="A.prstClr" />, <see cref="A.schemeClr" />, <see cref="A.scrgbClr" />, <see cref="A.srgbClr" />, <see cref="A.sysClr" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.hueDir" />, <see cref="NoNamespace.meth" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: EffectColorList.</description></item>
         /// </list>
         /// </remarks>
@@ -384,7 +382,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="styleLbl" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="A.hslClr" />, <see cref="A.prstClr" />, <see cref="A.schemeClr" />, <see cref="A.scrgbClr" />, <see cref="A.srgbClr" />, <see cref="A.sysClr" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.hueDir" />, <see cref="NoNamespace.meth" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: FillColorList.</description></item>
         /// </list>
         /// </remarks>
@@ -494,7 +491,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="styleLbl" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="A.hslClr" />, <see cref="A.prstClr" />, <see cref="A.schemeClr" />, <see cref="A.scrgbClr" />, <see cref="A.srgbClr" />, <see cref="A.sysClr" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.hueDir" />, <see cref="NoNamespace.meth" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: LineColorList.</description></item>
         /// </list>
         /// </remarks>
@@ -655,7 +651,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="layoutDef" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="dataModel" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.useDef" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: SampleData.</description></item>
         /// </list>
         /// </remarks>
@@ -737,7 +732,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="layoutDef" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="dataModel" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.useDef" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: StyleData.</description></item>
         /// </list>
         /// </remarks>
@@ -832,7 +826,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="styleLbl" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="A.hslClr" />, <see cref="A.prstClr" />, <see cref="A.schemeClr" />, <see cref="A.scrgbClr" />, <see cref="A.srgbClr" />, <see cref="A.sysClr" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.hueDir" />, <see cref="NoNamespace.meth" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: TextEffectColorList.</description></item>
         /// </list>
         /// </remarks>
@@ -846,7 +839,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="styleLbl" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="A.hslClr" />, <see cref="A.prstClr" />, <see cref="A.schemeClr" />, <see cref="A.scrgbClr" />, <see cref="A.srgbClr" />, <see cref="A.sysClr" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.hueDir" />, <see cref="NoNamespace.meth" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: TextFillColorList.</description></item>
         /// </list>
         /// </remarks>
@@ -860,7 +852,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="styleLbl" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="A.hslClr" />, <see cref="A.prstClr" />, <see cref="A.schemeClr" />, <see cref="A.scrgbClr" />, <see cref="A.srgbClr" />, <see cref="A.sysClr" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.hueDir" />, <see cref="NoNamespace.meth" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: TextLineColorList.</description></item>
         /// </list>
         /// </remarks>

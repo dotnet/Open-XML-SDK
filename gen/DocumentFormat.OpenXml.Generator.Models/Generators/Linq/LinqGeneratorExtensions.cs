@@ -421,20 +421,6 @@ public static class LinqGeneratorExtensions
         /// </summary>
         public string QualifiedName => string.IsNullOrEmpty(Prefix) ? LocalName : Prefix + ":" + LocalName;
 
-        private IEnumerable<SchemaType> GetHierarchy(IEnumerable<SchemaType> types)
-        {
-            foreach (var e in types)
-            {
-                var current = e;
-
-                while (current is not null)
-                {
-                    yield return current;
-                    current = _services.GetTypeFromClassName(current.Name.Type.Prefix, current.BaseClass);
-                }
-            }
-        }
-
         public IEnumerable<QName> ParentQualifiedNames =>
             _parentMetadata
                 .OrderBy(GetQualifiedName)
@@ -448,13 +434,13 @@ public static class LinqGeneratorExtensions
                 .Distinct();
 
         public IEnumerable<QName> AttributeContainerQualifiedNames =>
-            GetHierarchy(_attributeContainerMetadata)
+            _attributeContainerMetadata
                 .OrderBy(GetQualifiedName)
                 .Select(em => em.Name.QName)
                 .Distinct();
 
         public IEnumerable<QName> ElementAttributeQualifiedNames =>
-            GetHierarchy(_elementMetadata)
+            _elementMetadata
                 .SelectMany(em => em.Attributes)
                 .OrderBy(GetQualifiedName)
                 .Select(am => am.QName)

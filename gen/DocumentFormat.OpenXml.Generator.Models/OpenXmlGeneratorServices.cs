@@ -107,26 +107,4 @@ public class OpenXmlGeneratorServices
 
         return typeInfo.ClassName;
     }
-
-    internal SchemaType? GetTypeFromClassName(string prefix, string baseClass)
-    {
-        var options = Context.TypedClasses
-            .Where(t => t.ClassName == baseClass)
-            .Select(t => t.Name)
-            .Where(t => t.Type.Prefix == prefix)
-            .Where(t => t.QName.IsEmpty)
-            .ToList();
-
-        if (options.Count > 1)
-        {
-            Debugger.Break();
-        }
-
-        if (options.FirstOrDefault() is { } key && Context.Namespaces.SelectMany(n => n.Types).Where(t => t.Name.Equals(key)).FirstOrDefault() is { } result)
-        {
-            return result;
-        }
-
-        return null;
-    }
 }

@@ -49,7 +49,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="dataBar" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.auto" />, <see cref="NoNamespace.indexed" />, <see cref="NoNamespace.rgb" />, <see cref="NoNamespace.theme" />, <see cref="NoNamespace.tint" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: BarAxisColor.</description></item>
         /// </list>
         /// </remarks>
@@ -62,7 +61,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="dataBar" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.auto" />, <see cref="NoNamespace.indexed" />, <see cref="NoNamespace.rgb" />, <see cref="NoNamespace.theme" />, <see cref="NoNamespace.tint" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: BorderColor.</description></item>
         /// </list>
         /// </remarks>
@@ -171,7 +169,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="colorScale" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.auto" />, <see cref="NoNamespace.indexed" />, <see cref="NoNamespace.rgb" />, <see cref="NoNamespace.theme" />, <see cref="NoNamespace.tint" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: Color.</description></item>
         /// </list>
         /// </remarks>
@@ -184,7 +181,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="sparklineGroup" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.auto" />, <see cref="NoNamespace.indexed" />, <see cref="NoNamespace.rgb" />, <see cref="NoNamespace.theme" />, <see cref="NoNamespace.tint" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: AxisColor.</description></item>
         /// </list>
         /// </remarks>
@@ -197,7 +193,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="sparklineGroup" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.auto" />, <see cref="NoNamespace.indexed" />, <see cref="NoNamespace.rgb" />, <see cref="NoNamespace.theme" />, <see cref="NoNamespace.tint" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: FirstMarkerColor.</description></item>
         /// </list>
         /// </remarks>
@@ -210,7 +205,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="sparklineGroup" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.auto" />, <see cref="NoNamespace.indexed" />, <see cref="NoNamespace.rgb" />, <see cref="NoNamespace.theme" />, <see cref="NoNamespace.tint" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: HighMarkerColor.</description></item>
         /// </list>
         /// </remarks>
@@ -223,7 +217,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="sparklineGroup" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.auto" />, <see cref="NoNamespace.indexed" />, <see cref="NoNamespace.rgb" />, <see cref="NoNamespace.theme" />, <see cref="NoNamespace.tint" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: LastMarkerColor.</description></item>
         /// </list>
         /// </remarks>
@@ -236,7 +229,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="sparklineGroup" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.auto" />, <see cref="NoNamespace.indexed" />, <see cref="NoNamespace.rgb" />, <see cref="NoNamespace.theme" />, <see cref="NoNamespace.tint" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: LowMarkerColor.</description></item>
         /// </list>
         /// </remarks>
@@ -249,7 +241,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="sparklineGroup" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.auto" />, <see cref="NoNamespace.indexed" />, <see cref="NoNamespace.rgb" />, <see cref="NoNamespace.theme" />, <see cref="NoNamespace.tint" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: MarkersColor.</description></item>
         /// </list>
         /// </remarks>
@@ -262,7 +253,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="sparklineGroup" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.auto" />, <see cref="NoNamespace.indexed" />, <see cref="NoNamespace.rgb" />, <see cref="NoNamespace.theme" />, <see cref="NoNamespace.tint" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: NegativeColor.</description></item>
         /// </list>
         /// </remarks>
@@ -288,7 +278,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="sparklineGroup" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.auto" />, <see cref="NoNamespace.indexed" />, <see cref="NoNamespace.rgb" />, <see cref="NoNamespace.theme" />, <see cref="NoNamespace.tint" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: SeriesColor.</description></item>
         /// </list>
         /// </remarks>
@@ -558,7 +547,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="dataBar" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.auto" />, <see cref="NoNamespace.indexed" />, <see cref="NoNamespace.rgb" />, <see cref="NoNamespace.theme" />, <see cref="NoNamespace.tint" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: FillColor.</description></item>
         /// </list>
         /// </remarks>
@@ -797,7 +785,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="dataBar" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.auto" />, <see cref="NoNamespace.indexed" />, <see cref="NoNamespace.rgb" />, <see cref="NoNamespace.theme" />, <see cref="NoNamespace.tint" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: NegativeBorderColor.</description></item>
         /// </list>
         /// </remarks>
@@ -810,7 +797,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="dataBar" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.auto" />, <see cref="NoNamespace.indexed" />, <see cref="NoNamespace.rgb" />, <see cref="NoNamespace.theme" />, <see cref="NoNamespace.tint" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: NegativeFillColor.</description></item>
         /// </list>
         /// </remarks>

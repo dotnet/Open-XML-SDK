@@ -22,7 +22,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="webImageSrd" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="R.id" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: AddressWebImageSupportingRichDataRelationship.</description></item>
         /// </list>
         /// </remarks>
@@ -35,7 +34,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="webImageSrd" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="R.id" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: BlipWebImageSupportingRichDataRelationship.</description></item>
         /// </list>
         /// </remarks>
@@ -61,7 +59,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="webImageSrd" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="R.id" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: MoreImagesAddressWebImageSupportingRichDataRelationship.</description></item>
         /// </list>
         /// </remarks>

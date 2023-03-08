@@ -279,7 +279,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="transition" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.dir" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: BlindsTransition.</description></item>
         /// </list>
         /// </remarks>
@@ -319,7 +318,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="embeddedFont" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="R.id" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: BoldFont.</description></item>
         /// </list>
         /// </remarks>
@@ -332,7 +330,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="embeddedFont" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="R.id" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: BoldItalicFont.</description></item>
         /// </list>
         /// </remarks>
@@ -372,7 +369,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="animClr" />, <see cref="animMotion" />, <see cref="animScale" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="hsl" />, <see cref="rgb" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.x" />, <see cref="NoNamespace.y" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: ByColor, ByPosition.</description></item>
         /// </list>
         /// </remarks>
@@ -399,7 +395,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="txEl" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.end" />, <see cref="NoNamespace.st" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: CharRange.</description></item>
         /// </list>
         /// </remarks>
@@ -412,7 +407,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="transition" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.dir" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: CheckerTransition.</description></item>
         /// </list>
         /// </remarks>
@@ -666,7 +660,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="transition" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.dir" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: CombTransition.</description></item>
         /// </list>
         /// </remarks>
@@ -680,7 +673,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="endCondLst" />, <see cref="nextCondLst" />, <see cref="prevCondLst" />, <see cref="stCondLst" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="rtn" />, <see cref="tgtEl" />, <see cref="tn" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.delay" />, <see cref="NoNamespace.evt" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: Condition.</description></item>
         /// </list>
         /// </remarks>
@@ -734,7 +726,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="transition" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.dir" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: CoverTransition.</description></item>
         /// </list>
         /// </remarks>
@@ -842,7 +833,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="transition" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.thruBlk" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: CutTransition.</description></item>
         /// </list>
         /// </remarks>
@@ -985,7 +975,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="cTn" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="rtn" />, <see cref="tgtEl" />, <see cref="tn" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.delay" />, <see cref="NoNamespace.evt" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: EndSync.</description></item>
         /// </list>
         /// </remarks>
@@ -1039,7 +1028,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="transition" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.thruBlk" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: FadeTransition.</description></item>
         /// </list>
         /// </remarks>
@@ -1079,7 +1067,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="animClr" />, <see cref="animMotion" />, <see cref="animScale" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="A.hslClr" />, <see cref="A.prstClr" />, <see cref="A.schemeClr" />, <see cref="A.scrgbClr" />, <see cref="A.srgbClr" />, <see cref="A.sysClr" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.x" />, <see cref="NoNamespace.y" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: FromColor, FromPosition.</description></item>
         /// </list>
         /// </remarks>
@@ -1118,7 +1105,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="viewPr" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.cx" />, <see cref="NoNamespace.cy" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: GridSpacing.</description></item>
         /// </list>
         /// </remarks>
@@ -1265,7 +1251,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="tgtEl" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.spid" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: InkTarget.</description></item>
         /// </list>
         /// </remarks>
@@ -1291,7 +1276,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="embeddedFont" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="R.id" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: ItalicFont.</description></item>
         /// </list>
         /// </remarks>
@@ -1477,7 +1461,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="presentation" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.cx" />, <see cref="NoNamespace.cy" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: NotesSize.</description></item>
         /// </list>
         /// </remarks>
@@ -1622,7 +1605,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="cViewPr" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.x" />, <see cref="NoNamespace.y" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: Origin.</description></item>
         /// </list>
         /// </remarks>
@@ -1740,7 +1722,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="cm" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.x" />, <see cref="NoNamespace.y" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: Position.</description></item>
         /// </list>
         /// </remarks>
@@ -1805,7 +1786,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="txEl" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.end" />, <see cref="NoNamespace.st" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: ParagraphIndexRange.</description></item>
         /// </list>
         /// </remarks>
@@ -1845,7 +1825,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="transition" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.dir" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: PullTransition.</description></item>
         /// </list>
         /// </remarks>
@@ -1858,7 +1837,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="transition" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.dir" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: PushTransition.</description></item>
         /// </list>
         /// </remarks>
@@ -1883,7 +1861,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="transition" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.dir" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: RandomBarTransition.</description></item>
         /// </list>
         /// </remarks>
@@ -1896,7 +1873,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="animMotion" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.x" />, <see cref="NoNamespace.y" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: RotationCenter.</description></item>
         /// </list>
         /// </remarks>
@@ -1909,7 +1885,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="embeddedFont" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="R.id" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: RegularFont.</description></item>
         /// </list>
         /// </remarks>
@@ -1922,7 +1897,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="normalViewPr" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.autoAdjust" />, <see cref="NoNamespace.sz" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: RestoredLeft.</description></item>
         /// </list>
         /// </remarks>
@@ -1935,7 +1909,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="normalViewPr" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.autoAdjust" />, <see cref="NoNamespace.sz" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: RestoredTop.</description></item>
         /// </list>
         /// </remarks>
@@ -2176,7 +2149,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="htmlPubPr" />, <see cref="showPr" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.end" />, <see cref="NoNamespace.st" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: SlideRange.</description></item>
         /// </list>
         /// </remarks>
@@ -2241,7 +2213,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="stSnd" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.builtIn" />, <see cref="NoNamespace.name" />, <see cref="R.embed" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: Sound.</description></item>
         /// </list>
         /// </remarks>
@@ -2267,7 +2238,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="tgtEl" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.builtIn" />, <see cref="NoNamespace.name" />, <see cref="R.embed" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: SoundTarget.</description></item>
         /// </list>
         /// </remarks>
@@ -2428,7 +2398,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="spTgt" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.spid" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: SubShape.</description></item>
         /// </list>
         /// </remarks>
@@ -2651,7 +2620,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="animClr" />, <see cref="animMotion" />, <see cref="animScale" />, <see cref="set" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="A.hslClr" />, <see cref="A.prstClr" />, <see cref="A.schemeClr" />, <see cref="A.scrgbClr" />, <see cref="A.srgbClr" />, <see cref="A.sysClr" />, <see cref="boolVal" />, <see cref="clrVal" />, <see cref="fltVal" />, <see cref="intVal" />, <see cref="strVal" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.x" />, <see cref="NoNamespace.y" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: ToColor, ToPosition, ToVariantValue.</description></item>
         /// </list>
         /// </remarks>
@@ -2797,7 +2765,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="transition" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.dir" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: WipeTransition.</description></item>
         /// </list>
         /// </remarks>

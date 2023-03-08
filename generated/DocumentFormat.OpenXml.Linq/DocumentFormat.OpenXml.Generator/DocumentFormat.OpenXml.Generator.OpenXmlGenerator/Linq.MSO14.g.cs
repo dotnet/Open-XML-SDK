@@ -370,7 +370,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="comboBox" />, <see cref="dropDown" />, <see cref="gallery" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.getLabel" />, <see cref="NoNamespace.id" />, <see cref="NoNamespace.image" />, <see cref="NoNamespace.imageMso" />, <see cref="NoNamespace.label" />, <see cref="NoNamespace.screentip" />, <see cref="NoNamespace.supertip" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="NoNamespace.id" />, <see cref="NoNamespace.image" />, <see cref="NoNamespace.imageMso" />, <see cref="NoNamespace.label" />, <see cref="NoNamespace.screentip" />, <see cref="NoNamespace.supertip" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: Item, ItemBackstageItem.</description></item>
         /// </list>
         /// </remarks>
@@ -477,7 +477,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="radioGroup" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.getLabel" />, <see cref="NoNamespace.id" />, <see cref="NoNamespace.label" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: RadioButtonBackstageItem.</description></item>
         /// </list>
         /// </remarks>

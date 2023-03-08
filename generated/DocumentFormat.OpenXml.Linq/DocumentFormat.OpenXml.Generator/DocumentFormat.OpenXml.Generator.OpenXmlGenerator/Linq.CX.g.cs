@@ -407,7 +407,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="numDim" />, <see cref="strDim" />, <see cref="txData" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.dir" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: Formula.</description></item>
         /// </list>
         /// </remarks>
@@ -922,7 +921,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="axis" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="extLst" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.type" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: MajorTickMarksTickMarks.</description></item>
         /// </list>
         /// </remarks>
@@ -1027,7 +1025,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="axis" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="extLst" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.type" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: MinorTickMarksTickMarks.</description></item>
         /// </list>
         /// </remarks>
@@ -1040,7 +1037,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="numDim" />, <see cref="strDim" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.dir" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: NfFormula.</description></item>
         /// </list>
         /// </remarks>

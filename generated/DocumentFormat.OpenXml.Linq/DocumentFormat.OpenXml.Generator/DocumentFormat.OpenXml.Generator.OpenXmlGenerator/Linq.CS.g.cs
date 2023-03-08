@@ -23,7 +23,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="chartStyle" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="bodyPr" />, <see cref="defRPr" />, <see cref="effectRef" />, <see cref="extLst" />, <see cref="fillRef" />, <see cref="fontRef" />, <see cref="lineWidthScale" />, <see cref="lnRef" />, <see cref="spPr" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.mods" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: AxisTitle.</description></item>
         /// </list>
         /// </remarks>
@@ -51,7 +50,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="chartStyle" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="bodyPr" />, <see cref="defRPr" />, <see cref="effectRef" />, <see cref="extLst" />, <see cref="fillRef" />, <see cref="fontRef" />, <see cref="lineWidthScale" />, <see cref="lnRef" />, <see cref="spPr" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.mods" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: CategoryAxis.</description></item>
         /// </list>
         /// </remarks>
@@ -65,7 +63,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="chartStyle" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="bodyPr" />, <see cref="defRPr" />, <see cref="effectRef" />, <see cref="extLst" />, <see cref="fillRef" />, <see cref="fontRef" />, <see cref="lineWidthScale" />, <see cref="lnRef" />, <see cref="spPr" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.mods" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: ChartArea.</description></item>
         /// </list>
         /// </remarks>
@@ -107,7 +104,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="chartStyle" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="bodyPr" />, <see cref="defRPr" />, <see cref="effectRef" />, <see cref="extLst" />, <see cref="fillRef" />, <see cref="fontRef" />, <see cref="lineWidthScale" />, <see cref="lnRef" />, <see cref="spPr" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.mods" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: DataLabel.</description></item>
         /// </list>
         /// </remarks>
@@ -121,7 +117,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="chartStyle" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="bodyPr" />, <see cref="defRPr" />, <see cref="effectRef" />, <see cref="extLst" />, <see cref="fillRef" />, <see cref="fontRef" />, <see cref="lineWidthScale" />, <see cref="lnRef" />, <see cref="spPr" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.mods" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: DataLabelCallout.</description></item>
         /// </list>
         /// </remarks>
@@ -135,7 +130,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="chartStyle" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="bodyPr" />, <see cref="defRPr" />, <see cref="effectRef" />, <see cref="extLst" />, <see cref="fillRef" />, <see cref="fontRef" />, <see cref="lineWidthScale" />, <see cref="lnRef" />, <see cref="spPr" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.mods" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: DataPoint.</description></item>
         /// </list>
         /// </remarks>
@@ -149,7 +143,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="chartStyle" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="bodyPr" />, <see cref="defRPr" />, <see cref="effectRef" />, <see cref="extLst" />, <see cref="fillRef" />, <see cref="fontRef" />, <see cref="lineWidthScale" />, <see cref="lnRef" />, <see cref="spPr" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.mods" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: DataPoint3D.</description></item>
         /// </list>
         /// </remarks>
@@ -163,7 +156,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="chartStyle" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="bodyPr" />, <see cref="defRPr" />, <see cref="effectRef" />, <see cref="extLst" />, <see cref="fillRef" />, <see cref="fontRef" />, <see cref="lineWidthScale" />, <see cref="lnRef" />, <see cref="spPr" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.mods" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: DataPointLine.</description></item>
         /// </list>
         /// </remarks>
@@ -177,7 +169,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="chartStyle" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="bodyPr" />, <see cref="defRPr" />, <see cref="effectRef" />, <see cref="extLst" />, <see cref="fillRef" />, <see cref="fontRef" />, <see cref="lineWidthScale" />, <see cref="lnRef" />, <see cref="spPr" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.mods" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: DataPointMarker.</description></item>
         /// </list>
         /// </remarks>
@@ -204,7 +195,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="chartStyle" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="bodyPr" />, <see cref="defRPr" />, <see cref="effectRef" />, <see cref="extLst" />, <see cref="fillRef" />, <see cref="fontRef" />, <see cref="lineWidthScale" />, <see cref="lnRef" />, <see cref="spPr" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.mods" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: DataPointWireframe.</description></item>
         /// </list>
         /// </remarks>
@@ -218,7 +208,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="chartStyle" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="bodyPr" />, <see cref="defRPr" />, <see cref="effectRef" />, <see cref="extLst" />, <see cref="fillRef" />, <see cref="fontRef" />, <see cref="lineWidthScale" />, <see cref="lnRef" />, <see cref="spPr" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.mods" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: DataTableStyle.</description></item>
         /// </list>
         /// </remarks>
@@ -246,7 +235,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="chartStyle" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="bodyPr" />, <see cref="defRPr" />, <see cref="effectRef" />, <see cref="extLst" />, <see cref="fillRef" />, <see cref="fontRef" />, <see cref="lineWidthScale" />, <see cref="lnRef" />, <see cref="spPr" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.mods" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: DownBar.</description></item>
         /// </list>
         /// </remarks>
@@ -260,7 +248,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="chartStyle" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="bodyPr" />, <see cref="defRPr" />, <see cref="effectRef" />, <see cref="extLst" />, <see cref="fillRef" />, <see cref="fontRef" />, <see cref="lineWidthScale" />, <see cref="lnRef" />, <see cref="spPr" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.mods" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: DropLine.</description></item>
         /// </list>
         /// </remarks>
@@ -274,7 +261,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="axisTitle" />, <see cref="categoryAxis" />, <see cref="chartArea" />, <see cref="dataLabel" />, <see cref="dataLabelCallout" />, <see cref="dataPoint" />, <see cref="dataPoint3D" />, <see cref="dataPointLine" />, <see cref="dataPointMarker" />, <see cref="dataPointWireframe" />, <see cref="dataTable" />, <see cref="downBar" />, <see cref="dropLine" />, <see cref="errorBar" />, <see cref="floor" />, <see cref="gridlineMajor" />, <see cref="gridlineMinor" />, <see cref="hiLoLine" />, <see cref="leaderLine" />, <see cref="legend" />, <see cref="plotArea" />, <see cref="plotArea3D" />, <see cref="seriesAxis" />, <see cref="seriesLine" />, <see cref="title" />, <see cref="trendline" />, <see cref="trendlineLabel" />, <see cref="upBar" />, <see cref="valueAxis" />, <see cref="wall" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="A.hslClr" />, <see cref="A.prstClr" />, <see cref="A.schemeClr" />, <see cref="A.scrgbClr" />, <see cref="A.srgbClr" />, <see cref="A.sysClr" />, <see cref="styleClr" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.idx" />, <see cref="NoNamespace.mods" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: EffectReference.</description></item>
         /// </list>
         /// </remarks>
@@ -288,7 +274,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="chartStyle" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="bodyPr" />, <see cref="defRPr" />, <see cref="effectRef" />, <see cref="extLst" />, <see cref="fillRef" />, <see cref="fontRef" />, <see cref="lineWidthScale" />, <see cref="lnRef" />, <see cref="spPr" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.mods" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: ErrorBar.</description></item>
         /// </list>
         /// </remarks>
@@ -315,7 +300,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="axisTitle" />, <see cref="categoryAxis" />, <see cref="chartArea" />, <see cref="dataLabel" />, <see cref="dataLabelCallout" />, <see cref="dataPoint" />, <see cref="dataPoint3D" />, <see cref="dataPointLine" />, <see cref="dataPointMarker" />, <see cref="dataPointWireframe" />, <see cref="dataTable" />, <see cref="downBar" />, <see cref="dropLine" />, <see cref="errorBar" />, <see cref="floor" />, <see cref="gridlineMajor" />, <see cref="gridlineMinor" />, <see cref="hiLoLine" />, <see cref="leaderLine" />, <see cref="legend" />, <see cref="plotArea" />, <see cref="plotArea3D" />, <see cref="seriesAxis" />, <see cref="seriesLine" />, <see cref="title" />, <see cref="trendline" />, <see cref="trendlineLabel" />, <see cref="upBar" />, <see cref="valueAxis" />, <see cref="wall" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="A.hslClr" />, <see cref="A.prstClr" />, <see cref="A.schemeClr" />, <see cref="A.scrgbClr" />, <see cref="A.srgbClr" />, <see cref="A.sysClr" />, <see cref="styleClr" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.idx" />, <see cref="NoNamespace.mods" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: FillReference.</description></item>
         /// </list>
         /// </remarks>
@@ -329,7 +313,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="chartStyle" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="bodyPr" />, <see cref="defRPr" />, <see cref="effectRef" />, <see cref="extLst" />, <see cref="fillRef" />, <see cref="fontRef" />, <see cref="lineWidthScale" />, <see cref="lnRef" />, <see cref="spPr" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.mods" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: Floor.</description></item>
         /// </list>
         /// </remarks>
@@ -357,7 +340,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="chartStyle" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="bodyPr" />, <see cref="defRPr" />, <see cref="effectRef" />, <see cref="extLst" />, <see cref="fillRef" />, <see cref="fontRef" />, <see cref="lineWidthScale" />, <see cref="lnRef" />, <see cref="spPr" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.mods" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: GridlineMajor.</description></item>
         /// </list>
         /// </remarks>
@@ -371,7 +353,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="chartStyle" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="bodyPr" />, <see cref="defRPr" />, <see cref="effectRef" />, <see cref="extLst" />, <see cref="fillRef" />, <see cref="fontRef" />, <see cref="lineWidthScale" />, <see cref="lnRef" />, <see cref="spPr" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.mods" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: GridlineMinor.</description></item>
         /// </list>
         /// </remarks>
@@ -385,7 +366,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="chartStyle" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="bodyPr" />, <see cref="defRPr" />, <see cref="effectRef" />, <see cref="extLst" />, <see cref="fillRef" />, <see cref="fontRef" />, <see cref="lineWidthScale" />, <see cref="lnRef" />, <see cref="spPr" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.mods" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: HiLoLine.</description></item>
         /// </list>
         /// </remarks>
@@ -399,7 +379,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="chartStyle" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="bodyPr" />, <see cref="defRPr" />, <see cref="effectRef" />, <see cref="extLst" />, <see cref="fillRef" />, <see cref="fontRef" />, <see cref="lineWidthScale" />, <see cref="lnRef" />, <see cref="spPr" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.mods" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: LeaderLine.</description></item>
         /// </list>
         /// </remarks>
@@ -413,7 +392,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="chartStyle" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="bodyPr" />, <see cref="defRPr" />, <see cref="effectRef" />, <see cref="extLst" />, <see cref="fillRef" />, <see cref="fontRef" />, <see cref="lineWidthScale" />, <see cref="lnRef" />, <see cref="spPr" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.mods" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: LegendStyle.</description></item>
         /// </list>
         /// </remarks>
@@ -439,7 +417,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="axisTitle" />, <see cref="categoryAxis" />, <see cref="chartArea" />, <see cref="dataLabel" />, <see cref="dataLabelCallout" />, <see cref="dataPoint" />, <see cref="dataPoint3D" />, <see cref="dataPointLine" />, <see cref="dataPointMarker" />, <see cref="dataPointWireframe" />, <see cref="dataTable" />, <see cref="downBar" />, <see cref="dropLine" />, <see cref="errorBar" />, <see cref="floor" />, <see cref="gridlineMajor" />, <see cref="gridlineMinor" />, <see cref="hiLoLine" />, <see cref="leaderLine" />, <see cref="legend" />, <see cref="plotArea" />, <see cref="plotArea3D" />, <see cref="seriesAxis" />, <see cref="seriesLine" />, <see cref="title" />, <see cref="trendline" />, <see cref="trendlineLabel" />, <see cref="upBar" />, <see cref="valueAxis" />, <see cref="wall" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="A.hslClr" />, <see cref="A.prstClr" />, <see cref="A.schemeClr" />, <see cref="A.scrgbClr" />, <see cref="A.srgbClr" />, <see cref="A.sysClr" />, <see cref="styleClr" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.idx" />, <see cref="NoNamespace.mods" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: LineReference.</description></item>
         /// </list>
         /// </remarks>
@@ -453,7 +430,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="chartStyle" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="bodyPr" />, <see cref="defRPr" />, <see cref="effectRef" />, <see cref="extLst" />, <see cref="fillRef" />, <see cref="fontRef" />, <see cref="lineWidthScale" />, <see cref="lnRef" />, <see cref="spPr" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.mods" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: PlotArea.</description></item>
         /// </list>
         /// </remarks>
@@ -467,7 +443,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="chartStyle" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="bodyPr" />, <see cref="defRPr" />, <see cref="effectRef" />, <see cref="extLst" />, <see cref="fillRef" />, <see cref="fontRef" />, <see cref="lineWidthScale" />, <see cref="lnRef" />, <see cref="spPr" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.mods" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: PlotArea3D.</description></item>
         /// </list>
         /// </remarks>
@@ -481,7 +456,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="chartStyle" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="bodyPr" />, <see cref="defRPr" />, <see cref="effectRef" />, <see cref="extLst" />, <see cref="fillRef" />, <see cref="fontRef" />, <see cref="lineWidthScale" />, <see cref="lnRef" />, <see cref="spPr" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.mods" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: SeriesAxis.</description></item>
         /// </list>
         /// </remarks>
@@ -495,7 +469,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="chartStyle" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="bodyPr" />, <see cref="defRPr" />, <see cref="effectRef" />, <see cref="extLst" />, <see cref="fillRef" />, <see cref="fontRef" />, <see cref="lineWidthScale" />, <see cref="lnRef" />, <see cref="spPr" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.mods" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: SeriesLine.</description></item>
         /// </list>
         /// </remarks>
@@ -537,7 +510,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="chartStyle" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="bodyPr" />, <see cref="defRPr" />, <see cref="effectRef" />, <see cref="extLst" />, <see cref="fillRef" />, <see cref="fontRef" />, <see cref="lineWidthScale" />, <see cref="lnRef" />, <see cref="spPr" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.mods" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: TitleStyle.</description></item>
         /// </list>
         /// </remarks>
@@ -551,7 +523,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="chartStyle" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="bodyPr" />, <see cref="defRPr" />, <see cref="effectRef" />, <see cref="extLst" />, <see cref="fillRef" />, <see cref="fontRef" />, <see cref="lineWidthScale" />, <see cref="lnRef" />, <see cref="spPr" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.mods" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: TrendlineStyle.</description></item>
         /// </list>
         /// </remarks>
@@ -565,7 +536,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="chartStyle" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="bodyPr" />, <see cref="defRPr" />, <see cref="effectRef" />, <see cref="extLst" />, <see cref="fillRef" />, <see cref="fontRef" />, <see cref="lineWidthScale" />, <see cref="lnRef" />, <see cref="spPr" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.mods" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: TrendlineLabel.</description></item>
         /// </list>
         /// </remarks>
@@ -579,7 +549,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="chartStyle" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="bodyPr" />, <see cref="defRPr" />, <see cref="effectRef" />, <see cref="extLst" />, <see cref="fillRef" />, <see cref="fontRef" />, <see cref="lineWidthScale" />, <see cref="lnRef" />, <see cref="spPr" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.mods" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: UpBar.</description></item>
         /// </list>
         /// </remarks>
@@ -593,7 +562,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="chartStyle" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="bodyPr" />, <see cref="defRPr" />, <see cref="effectRef" />, <see cref="extLst" />, <see cref="fillRef" />, <see cref="fontRef" />, <see cref="lineWidthScale" />, <see cref="lnRef" />, <see cref="spPr" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.mods" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: ValueAxis.</description></item>
         /// </list>
         /// </remarks>
@@ -620,7 +588,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="chartStyle" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="bodyPr" />, <see cref="defRPr" />, <see cref="effectRef" />, <see cref="extLst" />, <see cref="fillRef" />, <see cref="fontRef" />, <see cref="lineWidthScale" />, <see cref="lnRef" />, <see cref="spPr" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.mods" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: Wall.</description></item>
         /// </list>
         /// </remarks>
