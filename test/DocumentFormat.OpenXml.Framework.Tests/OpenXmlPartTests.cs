@@ -32,12 +32,14 @@ namespace DocumentFormat.OpenXml.Framework.Tests
             var targetFeature = Substitute.For<ITargetFeature>();
             var partExtensionFeature = Substitute.For<IPartExtensionFeature>();
             var partUriFeature = Substitute.For<IPartUriFeature>();
+            var contentTypeFeature = Substitute.For<IContentTypeFeature>();
             var expectedUri = new Uri("/some/path.jpg", UriKind.Relative);
             partUriFeature.CreatePartUri(ContentType, OpenXmlPackage.Uri, string.Empty, string.Empty, TargetExt).Returns(expectedUri);
 
             features.Set(partUriFeature);
             features.Set(partExtensionFeature);
             features.Set(targetFeature);
+            features.Set(contentTypeFeature);
 
             // Act
             part.CreateInternal(package, null, ContentType, TargetExt);
