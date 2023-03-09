@@ -622,7 +622,8 @@ namespace DocumentFormat.OpenXml.Packaging
 
         private partial class WordprocessingDocumentFeatures : TypedPackageFeatureCollection<WordprocessingDocumentType, MainDocumentPart>,
             IApplicationTypeFeature,
-            IMainPartFeature
+            IMainPartFeature,
+            IProgrammaticIdentifierFeature
         {
             public WordprocessingDocumentFeatures(TypedOpenXmlPackage package)
                 : base(package)
@@ -634,6 +635,8 @@ namespace DocumentFormat.OpenXml.Packaging
             protected override MainDocumentPart CreateMainPart() => new();
 
             protected override string RelationshipType => MainDocumentPart.RelationshipTypeConstant;
+
+            string IProgrammaticIdentifierFeature.ProgramId => "Word.Document";
 
             protected override string? GetContentType(WordprocessingDocumentType type) => type switch
             {
