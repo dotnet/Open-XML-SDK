@@ -90,7 +90,7 @@ public static class FlatOpcExtensions
     /// <returns>The corresponding <see cref="XElement"/>.</returns>
     private static XElement GetContentsAsXml(IPackagePart part, HashSet<Uri> altChunkPartUris)
     {
-#if FEATURE_XML_PROHIBIT_DTD
+#if NET35
         var settings = default(XmlReaderSettings);
 #else
         var settings = new XmlReaderSettings
