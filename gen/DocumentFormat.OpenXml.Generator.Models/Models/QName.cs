@@ -1,9 +1,12 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Framework;
+using System.Net.NetworkInformation;
+
 namespace DocumentFormat.OpenXml.Generator.Models;
 
-public class QName
+public sealed record class QName : IComparable<QName>
 {
     public QName(string prefix, string name)
     {
@@ -25,19 +28,21 @@ public class QName
         _ => string.Empty,
     };
 
-    public override bool Equals(object? obj)
+    public bool Equals(QName other)
     {
-        if (obj is QName other)
-        {
-            return string.Equals(Prefix, other.Prefix, StringComparison.Ordinal)
-                && string.Equals(Name, other.Name, StringComparison.Ordinal);
-        }
-
-        return false;
+        return string.Equals(Prefix, other.Prefix, StringComparison.Ordinal)
+            && string.Equals(Name, other.Name, StringComparison.Ordinal);
     }
 
     public override int GetHashCode()
-        => Prefix.GetHashCode() ^ (Name?.GetHashCode() ?? 0);
+    {
+        var hash = default(HashCode);
+
+        hash.Add(Prefix, StringComparer.Ordinal);
+        hash.Add(Name, StringComparer.Ordinal);
+
+        return hash.ToHashCode();
+    }
 
     public static QName Parse(string input)
     {
@@ -49,6 +54,18 @@ public class QName
         }
 
         return new(input.Substring(0, idx), input.Substring(idx + 1));
+    }
+
+    public int CompareTo(QName other)
+    {
+        var prefix = Prefix.CompareTo(other.Prefix);
+
+        if (prefix != 0)
+        {
+            return prefix;
+        }
+
+        return Name.CompareTo(other.Name);
     }
 
     public static implicit operator string(QName qname) => qname.ToString();

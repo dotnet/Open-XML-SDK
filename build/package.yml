@@ -50,6 +50,7 @@ jobs:
         targetType: 'inline'
         script: |
           git status
+          git diff
           if(git status --porcelain -- .\generated){
             Write-Host  "##vso[task.LogIssue type=error;]Generated files are not in sync"
             exit 1

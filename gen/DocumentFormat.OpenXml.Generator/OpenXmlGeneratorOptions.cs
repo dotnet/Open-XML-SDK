@@ -12,4 +12,6 @@ public record OpenXmlGeneratorOptions
     public bool GenerateSchema { get; init; }
 
     public bool GenerateFactories { get; init; }
+
+    public bool GenerateLinq { get; init; }
 }
