@@ -8,9 +8,13 @@
     <IncludeFrameworkShims>true</IncludeFrameworkShims>
   </PropertyGroup>
 
+  <PropertyGroup>
+    <IncludeSourceGenerator>true</IncludeSourceGenerator>
+    <DocumentFormat_OpenXml_Generator_Linq>true</DocumentFormat_OpenXml_Generator_Linq>
+  </PropertyGroup>
+
   <ItemGroup>
-    <ProjectReference Include="..\DocumentFormat.OpenXml.Features\DocumentFormat.OpenXml.Features.csproj" />
-    <ProjectReference Include="..\DocumentFormat.OpenXml\DocumentFormat.OpenXml.csproj" />
+    <ProjectReference Include="..\DocumentFormat.OpenXml.Framework\DocumentFormat.OpenXml.Framework.csproj" />
   </ItemGroup>
 
   <Choose>
