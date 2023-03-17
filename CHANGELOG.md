@@ -42,6 +42,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Fixed
 - Fixed incorrect file extensions for vbaProject files (#1292)
+- Fixed incorrect casing for customXml (#1351)
 
 ## [2.19.0] - 2022-12-14
 
