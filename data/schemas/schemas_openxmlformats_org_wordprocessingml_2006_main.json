@@ -97,17 +97,6 @@
           "Validators": [
             {
               "Name": "RequiredValidator"
-            },
-            {
-              "Arguments": [
-                {
-                  "Type": "Long",
-                  "Name": "MaxLength",
-                  "Value": "255"
-                }
-              ],
-              "Name": "StringValidator",
-              "IsInitialVersion": true
             }
           ]
         },
@@ -116,6 +105,24 @@
           "PropertyName": "Date",
           "Type": "DateTimeValue",
           "PropertyComments": "date"
+        },
+        {
+          "QName": "w16du:dateUtc",
+          "PropertyName": "DateUtc",
+          "Type": "DateTimeValue",
+          "Version": "Microsoft365",
+          "PropertyComments": "dateUtc",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Microsoft365"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            }
+          ]
         },
         {
           "QName": "w:id",
@@ -183,17 +190,6 @@
           "Validators": [
             {
               "Name": "RequiredValidator"
-            },
-            {
-              "Arguments": [
-                {
-                  "Type": "Long",
-                  "Name": "MaxLength",
-                  "Value": "255"
-                }
-              ],
-              "Name": "StringValidator",
-              "IsInitialVersion": true
             }
           ]
         },
@@ -202,6 +198,24 @@
           "PropertyName": "Date",
           "Type": "DateTimeValue",
           "PropertyComments": "date"
+        },
+        {
+          "QName": "w16du:dateUtc",
+          "PropertyName": "DateUtc",
+          "Type": "DateTimeValue",
+          "Version": "Microsoft365",
+          "PropertyComments": "dateUtc",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Microsoft365"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            }
+          ]
         },
         {
           "QName": "w:id",
@@ -3662,17 +3676,6 @@
           "Validators": [
             {
               "Name": "RequiredValidator"
-            },
-            {
-              "Arguments": [
-                {
-                  "Type": "Long",
-                  "Name": "MaxLength",
-                  "Value": "255"
-                }
-              ],
-              "Name": "StringValidator",
-              "IsInitialVersion": true
             }
           ]
         },
@@ -3681,6 +3684,24 @@
           "PropertyName": "Date",
           "Type": "DateTimeValue",
           "PropertyComments": "date"
+        },
+        {
+          "QName": "w16du:dateUtc",
+          "PropertyName": "DateUtc",
+          "Type": "DateTimeValue",
+          "Version": "Microsoft365",
+          "PropertyComments": "dateUtc",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Microsoft365"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            }
+          ]
         },
         {
           "QName": "w:id",
@@ -5920,17 +5941,6 @@
           "Validators": [
             {
               "Name": "RequiredValidator"
-            },
-            {
-              "Arguments": [
-                {
-                  "Type": "Long",
-                  "Name": "MaxLength",
-                  "Value": "255"
-                }
-              ],
-              "Name": "StringValidator",
-              "IsInitialVersion": true
             }
           ]
         },
@@ -5939,6 +5949,24 @@
           "PropertyName": "Date",
           "Type": "DateTimeValue",
           "PropertyComments": "date"
+        },
+        {
+          "QName": "w16du:dateUtc",
+          "PropertyName": "DateUtc",
+          "Type": "DateTimeValue",
+          "Version": "Microsoft365",
+          "PropertyComments": "dateUtc",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Microsoft365"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            }
+          ]
         },
         {
           "QName": "w:id",
@@ -6808,17 +6836,6 @@
           "Validators": [
             {
               "Name": "RequiredValidator"
-            },
-            {
-              "Arguments": [
-                {
-                  "Type": "Long",
-                  "Name": "MaxLength",
-                  "Value": "255"
-                }
-              ],
-              "Name": "StringValidator",
-              "IsInitialVersion": true
             }
           ]
         },
@@ -6827,6 +6844,24 @@
           "PropertyName": "Date",
           "Type": "DateTimeValue",
           "PropertyComments": "date"
+        },
+        {
+          "QName": "w16du:dateUtc",
+          "PropertyName": "DateUtc",
+          "Type": "DateTimeValue",
+          "Version": "Microsoft365",
+          "PropertyComments": "dateUtc",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Microsoft365"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            }
+          ]
         },
         {
           "QName": "w:id",
@@ -6935,17 +6970,6 @@
           "Validators": [
             {
               "Name": "RequiredValidator"
-            },
-            {
-              "Arguments": [
-                {
-                  "Type": "Long",
-                  "Name": "MaxLength",
-                  "Value": "255"
-                }
-              ],
-              "Name": "StringValidator",
-              "IsInitialVersion": true
             }
           ]
         },
@@ -6954,6 +6978,24 @@
           "PropertyName": "Date",
           "Type": "DateTimeValue",
           "PropertyComments": "date"
+        },
+        {
+          "QName": "w16du:dateUtc",
+          "PropertyName": "DateUtc",
+          "Type": "DateTimeValue",
+          "Version": "Microsoft365",
+          "PropertyComments": "dateUtc",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Microsoft365"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            }
+          ]
         },
         {
           "QName": "w:id",
@@ -7201,17 +7243,6 @@
           "Validators": [
             {
               "Name": "RequiredValidator"
-            },
-            {
-              "Arguments": [
-                {
-                  "Type": "Long",
-                  "Name": "MaxLength",
-                  "Value": "255"
-                }
-              ],
-              "Name": "StringValidator",
-              "IsInitialVersion": true
             }
           ]
         },
@@ -7220,6 +7251,24 @@
           "PropertyName": "Date",
           "Type": "DateTimeValue",
           "PropertyComments": "date"
+        },
+        {
+          "QName": "w16du:dateUtc",
+          "PropertyName": "DateUtc",
+          "Type": "DateTimeValue",
+          "Version": "Microsoft365",
+          "PropertyComments": "dateUtc",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Microsoft365"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            }
+          ]
         },
         {
           "QName": "w:id",
@@ -12226,17 +12275,6 @@
           "Validators": [
             {
               "Name": "RequiredValidator"
-            },
-            {
-              "Arguments": [
-                {
-                  "Type": "Long",
-                  "Name": "MaxLength",
-                  "Value": "255"
-                }
-              ],
-              "Name": "StringValidator",
-              "IsInitialVersion": true
             }
           ]
         },
@@ -12245,6 +12283,24 @@
           "PropertyName": "Date",
           "Type": "DateTimeValue",
           "PropertyComments": "date"
+        },
+        {
+          "QName": "w16du:dateUtc",
+          "PropertyName": "DateUtc",
+          "Type": "DateTimeValue",
+          "Version": "Microsoft365",
+          "PropertyComments": "dateUtc",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Microsoft365"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            }
+          ]
         },
         {
           "QName": "w:id",
@@ -29351,17 +29407,6 @@
           "Validators": [
             {
               "Name": "RequiredValidator"
-            },
-            {
-              "Arguments": [
-                {
-                  "Type": "Long",
-                  "Name": "MaxLength",
-                  "Value": "255"
-                }
-              ],
-              "Name": "StringValidator",
-              "IsInitialVersion": true
             }
           ]
         },
@@ -29370,6 +29415,24 @@
           "PropertyName": "Date",
           "Type": "DateTimeValue",
           "PropertyComments": "date"
+        },
+        {
+          "QName": "w16du:dateUtc",
+          "PropertyName": "DateUtc",
+          "Type": "DateTimeValue",
+          "Version": "Microsoft365",
+          "PropertyComments": "dateUtc",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Microsoft365"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            }
+          ]
         },
         {
           "QName": "w:id",
@@ -31384,17 +31447,6 @@
           "Validators": [
             {
               "Name": "RequiredValidator"
-            },
-            {
-              "Arguments": [
-                {
-                  "Type": "Long",
-                  "Name": "MaxLength",
-                  "Value": "255"
-                }
-              ],
-              "Name": "StringValidator",
-              "IsInitialVersion": true
             }
           ]
         },
@@ -31403,6 +31455,24 @@
           "PropertyName": "Date",
           "Type": "DateTimeValue",
           "PropertyComments": "date"
+        },
+        {
+          "QName": "w16du:dateUtc",
+          "PropertyName": "DateUtc",
+          "Type": "DateTimeValue",
+          "Version": "Microsoft365",
+          "PropertyComments": "dateUtc",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Microsoft365"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            }
+          ]
         },
         {
           "QName": "w:id",
@@ -31483,17 +31553,6 @@
           "Validators": [
             {
               "Name": "RequiredValidator"
-            },
-            {
-              "Arguments": [
-                {
-                  "Type": "Long",
-                  "Name": "MaxLength",
-                  "Value": "255"
-                }
-              ],
-              "Name": "StringValidator",
-              "IsInitialVersion": true
             }
           ]
         },
@@ -31502,6 +31561,24 @@
           "PropertyName": "Date",
           "Type": "DateTimeValue",
           "PropertyComments": "date"
+        },
+        {
+          "QName": "w16du:dateUtc",
+          "PropertyName": "DateUtc",
+          "Type": "DateTimeValue",
+          "Version": "Microsoft365",
+          "PropertyComments": "dateUtc",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Microsoft365"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            }
+          ]
         },
         {
           "QName": "w:id",
@@ -36013,17 +36090,6 @@
           "Validators": [
             {
               "Name": "RequiredValidator"
-            },
-            {
-              "Arguments": [
-                {
-                  "Type": "Long",
-                  "Name": "MaxLength",
-                  "Value": "255"
-                }
-              ],
-              "Name": "StringValidator",
-              "IsInitialVersion": true
             }
           ]
         },
@@ -36032,6 +36098,24 @@
           "PropertyName": "Date",
           "Type": "DateTimeValue",
           "PropertyComments": "date"
+        },
+        {
+          "QName": "w16du:dateUtc",
+          "PropertyName": "DateUtc",
+          "Type": "DateTimeValue",
+          "Version": "Microsoft365",
+          "PropertyComments": "dateUtc",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Microsoft365"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            }
+          ]
         },
         {
           "QName": "w:id",
@@ -36446,17 +36530,6 @@
           "Validators": [
             {
               "Name": "RequiredValidator"
-            },
-            {
-              "Arguments": [
-                {
-                  "Type": "Long",
-                  "Name": "MaxLength",
-                  "Value": "255"
-                }
-              ],
-              "Name": "StringValidator",
-              "IsInitialVersion": true
             }
           ]
         },
@@ -36465,6 +36538,24 @@
           "PropertyName": "Date",
           "Type": "DateTimeValue",
           "PropertyComments": "date"
+        },
+        {
+          "QName": "w16du:dateUtc",
+          "PropertyName": "DateUtc",
+          "Type": "DateTimeValue",
+          "Version": "Microsoft365",
+          "PropertyComments": "dateUtc",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Microsoft365"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            }
+          ]
         },
         {
           "QName": "w:id",
@@ -36540,17 +36631,6 @@
           "Validators": [
             {
               "Name": "RequiredValidator"
-            },
-            {
-              "Arguments": [
-                {
-                  "Type": "Long",
-                  "Name": "MaxLength",
-                  "Value": "255"
-                }
-              ],
-              "Name": "StringValidator",
-              "IsInitialVersion": true
             }
           ]
         },
@@ -36559,6 +36639,24 @@
           "PropertyName": "Date",
           "Type": "DateTimeValue",
           "PropertyComments": "date"
+        },
+        {
+          "QName": "w16du:dateUtc",
+          "PropertyName": "DateUtc",
+          "Type": "DateTimeValue",
+          "Version": "Microsoft365",
+          "PropertyComments": "dateUtc",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Microsoft365"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            }
+          ]
         },
         {
           "QName": "w:id",
@@ -43239,17 +43337,6 @@
           "Validators": [
             {
               "Name": "RequiredValidator"
-            },
-            {
-              "Arguments": [
-                {
-                  "Type": "Long",
-                  "Name": "MaxLength",
-                  "Value": "255"
-                }
-              ],
-              "Name": "StringValidator",
-              "IsInitialVersion": true
             }
           ]
         },
@@ -43258,6 +43345,24 @@
           "PropertyName": "Date",
           "Type": "DateTimeValue",
           "PropertyComments": "date"
+        },
+        {
+          "QName": "w16du:dateUtc",
+          "PropertyName": "DateUtc",
+          "Type": "DateTimeValue",
+          "Version": "Microsoft365",
+          "PropertyComments": "dateUtc",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Microsoft365"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            }
+          ]
         },
         {
           "QName": "w:id",
@@ -46821,17 +46926,6 @@
           "Validators": [
             {
               "Name": "RequiredValidator"
-            },
-            {
-              "Arguments": [
-                {
-                  "Type": "Long",
-                  "Name": "MaxLength",
-                  "Value": "255"
-                }
-              ],
-              "Name": "StringValidator",
-              "IsInitialVersion": true
             }
           ]
         },
@@ -46840,6 +46934,24 @@
           "PropertyName": "Date",
           "Type": "DateTimeValue",
           "PropertyComments": "date"
+        },
+        {
+          "QName": "w16du:dateUtc",
+          "PropertyName": "DateUtc",
+          "Type": "DateTimeValue",
+          "Version": "Microsoft365",
+          "PropertyComments": "dateUtc",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Microsoft365"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            }
+          ]
         },
         {
           "QName": "w:id",

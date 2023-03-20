@@ -57,6 +57,11 @@
     "Version": "Office2019"
   },
   {
+    "Prefix": "aif",
+    "Uri": "http://schemas.microsoft.com/office/drawing/2022/imageformula",
+    "Version": "Microsoft365"
+  },
+  {
     "Prefix": "aink",
     "Uri": "http://schemas.microsoft.com/office/drawing/2016/ink",
     "Version": "Office2019"
@@ -345,6 +350,11 @@
     "Version": "Microsoft365"
   },
   {
+    "Prefix": "p228",
+    "Uri": "http://schemas.microsoft.com/office/powerpoint/2022/08/main",
+    "Version": "Microsoft365"
+  },
+  {
     "Prefix": "packaging",
     "Uri": "http://schemas.microsoft.com/office/internal/2007/ofapi/packaging"
   },
@@ -459,6 +469,11 @@
     "Prefix": "w16cur",
     "Uri": "http://schemas.microsoft.com/office/word/2018/wordml",
     "Version": "Office2021"
+  },
+  {
+    "Prefix": "w16du",
+    "Uri": "http://schemas.microsoft.com/office/word/2023/wordml/word16du",
+    "Version": "Microsoft365"
   },
   {
     "Prefix": "w16sdtdh",

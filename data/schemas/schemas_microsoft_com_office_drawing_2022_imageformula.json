@@ -1,0 +1,21 @@
+{
+  "TargetNamespace": "http://schemas.microsoft.com/office/drawing/2022/imageformula",
+  "Types": [
+    {
+      "Name": "aif:CT_ImageFormula/aif:imageFormula",
+      "ClassName": "ImageFormula",
+      "Summary": "Defines the ImageFormula Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Microsoft365",
+      "Attributes": [
+        {
+          "QName": ":formula",
+          "Type": "StringValue",
+          "Version": "Microsoft365",
+          "PropertyComments": "formula"
+        }
+      ]
+    }
+  ]
+}
