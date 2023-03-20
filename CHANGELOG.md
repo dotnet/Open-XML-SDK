@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## Added
 - Packages can now be saved on .NET Core and .NET 5+ if constructed with a path or stream (#1307).
 - Packages can now support malformed URIs (such as relationships with a URI such as `mailto:person@`)
+- Added DocumentFormat.OpenXml.Office.Drawing.Y2022.ImageFormula namespace
+- Added DocumentFormat.OpenXml.Office.Word.Y2023.WordML.Word16DU namespace
+- Added DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main namespace
 
 ## Changed
 - When validation finds incorrect part, it will now include the relationship type rather than a class name
@@ -36,6 +39,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Fixed incorrect casing for customXml (#1351)
 
 ## [2.20.0]
+
+### Added
+- Added DocumentFormat.OpenXml.Office.Drawing.Y2022.ImageFormula namespace
+- Added DocumentFormat.OpenXml.Office.Word.Y2023.WordML.Word16DU namespace
+- Added DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main namespace
 
 ### Changed
 - Marked all obsoleted APIs as compile as error. These will be removed in the next release
