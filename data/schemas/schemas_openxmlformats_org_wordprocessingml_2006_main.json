@@ -97,6 +97,17 @@
           "Validators": [
             {
               "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MaxLength",
+                  "Value": "255"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
             }
           ]
         },
@@ -190,6 +201,17 @@
           "Validators": [
             {
               "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MaxLength",
+                  "Value": "255"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
             }
           ]
         },
@@ -3676,6 +3698,17 @@
           "Validators": [
             {
               "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MaxLength",
+                  "Value": "255"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
             }
           ]
         },
@@ -5941,6 +5974,17 @@
           "Validators": [
             {
               "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MaxLength",
+                  "Value": "255"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
             }
           ]
         },
@@ -6836,6 +6880,17 @@
           "Validators": [
             {
               "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MaxLength",
+                  "Value": "255"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
             }
           ]
         },
@@ -6970,6 +7025,17 @@
           "Validators": [
             {
               "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MaxLength",
+                  "Value": "255"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
             }
           ]
         },
@@ -7243,6 +7309,17 @@
           "Validators": [
             {
               "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MaxLength",
+                  "Value": "255"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
             }
           ]
         },
@@ -12275,6 +12352,17 @@
           "Validators": [
             {
               "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MaxLength",
+                  "Value": "255"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
             }
           ]
         },
@@ -29407,6 +29495,17 @@
           "Validators": [
             {
               "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MaxLength",
+                  "Value": "255"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
             }
           ]
         },
@@ -31447,6 +31546,17 @@
           "Validators": [
             {
               "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MaxLength",
+                  "Value": "255"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
             }
           ]
         },
@@ -31553,6 +31663,17 @@
           "Validators": [
             {
               "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MaxLength",
+                  "Value": "255"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
             }
           ]
         },
@@ -36090,6 +36211,17 @@
           "Validators": [
             {
               "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MaxLength",
+                  "Value": "255"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
             }
           ]
         },
@@ -36530,6 +36662,17 @@
           "Validators": [
             {
               "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MaxLength",
+                  "Value": "255"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
             }
           ]
         },
@@ -36631,6 +36774,17 @@
           "Validators": [
             {
               "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MaxLength",
+                  "Value": "255"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
             }
           ]
         },
@@ -43337,6 +43491,17 @@
           "Validators": [
             {
               "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MaxLength",
+                  "Value": "255"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
             }
           ]
         },
@@ -46926,6 +47091,17 @@
           "Validators": [
             {
               "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Long",
+                  "Name": "MaxLength",
+                  "Value": "255"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
             }
           ]
         },
