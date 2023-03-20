@@ -292,7 +292,7 @@
     "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXml",
     "TargetFileExtension": ".xml",
     "TargetName": "item",
-    "TargetPath": "../customXML",
+    "TargetPath": "../customXml",
     "Parts": [
       {
         "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXmlProps",

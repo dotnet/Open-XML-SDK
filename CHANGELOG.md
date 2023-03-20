@@ -11,7 +11,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Marked `OpenXmlPackage.Package` as obsolete. This will be an implementation detail in future versions and won't be accessible (#1306)
 - Marked `OpenXmlPackage.Close` as obsolete. This will be removed in a later release, use Dispose instead (#1298)
 
-## [2.19.0]
+### Fixed
+- Fixed incorrect file extensions for vbaProject files (#1292)
+- Fixed incorrect casing for customXml (#1351)
+
+## [2.19.0] - 2022-12-14
 
 ### Added
 - .NET 6 target with support for trimming (#1243, #1240)

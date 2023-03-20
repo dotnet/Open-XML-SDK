@@ -41,7 +41,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             public GeneratedFeatures(OpenXmlPart part) : base(part) { }
             string ITargetFeature.Name => "item";
-            string ITargetFeature.Path => "../customXML";
+            string ITargetFeature.Path => "../customXml";
             private static readonly PartConstraints _partConstraints = new ()
             {
                 { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXmlProps", "CustomXmlPropertiesPart", "application/vnd.openxmlformats-officedocument.customXmlProperties+xml", false, false, FileFormatVersions.Office2007 },

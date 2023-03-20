@@ -4,7 +4,7 @@
   "RelationshipType": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXml",
   "Target": "item",
   "Paths": {
-    "General": "../customXML"
+    "General": "../customXml"
   },
   "Children": [
     {
