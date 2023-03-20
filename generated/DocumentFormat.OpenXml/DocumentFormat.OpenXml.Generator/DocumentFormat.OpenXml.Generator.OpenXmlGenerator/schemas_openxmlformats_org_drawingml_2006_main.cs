@@ -11,6 +11,7 @@ using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Office.Drawing;
 using DocumentFormat.OpenXml.Office.Drawing.Y2021.OEmbed;
 using DocumentFormat.OpenXml.Office.Drawing.Y2021.ScriptLink;
+using DocumentFormat.OpenXml.Office.Drawing.Y2022.ImageFormula;
 using DocumentFormat.OpenXml.Office.Word.Y2020.OEmbed;
 using DocumentFormat.OpenXml.Office2010.Drawing;
 using DocumentFormat.OpenXml.Office2010.Drawing.Diagram;
@@ -15359,6 +15360,7 @@ namespace DocumentFormat.OpenXml.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Drawing.DocumentClassification.ClassificationOutcome" /> <c>&lt;aclsh:classification></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Decorative" /> <c>&lt;adec:decorative></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.HyperLinkColor.HyperlinkColor" /> <c>&lt;ahyp:hlinkClr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2022.ImageFormula.ImageFormula" /> <c>&lt;aif:imageFormula></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.LiveFeedProperties" /> <c>&lt;alf:liveFeedProps></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2021.OEmbed.OEmbedShared" /> <c>&lt;aoe:oembedShared></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchStyleProperties" /> <c>&lt;ask:lineSketchStyleProps></c></description></item>
@@ -15743,6 +15745,7 @@ namespace DocumentFormat.OpenXml.Drawing
             builder.AddChild<DocumentFormat.OpenXml.Office2021.Drawing.DocumentClassification.ClassificationOutcome>();
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.Decorative>();
             builder.AddChild<DocumentFormat.OpenXml.Office2019.Drawing.HyperLinkColor.HyperlinkColor>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2022.ImageFormula.ImageFormula>();
             builder.AddChild<DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.LiveFeedProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2021.OEmbed.OEmbedShared>();
             builder.AddChild<DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchStyleProperties>();
@@ -31702,6 +31705,7 @@ namespace DocumentFormat.OpenXml.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.CameraTool" /> <c>&lt;a14:cameraTool></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ObjectProperties" /> <c>&lt;a15:objectPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.SignatureLine" /> <c>&lt;a15:signatureLine></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2022.ImageFormula.ImageFormula" /> <c>&lt;aif:imageFormula></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.LiveFeedProperties" /> <c>&lt;alf:liveFeedProps></c></description></item>
     /// </list>
     /// </remark>
@@ -31755,6 +31759,7 @@ namespace DocumentFormat.OpenXml.Drawing
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.CameraTool>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.ObjectProperties>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.SignatureLine>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Drawing.Y2022.ImageFormula.ImageFormula>();
             builder.AddChild<DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.LiveFeedProperties>();
             builder.AddElement<NonVisualPicturePropertiesExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
@@ -31768,6 +31773,7 @@ namespace DocumentFormat.OpenXml.Drawing
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.SignatureLine), 1, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.ObjectProperties), 1, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.LiveFeedProperties), 1, 1, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Drawing.Y2022.ImageFormula.ImageFormula), 1, 1, version: FileFormatVersions.Microsoft365),
                 new AnyParticle(0, 1)
             };
         }
