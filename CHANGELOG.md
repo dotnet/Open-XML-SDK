@@ -40,11 +40,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [2.20.0]
 
-### Added
-- Added DocumentFormat.OpenXml.Office.Drawing.Y2022.ImageFormula namespace
-- Added DocumentFormat.OpenXml.Office.Word.Y2023.WordML.Word16DU namespace
-- Added DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main namespace
-
 ### Changed
 - Marked all obsoleted APIs as compile as error. These will be removed in the next release
 
