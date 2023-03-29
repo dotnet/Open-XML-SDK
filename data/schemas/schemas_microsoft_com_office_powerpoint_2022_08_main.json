@@ -145,15 +145,6 @@
       "Version": "Microsoft365"
     },
     {
-      "Name": "p228:CT_TaskAssignUnassignUser/p228:unAsgn",
-      "ClassName": "UnAsgnTaskAssignUnassignUser",
-      "Summary": "Defines the UnAsgnTaskAssignUnassignUser Class.",
-      "BaseClass": "OpenXmlTaskAssignUnassignUserElement",
-      "IsDerived": true,
-      "IsLeafElement": true,
-      "Version": "Microsoft365"
-    },
-    {
       "Name": "p228:CT_TaskAssignUnassignUser/",
       "ClassName": "OpenXmlTaskAssignUnassignUserElement",
       "Summary": "Defines the OpenXmlTaskAssignUnassignUserElement Class.",
@@ -235,24 +226,6 @@
       "Name": "p:CT_Empty/p228:unasgnAll",
       "ClassName": "UnasgnAllEmpty",
       "Summary": "Defines the UnasgnAllEmpty Class.",
-      "BaseClass": "EmptyType",
-      "IsDerived": true,
-      "IsLeafElement": true,
-      "Version": "Microsoft365"
-    },
-    {
-      "Name": "p:CT_Empty/p228:deleted",
-      "ClassName": "DeletedEmpty",
-      "Summary": "Defines the DeletedEmpty Class.",
-      "BaseClass": "EmptyType",
-      "IsDerived": true,
-      "IsLeafElement": true,
-      "Version": "Microsoft365"
-    },
-    {
-      "Name": "p:CT_Empty/p228:restored",
-      "ClassName": "RestoredEmpty",
-      "Summary": "Defines the RestoredEmpty Class.",
       "BaseClass": "EmptyType",
       "IsDerived": true,
       "IsLeafElement": true,
@@ -451,9 +424,6 @@
           "Name": "p228:CT_TaskAssignUnassignUser/p228:asgn"
         },
         {
-          "Name": "p228:CT_TaskAssignUnassignUser/p228:unAsgn"
-        },
-        {
           "Name": "p:CT_Empty/p228:add"
         },
         {
@@ -473,12 +443,6 @@
         },
         {
           "Name": "p228:CT_TaskUnknownRecord/p228:unknown"
-        },
-        {
-          "Name": "p:CT_Empty/p228:deleted"
-        },
-        {
-          "Name": "p:CT_Empty/p228:restored"
         },
         {
           "Name": "p:CT_ExtensionList/p228:extLst"
@@ -510,10 +474,6 @@
             "Items": [
               {
                 "Name": "p228:CT_TaskAssignUnassignUser/p228:asgn",
-                "InitialVersion": "Microsoft365"
-              },
-              {
-                "Name": "p228:CT_TaskAssignUnassignUser/p228:unAsgn",
                 "InitialVersion": "Microsoft365"
               },
               {
@@ -552,14 +512,6 @@
               },
               {
                 "Name": "p228:CT_TaskUnknownRecord/p228:unknown",
-                "InitialVersion": "Microsoft365"
-              },
-              {
-                "Name": "p:CT_Empty/p228:deleted",
-                "InitialVersion": "Microsoft365"
-              },
-              {
-                "Name": "p:CT_Empty/p228:restored",
                 "InitialVersion": "Microsoft365"
               }
             ]

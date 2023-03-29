@@ -28,10 +28,6 @@
     "ClassName": "TaskScheduleEventInfo"
   },
   {
-    "Name": "p:CT_Empty/p228:deleted",
-    "ClassName": "DeletedEmpty"
-  },
-  {
     "Name": "p228:CT_TaskHistoryEvent/p228:event",
     "ClassName": "TaskHistoryEvent"
   },
@@ -48,20 +44,12 @@
     "ClassName": "TaskProgressEventInfo"
   },
   {
-    "Name": "p:CT_Empty/p228:restored",
-    "ClassName": "RestoredEmpty"
-  },
-  {
     "Name": "p228:CT_TaskDetails/p228:taskDetails",
     "ClassName": "TaskDetails"
   },
   {
     "Name": "p228:CT_TaskTitleEventInfo/p228:title",
     "ClassName": "TaskTitleEventInfo"
-  },
-  {
-    "Name": "p228:CT_TaskAssignUnassignUser/p228:unAsgn",
-    "ClassName": "UnAsgnTaskAssignUnassignUser"
   },
   {
     "Name": "p:CT_Empty/p228:unasgnAll",

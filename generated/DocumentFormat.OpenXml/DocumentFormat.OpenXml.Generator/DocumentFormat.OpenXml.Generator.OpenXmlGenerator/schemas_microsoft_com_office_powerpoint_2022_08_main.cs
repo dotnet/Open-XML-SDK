@@ -287,31 +287,6 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main
     }
 
     /// <summary>
-    /// <para>Defines the UnAsgnTaskAssignUnassignUser Class.</para>
-    /// <para>This class is available in Microsoft365 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is p228:unAsgn.</para>
-    /// </summary>
-    public partial class UnAsgnTaskAssignUnassignUser : OpenXmlTaskAssignUnassignUserElement
-    {
-        /// <summary>
-        /// Initializes a new instance of the UnAsgnTaskAssignUnassignUser class.
-        /// </summary>
-        public UnAsgnTaskAssignUnassignUser() : base()
-        {
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.SetSchema("p228:unAsgn");
-            builder.Availability = FileFormatVersions.Microsoft365;
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<UnAsgnTaskAssignUnassignUser>(deep);
-    }
-
-    /// <summary>
     /// <para>Defines the OpenXmlTaskAssignUnassignUserElement Class.</para>
     /// <para>This class is available in Microsoft365 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
@@ -484,56 +459,6 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<UnasgnAllEmpty>(deep);
-    }
-
-    /// <summary>
-    /// <para>Defines the DeletedEmpty Class.</para>
-    /// <para>This class is available in Microsoft365 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is p228:deleted.</para>
-    /// </summary>
-    public partial class DeletedEmpty : EmptyType
-    {
-        /// <summary>
-        /// Initializes a new instance of the DeletedEmpty class.
-        /// </summary>
-        public DeletedEmpty() : base()
-        {
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.SetSchema("p228:deleted");
-            builder.Availability = FileFormatVersions.Microsoft365;
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<DeletedEmpty>(deep);
-    }
-
-    /// <summary>
-    /// <para>Defines the RestoredEmpty Class.</para>
-    /// <para>This class is available in Microsoft365 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is p228:restored.</para>
-    /// </summary>
-    public partial class RestoredEmpty : EmptyType
-    {
-        /// <summary>
-        /// Initializes a new instance of the RestoredEmpty class.
-        /// </summary>
-        public RestoredEmpty() : base()
-        {
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.SetSchema("p228:restored");
-            builder.Availability = FileFormatVersions.Microsoft365;
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<RestoredEmpty>(deep);
     }
 
     /// <summary>
@@ -761,13 +686,10 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.AddEmpty" /> <c>&lt;p228:add></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.UnasgnAllEmpty" /> <c>&lt;p228:unasgnAll></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.DeletedEmpty" /> <c>&lt;p228:deleted></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.RestoredEmpty" /> <c>&lt;p228:restored></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.ExtensionList" /> <c>&lt;p228:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskAnchor" /> <c>&lt;p228:anchr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.AtrbtnTaskAssignUnassignUser" /> <c>&lt;p228:atrbtn></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.AsgnTaskAssignUnassignUser" /> <c>&lt;p228:asgn></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.UnAsgnTaskAssignUnassignUser" /> <c>&lt;p228:unAsgn></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskProgressEventInfo" /> <c>&lt;p228:pcntCmplt></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskScheduleEventInfo" /> <c>&lt;p228:date></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskTitleEventInfo" /> <c>&lt;p228:title></c></description></item>
@@ -835,13 +757,10 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main
             builder.Availability = FileFormatVersions.Microsoft365;
             builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.AddEmpty>();
             builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.UnasgnAllEmpty>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.DeletedEmpty>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.RestoredEmpty>();
             builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.ExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskAnchor>();
             builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.AtrbtnTaskAssignUnassignUser>();
             builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.AsgnTaskAssignUnassignUser>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.UnAsgnTaskAssignUnassignUser>();
             builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskProgressEventInfo>();
             builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskScheduleEventInfo>();
             builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskTitleEventInfo>();
@@ -864,16 +783,13 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main
                 new CompositeParticle.Builder(ParticleType.Choice, 0, 1)
                 {
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.AsgnTaskAssignUnassignUser), 1, 1, version: FileFormatVersions.Microsoft365),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.UnAsgnTaskAssignUnassignUser), 1, 1, version: FileFormatVersions.Microsoft365),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.AddEmpty), 0, 1, version: FileFormatVersions.Microsoft365),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskTitleEventInfo), 1, 1, version: FileFormatVersions.Microsoft365),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskScheduleEventInfo), 1, 1, version: FileFormatVersions.Microsoft365),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskProgressEventInfo), 1, 1, version: FileFormatVersions.Microsoft365),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.UnasgnAllEmpty), 0, 1, version: FileFormatVersions.Microsoft365),
                     new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskUndo), 1, 1, version: FileFormatVersions.Microsoft365),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskUnknownRecord), 1, 1, version: FileFormatVersions.Microsoft365),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.DeletedEmpty), 1, 1, version: FileFormatVersions.Microsoft365),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.RestoredEmpty), 1, 1, version: FileFormatVersions.Microsoft365)
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskUnknownRecord), 1, 1, version: FileFormatVersions.Microsoft365)
                 },
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.ExtensionList), 0, 1, version: FileFormatVersions.Microsoft365)
             };
