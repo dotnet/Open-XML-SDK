@@ -263,9 +263,19 @@ public static class FlatOpcExtensions
             throw new ArgumentNullException(nameof(p));
         }
 
+        // TODO: Figure out why the .NET Framework needs this
+#if NETFRAMEWORK
+        var packageFeature = new PackageFeature(p);
+        LoadFlatOpc(packageFeature, document);
+        p.Flush();
+
+        return package.WithStorage(p)
+            .UseDefaultBehavior();
+#else
         return package.WithStorage(p)
             .LoadFlatOpc(document)
             .UseDefaultBehavior();
+#endif
     }
 
     private static void AddPackageParts(XElement flatOpcPackage, IPackage package)
