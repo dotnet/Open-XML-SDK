@@ -30,6 +30,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Removed obsolete validation logic from v1 of the SDK
 - Removed obsoleted methods from 2.x
 - Removed mutable properties on OpenXmlAttribute and marked as `readonly`
+- Removed OpenXmlPackage.Close in favor of Dispose method (#1298)
 
 ### Fixed
 - Fixed incorrect file extensions for vbaProject files (#1292)

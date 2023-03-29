@@ -33,7 +33,7 @@ namespace DocumentFormat.OpenXml.Tests
                 {
                     var body = clone.MainDocumentPart.Document.Body;
                     body.InsertBefore(new Paragraph(new Run(new Text("Hello World"))), body.FirstChild);
-                    clone.SaveAs(file.Path).Close();
+                    clone.SaveAs(file.Path).Dispose();
 
                     using (var dest = WordprocessingDocument.Open(file.Path, false))
                     {
@@ -109,14 +109,14 @@ namespace DocumentFormat.OpenXml.Tests
                         var body3 = clone3.MainDocumentPart.Document.Body;
                         body3.GetFirstChild<Paragraph>()
                             .InsertBeforeSelf(new Paragraph(new Run(new Text("Clone 3"))));
-                        clone3.Close();
+                        clone3.Dispose();
 
                         // Clone source again.
                         var clone4 = (WordprocessingDocument)source.Clone();
                         var body4 = clone4.MainDocumentPart.Document.Body;
                         body4.GetFirstChild<Paragraph>()
                             .InsertBeforeSelf(new Paragraph(new Run(new Text("Clone 4"))));
-                        clone4.Close();
+                        clone4.Dispose();
                     }
                 });
             }
@@ -181,7 +181,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                         using (var tempFile = TemporaryFile.Create())
                         {
-                            clone.SaveAs(tempFile.Path).Close();
+                            clone.SaveAs(tempFile.Path).Dispose();
                         }
                     }
                 });
@@ -197,7 +197,7 @@ namespace DocumentFormat.OpenXml.Tests
             {
                 using (var package = Package.Open(ms, FileMode.Create))
                 {
-                    source.Clone(package).Close();
+                    source.Clone(package).Dispose();
                 }
 
                 ms.Position = 0;
@@ -218,7 +218,7 @@ namespace DocumentFormat.OpenXml.Tests
             {
                 using (var package = Package.Open(ms, FileMode.Create))
                 {
-                    source.Clone(package).Close();
+                    source.Clone(package).Dispose();
                 }
 
                 ms.Position = 0;
@@ -239,7 +239,7 @@ namespace DocumentFormat.OpenXml.Tests
             {
                 using (var package = Package.Open(ms, FileMode.Create))
                 {
-                    source.Clone(package).Close();
+                    source.Clone(package).Dispose();
                 }
 
                 ms.Position = 0;

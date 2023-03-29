@@ -22848,18 +22848,6 @@ namespace DocumentFormat.OpenXml.Linq
         public static readonly XName z = "z";
 
         /// <summary>
-        /// Represents the z-order XML attribute.
-        /// </summary>
-        /// <remarks>
-        /// <para>As an XML attribute, it:</para>
-        /// <list type="bullet">
-        /// <item><description>is contained in the following XML elements: <see cref="X.anchor" />.</description></item>
-        /// <item><description>corresponds to the following strongly-typed properties: ObjectAnchor.ZOrder.</description></item>
-        /// </list>
-        /// </remarks>
-        public static readonly XName z_order = "z-order";
-
-        /// <summary>
         /// Represents the zeroHeight XML attribute.
         /// </summary>
         /// <remarks>
@@ -22966,6 +22954,18 @@ namespace DocumentFormat.OpenXml.Linq
         /// </list>
         /// </remarks>
         public static readonly XName zoomToFit = "zoomToFit";
+
+        /// <summary>
+        /// Represents the z-order XML attribute.
+        /// </summary>
+        /// <remarks>
+        /// <para>As an XML attribute, it:</para>
+        /// <list type="bullet">
+        /// <item><description>is contained in the following XML elements: <see cref="X.anchor" />.</description></item>
+        /// <item><description>corresponds to the following strongly-typed properties: ObjectAnchor.ZOrder.</description></item>
+        /// </list>
+        /// </remarks>
+        public static readonly XName z_order = "z-order";
 
         /// <summary>
         /// Represents the zOrderOff XML attribute.
