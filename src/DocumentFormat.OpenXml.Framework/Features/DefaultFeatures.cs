@@ -2,7 +2,6 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Framework.Metadata;
-using DocumentFormat.OpenXml.Packaging;
 using System;
 
 namespace DocumentFormat.OpenXml.Features
@@ -15,7 +14,7 @@ namespace DocumentFormat.OpenXml.Features
 
         public int Revision => 0;
 
-        [KnownFeature(typeof(IOpenXmlNamespaceResolver), typeof(NoDataNamespaceResolver))]
+        [KnownFeature(typeof(IOpenXmlNamespaceResolver), typeof(OpenXmlNamespaceResolver))]
         [KnownFeature(typeof(IElementMetadataFactoryFeature), typeof(ElementMetadataFactoryFeature))]
         [ThreadSafe]
         public partial T? Get<T>();
