@@ -2350,19 +2350,6 @@ namespace DocumentFormat.OpenXml.Linq
         public static readonly XName main = x + "main";
 
         /// <summary>
-        /// Represents the x:map XML element.
-        /// </summary>
-        /// <remarks>
-        /// <para>As an XML element, it:</para>
-        /// <list type="bullet">
-        /// <item><description>has the following parent XML elements: <see cref="maps" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.dimension" />, <see cref="NoNamespace.measureGroup" />.</description></item>
-        /// <item><description>corresponds to the following strongly-typed classes: MeasureDimensionMap.</description></item>
-        /// </list>
-        /// </remarks>
-        public static readonly XName map = x + "map";
-
-        /// <summary>
         /// Represents the x:Map XML element.
         /// </summary>
         /// <remarks>
@@ -2375,6 +2362,19 @@ namespace DocumentFormat.OpenXml.Linq
         /// </list>
         /// </remarks>
         public static readonly XName Map_ = x + "Map";
+
+        /// <summary>
+        /// Represents the x:map XML element.
+        /// </summary>
+        /// <remarks>
+        /// <para>As an XML element, it:</para>
+        /// <list type="bullet">
+        /// <item><description>has the following parent XML elements: <see cref="maps" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="NoNamespace.dimension" />, <see cref="NoNamespace.measureGroup" />.</description></item>
+        /// <item><description>corresponds to the following strongly-typed classes: MeasureDimensionMap.</description></item>
+        /// </list>
+        /// </remarks>
+        public static readonly XName map = x + "map";
 
         /// <summary>
         /// Represents the x:MapInfo XML element.

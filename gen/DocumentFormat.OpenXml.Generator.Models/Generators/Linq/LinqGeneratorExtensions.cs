@@ -57,7 +57,7 @@ public static class LinqGeneratorExtensions
         {
             var prefix = fieldInfoGrouping.Key;
             var namespaceName = fieldInfoGrouping.First().NamespaceName;
-            var classFieldInfos = fieldInfoGrouping.OrderBy(fi => fi.LocalName);
+            var classFieldInfos = fieldInfoGrouping.OrderBy(fi => fi.LocalName, StringComparer.OrdinalIgnoreCase);
 
             var className = GetClassName(prefix);
 
