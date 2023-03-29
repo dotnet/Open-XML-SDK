@@ -22394,10 +22394,6 @@
     "Children": []
   },
   {
-    "Element": "DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.DeletedEmpty",
-    "Children": []
-  },
-  {
     "Element": "DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.ExtensionList",
     "Children": [
       {
@@ -22405,10 +22401,6 @@
         "Namespace": "http://schemas.openxmlformats.org/presentationml/2006/main"
       }
     ]
-  },
-  {
-    "Element": "DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.RestoredEmpty",
-    "Children": []
   },
   {
     "Element": "DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskAnchor",
@@ -22469,10 +22461,6 @@
         "Namespace": "http://schemas.microsoft.com/office/powerpoint/2022/08/main"
       },
       {
-        "Name": "deleted",
-        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2022/08/main"
-      },
-      {
         "Name": "extLst",
         "Namespace": "http://schemas.microsoft.com/office/powerpoint/2022/08/main"
       },
@@ -22481,15 +22469,7 @@
         "Namespace": "http://schemas.microsoft.com/office/powerpoint/2022/08/main"
       },
       {
-        "Name": "restored",
-        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2022/08/main"
-      },
-      {
         "Name": "title",
-        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2022/08/main"
-      },
-      {
-        "Name": "unAsgn",
         "Namespace": "http://schemas.microsoft.com/office/powerpoint/2022/08/main"
       },
       {
@@ -22524,10 +22504,6 @@
   },
   {
     "Element": "DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskUnknownRecord",
-    "Children": []
-  },
-  {
-    "Element": "DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.UnAsgnTaskAssignUnassignUser",
     "Children": []
   },
   {

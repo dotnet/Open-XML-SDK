@@ -33654,9 +33654,6 @@
          "ElementType": "DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.AsgnTaskAssignUnassignUser"
         },
         {
-         "ElementType": "DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.UnAsgnTaskAssignUnassignUser"
-        },
-        {
          "ElementType": "DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.AddEmpty",
          "MinOccurs": 0
         },
@@ -33678,12 +33675,6 @@
         },
         {
          "ElementType": "DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskUnknownRecord"
-        },
-        {
-         "ElementType": "DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.DeletedEmpty"
-        },
-        {
-         "ElementType": "DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.RestoredEmpty"
         }
        ],
        "MinOccurs": 0,
