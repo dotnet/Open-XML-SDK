@@ -580,7 +580,8 @@ namespace DocumentFormat.OpenXml.Packaging
 
         private partial class PresentationDocumentFeatures : TypedPackageFeatureCollection<PresentationDocumentType, PresentationPart>,
             IApplicationTypeFeature,
-            IMainPartFeature
+            IMainPartFeature,
+            IProgrammaticIdentifierFeature
         {
             public PresentationDocumentFeatures(TypedOpenXmlPackage package)
                 : base(package)
@@ -590,6 +591,8 @@ namespace DocumentFormat.OpenXml.Packaging
             ApplicationType IApplicationTypeFeature.Type => ApplicationType.PowerPoint;
 
             protected override string RelationshipType => PresentationPart.RelationshipTypeConstant;
+
+            string IProgrammaticIdentifierFeature.ProgramId => "PowerPoint.Show";
 
             protected override PresentationPart CreateMainPart() => new();
 
