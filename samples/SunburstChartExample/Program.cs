@@ -26,14 +26,11 @@ namespace CreatePresentationDocument
         public static void CreatePresentation(string filepath)
         {
             // Create a presentation at a specified file path. The presentation document type is pptx, by default.
-            var presentationDoc = PresentationDocument.Create(filepath, PresentationDocumentType.Presentation);
+            using PresentationDocument presentationDoc = PresentationDocument.Create(filepath, PresentationDocumentType.Presentation);
             var presentationPart = presentationDoc.AddPresentationPart();
             presentationPart.Presentation = new Presentation();
 
             CreatePresentationParts(presentationPart);
-
-            // Close the presentation handle
-            presentationDoc.Close();
         }
 
         private static void CreatePresentationParts(PresentationPart presentationPart)

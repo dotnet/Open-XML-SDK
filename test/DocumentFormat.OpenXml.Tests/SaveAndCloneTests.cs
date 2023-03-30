@@ -33,7 +33,10 @@ namespace DocumentFormat.OpenXml.Tests
                 {
                     var body = clone.MainDocumentPart.Document.Body;
                     body.InsertBefore(new Paragraph(new Run(new Text("Hello World"))), body.FirstChild);
-                    clone.SaveAs(file.Path).Close();
+                    using (var temp = clone.SaveAs(file.Path))
+                    {
+                        // clean up the temp package.
+                    }
 
                     using (var dest = WordprocessingDocument.Open(file.Path, false))
                     {
@@ -105,18 +108,20 @@ namespace DocumentFormat.OpenXml.Tests
                         }
 
                         // Clone clone1 again.
-                        var clone3 = (WordprocessingDocument)clone1.Clone();
-                        var body3 = clone3.MainDocumentPart.Document.Body;
-                        body3.GetFirstChild<Paragraph>()
-                            .InsertBeforeSelf(new Paragraph(new Run(new Text("Clone 3"))));
-                        clone3.Close();
+                        using (WordprocessingDocument clone3 = (WordprocessingDocument)clone1.Clone())
+                        {
+                            var body3 = clone3.MainDocumentPart.Document.Body;
+                            body3.GetFirstChild<Paragraph>()
+                                .InsertBeforeSelf(new Paragraph(new Run(new Text("Clone 3"))));
+                        }
 
                         // Clone source again.
-                        var clone4 = (WordprocessingDocument)source.Clone();
-                        var body4 = clone4.MainDocumentPart.Document.Body;
-                        body4.GetFirstChild<Paragraph>()
-                            .InsertBeforeSelf(new Paragraph(new Run(new Text("Clone 4"))));
-                        clone4.Close();
+                        using (WordprocessingDocument clone4 = (WordprocessingDocument)source.Clone())
+                        {
+                            var body4 = clone4.MainDocumentPart.Document.Body;
+                            body4.GetFirstChild<Paragraph>()
+                                .InsertBeforeSelf(new Paragraph(new Run(new Text("Clone 4"))));
+                        }
                     }
                 });
             }
@@ -181,7 +186,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                         using (var tempFile = TemporaryFile.Create())
                         {
-                            clone.SaveAs(tempFile.Path).Close();
+                            using var temp = clone.SaveAs(tempFile.Path);
                         }
                     }
                 });
@@ -197,7 +202,7 @@ namespace DocumentFormat.OpenXml.Tests
             {
                 using (var package = Package.Open(ms, FileMode.Create))
                 {
-                    source.Clone(package).Close();
+                    using var temp = source.Clone(package);
                 }
 
                 ms.Position = 0;
@@ -218,7 +223,7 @@ namespace DocumentFormat.OpenXml.Tests
             {
                 using (var package = Package.Open(ms, FileMode.Create))
                 {
-                    source.Clone(package).Close();
+                    using var temp = source.Clone(package);
                 }
 
                 ms.Position = 0;
@@ -239,7 +244,7 @@ namespace DocumentFormat.OpenXml.Tests
             {
                 using (var package = Package.Open(ms, FileMode.Create))
                 {
-                    source.Clone(package).Close();
+                    using var temp = source.Clone(package);
                 }
 
                 ms.Position = 0;

@@ -51,7 +51,7 @@ namespace ThreadedCommentsExample
             }
 
             // WORKBOOK
-            SpreadsheetDocument? sd = ExampleUtilities.CreateSpreadsheetWorkbook(filePath, sheetName);
+            using SpreadsheetDocument? sd = ExampleUtilities.CreateSpreadsheetWorkbook(filePath, sheetName);
 
             if (sd != null)
             {
@@ -105,9 +105,6 @@ namespace ThreadedCommentsExample
                         // ThreadedComment attributes
                         { Ref = reference, PersonId = idUser, Id = tcId, DT = System.DateTime.Now });
                 }
-
-                // Close the document.
-                sd.Close();
             }
             else
             {
