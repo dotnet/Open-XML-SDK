@@ -186,7 +186,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                         using (var tempFile = TemporaryFile.Create())
                         {
-                            using var temp = clone.SaveAs(tempFile.Path);
+                            using var _ = clone.SaveAs(tempFile.Path);
                         }
                     }
                 });
@@ -202,7 +202,7 @@ namespace DocumentFormat.OpenXml.Tests
             {
                 using (var package = Package.Open(ms, FileMode.Create))
                 {
-                    using var temp = source.Clone(package);
+                    using var _ = source.Clone(package);
                 }
 
                 ms.Position = 0;
@@ -223,7 +223,7 @@ namespace DocumentFormat.OpenXml.Tests
             {
                 using (var package = Package.Open(ms, FileMode.Create))
                 {
-                    using var temp = source.Clone(package);
+                    using var _ = source.Clone(package);
                 }
 
                 ms.Position = 0;
@@ -244,7 +244,7 @@ namespace DocumentFormat.OpenXml.Tests
             {
                 using (var package = Package.Open(ms, FileMode.Create))
                 {
-                    using var temp = source.Clone(package);
+                    using var _ = source.Clone(package);
                 }
 
                 ms.Position = 0;
