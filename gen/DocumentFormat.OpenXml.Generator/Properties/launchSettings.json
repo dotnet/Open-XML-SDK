@@ -2,7 +2,7 @@
   "profiles": {
     "Generator": {
       "commandName": "DebugRoslynComponent",
-      "targetProject": "..\\..\\src\\DocumentFormat.OpenXml\\DocumentFormat.OpenXml.csproj"
+      "targetProject": "..\\..\\src\\DocumentFormat.OpenXml.Linq\\DocumentFormat.OpenXml.Linq.csproj"
     }
   }
 }

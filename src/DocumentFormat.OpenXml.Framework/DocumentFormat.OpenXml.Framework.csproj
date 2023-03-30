@@ -9,6 +9,7 @@
 
   <PropertyGroup>
     <IncludeSourceGenerator>true</IncludeSourceGenerator>
+    <DocumentFormat_OpenXml_Generator_NamespaceLookup>true</DocumentFormat_OpenXml_Generator_NamespaceLookup>
   </PropertyGroup>
 
   <PropertyGroup>

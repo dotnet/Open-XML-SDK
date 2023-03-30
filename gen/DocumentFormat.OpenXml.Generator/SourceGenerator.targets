@@ -25,5 +25,6 @@
     <CompilerVisibleProperty Include="DocumentFormat_OpenXml_Generator_Parts" />
     <CompilerVisibleProperty Include="DocumentFormat_OpenXml_Generator_Schemas" />
     <CompilerVisibleProperty Include="DocumentFormat_OpenXml_Generator_Factories" />
+    <CompilerVisibleProperty Include="DocumentFormat_OpenXml_Generator_Linq" />
   </ItemGroup>
 </Project>

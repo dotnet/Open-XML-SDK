@@ -51,5 +51,20 @@ public class OpenXmlGenerator : IIncrementalGenerator
                    .SelectMany((s, _) => s?.Context.Namespaces ?? ImmutableArray.Create<SchemaNamespace>())
                    .Combine(openXml),
             (context, services) => SchemaGenerator.WriteSchemaFiles(context, services.Right, services.Left));
+
+        context.RegisterSourceOutput(
+            openXml.When(options, static options => options.GenerateLinq),
+            (context, services) =>
+            {
+                if (services is null)
+                {
+                    return;
+                }
+
+                foreach (var (className, contents) in services.GenerateLinqFiles())
+                {
+                    context.AddSource($"Linq.{className}.g.cs", contents);
+                }
+            });
     }
 }
