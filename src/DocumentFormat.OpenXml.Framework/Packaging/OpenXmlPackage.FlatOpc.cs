@@ -65,7 +65,7 @@ namespace DocumentFormat.OpenXml.Packaging
             // parts regardless of the actual content type, which might even be
             // XML-related such as application/xhtml+xml.
             var altChunkPartUris = new HashSet<Uri>(
-                package.GetParts()
+                Package.GetParts()
                     .Where(part => part.ContentType != RelationshipContentType)
                     .SelectMany(part => part.Relationships.Where(r => string.Equals(r.RelationshipType, AltChunkRelationshipType, StringComparison.Ordinal)))
                     .Select(pr => PackUriHelper.ResolvePartUri(pr.SourceUri, pr.TargetUri)));
@@ -79,7 +79,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 new XElement(
                     Pkg + "package",
                     new XAttribute(XNamespace.Xmlns + "pkg", Pkg.ToString()),
-                    package.GetParts().Select(part => GetContentsAsXml(part, altChunkPartUris))));
+                    Package.GetParts().Select(part => GetContentsAsXml(part, altChunkPartUris))));
         }
 
         /// <summary>
@@ -197,11 +197,11 @@ namespace DocumentFormat.OpenXml.Packaging
 
         /// <summary>
         /// Converts an <see cref="XDocument"/> in Flat OPC format to an OpenXml package
-        /// stored in a <see cref="System.IO.Packaging.Package"/>.
+        /// stored in a <see cref="Package"/>.
         /// </summary>
         /// <param name="flatOpcDocument">The document in Flat OPC format.</param>
-        /// <param name="package">The <see cref="System.IO.Packaging.Package"/> in which to store the OpenXml package.</param>
-        /// <returns>The <see cref="System.IO.Packaging.Package"/> containing the OpenXml package.</returns>
+        /// <param name="package">The <see cref="Package"/> in which to store the OpenXml package.</param>
+        /// <returns>The <see cref="Package"/> containing the OpenXml package.</returns>
         protected static Package FromFlatOpcDocumentCore(XDocument flatOpcDocument, Package package)
         {
             if (flatOpcDocument is null)
