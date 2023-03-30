@@ -11,19 +11,19 @@ namespace DocumentFormat.OpenXml.Features;
 
 internal partial class DefaultFeatures
 {
-    private global::DocumentFormat.OpenXml.Features.IOpenXmlNamespaceResolver? _NoDataNamespaceResolver;
+    private global::DocumentFormat.OpenXml.Features.IOpenXmlNamespaceResolver? _OpenXmlNamespaceResolver;
     private global::DocumentFormat.OpenXml.Features.IElementMetadataFactoryFeature? _ElementMetadataFactoryFeature;
 
     public partial T? Get<T>()
     {
         if (typeof(T) == typeof(global::DocumentFormat.OpenXml.Features.IOpenXmlNamespaceResolver))
         {
-            if (_NoDataNamespaceResolver is null)
+            if (_OpenXmlNamespaceResolver is null)
             {
-                Interlocked.CompareExchange(ref _NoDataNamespaceResolver, new global::DocumentFormat.OpenXml.Features.NoDataNamespaceResolver(), null);
+                Interlocked.CompareExchange(ref _OpenXmlNamespaceResolver, new global::DocumentFormat.OpenXml.Features.OpenXmlNamespaceResolver(), null);
             }
 
-            return (T)_NoDataNamespaceResolver;
+            return (T)_OpenXmlNamespaceResolver;
         }
 
         if (typeof(T) == typeof(global::DocumentFormat.OpenXml.Features.IElementMetadataFactoryFeature))
