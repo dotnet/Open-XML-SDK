@@ -907,6 +907,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </remarks>
         /// <param name="path">The path and file name of the target document.</param>
         /// <returns>The cloned OpenXml package</returns>
+        [Obsolete("This API will be removed in future release. Instead, use Clone() as it does the same thing")]
         public OpenXmlPackage SaveAs(string path)
         {
             return Clone(path);
