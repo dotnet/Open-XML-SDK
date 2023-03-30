@@ -134,12 +134,12 @@ namespace DocumentFormat.OpenXml.Packaging
             catch (UriFormatException exception)
             {
                 // UriFormatException is wrapped here in an OpenXmlPackageException
-                Close();
+                Dispose();
                 throw new OpenXmlPackageException(ExceptionMessages.InvalidUriFormat, exception);
             }
             catch (Exception)
             {
-                Close();
+                Dispose();
                 throw;
             }
         }
@@ -262,6 +262,8 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Saves and closes the OpenXml package and all underlying part streams.
         /// </summary>
+        [Obsolete("Close will be removed in later releases, use Dispose instead.")]
+        [EditorBrowsable(EditorBrowsableState.Never)]
         public void Close()
         {
             ThrowIfObjectDisposed();
