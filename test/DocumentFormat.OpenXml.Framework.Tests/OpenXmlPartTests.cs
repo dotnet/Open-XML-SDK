@@ -9,7 +9,6 @@ namespace DocumentFormat.OpenXml.Framework.Tests
 {
     public class OpenXmlPartTests
     {
-
         [Fact]
         public void ExtensionTest()
         {
@@ -118,6 +117,43 @@ namespace DocumentFormat.OpenXml.Framework.Tests
 
             // Act
             part.CreateInternal(package, null, ContentType, string.Empty);
+
+            // Assert
+            Assert.Equal(FilePath, part.Uri.ToString());
+        }
+
+        [Fact]
+        public void ExtensionTestFixedContentType()
+        {
+            // Arrange
+            const string ContentType = "test/mimetype";
+            const string TargetExt = ".jpg";
+            const string FilePath = "/some/path.jpg";
+
+            using var stream = new MemoryStream();
+
+            var package = Substitute.ForPartsOf<OpenXmlPackage>();
+            package.WithStorage(stream, PackageOpenMode.Create);
+
+            var features = new FeatureCollection();
+            var part = Substitute.ForPartsOf<OpenXmlPart>();
+            part.Features.Returns(features);
+            var targetFeature = Substitute.For<ITargetFeature>();
+            var partExtensionFeature = Substitute.For<IPartExtensionFeature>();
+            var partUriFeature = Substitute.For<IPartUriFeature>();
+            var contentTypeFeature = Substitute.For<IContentTypeFeature>();
+            var expectedUri = new Uri(FilePath, UriKind.Relative);
+
+            contentTypeFeature.IsConstant.Returns(true);
+            partUriFeature.CreatePartUri(ContentType, OpenXmlPackage.Uri, string.Empty, string.Empty, string.Empty).Returns(expectedUri);
+
+            features.Set(partUriFeature);
+            features.Set(partExtensionFeature);
+            features.Set(targetFeature);
+            features.Set(contentTypeFeature);
+
+            // Act
+            part.CreateInternal(package, null, ContentType, TargetExt);
 
             // Assert
             Assert.Equal(FilePath, part.Uri.ToString());
