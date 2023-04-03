@@ -3,7 +3,7 @@
   <PropertyGroup>
     <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
     <IsShipped>false</IsShipped>
-    <NoWarn>$(NoWarn);SA0001</NoWarn>
+    <NoWarn>$(NoWarn);SA0001;CS0618</NoWarn>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
 
     <!-- Because of the size of the project, to facilitate  quick development, by default only single
