@@ -117,7 +117,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 var extensions = Features.GetRequired<IPartExtensionFeature>();
 
-                if (!extensions.TryGetExtension(contentType, out var found))
+                if (extensions.TryGetExtension(contentType, out var found))
                 {
                     targetExt = found;
                 }
@@ -340,7 +340,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets a value indicating whether the ContentType for the current part is fixed.
         /// </summary>
-        internal bool IsContentTypeFixed => this is IFixedContentTypePart;
+        internal bool IsContentTypeFixed => Features.GetRequired<IContentTypeFeature>().IsConstant;
 
         /// <summary>
         /// Determines if the content type agrees with this part's constraints.

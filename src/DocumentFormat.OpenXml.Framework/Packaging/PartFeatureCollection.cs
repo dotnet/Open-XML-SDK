@@ -14,6 +14,7 @@ public abstract partial class OpenXmlPart
         IFeatureCollection,
         ITargetFeature,
         IPartConstraintFeature,
+        IContentTypeFeature,
         IKnownDataPartFeature
     {
         private readonly OpenXmlPart _part;
@@ -69,6 +70,8 @@ public abstract partial class OpenXmlPart
             => _container.Set(instance);
 
         IEnumerable<PartConstraintRule> IPartConstraintFeature.Rules => Enumerable.Empty<PartConstraintRule>();
+
+        bool IContentTypeFeature.IsConstant => _part is IFixedContentTypePart;
 
         bool IPartConstraintFeature.TryGetRule(string relationshipId, out PartConstraintRule rule)
         {
