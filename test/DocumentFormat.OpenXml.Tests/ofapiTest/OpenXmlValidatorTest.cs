@@ -3079,8 +3079,6 @@ namespace DocumentFormat.OpenXml.Tests
                     commentsPart.Comments.SaveToPart(commentsPart2);
 
                     mainPart.Relationships.Create(mainPart.Uri, System.IO.Packaging.TargetMode.Internal, mainPart.RelationshipType);
-
-                    wordDoc.Close();
                 }
 
                 stream.Flush();
