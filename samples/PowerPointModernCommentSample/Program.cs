@@ -38,7 +38,7 @@ namespace PowerPointModernCommentSample
                 }
 
                 // Create a presentation
-                PresentationDocument presentationDocument = PowerPointUtils.CreatePresentation(fileInfo.FullName);
+                using PresentationDocument presentationDocument = PowerPointUtils.CreatePresentation(fileInfo.FullName);
 
                 // create missing PowerPointAuthorsPart if it is null
                 if (presentationDocument?.PresentationPart?.authorsPart is null)
@@ -94,8 +94,6 @@ namespace PowerPointModernCommentSample
                             new CommentRelationship()
                             { Id = slidePart.GetIdOfPart(powerPointCommentPart) })
                         { Uri = "{6950BFC3-D8DA-4A85-94F7-54DA5524770B}" }));
-
-                presentationDocument.Close();
             }
             catch (Exception ex)
             {

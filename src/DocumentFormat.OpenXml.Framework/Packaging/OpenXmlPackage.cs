@@ -143,15 +143,6 @@ namespace DocumentFormat.OpenXml.Packaging
             DeletePartsRecursivelyOfTypeBase<T>();
         }
 
-        /// <summary>
-        /// Saves and closes the OpenXml package and all underlying part streams.
-        /// </summary>
-        public void Close()
-        {
-            ThrowIfObjectDisposed();
-            Dispose();
-        }
-
         #region methods to operate DataPart
 
         /// <summary>
