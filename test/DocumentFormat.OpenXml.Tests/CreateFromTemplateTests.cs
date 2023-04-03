@@ -20,7 +20,7 @@ namespace DocumentFormat.OpenXml.Tests
                 var part = packageDocument.PresentationPart;
                 var root = part.Presentation;
 
-                using var _ = packageDocument.SaveAs(Path.GetTempFileName());
+                _ = packageDocument.SaveAs(Path.GetTempFileName());
 
                 // We are fine if we have not run into an exception.
                 Assert.True(true);
@@ -36,7 +36,7 @@ namespace DocumentFormat.OpenXml.Tests
                 var part = packageDocument.WorkbookPart;
                 var root = part.Workbook;
 
-                using var _ = packageDocument.SaveAs(Path.GetTempFileName());
+                _ = packageDocument.SaveAs(Path.GetTempFileName());
 
                 // We are fine if we have not run into an exception.
                 Assert.True(true);
@@ -52,7 +52,7 @@ namespace DocumentFormat.OpenXml.Tests
                 var part = packageDocument.MainDocumentPart;
                 var root = part.Document;
 
-                using var _ = packageDocument.SaveAs(Path.GetTempFileName());
+                _ = packageDocument.SaveAs(Path.GetTempFileName());
 
                 // We are fine if we have not run into an exception.
                 Assert.True(true);
