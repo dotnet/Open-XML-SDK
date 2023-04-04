@@ -659,6 +659,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w16du=http://schemas.microsoft.com/office/word/2023/wordml/word16du
         /// </remark>
+        [SchemaAttr("w16du:dateUtc")]
         public DateTimeValue? DateUtc
         {
             get => GetAttribute<DateTimeValue>();
@@ -914,6 +915,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word
         /// <remark>
         /// xmlns:w16du=http://schemas.microsoft.com/office/word/2023/wordml/word16du
         /// </remark>
+        [SchemaAttr("w16du:dateUtc")]
         public DateTimeValue? DateUtc
         {
             get => GetAttribute<DateTimeValue>();
