@@ -11460,6 +11460,7 @@
         "aclsh:CT_ClassificationOutcome/aclsh:classification",
         "adec:CT_Decorative/adec:decorative",
         "ahyp:CT_HyperlinkColor/ahyp:hlinkClr",
+        "aif:CT_ImageFormula/aif:imageFormula",
         "alf:CT_LiveFeedProperties/alf:liveFeedProps",
         "aoe:CT_OEmbedShared/aoe:oembedShared",
         "ask:CT_LineSketchStyleProperties/ask:lineSketchStyleProps",
@@ -11779,6 +11780,9 @@
         },
         {
           "Name": "woe:CT_OEmbed/woe:oembed"
+        },
+        {
+          "Name": "aif:CT_ImageFormula/aif:imageFormula"
         },
         {
           "Name": "alf:CT_LiveFeedProperties/alf:liveFeedProps"
@@ -25472,6 +25476,10 @@
         {
           "Name": "alf:CT_LiveFeedProperties/alf:liveFeedProps",
           "PropertyName": "LiveFeedProperties"
+        },
+        {
+          "Name": "aif:CT_ImageFormula/aif:imageFormula",
+          "PropertyName": "ImageFormula"
         }
       ],
       "Particle": {
@@ -25491,6 +25499,10 @@
           },
           {
             "Name": "alf:CT_LiveFeedProperties/alf:liveFeedProps",
+            "InitialVersion": "Microsoft365"
+          },
+          {
+            "Name": "aif:CT_ImageFormula/aif:imageFormula",
             "InitialVersion": "Microsoft365"
           },
           {

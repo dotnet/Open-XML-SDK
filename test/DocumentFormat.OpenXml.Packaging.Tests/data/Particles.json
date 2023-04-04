@@ -15682,6 +15682,9 @@
        "ElementType": "DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.LiveFeedProperties"
       },
       {
+       "ElementType": "DocumentFormat.OpenXml.Office.Drawing.Y2022.ImageFormula.ImageFormula"
+      },
+      {
        "MinOccurs": 0,
        "ParticleType": "Any"
       }
@@ -33536,6 +33539,149 @@
       },
       {
        "ElementType": "DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.ExtensionList",
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.ExtensionList",
+  "Value": [
+   {
+    "Key": "Microsoft365",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ChildrenParticles": [
+        {
+         "ChildrenParticles": [
+          {
+           "ElementType": "DocumentFormat.OpenXml.Presentation.Extension",
+           "MaxOccurs": 0,
+           "MinOccurs": 0
+          }
+         ],
+         "ParticleType": "Sequence"
+        }
+       ],
+       "MinOccurs": 0,
+       "ParticleType": "Group"
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskAnchor",
+  "Value": [
+   {
+    "Key": "Microsoft365",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.CommentAnchor"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.ExtensionList",
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskDetails",
+  "Value": [
+   {
+    "Key": "Microsoft365",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskHistory"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.ExtensionList",
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskHistory",
+  "Value": [
+   {
+    "Key": "Microsoft365",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskHistoryEvent",
+       "MaxOccurs": 0,
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskHistoryEvent",
+  "Value": [
+   {
+    "Key": "Microsoft365",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.AtrbtnTaskAssignUnassignUser"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskAnchor",
+       "MinOccurs": 0
+      },
+      {
+       "ChildrenParticles": [
+        {
+         "ElementType": "DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.AsgnTaskAssignUnassignUser"
+        },
+        {
+         "ElementType": "DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.AddEmpty",
+         "MinOccurs": 0
+        },
+        {
+         "ElementType": "DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskTitleEventInfo"
+        },
+        {
+         "ElementType": "DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskScheduleEventInfo"
+        },
+        {
+         "ElementType": "DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskProgressEventInfo"
+        },
+        {
+         "ElementType": "DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.UnasgnAllEmpty",
+         "MinOccurs": 0
+        },
+        {
+         "ElementType": "DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskUndo"
+        },
+        {
+         "ElementType": "DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskUnknownRecord"
+        }
+       ],
+       "MinOccurs": 0,
+       "ParticleType": "Choice"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.ExtensionList",
        "MinOccurs": 0
       }
      ],

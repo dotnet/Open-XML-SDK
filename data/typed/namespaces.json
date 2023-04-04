@@ -112,6 +112,10 @@
     "Namespace": "DocumentFormat.OpenXml.Office.Drawing.Y2021.ScriptLink"
   },
   {
+    "Prefix": "aif",
+    "Namespace": "DocumentFormat.OpenXml.Office.Drawing.Y2022.ImageFormula"
+  },
+  {
     "Prefix": "xne",
     "Namespace": "DocumentFormat.OpenXml.Office.Excel"
   },
@@ -132,6 +136,10 @@
     "Namespace": "DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main"
   },
   {
+    "Prefix": "p228",
+    "Namespace": "DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main"
+  },
+  {
     "Prefix": "xxl21",
     "Namespace": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021"
   },
@@ -150,6 +158,10 @@
   {
     "Prefix": "woe",
     "Namespace": "DocumentFormat.OpenXml.Office.Word.Y2020.OEmbed"
+  },
+  {
+    "Prefix": "w16du",
+    "Namespace": "DocumentFormat.OpenXml.Office.Word.Y2023.WordML.Word16DU"
   },
   {
     "Prefix": "mso14",

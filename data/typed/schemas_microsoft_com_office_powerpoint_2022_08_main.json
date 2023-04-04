@@ -1,0 +1,66 @@
+[
+  {
+    "Name": "p228:CT_TaskAssignUnassignUser/",
+    "ClassName": "OpenXmlTaskAssignUnassignUserElement"
+  },
+  {
+    "Name": "p:CT_Empty/p228:add",
+    "ClassName": "AddEmpty"
+  },
+  {
+    "Name": "p228:CT_TaskAnchor/p228:anchr",
+    "ClassName": "TaskAnchor"
+  },
+  {
+    "Name": "p228:CT_TaskAssignUnassignUser/p228:asgn",
+    "ClassName": "AsgnTaskAssignUnassignUser"
+  },
+  {
+    "Name": "p228:CT_TaskAssignUnassignUser/p228:atrbtn",
+    "ClassName": "AtrbtnTaskAssignUnassignUser"
+  },
+  {
+    "Name": "p228:CT_CommentAnchor/p228:comment",
+    "ClassName": "CommentAnchor"
+  },
+  {
+    "Name": "p228:CT_TaskScheduleEventInfo/p228:date",
+    "ClassName": "TaskScheduleEventInfo"
+  },
+  {
+    "Name": "p228:CT_TaskHistoryEvent/p228:event",
+    "ClassName": "TaskHistoryEvent"
+  },
+  {
+    "Name": "p:CT_ExtensionList/p228:extLst",
+    "ClassName": "ExtensionList"
+  },
+  {
+    "Name": "p228:CT_TaskHistory/p228:history",
+    "ClassName": "TaskHistory"
+  },
+  {
+    "Name": "p228:CT_TaskProgressEventInfo/p228:pcntCmplt",
+    "ClassName": "TaskProgressEventInfo"
+  },
+  {
+    "Name": "p228:CT_TaskDetails/p228:taskDetails",
+    "ClassName": "TaskDetails"
+  },
+  {
+    "Name": "p228:CT_TaskTitleEventInfo/p228:title",
+    "ClassName": "TaskTitleEventInfo"
+  },
+  {
+    "Name": "p:CT_Empty/p228:unasgnAll",
+    "ClassName": "UnasgnAllEmpty"
+  },
+  {
+    "Name": "p228:CT_TaskUndo/p228:undo",
+    "ClassName": "TaskUndo"
+  },
+  {
+    "Name": "p228:CT_TaskUnknownRecord/p228:unknown",
+    "ClassName": "TaskUnknownRecord"
+  }
+]

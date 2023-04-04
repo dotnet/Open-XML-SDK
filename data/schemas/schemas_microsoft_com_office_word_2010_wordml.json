@@ -1229,6 +1229,24 @@
           "PropertyComments": "date"
         },
         {
+          "QName": "w16du:dateUtc",
+          "PropertyName": "DateUtc",
+          "Type": "DateTimeValue",
+          "Version": "Microsoft365",
+          "PropertyComments": "dateUtc",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Microsoft365"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            }
+          ]
+        },
+        {
           "QName": "w:id",
           "PropertyName": "Id",
           "Type": "StringValue",
@@ -1566,6 +1584,24 @@
           "PropertyName": "Date",
           "Type": "DateTimeValue",
           "PropertyComments": "date"
+        },
+        {
+          "QName": "w16du:dateUtc",
+          "PropertyName": "DateUtc",
+          "Type": "DateTimeValue",
+          "Version": "Microsoft365",
+          "PropertyComments": "dateUtc",
+          "Validators": [
+            {
+              "Arguments": [
+                {
+                  "Type": "Version",
+                  "Value": "Microsoft365"
+                }
+              ],
+              "Name": "OfficeVersionValidator"
+            }
+          ]
         },
         {
           "QName": "w:id",
