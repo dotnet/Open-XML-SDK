@@ -7937,8 +7937,8 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML attribute, it:</para>
         /// <list type="bullet">
-        /// <item><description>is contained in the following XML elements: <see cref="X.cacheField" />, <see cref="X.calculatedItem" />, <see cref="X.ignoredError" />, <see cref="X14.ignoredError" />.</description></item>
-        /// <item><description>corresponds to the following strongly-typed properties: CacheField.Formula, CalculatedItem.Formula, IgnoredError.Formula.</description></item>
+        /// <item><description>is contained in the following XML elements: <see cref="AIF.imageFormula" />, <see cref="X.cacheField" />, <see cref="X.calculatedItem" />, <see cref="X.ignoredError" />, <see cref="X14.ignoredError" />.</description></item>
+        /// <item><description>corresponds to the following strongly-typed properties: CacheField.Formula, CalculatedItem.Formula, IgnoredError.Formula, ImageFormula.Formula.</description></item>
         /// </list>
         /// </remarks>
         public static readonly XName formula = "formula";

@@ -1185,7 +1185,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="tcPr" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="author" />, <see cref="date" />, <see cref="id" />, <see cref="vMerge" />, <see cref="vMergeOrig" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="author" />, <see cref="date" />, <see cref="id" />, <see cref="vMerge" />, <see cref="vMergeOrig" />, <see cref="W16DU.dateUtc" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: CellMerge.</description></item>
         /// </list>
         /// </remarks>
@@ -1537,7 +1537,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="comments" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="altChunk" />, <see cref="bookmarkEnd" />, <see cref="bookmarkStart" />, <see cref="commentRangeEnd" />, <see cref="commentRangeStart" />, <see cref="customXml" />, <see cref="p" />, <see cref="permEnd" />, <see cref="permStart" />, <see cref="proofErr" />, <see cref="sdt" />, <see cref="tbl" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="author" />, <see cref="date" />, <see cref="id" />, <see cref="initials" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="author" />, <see cref="date" />, <see cref="id" />, <see cref="initials" />, <see cref="W16DU.dateUtc" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: Comment.</description></item>
         /// </list>
         /// </remarks>
@@ -2248,7 +2248,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="M.ctrlPr" />, <see cref="M.deg" />, <see cref="M.den" />, <see cref="M.e" />, <see cref="M.fName" />, <see cref="M.lim" />, <see cref="M.num" />, <see cref="M.oMath" />, <see cref="M.oMathPara" />, <see cref="M.sub" />, <see cref="M.sup" />, <see cref="bdo" />, <see cref="body" />, <see cref="customXml" />, <see cref="del" />, <see cref="dir" />, <see cref="docPartBody" />, <see cref="endnote" />, <see cref="fldSimple" />, <see cref="footnote" />, <see cref="ftr" />, <see cref="hdr" />, <see cref="hyperlink" />, <see cref="ins" />, <see cref="moveFrom" />, <see cref="moveTo" />, <see cref="p" />, <see cref="rPr" />, <see cref="rt" />, <see cref="rubyBase" />, <see cref="sdtContent" />, <see cref="tbl" />, <see cref="tc" />, <see cref="tr" />, <see cref="trPr" />, <see cref="txbxContent" />, <see cref="W14.conflictDel" />, <see cref="W14.conflictIns" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="M.acc" />, <see cref="M.bar" />, <see cref="M.borderBox" />, <see cref="M.box" />, <see cref="M.d" />, <see cref="M.eqArr" />, <see cref="M.f" />, <see cref="M.func" />, <see cref="M.groupChr" />, <see cref="M.limLow" />, <see cref="M.limUpp" />, <see cref="M.m_" />, <see cref="M.nary" />, <see cref="M.oMath" />, <see cref="M.oMathPara" />, <see cref="M.phant" />, <see cref="M.r" />, <see cref="M.rad" />, <see cref="M.sPre" />, <see cref="M.sSub" />, <see cref="M.sSubSup" />, <see cref="M.sSup" />, <see cref="bdo" />, <see cref="bookmarkEnd" />, <see cref="bookmarkStart" />, <see cref="commentRangeEnd" />, <see cref="commentRangeStart" />, <see cref="contentPart" />, <see cref="customXmlDelRangeEnd" />, <see cref="customXmlDelRangeStart" />, <see cref="customXmlInsRangeEnd" />, <see cref="customXmlInsRangeStart" />, <see cref="customXmlMoveFromRangeEnd" />, <see cref="customXmlMoveFromRangeStart" />, <see cref="customXmlMoveToRangeEnd" />, <see cref="customXmlMoveToRangeStart" />, <see cref="del" />, <see cref="dir" />, <see cref="ins" />, <see cref="moveFrom" />, <see cref="moveFromRangeEnd" />, <see cref="moveFromRangeStart" />, <see cref="moveTo" />, <see cref="moveToRangeEnd" />, <see cref="moveToRangeStart" />, <see cref="permEnd" />, <see cref="permStart" />, <see cref="proofErr" />, <see cref="r" />, <see cref="rPr" />, <see cref="sdt" />, <see cref="W14.conflictDel" />, <see cref="W14.conflictIns" />, <see cref="W14.customXmlConflictDelRangeEnd" />, <see cref="W14.customXmlConflictDelRangeStart" />, <see cref="W14.customXmlConflictInsRangeEnd" />, <see cref="W14.customXmlConflictInsRangeStart" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="author" />, <see cref="date" />, <see cref="id" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="author" />, <see cref="date" />, <see cref="id" />, <see cref="W16DU.dateUtc" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: Deleted, DeletedMathControl, DeletedRun.</description></item>
         /// </list>
         /// </remarks>
@@ -4803,7 +4803,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="M.ctrlPr" />, <see cref="M.deg" />, <see cref="M.den" />, <see cref="M.e" />, <see cref="M.fName" />, <see cref="M.lim" />, <see cref="M.num" />, <see cref="M.oMath" />, <see cref="M.oMathPara" />, <see cref="M.sub" />, <see cref="M.sup" />, <see cref="bdo" />, <see cref="body" />, <see cref="customXml" />, <see cref="del" />, <see cref="dir" />, <see cref="docPartBody" />, <see cref="endnote" />, <see cref="fldSimple" />, <see cref="footnote" />, <see cref="ftr" />, <see cref="hdr" />, <see cref="hyperlink" />, <see cref="ins" />, <see cref="moveFrom" />, <see cref="moveTo" />, <see cref="numPr" />, <see cref="p" />, <see cref="rPr" />, <see cref="rt" />, <see cref="rubyBase" />, <see cref="sdtContent" />, <see cref="tbl" />, <see cref="tc" />, <see cref="tr" />, <see cref="trPr" />, <see cref="txbxContent" />, <see cref="W14.conflictDel" />, <see cref="W14.conflictIns" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="M.acc" />, <see cref="M.bar" />, <see cref="M.borderBox" />, <see cref="M.box" />, <see cref="M.d" />, <see cref="M.eqArr" />, <see cref="M.f" />, <see cref="M.func" />, <see cref="M.groupChr" />, <see cref="M.limLow" />, <see cref="M.limUpp" />, <see cref="M.m_" />, <see cref="M.nary" />, <see cref="M.oMath" />, <see cref="M.oMathPara" />, <see cref="M.phant" />, <see cref="M.r" />, <see cref="M.rad" />, <see cref="M.sPre" />, <see cref="M.sSub" />, <see cref="M.sSubSup" />, <see cref="M.sSup" />, <see cref="bdo" />, <see cref="bookmarkEnd" />, <see cref="bookmarkStart" />, <see cref="commentRangeEnd" />, <see cref="commentRangeStart" />, <see cref="contentPart" />, <see cref="customXmlDelRangeEnd" />, <see cref="customXmlDelRangeStart" />, <see cref="customXmlInsRangeEnd" />, <see cref="customXmlInsRangeStart" />, <see cref="customXmlMoveFromRangeEnd" />, <see cref="customXmlMoveFromRangeStart" />, <see cref="customXmlMoveToRangeEnd" />, <see cref="customXmlMoveToRangeStart" />, <see cref="del" />, <see cref="dir" />, <see cref="ins" />, <see cref="moveFrom" />, <see cref="moveFromRangeEnd" />, <see cref="moveFromRangeStart" />, <see cref="moveTo" />, <see cref="moveToRangeEnd" />, <see cref="moveToRangeStart" />, <see cref="permEnd" />, <see cref="permStart" />, <see cref="proofErr" />, <see cref="r" />, <see cref="rPr" />, <see cref="sdt" />, <see cref="W14.conflictDel" />, <see cref="W14.conflictIns" />, <see cref="W14.customXmlConflictDelRangeEnd" />, <see cref="W14.customXmlConflictDelRangeStart" />, <see cref="W14.customXmlConflictInsRangeEnd" />, <see cref="W14.customXmlConflictInsRangeStart" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="author" />, <see cref="date" />, <see cref="id" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="author" />, <see cref="date" />, <see cref="id" />, <see cref="W16DU.dateUtc" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: Inserted, InsertedMathControl, InsertedRun.</description></item>
         /// </list>
         /// </remarks>
@@ -6089,7 +6089,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="fldChar" />, <see cref="numPr" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="author" />, <see cref="date" />, <see cref="id" />, <see cref="original" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="author" />, <see cref="date" />, <see cref="id" />, <see cref="original" />, <see cref="W16DU.dateUtc" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: NumberingChange.</description></item>
         /// </list>
         /// </remarks>
@@ -6711,7 +6711,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="pPr" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="pPr" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="author" />, <see cref="date" />, <see cref="id" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="author" />, <see cref="date" />, <see cref="id" />, <see cref="W16DU.dateUtc" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: ParagraphPropertiesChange.</description></item>
         /// </list>
         /// </remarks>
@@ -7143,7 +7143,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="rPr" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="rPr" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="author" />, <see cref="date" />, <see cref="id" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="author" />, <see cref="date" />, <see cref="id" />, <see cref="W16DU.dateUtc" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: ParagraphMarkRunPropertiesChange, RunPropertiesChange.</description></item>
         /// </list>
         /// </remarks>
@@ -7542,7 +7542,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="sectPr" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="sectPr" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="author" />, <see cref="date" />, <see cref="id" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="author" />, <see cref="date" />, <see cref="id" />, <see cref="W16DU.dateUtc" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: SectionPropertiesChange.</description></item>
         /// </list>
         /// </remarks>
@@ -8627,7 +8627,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="tblPr" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="tblPr" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="author" />, <see cref="date" />, <see cref="id" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="author" />, <see cref="date" />, <see cref="id" />, <see cref="W16DU.dateUtc" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: TablePropertiesChange.</description></item>
         /// </list>
         /// </remarks>
@@ -8654,7 +8654,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="tblPrEx" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="tblPrEx" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="author" />, <see cref="date" />, <see cref="id" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="author" />, <see cref="date" />, <see cref="id" />, <see cref="W16DU.dateUtc" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: TablePropertyExceptionsChange.</description></item>
         /// </list>
         /// </remarks>
@@ -8842,7 +8842,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="tcPr" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="tcPr" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="author" />, <see cref="date" />, <see cref="id" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="author" />, <see cref="date" />, <see cref="id" />, <see cref="W16DU.dateUtc" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: TableCellPropertiesChange.</description></item>
         /// </list>
         /// </remarks>
@@ -9205,7 +9205,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="trPr" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="trPr" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="author" />, <see cref="date" />, <see cref="id" />.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="author" />, <see cref="date" />, <see cref="id" />, <see cref="W16DU.dateUtc" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: TableRowPropertiesChange.</description></item>
         /// </list>
         /// </remarks>
