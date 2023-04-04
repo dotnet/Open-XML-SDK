@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [2.20.0]
 
+### Added
+- Added DocumentFormat.OpenXml.Office.Drawing.Y2022.ImageFormula namespace
+- Added DocumentFormat.OpenXml.Office.Word.Y2023.WordML.Word16DU namespace
+
 ### Changed
 - Marked `OpenXmlSimpleType.TextValue` as obsolete. This property was never meant to be used externally (#1284)
 - Marked `OpenXmlPackage.Package` as obsolete. This will be an implementation detail in future versions and won't be accessible (#1306)

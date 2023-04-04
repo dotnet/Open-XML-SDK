@@ -329,6 +329,20 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         }
 
         /// <summary>
+        /// <para>dateUtc, this property is only available in Microsoft365 and later.</para>
+        /// <para>Represents the following attribute in the schema: w16du:dateUtc</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:w16du=http://schemas.microsoft.com/office/word/2023/wordml/word16du
+        /// </remark>
+        [SchemaAttr("w16du:dateUtc")]
+        public DateTimeValue? DateUtc
+        {
+            get => GetAttribute<DateTimeValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
         /// <para>Annotation Identifier</para>
         /// <para>Represents the following attribute in the schema: w:id</para>
         /// </summary>
@@ -352,6 +366,10 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                     aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
                 })
                 .AddAttribute("w:date", a => a.Date)
+                .AddAttribute("w16du:dateUtc", a => a.DateUtc, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Microsoft365));
+                })
                 .AddAttribute("w:id", a => a.Id, aBuilder =>
                 {
                     aBuilder.AddValidator(RequiredValidator.Instance);
@@ -436,6 +454,20 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         }
 
         /// <summary>
+        /// <para>dateUtc, this property is only available in Microsoft365 and later.</para>
+        /// <para>Represents the following attribute in the schema: w16du:dateUtc</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:w16du=http://schemas.microsoft.com/office/word/2023/wordml/word16du
+        /// </remark>
+        [SchemaAttr("w16du:dateUtc")]
+        public DateTimeValue? DateUtc
+        {
+            get => GetAttribute<DateTimeValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
         /// <para>Annotation Identifier</para>
         /// <para>Represents the following attribute in the schema: w:id</para>
         /// </summary>
@@ -462,6 +494,10 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                     aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
                 })
                 .AddAttribute("w:date", a => a.Date)
+                .AddAttribute("w16du:dateUtc", a => a.DateUtc, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Microsoft365));
+                })
                 .AddAttribute("w:id", a => a.Id, aBuilder =>
                 {
                     aBuilder.AddValidator(RequiredValidator.Instance);
@@ -8403,6 +8439,20 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         }
 
         /// <summary>
+        /// <para>dateUtc, this property is only available in Microsoft365 and later.</para>
+        /// <para>Represents the following attribute in the schema: w16du:dateUtc</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:w16du=http://schemas.microsoft.com/office/word/2023/wordml/word16du
+        /// </remark>
+        [SchemaAttr("w16du:dateUtc")]
+        public DateTimeValue? DateUtc
+        {
+            get => GetAttribute<DateTimeValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
         /// <para>Annotation Identifier</para>
         /// <para>Represents the following attribute in the schema: w:id</para>
         /// </summary>
@@ -8428,6 +8478,10 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                     aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
                 })
                 .AddAttribute("w:date", a => a.Date)
+                .AddAttribute("w16du:dateUtc", a => a.DateUtc, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Microsoft365));
+                })
                 .AddAttribute("w:id", a => a.Id, aBuilder =>
                 {
                     aBuilder.AddValidator(RequiredValidator.Instance);
@@ -12472,6 +12526,20 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         }
 
         /// <summary>
+        /// <para>dateUtc, this property is only available in Microsoft365 and later.</para>
+        /// <para>Represents the following attribute in the schema: w16du:dateUtc</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:w16du=http://schemas.microsoft.com/office/word/2023/wordml/word16du
+        /// </remark>
+        [SchemaAttr("w16du:dateUtc")]
+        public DateTimeValue? DateUtc
+        {
+            get => GetAttribute<DateTimeValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
         /// <para>Annotation Identifier</para>
         /// <para>Represents the following attribute in the schema: w:id</para>
         /// </summary>
@@ -12497,6 +12565,10 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                     aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
                 })
                 .AddAttribute("w:date", a => a.Date)
+                .AddAttribute("w16du:dateUtc", a => a.DateUtc, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Microsoft365));
+                })
                 .AddAttribute("w:id", a => a.Id, aBuilder =>
                 {
                     aBuilder.AddValidator(RequiredValidator.Instance);
@@ -13547,6 +13619,20 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         }
 
         /// <summary>
+        /// <para>dateUtc, this property is only available in Microsoft365 and later.</para>
+        /// <para>Represents the following attribute in the schema: w16du:dateUtc</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:w16du=http://schemas.microsoft.com/office/word/2023/wordml/word16du
+        /// </remark>
+        [SchemaAttr("w16du:dateUtc")]
+        public DateTimeValue? DateUtc
+        {
+            get => GetAttribute<DateTimeValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
         /// <para>Annotation Identifier</para>
         /// <para>Represents the following attribute in the schema: w:id</para>
         /// </summary>
@@ -13573,6 +13659,10 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                     aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
                 })
                 .AddAttribute("w:date", a => a.Date)
+                .AddAttribute("w16du:dateUtc", a => a.DateUtc, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Microsoft365));
+                })
                 .AddAttribute("w:id", a => a.Id, aBuilder =>
                 {
                     aBuilder.AddValidator(RequiredValidator.Instance);
@@ -13683,6 +13773,20 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         }
 
         /// <summary>
+        /// <para>dateUtc, this property is only available in Microsoft365 and later.</para>
+        /// <para>Represents the following attribute in the schema: w16du:dateUtc</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:w16du=http://schemas.microsoft.com/office/word/2023/wordml/word16du
+        /// </remark>
+        [SchemaAttr("w16du:dateUtc")]
+        public DateTimeValue? DateUtc
+        {
+            get => GetAttribute<DateTimeValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
         /// <para>Annotation Identifier</para>
         /// <para>Represents the following attribute in the schema: w:id</para>
         /// </summary>
@@ -13708,6 +13812,10 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                     aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
                 })
                 .AddAttribute("w:date", a => a.Date)
+                .AddAttribute("w16du:dateUtc", a => a.DateUtc, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Microsoft365));
+                })
                 .AddAttribute("w:id", a => a.Id, aBuilder =>
                 {
                     aBuilder.AddValidator(RequiredValidator.Instance);
@@ -13982,6 +14090,20 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         }
 
         /// <summary>
+        /// <para>dateUtc, this property is only available in Microsoft365 and later.</para>
+        /// <para>Represents the following attribute in the schema: w16du:dateUtc</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:w16du=http://schemas.microsoft.com/office/word/2023/wordml/word16du
+        /// </remark>
+        [SchemaAttr("w16du:dateUtc")]
+        public DateTimeValue? DateUtc
+        {
+            get => GetAttribute<DateTimeValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
         /// <para>Annotation Identifier</para>
         /// <para>Represents the following attribute in the schema: w:id</para>
         /// </summary>
@@ -14008,6 +14130,10 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                     aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
                 })
                 .AddAttribute("w:date", a => a.Date)
+                .AddAttribute("w16du:dateUtc", a => a.DateUtc, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Microsoft365));
+                })
                 .AddAttribute("w:id", a => a.Id, aBuilder =>
                 {
                     aBuilder.AddValidator(RequiredValidator.Instance);
@@ -16826,6 +16952,20 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         }
 
         /// <summary>
+        /// <para>dateUtc, this property is only available in Microsoft365 and later.</para>
+        /// <para>Represents the following attribute in the schema: w16du:dateUtc</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:w16du=http://schemas.microsoft.com/office/word/2023/wordml/word16du
+        /// </remark>
+        [SchemaAttr("w16du:dateUtc")]
+        public DateTimeValue? DateUtc
+        {
+            get => GetAttribute<DateTimeValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
         /// <para>Annotation Identifier</para>
         /// <para>Represents the following attribute in the schema: w:id</para>
         /// </summary>
@@ -16905,6 +17045,10 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                     aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
                 })
                 .AddAttribute("w:date", a => a.Date)
+                .AddAttribute("w16du:dateUtc", a => a.DateUtc, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Microsoft365));
+                })
                 .AddAttribute("w:id", a => a.Id, aBuilder =>
                 {
                     aBuilder.AddValidator(RequiredValidator.Instance);
@@ -31229,6 +31373,20 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         }
 
         /// <summary>
+        /// <para>dateUtc, this property is only available in Microsoft365 and later.</para>
+        /// <para>Represents the following attribute in the schema: w16du:dateUtc</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:w16du=http://schemas.microsoft.com/office/word/2023/wordml/word16du
+        /// </remark>
+        [SchemaAttr("w16du:dateUtc")]
+        public DateTimeValue? DateUtc
+        {
+            get => GetAttribute<DateTimeValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
         /// <para>Annotation Identifier</para>
         /// <para>Represents the following attribute in the schema: w:id</para>
         /// </summary>
@@ -31254,6 +31412,10 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                     aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
                 })
                 .AddAttribute("w:date", a => a.Date)
+                .AddAttribute("w16du:dateUtc", a => a.DateUtc, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Microsoft365));
+                })
                 .AddAttribute("w:id", a => a.Id, aBuilder =>
                 {
                     aBuilder.AddValidator(RequiredValidator.Instance);
@@ -33023,6 +33185,20 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         }
 
         /// <summary>
+        /// <para>dateUtc, this property is only available in Microsoft365 and later.</para>
+        /// <para>Represents the following attribute in the schema: w16du:dateUtc</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:w16du=http://schemas.microsoft.com/office/word/2023/wordml/word16du
+        /// </remark>
+        [SchemaAttr("w16du:dateUtc")]
+        public DateTimeValue? DateUtc
+        {
+            get => GetAttribute<DateTimeValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
         /// <para>Annotation Identifier</para>
         /// <para>Represents the following attribute in the schema: w:id</para>
         /// </summary>
@@ -33048,6 +33224,10 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                     aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
                 })
                 .AddAttribute("w:date", a => a.Date)
+                .AddAttribute("w16du:dateUtc", a => a.DateUtc, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Microsoft365));
+                })
                 .AddAttribute("w:id", a => a.Id, aBuilder =>
                 {
                     aBuilder.AddValidator(RequiredValidator.Instance);
@@ -33158,6 +33338,20 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         }
 
         /// <summary>
+        /// <para>dateUtc, this property is only available in Microsoft365 and later.</para>
+        /// <para>Represents the following attribute in the schema: w16du:dateUtc</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:w16du=http://schemas.microsoft.com/office/word/2023/wordml/word16du
+        /// </remark>
+        [SchemaAttr("w16du:dateUtc")]
+        public DateTimeValue? DateUtc
+        {
+            get => GetAttribute<DateTimeValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
         /// <para>Annotation Identifier</para>
         /// <para>Represents the following attribute in the schema: w:id</para>
         /// </summary>
@@ -33183,6 +33377,10 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                     aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
                 })
                 .AddAttribute("w:date", a => a.Date)
+                .AddAttribute("w16du:dateUtc", a => a.DateUtc, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Microsoft365));
+                })
                 .AddAttribute("w:id", a => a.Id, aBuilder =>
                 {
                     aBuilder.AddValidator(RequiredValidator.Instance);
@@ -36158,6 +36356,20 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         }
 
         /// <summary>
+        /// <para>dateUtc, this property is only available in Microsoft365 and later.</para>
+        /// <para>Represents the following attribute in the schema: w16du:dateUtc</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:w16du=http://schemas.microsoft.com/office/word/2023/wordml/word16du
+        /// </remark>
+        [SchemaAttr("w16du:dateUtc")]
+        public DateTimeValue? DateUtc
+        {
+            get => GetAttribute<DateTimeValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
         /// <para>Annotation Identifier</para>
         /// <para>Represents the following attribute in the schema: w:id</para>
         /// </summary>
@@ -36183,6 +36395,10 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                     aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
                 })
                 .AddAttribute("w:date", a => a.Date)
+                .AddAttribute("w16du:dateUtc", a => a.DateUtc, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Microsoft365));
+                })
                 .AddAttribute("w:id", a => a.Id, aBuilder =>
                 {
                     aBuilder.AddValidator(RequiredValidator.Instance);
@@ -36624,6 +36840,20 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         }
 
         /// <summary>
+        /// <para>dateUtc, this property is only available in Microsoft365 and later.</para>
+        /// <para>Represents the following attribute in the schema: w16du:dateUtc</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:w16du=http://schemas.microsoft.com/office/word/2023/wordml/word16du
+        /// </remark>
+        [SchemaAttr("w16du:dateUtc")]
+        public DateTimeValue? DateUtc
+        {
+            get => GetAttribute<DateTimeValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
         /// <para>Annotation Identifier</para>
         /// <para>Represents the following attribute in the schema: w:id</para>
         /// </summary>
@@ -36649,6 +36879,10 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                     aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
                 })
                 .AddAttribute("w:date", a => a.Date)
+                .AddAttribute("w16du:dateUtc", a => a.DateUtc, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Microsoft365));
+                })
                 .AddAttribute("w:id", a => a.Id, aBuilder =>
                 {
                     aBuilder.AddValidator(RequiredValidator.Instance);
@@ -36759,6 +36993,20 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         }
 
         /// <summary>
+        /// <para>dateUtc, this property is only available in Microsoft365 and later.</para>
+        /// <para>Represents the following attribute in the schema: w16du:dateUtc</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:w16du=http://schemas.microsoft.com/office/word/2023/wordml/word16du
+        /// </remark>
+        [SchemaAttr("w16du:dateUtc")]
+        public DateTimeValue? DateUtc
+        {
+            get => GetAttribute<DateTimeValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
         /// <para>Annotation Identifier</para>
         /// <para>Represents the following attribute in the schema: w:id</para>
         /// </summary>
@@ -36784,6 +37032,10 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                     aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
                 })
                 .AddAttribute("w:date", a => a.Date)
+                .AddAttribute("w16du:dateUtc", a => a.DateUtc, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Microsoft365));
+                })
                 .AddAttribute("w:id", a => a.Id, aBuilder =>
                 {
                     aBuilder.AddValidator(RequiredValidator.Instance);
@@ -46784,6 +47036,20 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         }
 
         /// <summary>
+        /// <para>dateUtc, this property is only available in Microsoft365 and later.</para>
+        /// <para>Represents the following attribute in the schema: w16du:dateUtc</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:w16du=http://schemas.microsoft.com/office/word/2023/wordml/word16du
+        /// </remark>
+        [SchemaAttr("w16du:dateUtc")]
+        public DateTimeValue? DateUtc
+        {
+            get => GetAttribute<DateTimeValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
         /// <para>Annotation Identifier</para>
         /// <para>Represents the following attribute in the schema: w:id</para>
         /// </summary>
@@ -46824,6 +47090,10 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                     aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
                 })
                 .AddAttribute("w:date", a => a.Date)
+                .AddAttribute("w16du:dateUtc", a => a.DateUtc, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Microsoft365));
+                })
                 .AddAttribute("w:id", a => a.Id, aBuilder =>
                 {
                     aBuilder.AddValidator(RequiredValidator.Instance);
@@ -49767,6 +50037,20 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         }
 
         /// <summary>
+        /// <para>dateUtc, this property is only available in Microsoft365 and later.</para>
+        /// <para>Represents the following attribute in the schema: w16du:dateUtc</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:w16du=http://schemas.microsoft.com/office/word/2023/wordml/word16du
+        /// </remark>
+        [SchemaAttr("w16du:dateUtc")]
+        public DateTimeValue? DateUtc
+        {
+            get => GetAttribute<DateTimeValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
         /// <para>Annotation Identifier</para>
         /// <para>Represents the following attribute in the schema: w:id</para>
         /// </summary>
@@ -49792,6 +50076,10 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                     aBuilder.AddValidator(new StringValidator() { MaxLength = (255L) });
                 })
                 .AddAttribute("w:date", a => a.Date)
+                .AddAttribute("w16du:dateUtc", a => a.DateUtc, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Microsoft365));
+                })
                 .AddAttribute("w:id", a => a.Id, aBuilder =>
                 {
                     aBuilder.AddValidator(RequiredValidator.Instance);

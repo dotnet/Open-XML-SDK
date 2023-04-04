@@ -10022,6 +10022,10 @@
         "Namespace": "http://schemas.microsoft.com/office/drawing/2021/scriptlink"
       },
       {
+        "Name": "imageFormula",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2022/imageformula"
+      },
+      {
         "Name": "contentPart",
         "Namespace": "http://schemas.microsoft.com/office/excel/2010/spreadsheetDrawing"
       },
@@ -12720,6 +12724,10 @@
       {
         "Name": "liveFeedProps",
         "Namespace": "http://schemas.microsoft.com/office/drawing/2021/livefeed"
+      },
+      {
+        "Name": "imageFormula",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2022/imageformula"
       }
     ]
   },
@@ -22006,6 +22014,10 @@
     ]
   },
   {
+    "Element": "DocumentFormat.OpenXml.Office.Drawing.Y2022.ImageFormula.ImageFormula",
+    "Children": []
+  },
+  {
     "Element": "DocumentFormat.OpenXml.Office.Excel.ColumnSortMap",
     "Children": [
       {
@@ -22363,6 +22375,139 @@
   },
   {
     "Element": "DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.UnasgnAllEmpty",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.AddEmpty",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.AsgnTaskAssignUnassignUser",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.AtrbtnTaskAssignUnassignUser",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.CommentAnchor",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.ExtensionList",
+    "Children": [
+      {
+        "Name": "ext",
+        "Namespace": "http://schemas.openxmlformats.org/presentationml/2006/main"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskAnchor",
+    "Children": [
+      {
+        "Name": "comment",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2022/08/main"
+      },
+      {
+        "Name": "extLst",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2022/08/main"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskDetails",
+    "Children": [
+      {
+        "Name": "extLst",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2022/08/main"
+      },
+      {
+        "Name": "history",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2022/08/main"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskHistory",
+    "Children": [
+      {
+        "Name": "event",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2022/08/main"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskHistoryEvent",
+    "Children": [
+      {
+        "Name": "add",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2022/08/main"
+      },
+      {
+        "Name": "anchr",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2022/08/main"
+      },
+      {
+        "Name": "asgn",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2022/08/main"
+      },
+      {
+        "Name": "atrbtn",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2022/08/main"
+      },
+      {
+        "Name": "date",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2022/08/main"
+      },
+      {
+        "Name": "extLst",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2022/08/main"
+      },
+      {
+        "Name": "pcntCmplt",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2022/08/main"
+      },
+      {
+        "Name": "title",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2022/08/main"
+      },
+      {
+        "Name": "unasgnAll",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2022/08/main"
+      },
+      {
+        "Name": "undo",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2022/08/main"
+      },
+      {
+        "Name": "unknown",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2022/08/main"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskProgressEventInfo",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskScheduleEventInfo",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskTitleEventInfo",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskUndo",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskUnknownRecord",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.UnasgnAllEmpty",
     "Children": []
   },
   {
