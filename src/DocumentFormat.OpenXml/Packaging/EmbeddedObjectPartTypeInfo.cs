@@ -23,7 +23,7 @@ namespace DocumentFormat.OpenXml.Packaging
             };
 
         internal static EmbeddedObjectPartType GetEmbeddedObjectPartType(string extension)
-            => extension.ToLower(CultureInfo.CurrentCulture) switch
+            => extension.ToLower() switch
             {
                 ".bin" => EmbeddedObjectPartType.Binary,
                 _ => throw new NotSupportedException($"{extension} is not supported"),

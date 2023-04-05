@@ -102,7 +102,7 @@ namespace DocumentFormat.OpenXml.Packaging
             };
 
         internal static EmbeddedPackagePartType GetEmbeddedPackagePartType(string extension)
-            => extension.ToLower(CultureInfo.CurrentCulture) switch
+            => extension.ToLower() switch
             {
                 ".docm" => EmbeddedPackagePartType.Docm,
 
