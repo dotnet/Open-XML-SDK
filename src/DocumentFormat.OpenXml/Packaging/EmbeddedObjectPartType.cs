@@ -14,4 +14,3 @@ namespace DocumentFormat.OpenXml.Packaging
         Binary,
     }
 }
-
