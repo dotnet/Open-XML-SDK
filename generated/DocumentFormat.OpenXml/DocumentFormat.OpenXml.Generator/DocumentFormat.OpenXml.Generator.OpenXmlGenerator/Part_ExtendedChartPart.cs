@@ -134,19 +134,6 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Adds a EmbeddedPackagePart to the ExtendedChartPart
         /// </summary>
         /// <param name="partType">The part type of the EmbeddedPackagePart</param>
-        /// <return>The newly added part</return>
-        public EmbeddedPackagePart AddEmbeddedPackagePart(EmbeddedPackagePartType partType)
-        {
-            var contentType = EmbeddedPackagePartTypeInfo.GetContentType(partType);
-            var partExtension = EmbeddedPackagePartTypeInfo.GetTargetExtension(partType);
-            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
-            return AddEmbeddedPackagePart(contentType);
-        }
-
-        /// <summary>
-        /// Adds a EmbeddedPackagePart to the ExtendedChartPart
-        /// </summary>
-        /// <param name="partType">The part type of the EmbeddedPackagePart</param>
         /// <param name="id">The relationship id</param>
         /// <return>The newly added part</return>
         public EmbeddedPackagePart AddEmbeddedPackagePart(EmbeddedPackagePartType partType, string id)
@@ -155,6 +142,19 @@ namespace DocumentFormat.OpenXml.Packaging
             var partExtension = EmbeddedPackagePartTypeInfo.GetTargetExtension(partType);
             Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
             return AddEmbeddedPackagePart(contentType, id);
+        }
+
+        /// <summary>
+        /// Adds a EmbeddedPackagePart to the ExtendedChartPart
+        /// </summary>
+        /// <param name="partType">The part type of the EmbeddedPackagePart</param>
+        /// <return>The newly added part</return>
+        public EmbeddedPackagePart AddEmbeddedPackagePart(EmbeddedPackagePartType partType)
+        {
+            var contentType = EmbeddedPackagePartTypeInfo.GetContentType(partType);
+            var partExtension = EmbeddedPackagePartTypeInfo.GetTargetExtension(partType);
+            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
+            return AddEmbeddedPackagePart(contentType);
         }
 
         /// <summary>
