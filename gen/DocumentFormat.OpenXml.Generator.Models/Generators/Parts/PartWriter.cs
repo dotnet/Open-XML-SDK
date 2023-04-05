@@ -502,10 +502,8 @@ public static class PartWriter
                 yield return new Item(ItemType.Method, $"Add{p.Name}", writer => GenerateAddPartMethod(writer, type, p, AddPartParameter.MediaDataPart, false));
                 yield return new Item(ItemType.Method, $"Add{p.Name}", writer => GenerateAddPartMethod(writer, type, p, AddPartParameter.MediaDataPart, true));
             }
-            else if (p.IsSpecialEmbeddedPart)
-            {
-                yield return new Item(ItemType.Method, $"Add{p.Name}", writer => GenerateAddPartMethod(writer, type, p, AddPartParameter.ContentType, false));
-            }
+
+            // These are the same now but may need p.IsSpecialEmbeddedPart case later upon redesign of this.
             else
             {
                 yield return new Item(ItemType.Method, $"Add{p.Name}", writer => GenerateAddPartMethod(writer, type, p, AddPartParameter.ContentType, false));
