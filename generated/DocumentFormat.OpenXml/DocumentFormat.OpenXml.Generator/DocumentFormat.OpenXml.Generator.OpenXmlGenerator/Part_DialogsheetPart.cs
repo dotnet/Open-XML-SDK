@@ -106,6 +106,46 @@ namespace DocumentFormat.OpenXml.Packaging
             InitPart(childPart, contentType);
             return childPart;
         }
+
+        /// <summary>
+        /// Adds a EmbeddedObjectPart to the DialogsheetPart
+        /// </summary>
+        /// <param name="contentType">The content type of the EmbeddedObjectPart</param>
+        /// <param name="id">The relationship id</param>
+        /// <return>The newly added part</return>
+        public EmbeddedObjectPart AddEmbeddedObjectPart(string contentType, string id)
+        {
+            var childPart = new EmbeddedObjectPart();
+            InitPart(childPart, contentType, id);
+            return childPart;
+        }
+
+        /// <summary>
+        /// Adds a EmbeddedObjectPart to the DialogsheetPart
+        /// </summary>
+        /// <param name="partType">The part type of the EmbeddedObjectPart</param>
+        /// <param name="id">The relationship id</param>
+        /// <return>The newly added part</return>
+        public EmbeddedObjectPart AddEmbeddedObjectPart(EmbeddedObjectPartType partType, string id)
+        {
+            var contentType = EmbeddedObjectPartTypeInfo.GetContentType(partType);
+            var partExtension = EmbeddedObjectPartTypeInfo.GetTargetExtension(partType);
+            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
+            return AddEmbeddedObjectPart(contentType, id);
+        }
+
+        /// <summary>
+        /// Adds a EmbeddedObjectPart to the DialogsheetPart
+        /// </summary>
+        /// <param name="partType">The part type of the EmbeddedObjectPart</param>
+        /// <return>The newly added part</return>
+        public EmbeddedObjectPart AddEmbeddedObjectPart(EmbeddedObjectPartType partType)
+        {
+            var contentType = EmbeddedObjectPartTypeInfo.GetContentType(partType);
+            var partExtension = EmbeddedObjectPartTypeInfo.GetTargetExtension(partType);
+            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
+            return AddEmbeddedObjectPart(contentType);
+        }
         
         /// <inheritdoc/>
         public override IFeatureCollection Features => _features ??= new GeneratedFeatures(this);

@@ -118,6 +118,46 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
+        /// Adds a EmbeddedPackagePart to the ChartPart
+        /// </summary>
+        /// <param name="contentType">The content type of the EmbeddedPackagePart</param>
+        /// <param name="id">The relationship id</param>
+        /// <return>The newly added part</return>
+        public EmbeddedPackagePart AddEmbeddedPackagePart(string contentType, string id)
+        {
+            var childPart = new EmbeddedPackagePart();
+            InitPart(childPart, contentType, id);
+            return childPart;
+        }
+
+        /// <summary>
+        /// Adds a EmbeddedPackagePart to the ChartPart
+        /// </summary>
+        /// <param name="partType">The part type of the EmbeddedPackagePart</param>
+        /// <param name="id">The relationship id</param>
+        /// <return>The newly added part</return>
+        public EmbeddedPackagePart AddEmbeddedPackagePart(EmbeddedPackagePartType partType, string id)
+        {
+            var contentType = EmbeddedPackagePartTypeInfo.GetContentType(partType);
+            var partExtension = EmbeddedPackagePartTypeInfo.GetTargetExtension(partType);
+            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
+            return AddEmbeddedPackagePart(contentType, id);
+        }
+
+        /// <summary>
+        /// Adds a EmbeddedPackagePart to the ChartPart
+        /// </summary>
+        /// <param name="partType">The part type of the EmbeddedPackagePart</param>
+        /// <return>The newly added part</return>
+        public EmbeddedPackagePart AddEmbeddedPackagePart(EmbeddedPackagePartType partType)
+        {
+            var contentType = EmbeddedPackagePartTypeInfo.GetContentType(partType);
+            var partExtension = EmbeddedPackagePartTypeInfo.GetTargetExtension(partType);
+            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
+            return AddEmbeddedPackagePart(contentType);
+        }
+
+        /// <summary>
         /// Adds a ImagePart to the ChartPart
         /// </summary>
         /// <param name="contentType">The content type of the ImagePart</param>

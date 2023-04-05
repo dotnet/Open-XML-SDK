@@ -180,6 +180,46 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
+        /// Adds a EmbeddedObjectPart to the MacroSheetPart
+        /// </summary>
+        /// <param name="contentType">The content type of the EmbeddedObjectPart</param>
+        /// <param name="id">The relationship id</param>
+        /// <return>The newly added part</return>
+        public EmbeddedObjectPart AddEmbeddedObjectPart(string contentType, string id)
+        {
+            var childPart = new EmbeddedObjectPart();
+            InitPart(childPart, contentType, id);
+            return childPart;
+        }
+
+        /// <summary>
+        /// Adds a EmbeddedObjectPart to the MacroSheetPart
+        /// </summary>
+        /// <param name="partType">The part type of the EmbeddedObjectPart</param>
+        /// <param name="id">The relationship id</param>
+        /// <return>The newly added part</return>
+        public EmbeddedObjectPart AddEmbeddedObjectPart(EmbeddedObjectPartType partType, string id)
+        {
+            var contentType = EmbeddedObjectPartTypeInfo.GetContentType(partType);
+            var partExtension = EmbeddedObjectPartTypeInfo.GetTargetExtension(partType);
+            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
+            return AddEmbeddedObjectPart(contentType, id);
+        }
+
+        /// <summary>
+        /// Adds a EmbeddedObjectPart to the MacroSheetPart
+        /// </summary>
+        /// <param name="partType">The part type of the EmbeddedObjectPart</param>
+        /// <return>The newly added part</return>
+        public EmbeddedObjectPart AddEmbeddedObjectPart(EmbeddedObjectPartType partType)
+        {
+            var contentType = EmbeddedObjectPartTypeInfo.GetContentType(partType);
+            var partExtension = EmbeddedObjectPartTypeInfo.GetTargetExtension(partType);
+            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
+            return AddEmbeddedObjectPart(contentType);
+        }
+
+        /// <summary>
         /// Adds a EmbeddedPackagePart to the MacroSheetPart
         /// </summary>
         /// <param name="contentType">The content type of the EmbeddedPackagePart</param>
@@ -189,6 +229,46 @@ namespace DocumentFormat.OpenXml.Packaging
             var childPart = new EmbeddedPackagePart();
             InitPart(childPart, contentType);
             return childPart;
+        }
+
+        /// <summary>
+        /// Adds a EmbeddedPackagePart to the MacroSheetPart
+        /// </summary>
+        /// <param name="contentType">The content type of the EmbeddedPackagePart</param>
+        /// <param name="id">The relationship id</param>
+        /// <return>The newly added part</return>
+        public EmbeddedPackagePart AddEmbeddedPackagePart(string contentType, string id)
+        {
+            var childPart = new EmbeddedPackagePart();
+            InitPart(childPart, contentType, id);
+            return childPart;
+        }
+
+        /// <summary>
+        /// Adds a EmbeddedPackagePart to the MacroSheetPart
+        /// </summary>
+        /// <param name="partType">The part type of the EmbeddedPackagePart</param>
+        /// <param name="id">The relationship id</param>
+        /// <return>The newly added part</return>
+        public EmbeddedPackagePart AddEmbeddedPackagePart(EmbeddedPackagePartType partType, string id)
+        {
+            var contentType = EmbeddedPackagePartTypeInfo.GetContentType(partType);
+            var partExtension = EmbeddedPackagePartTypeInfo.GetTargetExtension(partType);
+            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
+            return AddEmbeddedPackagePart(contentType, id);
+        }
+
+        /// <summary>
+        /// Adds a EmbeddedPackagePart to the MacroSheetPart
+        /// </summary>
+        /// <param name="partType">The part type of the EmbeddedPackagePart</param>
+        /// <return>The newly added part</return>
+        public EmbeddedPackagePart AddEmbeddedPackagePart(EmbeddedPackagePartType partType)
+        {
+            var contentType = EmbeddedPackagePartTypeInfo.GetContentType(partType);
+            var partExtension = EmbeddedPackagePartTypeInfo.GetTargetExtension(partType);
+            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
+            return AddEmbeddedPackagePart(contentType);
         }
 
         /// <summary>
