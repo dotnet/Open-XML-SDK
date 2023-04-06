@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Creates an instance of the SharedStringTablePart OpenXmlType
         /// </summary>
-        internal protected SharedStringTablePart()
+        internal SharedStringTablePart()
         {
         }
 

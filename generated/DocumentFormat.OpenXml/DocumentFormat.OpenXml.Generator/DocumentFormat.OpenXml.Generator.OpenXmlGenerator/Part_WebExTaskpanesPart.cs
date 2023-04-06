@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Creates an instance of the WebExTaskpanesPart OpenXmlType
         /// </summary>
-        internal protected WebExTaskpanesPart()
+        internal WebExTaskpanesPart()
         {
         }
 

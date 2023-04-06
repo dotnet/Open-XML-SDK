@@ -23,7 +23,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Creates an instance of the WorkbookPart OpenXmlType
         /// </summary>
-        internal protected WorkbookPart()
+        internal WorkbookPart()
         {
         }
 

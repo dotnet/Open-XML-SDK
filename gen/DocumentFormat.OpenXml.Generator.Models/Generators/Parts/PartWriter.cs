@@ -483,7 +483,7 @@ public static class PartWriter
         yield return new(ItemType.Constructor, string.Empty, writer =>
         {
             writer.WriteDocumentationComment($"Creates an instance of the {type.Name} OpenXmlType");
-            writer.Write("internal protected ");
+            writer.Write("internal ");
             writer.Write(type.Name);
             writer.WriteLine("()");
             writer.WriteLine("{");

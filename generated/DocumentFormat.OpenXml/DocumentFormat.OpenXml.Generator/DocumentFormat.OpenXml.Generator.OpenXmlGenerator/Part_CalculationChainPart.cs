@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Creates an instance of the CalculationChainPart OpenXmlType
         /// </summary>
-        internal protected CalculationChainPart()
+        internal CalculationChainPart()
         {
         }
 

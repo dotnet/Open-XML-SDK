@@ -22,7 +22,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Creates an instance of the ThumbnailPart OpenXmlType
         /// </summary>
-        internal protected ThumbnailPart()
+        internal ThumbnailPart()
         {
         }
 

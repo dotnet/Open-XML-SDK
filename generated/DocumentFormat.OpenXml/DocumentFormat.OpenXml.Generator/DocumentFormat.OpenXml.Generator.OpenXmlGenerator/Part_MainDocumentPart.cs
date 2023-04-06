@@ -23,7 +23,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Creates an instance of the MainDocumentPart OpenXmlType
         /// </summary>
-        internal protected MainDocumentPart()
+        internal MainDocumentPart()
         {
         }
 

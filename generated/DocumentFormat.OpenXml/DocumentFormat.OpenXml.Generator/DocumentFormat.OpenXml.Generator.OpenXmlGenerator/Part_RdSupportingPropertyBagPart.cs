@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Creates an instance of the RdSupportingPropertyBagPart OpenXmlType
         /// </summary>
-        internal protected RdSupportingPropertyBagPart()
+        internal RdSupportingPropertyBagPart()
         {
         }
 

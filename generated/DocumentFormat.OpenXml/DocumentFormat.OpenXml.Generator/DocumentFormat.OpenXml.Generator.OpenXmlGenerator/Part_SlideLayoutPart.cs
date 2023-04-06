@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Creates an instance of the SlideLayoutPart OpenXmlType
         /// </summary>
-        internal protected SlideLayoutPart()
+        internal SlideLayoutPart()
         {
         }
 

@@ -23,7 +23,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Creates an instance of the StyleDefinitionsPart OpenXmlType
         /// </summary>
-        internal protected StyleDefinitionsPart()
+        internal StyleDefinitionsPart()
         {
         }
 

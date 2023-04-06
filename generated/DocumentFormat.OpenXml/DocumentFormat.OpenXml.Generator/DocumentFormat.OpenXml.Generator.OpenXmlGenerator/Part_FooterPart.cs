@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Creates an instance of the FooterPart OpenXmlType
         /// </summary>
-        internal protected FooterPart()
+        internal FooterPart()
         {
         }
 

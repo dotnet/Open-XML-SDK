@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Creates an instance of the CommentAuthorsPart OpenXmlType
         /// </summary>
-        internal protected CommentAuthorsPart()
+        internal CommentAuthorsPart()
         {
         }
 

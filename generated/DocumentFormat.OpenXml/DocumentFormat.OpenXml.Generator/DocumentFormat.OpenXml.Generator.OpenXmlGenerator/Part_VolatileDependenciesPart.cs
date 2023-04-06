@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Creates an instance of the VolatileDependenciesPart OpenXmlType
         /// </summary>
-        internal protected VolatileDependenciesPart()
+        internal VolatileDependenciesPart()
         {
         }
 

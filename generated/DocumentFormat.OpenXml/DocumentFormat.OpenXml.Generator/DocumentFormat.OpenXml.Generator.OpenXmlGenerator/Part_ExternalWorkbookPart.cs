@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Creates an instance of the ExternalWorkbookPart OpenXmlType
         /// </summary>
-        internal protected ExternalWorkbookPart()
+        internal ExternalWorkbookPart()
         {
         }
 

@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Creates an instance of the WebExtensionPart OpenXmlType
         /// </summary>
-        internal protected WebExtensionPart()
+        internal WebExtensionPart()
         {
         }
 

@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Creates an instance of the DiagramColorsPart OpenXmlType
         /// </summary>
-        internal protected DiagramColorsPart()
+        internal DiagramColorsPart()
         {
         }
 

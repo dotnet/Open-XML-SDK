@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Creates an instance of the WorkbookUserDataPart OpenXmlType
         /// </summary>
-        internal protected WorkbookUserDataPart()
+        internal WorkbookUserDataPart()
         {
         }
 

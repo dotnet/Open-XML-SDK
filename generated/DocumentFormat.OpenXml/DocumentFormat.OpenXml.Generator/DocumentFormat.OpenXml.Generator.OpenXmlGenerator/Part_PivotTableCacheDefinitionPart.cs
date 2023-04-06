@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Creates an instance of the PivotTableCacheDefinitionPart OpenXmlType
         /// </summary>
-        internal protected PivotTableCacheDefinitionPart()
+        internal PivotTableCacheDefinitionPart()
         {
         }
 

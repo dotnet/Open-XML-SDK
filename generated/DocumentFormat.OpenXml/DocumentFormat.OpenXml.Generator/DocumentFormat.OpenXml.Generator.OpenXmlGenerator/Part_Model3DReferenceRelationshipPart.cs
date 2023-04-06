@@ -23,7 +23,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Creates an instance of the Model3DReferenceRelationshipPart OpenXmlType
         /// </summary>
-        internal protected Model3DReferenceRelationshipPart()
+        internal Model3DReferenceRelationshipPart()
         {
         }
 

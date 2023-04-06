@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Creates an instance of the CellMetadataPart OpenXmlType
         /// </summary>
-        internal protected CellMetadataPart()
+        internal CellMetadataPart()
         {
         }
 

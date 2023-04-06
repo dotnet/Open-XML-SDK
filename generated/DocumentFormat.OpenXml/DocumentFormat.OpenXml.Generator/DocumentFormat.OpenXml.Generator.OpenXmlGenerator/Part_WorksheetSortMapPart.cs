@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Creates an instance of the WorksheetSortMapPart OpenXmlType
         /// </summary>
-        internal protected WorksheetSortMapPart()
+        internal WorksheetSortMapPart()
         {
         }
 

@@ -22,7 +22,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Creates an instance of the CustomXmlPart OpenXmlType
         /// </summary>
-        internal protected CustomXmlPart()
+        internal CustomXmlPart()
         {
         }
 

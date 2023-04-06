@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Creates an instance of the WorkbookStylesPart OpenXmlType
         /// </summary>
-        internal protected WorkbookStylesPart()
+        internal WorkbookStylesPart()
         {
         }
 

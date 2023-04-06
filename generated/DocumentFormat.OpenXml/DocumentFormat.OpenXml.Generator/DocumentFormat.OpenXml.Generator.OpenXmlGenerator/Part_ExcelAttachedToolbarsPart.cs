@@ -23,7 +23,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Creates an instance of the ExcelAttachedToolbarsPart OpenXmlType
         /// </summary>
-        internal protected ExcelAttachedToolbarsPart()
+        internal ExcelAttachedToolbarsPart()
         {
         }
 

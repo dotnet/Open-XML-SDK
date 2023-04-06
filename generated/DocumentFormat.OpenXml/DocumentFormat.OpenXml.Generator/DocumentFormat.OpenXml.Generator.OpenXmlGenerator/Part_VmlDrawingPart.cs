@@ -23,7 +23,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Creates an instance of the VmlDrawingPart OpenXmlType
         /// </summary>
-        internal protected VmlDrawingPart()
+        internal VmlDrawingPart()
         {
         }
 

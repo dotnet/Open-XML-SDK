@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Creates an instance of the NotesMasterPart OpenXmlType
         /// </summary>
-        internal protected NotesMasterPart()
+        internal NotesMasterPart()
         {
         }
 

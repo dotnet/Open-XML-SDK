@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Creates an instance of the ViewPropertiesPart OpenXmlType
         /// </summary>
-        internal protected ViewPropertiesPart()
+        internal ViewPropertiesPart()
         {
         }
 

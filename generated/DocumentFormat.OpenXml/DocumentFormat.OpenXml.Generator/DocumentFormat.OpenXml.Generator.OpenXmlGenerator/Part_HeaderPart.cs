@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Creates an instance of the HeaderPart OpenXmlType
         /// </summary>
-        internal protected HeaderPart()
+        internal HeaderPart()
         {
         }
 

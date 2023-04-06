@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Creates an instance of the PivotTablePart OpenXmlType
         /// </summary>
-        internal protected PivotTablePart()
+        internal PivotTablePart()
         {
         }
 

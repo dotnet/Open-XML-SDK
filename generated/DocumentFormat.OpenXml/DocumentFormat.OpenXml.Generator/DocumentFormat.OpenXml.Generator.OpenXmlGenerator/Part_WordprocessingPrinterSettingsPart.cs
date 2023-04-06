@@ -23,7 +23,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Creates an instance of the WordprocessingPrinterSettingsPart OpenXmlType
         /// </summary>
-        internal protected WordprocessingPrinterSettingsPart()
+        internal WordprocessingPrinterSettingsPart()
         {
         }
 

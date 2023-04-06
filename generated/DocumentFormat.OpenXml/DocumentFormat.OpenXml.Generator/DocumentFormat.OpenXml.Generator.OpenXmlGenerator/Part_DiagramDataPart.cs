@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Creates an instance of the DiagramDataPart OpenXmlType
         /// </summary>
-        internal protected DiagramDataPart()
+        internal DiagramDataPart()
         {
         }
 

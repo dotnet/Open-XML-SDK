@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Creates an instance of the EndnotesPart OpenXmlType
         /// </summary>
-        internal protected EndnotesPart()
+        internal EndnotesPart()
         {
         }
 

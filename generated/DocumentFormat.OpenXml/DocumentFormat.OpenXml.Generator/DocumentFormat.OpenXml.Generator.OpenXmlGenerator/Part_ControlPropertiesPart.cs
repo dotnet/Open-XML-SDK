@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Creates an instance of the ControlPropertiesPart OpenXmlType
         /// </summary>
-        internal protected ControlPropertiesPart()
+        internal ControlPropertiesPart()
         {
         }
 

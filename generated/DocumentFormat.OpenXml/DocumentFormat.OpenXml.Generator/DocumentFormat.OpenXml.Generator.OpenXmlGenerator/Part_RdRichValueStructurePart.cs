@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Creates an instance of the RdRichValueStructurePart OpenXmlType
         /// </summary>
-        internal protected RdRichValueStructurePart()
+        internal RdRichValueStructurePart()
         {
         }
 

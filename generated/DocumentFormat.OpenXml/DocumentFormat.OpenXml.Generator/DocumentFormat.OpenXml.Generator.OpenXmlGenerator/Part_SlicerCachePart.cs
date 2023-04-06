@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Creates an instance of the SlicerCachePart OpenXmlType
         /// </summary>
-        internal protected SlicerCachePart()
+        internal SlicerCachePart()
         {
         }
 

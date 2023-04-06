@@ -26,7 +26,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Initializes OpenXmlPartContainer.
         /// </summary>
         [SuppressMessage("Reliability", "CA2000:Dispose objects before losing scope", Justification = "Registered to be disposed with container")]
-        protected OpenXmlPartContainer()
+        private protected OpenXmlPartContainer()
         {
             var childFeatures = new PartRelationshipsFeature(this);
 

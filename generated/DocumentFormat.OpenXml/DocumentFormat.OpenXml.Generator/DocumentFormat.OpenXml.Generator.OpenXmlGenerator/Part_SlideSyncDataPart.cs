@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Creates an instance of the SlideSyncDataPart OpenXmlType
         /// </summary>
-        internal protected SlideSyncDataPart()
+        internal SlideSyncDataPart()
         {
         }
 

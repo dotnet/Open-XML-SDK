@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Creates an instance of the NamedSheetViewsPart OpenXmlType
         /// </summary>
-        internal protected NamedSheetViewsPart()
+        internal NamedSheetViewsPart()
         {
         }
 

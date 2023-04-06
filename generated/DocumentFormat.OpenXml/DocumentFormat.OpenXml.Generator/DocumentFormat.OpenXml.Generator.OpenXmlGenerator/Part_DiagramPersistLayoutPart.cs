@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Creates an instance of the DiagramPersistLayoutPart OpenXmlType
         /// </summary>
-        internal protected DiagramPersistLayoutPart()
+        internal DiagramPersistLayoutPart()
         {
         }
 

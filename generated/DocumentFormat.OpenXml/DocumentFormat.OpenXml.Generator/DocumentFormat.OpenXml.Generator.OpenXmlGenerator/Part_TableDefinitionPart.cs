@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Creates an instance of the TableDefinitionPart OpenXmlType
         /// </summary>
-        internal protected TableDefinitionPart()
+        internal TableDefinitionPart()
         {
         }
 

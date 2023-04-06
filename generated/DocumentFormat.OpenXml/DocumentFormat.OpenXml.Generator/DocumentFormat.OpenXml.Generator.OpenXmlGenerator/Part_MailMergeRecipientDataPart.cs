@@ -22,7 +22,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Creates an instance of the MailMergeRecipientDataPart OpenXmlType
         /// </summary>
-        internal protected MailMergeRecipientDataPart()
+        internal MailMergeRecipientDataPart()
         {
         }
 

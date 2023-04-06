@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Creates an instance of the TableStylesPart OpenXmlType
         /// </summary>
-        internal protected TableStylesPart()
+        internal TableStylesPart()
         {
         }
 

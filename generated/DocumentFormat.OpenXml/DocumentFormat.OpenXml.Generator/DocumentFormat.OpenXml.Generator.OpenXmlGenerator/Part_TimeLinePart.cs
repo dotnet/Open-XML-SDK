@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Creates an instance of the TimeLinePart OpenXmlType
         /// </summary>
-        internal protected TimeLinePart()
+        internal TimeLinePart()
         {
         }
 

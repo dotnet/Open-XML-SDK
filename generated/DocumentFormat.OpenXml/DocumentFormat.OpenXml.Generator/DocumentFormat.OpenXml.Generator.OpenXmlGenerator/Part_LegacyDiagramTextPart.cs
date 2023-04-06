@@ -23,7 +23,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Creates an instance of the LegacyDiagramTextPart OpenXmlType
         /// </summary>
-        internal protected LegacyDiagramTextPart()
+        internal LegacyDiagramTextPart()
         {
         }
 
