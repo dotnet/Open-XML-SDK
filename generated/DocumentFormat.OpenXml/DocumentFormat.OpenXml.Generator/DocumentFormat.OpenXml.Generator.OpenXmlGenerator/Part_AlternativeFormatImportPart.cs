@@ -22,7 +22,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Creates an instance of the AlternativeFormatImportPart OpenXmlType
         /// </summary>
-        internal protected AlternativeFormatImportPart()
+        internal AlternativeFormatImportPart()
         {
         }
 

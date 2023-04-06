@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Creates an instance of the RibbonAndBackstageCustomizationsPart OpenXmlType
         /// </summary>
-        internal protected RibbonAndBackstageCustomizationsPart()
+        internal RibbonAndBackstageCustomizationsPart()
         {
         }
 

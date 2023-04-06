@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Creates an instance of the NumberingDefinitionsPart OpenXmlType
         /// </summary>
-        internal protected NumberingDefinitionsPart()
+        internal NumberingDefinitionsPart()
         {
         }
 

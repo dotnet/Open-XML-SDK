@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Creates an instance of the ConnectionsPart OpenXmlType
         /// </summary>
-        internal protected ConnectionsPart()
+        internal ConnectionsPart()
         {
         }
 

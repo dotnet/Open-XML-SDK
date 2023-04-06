@@ -22,7 +22,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Creates an instance of the EmbeddedPackagePart OpenXmlType
         /// </summary>
-        internal protected EmbeddedPackagePart()
+        internal EmbeddedPackagePart()
         {
         }
 

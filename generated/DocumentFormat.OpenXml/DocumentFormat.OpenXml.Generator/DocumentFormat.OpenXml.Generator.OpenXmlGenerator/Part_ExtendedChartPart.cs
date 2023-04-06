@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Creates an instance of the ExtendedChartPart OpenXmlType
         /// </summary>
-        internal protected ExtendedChartPart()
+        internal ExtendedChartPart()
         {
         }
 

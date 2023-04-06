@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Creates an instance of the GlossaryDocumentPart OpenXmlType
         /// </summary>
-        internal protected GlossaryDocumentPart()
+        internal GlossaryDocumentPart()
         {
         }
 

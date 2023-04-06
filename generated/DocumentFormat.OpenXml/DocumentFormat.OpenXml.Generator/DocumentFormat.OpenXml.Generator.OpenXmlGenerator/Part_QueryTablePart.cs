@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Creates an instance of the QueryTablePart OpenXmlType
         /// </summary>
-        internal protected QueryTablePart()
+        internal QueryTablePart()
         {
         }
 

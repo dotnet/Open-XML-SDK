@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Creates an instance of the SlicersPart OpenXmlType
         /// </summary>
-        internal protected SlicersPart()
+        internal SlicersPart()
         {
         }
 

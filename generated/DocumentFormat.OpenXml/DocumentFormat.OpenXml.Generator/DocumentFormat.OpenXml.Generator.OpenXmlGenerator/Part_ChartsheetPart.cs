@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Creates an instance of the ChartsheetPart OpenXmlType
         /// </summary>
-        internal protected ChartsheetPart()
+        internal ChartsheetPart()
         {
         }
 

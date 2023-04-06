@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Creates an instance of the WorkbookRevisionLogPart OpenXmlType
         /// </summary>
-        internal protected WorkbookRevisionLogPart()
+        internal WorkbookRevisionLogPart()
         {
         }
 

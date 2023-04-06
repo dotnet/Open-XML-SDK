@@ -23,7 +23,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Creates an instance of the StylesWithEffectsPart OpenXmlType
         /// </summary>
-        internal protected StylesWithEffectsPart()
+        internal StylesWithEffectsPart()
         {
         }
 

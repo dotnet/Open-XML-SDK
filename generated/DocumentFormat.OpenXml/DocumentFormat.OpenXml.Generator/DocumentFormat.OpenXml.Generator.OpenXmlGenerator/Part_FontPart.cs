@@ -22,7 +22,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Creates an instance of the FontPart OpenXmlType
         /// </summary>
-        internal protected FontPart()
+        internal FontPart()
         {
         }
 

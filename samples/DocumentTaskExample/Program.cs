@@ -18,6 +18,10 @@ namespace DocumentTaskSample
     {
         private static void Main(string[] args)
         {
+            var types = typeof(SpreadsheetDocument).Assembly.GetTypes().Where(t => t.IsAssignableTo(typeof(OpenXmlPartContainer))).ToList();
+            var publi = types.Where(t => t.GetConstructors().Any(c => c.IsPublic)).ToList();
+
+
             if (args.Length < 1)
             {
                 Common.ExampleUtilities.ShowHelp(

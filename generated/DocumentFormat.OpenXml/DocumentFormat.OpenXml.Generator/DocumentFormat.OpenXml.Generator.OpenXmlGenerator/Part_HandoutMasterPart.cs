@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Creates an instance of the HandoutMasterPart OpenXmlType
         /// </summary>
-        internal protected HandoutMasterPart()
+        internal HandoutMasterPart()
         {
         }
 

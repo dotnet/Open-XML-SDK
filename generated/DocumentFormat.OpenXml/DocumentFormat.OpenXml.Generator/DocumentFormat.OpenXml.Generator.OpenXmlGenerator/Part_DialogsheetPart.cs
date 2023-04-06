@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Creates an instance of the DialogsheetPart OpenXmlType
         /// </summary>
-        internal protected DialogsheetPart()
+        internal DialogsheetPart()
         {
         }
 

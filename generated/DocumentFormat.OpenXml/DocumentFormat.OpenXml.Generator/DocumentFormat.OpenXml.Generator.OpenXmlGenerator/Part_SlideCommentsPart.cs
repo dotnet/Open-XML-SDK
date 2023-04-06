@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Creates an instance of the SlideCommentsPart OpenXmlType
         /// </summary>
-        internal protected SlideCommentsPart()
+        internal SlideCommentsPart()
         {
         }
 

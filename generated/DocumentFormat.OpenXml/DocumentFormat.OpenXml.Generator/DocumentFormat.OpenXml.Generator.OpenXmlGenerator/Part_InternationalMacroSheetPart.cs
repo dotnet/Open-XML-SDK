@@ -23,7 +23,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Creates an instance of the InternationalMacroSheetPart OpenXmlType
         /// </summary>
-        internal protected InternationalMacroSheetPart()
+        internal InternationalMacroSheetPart()
         {
         }
 

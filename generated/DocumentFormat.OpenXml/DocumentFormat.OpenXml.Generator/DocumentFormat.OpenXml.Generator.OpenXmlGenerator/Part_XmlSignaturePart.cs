@@ -23,7 +23,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Creates an instance of the XmlSignaturePart OpenXmlType
         /// </summary>
-        internal protected XmlSignaturePart()
+        internal XmlSignaturePart()
         {
         }
 

@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Creates an instance of the DocumentTasksPart OpenXmlType
         /// </summary>
-        internal protected DocumentTasksPart()
+        internal DocumentTasksPart()
         {
         }
 

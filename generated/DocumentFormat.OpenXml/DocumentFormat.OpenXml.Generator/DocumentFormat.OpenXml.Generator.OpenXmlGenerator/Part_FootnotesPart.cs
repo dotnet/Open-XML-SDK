@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Creates an instance of the FootnotesPart OpenXmlType
         /// </summary>
-        internal protected FootnotesPart()
+        internal FootnotesPart()
         {
         }
 

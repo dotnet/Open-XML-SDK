@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Creates an instance of the PowerPointAuthorsPart OpenXmlType
         /// </summary>
-        internal protected PowerPointAuthorsPart()
+        internal PowerPointAuthorsPart()
         {
         }
 

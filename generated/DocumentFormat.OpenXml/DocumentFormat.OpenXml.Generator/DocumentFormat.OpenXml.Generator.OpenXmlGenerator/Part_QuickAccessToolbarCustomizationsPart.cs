@@ -23,7 +23,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Creates an instance of the QuickAccessToolbarCustomizationsPart OpenXmlType
         /// </summary>
-        internal protected QuickAccessToolbarCustomizationsPart()
+        internal QuickAccessToolbarCustomizationsPart()
         {
         }
 

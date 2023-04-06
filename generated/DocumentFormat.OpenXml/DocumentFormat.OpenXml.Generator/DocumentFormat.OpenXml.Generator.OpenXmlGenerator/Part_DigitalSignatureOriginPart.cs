@@ -23,7 +23,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Creates an instance of the DigitalSignatureOriginPart OpenXmlType
         /// </summary>
-        internal protected DigitalSignatureOriginPart()
+        internal DigitalSignatureOriginPart()
         {
         }
 

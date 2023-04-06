@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Creates an instance of the ThemePart OpenXmlType
         /// </summary>
-        internal protected ThemePart()
+        internal ThemePart()
         {
         }
 

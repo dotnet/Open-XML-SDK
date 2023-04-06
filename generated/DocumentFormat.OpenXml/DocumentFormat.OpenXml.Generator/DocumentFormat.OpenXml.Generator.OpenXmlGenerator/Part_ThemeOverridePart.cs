@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Creates an instance of the ThemeOverridePart OpenXmlType
         /// </summary>
-        internal protected ThemeOverridePart()
+        internal ThemeOverridePart()
         {
         }
 

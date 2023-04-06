@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Creates an instance of the WordprocessingCommentsExPart OpenXmlType
         /// </summary>
-        internal protected WordprocessingCommentsExPart()
+        internal WordprocessingCommentsExPart()
         {
         }
 

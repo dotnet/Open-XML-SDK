@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Creates an instance of the PowerPointCommentPart OpenXmlType
         /// </summary>
-        internal protected PowerPointCommentPart()
+        internal PowerPointCommentPart()
         {
         }
 

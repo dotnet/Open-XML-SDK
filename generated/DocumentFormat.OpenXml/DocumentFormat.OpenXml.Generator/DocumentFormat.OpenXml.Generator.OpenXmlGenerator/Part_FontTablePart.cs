@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Creates an instance of the FontTablePart OpenXmlType
         /// </summary>
-        internal protected FontTablePart()
+        internal FontTablePart()
         {
         }
 

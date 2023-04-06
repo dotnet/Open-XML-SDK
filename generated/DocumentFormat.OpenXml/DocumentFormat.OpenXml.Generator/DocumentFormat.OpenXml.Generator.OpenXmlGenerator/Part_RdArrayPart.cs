@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Creates an instance of the RdArrayPart OpenXmlType
         /// </summary>
-        internal protected RdArrayPart()
+        internal RdArrayPart()
         {
         }
 

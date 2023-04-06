@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Creates an instance of the WorksheetCommentsPart OpenXmlType
         /// </summary>
-        internal protected WorksheetCommentsPart()
+        internal WorksheetCommentsPart()
         {
         }
 

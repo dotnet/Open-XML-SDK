@@ -23,7 +23,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Creates an instance of the CoreFilePropertiesPart OpenXmlType
         /// </summary>
-        internal protected CoreFilePropertiesPart()
+        internal CoreFilePropertiesPart()
         {
         }
 

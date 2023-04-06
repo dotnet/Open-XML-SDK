@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Initializes a new instance of the OpenXmlPackage class.
         /// </summary>
-        protected OpenXmlPackage()
+        private protected OpenXmlPackage()
             : base()
         {
         }

@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Creates an instance of the DrawingsPart OpenXmlType
         /// </summary>
-        internal protected DrawingsPart()
+        internal DrawingsPart()
         {
         }
 

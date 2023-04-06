@@ -23,7 +23,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Creates an instance of the VbaProjectPart OpenXmlType
         /// </summary>
-        internal protected VbaProjectPart()
+        internal VbaProjectPart()
         {
         }
 

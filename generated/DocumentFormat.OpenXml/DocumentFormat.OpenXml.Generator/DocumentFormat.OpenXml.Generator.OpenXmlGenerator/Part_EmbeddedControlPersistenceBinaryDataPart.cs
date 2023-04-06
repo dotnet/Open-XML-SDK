@@ -22,7 +22,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Creates an instance of the EmbeddedControlPersistenceBinaryDataPart OpenXmlType
         /// </summary>
-        internal protected EmbeddedControlPersistenceBinaryDataPart()
+        internal EmbeddedControlPersistenceBinaryDataPart()
         {
         }
 

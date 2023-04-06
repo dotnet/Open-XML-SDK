@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Creates an instance of the WordprocessingPeoplePart OpenXmlType
         /// </summary>
-        internal protected WordprocessingPeoplePart()
+        internal WordprocessingPeoplePart()
         {
         }
 

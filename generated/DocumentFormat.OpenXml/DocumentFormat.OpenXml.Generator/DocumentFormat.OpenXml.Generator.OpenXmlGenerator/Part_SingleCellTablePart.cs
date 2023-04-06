@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Creates an instance of the SingleCellTablePart OpenXmlType
         /// </summary>
-        internal protected SingleCellTablePart()
+        internal SingleCellTablePart()
         {
         }
 

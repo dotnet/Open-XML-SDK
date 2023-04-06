@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Initialize a new instance of ExtendedPart.
         /// </summary>
         /// <param name="relationshipType"></param>
-        internal protected ExtendedPart(string relationshipType)
+        internal ExtendedPart(string relationshipType)
             : base()
         {
             RelationshipType = relationshipType;

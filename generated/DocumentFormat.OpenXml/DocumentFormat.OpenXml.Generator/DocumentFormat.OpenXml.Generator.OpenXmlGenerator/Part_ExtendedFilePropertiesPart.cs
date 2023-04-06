@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Creates an instance of the ExtendedFilePropertiesPart OpenXmlType
         /// </summary>
-        internal protected ExtendedFilePropertiesPart()
+        internal ExtendedFilePropertiesPart()
         {
         }
 

@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Creates an instance of the DocumentSettingsPart OpenXmlType
         /// </summary>
-        internal protected DocumentSettingsPart()
+        internal DocumentSettingsPart()
         {
         }
 
