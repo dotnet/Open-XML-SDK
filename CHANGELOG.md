@@ -20,12 +20,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - .NET Standard 1.3 is no longer a supported platform. .NET Standard 2.0 is the lowest .NET Standard supported.
 
 ### Breaking change
-- OpenXmlPackage.CanSave is now an instance method (#1307)
-- Remove `OpenXmlSettings.RelationshipErrorHandlerFactory` and associated types.
+- Core infrastructure is now contained in a new package DocumentFormat.OpenXml.Framework. Typed classes are still in DocumentFormat.OpenXml. This means that you may reference DocumentFormat.OpenXml and still compile the same types, but if you want a smaller package, you may rely on just the framework package. 
+- OpenXmlPackage.CanSave is now an instance property (#1307)
+- Remove `OpenXmlSettings.RelationshipErrorHandlerFactory` and associated types and replaced with a built-in mechanism to enable this
 - IdPartPair is now a readonly struct rather than a class
 - IDisposableFeature is now a part of the framework package and is available by default on a package. Extension methods to manage this feature have been removed as it no longer needs to be opted into. It now registers all disposable actions to be done at the package level instead of adding support at the part level.
-- Core infrastructure is now contained in a new package DocumentFormat.OpenXml.Framework. Typed classes are still in DocumentFormat.OpenXml. This means that you may reference DocumentFormat.OpenXml and still compile the same types, but if you want a smaller package, you may rely on just the framework package. 
-- Removed `OpenXmlPackage.Package` property. A `OpenXmlPackage` is now backed by a `IPackage` instead of `System.IO.Packaging.Package`. This can be retrieved by `OpenXmlPackage.Features.Get<IPackageFeature>()`
+- Removed `OpenXmlPackage.Package` property. A `OpenXmlPackage` is now backed by an internal (for now) type `IPackage` instead of `System.IO.Packaging.Package`
 - Renamed PartExtensionProvider to IPartExtensionFeature and reduced its surface area to only two methods (instead of a full Dictionary<,>). The property to access this off of OpenXmlPackage has been removed, but may be accessed via `Features.Get<IPartExtensionFeature>()` if needed.
 - Removed unused `SchemaAttrAttribute`
 - Removed unused `ChildElementInfoAttribute`
@@ -34,6 +34,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Removed obsoleted methods from 2.x
 - Removed mutable properties on OpenXmlAttribute and marked as `readonly`
 - Removed `OpenXmlPackage.Close` in favor of Dispose (#1373)
+- OpenXmlPart/OpenXmlContainer/OpenXmlPackage and derived types all have internal constructors
 
 ### Fixed
 - Fixed incorrect file extensions for vbaProject files (#1292)
