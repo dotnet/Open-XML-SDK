@@ -3,11 +3,6 @@
 
 using DocumentFormat.OpenXml.Features;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 
 namespace DocumentFormat.OpenXml.Packaging
 {
@@ -20,7 +15,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentNullException(message: "Parent part MUST be provided.", paramName: nameof(parent));
             }
 
-            if (string.IsNullOrWhiteSpace(contentType) && !Enum.IsDefined(partType))
+            if (string.IsNullOrWhiteSpace(contentType) && !Enum.IsDefined<EmbeddedObjectPartType>(partType))
             {
                 throw new ArgumentException(message: "A valid contentType or partType MUST be provided");
             }
@@ -39,7 +34,7 @@ namespace DocumentFormat.OpenXml.Packaging
             }
 
             // At this point we know the content type. Try to get the part type.
-            if (!Enum.IsDefined(partType) || partType == EmbeddedObjectPartType.Unknown)
+            if (!Enum.IsDefined<EmbeddedObjectPartType>(partType) || partType == EmbeddedObjectPartType.Unknown)
             {
                 if (EmbeddedObjectPartTypeInfo.TryGetEmbeddedObjectPartTypeFromContentType(contentType))
                 {
@@ -48,7 +43,7 @@ namespace DocumentFormat.OpenXml.Packaging
             }
 
             // Did we get it?
-            if (Enum.IsDefined(partType) && partType != EmbeddedObjectPartType.Unknown)
+            if (Enum.IsDefined<EmbeddedObjectPartType>(partType) && partType != EmbeddedObjectPartType.Unknown)
             {
                 var partExtension = EmbeddedObjectPartTypeInfo.GetTargetExtension(partType);
                 parent.Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
