@@ -108,53 +108,13 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Adds a EmbeddedPackagePart to the ExtendedChartPart
         /// </summary>
-        /// <param name="contentType">The content type of the EmbeddedPackagePart</param>
+        /// <param name="partType">The part type of the EmbeddedPackagePart. Required, may be Unknown.</param>
+        /// <param name="contentType">The content type of the EmbeddedPackagePart. Optional, default to null.</param>
+        /// <param name="id">The relationship id. Optional, default to null.</param>
         /// <return>The newly added part</return>
-        public EmbeddedPackagePart AddEmbeddedPackagePart(string contentType)
+        public EmbeddedPackagePart AddEmbeddedPackagePart(EmbeddedPackagePartType partType, string? contentType = null, string? id = null)
         {
-            var childPart = new EmbeddedPackagePart();
-            InitPart(childPart, contentType);
-            return childPart;
-        }
-
-        /// <summary>
-        /// Adds a EmbeddedPackagePart to the ExtendedChartPart
-        /// </summary>
-        /// <param name="contentType">The content type of the EmbeddedPackagePart</param>
-        /// <param name="id">The relationship id</param>
-        /// <return>The newly added part</return>
-        public EmbeddedPackagePart AddEmbeddedPackagePart(string contentType, string id)
-        {
-            var childPart = new EmbeddedPackagePart();
-            InitPart(childPart, contentType, id);
-            return childPart;
-        }
-
-        /// <summary>
-        /// Adds a EmbeddedPackagePart to the ExtendedChartPart
-        /// </summary>
-        /// <param name="partType">The part type of the EmbeddedPackagePart</param>
-        /// <param name="id">The relationship id</param>
-        /// <return>The newly added part</return>
-        public EmbeddedPackagePart AddEmbeddedPackagePart(EmbeddedPackagePartType partType, string id)
-        {
-            var contentType = EmbeddedPackagePartTypeInfo.GetContentType(partType);
-            var partExtension = EmbeddedPackagePartTypeInfo.GetTargetExtension(partType);
-            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
-            return AddEmbeddedPackagePart(contentType, id);
-        }
-
-        /// <summary>
-        /// Adds a EmbeddedPackagePart to the ExtendedChartPart
-        /// </summary>
-        /// <param name="partType">The part type of the EmbeddedPackagePart</param>
-        /// <return>The newly added part</return>
-        public EmbeddedPackagePart AddEmbeddedPackagePart(EmbeddedPackagePartType partType)
-        {
-            var contentType = EmbeddedPackagePartTypeInfo.GetContentType(partType);
-            var partExtension = EmbeddedPackagePartTypeInfo.GetTargetExtension(partType);
-            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
-            return AddEmbeddedPackagePart(contentType);
+            return EmbeddedPackagePartExtensions.AddEmbeddedPackagePart(this, partType, contentType, id);
         }
 
         /// <summary>

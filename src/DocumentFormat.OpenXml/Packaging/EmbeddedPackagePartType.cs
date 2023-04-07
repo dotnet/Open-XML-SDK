@@ -107,5 +107,10 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Office Open XML workbook template (.xltx).
         /// </summary>
         Xltx,
+
+        /// <summary>
+        /// Unknown type of package.
+        /// </summary>
+        Unknown,
     }
 }

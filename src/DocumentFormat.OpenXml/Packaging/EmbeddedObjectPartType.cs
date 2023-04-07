@@ -12,5 +12,10 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Office Document OLE Embedded object
         /// </summary>
         Binary,
+
+        /// <summary>
+        /// Object type unknown
+        /// </summary>
+        Unknown,
     }
 }

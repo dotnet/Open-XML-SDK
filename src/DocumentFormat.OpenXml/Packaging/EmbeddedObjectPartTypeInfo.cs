@@ -28,5 +28,40 @@ namespace DocumentFormat.OpenXml.Packaging
                 ".bin" => EmbeddedObjectPartType.Binary,
                 _ => throw new NotSupportedException($"{extension} is not supported"),
             };
+
+        internal static EmbeddedObjectPartType GetEmbeddedObjectPartTypeFromContentType(string contenttype)
+            => contenttype.ToLower(CultureInfo.CurrentCulture) switch
+            {
+                "application/vnd.openxmlformats-officedocument.oleObject" => EmbeddedObjectPartType.Binary,
+                _ => throw new NotSupportedException($"{contenttype} is not supported"),
+            };
+
+        internal static bool TryGetEmbeddedObjectPartTypeFromContentType(string contentType)
+        {
+            try
+            {
+                _ = GetEmbeddedObjectPartTypeFromContentType(contentType);
+                return true;
+            }
+            catch (NotSupportedException)
+            {
+            }
+
+            return false;
+        }
+
+        internal static bool TryGetContentType(EmbeddedObjectPartType partType)
+        {
+            try
+            {
+                _ = GetContentType(partType);
+                return true;
+            }
+            catch (NotSupportedException)
+            {
+            }
+
+            return false;
+        }
     }
 }

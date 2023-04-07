@@ -502,6 +502,10 @@ public static class PartWriter
             }
 
             // For now they are the same, but for redesign later, we may need to use p.IsSpecialEmbeddedPart.
+            else if (p.IsSpecialEmbeddedPart)
+            {
+                yield return new Item(ItemType.Method, $"Add{p.Name}", writer => NewGenerateAddPartMethod(writer, type, p, AddPartParameter.ContentType, true));
+            }
             else
             {
                 yield return new Item(ItemType.Method, $"Add{p.Name}", writer => GenerateAddPartMethod(writer, type, p, AddPartParameter.ContentType, false));
@@ -648,6 +652,77 @@ public static class PartWriter
                     writer.Write(", id");
                 }
 
+                writer.WriteLine(");");
+            }
+        }
+    }
+
+    private static void NewGenerateAddPartMethod(IndentedTextWriter writer, Part type, PartChild p, AddPartParameter partParameter, bool hasId)
+    {
+        // const string ChildPartLocalVariable = "childPart";
+        // const string PartExtensionLocalVariable = "partExtension";
+        const string ContentTypeParameterName = "contentType";
+        const string MediaPartParameterName = "mediaDataPart";
+        const string PartTypeParameterName = "partType";
+        const string IdParameterName = "id";
+
+        writer.WriteDocumentationComment(new DocumentCommentOptions
+        {
+            Summary = $"Adds a {p.Name} to the {type.Name}",
+            Parameters = GetParameters(),
+            Return = "The newly added part",
+        });
+
+        Parameters GetParameters()
+        {
+            var parameterComments = new Parameters();
+
+            parameterComments.Add(PartTypeParameterName, $"The part type of the {p.Name}. Required, may be Unknown.");
+            parameterComments.Add(ContentTypeParameterName, $"The content type of the {p.Name}. Optional, default to null.");
+
+            // this isn't used in this method for now. might be later.
+            if (partParameter == AddPartParameter.MediaDataPart)
+            {
+                parameterComments.Add(MediaPartParameterName, $"The part type of the {p.Name}");
+            }
+
+            parameterComments.Add(IdParameterName, "The relationship id. Optional, default to null.");
+
+            return parameterComments;
+        }
+
+        writer.Write("public ");
+        writer.Write(p.Name);
+        writer.Write(" Add");
+        writer.Write(p.Name);
+        writer.Write("(");
+
+        writer.Write(p.Name);
+        writer.Write("Type " + PartTypeParameterName + ", ");
+        writer.Write("string? " + ContentTypeParameterName + " = null, ");
+
+        writer.Write("string? " + IdParameterName + " = null");
+
+        writer.WriteLine(")");
+
+        using (writer.AddBlock(_options))
+        {
+            // for now this isn't used in this method. it might be later.
+            if (partParameter == AddPartParameter.MediaDataPart)
+            {
+                writer.Write($"return AddDataPartReferenceRelationship<{p.Name}>(");
+                writer.Write(MediaPartParameterName);
+
+                if (hasId)
+                {
+                    writer.Write(", id");
+                }
+
+                writer.WriteLine(");");
+            }
+            else
+            {
+                writer.Write($"return {p.Name}Extensions.Add{p.Name}(this, {PartTypeParameterName}, {ContentTypeParameterName}, {IdParameterName}");
                 writer.WriteLine(");");
             }
         }
