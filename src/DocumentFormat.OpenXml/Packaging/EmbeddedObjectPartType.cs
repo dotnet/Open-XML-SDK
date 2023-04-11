@@ -9,13 +9,13 @@ namespace DocumentFormat.OpenXml.Packaging
     public enum EmbeddedObjectPartType
     {
         /// <summary>
+        /// Object type unknown
+        /// </summary>
+        Unknown = 0,
+
+        /// <summary>
         /// Office Document OLE Embedded object
         /// </summary>
         Binary,
-
-        /// <summary>
-        /// Object type unknown
-        /// </summary>
-        Unknown,
     }
 }

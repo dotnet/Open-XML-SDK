@@ -18,6 +18,7 @@ namespace DocumentFormat.OpenXml.Packaging
         internal static string GetTargetExtension(EmbeddedObjectPartType embeddedObjectType)
             => embeddedObjectType switch
             {
+                EmbeddedObjectPartType.Unknown => ".bin",
                 EmbeddedObjectPartType.Binary => ".bin",
                 _ => ".package",
             };

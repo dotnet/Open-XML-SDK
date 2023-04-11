@@ -15,13 +15,13 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentNullException(message: "Parent part MUST be provided.", paramName: nameof(parent));
             }
 
-            if (string.IsNullOrWhiteSpace(contentType) && !Enum.IsDefined<EmbeddedPackagePartType>(partType))
+            if ((contentType == null || contentType.Length == 0) && partType == EmbeddedPackagePartType.Unknown)
             {
                 throw new ArgumentException(message: "A valid contentType or partType MUST be provided");
             }
 
             // Try to establish the content type first.
-            if (string.IsNullOrWhiteSpace(contentType))
+            if (contentType == null || contentType.Length == 0)
             {
                 if (EmbeddedPackagePartTypeInfo.TryGetContentType(partType))
                 {
@@ -34,7 +34,7 @@ namespace DocumentFormat.OpenXml.Packaging
             }
 
             // At this point we know the content type. Try to get the part type.
-            if (!Enum.IsDefined<EmbeddedPackagePartType>(partType) || partType == EmbeddedPackagePartType.Unknown)
+            if (partType == EmbeddedPackagePartType.Unknown)
             {
                 if (EmbeddedPackagePartTypeInfo.TryGetEmbeddedPackagePartTypeFromContentType(contentType))
                 {
@@ -43,13 +43,13 @@ namespace DocumentFormat.OpenXml.Packaging
             }
 
             // Did we get it?
-            if (Enum.IsDefined<EmbeddedPackagePartType>(partType) && partType != EmbeddedPackagePartType.Unknown)
+            if (partType != EmbeddedPackagePartType.Unknown)
             {
                 var partExtension = EmbeddedPackagePartTypeInfo.GetTargetExtension(partType);
                 parent.Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
             }
 
-            if (string.IsNullOrWhiteSpace(relId))
+            if (contentType == null || contentType.Length == 0)
             {
                 relId = null;
             }

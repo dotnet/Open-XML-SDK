@@ -37,6 +37,7 @@ namespace DocumentFormat.OpenXml.Packaging
         internal static string GetTargetExtension(EmbeddedPackagePartType embeddedPackageType)
             => embeddedPackageType switch
             {
+                EmbeddedPackagePartType.Unknown => ".package",
                 EmbeddedPackagePartType.Docm => ".docm",
                 EmbeddedPackagePartType.Docx => ".docx",
                 EmbeddedPackagePartType.Dotm => ".dotm",
@@ -63,6 +64,7 @@ namespace DocumentFormat.OpenXml.Packaging
         internal static EmbeddedPackagePartType GetEmbeddedPackagePartType(string extension)
             => extension.ToLower(CultureInfo.CurrentCulture) switch
             {
+                ".package" => EmbeddedPackagePartType.Unknown,
                 ".docm" => EmbeddedPackagePartType.Docm,
                 ".docx" => EmbeddedPackagePartType.Docx,
                 ".dotm" => EmbeddedPackagePartType.Dotm,

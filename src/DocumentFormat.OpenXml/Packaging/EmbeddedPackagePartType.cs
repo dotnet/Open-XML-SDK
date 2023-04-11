@@ -9,6 +9,11 @@ namespace DocumentFormat.OpenXml.Packaging
     public enum EmbeddedPackagePartType
     {
         /// <summary>
+        /// Default to unknown package type.
+        /// </summary>
+        Unknown = 0,
+
+        /// <summary>
         /// Office Open XML macro-enabled document (.docm).
         /// </summary>
         Docm,
@@ -107,10 +112,5 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Office Open XML workbook template (.xltx).
         /// </summary>
         Xltx,
-
-        /// <summary>
-        /// Unknown type of package.
-        /// </summary>
-        Unknown,
     }
 }
