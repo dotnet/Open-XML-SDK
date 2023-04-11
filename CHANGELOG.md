@@ -43,12 +43,21 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [2.20.0]
 
+### Added
+- Added DocumentFormat.OpenXml.Office.Drawing.Y2022.ImageFormula namespace
+- Added DocumentFormat.OpenXml.Office.Word.Y2023.WordML.Word16DU namespace
+
 ### Changed
-- Marked all obsoleted APIs as compile as error. These will be removed in the next release
+- Marked `OpenXmlSimpleType.TextValue` as obsolete. This property was never meant to be used externally (#1284)
+- Marked `OpenXmlPackage.Package` as obsolete. This will be an implementation detail in future versions and won't be accessible (#1306)
+- Marked `OpenXmlPackage.Close` as obsolete. This will be removed in a later release, use Dispose instead (#1371)
+- Marked `OpenXmlPackage.SaveAs` as obsolete as it will be removed in a future version (#1378)
 
 ### Fixed
 - Fixed incorrect file extensions for vbaProject files (#1292)
+- Fixed incorrect file extensions for ImagePart (#1305)
 - Fixed incorrect casing for customXml (#1351)
+- Fixed AddEmbeddedPackagePart to allow correct extensions for various content types (#1388)
 
 ## [2.19.0] - 2022-12-14
 
