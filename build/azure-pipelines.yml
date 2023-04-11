@@ -10,8 +10,8 @@ pr:
     - release/*
   paths:
     exclude:
-      - '**/*.md'
-      - docs
+      - /**/*.md
+      - /docs/
 
 variables:
   RunPeVerify: true
