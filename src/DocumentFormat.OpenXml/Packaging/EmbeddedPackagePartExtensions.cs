@@ -49,7 +49,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 parent.Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
             }
 
-            if (contentType == null || contentType.Length == 0)
+            if (relId == null || relId.Length == 0)
             {
                 relId = null;
             }

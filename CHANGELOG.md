@@ -35,6 +35,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Removed mutable properties on OpenXmlAttribute and marked as `readonly`
 - Removed `OpenXmlPackage.Close` in favor of Dispose (#1373)
 - OpenXmlPart/OpenXmlContainer/OpenXmlPackage and derived types all have internal constructors
+- Refactor AddEmbeddedPackagePart overloads into one extension method (#1391)
 
 ### Fixed
 - Fixed incorrect file extensions for vbaProject files (#1292)
