@@ -500,21 +500,10 @@ public static class PartWriter
                 yield return new Item(ItemType.Method, $"Add{p.Name}", writer => GenerateAddPartMethod(writer, type, p, AddPartParameter.MediaDataPart, false));
                 yield return new Item(ItemType.Method, $"Add{p.Name}", writer => GenerateAddPartMethod(writer, type, p, AddPartParameter.MediaDataPart, true));
             }
-
-            // For now they are the same, but for redesign later, we may need to use p.IsSpecialEmbeddedPart.
-            // if (p.IsSpecialEmbeddedPart)
             else
             {
-                yield return new Item(ItemType.Method, $"Add{p.Name}", writer => NewGenerateAddPartMethod(writer, type, p, AddPartParameter.ContentType, true));
+                yield return new Item(ItemType.Method, $"Add{p.Name}", writer => GenerateLiteAddPartMethod(writer, type, p, AddPartParameter.ContentType, true));
             }
-
-            // else
-            // {
-            //    yield return new Item(ItemType.Method, $"Add{p.Name}", writer => GenerateAddPartMethod(writer, type, p, AddPartParameter.ContentType, false));
-            //    yield return new Item(ItemType.Method, $"Add{p.Name}", writer => GenerateAddPartMethod(writer, type, p, AddPartParameter.ContentType, true));
-            //    yield return new Item(ItemType.Method, $"Add{p.Name}", writer => GenerateAddPartMethod(writer, type, p, AddPartParameter.PartType, true));
-            //    yield return new Item(ItemType.Method, $"Add{p.Name}", writer => GenerateAddPartMethod(writer, type, p, AddPartParameter.PartType, false));
-            // }
         }
 
         return type.Children
@@ -659,12 +648,9 @@ public static class PartWriter
         }
     }
 
-    private static void NewGenerateAddPartMethod(IndentedTextWriter writer, Part type, PartChild p, AddPartParameter partParameter, bool hasId)
+    private static void GenerateLiteAddPartMethod(IndentedTextWriter writer, Part type, PartChild p, AddPartParameter partParameter, bool hasId)
     {
-        // const string ChildPartLocalVariable = "childPart";
-        // const string PartExtensionLocalVariable = "partExtension";
         const string ContentTypeParameterName = "contentType";
-        const string MediaPartParameterName = "mediaDataPart";
         const string PartTypeParameterName = "partType";
         const string IdParameterName = "id";
 
@@ -677,18 +663,12 @@ public static class PartWriter
 
         Parameters GetParameters()
         {
-            var parameterComments = new Parameters();
-
-            parameterComments.Add(PartTypeParameterName, $"The part type of the {p.Name}. Required, may be Unknown.");
-            parameterComments.Add(ContentTypeParameterName, $"The content type of the {p.Name}. Optional, default to null.");
-
-            // this isn't used in this method for now. might be later.
-            if (partParameter == AddPartParameter.MediaDataPart)
+            var parameterComments = new Parameters
             {
-                parameterComments.Add(MediaPartParameterName, $"The part type of the {p.Name}");
-            }
-
-            parameterComments.Add(IdParameterName, "The relationship id. Optional, default to null.");
+                { PartTypeParameterName, $"The part type of the {p.Name}. Required, may be Unknown." },
+                { ContentTypeParameterName, $"The content type of the {p.Name}. Optional, default to null." },
+                { IdParameterName, "The relationship id. Optional, default to null." },
+            };
 
             return parameterComments;
         }
@@ -709,24 +689,8 @@ public static class PartWriter
 
         using (writer.AddBlock(_options))
         {
-            // for now this isn't used in this method. it might be later.
-            if (partParameter == AddPartParameter.MediaDataPart)
-            {
-                writer.Write($"return AddDataPartReferenceRelationship<{p.Name}>(");
-                writer.Write(MediaPartParameterName);
-
-                if (hasId)
-                {
-                    writer.Write(", id");
-                }
-
-                writer.WriteLine(");");
-            }
-            else
-            {
-                writer.Write($"return {p.Name}Extensions.Add{p.Name}(this, {PartTypeParameterName}, {ContentTypeParameterName}, {IdParameterName}");
-                writer.WriteLine(");");
-            }
+            writer.Write($"return {p.Name}Extensions.Add{p.Name}(this, {PartTypeParameterName}, {ContentTypeParameterName}, {IdParameterName}");
+            writer.WriteLine(");");
         }
     }
 }
