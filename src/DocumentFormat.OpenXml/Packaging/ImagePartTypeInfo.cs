@@ -68,5 +68,54 @@ namespace DocumentFormat.OpenXml.Packaging
                 ".wmf" => ImagePartType.Wmf,
                 _ => throw new NotSupportedException($"{extension} is not supported"),
             };
+
+        internal static ImagePartType GetImagePartTypeFromContentType(string contenttype)
+            => contenttype.ToLower(CultureInfo.CurrentCulture) switch
+            {
+                "image/bmp" => ImagePartType.Bmp,
+                "image/gif" => ImagePartType.Gif,
+                "image/png" => ImagePartType.Png,
+                "image/tiff" => ImagePartType.Tiff,
+
+                // "image/xbm" => ImagePartType.Xbm,
+                "image/x-icon" => ImagePartType.Icon,
+                "image/x-pcx" => ImagePartType.Pcx,
+
+                // "image/x-pcz" => ImagePartType.Pcz,
+                // "image/pict" => ImagePartType.Pict,
+                "image/jpeg" => ImagePartType.Jpeg,
+                "image/x-emf" => ImagePartType.Emf,
+                "image/x-wmf" => ImagePartType.Wmf,
+                "image/svg+xml" => ImagePartType.Svg,
+                _ => throw new NotSupportedException($"{contenttype} is not supported"),
+            };
+
+        internal static bool TryGetImagePartTypeFromContentType(string contentType)
+        {
+            try
+            {
+                _ = GetImagePartTypeFromContentType(contentType);
+                return true;
+            }
+            catch (NotSupportedException)
+            {
+            }
+
+            return false;
+        }
+
+        internal static bool TryGetContentType(ImagePartType partType)
+        {
+            try
+            {
+                _ = GetContentType(partType);
+                return true;
+            }
+            catch (NotSupportedException)
+            {
+            }
+
+            return false;
+        }
     }
 }

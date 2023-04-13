@@ -238,105 +238,25 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Adds a AlternativeFormatImportPart to the GlossaryDocumentPart
         /// </summary>
-        /// <param name="contentType">The content type of the AlternativeFormatImportPart</param>
+        /// <param name="partType">The part type of the AlternativeFormatImportPart. Required, may be Unknown.</param>
+        /// <param name="contentType">The content type of the AlternativeFormatImportPart. Optional, default to null.</param>
+        /// <param name="id">The relationship id. Optional, default to null.</param>
         /// <return>The newly added part</return>
-        public AlternativeFormatImportPart AddAlternativeFormatImportPart(string contentType)
+        public AlternativeFormatImportPart AddAlternativeFormatImportPart(AlternativeFormatImportPartType partType, string? contentType = null, string? id = null)
         {
-            var childPart = new AlternativeFormatImportPart();
-            InitPart(childPart, contentType);
-            return childPart;
-        }
-
-        /// <summary>
-        /// Adds a AlternativeFormatImportPart to the GlossaryDocumentPart
-        /// </summary>
-        /// <param name="contentType">The content type of the AlternativeFormatImportPart</param>
-        /// <param name="id">The relationship id</param>
-        /// <return>The newly added part</return>
-        public AlternativeFormatImportPart AddAlternativeFormatImportPart(string contentType, string id)
-        {
-            var childPart = new AlternativeFormatImportPart();
-            InitPart(childPart, contentType, id);
-            return childPart;
-        }
-
-        /// <summary>
-        /// Adds a AlternativeFormatImportPart to the GlossaryDocumentPart
-        /// </summary>
-        /// <param name="partType">The part type of the AlternativeFormatImportPart</param>
-        /// <param name="id">The relationship id</param>
-        /// <return>The newly added part</return>
-        public AlternativeFormatImportPart AddAlternativeFormatImportPart(AlternativeFormatImportPartType partType, string id)
-        {
-            var contentType = AlternativeFormatImportPartTypeInfo.GetContentType(partType);
-            var partExtension = AlternativeFormatImportPartTypeInfo.GetTargetExtension(partType);
-            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
-            return AddAlternativeFormatImportPart(contentType, id);
-        }
-
-        /// <summary>
-        /// Adds a AlternativeFormatImportPart to the GlossaryDocumentPart
-        /// </summary>
-        /// <param name="partType">The part type of the AlternativeFormatImportPart</param>
-        /// <return>The newly added part</return>
-        public AlternativeFormatImportPart AddAlternativeFormatImportPart(AlternativeFormatImportPartType partType)
-        {
-            var contentType = AlternativeFormatImportPartTypeInfo.GetContentType(partType);
-            var partExtension = AlternativeFormatImportPartTypeInfo.GetTargetExtension(partType);
-            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
-            return AddAlternativeFormatImportPart(contentType);
+            return AlternativeFormatImportPartExtensions.AddAlternativeFormatImportPart(this, partType, contentType, id);
         }
 
         /// <summary>
         /// Adds a EmbeddedControlPersistencePart to the GlossaryDocumentPart
         /// </summary>
-        /// <param name="contentType">The content type of the EmbeddedControlPersistencePart</param>
+        /// <param name="partType">The part type of the EmbeddedControlPersistencePart. Required, may be Unknown.</param>
+        /// <param name="contentType">The content type of the EmbeddedControlPersistencePart. Optional, default to null.</param>
+        /// <param name="id">The relationship id. Optional, default to null.</param>
         /// <return>The newly added part</return>
-        public EmbeddedControlPersistencePart AddEmbeddedControlPersistencePart(string contentType)
+        public EmbeddedControlPersistencePart AddEmbeddedControlPersistencePart(EmbeddedControlPersistencePartType partType, string? contentType = null, string? id = null)
         {
-            var childPart = new EmbeddedControlPersistencePart();
-            InitPart(childPart, contentType);
-            return childPart;
-        }
-
-        /// <summary>
-        /// Adds a EmbeddedControlPersistencePart to the GlossaryDocumentPart
-        /// </summary>
-        /// <param name="contentType">The content type of the EmbeddedControlPersistencePart</param>
-        /// <param name="id">The relationship id</param>
-        /// <return>The newly added part</return>
-        public EmbeddedControlPersistencePart AddEmbeddedControlPersistencePart(string contentType, string id)
-        {
-            var childPart = new EmbeddedControlPersistencePart();
-            InitPart(childPart, contentType, id);
-            return childPart;
-        }
-
-        /// <summary>
-        /// Adds a EmbeddedControlPersistencePart to the GlossaryDocumentPart
-        /// </summary>
-        /// <param name="partType">The part type of the EmbeddedControlPersistencePart</param>
-        /// <param name="id">The relationship id</param>
-        /// <return>The newly added part</return>
-        public EmbeddedControlPersistencePart AddEmbeddedControlPersistencePart(EmbeddedControlPersistencePartType partType, string id)
-        {
-            var contentType = EmbeddedControlPersistencePartTypeInfo.GetContentType(partType);
-            var partExtension = EmbeddedControlPersistencePartTypeInfo.GetTargetExtension(partType);
-            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
-            return AddEmbeddedControlPersistencePart(contentType, id);
-        }
-
-        /// <summary>
-        /// Adds a EmbeddedControlPersistencePart to the GlossaryDocumentPart
-        /// </summary>
-        /// <param name="partType">The part type of the EmbeddedControlPersistencePart</param>
-        /// <return>The newly added part</return>
-        public EmbeddedControlPersistencePart AddEmbeddedControlPersistencePart(EmbeddedControlPersistencePartType partType)
-        {
-            var contentType = EmbeddedControlPersistencePartTypeInfo.GetContentType(partType);
-            var partExtension = EmbeddedControlPersistencePartTypeInfo.GetTargetExtension(partType);
-            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
-            return AddEmbeddedControlPersistencePart(contentType);
+            return EmbeddedControlPersistencePartExtensions.AddEmbeddedControlPersistencePart(this, partType, contentType, id);
         }
 
         /// <summary>
@@ -366,53 +286,13 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Adds a ImagePart to the GlossaryDocumentPart
         /// </summary>
-        /// <param name="contentType">The content type of the ImagePart</param>
+        /// <param name="partType">The part type of the ImagePart. Required, may be Unknown.</param>
+        /// <param name="contentType">The content type of the ImagePart. Optional, default to null.</param>
+        /// <param name="id">The relationship id. Optional, default to null.</param>
         /// <return>The newly added part</return>
-        public ImagePart AddImagePart(string contentType)
+        public ImagePart AddImagePart(ImagePartType partType, string? contentType = null, string? id = null)
         {
-            var childPart = new ImagePart();
-            InitPart(childPart, contentType);
-            return childPart;
-        }
-
-        /// <summary>
-        /// Adds a ImagePart to the GlossaryDocumentPart
-        /// </summary>
-        /// <param name="contentType">The content type of the ImagePart</param>
-        /// <param name="id">The relationship id</param>
-        /// <return>The newly added part</return>
-        public ImagePart AddImagePart(string contentType, string id)
-        {
-            var childPart = new ImagePart();
-            InitPart(childPart, contentType, id);
-            return childPart;
-        }
-
-        /// <summary>
-        /// Adds a ImagePart to the GlossaryDocumentPart
-        /// </summary>
-        /// <param name="partType">The part type of the ImagePart</param>
-        /// <param name="id">The relationship id</param>
-        /// <return>The newly added part</return>
-        public ImagePart AddImagePart(ImagePartType partType, string id)
-        {
-            var contentType = ImagePartTypeInfo.GetContentType(partType);
-            var partExtension = ImagePartTypeInfo.GetTargetExtension(partType);
-            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
-            return AddImagePart(contentType, id);
-        }
-
-        /// <summary>
-        /// Adds a ImagePart to the GlossaryDocumentPart
-        /// </summary>
-        /// <param name="partType">The part type of the ImagePart</param>
-        /// <return>The newly added part</return>
-        public ImagePart AddImagePart(ImagePartType partType)
-        {
-            var contentType = ImagePartTypeInfo.GetContentType(partType);
-            var partExtension = ImagePartTypeInfo.GetTargetExtension(partType);
-            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
-            return AddImagePart(contentType);
+            return ImagePartExtensions.AddImagePart(this, partType, contentType, id);
         }
 
         /// <summary>

@@ -9,6 +9,11 @@ namespace DocumentFormat.OpenXml.Packaging
     public enum FontPartType
     {
         /// <summary>
+        /// Unknown part type.
+        /// </summary>
+        Unknown = 0,
+
+        /// <summary>
         /// Font Data (.fntdata).
         /// </summary>
         FontData,

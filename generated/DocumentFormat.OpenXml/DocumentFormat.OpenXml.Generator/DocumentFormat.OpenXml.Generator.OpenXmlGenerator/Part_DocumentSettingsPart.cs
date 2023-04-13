@@ -88,105 +88,25 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Adds a ImagePart to the DocumentSettingsPart
         /// </summary>
-        /// <param name="contentType">The content type of the ImagePart</param>
+        /// <param name="partType">The part type of the ImagePart. Required, may be Unknown.</param>
+        /// <param name="contentType">The content type of the ImagePart. Optional, default to null.</param>
+        /// <param name="id">The relationship id. Optional, default to null.</param>
         /// <return>The newly added part</return>
-        public ImagePart AddImagePart(string contentType)
+        public ImagePart AddImagePart(ImagePartType partType, string? contentType = null, string? id = null)
         {
-            var childPart = new ImagePart();
-            InitPart(childPart, contentType);
-            return childPart;
-        }
-
-        /// <summary>
-        /// Adds a ImagePart to the DocumentSettingsPart
-        /// </summary>
-        /// <param name="contentType">The content type of the ImagePart</param>
-        /// <param name="id">The relationship id</param>
-        /// <return>The newly added part</return>
-        public ImagePart AddImagePart(string contentType, string id)
-        {
-            var childPart = new ImagePart();
-            InitPart(childPart, contentType, id);
-            return childPart;
-        }
-
-        /// <summary>
-        /// Adds a ImagePart to the DocumentSettingsPart
-        /// </summary>
-        /// <param name="partType">The part type of the ImagePart</param>
-        /// <param name="id">The relationship id</param>
-        /// <return>The newly added part</return>
-        public ImagePart AddImagePart(ImagePartType partType, string id)
-        {
-            var contentType = ImagePartTypeInfo.GetContentType(partType);
-            var partExtension = ImagePartTypeInfo.GetTargetExtension(partType);
-            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
-            return AddImagePart(contentType, id);
-        }
-
-        /// <summary>
-        /// Adds a ImagePart to the DocumentSettingsPart
-        /// </summary>
-        /// <param name="partType">The part type of the ImagePart</param>
-        /// <return>The newly added part</return>
-        public ImagePart AddImagePart(ImagePartType partType)
-        {
-            var contentType = ImagePartTypeInfo.GetContentType(partType);
-            var partExtension = ImagePartTypeInfo.GetTargetExtension(partType);
-            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
-            return AddImagePart(contentType);
+            return ImagePartExtensions.AddImagePart(this, partType, contentType, id);
         }
 
         /// <summary>
         /// Adds a MailMergeRecipientDataPart to the DocumentSettingsPart
         /// </summary>
-        /// <param name="contentType">The content type of the MailMergeRecipientDataPart</param>
+        /// <param name="partType">The part type of the MailMergeRecipientDataPart. Required, may be Unknown.</param>
+        /// <param name="contentType">The content type of the MailMergeRecipientDataPart. Optional, default to null.</param>
+        /// <param name="id">The relationship id. Optional, default to null.</param>
         /// <return>The newly added part</return>
-        public MailMergeRecipientDataPart AddMailMergeRecipientDataPart(string contentType)
+        public MailMergeRecipientDataPart AddMailMergeRecipientDataPart(MailMergeRecipientDataPartType partType, string? contentType = null, string? id = null)
         {
-            var childPart = new MailMergeRecipientDataPart();
-            InitPart(childPart, contentType);
-            return childPart;
-        }
-
-        /// <summary>
-        /// Adds a MailMergeRecipientDataPart to the DocumentSettingsPart
-        /// </summary>
-        /// <param name="contentType">The content type of the MailMergeRecipientDataPart</param>
-        /// <param name="id">The relationship id</param>
-        /// <return>The newly added part</return>
-        public MailMergeRecipientDataPart AddMailMergeRecipientDataPart(string contentType, string id)
-        {
-            var childPart = new MailMergeRecipientDataPart();
-            InitPart(childPart, contentType, id);
-            return childPart;
-        }
-
-        /// <summary>
-        /// Adds a MailMergeRecipientDataPart to the DocumentSettingsPart
-        /// </summary>
-        /// <param name="partType">The part type of the MailMergeRecipientDataPart</param>
-        /// <param name="id">The relationship id</param>
-        /// <return>The newly added part</return>
-        public MailMergeRecipientDataPart AddMailMergeRecipientDataPart(MailMergeRecipientDataPartType partType, string id)
-        {
-            var contentType = MailMergeRecipientDataPartTypeInfo.GetContentType(partType);
-            var partExtension = MailMergeRecipientDataPartTypeInfo.GetTargetExtension(partType);
-            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
-            return AddMailMergeRecipientDataPart(contentType, id);
-        }
-
-        /// <summary>
-        /// Adds a MailMergeRecipientDataPart to the DocumentSettingsPart
-        /// </summary>
-        /// <param name="partType">The part type of the MailMergeRecipientDataPart</param>
-        /// <return>The newly added part</return>
-        public MailMergeRecipientDataPart AddMailMergeRecipientDataPart(MailMergeRecipientDataPartType partType)
-        {
-            var contentType = MailMergeRecipientDataPartTypeInfo.GetContentType(partType);
-            var partExtension = MailMergeRecipientDataPartTypeInfo.GetTargetExtension(partType);
-            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
-            return AddMailMergeRecipientDataPart(contentType);
+            return MailMergeRecipientDataPartExtensions.AddMailMergeRecipientDataPart(this, partType, contentType, id);
         }
         
         /// <inheritdoc/>

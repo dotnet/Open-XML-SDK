@@ -9,6 +9,11 @@ namespace DocumentFormat.OpenXml.Packaging
     public enum MailMergeRecipientDataPartType
     {
         /// <summary>
+        /// Unknown part type.
+        /// </summary>
+        Unknown = 0,
+
+        /// <summary>
         /// OpenXml Mail Merge Recipient Data.
         /// </summary>
         OpenXmlMailMergeRecipientData,

@@ -502,17 +502,19 @@ public static class PartWriter
             }
 
             // For now they are the same, but for redesign later, we may need to use p.IsSpecialEmbeddedPart.
-            else if (p.IsSpecialEmbeddedPart)
+            // if (p.IsSpecialEmbeddedPart)
+            else
             {
                 yield return new Item(ItemType.Method, $"Add{p.Name}", writer => NewGenerateAddPartMethod(writer, type, p, AddPartParameter.ContentType, true));
             }
-            else
-            {
-                yield return new Item(ItemType.Method, $"Add{p.Name}", writer => GenerateAddPartMethod(writer, type, p, AddPartParameter.ContentType, false));
-                yield return new Item(ItemType.Method, $"Add{p.Name}", writer => GenerateAddPartMethod(writer, type, p, AddPartParameter.ContentType, true));
-                yield return new Item(ItemType.Method, $"Add{p.Name}", writer => GenerateAddPartMethod(writer, type, p, AddPartParameter.PartType, true));
-                yield return new Item(ItemType.Method, $"Add{p.Name}", writer => GenerateAddPartMethod(writer, type, p, AddPartParameter.PartType, false));
-            }
+
+            // else
+            // {
+            //    yield return new Item(ItemType.Method, $"Add{p.Name}", writer => GenerateAddPartMethod(writer, type, p, AddPartParameter.ContentType, false));
+            //    yield return new Item(ItemType.Method, $"Add{p.Name}", writer => GenerateAddPartMethod(writer, type, p, AddPartParameter.ContentType, true));
+            //    yield return new Item(ItemType.Method, $"Add{p.Name}", writer => GenerateAddPartMethod(writer, type, p, AddPartParameter.PartType, true));
+            //    yield return new Item(ItemType.Method, $"Add{p.Name}", writer => GenerateAddPartMethod(writer, type, p, AddPartParameter.PartType, false));
+            // }
         }
 
         return type.Children

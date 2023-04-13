@@ -31,6 +31,11 @@ namespace DocumentFormat.OpenXml.Packaging
     public enum ImagePartType
     {
         /// <summary>
+        /// Unknown part type.
+        /// </summary>
+        Unknown = 0,
+
+        /// <summary>
         /// Windows Bitmap Graphics (.bmp).
         /// </summary>
         Bmp,

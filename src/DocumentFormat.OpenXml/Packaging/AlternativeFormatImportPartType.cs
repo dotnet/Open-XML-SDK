@@ -27,6 +27,11 @@ namespace DocumentFormat.OpenXml.Packaging
     public enum AlternativeFormatImportPartType
     {
         /// <summary>
+        /// Unknown part type.
+        /// </summary>
+        Unknown = 0,
+
+        /// <summary>
         /// Extensible HyperText Markup Language File (.xhtml).
         /// </summary>
         Xhtml,

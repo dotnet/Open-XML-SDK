@@ -9,6 +9,11 @@ namespace DocumentFormat.OpenXml.Packaging
     public enum ThumbnailPartType
     {
         /// <summary>
+        /// Unknown part type
+        /// </summary>
+        Unknown = 0,
+
+        /// <summary>
         /// JPEG/JIFF Image (.jpeg).
         /// </summary>
         Jpeg,

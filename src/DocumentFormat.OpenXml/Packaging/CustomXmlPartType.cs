@@ -9,6 +9,11 @@ namespace DocumentFormat.OpenXml.Packaging
     public enum CustomXmlPartType
     {
         /// <summary>
+        /// Unknown part type.
+        /// </summary>
+        Unknown = 0,
+
+        /// <summary>
         /// Additional characteristics (application/xml).
         /// </summary>
         AdditionalCharacteristics,

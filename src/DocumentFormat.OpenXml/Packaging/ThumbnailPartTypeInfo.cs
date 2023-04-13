@@ -2,6 +2,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using System;
+using System.Globalization;
 
 namespace DocumentFormat.OpenXml.Packaging
 {
@@ -24,5 +25,42 @@ namespace DocumentFormat.OpenXml.Packaging
                 ThumbnailPartType.Wmf => ".wmf",
                 _ => ".image",
             };
+
+        internal static ThumbnailPartType GetThumbnailPartTypeFromContentType(string contenttype)
+            => contenttype.ToLower(CultureInfo.CurrentCulture) switch
+            {
+                "image/jpeg" => ThumbnailPartType.Jpeg,
+                "image/x-emf" => ThumbnailPartType.Emf,
+                "image/x-wmf" => ThumbnailPartType.Wmf,
+                _ => throw new NotSupportedException($"{contenttype} is not supported"),
+            };
+
+        internal static bool TryGetThumbnailPartTypeFromContentType(string contentType)
+        {
+            try
+            {
+                _ = GetThumbnailPartTypeFromContentType(contentType);
+                return true;
+            }
+            catch (NotSupportedException)
+            {
+            }
+
+            return false;
+        }
+
+        internal static bool TryGetContentType(ThumbnailPartType partType)
+        {
+            try
+            {
+                _ = GetContentType(partType);
+                return true;
+            }
+            catch (NotSupportedException)
+            {
+            }
+
+            return false;
+        }
     }
 }

@@ -9,6 +9,11 @@ namespace DocumentFormat.OpenXml.Packaging
     public enum EmbeddedControlPersistencePartType
     {
         /// <summary>
+        /// Unknown part type
+        /// </summary>
+        Unknown = 0,
+
+        /// <summary>
         /// ActiveX (.xml).
         /// </summary>
         ActiveX,

@@ -9,6 +9,11 @@ namespace DocumentFormat.OpenXml.Packaging
     public enum EmbeddedControlPersistenceBinaryDataPartType
     {
         /// <summary>
+        /// Unknown part type.
+        /// </summary>
+        Unknown = 0,
+
+        /// <summary>
         /// ActieveX (.bin).
         /// </summary>
         ActiveXBin,

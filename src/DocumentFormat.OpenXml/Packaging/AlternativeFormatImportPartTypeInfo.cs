@@ -2,6 +2,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using System;
+using System.Globalization;
 
 namespace DocumentFormat.OpenXml.Packaging
 {
@@ -44,5 +45,52 @@ namespace DocumentFormat.OpenXml.Packaging
                 AlternativeFormatImportPartType.Html => ".htm",
                 _ => ".dat",
             };
+
+        internal static AlternativeFormatImportPartType GetAlternativeFormatImportPartTypeFromContentType(string contenttype)
+            => contenttype.ToLower(CultureInfo.CurrentCulture) switch
+            {
+                // "application/text/plain" => AlternativeFormatImportPartType.Text,
+                "application/xhtml+xml" => AlternativeFormatImportPartType.Xhtml,
+                "message/rfc822" => AlternativeFormatImportPartType.Mht,
+                "application/xml" => AlternativeFormatImportPartType.Xml,
+
+                // "text/xml" => AlternativeFormatImportPartType.TextXml,
+                "text/plain" => AlternativeFormatImportPartType.TextPlain,
+                "application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml" => AlternativeFormatImportPartType.WordprocessingML,
+                "application/vnd.ms-word.document.macroEnabled.main+xml" => AlternativeFormatImportPartType.OfficeWordMacroEnabled,
+                "application/vnd.openxmlformats-officedocument.wordprocessingml.template.main+xml" => AlternativeFormatImportPartType.OfficeWordTemplate,
+                "application/vnd.ms-word.template.macroEnabledTemplate.main+xml" => AlternativeFormatImportPartType.OfficeWordMacroEnabledTemplate,
+                "application/rtf" => AlternativeFormatImportPartType.Rtf,
+                "text/html" => AlternativeFormatImportPartType.Html,
+                _ => throw new NotSupportedException($"{contenttype} is not supported"),
+            };
+
+        internal static bool TryGetAlternativeFormatImportPartTypeFromContentType(string contentType)
+        {
+            try
+            {
+                _ = GetAlternativeFormatImportPartTypeFromContentType(contentType);
+                return true;
+            }
+            catch (NotSupportedException)
+            {
+            }
+
+            return false;
+        }
+
+        internal static bool TryGetContentType(AlternativeFormatImportPartType partType)
+        {
+            try
+            {
+                _ = GetContentType(partType);
+                return true;
+            }
+            catch (NotSupportedException)
+            {
+            }
+
+            return false;
+        }
     }
 }

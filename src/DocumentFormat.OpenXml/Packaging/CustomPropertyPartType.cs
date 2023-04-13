@@ -9,6 +9,11 @@ namespace DocumentFormat.OpenXml.Packaging
     public enum CustomPropertyPartType
     {
         /// <summary>
+        /// Unknown part type
+        /// </summary>
+        Unknown = 0,
+
+        /// <summary>
         /// application/vnd.openxmlformats-officedocument.spreadsheetml.customProperty.
         /// </summary>
         Spreadsheet,
