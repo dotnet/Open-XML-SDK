@@ -18,7 +18,6 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         /// <param name="main">The source MainDocumentPart that is adding the ImagePart.</param>
         /// <param name="extension">The file extension of the image.</param>
-        /// <see cref="MainDocumentPart.AddImagePart(ImagePartType)" />
         public static ImagePart AddImagePart(this MainDocumentPart main, string extension)
         {
             if (main is null)
