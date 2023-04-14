@@ -3,9 +3,11 @@
 
 using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Framework.Metadata;
+using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Tests;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using Xunit;
@@ -35,6 +37,28 @@ namespace DocumentFormat.OpenXml.Framework.Tests
             var actual = GetBuiltIn().ToArray();
 
             Assert.Equal(expected, actual);
+        }
+
+        [Fact]
+        public void VerifyTypedRootsCanBeCreated()
+        {
+            // Arrange
+            using var doc = WordprocessingDocument.Create(new MemoryStream(), WordprocessingDocumentType.Document);
+            var feature = doc.Features.GetRequired<IRootElementFeature>();
+            var allTypedParts = typeof(TypedOpenXmlPartRootElement).Assembly
+                .GetTypes()
+                .Where(t => !t.IsAbstract && typeof(TypedOpenXmlPartRootElement).IsAssignableFrom(t))
+                .ToList();
+
+            Assert.Equal(102, allTypedParts.Count);
+
+            // Act/Assert
+            foreach (var rootType in allTypedParts)
+            {
+                var root = ((OpenXmlElement)Activator.CreateInstance(rootType))!;
+                Assert.True(feature.TryCreate(root.QName, out var created));
+                Assert.IsType(rootType, created);
+            }
         }
 
         [Fact]
@@ -78,11 +102,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
 
                 ElementFactoryCollection GetLookup()
                 {
-                    if (typeof(OpenXmlPartRootElement) == type)
-                    {
-                        return TypedFeatures.Shared.GetRequired<IRootElementFactory>().Collection;
-                    }
-                    else if (type.GetConstructor(Cached.Array<Type>()) is not null)
+                    if (type.GetConstructor(Cached.Array<Type>()) is not null)
                     {
                         var instance = (OpenXmlElement)Activator.CreateInstance(type);
                         return instance.Metadata.Children;

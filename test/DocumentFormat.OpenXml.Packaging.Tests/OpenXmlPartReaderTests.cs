@@ -30,7 +30,7 @@ public class OpenXmlPartReaderTests
     public void ExtractsInfoFromStream(string xml, string encoding, bool? standalone)
     {
         var features = new FeatureCollection();
-        var elementFactory = Substitute.For<IRootElementFactory>();
+        var elementFactory = Substitute.For<IRootElementFeature>();
         var namespaceResolver = Substitute.For<IOpenXmlNamespaceResolver>();
 
         features.Set(elementFactory);

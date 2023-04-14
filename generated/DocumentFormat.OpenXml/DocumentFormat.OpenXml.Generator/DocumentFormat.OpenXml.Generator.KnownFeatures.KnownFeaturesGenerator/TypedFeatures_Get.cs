@@ -11,18 +11,18 @@ namespace DocumentFormat.OpenXml.Features;
 
 internal partial class TypedFeatures
 {
-    private global::DocumentFormat.OpenXml.Features.IRootElementFactory? _TypedRootElementFactory;
+    private global::DocumentFormat.OpenXml.Features.IRootElementFeature? _TypedRootElementFeature;
 
     public partial T? Get<T>()
     {
-        if (typeof(T) == typeof(global::DocumentFormat.OpenXml.Features.IRootElementFactory))
+        if (typeof(T) == typeof(global::DocumentFormat.OpenXml.Features.IRootElementFeature))
         {
-            if (_TypedRootElementFactory is null)
+            if (_TypedRootElementFeature is null)
             {
-                Interlocked.CompareExchange(ref _TypedRootElementFactory, new global::DocumentFormat.OpenXml.Features.TypedRootElementFactory(), null);
+                Interlocked.CompareExchange(ref _TypedRootElementFeature, new TypedRootElementFeature(), null);
             }
 
-            return (T)_TypedRootElementFactory;
+            return (T)_TypedRootElementFeature;
         }
 
         if (global::DocumentFormat.OpenXml.Features.FeatureCollection.Default is global::DocumentFormat.OpenXml.Features.IFeatureCollection other1 && other1.Get<T>() is T result1)

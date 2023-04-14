@@ -14,7 +14,7 @@ using System.Diagnostics.CodeAnalysis;
 
 namespace DocumentFormat.OpenXml.Features;
 
-internal sealed class TypedRootElementFactory : IRootElementFeature
+internal sealed class TypedRootElementFeature : IRootElementFeature
 {
     private readonly Dictionary<OpenXmlQualifiedName, Func<OpenXmlElement>> _factory = new ()
     {
