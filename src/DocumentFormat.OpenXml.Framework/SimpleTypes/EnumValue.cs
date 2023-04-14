@@ -83,7 +83,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="value">The value to convert.</param>
         /// <returns>The converted string.</returns>
-        public static implicit operator string?(EnumValue<T> value)
+        public static implicit operator string?(EnumValue<T>? value)
         {
             if (value is null)
             {

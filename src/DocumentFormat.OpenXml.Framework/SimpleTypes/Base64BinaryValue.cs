@@ -100,7 +100,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="value">The <see cref="Base64BinaryValue"/> object to convert.</param>
         /// <returns>The base64Binary string. Returns null when <paramref name="value"/> is <c>null</c>.</returns>
-        public static implicit operator string?(Base64BinaryValue value)
+        public static implicit operator string?(Base64BinaryValue? value)
         {
             if (value is null)
             {
