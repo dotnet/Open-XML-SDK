@@ -21,7 +21,7 @@ namespace DocumentFormat.OpenXml.Office2016.Word.Symex
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w16se:symEx.</para>
     /// </summary>
-    public partial class SymEx : TypedOpenXmlLeafElement
+    public partial class SymEx : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the SymEx class.

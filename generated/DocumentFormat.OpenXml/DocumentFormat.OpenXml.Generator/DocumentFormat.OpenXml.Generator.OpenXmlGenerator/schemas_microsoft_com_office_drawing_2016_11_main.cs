@@ -21,7 +21,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a1611:picAttrSrcUrl.</para>
     /// </summary>
-    public partial class PictureAttributionSourceURL : TypedOpenXmlLeafElement
+    public partial class PictureAttributionSourceURL : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the PictureAttributionSourceURL class.

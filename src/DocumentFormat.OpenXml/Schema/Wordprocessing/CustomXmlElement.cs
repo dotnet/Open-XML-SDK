@@ -10,7 +10,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <summary>
     /// Defines CustomXmlElement - the base class for the customXml elements.
     /// </summary>
-    public abstract class CustomXmlElement : TypedOpenXmlCompositeElement
+    public abstract class CustomXmlElement : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the CustomXmlElement class with the specified child elements.

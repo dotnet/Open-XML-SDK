@@ -21,7 +21,7 @@ namespace DocumentFormat.OpenXml.Office2013.Word.Drawing
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp15:webVideoPr.</para>
     /// </summary>
-    public partial class WebVideoProperty : TypedOpenXmlLeafElement
+    public partial class WebVideoProperty : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the WebVideoProperty class.

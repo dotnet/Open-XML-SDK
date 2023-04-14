@@ -43,7 +43,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Transform2D" /> <c>&lt;a:xfrm></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ShapeProperties : TypedOpenXmlCompositeElement
+    public partial class ShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ShapeProperties class.
@@ -171,7 +171,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c16:explosion.</para>
     /// </summary>
-    public partial class UnsignedIntegerType : TypedOpenXmlLeafElement
+    public partial class UnsignedIntegerType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the UnsignedIntegerType class.
@@ -261,7 +261,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class BooleanType : TypedOpenXmlLeafElement
+    public abstract partial class BooleanType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the BooleanType class.
@@ -302,7 +302,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Symbol" /> <c>&lt;c:symbol></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Marker : TypedOpenXmlCompositeElement
+    public partial class Marker : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Marker class.
@@ -435,7 +435,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Separator" /> <c>&lt;c:separator></c></description></item>
     /// </list>
     /// </remark>
-    public partial class DLbl : TypedOpenXmlCompositeElement
+    public partial class DLbl : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the DLbl class.
@@ -553,7 +553,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Charts.CategoryFilterException" /> <c>&lt;c16:categoryFilterException></c></description></item>
     /// </list>
     /// </remark>
-    public partial class CategoryFilterExceptions : TypedOpenXmlCompositeElement
+    public partial class CategoryFilterExceptions : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the CategoryFilterExceptions class.
@@ -613,7 +613,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Charts.BooleanFalse" /> <c>&lt;c16:showExpandCollapseFieldButtons></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PivotOptions16 : TypedOpenXmlCompositeElement
+    public partial class PivotOptions16 : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the PivotOptions16 class.
@@ -686,7 +686,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Charts.ChartDataPointUniqueIDMapEntry" /> <c>&lt;c16:ptentry></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ChartDataPointUniqueIDMap : TypedOpenXmlCompositeElement
+    public partial class ChartDataPointUniqueIDMap : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ChartDataPointUniqueIDMap class.
@@ -790,7 +790,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class UniqueIDChart : TypedOpenXmlLeafElement
+    public abstract partial class UniqueIDChart : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the UniqueIDChart class.
@@ -837,7 +837,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID" /> <c>&lt;c16:uniqueId></c></description></item>
     /// </list>
     /// </remark>
-    public partial class CategoryFilterException : TypedOpenXmlCompositeElement
+    public partial class CategoryFilterException : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the CategoryFilterException class.
@@ -1003,7 +1003,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.FormatCode" /> <c>&lt;c:formatCode></c></description></item>
     /// </list>
     /// </remark>
-    public partial class NumberDataType : TypedOpenXmlCompositeElement
+    public partial class NumberDataType : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the NumberDataType class.
@@ -1095,7 +1095,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Charts.NumberDataType" /> <c>&lt;c16:numCache></c></description></item>
     /// </list>
     /// </remark>
-    public partial class NumFilteredLiteralCache : TypedOpenXmlCompositeElement
+    public partial class NumFilteredLiteralCache : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the NumFilteredLiteralCache class.
@@ -1170,7 +1170,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PointCount" /> <c>&lt;c:ptCount></c></description></item>
     /// </list>
     /// </remark>
-    public partial class StringDataType : TypedOpenXmlCompositeElement
+    public partial class StringDataType : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the StringDataType class.
@@ -1247,7 +1247,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Charts.StringDataType" /> <c>&lt;c16:strCache></c></description></item>
     /// </list>
     /// </remark>
-    public partial class StrFilteredLiteralCache : TypedOpenXmlCompositeElement
+    public partial class StrFilteredLiteralCache : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the StrFilteredLiteralCache class.
@@ -1322,7 +1322,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PointCount" /> <c>&lt;c:ptCount></c></description></item>
     /// </list>
     /// </remark>
-    public partial class MultiLvlStrData : TypedOpenXmlCompositeElement
+    public partial class MultiLvlStrData : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the MultiLvlStrData class.
@@ -1399,7 +1399,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Charts.MultiLvlStrData" /> <c>&lt;c16:multiLvlStrCache></c></description></item>
     /// </list>
     /// </remark>
-    public partial class MultiLvlStrFilteredLiteralCache : TypedOpenXmlCompositeElement
+    public partial class MultiLvlStrFilteredLiteralCache : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the MultiLvlStrFilteredLiteralCache class.
@@ -1466,7 +1466,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c16:literalDataChart.</para>
     /// </summary>
-    public partial class LiteralDataChart : TypedOpenXmlLeafElement
+    public partial class LiteralDataChart : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the LiteralDataChart class.
@@ -1506,7 +1506,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c16:showExpandCollapseFieldButtons.</para>
     /// </summary>
-    public partial class BooleanFalse : TypedOpenXmlLeafElement
+    public partial class BooleanFalse : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the BooleanFalse class.
@@ -1543,7 +1543,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c16:ptidx.</para>
     /// </summary>
-    public partial class XsdunsignedInt : TypedOpenXmlLeafTextElement
+    public partial class XsdunsignedInt : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the XsdunsignedInt class.
@@ -1589,7 +1589,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Charts.XsdunsignedInt" /> <c>&lt;c16:ptidx></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ChartDataPointUniqueIDMapEntry : TypedOpenXmlCompositeElement
+    public partial class ChartDataPointUniqueIDMapEntry : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ChartDataPointUniqueIDMapEntry class.

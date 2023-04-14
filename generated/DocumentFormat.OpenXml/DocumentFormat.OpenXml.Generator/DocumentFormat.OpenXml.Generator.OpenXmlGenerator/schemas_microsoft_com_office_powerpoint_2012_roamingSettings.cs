@@ -21,7 +21,7 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is pRoam:key.</para>
     /// </summary>
-    public partial class Key : TypedOpenXmlLeafTextElement
+    public partial class Key : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the Key class.
@@ -59,7 +59,7 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is pRoam:value.</para>
     /// </summary>
-    public partial class Value : TypedOpenXmlLeafTextElement
+    public partial class Value : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the Value class.
@@ -104,7 +104,7 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming.Value" /> <c>&lt;pRoam:value></c></description></item>
     /// </list>
     /// </remark>
-    public partial class RoamingProperty : TypedOpenXmlCompositeElement
+    public partial class RoamingProperty : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the RoamingProperty class.

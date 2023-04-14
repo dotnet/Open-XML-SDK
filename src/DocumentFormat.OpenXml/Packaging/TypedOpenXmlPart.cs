@@ -12,30 +12,22 @@ namespace DocumentFormat.OpenXml.Packaging;
 /// <summary>
 /// An implementation that is used to provide information for strongly typed <see cref="OpenXmlPart"/>.
 /// </summary>
-[EditorBrowsable(EditorBrowsableState.Never)]
-public abstract partial class TypedOpenXmlPart : OpenXmlPart
+internal abstract class TypedPartFeatureCollection : PartFeatureCollection,
+    IPartConstraintFeature,
+    IKnownDataPartFeature
 {
-    private protected TypedOpenXmlPart()
+    protected TypedPartFeatureCollection(OpenXmlPart part)
+        : base(part)
     {
     }
 
-    private protected abstract class TypedPartFeatureCollection : PartFeatureCollection,
-        IPartConstraintFeature,
-        IKnownDataPartFeature
+    IEnumerable<PartConstraintRule> IPartConstraintFeature.Rules => Enumerable.Empty<PartConstraintRule>();
+
+    bool IKnownDataPartFeature.IsKnown(string relationshipId) => false;
+
+    bool IPartConstraintFeature.TryGetRule(string relationshipId, out PartConstraintRule rule)
     {
-        protected TypedPartFeatureCollection(OpenXmlPart part)
-            : base(part)
-        {
-        }
-
-        IEnumerable<PartConstraintRule> IPartConstraintFeature.Rules => Enumerable.Empty<PartConstraintRule>();
-
-        bool IKnownDataPartFeature.IsKnown(string relationshipId) => false;
-
-        bool IPartConstraintFeature.TryGetRule(string relationshipId, out PartConstraintRule rule)
-        {
-            rule = default;
-            return false;
-        }
+        rule = default;
+        return false;
     }
 }

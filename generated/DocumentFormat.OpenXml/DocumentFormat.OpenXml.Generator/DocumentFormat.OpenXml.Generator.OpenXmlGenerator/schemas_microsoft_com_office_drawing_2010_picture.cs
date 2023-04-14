@@ -31,7 +31,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Pictures
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.EffectReference" /> <c>&lt;a:effectRef></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ShapeStyle : TypedOpenXmlCompositeElement
+    public partial class ShapeStyle : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ShapeStyle class.
@@ -149,7 +149,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Pictures
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extension" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class OfficeArtExtensionList : TypedOpenXmlCompositeElement
+    public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the OfficeArtExtensionList class.

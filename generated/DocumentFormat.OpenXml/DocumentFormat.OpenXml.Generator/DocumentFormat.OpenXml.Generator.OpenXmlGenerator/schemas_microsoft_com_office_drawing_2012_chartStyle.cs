@@ -35,7 +35,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ColorStyleVariation" /> <c>&lt;cs:variation></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ColorStyle : TypedOpenXmlPartRootElement
+    public partial class ColorStyle : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the ColorStyle class.
@@ -208,7 +208,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Wall" /> <c>&lt;cs:wall></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ChartStyle : TypedOpenXmlPartRootElement
+    public partial class ChartStyle : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the ChartStyle class.
@@ -816,7 +816,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HueModulation" /> <c>&lt;a:hueMod></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ColorStyleVariation : TypedOpenXmlCompositeElement
+    public partial class ColorStyleVariation : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ColorStyleVariation class.
@@ -936,7 +936,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extension" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class OfficeArtExtensionList : TypedOpenXmlCompositeElement
+    public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the OfficeArtExtensionList class.
@@ -1029,7 +1029,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HueModulation" /> <c>&lt;a:hueMod></c></description></item>
     /// </list>
     /// </remark>
-    public partial class StyleColor : TypedOpenXmlCompositeElement
+    public partial class StyleColor : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the StyleColor class.
@@ -1406,7 +1406,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.StyleColor" /> <c>&lt;cs:styleClr></c></description></item>
     /// </list>
     /// </remark>
-    public abstract partial class StyleReference : TypedOpenXmlCompositeElement
+    public abstract partial class StyleReference : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the StyleReference class.
@@ -1483,7 +1483,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:lineWidthScale.</para>
     /// </summary>
-    public partial class LineWidthScale : TypedOpenXmlLeafTextElement
+    public partial class LineWidthScale : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the LineWidthScale class.
@@ -1534,7 +1534,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.StyleColor" /> <c>&lt;cs:styleClr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class FontReference : TypedOpenXmlCompositeElement
+    public partial class FontReference : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the FontReference class.
@@ -1653,7 +1653,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Transform2D" /> <c>&lt;a:xfrm></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ShapeProperties : TypedOpenXmlCompositeElement
+    public partial class ShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ShapeProperties class.
@@ -1808,7 +1808,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.UnderlineFollowsText" /> <c>&lt;a:uLnTx></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TextCharacterPropertiesType : TypedOpenXmlCompositeElement
+    public partial class TextCharacterPropertiesType : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TextCharacterPropertiesType class.
@@ -2182,7 +2182,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ShapeAutoFit" /> <c>&lt;a:spAutoFit></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TextBodyProperties : TypedOpenXmlCompositeElement
+    public partial class TextBodyProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TextBodyProperties class.
@@ -2581,7 +2581,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class AxisProperties : TypedOpenXmlLeafElement
+    public abstract partial class AxisProperties : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the AxisProperties class.
@@ -2700,7 +2700,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:dataSeries.</para>
     /// </summary>
-    public partial class DataSeries : TypedOpenXmlLeafElement
+    public partial class DataSeries : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the DataSeries class.
@@ -2838,7 +2838,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:dataLabels.</para>
     /// </summary>
-    public partial class DataLabels : TypedOpenXmlLeafElement
+    public partial class DataLabels : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the DataLabels class.
@@ -2948,7 +2948,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:dataTable.</para>
     /// </summary>
-    public partial class DataTable : TypedOpenXmlLeafElement
+    public partial class DataTable : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the DataTable class.
@@ -3030,7 +3030,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:legend.</para>
     /// </summary>
-    public partial class Legend : TypedOpenXmlLeafElement
+    public partial class Legend : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Legend class.
@@ -3098,7 +3098,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:title.</para>
     /// </summary>
-    public partial class Title : TypedOpenXmlLeafElement
+    public partial class Title : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Title class.
@@ -3138,7 +3138,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:trendline.</para>
     /// </summary>
-    public partial class Trendline : TypedOpenXmlLeafElement
+    public partial class Trendline : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Trendline class.
@@ -3206,7 +3206,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:view3D.</para>
     /// </summary>
-    public partial class View3DProperties : TypedOpenXmlLeafElement
+    public partial class View3DProperties : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the View3DProperties class.
@@ -5580,7 +5580,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LineWidthScale" /> <c>&lt;cs:lineWidthScale></c></description></item>
     /// </list>
     /// </remark>
-    public abstract partial class StyleEntry : TypedOpenXmlCompositeElement
+    public abstract partial class StyleEntry : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the StyleEntry class.
@@ -5762,7 +5762,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cs:dataPointMarkerLayout.</para>
     /// </summary>
-    public partial class MarkerLayoutProperties : TypedOpenXmlLeafElement
+    public partial class MarkerLayoutProperties : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the MarkerLayoutProperties class.

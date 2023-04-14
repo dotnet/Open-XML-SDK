@@ -36,7 +36,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PrintSettings" /> <c>&lt;cx:printSettings></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ChartSpace : TypedOpenXmlPartRootElement
+    public partial class ChartSpace : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the ChartSpace class.
@@ -239,7 +239,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:chart.</para>
     /// </summary>
-    public partial class RelId : TypedOpenXmlLeafElement
+    public partial class RelId : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the RelId class.
@@ -282,7 +282,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:binCount.</para>
     /// </summary>
-    public partial class BinCountXsdunsignedInt : TypedOpenXmlLeafTextElement
+    public partial class BinCountXsdunsignedInt : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the BinCountXsdunsignedInt class.
@@ -321,7 +321,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:ext.</para>
     /// </summary>
-    public partial class Extension2 : TypedOpenXmlCompositeElement
+    public partial class Extension2 : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Extension2 class.
@@ -625,7 +625,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SystemColor" /> <c>&lt;a:sysClr></c></description></item>
     /// </list>
     /// </remark>
-    public abstract partial class OpenXmlSolidColorFillPropertiesElement : TypedOpenXmlCompositeElement
+    public abstract partial class OpenXmlSolidColorFillPropertiesElement : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the OpenXmlSolidColorFillPropertiesElement class.
@@ -753,7 +753,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:pt.</para>
     /// </summary>
-    public partial class ChartStringValue : TypedOpenXmlLeafTextElement
+    public partial class ChartStringValue : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the ChartStringValue class.
@@ -882,7 +882,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class OpenXmlFormulaElement : TypedOpenXmlLeafTextElement
+    public abstract partial class OpenXmlFormulaElement : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the OpenXmlFormulaElement class.
@@ -933,7 +933,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ChartStringValue" /> <c>&lt;cx:pt></c></description></item>
     /// </list>
     /// </remark>
-    public partial class StringLevel : TypedOpenXmlCompositeElement
+    public partial class StringLevel : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the StringLevel class.
@@ -1013,7 +1013,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:pt.</para>
     /// </summary>
-    public partial class NumericValue : TypedOpenXmlLeafTextElement
+    public partial class NumericValue : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the NumericValue class.
@@ -1072,7 +1072,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NumericValue" /> <c>&lt;cx:pt></c></description></item>
     /// </list>
     /// </remark>
-    public partial class NumericLevel : TypedOpenXmlCompositeElement
+    public partial class NumericLevel : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the NumericLevel class.
@@ -1171,7 +1171,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NumericLevel" /> <c>&lt;cx:lvl></c></description></item>
     /// </list>
     /// </remark>
-    public partial class NumericDimension : TypedOpenXmlCompositeElement
+    public partial class NumericDimension : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the NumericDimension class.
@@ -1256,7 +1256,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.StringLevel" /> <c>&lt;cx:lvl></c></description></item>
     /// </list>
     /// </remark>
-    public partial class StringDimension : TypedOpenXmlCompositeElement
+    public partial class StringDimension : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the StringDimension class.
@@ -1339,7 +1339,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Extension2" /> <c>&lt;cx:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ExtensionList : TypedOpenXmlCompositeElement
+    public partial class ExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ExtensionList class.
@@ -1393,7 +1393,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:externalData.</para>
     /// </summary>
-    public partial class ExternalData : TypedOpenXmlLeafElement
+    public partial class ExternalData : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ExternalData class.
@@ -1461,7 +1461,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.StringDimension" /> <c>&lt;cx:strDim></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Data : TypedOpenXmlCompositeElement
+    public partial class Data : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Data class.
@@ -1537,7 +1537,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:v.</para>
     /// </summary>
-    public partial class VXsdstring : TypedOpenXmlLeafTextElement
+    public partial class VXsdstring : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the VXsdstring class.
@@ -1575,7 +1575,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:copyright.</para>
     /// </summary>
-    public partial class CopyrightXsdstring : TypedOpenXmlLeafTextElement
+    public partial class CopyrightXsdstring : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the CopyrightXsdstring class.
@@ -1613,7 +1613,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:separator.</para>
     /// </summary>
-    public partial class SeparatorXsdstring : TypedOpenXmlLeafTextElement
+    public partial class SeparatorXsdstring : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the SeparatorXsdstring class.
@@ -1651,7 +1651,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:oddHeader.</para>
     /// </summary>
-    public partial class OddHeaderXsdstring : TypedOpenXmlLeafTextElement
+    public partial class OddHeaderXsdstring : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the OddHeaderXsdstring class.
@@ -1689,7 +1689,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:oddFooter.</para>
     /// </summary>
-    public partial class OddFooterXsdstring : TypedOpenXmlLeafTextElement
+    public partial class OddFooterXsdstring : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the OddFooterXsdstring class.
@@ -1727,7 +1727,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:evenHeader.</para>
     /// </summary>
-    public partial class EvenHeaderXsdstring : TypedOpenXmlLeafTextElement
+    public partial class EvenHeaderXsdstring : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the EvenHeaderXsdstring class.
@@ -1765,7 +1765,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:evenFooter.</para>
     /// </summary>
-    public partial class EvenFooterXsdstring : TypedOpenXmlLeafTextElement
+    public partial class EvenFooterXsdstring : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the EvenFooterXsdstring class.
@@ -1803,7 +1803,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:firstHeader.</para>
     /// </summary>
-    public partial class FirstHeaderXsdstring : TypedOpenXmlLeafTextElement
+    public partial class FirstHeaderXsdstring : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the FirstHeaderXsdstring class.
@@ -1841,7 +1841,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:firstFooter.</para>
     /// </summary>
-    public partial class FirstFooterXsdstring : TypedOpenXmlLeafTextElement
+    public partial class FirstFooterXsdstring : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the FirstFooterXsdstring class.
@@ -1886,7 +1886,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.VXsdstring" /> <c>&lt;cx:v></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TextData : TypedOpenXmlCompositeElement
+    public partial class TextData : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TextData class.
@@ -2080,7 +2080,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Paragraph" /> <c>&lt;a:p></c></description></item>
     /// </list>
     /// </remark>
-    public abstract partial class TextBodyType : TypedOpenXmlCompositeElement
+    public abstract partial class TextBodyType : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TextBodyType class.
@@ -2160,7 +2160,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TextData" /> <c>&lt;cx:txData></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Text : TypedOpenXmlCompositeElement
+    public partial class Text : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Text class.
@@ -2265,7 +2265,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Transform2D" /> <c>&lt;a:xfrm></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ShapeProperties : TypedOpenXmlCompositeElement
+    public partial class ShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ShapeProperties class.
@@ -2402,7 +2402,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Text" /> <c>&lt;cx:tx></c></description></item>
     /// </list>
     /// </remark>
-    public partial class AxisUnitsLabel : TypedOpenXmlCompositeElement
+    public partial class AxisUnitsLabel : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the AxisUnitsLabel class.
@@ -2514,7 +2514,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:catScaling.</para>
     /// </summary>
-    public partial class CategoryAxisScaling : TypedOpenXmlLeafElement
+    public partial class CategoryAxisScaling : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the CategoryAxisScaling class.
@@ -2558,7 +2558,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:valScaling.</para>
     /// </summary>
-    public partial class ValueAxisScaling : TypedOpenXmlLeafElement
+    public partial class ValueAxisScaling : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ValueAxisScaling class.
@@ -2665,7 +2665,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Text" /> <c>&lt;cx:tx></c></description></item>
     /// </list>
     /// </remark>
-    public partial class AxisTitle : TypedOpenXmlCompositeElement
+    public partial class AxisTitle : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the AxisTitle class.
@@ -2784,7 +2784,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList" /> <c>&lt;cx:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class AxisUnits : TypedOpenXmlCompositeElement
+    public partial class AxisUnits : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the AxisUnits class.
@@ -3007,7 +3007,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList" /> <c>&lt;cx:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public abstract partial class OpenXmlGridlinesElement : TypedOpenXmlCompositeElement
+    public abstract partial class OpenXmlGridlinesElement : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the OpenXmlGridlinesElement class.
@@ -3203,7 +3203,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList" /> <c>&lt;cx:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public abstract partial class OpenXmlTickMarksElement : TypedOpenXmlCompositeElement
+    public abstract partial class OpenXmlTickMarksElement : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the OpenXmlTickMarksElement class.
@@ -3279,7 +3279,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList" /> <c>&lt;cx:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TickLabels : TypedOpenXmlCompositeElement
+    public partial class TickLabels : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TickLabels class.
@@ -3346,7 +3346,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:numFmt.</para>
     /// </summary>
-    public partial class NumberFormat : TypedOpenXmlLeafElement
+    public partial class NumberFormat : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the NumberFormat class.
@@ -3397,7 +3397,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:binSize.</para>
     /// </summary>
-    public partial class Xsddouble : TypedOpenXmlLeafTextElement
+    public partial class Xsddouble : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the Xsddouble class.
@@ -3436,7 +3436,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:address.</para>
     /// </summary>
-    public partial class Address : TypedOpenXmlLeafElement
+    public partial class Address : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Address class.
@@ -3545,7 +3545,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Address" /> <c>&lt;cx:address></c></description></item>
     /// </list>
     /// </remark>
-    public partial class GeoLocation : TypedOpenXmlCompositeElement
+    public partial class GeoLocation : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the GeoLocation class.
@@ -3663,7 +3663,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:geoLocationQuery.</para>
     /// </summary>
-    public partial class GeoLocationQuery : TypedOpenXmlLeafElement
+    public partial class GeoLocationQuery : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the GeoLocationQuery class.
@@ -3753,7 +3753,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoLocation" /> <c>&lt;cx:geoLocation></c></description></item>
     /// </list>
     /// </remark>
-    public partial class GeoLocations : TypedOpenXmlCompositeElement
+    public partial class GeoLocations : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the GeoLocations class.
@@ -3827,7 +3827,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoLocations" /> <c>&lt;cx:geoLocations></c></description></item>
     /// </list>
     /// </remark>
-    public partial class GeoLocationQueryResult : TypedOpenXmlCompositeElement
+    public partial class GeoLocationQueryResult : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the GeoLocationQueryResult class.
@@ -3909,7 +3909,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:geoPolygon.</para>
     /// </summary>
-    public partial class GeoPolygon : TypedOpenXmlLeafElement
+    public partial class GeoPolygon : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the GeoPolygon class.
@@ -3983,7 +3983,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoPolygon" /> <c>&lt;cx:geoPolygon></c></description></item>
     /// </list>
     /// </remark>
-    public partial class GeoPolygons : TypedOpenXmlCompositeElement
+    public partial class GeoPolygons : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the GeoPolygons class.
@@ -4043,7 +4043,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.CopyrightXsdstring" /> <c>&lt;cx:copyright></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Copyrights : TypedOpenXmlCompositeElement
+    public partial class Copyrights : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Copyrights class.
@@ -4097,7 +4097,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:geoDataEntityQuery.</para>
     /// </summary>
-    public partial class GeoDataEntityQuery : TypedOpenXmlLeafElement
+    public partial class GeoDataEntityQuery : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the GeoDataEntityQuery class.
@@ -4158,7 +4158,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoPolygons" /> <c>&lt;cx:geoPolygons></c></description></item>
     /// </list>
     /// </remark>
-    public partial class GeoData : TypedOpenXmlCompositeElement
+    public partial class GeoData : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the GeoData class.
@@ -4332,7 +4332,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoDataEntityQuery" /> <c>&lt;cx:geoDataEntityQuery></c></description></item>
     /// </list>
     /// </remark>
-    public partial class GeoDataEntityQueryResult : TypedOpenXmlCompositeElement
+    public partial class GeoDataEntityQueryResult : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the GeoDataEntityQueryResult class.
@@ -4414,7 +4414,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:geoDataPointQuery.</para>
     /// </summary>
-    public partial class GeoDataPointQuery : TypedOpenXmlLeafElement
+    public partial class GeoDataPointQuery : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the GeoDataPointQuery class.
@@ -4482,7 +4482,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:geoDataPointToEntityQuery.</para>
     /// </summary>
-    public partial class GeoDataPointToEntityQuery : TypedOpenXmlLeafElement
+    public partial class GeoDataPointToEntityQuery : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the GeoDataPointToEntityQuery class.
@@ -4543,7 +4543,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoDataPointToEntityQuery" /> <c>&lt;cx:geoDataPointToEntityQuery></c></description></item>
     /// </list>
     /// </remark>
-    public partial class GeoDataPointToEntityQueryResult : TypedOpenXmlCompositeElement
+    public partial class GeoDataPointToEntityQueryResult : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the GeoDataPointToEntityQueryResult class.
@@ -4625,7 +4625,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:entityType.</para>
     /// </summary>
-    public partial class EntityType : TypedOpenXmlLeafTextElement
+    public partial class EntityType : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the EntityType class.
@@ -4670,7 +4670,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.EntityType" /> <c>&lt;cx:entityType></c></description></item>
     /// </list>
     /// </remark>
-    public partial class GeoChildTypes : TypedOpenXmlCompositeElement
+    public partial class GeoChildTypes : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the GeoChildTypes class.
@@ -4724,7 +4724,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:geoHierarchyEntity.</para>
     /// </summary>
-    public partial class GeoHierarchyEntity : TypedOpenXmlLeafElement
+    public partial class GeoHierarchyEntity : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the GeoHierarchyEntity class.
@@ -4798,7 +4798,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoChildTypes" /> <c>&lt;cx:geoChildTypes></c></description></item>
     /// </list>
     /// </remark>
-    public partial class GeoChildEntitiesQuery : TypedOpenXmlCompositeElement
+    public partial class GeoChildEntitiesQuery : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the GeoChildEntitiesQuery class.
@@ -4886,7 +4886,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoHierarchyEntity" /> <c>&lt;cx:geoHierarchyEntity></c></description></item>
     /// </list>
     /// </remark>
-    public partial class GeoChildEntities : TypedOpenXmlCompositeElement
+    public partial class GeoChildEntities : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the GeoChildEntities class.
@@ -4947,7 +4947,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoChildEntitiesQuery" /> <c>&lt;cx:geoChildEntitiesQuery></c></description></item>
     /// </list>
     /// </remark>
-    public partial class GeoChildEntitiesQueryResult : TypedOpenXmlCompositeElement
+    public partial class GeoChildEntitiesQueryResult : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the GeoChildEntitiesQueryResult class.
@@ -5029,7 +5029,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:geoParentEntitiesQuery.</para>
     /// </summary>
-    public partial class GeoParentEntitiesQuery : TypedOpenXmlLeafElement
+    public partial class GeoParentEntitiesQuery : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the GeoParentEntitiesQuery class.
@@ -5069,7 +5069,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:geoEntity.</para>
     /// </summary>
-    public partial class GeoEntity : TypedOpenXmlLeafElement
+    public partial class GeoEntity : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the GeoEntity class.
@@ -5123,7 +5123,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:geoParentEntity.</para>
     /// </summary>
-    public partial class GeoParentEntity : TypedOpenXmlLeafElement
+    public partial class GeoParentEntity : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the GeoParentEntity class.
@@ -5171,7 +5171,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoParentEntity" /> <c>&lt;cx:geoParentEntity></c></description></item>
     /// </list>
     /// </remark>
-    public partial class GeoParentEntitiesQueryResult : TypedOpenXmlCompositeElement
+    public partial class GeoParentEntitiesQueryResult : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the GeoParentEntitiesQueryResult class.
@@ -5274,7 +5274,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoLocationQueryResult" /> <c>&lt;cx:geoLocationQueryResult></c></description></item>
     /// </list>
     /// </remark>
-    public partial class GeoLocationQueryResults : TypedOpenXmlCompositeElement
+    public partial class GeoLocationQueryResults : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the GeoLocationQueryResults class.
@@ -5334,7 +5334,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoDataEntityQueryResult" /> <c>&lt;cx:geoDataEntityQueryResult></c></description></item>
     /// </list>
     /// </remark>
-    public partial class GeoDataEntityQueryResults : TypedOpenXmlCompositeElement
+    public partial class GeoDataEntityQueryResults : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the GeoDataEntityQueryResults class.
@@ -5394,7 +5394,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoDataPointToEntityQueryResult" /> <c>&lt;cx:geoDataPointToEntityQueryResult></c></description></item>
     /// </list>
     /// </remark>
-    public partial class GeoDataPointToEntityQueryResults : TypedOpenXmlCompositeElement
+    public partial class GeoDataPointToEntityQueryResults : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the GeoDataPointToEntityQueryResults class.
@@ -5454,7 +5454,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoChildEntitiesQueryResult" /> <c>&lt;cx:geoChildEntitiesQueryResult></c></description></item>
     /// </list>
     /// </remark>
-    public partial class GeoChildEntitiesQueryResults : TypedOpenXmlCompositeElement
+    public partial class GeoChildEntitiesQueryResults : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the GeoChildEntitiesQueryResults class.
@@ -5514,7 +5514,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoParentEntitiesQueryResult" /> <c>&lt;cx:geoParentEntitiesQueryResult></c></description></item>
     /// </list>
     /// </remark>
-    public partial class GeoParentEntitiesQueryResults : TypedOpenXmlCompositeElement
+    public partial class GeoParentEntitiesQueryResults : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the GeoParentEntitiesQueryResults class.
@@ -5568,7 +5568,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:binary.</para>
     /// </summary>
-    public partial class Xsdbase64Binary : TypedOpenXmlLeafTextElement
+    public partial class Xsdbase64Binary : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the Xsdbase64Binary class.
@@ -5617,7 +5617,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoParentEntitiesQueryResults" /> <c>&lt;cx:geoParentEntitiesQueryResults></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Clear : TypedOpenXmlCompositeElement
+    public partial class Clear : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Clear class.
@@ -5751,7 +5751,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Xsdbase64Binary" /> <c>&lt;cx:binary></c></description></item>
     /// </list>
     /// </remark>
-    public partial class GeoCache : TypedOpenXmlCompositeElement
+    public partial class GeoCache : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the GeoCache class.
@@ -5822,7 +5822,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:parentLabelLayout.</para>
     /// </summary>
-    public partial class ParentLabelLayout : TypedOpenXmlLeafElement
+    public partial class ParentLabelLayout : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ParentLabelLayout class.
@@ -5862,7 +5862,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:regionLabelLayout.</para>
     /// </summary>
-    public partial class RegionLabelLayout : TypedOpenXmlLeafElement
+    public partial class RegionLabelLayout : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the RegionLabelLayout class.
@@ -5902,7 +5902,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:visibility.</para>
     /// </summary>
-    public partial class SeriesElementVisibilities : TypedOpenXmlLeafElement
+    public partial class SeriesElementVisibilities : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the SeriesElementVisibilities class.
@@ -5983,7 +5983,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:aggregation.</para>
     /// </summary>
-    public partial class Aggregation : TypedOpenXmlLeafElement
+    public partial class Aggregation : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Aggregation class.
@@ -6015,7 +6015,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.BinCountXsdunsignedInt" /> <c>&lt;cx:binCount></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Binning : TypedOpenXmlCompositeElement
+    public partial class Binning : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Binning class.
@@ -6151,7 +6151,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoCache" /> <c>&lt;cx:geoCache></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Geography : TypedOpenXmlCompositeElement
+    public partial class Geography : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Geography class.
@@ -6284,7 +6284,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:statistics.</para>
     /// </summary>
-    public partial class Statistics : TypedOpenXmlLeafElement
+    public partial class Statistics : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Statistics class.
@@ -6327,7 +6327,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.UnsignedIntegerType" /> <c>&lt;cx:idx></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Subtotals : TypedOpenXmlCompositeElement
+    public partial class Subtotals : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Subtotals class.
@@ -6381,7 +6381,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:extremeValue.</para>
     /// </summary>
-    public partial class ExtremeValueColorPosition : TypedOpenXmlLeafElement
+    public partial class ExtremeValueColorPosition : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ExtremeValueColorPosition class.
@@ -6406,7 +6406,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:number.</para>
     /// </summary>
-    public partial class NumberColorPosition : TypedOpenXmlLeafElement
+    public partial class NumberColorPosition : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the NumberColorPosition class.
@@ -6446,7 +6446,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:percent.</para>
     /// </summary>
-    public partial class PercentageColorPosition : TypedOpenXmlLeafElement
+    public partial class PercentageColorPosition : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the PercentageColorPosition class.
@@ -6620,7 +6620,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PercentageColorPosition" /> <c>&lt;cx:percent></c></description></item>
     /// </list>
     /// </remark>
-    public abstract partial class OpenXmlValueColorEndPositionElement : TypedOpenXmlCompositeElement
+    public abstract partial class OpenXmlValueColorEndPositionElement : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the OpenXmlValueColorEndPositionElement class.
@@ -6713,7 +6713,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PercentageColorPosition" /> <c>&lt;cx:percent></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ValueColorMiddlePosition : TypedOpenXmlCompositeElement
+    public partial class ValueColorMiddlePosition : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ValueColorMiddlePosition class.
@@ -6795,7 +6795,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:visibility.</para>
     /// </summary>
-    public partial class DataLabelVisibilities : TypedOpenXmlLeafElement
+    public partial class DataLabelVisibilities : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the DataLabelVisibilities class.
@@ -6865,7 +6865,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.SeparatorXsdstring" /> <c>&lt;cx:separator></c></description></item>
     /// </list>
     /// </remark>
-    public partial class DataLabel : TypedOpenXmlCompositeElement
+    public partial class DataLabel : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the DataLabel class.
@@ -7033,7 +7033,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:dataLabelHidden.</para>
     /// </summary>
-    public partial class DataLabelHidden : TypedOpenXmlLeafElement
+    public partial class DataLabelHidden : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the DataLabelHidden class.
@@ -7081,7 +7081,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.MaxColorSolidColorFillProperties" /> <c>&lt;cx:maxColor></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ValueColors : TypedOpenXmlCompositeElement
+    public partial class ValueColors : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ValueColors class.
@@ -7186,7 +7186,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ValueColorMiddlePosition" /> <c>&lt;cx:mid></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ValueColorPositions : TypedOpenXmlCompositeElement
+    public partial class ValueColorPositions : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ValueColorPositions class.
@@ -7305,7 +7305,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList" /> <c>&lt;cx:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class DataPoint : TypedOpenXmlCompositeElement
+    public partial class DataPoint : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the DataPoint class.
@@ -7415,7 +7415,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.SeparatorXsdstring" /> <c>&lt;cx:separator></c></description></item>
     /// </list>
     /// </remark>
-    public partial class DataLabels : TypedOpenXmlCompositeElement
+    public partial class DataLabels : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the DataLabels class.
@@ -7560,7 +7560,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:dataId.</para>
     /// </summary>
-    public partial class DataId : TypedOpenXmlLeafElement
+    public partial class DataId : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the DataId class.
@@ -7614,7 +7614,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Subtotals" /> <c>&lt;cx:subtotals></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SeriesLayoutProperties : TypedOpenXmlCompositeElement
+    public partial class SeriesLayoutProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SeriesLayoutProperties class.
@@ -7726,7 +7726,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:axisId.</para>
     /// </summary>
-    public partial class AxisId : TypedOpenXmlLeafTextElement
+    public partial class AxisId : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the AxisId class.
@@ -7772,7 +7772,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList" /> <c>&lt;cx:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PlotSurface : TypedOpenXmlCompositeElement
+    public partial class PlotSurface : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the PlotSurface class.
@@ -7869,7 +7869,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.AxisId" /> <c>&lt;cx:axisId></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Series : TypedOpenXmlCompositeElement
+    public partial class Series : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Series class.
@@ -8060,7 +8060,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Series" /> <c>&lt;cx:series></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PlotAreaRegion : TypedOpenXmlCompositeElement
+    public partial class PlotAreaRegion : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the PlotAreaRegion class.
@@ -8149,7 +8149,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ValueAxisScaling" /> <c>&lt;cx:valScaling></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Axis : TypedOpenXmlCompositeElement
+    public partial class Axis : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Axis class.
@@ -8265,7 +8265,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Text" /> <c>&lt;cx:tx></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ChartTitle : TypedOpenXmlCompositeElement
+    public partial class ChartTitle : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ChartTitle class.
@@ -8420,7 +8420,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PlotAreaRegion" /> <c>&lt;cx:plotAreaRegion></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PlotArea : TypedOpenXmlCompositeElement
+    public partial class PlotArea : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the PlotArea class.
@@ -8501,7 +8501,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList" /> <c>&lt;cx:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Legend : TypedOpenXmlCompositeElement
+    public partial class Legend : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Legend class.
@@ -8639,7 +8639,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList" /> <c>&lt;cx:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class FormatOverride : TypedOpenXmlCompositeElement
+    public partial class FormatOverride : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the FormatOverride class.
@@ -8747,7 +8747,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.FirstFooterXsdstring" /> <c>&lt;cx:firstFooter></c></description></item>
     /// </list>
     /// </remark>
-    public partial class HeaderFooter : TypedOpenXmlCompositeElement
+    public partial class HeaderFooter : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the HeaderFooter class.
@@ -8923,7 +8923,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:pageMargins.</para>
     /// </summary>
-    public partial class PageMargins : TypedOpenXmlLeafElement
+    public partial class PageMargins : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the PageMargins class.
@@ -9033,7 +9033,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:pageSetup.</para>
     /// </summary>
-    public partial class PageSetup : TypedOpenXmlLeafElement
+    public partial class PageSetup : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the PageSetup class.
@@ -9166,7 +9166,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExternalData" /> <c>&lt;cx:externalData></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ChartData : TypedOpenXmlCompositeElement
+    public partial class ChartData : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ChartData class.
@@ -9246,7 +9246,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PlotArea" /> <c>&lt;cx:plotArea></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Chart : TypedOpenXmlCompositeElement
+    public partial class Chart : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Chart class.
@@ -9364,7 +9364,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ColorMappingType : TypedOpenXmlCompositeElement
+    public partial class ColorMappingType : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ColorMappingType class.
@@ -9618,7 +9618,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.FormatOverride" /> <c>&lt;cx:fmtOvr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class FormatOverrides : TypedOpenXmlCompositeElement
+    public partial class FormatOverrides : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the FormatOverrides class.
@@ -9680,7 +9680,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PageSetup" /> <c>&lt;cx:pageSetup></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PrintSettings : TypedOpenXmlCompositeElement
+    public partial class PrintSettings : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the PrintSettings class.
@@ -9777,7 +9777,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:idx.</para>
     /// </summary>
-    public partial class UnsignedIntegerType : TypedOpenXmlLeafElement
+    public partial class UnsignedIntegerType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the UnsignedIntegerType class.

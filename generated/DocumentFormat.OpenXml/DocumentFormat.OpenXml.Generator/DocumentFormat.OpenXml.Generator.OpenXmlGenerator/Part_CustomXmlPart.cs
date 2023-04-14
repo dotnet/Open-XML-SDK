@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the CustomXmlPart
     /// </summary>
-    public partial class CustomXmlPart : TypedOpenXmlPart
+    public partial class CustomXmlPart : OpenXmlPart
     {
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXml";
 

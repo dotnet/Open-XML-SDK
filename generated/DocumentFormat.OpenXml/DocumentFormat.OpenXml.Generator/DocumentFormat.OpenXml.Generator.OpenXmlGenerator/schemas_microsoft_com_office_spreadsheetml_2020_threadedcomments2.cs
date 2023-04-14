@@ -22,7 +22,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.ThreadedComments2
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xltc2:checksum.</para>
     /// </summary>
-    public partial class XsdunsignedInt : TypedOpenXmlLeafTextElement
+    public partial class XsdunsignedInt : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the XsdunsignedInt class.
@@ -67,7 +67,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.ThreadedComments2
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Excel.ThreadedComments2.ExtensionList" /> <c>&lt;xltc2:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class CommentHyperlink : TypedOpenXmlCompositeElement
+    public partial class CommentHyperlink : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the CommentHyperlink class.
@@ -183,7 +183,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.ThreadedComments2
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Extension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ExtensionList : TypedOpenXmlCompositeElement
+    public partial class ExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ExtensionList class.

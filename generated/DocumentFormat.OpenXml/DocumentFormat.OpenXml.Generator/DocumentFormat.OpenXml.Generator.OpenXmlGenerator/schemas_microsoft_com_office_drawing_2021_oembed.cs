@@ -28,7 +28,7 @@ namespace DocumentFormat.OpenXml.Office.Drawing.Y2021.OEmbed
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2021.OEmbed.OfficeArtExtensionList" /> <c>&lt;aoe:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class OEmbedShared : TypedOpenXmlCompositeElement
+    public partial class OEmbedShared : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the OEmbedShared class.
@@ -130,7 +130,7 @@ namespace DocumentFormat.OpenXml.Office.Drawing.Y2021.OEmbed
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extension" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class OfficeArtExtensionList : TypedOpenXmlCompositeElement
+    public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the OfficeArtExtensionList class.

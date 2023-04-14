@@ -28,7 +28,7 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021.RelativeUrlAlternateUrl" /> <c>&lt;xxl21:relativeUrl></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ExternalBookAlternateUrls : TypedOpenXmlCompositeElement
+    public partial class ExternalBookAlternateUrls : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ExternalBookAlternateUrls class.
@@ -183,7 +183,7 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021
     /// <para>This class is available in Microsoft365 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class OpenXmlAlternateUrlElement : TypedOpenXmlLeafElement
+    public abstract partial class OpenXmlAlternateUrlElement : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the OpenXmlAlternateUrlElement class.

@@ -28,7 +28,7 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.Livefeed
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList" /> <c>&lt;alf:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class BackgroundNormalProperties : TypedOpenXmlCompositeElement
+    public partial class BackgroundNormalProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the BackgroundNormalProperties class.
@@ -101,7 +101,7 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.Livefeed
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList" /> <c>&lt;alf:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class BackgroundRemovedProperties : TypedOpenXmlCompositeElement
+    public partial class BackgroundRemovedProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the BackgroundRemovedProperties class.
@@ -174,7 +174,7 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.Livefeed
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList" /> <c>&lt;alf:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class BackgroundBlurProperties : TypedOpenXmlCompositeElement
+    public partial class BackgroundBlurProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the BackgroundBlurProperties class.
@@ -247,7 +247,7 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.Livefeed
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList" /> <c>&lt;alf:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class BackgroundCustomProperties : TypedOpenXmlCompositeElement
+    public partial class BackgroundCustomProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the BackgroundCustomProperties class.
@@ -321,7 +321,7 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.Livefeed
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.LiveFeedBackgroundProperties" /> <c>&lt;alf:backgroundProps></c></description></item>
     /// </list>
     /// </remark>
-    public partial class LiveFeedProperties : TypedOpenXmlCompositeElement
+    public partial class LiveFeedProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the LiveFeedProperties class.
@@ -409,7 +409,7 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.Livefeed
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extension" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class OfficeArtExtensionList : TypedOpenXmlCompositeElement
+    public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the OfficeArtExtensionList class.
@@ -479,7 +479,7 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.Livefeed
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.BackgroundRemovedProperties" /> <c>&lt;alf:Removed></c></description></item>
     /// </list>
     /// </remark>
-    public partial class LiveFeedBackgroundProperties : TypedOpenXmlCompositeElement
+    public partial class LiveFeedBackgroundProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the LiveFeedBackgroundProperties class.

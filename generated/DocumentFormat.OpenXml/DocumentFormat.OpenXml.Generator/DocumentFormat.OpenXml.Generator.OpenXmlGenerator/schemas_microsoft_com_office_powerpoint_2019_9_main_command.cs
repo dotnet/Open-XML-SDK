@@ -29,7 +29,7 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2019.Main.Command
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint.Y2019.Main.Command.CommentV2Moniker" /> <c>&lt;pc2:cmMK></c></description></item>
     /// </list>
     /// </remark>
-    public partial class CommentV2MonikerList : TypedOpenXmlCompositeElement
+    public partial class CommentV2MonikerList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the CommentV2MonikerList class.
@@ -118,7 +118,7 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2019.Main.Command
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint.Y2019.Main.Command.CommentV2MonikerList" /> <c>&lt;pc2:cmMkLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class CommentReplyV2MonikerList : TypedOpenXmlCompositeElement
+    public partial class CommentReplyV2MonikerList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the CommentReplyV2MonikerList class.
@@ -200,7 +200,7 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2019.Main.Command
     /// <para>This class is available in Microsoft365 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is pc2:cmMK.</para>
     /// </summary>
-    public partial class CommentV2Moniker : TypedOpenXmlLeafElement
+    public partial class CommentV2Moniker : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the CommentV2Moniker class.
@@ -241,7 +241,7 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2019.Main.Command
     /// <para>This class is available in Microsoft365 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is pc2:cmRplyMk.</para>
     /// </summary>
-    public partial class CommentReplyV2Moniker : TypedOpenXmlLeafElement
+    public partial class CommentReplyV2Moniker : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the CommentReplyV2Moniker class.

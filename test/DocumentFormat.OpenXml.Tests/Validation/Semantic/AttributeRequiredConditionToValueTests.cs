@@ -55,7 +55,7 @@ namespace DocumentFormat.OpenXml.Tests.Validation.Semantic
             Assert.Equal(ValidationErrorType.Semantic, error.ErrorType);
         }
 
-        private class TestElement : TypedOpenXmlCompositeElement
+        private class TestElement : OpenXmlCompositeElement
         {
             public StringValue Required
             {

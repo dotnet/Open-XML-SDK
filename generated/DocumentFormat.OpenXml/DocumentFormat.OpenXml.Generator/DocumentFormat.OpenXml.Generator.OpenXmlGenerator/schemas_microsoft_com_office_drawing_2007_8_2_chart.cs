@@ -32,7 +32,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.Charts.DropZonesVisible" /> <c>&lt;c14:dropZonesVisible></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PivotOptions : TypedOpenXmlCompositeElement
+    public partial class PivotOptions : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the PivotOptions class.
@@ -166,7 +166,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.Charts.ShowSketchButton" /> <c>&lt;c14:showSketchBtn></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SketchOptions : TypedOpenXmlCompositeElement
+    public partial class SketchOptions : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SketchOptions class.
@@ -254,7 +254,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.Charts.ShapeProperties" /> <c>&lt;c14:spPr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class InvertSolidFillFormat : TypedOpenXmlCompositeElement
+    public partial class InvertSolidFillFormat : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the InvertSolidFillFormat class.
@@ -321,7 +321,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c14:style.</para>
     /// </summary>
-    public partial class Style : TypedOpenXmlLeafElement
+    public partial class Style : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Style class.
@@ -382,7 +382,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Transform2D" /> <c>&lt;a:xfrm></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ShapeProperties : TypedOpenXmlCompositeElement
+    public partial class ShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ShapeProperties class.
@@ -660,7 +660,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class BooleanFalseType : TypedOpenXmlLeafElement
+    public abstract partial class BooleanFalseType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the BooleanFalseType class.
@@ -692,7 +692,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c14:showSketchBtn.</para>
     /// </summary>
-    public partial class ShowSketchButton : TypedOpenXmlLeafElement
+    public partial class ShowSketchButton : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ShowSketchButton class.

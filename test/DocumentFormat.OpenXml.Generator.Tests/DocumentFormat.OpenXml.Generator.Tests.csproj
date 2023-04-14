@@ -8,11 +8,16 @@
     <PackageReference Include="Microsoft.CodeAnalysis.CSharp.SourceGenerators.Testing.XUnit" />
     <PackageReference Include="NuGet.Common" />
     <PackageReference Include="NuGet.Packaging" />
-    <PackageReference Include="NuGet.Packaging.Core" />
     <PackageReference Include="NuGet.Protocol" />
     <PackageReference Include="NuGet.Resolver" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\gen\DocumentFormat.OpenXml.Generator\DocumentFormat.OpenXml.Generator.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Update="xunit.runner.visualstudio">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
   </ItemGroup>
 </Project>

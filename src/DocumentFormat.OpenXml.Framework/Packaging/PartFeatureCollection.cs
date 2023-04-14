@@ -8,77 +8,74 @@ using System.Linq;
 
 namespace DocumentFormat.OpenXml.Packaging;
 
-public abstract partial class OpenXmlPart
+internal partial class PartFeatureCollection :
+    IFeatureCollection,
+    ITargetFeature,
+    IPartConstraintFeature,
+    IContentTypeFeature,
+    IKnownDataPartFeature
 {
-    private protected partial class PartFeatureCollection :
-        IFeatureCollection,
-        ITargetFeature,
-        IPartConstraintFeature,
-        IContentTypeFeature,
-        IKnownDataPartFeature
+    private readonly OpenXmlPart _part;
+
+    private FeatureContainer _container;
+
+    public PartFeatureCollection(OpenXmlPart part)
     {
-        private readonly OpenXmlPart _part;
-
-        private FeatureContainer _container;
-
-        public PartFeatureCollection(OpenXmlPart part)
-        {
-            _part = part;
-        }
-
-        public bool IsReadOnly => false;
-
-        public int Revision => _container.Revision + (Parent?.Revision ?? 0);
-
-        private IFeatureCollection? Parent => _part?._openXmlPackage?.Features;
-
-        string ITargetFeature.Path => ".";
-
-        string ITargetFeature.Extension => ".xml";
-
-        string ITargetFeature.Name => string.Empty;
-
-        public TFeature? Get<TFeature>()
-        {
-            if (_container.Get<TFeature>() is { } other)
-            {
-                return other;
-            }
-
-            if (this is TFeature @this)
-            {
-                return @this;
-            }
-
-            if (GetInternal<TFeature>() is { } @internal)
-            {
-                return @internal;
-            }
-
-            if (Parent is { } parent && parent.Get<TFeature>() is { } fromParent)
-            {
-                return fromParent;
-            }
-
-            return default;
-        }
-
-        [KnownFeature(typeof(AnnotationsFeature))]
-        private partial T? GetInternal<T>();
-
-        public void Set<TFeature>(TFeature? instance)
-            => _container.Set(instance);
-
-        IEnumerable<PartConstraintRule> IPartConstraintFeature.Rules => Enumerable.Empty<PartConstraintRule>();
-
-        bool IContentTypeFeature.IsConstant => _part is IFixedContentTypePart;
-
-        bool IPartConstraintFeature.TryGetRule(string relationshipId, out PartConstraintRule rule)
-        {
-            rule = default;
-            return false;
-        }
-
-        bool IKnownDataPartFeature.IsKnown(string relationshipId) => false;
+        _part = part;
     }
+
+    public bool IsReadOnly => false;
+
+    public int Revision => _container.Revision + (Parent?.Revision ?? 0);
+
+    private IFeatureCollection? Parent => _part?._openXmlPackage?.Features;
+
+    string ITargetFeature.Path => ".";
+
+    string ITargetFeature.Extension => ".xml";
+
+    string ITargetFeature.Name => string.Empty;
+
+    public TFeature? Get<TFeature>()
+    {
+        if (_container.Get<TFeature>() is { } other)
+        {
+            return other;
+        }
+
+        if (this is TFeature @this)
+        {
+            return @this;
+        }
+
+        if (GetInternal<TFeature>() is { } @internal)
+        {
+            return @internal;
+        }
+
+        if (Parent is { } parent && parent.Get<TFeature>() is { } fromParent)
+        {
+            return fromParent;
+        }
+
+        return default;
+    }
+
+    [KnownFeature(typeof(AnnotationsFeature))]
+    private partial T? GetInternal<T>();
+
+    public void Set<TFeature>(TFeature? instance)
+        => _container.Set(instance);
+
+    IEnumerable<PartConstraintRule> IPartConstraintFeature.Rules => Enumerable.Empty<PartConstraintRule>();
+
+    bool IContentTypeFeature.IsConstant => _part is IFixedContentTypePart;
+
+    bool IPartConstraintFeature.TryGetRule(string relationshipId, out PartConstraintRule rule)
+    {
+        rule = default;
+        return false;
+    }
+
+    bool IKnownDataPartFeature.IsKnown(string relationshipId) => false;
 }

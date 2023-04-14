@@ -42,7 +42,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.WindowViewport" /> <c>&lt;am3d:winViewport></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Model3D : TypedOpenXmlCompositeElement
+    public partial class Model3D : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Model3D class.
@@ -308,7 +308,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class RatioType : TypedOpenXmlLeafElement
+    public abstract partial class RatioType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the RatioType class.
@@ -457,7 +457,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class OpenXmlPositiveRatioElement : TypedOpenXmlLeafElement
+    public abstract partial class OpenXmlPositiveRatioElement : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the OpenXmlPositiveRatioElement class.
@@ -581,7 +581,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class Vector3DType : TypedOpenXmlLeafElement
+    public abstract partial class Vector3DType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Vector3DType class.
@@ -655,7 +655,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.SzRatio" /> <c>&lt;am3d:sz></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Scale3D : TypedOpenXmlCompositeElement
+    public partial class Scale3D : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Scale3D class.
@@ -752,7 +752,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is am3d:rot.</para>
     /// </summary>
-    public partial class Rotate3D : TypedOpenXmlLeafElement
+    public partial class Rotate3D : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Rotate3D class.
@@ -817,7 +817,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extension" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class OfficeArtExtensionList : TypedOpenXmlCompositeElement
+    public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the OfficeArtExtensionList class.
@@ -927,7 +927,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class OpenXmlPoint3DElement : TypedOpenXmlLeafElement
+    public abstract partial class OpenXmlPoint3DElement : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the OpenXmlPoint3DElement class.
@@ -1000,7 +1000,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.SzPositiveRatio" /> <c>&lt;am3d:sz></c></description></item>
     /// </list>
     /// </remark>
-    public partial class OrthographicProjection : TypedOpenXmlCompositeElement
+    public partial class OrthographicProjection : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the OrthographicProjection class.
@@ -1088,7 +1088,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList" /> <c>&lt;am3d:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PerspectiveProjection : TypedOpenXmlCompositeElement
+    public partial class PerspectiveProjection : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the PerspectiveProjection class.
@@ -1194,7 +1194,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.TintEffect" /> <c>&lt;a:tint></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Blip : TypedOpenXmlCompositeElement
+    public partial class Blip : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Blip class.
@@ -1339,7 +1339,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SystemColor" /> <c>&lt;a:sysClr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ColorType : TypedOpenXmlCompositeElement
+    public partial class ColorType : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ColorType class.
@@ -1494,7 +1494,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.PosterFrame" /> <c>&lt;a3danim:posterFrame></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Model3DExtension : TypedOpenXmlCompositeElement
+    public partial class Model3DExtension : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Model3DExtension class.
@@ -1587,7 +1587,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Transform2D" /> <c>&lt;a:xfrm></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ShapeProperties : TypedOpenXmlCompositeElement
+    public partial class ShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ShapeProperties class.
@@ -1726,7 +1726,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.PerspectiveProjection" /> <c>&lt;am3d:perspective></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Model3DCamera : TypedOpenXmlCompositeElement
+    public partial class Model3DCamera : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Model3DCamera class.
@@ -1843,7 +1843,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Scale3D" /> <c>&lt;am3d:scale></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Model3DTransform : TypedOpenXmlCompositeElement
+    public partial class Model3DTransform : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Model3DTransform class.
@@ -1985,7 +1985,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is am3d:attrSrcUrl.</para>
     /// </summary>
-    public partial class PictureAttributionSourceURL : TypedOpenXmlLeafElement
+    public partial class PictureAttributionSourceURL : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the PictureAttributionSourceURL class.
@@ -2034,7 +2034,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Blip" /> <c>&lt;am3d:blip></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Model3DRaster : TypedOpenXmlCompositeElement
+    public partial class Model3DRaster : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Model3DRaster class.
@@ -2136,7 +2136,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.Model3DExtension" /> <c>&lt;am3d:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Model3DExtensionList : TypedOpenXmlCompositeElement
+    public partial class Model3DExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Model3DExtensionList class.
@@ -2196,7 +2196,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList" /> <c>&lt;am3d:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ObjectViewport : TypedOpenXmlCompositeElement
+    public partial class ObjectViewport : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ObjectViewport class.
@@ -2285,7 +2285,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.OfficeArtExtensionList" /> <c>&lt;am3d:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class WindowViewport : TypedOpenXmlCompositeElement
+    public partial class WindowViewport : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the WindowViewport class.
@@ -2360,7 +2360,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.IlluminancePositiveRatio" /> <c>&lt;am3d:illuminance></c></description></item>
     /// </list>
     /// </remark>
-    public partial class AmbientLight : TypedOpenXmlCompositeElement
+    public partial class AmbientLight : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the AmbientLight class.
@@ -2478,7 +2478,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.IntensityPositiveRatio" /> <c>&lt;am3d:intensity></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PointLight : TypedOpenXmlCompositeElement
+    public partial class PointLight : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the PointLight class.
@@ -2627,7 +2627,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.IntensityPositiveRatio" /> <c>&lt;am3d:intensity></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SpotLight : TypedOpenXmlCompositeElement
+    public partial class SpotLight : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SpotLight class.
@@ -2806,7 +2806,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Model3D.IlluminancePositiveRatio" /> <c>&lt;am3d:illuminance></c></description></item>
     /// </list>
     /// </remark>
-    public partial class DirectionalLight : TypedOpenXmlCompositeElement
+    public partial class DirectionalLight : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the DirectionalLight class.
@@ -2960,7 +2960,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Model3D
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is am3d:unkLight.</para>
     /// </summary>
-    public partial class UnknownLight : TypedOpenXmlLeafElement
+    public partial class UnknownLight : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the UnknownLight class.

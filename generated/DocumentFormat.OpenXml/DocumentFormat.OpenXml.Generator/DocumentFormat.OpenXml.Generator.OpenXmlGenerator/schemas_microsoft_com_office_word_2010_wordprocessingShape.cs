@@ -37,7 +37,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.DrawingShape.TextBoxInfo2" /> <c>&lt;wps:txbx></c></description></item>
     /// </list>
     /// </remark>
-    public partial class WordprocessingShape : TypedOpenXmlCompositeElement
+    public partial class WordprocessingShape : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the WordprocessingShape class.
@@ -144,7 +144,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extension" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class OfficeArtExtensionList : TypedOpenXmlCompositeElement
+    public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the OfficeArtExtensionList class.
@@ -212,7 +212,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class NonVisualDrawingProperties : TypedOpenXmlCompositeElement
+    public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the NonVisualDrawingProperties class.
@@ -378,7 +378,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ShapeLocks" /> <c>&lt;a:spLocks></c></description></item>
     /// </list>
     /// </remark>
-    public partial class NonVisualDrawingShapeProperties : TypedOpenXmlCompositeElement
+    public partial class NonVisualDrawingShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the NonVisualDrawingShapeProperties class.
@@ -481,7 +481,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class NonVisualConnectorProperties : TypedOpenXmlCompositeElement
+    public partial class NonVisualConnectorProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the NonVisualConnectorProperties class.
@@ -613,7 +613,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Transform2D" /> <c>&lt;a:xfrm></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ShapeProperties : TypedOpenXmlCompositeElement
+    public partial class ShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ShapeProperties class.
@@ -750,7 +750,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.EffectReference" /> <c>&lt;a:effectRef></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ShapeStyle : TypedOpenXmlCompositeElement
+    public partial class ShapeStyle : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ShapeStyle class.
@@ -869,7 +869,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TextBoxContent" /> <c>&lt;w:txbxContent></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TextBoxInfo2 : TypedOpenXmlCompositeElement
+    public partial class TextBoxInfo2 : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TextBoxInfo2 class.
@@ -969,7 +969,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.DrawingShape.OfficeArtExtensionList" /> <c>&lt;wps:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class LinkedTextBox : TypedOpenXmlCompositeElement
+    public partial class LinkedTextBox : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the LinkedTextBox class.
@@ -1078,7 +1078,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ShapeAutoFit" /> <c>&lt;a:spAutoFit></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TextBodyProperties : TypedOpenXmlCompositeElement
+    public partial class TextBodyProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TextBodyProperties class.

@@ -28,7 +28,7 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo.LastRefreshFeatureXsdstring" /> <c>&lt;xxpvi:lastRefreshFeature></c></description></item>
     /// </list>
     /// </remark>
-    public partial class CacheVersionInfo : TypedOpenXmlCompositeElement
+    public partial class CacheVersionInfo : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the CacheVersionInfo class.
@@ -91,7 +91,7 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo.LastUpdateFeatureXsdstring" /> <c>&lt;xxpvi:lastUpdateFeature></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PivotVersionInfo : TypedOpenXmlCompositeElement
+    public partial class PivotVersionInfo : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the PivotVersionInfo class.
@@ -147,7 +147,7 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo
     /// <para>This class is available in Microsoft365 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xxpvi:requiredFeature.</para>
     /// </summary>
-    public partial class RequiredFeatureXsdstring : TypedOpenXmlLeafTextElement
+    public partial class RequiredFeatureXsdstring : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the RequiredFeatureXsdstring class.
@@ -185,7 +185,7 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo
     /// <para>This class is available in Microsoft365 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xxpvi:lastRefreshFeature.</para>
     /// </summary>
-    public partial class LastRefreshFeatureXsdstring : TypedOpenXmlLeafTextElement
+    public partial class LastRefreshFeatureXsdstring : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the LastRefreshFeatureXsdstring class.
@@ -223,7 +223,7 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo
     /// <para>This class is available in Microsoft365 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xxpvi:lastUpdateFeature.</para>
     /// </summary>
-    public partial class LastUpdateFeatureXsdstring : TypedOpenXmlLeafTextElement
+    public partial class LastUpdateFeatureXsdstring : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the LastUpdateFeatureXsdstring class.

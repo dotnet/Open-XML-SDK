@@ -7,25 +7,22 @@
 
 namespace DocumentFormat.OpenXml.Packaging;
 
-public partial class OpenXmlPart
+internal partial class PartFeatureCollection
 {
-    private protected partial class PartFeatureCollection
+    private global::DocumentFormat.OpenXml.Features.AnnotationsFeature? _AnnotationsFeature;
+
+    private partial T? GetInternal<T>()
     {
-        private global::DocumentFormat.OpenXml.Features.AnnotationsFeature? _AnnotationsFeature;
-
-        private partial T? GetInternal<T>()
+        if (typeof(T) == typeof(global::DocumentFormat.OpenXml.Features.AnnotationsFeature))
         {
-            if (typeof(T) == typeof(global::DocumentFormat.OpenXml.Features.AnnotationsFeature))
+            if (_AnnotationsFeature is null)
             {
-                if (_AnnotationsFeature is null)
-                {
-                    _AnnotationsFeature = new global::DocumentFormat.OpenXml.Features.AnnotationsFeature();
-                }
-
-                return (T)(object)_AnnotationsFeature;
+                _AnnotationsFeature = new global::DocumentFormat.OpenXml.Features.AnnotationsFeature();
             }
 
-            return default;
+            return (T)(object)_AnnotationsFeature;
         }
+
+        return default;
     }
 }

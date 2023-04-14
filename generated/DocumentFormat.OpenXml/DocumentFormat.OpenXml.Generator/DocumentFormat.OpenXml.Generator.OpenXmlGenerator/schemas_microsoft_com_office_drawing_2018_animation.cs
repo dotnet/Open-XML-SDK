@@ -28,7 +28,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Animation.OfficeArtExtensionList" /> <c>&lt;aanim:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class AnimationProperties : TypedOpenXmlCompositeElement
+    public partial class AnimationProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the AnimationProperties class.
@@ -189,7 +189,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extension" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class OfficeArtExtensionList : TypedOpenXmlCompositeElement
+    public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the OfficeArtExtensionList class.

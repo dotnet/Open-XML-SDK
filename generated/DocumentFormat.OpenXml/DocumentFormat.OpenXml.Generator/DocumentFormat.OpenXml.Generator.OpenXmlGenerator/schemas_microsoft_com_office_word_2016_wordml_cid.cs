@@ -27,7 +27,7 @@ namespace DocumentFormat.OpenXml.Office2019.Word.Cid
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Word.Cid.CommentId" /> <c>&lt;w16cid:commentId></c></description></item>
     /// </list>
     /// </remark>
-    public partial class CommentsIds : TypedOpenXmlPartRootElement
+    public partial class CommentsIds : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the CommentsIds class.
@@ -112,7 +112,7 @@ namespace DocumentFormat.OpenXml.Office2019.Word.Cid
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w16cid:commentId.</para>
     /// </summary>
-    public partial class CommentId : TypedOpenXmlLeafElement
+    public partial class CommentId : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the CommentId class.

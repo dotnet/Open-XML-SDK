@@ -54,7 +54,7 @@ namespace DocumentFormat.OpenXml.Office.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.SortState" /> <c>&lt;x:sortState></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Macrosheet : TypedOpenXmlPartRootElement
+    public partial class Macrosheet : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the Macrosheet class.
@@ -249,7 +249,7 @@ namespace DocumentFormat.OpenXml.Office.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.RowSortMap" /> <c>&lt;xne:rowSortMap></c></description></item>
     /// </list>
     /// </remark>
-    public partial class WorksheetSortMap : TypedOpenXmlPartRootElement
+    public partial class WorksheetSortMap : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the WorksheetSortMap class.
@@ -361,7 +361,7 @@ namespace DocumentFormat.OpenXml.Office.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xne:sqref.</para>
     /// </summary>
-    public partial class ReferenceSequence : TypedOpenXmlLeafTextElement
+    public partial class ReferenceSequence : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the ReferenceSequence class.
@@ -400,7 +400,7 @@ namespace DocumentFormat.OpenXml.Office.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xne:f.</para>
     /// </summary>
-    public partial class Formula : TypedOpenXmlLeafTextElement
+    public partial class Formula : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the Formula class.
@@ -444,7 +444,7 @@ namespace DocumentFormat.OpenXml.Office.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.RowSortMapItem" /> <c>&lt;xne:row></c></description></item>
     /// </list>
     /// </remark>
-    public partial class RowSortMap : TypedOpenXmlCompositeElement
+    public partial class RowSortMap : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the RowSortMap class.
@@ -532,7 +532,7 @@ namespace DocumentFormat.OpenXml.Office.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.ColumnSortMapItem" /> <c>&lt;xne:col></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ColumnSortMap : TypedOpenXmlCompositeElement
+    public partial class ColumnSortMap : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ColumnSortMap class.
@@ -662,7 +662,7 @@ namespace DocumentFormat.OpenXml.Office.Excel
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class SortMapItemType : TypedOpenXmlLeafElement
+    public abstract partial class SortMapItemType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the SortMapItemType class.

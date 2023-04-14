@@ -22,7 +22,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:scr.</para>
     /// </summary>
-    public partial class Script : TypedOpenXmlLeafElement
+    public partial class Script : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Script class.
@@ -64,7 +64,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:sty.</para>
     /// </summary>
-    public partial class Style : TypedOpenXmlLeafElement
+    public partial class Style : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Style class.
@@ -146,7 +146,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DeletedFieldCode" /> <c>&lt;w:delInstrText></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Run : TypedOpenXmlCompositeElement
+    public partial class Run : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Run class.
@@ -315,7 +315,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Base" /> <c>&lt;m:e></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Accent : TypedOpenXmlCompositeElement
+    public partial class Accent : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Accent class.
@@ -403,7 +403,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Base" /> <c>&lt;m:e></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Bar : TypedOpenXmlCompositeElement
+    public partial class Bar : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Bar class.
@@ -491,7 +491,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Base" /> <c>&lt;m:e></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Box : TypedOpenXmlCompositeElement
+    public partial class Box : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Box class.
@@ -579,7 +579,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Base" /> <c>&lt;m:e></c></description></item>
     /// </list>
     /// </remark>
-    public partial class BorderBox : TypedOpenXmlCompositeElement
+    public partial class BorderBox : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the BorderBox class.
@@ -667,7 +667,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Base" /> <c>&lt;m:e></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Delimiter : TypedOpenXmlCompositeElement
+    public partial class Delimiter : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Delimiter class.
@@ -742,7 +742,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Base" /> <c>&lt;m:e></c></description></item>
     /// </list>
     /// </remark>
-    public partial class EquationArray : TypedOpenXmlCompositeElement
+    public partial class EquationArray : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the EquationArray class.
@@ -818,7 +818,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Denominator" /> <c>&lt;m:den></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Fraction : TypedOpenXmlCompositeElement
+    public partial class Fraction : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Fraction class.
@@ -922,7 +922,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Base" /> <c>&lt;m:e></c></description></item>
     /// </list>
     /// </remark>
-    public partial class MathFunction : TypedOpenXmlCompositeElement
+    public partial class MathFunction : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the MathFunction class.
@@ -1025,7 +1025,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Base" /> <c>&lt;m:e></c></description></item>
     /// </list>
     /// </remark>
-    public partial class GroupChar : TypedOpenXmlCompositeElement
+    public partial class GroupChar : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the GroupChar class.
@@ -1114,7 +1114,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Limit" /> <c>&lt;m:lim></c></description></item>
     /// </list>
     /// </remark>
-    public partial class LimitLower : TypedOpenXmlCompositeElement
+    public partial class LimitLower : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the LimitLower class.
@@ -1218,7 +1218,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Limit" /> <c>&lt;m:lim></c></description></item>
     /// </list>
     /// </remark>
-    public partial class LimitUpper : TypedOpenXmlCompositeElement
+    public partial class LimitUpper : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the LimitUpper class.
@@ -1321,7 +1321,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.MatrixRow" /> <c>&lt;m:mr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Matrix : TypedOpenXmlCompositeElement
+    public partial class Matrix : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Matrix class.
@@ -1398,7 +1398,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Base" /> <c>&lt;m:e></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Nary : TypedOpenXmlCompositeElement
+    public partial class Nary : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Nary class.
@@ -1516,7 +1516,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.PhantomProperties" /> <c>&lt;m:phantPr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Phantom : TypedOpenXmlCompositeElement
+    public partial class Phantom : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Phantom class.
@@ -1605,7 +1605,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.RadicalProperties" /> <c>&lt;m:radPr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Radical : TypedOpenXmlCompositeElement
+    public partial class Radical : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Radical class.
@@ -1710,7 +1710,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.PreSubSuperProperties" /> <c>&lt;m:sPrePr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PreSubSuper : TypedOpenXmlCompositeElement
+    public partial class PreSubSuper : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the PreSubSuper class.
@@ -1829,7 +1829,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.SubscriptProperties" /> <c>&lt;m:sSubPr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Subscript : TypedOpenXmlCompositeElement
+    public partial class Subscript : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Subscript class.
@@ -1934,7 +1934,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.SubSuperscriptProperties" /> <c>&lt;m:sSubSupPr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SubSuperscript : TypedOpenXmlCompositeElement
+    public partial class SubSuperscript : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SubSuperscript class.
@@ -2053,7 +2053,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.SuperscriptProperties" /> <c>&lt;m:sSupPr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Superscript : TypedOpenXmlCompositeElement
+    public partial class Superscript : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Superscript class.
@@ -2188,7 +2188,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Paragraph : TypedOpenXmlCompositeElement
+    public partial class Paragraph : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Paragraph class.
@@ -2438,7 +2438,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-    public partial class OfficeMath : TypedOpenXmlCompositeElement
+    public partial class OfficeMath : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the OfficeMath class.
@@ -2738,7 +2738,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.WrapIndent" /> <c>&lt;m:wrapIndent></c></description></item>
     /// </list>
     /// </remark>
-    public partial class MathProperties : TypedOpenXmlCompositeElement
+    public partial class MathProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the MathProperties class.
@@ -3700,7 +3700,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class OnOffType : TypedOpenXmlLeafElement
+    public abstract partial class OnOffType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the OnOffType class.
@@ -3735,7 +3735,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:brk.</para>
     /// </summary>
-    public partial class Break : TypedOpenXmlLeafElement
+    public partial class Break : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Break class.
@@ -3805,7 +3805,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Style" /> <c>&lt;m:sty></c></description></item>
     /// </list>
     /// </remark>
-    public partial class RunProperties : TypedOpenXmlCompositeElement
+    public partial class RunProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the RunProperties class.
@@ -3893,7 +3893,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:t.</para>
     /// </summary>
-    public partial class Text : TypedOpenXmlLeafTextElement
+    public partial class Text : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the Text class.
@@ -4041,7 +4041,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class CharType : TypedOpenXmlLeafElement
+    public abstract partial class CharType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the CharType class.
@@ -4090,7 +4090,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.RunProperties" /> <c>&lt;w:rPr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ControlProperties : TypedOpenXmlCompositeElement
+    public partial class ControlProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ControlProperties class.
@@ -4182,7 +4182,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.ControlProperties" /> <c>&lt;m:ctrlPr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class AccentProperties : TypedOpenXmlCompositeElement
+    public partial class AccentProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the AccentProperties class.
@@ -6630,7 +6630,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-    public abstract partial class OfficeMathArgumentType : TypedOpenXmlCompositeElement
+    public abstract partial class OfficeMathArgumentType : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the OfficeMathArgumentType class.
@@ -6793,7 +6793,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class TopBottomType : TypedOpenXmlLeafElement
+    public abstract partial class TopBottomType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the TopBottomType class.
@@ -6838,7 +6838,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Position" /> <c>&lt;m:pos></c></description></item>
     /// </list>
     /// </remark>
-    public partial class BarProperties : TypedOpenXmlCompositeElement
+    public partial class BarProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the BarProperties class.
@@ -6930,7 +6930,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Alignment" /> <c>&lt;m:aln></c></description></item>
     /// </list>
     /// </remark>
-    public partial class BoxProperties : TypedOpenXmlCompositeElement
+    public partial class BoxProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the BoxProperties class.
@@ -7085,7 +7085,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.StrikeTopLeftToBottomRight" /> <c>&lt;m:strikeTLBR></c></description></item>
     /// </list>
     /// </remark>
-    public partial class BorderBoxProperties : TypedOpenXmlCompositeElement
+    public partial class BorderBoxProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the BorderBoxProperties class.
@@ -7271,7 +7271,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:shp.</para>
     /// </summary>
-    public partial class Shape : TypedOpenXmlLeafElement
+    public partial class Shape : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Shape class.
@@ -7324,7 +7324,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Shape" /> <c>&lt;m:shp></c></description></item>
     /// </list>
     /// </remark>
-    public partial class DelimiterProperties : TypedOpenXmlCompositeElement
+    public partial class DelimiterProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the DelimiterProperties class.
@@ -7465,7 +7465,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:baseJc.</para>
     /// </summary>
-    public partial class BaseJustification : TypedOpenXmlLeafElement
+    public partial class BaseJustification : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the BaseJustification class.
@@ -7555,7 +7555,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class SpacingRuleType : TypedOpenXmlLeafElement
+    public abstract partial class SpacingRuleType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the SpacingRuleType class.
@@ -7642,7 +7642,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class UnsignedShortType : TypedOpenXmlLeafElement
+    public abstract partial class UnsignedShortType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the UnsignedShortType class.
@@ -7691,7 +7691,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.BaseJustification" /> <c>&lt;m:baseJc></c></description></item>
     /// </list>
     /// </remark>
-    public partial class EquationArrayProperties : TypedOpenXmlCompositeElement
+    public partial class EquationArrayProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the EquationArrayProperties class.
@@ -7832,7 +7832,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:type.</para>
     /// </summary>
-    public partial class FractionType : TypedOpenXmlLeafElement
+    public partial class FractionType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the FractionType class.
@@ -7881,7 +7881,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.FractionType" /> <c>&lt;m:type></c></description></item>
     /// </list>
     /// </remark>
-    public partial class FractionProperties : TypedOpenXmlCompositeElement
+    public partial class FractionProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the FractionProperties class.
@@ -7968,7 +7968,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.ControlProperties" /> <c>&lt;m:ctrlPr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class FunctionProperties : TypedOpenXmlCompositeElement
+    public partial class FunctionProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the FunctionProperties class.
@@ -8043,7 +8043,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.VerticalJustification" /> <c>&lt;m:vertJc></c></description></item>
     /// </list>
     /// </remark>
-    public partial class GroupCharProperties : TypedOpenXmlCompositeElement
+    public partial class GroupCharProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the GroupCharProperties class.
@@ -8160,7 +8160,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.ControlProperties" /> <c>&lt;m:ctrlPr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class LimitLowerProperties : TypedOpenXmlCompositeElement
+    public partial class LimitLowerProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the LimitLowerProperties class.
@@ -8232,7 +8232,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.ControlProperties" /> <c>&lt;m:ctrlPr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class LimitUpperProperties : TypedOpenXmlCompositeElement
+    public partial class LimitUpperProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the LimitUpperProperties class.
@@ -8298,7 +8298,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:count.</para>
     /// </summary>
-    public partial class MatrixColumnCount : TypedOpenXmlLeafElement
+    public partial class MatrixColumnCount : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the MatrixColumnCount class.
@@ -8341,7 +8341,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:mcJc.</para>
     /// </summary>
-    public partial class MatrixColumnJustification : TypedOpenXmlLeafElement
+    public partial class MatrixColumnJustification : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the MatrixColumnJustification class.
@@ -8390,7 +8390,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.MatrixColumnJustification" /> <c>&lt;m:mcJc></c></description></item>
     /// </list>
     /// </remark>
-    public partial class MatrixColumnProperties : TypedOpenXmlCompositeElement
+    public partial class MatrixColumnProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the MatrixColumnProperties class.
@@ -8477,7 +8477,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.MatrixColumnProperties" /> <c>&lt;m:mcPr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class MatrixColumn : TypedOpenXmlCompositeElement
+    public partial class MatrixColumn : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the MatrixColumn class.
@@ -8735,7 +8735,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class TwipsMeasureType : TypedOpenXmlLeafElement
+    public abstract partial class TwipsMeasureType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the TwipsMeasureType class.
@@ -8780,7 +8780,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.MatrixColumn" /> <c>&lt;m:mc></c></description></item>
     /// </list>
     /// </remark>
-    public partial class MatrixColumns : TypedOpenXmlCompositeElement
+    public partial class MatrixColumns : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the MatrixColumns class.
@@ -8847,7 +8847,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.BaseJustification" /> <c>&lt;m:baseJc></c></description></item>
     /// </list>
     /// </remark>
-    public partial class MatrixProperties : TypedOpenXmlCompositeElement
+    public partial class MatrixProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the MatrixProperties class.
@@ -9039,7 +9039,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Base" /> <c>&lt;m:e></c></description></item>
     /// </list>
     /// </remark>
-    public partial class MatrixRow : TypedOpenXmlCompositeElement
+    public partial class MatrixRow : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the MatrixRow class.
@@ -9164,7 +9164,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class LimitLocationType : TypedOpenXmlLeafElement
+    public abstract partial class LimitLocationType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the LimitLocationType class.
@@ -9213,7 +9213,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.HideSuperArgument" /> <c>&lt;m:supHide></c></description></item>
     /// </list>
     /// </remark>
-    public partial class NaryProperties : TypedOpenXmlCompositeElement
+    public partial class NaryProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the NaryProperties class.
@@ -9365,7 +9365,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Transparent" /> <c>&lt;m:transp></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PhantomProperties : TypedOpenXmlCompositeElement
+    public partial class PhantomProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the PhantomProperties class.
@@ -9513,7 +9513,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.HideDegree" /> <c>&lt;m:degHide></c></description></item>
     /// </list>
     /// </remark>
-    public partial class RadicalProperties : TypedOpenXmlCompositeElement
+    public partial class RadicalProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the RadicalProperties class.
@@ -9600,7 +9600,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.ControlProperties" /> <c>&lt;m:ctrlPr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PreSubSuperProperties : TypedOpenXmlCompositeElement
+    public partial class PreSubSuperProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the PreSubSuperProperties class.
@@ -9672,7 +9672,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.ControlProperties" /> <c>&lt;m:ctrlPr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SubscriptProperties : TypedOpenXmlCompositeElement
+    public partial class SubscriptProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SubscriptProperties class.
@@ -9745,7 +9745,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.AlignScripts" /> <c>&lt;m:alnScr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SubSuperscriptProperties : TypedOpenXmlCompositeElement
+    public partial class SubSuperscriptProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SubSuperscriptProperties class.
@@ -9832,7 +9832,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.ControlProperties" /> <c>&lt;m:ctrlPr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SuperscriptProperties : TypedOpenXmlCompositeElement
+    public partial class SuperscriptProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SuperscriptProperties class.
@@ -9898,7 +9898,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:argSz.</para>
     /// </summary>
-    public partial class ArgumentSize : TypedOpenXmlLeafElement
+    public partial class ArgumentSize : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ArgumentSize class.
@@ -9947,7 +9947,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.ArgumentSize" /> <c>&lt;m:argSz></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ArgumentProperties : TypedOpenXmlCompositeElement
+    public partial class ArgumentProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ArgumentProperties class.
@@ -10061,7 +10061,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class OfficeMathJustificationType : TypedOpenXmlLeafElement
+    public abstract partial class OfficeMathJustificationType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the OfficeMathJustificationType class.
@@ -10099,7 +10099,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:mathFont.</para>
     /// </summary>
-    public partial class MathFont : TypedOpenXmlLeafElement
+    public partial class MathFont : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the MathFont class.
@@ -10142,7 +10142,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:brkBin.</para>
     /// </summary>
-    public partial class BreakBinary : TypedOpenXmlLeafElement
+    public partial class BreakBinary : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the BreakBinary class.
@@ -10181,7 +10181,7 @@ namespace DocumentFormat.OpenXml.Math
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is m:brkBinSub.</para>
     /// </summary>
-    public partial class BreakBinarySubtraction : TypedOpenXmlLeafElement
+    public partial class BreakBinarySubtraction : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the BreakBinarySubtraction class.
@@ -10230,7 +10230,7 @@ namespace DocumentFormat.OpenXml.Math
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Justification" /> <c>&lt;m:jc></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ParagraphProperties : TypedOpenXmlCompositeElement
+    public partial class ParagraphProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ParagraphProperties class.

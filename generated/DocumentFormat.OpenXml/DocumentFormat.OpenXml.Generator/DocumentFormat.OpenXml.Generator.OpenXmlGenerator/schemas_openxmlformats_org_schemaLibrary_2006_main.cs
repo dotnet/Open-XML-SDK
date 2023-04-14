@@ -28,7 +28,7 @@ namespace DocumentFormat.OpenXml.CustomXmlSchemaReferences
     ///   <item><description><see cref="DocumentFormat.OpenXml.CustomXmlSchemaReferences.Schema" /> <c>&lt;sl:schema></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SchemaLibrary : TypedOpenXmlCompositeElement
+    public partial class SchemaLibrary : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SchemaLibrary class.
@@ -81,7 +81,7 @@ namespace DocumentFormat.OpenXml.CustomXmlSchemaReferences
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is sl:schema.</para>
     /// </summary>
-    public partial class Schema : TypedOpenXmlLeafElement
+    public partial class Schema : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Schema class.

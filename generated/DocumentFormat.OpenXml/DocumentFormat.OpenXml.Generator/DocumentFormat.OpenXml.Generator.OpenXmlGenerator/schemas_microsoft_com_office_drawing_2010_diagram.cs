@@ -30,7 +30,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Diagram
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class NonVisualDrawingProperties : TypedOpenXmlCompositeElement
+    public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the NonVisualDrawingProperties class.
@@ -189,7 +189,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Diagram
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm14:recolorImg.</para>
     /// </summary>
-    public partial class RecolorImages : TypedOpenXmlLeafElement
+    public partial class RecolorImages : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the RecolorImages class.

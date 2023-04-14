@@ -21,7 +21,7 @@ namespace DocumentFormat.OpenXml.Office2021.OfficeExtLst
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oel:ext.</para>
     /// </summary>
-    public partial class Extension : TypedOpenXmlCompositeElement
+    public partial class Extension : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Extension class.

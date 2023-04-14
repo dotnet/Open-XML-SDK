@@ -28,7 +28,7 @@ namespace DocumentFormat.OpenXml.Office.Drawing.Y2021.ScriptLink
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2021.ScriptLink.OfficeArtExtensionList" /> <c>&lt;asl:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ScriptLink : TypedOpenXmlCompositeElement
+    public partial class ScriptLink : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ScriptLink class.
@@ -113,7 +113,7 @@ namespace DocumentFormat.OpenXml.Office.Drawing.Y2021.ScriptLink
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extension" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class OfficeArtExtensionList : TypedOpenXmlCompositeElement
+    public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the OfficeArtExtensionList class.

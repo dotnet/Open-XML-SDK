@@ -6,7 +6,7 @@ using System.Xml;
 
 namespace DocumentFormat.OpenXml.Tests
 {
-    internal class MockedOpenXmlElement : TypedOpenXmlElement
+    internal class MockedOpenXmlElement : OpenXmlElement
     {
         public override bool HasChildren => throw new NotImplementedException();
 

@@ -27,7 +27,7 @@ namespace DocumentFormat.OpenXml.Office2016.ExcelAc
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.ExcelAc.ModelTimeGrouping" /> <c>&lt;x16:modelTimeGrouping></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ModelTimeGroupings : TypedOpenXmlCompositeElement
+    public partial class ModelTimeGroupings : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ModelTimeGroupings class.
@@ -87,7 +87,7 @@ namespace DocumentFormat.OpenXml.Office2016.ExcelAc
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.ExcelAc.CalculatedTimeColumn" /> <c>&lt;x16:calculatedTimeColumn></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ModelTimeGrouping : TypedOpenXmlCompositeElement
+    public partial class ModelTimeGrouping : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ModelTimeGrouping class.
@@ -184,7 +184,7 @@ namespace DocumentFormat.OpenXml.Office2016.ExcelAc
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x16:calculatedTimeColumn.</para>
     /// </summary>
-    public partial class CalculatedTimeColumn : TypedOpenXmlLeafElement
+    public partial class CalculatedTimeColumn : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the CalculatedTimeColumn class.

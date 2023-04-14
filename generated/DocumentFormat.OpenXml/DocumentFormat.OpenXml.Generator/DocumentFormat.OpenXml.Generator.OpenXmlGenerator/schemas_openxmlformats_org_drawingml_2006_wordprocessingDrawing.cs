@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp:wrapNone.</para>
     /// </summary>
-    public partial class WrapNone : TypedOpenXmlLeafElement
+    public partial class WrapNone : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the WrapNone class.
@@ -54,7 +54,7 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Wordprocessing.EffectExtent" /> <c>&lt;wp:effectExtent></c></description></item>
     /// </list>
     /// </remark>
-    public partial class WrapSquare : TypedOpenXmlCompositeElement
+    public partial class WrapSquare : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the WrapSquare class.
@@ -186,7 +186,7 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapPolygon" /> <c>&lt;wp:wrapPolygon></c></description></item>
     /// </list>
     /// </remark>
-    public partial class WrapTight : TypedOpenXmlCompositeElement
+    public partial class WrapTight : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the WrapTight class.
@@ -296,7 +296,7 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapPolygon" /> <c>&lt;wp:wrapPolygon></c></description></item>
     /// </list>
     /// </remark>
-    public partial class WrapThrough : TypedOpenXmlCompositeElement
+    public partial class WrapThrough : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the WrapThrough class.
@@ -406,7 +406,7 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Wordprocessing.EffectExtent" /> <c>&lt;wp:effectExtent></c></description></item>
     /// </list>
     /// </remark>
-    public partial class WrapTopBottom : TypedOpenXmlCompositeElement
+    public partial class WrapTopBottom : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the WrapTopBottom class.
@@ -505,7 +505,7 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Wordprocessing.EffectExtent" /> <c>&lt;wp:effectExtent></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Inline : TypedOpenXmlCompositeElement
+    public partial class Inline : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Inline class.
@@ -732,7 +732,7 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.Drawing.RelativeHeight" /> <c>&lt;wp14:sizeRelV></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Anchor : TypedOpenXmlCompositeElement
+    public partial class Anchor : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Anchor class.
@@ -1132,7 +1132,7 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class Point2DType : TypedOpenXmlLeafElement
+    public abstract partial class Point2DType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Point2DType class.
@@ -1183,7 +1183,7 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp:effectExtent.</para>
     /// </summary>
-    public partial class EffectExtent : TypedOpenXmlLeafElement
+    public partial class EffectExtent : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the EffectExtent class.
@@ -1275,7 +1275,7 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Wordprocessing.LineTo" /> <c>&lt;wp:lineTo></c></description></item>
     /// </list>
     /// </remark>
-    public partial class WrapPolygon : TypedOpenXmlCompositeElement
+    public partial class WrapPolygon : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the WrapPolygon class.
@@ -1363,7 +1363,7 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Wordprocessing.PositionOffset" /> <c>&lt;wp:posOffset></c></description></item>
     /// </list>
     /// </remark>
-    public partial class HorizontalPosition : TypedOpenXmlCompositeElement
+    public partial class HorizontalPosition : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the HorizontalPosition class.
@@ -1486,7 +1486,7 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Wordprocessing.PositionOffset" /> <c>&lt;wp:posOffset></c></description></item>
     /// </list>
     /// </remark>
-    public partial class VerticalPosition : TypedOpenXmlCompositeElement
+    public partial class VerticalPosition : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the VerticalPosition class.
@@ -1601,7 +1601,7 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp:extent.</para>
     /// </summary>
-    public partial class Extent : TypedOpenXmlLeafElement
+    public partial class Extent : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Extent class.
@@ -1664,7 +1664,7 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class DocProperties : TypedOpenXmlCompositeElement
+    public partial class DocProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the DocProperties class.
@@ -1830,7 +1830,7 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class NonVisualGraphicFrameDrawingProperties : TypedOpenXmlCompositeElement
+    public partial class NonVisualGraphicFrameDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the NonVisualGraphicFrameDrawingProperties class.
@@ -1911,7 +1911,7 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp:align.</para>
     /// </summary>
-    public partial class VerticalAlignment : TypedOpenXmlLeafTextElement
+    public partial class VerticalAlignment : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the VerticalAlignment class.
@@ -1950,7 +1950,7 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp:posOffset.</para>
     /// </summary>
-    public partial class PositionOffset : TypedOpenXmlLeafTextElement
+    public partial class PositionOffset : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the PositionOffset class.
@@ -1988,7 +1988,7 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp:align.</para>
     /// </summary>
-    public partial class HorizontalAlignment : TypedOpenXmlLeafTextElement
+    public partial class HorizontalAlignment : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the HorizontalAlignment class.

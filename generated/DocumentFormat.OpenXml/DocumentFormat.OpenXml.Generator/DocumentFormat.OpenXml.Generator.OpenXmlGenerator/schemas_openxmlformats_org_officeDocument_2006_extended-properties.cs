@@ -54,7 +54,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     ///   <item><description><see cref="DocumentFormat.OpenXml.ExtendedProperties.ApplicationVersion" /> <c>&lt;ap:AppVersion></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Properties : TypedOpenXmlPartRootElement
+    public partial class Properties : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the Properties class.
@@ -541,7 +541,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:Template.</para>
     /// </summary>
-    public partial class Template : TypedOpenXmlLeafTextElement
+    public partial class Template : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the Template class.
@@ -578,7 +578,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:Manager.</para>
     /// </summary>
-    public partial class Manager : TypedOpenXmlLeafTextElement
+    public partial class Manager : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the Manager class.
@@ -615,7 +615,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:Company.</para>
     /// </summary>
-    public partial class Company : TypedOpenXmlLeafTextElement
+    public partial class Company : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the Company class.
@@ -652,7 +652,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:PresentationFormat.</para>
     /// </summary>
-    public partial class PresentationFormat : TypedOpenXmlLeafTextElement
+    public partial class PresentationFormat : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the PresentationFormat class.
@@ -689,7 +689,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:HyperlinkBase.</para>
     /// </summary>
-    public partial class HyperlinkBase : TypedOpenXmlLeafTextElement
+    public partial class HyperlinkBase : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the HyperlinkBase class.
@@ -726,7 +726,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:Application.</para>
     /// </summary>
-    public partial class Application : TypedOpenXmlLeafTextElement
+    public partial class Application : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the Application class.
@@ -763,7 +763,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:AppVersion.</para>
     /// </summary>
-    public partial class ApplicationVersion : TypedOpenXmlLeafTextElement
+    public partial class ApplicationVersion : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the ApplicationVersion class.
@@ -800,7 +800,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:Pages.</para>
     /// </summary>
-    public partial class Pages : TypedOpenXmlLeafTextElement
+    public partial class Pages : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the Pages class.
@@ -838,7 +838,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:Words.</para>
     /// </summary>
-    public partial class Words : TypedOpenXmlLeafTextElement
+    public partial class Words : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the Words class.
@@ -876,7 +876,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:Characters.</para>
     /// </summary>
-    public partial class Characters : TypedOpenXmlLeafTextElement
+    public partial class Characters : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the Characters class.
@@ -914,7 +914,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:Lines.</para>
     /// </summary>
-    public partial class Lines : TypedOpenXmlLeafTextElement
+    public partial class Lines : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the Lines class.
@@ -952,7 +952,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:Paragraphs.</para>
     /// </summary>
-    public partial class Paragraphs : TypedOpenXmlLeafTextElement
+    public partial class Paragraphs : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the Paragraphs class.
@@ -990,7 +990,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:Slides.</para>
     /// </summary>
-    public partial class Slides : TypedOpenXmlLeafTextElement
+    public partial class Slides : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the Slides class.
@@ -1028,7 +1028,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:Notes.</para>
     /// </summary>
-    public partial class Notes : TypedOpenXmlLeafTextElement
+    public partial class Notes : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the Notes class.
@@ -1066,7 +1066,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:TotalTime.</para>
     /// </summary>
-    public partial class TotalTime : TypedOpenXmlLeafTextElement
+    public partial class TotalTime : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the TotalTime class.
@@ -1104,7 +1104,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:HiddenSlides.</para>
     /// </summary>
-    public partial class HiddenSlides : TypedOpenXmlLeafTextElement
+    public partial class HiddenSlides : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the HiddenSlides class.
@@ -1142,7 +1142,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:MMClips.</para>
     /// </summary>
-    public partial class MultimediaClips : TypedOpenXmlLeafTextElement
+    public partial class MultimediaClips : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the MultimediaClips class.
@@ -1180,7 +1180,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:CharactersWithSpaces.</para>
     /// </summary>
-    public partial class CharactersWithSpaces : TypedOpenXmlLeafTextElement
+    public partial class CharactersWithSpaces : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the CharactersWithSpaces class.
@@ -1218,7 +1218,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:DocSecurity.</para>
     /// </summary>
-    public partial class DocumentSecurity : TypedOpenXmlLeafTextElement
+    public partial class DocumentSecurity : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the DocumentSecurity class.
@@ -1256,7 +1256,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:ScaleCrop.</para>
     /// </summary>
-    public partial class ScaleCrop : TypedOpenXmlLeafTextElement
+    public partial class ScaleCrop : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the ScaleCrop class.
@@ -1294,7 +1294,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:LinksUpToDate.</para>
     /// </summary>
-    public partial class LinksUpToDate : TypedOpenXmlLeafTextElement
+    public partial class LinksUpToDate : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the LinksUpToDate class.
@@ -1332,7 +1332,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:SharedDoc.</para>
     /// </summary>
-    public partial class SharedDocument : TypedOpenXmlLeafTextElement
+    public partial class SharedDocument : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the SharedDocument class.
@@ -1370,7 +1370,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:HyperlinksChanged.</para>
     /// </summary>
-    public partial class HyperlinksChanged : TypedOpenXmlLeafTextElement
+    public partial class HyperlinksChanged : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the HyperlinksChanged class.
@@ -1530,7 +1530,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTVector" /> <c>&lt;vt:vector></c></description></item>
     /// </list>
     /// </remark>
-    public abstract partial class VectorVariantType : TypedOpenXmlCompositeElement
+    public abstract partial class VectorVariantType : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the VectorVariantType class.
@@ -1594,7 +1594,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTVector" /> <c>&lt;vt:vector></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TitlesOfParts : TypedOpenXmlCompositeElement
+    public partial class TitlesOfParts : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TitlesOfParts class.
@@ -1666,7 +1666,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTBlob" /> <c>&lt;vt:blob></c></description></item>
     /// </list>
     /// </remark>
-    public partial class DigitalSignature : TypedOpenXmlCompositeElement
+    public partial class DigitalSignature : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the DigitalSignature class.

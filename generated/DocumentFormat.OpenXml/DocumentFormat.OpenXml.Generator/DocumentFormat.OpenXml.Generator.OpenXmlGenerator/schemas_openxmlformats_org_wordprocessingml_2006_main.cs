@@ -279,7 +279,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class TrackChangeType : TypedOpenXmlLeafElement
+    public abstract partial class TrackChangeType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the TrackChangeType class.
@@ -371,7 +371,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:cellMerge.</para>
     /// </summary>
-    public partial class CellMerge : TypedOpenXmlLeafElement
+    public partial class CellMerge : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the CellMerge class.
@@ -496,7 +496,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:bookmarkStart.</para>
     /// </summary>
-    public partial class BookmarkStart : TypedOpenXmlLeafElement
+    public partial class BookmarkStart : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the BookmarkStart class.
@@ -731,7 +731,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class MarkupRangeType : TypedOpenXmlLeafElement
+    public abstract partial class MarkupRangeType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the MarkupRangeType class.
@@ -838,7 +838,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class MoveBookmarkType : TypedOpenXmlLeafElement
+    public abstract partial class MoveBookmarkType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the MoveBookmarkType class.
@@ -1100,7 +1100,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class MarkupType : TypedOpenXmlLeafElement
+    public abstract partial class MarkupType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the MarkupType class.
@@ -1774,7 +1774,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class StringType : TypedOpenXmlLeafElement
+    public abstract partial class StringType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the StringType class.
@@ -6276,7 +6276,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class OnOffType : TypedOpenXmlLeafElement
+    public abstract partial class OnOffType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the OnOffType class.
@@ -6311,7 +6311,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:framePr.</para>
     /// </summary>
-    public partial class FrameProperties : TypedOpenXmlLeafElement
+    public partial class FrameProperties : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the FrameProperties class.
@@ -6601,7 +6601,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.NumberingChange" /> <c>&lt;w:numberingChange></c></description></item>
     /// </list>
     /// </remark>
-    public partial class NumberingProperties : TypedOpenXmlCompositeElement
+    public partial class NumberingProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the NumberingProperties class.
@@ -6723,7 +6723,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.BarBorder" /> <c>&lt;w:bar></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ParagraphBorders : TypedOpenXmlCompositeElement
+    public partial class ParagraphBorders : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ParagraphBorders class.
@@ -6864,7 +6864,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:shd.</para>
     /// </summary>
-    public partial class Shading : TypedOpenXmlLeafElement
+    public partial class Shading : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Shading class.
@@ -7050,7 +7050,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TabStop" /> <c>&lt;w:tab></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Tabs : TypedOpenXmlCompositeElement
+    public partial class Tabs : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Tabs class.
@@ -7103,7 +7103,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:spacing.</para>
     /// </summary>
-    public partial class SpacingBetweenLines : TypedOpenXmlLeafElement
+    public partial class SpacingBetweenLines : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the SpacingBetweenLines class.
@@ -7264,7 +7264,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:ind.</para>
     /// </summary>
-    public partial class Indentation : TypedOpenXmlLeafElement
+    public partial class Indentation : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Indentation class.
@@ -7513,7 +7513,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:jc.</para>
     /// </summary>
-    public partial class Justification : TypedOpenXmlLeafElement
+    public partial class Justification : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Justification class.
@@ -7555,7 +7555,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:textDirection.</para>
     /// </summary>
-    public partial class TextDirection : TypedOpenXmlLeafElement
+    public partial class TextDirection : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the TextDirection class.
@@ -7597,7 +7597,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:textAlignment.</para>
     /// </summary>
-    public partial class TextAlignment : TypedOpenXmlLeafElement
+    public partial class TextAlignment : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the TextAlignment class.
@@ -7639,7 +7639,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:textboxTightWrap.</para>
     /// </summary>
-    public partial class TextBoxTightWrap : TypedOpenXmlLeafElement
+    public partial class TextBoxTightWrap : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the TextBoxTightWrap class.
@@ -7994,7 +7994,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class DecimalNumberType : TypedOpenXmlLeafElement
+    public abstract partial class DecimalNumberType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the DecimalNumberType class.
@@ -8038,7 +8038,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.ParagraphPropertiesExtended" /> <c>&lt;w:pPr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ParagraphPropertiesChange : TypedOpenXmlCompositeElement
+    public partial class ParagraphPropertiesChange : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ParagraphPropertiesChange class.
@@ -8232,7 +8232,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class HeaderFooterReferenceType : TypedOpenXmlLeafElement
+    public abstract partial class HeaderFooterReferenceType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the HeaderFooterReferenceType class.
@@ -8287,7 +8287,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:br.</para>
     /// </summary>
-    public partial class Break : TypedOpenXmlLeafElement
+    public partial class Break : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Break class.
@@ -8488,7 +8488,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class TextType : TypedOpenXmlLeafTextElement
+    public abstract partial class TextType : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the TextType class.
@@ -9112,7 +9112,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class EmptyType : TypedOpenXmlLeafElement
+    public abstract partial class EmptyType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the EmptyType class.
@@ -9132,7 +9132,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:sym.</para>
     /// </summary>
-    public partial class SymbolChar : TypedOpenXmlLeafElement
+    public partial class SymbolChar : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the SymbolChar class.
@@ -9212,7 +9212,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.ObjectLink" /> <c>&lt;w:objectLink></c></description></item>
     /// </list>
     /// </remark>
-    public partial class EmbeddedObject : TypedOpenXmlCompositeElement
+    public partial class EmbeddedObject : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the EmbeddedObject class.
@@ -9376,7 +9376,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MovieReference" /> <c>&lt;w:movie></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Picture : TypedOpenXmlCompositeElement
+    public partial class Picture : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Picture class.
@@ -9494,7 +9494,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.NumberingChange" /> <c>&lt;w:numberingChange></c></description></item>
     /// </list>
     /// </remark>
-    public partial class FieldChar : TypedOpenXmlCompositeElement
+    public partial class FieldChar : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the FieldChar class.
@@ -9644,7 +9644,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.RubyProperties" /> <c>&lt;w:rubyPr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Ruby : TypedOpenXmlCompositeElement
+    public partial class Ruby : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Ruby class.
@@ -9789,7 +9789,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class FootnoteEndnoteReferenceType : TypedOpenXmlLeafElement
+    public abstract partial class FootnoteEndnoteReferenceType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the FootnoteEndnoteReferenceType class.
@@ -9849,7 +9849,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Wordprocessing.Inline" /> <c>&lt;wp:inline></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Drawing : TypedOpenXmlCompositeElement
+    public partial class Drawing : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Drawing class.
@@ -9930,7 +9930,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:ptab.</para>
     /// </summary>
-    public partial class PositionalTab : TypedOpenXmlLeafElement
+    public partial class PositionalTab : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the PositionalTab class.
@@ -10296,7 +10296,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class String253Type : TypedOpenXmlLeafElement
+    public abstract partial class String253Type : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the String253Type class.
@@ -10335,7 +10335,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:rFonts.</para>
     /// </summary>
-    public partial class RunFonts : TypedOpenXmlLeafElement
+    public partial class RunFonts : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the RunFonts class.
@@ -10498,7 +10498,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:color.</para>
     /// </summary>
-    public partial class Color : TypedOpenXmlLeafElement
+    public partial class Color : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Color class.
@@ -10593,7 +10593,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:spacing.</para>
     /// </summary>
-    public partial class Spacing : TypedOpenXmlLeafElement
+    public partial class Spacing : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Spacing class.
@@ -10636,7 +10636,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:w.</para>
     /// </summary>
-    public partial class CharacterScale : TypedOpenXmlLeafElement
+    public partial class CharacterScale : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the CharacterScale class.
@@ -10678,7 +10678,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:kern.</para>
     /// </summary>
-    public partial class Kern : TypedOpenXmlLeafElement
+    public partial class Kern : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Kern class.
@@ -10721,7 +10721,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:position.</para>
     /// </summary>
-    public partial class Position : TypedOpenXmlLeafElement
+    public partial class Position : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Position class.
@@ -10889,7 +10889,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class HpsMeasureType : TypedOpenXmlLeafElement
+    public abstract partial class HpsMeasureType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the HpsMeasureType class.
@@ -10933,7 +10933,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:highlight.</para>
     /// </summary>
-    public partial class Highlight : TypedOpenXmlLeafElement
+    public partial class Highlight : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Highlight class.
@@ -10975,7 +10975,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:u.</para>
     /// </summary>
-    public partial class Underline : TypedOpenXmlLeafElement
+    public partial class Underline : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Underline class.
@@ -11083,7 +11083,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:effect.</para>
     /// </summary>
-    public partial class TextEffect : TypedOpenXmlLeafElement
+    public partial class TextEffect : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the TextEffect class.
@@ -11441,7 +11441,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class BorderType : TypedOpenXmlLeafElement
+    public abstract partial class BorderType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the BorderType class.
@@ -11607,7 +11607,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:fitText.</para>
     /// </summary>
-    public partial class FitText : TypedOpenXmlLeafElement
+    public partial class FitText : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the FitText class.
@@ -11664,7 +11664,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:vertAlign.</para>
     /// </summary>
-    public partial class VerticalTextAlignment : TypedOpenXmlLeafElement
+    public partial class VerticalTextAlignment : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the VerticalTextAlignment class.
@@ -11706,7 +11706,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:em.</para>
     /// </summary>
-    public partial class Emphasis : TypedOpenXmlLeafElement
+    public partial class Emphasis : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Emphasis class.
@@ -11796,7 +11796,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class LanguageType : TypedOpenXmlLeafElement
+    public abstract partial class LanguageType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the LanguageType class.
@@ -11868,7 +11868,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:eastAsianLayout.</para>
     /// </summary>
-    public partial class EastAsianLayout : TypedOpenXmlLeafElement
+    public partial class EastAsianLayout : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the EastAsianLayout class.
@@ -11969,7 +11969,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.PreviousRunProperties" /> <c>&lt;w:rPr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class RunPropertiesChange : TypedOpenXmlCompositeElement
+    public partial class RunPropertiesChange : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the RunPropertiesChange class.
@@ -12167,7 +12167,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.TextOutlineEffect" /> <c>&lt;w14:textOutline></c></description></item>
     /// </list>
     /// </remark>
-    public partial class RunProperties : TypedOpenXmlCompositeElement
+    public partial class RunProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the RunProperties class.
@@ -13056,7 +13056,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.RunProperties" /> <c>&lt;w:rPr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class InsertedMathControl : TypedOpenXmlCompositeElement
+    public partial class InsertedMathControl : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the InsertedMathControl class.
@@ -13205,7 +13205,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.RunProperties" /> <c>&lt;w:rPr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class DeletedMathControl : TypedOpenXmlCompositeElement
+    public partial class DeletedMathControl : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the DeletedMathControl class.
@@ -13516,7 +13516,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.RunProperties" /> <c>&lt;w:rPr></c></description></item>
     /// </list>
     /// </remark>
-    public abstract partial class MathControlMoveType : TypedOpenXmlCompositeElement
+    public abstract partial class MathControlMoveType : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the MathControlMoveType class.
@@ -13994,7 +13994,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SimpleFieldRuby : TypedOpenXmlCompositeElement
+    public partial class SimpleFieldRuby : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SimpleFieldRuby class.
@@ -14348,7 +14348,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-    public partial class HyperlinkRuby : TypedOpenXmlCompositeElement
+    public partial class HyperlinkRuby : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the HyperlinkRuby class.
@@ -14712,7 +14712,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DeletedFieldCode" /> <c>&lt;w:delInstrText></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Run : TypedOpenXmlCompositeElement
+    public partial class Run : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Run class.
@@ -15062,7 +15062,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:proofErr.</para>
     /// </summary>
-    public partial class ProofError : TypedOpenXmlLeafElement
+    public partial class ProofError : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ProofError class.
@@ -15104,7 +15104,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:permStart.</para>
     /// </summary>
-    public partial class PermStart : TypedOpenXmlLeafElement
+    public partial class PermStart : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the PermStart class.
@@ -15223,7 +15223,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:permEnd.</para>
     /// </summary>
-    public partial class PermEnd : TypedOpenXmlLeafElement
+    public partial class PermEnd : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the PermEnd class.
@@ -16341,7 +16341,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-    public abstract partial class RunTrackChangeType : TypedOpenXmlCompositeElement
+    public abstract partial class RunTrackChangeType : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the RunTrackChangeType class.
@@ -16513,7 +16513,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:contentPart.</para>
     /// </summary>
-    public partial class ContentPart : TypedOpenXmlLeafElement
+    public partial class ContentPart : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ContentPart class.
@@ -17143,7 +17143,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Paragraph : TypedOpenXmlCompositeElement
+    public partial class Paragraph : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Paragraph class.
@@ -17600,7 +17600,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Table : TypedOpenXmlCompositeElement
+    public partial class Table : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Table class.
@@ -17841,7 +17841,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TableRowProperties" /> <c>&lt;w:trPr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TableRow : TypedOpenXmlCompositeElement
+    public partial class TableRow : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TableRow class.
@@ -18534,7 +18534,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TableCell : TypedOpenXmlCompositeElement
+    public partial class TableCell : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TableCell class.
@@ -19487,7 +19487,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SimpleField : TypedOpenXmlCompositeElement
+    public partial class SimpleField : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SimpleField class.
@@ -19874,7 +19874,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Hyperlink : TypedOpenXmlCompositeElement
+    public partial class Hyperlink : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Hyperlink class.
@@ -20295,7 +20295,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-    public partial class BidirectionalOverride : TypedOpenXmlCompositeElement
+    public partial class BidirectionalOverride : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the BidirectionalOverride class.
@@ -20634,7 +20634,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-    public partial class BidirectionalEmbedding : TypedOpenXmlCompositeElement
+    public partial class BidirectionalEmbedding : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the BidirectionalEmbedding class.
@@ -21132,7 +21132,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class RelationshipType : TypedOpenXmlLeafElement
+    public abstract partial class RelationshipType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the RelationshipType class.
@@ -21170,7 +21170,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:cnfStyle.</para>
     /// </summary>
-    public partial class ConditionalFormatStyle : TypedOpenXmlLeafElement
+    public partial class ConditionalFormatStyle : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ConditionalFormatStyle class.
@@ -21687,7 +21687,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class TableWidthType : TypedOpenXmlLeafElement
+    public abstract partial class TableWidthType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the TableWidthType class.
@@ -21749,7 +21749,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:hMerge.</para>
     /// </summary>
-    public partial class HorizontalMerge : TypedOpenXmlLeafElement
+    public partial class HorizontalMerge : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the HorizontalMerge class.
@@ -21788,7 +21788,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:vMerge.</para>
     /// </summary>
-    public partial class VerticalMerge : TypedOpenXmlLeafElement
+    public partial class VerticalMerge : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the VerticalMerge class.
@@ -21842,7 +21842,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TopRightToBottomLeftCellBorder" /> <c>&lt;w:tr2bl></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TableCellBorders : TypedOpenXmlCompositeElement
+    public partial class TableCellBorders : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TableCellBorders class.
@@ -22499,7 +22499,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class OnOffOnlyType : TypedOpenXmlLeafElement
+    public abstract partial class OnOffOnlyType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the OnOffOnlyType class.
@@ -22545,7 +22545,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.EndMargin" /> <c>&lt;w:end></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TableCellMargin : TypedOpenXmlCompositeElement
+    public partial class TableCellMargin : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TableCellMargin class.
@@ -22686,7 +22686,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:vAlign.</para>
     /// </summary>
-    public partial class TableCellVerticalAlignment : TypedOpenXmlLeafElement
+    public partial class TableCellVerticalAlignment : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the TableCellVerticalAlignment class.
@@ -22728,7 +22728,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:divId.</para>
     /// </summary>
-    public partial class DivId : TypedOpenXmlLeafElement
+    public partial class DivId : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the DivId class.
@@ -22776,7 +22776,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:trHeight.</para>
     /// </summary>
-    public partial class TableRowHeight : TypedOpenXmlLeafElement
+    public partial class TableRowHeight : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the TableRowHeight class.
@@ -22832,7 +22832,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:jc.</para>
     /// </summary>
-    public partial class TableJustification : TypedOpenXmlLeafElement
+    public partial class TableJustification : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the TableJustification class.
@@ -22874,7 +22874,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:tblpPr.</para>
     /// </summary>
-    public partial class TablePositionProperties : TypedOpenXmlLeafElement
+    public partial class TablePositionProperties : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the TablePositionProperties class.
@@ -23057,7 +23057,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:tblOverlap.</para>
     /// </summary>
-    public partial class TableOverlap : TypedOpenXmlLeafElement
+    public partial class TableOverlap : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the TableOverlap class.
@@ -23147,7 +23147,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class UnsignedDecimalNumberMax3Type : TypedOpenXmlLeafElement
+    public abstract partial class UnsignedDecimalNumberMax3Type : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the UnsignedDecimalNumberMax3Type class.
@@ -23186,7 +23186,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:tblInd.</para>
     /// </summary>
-    public partial class TableIndentation : TypedOpenXmlLeafElement
+    public partial class TableIndentation : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the TableIndentation class.
@@ -23252,7 +23252,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.InsideVerticalBorder" /> <c>&lt;w:insideV></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TableBorders : TypedOpenXmlCompositeElement
+    public partial class TableBorders : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TableBorders class.
@@ -23423,7 +23423,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:tblLayout.</para>
     /// </summary>
-    public partial class TableLayout : TypedOpenXmlLeafElement
+    public partial class TableLayout : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the TableLayout class.
@@ -23473,7 +23473,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TableCellRightMargin" /> <c>&lt;w:right></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TableCellMarginDefault : TypedOpenXmlCompositeElement
+    public partial class TableCellMarginDefault : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TableCellMarginDefault class.
@@ -23614,7 +23614,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:numStart.</para>
     /// </summary>
-    public partial class NumberingStart : TypedOpenXmlLeafElement
+    public partial class NumberingStart : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the NumberingStart class.
@@ -23656,7 +23656,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:numRestart.</para>
     /// </summary>
-    public partial class NumberingRestart : TypedOpenXmlLeafElement
+    public partial class NumberingRestart : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the NumberingRestart class.
@@ -23704,7 +23704,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.AltChunkProperties" /> <c>&lt;w:altChunkPr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class AltChunk : TypedOpenXmlCompositeElement
+    public partial class AltChunk : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the AltChunk class.
@@ -23787,7 +23787,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:tblLook.</para>
     /// </summary>
-    public partial class TableLook : TypedOpenXmlLeafElement
+    public partial class TableLook : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the TableLook class.
@@ -23940,7 +23940,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.NumberingRestart" /> <c>&lt;w:numRestart></c></description></item>
     /// </list>
     /// </remark>
-    public partial class FootnoteProperties : TypedOpenXmlCompositeElement
+    public partial class FootnoteProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the FootnoteProperties class.
@@ -24066,7 +24066,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.NumberingRestart" /> <c>&lt;w:numRestart></c></description></item>
     /// </list>
     /// </remark>
-    public partial class EndnoteProperties : TypedOpenXmlCompositeElement
+    public partial class EndnoteProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the EndnoteProperties class.
@@ -24183,7 +24183,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:type.</para>
     /// </summary>
-    public partial class SectionType : TypedOpenXmlLeafElement
+    public partial class SectionType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the SectionType class.
@@ -24225,7 +24225,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:pgSz.</para>
     /// </summary>
-    public partial class PageSize : TypedOpenXmlLeafElement
+    public partial class PageSize : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the PageSize class.
@@ -24312,7 +24312,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:pgMar.</para>
     /// </summary>
-    public partial class PageMargin : TypedOpenXmlLeafElement
+    public partial class PageMargin : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the PageMargin class.
@@ -24456,7 +24456,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:paperSrc.</para>
     /// </summary>
-    public partial class PaperSource : TypedOpenXmlLeafElement
+    public partial class PaperSource : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the PaperSource class.
@@ -24518,7 +24518,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.RightBorder" /> <c>&lt;w:right></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PageBorders : TypedOpenXmlCompositeElement
+    public partial class PageBorders : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the PageBorders class.
@@ -24672,7 +24672,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:lnNumType.</para>
     /// </summary>
-    public partial class LineNumberType : TypedOpenXmlLeafElement
+    public partial class LineNumberType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the LineNumberType class.
@@ -24767,7 +24767,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:pgNumType.</para>
     /// </summary>
-    public partial class PageNumberType : TypedOpenXmlLeafElement
+    public partial class PageNumberType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the PageNumberType class.
@@ -24857,7 +24857,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Column" /> <c>&lt;w:col></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Columns : TypedOpenXmlCompositeElement
+    public partial class Columns : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Columns class.
@@ -24978,7 +24978,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:vAlign.</para>
     /// </summary>
-    public partial class VerticalTextAlignmentOnPage : TypedOpenXmlLeafElement
+    public partial class VerticalTextAlignmentOnPage : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the VerticalTextAlignmentOnPage class.
@@ -25020,7 +25020,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:docGrid.</para>
     /// </summary>
-    public partial class DocGrid : TypedOpenXmlLeafElement
+    public partial class DocGrid : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the DocGrid class.
@@ -25093,7 +25093,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.RecipientData" /> <c>&lt;w:recipientData></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Recipients : TypedOpenXmlPartRootElement
+    public partial class Recipients : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the Recipients class.
@@ -25186,7 +25186,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TextBoxContent : TypedOpenXmlCompositeElement
+    public partial class TextBoxContent : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TextBoxContent class.
@@ -25376,7 +25376,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Comment" /> <c>&lt;w:comment></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Comments : TypedOpenXmlPartRootElement
+    public partial class Comments : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the Comments class.
@@ -25466,7 +25466,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Footnote" /> <c>&lt;w:footnote></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Footnotes : TypedOpenXmlPartRootElement
+    public partial class Footnotes : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the Footnotes class.
@@ -25556,7 +25556,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Endnote" /> <c>&lt;w:endnote></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Endnotes : TypedOpenXmlPartRootElement
+    public partial class Endnotes : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the Endnotes class.
@@ -25680,7 +25680,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Header : TypedOpenXmlPartRootElement
+    public partial class Header : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the Header class.
@@ -25935,7 +25935,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Footer : TypedOpenXmlPartRootElement
+    public partial class Footer : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the Footer class.
@@ -26190,7 +26190,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-    public abstract partial class HeaderFooterType : TypedOpenXmlCompositeElement
+    public abstract partial class HeaderFooterType : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the HeaderFooterType class.
@@ -26377,7 +26377,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Word.PersistentDocumentId" /> <c>&lt;w15:docId></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Settings : TypedOpenXmlPartRootElement
+    public partial class Settings : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the Settings class.
@@ -26955,7 +26955,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TargetScreenSize" /> <c>&lt;w:targetScreenSz></c></description></item>
     /// </list>
     /// </remark>
-    public partial class WebSettings : TypedOpenXmlPartRootElement
+    public partial class WebSettings : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the WebSettings class.
@@ -27223,7 +27223,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Font" /> <c>&lt;w:font></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Fonts : TypedOpenXmlPartRootElement
+    public partial class Fonts : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the Fonts class.
@@ -27316,7 +27316,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.NumberingPictureBullet" /> <c>&lt;w:numPicBullet></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Numbering : TypedOpenXmlPartRootElement
+    public partial class Numbering : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the Numbering class.
@@ -27414,7 +27414,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Style" /> <c>&lt;w:style></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Styles : TypedOpenXmlPartRootElement
+    public partial class Styles : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the Styles class.
@@ -27504,7 +27504,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Body" /> <c>&lt;w:body></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Document : TypedOpenXmlPartRootElement
+    public partial class Document : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the Document class.
@@ -27644,7 +27644,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DocParts" /> <c>&lt;w:docParts></c></description></item>
     /// </list>
     /// </remark>
-    public partial class GlossaryDocument : TypedOpenXmlPartRootElement
+    public partial class GlossaryDocument : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the GlossaryDocument class.
@@ -27776,7 +27776,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TableIndentation" /> <c>&lt;w:tblInd></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PreviousTablePropertyExceptions : TypedOpenXmlCompositeElement
+    public partial class PreviousTablePropertyExceptions : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the PreviousTablePropertyExceptions class.
@@ -27983,7 +27983,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.VerticalMerge" /> <c>&lt;w:vMerge></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PreviousTableCellProperties : TypedOpenXmlCompositeElement
+    public partial class PreviousTableCellProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the PreviousTableCellProperties class.
@@ -28300,7 +28300,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TableCellSpacing" /> <c>&lt;w:tblCellSpacing></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PreviousTableRowProperties : TypedOpenXmlCompositeElement
+    public partial class PreviousTableRowProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the PreviousTableRowProperties class.
@@ -28407,7 +28407,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TableIndentation" /> <c>&lt;w:tblInd></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PreviousTableProperties : TypedOpenXmlCompositeElement
+    public partial class PreviousTableProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the PreviousTableProperties class.
@@ -28744,7 +28744,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignmentOnPage" /> <c>&lt;w:vAlign></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PreviousSectionProperties : TypedOpenXmlCompositeElement
+    public partial class PreviousSectionProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the PreviousSectionProperties class.
@@ -29208,7 +29208,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TextDirection" /> <c>&lt;w:textDirection></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ParagraphPropertiesExtended : TypedOpenXmlCompositeElement
+    public partial class ParagraphPropertiesExtended : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ParagraphPropertiesExtended class.
@@ -29827,7 +29827,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.TextOutlineEffect" /> <c>&lt;w14:textOutline></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PreviousRunProperties : TypedOpenXmlCompositeElement
+    public partial class PreviousRunProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the PreviousRunProperties class.
@@ -30094,7 +30094,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.TextOutlineEffect" /> <c>&lt;w14:textOutline></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PreviousParagraphMarkRunProperties : TypedOpenXmlCompositeElement
+    public partial class PreviousParagraphMarkRunProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the PreviousParagraphMarkRunProperties class.
@@ -30383,7 +30383,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:ilvl.</para>
     /// </summary>
-    public partial class NumberingLevelReference : TypedOpenXmlLeafElement
+    public partial class NumberingLevelReference : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the NumberingLevelReference class.
@@ -30498,7 +30498,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class NonNegativeDecimalNumberType : TypedOpenXmlLeafElement
+    public abstract partial class NonNegativeDecimalNumberType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the NonNegativeDecimalNumberType class.
@@ -30537,7 +30537,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:numberingChange.</para>
     /// </summary>
-    public partial class NumberingChange : TypedOpenXmlLeafElement
+    public partial class NumberingChange : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the NumberingChange class.
@@ -30649,7 +30649,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:tab.</para>
     /// </summary>
-    public partial class TabStop : TypedOpenXmlLeafElement
+    public partial class TabStop : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the TabStop class.
@@ -30786,7 +30786,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.TextOutlineEffect" /> <c>&lt;w14:textOutline></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ParagraphMarkRunProperties : TypedOpenXmlCompositeElement
+    public partial class ParagraphMarkRunProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ParagraphMarkRunProperties class.
@@ -31105,7 +31105,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignmentOnPage" /> <c>&lt;w:vAlign></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SectionProperties : TypedOpenXmlCompositeElement
+    public partial class SectionProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SectionProperties class.
@@ -31283,7 +31283,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:fldData.</para>
     /// </summary>
-    public partial class FieldData : TypedOpenXmlLeafTextElement
+    public partial class FieldData : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the FieldData class.
@@ -31335,7 +31335,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CalculateOnExit" /> <c>&lt;w:calcOnExit></c></description></item>
     /// </list>
     /// </remark>
-    public partial class FormFieldData : TypedOpenXmlCompositeElement
+    public partial class FormFieldData : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the FormFieldData class.
@@ -31409,7 +31409,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:name.</para>
     /// </summary>
-    public partial class FormFieldName : TypedOpenXmlLeafElement
+    public partial class FormFieldName : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the FormFieldName class.
@@ -31500,7 +31500,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class MacroNameType : TypedOpenXmlLeafElement
+    public abstract partial class MacroNameType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the MacroNameType class.
@@ -31539,7 +31539,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:helpText.</para>
     /// </summary>
-    public partial class HelpText : TypedOpenXmlLeafElement
+    public partial class HelpText : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the HelpText class.
@@ -31595,7 +31595,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:statusText.</para>
     /// </summary>
-    public partial class StatusText : TypedOpenXmlLeafElement
+    public partial class StatusText : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the StatusText class.
@@ -31661,7 +31661,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Checked" /> <c>&lt;w:checked></c></description></item>
     /// </list>
     /// </remark>
-    public partial class CheckBox : TypedOpenXmlCompositeElement
+    public partial class CheckBox : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the CheckBox class.
@@ -31731,7 +31731,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DefaultDropDownListItemIndex" /> <c>&lt;w:default></c></description></item>
     /// </list>
     /// </remark>
-    public partial class DropDownListFormField : TypedOpenXmlCompositeElement
+    public partial class DropDownListFormField : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the DropDownListFormField class.
@@ -31823,7 +31823,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Format" /> <c>&lt;w:format></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TextInput : TypedOpenXmlCompositeElement
+    public partial class TextInput : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TextInput class.
@@ -31934,7 +31934,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:default.</para>
     /// </summary>
-    public partial class DefaultDropDownListItemIndex : TypedOpenXmlLeafElement
+    public partial class DefaultDropDownListItemIndex : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the DefaultDropDownListItemIndex class.
@@ -32050,7 +32050,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class String255Type : TypedOpenXmlLeafElement
+    public abstract partial class String255Type : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the String255Type class.
@@ -32089,7 +32089,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:type.</para>
     /// </summary>
-    public partial class TextBoxFormFieldType : TypedOpenXmlLeafElement
+    public partial class TextBoxFormFieldType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the TextBoxFormFieldType class.
@@ -32131,7 +32131,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:maxLength.</para>
     /// </summary>
-    public partial class MaxLength : TypedOpenXmlLeafElement
+    public partial class MaxLength : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the MaxLength class.
@@ -32174,7 +32174,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:format.</para>
     /// </summary>
-    public partial class Format : TypedOpenXmlLeafElement
+    public partial class Format : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Format class.
@@ -32217,7 +32217,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:col.</para>
     /// </summary>
-    public partial class Column : TypedOpenXmlLeafElement
+    public partial class Column : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Column class.
@@ -32292,7 +32292,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.PreviousSectionProperties" /> <c>&lt;w:sectPr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SectionPropertiesChange : TypedOpenXmlCompositeElement
+    public partial class SectionPropertiesChange : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SectionPropertiesChange class.
@@ -32440,7 +32440,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.PreviousParagraphMarkRunProperties" /> <c>&lt;w:rPr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ParagraphMarkRunPropertiesChange : TypedOpenXmlCompositeElement
+    public partial class ParagraphMarkRunPropertiesChange : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ParagraphMarkRunPropertiesChange class.
@@ -32588,7 +32588,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MatchSource" /> <c>&lt;w:matchSrc></c></description></item>
     /// </list>
     /// </remark>
-    public partial class AltChunkProperties : TypedOpenXmlCompositeElement
+    public partial class AltChunkProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the AltChunkProperties class.
@@ -32654,7 +32654,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:rubyAlign.</para>
     /// </summary>
-    public partial class RubyAlign : TypedOpenXmlLeafElement
+    public partial class RubyAlign : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the RubyAlign class.
@@ -32696,7 +32696,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:hpsRaise.</para>
     /// </summary>
-    public partial class PhoneticGuideRaise : TypedOpenXmlLeafElement
+    public partial class PhoneticGuideRaise : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the PhoneticGuideRaise class.
@@ -32738,7 +32738,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:lid.</para>
     /// </summary>
-    public partial class LanguageId : TypedOpenXmlLeafElement
+    public partial class LanguageId : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the LanguageId class.
@@ -32792,7 +32792,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.RubyAlign" /> <c>&lt;w:rubyAlign></c></description></item>
     /// </list>
     /// </remark>
-    public partial class RubyProperties : TypedOpenXmlCompositeElement
+    public partial class RubyProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the RubyProperties class.
@@ -33461,7 +33461,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-    public abstract partial class RubyContentType : TypedOpenXmlCompositeElement
+    public abstract partial class RubyContentType : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the RubyContentType class.
@@ -33562,7 +33562,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:storeMappedDataAs.</para>
     /// </summary>
-    public partial class SdtDateMappingType : TypedOpenXmlLeafElement
+    public partial class SdtDateMappingType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the SdtDateMappingType class.
@@ -33601,7 +33601,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:calendar.</para>
     /// </summary>
-    public partial class Calendar : TypedOpenXmlLeafElement
+    public partial class Calendar : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Calendar class.
@@ -33640,7 +33640,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:listItem.</para>
     /// </summary>
-    public partial class ListItem : TypedOpenXmlLeafElement
+    public partial class ListItem : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ListItem class.
@@ -33728,7 +33728,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Word.SdtRepeatedSection" /> <c>&lt;w15:repeatingSection></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SdtProperties : TypedOpenXmlCompositeElement
+    public partial class SdtProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SdtProperties class.
@@ -33851,7 +33851,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.RunProperties" /> <c>&lt;w:rPr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SdtEndCharProperties : TypedOpenXmlCompositeElement
+    public partial class SdtEndCharProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SdtEndCharProperties class.
@@ -33943,7 +33943,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SdtContentBlock : TypedOpenXmlCompositeElement
+    public partial class SdtContentBlock : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SdtContentBlock class.
@@ -34172,7 +34172,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SdtContentRun : TypedOpenXmlCompositeElement
+    public partial class SdtContentRun : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SdtContentRun class.
@@ -34502,7 +34502,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SdtContentRunRuby : TypedOpenXmlCompositeElement
+    public partial class SdtContentRunRuby : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SdtContentRunRuby class.
@@ -34768,7 +34768,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SdtContentCell : TypedOpenXmlCompositeElement
+    public partial class SdtContentCell : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SdtContentCell class.
@@ -34962,7 +34962,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SdtContentRow : TypedOpenXmlCompositeElement
+    public partial class SdtContentRow : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SdtContentRow class.
@@ -35125,7 +35125,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlAttribute" /> <c>&lt;w:attr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class CustomXmlProperties : TypedOpenXmlCompositeElement
+    public partial class CustomXmlProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the CustomXmlProperties class.
@@ -35193,7 +35193,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:attr.</para>
     /// </summary>
-    public partial class CustomXmlAttribute : TypedOpenXmlLeafElement
+    public partial class CustomXmlAttribute : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the CustomXmlAttribute class.
@@ -35267,7 +35267,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:gridCol.</para>
     /// </summary>
-    public partial class GridColumn : TypedOpenXmlLeafElement
+    public partial class GridColumn : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the GridColumn class.
@@ -35320,7 +35320,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.PreviousTableGrid" /> <c>&lt;w:tblGrid></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TableGridChange : TypedOpenXmlCompositeElement
+    public partial class TableGridChange : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TableGridChange class.
@@ -35420,7 +35420,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.PreviousTableCellProperties" /> <c>&lt;w:tcPr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TableCellPropertiesChange : TypedOpenXmlCompositeElement
+    public partial class TableCellPropertiesChange : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TableCellPropertiesChange class.
@@ -35584,7 +35584,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.VerticalMerge" /> <c>&lt;w:vMerge></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TableCellProperties : TypedOpenXmlCompositeElement
+    public partial class TableCellProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TableCellProperties class.
@@ -35898,7 +35898,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.PreviousTableProperties" /> <c>&lt;w:tblPr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TablePropertiesChange : TypedOpenXmlCompositeElement
+    public partial class TablePropertiesChange : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TablePropertiesChange class.
@@ -36046,7 +36046,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.PreviousTablePropertyExceptions" /> <c>&lt;w:tblPrEx></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TablePropertyExceptionsChange : TypedOpenXmlCompositeElement
+    public partial class TablePropertyExceptionsChange : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TablePropertyExceptionsChange class.
@@ -36209,7 +36209,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TableIndentation" /> <c>&lt;w:tblInd></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TableProperties : TypedOpenXmlCompositeElement
+    public partial class TableProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TableProperties class.
@@ -36549,7 +36549,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.GridColumn" /> <c>&lt;w:gridCol></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TableGrid : TypedOpenXmlCompositeElement
+    public partial class TableGrid : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TableGrid class.
@@ -36610,7 +36610,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:pos.</para>
     /// </summary>
-    public partial class FootnotePosition : TypedOpenXmlLeafElement
+    public partial class FootnotePosition : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the FootnotePosition class.
@@ -36652,7 +36652,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:numFmt.</para>
     /// </summary>
-    public partial class NumberingFormat : TypedOpenXmlLeafElement
+    public partial class NumberingFormat : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the NumberingFormat class.
@@ -36711,7 +36711,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:pos.</para>
     /// </summary>
-    public partial class EndnotePosition : TypedOpenXmlLeafElement
+    public partial class EndnotePosition : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the EndnotePosition class.
@@ -36805,7 +36805,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class FootnoteEndnoteSeparatorReferenceType : TypedOpenXmlLeafElement
+    public abstract partial class FootnoteEndnoteSeparatorReferenceType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the FootnoteEndnoteSeparatorReferenceType class.
@@ -36892,7 +36892,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class UnsignedDecimalNumberType : TypedOpenXmlLeafElement
+    public abstract partial class UnsignedDecimalNumberType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the UnsignedDecimalNumberType class.
@@ -36930,7 +36930,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:uniqueTag.</para>
     /// </summary>
-    public partial class UniqueTag : TypedOpenXmlLeafElement
+    public partial class UniqueTag : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the UniqueTag class.
@@ -36980,7 +36980,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.ColumnIndex" /> <c>&lt;w:column></c></description></item>
     /// </list>
     /// </remark>
-    public partial class RecipientData : TypedOpenXmlCompositeElement
+    public partial class RecipientData : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the RecipientData class.
@@ -37077,7 +37077,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:type.</para>
     /// </summary>
-    public partial class MailMergeFieldType : TypedOpenXmlLeafElement
+    public partial class MailMergeFieldType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the MailMergeFieldType class.
@@ -37119,7 +37119,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:type.</para>
     /// </summary>
-    public partial class MailMergeSource : TypedOpenXmlLeafElement
+    public partial class MailMergeSource : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the MailMergeSource class.
@@ -37172,7 +37172,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.ColumnIndex" /> <c>&lt;w:column></c></description></item>
     /// </list>
     /// </remark>
-    public partial class FieldMapData : TypedOpenXmlCompositeElement
+    public partial class FieldMapData : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the FieldMapData class.
@@ -37313,7 +37313,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:mainDocumentType.</para>
     /// </summary>
-    public partial class MainDocumentType : TypedOpenXmlLeafElement
+    public partial class MainDocumentType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the MainDocumentType class.
@@ -37355,7 +37355,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:dataType.</para>
     /// </summary>
-    public partial class DataType : TypedOpenXmlLeafElement
+    public partial class DataType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the DataType class.
@@ -37397,7 +37397,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:destination.</para>
     /// </summary>
-    public partial class Destination : TypedOpenXmlLeafElement
+    public partial class Destination : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Destination class.
@@ -37452,7 +37452,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.ColumnDelimiter" /> <c>&lt;w:colDelim></c></description></item>
     /// </list>
     /// </remark>
-    public partial class DataSourceObject : TypedOpenXmlCompositeElement
+    public partial class DataSourceObject : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the DataSourceObject class.
@@ -37597,7 +37597,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:docVar.</para>
     /// </summary>
-    public partial class DocumentVariable : TypedOpenXmlLeafElement
+    public partial class DocumentVariable : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the DocumentVariable class.
@@ -37754,7 +37754,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class LongHexNumberType : TypedOpenXmlLeafElement
+    public abstract partial class LongHexNumberType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the LongHexNumberType class.
@@ -37832,7 +37832,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignment" /> <c>&lt;w:vertAlign></c></description></item>
     /// </list>
     /// </remark>
-    public partial class RunPropertiesBaseStyle : TypedOpenXmlCompositeElement
+    public partial class RunPropertiesBaseStyle : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the RunPropertiesBaseStyle class.
@@ -38452,7 +38452,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TextDirection" /> <c>&lt;w:textDirection></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ParagraphPropertiesBaseStyle : TypedOpenXmlCompositeElement
+    public partial class ParagraphPropertiesBaseStyle : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ParagraphPropertiesBaseStyle class.
@@ -38965,7 +38965,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.RunPropertiesBaseStyle" /> <c>&lt;w:rPr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class RunPropertiesDefault : TypedOpenXmlCompositeElement
+    public partial class RunPropertiesDefault : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the RunPropertiesDefault class.
@@ -39037,7 +39037,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.ParagraphPropertiesBaseStyle" /> <c>&lt;w:pPr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ParagraphPropertiesDefault : TypedOpenXmlCompositeElement
+    public partial class ParagraphPropertiesDefault : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ParagraphPropertiesDefault class.
@@ -39151,7 +39151,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class PixelsMeasureType : TypedOpenXmlLeafElement
+    public abstract partial class PixelsMeasureType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the PixelsMeasureType class.
@@ -39189,7 +39189,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:scrollbar.</para>
     /// </summary>
-    public partial class ScrollbarVisibility : TypedOpenXmlLeafElement
+    public partial class ScrollbarVisibility : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ScrollbarVisibility class.
@@ -39375,7 +39375,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class TwipsMeasureType : TypedOpenXmlLeafElement
+    public abstract partial class TwipsMeasureType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the TwipsMeasureType class.
@@ -39428,7 +39428,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Width" /> <c>&lt;w:w></c></description></item>
     /// </list>
     /// </remark>
-    public partial class FramesetSplitbar : TypedOpenXmlCompositeElement
+    public partial class FramesetSplitbar : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the FramesetSplitbar class.
@@ -39539,7 +39539,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:frameLayout.</para>
     /// </summary>
-    public partial class FrameLayout : TypedOpenXmlLeafElement
+    public partial class FrameLayout : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the FrameLayout class.
@@ -39591,7 +39591,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.FrameSize" /> <c>&lt;w:sz></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Frameset : TypedOpenXmlCompositeElement
+    public partial class Frameset : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Frameset class.
@@ -39710,7 +39710,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.FrameName" /> <c>&lt;w:name></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Frame : TypedOpenXmlCompositeElement
+    public partial class Frame : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Frame class.
@@ -39881,7 +39881,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:suff.</para>
     /// </summary>
-    public partial class LevelSuffix : TypedOpenXmlLeafElement
+    public partial class LevelSuffix : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the LevelSuffix class.
@@ -39923,7 +39923,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:lvlText.</para>
     /// </summary>
-    public partial class LevelText : TypedOpenXmlLeafElement
+    public partial class LevelText : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the LevelText class.
@@ -39976,7 +39976,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:legacy.</para>
     /// </summary>
-    public partial class LegacyNumbering : TypedOpenXmlLeafElement
+    public partial class LegacyNumbering : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the LegacyNumbering class.
@@ -40059,7 +40059,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:lvlJc.</para>
     /// </summary>
-    public partial class LevelJustification : TypedOpenXmlLeafElement
+    public partial class LevelJustification : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the LevelJustification class.
@@ -40137,7 +40137,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TextDirection" /> <c>&lt;w:textDirection></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PreviousParagraphProperties : TypedOpenXmlCompositeElement
+    public partial class PreviousParagraphProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the PreviousParagraphProperties class.
@@ -40706,7 +40706,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignment" /> <c>&lt;w:vertAlign></c></description></item>
     /// </list>
     /// </remark>
-    public partial class NumberingSymbolRunProperties : TypedOpenXmlCompositeElement
+    public partial class NumberingSymbolRunProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the NumberingSymbolRunProperties class.
@@ -41321,7 +41321,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:multiLevelType.</para>
     /// </summary>
-    public partial class MultiLevelType : TypedOpenXmlLeafElement
+    public partial class MultiLevelType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the MultiLevelType class.
@@ -41380,7 +41380,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.ParagraphStyleIdInLevel" /> <c>&lt;w:pStyle></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Level : TypedOpenXmlCompositeElement
+    public partial class Level : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Level class.
@@ -41667,7 +41667,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.PictureBulletBase" /> <c>&lt;w:pict></c></description></item>
     /// </list>
     /// </remark>
-    public partial class NumberingPictureBullet : TypedOpenXmlCompositeElement
+    public partial class NumberingPictureBullet : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the NumberingPictureBullet class.
@@ -41782,7 +41782,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.NumberingStyleLink" /> <c>&lt;w:numStyleLink></c></description></item>
     /// </list>
     /// </remark>
-    public partial class AbstractNum : TypedOpenXmlCompositeElement
+    public partial class AbstractNum : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the AbstractNum class.
@@ -41952,7 +41952,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.LevelOverride" /> <c>&lt;w:lvlOverride></c></description></item>
     /// </list>
     /// </remark>
-    public partial class NumberingInstance : TypedOpenXmlCompositeElement
+    public partial class NumberingInstance : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the NumberingInstance class.
@@ -42089,7 +42089,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TextDirection" /> <c>&lt;w:textDirection></c></description></item>
     /// </list>
     /// </remark>
-    public partial class StyleParagraphProperties : TypedOpenXmlCompositeElement
+    public partial class StyleParagraphProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the StyleParagraphProperties class.
@@ -42634,7 +42634,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TableIndentation" /> <c>&lt;w:tblInd></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TableStyleConditionalFormattingTableProperties : TypedOpenXmlCompositeElement
+    public partial class TableStyleConditionalFormattingTableProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TableStyleConditionalFormattingTableProperties class.
@@ -42797,7 +42797,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TableCellSpacing" /> <c>&lt;w:tblCellSpacing></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TableStyleConditionalFormattingTableRowProperties : TypedOpenXmlCompositeElement
+    public partial class TableStyleConditionalFormattingTableRowProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TableStyleConditionalFormattingTableRowProperties class.
@@ -42874,7 +42874,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TableCellVerticalAlignment" /> <c>&lt;w:vAlign></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TableStyleConditionalFormattingTableCellProperties : TypedOpenXmlCompositeElement
+    public partial class TableStyleConditionalFormattingTableCellProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TableStyleConditionalFormattingTableCellProperties class.
@@ -43018,7 +43018,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:name.</para>
     /// </summary>
-    public partial class StyleName : TypedOpenXmlLeafElement
+    public partial class StyleName : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the StyleName class.
@@ -43062,7 +43062,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:uiPriority.</para>
     /// </summary>
-    public partial class UIPriority : TypedOpenXmlLeafElement
+    public partial class UIPriority : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the UIPriority class.
@@ -43145,7 +43145,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignment" /> <c>&lt;w:vertAlign></c></description></item>
     /// </list>
     /// </remark>
-    public partial class StyleRunProperties : TypedOpenXmlCompositeElement
+    public partial class StyleRunProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the StyleRunProperties class.
@@ -43770,7 +43770,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TableStyleColumnBandSize" /> <c>&lt;w:tblStyleColBandSize></c></description></item>
     /// </list>
     /// </remark>
-    public partial class StyleTableProperties : TypedOpenXmlCompositeElement
+    public partial class StyleTableProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the StyleTableProperties class.
@@ -43968,7 +43968,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TableCellVerticalAlignment" /> <c>&lt;w:vAlign></c></description></item>
     /// </list>
     /// </remark>
-    public partial class StyleTableCellProperties : TypedOpenXmlCompositeElement
+    public partial class StyleTableCellProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the StyleTableCellProperties class.
@@ -44101,7 +44101,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TableStyleConditionalFormattingTableRowProperties" /> <c>&lt;w:trPr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TableStyleProperties : TypedOpenXmlCompositeElement
+    public partial class TableStyleProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TableStyleProperties class.
@@ -44245,7 +44245,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:lsdException.</para>
     /// </summary>
-    public partial class LatentStyleExceptionInfo : TypedOpenXmlLeafElement
+    public partial class LatentStyleExceptionInfo : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the LatentStyleExceptionInfo class.
@@ -44367,7 +44367,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.RunPropertiesDefault" /> <c>&lt;w:rPrDefault></c></description></item>
     /// </list>
     /// </remark>
-    public partial class DocDefaults : TypedOpenXmlCompositeElement
+    public partial class DocDefaults : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the DocDefaults class.
@@ -44454,7 +44454,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.LatentStyleExceptionInfo" /> <c>&lt;w:lsdException></c></description></item>
     /// </list>
     /// </remark>
-    public partial class LatentStyles : TypedOpenXmlCompositeElement
+    public partial class LatentStyles : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the LatentStyles class.
@@ -44622,7 +44622,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.UIPriority" /> <c>&lt;w:uiPriority></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Style : TypedOpenXmlCompositeElement
+    public partial class Style : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Style class.
@@ -45067,7 +45067,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.AltName" /> <c>&lt;w:altName></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Font : TypedOpenXmlCompositeElement
+    public partial class Font : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Font class.
@@ -45397,7 +45397,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class SignedTwipsMeasureType : TypedOpenXmlLeafElement
+    public abstract partial class SignedTwipsMeasureType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the SignedTwipsMeasureType class.
@@ -45450,7 +45450,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.RightBorder" /> <c>&lt;w:right></c></description></item>
     /// </list>
     /// </remark>
-    public partial class DivBorder : TypedOpenXmlCompositeElement
+    public partial class DivBorder : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the DivBorder class.
@@ -45683,7 +45683,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Div" /> <c>&lt;w:div></c></description></item>
     /// </list>
     /// </remark>
-    public abstract partial class DivsType : TypedOpenXmlCompositeElement
+    public abstract partial class DivsType : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the DivsType class.
@@ -45741,7 +45741,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.BottomMarginDiv" /> <c>&lt;w:marBottom></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Div : TypedOpenXmlCompositeElement
+    public partial class Div : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Div class.
@@ -45940,7 +45940,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Table" /> <c>&lt;w:tbl></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Comment : TypedOpenXmlCompositeElement
+    public partial class Comment : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Comment class.
@@ -46584,7 +46584,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-    public abstract partial class FootnoteEndnoteType : TypedOpenXmlCompositeElement
+    public abstract partial class FootnoteEndnoteType : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the FootnoteEndnoteType class.
@@ -46696,7 +46696,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:behavior.</para>
     /// </summary>
-    public partial class Behavior : TypedOpenXmlLeafElement
+    public partial class Behavior : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Behavior class.
@@ -46738,7 +46738,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:type.</para>
     /// </summary>
-    public partial class DocPartType : TypedOpenXmlLeafElement
+    public partial class DocPartType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the DocPartType class.
@@ -46780,7 +46780,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:gallery.</para>
     /// </summary>
-    public partial class Gallery : TypedOpenXmlLeafElement
+    public partial class Gallery : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Gallery class.
@@ -46822,7 +46822,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:autoCaption.</para>
     /// </summary>
-    public partial class AutoCaption : TypedOpenXmlLeafElement
+    public partial class AutoCaption : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the AutoCaption class.
@@ -46884,7 +46884,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:caption.</para>
     /// </summary>
-    public partial class Caption : TypedOpenXmlLeafElement
+    public partial class Caption : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Caption class.
@@ -47017,7 +47017,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.AutoCaption" /> <c>&lt;w:autoCaption></c></description></item>
     /// </list>
     /// </remark>
-    public partial class AutoCaptions : TypedOpenXmlCompositeElement
+    public partial class AutoCaptions : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the AutoCaptions class.
@@ -47076,7 +47076,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Background" /> <c>&lt;v:background></c></description></item>
     /// </list>
     /// </remark>
-    public partial class DocumentBackground : TypedOpenXmlCompositeElement
+    public partial class DocumentBackground : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the DocumentBackground class.
@@ -47218,7 +47218,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DocPart" /> <c>&lt;w:docPart></c></description></item>
     /// </list>
     /// </remark>
-    public partial class DocParts : TypedOpenXmlCompositeElement
+    public partial class DocParts : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the DocParts class.
@@ -47272,7 +47272,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:name.</para>
     /// </summary>
-    public partial class DocPartName : TypedOpenXmlLeafElement
+    public partial class DocPartName : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the DocPartName class.
@@ -47336,7 +47336,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Name" /> <c>&lt;w:name></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Category : TypedOpenXmlCompositeElement
+    public partial class Category : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Category class.
@@ -47423,7 +47423,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DocPartType" /> <c>&lt;w:type></c></description></item>
     /// </list>
     /// </remark>
-    public partial class DocPartTypes : TypedOpenXmlCompositeElement
+    public partial class DocPartTypes : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the DocPartTypes class.
@@ -47497,7 +47497,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Behavior" /> <c>&lt;w:behavior></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Behaviors : TypedOpenXmlCompositeElement
+    public partial class Behaviors : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Behaviors class.
@@ -47550,7 +47550,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:guid.</para>
     /// </summary>
-    public partial class DocPartId : TypedOpenXmlLeafElement
+    public partial class DocPartId : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the DocPartId class.
@@ -47605,7 +47605,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Description" /> <c>&lt;w:description></c></description></item>
     /// </list>
     /// </remark>
-    public partial class DocPartProperties : TypedOpenXmlCompositeElement
+    public partial class DocPartProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the DocPartProperties class.
@@ -48190,7 +48190,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-    public abstract partial class BodyType : TypedOpenXmlCompositeElement
+    public abstract partial class BodyType : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the BodyType class.
@@ -48277,7 +48277,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DocPartProperties" /> <c>&lt;w:docPartPr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class DocPart : TypedOpenXmlCompositeElement
+    public partial class DocPart : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the DocPart class.
@@ -48358,7 +48358,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:compatSetting.</para>
     /// </summary>
-    public partial class CompatibilitySetting : TypedOpenXmlLeafElement
+    public partial class CompatibilitySetting : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the CompatibilitySetting class.
@@ -48483,7 +48483,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class TableWidthDxaNilType : TypedOpenXmlLeafElement
+    public abstract partial class TableWidthDxaNilType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the TableWidthDxaNilType class.
@@ -48554,7 +48554,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TableIndentation" /> <c>&lt;w:tblInd></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TablePropertyExceptions : TypedOpenXmlCompositeElement
+    public partial class TablePropertyExceptions : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TablePropertyExceptions class.
@@ -48783,7 +48783,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TableRowPropertiesChange" /> <c>&lt;w:trPrChange></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TableRowProperties : TypedOpenXmlCompositeElement
+    public partial class TableRowProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TableRowProperties class.
@@ -48898,7 +48898,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.PreviousTableRowProperties" /> <c>&lt;w:trPr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TableRowPropertiesChange : TypedOpenXmlCompositeElement
+    public partial class TableRowPropertiesChange : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TableRowPropertiesChange class.
@@ -49081,7 +49081,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TextDirection" /> <c>&lt;w:textDirection></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ParagraphProperties : TypedOpenXmlCompositeElement
+    public partial class ParagraphProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ParagraphProperties class.
@@ -49702,7 +49702,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:control.</para>
     /// </summary>
-    public partial class Control : TypedOpenXmlLeafElement
+    public partial class Control : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Control class.
@@ -49780,7 +49780,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.GridColumn" /> <c>&lt;w:gridCol></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PreviousTableGrid : TypedOpenXmlCompositeElement
+    public partial class PreviousTableGrid : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the PreviousTableGrid class.
@@ -49833,7 +49833,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:objectEmbed.</para>
     /// </summary>
-    public partial class ObjectEmbed : TypedOpenXmlLeafElement
+    public partial class ObjectEmbed : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ObjectEmbed class.
@@ -49931,7 +49931,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:objectLink.</para>
     /// </summary>
-    public partial class ObjectLink : TypedOpenXmlLeafElement
+    public partial class ObjectLink : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ObjectLink class.
@@ -50060,7 +50060,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:lock.</para>
     /// </summary>
-    public partial class Lock : TypedOpenXmlLeafElement
+    public partial class Lock : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Lock class.
@@ -50105,7 +50105,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DocPartReference" /> <c>&lt;w:docPart></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SdtPlaceholder : TypedOpenXmlCompositeElement
+    public partial class SdtPlaceholder : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SdtPlaceholder class.
@@ -50171,7 +50171,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:dataBinding.</para>
     /// </summary>
-    public partial class DataBinding : TypedOpenXmlLeafElement
+    public partial class DataBinding : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the DataBinding class.
@@ -50250,7 +50250,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.ListItem" /> <c>&lt;w:listItem></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SdtContentComboBox : TypedOpenXmlCompositeElement
+    public partial class SdtContentComboBox : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SdtContentComboBox class.
@@ -50327,7 +50327,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DateFormat" /> <c>&lt;w:dateFormat></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SdtContentDate : TypedOpenXmlCompositeElement
+    public partial class SdtContentDate : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SdtContentDate class.
@@ -50585,7 +50585,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DocPartCategory" /> <c>&lt;w:docPartCategory></c></description></item>
     /// </list>
     /// </remark>
-    public abstract partial class SdtDocPartType : TypedOpenXmlCompositeElement
+    public abstract partial class SdtDocPartType : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SdtDocPartType class.
@@ -50677,7 +50677,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.ListItem" /> <c>&lt;w:listItem></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SdtContentDropDownList : TypedOpenXmlCompositeElement
+    public partial class SdtContentDropDownList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SdtContentDropDownList class.
@@ -50745,7 +50745,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:text.</para>
     /// </summary>
-    public partial class SdtContentText : TypedOpenXmlLeafElement
+    public partial class SdtContentText : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the SdtContentText class.
@@ -50784,7 +50784,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:writeProtection.</para>
     /// </summary>
-    public partial class WriteProtection : TypedOpenXmlLeafElement
+    public partial class WriteProtection : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the WriteProtection class.
@@ -51068,7 +51068,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:view.</para>
     /// </summary>
-    public partial class View : TypedOpenXmlLeafElement
+    public partial class View : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the View class.
@@ -51110,7 +51110,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:zoom.</para>
     /// </summary>
-    public partial class Zoom : TypedOpenXmlLeafElement
+    public partial class Zoom : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Zoom class.
@@ -51176,7 +51176,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:activeWritingStyle.</para>
     /// </summary>
-    public partial class ActiveWritingStyle : TypedOpenXmlLeafElement
+    public partial class ActiveWritingStyle : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ActiveWritingStyle class.
@@ -51302,7 +51302,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:proofState.</para>
     /// </summary>
-    public partial class ProofState : TypedOpenXmlLeafElement
+    public partial class ProofState : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ProofState class.
@@ -51355,7 +51355,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:stylePaneFormatFilter.</para>
     /// </summary>
-    public partial class StylePaneFormatFilter : TypedOpenXmlLeafElement
+    public partial class StylePaneFormatFilter : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the StylePaneFormatFilter class.
@@ -51653,7 +51653,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:stylePaneSortMethod.</para>
     /// </summary>
-    public partial class StylePaneSortMethods : TypedOpenXmlLeafElement
+    public partial class StylePaneSortMethods : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the StylePaneSortMethods class.
@@ -51697,7 +51697,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:documentType.</para>
     /// </summary>
-    public partial class DocumentType : TypedOpenXmlLeafElement
+    public partial class DocumentType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the DocumentType class.
@@ -51760,7 +51760,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MailSubject" /> <c>&lt;w:mailSubject></c></description></item>
     /// </list>
     /// </remark>
-    public partial class MailMerge : TypedOpenXmlCompositeElement
+    public partial class MailMerge : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the MailMerge class.
@@ -52051,7 +52051,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:revisionView.</para>
     /// </summary>
-    public partial class RevisionView : TypedOpenXmlLeafElement
+    public partial class RevisionView : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the RevisionView class.
@@ -52146,7 +52146,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:documentProtection.</para>
     /// </summary>
-    public partial class DocumentProtection : TypedOpenXmlLeafElement
+    public partial class DocumentProtection : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the DocumentProtection class.
@@ -52507,7 +52507,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class NonNegativeShortType : TypedOpenXmlLeafElement
+    public abstract partial class NonNegativeShortType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the NonNegativeShortType class.
@@ -52546,7 +52546,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:consecutiveHyphenLimit.</para>
     /// </summary>
-    public partial class ConsecutiveHyphenLimit : TypedOpenXmlLeafElement
+    public partial class ConsecutiveHyphenLimit : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ConsecutiveHyphenLimit class.
@@ -52588,7 +52588,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:summaryLength.</para>
     /// </summary>
-    public partial class SummaryLength : TypedOpenXmlLeafElement
+    public partial class SummaryLength : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the SummaryLength class.
@@ -52679,7 +52679,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class UnsignedInt7Type : TypedOpenXmlLeafElement
+    public abstract partial class UnsignedInt7Type : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the UnsignedInt7Type class.
@@ -52718,7 +52718,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:characterSpacingControl.</para>
     /// </summary>
-    public partial class CharacterSpacingControl : TypedOpenXmlLeafElement
+    public partial class CharacterSpacingControl : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the CharacterSpacingControl class.
@@ -52760,7 +52760,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:noLineBreaksAfter.</para>
     /// </summary>
-    public partial class NoLineBreaksAfterKinsoku : TypedOpenXmlLeafElement
+    public partial class NoLineBreaksAfterKinsoku : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the NoLineBreaksAfterKinsoku class.
@@ -52821,7 +52821,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:noLineBreaksBefore.</para>
     /// </summary>
-    public partial class NoLineBreaksBeforeKinsoku : TypedOpenXmlLeafElement
+    public partial class NoLineBreaksBeforeKinsoku : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the NoLineBreaksBeforeKinsoku class.
@@ -52882,7 +52882,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:saveThroughXslt.</para>
     /// </summary>
-    public partial class SaveThroughXslt : TypedOpenXmlLeafElement
+    public partial class SaveThroughXslt : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the SaveThroughXslt class.
@@ -53063,7 +53063,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.ShapeLayout" /> <c>&lt;o:shapelayout></c></description></item>
     /// </list>
     /// </remark>
-    public abstract partial class ShapeDefaultsType : TypedOpenXmlCompositeElement
+    public abstract partial class ShapeDefaultsType : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ShapeDefaultsType class.
@@ -53119,7 +53119,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.NumberingRestart" /> <c>&lt;w:numRestart></c></description></item>
     /// </list>
     /// </remark>
-    public partial class FootnoteDocumentWideProperties : TypedOpenXmlCompositeElement
+    public partial class FootnoteDocumentWideProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the FootnoteDocumentWideProperties class.
@@ -53254,7 +53254,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.NumberingRestart" /> <c>&lt;w:numRestart></c></description></item>
     /// </list>
     /// </remark>
-    public partial class EndnoteDocumentWideProperties : TypedOpenXmlCompositeElement
+    public partial class EndnoteDocumentWideProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the EndnoteDocumentWideProperties class.
@@ -53450,7 +53450,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CachedColumnBalance" /> <c>&lt;w:cachedColBalance></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Compatibility : TypedOpenXmlCompositeElement
+    public partial class Compatibility : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Compatibility class.
@@ -54484,7 +54484,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DocumentVariable" /> <c>&lt;w:docVar></c></description></item>
     /// </list>
     /// </remark>
-    public partial class DocumentVariables : TypedOpenXmlCompositeElement
+    public partial class DocumentVariables : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the DocumentVariables class.
@@ -54544,7 +54544,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Rsid" /> <c>&lt;w:rsid></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Rsids : TypedOpenXmlCompositeElement
+    public partial class Rsids : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Rsids class.
@@ -54612,7 +54612,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:clrSchemeMapping.</para>
     /// </summary>
-    public partial class ColorSchemeMapping : TypedOpenXmlLeafElement
+    public partial class ColorSchemeMapping : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ColorSchemeMapping class.
@@ -54812,7 +54812,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Caption" /> <c>&lt;w:caption></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Captions : TypedOpenXmlCompositeElement
+    public partial class Captions : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Captions class.
@@ -54867,7 +54867,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:readModeInkLockDown.</para>
     /// </summary>
-    public partial class ReadModeInkLockDown : TypedOpenXmlLeafElement
+    public partial class ReadModeInkLockDown : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ReadModeInkLockDown class.
@@ -54968,7 +54968,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:targetScreenSz.</para>
     /// </summary>
-    public partial class TargetScreenSize : TypedOpenXmlLeafElement
+    public partial class TargetScreenSize : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the TargetScreenSize class.
@@ -55024,7 +55024,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Shapetype" /> <c>&lt;v:shapetype></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PictureBulletBase : TypedOpenXmlCompositeElement
+    public partial class PictureBulletBase : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the PictureBulletBase class.
@@ -55099,7 +55099,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:panose1.</para>
     /// </summary>
-    public partial class Panose1Number : TypedOpenXmlLeafElement
+    public partial class Panose1Number : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Panose1Number class.
@@ -55142,7 +55142,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:charset.</para>
     /// </summary>
-    public partial class FontCharSet : TypedOpenXmlLeafElement
+    public partial class FontCharSet : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the FontCharSet class.
@@ -55198,7 +55198,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:family.</para>
     /// </summary>
-    public partial class FontFamily : TypedOpenXmlLeafElement
+    public partial class FontFamily : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the FontFamily class.
@@ -55240,7 +55240,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:pitch.</para>
     /// </summary>
-    public partial class Pitch : TypedOpenXmlLeafElement
+    public partial class Pitch : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Pitch class.
@@ -55282,7 +55282,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:sig.</para>
     /// </summary>
-    public partial class FontSignature : TypedOpenXmlLeafElement
+    public partial class FontSignature : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the FontSignature class.
@@ -55518,7 +55518,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class FontRelationshipType : TypedOpenXmlLeafElement
+    public abstract partial class FontRelationshipType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the FontRelationshipType class.
@@ -55594,7 +55594,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Level" /> <c>&lt;w:lvl></c></description></item>
     /// </list>
     /// </remark>
-    public partial class LevelOverride : TypedOpenXmlCompositeElement
+    public partial class LevelOverride : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the LevelOverride class.

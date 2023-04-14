@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the CustomFilePropertiesPart
     /// </summary>
-    public partial class CustomFilePropertiesPart : TypedOpenXmlPart, IFixedContentTypePart
+    public partial class CustomFilePropertiesPart : OpenXmlPart, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.custom-properties+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/custom-properties";

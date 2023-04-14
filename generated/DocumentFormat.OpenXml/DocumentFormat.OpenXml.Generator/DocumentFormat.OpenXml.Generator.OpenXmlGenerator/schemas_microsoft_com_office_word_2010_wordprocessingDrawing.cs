@@ -22,7 +22,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp14:pctPosHOffset.</para>
     /// </summary>
-    public partial class PercentagePositionHeightOffset : TypedOpenXmlLeafTextElement
+    public partial class PercentagePositionHeightOffset : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the PercentagePositionHeightOffset class.
@@ -61,7 +61,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp14:pctPosVOffset.</para>
     /// </summary>
-    public partial class PercentagePositionVerticalOffset : TypedOpenXmlLeafTextElement
+    public partial class PercentagePositionVerticalOffset : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the PercentagePositionVerticalOffset class.
@@ -106,7 +106,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentageWidth" /> <c>&lt;wp14:pctWidth></c></description></item>
     /// </list>
     /// </remark>
-    public partial class RelativeWidth : TypedOpenXmlCompositeElement
+    public partial class RelativeWidth : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the RelativeWidth class.
@@ -195,7 +195,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentageHeight" /> <c>&lt;wp14:pctHeight></c></description></item>
     /// </list>
     /// </remark>
-    public partial class RelativeHeight : TypedOpenXmlCompositeElement
+    public partial class RelativeHeight : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the RelativeHeight class.
@@ -278,7 +278,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp14:pctWidth.</para>
     /// </summary>
-    public partial class PercentageWidth : TypedOpenXmlLeafTextElement
+    public partial class PercentageWidth : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the PercentageWidth class.
@@ -317,7 +317,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp14:pctHeight.</para>
     /// </summary>
-    public partial class PercentageHeight : TypedOpenXmlLeafTextElement
+    public partial class PercentageHeight : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the PercentageHeight class.

@@ -16,4 +16,11 @@
     <ProjectReference Include="..\..\src\DocumentFormat.OpenXml.Features\DocumentFormat.OpenXml.Features.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Update="xunit.runner.visualstudio">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
 </Project>

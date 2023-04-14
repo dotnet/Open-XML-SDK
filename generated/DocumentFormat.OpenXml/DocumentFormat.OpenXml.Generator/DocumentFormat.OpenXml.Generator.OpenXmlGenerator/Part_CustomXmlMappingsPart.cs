@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the CustomXmlMappingsPart
     /// </summary>
-    public partial class CustomXmlMappingsPart : TypedOpenXmlPart, IFixedContentTypePart
+    public partial class CustomXmlMappingsPart : OpenXmlPart, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/xmlMaps";

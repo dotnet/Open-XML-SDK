@@ -21,7 +21,7 @@ namespace DocumentFormat.OpenXml.Office2010.ExcelAc
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x12ac:list.</para>
     /// </summary>
-    public partial class List : TypedOpenXmlLeafTextElement
+    public partial class List : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the List class.

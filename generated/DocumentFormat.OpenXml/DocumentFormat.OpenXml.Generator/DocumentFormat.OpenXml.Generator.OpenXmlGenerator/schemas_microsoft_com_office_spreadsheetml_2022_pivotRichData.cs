@@ -21,7 +21,7 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotRichData
     /// <para>This class is available in Microsoft365 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xprd:richInfo.</para>
     /// </summary>
-    public partial class RichDataPivotCacheGuid : TypedOpenXmlLeafElement
+    public partial class RichDataPivotCacheGuid : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the RichDataPivotCacheGuid class.

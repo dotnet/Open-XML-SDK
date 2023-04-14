@@ -21,7 +21,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.HyperLinkColor
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ahyp:hlinkClr.</para>
     /// </summary>
-    public partial class HyperlinkColor : TypedOpenXmlLeafElement
+    public partial class HyperlinkColor : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the HyperlinkColor class.

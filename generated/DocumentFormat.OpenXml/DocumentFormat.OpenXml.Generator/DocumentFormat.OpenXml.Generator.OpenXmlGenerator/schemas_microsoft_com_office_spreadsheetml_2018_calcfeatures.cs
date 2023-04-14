@@ -27,7 +27,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.CalcFeatures
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.CalcFeatures.CalcFeature" /> <c>&lt;xcalcf:feature></c></description></item>
     /// </list>
     /// </remark>
-    public partial class CalcFeatures : TypedOpenXmlCompositeElement
+    public partial class CalcFeatures : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the CalcFeatures class.
@@ -81,7 +81,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.CalcFeatures
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xcalcf:feature.</para>
     /// </summary>
-    public partial class CalcFeature : TypedOpenXmlLeafElement
+    public partial class CalcFeature : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the CalcFeature class.

@@ -27,7 +27,7 @@ namespace DocumentFormat.OpenXml.Vml
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is v:path.</para>
     /// </summary>
-    public partial class Path : TypedOpenXmlLeafElement
+    public partial class Path : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Path class.
@@ -236,7 +236,7 @@ namespace DocumentFormat.OpenXml.Vml
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Formula" /> <c>&lt;v:f></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Formulas : TypedOpenXmlCompositeElement
+    public partial class Formulas : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Formulas class.
@@ -295,7 +295,7 @@ namespace DocumentFormat.OpenXml.Vml
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.ShapeHandle" /> <c>&lt;v:h></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ShapeHandles : TypedOpenXmlCompositeElement
+    public partial class ShapeHandles : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ShapeHandles class.
@@ -354,7 +354,7 @@ namespace DocumentFormat.OpenXml.Vml
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.FillExtendedProperties" /> <c>&lt;o:fill></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Fill : TypedOpenXmlCompositeElement
+    public partial class Fill : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Fill class.
@@ -742,7 +742,7 @@ namespace DocumentFormat.OpenXml.Vml
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.ColumnStroke" /> <c>&lt;o:column></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Stroke : TypedOpenXmlCompositeElement
+    public partial class Stroke : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Stroke class.
@@ -1197,7 +1197,7 @@ namespace DocumentFormat.OpenXml.Vml
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is v:shadow.</para>
     /// </summary>
-    public partial class Shadow : TypedOpenXmlLeafElement
+    public partial class Shadow : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Shadow class.
@@ -1350,7 +1350,7 @@ namespace DocumentFormat.OpenXml.Vml
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TextBoxContent" /> <c>&lt;w:txbxContent></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TextBox : TypedOpenXmlCompositeElement
+    public partial class TextBox : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TextBox class.
@@ -1453,7 +1453,7 @@ namespace DocumentFormat.OpenXml.Vml
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is v:textpath.</para>
     /// </summary>
-    public partial class TextPath : TypedOpenXmlLeafElement
+    public partial class TextPath : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the TextPath class.
@@ -1567,7 +1567,7 @@ namespace DocumentFormat.OpenXml.Vml
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is v:imagedata.</para>
     /// </summary>
-    public partial class ImageData : TypedOpenXmlLeafElement
+    public partial class ImageData : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ImageData class.
@@ -1857,7 +1857,7 @@ namespace DocumentFormat.OpenXml.Vml
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData" /> <c>&lt;xvml:ClientData></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Shape : TypedOpenXmlCompositeElement
+    public partial class Shape : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Shape class.
@@ -2721,7 +2721,7 @@ namespace DocumentFormat.OpenXml.Vml
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData" /> <c>&lt;xvml:ClientData></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Shapetype : TypedOpenXmlCompositeElement
+    public partial class Shapetype : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Shapetype class.
@@ -3554,7 +3554,7 @@ namespace DocumentFormat.OpenXml.Vml
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData" /> <c>&lt;xvml:ClientData></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Group : TypedOpenXmlCompositeElement
+    public partial class Group : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Group class.
@@ -4090,7 +4090,7 @@ namespace DocumentFormat.OpenXml.Vml
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Fill" /> <c>&lt;v:fill></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Background : TypedOpenXmlCompositeElement
+    public partial class Background : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Background class.
@@ -4278,7 +4278,7 @@ namespace DocumentFormat.OpenXml.Vml
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData" /> <c>&lt;xvml:ClientData></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Arc : TypedOpenXmlCompositeElement
+    public partial class Arc : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Arc class.
@@ -5110,7 +5110,7 @@ namespace DocumentFormat.OpenXml.Vml
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData" /> <c>&lt;xvml:ClientData></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Curve : TypedOpenXmlCompositeElement
+    public partial class Curve : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Curve class.
@@ -5970,7 +5970,7 @@ namespace DocumentFormat.OpenXml.Vml
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData" /> <c>&lt;xvml:ClientData></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ImageFile : TypedOpenXmlCompositeElement
+    public partial class ImageFile : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ImageFile class.
@@ -6885,7 +6885,7 @@ namespace DocumentFormat.OpenXml.Vml
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData" /> <c>&lt;xvml:ClientData></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Line : TypedOpenXmlCompositeElement
+    public partial class Line : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Line class.
@@ -7721,7 +7721,7 @@ namespace DocumentFormat.OpenXml.Vml
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData" /> <c>&lt;xvml:ClientData></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Oval : TypedOpenXmlCompositeElement
+    public partial class Oval : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Oval class.
@@ -8538,7 +8538,7 @@ namespace DocumentFormat.OpenXml.Vml
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData" /> <c>&lt;xvml:ClientData></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PolyLine : TypedOpenXmlCompositeElement
+    public partial class PolyLine : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the PolyLine class.
@@ -9366,7 +9366,7 @@ namespace DocumentFormat.OpenXml.Vml
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData" /> <c>&lt;xvml:ClientData></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Rectangle : TypedOpenXmlCompositeElement
+    public partial class Rectangle : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Rectangle class.
@@ -10182,7 +10182,7 @@ namespace DocumentFormat.OpenXml.Vml
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData" /> <c>&lt;xvml:ClientData></c></description></item>
     /// </list>
     /// </remark>
-    public partial class RoundRectangle : TypedOpenXmlCompositeElement
+    public partial class RoundRectangle : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the RoundRectangle class.
@@ -10970,7 +10970,7 @@ namespace DocumentFormat.OpenXml.Vml
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is v:h.</para>
     /// </summary>
-    public partial class ShapeHandle : TypedOpenXmlLeafElement
+    public partial class ShapeHandle : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ShapeHandle class.
@@ -11094,7 +11094,7 @@ namespace DocumentFormat.OpenXml.Vml
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is v:f.</para>
     /// </summary>
-    public partial class Formula : TypedOpenXmlLeafElement
+    public partial class Formula : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Formula class.
