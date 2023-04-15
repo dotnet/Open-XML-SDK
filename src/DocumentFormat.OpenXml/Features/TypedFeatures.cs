@@ -1,7 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using DocumentFormat.OpenXml.Framework;
 using System;
 using System.Threading;
 
@@ -29,7 +28,7 @@ internal partial class TypedFeatures : IFeatureCollection
     public int Revision => 0;
 
 #pragma warning disable CS0436 // Type conflicts with imported type
-    [KnownFeature(typeof(IRootElementFactory), typeof(TypedRootElementFactory))]
+    [KnownFeature(typeof(IRootElementFeature), typeof(TypedRootElementFeature))]
     [DelegatedFeature(nameof(FeatureCollection.Default), typeof(FeatureCollection))]
     [ThreadSafe]
 #pragma warning restore CS0436 // Type conflicts with imported type

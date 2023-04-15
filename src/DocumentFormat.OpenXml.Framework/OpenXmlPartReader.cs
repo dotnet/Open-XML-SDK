@@ -19,7 +19,7 @@ namespace DocumentFormat.OpenXml
     /// </summary>
     public class OpenXmlPartReader : OpenXmlReader
     {
-        private readonly IRootElementFactory _factory;
+        private readonly IRootElementFeature _rootElements;
         private readonly IOpenXmlNamespaceResolver _resolver;
         private readonly XmlReader _xmlReader;
         private readonly List<OpenXmlAttribute> _attributeList = new List<OpenXmlAttribute>();
@@ -99,7 +99,7 @@ namespace DocumentFormat.OpenXml
             }
 
             _resolver = features.GetRequired<IOpenXmlNamespaceResolver>();
-            _factory = features.GetRequired<IRootElementFactory>();
+            _rootElements = features.GetRequired<IRootElementFeature>();
             _xmlReader = CreateReader(partStream, options.CloseStream, options.MaxCharactersInPart, ignoreWhitespace: options.IgnoreWhitespace, out _standalone, out _encoding);
         }
 
@@ -759,7 +759,7 @@ namespace DocumentFormat.OpenXml
 
         private OpenXmlElement CreateElement(in OpenXmlQualifiedName qname)
         {
-            if (_factory.TryCreate(qname, out var element))
+            if (_rootElements.TryCreate(qname, out var element))
             {
                 return element;
             }
