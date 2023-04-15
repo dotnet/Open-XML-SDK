@@ -71,40 +71,35 @@ public static class FactoryGenerator
         writer.WriteLine("namespace DocumentFormat.OpenXml.Packaging;");
         writer.WriteLine();
 
-        writer.WriteLine("public abstract partial class TypedOpenXmlPackage");
+        writer.WriteLine("internal abstract partial class TypedPackageFeatureCollection<TDocumentType, TMainPart> : ITypedPartFactoryFeature");
+        writer.Indent++;
+        writer.WriteLine("where TDocumentType : struct, System.Enum");
+        writer.WriteLine("where TMainPart : OpenXmlPart");
+        writer.Indent--;
 
         using (writer.AddBlock())
         {
-            writer.WriteLine("private protected abstract partial class TypedPackageFeatureCollection<TDocumentType, TMainPart> : ITypedPartFactoryFeature");
-            writer.Indent++;
-            writer.WriteLine("where TDocumentType : struct, System.Enum");
-            writer.WriteLine("where TMainPart : OpenXmlPart");
-            writer.Indent--;
+            writer.WriteLine("T? ITypedPartFactoryFeature.Create<T>() where T : class");
 
             using (writer.AddBlock())
             {
-                writer.WriteLine("T? ITypedPartFactoryFeature.Create<T>() where T : class");
-
-                using (writer.AddBlock())
+                foreach (var part in openXml.Context.Parts)
                 {
-                    foreach (var part in openXml.Context.Parts)
+                    writer.Write("if (typeof(T) == typeof(");
+                    writer.Write(part.Name);
+                    writer.WriteLine("))");
+
+                    using (writer.AddBlock())
                     {
-                        writer.Write("if (typeof(T) == typeof(");
+                        writer.Write("return (T)(object)new ");
                         writer.Write(part.Name);
-                        writer.WriteLine("))");
-
-                        using (writer.AddBlock())
-                        {
-                            writer.Write("return (T)(object)new ");
-                            writer.Write(part.Name);
-                            writer.WriteLine("();");
-                        }
-
-                        writer.WriteLine();
+                        writer.WriteLine("();");
                     }
 
-                    writer.WriteLine("return default;");
+                    writer.WriteLine();
                 }
+
+                writer.WriteLine("return default;");
             }
         }
 

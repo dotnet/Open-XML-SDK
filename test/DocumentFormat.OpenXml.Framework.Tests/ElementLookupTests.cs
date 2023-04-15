@@ -45,9 +45,9 @@ namespace DocumentFormat.OpenXml.Framework.Tests
             // Arrange
             using var doc = WordprocessingDocument.Create(new MemoryStream(), WordprocessingDocumentType.Document);
             var feature = doc.Features.GetRequired<IRootElementFeature>();
-            var allTypedParts = typeof(TypedOpenXmlPartRootElement).Assembly
+            var allTypedParts = typeof(WordprocessingDocument).Assembly
                 .GetTypes()
-                .Where(t => !t.IsAbstract && typeof(TypedOpenXmlPartRootElement).IsAssignableFrom(t))
+                .Where(t => !t.IsAbstract && typeof(OpenXmlPartRootElement).IsAssignableFrom(t))
                 .ToList();
 
             Assert.Equal(102, allTypedParts.Count);

@@ -4,7 +4,6 @@
 using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Framework;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Linq;
 
 namespace DocumentFormat.OpenXml.Packaging;
