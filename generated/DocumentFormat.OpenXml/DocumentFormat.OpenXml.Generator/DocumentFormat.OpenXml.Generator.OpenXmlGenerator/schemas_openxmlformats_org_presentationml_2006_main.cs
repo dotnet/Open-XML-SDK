@@ -339,7 +339,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class EmptyType : TypedOpenXmlLeafElement
+    public abstract partial class EmptyType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the EmptyType class.
@@ -432,7 +432,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class IndexRangeType : TypedOpenXmlLeafElement
+    public abstract partial class IndexRangeType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the IndexRangeType class.
@@ -481,7 +481,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:custShow.</para>
     /// </summary>
-    public partial class CustomShowReference : TypedOpenXmlLeafElement
+    public partial class CustomShowReference : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the CustomShowReference class.
@@ -521,7 +521,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:ext.</para>
     /// </summary>
-    public partial class Extension : TypedOpenXmlCompositeElement
+    public partial class Extension : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Extension class.
@@ -589,7 +589,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:browse.</para>
     /// </summary>
-    public partial class BrowseSlideMode : TypedOpenXmlLeafElement
+    public partial class BrowseSlideMode : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the BrowseSlideMode class.
@@ -625,7 +625,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:kiosk.</para>
     /// </summary>
-    public partial class KioskSlideMode : TypedOpenXmlLeafElement
+    public partial class KioskSlideMode : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the KioskSlideMode class.
@@ -667,7 +667,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ColorMap : TypedOpenXmlCompositeElement
+    public partial class ColorMap : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ColorMap class.
@@ -921,7 +921,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.MasterColorMapping" /> <c>&lt;a:masterClrMapping></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ColorMapOverride : TypedOpenXmlCompositeElement
+    public partial class ColorMapOverride : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ColorMapOverride class.
@@ -1018,7 +1018,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ExtensionList" /> <c>&lt;p:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class BackgroundProperties : TypedOpenXmlCompositeElement
+    public partial class BackgroundProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the BackgroundProperties class.
@@ -1120,7 +1120,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SystemColor" /> <c>&lt;a:sysClr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class BackgroundStyleReference : TypedOpenXmlCompositeElement
+    public partial class BackgroundStyleReference : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the BackgroundStyleReference class.
@@ -1288,7 +1288,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CommentAuthor" /> <c>&lt;p:cmAuthor></c></description></item>
     /// </list>
     /// </remark>
-    public partial class CommentAuthorList : TypedOpenXmlPartRootElement
+    public partial class CommentAuthorList : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the CommentAuthorList class.
@@ -1378,7 +1378,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Comment" /> <c>&lt;p:cm></c></description></item>
     /// </list>
     /// </remark>
-    public partial class CommentList : TypedOpenXmlPartRootElement
+    public partial class CommentList : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the CommentList class.
@@ -1470,7 +1470,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Picture" /> <c>&lt;p:pic></c></description></item>
     /// </list>
     /// </remark>
-    public partial class OleObject : TypedOpenXmlCompositeElement
+    public partial class OleObject : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the OleObject class.
@@ -1640,7 +1640,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.SlideSize" /> <c>&lt;p:sldSz></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Presentation : TypedOpenXmlPartRootElement
+    public partial class Presentation : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the Presentation class.
@@ -2080,7 +2080,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.WebProperties" /> <c>&lt;p:webPr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PresentationProperties : TypedOpenXmlPartRootElement
+    public partial class PresentationProperties : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the PresentationProperties class.
@@ -2262,7 +2262,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Transition" /> <c>&lt;p:transition></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Slide : TypedOpenXmlPartRootElement
+    public partial class Slide : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the Slide class.
@@ -2471,7 +2471,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Transition" /> <c>&lt;p:transition></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SlideLayout : TypedOpenXmlPartRootElement
+    public partial class SlideLayout : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the SlideLayout class.
@@ -2732,7 +2732,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Transition" /> <c>&lt;p:transition></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SlideMaster : TypedOpenXmlPartRootElement
+    public partial class SlideMaster : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the SlideMaster class.
@@ -2961,7 +2961,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.HeaderFooter" /> <c>&lt;p:hf></c></description></item>
     /// </list>
     /// </remark>
-    public partial class HandoutMaster : TypedOpenXmlPartRootElement
+    public partial class HandoutMaster : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the HandoutMaster class.
@@ -3119,7 +3119,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.NotesMasterExtensionList" /> <c>&lt;p:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class NotesMaster : TypedOpenXmlPartRootElement
+    public partial class NotesMaster : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the NotesMaster class.
@@ -3290,7 +3290,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ExtensionListWithModification" /> <c>&lt;p:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class NotesSlide : TypedOpenXmlPartRootElement
+    public partial class NotesSlide : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the NotesSlide class.
@@ -3452,7 +3452,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ExtensionList" /> <c>&lt;p:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SlideSyncProperties : TypedOpenXmlPartRootElement
+    public partial class SlideSyncProperties : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the SlideSyncProperties class.
@@ -3598,7 +3598,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Tag" /> <c>&lt;p:tag></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TagList : TypedOpenXmlPartRootElement
+    public partial class TagList : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the TagList class.
@@ -3695,7 +3695,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.SlideViewProperties" /> <c>&lt;p:slideViewPr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ViewProperties : TypedOpenXmlPartRootElement
+    public partial class ViewProperties : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the ViewProperties class.
@@ -3931,7 +3931,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.NonVisualContentPartProperties" /> <c>&lt;p14:nvContentPartPr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ContentPart : TypedOpenXmlCompositeElement
+    public partial class ContentPart : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ContentPart class.
@@ -4112,7 +4112,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class EmbeddedWavAudioFileType : TypedOpenXmlLeafElement
+    public abstract partial class EmbeddedWavAudioFileType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the EmbeddedWavAudioFileType class.
@@ -4178,7 +4178,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Sound" /> <c>&lt;p:snd></c></description></item>
     /// </list>
     /// </remark>
-    public partial class StartSoundAction : TypedOpenXmlCompositeElement
+    public partial class StartSoundAction : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the StartSoundAction class.
@@ -4256,7 +4256,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:tmAbs.</para>
     /// </summary>
-    public partial class TimeAbsolute : TypedOpenXmlLeafElement
+    public partial class TimeAbsolute : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the TimeAbsolute class.
@@ -4305,7 +4305,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:tmPct.</para>
     /// </summary>
-    public partial class TimePercentage : TypedOpenXmlLeafElement
+    public partial class TimePercentage : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the TimePercentage class.
@@ -4356,7 +4356,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.BookmarkTarget" /> <c>&lt;p14:bmkTgt></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TargetElement : TypedOpenXmlCompositeElement
+    public partial class TargetElement : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TargetElement class.
@@ -4482,7 +4482,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:tn.</para>
     /// </summary>
-    public partial class TimeNode : TypedOpenXmlLeafElement
+    public partial class TimeNode : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the TimeNode class.
@@ -4521,7 +4521,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:rtn.</para>
     /// </summary>
-    public partial class RuntimeNodeTrigger : TypedOpenXmlLeafElement
+    public partial class RuntimeNodeTrigger : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the RuntimeNodeTrigger class.
@@ -4693,7 +4693,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.TimeNode" /> <c>&lt;p:tn></c></description></item>
     /// </list>
     /// </remark>
-    public abstract partial class TimeListConditionalType : TypedOpenXmlCompositeElement
+    public abstract partial class TimeListConditionalType : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TimeListConditionalType class.
@@ -4823,7 +4823,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CommonTimeNode" /> <c>&lt;p:cTn></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ParallelTimeNode : TypedOpenXmlCompositeElement
+    public partial class ParallelTimeNode : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ParallelTimeNode class.
@@ -4897,7 +4897,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.NextConditionList" /> <c>&lt;p:nextCondLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SequenceTimeNode : TypedOpenXmlCompositeElement
+    public partial class SequenceTimeNode : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SequenceTimeNode class.
@@ -5039,7 +5039,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CommonTimeNode" /> <c>&lt;p:cTn></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ExclusiveTimeNode : TypedOpenXmlCompositeElement
+    public partial class ExclusiveTimeNode : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ExclusiveTimeNode class.
@@ -5112,7 +5112,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.TimeAnimateValueList" /> <c>&lt;p:tavLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Animate : TypedOpenXmlCompositeElement
+    public partial class Animate : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Animate class.
@@ -5282,7 +5282,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CommonBehavior" /> <c>&lt;p:cBhvr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class AnimateColor : TypedOpenXmlCompositeElement
+    public partial class AnimateColor : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the AnimateColor class.
@@ -5429,7 +5429,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CommonBehavior" /> <c>&lt;p:cBhvr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class AnimateEffect : TypedOpenXmlCompositeElement
+    public partial class AnimateEffect : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the AnimateEffect class.
@@ -5557,7 +5557,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.RotationCenter" /> <c>&lt;p:rCtr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class AnimateMotion : TypedOpenXmlCompositeElement
+    public partial class AnimateMotion : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the AnimateMotion class.
@@ -5770,7 +5770,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CommonBehavior" /> <c>&lt;p:cBhvr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class AnimateRotation : TypedOpenXmlCompositeElement
+    public partial class AnimateRotation : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the AnimateRotation class.
@@ -5900,7 +5900,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ToPosition" /> <c>&lt;p:to></c></description></item>
     /// </list>
     /// </remark>
-    public partial class AnimateScale : TypedOpenXmlCompositeElement
+    public partial class AnimateScale : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the AnimateScale class.
@@ -6047,7 +6047,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CommonBehavior" /> <c>&lt;p:cBhvr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Command : TypedOpenXmlCompositeElement
+    public partial class Command : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Command class.
@@ -6146,7 +6146,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CommonBehavior" /> <c>&lt;p:cBhvr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SetBehavior : TypedOpenXmlCompositeElement
+    public partial class SetBehavior : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SetBehavior class.
@@ -6233,7 +6233,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CommonMediaNode" /> <c>&lt;p:cMediaNode></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Audio : TypedOpenXmlCompositeElement
+    public partial class Audio : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Audio class.
@@ -6317,7 +6317,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CommonMediaNode" /> <c>&lt;p:cMediaNode></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Video : TypedOpenXmlCompositeElement
+    public partial class Video : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Video class.
@@ -6406,7 +6406,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.EndConditionList" /> <c>&lt;p:endCondLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class CommonTimeNode : TypedOpenXmlCompositeElement
+    public partial class CommonTimeNode : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the CommonTimeNode class.
@@ -7082,7 +7082,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Condition" /> <c>&lt;p:cond></c></description></item>
     /// </list>
     /// </remark>
-    public abstract partial class TimeListTimeConditionalListType : TypedOpenXmlCompositeElement
+    public abstract partial class TimeListTimeConditionalListType : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TimeListTimeConditionalListType class.
@@ -7127,7 +7127,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:attrName.</para>
     /// </summary>
-    public partial class AttributeName : TypedOpenXmlLeafTextElement
+    public partial class AttributeName : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the AttributeName class.
@@ -7164,7 +7164,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:text.</para>
     /// </summary>
-    public partial class Text : TypedOpenXmlLeafTextElement
+    public partial class Text : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the Text class.
@@ -7207,7 +7207,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.AttributeName" /> <c>&lt;p:attrName></c></description></item>
     /// </list>
     /// </remark>
-    public partial class AttributeNameList : TypedOpenXmlCompositeElement
+    public partial class AttributeNameList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the AttributeNameList class.
@@ -7260,7 +7260,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:boolVal.</para>
     /// </summary>
-    public partial class BooleanVariantValue : TypedOpenXmlLeafElement
+    public partial class BooleanVariantValue : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the BooleanVariantValue class.
@@ -7299,7 +7299,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:intVal.</para>
     /// </summary>
-    public partial class IntegerVariantValue : TypedOpenXmlLeafElement
+    public partial class IntegerVariantValue : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the IntegerVariantValue class.
@@ -7338,7 +7338,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:fltVal.</para>
     /// </summary>
-    public partial class FloatVariantValue : TypedOpenXmlLeafElement
+    public partial class FloatVariantValue : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the FloatVariantValue class.
@@ -7377,7 +7377,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:strVal.</para>
     /// </summary>
-    public partial class StringVariantValue : TypedOpenXmlLeafElement
+    public partial class StringVariantValue : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the StringVariantValue class.
@@ -7575,7 +7575,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SystemColor" /> <c>&lt;a:sysClr></c></description></item>
     /// </list>
     /// </remark>
-    public abstract partial class ColorType : TypedOpenXmlCompositeElement
+    public abstract partial class ColorType : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ColorType class.
@@ -7709,7 +7709,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.VariantValue" /> <c>&lt;p:val></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TimeAnimateValue : TypedOpenXmlCompositeElement
+    public partial class TimeAnimateValue : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TimeAnimateValue class.
@@ -7805,7 +7805,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:rgb.</para>
     /// </summary>
-    public partial class RgbColor : TypedOpenXmlLeafElement
+    public partial class RgbColor : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the RgbColor class.
@@ -7875,7 +7875,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:hsl.</para>
     /// </summary>
-    public partial class HslColor : TypedOpenXmlLeafElement
+    public partial class HslColor : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the HslColor class.
@@ -7952,7 +7952,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.TargetElement" /> <c>&lt;p:tgtEl></c></description></item>
     /// </list>
     /// </remark>
-    public partial class CommonBehavior : TypedOpenXmlCompositeElement
+    public partial class CommonBehavior : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the CommonBehavior class.
@@ -8155,7 +8155,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.FloatVariantValue" /> <c>&lt;p:fltVal></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Progress : TypedOpenXmlCompositeElement
+    public partial class Progress : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Progress class.
@@ -8363,7 +8363,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.StringVariantValue" /> <c>&lt;p:strVal></c></description></item>
     /// </list>
     /// </remark>
-    public abstract partial class TimeListAnimationVariantType : TypedOpenXmlCompositeElement
+    public abstract partial class TimeListAnimationVariantType : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TimeListAnimationVariantType class.
@@ -8484,7 +8484,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.TargetElement" /> <c>&lt;p:tgtEl></c></description></item>
     /// </list>
     /// </remark>
-    public partial class CommonMediaNode : TypedOpenXmlCompositeElement
+    public partial class CommonMediaNode : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the CommonMediaNode class.
@@ -8619,7 +8619,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ParallelTimeNode" /> <c>&lt;p:par></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TimeNodeList : TypedOpenXmlCompositeElement
+    public partial class TimeNodeList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TimeNodeList class.
@@ -8691,7 +8691,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.TimeNodeList" /> <c>&lt;p:tnLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Template : TypedOpenXmlCompositeElement
+    public partial class Template : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Template class.
@@ -8777,7 +8777,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Template" /> <c>&lt;p:tmpl></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TemplateList : TypedOpenXmlCompositeElement
+    public partial class TemplateList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TemplateList class.
@@ -8837,7 +8837,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.BuildDiagram" /> <c>&lt;a:bldDgm></c></description></item>
     /// </list>
     /// </remark>
-    public partial class BuildSubElement : TypedOpenXmlCompositeElement
+    public partial class BuildSubElement : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the BuildSubElement class.
@@ -8924,7 +8924,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.TemplateList" /> <c>&lt;p:tmplLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class BuildParagraph : TypedOpenXmlCompositeElement
+    public partial class BuildParagraph : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the BuildParagraph class.
@@ -9115,7 +9115,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:bldDgm.</para>
     /// </summary>
-    public partial class BuildDiagram : TypedOpenXmlLeafElement
+    public partial class BuildDiagram : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the BuildDiagram class.
@@ -9198,7 +9198,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:bldOleChart.</para>
     /// </summary>
-    public partial class BuildOleChart : TypedOpenXmlLeafElement
+    public partial class BuildOleChart : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the BuildOleChart class.
@@ -9299,7 +9299,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.BuildAsOne" /> <c>&lt;p:bldAsOne></c></description></item>
     /// </list>
     /// </remark>
-    public partial class BuildGraphics : TypedOpenXmlCompositeElement
+    public partial class BuildGraphics : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the BuildGraphics class.
@@ -9434,7 +9434,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.BuildOleChart" /> <c>&lt;p:bldOleChart></c></description></item>
     /// </list>
     /// </remark>
-    public partial class BuildList : TypedOpenXmlCompositeElement
+    public partial class BuildList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the BuildList class.
@@ -9499,7 +9499,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Extension" /> <c>&lt;p:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ExtensionListWithModification : TypedOpenXmlCompositeElement
+    public partial class ExtensionListWithModification : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ExtensionListWithModification class.
@@ -9577,7 +9577,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.RgbColor" /> <c>&lt;p:rgb></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ByColor : TypedOpenXmlCompositeElement
+    public partial class ByColor : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ByColor class.
@@ -9805,7 +9805,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SystemColor" /> <c>&lt;a:sysClr></c></description></item>
     /// </list>
     /// </remark>
-    public abstract partial class Color3Type : TypedOpenXmlCompositeElement
+    public abstract partial class Color3Type : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Color3Type class.
@@ -9933,7 +9933,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:sld.</para>
     /// </summary>
-    public partial class SlideListEntry : TypedOpenXmlLeafElement
+    public partial class SlideListEntry : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the SlideListEntry class.
@@ -9976,7 +9976,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:custData.</para>
     /// </summary>
-    public partial class CustomerData : TypedOpenXmlLeafElement
+    public partial class CustomerData : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the CustomerData class.
@@ -10018,7 +10018,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:tags.</para>
     /// </summary>
-    public partial class CustomerDataTags : TypedOpenXmlLeafElement
+    public partial class CustomerDataTags : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the CustomerDataTags class.
@@ -10066,7 +10066,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CommentAuthorExtensionList" /> <c>&lt;p:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class CommentAuthor : TypedOpenXmlCompositeElement
+    public partial class CommentAuthor : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the CommentAuthor class.
@@ -10214,7 +10214,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Text" /> <c>&lt;p:text></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Comment : TypedOpenXmlCompositeElement
+    public partial class Comment : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Comment class.
@@ -10356,7 +10356,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Extension" /> <c>&lt;p:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ExtensionList : TypedOpenXmlCompositeElement
+    public partial class ExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ExtensionList class.
@@ -10422,7 +10422,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Picture" /> <c>&lt;p:pic></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Control : TypedOpenXmlCompositeElement
+    public partial class Control : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Control class.
@@ -10588,7 +10588,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ExtensionList" /> <c>&lt;p:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SlideId : TypedOpenXmlCompositeElement
+    public partial class SlideId : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SlideId class.
@@ -10695,7 +10695,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ExtensionList" /> <c>&lt;p:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SlideMasterId : TypedOpenXmlCompositeElement
+    public partial class SlideMasterId : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SlideMasterId class.
@@ -10801,7 +10801,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ExtensionList" /> <c>&lt;p:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class NotesMasterId : TypedOpenXmlCompositeElement
+    public partial class NotesMasterId : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the NotesMasterId class.
@@ -10892,7 +10892,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ExtensionList" /> <c>&lt;p:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class HandoutMasterId : TypedOpenXmlCompositeElement
+    public partial class HandoutMasterId : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the HandoutMasterId class.
@@ -10977,7 +10977,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:font.</para>
     /// </summary>
-    public partial class Font : TypedOpenXmlLeafElement
+    public partial class Font : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Font class.
@@ -11145,7 +11145,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class EmbeddedFontDataIdType : TypedOpenXmlLeafElement
+    public abstract partial class EmbeddedFontDataIdType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the EmbeddedFontDataIdType class.
@@ -11193,7 +11193,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.BoldItalicFont" /> <c>&lt;p:boldItalic></c></description></item>
     /// </list>
     /// </remark>
-    public partial class EmbeddedFont : TypedOpenXmlCompositeElement
+    public partial class EmbeddedFont : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the EmbeddedFont class.
@@ -11325,7 +11325,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.SlideListEntry" /> <c>&lt;p:sld></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SlideList : TypedOpenXmlCompositeElement
+    public partial class SlideList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SlideList class.
@@ -11385,7 +11385,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.SlideList" /> <c>&lt;p:sldLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class CustomShow : TypedOpenXmlCompositeElement
+    public partial class CustomShow : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the CustomShow class.
@@ -11504,7 +11504,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class NonVisualDrawingProperties : TypedOpenXmlCompositeElement
+    public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the NonVisualDrawingProperties class.
@@ -11669,7 +11669,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ShapeLocks" /> <c>&lt;a:spLocks></c></description></item>
     /// </list>
     /// </remark>
-    public partial class NonVisualShapeDrawingProperties : TypedOpenXmlCompositeElement
+    public partial class NonVisualShapeDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the NonVisualShapeDrawingProperties class.
@@ -11775,7 +11775,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.PlaceholderShape" /> <c>&lt;p:ph></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ApplicationNonVisualDrawingProperties : TypedOpenXmlCompositeElement
+    public partial class ApplicationNonVisualDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ApplicationNonVisualDrawingProperties class.
@@ -11892,7 +11892,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingProperties" /> <c>&lt;p:nvPr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class NonVisualShapeProperties : TypedOpenXmlCompositeElement
+    public partial class NonVisualShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the NonVisualShapeProperties class.
@@ -12008,7 +12008,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Transform2D" /> <c>&lt;a:xfrm></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ShapeProperties : TypedOpenXmlCompositeElement
+    public partial class ShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ShapeProperties class.
@@ -12144,7 +12144,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.EffectReference" /> <c>&lt;a:effectRef></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ShapeStyle : TypedOpenXmlCompositeElement
+    public partial class ShapeStyle : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ShapeStyle class.
@@ -12263,7 +12263,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Paragraph" /> <c>&lt;a:p></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TextBody : TypedOpenXmlCompositeElement
+    public partial class TextBody : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TextBody class.
@@ -12355,7 +12355,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class NonVisualConnectorShapeDrawingProperties : TypedOpenXmlCompositeElement
+    public partial class NonVisualConnectorShapeDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the NonVisualConnectorShapeDrawingProperties class.
@@ -12474,7 +12474,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingProperties" /> <c>&lt;p:nvPr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class NonVisualConnectionShapeProperties : TypedOpenXmlCompositeElement
+    public partial class NonVisualConnectionShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the NonVisualConnectionShapeProperties class.
@@ -12577,7 +12577,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PictureLocks" /> <c>&lt;a:picLocks></c></description></item>
     /// </list>
     /// </remark>
-    public partial class NonVisualPictureDrawingProperties : TypedOpenXmlCompositeElement
+    public partial class NonVisualPictureDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the NonVisualPictureDrawingProperties class.
@@ -12678,7 +12678,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingProperties" /> <c>&lt;p:nvPr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class NonVisualPictureProperties : TypedOpenXmlCompositeElement
+    public partial class NonVisualPictureProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the NonVisualPictureProperties class.
@@ -12783,7 +12783,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Tile" /> <c>&lt;a:tile></c></description></item>
     /// </list>
     /// </remark>
-    public partial class BlipFill : TypedOpenXmlCompositeElement
+    public partial class BlipFill : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the BlipFill class.
@@ -12904,7 +12904,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class NonVisualGraphicFrameDrawingProperties : TypedOpenXmlCompositeElement
+    public partial class NonVisualGraphicFrameDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the NonVisualGraphicFrameDrawingProperties class.
@@ -12993,7 +12993,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingProperties" /> <c>&lt;p:nvPr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class NonVisualGraphicFrameProperties : TypedOpenXmlCompositeElement
+    public partial class NonVisualGraphicFrameProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the NonVisualGraphicFrameProperties class.
@@ -13096,7 +13096,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extents" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Transform : TypedOpenXmlCompositeElement
+    public partial class Transform : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Transform class.
@@ -13218,7 +13218,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class NonVisualGroupShapeDrawingProperties : TypedOpenXmlCompositeElement
+    public partial class NonVisualGroupShapeDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the NonVisualGroupShapeDrawingProperties class.
@@ -13705,7 +13705,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Level9ParagraphProperties" /> <c>&lt;a:lvl9pPr></c></description></item>
     /// </list>
     /// </remark>
-    public abstract partial class TextListStyleType : TypedOpenXmlCompositeElement
+    public abstract partial class TextListStyleType : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TextListStyleType class.
@@ -13909,7 +13909,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ExtensionList" /> <c>&lt;p:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SlideLayoutId : TypedOpenXmlCompositeElement
+    public partial class SlideLayoutId : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SlideLayoutId class.
@@ -14019,7 +14019,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ShapeTree" /> <c>&lt;p:spTree></c></description></item>
     /// </list>
     /// </remark>
-    public partial class CommonSlideData : TypedOpenXmlCompositeElement
+    public partial class CommonSlideData : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the CommonSlideData class.
@@ -14157,7 +14157,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:tag.</para>
     /// </summary>
-    public partial class Tag : TypedOpenXmlLeafElement
+    public partial class Tag : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Tag class.
@@ -14259,7 +14259,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class NormalViewPortionType : TypedOpenXmlLeafElement
+    public abstract partial class NormalViewPortionType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the NormalViewPortionType class.
@@ -14313,7 +14313,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ScaleY" /> <c>&lt;a:sy></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ScaleFactor : TypedOpenXmlCompositeElement
+    public partial class ScaleFactor : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ScaleFactor class.
@@ -14442,7 +14442,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class Point2DType : TypedOpenXmlLeafElement
+    public abstract partial class Point2DType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Point2DType class.
@@ -14500,7 +14500,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ScaleFactor" /> <c>&lt;p:scale></c></description></item>
     /// </list>
     /// </remark>
-    public partial class CommonViewProperties : TypedOpenXmlCompositeElement
+    public partial class CommonViewProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the CommonViewProperties class.
@@ -14593,7 +14593,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:sld.</para>
     /// </summary>
-    public partial class OutlineViewSlideListEntry : TypedOpenXmlLeafElement
+    public partial class OutlineViewSlideListEntry : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the OutlineViewSlideListEntry class.
@@ -14653,7 +14653,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.OutlineViewSlideListEntry" /> <c>&lt;p:sld></c></description></item>
     /// </list>
     /// </remark>
-    public partial class OutlineViewSlideList : TypedOpenXmlCompositeElement
+    public partial class OutlineViewSlideList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the OutlineViewSlideList class.
@@ -14706,7 +14706,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:guide.</para>
     /// </summary>
-    public partial class Guide : TypedOpenXmlLeafElement
+    public partial class Guide : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Guide class.
@@ -14762,7 +14762,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Guide" /> <c>&lt;p:guide></c></description></item>
     /// </list>
     /// </remark>
-    public partial class GuideList : TypedOpenXmlCompositeElement
+    public partial class GuideList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the GuideList class.
@@ -14822,7 +14822,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.GuideList" /> <c>&lt;p:guideLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class CommonSlideViewProperties : TypedOpenXmlCompositeElement
+    public partial class CommonSlideViewProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the CommonSlideViewProperties class.
@@ -14945,7 +14945,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.RestoredTop" /> <c>&lt;p:restoredTop></c></description></item>
     /// </list>
     /// </remark>
-    public partial class NormalViewProperties : TypedOpenXmlCompositeElement
+    public partial class NormalViewProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the NormalViewProperties class.
@@ -15110,7 +15110,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ExtensionList" /> <c>&lt;p:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SlideViewProperties : TypedOpenXmlCompositeElement
+    public partial class SlideViewProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SlideViewProperties class.
@@ -15199,7 +15199,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.OutlineViewSlideList" /> <c>&lt;p:sldLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class OutlineViewProperties : TypedOpenXmlCompositeElement
+    public partial class OutlineViewProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the OutlineViewProperties class.
@@ -15302,7 +15302,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ExtensionList" /> <c>&lt;p:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class NotesTextViewProperties : TypedOpenXmlCompositeElement
+    public partial class NotesTextViewProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the NotesTextViewProperties class.
@@ -15390,7 +15390,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ExtensionList" /> <c>&lt;p:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SorterViewProperties : TypedOpenXmlCompositeElement
+    public partial class SorterViewProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SorterViewProperties class.
@@ -15490,7 +15490,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ExtensionList" /> <c>&lt;p:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class NotesViewProperties : TypedOpenXmlCompositeElement
+    public partial class NotesViewProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the NotesViewProperties class.
@@ -15619,7 +15619,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class PositiveSize2DType : TypedOpenXmlLeafElement
+    public abstract partial class PositiveSize2DType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the PositiveSize2DType class.
@@ -15678,7 +15678,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.CommentRelationship" /> <c>&lt;p188:commentRel></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SlideExtension : TypedOpenXmlCompositeElement
+    public partial class SlideExtension : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SlideExtension class.
@@ -15758,7 +15758,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.CreationId" /> <c>&lt;p14:creationId></c></description></item>
     /// </list>
     /// </remark>
-    public partial class CommonSlideDataExtension : TypedOpenXmlCompositeElement
+    public partial class CommonSlideDataExtension : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the CommonSlideDataExtension class.
@@ -15836,7 +15836,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.ShowMediaControls" /> <c>&lt;p14:showMediaCtrls></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ShowPropertiesExtension : TypedOpenXmlCompositeElement
+    public partial class ShowPropertiesExtension : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ShowPropertiesExtension class.
@@ -15920,7 +15920,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.NonVisualPictureProperties" /> <c>&lt;p:nvPicPr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Picture : TypedOpenXmlCompositeElement
+    public partial class Picture : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Picture class.
@@ -16052,7 +16052,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ExtensionList" /> <c>&lt;p:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class OleObjectEmbed : TypedOpenXmlCompositeElement
+    public partial class OleObjectEmbed : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the OleObjectEmbed class.
@@ -16139,7 +16139,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ExtensionList" /> <c>&lt;p:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class OleObjectLink : TypedOpenXmlCompositeElement
+    public partial class OleObjectLink : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the OleObjectLink class.
@@ -16265,7 +16265,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.PowerPoint.PresetTransition" /> <c>&lt;p15:prstTrans></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Transition : TypedOpenXmlCompositeElement
+    public partial class Transition : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Transition class.
@@ -16473,7 +16473,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.TimeNodeList" /> <c>&lt;p:tnLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Timing : TypedOpenXmlCompositeElement
+    public partial class Timing : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Timing class.
@@ -16575,7 +16575,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.SlideExtension" /> <c>&lt;p:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SlideExtensionList : TypedOpenXmlCompositeElement
+    public partial class SlideExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SlideExtensionList class.
@@ -16635,7 +16635,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.BackgroundProperties" /> <c>&lt;p:bgPr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Background : TypedOpenXmlCompositeElement
+    public partial class Background : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Background class.
@@ -16905,7 +16905,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Shape" /> <c>&lt;p:sp></c></description></item>
     /// </list>
     /// </remark>
-    public abstract partial class GroupShapeType : TypedOpenXmlCompositeElement
+    public abstract partial class GroupShapeType : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the GroupShapeType class.
@@ -16991,7 +16991,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CustomerDataTags" /> <c>&lt;p:tags></c></description></item>
     /// </list>
     /// </remark>
-    public partial class CustomerDataList : TypedOpenXmlCompositeElement
+    public partial class CustomerDataList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the CustomerDataList class.
@@ -17052,7 +17052,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Control" /> <c>&lt;p:control></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ControlList : TypedOpenXmlCompositeElement
+    public partial class ControlList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ControlList class.
@@ -17111,7 +17111,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CommonSlideDataExtension" /> <c>&lt;p:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class CommonSlideDataExtensionList : TypedOpenXmlCompositeElement
+    public partial class CommonSlideDataExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the CommonSlideDataExtensionList class.
@@ -17172,7 +17172,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingProperties" /> <c>&lt;p:nvPr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class NonVisualGroupShapeProperties : TypedOpenXmlCompositeElement
+    public partial class NonVisualGroupShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the NonVisualGroupShapeProperties class.
@@ -17284,7 +17284,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SolidFill" /> <c>&lt;a:solidFill></c></description></item>
     /// </list>
     /// </remark>
-    public partial class GroupShapeProperties : TypedOpenXmlCompositeElement
+    public partial class GroupShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the GroupShapeProperties class.
@@ -17407,7 +17407,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.NonVisualShapeProperties" /> <c>&lt;p:nvSpPr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Shape : TypedOpenXmlCompositeElement
+    public partial class Shape : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Shape class.
@@ -17554,7 +17554,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.NonVisualGraphicFrameProperties" /> <c>&lt;p:nvGraphicFramePr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class GraphicFrame : TypedOpenXmlCompositeElement
+    public partial class GraphicFrame : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the GraphicFrame class.
@@ -17674,7 +17674,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ExtensionListWithModification" /> <c>&lt;p:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ConnectionShape : TypedOpenXmlCompositeElement
+    public partial class ConnectionShape : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ConnectionShape class.
@@ -17791,7 +17791,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ShowPropertiesExtension" /> <c>&lt;p:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ShowPropertiesExtensionList : TypedOpenXmlCompositeElement
+    public partial class ShowPropertiesExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ShowPropertiesExtensionList class.
@@ -17854,7 +17854,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.TextElement" /> <c>&lt;p:txEl></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ShapeTarget : TypedOpenXmlCompositeElement
+    public partial class ShapeTarget : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ShapeTarget class.
@@ -18046,7 +18046,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class TimeListSubShapeIdType : TypedOpenXmlLeafElement
+    public abstract partial class TimeListSubShapeIdType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the TimeListSubShapeIdType class.
@@ -18088,7 +18088,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.PowerPoint.PresenceInfo" /> <c>&lt;p15:presenceInfo></c></description></item>
     /// </list>
     /// </remark>
-    public partial class CommentAuthorExtension : TypedOpenXmlCompositeElement
+    public partial class CommentAuthorExtension : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the CommentAuthorExtension class.
@@ -18164,7 +18164,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.PowerPoint.ThreadingInfo" /> <c>&lt;p15:threadingInfo></c></description></item>
     /// </list>
     /// </remark>
-    public partial class CommentExtension : TypedOpenXmlCompositeElement
+    public partial class CommentExtension : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the CommentExtension class.
@@ -18240,7 +18240,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.PowerPoint.SlideGuideList" /> <c>&lt;p15:sldGuideLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SlideLayoutExtension : TypedOpenXmlCompositeElement
+    public partial class SlideLayoutExtension : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SlideLayoutExtension class.
@@ -18316,7 +18316,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.PowerPoint.SlideGuideList" /> <c>&lt;p15:sldGuideLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SlideMasterExtension : TypedOpenXmlCompositeElement
+    public partial class SlideMasterExtension : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SlideMasterExtension class.
@@ -18392,7 +18392,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.PowerPoint.SlideGuideList" /> <c>&lt;p15:sldGuideLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class HandoutMasterExtension : TypedOpenXmlCompositeElement
+    public partial class HandoutMasterExtension : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the HandoutMasterExtension class.
@@ -18468,7 +18468,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.PowerPoint.SlideGuideList" /> <c>&lt;p15:sldGuideLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class NotesMasterExtension : TypedOpenXmlCompositeElement
+    public partial class NotesMasterExtension : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the NotesMasterExtension class.
@@ -18544,7 +18544,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ExtensionListWithModification" /> <c>&lt;p:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PlaceholderShape : TypedOpenXmlCompositeElement
+    public partial class PlaceholderShape : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the PlaceholderShape class.
@@ -18681,7 +18681,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingPropertiesExtension" /> <c>&lt;p:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ApplicationNonVisualDrawingPropertiesExtensionList : TypedOpenXmlCompositeElement
+    public partial class ApplicationNonVisualDrawingPropertiesExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ApplicationNonVisualDrawingPropertiesExtensionList class.
@@ -18741,7 +18741,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.ModificationId" /> <c>&lt;p14:modId></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ApplicationNonVisualDrawingPropertiesExtension : TypedOpenXmlCompositeElement
+    public partial class ApplicationNonVisualDrawingPropertiesExtension : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ApplicationNonVisualDrawingPropertiesExtension class.
@@ -18820,7 +18820,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.TimeAbsolute" /> <c>&lt;p:tmAbs></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Iterate : TypedOpenXmlCompositeElement
+    public partial class Iterate : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Iterate class.
@@ -19109,7 +19109,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.SequenceTimeNode" /> <c>&lt;p:seq></c></description></item>
     /// </list>
     /// </remark>
-    public abstract partial class TimeTypeListType : TypedOpenXmlCompositeElement
+    public abstract partial class TimeTypeListType : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TimeTypeListType class.
@@ -19172,7 +19172,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.TimeAnimateValue" /> <c>&lt;p:tav></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TimeAnimateValueList : TypedOpenXmlCompositeElement
+    public partial class TimeAnimateValueList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TimeAnimateValueList class.
@@ -19321,7 +19321,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class TimeListType : TypedOpenXmlLeafElement
+    public abstract partial class TimeListType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the TimeListType class.
@@ -19376,7 +19376,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CommentAuthorExtension" /> <c>&lt;p:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class CommentAuthorExtensionList : TypedOpenXmlCompositeElement
+    public partial class CommentAuthorExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the CommentAuthorExtensionList class.
@@ -19435,7 +19435,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CommentExtension" /> <c>&lt;p:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class CommentExtensionList : TypedOpenXmlCompositeElement
+    public partial class CommentExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the CommentExtensionList class.
@@ -19494,7 +19494,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.SlideMasterId" /> <c>&lt;p:sldMasterId></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SlideMasterIdList : TypedOpenXmlCompositeElement
+    public partial class SlideMasterIdList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SlideMasterIdList class.
@@ -19553,7 +19553,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.NotesMasterId" /> <c>&lt;p:notesMasterId></c></description></item>
     /// </list>
     /// </remark>
-    public partial class NotesMasterIdList : TypedOpenXmlCompositeElement
+    public partial class NotesMasterIdList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the NotesMasterIdList class.
@@ -19625,7 +19625,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.HandoutMasterId" /> <c>&lt;p:handoutMasterId></c></description></item>
     /// </list>
     /// </remark>
-    public partial class HandoutMasterIdList : TypedOpenXmlCompositeElement
+    public partial class HandoutMasterIdList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the HandoutMasterIdList class.
@@ -19697,7 +19697,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.SlideId" /> <c>&lt;p:sldId></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SlideIdList : TypedOpenXmlCompositeElement
+    public partial class SlideIdList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SlideIdList class.
@@ -19750,7 +19750,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:sldSz.</para>
     /// </summary>
-    public partial class SlideSize : TypedOpenXmlLeafElement
+    public partial class SlideSize : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the SlideSize class.
@@ -19825,7 +19825,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.EmbeddedFont" /> <c>&lt;p:embeddedFont></c></description></item>
     /// </list>
     /// </remark>
-    public partial class EmbeddedFontList : TypedOpenXmlCompositeElement
+    public partial class EmbeddedFontList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the EmbeddedFontList class.
@@ -19884,7 +19884,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CustomShow" /> <c>&lt;p:custShow></c></description></item>
     /// </list>
     /// </remark>
-    public partial class CustomShowList : TypedOpenXmlCompositeElement
+    public partial class CustomShowList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the CustomShowList class.
@@ -19943,7 +19943,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ExtensionList" /> <c>&lt;p:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PhotoAlbum : TypedOpenXmlCompositeElement
+    public partial class PhotoAlbum : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the PhotoAlbum class.
@@ -20060,7 +20060,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:kinsoku.</para>
     /// </summary>
-    public partial class Kinsoku : TypedOpenXmlLeafElement
+    public partial class Kinsoku : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Kinsoku class.
@@ -20124,7 +20124,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:modifyVerifier.</para>
     /// </summary>
-    public partial class ModificationVerifier : TypedOpenXmlLeafElement
+    public partial class ModificationVerifier : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ModificationVerifier class.
@@ -20375,7 +20375,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.PresentationExtension" /> <c>&lt;p:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PresentationExtensionList : TypedOpenXmlCompositeElement
+    public partial class PresentationExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the PresentationExtensionList class.
@@ -20437,7 +20437,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.PowerPoint.NotesGuideList" /> <c>&lt;p15:notesGuideLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PresentationExtension : TypedOpenXmlCompositeElement
+    public partial class PresentationExtension : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the PresentationExtension class.
@@ -20522,7 +20522,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.SlideRange" /> <c>&lt;p:sldRg></c></description></item>
     /// </list>
     /// </remark>
-    public partial class HtmlPublishProperties : TypedOpenXmlCompositeElement
+    public partial class HtmlPublishProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the HtmlPublishProperties class.
@@ -20636,7 +20636,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ExtensionList" /> <c>&lt;p:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class WebProperties : TypedOpenXmlCompositeElement
+    public partial class WebProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the WebProperties class.
@@ -20814,7 +20814,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ExtensionList" /> <c>&lt;p:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PrintingProperties : TypedOpenXmlCompositeElement
+    public partial class PrintingProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the PrintingProperties class.
@@ -20955,7 +20955,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ShowPropertiesExtensionList" /> <c>&lt;p:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ShowProperties : TypedOpenXmlCompositeElement
+    public partial class ShowProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ShowProperties class.
@@ -21090,7 +21090,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SystemColor" /> <c>&lt;a:sysClr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ColorMostRecentlyUsed : TypedOpenXmlCompositeElement
+    public partial class ColorMostRecentlyUsed : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ColorMostRecentlyUsed class.
@@ -21177,7 +21177,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.PresentationPropertiesExtension" /> <c>&lt;p:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PresentationPropertiesExtensionList : TypedOpenXmlCompositeElement
+    public partial class PresentationPropertiesExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the PresentationPropertiesExtensionList class.
@@ -21239,7 +21239,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.PowerPoint.ChartTrackingReferenceBased" /> <c>&lt;p15:chartTrackingRefBased></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PresentationPropertiesExtension : TypedOpenXmlCompositeElement
+    public partial class PresentationPropertiesExtension : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the PresentationPropertiesExtension class.
@@ -21321,7 +21321,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ExtensionListWithModification" /> <c>&lt;p:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class HeaderFooter : TypedOpenXmlCompositeElement
+    public partial class HeaderFooter : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the HeaderFooter class.
@@ -21438,7 +21438,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.SlideLayoutExtension" /> <c>&lt;p:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SlideLayoutExtensionList : TypedOpenXmlCompositeElement
+    public partial class SlideLayoutExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SlideLayoutExtensionList class.
@@ -21497,7 +21497,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.SlideLayoutId" /> <c>&lt;p:sldLayoutId></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SlideLayoutIdList : TypedOpenXmlCompositeElement
+    public partial class SlideLayoutIdList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SlideLayoutIdList class.
@@ -21559,7 +21559,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ExtensionList" /> <c>&lt;p:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TextStyles : TypedOpenXmlCompositeElement
+    public partial class TextStyles : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TextStyles class.
@@ -21676,7 +21676,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.SlideMasterExtension" /> <c>&lt;p:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SlideMasterExtensionList : TypedOpenXmlCompositeElement
+    public partial class SlideMasterExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SlideMasterExtensionList class.
@@ -21735,7 +21735,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.HandoutMasterExtension" /> <c>&lt;p:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class HandoutMasterExtensionList : TypedOpenXmlCompositeElement
+    public partial class HandoutMasterExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the HandoutMasterExtensionList class.
@@ -21794,7 +21794,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.NotesMasterExtension" /> <c>&lt;p:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class NotesMasterExtensionList : TypedOpenXmlCompositeElement
+    public partial class NotesMasterExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the NotesMasterExtensionList class.
@@ -21847,7 +21847,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:oleChartEl.</para>
     /// </summary>
-    public partial class OleChartElement : TypedOpenXmlLeafElement
+    public partial class OleChartElement : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the OleChartElement class.
@@ -21905,7 +21905,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ParagraphIndexRange" /> <c>&lt;p:pRg></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TextElement : TypedOpenXmlCompositeElement
+    public partial class TextElement : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TextElement class.
@@ -21993,7 +21993,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagram" /> <c>&lt;a:dgm></c></description></item>
     /// </list>
     /// </remark>
-    public partial class GraphicElement : TypedOpenXmlCompositeElement
+    public partial class GraphicElement : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the GraphicElement class.
@@ -22170,7 +22170,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class OrientationTransitionType : TypedOpenXmlLeafElement
+    public abstract partial class OrientationTransitionType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the OrientationTransitionType class.
@@ -22253,7 +22253,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class EightDirectionTransitionType : TypedOpenXmlLeafElement
+    public abstract partial class EightDirectionTransitionType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the EightDirectionTransitionType class.
@@ -22340,7 +22340,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class OptionalBlackTransitionType : TypedOpenXmlLeafElement
+    public abstract partial class OptionalBlackTransitionType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the OptionalBlackTransitionType class.
@@ -22420,7 +22420,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class SideDirectionTransitionType : TypedOpenXmlLeafElement
+    public abstract partial class SideDirectionTransitionType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the SideDirectionTransitionType class.
@@ -22455,7 +22455,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:split.</para>
     /// </summary>
-    public partial class SplitTransition : TypedOpenXmlLeafElement
+    public partial class SplitTransition : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the SplitTransition class.
@@ -22508,7 +22508,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:strips.</para>
     /// </summary>
-    public partial class StripsTransition : TypedOpenXmlLeafElement
+    public partial class StripsTransition : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the StripsTransition class.
@@ -22547,7 +22547,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:wheel.</para>
     /// </summary>
-    public partial class WheelTransition : TypedOpenXmlLeafElement
+    public partial class WheelTransition : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the WheelTransition class.
@@ -22583,7 +22583,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:zoom.</para>
     /// </summary>
-    public partial class ZoomTransition : TypedOpenXmlLeafElement
+    public partial class ZoomTransition : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ZoomTransition class.
@@ -22629,7 +22629,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.StartSoundAction" /> <c>&lt;p:stSnd></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SoundAction : TypedOpenXmlCompositeElement
+    public partial class SoundAction : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SoundAction class.

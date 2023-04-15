@@ -30,7 +30,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D.AnimationProperties" /> <c>&lt;a3danim:animPr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class EmbeddedAnimation : TypedOpenXmlCompositeElement
+    public partial class EmbeddedAnimation : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the EmbeddedAnimation class.
@@ -127,7 +127,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a3danim:posterFrame.</para>
     /// </summary>
-    public partial class PosterFrame : TypedOpenXmlLeafElement
+    public partial class PosterFrame : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the PosterFrame class.
@@ -187,7 +187,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Animation.OfficeArtExtensionList" /> <c>&lt;aanim:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class AnimationProperties : TypedOpenXmlCompositeElement
+    public partial class AnimationProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the AnimationProperties class.
@@ -348,7 +348,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Animation.Model3D
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extension" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class OfficeArtExtensionList : TypedOpenXmlCompositeElement
+    public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the OfficeArtExtensionList class.

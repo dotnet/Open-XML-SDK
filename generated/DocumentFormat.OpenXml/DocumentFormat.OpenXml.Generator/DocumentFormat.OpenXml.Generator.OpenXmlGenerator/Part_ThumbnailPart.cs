@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the ThumbnailPart
     /// </summary>
-    public partial class ThumbnailPart : TypedOpenXmlPart
+    public partial class ThumbnailPart : OpenXmlPart
     {
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/package/2006/relationships/metadata/thumbnail";
 

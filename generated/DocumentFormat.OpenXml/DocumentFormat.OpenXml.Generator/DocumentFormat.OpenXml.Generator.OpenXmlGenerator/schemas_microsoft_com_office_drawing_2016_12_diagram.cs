@@ -42,7 +42,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram12
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Transform2D" /> <c>&lt;a:xfrm></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ShapeProperties : TypedOpenXmlCompositeElement
+    public partial class ShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ShapeProperties class.
@@ -186,7 +186,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram12
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Level9ParagraphProperties" /> <c>&lt;a:lvl9pPr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TextListStyleType : TypedOpenXmlCompositeElement
+    public partial class TextListStyleType : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TextListStyleType class.

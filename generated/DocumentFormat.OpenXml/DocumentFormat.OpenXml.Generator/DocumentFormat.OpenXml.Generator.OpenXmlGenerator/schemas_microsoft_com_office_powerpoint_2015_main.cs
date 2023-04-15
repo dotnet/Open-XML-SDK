@@ -21,7 +21,7 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p16:designElem.</para>
     /// </summary>
-    public partial class DesignElement : TypedOpenXmlLeafElement
+    public partial class DesignElement : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the DesignElement class.

@@ -5,15 +5,9 @@ namespace DocumentFormat.OpenXml.Generator.Models;
 
 public class Part
 {
-    private string _base = null!;
-
     public string Name { get; set; } = null!;
 
-    public string Base
-    {
-        get => _base;
-        set => _base = value.Equals("OpenXmlPart") ? "TypedOpenXmlPart" : value;
-    }
+    public string Base { get; set; } = null!;
 
     public bool IsPackage => string.Equals(Base, "OpenXmlPackage", StringComparison.Ordinal);
 

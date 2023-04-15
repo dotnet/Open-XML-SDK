@@ -32,7 +32,7 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CoverPageProps.CompanyEmailAddress" /> <c>&lt;cppr:CompanyEmail></c></description></item>
     /// </list>
     /// </remark>
-    public partial class CoverPageProperties : TypedOpenXmlCompositeElement
+    public partial class CoverPageProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the CoverPageProperties class.
@@ -173,7 +173,7 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cppr:PublishDate.</para>
     /// </summary>
-    public partial class PublishDate : TypedOpenXmlLeafTextElement
+    public partial class PublishDate : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the PublishDate class.
@@ -210,7 +210,7 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cppr:Abstract.</para>
     /// </summary>
-    public partial class DocumentAbstract : TypedOpenXmlLeafTextElement
+    public partial class DocumentAbstract : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the DocumentAbstract class.
@@ -247,7 +247,7 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cppr:CompanyAddress.</para>
     /// </summary>
-    public partial class CompanyAddress : TypedOpenXmlLeafTextElement
+    public partial class CompanyAddress : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the CompanyAddress class.
@@ -284,7 +284,7 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cppr:CompanyPhone.</para>
     /// </summary>
-    public partial class CompanyPhoneNumber : TypedOpenXmlLeafTextElement
+    public partial class CompanyPhoneNumber : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the CompanyPhoneNumber class.
@@ -321,7 +321,7 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cppr:CompanyFax.</para>
     /// </summary>
-    public partial class CompanyFaxNumber : TypedOpenXmlLeafTextElement
+    public partial class CompanyFaxNumber : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the CompanyFaxNumber class.
@@ -358,7 +358,7 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cppr:CompanyEmail.</para>
     /// </summary>
-    public partial class CompanyEmailAddress : TypedOpenXmlLeafTextElement
+    public partial class CompanyEmailAddress : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the CompanyEmailAddress class.

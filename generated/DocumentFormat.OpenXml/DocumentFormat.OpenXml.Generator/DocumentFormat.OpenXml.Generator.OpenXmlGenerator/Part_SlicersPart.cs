@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the SlicersPart
     /// </summary>
-    public partial class SlicersPart : TypedOpenXmlPart, IFixedContentTypePart
+    public partial class SlicersPart : OpenXmlPart, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.ms-excel.slicer+xml";
         internal const string RelationshipTypeConstant = "http://schemas.microsoft.com/office/2007/relationships/slicer";

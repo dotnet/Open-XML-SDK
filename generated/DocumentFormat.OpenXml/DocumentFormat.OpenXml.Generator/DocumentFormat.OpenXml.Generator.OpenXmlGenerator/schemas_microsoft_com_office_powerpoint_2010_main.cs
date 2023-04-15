@@ -33,7 +33,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.ApplicationNonVisualDrawingProperties" /> <c>&lt;p14:nvPr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class NonVisualContentPartProperties : TypedOpenXmlCompositeElement
+    public partial class NonVisualContentPartProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the NonVisualContentPartProperties class.
@@ -137,7 +137,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extents" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Transform2D : TypedOpenXmlCompositeElement
+    public partial class Transform2D : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Transform2D class.
@@ -259,7 +259,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Extension" /> <c>&lt;p:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ExtensionListModify : TypedOpenXmlCompositeElement
+    public partial class ExtensionListModify : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ExtensionListModify class.
@@ -340,7 +340,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.MediaTrim" /> <c>&lt;p14:trim></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Media : TypedOpenXmlCompositeElement
+    public partial class Media : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Media class.
@@ -533,7 +533,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class SideDirectionTransitionType : TypedOpenXmlLeafElement
+    public abstract partial class SideDirectionTransitionType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the SideDirectionTransitionType class.
@@ -693,7 +693,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class LeftRightDirectionTransitionType : TypedOpenXmlLeafElement
+    public abstract partial class LeftRightDirectionTransitionType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the LeftRightDirectionTransitionType class.
@@ -728,7 +728,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:ripple.</para>
     /// </summary>
-    public partial class RippleTransition : TypedOpenXmlLeafElement
+    public partial class RippleTransition : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the RippleTransition class.
@@ -822,7 +822,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class EmptyType : TypedOpenXmlLeafElement
+    public abstract partial class EmptyType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the EmptyType class.
@@ -842,7 +842,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:prism.</para>
     /// </summary>
-    public partial class PrismTransition : TypedOpenXmlLeafElement
+    public partial class PrismTransition : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the PrismTransition class.
@@ -954,7 +954,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class OrientationTransitionType : TypedOpenXmlLeafElement
+    public abstract partial class OrientationTransitionType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the OrientationTransitionType class.
@@ -989,7 +989,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:glitter.</para>
     /// </summary>
-    public partial class GlitterTransition : TypedOpenXmlLeafElement
+    public partial class GlitterTransition : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the GlitterTransition class.
@@ -1043,7 +1043,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:warp.</para>
     /// </summary>
-    public partial class WarpTransition : TypedOpenXmlLeafElement
+    public partial class WarpTransition : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the WarpTransition class.
@@ -1083,7 +1083,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:flythrough.</para>
     /// </summary>
-    public partial class FlythroughTransition : TypedOpenXmlLeafElement
+    public partial class FlythroughTransition : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the FlythroughTransition class.
@@ -1134,7 +1134,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:shred.</para>
     /// </summary>
-    public partial class ShredTransition : TypedOpenXmlLeafElement
+    public partial class ShredTransition : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ShredTransition class.
@@ -1188,7 +1188,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:reveal.</para>
     /// </summary>
-    public partial class RevealTransition : TypedOpenXmlLeafElement
+    public partial class RevealTransition : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the RevealTransition class.
@@ -1239,7 +1239,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:wheelReverse.</para>
     /// </summary>
-    public partial class WheelReverseTransition : TypedOpenXmlLeafElement
+    public partial class WheelReverseTransition : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the WheelReverseTransition class.
@@ -1276,7 +1276,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:bmkTgt.</para>
     /// </summary>
-    public partial class BookmarkTarget : TypedOpenXmlLeafElement
+    public partial class BookmarkTarget : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the BookmarkTarget class.
@@ -1336,7 +1336,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.SectionOld" /> <c>&lt;p14:section></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SectionProperties : TypedOpenXmlCompositeElement
+    public partial class SectionProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SectionProperties class.
@@ -1396,7 +1396,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.Section" /> <c>&lt;p14:section></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SectionList : TypedOpenXmlCompositeElement
+    public partial class SectionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SectionList class.
@@ -1450,7 +1450,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:browseMode.</para>
     /// </summary>
-    public partial class BrowseMode : TypedOpenXmlLeafElement
+    public partial class BrowseMode : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the BrowseMode class.
@@ -1498,7 +1498,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SystemColor" /> <c>&lt;a:sysClr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class LaserColor : TypedOpenXmlCompositeElement
+    public partial class LaserColor : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the LaserColor class.
@@ -1646,7 +1646,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:defaultImageDpi.</para>
     /// </summary>
-    public partial class DefaultImageDpi : TypedOpenXmlLeafElement
+    public partial class DefaultImageDpi : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the DefaultImageDpi class.
@@ -1686,7 +1686,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:discardImageEditData.</para>
     /// </summary>
-    public partial class DiscardImageEditData : TypedOpenXmlLeafElement
+    public partial class DiscardImageEditData : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the DiscardImageEditData class.
@@ -1726,7 +1726,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:showMediaCtrls.</para>
     /// </summary>
-    public partial class ShowMediaControls : TypedOpenXmlLeafElement
+    public partial class ShowMediaControls : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ShowMediaControls class.
@@ -1772,7 +1772,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.TracePointList" /> <c>&lt;p14:tracePtLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class LaserTraceList : TypedOpenXmlCompositeElement
+    public partial class LaserTraceList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the LaserTraceList class.
@@ -1876,7 +1876,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class RandomIdType : TypedOpenXmlLeafElement
+    public abstract partial class RandomIdType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the RandomIdType class.
@@ -1923,7 +1923,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.TriggerEventRecord" /> <c>&lt;p14:triggerEvt></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ShowEventRecordList : TypedOpenXmlCompositeElement
+    public partial class ShowEventRecordList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ShowEventRecordList class.
@@ -2091,7 +2091,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class NonVisualDrawingProperties : TypedOpenXmlCompositeElement
+    public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the NonVisualDrawingProperties class.
@@ -2257,7 +2257,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks" /> <c>&lt;a14:cpLocks></c></description></item>
     /// </list>
     /// </remark>
-    public partial class NonVisualInkContentPartProperties : TypedOpenXmlCompositeElement
+    public partial class NonVisualInkContentPartProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the NonVisualInkContentPartProperties class.
@@ -2364,7 +2364,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.PlaceholderShape" /> <c>&lt;p:ph></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ApplicationNonVisualDrawingProperties : TypedOpenXmlCompositeElement
+    public partial class ApplicationNonVisualDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ApplicationNonVisualDrawingProperties class.
@@ -2474,7 +2474,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:bmk.</para>
     /// </summary>
-    public partial class MediaBookmark : TypedOpenXmlLeafElement
+    public partial class MediaBookmark : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the MediaBookmark class.
@@ -2524,7 +2524,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:trim.</para>
     /// </summary>
-    public partial class MediaTrim : TypedOpenXmlLeafElement
+    public partial class MediaTrim : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the MediaTrim class.
@@ -2572,7 +2572,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:fade.</para>
     /// </summary>
-    public partial class MediaFade : TypedOpenXmlLeafElement
+    public partial class MediaFade : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the MediaFade class.
@@ -2626,7 +2626,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.MediaBookmark" /> <c>&lt;p14:bmk></c></description></item>
     /// </list>
     /// </remark>
-    public partial class MediaBookmarkList : TypedOpenXmlCompositeElement
+    public partial class MediaBookmarkList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the MediaBookmarkList class.
@@ -2686,7 +2686,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Extension" /> <c>&lt;p:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ExtensionList : TypedOpenXmlCompositeElement
+    public partial class ExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ExtensionList class.
@@ -2752,7 +2752,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.ExtensionList" /> <c>&lt;p14:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SectionOld : TypedOpenXmlCompositeElement
+    public partial class SectionOld : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SectionOld class.
@@ -2859,7 +2859,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:sldId.</para>
     /// </summary>
-    public partial class SectionSlideIdListEntry : TypedOpenXmlLeafElement
+    public partial class SectionSlideIdListEntry : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the SectionSlideIdListEntry class.
@@ -2906,7 +2906,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.SectionSlideIdListEntry" /> <c>&lt;p14:sldId></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SectionSlideIdList : TypedOpenXmlCompositeElement
+    public partial class SectionSlideIdList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SectionSlideIdList class.
@@ -2967,7 +2967,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.SectionSlideIdList" /> <c>&lt;p14:sldIdLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Section : TypedOpenXmlCompositeElement
+    public partial class Section : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Section class.
@@ -3075,7 +3075,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:tracePt.</para>
     /// </summary>
-    public partial class TracePoint : TypedOpenXmlLeafElement
+    public partial class TracePoint : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the TracePoint class.
@@ -3151,7 +3151,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.TracePoint" /> <c>&lt;p14:tracePt></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TracePointList : TypedOpenXmlCompositeElement
+    public partial class TracePointList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TracePointList class.
@@ -3205,7 +3205,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:triggerEvt.</para>
     /// </summary>
-    public partial class TriggerEventRecord : TypedOpenXmlLeafElement
+    public partial class TriggerEventRecord : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the TriggerEventRecord class.
@@ -3374,7 +3374,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class MediaPlaybackEventRecordType : TypedOpenXmlLeafElement
+    public abstract partial class MediaPlaybackEventRecordType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the MediaPlaybackEventRecordType class.
@@ -3423,7 +3423,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:seekEvt.</para>
     /// </summary>
-    public partial class SeekEventRecord : TypedOpenXmlLeafElement
+    public partial class SeekEventRecord : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the SeekEventRecord class.
@@ -3491,7 +3491,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p14:nullEvt.</para>
     /// </summary>
-    public partial class NullEventRecord : TypedOpenXmlLeafElement
+    public partial class NullEventRecord : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the NullEventRecord class.

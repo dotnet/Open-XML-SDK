@@ -21,7 +21,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a16:creationId.</para>
     /// </summary>
-    public partial class CreationId : TypedOpenXmlLeafElement
+    public partial class CreationId : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the CreationId class.
@@ -61,7 +61,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a16:predDERef.</para>
     /// </summary>
-    public partial class PredecessorDrawingElementReference : TypedOpenXmlLeafElement
+    public partial class PredecessorDrawingElementReference : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the PredecessorDrawingElementReference class.
@@ -101,7 +101,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a16:cxnDERefs.</para>
     /// </summary>
-    public partial class ConnectableReferences : TypedOpenXmlLeafElement
+    public partial class ConnectableReferences : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ConnectableReferences class.
@@ -205,7 +205,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class OpenXmlIdentifierElement : TypedOpenXmlLeafElement
+    public abstract partial class OpenXmlIdentifierElement : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the OpenXmlIdentifierElement class.

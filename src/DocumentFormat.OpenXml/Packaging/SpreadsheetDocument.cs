@@ -13,7 +13,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// Defines SpreadsheetDocument - an OpenXmlPackage represents a Spreadsheet document.
     /// </summary>
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Reliability", "CA2000:Dispose objects before losing scope", Justification = "Disposable is returned")]
-    public partial class SpreadsheetDocument : TypedOpenXmlPackage
+    public partial class SpreadsheetDocument : OpenXmlPackage
     {
         private SpreadsheetDocument()
             : base()
@@ -583,7 +583,7 @@ namespace DocumentFormat.OpenXml.Packaging
             IApplicationTypeFeature,
             IMainPartFeature
         {
-            public SpreadsheetDocumentFeatures(TypedOpenXmlPackage package)
+            public SpreadsheetDocumentFeatures(OpenXmlPackage package)
                 : base(package)
             {
             }

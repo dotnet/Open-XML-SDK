@@ -27,7 +27,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:numFmt.</para>
     /// </summary>
-    public partial class NumberingFormat : TypedOpenXmlLeafElement
+    public partial class NumberingFormat : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the NumberingFormat class.
@@ -96,7 +96,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Transform2D" /> <c>&lt;a:xfrm></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ChartShapeProperties : TypedOpenXmlCompositeElement
+    public partial class ChartShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ChartShapeProperties class.
@@ -350,7 +350,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Paragraph" /> <c>&lt;a:p></c></description></item>
     /// </list>
     /// </remark>
-    public abstract partial class TextBodyType : TypedOpenXmlCompositeElement
+    public abstract partial class TextBodyType : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TextBodyType class.
@@ -423,7 +423,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:dLblPos.</para>
     /// </summary>
-    public partial class DataLabelPosition : TypedOpenXmlLeafElement
+    public partial class DataLabelPosition : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the DataLabelPosition class.
@@ -1422,7 +1422,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class BooleanType : TypedOpenXmlLeafElement
+    public abstract partial class BooleanType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the BooleanType class.
@@ -1454,7 +1454,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:separator.</para>
     /// </summary>
-    public partial class Separator : TypedOpenXmlLeafTextElement
+    public partial class Separator : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the Separator class.
@@ -1491,7 +1491,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:name.</para>
     /// </summary>
-    public partial class TrendlineName : TypedOpenXmlLeafTextElement
+    public partial class TrendlineName : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the TrendlineName class.
@@ -1528,7 +1528,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:f.</para>
     /// </summary>
-    public partial class Formula : TypedOpenXmlLeafTextElement
+    public partial class Formula : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the Formula class.
@@ -1572,7 +1572,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ManualLayout" /> <c>&lt;c:manualLayout></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Layout : TypedOpenXmlCompositeElement
+    public partial class Layout : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Layout class.
@@ -1661,7 +1661,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.StringReference" /> <c>&lt;c:strRef></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ChartText : TypedOpenXmlCompositeElement
+    public partial class ChartText : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ChartText class.
@@ -2114,7 +2114,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
     /// </list>
     /// </remark>
-    public abstract partial class ChartLinesType : TypedOpenXmlCompositeElement
+    public abstract partial class ChartLinesType : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ChartLinesType class.
@@ -2372,7 +2372,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class UnsignedIntegerType : TypedOpenXmlLeafElement
+    public abstract partial class UnsignedIntegerType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the UnsignedIntegerType class.
@@ -2414,7 +2414,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.NumericValue" /> <c>&lt;c:v></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SeriesText : TypedOpenXmlCompositeElement
+    public partial class SeriesText : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SeriesText class.
@@ -2498,7 +2498,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:grouping.</para>
     /// </summary>
-    public partial class Grouping : TypedOpenXmlLeafElement
+    public partial class Grouping : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Grouping class.
@@ -2553,7 +2553,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Order" /> <c>&lt;c:order></c></description></item>
     /// </list>
     /// </remark>
-    public partial class LineChartSeries : TypedOpenXmlCompositeElement
+    public partial class LineChartSeries : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the LineChartSeries class.
@@ -2737,7 +2737,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Separator" /> <c>&lt;c:separator></c></description></item>
     /// </list>
     /// </remark>
-    public partial class DataLabels : TypedOpenXmlCompositeElement
+    public partial class DataLabels : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the DataLabels class.
@@ -2835,7 +2835,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:barDir.</para>
     /// </summary>
-    public partial class BarDirection : TypedOpenXmlLeafElement
+    public partial class BarDirection : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the BarDirection class.
@@ -2874,7 +2874,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:grouping.</para>
     /// </summary>
-    public partial class BarGrouping : TypedOpenXmlLeafElement
+    public partial class BarGrouping : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the BarGrouping class.
@@ -2929,7 +2929,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Order" /> <c>&lt;c:order></c></description></item>
     /// </list>
     /// </remark>
-    public partial class BarChartSeries : TypedOpenXmlCompositeElement
+    public partial class BarChartSeries : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the BarChartSeries class.
@@ -3109,7 +3109,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Order" /> <c>&lt;c:order></c></description></item>
     /// </list>
     /// </remark>
-    public partial class AreaChartSeries : TypedOpenXmlCompositeElement
+    public partial class AreaChartSeries : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the AreaChartSeries class.
@@ -3271,7 +3271,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Explosion" /> <c>&lt;c:explosion></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PieChartSeries : TypedOpenXmlCompositeElement
+    public partial class PieChartSeries : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the PieChartSeries class.
@@ -3442,7 +3442,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Order" /> <c>&lt;c:order></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SurfaceChartSeries : TypedOpenXmlCompositeElement
+    public partial class SurfaceChartSeries : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SurfaceChartSeries class.
@@ -3640,7 +3640,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.BandFormat" /> <c>&lt;c:bandFmt></c></description></item>
     /// </list>
     /// </remark>
-    public partial class BandFormats : TypedOpenXmlCompositeElement
+    public partial class BandFormats : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the BandFormats class.
@@ -3703,7 +3703,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Orientation" /> <c>&lt;c:orientation></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Scaling : TypedOpenXmlCompositeElement
+    public partial class Scaling : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Scaling class.
@@ -3829,7 +3829,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:axPos.</para>
     /// </summary>
-    public partial class AxisPosition : TypedOpenXmlLeafElement
+    public partial class AxisPosition : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the AxisPosition class.
@@ -3879,7 +3879,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartText" /> <c>&lt;c:tx></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Title : TypedOpenXmlCompositeElement
+    public partial class Title : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Title class.
@@ -4068,7 +4068,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class TickMarkType : TypedOpenXmlLeafElement
+    public abstract partial class TickMarkType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the TickMarkType class.
@@ -4100,7 +4100,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:tickLblPos.</para>
     /// </summary>
-    public partial class TickLabelPosition : TypedOpenXmlLeafElement
+    public partial class TickLabelPosition : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the TickLabelPosition class.
@@ -4136,7 +4136,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:crosses.</para>
     /// </summary>
-    public partial class Crosses : TypedOpenXmlLeafElement
+    public partial class Crosses : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Crosses class.
@@ -4493,7 +4493,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class DoubleType : TypedOpenXmlLeafElement
+    public abstract partial class DoubleType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the DoubleType class.
@@ -4548,7 +4548,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.Charts.Style" /> <c>&lt;c14:style></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ChartSpace : TypedOpenXmlPartRootElement
+    public partial class ChartSpace : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the ChartSpace class.
@@ -4709,7 +4709,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ChartDrawing.RelativeAnchorSize" /> <c>&lt;cdr:relSizeAnchor></c></description></item>
     /// </list>
     /// </remark>
-    public partial class UserShapes : TypedOpenXmlPartRootElement
+    public partial class UserShapes : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the UserShapes class.
@@ -4874,7 +4874,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class RelationshipIdType : TypedOpenXmlLeafElement
+    public abstract partial class RelationshipIdType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the RelationshipIdType class.
@@ -4912,7 +4912,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:ext.</para>
     /// </summary>
-    public partial class Extension : TypedOpenXmlCompositeElement
+    public partial class Extension : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Extension class.
@@ -4979,7 +4979,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:v.</para>
     /// </summary>
-    public partial class NumericValue : TypedOpenXmlLeafTextElement
+    public partial class NumericValue : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the NumericValue class.
@@ -5016,7 +5016,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:formatCode.</para>
     /// </summary>
-    public partial class FormatCode : TypedOpenXmlLeafTextElement
+    public partial class FormatCode : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the FormatCode class.
@@ -5053,7 +5053,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:oddHeader.</para>
     /// </summary>
-    public partial class OddHeader : TypedOpenXmlLeafTextElement
+    public partial class OddHeader : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the OddHeader class.
@@ -5090,7 +5090,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:oddFooter.</para>
     /// </summary>
-    public partial class OddFooter : TypedOpenXmlLeafTextElement
+    public partial class OddFooter : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the OddFooter class.
@@ -5127,7 +5127,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:evenHeader.</para>
     /// </summary>
-    public partial class EvenHeader : TypedOpenXmlLeafTextElement
+    public partial class EvenHeader : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the EvenHeader class.
@@ -5164,7 +5164,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:evenFooter.</para>
     /// </summary>
-    public partial class EvenFooter : TypedOpenXmlLeafTextElement
+    public partial class EvenFooter : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the EvenFooter class.
@@ -5201,7 +5201,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:firstHeader.</para>
     /// </summary>
-    public partial class FirstHeader : TypedOpenXmlLeafTextElement
+    public partial class FirstHeader : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the FirstHeader class.
@@ -5238,7 +5238,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:firstFooter.</para>
     /// </summary>
-    public partial class FirstFooter : TypedOpenXmlLeafTextElement
+    public partial class FirstFooter : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the FirstFooter class.
@@ -5275,7 +5275,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:name.</para>
     /// </summary>
-    public partial class PivotTableName : TypedOpenXmlLeafTextElement
+    public partial class PivotTableName : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the PivotTableName class.
@@ -5318,7 +5318,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.NumericValue" /> <c>&lt;c:v></c></description></item>
     /// </list>
     /// </remark>
-    public partial class NumericPoint : TypedOpenXmlCompositeElement
+    public partial class NumericPoint : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the NumericPoint class.
@@ -5418,7 +5418,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Extension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ExtensionList : TypedOpenXmlCompositeElement
+    public partial class ExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ExtensionList class.
@@ -5479,7 +5479,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Formula" /> <c>&lt;c:f></c></description></item>
     /// </list>
     /// </remark>
-    public partial class NumberReference : TypedOpenXmlCompositeElement
+    public partial class NumberReference : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the NumberReference class.
@@ -5712,7 +5712,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.FormatCode" /> <c>&lt;c:formatCode></c></description></item>
     /// </list>
     /// </remark>
-    public abstract partial class NumberDataType : TypedOpenXmlCompositeElement
+    public abstract partial class NumberDataType : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the NumberDataType class.
@@ -5792,7 +5792,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.StringPoint" /> <c>&lt;c:pt></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Level : TypedOpenXmlCompositeElement
+    public partial class Level : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Level class.
@@ -5853,7 +5853,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Formula" /> <c>&lt;c:f></c></description></item>
     /// </list>
     /// </remark>
-    public partial class MultiLevelStringReference : TypedOpenXmlCompositeElement
+    public partial class MultiLevelStringReference : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the MultiLevelStringReference class.
@@ -5957,7 +5957,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Formula" /> <c>&lt;c:f></c></description></item>
     /// </list>
     /// </remark>
-    public partial class StringReference : TypedOpenXmlCompositeElement
+    public partial class StringReference : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the StringReference class.
@@ -6185,7 +6185,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PointCount" /> <c>&lt;c:ptCount></c></description></item>
     /// </list>
     /// </remark>
-    public abstract partial class StringDataType : TypedOpenXmlCompositeElement
+    public abstract partial class StringDataType : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the StringDataType class.
@@ -6245,7 +6245,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:layoutTarget.</para>
     /// </summary>
-    public partial class LayoutTarget : TypedOpenXmlLeafElement
+    public partial class LayoutTarget : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the LayoutTarget class.
@@ -6377,7 +6377,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class LayoutModeType : TypedOpenXmlLeafElement
+    public abstract partial class LayoutModeType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the LayoutModeType class.
@@ -6424,7 +6424,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.LayoutTarget" /> <c>&lt;c:layoutTarget></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ManualLayout : TypedOpenXmlCompositeElement
+    public partial class ManualLayout : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ManualLayout class.
@@ -6625,7 +6625,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:rotX.</para>
     /// </summary>
-    public partial class RotateX : TypedOpenXmlLeafElement
+    public partial class RotateX : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the RotateX class.
@@ -6664,7 +6664,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:hPercent.</para>
     /// </summary>
-    public partial class HeightPercent : TypedOpenXmlLeafElement
+    public partial class HeightPercent : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the HeightPercent class.
@@ -6703,7 +6703,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:rotY.</para>
     /// </summary>
-    public partial class RotateY : TypedOpenXmlLeafElement
+    public partial class RotateY : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the RotateY class.
@@ -6742,7 +6742,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:depthPercent.</para>
     /// </summary>
-    public partial class DepthPercent : TypedOpenXmlLeafElement
+    public partial class DepthPercent : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the DepthPercent class.
@@ -6781,7 +6781,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:perspective.</para>
     /// </summary>
-    public partial class Perspective : TypedOpenXmlLeafElement
+    public partial class Perspective : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Perspective class.
@@ -6820,7 +6820,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:symbol.</para>
     /// </summary>
-    public partial class Symbol : TypedOpenXmlLeafElement
+    public partial class Symbol : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Symbol class.
@@ -6859,7 +6859,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:size.</para>
     /// </summary>
-    public partial class Size : TypedOpenXmlLeafElement
+    public partial class Size : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Size class.
@@ -6907,7 +6907,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Symbol" /> <c>&lt;c:symbol></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Marker : TypedOpenXmlCompositeElement
+    public partial class Marker : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Marker class.
@@ -7028,7 +7028,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PictureStackUnit" /> <c>&lt;c:pictureStackUnit></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PictureOptions : TypedOpenXmlCompositeElement
+    public partial class PictureOptions : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the PictureOptions class.
@@ -7154,7 +7154,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:trendlineType.</para>
     /// </summary>
-    public partial class TrendlineType : TypedOpenXmlLeafElement
+    public partial class TrendlineType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the TrendlineType class.
@@ -7190,7 +7190,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:order.</para>
     /// </summary>
-    public partial class PolynomialOrder : TypedOpenXmlLeafElement
+    public partial class PolynomialOrder : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the PolynomialOrder class.
@@ -7231,7 +7231,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:period.</para>
     /// </summary>
-    public partial class Period : TypedOpenXmlLeafElement
+    public partial class Period : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Period class.
@@ -7282,7 +7282,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartText" /> <c>&lt;c:tx></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TrendlineLabel : TypedOpenXmlCompositeElement
+    public partial class TrendlineLabel : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TrendlineLabel class.
@@ -7423,7 +7423,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:errDir.</para>
     /// </summary>
-    public partial class ErrorDirection : TypedOpenXmlLeafElement
+    public partial class ErrorDirection : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ErrorDirection class.
@@ -7462,7 +7462,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:errBarType.</para>
     /// </summary>
-    public partial class ErrorBarType : TypedOpenXmlLeafElement
+    public partial class ErrorBarType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ErrorBarType class.
@@ -7501,7 +7501,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:errValType.</para>
     /// </summary>
-    public partial class ErrorBarValueType : TypedOpenXmlLeafElement
+    public partial class ErrorBarValueType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ErrorBarValueType class.
@@ -7862,7 +7862,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.NumberReference" /> <c>&lt;c:numRef></c></description></item>
     /// </list>
     /// </remark>
-    public abstract partial class NumberDataSourceType : TypedOpenXmlCompositeElement
+    public abstract partial class NumberDataSourceType : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the NumberDataSourceType class.
@@ -7982,7 +7982,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class GapAmountType : TypedOpenXmlLeafElement
+    public abstract partial class GapAmountType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the GapAmountType class.
@@ -8139,7 +8139,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
     /// </list>
     /// </remark>
-    public abstract partial class UpDownBarType : TypedOpenXmlCompositeElement
+    public abstract partial class UpDownBarType : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the UpDownBarType class.
@@ -8197,7 +8197,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:ofPieType.</para>
     /// </summary>
-    public partial class OfPieType : TypedOpenXmlLeafElement
+    public partial class OfPieType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the OfPieType class.
@@ -8236,7 +8236,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:splitType.</para>
     /// </summary>
-    public partial class SplitType : TypedOpenXmlLeafElement
+    public partial class SplitType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the SplitType class.
@@ -8281,7 +8281,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.SecondPiePoint" /> <c>&lt;c:secondPiePt></c></description></item>
     /// </list>
     /// </remark>
-    public partial class CustomSplit : TypedOpenXmlCompositeElement
+    public partial class CustomSplit : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the CustomSplit class.
@@ -8334,7 +8334,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:secondPieSize.</para>
     /// </summary>
-    public partial class SecondPieSize : TypedOpenXmlLeafElement
+    public partial class SecondPieSize : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the SecondPieSize class.
@@ -8380,7 +8380,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Index" /> <c>&lt;c:idx></c></description></item>
     /// </list>
     /// </remark>
-    public partial class BandFormat : TypedOpenXmlCompositeElement
+    public partial class BandFormat : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the BandFormat class.
@@ -8461,7 +8461,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:pictureFormat.</para>
     /// </summary>
-    public partial class PictureFormat : TypedOpenXmlLeafElement
+    public partial class PictureFormat : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the PictureFormat class.
@@ -8500,7 +8500,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:pictureStackUnit.</para>
     /// </summary>
-    public partial class PictureStackUnit : TypedOpenXmlLeafElement
+    public partial class PictureStackUnit : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the PictureStackUnit class.
@@ -8540,7 +8540,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:builtInUnit.</para>
     /// </summary>
-    public partial class BuiltInUnit : TypedOpenXmlLeafElement
+    public partial class BuiltInUnit : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the BuiltInUnit class.
@@ -8585,7 +8585,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartText" /> <c>&lt;c:tx></c></description></item>
     /// </list>
     /// </remark>
-    public partial class DisplayUnitsLabel : TypedOpenXmlCompositeElement
+    public partial class DisplayUnitsLabel : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the DisplayUnitsLabel class.
@@ -8696,7 +8696,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:logBase.</para>
     /// </summary>
-    public partial class LogBase : TypedOpenXmlLeafElement
+    public partial class LogBase : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the LogBase class.
@@ -8736,7 +8736,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:orientation.</para>
     /// </summary>
-    public partial class Orientation : TypedOpenXmlLeafElement
+    public partial class Orientation : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Orientation class.
@@ -8782,7 +8782,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Index" /> <c>&lt;c:idx></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PivotFormat : TypedOpenXmlCompositeElement
+    public partial class PivotFormat : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the PivotFormat class.
@@ -8908,7 +8908,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:legendPos.</para>
     /// </summary>
-    public partial class LegendPosition : TypedOpenXmlLeafElement
+    public partial class LegendPosition : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the LegendPosition class.
@@ -8953,7 +8953,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Index" /> <c>&lt;c:idx></c></description></item>
     /// </list>
     /// </remark>
-    public partial class LegendEntry : TypedOpenXmlCompositeElement
+    public partial class LegendEntry : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the LegendEntry class.
@@ -9045,7 +9045,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.FirstFooter" /> <c>&lt;c:firstFooter></c></description></item>
     /// </list>
     /// </remark>
-    public partial class HeaderFooter : TypedOpenXmlCompositeElement
+    public partial class HeaderFooter : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the HeaderFooter class.
@@ -9220,7 +9220,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:pageMargins.</para>
     /// </summary>
-    public partial class PageMargins : TypedOpenXmlLeafElement
+    public partial class PageMargins : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the PageMargins class.
@@ -9335,7 +9335,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:pageSetup.</para>
     /// </summary>
-    public partial class PageSetup : TypedOpenXmlLeafElement
+    public partial class PageSetup : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the PageSetup class.
@@ -9481,7 +9481,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Transform2D" /> <c>&lt;a:xfrm></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ShapeProperties : TypedOpenXmlCompositeElement
+    public partial class ShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ShapeProperties class.
@@ -9629,7 +9629,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Separator" /> <c>&lt;c:separator></c></description></item>
     /// </list>
     /// </remark>
-    public partial class DataLabel : TypedOpenXmlCompositeElement
+    public partial class DataLabel : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the DataLabel class.
@@ -9752,7 +9752,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.AxisId" /> <c>&lt;c:axId></c></description></item>
     /// </list>
     /// </remark>
-    public partial class AreaChart : TypedOpenXmlCompositeElement
+    public partial class AreaChart : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the AreaChart class.
@@ -9862,7 +9862,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.AxisId" /> <c>&lt;c:axId></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Area3DChart : TypedOpenXmlCompositeElement
+    public partial class Area3DChart : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Area3DChart class.
@@ -9977,7 +9977,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.UpDownBars" /> <c>&lt;c:upDownBars></c></description></item>
     /// </list>
     /// </remark>
-    public partial class LineChart : TypedOpenXmlCompositeElement
+    public partial class LineChart : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the LineChart class.
@@ -10095,7 +10095,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.AxisId" /> <c>&lt;c:axId></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Line3DChart : TypedOpenXmlCompositeElement
+    public partial class Line3DChart : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Line3DChart class.
@@ -10206,7 +10206,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.UpDownBars" /> <c>&lt;c:upDownBars></c></description></item>
     /// </list>
     /// </remark>
-    public partial class StockChart : TypedOpenXmlCompositeElement
+    public partial class StockChart : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the StockChart class.
@@ -10282,7 +10282,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.AxisId" /> <c>&lt;c:axId></c></description></item>
     /// </list>
     /// </remark>
-    public partial class RadarChart : TypedOpenXmlCompositeElement
+    public partial class RadarChart : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the RadarChart class.
@@ -10382,7 +10382,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.AxisId" /> <c>&lt;c:axId></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ScatterChart : TypedOpenXmlCompositeElement
+    public partial class ScatterChart : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ScatterChart class.
@@ -10481,7 +10481,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PieChartSeries" /> <c>&lt;c:ser></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PieChart : TypedOpenXmlCompositeElement
+    public partial class PieChart : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the PieChart class.
@@ -10570,7 +10570,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PieChartSeries" /> <c>&lt;c:ser></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Pie3DChart : TypedOpenXmlCompositeElement
+    public partial class Pie3DChart : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Pie3DChart class.
@@ -10659,7 +10659,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PieChartSeries" /> <c>&lt;c:ser></c></description></item>
     /// </list>
     /// </remark>
-    public partial class DoughnutChart : TypedOpenXmlCompositeElement
+    public partial class DoughnutChart : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the DoughnutChart class.
@@ -10756,7 +10756,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.AxisId" /> <c>&lt;c:axId></c></description></item>
     /// </list>
     /// </remark>
-    public partial class BarChart : TypedOpenXmlCompositeElement
+    public partial class BarChart : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the BarChart class.
@@ -10887,7 +10887,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.AxisId" /> <c>&lt;c:axId></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Bar3DChart : TypedOpenXmlCompositeElement
+    public partial class Bar3DChart : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Bar3DChart class.
@@ -11019,7 +11019,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.SplitType" /> <c>&lt;c:splitType></c></description></item>
     /// </list>
     /// </remark>
-    public partial class OfPieChart : TypedOpenXmlCompositeElement
+    public partial class OfPieChart : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the OfPieChart class.
@@ -11134,7 +11134,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.AxisId" /> <c>&lt;c:axId></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SurfaceChart : TypedOpenXmlCompositeElement
+    public partial class SurfaceChart : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SurfaceChart class.
@@ -11225,7 +11225,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.AxisId" /> <c>&lt;c:axId></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Surface3DChart : TypedOpenXmlCompositeElement
+    public partial class Surface3DChart : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Surface3DChart class.
@@ -11328,7 +11328,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.AxisId" /> <c>&lt;c:axId></c></description></item>
     /// </list>
     /// </remark>
-    public partial class BubbleChart : TypedOpenXmlCompositeElement
+    public partial class BubbleChart : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the BubbleChart class.
@@ -11436,7 +11436,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ValAxExtensionList" /> <c>&lt;c:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ValueAxis : TypedOpenXmlCompositeElement
+    public partial class ValueAxis : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ValueAxis class.
@@ -11748,7 +11748,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.CrossingAxis" /> <c>&lt;c:crossAx></c></description></item>
     /// </list>
     /// </remark>
-    public partial class CategoryAxis : TypedOpenXmlCompositeElement
+    public partial class CategoryAxis : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the CategoryAxis class.
@@ -12065,7 +12065,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.CrossingAxis" /> <c>&lt;c:crossAx></c></description></item>
     /// </list>
     /// </remark>
-    public partial class DateAxis : TypedOpenXmlCompositeElement
+    public partial class DateAxis : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the DateAxis class.
@@ -12379,7 +12379,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.CrossingAxis" /> <c>&lt;c:crossAx></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SeriesAxis : TypedOpenXmlCompositeElement
+    public partial class SeriesAxis : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SeriesAxis class.
@@ -12671,7 +12671,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ExtensionList" /> <c>&lt;c:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class DataTable : TypedOpenXmlCompositeElement
+    public partial class DataTable : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the DataTable class.
@@ -12827,7 +12827,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:firstSliceAng.</para>
     /// </summary>
-    public partial class FirstSliceAngle : TypedOpenXmlLeafElement
+    public partial class FirstSliceAngle : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the FirstSliceAngle class.
@@ -12866,7 +12866,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:holeSize.</para>
     /// </summary>
-    public partial class HoleSize : TypedOpenXmlLeafElement
+    public partial class HoleSize : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the HoleSize class.
@@ -12912,7 +12912,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.NumericValue" /> <c>&lt;c:v></c></description></item>
     /// </list>
     /// </remark>
-    public partial class StringPoint : TypedOpenXmlCompositeElement
+    public partial class StringPoint : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the StringPoint class.
@@ -12995,7 +12995,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:thickness.</para>
     /// </summary>
-    public partial class Thickness : TypedOpenXmlLeafElement
+    public partial class Thickness : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Thickness class.
@@ -13040,7 +13040,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredLineSeriesExtension" /> <c>&lt;c15:filteredLineSeries></c></description></item>
     /// </list>
     /// </remark>
-    public partial class StockChartExtension : TypedOpenXmlCompositeElement
+    public partial class StockChartExtension : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the StockChartExtension class.
@@ -13116,7 +13116,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredPieSeries" /> <c>&lt;c15:filteredPieSeries></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PieChartExtension : TypedOpenXmlCompositeElement
+    public partial class PieChartExtension : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the PieChartExtension class.
@@ -13192,7 +13192,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredPieSeries" /> <c>&lt;c15:filteredPieSeries></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Pie3DChartExtension : TypedOpenXmlCompositeElement
+    public partial class Pie3DChartExtension : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Pie3DChartExtension class.
@@ -13270,7 +13270,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.LevelReference" /> <c>&lt;c15:levelRef></c></description></item>
     /// </list>
     /// </remark>
-    public partial class NumRefExtension : TypedOpenXmlCompositeElement
+    public partial class NumRefExtension : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the NumRefExtension class.
@@ -13350,7 +13350,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.AutoGeneneratedCategories" /> <c>&lt;c15:autoCat></c></description></item>
     /// </list>
     /// </remark>
-    public partial class StrDataExtension : TypedOpenXmlCompositeElement
+    public partial class StrDataExtension : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the StrDataExtension class.
@@ -13428,7 +13428,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.LevelReference" /> <c>&lt;c15:levelRef></c></description></item>
     /// </list>
     /// </remark>
-    public partial class StrRefExtension : TypedOpenXmlCompositeElement
+    public partial class StrRefExtension : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the StrRefExtension class.
@@ -13510,7 +13510,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.LevelReference" /> <c>&lt;c15:levelRef></c></description></item>
     /// </list>
     /// </remark>
-    public partial class MultiLvlStrRefExtension : TypedOpenXmlCompositeElement
+    public partial class MultiLvlStrRefExtension : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the MultiLvlStrRefExtension class.
@@ -13594,7 +13594,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelFieldTable" /> <c>&lt;c15:dlblFieldTable></c></description></item>
     /// </list>
     /// </remark>
-    public partial class DLblExtension : TypedOpenXmlCompositeElement
+    public partial class DLblExtension : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the DLblExtension class.
@@ -13684,7 +13684,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelFieldTable" /> <c>&lt;c15:dlblFieldTable></c></description></item>
     /// </list>
     /// </remark>
-    public partial class DLblsExtension : TypedOpenXmlCompositeElement
+    public partial class DLblsExtension : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the DLblsExtension class.
@@ -13775,7 +13775,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange" /> <c>&lt;c15:datalabelsRange></c></description></item>
     /// </list>
     /// </remark>
-    public partial class LineSerExtension : TypedOpenXmlCompositeElement
+    public partial class LineSerExtension : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the LineSerExtension class.
@@ -13860,7 +13860,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange" /> <c>&lt;c15:datalabelsRange></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ScatterSerExtension : TypedOpenXmlCompositeElement
+    public partial class ScatterSerExtension : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ScatterSerExtension class.
@@ -13945,7 +13945,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange" /> <c>&lt;c15:datalabelsRange></c></description></item>
     /// </list>
     /// </remark>
-    public partial class RadarSerExtension : TypedOpenXmlCompositeElement
+    public partial class RadarSerExtension : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the RadarSerExtension class.
@@ -14030,7 +14030,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange" /> <c>&lt;c15:datalabelsRange></c></description></item>
     /// </list>
     /// </remark>
-    public partial class AreaSerExtension : TypedOpenXmlCompositeElement
+    public partial class AreaSerExtension : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the AreaSerExtension class.
@@ -14115,7 +14115,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange" /> <c>&lt;c15:datalabelsRange></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PieSerExtension : TypedOpenXmlCompositeElement
+    public partial class PieSerExtension : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the PieSerExtension class.
@@ -14199,7 +14199,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle" /> <c>&lt;c15:filteredSeriesTitle></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SurfaceSerExtension : TypedOpenXmlCompositeElement
+    public partial class SurfaceSerExtension : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SurfaceSerExtension class.
@@ -14279,7 +14279,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredLineSeriesExtension" /> <c>&lt;c15:filteredLineSeries></c></description></item>
     /// </list>
     /// </remark>
-    public partial class LineChartExtension : TypedOpenXmlCompositeElement
+    public partial class LineChartExtension : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the LineChartExtension class.
@@ -14355,7 +14355,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredLineSeriesExtension" /> <c>&lt;c15:filteredLineSeries></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Line3DChartExtension : TypedOpenXmlCompositeElement
+    public partial class Line3DChartExtension : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Line3DChartExtension class.
@@ -14431,7 +14431,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredScatterSeries" /> <c>&lt;c15:filteredScatterSeries></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ScatterChartExtension : TypedOpenXmlCompositeElement
+    public partial class ScatterChartExtension : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ScatterChartExtension class.
@@ -14507,7 +14507,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredRadarSeries" /> <c>&lt;c15:filteredRadarSeries></c></description></item>
     /// </list>
     /// </remark>
-    public partial class RadarChartExtension : TypedOpenXmlCompositeElement
+    public partial class RadarChartExtension : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the RadarChartExtension class.
@@ -14583,7 +14583,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredBarSeries" /> <c>&lt;c15:filteredBarSeries></c></description></item>
     /// </list>
     /// </remark>
-    public partial class BarChartExtension : TypedOpenXmlCompositeElement
+    public partial class BarChartExtension : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the BarChartExtension class.
@@ -14659,7 +14659,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredBarSeries" /> <c>&lt;c15:filteredBarSeries></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Bar3DChartExtension : TypedOpenXmlCompositeElement
+    public partial class Bar3DChartExtension : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Bar3DChartExtension class.
@@ -14735,7 +14735,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredAreaSeries" /> <c>&lt;c15:filteredAreaSeries></c></description></item>
     /// </list>
     /// </remark>
-    public partial class AreaChartExtension : TypedOpenXmlCompositeElement
+    public partial class AreaChartExtension : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the AreaChartExtension class.
@@ -14811,7 +14811,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredAreaSeries" /> <c>&lt;c15:filteredAreaSeries></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Area3DChartExtension : TypedOpenXmlCompositeElement
+    public partial class Area3DChartExtension : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Area3DChartExtension class.
@@ -14887,7 +14887,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredBubbleSeries" /> <c>&lt;c15:filteredBubbleSeries></c></description></item>
     /// </list>
     /// </remark>
-    public partial class BubbleChartExtension : TypedOpenXmlCompositeElement
+    public partial class BubbleChartExtension : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the BubbleChartExtension class.
@@ -14963,7 +14963,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSurfaceSeries" /> <c>&lt;c15:filteredSurfaceSeries></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SurfaceChartExtension : TypedOpenXmlCompositeElement
+    public partial class SurfaceChartExtension : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SurfaceChartExtension class.
@@ -15039,7 +15039,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSurfaceSeries" /> <c>&lt;c15:filteredSurfaceSeries></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Surface3DChartExtension : TypedOpenXmlCompositeElement
+    public partial class Surface3DChartExtension : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Surface3DChartExtension class.
@@ -15115,7 +15115,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.NumberingFormat" /> <c>&lt;c15:numFmt></c></description></item>
     /// </list>
     /// </remark>
-    public partial class CatAxExtension : TypedOpenXmlCompositeElement
+    public partial class CatAxExtension : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the CatAxExtension class.
@@ -15191,7 +15191,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.NumberingFormat" /> <c>&lt;c15:numFmt></c></description></item>
     /// </list>
     /// </remark>
-    public partial class DateAxExtension : TypedOpenXmlCompositeElement
+    public partial class DateAxExtension : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the DateAxExtension class.
@@ -15267,7 +15267,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.NumberingFormat" /> <c>&lt;c15:numFmt></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SerAxExtension : TypedOpenXmlCompositeElement
+    public partial class SerAxExtension : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SerAxExtension class.
@@ -15343,7 +15343,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.NumberingFormat" /> <c>&lt;c15:numFmt></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ValAxExtension : TypedOpenXmlCompositeElement
+    public partial class ValAxExtension : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ValAxExtension class.
@@ -15422,7 +15422,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.DownBars" /> <c>&lt;c:downBars></c></description></item>
     /// </list>
     /// </remark>
-    public partial class UpDownBars : TypedOpenXmlCompositeElement
+    public partial class UpDownBars : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the UpDownBars class.
@@ -15539,7 +15539,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.StockChartExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class StockChartExtensionList : TypedOpenXmlCompositeElement
+    public partial class StockChartExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the StockChartExtensionList class.
@@ -15598,7 +15598,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PieChartExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PieChartExtensionList : TypedOpenXmlCompositeElement
+    public partial class PieChartExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the PieChartExtensionList class.
@@ -15657,7 +15657,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Pie3DChartExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Pie3DChartExtensionList : TypedOpenXmlCompositeElement
+    public partial class Pie3DChartExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Pie3DChartExtensionList class.
@@ -15716,7 +15716,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.NumRefExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class NumRefExtensionList : TypedOpenXmlCompositeElement
+    public partial class NumRefExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the NumRefExtensionList class.
@@ -15775,7 +15775,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.StrDataExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class StrDataExtensionList : TypedOpenXmlCompositeElement
+    public partial class StrDataExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the StrDataExtensionList class.
@@ -15834,7 +15834,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.StrRefExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class StrRefExtensionList : TypedOpenXmlCompositeElement
+    public partial class StrRefExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the StrRefExtensionList class.
@@ -15895,7 +15895,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PointCount" /> <c>&lt;c:ptCount></c></description></item>
     /// </list>
     /// </remark>
-    public partial class MultiLevelStringCache : TypedOpenXmlCompositeElement
+    public partial class MultiLevelStringCache : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the MultiLevelStringCache class.
@@ -15971,7 +15971,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.MultiLvlStrRefExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class MultiLvlStrRefExtensionList : TypedOpenXmlCompositeElement
+    public partial class MultiLvlStrRefExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the MultiLvlStrRefExtensionList class.
@@ -16030,7 +16030,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.DLblExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class DLblExtensionList : TypedOpenXmlCompositeElement
+    public partial class DLblExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the DLblExtensionList class.
@@ -16089,7 +16089,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.DLblsExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class DLblsExtensionList : TypedOpenXmlCompositeElement
+    public partial class DLblsExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the DLblsExtensionList class.
@@ -16155,7 +16155,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Explosion" /> <c>&lt;c:explosion></c></description></item>
     /// </list>
     /// </remark>
-    public partial class DataPoint : TypedOpenXmlCompositeElement
+    public partial class DataPoint : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the DataPoint class.
@@ -16343,7 +16343,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.TrendlineName" /> <c>&lt;c:name></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Trendline : TypedOpenXmlCompositeElement
+    public partial class Trendline : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Trendline class.
@@ -16588,7 +16588,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Minus" /> <c>&lt;c:minus></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ErrorBars : TypedOpenXmlCompositeElement
+    public partial class ErrorBars : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ErrorBars class.
@@ -16922,7 +16922,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.StringReference" /> <c>&lt;c:strRef></c></description></item>
     /// </list>
     /// </remark>
-    public abstract partial class AxisDataSourceType : TypedOpenXmlCompositeElement
+    public abstract partial class AxisDataSourceType : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the AxisDataSourceType class.
@@ -17042,7 +17042,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.LineSerExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class LineSerExtensionList : TypedOpenXmlCompositeElement
+    public partial class LineSerExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the LineSerExtensionList class.
@@ -17101,7 +17101,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ScatterSerExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ScatterSerExtensionList : TypedOpenXmlCompositeElement
+    public partial class ScatterSerExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ScatterSerExtensionList class.
@@ -17160,7 +17160,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.RadarSerExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class RadarSerExtensionList : TypedOpenXmlCompositeElement
+    public partial class RadarSerExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the RadarSerExtensionList class.
@@ -17213,7 +17213,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:shape.</para>
     /// </summary>
-    public partial class Shape : TypedOpenXmlLeafElement
+    public partial class Shape : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Shape class.
@@ -17255,7 +17255,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.BarSerExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class BarSerExtensionList : TypedOpenXmlCompositeElement
+    public partial class BarSerExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the BarSerExtensionList class.
@@ -17318,7 +17318,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange" /> <c>&lt;c15:datalabelsRange></c></description></item>
     /// </list>
     /// </remark>
-    public partial class BarSerExtension : TypedOpenXmlCompositeElement
+    public partial class BarSerExtension : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the BarSerExtension class.
@@ -17402,7 +17402,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.AreaSerExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class AreaSerExtensionList : TypedOpenXmlCompositeElement
+    public partial class AreaSerExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the AreaSerExtensionList class.
@@ -17461,7 +17461,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PieSerExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PieSerExtensionList : TypedOpenXmlCompositeElement
+    public partial class PieSerExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the PieSerExtensionList class.
@@ -17520,7 +17520,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.BubbleSerExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class BubbleSerExtensionList : TypedOpenXmlCompositeElement
+    public partial class BubbleSerExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the BubbleSerExtensionList class.
@@ -17582,7 +17582,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange" /> <c>&lt;c15:datalabelsRange></c></description></item>
     /// </list>
     /// </remark>
-    public partial class BubbleSerExtension : TypedOpenXmlCompositeElement
+    public partial class BubbleSerExtension : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the BubbleSerExtension class.
@@ -17664,7 +17664,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.SurfaceSerExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SurfaceSerExtensionList : TypedOpenXmlCompositeElement
+    public partial class SurfaceSerExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SurfaceSerExtensionList class.
@@ -17723,7 +17723,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.LineChartExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class LineChartExtensionList : TypedOpenXmlCompositeElement
+    public partial class LineChartExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the LineChartExtensionList class.
@@ -17782,7 +17782,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Line3DChartExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Line3DChartExtensionList : TypedOpenXmlCompositeElement
+    public partial class Line3DChartExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Line3DChartExtensionList class.
@@ -17835,7 +17835,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:scatterStyle.</para>
     /// </summary>
-    public partial class ScatterStyle : TypedOpenXmlLeafElement
+    public partial class ScatterStyle : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ScatterStyle class.
@@ -17889,7 +17889,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Order" /> <c>&lt;c:order></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ScatterChartSeries : TypedOpenXmlCompositeElement
+    public partial class ScatterChartSeries : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ScatterChartSeries class.
@@ -18043,7 +18043,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ScatterChartExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ScatterChartExtensionList : TypedOpenXmlCompositeElement
+    public partial class ScatterChartExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ScatterChartExtensionList class.
@@ -18096,7 +18096,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:radarStyle.</para>
     /// </summary>
-    public partial class RadarStyle : TypedOpenXmlLeafElement
+    public partial class RadarStyle : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the RadarStyle class.
@@ -18151,7 +18151,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Order" /> <c>&lt;c:order></c></description></item>
     /// </list>
     /// </remark>
-    public partial class RadarChartSeries : TypedOpenXmlCompositeElement
+    public partial class RadarChartSeries : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the RadarChartSeries class.
@@ -18314,7 +18314,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.RadarChartExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class RadarChartExtensionList : TypedOpenXmlCompositeElement
+    public partial class RadarChartExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the RadarChartExtensionList class.
@@ -18367,7 +18367,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:overlap.</para>
     /// </summary>
-    public partial class Overlap : TypedOpenXmlLeafElement
+    public partial class Overlap : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Overlap class.
@@ -18412,7 +18412,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.BarChartExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class BarChartExtensionList : TypedOpenXmlCompositeElement
+    public partial class BarChartExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the BarChartExtensionList class.
@@ -18471,7 +18471,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Bar3DChartExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Bar3DChartExtensionList : TypedOpenXmlCompositeElement
+    public partial class Bar3DChartExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Bar3DChartExtensionList class.
@@ -18530,7 +18530,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.AreaChartExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class AreaChartExtensionList : TypedOpenXmlCompositeElement
+    public partial class AreaChartExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the AreaChartExtensionList class.
@@ -18589,7 +18589,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Area3DChartExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Area3DChartExtensionList : TypedOpenXmlCompositeElement
+    public partial class Area3DChartExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Area3DChartExtensionList class.
@@ -18662,7 +18662,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Order" /> <c>&lt;c:order></c></description></item>
     /// </list>
     /// </remark>
-    public partial class BubbleChartSeries : TypedOpenXmlCompositeElement
+    public partial class BubbleChartSeries : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the BubbleChartSeries class.
@@ -18827,7 +18827,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:bubbleScale.</para>
     /// </summary>
-    public partial class BubbleScale : TypedOpenXmlLeafElement
+    public partial class BubbleScale : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the BubbleScale class.
@@ -18866,7 +18866,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:sizeRepresents.</para>
     /// </summary>
-    public partial class SizeRepresents : TypedOpenXmlLeafElement
+    public partial class SizeRepresents : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the SizeRepresents class.
@@ -18908,7 +18908,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.BubbleChartExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class BubbleChartExtensionList : TypedOpenXmlCompositeElement
+    public partial class BubbleChartExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the BubbleChartExtensionList class.
@@ -18967,7 +18967,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.SurfaceChartExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SurfaceChartExtensionList : TypedOpenXmlCompositeElement
+    public partial class SurfaceChartExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SurfaceChartExtensionList class.
@@ -19026,7 +19026,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Surface3DChartExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Surface3DChartExtensionList : TypedOpenXmlCompositeElement
+    public partial class Surface3DChartExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Surface3DChartExtensionList class.
@@ -19079,7 +19079,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:lblAlgn.</para>
     /// </summary>
-    public partial class LabelAlignment : TypedOpenXmlLeafElement
+    public partial class LabelAlignment : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the LabelAlignment class.
@@ -19118,7 +19118,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:lblOffset.</para>
     /// </summary>
-    public partial class LabelOffset : TypedOpenXmlLeafElement
+    public partial class LabelOffset : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the LabelOffset class.
@@ -19205,7 +19205,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class SkipType : TypedOpenXmlLeafElement
+    public abstract partial class SkipType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the SkipType class.
@@ -19247,7 +19247,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.CatAxExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class CatAxExtensionList : TypedOpenXmlCompositeElement
+    public partial class CatAxExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the CatAxExtensionList class.
@@ -19372,7 +19372,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class TimeUnitType : TypedOpenXmlLeafElement
+    public abstract partial class TimeUnitType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the TimeUnitType class.
@@ -19452,7 +19452,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class AxisUnitType : TypedOpenXmlLeafElement
+    public abstract partial class AxisUnitType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the AxisUnitType class.
@@ -19494,7 +19494,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.DateAxExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class DateAxExtensionList : TypedOpenXmlCompositeElement
+    public partial class DateAxExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the DateAxExtensionList class.
@@ -19553,7 +19553,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.SerAxExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SerAxExtensionList : TypedOpenXmlCompositeElement
+    public partial class SerAxExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SerAxExtensionList class.
@@ -19606,7 +19606,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:crossBetween.</para>
     /// </summary>
-    public partial class CrossBetween : TypedOpenXmlLeafElement
+    public partial class CrossBetween : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the CrossBetween class.
@@ -19654,7 +19654,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ExtensionList" /> <c>&lt;c:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class DisplayUnits : TypedOpenXmlCompositeElement
+    public partial class DisplayUnits : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the DisplayUnits class.
@@ -19722,7 +19722,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ValAxExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ValAxExtensionList : TypedOpenXmlCompositeElement
+    public partial class ValAxExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ValAxExtensionList class.
@@ -19775,7 +19775,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:lang.</para>
     /// </summary>
-    public partial class EditingLanguage : TypedOpenXmlLeafElement
+    public partial class EditingLanguage : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the EditingLanguage class.
@@ -19814,7 +19814,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:style.</para>
     /// </summary>
-    public partial class Style : TypedOpenXmlLeafElement
+    public partial class Style : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Style class.
@@ -19859,7 +19859,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ColorMapOverride : TypedOpenXmlCompositeElement
+    public partial class ColorMapOverride : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ColorMapOverride class.
@@ -20114,7 +20114,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PivotTableName" /> <c>&lt;c:name></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PivotSource : TypedOpenXmlCompositeElement
+    public partial class PivotSource : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the PivotSource class.
@@ -20220,7 +20220,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.UserInterface" /> <c>&lt;c:userInterface></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Protection : TypedOpenXmlCompositeElement
+    public partial class Protection : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Protection class.
@@ -20364,7 +20364,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.View3D" /> <c>&lt;c:view3D></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Chart : TypedOpenXmlCompositeElement
+    public partial class Chart : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Chart class.
@@ -20617,7 +20617,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.AutoUpdate" /> <c>&lt;c:autoUpdate></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ExternalData : TypedOpenXmlCompositeElement
+    public partial class ExternalData : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ExternalData class.
@@ -20711,7 +20711,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.LegacyDrawingHeaderFooter" /> <c>&lt;c:legacyDrawingHF></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PrintSettings : TypedOpenXmlCompositeElement
+    public partial class PrintSettings : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the PrintSettings class.
@@ -20828,7 +20828,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartSpaceExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ChartSpaceExtensionList : TypedOpenXmlCompositeElement
+    public partial class ChartSpaceExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ChartSpaceExtensionList class.
@@ -20889,7 +20889,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.Charts.SketchOptions" /> <c>&lt;c14:sketchOptions></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ChartSpaceExtension : TypedOpenXmlCompositeElement
+    public partial class ChartSpaceExtension : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ChartSpaceExtension class.
@@ -20969,7 +20969,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Chart.BooleanFalse" /> <c>&lt;c16r3:dispNaAsBlank></c></description></item>
     /// </list>
     /// </remark>
-    public partial class DataDisplayOptions16 : TypedOpenXmlCompositeElement
+    public partial class DataDisplayOptions16 : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the DataDisplayOptions16 class.
@@ -21042,7 +21042,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PivotFormat" /> <c>&lt;c:pivotFmt></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PivotFormats : TypedOpenXmlCompositeElement
+    public partial class PivotFormats : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the PivotFormats class.
@@ -21107,7 +21107,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.RotateY" /> <c>&lt;c:rotY></c></description></item>
     /// </list>
     /// </remark>
-    public partial class View3D : TypedOpenXmlCompositeElement
+    public partial class View3D : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the View3D class.
@@ -21464,7 +21464,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Thickness" /> <c>&lt;c:thickness></c></description></item>
     /// </list>
     /// </remark>
-    public abstract partial class SurfaceType : TypedOpenXmlCompositeElement
+    public abstract partial class SurfaceType : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SurfaceType class.
@@ -21593,7 +21593,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ValueAxis" /> <c>&lt;c:valAx></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PlotArea : TypedOpenXmlCompositeElement
+    public partial class PlotArea : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the PlotArea class.
@@ -21723,7 +21723,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.LegendPosition" /> <c>&lt;c:legendPos></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Legend : TypedOpenXmlCompositeElement
+    public partial class Legend : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Legend class.
@@ -21801,7 +21801,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:dispBlanksAs.</para>
     /// </summary>
-    public partial class DisplayBlanksAs : TypedOpenXmlLeafElement
+    public partial class DisplayBlanksAs : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the DisplayBlanksAs class.
@@ -21843,7 +21843,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.DataDisplayOptions16" /> <c>&lt;c:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ChartExtensionList : TypedOpenXmlCompositeElement
+    public partial class ChartExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ChartExtensionList class.

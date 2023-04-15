@@ -29,7 +29,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage.WebImageSupportingRichData" /> <c>&lt;xlrdwi:webImageSrd></c></description></item>
     /// </list>
     /// </remark>
-    public partial class WebImagesSupportingRichData : TypedOpenXmlPartRootElement
+    public partial class WebImagesSupportingRichData : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the WebImagesSupportingRichData class.
@@ -124,7 +124,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage.BlipWebImageSupportingRichDataRelationship" /> <c>&lt;xlrdwi:blip></c></description></item>
     /// </list>
     /// </remark>
-    public partial class WebImageSupportingRichData : TypedOpenXmlCompositeElement
+    public partial class WebImageSupportingRichData : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the WebImageSupportingRichData class.
@@ -227,7 +227,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Extension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ExtensionList : TypedOpenXmlCompositeElement
+    public partial class ExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ExtensionList class.
@@ -362,7 +362,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.RichDataWebImage
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class OpenXmlWebImageSupportingRichDataRelationshipElement : TypedOpenXmlLeafElement
+    public abstract partial class OpenXmlWebImageSupportingRichDataRelationshipElement : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the OpenXmlWebImageSupportingRichDataRelationshipElement class.

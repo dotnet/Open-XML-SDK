@@ -31,7 +31,7 @@ namespace DocumentFormat.OpenXml.Office.Word
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Toolbars" /> <c>&lt;wne:toolbars></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TemplateCommandGroup : TypedOpenXmlPartRootElement
+    public partial class TemplateCommandGroup : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the TemplateCommandGroup class.
@@ -127,7 +127,7 @@ namespace DocumentFormat.OpenXml.Office.Word
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Mcd" /> <c>&lt;wne:mcd></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Mcds : TypedOpenXmlCompositeElement
+    public partial class Mcds : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Mcds class.
@@ -187,7 +187,7 @@ namespace DocumentFormat.OpenXml.Office.Word
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.Mcds" /> <c>&lt;wne:mcds></c></description></item>
     /// </list>
     /// </remark>
-    public partial class VbaSuppData : TypedOpenXmlPartRootElement
+    public partial class VbaSuppData : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the VbaSuppData class.
@@ -305,7 +305,7 @@ namespace DocumentFormat.OpenXml.Office.Word
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.SingleDataSourceRecord" /> <c>&lt;wne:recipientData></c></description></item>
     /// </list>
     /// </remark>
-    public partial class MailMergeRecipients : TypedOpenXmlPartRootElement
+    public partial class MailMergeRecipients : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the MailMergeRecipients class.
@@ -358,7 +358,7 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:fci.</para>
     /// </summary>
-    public partial class FixedCommandKeyboardCustomization : TypedOpenXmlLeafElement
+    public partial class FixedCommandKeyboardCustomization : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the FixedCommandKeyboardCustomization class.
@@ -479,7 +479,7 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class MacroWllType : TypedOpenXmlLeafElement
+    public abstract partial class MacroWllType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the MacroWllType class.
@@ -562,7 +562,7 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class AcceleratorKeymapType : TypedOpenXmlLeafElement
+    public abstract partial class AcceleratorKeymapType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the AcceleratorKeymapType class.
@@ -597,7 +597,7 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:wch.</para>
     /// </summary>
-    public partial class CharacterInsertion : TypedOpenXmlLeafElement
+    public partial class CharacterInsertion : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the CharacterInsertion class.
@@ -650,7 +650,7 @@ namespace DocumentFormat.OpenXml.Office.Word
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.WllMacroKeyboardCustomization" /> <c>&lt;wne:wll></c></description></item>
     /// </list>
     /// </remark>
-    public partial class KeyMapEntry : TypedOpenXmlCompositeElement
+    public partial class KeyMapEntry : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the KeyMapEntry class.
@@ -859,7 +859,7 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:acd.</para>
     /// </summary>
-    public partial class AllocatedCommand : TypedOpenXmlLeafElement
+    public partial class AllocatedCommand : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the AllocatedCommand class.
@@ -943,7 +943,7 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:mcd.</para>
     /// </summary>
-    public partial class Mcd : TypedOpenXmlLeafElement
+    public partial class Mcd : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Mcd class.
@@ -1047,7 +1047,7 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:eventDocNew.</para>
     /// </summary>
-    public partial class EventDocNewXsdString : TypedOpenXmlLeafTextElement
+    public partial class EventDocNewXsdString : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the EventDocNewXsdString class.
@@ -1084,7 +1084,7 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:eventDocOpen.</para>
     /// </summary>
-    public partial class EventDocOpenXsdString : TypedOpenXmlLeafTextElement
+    public partial class EventDocOpenXsdString : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the EventDocOpenXsdString class.
@@ -1121,7 +1121,7 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:eventDocClose.</para>
     /// </summary>
-    public partial class EventDocCloseXsdString : TypedOpenXmlLeafTextElement
+    public partial class EventDocCloseXsdString : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the EventDocCloseXsdString class.
@@ -1158,7 +1158,7 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:eventDocSync.</para>
     /// </summary>
-    public partial class EventDocSyncXsdString : TypedOpenXmlLeafTextElement
+    public partial class EventDocSyncXsdString : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the EventDocSyncXsdString class.
@@ -1195,7 +1195,7 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:eventDocXmlAfterInsert.</para>
     /// </summary>
-    public partial class EventDocXmlAfterInsertXsdString : TypedOpenXmlLeafTextElement
+    public partial class EventDocXmlAfterInsertXsdString : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the EventDocXmlAfterInsertXsdString class.
@@ -1232,7 +1232,7 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:eventDocXmlBeforeDelete.</para>
     /// </summary>
-    public partial class EventDocXmlBeforeDeleteXsdString : TypedOpenXmlLeafTextElement
+    public partial class EventDocXmlBeforeDeleteXsdString : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the EventDocXmlBeforeDeleteXsdString class.
@@ -1269,7 +1269,7 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:eventDocContentControlAfterInsert.</para>
     /// </summary>
-    public partial class EventDocContentControlAfterInsertXsdString : TypedOpenXmlLeafTextElement
+    public partial class EventDocContentControlAfterInsertXsdString : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the EventDocContentControlAfterInsertXsdString class.
@@ -1306,7 +1306,7 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:eventDocContentControlBeforeDelete.</para>
     /// </summary>
-    public partial class EventDocContentControlBeforeDeleteXsdString : TypedOpenXmlLeafTextElement
+    public partial class EventDocContentControlBeforeDeleteXsdString : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the EventDocContentControlBeforeDeleteXsdString class.
@@ -1343,7 +1343,7 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:eventDocContentControlOnExit.</para>
     /// </summary>
-    public partial class EventDocContentControlOnExistXsdString : TypedOpenXmlLeafTextElement
+    public partial class EventDocContentControlOnExistXsdString : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the EventDocContentControlOnExistXsdString class.
@@ -1380,7 +1380,7 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:eventDocContentControlOnEnter.</para>
     /// </summary>
-    public partial class EventDocContentControlOnEnterXsdString : TypedOpenXmlLeafTextElement
+    public partial class EventDocContentControlOnEnterXsdString : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the EventDocContentControlOnEnterXsdString class.
@@ -1417,7 +1417,7 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:eventDocStoreUpdate.</para>
     /// </summary>
-    public partial class EventDocStoreUpdateXsdString : TypedOpenXmlLeafTextElement
+    public partial class EventDocStoreUpdateXsdString : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the EventDocStoreUpdateXsdString class.
@@ -1454,7 +1454,7 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:eventDocContentControlContentUpdate.</para>
     /// </summary>
-    public partial class EventDocContentControlUpdateXsdString : TypedOpenXmlLeafTextElement
+    public partial class EventDocContentControlUpdateXsdString : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the EventDocContentControlUpdateXsdString class.
@@ -1491,7 +1491,7 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:eventDocBuildingBlockAfterInsert.</para>
     /// </summary>
-    public partial class EventDocBuildingBlockAfterInsertXsdString : TypedOpenXmlLeafTextElement
+    public partial class EventDocBuildingBlockAfterInsertXsdString : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the EventDocBuildingBlockAfterInsertXsdString class.
@@ -1546,7 +1546,7 @@ namespace DocumentFormat.OpenXml.Office.Word
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.EventDocBuildingBlockAfterInsertXsdString" /> <c>&lt;wne:eventDocBuildingBlockAfterInsert></c></description></item>
     /// </list>
     /// </remark>
-    public partial class DocEvents : TypedOpenXmlCompositeElement
+    public partial class DocEvents : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the DocEvents class.
@@ -1798,7 +1798,7 @@ namespace DocumentFormat.OpenXml.Office.Word
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.AllocatedCommandManifestEntry" /> <c>&lt;wne:acdEntry></c></description></item>
     /// </list>
     /// </remark>
-    public partial class AllocatedCommandManifest : TypedOpenXmlCompositeElement
+    public partial class AllocatedCommandManifest : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the AllocatedCommandManifest class.
@@ -1851,7 +1851,7 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:toolbarData.</para>
     /// </summary>
-    public partial class ToolbarData : TypedOpenXmlLeafElement
+    public partial class ToolbarData : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ToolbarData class.
@@ -2015,7 +2015,7 @@ namespace DocumentFormat.OpenXml.Office.Word
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.KeyMapEntry" /> <c>&lt;wne:keymap></c></description></item>
     /// </list>
     /// </remark>
-    public abstract partial class KeymapsType : TypedOpenXmlCompositeElement
+    public abstract partial class KeymapsType : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the KeymapsType class.
@@ -2067,7 +2067,7 @@ namespace DocumentFormat.OpenXml.Office.Word
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.ToolbarData" /> <c>&lt;wne:toolbarData></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Toolbars : TypedOpenXmlCompositeElement
+    public partial class Toolbars : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Toolbars class.
@@ -2128,7 +2128,7 @@ namespace DocumentFormat.OpenXml.Office.Word
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.AllocatedCommand" /> <c>&lt;wne:acd></c></description></item>
     /// </list>
     /// </remark>
-    public partial class AllocatedCommands : TypedOpenXmlCompositeElement
+    public partial class AllocatedCommands : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the AllocatedCommands class.
@@ -2181,7 +2181,7 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:active.</para>
     /// </summary>
-    public partial class RecordIncluded : TypedOpenXmlLeafElement
+    public partial class RecordIncluded : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the RecordIncluded class.
@@ -2220,7 +2220,7 @@ namespace DocumentFormat.OpenXml.Office.Word
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wne:hash.</para>
     /// </summary>
-    public partial class RecordHashCode : TypedOpenXmlLeafElement
+    public partial class RecordHashCode : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the RecordHashCode class.
@@ -2269,7 +2269,7 @@ namespace DocumentFormat.OpenXml.Office.Word
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Word.RecordIncluded" /> <c>&lt;wne:active></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SingleDataSourceRecord : TypedOpenXmlCompositeElement
+    public partial class SingleDataSourceRecord : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SingleDataSourceRecord class.

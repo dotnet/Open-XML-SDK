@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the NotesMasterPart
     /// </summary>
-    public partial class NotesMasterPart : TypedOpenXmlPart, IFixedContentTypePart
+    public partial class NotesMasterPart : OpenXmlPart, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.presentationml.notesMaster+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/notesMaster";

@@ -21,7 +21,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a15:backgroundPr.</para>
     /// </summary>
-    public partial class BackgroundProperties : TypedOpenXmlLeafElement
+    public partial class BackgroundProperties : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the BackgroundProperties class.
@@ -103,7 +103,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a15:nonVisualGroupProps.</para>
     /// </summary>
-    public partial class NonVisualGroupProperties : TypedOpenXmlLeafElement
+    public partial class NonVisualGroupProperties : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the NonVisualGroupProperties class.
@@ -140,7 +140,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a15:objectPr.</para>
     /// </summary>
-    public partial class ObjectProperties : TypedOpenXmlLeafElement
+    public partial class ObjectProperties : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ObjectProperties class.
@@ -199,7 +199,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a15:signatureLine.</para>
     /// </summary>
-    public partial class SignatureLine : TypedOpenXmlLeafElement
+    public partial class SignatureLine : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the SignatureLine class.

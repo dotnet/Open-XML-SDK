@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the ExtendedFilePropertiesPart
     /// </summary>
-    public partial class ExtendedFilePropertiesPart : TypedOpenXmlPart, IFixedContentTypePart
+    public partial class ExtendedFilePropertiesPart : OpenXmlPart, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.extended-properties+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/extended-properties";

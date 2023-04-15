@@ -21,7 +21,7 @@ namespace DocumentFormat.OpenXml.Office2019.Presentation
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p184:classification.</para>
     /// </summary>
-    public partial class ClassificationOutcome : TypedOpenXmlLeafElement
+    public partial class ClassificationOutcome : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ClassificationOutcome class.

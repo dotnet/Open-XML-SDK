@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the InternationalMacroSheetPart
     /// </summary>
-    public partial class InternationalMacroSheetPart : TypedOpenXmlPart, IFixedContentTypePart
+    public partial class InternationalMacroSheetPart : OpenXmlPart, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.ms-excel.intlmacrosheet+xml";
         internal const string RelationshipTypeConstant = "http://schemas.microsoft.com/office/2006/relationships/xlIntlMacrosheet";

@@ -33,7 +33,7 @@ namespace DocumentFormat.OpenXml.Tests
                 {
                     var body = clone.MainDocumentPart.Document.Body;
                     body.InsertBefore(new Paragraph(new Run(new Text("Hello World"))), body.FirstChild);
-                    using (var temp = clone.SaveAs(file.Path))
+                    using (var temp = clone.Clone(file.Path))
                     {
                         // clean up the temp package.
                     }
@@ -100,7 +100,7 @@ namespace DocumentFormat.OpenXml.Tests
                             .InsertBeforeSelf(new Paragraph(new Run(new Text("Clone 1"))));
 
                         using (var tempFile = TemporaryFile.Create())
-                        using (var clone2 = (WordprocessingDocument)clone1.SaveAs(tempFile.Path))
+                        using (var clone2 = (WordprocessingDocument)clone1.Clone(tempFile.Path))
                         {
                             var body2 = clone2.MainDocumentPart.Document.Body;
                             body2.GetFirstChild<Paragraph>()
@@ -186,7 +186,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                         using (var tempFile = TemporaryFile.Create())
                         {
-                            using (clone.SaveAs(tempFile.Path))
+                            using (clone.Clone(tempFile.Path))
                             {
                             }
                         }
@@ -325,7 +325,7 @@ namespace DocumentFormat.OpenXml.Tests
             using (var stream = GetStream(TestFiles.Document))
             using (var source = WordprocessingDocument.Open(stream, false))
             {
-                using (source.SaveAs(tempFile.Path))
+                using (source.Clone(tempFile.Path))
                 {
                 }
 
@@ -392,7 +392,7 @@ namespace DocumentFormat.OpenXml.Tests
             using (var stream = GetStream(TestFiles.Spreadsheet))
             using (var source = SpreadsheetDocument.Open(stream, false))
             {
-                using (source.SaveAs(tempFile.Path))
+                using (source.Clone(tempFile.Path))
                 {
                 }
 
@@ -410,7 +410,7 @@ namespace DocumentFormat.OpenXml.Tests
             using (var source = PresentationDocument.Open(stream, false))
             using (var tempFile = TemporaryFile.Create())
             {
-                using (source.SaveAs(tempFile.Path))
+                using (source.Clone(tempFile.Path))
                 {
                 }
 

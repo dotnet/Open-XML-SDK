@@ -587,7 +587,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
     /// </remark>
-    public abstract partial class RunTrackChangeType : TypedOpenXmlCompositeElement
+    public abstract partial class RunTrackChangeType : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the RunTrackChangeType class.
@@ -859,7 +859,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class TrackChangeType : TypedOpenXmlLeafElement
+    public abstract partial class TrackChangeType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the TrackChangeType class.
@@ -1026,7 +1026,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class PositiveFixedPercentageType : TypedOpenXmlLeafElement
+    public abstract partial class PositiveFixedPercentageType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the PositiveFixedPercentageType class.
@@ -1066,7 +1066,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:hueMod.</para>
     /// </summary>
-    public partial class HueModulation : TypedOpenXmlLeafElement
+    public partial class HueModulation : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the HueModulation class.
@@ -1261,7 +1261,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class PercentageType : TypedOpenXmlLeafElement
+    public abstract partial class PercentageType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the PercentageType class.
@@ -1315,7 +1315,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.HueModulation" /> <c>&lt;w14:hueMod></c></description></item>
     /// </list>
     /// </remark>
-    public partial class RgbColorModelHex : TypedOpenXmlCompositeElement
+    public partial class RgbColorModelHex : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the RgbColorModelHex class.
@@ -1428,7 +1428,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.HueModulation" /> <c>&lt;w14:hueMod></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SchemeColor : TypedOpenXmlCompositeElement
+    public partial class SchemeColor : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SchemeColor class.
@@ -1525,7 +1525,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:lin.</para>
     /// </summary>
-    public partial class LinearShadeProperties : TypedOpenXmlLeafElement
+    public partial class LinearShadeProperties : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the LinearShadeProperties class.
@@ -1592,7 +1592,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.FillToRectangle" /> <c>&lt;w14:fillToRect></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PathShadeProperties : TypedOpenXmlCompositeElement
+    public partial class PathShadeProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the PathShadeProperties class.
@@ -1777,7 +1777,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class EmptyType : TypedOpenXmlLeafElement
+    public abstract partial class EmptyType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the EmptyType class.
@@ -1804,7 +1804,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RgbColorModelHex" /> <c>&lt;w14:srgbClr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SolidColorFillProperties : TypedOpenXmlCompositeElement
+    public partial class SolidColorFillProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SolidColorFillProperties class.
@@ -1900,7 +1900,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.PathShadeProperties" /> <c>&lt;w14:path></c></description></item>
     /// </list>
     /// </remark>
-    public partial class GradientFillProperties : TypedOpenXmlCompositeElement
+    public partial class GradientFillProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the GradientFillProperties class.
@@ -1977,7 +1977,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:prstDash.</para>
     /// </summary>
-    public partial class PresetLineDashProperties : TypedOpenXmlLeafElement
+    public partial class PresetLineDashProperties : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the PresetLineDashProperties class.
@@ -2020,7 +2020,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:miter.</para>
     /// </summary>
-    public partial class LineJoinMiterProperties : TypedOpenXmlLeafElement
+    public partial class LineJoinMiterProperties : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the LineJoinMiterProperties class.
@@ -2071,7 +2071,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RgbColorModelHex" /> <c>&lt;w14:srgbClr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Glow : TypedOpenXmlCompositeElement
+    public partial class Glow : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Glow class.
@@ -2185,7 +2185,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RgbColorModelHex" /> <c>&lt;w14:srgbClr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Shadow : TypedOpenXmlCompositeElement
+    public partial class Shadow : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Shadow class.
@@ -2415,7 +2415,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:reflection.</para>
     /// </summary>
-    public partial class Reflection : TypedOpenXmlLeafElement
+    public partial class Reflection : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Reflection class.
@@ -2684,7 +2684,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.SolidColorFillProperties" /> <c>&lt;w14:solidFill></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TextOutlineEffect : TypedOpenXmlCompositeElement
+    public partial class TextOutlineEffect : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TextOutlineEffect class.
@@ -2846,7 +2846,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.SolidColorFillProperties" /> <c>&lt;w14:solidFill></c></description></item>
     /// </list>
     /// </remark>
-    public partial class FillTextEffect : TypedOpenXmlCompositeElement
+    public partial class FillTextEffect : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the FillTextEffect class.
@@ -2956,7 +2956,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.LightRig" /> <c>&lt;w14:lightRig></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Scene3D : TypedOpenXmlCompositeElement
+    public partial class Scene3D : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Scene3D class.
@@ -3047,7 +3047,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.ContourColor" /> <c>&lt;w14:contourClr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Properties3D : TypedOpenXmlCompositeElement
+    public partial class Properties3D : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Properties3D class.
@@ -3214,7 +3214,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:ligatures.</para>
     /// </summary>
-    public partial class Ligatures : TypedOpenXmlLeafElement
+    public partial class Ligatures : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Ligatures class.
@@ -3258,7 +3258,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:numForm.</para>
     /// </summary>
-    public partial class NumberingFormat : TypedOpenXmlLeafElement
+    public partial class NumberingFormat : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the NumberingFormat class.
@@ -3302,7 +3302,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:numSpacing.</para>
     /// </summary>
-    public partial class NumberSpacing : TypedOpenXmlLeafElement
+    public partial class NumberSpacing : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the NumberSpacing class.
@@ -3352,7 +3352,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.StyleSet" /> <c>&lt;w14:styleSet></c></description></item>
     /// </list>
     /// </remark>
-    public partial class StylisticSets : TypedOpenXmlCompositeElement
+    public partial class StylisticSets : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the StylisticSets class.
@@ -3506,7 +3506,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class OnOffType : TypedOpenXmlLeafElement
+    public abstract partial class OnOffType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the OnOffType class.
@@ -3552,7 +3552,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.WordNonVisualContentPartShapeProperties" /> <c>&lt;w14:nvContentPartPr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ContentPart : TypedOpenXmlCompositeElement
+    public partial class ContentPart : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ContentPart class.
@@ -3685,7 +3685,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:docId.</para>
     /// </summary>
-    public partial class DocumentId : TypedOpenXmlLeafElement
+    public partial class DocumentId : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the DocumentId class.
@@ -3781,7 +3781,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class MarkupType : TypedOpenXmlLeafElement
+    public abstract partial class MarkupType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the MarkupType class.
@@ -3824,7 +3824,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:defaultImageDpi.</para>
     /// </summary>
-    public partial class DefaultImageDpi : TypedOpenXmlLeafElement
+    public partial class DefaultImageDpi : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the DefaultImageDpi class.
@@ -3876,7 +3876,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.UncheckedState" /> <c>&lt;w14:uncheckedState></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SdtContentCheckBox : TypedOpenXmlCompositeElement
+    public partial class SdtContentCheckBox : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SdtContentCheckBox class.
@@ -3980,7 +3980,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RgbColorModelHex" /> <c>&lt;w14:srgbClr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class GradientStop : TypedOpenXmlCompositeElement
+    public partial class GradientStop : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the GradientStop class.
@@ -4088,7 +4088,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:fillToRect.</para>
     /// </summary>
-    public partial class FillToRectangle : TypedOpenXmlLeafElement
+    public partial class FillToRectangle : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the FillToRectangle class.
@@ -4188,7 +4188,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.GradientStop" /> <c>&lt;w14:gs></c></description></item>
     /// </list>
     /// </remark>
-    public partial class GradientStopList : TypedOpenXmlCompositeElement
+    public partial class GradientStopList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the GradientStopList class.
@@ -4242,7 +4242,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:rot.</para>
     /// </summary>
-    public partial class SphereCoordinates : TypedOpenXmlLeafElement
+    public partial class SphereCoordinates : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the SphereCoordinates class.
@@ -4325,7 +4325,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:camera.</para>
     /// </summary>
-    public partial class Camera : TypedOpenXmlLeafElement
+    public partial class Camera : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Camera class.
@@ -4376,7 +4376,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.SphereCoordinates" /> <c>&lt;w14:rot></c></description></item>
     /// </list>
     /// </remark>
-    public partial class LightRig : TypedOpenXmlCompositeElement
+    public partial class LightRig : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the LightRig class.
@@ -4532,7 +4532,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class BevelType : TypedOpenXmlLeafElement
+    public abstract partial class BevelType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the BevelType class.
@@ -4748,7 +4748,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.RgbColorModelHex" /> <c>&lt;w14:srgbClr></c></description></item>
     /// </list>
     /// </remark>
-    public abstract partial class ColorType : TypedOpenXmlCompositeElement
+    public abstract partial class ColorType : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ColorType class.
@@ -4820,7 +4820,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w14:styleSet.</para>
     /// </summary>
-    public partial class StyleSet : TypedOpenXmlLeafElement
+    public partial class StyleSet : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the StyleSet class.
@@ -4932,7 +4932,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class CheckBoxSymbolType : TypedOpenXmlLeafElement
+    public abstract partial class CheckBoxSymbolType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the CheckBoxSymbolType class.
@@ -4996,7 +4996,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class NonVisualDrawingProperties : TypedOpenXmlCompositeElement
+    public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the NonVisualDrawingProperties class.
@@ -5162,7 +5162,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks" /> <c>&lt;a14:cpLocks></c></description></item>
     /// </list>
     /// </remark>
-    public partial class NonVisualInkContentPartProperties : TypedOpenXmlCompositeElement
+    public partial class NonVisualInkContentPartProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the NonVisualInkContentPartProperties class.
@@ -5263,7 +5263,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.NonVisualInkContentPartProperties" /> <c>&lt;w14:cNvContentPartPr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class WordNonVisualContentPartShapeProperties : TypedOpenXmlCompositeElement
+    public partial class WordNonVisualContentPartShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the WordNonVisualContentPartShapeProperties class.
@@ -5352,7 +5352,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extents" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Transform2D : TypedOpenXmlCompositeElement
+    public partial class Transform2D : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Transform2D class.
@@ -5474,7 +5474,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extension" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class OfficeArtExtensionList : TypedOpenXmlCompositeElement
+    public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the OfficeArtExtensionList class.

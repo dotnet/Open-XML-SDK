@@ -23,7 +23,7 @@ namespace DocumentFormat.OpenXml.Office2013.Word
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w15:color.</para>
     /// </summary>
-    public partial class Color : TypedOpenXmlLeafElement
+    public partial class Color : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Color class.
@@ -119,7 +119,7 @@ namespace DocumentFormat.OpenXml.Office2013.Word
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w15:dataBinding.</para>
     /// </summary>
-    public partial class DataBinding : TypedOpenXmlLeafElement
+    public partial class DataBinding : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the DataBinding class.
@@ -193,7 +193,7 @@ namespace DocumentFormat.OpenXml.Office2013.Word
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w15:appearance.</para>
     /// </summary>
-    public partial class Appearance : TypedOpenXmlLeafElement
+    public partial class Appearance : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Appearance class.
@@ -242,7 +242,7 @@ namespace DocumentFormat.OpenXml.Office2013.Word
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Word.CommentEx" /> <c>&lt;w15:commentEx></c></description></item>
     /// </list>
     /// </remark>
-    public partial class CommentsEx : TypedOpenXmlPartRootElement
+    public partial class CommentsEx : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the CommentsEx class.
@@ -333,7 +333,7 @@ namespace DocumentFormat.OpenXml.Office2013.Word
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Word.Person" /> <c>&lt;w15:person></c></description></item>
     /// </list>
     /// </remark>
-    public partial class People : TypedOpenXmlPartRootElement
+    public partial class People : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the People class.
@@ -425,7 +425,7 @@ namespace DocumentFormat.OpenXml.Office2013.Word
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Word.SectionTitle" /> <c>&lt;w15:sectionTitle></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SdtRepeatedSection : TypedOpenXmlCompositeElement
+    public partial class SdtRepeatedSection : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SdtRepeatedSection class.
@@ -507,7 +507,7 @@ namespace DocumentFormat.OpenXml.Office2013.Word
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w15:repeatingSectionItem.</para>
     /// </summary>
-    public partial class SdtRepeatedSectionItem : TypedOpenXmlLeafElement
+    public partial class SdtRepeatedSectionItem : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the SdtRepeatedSectionItem class.
@@ -657,7 +657,7 @@ namespace DocumentFormat.OpenXml.Office2013.Word
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class OnOffType : TypedOpenXmlLeafElement
+    public abstract partial class OnOffType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the OnOffType class.
@@ -692,7 +692,7 @@ namespace DocumentFormat.OpenXml.Office2013.Word
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w15:docId.</para>
     /// </summary>
-    public partial class PersistentDocumentId : TypedOpenXmlLeafElement
+    public partial class PersistentDocumentId : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the PersistentDocumentId class.
@@ -736,7 +736,7 @@ namespace DocumentFormat.OpenXml.Office2013.Word
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w15:footnoteColumns.</para>
     /// </summary>
-    public partial class FootnoteColumns : TypedOpenXmlLeafElement
+    public partial class FootnoteColumns : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the FootnoteColumns class.
@@ -779,7 +779,7 @@ namespace DocumentFormat.OpenXml.Office2013.Word
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w15:commentEx.</para>
     /// </summary>
-    public partial class CommentEx : TypedOpenXmlLeafElement
+    public partial class CommentEx : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the CommentEx class.
@@ -867,7 +867,7 @@ namespace DocumentFormat.OpenXml.Office2013.Word
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Word.PresenceInfo" /> <c>&lt;w15:presenceInfo></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Person : TypedOpenXmlCompositeElement
+    public partial class Person : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Person class.
@@ -953,7 +953,7 @@ namespace DocumentFormat.OpenXml.Office2013.Word
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w15:presenceInfo.</para>
     /// </summary>
-    public partial class PresenceInfo : TypedOpenXmlLeafElement
+    public partial class PresenceInfo : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the PresenceInfo class.
@@ -1017,7 +1017,7 @@ namespace DocumentFormat.OpenXml.Office2013.Word
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w15:sectionTitle.</para>
     /// </summary>
-    public partial class SectionTitle : TypedOpenXmlLeafElement
+    public partial class SectionTitle : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the SectionTitle class.

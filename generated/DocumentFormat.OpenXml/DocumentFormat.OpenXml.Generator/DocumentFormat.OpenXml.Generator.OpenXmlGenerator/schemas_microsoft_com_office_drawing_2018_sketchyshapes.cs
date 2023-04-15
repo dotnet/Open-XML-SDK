@@ -122,7 +122,7 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class OpenXmlEmptyElement : TypedOpenXmlLeafElement
+    public abstract partial class OpenXmlEmptyElement : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the OpenXmlEmptyElement class.
@@ -152,7 +152,7 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchSeed" /> <c>&lt;ask:seed></c></description></item>
     /// </list>
     /// </remark>
-    public partial class LineSketchStyleProperties : TypedOpenXmlCompositeElement
+    public partial class LineSketchStyleProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the LineSketchStyleProperties class.
@@ -241,7 +241,7 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchScribbleEmpty" /> <c>&lt;ask:lineSketchScribble></c></description></item>
     /// </list>
     /// </remark>
-    public partial class LineSketchTypeProperties : TypedOpenXmlCompositeElement
+    public partial class LineSketchTypeProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the LineSketchTypeProperties class.
@@ -359,7 +359,7 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ask:seed.</para>
     /// </summary>
-    public partial class LineSketchSeed : TypedOpenXmlLeafTextElement
+    public partial class LineSketchSeed : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the LineSketchSeed class.
@@ -404,7 +404,7 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extension" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class OfficeArtExtensionList : TypedOpenXmlCompositeElement
+    public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the OfficeArtExtensionList class.

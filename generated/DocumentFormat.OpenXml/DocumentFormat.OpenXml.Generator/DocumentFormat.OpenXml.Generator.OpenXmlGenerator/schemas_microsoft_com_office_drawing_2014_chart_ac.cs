@@ -30,7 +30,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartsAc
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PointCount" /> <c>&lt;c:ptCount></c></description></item>
     /// </list>
     /// </remark>
-    public partial class MultiLvlStrData : TypedOpenXmlCompositeElement
+    public partial class MultiLvlStrData : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the MultiLvlStrData class.

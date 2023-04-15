@@ -62,7 +62,7 @@ namespace DocumentFormat.OpenXml.VariantTypes
     ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTUnsignedShort" /> <c>&lt;vt:ui2></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Variant : TypedOpenXmlCompositeElement
+    public partial class Variant : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Variant class.
@@ -664,7 +664,7 @@ namespace DocumentFormat.OpenXml.VariantTypes
     ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTUnsignedShort" /> <c>&lt;vt:ui2></c></description></item>
     /// </list>
     /// </remark>
-    public partial class VTVector : TypedOpenXmlCompositeElement
+    public partial class VTVector : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the VTVector class.
@@ -808,7 +808,7 @@ namespace DocumentFormat.OpenXml.VariantTypes
     ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTUnsignedShort" /> <c>&lt;vt:ui2></c></description></item>
     /// </list>
     /// </remark>
-    public partial class VTArray : TypedOpenXmlCompositeElement
+    public partial class VTArray : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the VTArray class.
@@ -936,7 +936,7 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:blob.</para>
     /// </summary>
-    public partial class VTBlob : TypedOpenXmlLeafTextElement
+    public partial class VTBlob : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the VTBlob class.
@@ -974,7 +974,7 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:oblob.</para>
     /// </summary>
-    public partial class VTOBlob : TypedOpenXmlLeafTextElement
+    public partial class VTOBlob : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the VTOBlob class.
@@ -1012,7 +1012,7 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:stream.</para>
     /// </summary>
-    public partial class VTStreamData : TypedOpenXmlLeafTextElement
+    public partial class VTStreamData : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the VTStreamData class.
@@ -1050,7 +1050,7 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:ostream.</para>
     /// </summary>
-    public partial class VTOStreamData : TypedOpenXmlLeafTextElement
+    public partial class VTOStreamData : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the VTOStreamData class.
@@ -1088,7 +1088,7 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:storage.</para>
     /// </summary>
-    public partial class VTStorage : TypedOpenXmlLeafTextElement
+    public partial class VTStorage : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the VTStorage class.
@@ -1126,7 +1126,7 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:ostorage.</para>
     /// </summary>
-    public partial class VTOStorage : TypedOpenXmlLeafTextElement
+    public partial class VTOStorage : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the VTOStorage class.
@@ -1164,7 +1164,7 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:empty.</para>
     /// </summary>
-    public partial class VTEmpty : TypedOpenXmlLeafElement
+    public partial class VTEmpty : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the VTEmpty class.
@@ -1188,7 +1188,7 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:null.</para>
     /// </summary>
-    public partial class VTNull : TypedOpenXmlLeafElement
+    public partial class VTNull : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the VTNull class.
@@ -1212,7 +1212,7 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:i1.</para>
     /// </summary>
-    public partial class VTByte : TypedOpenXmlLeafTextElement
+    public partial class VTByte : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the VTByte class.
@@ -1250,7 +1250,7 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:i2.</para>
     /// </summary>
-    public partial class VTShort : TypedOpenXmlLeafTextElement
+    public partial class VTShort : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the VTShort class.
@@ -1288,7 +1288,7 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:i4.</para>
     /// </summary>
-    public partial class VTInt32 : TypedOpenXmlLeafTextElement
+    public partial class VTInt32 : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the VTInt32 class.
@@ -1326,7 +1326,7 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:int.</para>
     /// </summary>
-    public partial class VTInteger : TypedOpenXmlLeafTextElement
+    public partial class VTInteger : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the VTInteger class.
@@ -1364,7 +1364,7 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:i8.</para>
     /// </summary>
-    public partial class VTInt64 : TypedOpenXmlLeafTextElement
+    public partial class VTInt64 : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the VTInt64 class.
@@ -1402,7 +1402,7 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:ui1.</para>
     /// </summary>
-    public partial class VTUnsignedByte : TypedOpenXmlLeafTextElement
+    public partial class VTUnsignedByte : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the VTUnsignedByte class.
@@ -1440,7 +1440,7 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:ui2.</para>
     /// </summary>
-    public partial class VTUnsignedShort : TypedOpenXmlLeafTextElement
+    public partial class VTUnsignedShort : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the VTUnsignedShort class.
@@ -1478,7 +1478,7 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:ui4.</para>
     /// </summary>
-    public partial class VTUnsignedInt32 : TypedOpenXmlLeafTextElement
+    public partial class VTUnsignedInt32 : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the VTUnsignedInt32 class.
@@ -1516,7 +1516,7 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:uint.</para>
     /// </summary>
-    public partial class VTUnsignedInteger : TypedOpenXmlLeafTextElement
+    public partial class VTUnsignedInteger : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the VTUnsignedInteger class.
@@ -1554,7 +1554,7 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:ui8.</para>
     /// </summary>
-    public partial class VTUnsignedInt64 : TypedOpenXmlLeafTextElement
+    public partial class VTUnsignedInt64 : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the VTUnsignedInt64 class.
@@ -1592,7 +1592,7 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:r4.</para>
     /// </summary>
-    public partial class VTFloat : TypedOpenXmlLeafTextElement
+    public partial class VTFloat : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the VTFloat class.
@@ -1630,7 +1630,7 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:r8.</para>
     /// </summary>
-    public partial class VTDouble : TypedOpenXmlLeafTextElement
+    public partial class VTDouble : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the VTDouble class.
@@ -1668,7 +1668,7 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:decimal.</para>
     /// </summary>
-    public partial class VTDecimal : TypedOpenXmlLeafTextElement
+    public partial class VTDecimal : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the VTDecimal class.
@@ -1706,7 +1706,7 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:lpstr.</para>
     /// </summary>
-    public partial class VTLPSTR : TypedOpenXmlLeafTextElement
+    public partial class VTLPSTR : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the VTLPSTR class.
@@ -1743,7 +1743,7 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:lpwstr.</para>
     /// </summary>
-    public partial class VTLPWSTR : TypedOpenXmlLeafTextElement
+    public partial class VTLPWSTR : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the VTLPWSTR class.
@@ -1780,7 +1780,7 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:bstr.</para>
     /// </summary>
-    public partial class VTBString : TypedOpenXmlLeafTextElement
+    public partial class VTBString : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the VTBString class.
@@ -1817,7 +1817,7 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:date.</para>
     /// </summary>
-    public partial class VTDate : TypedOpenXmlLeafTextElement
+    public partial class VTDate : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the VTDate class.
@@ -1855,7 +1855,7 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:filetime.</para>
     /// </summary>
-    public partial class VTFileTime : TypedOpenXmlLeafTextElement
+    public partial class VTFileTime : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the VTFileTime class.
@@ -1893,7 +1893,7 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:bool.</para>
     /// </summary>
-    public partial class VTBool : TypedOpenXmlLeafTextElement
+    public partial class VTBool : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the VTBool class.
@@ -1931,7 +1931,7 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:cy.</para>
     /// </summary>
-    public partial class VTCurrency : TypedOpenXmlLeafTextElement
+    public partial class VTCurrency : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the VTCurrency class.
@@ -1969,7 +1969,7 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:error.</para>
     /// </summary>
-    public partial class VTError : TypedOpenXmlLeafTextElement
+    public partial class VTError : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the VTError class.
@@ -2007,7 +2007,7 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:vstream.</para>
     /// </summary>
-    public partial class VTVStreamData : TypedOpenXmlLeafTextElement
+    public partial class VTVStreamData : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the VTVStreamData class.
@@ -2061,7 +2061,7 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:clsid.</para>
     /// </summary>
-    public partial class VTClassId : TypedOpenXmlLeafTextElement
+    public partial class VTClassId : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the VTClassId class.
@@ -2099,7 +2099,7 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is vt:cf.</para>
     /// </summary>
-    public partial class VTClipboardData : TypedOpenXmlLeafTextElement
+    public partial class VTClipboardData : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the VTClipboardData class.

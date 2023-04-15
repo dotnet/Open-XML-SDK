@@ -29,7 +29,7 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskHistory" /> <c>&lt;p228:history></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TaskDetails : TypedOpenXmlCompositeElement
+    public partial class TaskDetails : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TaskDetails class.
@@ -134,7 +134,7 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main
     /// <para>This class is available in Microsoft365 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p228:comment.</para>
     /// </summary>
-    public partial class CommentAnchor : TypedOpenXmlLeafElement
+    public partial class CommentAnchor : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the CommentAnchor class.
@@ -181,7 +181,7 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Extension" /> <c>&lt;p:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ExtensionList : TypedOpenXmlCompositeElement
+    public partial class ExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ExtensionList class.
@@ -291,7 +291,7 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main
     /// <para>This class is available in Microsoft365 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class OpenXmlTaskAssignUnassignUserElement : TypedOpenXmlLeafElement
+    public abstract partial class OpenXmlTaskAssignUnassignUserElement : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the OpenXmlTaskAssignUnassignUserElement class.
@@ -334,7 +334,7 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.CommentAnchor" /> <c>&lt;p228:comment></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TaskAnchor : TypedOpenXmlCompositeElement
+    public partial class TaskAnchor : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TaskAnchor class.
@@ -466,7 +466,7 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class EmptyType : TypedOpenXmlLeafElement
+    public abstract partial class EmptyType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the EmptyType class.
@@ -486,7 +486,7 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main
     /// <para>This class is available in Microsoft365 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p228:title.</para>
     /// </summary>
-    public partial class TaskTitleEventInfo : TypedOpenXmlLeafElement
+    public partial class TaskTitleEventInfo : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the TaskTitleEventInfo class.
@@ -526,7 +526,7 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main
     /// <para>This class is available in Microsoft365 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p228:date.</para>
     /// </summary>
-    public partial class TaskScheduleEventInfo : TypedOpenXmlLeafElement
+    public partial class TaskScheduleEventInfo : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the TaskScheduleEventInfo class.
@@ -574,7 +574,7 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main
     /// <para>This class is available in Microsoft365 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p228:pcntCmplt.</para>
     /// </summary>
-    public partial class TaskProgressEventInfo : TypedOpenXmlLeafElement
+    public partial class TaskProgressEventInfo : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the TaskProgressEventInfo class.
@@ -615,7 +615,7 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main
     /// <para>This class is available in Microsoft365 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p228:undo.</para>
     /// </summary>
-    public partial class TaskUndo : TypedOpenXmlLeafElement
+    public partial class TaskUndo : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the TaskUndo class.
@@ -656,7 +656,7 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main
     /// <para>This class is available in Microsoft365 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p228:unknown.</para>
     /// </summary>
-    public partial class TaskUnknownRecord : TypedOpenXmlLeafElement
+    public partial class TaskUnknownRecord : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the TaskUnknownRecord class.
@@ -697,7 +697,7 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskUnknownRecord" /> <c>&lt;p228:unknown></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TaskHistoryEvent : TypedOpenXmlCompositeElement
+    public partial class TaskHistoryEvent : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TaskHistoryEvent class.
@@ -836,7 +836,7 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskHistoryEvent" /> <c>&lt;p228:event></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TaskHistory : TypedOpenXmlCompositeElement
+    public partial class TaskHistory : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TaskHistory class.

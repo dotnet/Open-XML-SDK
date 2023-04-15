@@ -27,7 +27,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Chart
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Chart.BooleanFalse" /> <c>&lt;c16r3:dispNaAsBlank></c></description></item>
     /// </list>
     /// </remark>
-    public partial class DataDisplayOptions16 : TypedOpenXmlCompositeElement
+    public partial class DataDisplayOptions16 : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the DataDisplayOptions16 class.
@@ -94,7 +94,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Chart
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c16r3:dispNaAsBlank.</para>
     /// </summary>
-    public partial class BooleanFalse : TypedOpenXmlLeafElement
+    public partial class BooleanFalse : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the BooleanFalse class.

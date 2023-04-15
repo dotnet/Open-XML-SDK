@@ -21,7 +21,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is adec:decorative.</para>
     /// </summary>
-    public partial class Decorative : TypedOpenXmlLeafElement
+    public partial class Decorative : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Decorative class.

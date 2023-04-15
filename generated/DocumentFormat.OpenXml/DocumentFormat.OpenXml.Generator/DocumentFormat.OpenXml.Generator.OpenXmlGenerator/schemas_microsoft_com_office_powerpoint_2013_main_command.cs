@@ -21,7 +21,7 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is pc:cmAuthorMkLst.</para>
     /// </summary>
-    public partial class CommentAuthorMonikerList : TypedOpenXmlCompositeElement
+    public partial class CommentAuthorMonikerList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the CommentAuthorMonikerList class.
@@ -74,7 +74,7 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is pc:cmMkLst.</para>
     /// </summary>
-    public partial class CommentMonikerList : TypedOpenXmlCompositeElement
+    public partial class CommentMonikerList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the CommentMonikerList class.
@@ -127,7 +127,7 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is pc:tagMkLst.</para>
     /// </summary>
-    public partial class StringTagMonikerList : TypedOpenXmlCompositeElement
+    public partial class StringTagMonikerList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the StringTagMonikerList class.
@@ -180,7 +180,7 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is pc:custShowMkLst.</para>
     /// </summary>
-    public partial class CustomShowMonikerList : TypedOpenXmlCompositeElement
+    public partial class CustomShowMonikerList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the CustomShowMonikerList class.
@@ -233,7 +233,7 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is pc:docMkLst.</para>
     /// </summary>
-    public partial class DocumentMonikerList : TypedOpenXmlCompositeElement
+    public partial class DocumentMonikerList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the DocumentMonikerList class.
@@ -286,7 +286,7 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is pc:sectionMkLst.</para>
     /// </summary>
-    public partial class SectionMonikerList : TypedOpenXmlCompositeElement
+    public partial class SectionMonikerList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SectionMonikerList class.
@@ -339,7 +339,7 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is pc:sldBaseMkLst.</para>
     /// </summary>
-    public partial class SlideBaseMonikerList : TypedOpenXmlCompositeElement
+    public partial class SlideBaseMonikerList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SlideBaseMonikerList class.
@@ -392,7 +392,7 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is pc:sldLayoutMkLst.</para>
     /// </summary>
-    public partial class SlideLayoutMonikerList : TypedOpenXmlCompositeElement
+    public partial class SlideLayoutMonikerList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SlideLayoutMonikerList class.
@@ -445,7 +445,7 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is pc:sldMasterMkLst.</para>
     /// </summary>
-    public partial class MainMasterMonikerList : TypedOpenXmlCompositeElement
+    public partial class MainMasterMonikerList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the MainMasterMonikerList class.
@@ -505,7 +505,7 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Presentation.Command.SlideMoniker" /> <c>&lt;pc:sldMk></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SlideMonikerList : TypedOpenXmlCompositeElement
+    public partial class SlideMonikerList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SlideMonikerList class.
@@ -588,7 +588,7 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is pc:sldPosMkLst.</para>
     /// </summary>
-    public partial class SlidePosMonikerList : TypedOpenXmlCompositeElement
+    public partial class SlidePosMonikerList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SlidePosMonikerList class.
@@ -641,7 +641,7 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is pc:notesMkLst.</para>
     /// </summary>
-    public partial class NotesMonikerList : TypedOpenXmlCompositeElement
+    public partial class NotesMonikerList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the NotesMonikerList class.
@@ -694,7 +694,7 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is pc:notesTxtMkLst.</para>
     /// </summary>
-    public partial class NotesTextMonikerList : TypedOpenXmlCompositeElement
+    public partial class NotesTextMonikerList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the NotesTextMonikerList class.
@@ -747,7 +747,7 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is pc:notesMasterMkLst.</para>
     /// </summary>
-    public partial class NotesMasterMonikerList : TypedOpenXmlCompositeElement
+    public partial class NotesMasterMonikerList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the NotesMasterMonikerList class.
@@ -800,7 +800,7 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is pc:handoutMkLst.</para>
     /// </summary>
-    public partial class HandoutMonikerList : TypedOpenXmlCompositeElement
+    public partial class HandoutMonikerList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the HandoutMonikerList class.
@@ -959,7 +959,7 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class OpenXmlAnimationEffectMonikerListElement : TypedOpenXmlCompositeElement
+    public abstract partial class OpenXmlAnimationEffectMonikerListElement : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the OpenXmlAnimationEffectMonikerListElement class.
@@ -1003,7 +1003,7 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is pc:tkAppMkLst.</para>
     /// </summary>
-    public partial class OsfTaskPaneAppMonikerList : TypedOpenXmlCompositeElement
+    public partial class OsfTaskPaneAppMonikerList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the OsfTaskPaneAppMonikerList class.
@@ -1056,7 +1056,7 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is pc:tocMkLst.</para>
     /// </summary>
-    public partial class SummaryZoomMonikerList : TypedOpenXmlCompositeElement
+    public partial class SummaryZoomMonikerList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SummaryZoomMonikerList class.
@@ -1109,7 +1109,7 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is pc:sectionLnkObjMkLst.</para>
     /// </summary>
-    public partial class SectionLinkObjMonikerList : TypedOpenXmlCompositeElement
+    public partial class SectionLinkObjMonikerList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SectionLinkObjMonikerList class.
@@ -1162,7 +1162,7 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is pc:designTagMkLst.</para>
     /// </summary>
-    public partial class DesignerTagMonikerList : TypedOpenXmlCompositeElement
+    public partial class DesignerTagMonikerList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the DesignerTagMonikerList class.
@@ -1215,7 +1215,7 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is pc:cXmlMkLst.</para>
     /// </summary>
-    public partial class CustomXmlPartMonikerList : TypedOpenXmlCompositeElement
+    public partial class CustomXmlPartMonikerList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the CustomXmlPartMonikerList class.
@@ -1268,7 +1268,7 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is pc:docMk.</para>
     /// </summary>
-    public partial class DocumentMoniker : TypedOpenXmlLeafElement
+    public partial class DocumentMoniker : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the DocumentMoniker class.
@@ -1293,7 +1293,7 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is pc:sldMk.</para>
     /// </summary>
-    public partial class SlideMoniker : TypedOpenXmlLeafElement
+    public partial class SlideMoniker : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the SlideMoniker class.

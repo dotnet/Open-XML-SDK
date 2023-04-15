@@ -29,7 +29,7 @@ namespace DocumentFormat.OpenXml.Office2013.Theme
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Theme.OfficeArtExtensionList" /> <c>&lt;thm15:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ThemeFamily : TypedOpenXmlCompositeElement
+    public partial class ThemeFamily : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ThemeFamily class.
@@ -148,7 +148,7 @@ namespace DocumentFormat.OpenXml.Office2013.Theme
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extension" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class OfficeArtExtensionList : TypedOpenXmlCompositeElement
+    public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the OfficeArtExtensionList class.
@@ -214,7 +214,7 @@ namespace DocumentFormat.OpenXml.Office2013.Theme
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Theme.OfficeArtExtensionList" /> <c>&lt;thm15:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ThemeVariant : TypedOpenXmlCompositeElement
+    public partial class ThemeVariant : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ThemeVariant class.
@@ -364,7 +364,7 @@ namespace DocumentFormat.OpenXml.Office2013.Theme
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Theme.ThemeVariant" /> <c>&lt;thm15:themeVariant></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ThemeVariantList : TypedOpenXmlCompositeElement
+    public partial class ThemeVariantList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ThemeVariantList class.

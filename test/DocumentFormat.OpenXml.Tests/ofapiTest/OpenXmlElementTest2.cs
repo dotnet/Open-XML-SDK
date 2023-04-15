@@ -196,7 +196,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Null(cell.Child);
         }
 
-        private class WithChildElement : TypedOpenXmlCompositeElement
+        private class WithChildElement : OpenXmlCompositeElement
         {
             public ChildElement Child
             {

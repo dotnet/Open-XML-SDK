@@ -22,7 +22,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:spMk.</para>
     /// </summary>
-    public partial class ShapeMoniker : TypedOpenXmlLeafElement
+    public partial class ShapeMoniker : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ShapeMoniker class.
@@ -76,7 +76,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:grpSpMk.</para>
     /// </summary>
-    public partial class GroupShapeMoniker : TypedOpenXmlLeafElement
+    public partial class GroupShapeMoniker : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the GroupShapeMoniker class.
@@ -130,7 +130,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:graphicFrameMk.</para>
     /// </summary>
-    public partial class GraphicFrameMoniker : TypedOpenXmlLeafElement
+    public partial class GraphicFrameMoniker : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the GraphicFrameMoniker class.
@@ -184,7 +184,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:cxnSpMk.</para>
     /// </summary>
-    public partial class ConnectorMoniker : TypedOpenXmlLeafElement
+    public partial class ConnectorMoniker : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ConnectorMoniker class.
@@ -238,7 +238,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:picMk.</para>
     /// </summary>
-    public partial class PictureMoniker : TypedOpenXmlLeafElement
+    public partial class PictureMoniker : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the PictureMoniker class.
@@ -292,7 +292,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:inkMk.</para>
     /// </summary>
-    public partial class InkMoniker : TypedOpenXmlLeafElement
+    public partial class InkMoniker : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the InkMoniker class.
@@ -346,7 +346,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:dgMkLst.</para>
     /// </summary>
-    public partial class DrawingMonikerList : TypedOpenXmlCompositeElement
+    public partial class DrawingMonikerList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the DrawingMonikerList class.
@@ -406,7 +406,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extents" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Transform2D : TypedOpenXmlCompositeElement
+    public partial class Transform2D : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Transform2D class.
@@ -522,7 +522,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:grpSpMkLst.</para>
     /// </summary>
-    public partial class GroupShapeMonikerList : TypedOpenXmlCompositeElement
+    public partial class GroupShapeMonikerList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the GroupShapeMonikerList class.
@@ -575,7 +575,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:dePkg.</para>
     /// </summary>
-    public partial class DrawingElementPackage : TypedOpenXmlLeafElement
+    public partial class DrawingElementPackage : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the DrawingElementPackage class.
@@ -812,7 +812,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class OpenXmlDrawingElementMonikerListElement : TypedOpenXmlCompositeElement
+    public abstract partial class OpenXmlDrawingElementMonikerListElement : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the OpenXmlDrawingElementMonikerListElement class.
@@ -970,7 +970,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class OpenXmlImgDataElement : TypedOpenXmlLeafTextElement
+    public abstract partial class OpenXmlImgDataElement : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the OpenXmlImgDataElement class.
@@ -1003,7 +1003,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:imgUrl.</para>
     /// </summary>
-    public partial class ResourceUrl : TypedOpenXmlLeafElement
+    public partial class ResourceUrl : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ResourceUrl class.
@@ -1057,7 +1057,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:txBodyPkg.</para>
     /// </summary>
-    public partial class TextBodyPackage : TypedOpenXmlLeafElement
+    public partial class TextBodyPackage : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the TextBodyPackage class.
@@ -1097,7 +1097,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.ShapeMoniker" /> <c>&lt;oac:spMk></c></description></item>
     /// </list>
     /// </remark>
-    public partial class GroupCommand : TypedOpenXmlCompositeElement
+    public partial class GroupCommand : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the GroupCommand class.
@@ -1222,7 +1222,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:imgLink.</para>
     /// </summary>
-    public partial class ImgLink : TypedOpenXmlLeafElement
+    public partial class ImgLink : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ImgLink class.
@@ -1263,7 +1263,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:dcMkLst.</para>
     /// </summary>
-    public partial class DocumentContextMonikerList : TypedOpenXmlCompositeElement
+    public partial class DocumentContextMonikerList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the DocumentContextMonikerList class.
@@ -1316,7 +1316,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:graphicParentMkLst.</para>
     /// </summary>
-    public partial class GraphicParentMonikerList : TypedOpenXmlCompositeElement
+    public partial class GraphicParentMonikerList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the GraphicParentMonikerList class.
@@ -1369,7 +1369,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:spMkLst.</para>
     /// </summary>
-    public partial class ShapeMonikerList : TypedOpenXmlCompositeElement
+    public partial class ShapeMonikerList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ShapeMonikerList class.
@@ -1422,7 +1422,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:graphicFrameMkLst.</para>
     /// </summary>
-    public partial class GraphicFrameMonikerList : TypedOpenXmlCompositeElement
+    public partial class GraphicFrameMonikerList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the GraphicFrameMonikerList class.
@@ -1475,7 +1475,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:cxnSpMkLst.</para>
     /// </summary>
-    public partial class ConnectorMonikerList : TypedOpenXmlCompositeElement
+    public partial class ConnectorMonikerList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ConnectorMonikerList class.
@@ -1528,7 +1528,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:picMkLst.</para>
     /// </summary>
-    public partial class PictureMonikerList : TypedOpenXmlCompositeElement
+    public partial class PictureMonikerList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the PictureMonikerList class.
@@ -1581,7 +1581,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:inkMkLst.</para>
     /// </summary>
-    public partial class InkMonikerList : TypedOpenXmlCompositeElement
+    public partial class InkMonikerList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the InkMonikerList class.
@@ -1634,7 +1634,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:txBodyMkLst.</para>
     /// </summary>
-    public partial class TextBodyMonikerList : TypedOpenXmlCompositeElement
+    public partial class TextBodyMonikerList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TextBodyMonikerList class.
@@ -1687,7 +1687,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:txMkLst.</para>
     /// </summary>
-    public partial class TextCharRangeMonikerList : TypedOpenXmlCompositeElement
+    public partial class TextCharRangeMonikerList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TextCharRangeMonikerList class.
@@ -1740,7 +1740,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:hlinkMkLst.</para>
     /// </summary>
-    public partial class HyperlinkMonikerList : TypedOpenXmlCompositeElement
+    public partial class HyperlinkMonikerList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the HyperlinkMonikerList class.
@@ -1793,7 +1793,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:model3DMkLst.</para>
     /// </summary>
-    public partial class Model3DMonikerList : TypedOpenXmlCompositeElement
+    public partial class Model3DMonikerList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Model3DMonikerList class.
@@ -1846,7 +1846,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:viewSelLst.</para>
     /// </summary>
-    public partial class ViewSelectionStgList : TypedOpenXmlCompositeElement
+    public partial class ViewSelectionStgList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ViewSelectionStgList class.
@@ -1899,7 +1899,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:editorSelLst.</para>
     /// </summary>
-    public partial class EditorSelectionStgList : TypedOpenXmlCompositeElement
+    public partial class EditorSelectionStgList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the EditorSelectionStgList class.
@@ -1952,7 +1952,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:drSelLst.</para>
     /// </summary>
-    public partial class DrawingSelectionStgList : TypedOpenXmlCompositeElement
+    public partial class DrawingSelectionStgList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the DrawingSelectionStgList class.
@@ -2005,7 +2005,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:tblMkLst.</para>
     /// </summary>
-    public partial class TableMonikerList : TypedOpenXmlCompositeElement
+    public partial class TableMonikerList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TableMonikerList class.
@@ -2058,7 +2058,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:tcMkLst.</para>
     /// </summary>
-    public partial class TableCellMonikerList : TypedOpenXmlCompositeElement
+    public partial class TableCellMonikerList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TableCellMonikerList class.
@@ -2111,7 +2111,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:trMkLst.</para>
     /// </summary>
-    public partial class TableRowMonikerList : TypedOpenXmlCompositeElement
+    public partial class TableRowMonikerList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TableRowMonikerList class.
@@ -2164,7 +2164,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:gridColMkLst.</para>
     /// </summary>
-    public partial class TableColumnMonikerList : TypedOpenXmlCompositeElement
+    public partial class TableColumnMonikerList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TableColumnMonikerList class.
@@ -2217,7 +2217,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:cNvPr.</para>
     /// </summary>
-    public partial class ModifyNonVisualDrawingProps : TypedOpenXmlLeafElement
+    public partial class ModifyNonVisualDrawingProps : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ModifyNonVisualDrawingProps class.
@@ -2309,7 +2309,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:xfrm.</para>
     /// </summary>
-    public partial class ModifyTransformProps : TypedOpenXmlLeafElement
+    public partial class ModifyTransformProps : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ModifyTransformProps class.
@@ -2424,7 +2424,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:off.</para>
     /// </summary>
-    public partial class Point2DType : TypedOpenXmlLeafElement
+    public partial class Point2DType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Point2DType class.
@@ -2502,7 +2502,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.TabStopList" /> <c>&lt;a:tabLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TextParagraphPropertiesType : TypedOpenXmlCompositeElement
+    public partial class TextParagraphPropertiesType : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TextParagraphPropertiesType class.
@@ -2804,7 +2804,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ShapeAutoFit" /> <c>&lt;a:spAutoFit></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TextBodyProperties : TypedOpenXmlCompositeElement
+    public partial class TextBodyProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TextBodyProperties class.
@@ -3128,7 +3128,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:cNvSpPr.</para>
     /// </summary>
-    public partial class ModifyNonVisualDrawingShapeProps : TypedOpenXmlLeafElement
+    public partial class ModifyNonVisualDrawingShapeProps : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ModifyNonVisualDrawingShapeProps class.
@@ -3286,7 +3286,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:spMkLst.</para>
     /// </summary>
-    public partial class ShapePropsMonikerList : TypedOpenXmlCompositeElement
+    public partial class ShapePropsMonikerList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ShapePropsMonikerList class.
@@ -3359,7 +3359,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Transform2D" /> <c>&lt;a:xfrm></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ShapeProperties : TypedOpenXmlCompositeElement
+    public partial class ShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ShapeProperties class.
@@ -4187,7 +4187,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class OpenXmlEmptyElement : TypedOpenXmlLeafElement
+    public abstract partial class OpenXmlEmptyElement : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the OpenXmlEmptyElement class.
@@ -4221,7 +4221,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.BwModeEmpty" /> <c>&lt;oac:bwMode></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ResetShapeProperties : TypedOpenXmlCompositeElement
+    public partial class ResetShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ResetShapeProperties class.
@@ -4644,7 +4644,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SystemColor" /> <c>&lt;a:sysClr></c></description></item>
     /// </list>
     /// </remark>
-    public abstract partial class StyleMatrixReferenceType : TypedOpenXmlCompositeElement
+    public abstract partial class StyleMatrixReferenceType : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the StyleMatrixReferenceType class.
@@ -4798,7 +4798,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SystemColor" /> <c>&lt;a:sysClr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class FontReference : TypedOpenXmlCompositeElement
+    public partial class FontReference : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the FontReference class.
@@ -4971,7 +4971,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.EffectRefStyleMatrixReference" /> <c>&lt;oac:effectRef></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ModifyShapeStyleProps : TypedOpenXmlCompositeElement
+    public partial class ModifyShapeStyleProps : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ModifyShapeStyleProps class.
@@ -5083,7 +5083,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:reset.</para>
     /// </summary>
-    public partial class ResetXsdboolean : TypedOpenXmlLeafTextElement
+    public partial class ResetXsdboolean : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the ResetXsdboolean class.
@@ -5122,7 +5122,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:useBounds.</para>
     /// </summary>
-    public partial class UseBoundsXsdboolean : TypedOpenXmlLeafTextElement
+    public partial class UseBoundsXsdboolean : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the UseBoundsXsdboolean class.
@@ -5170,7 +5170,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Tile" /> <c>&lt;a:tile></c></description></item>
     /// </list>
     /// </remark>
-    public partial class BlipFillProperties : TypedOpenXmlCompositeElement
+    public partial class BlipFillProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the BlipFillProperties class.
@@ -5335,7 +5335,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class OpenXmlRelativeRectPropsElement : TypedOpenXmlLeafElement
+    public abstract partial class OpenXmlRelativeRectPropsElement : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the OpenXmlRelativeRectPropsElement class.
@@ -5409,7 +5409,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.RotWithShapeEmpty" /> <c>&lt;oac:rotWithShape></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ResetBlipFillProperties : TypedOpenXmlCompositeElement
+    public partial class ResetBlipFillProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ResetBlipFillProperties class.
@@ -5521,7 +5521,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:cNvGrpSpPr.</para>
     /// </summary>
-    public partial class ModifyNonVisualGroupDrawingShapeProps : TypedOpenXmlLeafElement
+    public partial class ModifyNonVisualGroupDrawingShapeProps : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ModifyNonVisualGroupDrawingShapeProps class.
@@ -5640,7 +5640,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SolidFill" /> <c>&lt;a:solidFill></c></description></item>
     /// </list>
     /// </remark>
-    public partial class GroupShapeProperties : TypedOpenXmlCompositeElement
+    public partial class GroupShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the GroupShapeProperties class.
@@ -5765,7 +5765,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.BwModeEmpty" /> <c>&lt;oac:bwMode></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ResetGroupShapeProperties : TypedOpenXmlCompositeElement
+    public partial class ResetGroupShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ResetGroupShapeProperties class.
@@ -5915,7 +5915,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class NonVisualDrawingProps : TypedOpenXmlCompositeElement
+    public partial class NonVisualDrawingProps : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the NonVisualDrawingProps class.
@@ -6081,7 +6081,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class NonVisualGroupDrawingShapeProps : TypedOpenXmlCompositeElement
+    public partial class NonVisualGroupDrawingShapeProps : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the NonVisualGroupDrawingShapeProps class.
@@ -6163,7 +6163,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:cNvGraphicFramePr.</para>
     /// </summary>
-    public partial class ModifyNonVisualGraphicFrameProps : TypedOpenXmlLeafElement
+    public partial class ModifyNonVisualGraphicFrameProps : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ModifyNonVisualGraphicFrameProps class.
@@ -6305,7 +6305,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class ConnectionType : TypedOpenXmlLeafElement
+    public abstract partial class ConnectionType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ConnectionType class.
@@ -6361,7 +6361,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.EndCxnConnection" /> <c>&lt;oac:endCxn></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ModifyNonVisualConnectorProps : TypedOpenXmlCompositeElement
+    public partial class ModifyNonVisualConnectorProps : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ModifyNonVisualConnectorProps class.
@@ -6571,7 +6571,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.NoChangeShapeTypeEmpty" /> <c>&lt;oac:noChangeShapeType></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ResetNonVisualConnectorProps : TypedOpenXmlCompositeElement
+    public partial class ResetNonVisualConnectorProps : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ResetNonVisualConnectorProps class.
@@ -6803,7 +6803,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:compressPicPr.</para>
     /// </summary>
-    public partial class CompressPictureProps : TypedOpenXmlLeafElement
+    public partial class CompressPictureProps : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the CompressPictureProps class.
@@ -6865,7 +6865,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:cNvPicPr.</para>
     /// </summary>
-    public partial class ModifyNonVisualPictureProps : TypedOpenXmlLeafElement
+    public partial class ModifyNonVisualPictureProps : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ModifyNonVisualPictureProps class.
@@ -7029,7 +7029,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.LfPrEmpty" /> <c>&lt;oac:lfPr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ResetNonVisualPictureProps : TypedOpenXmlCompositeElement
+    public partial class ResetNonVisualPictureProps : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ResetNonVisualPictureProps class.
@@ -7096,7 +7096,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:bounds.</para>
     /// </summary>
-    public partial class BoundRect : TypedOpenXmlLeafElement
+    public partial class BoundRect : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the BoundRect class.
@@ -7182,7 +7182,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:svgBlipMkLst.</para>
     /// </summary>
-    public partial class SVGBlipMonikerList : TypedOpenXmlCompositeElement
+    public partial class SVGBlipMonikerList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SVGBlipMonikerList class.
@@ -7252,7 +7252,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SolidFill" /> <c>&lt;a:solidFill></c></description></item>
     /// </list>
     /// </remark>
-    public partial class LinePropertiesType : TypedOpenXmlCompositeElement
+    public partial class LinePropertiesType : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the LinePropertiesType class.
@@ -7403,7 +7403,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:cNvInkPr.</para>
     /// </summary>
-    public partial class ModifyNonVisualInkProps : TypedOpenXmlLeafElement
+    public partial class ModifyNonVisualInkProps : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ModifyNonVisualInkProps class.
@@ -7674,7 +7674,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.SndDataImgData" /> <c>&lt;oac:sndData></c></description></item>
     /// </list>
     /// </remark>
-    public abstract partial class OpenXmlHyperlinkPropsElement : TypedOpenXmlCompositeElement
+    public abstract partial class OpenXmlHyperlinkPropsElement : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the OpenXmlHyperlinkPropsElement class.
@@ -7817,7 +7817,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.HlinkHoverHyperlinkProps" /> <c>&lt;oac:hlinkHover></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ModifyHyperlinkProps : TypedOpenXmlCompositeElement
+    public partial class ModifyHyperlinkProps : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ModifyHyperlinkProps class.
@@ -7906,7 +7906,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.HlinkHoverEmpty" /> <c>&lt;oac:hlinkHover></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ResetHyperlinkProps : TypedOpenXmlCompositeElement
+    public partial class ResetHyperlinkProps : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ResetHyperlinkProps class.
@@ -7988,7 +7988,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:context.</para>
     /// </summary>
-    public partial class TextCharRangeContext : TypedOpenXmlLeafElement
+    public partial class TextCharRangeContext : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the TextCharRangeContext class.

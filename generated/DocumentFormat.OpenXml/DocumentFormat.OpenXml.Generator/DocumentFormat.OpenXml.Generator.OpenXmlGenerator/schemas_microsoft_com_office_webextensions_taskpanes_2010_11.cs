@@ -30,7 +30,7 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtentionPane
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.WebExtentionPane.WebExtensionTaskpane" /> <c>&lt;wetp:taskpane></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Taskpanes : TypedOpenXmlPartRootElement
+    public partial class Taskpanes : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the Taskpanes class.
@@ -115,7 +115,7 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtentionPane
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wetp:webextensionref.</para>
     /// </summary>
-    public partial class WebExtensionPartReference : TypedOpenXmlLeafElement
+    public partial class WebExtensionPartReference : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the WebExtensionPartReference class.
@@ -165,7 +165,7 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtentionPane
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extension" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class OfficeArtExtensionList : TypedOpenXmlCompositeElement
+    public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the OfficeArtExtensionList class.
@@ -232,7 +232,7 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtentionPane
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.WebExtentionPane.WebExtensionPartReference" /> <c>&lt;wetp:webextensionref></c></description></item>
     /// </list>
     /// </remark>
-    public partial class WebExtensionTaskpane : TypedOpenXmlCompositeElement
+    public partial class WebExtensionTaskpane : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the WebExtensionTaskpane class.

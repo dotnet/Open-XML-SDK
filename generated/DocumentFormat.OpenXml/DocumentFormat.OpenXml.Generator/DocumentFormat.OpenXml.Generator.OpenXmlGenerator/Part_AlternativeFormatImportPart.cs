@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the AlternativeFormatImportPart
     /// </summary>
-    public partial class AlternativeFormatImportPart : TypedOpenXmlPart
+    public partial class AlternativeFormatImportPart : OpenXmlPart
     {
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/aFChunk";
 

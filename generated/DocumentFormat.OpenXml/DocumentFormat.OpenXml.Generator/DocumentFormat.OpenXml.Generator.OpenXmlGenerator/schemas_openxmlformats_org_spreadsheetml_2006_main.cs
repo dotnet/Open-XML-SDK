@@ -30,7 +30,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:ext.</para>
     /// </summary>
-    public partial class Extension : TypedOpenXmlCompositeElement
+    public partial class Extension : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Extension class.
@@ -105,7 +105,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class CalculationChain : TypedOpenXmlPartRootElement
+    public partial class CalculationChain : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the CalculationChain class.
@@ -199,7 +199,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Comments : TypedOpenXmlPartRootElement
+    public partial class Comments : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the Comments class.
@@ -333,7 +333,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Schema" /> <c>&lt;x:Schema></c></description></item>
     /// </list>
     /// </remark>
-    public partial class MapInfo : TypedOpenXmlPartRootElement
+    public partial class MapInfo : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the MapInfo class.
@@ -440,7 +440,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Connection" /> <c>&lt;x:connection></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Connections : TypedOpenXmlPartRootElement
+    public partial class Connections : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the Connections class.
@@ -540,7 +540,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.TupleCache" /> <c>&lt;x:tupleCache></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PivotCacheDefinition : TypedOpenXmlPartRootElement
+    public partial class PivotCacheDefinition : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the PivotCacheDefinition class.
@@ -1008,7 +1008,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotCacheRecord" /> <c>&lt;x:r></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PivotCacheRecords : TypedOpenXmlPartRootElement
+    public partial class PivotCacheRecords : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the PivotCacheRecords class.
@@ -1128,7 +1128,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.RowItems" /> <c>&lt;x:rowItems></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PivotTableDefinition : TypedOpenXmlPartRootElement
+    public partial class PivotTableDefinition : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the PivotTableDefinition class.
@@ -2243,7 +2243,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.QueryTableRefresh" /> <c>&lt;x:queryTableRefresh></c></description></item>
     /// </list>
     /// </remark>
-    public partial class QueryTable : TypedOpenXmlPartRootElement
+    public partial class QueryTable : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the QueryTable class.
@@ -2615,7 +2615,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.SharedStringItem" /> <c>&lt;x:si></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SharedStringTable : TypedOpenXmlPartRootElement
+    public partial class SharedStringTable : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the SharedStringTable class.
@@ -2732,7 +2732,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Header" /> <c>&lt;x:header></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Headers : TypedOpenXmlPartRootElement
+    public partial class Headers : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the Headers class.
@@ -2977,7 +2977,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.RevisionSheetName" /> <c>&lt;x:rsnm></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Revisions : TypedOpenXmlPartRootElement
+    public partial class Revisions : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the Revisions class.
@@ -3089,7 +3089,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.UserInfo" /> <c>&lt;x:userInfo></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Users : TypedOpenXmlPartRootElement
+    public partial class Users : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the Users class.
@@ -3229,7 +3229,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.WorksheetExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Worksheet : TypedOpenXmlPartRootElement
+    public partial class Worksheet : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the Worksheet class.
@@ -3458,7 +3458,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.WebPublishItems" /> <c>&lt;x:webPublishItems></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Chartsheet : TypedOpenXmlPartRootElement
+    public partial class Chartsheet : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the Chartsheet class.
@@ -3771,7 +3771,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.SheetViews" /> <c>&lt;x:sheetViews></c></description></item>
     /// </list>
     /// </remark>
-    public partial class DialogSheet : TypedOpenXmlPartRootElement
+    public partial class DialogSheet : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the DialogSheet class.
@@ -4105,7 +4105,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.MetadataTypes" /> <c>&lt;x:metadataTypes></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Metadata : TypedOpenXmlPartRootElement
+    public partial class Metadata : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the Metadata class.
@@ -4246,7 +4246,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.SingleXmlCell" /> <c>&lt;x:singleXmlCell></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SingleXmlCells : TypedOpenXmlPartRootElement
+    public partial class SingleXmlCells : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the SingleXmlCells class.
@@ -4346,7 +4346,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.TableStyles" /> <c>&lt;x:tableStyles></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Stylesheet : TypedOpenXmlPartRootElement
+    public partial class Stylesheet : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the Stylesheet class.
@@ -4602,7 +4602,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.OleLink" /> <c>&lt;x:oleLink></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ExternalLink : TypedOpenXmlPartRootElement
+    public partial class ExternalLink : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the ExternalLink class.
@@ -4705,7 +4705,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.TableStyleInfo" /> <c>&lt;x:tableStyleInfo></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Table : TypedOpenXmlPartRootElement
+    public partial class Table : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the Table class.
@@ -5136,7 +5136,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.VolatileType" /> <c>&lt;x:volType></c></description></item>
     /// </list>
     /// </remark>
-    public partial class VolatileTypes : TypedOpenXmlPartRootElement
+    public partial class VolatileTypes : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the VolatileTypes class.
@@ -5245,7 +5245,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.ExcelAc.AbsolutePath" /> <c>&lt;x15ac:absPath></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Workbook : TypedOpenXmlPartRootElement
+    public partial class Workbook : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the Workbook class.
@@ -5584,7 +5584,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.IconFilter" /> <c>&lt;x14:iconFilter></c></description></item>
     /// </list>
     /// </remark>
-    public partial class FilterColumn : TypedOpenXmlCompositeElement
+    public partial class FilterColumn : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the FilterColumn class.
@@ -5815,7 +5815,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.SortCondition" /> <c>&lt;x14:sortCondition></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SortState : TypedOpenXmlCompositeElement
+    public partial class SortState : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SortState class.
@@ -5929,7 +5929,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Extension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ExtensionList : TypedOpenXmlCompositeElement
+    public partial class ExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ExtensionList class.
@@ -5988,7 +5988,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:customFilter.</para>
     /// </summary>
-    public partial class CustomFilter : TypedOpenXmlLeafElement
+    public partial class CustomFilter : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the CustomFilter class.
@@ -6035,7 +6035,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:c.</para>
     /// </summary>
-    public partial class CalculationCell : TypedOpenXmlLeafElement
+    public partial class CalculationCell : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the CalculationCell class.
@@ -6144,7 +6144,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Author" /> <c>&lt;x:author></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Authors : TypedOpenXmlCompositeElement
+    public partial class Authors : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Authors class.
@@ -6203,7 +6203,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Comment" /> <c>&lt;x:comment></c></description></item>
     /// </list>
     /// </remark>
-    public partial class CommentList : TypedOpenXmlCompositeElement
+    public partial class CommentList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the CommentList class.
@@ -6263,7 +6263,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CommentText" /> <c>&lt;x:text></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Comment : TypedOpenXmlCompositeElement
+    public partial class Comment : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Comment class.
@@ -6962,7 +6962,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class XstringType : TypedOpenXmlLeafTextElement
+    public abstract partial class XstringType : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the XstringType class.
@@ -7010,7 +7010,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:Schema.</para>
     /// </summary>
-    public partial class Schema : TypedOpenXmlCompositeElement
+    public partial class Schema : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Schema class.
@@ -7109,7 +7109,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DataBinding" /> <c>&lt;x:DataBinding></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Map : TypedOpenXmlCompositeElement
+    public partial class Map : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Map class.
@@ -7306,7 +7306,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:DataBinding.</para>
     /// </summary>
-    public partial class DataBinding : TypedOpenXmlCompositeElement
+    public partial class DataBinding : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the DataBinding class.
@@ -7437,7 +7437,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.WebQueryProperties" /> <c>&lt;x:webPr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Connection : TypedOpenXmlCompositeElement
+    public partial class Connection : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Connection class.
@@ -7822,7 +7822,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CharacterValue" /> <c>&lt;x:s></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Tables : TypedOpenXmlCompositeElement
+    public partial class Tables : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Tables class.
@@ -7891,7 +7891,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:parameter.</para>
     /// </summary>
-    public partial class Parameter : TypedOpenXmlLeafElement
+    public partial class Parameter : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Parameter class.
@@ -8031,7 +8031,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:m.</para>
     /// </summary>
-    public partial class MissingTable : TypedOpenXmlLeafElement
+    public partial class MissingTable : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the MissingTable class.
@@ -8057,7 +8057,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:s.</para>
     /// </summary>
-    public partial class CharacterValue : TypedOpenXmlLeafElement
+    public partial class CharacterValue : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the CharacterValue class.
@@ -8098,7 +8098,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:x.</para>
     /// </summary>
-    public partial class FieldItem : TypedOpenXmlLeafElement
+    public partial class FieldItem : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the FieldItem class.
@@ -8137,7 +8137,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:textField.</para>
     /// </summary>
-    public partial class TextField : TypedOpenXmlLeafElement
+    public partial class TextField : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the TextField class.
@@ -8194,7 +8194,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.MemberPropertiesMap" /> <c>&lt;x:mpMap></c></description></item>
     /// </list>
     /// </remark>
-    public partial class CacheField : TypedOpenXmlCompositeElement
+    public partial class CacheField : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the CacheField class.
@@ -8433,7 +8433,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Page" /> <c>&lt;x:page></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Pages : TypedOpenXmlCompositeElement
+    public partial class Pages : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Pages class.
@@ -8504,7 +8504,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.RangeSet" /> <c>&lt;x:rangeSet></c></description></item>
     /// </list>
     /// </remark>
-    public partial class RangeSets : TypedOpenXmlCompositeElement
+    public partial class RangeSets : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the RangeSets class.
@@ -8575,7 +8575,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PageItem" /> <c>&lt;x:pageItem></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Page : TypedOpenXmlCompositeElement
+    public partial class Page : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Page class.
@@ -8640,7 +8640,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:pageItem.</para>
     /// </summary>
-    public partial class PageItem : TypedOpenXmlLeafElement
+    public partial class PageItem : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the PageItem class.
@@ -8679,7 +8679,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:rangeSet.</para>
     /// </summary>
-    public partial class RangeSet : TypedOpenXmlLeafElement
+    public partial class RangeSet : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the RangeSet class.
@@ -8804,7 +8804,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.MemberPropertyIndex" /> <c>&lt;x:x></c></description></item>
     /// </list>
     /// </remark>
-    public partial class MissingItem : TypedOpenXmlCompositeElement
+    public partial class MissingItem : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the MissingItem class.
@@ -8996,7 +8996,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.MemberPropertyIndex" /> <c>&lt;x:x></c></description></item>
     /// </list>
     /// </remark>
-    public partial class NumberItem : TypedOpenXmlCompositeElement
+    public partial class NumberItem : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the NumberItem class.
@@ -9204,7 +9204,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.MemberPropertyIndex" /> <c>&lt;x:x></c></description></item>
     /// </list>
     /// </remark>
-    public partial class BooleanItem : TypedOpenXmlCompositeElement
+    public partial class BooleanItem : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the BooleanItem class.
@@ -9324,7 +9324,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.MemberPropertyIndex" /> <c>&lt;x:x></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ErrorItem : TypedOpenXmlCompositeElement
+    public partial class ErrorItem : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ErrorItem class.
@@ -9543,7 +9543,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.MemberPropertyIndex" /> <c>&lt;x:x></c></description></item>
     /// </list>
     /// </remark>
-    public partial class StringItem : TypedOpenXmlCompositeElement
+    public partial class StringItem : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the StringItem class.
@@ -9748,7 +9748,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.MemberPropertyIndex" /> <c>&lt;x:x></c></description></item>
     /// </list>
     /// </remark>
-    public partial class DateTimeItem : TypedOpenXmlCompositeElement
+    public partial class DateTimeItem : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the DateTimeItem class.
@@ -9983,7 +9983,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Tuple" /> <c>&lt;x:tpl></c></description></item>
     /// </list>
     /// </remark>
-    public abstract partial class TuplesType : TypedOpenXmlCompositeElement
+    public abstract partial class TuplesType : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TuplesType class.
@@ -10089,7 +10089,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class XType : TypedOpenXmlLeafElement
+    public abstract partial class XType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the XType class.
@@ -10133,7 +10133,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.StringItem" /> <c>&lt;x:s></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PivotCacheRecord : TypedOpenXmlCompositeElement
+    public partial class PivotCacheRecord : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the PivotCacheRecord class.
@@ -10198,7 +10198,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:kpi.</para>
     /// </summary>
-    public partial class Kpi : TypedOpenXmlLeafElement
+    public partial class Kpi : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Kpi class.
@@ -10352,7 +10352,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:fieldUsage.</para>
     /// </summary>
-    public partial class FieldUsage : TypedOpenXmlLeafElement
+    public partial class FieldUsage : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the FieldUsage class.
@@ -10400,7 +10400,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Groups" /> <c>&lt;x:groups></c></description></item>
     /// </list>
     /// </remark>
-    public partial class GroupLevel : TypedOpenXmlCompositeElement
+    public partial class GroupLevel : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the GroupLevel class.
@@ -10539,7 +10539,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Group" /> <c>&lt;x:group></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Groups : TypedOpenXmlCompositeElement
+    public partial class Groups : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Groups class.
@@ -10610,7 +10610,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.GroupMembers" /> <c>&lt;x:groupMembers></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Group : TypedOpenXmlCompositeElement
+    public partial class Group : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Group class.
@@ -10751,7 +10751,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.GroupMember" /> <c>&lt;x:groupMember></c></description></item>
     /// </list>
     /// </remark>
-    public partial class GroupMembers : TypedOpenXmlCompositeElement
+    public partial class GroupMembers : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the GroupMembers class.
@@ -10816,7 +10816,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:groupMember.</para>
     /// </summary>
-    public partial class GroupMember : TypedOpenXmlLeafElement
+    public partial class GroupMember : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the GroupMember class.
@@ -10877,7 +10877,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.StringItem" /> <c>&lt;x:s></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Entries : TypedOpenXmlCompositeElement
+    public partial class Entries : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Entries class.
@@ -10954,7 +10954,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.TupleSet" /> <c>&lt;x:set></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Sets : TypedOpenXmlCompositeElement
+    public partial class Sets : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Sets class.
@@ -11025,7 +11025,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Query" /> <c>&lt;x:query></c></description></item>
     /// </list>
     /// </remark>
-    public partial class QueryCache : TypedOpenXmlCompositeElement
+    public partial class QueryCache : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the QueryCache class.
@@ -11096,7 +11096,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ServerFormat" /> <c>&lt;x:serverFormat></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ServerFormats : TypedOpenXmlCompositeElement
+    public partial class ServerFormats : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ServerFormats class.
@@ -11161,7 +11161,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:serverFormat.</para>
     /// </summary>
-    public partial class ServerFormat : TypedOpenXmlLeafElement
+    public partial class ServerFormat : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ServerFormat class.
@@ -11211,7 +11211,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:tpl.</para>
     /// </summary>
-    public partial class Tuple : TypedOpenXmlLeafElement
+    public partial class Tuple : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Tuple class.
@@ -11282,7 +11282,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.SortByTuple" /> <c>&lt;x:sortByTuple></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TupleSet : TypedOpenXmlCompositeElement
+    public partial class TupleSet : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TupleSet class.
@@ -11407,7 +11407,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Tuples" /> <c>&lt;x:tpls></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Query : TypedOpenXmlCompositeElement
+    public partial class Query : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Query class.
@@ -11496,7 +11496,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotArea" /> <c>&lt;x:pivotArea></c></description></item>
     /// </list>
     /// </remark>
-    public partial class CalculatedItem : TypedOpenXmlCompositeElement
+    public partial class CalculatedItem : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the CalculatedItem class.
@@ -11607,7 +11607,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotAreaReferences" /> <c>&lt;x:references></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PivotArea : TypedOpenXmlCompositeElement
+    public partial class PivotArea : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the PivotArea class.
@@ -11828,7 +11828,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CalculatedMemberExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class CalculatedMember : TypedOpenXmlCompositeElement
+    public partial class CalculatedMember : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the CalculatedMember class.
@@ -11995,7 +11995,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotFieldExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PivotField : TypedOpenXmlCompositeElement
+    public partial class PivotField : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the PivotField class.
@@ -12621,7 +12621,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:item.</para>
     /// </summary>
-    public partial class Item : TypedOpenXmlLeafElement
+    public partial class Item : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Item class.
@@ -12776,7 +12776,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DataFieldExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class DataField : TypedOpenXmlCompositeElement
+    public partial class DataField : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the DataField class.
@@ -12930,7 +12930,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.MemberPropertyIndex" /> <c>&lt;x:x></c></description></item>
     /// </list>
     /// </remark>
-    public partial class RowItem : TypedOpenXmlCompositeElement
+    public partial class RowItem : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the RowItem class.
@@ -13018,7 +13018,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:field.</para>
     /// </summary>
-    public partial class Field : TypedOpenXmlLeafElement
+    public partial class Field : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Field class.
@@ -13065,7 +13065,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotArea" /> <c>&lt;x:pivotArea></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Format : TypedOpenXmlCompositeElement
+    public partial class Format : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Format class.
@@ -13177,7 +13177,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotAreas" /> <c>&lt;x:pivotAreas></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ConditionalFormat : TypedOpenXmlCompositeElement
+    public partial class ConditionalFormat : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ConditionalFormat class.
@@ -13302,7 +13302,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotArea" /> <c>&lt;x:pivotArea></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PivotAreas : TypedOpenXmlCompositeElement
+    public partial class PivotAreas : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the PivotAreas class.
@@ -13373,7 +13373,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotArea" /> <c>&lt;x:pivotArea></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ChartFormat : TypedOpenXmlCompositeElement
+    public partial class ChartFormat : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ChartFormat class.
@@ -13487,7 +13487,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotHierarchyExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PivotHierarchy : TypedOpenXmlCompositeElement
+    public partial class PivotHierarchy : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the PivotHierarchy class.
@@ -13728,7 +13728,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class HierarchyUsageType : TypedOpenXmlLeafElement
+    public abstract partial class HierarchyUsageType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the HierarchyUsageType class.
@@ -13763,7 +13763,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:mp.</para>
     /// </summary>
-    public partial class MemberProperty : TypedOpenXmlLeafElement
+    public partial class MemberProperty : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the MemberProperty class.
@@ -13891,7 +13891,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:member.</para>
     /// </summary>
-    public partial class Member : TypedOpenXmlLeafElement
+    public partial class Member : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Member class.
@@ -13930,7 +13930,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:dimension.</para>
     /// </summary>
-    public partial class Dimension : TypedOpenXmlLeafElement
+    public partial class Dimension : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Dimension class.
@@ -14012,7 +14012,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:measureGroup.</para>
     /// </summary>
-    public partial class MeasureGroup : TypedOpenXmlLeafElement
+    public partial class MeasureGroup : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the MeasureGroup class.
@@ -14067,7 +14067,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:map.</para>
     /// </summary>
-    public partial class MeasureDimensionMap : TypedOpenXmlLeafElement
+    public partial class MeasureDimensionMap : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the MeasureDimensionMap class.
@@ -14127,7 +14127,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotFilterExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PivotFilter : TypedOpenXmlCompositeElement
+    public partial class PivotFilter : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the PivotFilter class.
@@ -14351,7 +14351,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.GroupLevels" /> <c>&lt;x:groupLevels></c></description></item>
     /// </list>
     /// </remark>
-    public partial class CacheHierarchy : TypedOpenXmlCompositeElement
+    public partial class CacheHierarchy : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the CacheHierarchy class.
@@ -14702,7 +14702,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:rangePr.</para>
     /// </summary>
-    public partial class RangeProperties : TypedOpenXmlLeafElement
+    public partial class RangeProperties : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the RangeProperties class.
@@ -14822,7 +14822,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.FieldItem" /> <c>&lt;x:x></c></description></item>
     /// </list>
     /// </remark>
-    public partial class DiscreteProperties : TypedOpenXmlCompositeElement
+    public partial class DiscreteProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the DiscreteProperties class.
@@ -14898,7 +14898,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.StringItem" /> <c>&lt;x:s></c></description></item>
     /// </list>
     /// </remark>
-    public partial class GroupItems : TypedOpenXmlCompositeElement
+    public partial class GroupItems : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the GroupItems class.
@@ -14979,7 +14979,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PageField : TypedOpenXmlCompositeElement
+    public partial class PageField : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the PageField class.
@@ -15112,7 +15112,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotAreaReference" /> <c>&lt;x:reference></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PivotAreaReferences : TypedOpenXmlCompositeElement
+    public partial class PivotAreaReferences : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the PivotAreaReferences class.
@@ -15184,7 +15184,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.FieldItem" /> <c>&lt;x:x></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PivotAreaReference : TypedOpenXmlCompositeElement
+    public partial class PivotAreaReference : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the PivotAreaReference class.
@@ -15433,7 +15433,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.QueryTableField" /> <c>&lt;x:queryTableField></c></description></item>
     /// </list>
     /// </remark>
-    public partial class QueryTableFields : TypedOpenXmlCompositeElement
+    public partial class QueryTableFields : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the QueryTableFields class.
@@ -15504,7 +15504,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DeletedField" /> <c>&lt;x:deletedField></c></description></item>
     /// </list>
     /// </remark>
-    public partial class QueryTableDeletedFields : TypedOpenXmlCompositeElement
+    public partial class QueryTableDeletedFields : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the QueryTableDeletedFields class.
@@ -15569,7 +15569,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:deletedField.</para>
     /// </summary>
-    public partial class DeletedField : TypedOpenXmlLeafElement
+    public partial class DeletedField : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the DeletedField class.
@@ -15615,7 +15615,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class QueryTableField : TypedOpenXmlCompositeElement
+    public partial class QueryTableField : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the QueryTableField class.
@@ -15969,7 +15969,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Text" /> <c>&lt;x:t></c></description></item>
     /// </list>
     /// </remark>
-    public abstract partial class RstType : TypedOpenXmlCompositeElement
+    public abstract partial class RstType : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the RstType class.
@@ -16200,7 +16200,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class BooleanPropertyType : TypedOpenXmlLeafElement
+    public abstract partial class BooleanPropertyType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the BooleanPropertyType class.
@@ -16232,7 +16232,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:u.</para>
     /// </summary>
-    public partial class Underline : TypedOpenXmlLeafElement
+    public partial class Underline : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Underline class.
@@ -16268,7 +16268,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:vertAlign.</para>
     /// </summary>
-    public partial class VerticalTextAlignment : TypedOpenXmlLeafElement
+    public partial class VerticalTextAlignment : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the VerticalTextAlignment class.
@@ -16307,7 +16307,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:sz.</para>
     /// </summary>
-    public partial class FontSize : TypedOpenXmlLeafElement
+    public partial class FontSize : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the FontSize class.
@@ -16450,7 +16450,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class ColorType : TypedOpenXmlLeafElement
+    public abstract partial class ColorType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ColorType class.
@@ -16529,7 +16529,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:rFont.</para>
     /// </summary>
-    public partial class RunFont : TypedOpenXmlLeafElement
+    public partial class RunFont : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the RunFont class.
@@ -16619,7 +16619,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class InternationalPropertyType : TypedOpenXmlLeafElement
+    public abstract partial class InternationalPropertyType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the InternationalPropertyType class.
@@ -16654,7 +16654,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:scheme.</para>
     /// </summary>
-    public partial class FontScheme : TypedOpenXmlLeafElement
+    public partial class FontScheme : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the FontScheme class.
@@ -16713,7 +16713,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.VerticalTextAlignment" /> <c>&lt;x:vertAlign></c></description></item>
     /// </list>
     /// </remark>
-    public partial class RunProperties : TypedOpenXmlCompositeElement
+    public partial class RunProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the RunProperties class.
@@ -16801,7 +16801,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Text" /> <c>&lt;x:t></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Run : TypedOpenXmlCompositeElement
+    public partial class Run : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Run class.
@@ -16888,7 +16888,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Text" /> <c>&lt;x:t></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PhoneticRun : TypedOpenXmlCompositeElement
+    public partial class PhoneticRun : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the PhoneticRun class.
@@ -16984,7 +16984,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:phoneticPr.</para>
     /// </summary>
-    public partial class PhoneticProperties : TypedOpenXmlLeafElement
+    public partial class PhoneticProperties : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the PhoneticProperties class.
@@ -17054,7 +17054,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.SheetIdMap" /> <c>&lt;x:sheetIdMap></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Header : TypedOpenXmlCompositeElement
+    public partial class Header : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Header class.
@@ -17258,7 +17258,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Undo" /> <c>&lt;x:undo></c></description></item>
     /// </list>
     /// </remark>
-    public partial class RevisionRowColumn : TypedOpenXmlCompositeElement
+    public partial class RevisionRowColumn : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the RevisionRowColumn class.
@@ -17425,7 +17425,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Undo" /> <c>&lt;x:undo></c></description></item>
     /// </list>
     /// </remark>
-    public partial class RevisionMove : TypedOpenXmlCompositeElement
+    public partial class RevisionMove : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the RevisionMove class.
@@ -17574,7 +17574,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:rcv.</para>
     /// </summary>
-    public partial class RevisionCustomView : TypedOpenXmlLeafElement
+    public partial class RevisionCustomView : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the RevisionCustomView class.
@@ -17634,7 +17634,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class RevisionSheetName : TypedOpenXmlCompositeElement
+    public partial class RevisionSheetName : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the RevisionSheetName class.
@@ -17780,7 +17780,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:ris.</para>
     /// </summary>
-    public partial class RevisionInsertSheet : TypedOpenXmlLeafElement
+    public partial class RevisionInsertSheet : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the RevisionInsertSheet class.
@@ -17895,7 +17895,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.NewCell" /> <c>&lt;x:nc></c></description></item>
     /// </list>
     /// </remark>
-    public partial class RevisionCellChange : TypedOpenXmlCompositeElement
+    public partial class RevisionCellChange : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the RevisionCellChange class.
@@ -18190,7 +18190,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class RevisionFormat : TypedOpenXmlCompositeElement
+    public partial class RevisionFormat : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the RevisionFormat class.
@@ -18345,7 +18345,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:raf.</para>
     /// </summary>
-    public partial class RevisionAutoFormat : TypedOpenXmlLeafElement
+    public partial class RevisionAutoFormat : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the RevisionAutoFormat class.
@@ -18485,7 +18485,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.OldFormula" /> <c>&lt;x:oldFormula></c></description></item>
     /// </list>
     /// </remark>
-    public partial class RevisionDefinedName : TypedOpenXmlCompositeElement
+    public partial class RevisionDefinedName : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the RevisionDefinedName class.
@@ -18867,7 +18867,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:rcmt.</para>
     /// </summary>
-    public partial class RevisionComment : TypedOpenXmlLeafElement
+    public partial class RevisionComment : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the RevisionComment class.
@@ -19027,7 +19027,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:rqt.</para>
     /// </summary>
-    public partial class RevisionQueryTable : TypedOpenXmlLeafElement
+    public partial class RevisionQueryTable : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the RevisionQueryTable class.
@@ -19094,7 +19094,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:rcft.</para>
     /// </summary>
-    public partial class RevisionConflict : TypedOpenXmlLeafElement
+    public partial class RevisionConflict : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the RevisionConflict class.
@@ -19173,7 +19173,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.SheetId" /> <c>&lt;x:sheetId></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SheetIdMap : TypedOpenXmlCompositeElement
+    public partial class SheetIdMap : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SheetIdMap class.
@@ -19244,7 +19244,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Reviewed" /> <c>&lt;x:reviewed></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ReviewedList : TypedOpenXmlCompositeElement
+    public partial class ReviewedList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ReviewedList class.
@@ -19309,7 +19309,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:reviewed.</para>
     /// </summary>
-    public partial class Reviewed : TypedOpenXmlLeafElement
+    public partial class Reviewed : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Reviewed class.
@@ -19349,7 +19349,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:undo.</para>
     /// </summary>
-    public partial class Undo : TypedOpenXmlLeafElement
+    public partial class Undo : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Undo class.
@@ -19657,7 +19657,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CellValue" /> <c>&lt;x:v></c></description></item>
     /// </list>
     /// </remark>
-    public abstract partial class CellType : TypedOpenXmlCompositeElement
+    public abstract partial class CellType : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the CellType class.
@@ -19833,7 +19833,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CellValue" /> <c>&lt;x:v></c></description></item>
     /// </list>
     /// </remark>
-    public partial class NewCell : TypedOpenXmlCompositeElement
+    public partial class NewCell : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the NewCell class.
@@ -20239,7 +20239,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.NumberingFormat" /> <c>&lt;x:numFmt></c></description></item>
     /// </list>
     /// </remark>
-    public abstract partial class DifferentialFormatType : TypedOpenXmlCompositeElement
+    public abstract partial class DifferentialFormatType : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the DifferentialFormatType class.
@@ -20381,7 +20381,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:sheetId.</para>
     /// </summary>
-    public partial class SheetId : TypedOpenXmlLeafElement
+    public partial class SheetId : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the SheetId class.
@@ -20421,7 +20421,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:f.</para>
     /// </summary>
-    public partial class CellFormula : TypedOpenXmlLeafTextElement
+    public partial class CellFormula : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the CellFormula class.
@@ -20613,7 +20613,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class UserInfo : TypedOpenXmlCompositeElement
+    public partial class UserInfo : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the UserInfo class.
@@ -20744,7 +20744,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Row : TypedOpenXmlCompositeElement
+    public partial class Row : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Row class.
@@ -20953,7 +20953,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:col.</para>
     /// </summary>
-    public partial class Column : TypedOpenXmlLeafElement
+    public partial class Column : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Column class.
@@ -21101,7 +21101,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:outlinePr.</para>
     /// </summary>
-    public partial class OutlineProperties : TypedOpenXmlLeafElement
+    public partial class OutlineProperties : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the OutlineProperties class.
@@ -21170,7 +21170,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:pageSetUpPr.</para>
     /// </summary>
-    public partial class PageSetupProperties : TypedOpenXmlLeafElement
+    public partial class PageSetupProperties : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the PageSetupProperties class.
@@ -21217,7 +21217,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:pane.</para>
     /// </summary>
-    public partial class Pane : TypedOpenXmlLeafElement
+    public partial class Pane : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Pane class.
@@ -21297,7 +21297,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:selection.</para>
     /// </summary>
-    public partial class Selection : TypedOpenXmlLeafElement
+    public partial class Selection : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Selection class.
@@ -21373,7 +21373,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotArea" /> <c>&lt;x:pivotArea></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PivotSelection : TypedOpenXmlCompositeElement
+    public partial class PivotSelection : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the PivotSelection class.
@@ -21636,7 +21636,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:brk.</para>
     /// </summary>
-    public partial class Break : TypedOpenXmlLeafElement
+    public partial class Break : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Break class.
@@ -21719,7 +21719,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:dataRef.</para>
     /// </summary>
-    public partial class DataReference : TypedOpenXmlLeafElement
+    public partial class DataReference : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the DataReference class.
@@ -21917,7 +21917,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Break" /> <c>&lt;x:brk></c></description></item>
     /// </list>
     /// </remark>
-    public abstract partial class PageBreakType : TypedOpenXmlCompositeElement
+    public abstract partial class PageBreakType : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the PageBreakType class.
@@ -21985,7 +21985,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:pageMargins.</para>
     /// </summary>
-    public partial class PageMargins : TypedOpenXmlLeafElement
+    public partial class PageMargins : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the PageMargins class.
@@ -22100,7 +22100,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:printOptions.</para>
     /// </summary>
-    public partial class PrintOptions : TypedOpenXmlLeafElement
+    public partial class PrintOptions : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the PrintOptions class.
@@ -22180,7 +22180,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:pageSetup.</para>
     /// </summary>
-    public partial class PageSetup : TypedOpenXmlLeafElement
+    public partial class PageSetup : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the PageSetup class.
@@ -22411,7 +22411,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.FirstFooter" /> <c>&lt;x:firstFooter></c></description></item>
     /// </list>
     /// </remark>
-    public partial class HeaderFooter : TypedOpenXmlCompositeElement
+    public partial class HeaderFooter : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the HeaderFooter class.
@@ -22605,7 +22605,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.SortState" /> <c>&lt;x:sortState></c></description></item>
     /// </list>
     /// </remark>
-    public partial class AutoFilter : TypedOpenXmlCompositeElement
+    public partial class AutoFilter : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the AutoFilter class.
@@ -22684,7 +22684,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Formula" /> <c>&lt;x:formula></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ConditionalFormattingRule : TypedOpenXmlCompositeElement
+    public partial class ConditionalFormattingRule : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ConditionalFormattingRule class.
@@ -22898,7 +22898,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:hyperlink.</para>
     /// </summary>
-    public partial class Hyperlink : TypedOpenXmlLeafElement
+    public partial class Hyperlink : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Hyperlink class.
@@ -22994,7 +22994,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ConditionalFormatValueObject : TypedOpenXmlCompositeElement
+    public partial class ConditionalFormatValueObject : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ConditionalFormatValueObject class.
@@ -23103,7 +23103,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.InputCells" /> <c>&lt;x:inputCells></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Scenario : TypedOpenXmlCompositeElement
+    public partial class Scenario : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Scenario class.
@@ -23231,7 +23231,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:protectedRange.</para>
     /// </summary>
-    public partial class ProtectedRange : TypedOpenXmlLeafElement
+    public partial class ProtectedRange : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ProtectedRange class.
@@ -23356,7 +23356,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:cellWatch.</para>
     /// </summary>
-    public partial class CellWatch : TypedOpenXmlLeafElement
+    public partial class CellWatch : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the CellWatch class.
@@ -23396,7 +23396,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:pageSetup.</para>
     /// </summary>
-    public partial class ChartSheetPageSetup : TypedOpenXmlLeafElement
+    public partial class ChartSheetPageSetup : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ChartSheetPageSetup class.
@@ -23550,7 +23550,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:customPr.</para>
     /// </summary>
-    public partial class CustomProperty : TypedOpenXmlLeafElement
+    public partial class CustomProperty : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the CustomProperty class.
@@ -23607,7 +23607,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:webPublishItem.</para>
     /// </summary>
-    public partial class WebPublishItem : TypedOpenXmlLeafElement
+    public partial class WebPublishItem : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the WebPublishItem class.
@@ -23739,7 +23739,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:tablePart.</para>
     /// </summary>
-    public partial class TablePart : TypedOpenXmlLeafElement
+    public partial class TablePart : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the TablePart class.
@@ -23787,7 +23787,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ChartSheetView : TypedOpenXmlCompositeElement
+    public partial class ChartSheetView : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ChartSheetView class.
@@ -23915,7 +23915,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PageMargins" /> <c>&lt;x:pageMargins></c></description></item>
     /// </list>
     /// </remark>
-    public partial class CustomChartsheetView : TypedOpenXmlCompositeElement
+    public partial class CustomChartsheetView : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the CustomChartsheetView class.
@@ -24063,7 +24063,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:inputCells.</para>
     /// </summary>
-    public partial class InputCells : TypedOpenXmlLeafElement
+    public partial class InputCells : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the InputCells class.
@@ -24156,7 +24156,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ControlProperties" /> <c>&lt;x:controlPr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Control : TypedOpenXmlCompositeElement
+    public partial class Control : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Control class.
@@ -24268,7 +24268,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:ignoredError.</para>
     /// </summary>
-    public partial class IgnoredError : TypedOpenXmlLeafElement
+    public partial class IgnoredError : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the IgnoredError class.
@@ -24407,7 +24407,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:mergeCell.</para>
     /// </summary>
-    public partial class MergeCell : TypedOpenXmlLeafElement
+    public partial class MergeCell : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the MergeCell class.
@@ -24454,7 +24454,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.ExcelAc.List" /> <c>&lt;x12ac:list></c></description></item>
     /// </list>
     /// </remark>
-    public partial class DataValidation : TypedOpenXmlCompositeElement
+    public partial class DataValidation : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the DataValidation class.
@@ -24709,7 +24709,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Selection" /> <c>&lt;x:selection></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SheetView : TypedOpenXmlCompositeElement
+    public partial class SheetView : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SheetView class.
@@ -25015,7 +25015,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Selection" /> <c>&lt;x:selection></c></description></item>
     /// </list>
     /// </remark>
-    public partial class CustomSheetView : TypedOpenXmlCompositeElement
+    public partial class CustomSheetView : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the CustomSheetView class.
@@ -25450,7 +25450,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.EmbeddedObjectProperties" /> <c>&lt;x:objectPr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class OleObject : TypedOpenXmlCompositeElement
+    public partial class OleObject : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the OleObject class.
@@ -25609,7 +25609,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.MetadataType" /> <c>&lt;x:metadataType></c></description></item>
     /// </list>
     /// </remark>
-    public partial class MetadataTypes : TypedOpenXmlCompositeElement
+    public partial class MetadataTypes : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the MetadataTypes class.
@@ -25681,7 +25681,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CharacterValue" /> <c>&lt;x:s></c></description></item>
     /// </list>
     /// </remark>
-    public partial class MetadataStrings : TypedOpenXmlCompositeElement
+    public partial class MetadataStrings : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the MetadataStrings class.
@@ -25753,7 +25753,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Mdx" /> <c>&lt;x:mdx></c></description></item>
     /// </list>
     /// </remark>
-    public partial class MdxMetadata : TypedOpenXmlCompositeElement
+    public partial class MdxMetadata : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the MdxMetadata class.
@@ -25826,7 +25826,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.FutureMetadataBlock" /> <c>&lt;x:bk></c></description></item>
     /// </list>
     /// </remark>
-    public partial class FutureMetadata : TypedOpenXmlCompositeElement
+    public partial class FutureMetadata : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the FutureMetadata class.
@@ -26035,7 +26035,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.MetadataBlock" /> <c>&lt;x:bk></c></description></item>
     /// </list>
     /// </remark>
-    public abstract partial class MetadataBlocksType : TypedOpenXmlCompositeElement
+    public abstract partial class MetadataBlocksType : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the MetadataBlocksType class.
@@ -26092,7 +26092,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:metadataType.</para>
     /// </summary>
-    public partial class MetadataType : TypedOpenXmlLeafElement
+    public partial class MetadataType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the MetadataType class.
@@ -26439,7 +26439,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.MetadataRecord" /> <c>&lt;x:rc></c></description></item>
     /// </list>
     /// </remark>
-    public partial class MetadataBlock : TypedOpenXmlCompositeElement
+    public partial class MetadataBlock : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the MetadataBlock class.
@@ -26492,7 +26492,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:rc.</para>
     /// </summary>
-    public partial class MetadataRecord : TypedOpenXmlLeafElement
+    public partial class MetadataRecord : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the MetadataRecord class.
@@ -26553,7 +26553,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class FutureMetadataBlock : TypedOpenXmlCompositeElement
+    public partial class FutureMetadataBlock : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the FutureMetadataBlock class.
@@ -26628,7 +26628,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.MdxTuple" /> <c>&lt;x:t></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Mdx : TypedOpenXmlCompositeElement
+    public partial class Mdx : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Mdx class.
@@ -26776,7 +26776,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.NameIndex" /> <c>&lt;x:n></c></description></item>
     /// </list>
     /// </remark>
-    public partial class MdxTuple : TypedOpenXmlCompositeElement
+    public partial class MdxTuple : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the MdxTuple class.
@@ -26956,7 +26956,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.NameIndex" /> <c>&lt;x:n></c></description></item>
     /// </list>
     /// </remark>
-    public partial class MdxSet : TypedOpenXmlCompositeElement
+    public partial class MdxSet : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the MdxSet class.
@@ -27049,7 +27049,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:p.</para>
     /// </summary>
-    public partial class MdxMemberProp : TypedOpenXmlLeafElement
+    public partial class MdxMemberProp : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the MdxMemberProp class.
@@ -27106,7 +27106,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:k.</para>
     /// </summary>
-    public partial class MdxKpi : TypedOpenXmlLeafElement
+    public partial class MdxKpi : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the MdxKpi class.
@@ -27177,7 +27177,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:n.</para>
     /// </summary>
-    public partial class NameIndex : TypedOpenXmlLeafElement
+    public partial class NameIndex : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the NameIndex class.
@@ -27239,7 +27239,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.XmlCellProperties" /> <c>&lt;x:xmlCellPr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SingleXmlCell : TypedOpenXmlCompositeElement
+    public partial class SingleXmlCell : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SingleXmlCell class.
@@ -27373,7 +27373,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.XmlProperties" /> <c>&lt;x:xmlPr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class XmlCellProperties : TypedOpenXmlCompositeElement
+    public partial class XmlCellProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the XmlCellProperties class.
@@ -27492,7 +27492,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class XmlProperties : TypedOpenXmlCompositeElement
+    public partial class XmlProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the XmlProperties class.
@@ -27610,7 +27610,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.BackgroundColor" /> <c>&lt;x:bgColor></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PatternFill : TypedOpenXmlCompositeElement
+    public partial class PatternFill : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the PatternFill class.
@@ -27709,7 +27709,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.GradientStop" /> <c>&lt;x:stop></c></description></item>
     /// </list>
     /// </remark>
-    public partial class GradientFill : TypedOpenXmlCompositeElement
+    public partial class GradientFill : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the GradientFill class.
@@ -27840,7 +27840,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Color" /> <c>&lt;x:color></c></description></item>
     /// </list>
     /// </remark>
-    public partial class GradientStop : TypedOpenXmlCompositeElement
+    public partial class GradientStop : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the GradientStop class.
@@ -27922,7 +27922,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:numFmt.</para>
     /// </summary>
-    public partial class NumberingFormat : TypedOpenXmlLeafElement
+    public partial class NumberingFormat : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the NumberingFormat class.
@@ -27976,7 +27976,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:alignment.</para>
     /// </summary>
-    public partial class Alignment : TypedOpenXmlLeafElement
+    public partial class Alignment : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Alignment class.
@@ -28114,7 +28114,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:protection.</para>
     /// </summary>
-    public partial class Protection : TypedOpenXmlLeafElement
+    public partial class Protection : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Protection class.
@@ -28181,7 +28181,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.VerticalTextAlignment" /> <c>&lt;x:vertAlign></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Font : TypedOpenXmlCompositeElement
+    public partial class Font : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Font class.
@@ -28464,7 +28464,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PatternFill" /> <c>&lt;x:patternFill></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Fill : TypedOpenXmlCompositeElement
+    public partial class Fill : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Fill class.
@@ -28559,7 +28559,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.HorizontalBorder" /> <c>&lt;x:horizontal></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Border : TypedOpenXmlCompositeElement
+    public partial class Border : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Border class.
@@ -28785,7 +28785,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.RgbColor" /> <c>&lt;x:rgbColor></c></description></item>
     /// </list>
     /// </remark>
-    public partial class IndexedColors : TypedOpenXmlCompositeElement
+    public partial class IndexedColors : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the IndexedColors class.
@@ -28844,7 +28844,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Color" /> <c>&lt;x:color></c></description></item>
     /// </list>
     /// </remark>
-    public partial class MruColors : TypedOpenXmlCompositeElement
+    public partial class MruColors : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the MruColors class.
@@ -28903,7 +28903,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.TableStyleElement" /> <c>&lt;x:tableStyleElement></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TableStyle : TypedOpenXmlCompositeElement
+    public partial class TableStyle : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TableStyle class.
@@ -29005,7 +29005,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:rgbColor.</para>
     /// </summary>
-    public partial class RgbColor : TypedOpenXmlLeafElement
+    public partial class RgbColor : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the RgbColor class.
@@ -29050,7 +29050,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class CellStyle : TypedOpenXmlCompositeElement
+    public partial class CellStyle : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the CellStyle class.
@@ -29199,7 +29199,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class CellFormat : TypedOpenXmlCompositeElement
+    public partial class CellFormat : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the CellFormat class.
@@ -29444,7 +29444,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:name.</para>
     /// </summary>
-    public partial class FontName : TypedOpenXmlLeafElement
+    public partial class FontName : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the FontName class.
@@ -29485,7 +29485,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:family.</para>
     /// </summary>
-    public partial class FontFamilyNumbering : TypedOpenXmlLeafElement
+    public partial class FontFamilyNumbering : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the FontFamilyNumbering class.
@@ -29526,7 +29526,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:charset.</para>
     /// </summary>
-    public partial class FontCharSet : TypedOpenXmlLeafElement
+    public partial class FontCharSet : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the FontCharSet class.
@@ -29567,7 +29567,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:tableStyleElement.</para>
     /// </summary>
-    public partial class TableStyleElement : TypedOpenXmlLeafElement
+    public partial class TableStyleElement : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the TableStyleElement class.
@@ -29630,7 +29630,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:definedName.</para>
     /// </summary>
-    public partial class ExternalDefinedName : TypedOpenXmlLeafElement
+    public partial class ExternalDefinedName : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ExternalDefinedName class.
@@ -29701,7 +29701,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExternalRow" /> <c>&lt;x:row></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ExternalSheetData : TypedOpenXmlCompositeElement
+    public partial class ExternalSheetData : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ExternalSheetData class.
@@ -29787,7 +29787,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExternalCell" /> <c>&lt;x:cell></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ExternalRow : TypedOpenXmlCompositeElement
+    public partial class ExternalRow : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ExternalRow class.
@@ -29865,7 +29865,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Xstring" /> <c>&lt;x:v></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ExternalCell : TypedOpenXmlCompositeElement
+    public partial class ExternalCell : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ExternalCell class.
@@ -29976,7 +29976,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DdeItem" /> <c>&lt;x:ddeItem></c></description></item>
     /// </list>
     /// </remark>
-    public partial class DdeItems : TypedOpenXmlCompositeElement
+    public partial class DdeItems : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the DdeItems class.
@@ -30035,7 +30035,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Values" /> <c>&lt;x:values></c></description></item>
     /// </list>
     /// </remark>
-    public partial class DdeItem : TypedOpenXmlCompositeElement
+    public partial class DdeItem : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the DdeItem class.
@@ -30154,7 +30154,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Value" /> <c>&lt;x:value></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Values : TypedOpenXmlCompositeElement
+    public partial class Values : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Values class.
@@ -30238,7 +30238,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DdeLinkValue" /> <c>&lt;x:val></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Value : TypedOpenXmlCompositeElement
+    public partial class Value : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Value class.
@@ -30323,7 +30323,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.OleItem" /> <c>&lt;x14:oleItem></c></description></item>
     /// </list>
     /// </remark>
-    public partial class OleItems : TypedOpenXmlCompositeElement
+    public partial class OleItems : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the OleItems class.
@@ -30387,7 +30387,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021.ExternalBookAlternateUrls" /> <c>&lt;xxl21:alternateUrls></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ExternalBook : TypedOpenXmlCompositeElement
+    public partial class ExternalBook : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ExternalBook class.
@@ -30522,7 +30522,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DdeItems" /> <c>&lt;x:ddeItems></c></description></item>
     /// </list>
     /// </remark>
-    public partial class DdeLink : TypedOpenXmlCompositeElement
+    public partial class DdeLink : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the DdeLink class.
@@ -30625,7 +30625,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.OleItems" /> <c>&lt;x:oleItems></c></description></item>
     /// </list>
     /// </remark>
-    public partial class OleLink : TypedOpenXmlCompositeElement
+    public partial class OleLink : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the OleLink class.
@@ -30724,7 +30724,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:sheetName.</para>
     /// </summary>
-    public partial class SheetName : TypedOpenXmlLeafElement
+    public partial class SheetName : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the SheetName class.
@@ -30761,7 +30761,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:v.</para>
     /// </summary>
-    public partial class Xstring : TypedOpenXmlLeafTextElement
+    public partial class Xstring : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the Xstring class.
@@ -30807,7 +30807,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.XmlColumnProperties" /> <c>&lt;x:xmlColumnPr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TableColumn : TypedOpenXmlCompositeElement
+    public partial class TableColumn : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TableColumn class.
@@ -31145,7 +31145,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class TableFormulaType : TypedOpenXmlLeafTextElement
+    public abstract partial class TableFormulaType : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the TableFormulaType class.
@@ -31210,7 +31210,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class XmlColumnProperties : TypedOpenXmlCompositeElement
+    public partial class XmlColumnProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the XmlColumnProperties class.
@@ -31339,7 +31339,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Main" /> <c>&lt;x:main></c></description></item>
     /// </list>
     /// </remark>
-    public partial class VolatileType : TypedOpenXmlCompositeElement
+    public partial class VolatileType : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the VolatileType class.
@@ -31413,7 +31413,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Topic" /> <c>&lt;x:tp></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Main : TypedOpenXmlCompositeElement
+    public partial class Main : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Main class.
@@ -31490,7 +31490,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Xstring" /> <c>&lt;x:v></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Topic : TypedOpenXmlCompositeElement
+    public partial class Topic : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Topic class.
@@ -31572,7 +31572,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:tr.</para>
     /// </summary>
-    public partial class TopicReferences : TypedOpenXmlLeafElement
+    public partial class TopicReferences : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the TopicReferences class.
@@ -31626,7 +31626,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:pivotCache.</para>
     /// </summary>
-    public partial class PivotCache : TypedOpenXmlLeafElement
+    public partial class PivotCache : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the PivotCache class.
@@ -31684,7 +31684,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:webPublishObject.</para>
     /// </summary>
-    public partial class WebPublishObject : TypedOpenXmlLeafElement
+    public partial class WebPublishObject : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the WebPublishObject class.
@@ -31789,7 +31789,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:externalReference.</para>
     /// </summary>
-    public partial class ExternalReference : TypedOpenXmlLeafElement
+    public partial class ExternalReference : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ExternalReference class.
@@ -31837,7 +31837,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class CustomWorkbookView : TypedOpenXmlCompositeElement
+    public partial class CustomWorkbookView : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the CustomWorkbookView class.
@@ -32183,7 +32183,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:sheet.</para>
     /// </summary>
-    public partial class Sheet : TypedOpenXmlLeafElement
+    public partial class Sheet : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Sheet class.
@@ -32277,7 +32277,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class WorkbookView : TypedOpenXmlCompositeElement
+    public partial class WorkbookView : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the WorkbookView class.
@@ -32491,7 +32491,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:definedName.</para>
     /// </summary>
-    public partial class DefinedName : TypedOpenXmlLeafTextElement
+    public partial class DefinedName : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the DefinedName class.
@@ -32701,7 +32701,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:functionGroup.</para>
     /// </summary>
-    public partial class FunctionGroup : TypedOpenXmlLeafElement
+    public partial class FunctionGroup : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the FunctionGroup class.
@@ -32747,7 +32747,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.Table" /> <c>&lt;x14:table></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TableExtension : TypedOpenXmlCompositeElement
+    public partial class TableExtension : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TableExtension class.
@@ -32824,7 +32824,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ToMarker" /> <c>&lt;x:to></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ObjectAnchor : TypedOpenXmlCompositeElement
+    public partial class ObjectAnchor : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ObjectAnchor class.
@@ -33079,7 +33079,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.RowId" /> <c>&lt;xdr:row></c></description></item>
     /// </list>
     /// </remark>
-    public abstract partial class MarkerType : TypedOpenXmlCompositeElement
+    public abstract partial class MarkerType : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the MarkerType class.
@@ -33185,7 +33185,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.Id" /> <c>&lt;x14:id></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ConditionalFormattingRuleExtension : TypedOpenXmlCompositeElement
+    public partial class ConditionalFormattingRuleExtension : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ConditionalFormattingRuleExtension class.
@@ -33261,7 +33261,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.PivotHierarchy" /> <c>&lt;x14:pivotHierarchy></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PivotHierarchyExtension : TypedOpenXmlCompositeElement
+    public partial class PivotHierarchyExtension : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the PivotHierarchyExtension class.
@@ -33337,7 +33337,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.PivotField" /> <c>&lt;x14:pivotField></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PivotFieldExtension : TypedOpenXmlCompositeElement
+    public partial class PivotFieldExtension : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the PivotFieldExtension class.
@@ -33413,7 +33413,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.SourceConnection" /> <c>&lt;x14:sourceConnection></c></description></item>
     /// </list>
     /// </remark>
-    public partial class CacheSourceExtension : TypedOpenXmlCompositeElement
+    public partial class CacheSourceExtension : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the CacheSourceExtension class.
@@ -33489,7 +33489,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.TableColumn" /> <c>&lt;x:tableColumn></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TableColumns : TypedOpenXmlCompositeElement
+    public partial class TableColumns : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TableColumns class.
@@ -33554,7 +33554,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:tableStyleInfo.</para>
     /// </summary>
-    public partial class TableStyleInfo : TypedOpenXmlLeafElement
+    public partial class TableStyleInfo : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the TableStyleInfo class.
@@ -33641,7 +33641,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.TableExtension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TableExtensionList : TypedOpenXmlCompositeElement
+    public partial class TableExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TableExtensionList class.
@@ -33694,7 +33694,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:oleItem.</para>
     /// </summary>
-    public partial class OleItem : TypedOpenXmlLeafElement
+    public partial class OleItem : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the OleItem class.
@@ -34298,7 +34298,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Color" /> <c>&lt;x:color></c></description></item>
     /// </list>
     /// </remark>
-    public abstract partial class BorderPropertiesType : TypedOpenXmlCompositeElement
+    public abstract partial class BorderPropertiesType : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the BorderPropertiesType class.
@@ -34374,7 +34374,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ObjectAnchor" /> <c>&lt;x:anchor></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ControlProperties : TypedOpenXmlCompositeElement
+    public partial class ControlProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ControlProperties class.
@@ -34616,7 +34616,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ObjectAnchor" /> <c>&lt;x:anchor></c></description></item>
     /// </list>
     /// </remark>
-    public partial class EmbeddedObjectProperties : TypedOpenXmlCompositeElement
+    public partial class EmbeddedObjectProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the EmbeddedObjectProperties class.
@@ -34825,7 +34825,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.TabColor" /> <c>&lt;x:tabColor></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ChartSheetProperties : TypedOpenXmlCompositeElement
+    public partial class ChartSheetProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ChartSheetProperties class.
@@ -34923,7 +34923,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ChartSheetViews : TypedOpenXmlCompositeElement
+    public partial class ChartSheetViews : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ChartSheetViews class.
@@ -34978,7 +34978,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:sheetProtection.</para>
     /// </summary>
-    public partial class ChartSheetProtection : TypedOpenXmlLeafElement
+    public partial class ChartSheetProtection : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ChartSheetProtection class.
@@ -35089,7 +35089,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CustomChartsheetView" /> <c>&lt;x:customSheetView></c></description></item>
     /// </list>
     /// </remark>
-    public partial class CustomChartsheetViews : TypedOpenXmlCompositeElement
+    public partial class CustomChartsheetViews : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the CustomChartsheetViews class.
@@ -35142,7 +35142,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:drawing.</para>
     /// </summary>
-    public partial class Drawing : TypedOpenXmlLeafElement
+    public partial class Drawing : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Drawing class.
@@ -35234,7 +35234,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class LegacyDrawingType : TypedOpenXmlLeafElement
+    public abstract partial class LegacyDrawingType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the LegacyDrawingType class.
@@ -35272,7 +35272,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:drawingHF.</para>
     /// </summary>
-    public partial class DrawingHeaderFooter : TypedOpenXmlLeafElement
+    public partial class DrawingHeaderFooter : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the DrawingHeaderFooter class.
@@ -35512,7 +35512,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:picture.</para>
     /// </summary>
-    public partial class Picture : TypedOpenXmlLeafElement
+    public partial class Picture : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Picture class.
@@ -35560,7 +35560,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.WebPublishItem" /> <c>&lt;x:webPublishItem></c></description></item>
     /// </list>
     /// </remark>
-    public partial class WebPublishItems : TypedOpenXmlCompositeElement
+    public partial class WebPublishItems : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the WebPublishItems class.
@@ -35632,7 +35632,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Color" /> <c>&lt;x:color></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ColorScale : TypedOpenXmlCompositeElement
+    public partial class ColorScale : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ColorScale class.
@@ -35694,7 +35694,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Color" /> <c>&lt;x:color></c></description></item>
     /// </list>
     /// </remark>
-    public partial class DataBar : TypedOpenXmlCompositeElement
+    public partial class DataBar : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the DataBar class.
@@ -35791,7 +35791,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ConditionalFormatValueObject" /> <c>&lt;x:cfvo></c></description></item>
     /// </list>
     /// </remark>
-    public partial class IconSet : TypedOpenXmlCompositeElement
+    public partial class IconSet : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the IconSet class.
@@ -35895,7 +35895,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ConditionalFormattingRuleExtension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ConditionalFormattingRuleExtensionList : TypedOpenXmlCompositeElement
+    public partial class ConditionalFormattingRuleExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ConditionalFormattingRuleExtensionList class.
@@ -35954,7 +35954,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DataReference" /> <c>&lt;x:dataRef></c></description></item>
     /// </list>
     /// </remark>
-    public partial class DataReferences : TypedOpenXmlCompositeElement
+    public partial class DataReferences : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the DataReferences class.
@@ -36027,7 +36027,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PageSetupProperties" /> <c>&lt;x:pageSetUpPr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SheetProperties : TypedOpenXmlCompositeElement
+    public partial class SheetProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SheetProperties class.
@@ -36232,7 +36232,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.SheetView" /> <c>&lt;x:sheetView></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SheetViews : TypedOpenXmlCompositeElement
+    public partial class SheetViews : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SheetViews class.
@@ -36287,7 +36287,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:sheetFormatPr.</para>
     /// </summary>
-    public partial class SheetFormatProperties : TypedOpenXmlLeafElement
+    public partial class SheetFormatProperties : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the SheetFormatProperties class.
@@ -36435,7 +36435,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:sheetProtection.</para>
     /// </summary>
-    public partial class SheetProtection : TypedOpenXmlLeafElement
+    public partial class SheetProtection : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the SheetProtection class.
@@ -36700,7 +36700,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CustomSheetView" /> <c>&lt;x:customSheetView></c></description></item>
     /// </list>
     /// </remark>
-    public partial class CustomSheetViews : TypedOpenXmlCompositeElement
+    public partial class CustomSheetViews : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the CustomSheetViews class.
@@ -36759,7 +36759,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.OleObject" /> <c>&lt;x:oleObject></c></description></item>
     /// </list>
     /// </remark>
-    public partial class OleObjects : TypedOpenXmlCompositeElement
+    public partial class OleObjects : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the OleObjects class.
@@ -36818,7 +36818,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Control" /> <c>&lt;x:control></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Controls : TypedOpenXmlCompositeElement
+    public partial class Controls : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Controls class.
@@ -36871,7 +36871,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:dimension.</para>
     /// </summary>
-    public partial class SheetDimension : TypedOpenXmlLeafElement
+    public partial class SheetDimension : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the SheetDimension class.
@@ -36920,7 +36920,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Column" /> <c>&lt;x:col></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Columns : TypedOpenXmlCompositeElement
+    public partial class Columns : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Columns class.
@@ -36979,7 +36979,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Row" /> <c>&lt;x:row></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SheetData : TypedOpenXmlCompositeElement
+    public partial class SheetData : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SheetData class.
@@ -37039,7 +37039,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DataReferences" /> <c>&lt;x:dataRefs></c></description></item>
     /// </list>
     /// </remark>
-    public partial class DataConsolidate : TypedOpenXmlCompositeElement
+    public partial class DataConsolidate : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the DataConsolidate class.
@@ -37171,7 +37171,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ConditionalFormatting : TypedOpenXmlCompositeElement
+    public partial class ConditionalFormatting : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ConditionalFormatting class.
@@ -37256,7 +37256,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CustomProperty" /> <c>&lt;x:customPr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class CustomProperties : TypedOpenXmlCompositeElement
+    public partial class CustomProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the CustomProperties class.
@@ -37315,7 +37315,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.MemberProperty" /> <c>&lt;x:mp></c></description></item>
     /// </list>
     /// </remark>
-    public partial class MemberProperties : TypedOpenXmlCompositeElement
+    public partial class MemberProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the MemberProperties class.
@@ -37386,7 +37386,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Member" /> <c>&lt;x:member></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Members : TypedOpenXmlCompositeElement
+    public partial class Members : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Members class.
@@ -37468,7 +37468,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotHierarchyExtension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PivotHierarchyExtensionList : TypedOpenXmlCompositeElement
+    public partial class PivotHierarchyExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the PivotHierarchyExtensionList class.
@@ -37527,7 +37527,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Item" /> <c>&lt;x:item></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Items : TypedOpenXmlCompositeElement
+    public partial class Items : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Items class.
@@ -37598,7 +37598,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotArea" /> <c>&lt;x:pivotArea></c></description></item>
     /// </list>
     /// </remark>
-    public partial class AutoSortScope : TypedOpenXmlCompositeElement
+    public partial class AutoSortScope : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the AutoSortScope class.
@@ -37670,7 +37670,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotFieldExtension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PivotFieldExtensionList : TypedOpenXmlCompositeElement
+    public partial class PivotFieldExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the PivotFieldExtensionList class.
@@ -37723,7 +37723,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:worksheetSource.</para>
     /// </summary>
-    public partial class WorksheetSource : TypedOpenXmlLeafElement
+    public partial class WorksheetSource : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the WorksheetSource class.
@@ -37805,7 +37805,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.RangeSets" /> <c>&lt;x:rangeSets></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Consolidation : TypedOpenXmlCompositeElement
+    public partial class Consolidation : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Consolidation class.
@@ -37904,7 +37904,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CacheSourceExtension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class CacheSourceExtensionList : TypedOpenXmlCompositeElement
+    public partial class CacheSourceExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the CacheSourceExtensionList class.
@@ -37963,7 +37963,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ObjectAnchor" /> <c>&lt;x:anchor></c></description></item>
     /// </list>
     /// </remark>
-    public partial class CommentProperties : TypedOpenXmlCompositeElement
+    public partial class CommentProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the CommentProperties class.
@@ -38196,7 +38196,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:sortCondition.</para>
     /// </summary>
-    public partial class SortCondition : TypedOpenXmlLeafElement
+    public partial class SortCondition : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the SortCondition class.
@@ -38301,7 +38301,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:filter.</para>
     /// </summary>
-    public partial class Filter : TypedOpenXmlLeafElement
+    public partial class Filter : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Filter class.
@@ -38344,7 +38344,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:dateGroupItem.</para>
     /// </summary>
-    public partial class DateGroupItem : TypedOpenXmlLeafElement
+    public partial class DateGroupItem : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the DateGroupItem class.
@@ -38466,7 +38466,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.Filter" /> <c>&lt;x14:filter></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Filters : TypedOpenXmlCompositeElement
+    public partial class Filters : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Filters class.
@@ -38546,7 +38546,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:top10.</para>
     /// </summary>
-    public partial class Top10 : TypedOpenXmlLeafElement
+    public partial class Top10 : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Top10 class.
@@ -38624,7 +38624,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CustomFilter" /> <c>&lt;x:customFilter></c></description></item>
     /// </list>
     /// </remark>
-    public partial class CustomFilters : TypedOpenXmlCompositeElement
+    public partial class CustomFilters : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the CustomFilters class.
@@ -38689,7 +38689,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:dynamicFilter.</para>
     /// </summary>
-    public partial class DynamicFilter : TypedOpenXmlLeafElement
+    public partial class DynamicFilter : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the DynamicFilter class.
@@ -38778,7 +38778,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:colorFilter.</para>
     /// </summary>
-    public partial class ColorFilter : TypedOpenXmlLeafElement
+    public partial class ColorFilter : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ColorFilter class.
@@ -38829,7 +38829,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:iconFilter.</para>
     /// </summary>
-    public partial class IconFilter : TypedOpenXmlLeafElement
+    public partial class IconFilter : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the IconFilter class.
@@ -38887,7 +38887,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.TableSlicerCache" /> <c>&lt;x15:tableSlicerCache></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SlicerCacheDefinitionExtension : TypedOpenXmlCompositeElement
+    public partial class SlicerCacheDefinitionExtension : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SlicerCacheDefinitionExtension class.
@@ -38968,7 +38968,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.PivotFilter" /> <c>&lt;x15:pivotFilter></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PivotFilterExtension : TypedOpenXmlCompositeElement
+    public partial class PivotFilterExtension : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the PivotFilterExtension class.
@@ -39046,7 +39046,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.QueryTable" /> <c>&lt;x15:queryTable></c></description></item>
     /// </list>
     /// </remark>
-    public partial class QueryTableExtension : TypedOpenXmlCompositeElement
+    public partial class QueryTableExtension : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the QueryTableExtension class.
@@ -39116,7 +39116,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:dbPr.</para>
     /// </summary>
-    public partial class DatabaseProperties : TypedOpenXmlLeafElement
+    public partial class DatabaseProperties : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the DatabaseProperties class.
@@ -39190,7 +39190,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:olapPr.</para>
     /// </summary>
-    public partial class OlapProperties : TypedOpenXmlLeafElement
+    public partial class OlapProperties : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the OlapProperties class.
@@ -39321,7 +39321,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Tables" /> <c>&lt;x:tables></c></description></item>
     /// </list>
     /// </remark>
-    public partial class WebQueryProperties : TypedOpenXmlCompositeElement
+    public partial class WebQueryProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the WebQueryProperties class.
@@ -39538,7 +39538,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.TextFields" /> <c>&lt;x:textFields></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TextProperties : TypedOpenXmlCompositeElement
+    public partial class TextProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TextProperties class.
@@ -39792,7 +39792,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Parameter" /> <c>&lt;x:parameter></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Parameters : TypedOpenXmlCompositeElement
+    public partial class Parameters : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Parameters class.
@@ -39863,7 +39863,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ConnectionExtension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ConnectionExtensionList : TypedOpenXmlCompositeElement
+    public partial class ConnectionExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ConnectionExtensionList class.
@@ -39923,7 +39923,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.Connection" /> <c>&lt;x15:connection></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ConnectionExtension : TypedOpenXmlCompositeElement
+    public partial class ConnectionExtension : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ConnectionExtension class.
@@ -40001,7 +40001,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.TextField" /> <c>&lt;x:textField></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TextFields : TypedOpenXmlCompositeElement
+    public partial class TextFields : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TextFields class.
@@ -40077,7 +40077,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.StringItem" /> <c>&lt;x:s></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SharedItems : TypedOpenXmlCompositeElement
+    public partial class SharedItems : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SharedItems class.
@@ -40306,7 +40306,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.RangeProperties" /> <c>&lt;x:rangePr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class FieldGroup : TypedOpenXmlCompositeElement
+    public partial class FieldGroup : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the FieldGroup class.
@@ -40395,7 +40395,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CacheFieldExtension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class CacheFieldExtensionList : TypedOpenXmlCompositeElement
+    public partial class CacheFieldExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the CacheFieldExtensionList class.
@@ -40455,7 +40455,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.CachedUniqueNames" /> <c>&lt;x15:cachedUniqueNames></c></description></item>
     /// </list>
     /// </remark>
-    public partial class CacheFieldExtension : TypedOpenXmlCompositeElement
+    public partial class CacheFieldExtension : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the CacheFieldExtension class.
@@ -40533,7 +40533,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.FieldUsage" /> <c>&lt;x:fieldUsage></c></description></item>
     /// </list>
     /// </remark>
-    public partial class FieldsUsage : TypedOpenXmlCompositeElement
+    public partial class FieldsUsage : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the FieldsUsage class.
@@ -40604,7 +40604,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.GroupLevel" /> <c>&lt;x:groupLevel></c></description></item>
     /// </list>
     /// </remark>
-    public partial class GroupLevels : TypedOpenXmlCompositeElement
+    public partial class GroupLevels : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the GroupLevels class.
@@ -40675,7 +40675,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CacheHierarchyExtension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class CacheHierarchyExtensionList : TypedOpenXmlCompositeElement
+    public partial class CacheHierarchyExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the CacheHierarchyExtensionList class.
@@ -40735,7 +40735,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.CacheHierarchy" /> <c>&lt;x15:cacheHierarchy></c></description></item>
     /// </list>
     /// </remark>
-    public partial class CacheHierarchyExtension : TypedOpenXmlCompositeElement
+    public partial class CacheHierarchyExtension : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the CacheHierarchyExtension class.
@@ -40813,7 +40813,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CalculatedMemberExtension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class CalculatedMemberExtensionList : TypedOpenXmlCompositeElement
+    public partial class CalculatedMemberExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the CalculatedMemberExtensionList class.
@@ -40873,7 +40873,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.CalculatedMember" /> <c>&lt;x15:calculatedMember></c></description></item>
     /// </list>
     /// </remark>
-    public partial class CalculatedMemberExtension : TypedOpenXmlCompositeElement
+    public partial class CalculatedMemberExtension : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the CalculatedMemberExtension class.
@@ -40951,7 +40951,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DataFieldExtension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class DataFieldExtensionList : TypedOpenXmlCompositeElement
+    public partial class DataFieldExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the DataFieldExtensionList class.
@@ -41011,7 +41011,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.DataField" /> <c>&lt;x15:dataField></c></description></item>
     /// </list>
     /// </remark>
-    public partial class DataFieldExtension : TypedOpenXmlCompositeElement
+    public partial class DataFieldExtension : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the DataFieldExtension class.
@@ -41089,7 +41089,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotFilterExtension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PivotFilterExtensionList : TypedOpenXmlCompositeElement
+    public partial class PivotFilterExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the PivotFilterExtensionList class.
@@ -41151,7 +41151,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.SortState" /> <c>&lt;x:sortState></c></description></item>
     /// </list>
     /// </remark>
-    public partial class QueryTableRefresh : TypedOpenXmlCompositeElement
+    public partial class QueryTableRefresh : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the QueryTableRefresh class.
@@ -41350,7 +41350,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.QueryTableExtension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class QueryTableExtensionList : TypedOpenXmlCompositeElement
+    public partial class QueryTableExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the QueryTableExtensionList class.
@@ -41403,7 +41403,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:sheetCalcPr.</para>
     /// </summary>
-    public partial class SheetCalculationProperties : TypedOpenXmlLeafElement
+    public partial class SheetCalculationProperties : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the SheetCalculationProperties class.
@@ -41445,7 +41445,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ProtectedRange" /> <c>&lt;x:protectedRange></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ProtectedRanges : TypedOpenXmlCompositeElement
+    public partial class ProtectedRanges : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ProtectedRanges class.
@@ -41504,7 +41504,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Scenario" /> <c>&lt;x:scenario></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Scenarios : TypedOpenXmlCompositeElement
+    public partial class Scenarios : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Scenarios class.
@@ -41597,7 +41597,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.MergeCell" /> <c>&lt;x:mergeCell></c></description></item>
     /// </list>
     /// </remark>
-    public partial class MergeCells : TypedOpenXmlCompositeElement
+    public partial class MergeCells : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the MergeCells class.
@@ -41668,7 +41668,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DataValidation" /> <c>&lt;x:dataValidation></c></description></item>
     /// </list>
     /// </remark>
-    public partial class DataValidations : TypedOpenXmlCompositeElement
+    public partial class DataValidations : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the DataValidations class.
@@ -41775,7 +41775,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Hyperlink" /> <c>&lt;x:hyperlink></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Hyperlinks : TypedOpenXmlCompositeElement
+    public partial class Hyperlinks : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Hyperlinks class.
@@ -41834,7 +41834,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CellWatch" /> <c>&lt;x:cellWatch></c></description></item>
     /// </list>
     /// </remark>
-    public partial class CellWatches : TypedOpenXmlCompositeElement
+    public partial class CellWatches : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the CellWatches class.
@@ -41894,7 +41894,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.IgnoredError" /> <c>&lt;x:ignoredError></c></description></item>
     /// </list>
     /// </remark>
-    public partial class IgnoredErrors : TypedOpenXmlCompositeElement
+    public partial class IgnoredErrors : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the IgnoredErrors class.
@@ -41955,7 +41955,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.TablePart" /> <c>&lt;x:tablePart></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TableParts : TypedOpenXmlCompositeElement
+    public partial class TableParts : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TableParts class.
@@ -42026,7 +42026,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.WorksheetExtension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class WorksheetExtensionList : TypedOpenXmlCompositeElement
+    public partial class WorksheetExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the WorksheetExtensionList class.
@@ -42092,7 +42092,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.WebExtensions" /> <c>&lt;x15:webExtensions></c></description></item>
     /// </list>
     /// </remark>
-    public partial class WorksheetExtension : TypedOpenXmlCompositeElement
+    public partial class WorksheetExtension : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the WorksheetExtension class.
@@ -42182,7 +42182,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.NumberingFormat" /> <c>&lt;x:numFmt></c></description></item>
     /// </list>
     /// </remark>
-    public partial class NumberingFormats : TypedOpenXmlCompositeElement
+    public partial class NumberingFormats : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the NumberingFormats class.
@@ -42253,7 +42253,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Font" /> <c>&lt;x:font></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Fonts : TypedOpenXmlCompositeElement
+    public partial class Fonts : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Fonts class.
@@ -42341,7 +42341,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Fill" /> <c>&lt;x:fill></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Fills : TypedOpenXmlCompositeElement
+    public partial class Fills : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Fills class.
@@ -42412,7 +42412,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Border" /> <c>&lt;x:border></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Borders : TypedOpenXmlCompositeElement
+    public partial class Borders : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Borders class.
@@ -42483,7 +42483,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CellFormat" /> <c>&lt;x:xf></c></description></item>
     /// </list>
     /// </remark>
-    public partial class CellStyleFormats : TypedOpenXmlCompositeElement
+    public partial class CellStyleFormats : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the CellStyleFormats class.
@@ -42554,7 +42554,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CellFormat" /> <c>&lt;x:xf></c></description></item>
     /// </list>
     /// </remark>
-    public partial class CellFormats : TypedOpenXmlCompositeElement
+    public partial class CellFormats : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the CellFormats class.
@@ -42625,7 +42625,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CellStyle" /> <c>&lt;x:cellStyle></c></description></item>
     /// </list>
     /// </remark>
-    public partial class CellStyles : TypedOpenXmlCompositeElement
+    public partial class CellStyles : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the CellStyles class.
@@ -42696,7 +42696,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat" /> <c>&lt;x:dxf></c></description></item>
     /// </list>
     /// </remark>
-    public partial class DifferentialFormats : TypedOpenXmlCompositeElement
+    public partial class DifferentialFormats : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the DifferentialFormats class.
@@ -42767,7 +42767,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.TableStyle" /> <c>&lt;x:tableStyle></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TableStyles : TypedOpenXmlCompositeElement
+    public partial class TableStyles : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TableStyles class.
@@ -42862,7 +42862,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.MruColors" /> <c>&lt;x:mruColors></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Colors : TypedOpenXmlCompositeElement
+    public partial class Colors : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Colors class.
@@ -42949,7 +42949,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.StylesheetExtension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class StylesheetExtensionList : TypedOpenXmlCompositeElement
+    public partial class StylesheetExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the StylesheetExtensionList class.
@@ -43011,7 +43011,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.TimelineStyles" /> <c>&lt;x15:timelineStyles></c></description></item>
     /// </list>
     /// </remark>
-    public partial class StylesheetExtension : TypedOpenXmlCompositeElement
+    public partial class StylesheetExtension : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the StylesheetExtension class.
@@ -43087,7 +43087,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:fileVersion.</para>
     /// </summary>
-    public partial class FileVersion : TypedOpenXmlLeafElement
+    public partial class FileVersion : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the FileVersion class.
@@ -43174,7 +43174,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:fileSharing.</para>
     /// </summary>
-    public partial class FileSharing : TypedOpenXmlLeafElement
+    public partial class FileSharing : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the FileSharing class.
@@ -43280,7 +43280,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:workbookPr.</para>
     /// </summary>
-    public partial class WorkbookProperties : TypedOpenXmlLeafElement
+    public partial class WorkbookProperties : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the WorkbookProperties class.
@@ -43517,7 +43517,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:workbookProtection.</para>
     /// </summary>
-    public partial class WorkbookProtection : TypedOpenXmlLeafElement
+    public partial class WorkbookProtection : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the WorkbookProtection class.
@@ -43697,7 +43697,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.WorkbookView" /> <c>&lt;x:workbookView></c></description></item>
     /// </list>
     /// </remark>
-    public partial class BookViews : TypedOpenXmlCompositeElement
+    public partial class BookViews : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the BookViews class.
@@ -43756,7 +43756,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Sheet" /> <c>&lt;x:sheet></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Sheets : TypedOpenXmlCompositeElement
+    public partial class Sheets : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Sheets class.
@@ -43815,7 +43815,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.FunctionGroup" /> <c>&lt;x:functionGroup></c></description></item>
     /// </list>
     /// </remark>
-    public partial class FunctionGroups : TypedOpenXmlCompositeElement
+    public partial class FunctionGroups : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the FunctionGroups class.
@@ -43887,7 +43887,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExternalReference" /> <c>&lt;x:externalReference></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ExternalReferences : TypedOpenXmlCompositeElement
+    public partial class ExternalReferences : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ExternalReferences class.
@@ -43946,7 +43946,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DefinedName" /> <c>&lt;x:definedName></c></description></item>
     /// </list>
     /// </remark>
-    public partial class DefinedNames : TypedOpenXmlCompositeElement
+    public partial class DefinedNames : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the DefinedNames class.
@@ -43999,7 +43999,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:calcPr.</para>
     /// </summary>
-    public partial class CalculationProperties : TypedOpenXmlLeafElement
+    public partial class CalculationProperties : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the CalculationProperties class.
@@ -44167,7 +44167,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:oleSize.</para>
     /// </summary>
-    public partial class OleSize : TypedOpenXmlLeafElement
+    public partial class OleSize : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the OleSize class.
@@ -44212,7 +44212,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CustomWorkbookView" /> <c>&lt;x:customWorkbookView></c></description></item>
     /// </list>
     /// </remark>
-    public partial class CustomWorkbookViews : TypedOpenXmlCompositeElement
+    public partial class CustomWorkbookViews : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the CustomWorkbookViews class.
@@ -44271,7 +44271,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotCache" /> <c>&lt;x:pivotCache></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PivotCaches : TypedOpenXmlCompositeElement
+    public partial class PivotCaches : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the PivotCaches class.
@@ -44324,7 +44324,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:webPublishing.</para>
     /// </summary>
-    public partial class WebPublishing : TypedOpenXmlLeafElement
+    public partial class WebPublishing : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the WebPublishing class.
@@ -44448,7 +44448,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:fileRecoveryPr.</para>
     /// </summary>
-    public partial class FileRecoveryProperties : TypedOpenXmlLeafElement
+    public partial class FileRecoveryProperties : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the FileRecoveryProperties class.
@@ -44523,7 +44523,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.WebPublishObject" /> <c>&lt;x:webPublishObject></c></description></item>
     /// </list>
     /// </remark>
-    public partial class WebPublishObjects : TypedOpenXmlCompositeElement
+    public partial class WebPublishObjects : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the WebPublishObjects class.
@@ -44594,7 +44594,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.WorkbookExtension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class WorkbookExtensionList : TypedOpenXmlCompositeElement
+    public partial class WorkbookExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the WorkbookExtensionList class.
@@ -44663,7 +44663,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.WorkbookProperties" /> <c>&lt;x15:workbookPr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class WorkbookExtension : TypedOpenXmlCompositeElement
+    public partial class WorkbookExtension : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the WorkbookExtension class.
@@ -44753,7 +44753,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:location.</para>
     /// </summary>
-    public partial class Location : TypedOpenXmlLeafElement
+    public partial class Location : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Location class.
@@ -44862,7 +44862,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotField" /> <c>&lt;x:pivotField></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PivotFields : TypedOpenXmlCompositeElement
+    public partial class PivotFields : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the PivotFields class.
@@ -44933,7 +44933,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Field" /> <c>&lt;x:field></c></description></item>
     /// </list>
     /// </remark>
-    public partial class RowFields : TypedOpenXmlCompositeElement
+    public partial class RowFields : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the RowFields class.
@@ -45004,7 +45004,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.RowItem" /> <c>&lt;x:i></c></description></item>
     /// </list>
     /// </remark>
-    public partial class RowItems : TypedOpenXmlCompositeElement
+    public partial class RowItems : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the RowItems class.
@@ -45075,7 +45075,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Field" /> <c>&lt;x:field></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ColumnFields : TypedOpenXmlCompositeElement
+    public partial class ColumnFields : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ColumnFields class.
@@ -45146,7 +45146,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.RowItem" /> <c>&lt;x:i></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ColumnItems : TypedOpenXmlCompositeElement
+    public partial class ColumnItems : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ColumnItems class.
@@ -45217,7 +45217,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PageField" /> <c>&lt;x:pageField></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PageFields : TypedOpenXmlCompositeElement
+    public partial class PageFields : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the PageFields class.
@@ -45288,7 +45288,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DataField" /> <c>&lt;x:dataField></c></description></item>
     /// </list>
     /// </remark>
-    public partial class DataFields : TypedOpenXmlCompositeElement
+    public partial class DataFields : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the DataFields class.
@@ -45359,7 +45359,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Format" /> <c>&lt;x:format></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Formats : TypedOpenXmlCompositeElement
+    public partial class Formats : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Formats class.
@@ -45430,7 +45430,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ConditionalFormat" /> <c>&lt;x:conditionalFormat></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ConditionalFormats : TypedOpenXmlCompositeElement
+    public partial class ConditionalFormats : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ConditionalFormats class.
@@ -45501,7 +45501,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ChartFormat" /> <c>&lt;x:chartFormat></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ChartFormats : TypedOpenXmlCompositeElement
+    public partial class ChartFormats : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ChartFormats class.
@@ -45572,7 +45572,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotHierarchy" /> <c>&lt;x:pivotHierarchy></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PivotHierarchies : TypedOpenXmlCompositeElement
+    public partial class PivotHierarchies : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the PivotHierarchies class.
@@ -45637,7 +45637,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:pivotTableStyleInfo.</para>
     /// </summary>
-    public partial class PivotTableStyle : TypedOpenXmlLeafElement
+    public partial class PivotTableStyle : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the PivotTableStyle class.
@@ -45735,7 +45735,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotFilter" /> <c>&lt;x:filter></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PivotFilters : TypedOpenXmlCompositeElement
+    public partial class PivotFilters : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the PivotFilters class.
@@ -45806,7 +45806,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.RowHierarchyUsage" /> <c>&lt;x:rowHierarchyUsage></c></description></item>
     /// </list>
     /// </remark>
-    public partial class RowHierarchiesUsage : TypedOpenXmlCompositeElement
+    public partial class RowHierarchiesUsage : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the RowHierarchiesUsage class.
@@ -45877,7 +45877,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ColumnHierarchyUsage" /> <c>&lt;x:colHierarchyUsage></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ColumnHierarchiesUsage : TypedOpenXmlCompositeElement
+    public partial class ColumnHierarchiesUsage : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ColumnHierarchiesUsage class.
@@ -45948,7 +45948,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotTableDefinitionExtension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PivotTableDefinitionExtensionList : TypedOpenXmlCompositeElement
+    public partial class PivotTableDefinitionExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the PivotTableDefinitionExtensionList class.
@@ -46010,7 +46010,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo.PivotVersionInfo" /> <c>&lt;xxpvi:pivotVersionInfo></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PivotTableDefinitionExtension : TypedOpenXmlCompositeElement
+    public partial class PivotTableDefinitionExtension : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the PivotTableDefinitionExtension class.
@@ -46094,7 +46094,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.WorksheetSource" /> <c>&lt;x:worksheetSource></c></description></item>
     /// </list>
     /// </remark>
-    public partial class CacheSource : TypedOpenXmlCompositeElement
+    public partial class CacheSource : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the CacheSource class.
@@ -46224,7 +46224,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CacheField" /> <c>&lt;x:cacheField></c></description></item>
     /// </list>
     /// </remark>
-    public partial class CacheFields : TypedOpenXmlCompositeElement
+    public partial class CacheFields : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the CacheFields class.
@@ -46295,7 +46295,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CacheHierarchy" /> <c>&lt;x:cacheHierarchy></c></description></item>
     /// </list>
     /// </remark>
-    public partial class CacheHierarchies : TypedOpenXmlCompositeElement
+    public partial class CacheHierarchies : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the CacheHierarchies class.
@@ -46366,7 +46366,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Kpi" /> <c>&lt;x:kpi></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Kpis : TypedOpenXmlCompositeElement
+    public partial class Kpis : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Kpis class.
@@ -46441,7 +46441,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Sets" /> <c>&lt;x:sets></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TupleCache : TypedOpenXmlCompositeElement
+    public partial class TupleCache : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TupleCache class.
@@ -46573,7 +46573,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CalculatedItem" /> <c>&lt;x:calculatedItem></c></description></item>
     /// </list>
     /// </remark>
-    public partial class CalculatedItems : TypedOpenXmlCompositeElement
+    public partial class CalculatedItems : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the CalculatedItems class.
@@ -46644,7 +46644,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CalculatedMember" /> <c>&lt;x:calculatedMember></c></description></item>
     /// </list>
     /// </remark>
-    public partial class CalculatedMembers : TypedOpenXmlCompositeElement
+    public partial class CalculatedMembers : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the CalculatedMembers class.
@@ -46715,7 +46715,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Dimension" /> <c>&lt;x:dimension></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Dimensions : TypedOpenXmlCompositeElement
+    public partial class Dimensions : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Dimensions class.
@@ -46786,7 +46786,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.MeasureGroup" /> <c>&lt;x:measureGroup></c></description></item>
     /// </list>
     /// </remark>
-    public partial class MeasureGroups : TypedOpenXmlCompositeElement
+    public partial class MeasureGroups : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the MeasureGroups class.
@@ -46857,7 +46857,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.MeasureDimensionMap" /> <c>&lt;x:map></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Maps : TypedOpenXmlCompositeElement
+    public partial class Maps : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Maps class.
@@ -46928,7 +46928,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotCacheDefinitionExtension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PivotCacheDefinitionExtensionList : TypedOpenXmlCompositeElement
+    public partial class PivotCacheDefinitionExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the PivotCacheDefinitionExtensionList class.
@@ -46993,7 +46993,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo.CacheVersionInfo" /> <c>&lt;xxpvi:cacheVersionInfo></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PivotCacheDefinitionExtension : TypedOpenXmlCompositeElement
+    public partial class PivotCacheDefinitionExtension : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the PivotCacheDefinitionExtension class.
@@ -47075,7 +47075,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>This class is available in Microsoft365 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:richInfo.</para>
     /// </summary>
-    public partial class RichDataPivotCacheGuid : TypedOpenXmlLeafElement
+    public partial class RichDataPivotCacheGuid : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the RichDataPivotCacheGuid class.
@@ -47122,7 +47122,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.SheetName" /> <c>&lt;x:sheetName></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SheetNames : TypedOpenXmlCompositeElement
+    public partial class SheetNames : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SheetNames class.
@@ -47181,7 +47181,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExternalDefinedName" /> <c>&lt;x:definedName></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ExternalDefinedNames : TypedOpenXmlCompositeElement
+    public partial class ExternalDefinedNames : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ExternalDefinedNames class.
@@ -47240,7 +47240,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExternalSheetData" /> <c>&lt;x:sheetData></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SheetDataSet : TypedOpenXmlCompositeElement
+    public partial class SheetDataSet : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SheetDataSet class.

@@ -38,7 +38,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.ContentPart" /> <c>&lt;xdr:contentPart></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TwoCellAnchor : TypedOpenXmlCompositeElement
+    public partial class TwoCellAnchor : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TwoCellAnchor class.
@@ -171,7 +171,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.ContentPart" /> <c>&lt;xdr:contentPart></c></description></item>
     /// </list>
     /// </remark>
-    public partial class OneCellAnchor : TypedOpenXmlCompositeElement
+    public partial class OneCellAnchor : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the OneCellAnchor class.
@@ -289,7 +289,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.ContentPart" /> <c>&lt;xdr:contentPart></c></description></item>
     /// </list>
     /// </remark>
-    public partial class AbsoluteAnchor : TypedOpenXmlCompositeElement
+    public partial class AbsoluteAnchor : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the AbsoluteAnchor class.
@@ -402,7 +402,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualShapeProperties" /> <c>&lt;xdr:nvSpPr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Shape : TypedOpenXmlCompositeElement
+    public partial class Shape : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Shape class.
@@ -572,7 +572,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.Drawing.ContentPart" /> <c>&lt;xdr14:contentPart></c></description></item>
     /// </list>
     /// </remark>
-    public partial class GroupShape : TypedOpenXmlCompositeElement
+    public partial class GroupShape : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the GroupShape class.
@@ -676,7 +676,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGraphicFrameProperties" /> <c>&lt;xdr:nvGraphicFramePr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class GraphicFrame : TypedOpenXmlCompositeElement
+    public partial class GraphicFrame : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the GraphicFrame class.
@@ -804,7 +804,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualConnectionShapeProperties" /> <c>&lt;xdr:nvCxnSpPr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ConnectionShape : TypedOpenXmlCompositeElement
+    public partial class ConnectionShape : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ConnectionShape class.
@@ -933,7 +933,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualPictureProperties" /> <c>&lt;xdr:nvPicPr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Picture : TypedOpenXmlCompositeElement
+    public partial class Picture : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Picture class.
@@ -1076,7 +1076,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.Drawing.ExcelNonVisualContentPartShapeProperties" /> <c>&lt;xdr14:nvContentPartPr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ContentPart : TypedOpenXmlCompositeElement
+    public partial class ContentPart : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ContentPart class.
@@ -1228,7 +1228,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.TwoCellAnchor" /> <c>&lt;xdr:twoCellAnchor></c></description></item>
     /// </list>
     /// </remark>
-    public partial class WorksheetDrawing : TypedOpenXmlPartRootElement
+    public partial class WorksheetDrawing : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the WorksheetDrawing class.
@@ -1329,7 +1329,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties" /> <c>&lt;xdr:cNvPr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class NonVisualShapeProperties : TypedOpenXmlCompositeElement
+    public partial class NonVisualShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the NonVisualShapeProperties class.
@@ -1430,7 +1430,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Transform2D" /> <c>&lt;a:xfrm></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ShapeProperties : TypedOpenXmlCompositeElement
+    public partial class ShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ShapeProperties class.
@@ -1566,7 +1566,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.EffectReference" /> <c>&lt;a:effectRef></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ShapeStyle : TypedOpenXmlCompositeElement
+    public partial class ShapeStyle : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ShapeStyle class.
@@ -1685,7 +1685,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Paragraph" /> <c>&lt;a:p></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TextBody : TypedOpenXmlCompositeElement
+    public partial class TextBody : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TextBody class.
@@ -1775,7 +1775,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties" /> <c>&lt;xdr:cNvPr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class NonVisualConnectionShapeProperties : TypedOpenXmlCompositeElement
+    public partial class NonVisualConnectionShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the NonVisualConnectionShapeProperties class.
@@ -1863,7 +1863,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties" /> <c>&lt;xdr:cNvPr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class NonVisualPictureProperties : TypedOpenXmlCompositeElement
+    public partial class NonVisualPictureProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the NonVisualPictureProperties class.
@@ -1953,7 +1953,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Tile" /> <c>&lt;a:tile></c></description></item>
     /// </list>
     /// </remark>
-    public partial class BlipFill : TypedOpenXmlCompositeElement
+    public partial class BlipFill : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the BlipFill class.
@@ -2063,7 +2063,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties" /> <c>&lt;xdr:cNvPr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class NonVisualGraphicFrameProperties : TypedOpenXmlCompositeElement
+    public partial class NonVisualGraphicFrameProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the NonVisualGraphicFrameProperties class.
@@ -2151,7 +2151,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extents" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Transform : TypedOpenXmlCompositeElement
+    public partial class Transform : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Transform class.
@@ -2266,7 +2266,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xdr:col.</para>
     /// </summary>
-    public partial class ColumnId : TypedOpenXmlLeafTextElement
+    public partial class ColumnId : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the ColumnId class.
@@ -2304,7 +2304,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xdr:colOff.</para>
     /// </summary>
-    public partial class ColumnOffset : TypedOpenXmlLeafTextElement
+    public partial class ColumnOffset : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the ColumnOffset class.
@@ -2342,7 +2342,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xdr:rowOff.</para>
     /// </summary>
-    public partial class RowOffset : TypedOpenXmlLeafTextElement
+    public partial class RowOffset : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the RowOffset class.
@@ -2380,7 +2380,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xdr:row.</para>
     /// </summary>
-    public partial class RowId : TypedOpenXmlLeafTextElement
+    public partial class RowId : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the RowId class.
@@ -2555,7 +2555,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.RowId" /> <c>&lt;xdr:row></c></description></item>
     /// </list>
     /// </remark>
-    public abstract partial class MarkerType : TypedOpenXmlCompositeElement
+    public abstract partial class MarkerType : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the MarkerType class.
@@ -2655,7 +2655,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xdr:clientData.</para>
     /// </summary>
-    public partial class ClientData : TypedOpenXmlLeafElement
+    public partial class ClientData : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ClientData class.
@@ -2702,7 +2702,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xdr:ext.</para>
     /// </summary>
-    public partial class Extent : TypedOpenXmlLeafElement
+    public partial class Extent : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Extent class.
@@ -2757,7 +2757,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xdr:pos.</para>
     /// </summary>
-    public partial class Position : TypedOpenXmlLeafElement
+    public partial class Position : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Position class.
@@ -2820,7 +2820,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class NonVisualDrawingProperties : TypedOpenXmlCompositeElement
+    public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the NonVisualDrawingProperties class.
@@ -2986,7 +2986,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ShapeLocks" /> <c>&lt;a:spLocks></c></description></item>
     /// </list>
     /// </remark>
-    public partial class NonVisualShapeDrawingProperties : TypedOpenXmlCompositeElement
+    public partial class NonVisualShapeDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the NonVisualShapeDrawingProperties class.
@@ -3088,7 +3088,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class NonVisualConnectorShapeDrawingProperties : TypedOpenXmlCompositeElement
+    public partial class NonVisualConnectorShapeDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the NonVisualConnectorShapeDrawingProperties class.
@@ -3206,7 +3206,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PictureLocks" /> <c>&lt;a:picLocks></c></description></item>
     /// </list>
     /// </remark>
-    public partial class NonVisualPictureDrawingProperties : TypedOpenXmlCompositeElement
+    public partial class NonVisualPictureDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the NonVisualPictureDrawingProperties class.
@@ -3306,7 +3306,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class NonVisualGraphicFrameDrawingProperties : TypedOpenXmlCompositeElement
+    public partial class NonVisualGraphicFrameDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the NonVisualGraphicFrameDrawingProperties class.
@@ -3394,7 +3394,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class NonVisualGroupShapeDrawingProperties : TypedOpenXmlCompositeElement
+    public partial class NonVisualGroupShapeDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the NonVisualGroupShapeDrawingProperties class.
@@ -3482,7 +3482,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties" /> <c>&lt;xdr:cNvPr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class NonVisualGroupShapeProperties : TypedOpenXmlCompositeElement
+    public partial class NonVisualGroupShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the NonVisualGroupShapeProperties class.
@@ -3579,7 +3579,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SolidFill" /> <c>&lt;a:solidFill></c></description></item>
     /// </list>
     /// </remark>
-    public partial class GroupShapeProperties : TypedOpenXmlCompositeElement
+    public partial class GroupShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the GroupShapeProperties class.

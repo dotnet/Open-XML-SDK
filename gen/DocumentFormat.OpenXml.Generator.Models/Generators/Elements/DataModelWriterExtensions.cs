@@ -11,15 +11,6 @@ namespace DocumentFormat.OpenXml.Generator.Generators.Elements;
 
 public static class DataModelWriterExtensions
 {
-    private static HashSet<string> _typedBasedClasses = new()
-    {
-        "OpenXmlElement",
-        "OpenXmlCompositeElement",
-        "OpenXmlLeafElement",
-        "OpenXmlLeafTextElement",
-        "OpenXmlPartRootElement",
-    };
-
     public static bool GetDataModelSyntax(this IndentedTextWriter writer, OpenXmlGeneratorServices services, SchemaNamespace model)
     {
         foreach (var ns in GetNamespaces(model, services).Distinct().OrderBy(n => n))
@@ -66,12 +57,7 @@ public static class DataModelWriterExtensions
     {
         if (type.IsPart)
         {
-            return "TypedOpenXmlPartRootElement";
-        }
-
-        if (_typedBasedClasses.Contains(type.BaseClass))
-        {
-            return $"Typed{type.BaseClass}";
+            return "OpenXmlPartRootElement";
         }
 
         return type.BaseClass;

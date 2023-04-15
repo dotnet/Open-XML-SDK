@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the EmbeddedObjectPart
     /// </summary>
-    public partial class EmbeddedObjectPart : TypedOpenXmlPart
+    public partial class EmbeddedObjectPart : OpenXmlPart
     {
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject";
 

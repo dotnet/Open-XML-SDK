@@ -16,7 +16,8 @@ namespace DocumentFormat.OpenXml.Packaging
     /// </summary>
     public abstract partial class OpenXmlPart : OpenXmlPartContainer
     {
-        private OpenXmlPackage? _openXmlPackage;
+        [SuppressMessage("StyleCop.CSharp.MaintainabilityRules", "SA1401:Fields should be private", Justification = "Need to access without checking if disposed")]
+        internal OpenXmlPackage? _openXmlPackage;
         private bool _isLoading;
 
         /// <summary>

@@ -28,7 +28,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Slicer
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.Slicer.OfficeArtExtensionList" /> <c>&lt;sle:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Slicer : TypedOpenXmlCompositeElement
+    public partial class Slicer : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Slicer class.
@@ -116,7 +116,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Slicer
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extension" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class OfficeArtExtensionList : TypedOpenXmlCompositeElement
+    public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the OfficeArtExtensionList class.

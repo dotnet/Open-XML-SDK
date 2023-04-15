@@ -33,7 +33,7 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Paragraph" /> <c>&lt;a:p></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TextBodyType : TypedOpenXmlCompositeElement
+    public partial class TextBodyType : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TextBodyType class.
@@ -123,7 +123,7 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Extension" /> <c>&lt;p:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ExtensionList : TypedOpenXmlCompositeElement
+    public partial class ExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ExtensionList class.
@@ -183,7 +183,7 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p188:unknownAnchor.</para>
     /// </summary>
-    public partial class CommentUnknownAnchor : TypedOpenXmlLeafElement
+    public partial class CommentUnknownAnchor : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the CommentUnknownAnchor class.
@@ -214,7 +214,7 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.Author" /> <c>&lt;p188:author></c></description></item>
     /// </list>
     /// </remark>
-    public partial class AuthorList : TypedOpenXmlPartRootElement
+    public partial class AuthorList : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the AuthorList class.
@@ -305,7 +305,7 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.Comment" /> <c>&lt;p188:cm></c></description></item>
     /// </list>
     /// </remark>
-    public partial class CommentList : TypedOpenXmlPartRootElement
+    public partial class CommentList : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the CommentList class.
@@ -390,7 +390,7 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p188:commentRel.</para>
     /// </summary>
-    public partial class CommentRelationship : TypedOpenXmlLeafElement
+    public partial class CommentRelationship : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the CommentRelationship class.
@@ -439,7 +439,7 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.ExtensionList" /> <c>&lt;p188:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Author : TypedOpenXmlCompositeElement
+    public partial class Author : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Author class.
@@ -582,7 +582,7 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.ExtensionList" /> <c>&lt;p188:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class CommentReply : TypedOpenXmlCompositeElement
+    public partial class CommentReply : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the CommentReply class.
@@ -751,7 +751,7 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p188:pos.</para>
     /// </summary>
-    public partial class Point2DType : TypedOpenXmlLeafElement
+    public partial class Point2DType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Point2DType class.
@@ -813,7 +813,7 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.CommentReply" /> <c>&lt;p188:reply></c></description></item>
     /// </list>
     /// </remark>
-    public partial class CommentReplyList : TypedOpenXmlCompositeElement
+    public partial class CommentReplyList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the CommentReplyList class.
@@ -886,7 +886,7 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Presentation.Command.SlideMonikerList" /> <c>&lt;pc:sldMkLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Comment : TypedOpenXmlCompositeElement
+    public partial class Comment : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Comment class.

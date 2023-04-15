@@ -22,7 +22,7 @@ namespace DocumentFormat.OpenXml.Drawing.LegacyCompatibility
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is comp:legacyDrawing.</para>
     /// </summary>
-    public partial class LegacyDrawing : TypedOpenXmlLeafElement
+    public partial class LegacyDrawing : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the LegacyDrawing class.

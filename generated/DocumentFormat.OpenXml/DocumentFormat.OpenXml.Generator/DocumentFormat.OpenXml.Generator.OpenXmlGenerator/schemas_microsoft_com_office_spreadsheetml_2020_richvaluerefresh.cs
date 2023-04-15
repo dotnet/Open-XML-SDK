@@ -27,7 +27,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.RichValueRefreshIntervals
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Excel.RichValueRefreshIntervals.RichValueRefreshInterval" /> <c>&lt;xlrvr:refreshInterval></c></description></item>
     /// </list>
     /// </remark>
-    public partial class RichValueRefreshIntervals : TypedOpenXmlCompositeElement
+    public partial class RichValueRefreshIntervals : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the RichValueRefreshIntervals class.
@@ -81,7 +81,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.RichValueRefreshIntervals
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrvr:refreshInterval.</para>
     /// </summary>
-    public partial class RichValueRefreshInterval : TypedOpenXmlLeafElement
+    public partial class RichValueRefreshInterval : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the RichValueRefreshInterval class.

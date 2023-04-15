@@ -39,7 +39,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.TextBox" /> <c>&lt;v:textbox></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ShapeDefaults : TypedOpenXmlCompositeElement
+    public partial class ShapeDefaults : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ShapeDefaults class.
@@ -386,7 +386,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.Rules" /> <c>&lt;o:rules></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ShapeLayout : TypedOpenXmlCompositeElement
+    public partial class ShapeLayout : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ShapeLayout class.
@@ -497,7 +497,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:signatureline.</para>
     /// </summary>
-    public partial class SignatureLine : TypedOpenXmlLeafElement
+    public partial class SignatureLine : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the SignatureLine class.
@@ -684,7 +684,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:ink.</para>
     /// </summary>
-    public partial class Ink : TypedOpenXmlLeafElement
+    public partial class Ink : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Ink class.
@@ -737,7 +737,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.RelationTable" /> <c>&lt;o:relationtable></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Diagram : TypedOpenXmlCompositeElement
+    public partial class Diagram : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Diagram class.
@@ -917,7 +917,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:skew.</para>
     /// </summary>
-    public partial class Skew : TypedOpenXmlLeafElement
+    public partial class Skew : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Skew class.
@@ -1011,7 +1011,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:extrusion.</para>
     /// </summary>
-    public partial class Extrusion : TypedOpenXmlLeafElement
+    public partial class Extrusion : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Extrusion class.
@@ -1384,7 +1384,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:callout.</para>
     /// </summary>
-    public partial class Callout : TypedOpenXmlLeafElement
+    public partial class Callout : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Callout class.
@@ -1567,7 +1567,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:lock.</para>
     /// </summary>
-    public partial class Lock : TypedOpenXmlLeafElement
+    public partial class Lock : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Lock class.
@@ -1735,7 +1735,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.FieldCodes" /> <c>&lt;o:FieldCodes></c></description></item>
     /// </list>
     /// </remark>
-    public partial class OleObject : TypedOpenXmlCompositeElement
+    public partial class OleObject : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the OleObject class.
@@ -1914,7 +1914,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:complex.</para>
     /// </summary>
-    public partial class Complex : TypedOpenXmlLeafElement
+    public partial class Complex : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Complex class.
@@ -2076,7 +2076,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class StrokeChildType : TypedOpenXmlLeafElement
+    public abstract partial class StrokeChildType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the StrokeChildType class.
@@ -2409,7 +2409,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:clippath.</para>
     /// </summary>
-    public partial class ClipPath : TypedOpenXmlLeafElement
+    public partial class ClipPath : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ClipPath class.
@@ -2451,7 +2451,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:fill.</para>
     /// </summary>
-    public partial class FillExtendedProperties : TypedOpenXmlLeafElement
+    public partial class FillExtendedProperties : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the FillExtendedProperties class.
@@ -2501,7 +2501,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:idmap.</para>
     /// </summary>
-    public partial class ShapeIdMap : TypedOpenXmlLeafElement
+    public partial class ShapeIdMap : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ShapeIdMap class.
@@ -2557,7 +2557,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.Entry" /> <c>&lt;o:entry></c></description></item>
     /// </list>
     /// </remark>
-    public partial class RegroupTable : TypedOpenXmlCompositeElement
+    public partial class RegroupTable : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the RegroupTable class.
@@ -2631,7 +2631,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.Rule" /> <c>&lt;o:r></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Rules : TypedOpenXmlCompositeElement
+    public partial class Rules : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Rules class.
@@ -2699,7 +2699,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:entry.</para>
     /// </summary>
-    public partial class Entry : TypedOpenXmlLeafElement
+    public partial class Entry : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Entry class.
@@ -2752,7 +2752,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.Proxy" /> <c>&lt;o:proxy></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Rule : TypedOpenXmlCompositeElement
+    public partial class Rule : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Rule class.
@@ -2862,7 +2862,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.Relation" /> <c>&lt;o:rel></c></description></item>
     /// </list>
     /// </remark>
-    public partial class RelationTable : TypedOpenXmlCompositeElement
+    public partial class RelationTable : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the RelationTable class.
@@ -2930,7 +2930,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:rel.</para>
     /// </summary>
-    public partial class Relation : TypedOpenXmlLeafElement
+    public partial class Relation : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Relation class.
@@ -3011,7 +3011,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:LinkType.</para>
     /// </summary>
-    public partial class LinkType : TypedOpenXmlLeafTextElement
+    public partial class LinkType : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the LinkType class.
@@ -3049,7 +3049,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:LockedField.</para>
     /// </summary>
-    public partial class LockedField : TypedOpenXmlLeafTextElement
+    public partial class LockedField : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the LockedField class.
@@ -3087,7 +3087,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:FieldCodes.</para>
     /// </summary>
-    public partial class FieldCodes : TypedOpenXmlLeafTextElement
+    public partial class FieldCodes : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the FieldCodes class.
@@ -3124,7 +3124,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:proxy.</para>
     /// </summary>
-    public partial class Proxy : TypedOpenXmlLeafElement
+    public partial class Proxy : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Proxy class.
@@ -3200,7 +3200,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:colormru.</para>
     /// </summary>
-    public partial class ColorMostRecentlyUsed : TypedOpenXmlLeafElement
+    public partial class ColorMostRecentlyUsed : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ColorMostRecentlyUsed class.
@@ -3250,7 +3250,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:colormenu.</para>
     /// </summary>
-    public partial class ColorMenu : TypedOpenXmlLeafElement
+    public partial class ColorMenu : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ColorMenu class.

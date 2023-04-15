@@ -33,7 +33,7 @@ namespace DocumentFormat.OpenXml.Drawing.Pictures
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Pictures.NonVisualPictureProperties" /> <c>&lt;pic:nvPicPr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Picture : TypedOpenXmlCompositeElement
+    public partial class Picture : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Picture class.
@@ -167,7 +167,7 @@ namespace DocumentFormat.OpenXml.Drawing.Pictures
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class NonVisualDrawingProperties : TypedOpenXmlCompositeElement
+    public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the NonVisualDrawingProperties class.
@@ -333,7 +333,7 @@ namespace DocumentFormat.OpenXml.Drawing.Pictures
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PictureLocks" /> <c>&lt;a:picLocks></c></description></item>
     /// </list>
     /// </remark>
-    public partial class NonVisualPictureDrawingProperties : TypedOpenXmlCompositeElement
+    public partial class NonVisualPictureDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the NonVisualPictureDrawingProperties class.
@@ -433,7 +433,7 @@ namespace DocumentFormat.OpenXml.Drawing.Pictures
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Pictures.NonVisualPictureDrawingProperties" /> <c>&lt;pic:cNvPicPr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class NonVisualPictureProperties : TypedOpenXmlCompositeElement
+    public partial class NonVisualPictureProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the NonVisualPictureProperties class.
@@ -523,7 +523,7 @@ namespace DocumentFormat.OpenXml.Drawing.Pictures
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Tile" /> <c>&lt;a:tile></c></description></item>
     /// </list>
     /// </remark>
-    public partial class BlipFill : TypedOpenXmlCompositeElement
+    public partial class BlipFill : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the BlipFill class.
@@ -657,7 +657,7 @@ namespace DocumentFormat.OpenXml.Drawing.Pictures
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Transform2D" /> <c>&lt;a:xfrm></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ShapeProperties : TypedOpenXmlCompositeElement
+    public partial class ShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ShapeProperties class.

@@ -32,7 +32,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichTop10" /> <c>&lt;xlrd2:top10></c></description></item>
     /// </list>
     /// </remark>
-    public partial class RichFilterColumn : TypedOpenXmlCompositeElement
+    public partial class RichFilterColumn : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the RichFilterColumn class.
@@ -159,7 +159,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:richSortCondition.</para>
     /// </summary>
-    public partial class RichSortCondition : TypedOpenXmlLeafElement
+    public partial class RichSortCondition : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the RichSortCondition class.
@@ -283,7 +283,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagData" /> <c>&lt;xlrd2:spbData></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SupportingPropertyBags : TypedOpenXmlPartRootElement
+    public partial class SupportingPropertyBags : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the SupportingPropertyBags class.
@@ -403,7 +403,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagStructure" /> <c>&lt;xlrd2:s></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SupportingPropertyBagStructures : TypedOpenXmlPartRootElement
+    public partial class SupportingPropertyBagStructures : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the SupportingPropertyBagStructures class.
@@ -512,7 +512,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.Array" /> <c>&lt;xlrd2:a></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ArrayData : TypedOpenXmlPartRootElement
+    public partial class ArrayData : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the ArrayData class.
@@ -623,7 +623,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichStyles" /> <c>&lt;xlrd2:richStyles></c></description></item>
     /// </list>
     /// </remark>
-    public partial class RichStylesheet : TypedOpenXmlPartRootElement
+    public partial class RichStylesheet : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the RichStylesheet class.
@@ -774,7 +774,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueTypes" /> <c>&lt;xlrd2:types></c></description></item>
     /// </list>
     /// </remark>
-    public partial class RichValueTypesInfo : TypedOpenXmlPartRootElement
+    public partial class RichValueTypesInfo : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the RichValueTypesInfo class.
@@ -910,7 +910,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichFilter" /> <c>&lt;xlrd2:filter></c></description></item>
     /// </list>
     /// </remark>
-    public partial class RichFilters : TypedOpenXmlCompositeElement
+    public partial class RichFilters : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the RichFilters class.
@@ -968,7 +968,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:top10.</para>
     /// </summary>
-    public partial class RichTop10 : TypedOpenXmlLeafElement
+    public partial class RichTop10 : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the RichTop10 class.
@@ -1059,7 +1059,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.CustomRichFilter" /> <c>&lt;xlrd2:customFilter></c></description></item>
     /// </list>
     /// </remark>
-    public partial class CustomRichFilters : TypedOpenXmlCompositeElement
+    public partial class CustomRichFilters : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the CustomRichFilters class.
@@ -1130,7 +1130,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:dynamicFilter.</para>
     /// </summary>
-    public partial class DynamicRichFilter : TypedOpenXmlLeafElement
+    public partial class DynamicRichFilter : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the DynamicRichFilter class.
@@ -1237,7 +1237,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Extension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ExtensionList : TypedOpenXmlCompositeElement
+    public partial class ExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ExtensionList class.
@@ -1297,7 +1297,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:filter.</para>
     /// </summary>
-    public partial class RichFilter : TypedOpenXmlLeafElement
+    public partial class RichFilter : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the RichFilter class.
@@ -1367,7 +1367,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:dateGroupItem.</para>
     /// </summary>
-    public partial class RichDateGroupItem : TypedOpenXmlLeafElement
+    public partial class RichDateGroupItem : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the RichDateGroupItem class.
@@ -1487,7 +1487,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:customFilter.</para>
     /// </summary>
-    public partial class CustomRichFilter : TypedOpenXmlLeafElement
+    public partial class CustomRichFilter : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the CustomRichFilter class.
@@ -1553,7 +1553,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagArray" /> <c>&lt;xlrd2:a></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SupportingPropertyBagArrayData : TypedOpenXmlCompositeElement
+    public partial class SupportingPropertyBagArrayData : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SupportingPropertyBagArrayData class.
@@ -1631,7 +1631,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBag" /> <c>&lt;xlrd2:spb></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SupportingPropertyBagData : TypedOpenXmlCompositeElement
+    public partial class SupportingPropertyBagData : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SupportingPropertyBagData class.
@@ -1708,7 +1708,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagValue" /> <c>&lt;xlrd2:v></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SupportingPropertyBag : TypedOpenXmlCompositeElement
+    public partial class SupportingPropertyBag : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SupportingPropertyBag class.
@@ -1777,7 +1777,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:v.</para>
     /// </summary>
-    public partial class SupportingPropertyBagValue : TypedOpenXmlLeafTextElement
+    public partial class SupportingPropertyBagValue : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the SupportingPropertyBagValue class.
@@ -1821,7 +1821,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagKey" /> <c>&lt;xlrd2:k></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SupportingPropertyBagStructure : TypedOpenXmlCompositeElement
+    public partial class SupportingPropertyBagStructure : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SupportingPropertyBagStructure class.
@@ -1875,7 +1875,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:k.</para>
     /// </summary>
-    public partial class SupportingPropertyBagKey : TypedOpenXmlLeafElement
+    public partial class SupportingPropertyBagKey : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the SupportingPropertyBagKey class.
@@ -1932,7 +1932,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.SupportingPropertyBagArrayValue" /> <c>&lt;xlrd2:v></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SupportingPropertyBagArray : TypedOpenXmlCompositeElement
+    public partial class SupportingPropertyBagArray : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SupportingPropertyBagArray class.
@@ -2001,7 +2001,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:v.</para>
     /// </summary>
-    public partial class SupportingPropertyBagArrayValue : TypedOpenXmlLeafTextElement
+    public partial class SupportingPropertyBagArrayValue : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the SupportingPropertyBagArrayValue class.
@@ -2057,7 +2057,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.ArrayValue" /> <c>&lt;xlrd2:v></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Array : TypedOpenXmlCompositeElement
+    public partial class Array : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Array class.
@@ -2137,7 +2137,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:v.</para>
     /// </summary>
-    public partial class ArrayValue : TypedOpenXmlLeafTextElement
+    public partial class ArrayValue : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the ArrayValue class.
@@ -2193,7 +2193,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat" /> <c>&lt;x:dxf></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Dxfs : TypedOpenXmlCompositeElement
+    public partial class Dxfs : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Dxfs class.
@@ -2265,7 +2265,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichFormatProperty" /> <c>&lt;xlrd2:rPr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class RichFormatProperties : TypedOpenXmlCompositeElement
+    public partial class RichFormatProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the RichFormatProperties class.
@@ -2325,7 +2325,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichStyle" /> <c>&lt;xlrd2:rSty></c></description></item>
     /// </list>
     /// </remark>
-    public partial class RichStyles : TypedOpenXmlCompositeElement
+    public partial class RichStyles : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the RichStyles class.
@@ -2379,7 +2379,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:rPr.</para>
     /// </summary>
-    public partial class RichFormatProperty : TypedOpenXmlLeafElement
+    public partial class RichFormatProperty : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the RichFormatProperty class.
@@ -2439,7 +2439,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichStylePropertyValue" /> <c>&lt;xlrd2:rpv></c></description></item>
     /// </list>
     /// </remark>
-    public partial class RichStyle : TypedOpenXmlCompositeElement
+    public partial class RichStyle : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the RichStyle class.
@@ -2505,7 +2505,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:rpv.</para>
     /// </summary>
-    public partial class RichStylePropertyValue : TypedOpenXmlLeafTextElement
+    public partial class RichStylePropertyValue : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the RichStylePropertyValue class.
@@ -2565,7 +2565,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueTypeKeyFlags" /> <c>&lt;xlrd2:keyFlags></c></description></item>
     /// </list>
     /// </remark>
-    public partial class RichValueGlobalType : TypedOpenXmlCompositeElement
+    public partial class RichValueGlobalType : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the RichValueGlobalType class.
@@ -2653,7 +2653,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueType" /> <c>&lt;xlrd2:type></c></description></item>
     /// </list>
     /// </remark>
-    public partial class RichValueTypes : TypedOpenXmlCompositeElement
+    public partial class RichValueTypes : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the RichValueTypes class.
@@ -2714,7 +2714,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueTypeKeyFlags" /> <c>&lt;xlrd2:keyFlags></c></description></item>
     /// </list>
     /// </remark>
-    public partial class RichValueType : TypedOpenXmlCompositeElement
+    public partial class RichValueType : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the RichValueType class.
@@ -2817,7 +2817,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueTypeReservedKey" /> <c>&lt;xlrd2:key></c></description></item>
     /// </list>
     /// </remark>
-    public partial class RichValueTypeKeyFlags : TypedOpenXmlCompositeElement
+    public partial class RichValueTypeKeyFlags : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the RichValueTypeKeyFlags class.
@@ -2877,7 +2877,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData2.RichValueTypeReservedKeyFlag" /> <c>&lt;xlrd2:flag></c></description></item>
     /// </list>
     /// </remark>
-    public partial class RichValueTypeReservedKey : TypedOpenXmlCompositeElement
+    public partial class RichValueTypeReservedKey : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the RichValueTypeReservedKey class.
@@ -2946,7 +2946,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd2:flag.</para>
     /// </summary>
-    public partial class RichValueTypeReservedKeyFlag : TypedOpenXmlLeafElement
+    public partial class RichValueTypeReservedKeyFlag : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the RichValueTypeReservedKeyFlag class.

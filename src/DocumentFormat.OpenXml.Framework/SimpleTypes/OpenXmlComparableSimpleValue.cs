@@ -125,7 +125,7 @@ namespace DocumentFormat.OpenXml
         /// <param name="left">The left operand, or null.</param>
         /// <param name="right">The right operand, or null.</param>
         /// <returns>True if the operands are equal; otherwise, false.</returns>
-        public static bool operator ==(OpenXmlComparableSimpleValue<T> left, OpenXmlComparableSimpleValue<T> right)
+        public static bool operator ==(OpenXmlComparableSimpleValue<T>? left, OpenXmlComparableSimpleValue<T>? right)
         {
             if (left is null)
             {
@@ -141,7 +141,7 @@ namespace DocumentFormat.OpenXml
         /// <param name="left">The left operand, or null.</param>
         /// <param name="right">The right operand, or null.</param>
         /// <returns>True if the operands are not equal; otherwise, false.</returns>
-        public static bool operator !=(OpenXmlComparableSimpleValue<T> left, OpenXmlComparableSimpleValue<T> right)
+        public static bool operator !=(OpenXmlComparableSimpleValue<T>? left, OpenXmlComparableSimpleValue<T>? right)
         {
             return !(left == right);
         }
@@ -152,7 +152,7 @@ namespace DocumentFormat.OpenXml
         /// <param name="left">The left operand, or null.</param>
         /// <param name="right">The right operand, or null.</param>
         /// <returns>True if the left operand is less than the right operand; otherwise, false.</returns>
-        public static bool operator <(OpenXmlComparableSimpleValue<T> left, OpenXmlComparableSimpleValue<T> right)
+        public static bool operator <(OpenXmlComparableSimpleValue<T>? left, OpenXmlComparableSimpleValue<T>? right)
         {
             return left is null ? !(right is null) : left.CompareTo(right) < 0;
         }
@@ -163,7 +163,7 @@ namespace DocumentFormat.OpenXml
         /// <param name="left">The left operand, or null.</param>
         /// <param name="right">The right operand, or null.</param>
         /// <returns>True if the left operand is less than or equal to the right operand; otherwise, false.</returns>
-        public static bool operator <=(OpenXmlComparableSimpleValue<T> left, OpenXmlComparableSimpleValue<T> right)
+        public static bool operator <=(OpenXmlComparableSimpleValue<T>? left, OpenXmlComparableSimpleValue<T>? right)
         {
             return left is null || left.CompareTo(right) <= 0;
         }
@@ -174,7 +174,7 @@ namespace DocumentFormat.OpenXml
         /// <param name="left">The left operand, or null.</param>
         /// <param name="right">The right operand, or null.</param>
         /// <returns>True if the left operand is greater than the right operand; otherwise, false.</returns>
-        public static bool operator >(OpenXmlComparableSimpleValue<T> left, OpenXmlComparableSimpleValue<T> right)
+        public static bool operator >(OpenXmlComparableSimpleValue<T>? left, OpenXmlComparableSimpleValue<T>? right)
         {
             return !(left is null) && left.CompareTo(right) > 0;
         }

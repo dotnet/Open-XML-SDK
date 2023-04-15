@@ -29,7 +29,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.RevExHeader" /> <c>&lt;xr:hdr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class RevExHeaders : TypedOpenXmlCompositeElement
+    public partial class RevExHeaders : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the RevExHeaders class.
@@ -159,7 +159,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.RevListAutoExpandRw" /> <c>&lt;xr:xrrListExpR></c></description></item>
     /// </list>
     /// </remark>
-    public partial class RevExStream : TypedOpenXmlCompositeElement
+    public partial class RevExStream : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the RevExStream class.
@@ -251,7 +251,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.NumberingFormat" /> <c>&lt;x:numFmt></c></description></item>
     /// </list>
     /// </remark>
-    public partial class DifferentialFormatType : TypedOpenXmlCompositeElement
+    public partial class DifferentialFormatType : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the DifferentialFormatType class.
@@ -408,7 +408,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:revisionPtr.</para>
     /// </summary>
-    public partial class RevisionPtr : TypedOpenXmlLeafElement
+    public partial class RevisionPtr : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the RevisionPtr class.
@@ -473,7 +473,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.SparklineGroup" /> <c>&lt;xr:sparklineGroup></c></description></item>
     /// </list>
     /// </remark>
-    public partial class StateBasedObject : TypedOpenXmlCompositeElement
+    public partial class StateBasedObject : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the StateBasedObject class.
@@ -615,7 +615,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:hdr.</para>
     /// </summary>
-    public partial class RevExHeader : TypedOpenXmlLeafElement
+    public partial class RevExHeader : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the RevExHeader class.
@@ -700,7 +700,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.RevExTest" /> <c>&lt;xr:xrrtest></c></description></item>
     /// </list>
     /// </remark>
-    public partial class RevExFuture : TypedOpenXmlCompositeElement
+    public partial class RevExFuture : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the RevExFuture class.
@@ -835,7 +835,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:xrrUspt.</para>
     /// </summary>
-    public partial class RevExUnsupported : TypedOpenXmlLeafElement
+    public partial class RevExUnsupported : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the RevExUnsupported class.
@@ -930,7 +930,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:xrrTrim.</para>
     /// </summary>
-    public partial class RevExTrimmed : TypedOpenXmlLeafElement
+    public partial class RevExTrimmed : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the RevExTrimmed class.
@@ -1025,7 +1025,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:xrrrc.</para>
     /// </summary>
-    public partial class RevExRowColumn : TypedOpenXmlLeafElement
+    public partial class RevExRowColumn : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the RevExRowColumn class.
@@ -1159,7 +1159,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:xrrm.</para>
     /// </summary>
-    public partial class RevExMove : TypedOpenXmlLeafElement
+    public partial class RevExMove : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the RevExMove class.
@@ -1303,7 +1303,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.RevCell" /> <c>&lt;xr:c></c></description></item>
     /// </list>
     /// </remark>
-    public partial class RevExChangeCell : TypedOpenXmlCompositeElement
+    public partial class RevExChangeCell : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the RevExChangeCell class.
@@ -1497,7 +1497,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.ExtensionList" /> <c>&lt;xr:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class RevExFormatting : TypedOpenXmlCompositeElement
+    public partial class RevExFormatting : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the RevExFormatting class.
@@ -1816,7 +1816,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.FormulaFormula" /> <c>&lt;xr:formula></c></description></item>
     /// </list>
     /// </remark>
-    public partial class RevExDefinedName : TypedOpenXmlCompositeElement
+    public partial class RevExDefinedName : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the RevExDefinedName class.
@@ -2098,7 +2098,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.StateBasedHeader" /> <c>&lt;xr:hdr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class RevExDelObj : TypedOpenXmlCompositeElement
+    public partial class RevExDelObj : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the RevExDelObj class.
@@ -2243,7 +2243,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.StateBasedHeader" /> <c>&lt;xr:hdr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class RevExChgObj : TypedOpenXmlCompositeElement
+    public partial class RevExChgObj : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the RevExChgObj class.
@@ -2387,7 +2387,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:xrrSheet.</para>
     /// </summary>
-    public partial class RevExSheetOp : TypedOpenXmlLeafElement
+    public partial class RevExSheetOp : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the RevExSheetOp class.
@@ -2529,7 +2529,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:xrrList.</para>
     /// </summary>
-    public partial class RevisionList : TypedOpenXmlLeafElement
+    public partial class RevisionList : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the RevisionList class.
@@ -2718,7 +2718,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:xrrListExpR.</para>
     /// </summary>
-    public partial class RevListAutoExpandRw : TypedOpenXmlLeafElement
+    public partial class RevListAutoExpandRw : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the RevListAutoExpandRw class.
@@ -2860,7 +2860,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.RevListAutoExpandRw" /> <c>&lt;xr:xrrListExpR></c></description></item>
     /// </list>
     /// </remark>
-    public partial class RevGroup : TypedOpenXmlCompositeElement
+    public partial class RevGroup : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the RevGroup class.
@@ -3008,7 +3008,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:xrrtest.</para>
     /// </summary>
-    public partial class RevExTest : TypedOpenXmlLeafElement
+    public partial class RevExTest : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the RevExTest class.
@@ -3041,7 +3041,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.Xstring" /> <c>&lt;xr:v></c></description></item>
     /// </list>
     /// </remark>
-    public partial class RevCell : TypedOpenXmlCompositeElement
+    public partial class RevCell : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the RevCell class.
@@ -3189,7 +3189,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.RevCell" /> <c>&lt;xr:c></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ChangeCellSubEdit : TypedOpenXmlCompositeElement
+    public partial class ChangeCellSubEdit : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ChangeCellSubEdit class.
@@ -3297,7 +3297,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Extension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ExtensionList : TypedOpenXmlCompositeElement
+    public partial class ExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ExtensionList class.
@@ -3357,7 +3357,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:formula.</para>
     /// </summary>
-    public partial class FormulaFormula : TypedOpenXmlLeafTextElement
+    public partial class FormulaFormula : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the FormulaFormula class.
@@ -3395,7 +3395,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:f.</para>
     /// </summary>
-    public partial class FFormula : TypedOpenXmlLeafTextElement
+    public partial class FFormula : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the FFormula class.
@@ -3439,7 +3439,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.RefMap" /> <c>&lt;xr:refmap></c></description></item>
     /// </list>
     /// </remark>
-    public partial class StateBasedHeader : TypedOpenXmlCompositeElement
+    public partial class StateBasedHeader : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the StateBasedHeader class.
@@ -3569,7 +3569,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:link.</para>
     /// </summary>
-    public partial class RevisionStateLink : TypedOpenXmlLeafElement
+    public partial class RevisionStateLink : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the RevisionStateLink class.
@@ -3622,7 +3622,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.ShowGridlinesHeadings" /> <c>&lt;xr:showGridlinesHeadings></c></description></item>
     /// </list>
     /// </remark>
-    public partial class RevisionState : TypedOpenXmlCompositeElement
+    public partial class RevisionState : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the RevisionState class.
@@ -3759,7 +3759,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.SheetXluid" /> <c>&lt;xr:sheetUid></c></description></item>
     /// </list>
     /// </remark>
-    public partial class RefMap : TypedOpenXmlCompositeElement
+    public partial class RefMap : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the RefMap class.
@@ -3821,7 +3821,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:rowColVisualOps.</para>
     /// </summary>
-    public partial class RowColVisualOps : TypedOpenXmlLeafElement
+    public partial class RowColVisualOps : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the RowColVisualOps class.
@@ -3897,7 +3897,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:hideUnhideSheet.</para>
     /// </summary>
-    public partial class HideUnhideSheet : TypedOpenXmlLeafElement
+    public partial class HideUnhideSheet : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the HideUnhideSheet class.
@@ -3937,7 +3937,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:showGridlinesHeadings.</para>
     /// </summary>
-    public partial class ShowGridlinesHeadings : TypedOpenXmlLeafElement
+    public partial class ShowGridlinesHeadings : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ShowGridlinesHeadings class.
@@ -3991,7 +3991,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:freezePanes.</para>
     /// </summary>
-    public partial class FreezePanes : TypedOpenXmlLeafElement
+    public partial class FreezePanes : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the FreezePanes class.
@@ -4037,7 +4037,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.Outline" /> <c>&lt;xr:outline></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Outlines : TypedOpenXmlCompositeElement
+    public partial class Outlines : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Outlines class.
@@ -4106,7 +4106,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:outline.</para>
     /// </summary>
-    public partial class Outline : TypedOpenXmlLeafElement
+    public partial class Outline : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Outline class.
@@ -4160,7 +4160,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:v.</para>
     /// </summary>
-    public partial class Xstring : TypedOpenXmlLeafTextElement
+    public partial class Xstring : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the Xstring class.
@@ -4207,7 +4207,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Text" /> <c>&lt;x:t></c></description></item>
     /// </list>
     /// </remark>
-    public partial class RstType : TypedOpenXmlCompositeElement
+    public partial class RstType : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the RstType class.
@@ -4280,7 +4280,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:ref.</para>
     /// </summary>
-    public partial class RefCell : TypedOpenXmlLeafElement
+    public partial class RefCell : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the RefCell class.
@@ -4398,7 +4398,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:sheetUid.</para>
     /// </summary>
-    public partial class SheetXluid : TypedOpenXmlLeafElement
+    public partial class SheetXluid : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the SheetXluid class.
@@ -4489,7 +4489,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:oartAnchor.</para>
     /// </summary>
-    public partial class RefOartAnchor : TypedOpenXmlLeafElement
+    public partial class RefOartAnchor : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the RefOartAnchor class.
@@ -4702,7 +4702,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:future.</para>
     /// </summary>
-    public partial class RefFuture : TypedOpenXmlLeafElement
+    public partial class RefFuture : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the RefFuture class.
@@ -4727,7 +4727,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:test.</para>
     /// </summary>
-    public partial class RefTest : TypedOpenXmlLeafElement
+    public partial class RefTest : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the RefTest class.
@@ -4811,7 +4811,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.ExcelAc.List" /> <c>&lt;x12ac:list></c></description></item>
     /// </list>
     /// </remark>
-    public partial class DataValidation : TypedOpenXmlCompositeElement
+    public partial class DataValidation : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the DataValidation class.
@@ -5055,7 +5055,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:hyperlink.</para>
     /// </summary>
-    public partial class Hyperlink : TypedOpenXmlLeafElement
+    public partial class Hyperlink : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Hyperlink class.
@@ -5157,7 +5157,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.Sparklines" /> <c>&lt;x14:sparklines></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SparklineGroup : TypedOpenXmlCompositeElement
+    public partial class SparklineGroup : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SparklineGroup class.
@@ -5555,7 +5555,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Comments : TypedOpenXmlCompositeElement
+    public partial class Comments : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Comments class.
@@ -5660,7 +5660,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.SortState" /> <c>&lt;x:sortState></c></description></item>
     /// </list>
     /// </remark>
-    public partial class AutoFilter : TypedOpenXmlCompositeElement
+    public partial class AutoFilter : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the AutoFilter class.
@@ -5752,7 +5752,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.RowItems" /> <c>&lt;x:rowItems></c></description></item>
     /// </list>
     /// </remark>
-    public partial class pivotTableDefinition : TypedOpenXmlCompositeElement
+    public partial class pivotTableDefinition : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the pivotTableDefinition class.

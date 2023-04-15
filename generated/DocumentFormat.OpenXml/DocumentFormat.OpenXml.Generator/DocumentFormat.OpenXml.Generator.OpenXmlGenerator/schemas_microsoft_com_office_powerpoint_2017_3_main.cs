@@ -27,7 +27,7 @@ namespace DocumentFormat.OpenXml.Office2019.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Presentation.TrackList" /> <c>&lt;p173:trackLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TracksInfo : TypedOpenXmlCompositeElement
+    public partial class TracksInfo : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TracksInfo class.
@@ -109,7 +109,7 @@ namespace DocumentFormat.OpenXml.Office2019.Presentation
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p173:track.</para>
     /// </summary>
-    public partial class Track : TypedOpenXmlLeafElement
+    public partial class Track : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Track class.
@@ -209,7 +209,7 @@ namespace DocumentFormat.OpenXml.Office2019.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Presentation.Track" /> <c>&lt;p173:track></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TrackList : TypedOpenXmlCompositeElement
+    public partial class TrackList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TrackList class.

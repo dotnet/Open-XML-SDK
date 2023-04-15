@@ -21,7 +21,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso:control.</para>
     /// </summary>
-    public partial class UnsizedControlClone : TypedOpenXmlLeafElement
+    public partial class UnsizedControlClone : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the UnsizedControlClone class.
@@ -398,7 +398,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso:button.</para>
     /// </summary>
-    public partial class UnsizedButton : TypedOpenXmlLeafElement
+    public partial class UnsizedButton : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the UnsizedButton class.
@@ -831,7 +831,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso:checkBox.</para>
     /// </summary>
-    public partial class CheckBox : TypedOpenXmlLeafElement
+    public partial class CheckBox : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the CheckBox class.
@@ -1193,7 +1193,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CustomUI.Item" /> <c>&lt;mso:item></c></description></item>
     /// </list>
     /// </remark>
-    public partial class UnsizedGallery : TypedOpenXmlCompositeElement
+    public partial class UnsizedGallery : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the UnsizedGallery class.
@@ -1906,7 +1906,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso:toggleButton.</para>
     /// </summary>
-    public partial class UnsizedToggleButton : TypedOpenXmlLeafElement
+    public partial class UnsizedToggleButton : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the UnsizedToggleButton class.
@@ -2353,7 +2353,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso:menuSeparator.</para>
     /// </summary>
-    public partial class MenuSeparator : TypedOpenXmlLeafElement
+    public partial class MenuSeparator : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the MenuSeparator class.
@@ -2498,7 +2498,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CustomUI.VisibleToggleButton" /> <c>&lt;mso:toggleButton></c></description></item>
     /// </list>
     /// </remark>
-    public partial class UnsizedSplitButton : TypedOpenXmlCompositeElement
+    public partial class UnsizedSplitButton : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the UnsizedSplitButton class.
@@ -2791,7 +2791,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CustomUI.UnsizedToggleButton" /> <c>&lt;mso:toggleButton></c></description></item>
     /// </list>
     /// </remark>
-    public partial class UnsizedMenu : TypedOpenXmlCompositeElement
+    public partial class UnsizedMenu : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the UnsizedMenu class.
@@ -3284,7 +3284,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso:dynamicMenu.</para>
     /// </summary>
-    public partial class UnsizedDynamicMenu : TypedOpenXmlLeafElement
+    public partial class UnsizedDynamicMenu : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the UnsizedDynamicMenu class.
@@ -3737,7 +3737,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CustomUI.VisibleToggleButton" /> <c>&lt;mso:toggleButton></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SplitButtonWithTitle : TypedOpenXmlCompositeElement
+    public partial class SplitButtonWithTitle : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SplitButtonWithTitle class.
@@ -4030,7 +4030,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CustomUI.UnsizedToggleButton" /> <c>&lt;mso:toggleButton></c></description></item>
     /// </list>
     /// </remark>
-    public partial class MenuWithTitle : TypedOpenXmlCompositeElement
+    public partial class MenuWithTitle : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the MenuWithTitle class.
@@ -4523,7 +4523,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso:control.</para>
     /// </summary>
-    public partial class ControlClone : TypedOpenXmlLeafElement
+    public partial class ControlClone : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ControlClone class.
@@ -4953,7 +4953,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso:labelControl.</para>
     /// </summary>
-    public partial class TextLabel : TypedOpenXmlLeafElement
+    public partial class TextLabel : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the TextLabel class.
@@ -5249,7 +5249,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso:button.</para>
     /// </summary>
-    public partial class Button : TypedOpenXmlLeafElement
+    public partial class Button : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Button class.
@@ -5707,7 +5707,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso:toggleButton.</para>
     /// </summary>
-    public partial class ToggleButton : TypedOpenXmlLeafElement
+    public partial class ToggleButton : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ToggleButton class.
@@ -6179,7 +6179,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso:editBox.</para>
     /// </summary>
-    public partial class EditBox : TypedOpenXmlLeafElement
+    public partial class EditBox : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the EditBox class.
@@ -6632,7 +6632,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CustomUI.Item" /> <c>&lt;mso:item></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ComboBox : TypedOpenXmlCompositeElement
+    public partial class ComboBox : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ComboBox class.
@@ -7224,7 +7224,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CustomUI.Item" /> <c>&lt;mso:item></c></description></item>
     /// </list>
     /// </remark>
-    public partial class DropDown : TypedOpenXmlCompositeElement
+    public partial class DropDown : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the DropDown class.
@@ -7818,7 +7818,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CustomUI.Item" /> <c>&lt;mso:item></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Gallery : TypedOpenXmlCompositeElement
+    public partial class Gallery : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Gallery class.
@@ -8573,7 +8573,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CustomUI.UnsizedToggleButton" /> <c>&lt;mso:toggleButton></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Menu : TypedOpenXmlCompositeElement
+    public partial class Menu : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Menu class.
@@ -9094,7 +9094,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso:dynamicMenu.</para>
     /// </summary>
-    public partial class DynamicMenu : TypedOpenXmlLeafElement
+    public partial class DynamicMenu : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the DynamicMenu class.
@@ -9572,7 +9572,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CustomUI.VisibleToggleButton" /> <c>&lt;mso:toggleButton></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SplitButton : TypedOpenXmlCompositeElement
+    public partial class SplitButton : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SplitButton class.
@@ -9898,7 +9898,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CustomUI.ToggleButton" /> <c>&lt;mso:toggleButton></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Box : TypedOpenXmlCompositeElement
+    public partial class Box : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Box class.
@@ -10113,7 +10113,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CustomUI.UnsizedToggleButton" /> <c>&lt;mso:toggleButton></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ButtonGroup : TypedOpenXmlCompositeElement
+    public partial class ButtonGroup : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ButtonGroup class.
@@ -10305,7 +10305,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CustomUI.UnsizedToggleButton" /> <c>&lt;mso:toggleButton></c></description></item>
     /// </list>
     /// </remark>
-    public partial class MenuRoot : TypedOpenXmlCompositeElement
+    public partial class MenuRoot : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the MenuRoot class.
@@ -10436,7 +10436,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CustomUI.Ribbon" /> <c>&lt;mso:ribbon></c></description></item>
     /// </list>
     /// </remark>
-    public partial class CustomUI : TypedOpenXmlPartRootElement
+    public partial class CustomUI : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the CustomUI class.
@@ -10546,7 +10546,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso:item.</para>
     /// </summary>
-    public partial class Item : TypedOpenXmlLeafElement
+    public partial class Item : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Item class.
@@ -10655,7 +10655,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso:button.</para>
     /// </summary>
-    public partial class VisibleButton : TypedOpenXmlLeafElement
+    public partial class VisibleButton : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the VisibleButton class.
@@ -11063,7 +11063,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso:toggleButton.</para>
     /// </summary>
-    public partial class VisibleToggleButton : TypedOpenXmlLeafElement
+    public partial class VisibleToggleButton : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the VisibleToggleButton class.
@@ -11485,7 +11485,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso:separator.</para>
     /// </summary>
-    public partial class VerticalSeparator : TypedOpenXmlLeafElement
+    public partial class VerticalSeparator : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the VerticalSeparator class.
@@ -11625,7 +11625,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CustomUI.UnsizedButton" /> <c>&lt;mso:button></c></description></item>
     /// </list>
     /// </remark>
-    public partial class DialogBoxLauncher : TypedOpenXmlCompositeElement
+    public partial class DialogBoxLauncher : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the DialogBoxLauncher class.
@@ -11712,7 +11712,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CustomUI.ToggleButton" /> <c>&lt;mso:toggleButton></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Group : TypedOpenXmlCompositeElement
+    public partial class Group : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Group class.
@@ -12099,7 +12099,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso:control.</para>
     /// </summary>
-    public partial class QuickAccessToolbarControlClone : TypedOpenXmlLeafElement
+    public partial class QuickAccessToolbarControlClone : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the QuickAccessToolbarControlClone class.
@@ -12667,7 +12667,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CustomUI.VerticalSeparator" /> <c>&lt;mso:separator></c></description></item>
     /// </list>
     /// </remark>
-    public abstract partial class QatItemsType : TypedOpenXmlCompositeElement
+    public abstract partial class QatItemsType : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the QatItemsType class.
@@ -12720,7 +12720,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CustomUI.Group" /> <c>&lt;mso:group></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Tab : TypedOpenXmlCompositeElement
+    public partial class Tab : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Tab class.
@@ -12976,7 +12976,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CustomUI.Tab" /> <c>&lt;mso:tab></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ContextualTabSet : TypedOpenXmlCompositeElement
+    public partial class ContextualTabSet : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ContextualTabSet class.
@@ -13070,7 +13070,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso:command.</para>
     /// </summary>
-    public partial class RepurposedCommand : TypedOpenXmlLeafElement
+    public partial class RepurposedCommand : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the RepurposedCommand class.
@@ -13162,7 +13162,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CustomUI.UnsizedToggleButton" /> <c>&lt;mso:toggleButton></c></description></item>
     /// </list>
     /// </remark>
-    public partial class OfficeMenu : TypedOpenXmlCompositeElement
+    public partial class OfficeMenu : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the OfficeMenu class.
@@ -13253,7 +13253,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CustomUI.DocumentSpecificQuickAccessToolbarControls" /> <c>&lt;mso:documentControls></c></description></item>
     /// </list>
     /// </remark>
-    public partial class QuickAccessToolbar : TypedOpenXmlCompositeElement
+    public partial class QuickAccessToolbar : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the QuickAccessToolbar class.
@@ -13340,7 +13340,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CustomUI.Tab" /> <c>&lt;mso:tab></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Tabs : TypedOpenXmlCompositeElement
+    public partial class Tabs : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Tabs class.
@@ -13399,7 +13399,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CustomUI.ContextualTabSet" /> <c>&lt;mso:tabSet></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ContextualTabSets : TypedOpenXmlCompositeElement
+    public partial class ContextualTabSets : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ContextualTabSets class.
@@ -13458,7 +13458,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CustomUI.RepurposedCommand" /> <c>&lt;mso:command></c></description></item>
     /// </list>
     /// </remark>
-    public partial class RepurposedCommands : TypedOpenXmlCompositeElement
+    public partial class RepurposedCommands : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the RepurposedCommands class.
@@ -13520,7 +13520,7 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CustomUI.Tabs" /> <c>&lt;mso:tabs></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Ribbon : TypedOpenXmlCompositeElement
+    public partial class Ribbon : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Ribbon class.

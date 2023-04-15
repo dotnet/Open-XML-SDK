@@ -22,7 +22,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:control.</para>
     /// </summary>
-    public partial class ControlCloneRegular : TypedOpenXmlLeafElement
+    public partial class ControlCloneRegular : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ControlCloneRegular class.
@@ -401,7 +401,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:button.</para>
     /// </summary>
-    public partial class ButtonRegular : TypedOpenXmlLeafElement
+    public partial class ButtonRegular : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ButtonRegular class.
@@ -837,7 +837,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:checkBox.</para>
     /// </summary>
-    public partial class CheckBox : TypedOpenXmlLeafElement
+    public partial class CheckBox : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the CheckBox class.
@@ -1200,7 +1200,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.Item" /> <c>&lt;mso14:item></c></description></item>
     /// </list>
     /// </remark>
-    public partial class GalleryRegular : TypedOpenXmlCompositeElement
+    public partial class GalleryRegular : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the GalleryRegular class.
@@ -1925,7 +1925,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:toggleButton.</para>
     /// </summary>
-    public partial class ToggleButtonRegular : TypedOpenXmlLeafElement
+    public partial class ToggleButtonRegular : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ToggleButtonRegular class.
@@ -2373,7 +2373,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:menuSeparator.</para>
     /// </summary>
-    public partial class MenuSeparator : TypedOpenXmlLeafElement
+    public partial class MenuSeparator : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the MenuSeparator class.
@@ -2533,7 +2533,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.VisibleToggleButton" /> <c>&lt;mso14:toggleButton></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SplitButtonRegular : TypedOpenXmlCompositeElement
+    public partial class SplitButtonRegular : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SplitButtonRegular class.
@@ -2827,7 +2827,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButtonRegular" /> <c>&lt;mso14:toggleButton></c></description></item>
     /// </list>
     /// </remark>
-    public partial class MenuRegular : TypedOpenXmlCompositeElement
+    public partial class MenuRegular : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the MenuRegular class.
@@ -3321,7 +3321,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:dynamicMenu.</para>
     /// </summary>
-    public partial class DynamicMenuRegular : TypedOpenXmlLeafElement
+    public partial class DynamicMenuRegular : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the DynamicMenuRegular class.
@@ -3775,7 +3775,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.VisibleToggleButton" /> <c>&lt;mso14:toggleButton></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SplitButtonWithTitle : TypedOpenXmlCompositeElement
+    public partial class SplitButtonWithTitle : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SplitButtonWithTitle class.
@@ -4069,7 +4069,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButtonRegular" /> <c>&lt;mso14:toggleButton></c></description></item>
     /// </list>
     /// </remark>
-    public partial class MenuWithTitle : TypedOpenXmlCompositeElement
+    public partial class MenuWithTitle : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the MenuWithTitle class.
@@ -4563,7 +4563,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:menuSeparator.</para>
     /// </summary>
-    public partial class MenuSeparatorNoTitle : TypedOpenXmlLeafElement
+    public partial class MenuSeparatorNoTitle : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the MenuSeparatorNoTitle class.
@@ -4687,7 +4687,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:control.</para>
     /// </summary>
-    public partial class ControlClone : TypedOpenXmlLeafElement
+    public partial class ControlClone : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ControlClone class.
@@ -5119,7 +5119,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:labelControl.</para>
     /// </summary>
-    public partial class LabelControl : TypedOpenXmlLeafElement
+    public partial class LabelControl : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the LabelControl class.
@@ -5416,7 +5416,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:button.</para>
     /// </summary>
-    public partial class Button : TypedOpenXmlLeafElement
+    public partial class Button : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Button class.
@@ -5877,7 +5877,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:toggleButton.</para>
     /// </summary>
-    public partial class ToggleButton : TypedOpenXmlLeafElement
+    public partial class ToggleButton : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ToggleButton class.
@@ -6350,7 +6350,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:editBox.</para>
     /// </summary>
-    public partial class EditBox : TypedOpenXmlLeafElement
+    public partial class EditBox : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the EditBox class.
@@ -6804,7 +6804,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.Item" /> <c>&lt;mso14:item></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ComboBox : TypedOpenXmlCompositeElement
+    public partial class ComboBox : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ComboBox class.
@@ -7397,7 +7397,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.Item" /> <c>&lt;mso14:item></c></description></item>
     /// </list>
     /// </remark>
-    public partial class DropDownRegular : TypedOpenXmlCompositeElement
+    public partial class DropDownRegular : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the DropDownRegular class.
@@ -7992,7 +7992,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.Item" /> <c>&lt;mso14:item></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Gallery : TypedOpenXmlCompositeElement
+    public partial class Gallery : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Gallery class.
@@ -8759,7 +8759,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButtonRegular" /> <c>&lt;mso14:toggleButton></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Menu : TypedOpenXmlCompositeElement
+    public partial class Menu : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Menu class.
@@ -9281,7 +9281,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:dynamicMenu.</para>
     /// </summary>
-    public partial class DynamicMenu : TypedOpenXmlLeafElement
+    public partial class DynamicMenu : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the DynamicMenu class.
@@ -9760,7 +9760,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.VisibleToggleButton" /> <c>&lt;mso14:toggleButton></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SplitButton : TypedOpenXmlCompositeElement
+    public partial class SplitButton : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SplitButton class.
@@ -10087,7 +10087,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButton" /> <c>&lt;mso14:toggleButton></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Box : TypedOpenXmlCompositeElement
+    public partial class Box : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Box class.
@@ -10318,7 +10318,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButtonRegular" /> <c>&lt;mso14:toggleButton></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ButtonGroup : TypedOpenXmlCompositeElement
+    public partial class ButtonGroup : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ButtonGroup class.
@@ -10513,7 +10513,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:button.</para>
     /// </summary>
-    public partial class BackstageMenuButton : TypedOpenXmlLeafElement
+    public partial class BackstageMenuButton : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the BackstageMenuButton class.
@@ -10784,7 +10784,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:checkBox.</para>
     /// </summary>
-    public partial class BackstageMenuCheckBox : TypedOpenXmlLeafElement
+    public partial class BackstageMenuCheckBox : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the BackstageMenuCheckBox class.
@@ -11020,7 +11020,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.BackstageMenuGroup" /> <c>&lt;mso14:menuGroup></c></description></item>
     /// </list>
     /// </remark>
-    public partial class BackstageSubMenu : TypedOpenXmlCompositeElement
+    public partial class BackstageSubMenu : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the BackstageSubMenu class.
@@ -11299,7 +11299,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:toggleButton.</para>
     /// </summary>
-    public partial class BackstageMenuToggleButton : TypedOpenXmlLeafElement
+    public partial class BackstageMenuToggleButton : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the BackstageMenuToggleButton class.
@@ -11571,7 +11571,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:button.</para>
     /// </summary>
-    public partial class BackstageGroupButton : TypedOpenXmlLeafElement
+    public partial class BackstageGroupButton : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the BackstageGroupButton class.
@@ -11892,7 +11892,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:checkBox.</para>
     /// </summary>
-    public partial class BackstageCheckBox : TypedOpenXmlLeafElement
+    public partial class BackstageCheckBox : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the BackstageCheckBox class.
@@ -12189,7 +12189,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:editBox.</para>
     /// </summary>
-    public partial class BackstageEditBox : TypedOpenXmlLeafElement
+    public partial class BackstageEditBox : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the BackstageEditBox class.
@@ -12447,7 +12447,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ItemBackstageItem" /> <c>&lt;mso14:item></c></description></item>
     /// </list>
     /// </remark>
-    public partial class BackstageDropDown : TypedOpenXmlCompositeElement
+    public partial class BackstageDropDown : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the BackstageDropDown class.
@@ -12818,7 +12818,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.RadioButtonBackstageItem" /> <c>&lt;mso14:radioButton></c></description></item>
     /// </list>
     /// </remark>
-    public partial class RadioGroup : TypedOpenXmlCompositeElement
+    public partial class RadioGroup : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the RadioGroup class.
@@ -13119,7 +13119,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ItemBackstageItem" /> <c>&lt;mso14:item></c></description></item>
     /// </list>
     /// </remark>
-    public partial class BackstageComboBox : TypedOpenXmlCompositeElement
+    public partial class BackstageComboBox : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the BackstageComboBox class.
@@ -13428,7 +13428,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:hyperlink.</para>
     /// </summary>
-    public partial class Hyperlink : TypedOpenXmlLeafElement
+    public partial class Hyperlink : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Hyperlink class.
@@ -13764,7 +13764,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:labelControl.</para>
     /// </summary>
-    public partial class BackstageLabelControl : TypedOpenXmlLeafElement
+    public partial class BackstageLabelControl : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the BackstageLabelControl class.
@@ -13959,7 +13959,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.RadioGroup" /> <c>&lt;mso14:radioGroup></c></description></item>
     /// </list>
     /// </remark>
-    public partial class GroupBox : TypedOpenXmlCompositeElement
+    public partial class GroupBox : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the GroupBox class.
@@ -14137,7 +14137,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.RadioGroup" /> <c>&lt;mso14:radioGroup></c></description></item>
     /// </list>
     /// </remark>
-    public partial class LayoutContainer : TypedOpenXmlCompositeElement
+    public partial class LayoutContainer : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the LayoutContainer class.
@@ -14293,7 +14293,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:imageControl.</para>
     /// </summary>
-    public partial class ImageControl : TypedOpenXmlLeafElement
+    public partial class ImageControl : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ImageControl class.
@@ -14489,7 +14489,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.PrimaryItem" /> <c>&lt;mso14:primaryItem></c></description></item>
     /// </list>
     /// </remark>
-    public partial class BackstageGroup : TypedOpenXmlCompositeElement
+    public partial class BackstageGroup : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the BackstageGroup class.
@@ -14800,7 +14800,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.TaskGroupCategory" /> <c>&lt;mso14:category></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TaskGroup : TypedOpenXmlCompositeElement
+    public partial class TaskGroup : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TaskGroup class.
@@ -15098,7 +15098,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButtonRegular" /> <c>&lt;mso14:toggleButton></c></description></item>
     /// </list>
     /// </remark>
-    public partial class MenuRoot : TypedOpenXmlCompositeElement
+    public partial class MenuRoot : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the MenuRoot class.
@@ -15232,7 +15232,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.Ribbon" /> <c>&lt;mso14:ribbon></c></description></item>
     /// </list>
     /// </remark>
-    public partial class CustomUI : TypedOpenXmlPartRootElement
+    public partial class CustomUI : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the CustomUI class.
@@ -15404,7 +15404,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:item.</para>
     /// </summary>
-    public partial class Item : TypedOpenXmlLeafElement
+    public partial class Item : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Item class.
@@ -15514,7 +15514,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:button.</para>
     /// </summary>
-    public partial class VisibleButton : TypedOpenXmlLeafElement
+    public partial class VisibleButton : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the VisibleButton class.
@@ -15925,7 +15925,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:toggleButton.</para>
     /// </summary>
-    public partial class VisibleToggleButton : TypedOpenXmlLeafElement
+    public partial class VisibleToggleButton : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the VisibleToggleButton class.
@@ -16348,7 +16348,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:separator.</para>
     /// </summary>
-    public partial class Separator : TypedOpenXmlLeafElement
+    public partial class Separator : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Separator class.
@@ -16503,7 +16503,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ButtonRegular" /> <c>&lt;mso14:button></c></description></item>
     /// </list>
     /// </remark>
-    public partial class DialogBoxLauncher : TypedOpenXmlCompositeElement
+    public partial class DialogBoxLauncher : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the DialogBoxLauncher class.
@@ -16591,7 +16591,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButton" /> <c>&lt;mso14:toggleButton></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Group : TypedOpenXmlCompositeElement
+    public partial class Group : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Group class.
@@ -17001,7 +17001,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:control.</para>
     /// </summary>
-    public partial class ControlCloneQat : TypedOpenXmlLeafElement
+    public partial class ControlCloneQat : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ControlCloneQat class.
@@ -17573,7 +17573,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.Separator" /> <c>&lt;mso14:separator></c></description></item>
     /// </list>
     /// </remark>
-    public abstract partial class QatItemsType : TypedOpenXmlCompositeElement
+    public abstract partial class QatItemsType : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the QatItemsType class.
@@ -17626,7 +17626,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.Group" /> <c>&lt;mso14:group></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Tab : TypedOpenXmlCompositeElement
+    public partial class Tab : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Tab class.
@@ -17883,7 +17883,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.Tab" /> <c>&lt;mso14:tab></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TabSet : TypedOpenXmlCompositeElement
+    public partial class TabSet : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TabSet class.
@@ -17978,7 +17978,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:command.</para>
     /// </summary>
-    public partial class Command : TypedOpenXmlLeafElement
+    public partial class Command : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Command class.
@@ -18064,7 +18064,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.DocumentControlsQatItems" /> <c>&lt;mso14:documentControls></c></description></item>
     /// </list>
     /// </remark>
-    public partial class QuickAccessToolbar : TypedOpenXmlCompositeElement
+    public partial class QuickAccessToolbar : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the QuickAccessToolbar class.
@@ -18152,7 +18152,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.Tab" /> <c>&lt;mso14:tab></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Tabs : TypedOpenXmlCompositeElement
+    public partial class Tabs : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Tabs class.
@@ -18212,7 +18212,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.TabSet" /> <c>&lt;mso14:tabSet></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ContextualTabs : TypedOpenXmlCompositeElement
+    public partial class ContextualTabs : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ContextualTabs class.
@@ -18280,7 +18280,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ToggleButtonRegular" /> <c>&lt;mso14:toggleButton></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ContextMenu : TypedOpenXmlCompositeElement
+    public partial class ContextMenu : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ContextMenu class.
@@ -18424,7 +18424,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class BackstageItemType : TypedOpenXmlLeafElement
+    public abstract partial class BackstageItemType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the BackstageItemType class.
@@ -18487,7 +18487,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:button.</para>
     /// </summary>
-    public partial class BackstageRegularButton : TypedOpenXmlLeafElement
+    public partial class BackstageRegularButton : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the BackstageRegularButton class.
@@ -18792,7 +18792,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.BackstageMenuGroup" /> <c>&lt;mso14:menuGroup></c></description></item>
     /// </list>
     /// </remark>
-    public partial class BackstagePrimaryMenu : TypedOpenXmlCompositeElement
+    public partial class BackstagePrimaryMenu : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the BackstagePrimaryMenu class.
@@ -19108,7 +19108,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.BackstageSubMenu" /> <c>&lt;mso14:menu></c></description></item>
     /// </list>
     /// </remark>
-    public partial class BackstageMenuGroup : TypedOpenXmlCompositeElement
+    public partial class BackstageMenuGroup : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the BackstageMenuGroup class.
@@ -19266,7 +19266,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.BackstageRegularButton" /> <c>&lt;mso14:button></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PrimaryItem : TypedOpenXmlCompositeElement
+    public partial class PrimaryItem : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the PrimaryItem class.
@@ -19534,7 +19534,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.RadioGroup" /> <c>&lt;mso14:radioGroup></c></description></item>
     /// </list>
     /// </remark>
-    public abstract partial class GroupControlsType : TypedOpenXmlCompositeElement
+    public abstract partial class GroupControlsType : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the GroupControlsType class.
@@ -19595,7 +19595,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.TaskGroupTask" /> <c>&lt;mso14:task></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TaskGroupCategory : TypedOpenXmlCompositeElement
+    public partial class TaskGroupCategory : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TaskGroupCategory class.
@@ -19815,7 +19815,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:task.</para>
     /// </summary>
-    public partial class TaskGroupTask : TypedOpenXmlLeafElement
+    public partial class TaskGroupTask : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the TaskGroupTask class.
@@ -20160,7 +20160,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.TaskFormGroupTask" /> <c>&lt;mso14:task></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TaskFormGroupCategory : TypedOpenXmlCompositeElement
+    public partial class TaskFormGroupCategory : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TaskFormGroupCategory class.
@@ -20386,7 +20386,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.BackstageGroup" /> <c>&lt;mso14:group></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TaskFormGroupTask : TypedOpenXmlCompositeElement
+    public partial class TaskFormGroupTask : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TaskFormGroupTask class.
@@ -20735,7 +20735,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.TaskFormGroupCategory" /> <c>&lt;mso14:category></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TaskFormGroup : TypedOpenXmlCompositeElement
+    public partial class TaskFormGroup : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TaskFormGroup class.
@@ -20971,7 +20971,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.TaskGroup" /> <c>&lt;mso14:taskGroup></c></description></item>
     /// </list>
     /// </remark>
-    public partial class BackstageGroups : TypedOpenXmlCompositeElement
+    public partial class BackstageGroups : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the BackstageGroups class.
@@ -21048,7 +21048,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.TaskGroup" /> <c>&lt;mso14:taskGroup></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SimpleGroups : TypedOpenXmlCompositeElement
+    public partial class SimpleGroups : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SimpleGroups class.
@@ -21117,7 +21117,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.SimpleGroups" /> <c>&lt;mso14:secondColumn></c></description></item>
     /// </list>
     /// </remark>
-    public partial class BackstageTab : TypedOpenXmlCompositeElement
+    public partial class BackstageTab : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the BackstageTab class.
@@ -21516,7 +21516,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is mso14:button.</para>
     /// </summary>
-    public partial class BackstageFastCommandButton : TypedOpenXmlLeafElement
+    public partial class BackstageFastCommandButton : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the BackstageFastCommandButton class.
@@ -21835,7 +21835,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.Command" /> <c>&lt;mso14:command></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Commands : TypedOpenXmlCompositeElement
+    public partial class Commands : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Commands class.
@@ -21897,7 +21897,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.Tabs" /> <c>&lt;mso14:tabs></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Ribbon : TypedOpenXmlCompositeElement
+    public partial class Ribbon : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Ribbon class.
@@ -22013,7 +22013,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.BackstageTab" /> <c>&lt;mso14:tab></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Backstage : TypedOpenXmlCompositeElement
+    public partial class Backstage : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Backstage class.
@@ -22107,7 +22107,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.CustomUI.ContextMenu" /> <c>&lt;mso14:contextMenu></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ContextMenus : TypedOpenXmlCompositeElement
+    public partial class ContextMenus : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ContextMenus class.

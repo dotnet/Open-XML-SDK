@@ -28,7 +28,7 @@ namespace DocumentFormat.OpenXml.Office.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.ShapeTree" /> <c>&lt;dsp:spTree></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Drawing : TypedOpenXmlPartRootElement
+    public partial class Drawing : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the Drawing class.
@@ -126,7 +126,7 @@ namespace DocumentFormat.OpenXml.Office.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dsp:dataModelExt.</para>
     /// </summary>
-    public partial class DataModelExtensionBlock : TypedOpenXmlLeafElement
+    public partial class DataModelExtensionBlock : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the DataModelExtensionBlock class.
@@ -185,7 +185,7 @@ namespace DocumentFormat.OpenXml.Office.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class NonVisualDrawingProperties : TypedOpenXmlCompositeElement
+    public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the NonVisualDrawingProperties class.
@@ -351,7 +351,7 @@ namespace DocumentFormat.OpenXml.Office.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ShapeLocks" /> <c>&lt;a:spLocks></c></description></item>
     /// </list>
     /// </remark>
-    public partial class NonVisualDrawingShapeProperties : TypedOpenXmlCompositeElement
+    public partial class NonVisualDrawingShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the NonVisualDrawingShapeProperties class.
@@ -452,7 +452,7 @@ namespace DocumentFormat.OpenXml.Office.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.NonVisualDrawingShapeProperties" /> <c>&lt;dsp:cNvSpPr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ShapeNonVisualProperties : TypedOpenXmlCompositeElement
+    public partial class ShapeNonVisualProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ShapeNonVisualProperties class.
@@ -554,7 +554,7 @@ namespace DocumentFormat.OpenXml.Office.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Transform2D" /> <c>&lt;a:xfrm></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ShapeProperties : TypedOpenXmlCompositeElement
+    public partial class ShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ShapeProperties class.
@@ -691,7 +691,7 @@ namespace DocumentFormat.OpenXml.Office.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.EffectReference" /> <c>&lt;a:effectRef></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ShapeStyle : TypedOpenXmlCompositeElement
+    public partial class ShapeStyle : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ShapeStyle class.
@@ -811,7 +811,7 @@ namespace DocumentFormat.OpenXml.Office.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Paragraph" /> <c>&lt;a:p></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TextBody : TypedOpenXmlCompositeElement
+    public partial class TextBody : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TextBody class.
@@ -902,7 +902,7 @@ namespace DocumentFormat.OpenXml.Office.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extents" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Transform2D : TypedOpenXmlCompositeElement
+    public partial class Transform2D : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Transform2D class.
@@ -1024,7 +1024,7 @@ namespace DocumentFormat.OpenXml.Office.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extension" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class OfficeArtExtensionList : TypedOpenXmlCompositeElement
+    public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the OfficeArtExtensionList class.
@@ -1091,7 +1091,7 @@ namespace DocumentFormat.OpenXml.Office.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class NonVisualGroupDrawingShapeProperties : TypedOpenXmlCompositeElement
+    public partial class NonVisualGroupDrawingShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the NonVisualGroupDrawingShapeProperties class.
@@ -1180,7 +1180,7 @@ namespace DocumentFormat.OpenXml.Office.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.NonVisualGroupDrawingShapeProperties" /> <c>&lt;dsp:cNvGrpSpPr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class GroupShapeNonVisualProperties : TypedOpenXmlCompositeElement
+    public partial class GroupShapeNonVisualProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the GroupShapeNonVisualProperties class.
@@ -1278,7 +1278,7 @@ namespace DocumentFormat.OpenXml.Office.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SolidFill" /> <c>&lt;a:solidFill></c></description></item>
     /// </list>
     /// </remark>
-    public partial class GroupShapeProperties : TypedOpenXmlCompositeElement
+    public partial class GroupShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the GroupShapeProperties class.
@@ -1403,7 +1403,7 @@ namespace DocumentFormat.OpenXml.Office.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.ShapeNonVisualProperties" /> <c>&lt;dsp:nvSpPr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Shape : TypedOpenXmlCompositeElement
+    public partial class Shape : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Shape class.
@@ -1715,7 +1715,7 @@ namespace DocumentFormat.OpenXml.Office.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Shape" /> <c>&lt;dsp:sp></c></description></item>
     /// </list>
     /// </remark>
-    public abstract partial class GroupShapeType : TypedOpenXmlCompositeElement
+    public abstract partial class GroupShapeType : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the GroupShapeType class.

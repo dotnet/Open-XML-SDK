@@ -148,7 +148,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotCache" /> <c>&lt;x:pivotCache></c></description></item>
     /// </list>
     /// </remark>
-    public abstract partial class OpenXmlPivotCachesElement : TypedOpenXmlCompositeElement
+    public abstract partial class OpenXmlPivotCachesElement : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the OpenXmlPivotCachesElement class.
@@ -199,7 +199,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.PivotTableReference" /> <c>&lt;x15:pivotTableReference></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PivotTableReferences : TypedOpenXmlCompositeElement
+    public partial class PivotTableReferences : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the PivotTableReferences class.
@@ -253,7 +253,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:queryTable.</para>
     /// </summary>
-    public partial class QueryTable : TypedOpenXmlLeafElement
+    public partial class QueryTable : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the QueryTable class.
@@ -318,7 +318,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.WebExtension" /> <c>&lt;x15:webExtension></c></description></item>
     /// </list>
     /// </remark>
-    public partial class WebExtensions : TypedOpenXmlCompositeElement
+    public partial class WebExtensions : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the WebExtensions class.
@@ -378,7 +378,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.TimelineCacheReference" /> <c>&lt;x15:timelineCacheRef></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TimelineCacheReferences : TypedOpenXmlCompositeElement
+    public partial class TimelineCacheReferences : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TimelineCacheReferences class.
@@ -438,7 +438,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.TimelineReference" /> <c>&lt;x15:timelineRef></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TimelineReferences : TypedOpenXmlCompositeElement
+    public partial class TimelineReferences : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TimelineReferences class.
@@ -492,7 +492,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:workbookPr.</para>
     /// </summary>
-    public partial class WorkbookProperties : TypedOpenXmlLeafElement
+    public partial class WorkbookProperties : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the WorkbookProperties class.
@@ -535,7 +535,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.TimelineStyle" /> <c>&lt;x15:timelineStyle></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TimelineStyles : TypedOpenXmlCompositeElement
+    public partial class TimelineStyles : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TimelineStyles class.
@@ -610,7 +610,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat" /> <c>&lt;x:dxf></c></description></item>
     /// </list>
     /// </remark>
-    public partial class DifferentialFormats : TypedOpenXmlCompositeElement
+    public partial class DifferentialFormats : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the DifferentialFormats class.
@@ -686,7 +686,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.RangeProperties" /> <c>&lt;x15:rangePr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Connection : TypedOpenXmlCompositeElement
+    public partial class Connection : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Connection class.
@@ -872,7 +872,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:calculatedMember.</para>
     /// </summary>
-    public partial class CalculatedMember : TypedOpenXmlLeafElement
+    public partial class CalculatedMember : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the CalculatedMember class.
@@ -938,7 +938,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.FieldListActiveTabTopLevelEntity" /> <c>&lt;x15:activeTabTopLevelEntity></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PivotTableUISettings : TypedOpenXmlCompositeElement
+    public partial class PivotTableUISettings : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the PivotTableUISettings class.
@@ -1017,7 +1017,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:pivotFilter.</para>
     /// </summary>
-    public partial class PivotFilter : TypedOpenXmlLeafElement
+    public partial class PivotFilter : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the PivotFilter class.
@@ -1063,7 +1063,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.CachedUniqueName" /> <c>&lt;x15:cachedUniqueName></c></description></item>
     /// </list>
     /// </remark>
-    public partial class CachedUniqueNames : TypedOpenXmlCompositeElement
+    public partial class CachedUniqueNames : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the CachedUniqueNames class.
@@ -1117,7 +1117,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:cacheHierarchy.</para>
     /// </summary>
-    public partial class CacheHierarchy : TypedOpenXmlLeafElement
+    public partial class CacheHierarchy : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the CacheHierarchy class.
@@ -1157,7 +1157,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:timelinePivotCacheDefinition.</para>
     /// </summary>
-    public partial class TimelinePivotCacheDefinition : TypedOpenXmlLeafElement
+    public partial class TimelinePivotCacheDefinition : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the TimelinePivotCacheDefinition class.
@@ -1194,7 +1194,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:pivotCacheIdVersion.</para>
     /// </summary>
-    public partial class PivotCacheIdVersion : TypedOpenXmlLeafElement
+    public partial class PivotCacheIdVersion : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the PivotCacheIdVersion class.
@@ -1256,7 +1256,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.ModelTables" /> <c>&lt;x15:modelTables></c></description></item>
     /// </list>
     /// </remark>
-    public partial class DataModel : TypedOpenXmlCompositeElement
+    public partial class DataModel : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the DataModel class.
@@ -1371,7 +1371,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.PivotRow" /> <c>&lt;x15:pivotRow></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PivotTableData : TypedOpenXmlCompositeElement
+    public partial class PivotTableData : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the PivotTableData class.
@@ -1465,7 +1465,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:pivotCacheDecoupled.</para>
     /// </summary>
-    public partial class PivotCacheDecoupled : TypedOpenXmlLeafElement
+    public partial class PivotCacheDecoupled : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the PivotCacheDecoupled class.
@@ -1502,7 +1502,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:dataField.</para>
     /// </summary>
-    public partial class DataField : TypedOpenXmlLeafElement
+    public partial class DataField : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the DataField class.
@@ -1539,7 +1539,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:movingPeriodState.</para>
     /// </summary>
-    public partial class MovingPeriodState : TypedOpenXmlLeafElement
+    public partial class MovingPeriodState : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the MovingPeriodState class.
@@ -1641,7 +1641,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.SlicerCache" /> <c>&lt;x14:slicerCache></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SlicerCaches : TypedOpenXmlCompositeElement
+    public partial class SlicerCaches : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SlicerCaches class.
@@ -1701,7 +1701,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.ExtensionList" /> <c>&lt;x15:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TableSlicerCache : TypedOpenXmlCompositeElement
+    public partial class TableSlicerCache : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TableSlicerCache class.
@@ -1836,7 +1836,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.SlicerCacheOlapLevelName" /> <c>&lt;x15:slicerCacheOlapLevelName></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SlicerCacheHideItemsWithNoData : TypedOpenXmlCompositeElement
+    public partial class SlicerCacheHideItemsWithNoData : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SlicerCacheHideItemsWithNoData class.
@@ -1908,7 +1908,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.SlicerCachePivotTable" /> <c>&lt;x14:pivotTable></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SlicerCachePivotTables : TypedOpenXmlCompositeElement
+    public partial class SlicerCachePivotTables : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SlicerCachePivotTables class.
@@ -1972,7 +1972,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.SurveyQuestions" /> <c>&lt;x15:questions></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Survey : TypedOpenXmlCompositeElement
+    public partial class Survey : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Survey class.
@@ -2157,7 +2157,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.Timeline" /> <c>&lt;x15:timeline></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Timelines : TypedOpenXmlPartRootElement
+    public partial class Timelines : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the Timelines class.
@@ -2250,7 +2250,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.TimelineState" /> <c>&lt;x15:state></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TimelineCacheDefinition : TypedOpenXmlPartRootElement
+    public partial class TimelineCacheDefinition : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the TimelineCacheDefinition class.
@@ -2407,7 +2407,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:pivotTableReference.</para>
     /// </summary>
-    public partial class PivotTableReference : TypedOpenXmlLeafElement
+    public partial class PivotTableReference : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the PivotTableReference class.
@@ -2456,7 +2456,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.Formula" /> <c>&lt;xne:f></c></description></item>
     /// </list>
     /// </remark>
-    public partial class WebExtension : TypedOpenXmlCompositeElement
+    public partial class WebExtension : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the WebExtension class.
@@ -2538,7 +2538,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:timelineCacheRef.</para>
     /// </summary>
-    public partial class TimelineCacheReference : TypedOpenXmlLeafElement
+    public partial class TimelineCacheReference : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the TimelineCacheReference class.
@@ -2581,7 +2581,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:timelineRef.</para>
     /// </summary>
-    public partial class TimelineReference : TypedOpenXmlLeafElement
+    public partial class TimelineReference : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the TimelineReference class.
@@ -2630,7 +2630,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.TimelineStyleElements" /> <c>&lt;x15:timelineStyleElements></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TimelineStyle : TypedOpenXmlCompositeElement
+    public partial class TimelineStyle : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TimelineStyle class.
@@ -2712,7 +2712,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:timelineStyleElement.</para>
     /// </summary>
-    public partial class TimelineStyleElement : TypedOpenXmlLeafElement
+    public partial class TimelineStyleElement : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the TimelineStyleElement class.
@@ -2769,7 +2769,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.TimelineStyleElement" /> <c>&lt;x15:timelineStyleElement></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TimelineStyleElements : TypedOpenXmlCompositeElement
+    public partial class TimelineStyleElements : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TimelineStyleElements class.
@@ -2823,7 +2823,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:dbTable.</para>
     /// </summary>
-    public partial class DbTable : TypedOpenXmlLeafElement
+    public partial class DbTable : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the DbTable class.
@@ -2869,7 +2869,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.DbTable" /> <c>&lt;x15:dbTable></c></description></item>
     /// </list>
     /// </remark>
-    public partial class DbTables : TypedOpenXmlCompositeElement
+    public partial class DbTables : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the DbTables class.
@@ -2923,7 +2923,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:dbCommand.</para>
     /// </summary>
-    public partial class DbCommand : TypedOpenXmlLeafElement
+    public partial class DbCommand : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the DbCommand class.
@@ -2969,7 +2969,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.TextFields" /> <c>&lt;x:textFields></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TextProperties : TypedOpenXmlCompositeElement
+    public partial class TextProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TextProperties class.
@@ -3213,7 +3213,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:modelTextPr.</para>
     /// </summary>
-    public partial class ModelTextProperties : TypedOpenXmlLeafElement
+    public partial class ModelTextProperties : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ModelTextProperties class.
@@ -3250,7 +3250,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:rangePr.</para>
     /// </summary>
-    public partial class RangeProperties : TypedOpenXmlLeafElement
+    public partial class RangeProperties : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the RangeProperties class.
@@ -3297,7 +3297,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.DbTables" /> <c>&lt;x15:dbTables></c></description></item>
     /// </list>
     /// </remark>
-    public partial class OleDbPrpoperties : TypedOpenXmlCompositeElement
+    public partial class OleDbPrpoperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the OleDbPrpoperties class.
@@ -3397,7 +3397,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.DbTables" /> <c>&lt;x15:dbTables></c></description></item>
     /// </list>
     /// </remark>
-    public partial class DataFeedProperties : TypedOpenXmlCompositeElement
+    public partial class DataFeedProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the DataFeedProperties class.
@@ -3479,7 +3479,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:activeTabTopLevelEntity.</para>
     /// </summary>
-    public partial class FieldListActiveTabTopLevelEntity : TypedOpenXmlLeafElement
+    public partial class FieldListActiveTabTopLevelEntity : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the FieldListActiveTabTopLevelEntity class.
@@ -3536,7 +3536,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Extension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ExtensionList : TypedOpenXmlCompositeElement
+    public partial class ExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ExtensionList class.
@@ -3596,7 +3596,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:cachedUniqueName.</para>
     /// </summary>
-    public partial class CachedUniqueName : TypedOpenXmlLeafElement
+    public partial class CachedUniqueName : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the CachedUniqueName class.
@@ -3650,7 +3650,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:modelTable.</para>
     /// </summary>
-    public partial class ModelTable : TypedOpenXmlLeafElement
+    public partial class ModelTable : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ModelTable class.
@@ -3718,7 +3718,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:modelRelationship.</para>
     /// </summary>
-    public partial class ModelRelationship : TypedOpenXmlLeafElement
+    public partial class ModelRelationship : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ModelRelationship class.
@@ -3806,7 +3806,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.ModelTable" /> <c>&lt;x15:modelTable></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ModelTables : TypedOpenXmlCompositeElement
+    public partial class ModelTables : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ModelTables class.
@@ -3866,7 +3866,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.ModelRelationship" /> <c>&lt;x15:modelRelationship></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ModelRelationships : TypedOpenXmlCompositeElement
+    public partial class ModelRelationships : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ModelRelationships class.
@@ -3927,7 +3927,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.PivotValueCellExtra" /> <c>&lt;x15:x></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PivotValueCell : TypedOpenXmlCompositeElement
+    public partial class PivotValueCell : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the PivotValueCell class.
@@ -4032,7 +4032,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:v.</para>
     /// </summary>
-    public partial class Xstring : TypedOpenXmlLeafTextElement
+    public partial class Xstring : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the Xstring class.
@@ -4070,7 +4070,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:x.</para>
     /// </summary>
-    public partial class PivotValueCellExtra : TypedOpenXmlLeafElement
+    public partial class PivotValueCellExtra : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the PivotValueCellExtra class.
@@ -4185,7 +4185,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.ServerFormat" /> <c>&lt;x15:serverFormat></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PivotTableServerFormats : TypedOpenXmlCompositeElement
+    public partial class PivotTableServerFormats : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the PivotTableServerFormats class.
@@ -4254,7 +4254,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:serverFormat.</para>
     /// </summary>
-    public partial class ServerFormat : TypedOpenXmlLeafElement
+    public partial class ServerFormat : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ServerFormat class.
@@ -4302,7 +4302,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:slicerCacheOlapLevelName.</para>
     /// </summary>
-    public partial class SlicerCacheOlapLevelName : TypedOpenXmlLeafElement
+    public partial class SlicerCacheOlapLevelName : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the SlicerCacheOlapLevelName class.
@@ -4657,7 +4657,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.ExtensionList" /> <c>&lt;x15:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public abstract partial class OpenXmlSurveyElementPrElement : TypedOpenXmlCompositeElement
+    public abstract partial class OpenXmlSurveyElementPrElement : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the OpenXmlSurveyElementPrElement class.
@@ -4811,7 +4811,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.SurveyQuestion" /> <c>&lt;x15:question></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SurveyQuestions : TypedOpenXmlCompositeElement
+    public partial class SurveyQuestions : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SurveyQuestions class.
@@ -4887,7 +4887,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.QuestionPrSurveyElementPr" /> <c>&lt;x15:questionPr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SurveyQuestion : TypedOpenXmlCompositeElement
+    public partial class SurveyQuestion : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SurveyQuestion class.
@@ -5078,7 +5078,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.ExtensionList" /> <c>&lt;x15:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Timeline : TypedOpenXmlCompositeElement
+    public partial class Timeline : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Timeline class.
@@ -5280,7 +5280,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:pivotTable.</para>
     /// </summary>
-    public partial class TimelineCachePivotTable : TypedOpenXmlLeafElement
+    public partial class TimelineCachePivotTable : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the TimelineCachePivotTable class.
@@ -5384,7 +5384,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class TimelineRange : TypedOpenXmlLeafElement
+    public abstract partial class TimelineRange : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the TimelineRange class.
@@ -5441,7 +5441,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.SortState" /> <c>&lt;x:sortState></c></description></item>
     /// </list>
     /// </remark>
-    public partial class AutoFilter : TypedOpenXmlCompositeElement
+    public partial class AutoFilter : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the AutoFilter class.
@@ -5517,7 +5517,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.TimelineCachePivotTable" /> <c>&lt;x15:pivotTable></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TimelineCachePivotTables : TypedOpenXmlCompositeElement
+    public partial class TimelineCachePivotTables : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TimelineCachePivotTables class.
@@ -5580,7 +5580,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.BoundsTimelineRange" /> <c>&lt;x15:bounds></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TimelineState : TypedOpenXmlCompositeElement
+    public partial class TimelineState : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TimelineState class.
@@ -5799,7 +5799,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.PivotValueCell" /> <c>&lt;x15:c></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PivotRow : TypedOpenXmlCompositeElement
+    public partial class PivotRow : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the PivotRow class.

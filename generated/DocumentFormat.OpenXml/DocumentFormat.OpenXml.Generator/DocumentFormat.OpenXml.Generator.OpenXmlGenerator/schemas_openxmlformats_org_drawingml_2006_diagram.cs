@@ -34,7 +34,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.ColorTransformStyleLabel" /> <c>&lt;dgm:styleLbl></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ColorsDefinition : TypedOpenXmlPartRootElement
+    public partial class ColorsDefinition : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the ColorsDefinition class.
@@ -159,7 +159,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.ColorDefinitionTitle" /> <c>&lt;dgm:title></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ColorsDefinitionHeader : TypedOpenXmlCompositeElement
+    public partial class ColorsDefinitionHeader : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ColorsDefinitionHeader class.
@@ -261,7 +261,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.ColorsDefinitionHeader" /> <c>&lt;dgm:colorsDefHdr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ColorsDefinitionHeaderList : TypedOpenXmlCompositeElement
+    public partial class ColorsDefinitionHeaderList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ColorsDefinitionHeaderList class.
@@ -324,7 +324,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.PointList" /> <c>&lt;dgm:ptLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class DataModelRoot : TypedOpenXmlPartRootElement
+    public partial class DataModelRoot : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the DataModelRoot class.
@@ -494,7 +494,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.ColorData" /> <c>&lt;dgm:clrData></c></description></item>
     /// </list>
     /// </remark>
-    public partial class LayoutDefinition : TypedOpenXmlPartRootElement
+    public partial class LayoutDefinition : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the LayoutDefinition class.
@@ -635,7 +635,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.Title" /> <c>&lt;dgm:title></c></description></item>
     /// </list>
     /// </remark>
-    public partial class LayoutDefinitionHeader : TypedOpenXmlCompositeElement
+    public partial class LayoutDefinitionHeader : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the LayoutDefinitionHeader class.
@@ -748,7 +748,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.LayoutDefinitionHeader" /> <c>&lt;dgm:layoutDefHdr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class LayoutDefinitionHeaderList : TypedOpenXmlCompositeElement
+    public partial class LayoutDefinitionHeaderList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the LayoutDefinitionHeaderList class.
@@ -801,7 +801,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:relIds.</para>
     /// </summary>
-    public partial class RelationshipIds : TypedOpenXmlLeafElement
+    public partial class RelationshipIds : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the RelationshipIds class.
@@ -910,7 +910,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.StyleLabel" /> <c>&lt;dgm:styleLbl></c></description></item>
     /// </list>
     /// </remark>
-    public partial class StyleDefinition : TypedOpenXmlPartRootElement
+    public partial class StyleDefinition : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the StyleDefinition class.
@@ -1036,7 +1036,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.StyleDefinitionTitle" /> <c>&lt;dgm:title></c></description></item>
     /// </list>
     /// </remark>
-    public partial class StyleDefinitionHeader : TypedOpenXmlCompositeElement
+    public partial class StyleDefinitionHeader : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the StyleDefinitionHeader class.
@@ -1138,7 +1138,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.StyleDefinitionHeader" /> <c>&lt;dgm:styleDefHdr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class StyleDefinitionHeaderList : TypedOpenXmlCompositeElement
+    public partial class StyleDefinitionHeaderList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the StyleDefinitionHeaderList class.
@@ -1191,7 +1191,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:cat.</para>
     /// </summary>
-    public partial class ColorTransformCategory : TypedOpenXmlLeafElement
+    public partial class ColorTransformCategory : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ColorTransformCategory class.
@@ -1700,7 +1700,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SystemColor" /> <c>&lt;a:sysClr></c></description></item>
     /// </list>
     /// </remark>
-    public abstract partial class ColorsType : TypedOpenXmlCompositeElement
+    public abstract partial class ColorsType : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ColorsType class.
@@ -1785,7 +1785,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extension" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ExtensionList : TypedOpenXmlCompositeElement
+    public partial class ExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ExtensionList class.
@@ -1844,7 +1844,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:title.</para>
     /// </summary>
-    public partial class ColorDefinitionTitle : TypedOpenXmlLeafElement
+    public partial class ColorDefinitionTitle : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ColorDefinitionTitle class.
@@ -1894,7 +1894,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:desc.</para>
     /// </summary>
-    public partial class ColorTransformDescription : TypedOpenXmlLeafElement
+    public partial class ColorTransformDescription : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ColorTransformDescription class.
@@ -1950,7 +1950,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.ColorTransformCategory" /> <c>&lt;dgm:cat></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ColorTransformCategories : TypedOpenXmlCompositeElement
+    public partial class ColorTransformCategories : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ColorTransformCategories class.
@@ -2015,7 +2015,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.TextEffectColorList" /> <c>&lt;dgm:txEffectClrLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ColorTransformStyleLabel : TypedOpenXmlCompositeElement
+    public partial class ColorTransformStyleLabel : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ColorTransformStyleLabel class.
@@ -2195,7 +2195,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.PropertySet" /> <c>&lt;dgm:prSet></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Point : TypedOpenXmlCompositeElement
+    public partial class Point : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Point class.
@@ -2364,7 +2364,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList" /> <c>&lt;dgm:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Connection : TypedOpenXmlCompositeElement
+    public partial class Connection : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Connection class.
@@ -2585,7 +2585,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList" /> <c>&lt;dgm:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Constraint : TypedOpenXmlCompositeElement
+    public partial class Constraint : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Constraint class.
@@ -2801,7 +2801,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList" /> <c>&lt;dgm:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Rule : TypedOpenXmlCompositeElement
+    public partial class Rule : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Rule class.
@@ -2955,7 +2955,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:adj.</para>
     /// </summary>
-    public partial class Adjust : TypedOpenXmlLeafElement
+    public partial class Adjust : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Adjust class.
@@ -3015,7 +3015,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.Adjust" /> <c>&lt;dgm:adj></c></description></item>
     /// </list>
     /// </remark>
-    public partial class AdjustList : TypedOpenXmlCompositeElement
+    public partial class AdjustList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the AdjustList class.
@@ -3068,7 +3068,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:param.</para>
     /// </summary>
-    public partial class Parameter : TypedOpenXmlLeafElement
+    public partial class Parameter : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Parameter class.
@@ -3167,7 +3167,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.Parameter" /> <c>&lt;dgm:param></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Algorithm : TypedOpenXmlCompositeElement
+    public partial class Algorithm : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Algorithm class.
@@ -3256,7 +3256,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.AdjustList" /> <c>&lt;dgm:adjLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Shape : TypedOpenXmlCompositeElement
+    public partial class Shape : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Shape class.
@@ -3433,7 +3433,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList" /> <c>&lt;dgm:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PresentationOf : TypedOpenXmlCompositeElement
+    public partial class PresentationOf : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the PresentationOf class.
@@ -3572,7 +3572,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.Constraint" /> <c>&lt;dgm:constr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Constraints : TypedOpenXmlCompositeElement
+    public partial class Constraints : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Constraints class.
@@ -3631,7 +3631,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.Rule" /> <c>&lt;dgm:rule></c></description></item>
     /// </list>
     /// </remark>
-    public partial class RuleList : TypedOpenXmlCompositeElement
+    public partial class RuleList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the RuleList class.
@@ -3846,7 +3846,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.ResizeHandles" /> <c>&lt;dgm:resizeHandles></c></description></item>
     /// </list>
     /// </remark>
-    public abstract partial class LayoutVariablePropertySetType : TypedOpenXmlCompositeElement
+    public abstract partial class LayoutVariablePropertySetType : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the LayoutVariablePropertySetType class.
@@ -4030,7 +4030,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.Shape" /> <c>&lt;dgm:shape></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ForEach : TypedOpenXmlCompositeElement
+    public partial class ForEach : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ForEach class.
@@ -4204,7 +4204,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.Shape" /> <c>&lt;dgm:shape></c></description></item>
     /// </list>
     /// </remark>
-    public partial class LayoutNode : TypedOpenXmlCompositeElement
+    public partial class LayoutNode : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the LayoutNode class.
@@ -4331,7 +4331,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.DiagramChooseIf" /> <c>&lt;dgm:if></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Choose : TypedOpenXmlCompositeElement
+    public partial class Choose : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Choose class.
@@ -4413,7 +4413,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.Shape" /> <c>&lt;dgm:shape></c></description></item>
     /// </list>
     /// </remark>
-    public partial class DiagramChooseIf : TypedOpenXmlCompositeElement
+    public partial class DiagramChooseIf : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the DiagramChooseIf class.
@@ -4646,7 +4646,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.Shape" /> <c>&lt;dgm:shape></c></description></item>
     /// </list>
     /// </remark>
-    public partial class DiagramChooseElse : TypedOpenXmlCompositeElement
+    public partial class DiagramChooseElse : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the DiagramChooseElse class.
@@ -4738,7 +4738,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.PointList" /> <c>&lt;dgm:ptLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class DataModel : TypedOpenXmlCompositeElement
+    public partial class DataModel : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the DataModel class.
@@ -4864,7 +4864,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:cat.</para>
     /// </summary>
-    public partial class Category : TypedOpenXmlLeafElement
+    public partial class Category : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Category class.
@@ -4918,7 +4918,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:title.</para>
     /// </summary>
-    public partial class Title : TypedOpenXmlLeafElement
+    public partial class Title : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Title class.
@@ -4968,7 +4968,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:desc.</para>
     /// </summary>
-    public partial class Description : TypedOpenXmlLeafElement
+    public partial class Description : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Description class.
@@ -5024,7 +5024,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.Category" /> <c>&lt;dgm:cat></c></description></item>
     /// </list>
     /// </remark>
-    public partial class CategoryList : TypedOpenXmlCompositeElement
+    public partial class CategoryList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the CategoryList class.
@@ -5086,7 +5086,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.EffectReference" /> <c>&lt;a:effectRef></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Style : TypedOpenXmlCompositeElement
+    public partial class Style : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Style class.
@@ -5197,7 +5197,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:orgChart.</para>
     /// </summary>
-    public partial class OrganizationChart : TypedOpenXmlLeafElement
+    public partial class OrganizationChart : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the OrganizationChart class.
@@ -5233,7 +5233,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:chMax.</para>
     /// </summary>
-    public partial class MaxNumberOfChildren : TypedOpenXmlLeafElement
+    public partial class MaxNumberOfChildren : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the MaxNumberOfChildren class.
@@ -5272,7 +5272,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:chPref.</para>
     /// </summary>
-    public partial class PreferredNumberOfChildren : TypedOpenXmlLeafElement
+    public partial class PreferredNumberOfChildren : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the PreferredNumberOfChildren class.
@@ -5311,7 +5311,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:bulletEnabled.</para>
     /// </summary>
-    public partial class BulletEnabled : TypedOpenXmlLeafElement
+    public partial class BulletEnabled : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the BulletEnabled class.
@@ -5347,7 +5347,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:dir.</para>
     /// </summary>
-    public partial class Direction : TypedOpenXmlLeafElement
+    public partial class Direction : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Direction class.
@@ -5386,7 +5386,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:hierBranch.</para>
     /// </summary>
-    public partial class HierarchyBranch : TypedOpenXmlLeafElement
+    public partial class HierarchyBranch : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the HierarchyBranch class.
@@ -5425,7 +5425,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:animOne.</para>
     /// </summary>
-    public partial class AnimateOneByOne : TypedOpenXmlLeafElement
+    public partial class AnimateOneByOne : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the AnimateOneByOne class.
@@ -5464,7 +5464,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:animLvl.</para>
     /// </summary>
-    public partial class AnimationLevel : TypedOpenXmlLeafElement
+    public partial class AnimationLevel : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the AnimationLevel class.
@@ -5503,7 +5503,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:resizeHandles.</para>
     /// </summary>
-    public partial class ResizeHandles : TypedOpenXmlLeafElement
+    public partial class ResizeHandles : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ResizeHandles class.
@@ -5542,7 +5542,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:cat.</para>
     /// </summary>
-    public partial class StyleDisplayCategory : TypedOpenXmlLeafElement
+    public partial class StyleDisplayCategory : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the StyleDisplayCategory class.
@@ -5605,7 +5605,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Scene3D : TypedOpenXmlCompositeElement
+    public partial class Scene3D : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Scene3D class.
@@ -5726,7 +5726,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Shape3D : TypedOpenXmlCompositeElement
+    public partial class Shape3D : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Shape3D class.
@@ -5916,7 +5916,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Shape3DType" /> <c>&lt;a:sp3d></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TextProperties : TypedOpenXmlCompositeElement
+    public partial class TextProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TextProperties class.
@@ -6003,7 +6003,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:title.</para>
     /// </summary>
-    public partial class StyleDefinitionTitle : TypedOpenXmlLeafElement
+    public partial class StyleDefinitionTitle : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the StyleDefinitionTitle class.
@@ -6053,7 +6053,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:desc.</para>
     /// </summary>
-    public partial class StyleLabelDescription : TypedOpenXmlLeafElement
+    public partial class StyleLabelDescription : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the StyleLabelDescription class.
@@ -6109,7 +6109,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.StyleDisplayCategory" /> <c>&lt;dgm:cat></c></description></item>
     /// </list>
     /// </remark>
-    public partial class StyleDisplayCategories : TypedOpenXmlCompositeElement
+    public partial class StyleDisplayCategories : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the StyleDisplayCategories class.
@@ -6172,7 +6172,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.TextProperties" /> <c>&lt;dgm:txPr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class StyleLabel : TypedOpenXmlCompositeElement
+    public partial class StyleLabel : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the StyleLabel class.
@@ -6319,7 +6319,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.Point" /> <c>&lt;dgm:pt></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PointList : TypedOpenXmlCompositeElement
+    public partial class PointList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the PointList class.
@@ -6378,7 +6378,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.Connection" /> <c>&lt;dgm:cxn></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ConnectionList : TypedOpenXmlCompositeElement
+    public partial class ConnectionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ConnectionList class.
@@ -6444,7 +6444,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SolidFill" /> <c>&lt;a:solidFill></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Background : TypedOpenXmlCompositeElement
+    public partial class Background : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Background class.
@@ -6531,7 +6531,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Outline" /> <c>&lt;a:ln></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Whole : TypedOpenXmlCompositeElement
+    public partial class Whole : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Whole class.
@@ -6613,7 +6613,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.DataModelExtension" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class DataModelExtensionList : TypedOpenXmlCompositeElement
+    public partial class DataModelExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the DataModelExtensionList class.
@@ -6673,7 +6673,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.PresentationLayoutVariables" /> <c>&lt;dgm:presLayoutVars></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PropertySet : TypedOpenXmlCompositeElement
+    public partial class PropertySet : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the PropertySet class.
@@ -7090,7 +7090,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Transform2D" /> <c>&lt;a:xfrm></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ShapeProperties : TypedOpenXmlCompositeElement
+    public partial class ShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ShapeProperties class.
@@ -7225,7 +7225,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Paragraph" /> <c>&lt;a:p></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TextBody : TypedOpenXmlCompositeElement
+    public partial class TextBody : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TextBody class.
@@ -7314,7 +7314,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PtExtension" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PtExtensionList : TypedOpenXmlCompositeElement
+    public partial class PtExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the PtExtensionList class.
@@ -7374,7 +7374,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Diagram11.NumberDiagramInfoList" /> <c>&lt;dgm1611:autoBuNodeInfoLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class DiagramDefinitionExtension : TypedOpenXmlCompositeElement
+    public partial class DiagramDefinitionExtension : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the DiagramDefinitionExtension class.
@@ -7626,7 +7626,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.DataModel" /> <c>&lt;dgm:dataModel></c></description></item>
     /// </list>
     /// </remark>
-    public abstract partial class SampleDataType : TypedOpenXmlCompositeElement
+    public abstract partial class SampleDataType : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SampleDataType class.
@@ -7702,7 +7702,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.DiagramDefinitionExtension" /> <c>&lt;dgm:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class DiagramDefinitionExtensionList : TypedOpenXmlCompositeElement
+    public partial class DiagramDefinitionExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the DiagramDefinitionExtensionList class.

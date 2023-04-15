@@ -29,7 +29,7 @@ namespace DocumentFormat.OpenXml.CustomProperties
     ///   <item><description><see cref="DocumentFormat.OpenXml.CustomProperties.CustomDocumentProperty" /> <c>&lt;op:property></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Properties : TypedOpenXmlPartRootElement
+    public partial class Properties : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the Properties class.
@@ -152,7 +152,7 @@ namespace DocumentFormat.OpenXml.CustomProperties
     ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTUnsignedShort" /> <c>&lt;vt:ui2></c></description></item>
     /// </list>
     /// </remark>
-    public partial class CustomDocumentProperty : TypedOpenXmlCompositeElement
+    public partial class CustomDocumentProperty : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the CustomDocumentProperty class.

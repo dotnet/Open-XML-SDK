@@ -616,22 +616,6 @@ namespace DocumentFormat.OpenXml.Packaging
             }
         }
 
-        /// <summary>
-        /// Saves the contents of all parts and relationships that are contained
-        /// in the OpenXml package to the specified file. Opens the saved document
-        /// using the same settings that were used to open this OpenXml package.
-        /// </summary>
-        /// <remarks>
-        /// Calling SaveAs(string) is exactly equivalent to calling Clone(string).
-        /// This method is essentially provided for convenience.
-        /// </remarks>
-        /// <param name="path">The path and file name of the target document.</param>
-        /// <returns>The cloned OpenXml package</returns>
-        public OpenXmlPackage SaveAs(string path)
-        {
-            return Clone(path);
-        }
-
         #endregion saving
 
         #region Default clone method

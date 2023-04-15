@@ -29,7 +29,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.Person" /> <c>&lt;xltc:person></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PersonList : TypedOpenXmlPartRootElement
+    public partial class PersonList : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the PersonList class.
@@ -123,7 +123,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ThreadedComment" /> <c>&lt;xltc:threadedComment></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ThreadedComments : TypedOpenXmlPartRootElement
+    public partial class ThreadedComments : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the ThreadedComments class.
@@ -216,7 +216,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ExtensionList" /> <c>&lt;xltc:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Person : TypedOpenXmlCompositeElement
+    public partial class Person : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Person class.
@@ -341,7 +341,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Extension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ExtensionList : TypedOpenXmlCompositeElement
+    public partial class ExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ExtensionList class.
@@ -409,7 +409,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ThreadedCommentMentions" /> <c>&lt;xltc:mentions></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ThreadedComment : TypedOpenXmlCompositeElement
+    public partial class ThreadedComment : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ThreadedComment class.
@@ -584,7 +584,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xltc:text.</para>
     /// </summary>
-    public partial class ThreadedCommentText : TypedOpenXmlLeafTextElement
+    public partial class ThreadedCommentText : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the ThreadedCommentText class.
@@ -628,7 +628,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.Mention" /> <c>&lt;xltc:mention></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ThreadedCommentMentions : TypedOpenXmlCompositeElement
+    public partial class ThreadedCommentMentions : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ThreadedCommentMentions class.
@@ -682,7 +682,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xltc:mention.</para>
     /// </summary>
-    public partial class Mention : TypedOpenXmlLeafElement
+    public partial class Mention : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Mention class.

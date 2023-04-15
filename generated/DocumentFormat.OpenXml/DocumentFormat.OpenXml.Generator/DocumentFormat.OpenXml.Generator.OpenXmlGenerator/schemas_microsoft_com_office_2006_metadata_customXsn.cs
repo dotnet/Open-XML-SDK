@@ -30,7 +30,7 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CustomXsn.Scope" /> <c>&lt;ntns:xsnScope></c></description></item>
     /// </list>
     /// </remark>
-    public partial class CustomXsn : TypedOpenXmlCompositeElement
+    public partial class CustomXsn : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the CustomXsn class.
@@ -141,7 +141,7 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ntns:xsnLocation.</para>
     /// </summary>
-    public partial class XsnLocation : TypedOpenXmlLeafTextElement
+    public partial class XsnLocation : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the XsnLocation class.
@@ -178,7 +178,7 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ntns:cached.</para>
     /// </summary>
-    public partial class CachedView : TypedOpenXmlLeafTextElement
+    public partial class CachedView : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the CachedView class.
@@ -215,7 +215,7 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ntns:openByDefault.</para>
     /// </summary>
-    public partial class OpenByDefault : TypedOpenXmlLeafTextElement
+    public partial class OpenByDefault : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the OpenByDefault class.
@@ -252,7 +252,7 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ntns:xsnScope.</para>
     /// </summary>
-    public partial class Scope : TypedOpenXmlLeafTextElement
+    public partial class Scope : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the Scope class.

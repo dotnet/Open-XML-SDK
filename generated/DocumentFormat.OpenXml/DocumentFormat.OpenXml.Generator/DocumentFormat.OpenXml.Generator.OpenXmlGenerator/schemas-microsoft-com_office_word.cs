@@ -117,7 +117,7 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class BorderType : TypedOpenXmlLeafElement
+    public abstract partial class BorderType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the BorderType class.
@@ -174,7 +174,7 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w10:wrap.</para>
     /// </summary>
-    public partial class TextWrap : TypedOpenXmlLeafElement
+    public partial class TextWrap : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the TextWrap class.
@@ -243,7 +243,7 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w10:anchorlock.</para>
     /// </summary>
-    public partial class AnchorLock : TypedOpenXmlLeafElement
+    public partial class AnchorLock : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the AnchorLock class.

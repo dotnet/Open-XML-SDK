@@ -21,7 +21,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.PivotDefaultLayout
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xpdl:pivotTableDefinition16.</para>
     /// </summary>
-    public partial class PivotTableDefinition16 : TypedOpenXmlLeafElement
+    public partial class PivotTableDefinition16 : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the PivotTableDefinition16 class.
