@@ -14,7 +14,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// Defines PresentationDocument - an OpenXmlPackage represents a Presentation document
     /// </summary>
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Reliability", "CA2000:Dispose objects before losing scope", Justification = "Disposable is returned")]
-    public partial class PresentationDocument : TypedOpenXmlPackage
+    public partial class PresentationDocument : OpenXmlPackage
     {
         private PresentationDocument()
             : base()
@@ -583,7 +583,7 @@ namespace DocumentFormat.OpenXml.Packaging
             IMainPartFeature,
             IProgrammaticIdentifierFeature
         {
-            public PresentationDocumentFeatures(TypedOpenXmlPackage package)
+            public PresentationDocumentFeatures(OpenXmlPackage package)
                 : base(package)
             {
             }
