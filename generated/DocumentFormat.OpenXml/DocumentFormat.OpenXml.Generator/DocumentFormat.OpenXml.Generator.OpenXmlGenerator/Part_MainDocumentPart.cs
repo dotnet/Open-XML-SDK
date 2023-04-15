@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the MainDocumentPart
     /// </summary>
-    public partial class MainDocumentPart : TypedOpenXmlPart
+    public partial class MainDocumentPart : OpenXmlPart
     {
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument";
         private DocumentFormat.OpenXml.Wordprocessing.Document? _rootElement;

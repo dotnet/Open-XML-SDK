@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the SpreadsheetPrinterSettingsPart
     /// </summary>
-    public partial class SpreadsheetPrinterSettingsPart : TypedOpenXmlPart, IFixedContentTypePart
+    public partial class SpreadsheetPrinterSettingsPart : OpenXmlPart, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.spreadsheetml.printerSettings";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/printerSettings";

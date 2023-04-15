@@ -28,7 +28,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram11
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Diagram11.NumberDiagramInfo" /> <c>&lt;dgm1611:autoBuNodeInfo></c></description></item>
     /// </list>
     /// </remark>
-    public partial class NumberDiagramInfoList : TypedOpenXmlCompositeElement
+    public partial class NumberDiagramInfoList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the NumberDiagramInfoList class.
@@ -91,7 +91,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram11
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NoBullet" /> <c>&lt;a:buNone></c></description></item>
     /// </list>
     /// </remark>
-    public partial class DiagramAutoBullet : TypedOpenXmlCompositeElement
+    public partial class DiagramAutoBullet : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the DiagramAutoBullet class.
@@ -235,7 +235,7 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Diagram11
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Diagram11.DiagramAutoBullet" /> <c>&lt;dgm1611:buPr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class NumberDiagramInfo : TypedOpenXmlCompositeElement
+    public partial class NumberDiagramInfo : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the NumberDiagramInfo class.

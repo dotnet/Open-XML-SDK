@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the EmbeddedControlPersistenceBinaryDataPart
     /// </summary>
-    public partial class EmbeddedControlPersistenceBinaryDataPart : TypedOpenXmlPart
+    public partial class EmbeddedControlPersistenceBinaryDataPart : OpenXmlPart
     {
         internal const string RelationshipTypeConstant = "http://schemas.microsoft.com/office/2006/relationships/activeXControlBinary";
 

@@ -23,7 +23,7 @@ namespace DocumentFormat.OpenXml.EMMA
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is emma:derived-from.</para>
     /// </summary>
-    public partial class DerivedFrom : TypedOpenXmlLeafElement
+    public partial class DerivedFrom : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the DerivedFrom class.
@@ -74,7 +74,7 @@ namespace DocumentFormat.OpenXml.EMMA
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is emma:info.</para>
     /// </summary>
-    public partial class Info : TypedOpenXmlCompositeElement
+    public partial class Info : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Info class.
@@ -148,7 +148,7 @@ namespace DocumentFormat.OpenXml.EMMA
     ///   <item><description><see cref="DocumentFormat.OpenXml.EMMA.Node" /> <c>&lt;emma:node></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Lattice : TypedOpenXmlCompositeElement
+    public partial class Lattice : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Lattice class.
@@ -261,7 +261,7 @@ namespace DocumentFormat.OpenXml.EMMA
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is emma:literal.</para>
     /// </summary>
-    public partial class Literal : TypedOpenXmlLeafTextElement
+    public partial class Literal : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the Literal class.
@@ -308,7 +308,7 @@ namespace DocumentFormat.OpenXml.EMMA
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Ink.ContextNode" /> <c>&lt;msink:context></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Interpretation : TypedOpenXmlCompositeElement
+    public partial class Interpretation : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Interpretation class.
@@ -757,7 +757,7 @@ namespace DocumentFormat.OpenXml.EMMA
     ///   <item><description><see cref="DocumentFormat.OpenXml.EMMA.Sequence" /> <c>&lt;emma:sequence></c></description></item>
     /// </list>
     /// </remark>
-    public partial class OneOf : TypedOpenXmlCompositeElement
+    public partial class OneOf : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the OneOf class.
@@ -1191,7 +1191,7 @@ namespace DocumentFormat.OpenXml.EMMA
     ///   <item><description><see cref="DocumentFormat.OpenXml.EMMA.Sequence" /> <c>&lt;emma:sequence></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Group : TypedOpenXmlCompositeElement
+    public partial class Group : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Group class.
@@ -1614,7 +1614,7 @@ namespace DocumentFormat.OpenXml.EMMA
     ///   <item><description><see cref="DocumentFormat.OpenXml.EMMA.Sequence" /> <c>&lt;emma:sequence></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Sequence : TypedOpenXmlCompositeElement
+    public partial class Sequence : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Sequence class.
@@ -2024,7 +2024,7 @@ namespace DocumentFormat.OpenXml.EMMA
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is emma:group-info.</para>
     /// </summary>
-    public partial class GroupInfo : TypedOpenXmlCompositeElement
+    public partial class GroupInfo : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the GroupInfo class.
@@ -2100,7 +2100,7 @@ namespace DocumentFormat.OpenXml.EMMA
     ///   <item><description><see cref="DocumentFormat.OpenXml.EMMA.Sequence" /> <c>&lt;emma:sequence></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Derivation : TypedOpenXmlCompositeElement
+    public partial class Derivation : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Derivation class.
@@ -2159,7 +2159,7 @@ namespace DocumentFormat.OpenXml.EMMA
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is emma:grammar.</para>
     /// </summary>
-    public partial class Grammar : TypedOpenXmlLeafElement
+    public partial class Grammar : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Grammar class.
@@ -2214,7 +2214,7 @@ namespace DocumentFormat.OpenXml.EMMA
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is emma:model.</para>
     /// </summary>
-    public partial class Model : TypedOpenXmlCompositeElement
+    public partial class Model : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Model class.
@@ -2302,7 +2302,7 @@ namespace DocumentFormat.OpenXml.EMMA
     ///   <item><description><see cref="DocumentFormat.OpenXml.EMMA.EndPoint" /> <c>&lt;emma:endpoint></c></description></item>
     /// </list>
     /// </remark>
-    public partial class EndPointInfo : TypedOpenXmlCompositeElement
+    public partial class EndPointInfo : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the EndPointInfo class.
@@ -2371,7 +2371,7 @@ namespace DocumentFormat.OpenXml.EMMA
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is emma:endpoint.</para>
     /// </summary>
-    public partial class EndPoint : TypedOpenXmlCompositeElement
+    public partial class EndPoint : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the EndPoint class.
@@ -2585,7 +2585,7 @@ namespace DocumentFormat.OpenXml.EMMA
     ///   <item><description><see cref="DocumentFormat.OpenXml.EMMA.Info" /> <c>&lt;emma:info></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Node : TypedOpenXmlCompositeElement
+    public partial class Node : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Node class.
@@ -2694,7 +2694,7 @@ namespace DocumentFormat.OpenXml.EMMA
     ///   <item><description><see cref="DocumentFormat.OpenXml.EMMA.Info" /> <c>&lt;emma:info></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Arc : TypedOpenXmlCompositeElement
+    public partial class Arc : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Arc class.
@@ -2938,7 +2938,7 @@ namespace DocumentFormat.OpenXml.EMMA
     ///   <item><description><see cref="DocumentFormat.OpenXml.EMMA.Sequence" /> <c>&lt;emma:sequence></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Emma : TypedOpenXmlCompositeElement
+    public partial class Emma : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Emma class.

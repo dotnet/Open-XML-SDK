@@ -42,7 +42,7 @@ namespace DocumentFormat.OpenXml.Tests
                 .GetTypeInfo()
                 .Assembly
                 .DefinedTypes
-                .Where(t => t != typeof(TypedOpenXmlPart))
+                .Where(t => t != typeof(OpenXmlPart))
                 .Concat(fromFramework)
                 .Distinct()
                 .Where(t => typeof(OpenXmlPart).GetTypeInfo().IsAssignableFrom(t))

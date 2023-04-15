@@ -22,7 +22,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd:rvb.</para>
     /// </summary>
-    public partial class RichValueBlock : TypedOpenXmlLeafElement
+    public partial class RichValueBlock : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the RichValueBlock class.
@@ -69,7 +69,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData.RichValue" /> <c>&lt;xlrd:rv></c></description></item>
     /// </list>
     /// </remark>
-    public partial class RichValueData : TypedOpenXmlPartRootElement
+    public partial class RichValueData : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the RichValueData class.
@@ -178,7 +178,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData.RichValueStructure" /> <c>&lt;xlrd:s></c></description></item>
     /// </list>
     /// </remark>
-    public partial class RichValueStructures : TypedOpenXmlPartRootElement
+    public partial class RichValueStructures : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the RichValueStructures class.
@@ -287,7 +287,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData.Value" /> <c>&lt;xlrd:v></c></description></item>
     /// </list>
     /// </remark>
-    public partial class RichValue : TypedOpenXmlCompositeElement
+    public partial class RichValue : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the RichValue class.
@@ -377,7 +377,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Extension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ExtensionList : TypedOpenXmlCompositeElement
+    public partial class ExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ExtensionList class.
@@ -437,7 +437,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd:fb.</para>
     /// </summary>
-    public partial class RichValueFallback : TypedOpenXmlLeafTextElement
+    public partial class RichValueFallback : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the RichValueFallback class.
@@ -487,7 +487,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd:v.</para>
     /// </summary>
-    public partial class Value : TypedOpenXmlLeafTextElement
+    public partial class Value : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the Value class.
@@ -531,7 +531,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData.Key" /> <c>&lt;xlrd:k></c></description></item>
     /// </list>
     /// </remark>
-    public partial class RichValueStructure : TypedOpenXmlCompositeElement
+    public partial class RichValueStructure : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the RichValueStructure class.
@@ -600,7 +600,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd:k.</para>
     /// </summary>
-    public partial class Key : TypedOpenXmlLeafElement
+    public partial class Key : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Key class.

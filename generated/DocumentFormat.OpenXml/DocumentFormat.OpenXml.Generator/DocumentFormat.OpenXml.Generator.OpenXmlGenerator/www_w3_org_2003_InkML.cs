@@ -35,7 +35,7 @@ namespace DocumentFormat.OpenXml.InkML
     ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.TraceView" /> <c>&lt;inkml:traceView></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Ink : TypedOpenXmlPartRootElement
+    public partial class Ink : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the Ink class.
@@ -115,7 +115,7 @@ namespace DocumentFormat.OpenXml.InkML
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:bind.</para>
     /// </summary>
-    public partial class Bind : TypedOpenXmlLeafElement
+    public partial class Bind : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Bind class.
@@ -184,7 +184,7 @@ namespace DocumentFormat.OpenXml.InkML
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:table.</para>
     /// </summary>
-    public partial class Table : TypedOpenXmlLeafTextElement
+    public partial class Table : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the Table class.
@@ -258,7 +258,7 @@ namespace DocumentFormat.OpenXml.InkML
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:matrix.</para>
     /// </summary>
-    public partial class Matrix : TypedOpenXmlLeafTextElement
+    public partial class Matrix : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the Matrix class.
@@ -319,7 +319,7 @@ namespace DocumentFormat.OpenXml.InkML
     ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.Table" /> <c>&lt;inkml:table></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Mapping : TypedOpenXmlCompositeElement
+    public partial class Mapping : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Mapping class.
@@ -433,7 +433,7 @@ namespace DocumentFormat.OpenXml.InkML
     ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.Mapping" /> <c>&lt;inkml:mapping></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Channel : TypedOpenXmlCompositeElement
+    public partial class Channel : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Channel class.
@@ -630,7 +630,7 @@ namespace DocumentFormat.OpenXml.InkML
     ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.Channel" /> <c>&lt;inkml:channel></c></description></item>
     /// </list>
     /// </remark>
-    public partial class IntermittentChannels : TypedOpenXmlCompositeElement
+    public partial class IntermittentChannels : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the IntermittentChannels class.
@@ -683,7 +683,7 @@ namespace DocumentFormat.OpenXml.InkML
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:channelProperty.</para>
     /// </summary>
-    public partial class ChannelProperty : TypedOpenXmlLeafElement
+    public partial class ChannelProperty : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ChannelProperty class.
@@ -795,7 +795,7 @@ namespace DocumentFormat.OpenXml.InkML
     ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.IntermittentChannels" /> <c>&lt;inkml:intermittentChannels></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TraceFormat : TypedOpenXmlCompositeElement
+    public partial class TraceFormat : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TraceFormat class.
@@ -865,7 +865,7 @@ namespace DocumentFormat.OpenXml.InkML
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:sampleRate.</para>
     /// </summary>
-    public partial class SampleRate : TypedOpenXmlLeafElement
+    public partial class SampleRate : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the SampleRate class.
@@ -915,7 +915,7 @@ namespace DocumentFormat.OpenXml.InkML
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:latency.</para>
     /// </summary>
-    public partial class Latency : TypedOpenXmlLeafElement
+    public partial class Latency : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Latency class.
@@ -954,7 +954,7 @@ namespace DocumentFormat.OpenXml.InkML
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:activeArea.</para>
     /// </summary>
-    public partial class ActiveArea : TypedOpenXmlLeafElement
+    public partial class ActiveArea : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ActiveArea class.
@@ -1040,7 +1040,7 @@ namespace DocumentFormat.OpenXml.InkML
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:srcProperty.</para>
     /// </summary>
-    public partial class SourceProperty : TypedOpenXmlLeafElement
+    public partial class SourceProperty : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the SourceProperty class.
@@ -1127,7 +1127,7 @@ namespace DocumentFormat.OpenXml.InkML
     ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.ChannelProperty" /> <c>&lt;inkml:channelProperty></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ChannelProperties : TypedOpenXmlCompositeElement
+    public partial class ChannelProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ChannelProperties class.
@@ -1180,7 +1180,7 @@ namespace DocumentFormat.OpenXml.InkML
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:annotation.</para>
     /// </summary>
-    public partial class Annotation : TypedOpenXmlLeafTextElement
+    public partial class Annotation : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the Annotation class.
@@ -1246,7 +1246,7 @@ namespace DocumentFormat.OpenXml.InkML
     ///   <item><description><see cref="DocumentFormat.OpenXml.EMMA.Emma" /> <c>&lt;emma:emma></c></description></item>
     /// </list>
     /// </remark>
-    public partial class AnnotationXml : TypedOpenXmlCompositeElement
+    public partial class AnnotationXml : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the AnnotationXml class.
@@ -1356,7 +1356,7 @@ namespace DocumentFormat.OpenXml.InkML
     ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.AnnotationXml" /> <c>&lt;inkml:annotationXML></c></description></item>
     /// </list>
     /// </remark>
-    public partial class BrushProperty : TypedOpenXmlCompositeElement
+    public partial class BrushProperty : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the BrushProperty class.
@@ -1487,7 +1487,7 @@ namespace DocumentFormat.OpenXml.InkML
     ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.TraceFormat" /> <c>&lt;inkml:traceFormat></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Canvas : TypedOpenXmlCompositeElement
+    public partial class Canvas : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Canvas class.
@@ -1588,7 +1588,7 @@ namespace DocumentFormat.OpenXml.InkML
     ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.Mapping" /> <c>&lt;inkml:mapping></c></description></item>
     /// </list>
     /// </remark>
-    public partial class CanvasTransform : TypedOpenXmlCompositeElement
+    public partial class CanvasTransform : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the CanvasTransform class.
@@ -1678,7 +1678,7 @@ namespace DocumentFormat.OpenXml.InkML
     ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.TraceFormat" /> <c>&lt;inkml:traceFormat></c></description></item>
     /// </list>
     /// </remark>
-    public partial class InkSource : TypedOpenXmlCompositeElement
+    public partial class InkSource : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the InkSource class.
@@ -1877,7 +1877,7 @@ namespace DocumentFormat.OpenXml.InkML
     ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.BrushProperty" /> <c>&lt;inkml:brushProperty></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Brush : TypedOpenXmlCompositeElement
+    public partial class Brush : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Brush class.
@@ -1963,7 +1963,7 @@ namespace DocumentFormat.OpenXml.InkML
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:timestamp.</para>
     /// </summary>
-    public partial class Timestamp : TypedOpenXmlLeafElement
+    public partial class Timestamp : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Timestamp class.
@@ -2052,7 +2052,7 @@ namespace DocumentFormat.OpenXml.InkML
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is inkml:trace.</para>
     /// </summary>
-    public partial class Trace : TypedOpenXmlLeafTextElement
+    public partial class Trace : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the Trace class.
@@ -2199,7 +2199,7 @@ namespace DocumentFormat.OpenXml.InkML
     ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.TraceGroup" /> <c>&lt;inkml:traceGroup></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TraceGroup : TypedOpenXmlCompositeElement
+    public partial class TraceGroup : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TraceGroup class.
@@ -2309,7 +2309,7 @@ namespace DocumentFormat.OpenXml.InkML
     ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.TraceView" /> <c>&lt;inkml:traceView></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TraceView : TypedOpenXmlCompositeElement
+    public partial class TraceView : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TraceView class.
@@ -2442,7 +2442,7 @@ namespace DocumentFormat.OpenXml.InkML
     ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.TraceFormat" /> <c>&lt;inkml:traceFormat></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Context : TypedOpenXmlCompositeElement
+    public partial class Context : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Context class.
@@ -2712,7 +2712,7 @@ namespace DocumentFormat.OpenXml.InkML
     ///   <item><description><see cref="DocumentFormat.OpenXml.InkML.TraceView" /> <c>&lt;inkml:traceView></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Definitions : TypedOpenXmlCompositeElement
+    public partial class Definitions : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Definitions class.

@@ -30,7 +30,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormatting" /> <c>&lt;x14:conditionalFormatting></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ConditionalFormattings : TypedOpenXmlCompositeElement
+    public partial class ConditionalFormattings : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ConditionalFormattings class.
@@ -90,7 +90,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.DataValidation" /> <c>&lt;x14:dataValidation></c></description></item>
     /// </list>
     /// </remark>
-    public partial class DataValidations : TypedOpenXmlCompositeElement
+    public partial class DataValidations : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the DataValidations class.
@@ -197,7 +197,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.SparklineGroup" /> <c>&lt;x14:sparklineGroup></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SparklineGroups : TypedOpenXmlCompositeElement
+    public partial class SparklineGroups : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SparklineGroups class.
@@ -257,7 +257,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.SlicerRef" /> <c>&lt;x14:slicer></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SlicerList : TypedOpenXmlCompositeElement
+    public partial class SlicerList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SlicerList class.
@@ -317,7 +317,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.ProtectedRange" /> <c>&lt;x14:protectedRange></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ProtectedRanges : TypedOpenXmlCompositeElement
+    public partial class ProtectedRanges : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ProtectedRanges class.
@@ -378,7 +378,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.IgnoredError" /> <c>&lt;x14:ignoredError></c></description></item>
     /// </list>
     /// </remark>
-    public partial class IgnoredErrors : TypedOpenXmlCompositeElement
+    public partial class IgnoredErrors : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the IgnoredErrors class.
@@ -440,7 +440,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.DefinedName" /> <c>&lt;x14:definedName></c></description></item>
     /// </list>
     /// </remark>
-    public partial class DefinedNames : TypedOpenXmlCompositeElement
+    public partial class DefinedNames : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the DefinedNames class.
@@ -500,7 +500,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotCache" /> <c>&lt;x:pivotCache></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PivotCaches : TypedOpenXmlCompositeElement
+    public partial class PivotCaches : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the PivotCaches class.
@@ -560,7 +560,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.SlicerCache" /> <c>&lt;x14:slicerCache></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SlicerCaches : TypedOpenXmlCompositeElement
+    public partial class SlicerCaches : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SlicerCaches class.
@@ -614,7 +614,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:workbookPr.</para>
     /// </summary>
-    public partial class WorkbookProperties : TypedOpenXmlLeafElement
+    public partial class WorkbookProperties : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the WorkbookProperties class.
@@ -680,7 +680,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.TupleSet" /> <c>&lt;x14:tupleSet></c></description></item>
     /// </list>
     /// </remark>
-    public partial class CalculatedMember : TypedOpenXmlCompositeElement
+    public partial class CalculatedMember : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the CalculatedMember class.
@@ -811,7 +811,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.SetLevels" /> <c>&lt;x14:setLevels></c></description></item>
     /// </list>
     /// </remark>
-    public partial class CacheHierarchy : TypedOpenXmlCompositeElement
+    public partial class CacheHierarchy : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the CacheHierarchy class.
@@ -926,7 +926,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:dataField.</para>
     /// </summary>
-    public partial class DataField : TypedOpenXmlLeafElement
+    public partial class DataField : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the DataField class.
@@ -987,7 +987,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:pivotField.</para>
     /// </summary>
-    public partial class PivotField : TypedOpenXmlLeafElement
+    public partial class PivotField : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the PivotField class.
@@ -1043,7 +1043,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.PivotEdits" /> <c>&lt;x14:pivotEdits></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PivotTableDefinition : TypedOpenXmlCompositeElement
+    public partial class PivotTableDefinition : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the PivotTableDefinition class.
@@ -1254,7 +1254,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:pivotCacheDefinition.</para>
     /// </summary>
-    public partial class PivotCacheDefinition : TypedOpenXmlLeafElement
+    public partial class PivotCacheDefinition : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the PivotCacheDefinition class.
@@ -1341,7 +1341,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.CalculatedMembers" /> <c>&lt;x14:calculatedMembers></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Connection : TypedOpenXmlCompositeElement
+    public partial class Connection : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Connection class.
@@ -1433,7 +1433,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:table.</para>
     /// </summary>
-    public partial class Table : TypedOpenXmlLeafElement
+    public partial class Table : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Table class.
@@ -1489,7 +1489,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.SlicerStyle" /> <c>&lt;x14:slicerStyle></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SlicerStyles : TypedOpenXmlCompositeElement
+    public partial class SlicerStyles : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SlicerStyles class.
@@ -1565,7 +1565,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat" /> <c>&lt;x:dxf></c></description></item>
     /// </list>
     /// </remark>
-    public partial class DifferentialFormats : TypedOpenXmlCompositeElement
+    public partial class DifferentialFormats : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the DifferentialFormats class.
@@ -1637,7 +1637,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.DdeValues" /> <c>&lt;x14:values></c></description></item>
     /// </list>
     /// </remark>
-    public partial class OleItem : TypedOpenXmlCompositeElement
+    public partial class OleItem : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the OleItem class.
@@ -1752,7 +1752,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:pivotHierarchy.</para>
     /// </summary>
-    public partial class PivotHierarchy : TypedOpenXmlLeafElement
+    public partial class PivotHierarchy : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the PivotHierarchy class.
@@ -1789,7 +1789,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:cacheField.</para>
     /// </summary>
-    public partial class CacheField : TypedOpenXmlLeafElement
+    public partial class CacheField : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the CacheField class.
@@ -1826,7 +1826,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:id.</para>
     /// </summary>
-    public partial class Id : TypedOpenXmlLeafTextElement
+    public partial class Id : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the Id class.
@@ -1865,7 +1865,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:iconFilter.</para>
     /// </summary>
-    public partial class IconFilter : TypedOpenXmlLeafElement
+    public partial class IconFilter : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the IconFilter class.
@@ -1919,7 +1919,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:filter.</para>
     /// </summary>
-    public partial class Filter : TypedOpenXmlLeafElement
+    public partial class Filter : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Filter class.
@@ -1962,7 +1962,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.CustomFilter" /> <c>&lt;x14:customFilter></c></description></item>
     /// </list>
     /// </remark>
-    public partial class CustomFilters : TypedOpenXmlCompositeElement
+    public partial class CustomFilters : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the CustomFilters class.
@@ -2028,7 +2028,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:sortCondition.</para>
     /// </summary>
-    public partial class SortCondition : TypedOpenXmlLeafElement
+    public partial class SortCondition : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the SortCondition class.
@@ -2137,7 +2137,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:sourceConnection.</para>
     /// </summary>
-    public partial class SourceConnection : TypedOpenXmlLeafElement
+    public partial class SourceConnection : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the SourceConnection class.
@@ -2183,7 +2183,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.ExtensionList" /> <c>&lt;x14:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class DatastoreItem : TypedOpenXmlPartRootElement
+    public partial class DatastoreItem : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the DatastoreItem class.
@@ -2304,7 +2304,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.ListItems" /> <c>&lt;x14:itemLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class FormControlProperties : TypedOpenXmlPartRootElement
+    public partial class FormControlProperties : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the FormControlProperties class.
@@ -2785,7 +2785,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.Slicer" /> <c>&lt;x14:slicer></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Slicers : TypedOpenXmlPartRootElement
+    public partial class Slicers : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the Slicers class.
@@ -2878,7 +2878,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.SlicerCachePivotTables" /> <c>&lt;x14:pivotTables></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SlicerCacheDefinition : TypedOpenXmlPartRootElement
+    public partial class SlicerCacheDefinition : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the SlicerCacheDefinition class.
@@ -3043,7 +3043,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.ReferenceSequence" /> <c>&lt;xne:sqref></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ConditionalFormatting : TypedOpenXmlCompositeElement
+    public partial class ConditionalFormatting : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ConditionalFormatting class.
@@ -3124,7 +3124,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.IconSet" /> <c>&lt;x14:iconSet></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ConditionalFormattingRule : TypedOpenXmlCompositeElement
+    public partial class ConditionalFormattingRule : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ConditionalFormattingRule class.
@@ -3361,7 +3361,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Extension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ExtensionList : TypedOpenXmlCompositeElement
+    public partial class ExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ExtensionList class.
@@ -3429,7 +3429,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.ReferenceSequence" /> <c>&lt;xne:sqref></c></description></item>
     /// </list>
     /// </remark>
-    public partial class DataValidation : TypedOpenXmlCompositeElement
+    public partial class DataValidation : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the DataValidation class.
@@ -3786,7 +3786,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.Formula" /> <c>&lt;xne:f></c></description></item>
     /// </list>
     /// </remark>
-    public abstract partial class DataValidationFormulaType : TypedOpenXmlCompositeElement
+    public abstract partial class DataValidationFormulaType : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the DataValidationFormulaType class.
@@ -3859,7 +3859,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.Sparklines" /> <c>&lt;x14:sparklines></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SparklineGroup : TypedOpenXmlCompositeElement
+    public partial class SparklineGroup : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SparklineGroup class.
@@ -4608,7 +4608,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class ColorType : TypedOpenXmlLeafElement
+    public abstract partial class ColorType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ColorType class.
@@ -4693,7 +4693,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.Sparkline" /> <c>&lt;x14:sparkline></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Sparklines : TypedOpenXmlCompositeElement
+    public partial class Sparklines : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Sparklines class.
@@ -4754,7 +4754,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.ReferenceSequence" /> <c>&lt;xne:sqref></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Sparkline : TypedOpenXmlCompositeElement
+    public partial class Sparkline : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Sparkline class.
@@ -4836,7 +4836,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:slicer.</para>
     /// </summary>
-    public partial class SlicerRef : TypedOpenXmlLeafElement
+    public partial class SlicerRef : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the SlicerRef class.
@@ -4884,7 +4884,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:slicerCache.</para>
     /// </summary>
-    public partial class SlicerCache : TypedOpenXmlLeafElement
+    public partial class SlicerCache : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the SlicerCache class.
@@ -4934,7 +4934,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.ArgumentDescriptions" /> <c>&lt;x14:argumentDescriptions></c></description></item>
     /// </list>
     /// </remark>
-    public partial class DefinedName : TypedOpenXmlCompositeElement
+    public partial class DefinedName : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the DefinedName class.
@@ -5023,7 +5023,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.ArgumentDescription" /> <c>&lt;x14:argumentDescription></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ArgumentDescriptions : TypedOpenXmlCompositeElement
+    public partial class ArgumentDescriptions : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ArgumentDescriptions class.
@@ -5089,7 +5089,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:argumentDescription.</para>
     /// </summary>
-    public partial class ArgumentDescription : TypedOpenXmlLeafTextElement
+    public partial class ArgumentDescription : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the ArgumentDescription class.
@@ -5150,7 +5150,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.TupleSetRows" /> <c>&lt;x14:rows></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TupleSet : TypedOpenXmlCompositeElement
+    public partial class TupleSet : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TupleSet class.
@@ -5261,7 +5261,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.TupleSetHeader" /> <c>&lt;x14:header></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TupleSetHeaders : TypedOpenXmlCompositeElement
+    public partial class TupleSetHeaders : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TupleSetHeaders class.
@@ -5321,7 +5321,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.TupleSetRow" /> <c>&lt;x14:row></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TupleSetRows : TypedOpenXmlCompositeElement
+    public partial class TupleSetRows : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TupleSetRows class.
@@ -5375,7 +5375,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:header.</para>
     /// </summary>
-    public partial class TupleSetHeader : TypedOpenXmlLeafElement
+    public partial class TupleSetHeader : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the TupleSetHeader class.
@@ -5431,7 +5431,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.TupleSetRowItem" /> <c>&lt;x14:rowItem></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TupleSetRow : TypedOpenXmlCompositeElement
+    public partial class TupleSetRow : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TupleSetRow class.
@@ -5485,7 +5485,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:rowItem.</para>
     /// </summary>
-    public partial class TupleSetRowItem : TypedOpenXmlLeafElement
+    public partial class TupleSetRowItem : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the TupleSetRowItem class.
@@ -5535,7 +5535,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:setLevel.</para>
     /// </summary>
-    public partial class SetLevel : TypedOpenXmlLeafElement
+    public partial class SetLevel : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the SetLevel class.
@@ -5582,7 +5582,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.SetLevel" /> <c>&lt;x14:setLevel></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SetLevels : TypedOpenXmlCompositeElement
+    public partial class SetLevels : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SetLevels class.
@@ -5655,7 +5655,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormattingValueObject" /> <c>&lt;x14:cfvo></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ColorScale : TypedOpenXmlCompositeElement
+    public partial class ColorScale : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ColorScale class.
@@ -5722,7 +5722,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormattingValueObject" /> <c>&lt;x14:cfvo></c></description></item>
     /// </list>
     /// </remark>
-    public partial class DataBar : TypedOpenXmlCompositeElement
+    public partial class DataBar : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the DataBar class.
@@ -5895,7 +5895,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormattingValueObject" /> <c>&lt;x14:cfvo></c></description></item>
     /// </list>
     /// </remark>
-    public partial class IconSet : TypedOpenXmlCompositeElement
+    public partial class IconSet : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the IconSet class.
@@ -6019,7 +6019,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.NumberingFormat" /> <c>&lt;x:numFmt></c></description></item>
     /// </list>
     /// </remark>
-    public partial class DifferentialType : TypedOpenXmlCompositeElement
+    public partial class DifferentialType : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the DifferentialType class.
@@ -6183,7 +6183,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.Formula" /> <c>&lt;xne:f></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ConditionalFormattingValueObject : TypedOpenXmlCompositeElement
+    public partial class ConditionalFormattingValueObject : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ConditionalFormattingValueObject class.
@@ -6291,7 +6291,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:cfIcon.</para>
     /// </summary>
-    public partial class ConditionalFormattingIcon : TypedOpenXmlLeafElement
+    public partial class ConditionalFormattingIcon : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ConditionalFormattingIcon class.
@@ -6351,7 +6351,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.PivotEdit" /> <c>&lt;x14:pivotEdit></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PivotEdits : TypedOpenXmlCompositeElement
+    public partial class PivotEdits : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the PivotEdits class.
@@ -6411,7 +6411,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.PivotChange" /> <c>&lt;x14:pivotChange></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PivotChanges : TypedOpenXmlCompositeElement
+    public partial class PivotChanges : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the PivotChanges class.
@@ -6471,7 +6471,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormat" /> <c>&lt;x14:conditionalFormat></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ConditionalFormats : TypedOpenXmlCompositeElement
+    public partial class ConditionalFormats : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ConditionalFormats class.
@@ -6543,7 +6543,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CalculatedMember" /> <c>&lt;x:calculatedMember></c></description></item>
     /// </list>
     /// </remark>
-    public partial class CalculatedMembers : TypedOpenXmlCompositeElement
+    public partial class CalculatedMembers : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the CalculatedMembers class.
@@ -6618,7 +6618,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.TupleItems" /> <c>&lt;x14:tupleItems></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PivotEdit : TypedOpenXmlCompositeElement
+    public partial class PivotEdit : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the PivotEdit class.
@@ -6737,7 +6737,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.PivotEditValue" /> <c>&lt;x14:editValue></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PivotUserEdit : TypedOpenXmlCompositeElement
+    public partial class PivotUserEdit : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the PivotUserEdit class.
@@ -6825,7 +6825,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.Xstring" /> <c>&lt;x14:tupleItem></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TupleItems : TypedOpenXmlCompositeElement
+    public partial class TupleItems : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TupleItems class.
@@ -6886,7 +6886,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotAreaReferences" /> <c>&lt;x:references></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PivotArea : TypedOpenXmlCompositeElement
+    public partial class PivotArea : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the PivotArea class.
@@ -7109,7 +7109,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.TupleItems" /> <c>&lt;x14:tupleItems></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PivotChange : TypedOpenXmlCompositeElement
+    public partial class PivotChange : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the PivotChange class.
@@ -7230,7 +7230,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:editValue.</para>
     /// </summary>
-    public partial class PivotEditValue : TypedOpenXmlLeafTextElement
+    public partial class PivotEditValue : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the PivotEditValue class.
@@ -7284,7 +7284,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:tupleItem.</para>
     /// </summary>
-    public partial class Xstring : TypedOpenXmlLeafTextElement
+    public partial class Xstring : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the Xstring class.
@@ -7328,7 +7328,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.SlicerStyleElement" /> <c>&lt;x14:slicerStyleElement></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SlicerStyleElements : TypedOpenXmlCompositeElement
+    public partial class SlicerStyleElements : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SlicerStyleElements class.
@@ -7388,7 +7388,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Value" /> <c>&lt;x:value></c></description></item>
     /// </list>
     /// </remark>
-    public partial class DdeValues : TypedOpenXmlCompositeElement
+    public partial class DdeValues : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the DdeValues class.
@@ -7472,7 +7472,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.PivotAreas" /> <c>&lt;x14:pivotAreas></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ConditionalFormat : TypedOpenXmlCompositeElement
+    public partial class ConditionalFormat : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ConditionalFormat class.
@@ -7612,7 +7612,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotArea" /> <c>&lt;x:pivotArea></c></description></item>
     /// </list>
     /// </remark>
-    public partial class PivotAreas : TypedOpenXmlCompositeElement
+    public partial class PivotAreas : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the PivotAreas class.
@@ -7684,7 +7684,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.SlicerStyleElements" /> <c>&lt;x14:slicerStyleElements></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SlicerStyle : TypedOpenXmlCompositeElement
+    public partial class SlicerStyle : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SlicerStyle class.
@@ -7769,7 +7769,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:slicerStyleElement.</para>
     /// </summary>
-    public partial class SlicerStyleElement : TypedOpenXmlLeafElement
+    public partial class SlicerStyleElement : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the SlicerStyleElement class.
@@ -7828,7 +7828,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.ReferenceSequence" /> <c>&lt;xne:sqref></c></description></item>
     /// </list>
     /// </remark>
-    public partial class IgnoredError : TypedOpenXmlCompositeElement
+    public partial class IgnoredError : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the IgnoredError class.
@@ -8001,7 +8001,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.ReferenceSequence" /> <c>&lt;xne:sqref></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ProtectedRange : TypedOpenXmlCompositeElement
+    public partial class ProtectedRange : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ProtectedRange class.
@@ -8155,7 +8155,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:customFilter.</para>
     /// </summary>
-    public partial class CustomFilter : TypedOpenXmlLeafElement
+    public partial class CustomFilter : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the CustomFilter class.
@@ -8203,7 +8203,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:item.</para>
     /// </summary>
-    public partial class ListItem : TypedOpenXmlLeafElement
+    public partial class ListItem : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ListItem class.
@@ -8250,7 +8250,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.ListItem" /> <c>&lt;x14:item></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ListItems : TypedOpenXmlCompositeElement
+    public partial class ListItems : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ListItems class.
@@ -8312,7 +8312,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.ExtensionList" /> <c>&lt;x14:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Slicer : TypedOpenXmlCompositeElement
+    public partial class Slicer : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Slicer class.
@@ -8512,7 +8512,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheSelections" /> <c>&lt;x14:selections></c></description></item>
     /// </list>
     /// </remark>
-    public partial class OlapSlicerCache : TypedOpenXmlCompositeElement
+    public partial class OlapSlicerCache : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the OlapSlicerCache class.
@@ -8631,7 +8631,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.TabularSlicerCacheItems" /> <c>&lt;x14:items></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TabularSlicerCache : TypedOpenXmlCompositeElement
+    public partial class TabularSlicerCache : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TabularSlicerCache class.
@@ -8772,7 +8772,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:pivotTable.</para>
     /// </summary>
-    public partial class SlicerCachePivotTable : TypedOpenXmlLeafElement
+    public partial class SlicerCachePivotTable : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the SlicerCachePivotTable class.
@@ -8827,7 +8827,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:p.</para>
     /// </summary>
-    public partial class OlapSlicerCacheItemParent : TypedOpenXmlLeafElement
+    public partial class OlapSlicerCacheItemParent : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the OlapSlicerCacheItemParent class.
@@ -8873,7 +8873,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheItemParent" /> <c>&lt;x14:p></c></description></item>
     /// </list>
     /// </remark>
-    public partial class OlapSlicerCacheItem : TypedOpenXmlCompositeElement
+    public partial class OlapSlicerCacheItem : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the OlapSlicerCacheItem class.
@@ -8971,7 +8971,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheItem" /> <c>&lt;x14:i></c></description></item>
     /// </list>
     /// </remark>
-    public partial class OlapSlicerCacheRange : TypedOpenXmlCompositeElement
+    public partial class OlapSlicerCacheRange : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the OlapSlicerCacheRange class.
@@ -9047,7 +9047,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheRange" /> <c>&lt;x14:range></c></description></item>
     /// </list>
     /// </remark>
-    public partial class OlapSlicerCacheRanges : TypedOpenXmlCompositeElement
+    public partial class OlapSlicerCacheRanges : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the OlapSlicerCacheRanges class.
@@ -9107,7 +9107,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheRanges" /> <c>&lt;x14:ranges></c></description></item>
     /// </list>
     /// </remark>
-    public partial class OlapSlicerCacheLevelData : TypedOpenXmlCompositeElement
+    public partial class OlapSlicerCacheLevelData : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the OlapSlicerCacheLevelData class.
@@ -9243,7 +9243,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheLevelData" /> <c>&lt;x14:level></c></description></item>
     /// </list>
     /// </remark>
-    public partial class OlapSlicerCacheLevelsData : TypedOpenXmlCompositeElement
+    public partial class OlapSlicerCacheLevelsData : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the OlapSlicerCacheLevelsData class.
@@ -9315,7 +9315,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheSelection" /> <c>&lt;x14:selection></c></description></item>
     /// </list>
     /// </remark>
-    public partial class OlapSlicerCacheSelections : TypedOpenXmlCompositeElement
+    public partial class OlapSlicerCacheSelections : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the OlapSlicerCacheSelections class.
@@ -9387,7 +9387,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheItemParent" /> <c>&lt;x14:p></c></description></item>
     /// </list>
     /// </remark>
-    public partial class OlapSlicerCacheSelection : TypedOpenXmlCompositeElement
+    public partial class OlapSlicerCacheSelection : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the OlapSlicerCacheSelection class.
@@ -9462,7 +9462,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.TabularSlicerCacheItem" /> <c>&lt;x14:i></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TabularSlicerCacheItems : TypedOpenXmlCompositeElement
+    public partial class TabularSlicerCacheItems : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TabularSlicerCacheItems class.
@@ -9528,7 +9528,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:i.</para>
     /// </summary>
-    public partial class TabularSlicerCacheItem : TypedOpenXmlLeafElement
+    public partial class TabularSlicerCacheItem : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the TabularSlicerCacheItem class.
@@ -9597,7 +9597,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.SlicerCachePivotTable" /> <c>&lt;x14:pivotTable></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SlicerCachePivotTables : TypedOpenXmlCompositeElement
+    public partial class SlicerCachePivotTables : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SlicerCachePivotTables class.
@@ -9658,7 +9658,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.TabularSlicerCache" /> <c>&lt;x14:tabular></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SlicerCacheData : TypedOpenXmlCompositeElement
+    public partial class SlicerCacheData : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SlicerCacheData class.
@@ -9746,7 +9746,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.SlicerCacheDefinitionExtension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SlicerCacheDefinitionExtensionList : TypedOpenXmlCompositeElement
+    public partial class SlicerCacheDefinitionExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SlicerCacheDefinitionExtensionList class.

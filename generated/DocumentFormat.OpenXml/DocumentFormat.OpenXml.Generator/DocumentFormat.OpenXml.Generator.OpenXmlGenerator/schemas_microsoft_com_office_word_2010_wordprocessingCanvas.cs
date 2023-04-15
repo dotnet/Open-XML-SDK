@@ -39,7 +39,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.DrawingShape.WordprocessingShape" /> <c>&lt;wps:wsp></c></description></item>
     /// </list>
     /// </remark>
-    public partial class WordprocessingCanvas : TypedOpenXmlCompositeElement
+    public partial class WordprocessingCanvas : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the WordprocessingCanvas class.
@@ -149,7 +149,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SolidFill" /> <c>&lt;a:solidFill></c></description></item>
     /// </list>
     /// </remark>
-    public partial class BackgroundFormatting : TypedOpenXmlCompositeElement
+    public partial class BackgroundFormatting : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the BackgroundFormatting class.
@@ -237,7 +237,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Outline" /> <c>&lt;a:ln></c></description></item>
     /// </list>
     /// </remark>
-    public partial class WholeFormatting : TypedOpenXmlCompositeElement
+    public partial class WholeFormatting : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the WholeFormatting class.
@@ -324,7 +324,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.Transform2D" /> <c>&lt;wpg:xfrm></c></description></item>
     /// </list>
     /// </remark>
-    public partial class GraphicFrameType : TypedOpenXmlCompositeElement
+    public partial class GraphicFrameType : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the GraphicFrameType class.
@@ -457,7 +457,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extension" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class OfficeArtExtensionList : TypedOpenXmlCompositeElement
+    public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the OfficeArtExtensionList class.

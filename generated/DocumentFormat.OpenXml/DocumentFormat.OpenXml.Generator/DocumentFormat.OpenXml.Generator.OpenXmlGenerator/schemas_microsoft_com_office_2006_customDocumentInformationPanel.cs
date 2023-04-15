@@ -29,7 +29,7 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.ShowOnOpen" /> <c>&lt;cdip:showOnOpen></c></description></item>
     /// </list>
     /// </remark>
-    public partial class CustomPropertyEditors : TypedOpenXmlCompositeElement
+    public partial class CustomPropertyEditors : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the CustomPropertyEditors class.
@@ -112,7 +112,7 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cdip:XMLNamespace.</para>
     /// </summary>
-    public partial class PropertyEditorNamespace : TypedOpenXmlLeafTextElement
+    public partial class PropertyEditorNamespace : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the PropertyEditorNamespace class.
@@ -150,7 +150,7 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cdip:defaultPropertyEditorNamespace.</para>
     /// </summary>
-    public partial class DefaultPropertyEditorNamespace : TypedOpenXmlLeafTextElement
+    public partial class DefaultPropertyEditorNamespace : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the DefaultPropertyEditorNamespace class.
@@ -188,7 +188,7 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cdip:XSNLocation.</para>
     /// </summary>
-    public partial class XsnFileLocation : TypedOpenXmlLeafTextElement
+    public partial class XsnFileLocation : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the XsnFileLocation class.
@@ -225,7 +225,7 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cdip:showOnOpen.</para>
     /// </summary>
-    public partial class ShowOnOpen : TypedOpenXmlLeafTextElement
+    public partial class ShowOnOpen : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the ShowOnOpen class.
@@ -270,7 +270,7 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.XsnFileLocation" /> <c>&lt;cdip:XSNLocation></c></description></item>
     /// </list>
     /// </remark>
-    public partial class CustomPropertyEditor : TypedOpenXmlCompositeElement
+    public partial class CustomPropertyEditor : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the CustomPropertyEditor class.

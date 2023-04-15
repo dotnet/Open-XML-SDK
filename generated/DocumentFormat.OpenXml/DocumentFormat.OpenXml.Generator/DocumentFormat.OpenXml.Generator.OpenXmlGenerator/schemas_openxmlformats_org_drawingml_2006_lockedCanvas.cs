@@ -38,7 +38,7 @@ namespace DocumentFormat.OpenXml.Drawing.LockedCanvas
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.GvmlContentPart" /> <c>&lt;a14:contentPart></c></description></item>
     /// </list>
     /// </remark>
-    public partial class LockedCanvas : TypedOpenXmlCompositeElement
+    public partial class LockedCanvas : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the LockedCanvas class.

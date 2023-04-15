@@ -29,7 +29,7 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.DocumentTasks.Task" /> <c>&lt;t:Task></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Tasks : TypedOpenXmlPartRootElement
+    public partial class Tasks : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the Tasks class.
@@ -124,7 +124,7 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskHistory" /> <c>&lt;t:History></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Task : TypedOpenXmlCompositeElement
+    public partial class Task : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Task class.
@@ -243,7 +243,7 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.OfficeExtLst.Extension" /> <c>&lt;oel:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ExtensionList : TypedOpenXmlCompositeElement
+    public partial class ExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ExtensionList class.
@@ -304,7 +304,7 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.DocumentTasks.CommentAnchor" /> <c>&lt;t:Comment></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TaskAnchor : TypedOpenXmlCompositeElement
+    public partial class TaskAnchor : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TaskAnchor class.
@@ -392,7 +392,7 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskHistoryEvent" /> <c>&lt;t:Event></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TaskHistory : TypedOpenXmlCompositeElement
+    public partial class TaskHistory : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TaskHistory class.
@@ -465,7 +465,7 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.DocumentTasks.UnassignTaskUser" /> <c>&lt;t:Unassign></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TaskHistoryEvent : TypedOpenXmlCompositeElement
+    public partial class TaskHistoryEvent : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TaskHistoryEvent class.
@@ -679,7 +679,7 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class OpenXmlTaskUserElement : TypedOpenXmlLeafElement
+    public abstract partial class OpenXmlTaskUserElement : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the OpenXmlTaskUserElement class.
@@ -742,7 +742,7 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is t:Create.</para>
     /// </summary>
-    public partial class TaskCreateEventInfo : TypedOpenXmlLeafElement
+    public partial class TaskCreateEventInfo : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the TaskCreateEventInfo class.
@@ -767,7 +767,7 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is t:SetTitle.</para>
     /// </summary>
-    public partial class TaskTitleEventInfo : TypedOpenXmlLeafElement
+    public partial class TaskTitleEventInfo : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the TaskTitleEventInfo class.
@@ -807,7 +807,7 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is t:Schedule.</para>
     /// </summary>
-    public partial class TaskScheduleEventInfo : TypedOpenXmlLeafElement
+    public partial class TaskScheduleEventInfo : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the TaskScheduleEventInfo class.
@@ -855,7 +855,7 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is t:Progress.</para>
     /// </summary>
-    public partial class TaskProgressEventInfo : TypedOpenXmlLeafElement
+    public partial class TaskProgressEventInfo : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the TaskProgressEventInfo class.
@@ -896,7 +896,7 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is t:Priority.</para>
     /// </summary>
-    public partial class TaskPriorityEventInfo : TypedOpenXmlLeafElement
+    public partial class TaskPriorityEventInfo : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the TaskPriorityEventInfo class.
@@ -937,7 +937,7 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is t:Delete.</para>
     /// </summary>
-    public partial class TaskDeleteEventInfo : TypedOpenXmlLeafElement
+    public partial class TaskDeleteEventInfo : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the TaskDeleteEventInfo class.
@@ -962,7 +962,7 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is t:Undelete.</para>
     /// </summary>
-    public partial class TaskUndeleteEventInfo : TypedOpenXmlLeafElement
+    public partial class TaskUndeleteEventInfo : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the TaskUndeleteEventInfo class.
@@ -987,7 +987,7 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is t:UnassignAll.</para>
     /// </summary>
-    public partial class TaskUnassignAll : TypedOpenXmlLeafElement
+    public partial class TaskUnassignAll : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the TaskUnassignAll class.
@@ -1012,7 +1012,7 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is t:Undo.</para>
     /// </summary>
-    public partial class TaskUndo : TypedOpenXmlLeafElement
+    public partial class TaskUndo : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the TaskUndo class.
@@ -1053,7 +1053,7 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is t:Comment.</para>
     /// </summary>
-    public partial class CommentAnchor : TypedOpenXmlLeafElement
+    public partial class CommentAnchor : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the CommentAnchor class.

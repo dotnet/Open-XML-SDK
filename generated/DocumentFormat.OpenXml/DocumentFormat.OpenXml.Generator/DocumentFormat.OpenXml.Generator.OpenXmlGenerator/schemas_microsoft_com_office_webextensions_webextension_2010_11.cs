@@ -34,7 +34,7 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionReferenceList" /> <c>&lt;we:alternateReferences></c></description></item>
     /// </list>
     /// </remark>
-    public partial class WebExtension : TypedOpenXmlPartRootElement
+    public partial class WebExtension : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the WebExtension class.
@@ -234,7 +234,7 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is we:webextensionref.</para>
     /// </summary>
-    public partial class WebExtensionReference : TypedOpenXmlLeafElement
+    public partial class WebExtensionReference : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the WebExtensionReference class.
@@ -277,7 +277,7 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is we:property.</para>
     /// </summary>
-    public partial class WebExtensionProperty : TypedOpenXmlLeafElement
+    public partial class WebExtensionProperty : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the WebExtensionProperty class.
@@ -337,7 +337,7 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extension" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class OfficeArtExtensionList : TypedOpenXmlCompositeElement
+    public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the OfficeArtExtensionList class.
@@ -403,7 +403,7 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.WebExtension.OfficeArtExtensionList" /> <c>&lt;we:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class WebExtensionBinding : TypedOpenXmlCompositeElement
+    public partial class WebExtensionBinding : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the WebExtensionBinding class.
@@ -519,7 +519,7 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.WebExtension.OfficeArtExtensionList" /> <c>&lt;we:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class WebExtensionStoreReference : TypedOpenXmlCompositeElement
+    public partial class WebExtensionStoreReference : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the WebExtensionStoreReference class.
@@ -644,7 +644,7 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionStoreReference" /> <c>&lt;we:reference></c></description></item>
     /// </list>
     /// </remark>
-    public partial class WebExtensionReferenceList : TypedOpenXmlCompositeElement
+    public partial class WebExtensionReferenceList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the WebExtensionReferenceList class.
@@ -704,7 +704,7 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionProperty" /> <c>&lt;we:property></c></description></item>
     /// </list>
     /// </remark>
-    public partial class WebExtensionPropertyBag : TypedOpenXmlCompositeElement
+    public partial class WebExtensionPropertyBag : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the WebExtensionPropertyBag class.
@@ -764,7 +764,7 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionBinding" /> <c>&lt;we:binding></c></description></item>
     /// </list>
     /// </remark>
-    public partial class WebExtensionBindingList : TypedOpenXmlCompositeElement
+    public partial class WebExtensionBindingList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the WebExtensionBindingList class.
@@ -841,7 +841,7 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.TintEffect" /> <c>&lt;a:tint></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Snapshot : TypedOpenXmlCompositeElement
+    public partial class Snapshot : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Snapshot class.

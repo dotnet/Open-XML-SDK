@@ -32,7 +32,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.Drawing.ExcelNonVisualContentPartShapeProperties" /> <c>&lt;xdr14:nvContentPartPr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ContentPart : TypedOpenXmlCompositeElement
+    public partial class ContentPart : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ContentPart class.
@@ -184,7 +184,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class NonVisualDrawingProperties : TypedOpenXmlCompositeElement
+    public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the NonVisualDrawingProperties class.
@@ -350,7 +350,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks" /> <c>&lt;a14:cpLocks></c></description></item>
     /// </list>
     /// </remark>
-    public partial class NonVisualInkContentPartProperties : TypedOpenXmlCompositeElement
+    public partial class NonVisualInkContentPartProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the NonVisualInkContentPartProperties class.
@@ -451,7 +451,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.Drawing.NonVisualInkContentPartProperties" /> <c>&lt;xdr14:cNvContentPartPr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ExcelNonVisualContentPartShapeProperties : TypedOpenXmlCompositeElement
+    public partial class ExcelNonVisualContentPartShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ExcelNonVisualContentPartShapeProperties class.
@@ -533,7 +533,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xdr14:nvPr.</para>
     /// </summary>
-    public partial class ApplicationNonVisualDrawingProperties : TypedOpenXmlLeafElement
+    public partial class ApplicationNonVisualDrawingProperties : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ApplicationNonVisualDrawingProperties class.
@@ -588,7 +588,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extents" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Transform2D : TypedOpenXmlCompositeElement
+    public partial class Transform2D : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Transform2D class.
@@ -710,7 +710,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extension" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class OfficeArtExtensionList : TypedOpenXmlCompositeElement
+    public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the OfficeArtExtensionList class.

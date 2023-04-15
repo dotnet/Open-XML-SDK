@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the MailMergeRecipientDataPart
     /// </summary>
-    public partial class MailMergeRecipientDataPart : TypedOpenXmlPart
+    public partial class MailMergeRecipientDataPart : OpenXmlPart
     {
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/recipientData";
 

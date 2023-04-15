@@ -28,7 +28,7 @@ namespace DocumentFormat.OpenXml.Office2021.MipLabelMetaData
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.MipLabelMetaData.ClassificationLabel" /> <c>&lt;clbl:label></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ClassificationLabelList : TypedOpenXmlPartRootElement
+    public partial class ClassificationLabelList : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the ClassificationLabelList class.
@@ -115,7 +115,7 @@ namespace DocumentFormat.OpenXml.Office2021.MipLabelMetaData
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is clbl:ext.</para>
     /// </summary>
-    public partial class ClassificationExtension : TypedOpenXmlCompositeElement
+    public partial class ClassificationExtension : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ClassificationExtension class.
@@ -184,7 +184,7 @@ namespace DocumentFormat.OpenXml.Office2021.MipLabelMetaData
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is clbl:label.</para>
     /// </summary>
-    public partial class ClassificationLabel : TypedOpenXmlLeafElement
+    public partial class ClassificationLabel : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ClassificationLabel class.
@@ -331,7 +331,7 @@ namespace DocumentFormat.OpenXml.Office2021.MipLabelMetaData
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.MipLabelMetaData.ClassificationExtension" /> <c>&lt;clbl:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ClassificationExtensionList : TypedOpenXmlCompositeElement
+    public partial class ClassificationExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ClassificationExtensionList class.

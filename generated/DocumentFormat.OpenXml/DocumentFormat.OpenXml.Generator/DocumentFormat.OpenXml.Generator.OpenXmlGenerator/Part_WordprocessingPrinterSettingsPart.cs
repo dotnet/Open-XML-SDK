@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the WordprocessingPrinterSettingsPart
     /// </summary>
-    public partial class WordprocessingPrinterSettingsPart : TypedOpenXmlPart, IFixedContentTypePart
+    public partial class WordprocessingPrinterSettingsPart : OpenXmlPart, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.wordprocessingml.printerSettings";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/printerSettings";

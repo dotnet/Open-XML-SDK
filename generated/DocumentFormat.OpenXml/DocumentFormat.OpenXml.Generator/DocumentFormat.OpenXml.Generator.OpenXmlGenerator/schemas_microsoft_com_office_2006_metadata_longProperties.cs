@@ -27,7 +27,7 @@ namespace DocumentFormat.OpenXml.Office.LongProperties
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.LongProperties.LongProperty" /> <c>&lt;lp:LongProp></c></description></item>
     /// </list>
     /// </remark>
-    public partial class LongProperties : TypedOpenXmlCompositeElement
+    public partial class LongProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the LongProperties class.
@@ -80,7 +80,7 @@ namespace DocumentFormat.OpenXml.Office.LongProperties
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is lp:LongProp.</para>
     /// </summary>
-    public partial class LongProperty : TypedOpenXmlLeafTextElement
+    public partial class LongProperty : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the LongProperty class.

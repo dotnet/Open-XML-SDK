@@ -28,7 +28,7 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Designer
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Designer.DesignerTag" /> <c>&lt;p202:designTag></c></description></item>
     /// </list>
     /// </remark>
-    public partial class DesignerTagList : TypedOpenXmlCompositeElement
+    public partial class DesignerTagList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the DesignerTagList class.
@@ -89,7 +89,7 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Designer
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Designer.DesignerTagList" /> <c>&lt;p202:designTagLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class DesignerDrawingProps : TypedOpenXmlCompositeElement
+    public partial class DesignerDrawingProps : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the DesignerDrawingProps class.
@@ -183,7 +183,7 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Designer
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p202:designTag.</para>
     /// </summary>
-    public partial class DesignerTag : TypedOpenXmlLeafElement
+    public partial class DesignerTag : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the DesignerTag class.
@@ -243,7 +243,7 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Designer
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Extension" /> <c>&lt;p:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ExtensionList : TypedOpenXmlCompositeElement
+    public partial class ExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ExtensionList class.

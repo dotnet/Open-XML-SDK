@@ -23,7 +23,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:cameraTool.</para>
     /// </summary>
-    public partial class CameraTool : TypedOpenXmlLeafElement
+    public partial class CameraTool : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the CameraTool class.
@@ -72,7 +72,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:compatExt.</para>
     /// </summary>
-    public partial class CompatExtension : TypedOpenXmlLeafElement
+    public partial class CompatExtension : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the CompatExtension class.
@@ -110,7 +110,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:isCanvas.</para>
     /// </summary>
-    public partial class IsCanvas : TypedOpenXmlLeafElement
+    public partial class IsCanvas : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the IsCanvas class.
@@ -158,7 +158,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.NonVisualContentPartProperties" /> <c>&lt;a14:nvContentPartPr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class GvmlContentPart : TypedOpenXmlCompositeElement
+    public partial class GvmlContentPart : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the GvmlContentPart class.
@@ -287,7 +287,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:shadowObscured.</para>
     /// </summary>
-    public partial class ShadowObscured : TypedOpenXmlLeafElement
+    public partial class ShadowObscured : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ShadowObscured class.
@@ -335,7 +335,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SolidFill" /> <c>&lt;a:solidFill></c></description></item>
     /// </list>
     /// </remark>
-    public partial class HiddenFillProperties : TypedOpenXmlCompositeElement
+    public partial class HiddenFillProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the HiddenFillProperties class.
@@ -500,7 +500,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SolidFill" /> <c>&lt;a:solidFill></c></description></item>
     /// </list>
     /// </remark>
-    public partial class HiddenLineProperties : TypedOpenXmlCompositeElement
+    public partial class HiddenLineProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the HiddenLineProperties class.
@@ -658,7 +658,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.EffectList" /> <c>&lt;a:effectLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class HiddenEffectsProperties : TypedOpenXmlCompositeElement
+    public partial class HiddenEffectsProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the HiddenEffectsProperties class.
@@ -755,7 +755,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class HiddenScene3D : TypedOpenXmlCompositeElement
+    public partial class HiddenScene3D : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the HiddenScene3D class.
@@ -877,7 +877,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class HiddenShape3D : TypedOpenXmlCompositeElement
+    public partial class HiddenShape3D : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the HiddenShape3D class.
@@ -1067,7 +1067,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ImageLayer" /> <c>&lt;a14:imgLayer></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ImageProperties : TypedOpenXmlCompositeElement
+    public partial class ImageProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ImageProperties class.
@@ -1134,7 +1134,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:useLocalDpi.</para>
     /// </summary>
-    public partial class UseLocalDpi : TypedOpenXmlLeafElement
+    public partial class UseLocalDpi : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the UseLocalDpi class.
@@ -1171,7 +1171,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:m.</para>
     /// </summary>
-    public partial class TextMath : TypedOpenXmlLeafElement
+    public partial class TextMath : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the TextMath class.
@@ -1202,7 +1202,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extension" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class OfficeArtExtensionList : TypedOpenXmlCompositeElement
+    public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the OfficeArtExtensionList class.
@@ -1268,7 +1268,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList" /> <c>&lt;a14:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ContentPartLocks : TypedOpenXmlCompositeElement
+    public partial class ContentPartLocks : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ContentPartLocks class.
@@ -1446,7 +1446,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:foregroundMark.</para>
     /// </summary>
-    public partial class ForegroundMark : TypedOpenXmlLeafElement
+    public partial class ForegroundMark : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ForegroundMark class.
@@ -1532,7 +1532,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:backgroundMark.</para>
     /// </summary>
-    public partial class BackgroundMark : TypedOpenXmlLeafElement
+    public partial class BackgroundMark : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the BackgroundMark class.
@@ -1618,7 +1618,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:artisticBlur.</para>
     /// </summary>
-    public partial class ArtisticBlur : TypedOpenXmlLeafElement
+    public partial class ArtisticBlur : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ArtisticBlur class.
@@ -1658,7 +1658,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:artisticCement.</para>
     /// </summary>
-    public partial class ArtisticCement : TypedOpenXmlLeafElement
+    public partial class ArtisticCement : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ArtisticCement class.
@@ -1712,7 +1712,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:artisticChalkSketch.</para>
     /// </summary>
-    public partial class ArtisticChalkSketch : TypedOpenXmlLeafElement
+    public partial class ArtisticChalkSketch : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ArtisticChalkSketch class.
@@ -1766,7 +1766,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:artisticCrisscrossEtching.</para>
     /// </summary>
-    public partial class ArtisticCrisscrossEtching : TypedOpenXmlLeafElement
+    public partial class ArtisticCrisscrossEtching : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ArtisticCrisscrossEtching class.
@@ -1820,7 +1820,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:artisticCutout.</para>
     /// </summary>
-    public partial class ArtisticCutout : TypedOpenXmlLeafElement
+    public partial class ArtisticCutout : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ArtisticCutout class.
@@ -1874,7 +1874,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:artisticFilmGrain.</para>
     /// </summary>
-    public partial class ArtisticFilmGrain : TypedOpenXmlLeafElement
+    public partial class ArtisticFilmGrain : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ArtisticFilmGrain class.
@@ -1928,7 +1928,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:artisticGlass.</para>
     /// </summary>
-    public partial class ArtisticGlass : TypedOpenXmlLeafElement
+    public partial class ArtisticGlass : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ArtisticGlass class.
@@ -1982,7 +1982,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:artisticGlowDiffused.</para>
     /// </summary>
-    public partial class ArtisticGlowDiffused : TypedOpenXmlLeafElement
+    public partial class ArtisticGlowDiffused : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ArtisticGlowDiffused class.
@@ -2036,7 +2036,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:artisticGlowEdges.</para>
     /// </summary>
-    public partial class ArtisticGlowEdges : TypedOpenXmlLeafElement
+    public partial class ArtisticGlowEdges : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ArtisticGlowEdges class.
@@ -2090,7 +2090,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:artisticLightScreen.</para>
     /// </summary>
-    public partial class ArtisticLightScreen : TypedOpenXmlLeafElement
+    public partial class ArtisticLightScreen : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ArtisticLightScreen class.
@@ -2144,7 +2144,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:artisticLineDrawing.</para>
     /// </summary>
-    public partial class ArtisticLineDrawing : TypedOpenXmlLeafElement
+    public partial class ArtisticLineDrawing : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ArtisticLineDrawing class.
@@ -2198,7 +2198,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:artisticMarker.</para>
     /// </summary>
-    public partial class ArtisticMarker : TypedOpenXmlLeafElement
+    public partial class ArtisticMarker : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ArtisticMarker class.
@@ -2252,7 +2252,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:artisticMosiaicBubbles.</para>
     /// </summary>
-    public partial class ArtisticMosaicBubbles : TypedOpenXmlLeafElement
+    public partial class ArtisticMosaicBubbles : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ArtisticMosaicBubbles class.
@@ -2306,7 +2306,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:artisticPaintStrokes.</para>
     /// </summary>
-    public partial class ArtisticPaintStrokes : TypedOpenXmlLeafElement
+    public partial class ArtisticPaintStrokes : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ArtisticPaintStrokes class.
@@ -2360,7 +2360,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:artisticPaintBrush.</para>
     /// </summary>
-    public partial class ArtisticPaintBrush : TypedOpenXmlLeafElement
+    public partial class ArtisticPaintBrush : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ArtisticPaintBrush class.
@@ -2414,7 +2414,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:artisticPastelsSmooth.</para>
     /// </summary>
-    public partial class ArtisticPastelsSmooth : TypedOpenXmlLeafElement
+    public partial class ArtisticPastelsSmooth : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ArtisticPastelsSmooth class.
@@ -2468,7 +2468,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:artisticPencilGrayscale.</para>
     /// </summary>
-    public partial class ArtisticPencilGrayscale : TypedOpenXmlLeafElement
+    public partial class ArtisticPencilGrayscale : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ArtisticPencilGrayscale class.
@@ -2522,7 +2522,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:artisticPencilSketch.</para>
     /// </summary>
-    public partial class ArtisticPencilSketch : TypedOpenXmlLeafElement
+    public partial class ArtisticPencilSketch : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ArtisticPencilSketch class.
@@ -2576,7 +2576,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:artisticPhotocopy.</para>
     /// </summary>
-    public partial class ArtisticPhotocopy : TypedOpenXmlLeafElement
+    public partial class ArtisticPhotocopy : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ArtisticPhotocopy class.
@@ -2630,7 +2630,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:artisticPlasticWrap.</para>
     /// </summary>
-    public partial class ArtisticPlasticWrap : TypedOpenXmlLeafElement
+    public partial class ArtisticPlasticWrap : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ArtisticPlasticWrap class.
@@ -2684,7 +2684,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:artisticTexturizer.</para>
     /// </summary>
-    public partial class ArtisticTexturizer : TypedOpenXmlLeafElement
+    public partial class ArtisticTexturizer : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ArtisticTexturizer class.
@@ -2738,7 +2738,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:artisticWatercolorSponge.</para>
     /// </summary>
-    public partial class ArtisticWatercolorSponge : TypedOpenXmlLeafElement
+    public partial class ArtisticWatercolorSponge : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ArtisticWatercolorSponge class.
@@ -2799,7 +2799,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ForegroundMark" /> <c>&lt;a14:foregroundMark></c></description></item>
     /// </list>
     /// </remark>
-    public partial class BackgroundRemoval : TypedOpenXmlCompositeElement
+    public partial class BackgroundRemoval : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the BackgroundRemoval class.
@@ -2916,7 +2916,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:brightnessContrast.</para>
     /// </summary>
-    public partial class BrightnessContrast : TypedOpenXmlLeafElement
+    public partial class BrightnessContrast : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the BrightnessContrast class.
@@ -2970,7 +2970,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:colorTemperature.</para>
     /// </summary>
-    public partial class ColorTemperature : TypedOpenXmlLeafElement
+    public partial class ColorTemperature : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ColorTemperature class.
@@ -3010,7 +3010,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:saturation.</para>
     /// </summary>
-    public partial class Saturation : TypedOpenXmlLeafElement
+    public partial class Saturation : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Saturation class.
@@ -3050,7 +3050,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is a14:sharpenSoften.</para>
     /// </summary>
-    public partial class SharpenSoften : TypedOpenXmlLeafElement
+    public partial class SharpenSoften : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the SharpenSoften class.
@@ -3122,7 +3122,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ArtisticWatercolorSponge" /> <c>&lt;a14:artisticWatercolorSponge></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ImageEffect : TypedOpenXmlCompositeElement
+    public partial class ImageEffect : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ImageEffect class.
@@ -3597,7 +3597,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ImageEffect" /> <c>&lt;a14:imgEffect></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ImageLayer : TypedOpenXmlCompositeElement
+    public partial class ImageLayer : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ImageLayer class.
@@ -3674,7 +3674,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class NonVisualDrawingProperties : TypedOpenXmlCompositeElement
+    public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the NonVisualDrawingProperties class.
@@ -3840,7 +3840,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks" /> <c>&lt;a14:cpLocks></c></description></item>
     /// </list>
     /// </remark>
-    public partial class NonVisualInkContentPartProperties : TypedOpenXmlCompositeElement
+    public partial class NonVisualInkContentPartProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the NonVisualInkContentPartProperties class.
@@ -3941,7 +3941,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.NonVisualInkContentPartProperties" /> <c>&lt;a14:cNvContentPartPr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class NonVisualContentPartProperties : TypedOpenXmlCompositeElement
+    public partial class NonVisualContentPartProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the NonVisualContentPartProperties class.
@@ -4030,7 +4030,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extents" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Transform2D : TypedOpenXmlCompositeElement
+    public partial class Transform2D : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Transform2D class.

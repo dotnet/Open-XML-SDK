@@ -29,7 +29,7 @@ namespace DocumentFormat.OpenXml.Office2021.Word.CommentsExt
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Word.CommentsExt.ExtensionList" /> <c>&lt;w16cex:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class CommentsExtensible : TypedOpenXmlPartRootElement
+    public partial class CommentsExtensible : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the CommentsExtensible class.
@@ -122,7 +122,7 @@ namespace DocumentFormat.OpenXml.Office2021.Word.CommentsExt
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Word.CommentsExt.ExtensionList" /> <c>&lt;w16cex:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class CommentExtensible : TypedOpenXmlCompositeElement
+    public partial class CommentExtensible : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the CommentExtensible class.
@@ -249,7 +249,7 @@ namespace DocumentFormat.OpenXml.Office2021.Word.CommentsExt
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Word.ExtensionList.Extension" /> <c>&lt;w16cur:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ExtensionList : TypedOpenXmlCompositeElement
+    public partial class ExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ExtensionList class.

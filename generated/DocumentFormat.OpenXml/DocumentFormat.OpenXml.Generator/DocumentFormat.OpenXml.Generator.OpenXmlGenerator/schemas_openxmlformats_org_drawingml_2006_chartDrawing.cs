@@ -37,7 +37,7 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.ContentPart" /> <c>&lt;cdr14:contentPart></c></description></item>
     /// </list>
     /// </remark>
-    public partial class RelativeAnchorSize : TypedOpenXmlCompositeElement
+    public partial class RelativeAnchorSize : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the RelativeAnchorSize class.
@@ -152,7 +152,7 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.ContentPart" /> <c>&lt;cdr14:contentPart></c></description></item>
     /// </list>
     /// </remark>
-    public partial class AbsoluteAnchorSize : TypedOpenXmlCompositeElement
+    public partial class AbsoluteAnchorSize : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the AbsoluteAnchorSize class.
@@ -263,7 +263,7 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ChartDrawing.NonVisualShapeProperties" /> <c>&lt;cdr:nvSpPr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Shape : TypedOpenXmlCompositeElement
+    public partial class Shape : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Shape class.
@@ -433,7 +433,7 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.ChartDrawing.ContentPart" /> <c>&lt;cdr14:contentPart></c></description></item>
     /// </list>
     /// </remark>
-    public partial class GroupShape : TypedOpenXmlCompositeElement
+    public partial class GroupShape : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the GroupShape class.
@@ -537,7 +537,7 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ChartDrawing.NonVisualGraphicFrameProperties" /> <c>&lt;cdr:nvGraphicFramePr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class GraphicFrame : TypedOpenXmlCompositeElement
+    public partial class GraphicFrame : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the GraphicFrame class.
@@ -665,7 +665,7 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ChartDrawing.NonVisualConnectorShapeDrawingProperties" /> <c>&lt;cdr:nvCxnSpPr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ConnectionShape : TypedOpenXmlCompositeElement
+    public partial class ConnectionShape : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ConnectionShape class.
@@ -794,7 +794,7 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ChartDrawing.NonVisualPictureProperties" /> <c>&lt;cdr:nvPicPr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Picture : TypedOpenXmlCompositeElement
+    public partial class Picture : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Picture class.
@@ -937,7 +937,7 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class NonVisualDrawingProperties : TypedOpenXmlCompositeElement
+    public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the NonVisualDrawingProperties class.
@@ -1103,7 +1103,7 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ShapeLocks" /> <c>&lt;a:spLocks></c></description></item>
     /// </list>
     /// </remark>
-    public partial class NonVisualShapeDrawingProperties : TypedOpenXmlCompositeElement
+    public partial class NonVisualShapeDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the NonVisualShapeDrawingProperties class.
@@ -1203,7 +1203,7 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ChartDrawing.NonVisualShapeDrawingProperties" /> <c>&lt;cdr:cNvSpPr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class NonVisualShapeProperties : TypedOpenXmlCompositeElement
+    public partial class NonVisualShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the NonVisualShapeProperties class.
@@ -1304,7 +1304,7 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Transform2D" /> <c>&lt;a:xfrm></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ShapeProperties : TypedOpenXmlCompositeElement
+    public partial class ShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ShapeProperties class.
@@ -1440,7 +1440,7 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.EffectReference" /> <c>&lt;a:effectRef></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Style : TypedOpenXmlCompositeElement
+    public partial class Style : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Style class.
@@ -1559,7 +1559,7 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Paragraph" /> <c>&lt;a:p></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TextBody : TypedOpenXmlCompositeElement
+    public partial class TextBody : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TextBody class.
@@ -1651,7 +1651,7 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class NonVisualConnectionShapeProperties : TypedOpenXmlCompositeElement
+    public partial class NonVisualConnectionShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the NonVisualConnectionShapeProperties class.
@@ -1769,7 +1769,7 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ChartDrawing.NonVisualDrawingProperties" /> <c>&lt;cdr:cNvPr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class NonVisualConnectorShapeDrawingProperties : TypedOpenXmlCompositeElement
+    public partial class NonVisualConnectorShapeDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the NonVisualConnectorShapeDrawingProperties class.
@@ -1857,7 +1857,7 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PictureLocks" /> <c>&lt;a:picLocks></c></description></item>
     /// </list>
     /// </remark>
-    public partial class NonVisualPictureDrawingProperties : TypedOpenXmlCompositeElement
+    public partial class NonVisualPictureDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the NonVisualPictureDrawingProperties class.
@@ -1957,7 +1957,7 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ChartDrawing.NonVisualPictureDrawingProperties" /> <c>&lt;cdr:cNvPicPr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class NonVisualPictureProperties : TypedOpenXmlCompositeElement
+    public partial class NonVisualPictureProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the NonVisualPictureProperties class.
@@ -2047,7 +2047,7 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Tile" /> <c>&lt;a:tile></c></description></item>
     /// </list>
     /// </remark>
-    public partial class BlipFill : TypedOpenXmlCompositeElement
+    public partial class BlipFill : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the BlipFill class.
@@ -2168,7 +2168,7 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class NonVisualGraphicFrameDrawingProperties : TypedOpenXmlCompositeElement
+    public partial class NonVisualGraphicFrameDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the NonVisualGraphicFrameDrawingProperties class.
@@ -2256,7 +2256,7 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ChartDrawing.NonVisualGraphicFrameDrawingProperties" /> <c>&lt;cdr:cNvGraphicFramePr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class NonVisualGraphicFrameProperties : TypedOpenXmlCompositeElement
+    public partial class NonVisualGraphicFrameProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the NonVisualGraphicFrameProperties class.
@@ -2344,7 +2344,7 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extents" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Transform : TypedOpenXmlCompositeElement
+    public partial class Transform : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Transform class.
@@ -2466,7 +2466,7 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class NonVisualGroupShapeDrawingProperties : TypedOpenXmlCompositeElement
+    public partial class NonVisualGroupShapeDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the NonVisualGroupShapeDrawingProperties class.
@@ -2547,7 +2547,7 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cdr:x.</para>
     /// </summary>
-    public partial class XPosition : TypedOpenXmlLeafTextElement
+    public partial class XPosition : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the XPosition class.
@@ -2585,7 +2585,7 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cdr:y.</para>
     /// </summary>
-    public partial class YPosition : TypedOpenXmlLeafTextElement
+    public partial class YPosition : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the YPosition class.
@@ -2750,7 +2750,7 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ChartDrawing.YPosition" /> <c>&lt;cdr:y></c></description></item>
     /// </list>
     /// </remark>
-    public abstract partial class MarkerType : TypedOpenXmlCompositeElement
+    public abstract partial class MarkerType : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the MarkerType class.
@@ -2822,7 +2822,7 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cdr:ext.</para>
     /// </summary>
-    public partial class Extent : TypedOpenXmlLeafElement
+    public partial class Extent : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Extent class.
@@ -2884,7 +2884,7 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ChartDrawing.NonVisualGroupShapeDrawingProperties" /> <c>&lt;cdr:cNvGrpSpPr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class NonVisualGroupShapeProperties : TypedOpenXmlCompositeElement
+    public partial class NonVisualGroupShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the NonVisualGroupShapeProperties class.
@@ -2981,7 +2981,7 @@ namespace DocumentFormat.OpenXml.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SolidFill" /> <c>&lt;a:solidFill></c></description></item>
     /// </list>
     /// </remark>
-    public partial class GroupShapeProperties : TypedOpenXmlCompositeElement
+    public partial class GroupShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the GroupShapeProperties class.

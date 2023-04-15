@@ -28,7 +28,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.TimeSlicer
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.TimeSlicer.OfficeArtExtensionList" /> <c>&lt;tsle:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TimeSlicer : TypedOpenXmlCompositeElement
+    public partial class TimeSlicer : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the TimeSlicer class.
@@ -116,7 +116,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.TimeSlicer
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extension" /> <c>&lt;a:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class OfficeArtExtensionList : TypedOpenXmlCompositeElement
+    public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the OfficeArtExtensionList class.

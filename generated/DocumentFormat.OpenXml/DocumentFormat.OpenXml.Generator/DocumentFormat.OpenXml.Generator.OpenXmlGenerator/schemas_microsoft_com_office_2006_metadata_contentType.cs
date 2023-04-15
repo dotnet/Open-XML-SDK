@@ -21,7 +21,7 @@ namespace DocumentFormat.OpenXml.Office.ContentType
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ct:contentTypeSchema.</para>
     /// </summary>
-    public partial class ContentTypeSchema : TypedOpenXmlCompositeElement
+    public partial class ContentTypeSchema : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ContentTypeSchema class.

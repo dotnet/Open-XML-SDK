@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p15:prstTrans.</para>
     /// </summary>
-    public partial class PresetTransition : TypedOpenXmlLeafElement
+    public partial class PresetTransition : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the PresetTransition class.
@@ -83,7 +83,7 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p15:presenceInfo.</para>
     /// </summary>
-    public partial class PresenceInfo : TypedOpenXmlLeafElement
+    public partial class PresenceInfo : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the PresenceInfo class.
@@ -145,7 +145,7 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.PowerPoint.ParentCommentIdentifier" /> <c>&lt;p15:parentCm></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ThreadingInfo : TypedOpenXmlCompositeElement
+    public partial class ThreadingInfo : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ThreadingInfo class.
@@ -353,7 +353,7 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.PowerPoint.ExtendedGuide" /> <c>&lt;p15:guide></c></description></item>
     /// </list>
     /// </remark>
-    public abstract partial class ExtendedGuideList : TypedOpenXmlCompositeElement
+    public abstract partial class ExtendedGuideList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ExtendedGuideList class.
@@ -399,7 +399,7 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p15:chartTrackingRefBased.</para>
     /// </summary>
-    public partial class ChartTrackingReferenceBased : TypedOpenXmlLeafElement
+    public partial class ChartTrackingReferenceBased : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ChartTrackingReferenceBased class.
@@ -439,7 +439,7 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p15:parentCm.</para>
     /// </summary>
-    public partial class ParentCommentIdentifier : TypedOpenXmlLeafElement
+    public partial class ParentCommentIdentifier : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ParentCommentIdentifier class.
@@ -498,7 +498,7 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SystemColor" /> <c>&lt;a:sysClr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ColorType : TypedOpenXmlCompositeElement
+    public partial class ColorType : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ColorType class.
@@ -652,7 +652,7 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Extension" /> <c>&lt;p:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ExtensionList : TypedOpenXmlCompositeElement
+    public partial class ExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ExtensionList class.
@@ -719,7 +719,7 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.PowerPoint.ExtensionList" /> <c>&lt;p15:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ExtendedGuide : TypedOpenXmlCompositeElement
+    public partial class ExtendedGuide : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ExtendedGuide class.

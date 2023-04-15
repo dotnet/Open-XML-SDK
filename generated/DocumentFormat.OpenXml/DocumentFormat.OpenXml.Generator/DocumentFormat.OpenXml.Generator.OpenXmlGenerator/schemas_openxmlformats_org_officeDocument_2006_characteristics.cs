@@ -27,7 +27,7 @@ namespace DocumentFormat.OpenXml.AdditionalCharacteristics
     ///   <item><description><see cref="DocumentFormat.OpenXml.AdditionalCharacteristics.Characteristic" /> <c>&lt;ac:characteristic></c></description></item>
     /// </list>
     /// </remark>
-    public partial class AdditionalCharacteristicsInfo : TypedOpenXmlPartRootElement
+    public partial class AdditionalCharacteristicsInfo : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the AdditionalCharacteristicsInfo class.
@@ -80,7 +80,7 @@ namespace DocumentFormat.OpenXml.AdditionalCharacteristics
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ac:characteristic.</para>
     /// </summary>
-    public partial class Characteristic : TypedOpenXmlLeafElement
+    public partial class Characteristic : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the Characteristic class.

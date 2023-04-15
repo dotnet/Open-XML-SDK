@@ -27,7 +27,7 @@ namespace DocumentFormat.OpenXml.Bibliography
     ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Source" /> <c>&lt;b:Source></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Sources : TypedOpenXmlPartRootElement
+    public partial class Sources : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the Sources class.
@@ -131,7 +131,7 @@ namespace DocumentFormat.OpenXml.Bibliography
     ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Middle" /> <c>&lt;b:Middle></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Person : TypedOpenXmlCompositeElement
+    public partial class Person : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Person class.
@@ -188,7 +188,7 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Last.</para>
     /// </summary>
-    public partial class Last : TypedOpenXmlLeafTextElement
+    public partial class Last : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the Last class.
@@ -226,7 +226,7 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:First.</para>
     /// </summary>
-    public partial class First : TypedOpenXmlLeafTextElement
+    public partial class First : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the First class.
@@ -264,7 +264,7 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Middle.</para>
     /// </summary>
-    public partial class Middle : TypedOpenXmlLeafTextElement
+    public partial class Middle : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the Middle class.
@@ -302,7 +302,7 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Corporate.</para>
     /// </summary>
-    public partial class Corporate : TypedOpenXmlLeafTextElement
+    public partial class Corporate : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the Corporate class.
@@ -340,7 +340,7 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:AbbreviatedCaseNumber.</para>
     /// </summary>
-    public partial class AbbreviatedCaseNumber : TypedOpenXmlLeafTextElement
+    public partial class AbbreviatedCaseNumber : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the AbbreviatedCaseNumber class.
@@ -378,7 +378,7 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:AlbumTitle.</para>
     /// </summary>
-    public partial class AlbumTitle : TypedOpenXmlLeafTextElement
+    public partial class AlbumTitle : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the AlbumTitle class.
@@ -416,7 +416,7 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:BookTitle.</para>
     /// </summary>
-    public partial class BookTitle : TypedOpenXmlLeafTextElement
+    public partial class BookTitle : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the BookTitle class.
@@ -454,7 +454,7 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Broadcaster.</para>
     /// </summary>
-    public partial class Broadcaster : TypedOpenXmlLeafTextElement
+    public partial class Broadcaster : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the Broadcaster class.
@@ -492,7 +492,7 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:BroadcastTitle.</para>
     /// </summary>
-    public partial class BroadcastTitle : TypedOpenXmlLeafTextElement
+    public partial class BroadcastTitle : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the BroadcastTitle class.
@@ -530,7 +530,7 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:CaseNumber.</para>
     /// </summary>
-    public partial class CaseNumber : TypedOpenXmlLeafTextElement
+    public partial class CaseNumber : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the CaseNumber class.
@@ -568,7 +568,7 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:ChapterNumber.</para>
     /// </summary>
-    public partial class ChapterNumber : TypedOpenXmlLeafTextElement
+    public partial class ChapterNumber : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the ChapterNumber class.
@@ -606,7 +606,7 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:City.</para>
     /// </summary>
-    public partial class City : TypedOpenXmlLeafTextElement
+    public partial class City : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the City class.
@@ -644,7 +644,7 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Comments.</para>
     /// </summary>
-    public partial class Comments : TypedOpenXmlLeafTextElement
+    public partial class Comments : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the Comments class.
@@ -682,7 +682,7 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:ConferenceName.</para>
     /// </summary>
-    public partial class ConferenceName : TypedOpenXmlLeafTextElement
+    public partial class ConferenceName : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the ConferenceName class.
@@ -720,7 +720,7 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:CountryRegion.</para>
     /// </summary>
-    public partial class CountryRegion : TypedOpenXmlLeafTextElement
+    public partial class CountryRegion : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the CountryRegion class.
@@ -758,7 +758,7 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Court.</para>
     /// </summary>
-    public partial class Court : TypedOpenXmlLeafTextElement
+    public partial class Court : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the Court class.
@@ -796,7 +796,7 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Day.</para>
     /// </summary>
-    public partial class Day : TypedOpenXmlLeafTextElement
+    public partial class Day : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the Day class.
@@ -834,7 +834,7 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:DayAccessed.</para>
     /// </summary>
-    public partial class DayAccessed : TypedOpenXmlLeafTextElement
+    public partial class DayAccessed : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the DayAccessed class.
@@ -872,7 +872,7 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Department.</para>
     /// </summary>
-    public partial class Department : TypedOpenXmlLeafTextElement
+    public partial class Department : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the Department class.
@@ -910,7 +910,7 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Distributor.</para>
     /// </summary>
-    public partial class Distributor : TypedOpenXmlLeafTextElement
+    public partial class Distributor : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the Distributor class.
@@ -948,7 +948,7 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Edition.</para>
     /// </summary>
-    public partial class Edition : TypedOpenXmlLeafTextElement
+    public partial class Edition : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the Edition class.
@@ -986,7 +986,7 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Guid.</para>
     /// </summary>
-    public partial class GuidString : TypedOpenXmlLeafTextElement
+    public partial class GuidString : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the GuidString class.
@@ -1024,7 +1024,7 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Institution.</para>
     /// </summary>
-    public partial class Institution : TypedOpenXmlLeafTextElement
+    public partial class Institution : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the Institution class.
@@ -1062,7 +1062,7 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:InternetSiteTitle.</para>
     /// </summary>
-    public partial class InternetSiteTitle : TypedOpenXmlLeafTextElement
+    public partial class InternetSiteTitle : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the InternetSiteTitle class.
@@ -1100,7 +1100,7 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Issue.</para>
     /// </summary>
-    public partial class Issue : TypedOpenXmlLeafTextElement
+    public partial class Issue : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the Issue class.
@@ -1138,7 +1138,7 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:JournalName.</para>
     /// </summary>
-    public partial class JournalName : TypedOpenXmlLeafTextElement
+    public partial class JournalName : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the JournalName class.
@@ -1176,7 +1176,7 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:LCID.</para>
     /// </summary>
-    public partial class LcId : TypedOpenXmlLeafTextElement
+    public partial class LcId : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the LcId class.
@@ -1214,7 +1214,7 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Medium.</para>
     /// </summary>
-    public partial class Medium : TypedOpenXmlLeafTextElement
+    public partial class Medium : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the Medium class.
@@ -1252,7 +1252,7 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Month.</para>
     /// </summary>
-    public partial class Month : TypedOpenXmlLeafTextElement
+    public partial class Month : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the Month class.
@@ -1290,7 +1290,7 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:MonthAccessed.</para>
     /// </summary>
-    public partial class MonthAccessed : TypedOpenXmlLeafTextElement
+    public partial class MonthAccessed : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the MonthAccessed class.
@@ -1328,7 +1328,7 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:NumberVolumes.</para>
     /// </summary>
-    public partial class NumberVolumes : TypedOpenXmlLeafTextElement
+    public partial class NumberVolumes : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the NumberVolumes class.
@@ -1366,7 +1366,7 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Pages.</para>
     /// </summary>
-    public partial class Pages : TypedOpenXmlLeafTextElement
+    public partial class Pages : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the Pages class.
@@ -1404,7 +1404,7 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:PatentNumber.</para>
     /// </summary>
-    public partial class PatentNumber : TypedOpenXmlLeafTextElement
+    public partial class PatentNumber : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the PatentNumber class.
@@ -1442,7 +1442,7 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:PeriodicalTitle.</para>
     /// </summary>
-    public partial class PeriodicalTitle : TypedOpenXmlLeafTextElement
+    public partial class PeriodicalTitle : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the PeriodicalTitle class.
@@ -1480,7 +1480,7 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:ProductionCompany.</para>
     /// </summary>
-    public partial class ProductionCompany : TypedOpenXmlLeafTextElement
+    public partial class ProductionCompany : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the ProductionCompany class.
@@ -1518,7 +1518,7 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:PublicationTitle.</para>
     /// </summary>
-    public partial class PublicationTitle : TypedOpenXmlLeafTextElement
+    public partial class PublicationTitle : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the PublicationTitle class.
@@ -1556,7 +1556,7 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Publisher.</para>
     /// </summary>
-    public partial class Publisher : TypedOpenXmlLeafTextElement
+    public partial class Publisher : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the Publisher class.
@@ -1594,7 +1594,7 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:RecordingNumber.</para>
     /// </summary>
-    public partial class RecordingNumber : TypedOpenXmlLeafTextElement
+    public partial class RecordingNumber : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the RecordingNumber class.
@@ -1632,7 +1632,7 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:RefOrder.</para>
     /// </summary>
-    public partial class ReferenceOrder : TypedOpenXmlLeafTextElement
+    public partial class ReferenceOrder : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the ReferenceOrder class.
@@ -1670,7 +1670,7 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Reporter.</para>
     /// </summary>
-    public partial class Reporter : TypedOpenXmlLeafTextElement
+    public partial class Reporter : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the Reporter class.
@@ -1708,7 +1708,7 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:ShortTitle.</para>
     /// </summary>
-    public partial class ShortTitle : TypedOpenXmlLeafTextElement
+    public partial class ShortTitle : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the ShortTitle class.
@@ -1746,7 +1746,7 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:StandardNumber.</para>
     /// </summary>
-    public partial class StandardNumber : TypedOpenXmlLeafTextElement
+    public partial class StandardNumber : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the StandardNumber class.
@@ -1784,7 +1784,7 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:StateProvince.</para>
     /// </summary>
-    public partial class StateProvince : TypedOpenXmlLeafTextElement
+    public partial class StateProvince : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the StateProvince class.
@@ -1822,7 +1822,7 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Station.</para>
     /// </summary>
-    public partial class Station : TypedOpenXmlLeafTextElement
+    public partial class Station : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the Station class.
@@ -1860,7 +1860,7 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Tag.</para>
     /// </summary>
-    public partial class Tag : TypedOpenXmlLeafTextElement
+    public partial class Tag : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the Tag class.
@@ -1898,7 +1898,7 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Theater.</para>
     /// </summary>
-    public partial class Theater : TypedOpenXmlLeafTextElement
+    public partial class Theater : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the Theater class.
@@ -1936,7 +1936,7 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:ThesisType.</para>
     /// </summary>
-    public partial class ThesisType : TypedOpenXmlLeafTextElement
+    public partial class ThesisType : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the ThesisType class.
@@ -1974,7 +1974,7 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Title.</para>
     /// </summary>
-    public partial class Title : TypedOpenXmlLeafTextElement
+    public partial class Title : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the Title class.
@@ -2012,7 +2012,7 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Type.</para>
     /// </summary>
-    public partial class PatentType : TypedOpenXmlLeafTextElement
+    public partial class PatentType : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the PatentType class.
@@ -2050,7 +2050,7 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:URL.</para>
     /// </summary>
-    public partial class UrlString : TypedOpenXmlLeafTextElement
+    public partial class UrlString : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the UrlString class.
@@ -2088,7 +2088,7 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Version.</para>
     /// </summary>
-    public partial class Version : TypedOpenXmlLeafTextElement
+    public partial class Version : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the Version class.
@@ -2126,7 +2126,7 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Volume.</para>
     /// </summary>
-    public partial class Volume : TypedOpenXmlLeafTextElement
+    public partial class Volume : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the Volume class.
@@ -2164,7 +2164,7 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:Year.</para>
     /// </summary>
-    public partial class Year : TypedOpenXmlLeafTextElement
+    public partial class Year : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the Year class.
@@ -2202,7 +2202,7 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:YearAccessed.</para>
     /// </summary>
-    public partial class YearAccessed : TypedOpenXmlLeafTextElement
+    public partial class YearAccessed : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the YearAccessed class.
@@ -2246,7 +2246,7 @@ namespace DocumentFormat.OpenXml.Bibliography
     ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Person" /> <c>&lt;b:Person></c></description></item>
     /// </list>
     /// </remark>
-    public partial class NameList : TypedOpenXmlCompositeElement
+    public partial class NameList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the NameList class.
@@ -3117,7 +3117,7 @@ namespace DocumentFormat.OpenXml.Bibliography
     ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.NameList" /> <c>&lt;b:NameList></c></description></item>
     /// </list>
     /// </remark>
-    public abstract partial class NameType : TypedOpenXmlCompositeElement
+    public abstract partial class NameType : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the NameType class.
@@ -3308,7 +3308,7 @@ namespace DocumentFormat.OpenXml.Bibliography
     ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Corporate" /> <c>&lt;b:Corporate></c></description></item>
     /// </list>
     /// </remark>
-    public abstract partial class NameOrCorporateType : TypedOpenXmlCompositeElement
+    public abstract partial class NameOrCorporateType : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the NameOrCorporateType class.
@@ -3401,7 +3401,7 @@ namespace DocumentFormat.OpenXml.Bibliography
     ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.Writer" /> <c>&lt;b:Writer></c></description></item>
     /// </list>
     /// </remark>
-    public partial class AuthorList : TypedOpenXmlCompositeElement
+    public partial class AuthorList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the AuthorList class.
@@ -3695,7 +3695,7 @@ namespace DocumentFormat.OpenXml.Bibliography
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is b:SourceType.</para>
     /// </summary>
-    public partial class SourceType : TypedOpenXmlLeafTextElement
+    public partial class SourceType : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the SourceType class.
@@ -3790,7 +3790,7 @@ namespace DocumentFormat.OpenXml.Bibliography
     ///   <item><description><see cref="DocumentFormat.OpenXml.Bibliography.YearAccessed" /> <c>&lt;b:YearAccessed></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Source : TypedOpenXmlCompositeElement
+    public partial class Source : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the Source class.

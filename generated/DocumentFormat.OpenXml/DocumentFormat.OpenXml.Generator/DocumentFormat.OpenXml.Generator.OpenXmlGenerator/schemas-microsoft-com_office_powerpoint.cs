@@ -21,7 +21,7 @@ namespace DocumentFormat.OpenXml.Vml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is pvml:iscomment.</para>
     /// </summary>
-    public partial class InkAnnotationFlag : TypedOpenXmlLeafElement
+    public partial class InkAnnotationFlag : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the InkAnnotationFlag class.
@@ -45,7 +45,7 @@ namespace DocumentFormat.OpenXml.Vml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is pvml:textdata.</para>
     /// </summary>
-    public partial class TextData : TypedOpenXmlLeafElement
+    public partial class TextData : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the TextData class.

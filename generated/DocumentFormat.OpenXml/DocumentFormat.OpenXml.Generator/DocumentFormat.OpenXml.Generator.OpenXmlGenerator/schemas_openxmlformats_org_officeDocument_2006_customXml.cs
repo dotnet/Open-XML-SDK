@@ -27,7 +27,7 @@ namespace DocumentFormat.OpenXml.CustomXmlDataProperties
     ///   <item><description><see cref="DocumentFormat.OpenXml.CustomXmlDataProperties.SchemaReferences" /> <c>&lt;ds:schemaRefs></c></description></item>
     /// </list>
     /// </remark>
-    public partial class DataStoreItem : TypedOpenXmlPartRootElement
+    public partial class DataStoreItem : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the DataStoreItem class.
@@ -143,7 +143,7 @@ namespace DocumentFormat.OpenXml.CustomXmlDataProperties
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ds:schemaRef.</para>
     /// </summary>
-    public partial class SchemaReference : TypedOpenXmlLeafElement
+    public partial class SchemaReference : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the SchemaReference class.
@@ -191,7 +191,7 @@ namespace DocumentFormat.OpenXml.CustomXmlDataProperties
     ///   <item><description><see cref="DocumentFormat.OpenXml.CustomXmlDataProperties.SchemaReference" /> <c>&lt;ds:schemaRef></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SchemaReferences : TypedOpenXmlCompositeElement
+    public partial class SchemaReferences : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SchemaReferences class.

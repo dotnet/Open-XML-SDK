@@ -27,7 +27,7 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.ActiveX.ActiveXObjectProperty" /> <c>&lt;ax:ocxPr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ActiveXControlData : TypedOpenXmlCompositeElement
+    public partial class ActiveXControlData : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ActiveXControlData class.
@@ -150,7 +150,7 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.ActiveX.SharedComPicture" /> <c>&lt;ax:picture></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ActiveXObjectProperty : TypedOpenXmlCompositeElement
+    public partial class ActiveXObjectProperty : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ActiveXObjectProperty class.
@@ -272,7 +272,7 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.ActiveX.ActiveXObjectProperty" /> <c>&lt;ax:ocxPr></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SharedComFont : TypedOpenXmlCompositeElement
+    public partial class SharedComFont : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SharedComFont class.
@@ -354,7 +354,7 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ax:picture.</para>
     /// </summary>
-    public partial class SharedComPicture : TypedOpenXmlLeafElement
+    public partial class SharedComPicture : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the SharedComPicture class.

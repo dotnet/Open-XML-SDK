@@ -31,7 +31,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.NamedSheetView" /> <c>&lt;xnsv:namedSheetView></c></description></item>
     /// </list>
     /// </remark>
-    public partial class NamedSheetViews : TypedOpenXmlPartRootElement
+    public partial class NamedSheetViews : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the NamedSheetViews class.
@@ -125,7 +125,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.NsvFilter" /> <c>&lt;xnsv:nsvFilter></c></description></item>
     /// </list>
     /// </remark>
-    public partial class NamedSheetView : TypedOpenXmlCompositeElement
+    public partial class NamedSheetView : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the NamedSheetView class.
@@ -217,7 +217,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Extension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ExtensionList : TypedOpenXmlCompositeElement
+    public partial class ExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ExtensionList class.
@@ -285,7 +285,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.SortRules" /> <c>&lt;xnsv:sortRules></c></description></item>
     /// </list>
     /// </remark>
-    public partial class NsvFilter : TypedOpenXmlCompositeElement
+    public partial class NsvFilter : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the NsvFilter class.
@@ -389,7 +389,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.FilterColumn" /> <c>&lt;xnsv:filter></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ColumnFilter : TypedOpenXmlCompositeElement
+    public partial class ColumnFilter : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ColumnFilter class.
@@ -496,7 +496,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.SortRule" /> <c>&lt;xnsv:sortRule></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SortRules : TypedOpenXmlCompositeElement
+    public partial class SortRules : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SortRules class.
@@ -587,7 +587,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.NumberingFormat" /> <c>&lt;x:numFmt></c></description></item>
     /// </list>
     /// </remark>
-    public partial class DifferentialFormatType : TypedOpenXmlCompositeElement
+    public partial class DifferentialFormatType : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the DifferentialFormatType class.
@@ -758,7 +758,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.IconFilter" /> <c>&lt;x14:iconFilter></c></description></item>
     /// </list>
     /// </remark>
-    public partial class FilterColumn : TypedOpenXmlCompositeElement
+    public partial class FilterColumn : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the FilterColumn class.
@@ -990,7 +990,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.RichSortCondition" /> <c>&lt;xnsv:richSortCondition></c></description></item>
     /// </list>
     /// </remark>
-    public partial class SortRule : TypedOpenXmlCompositeElement
+    public partial class SortRule : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the SortRule class.
@@ -1093,7 +1093,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xnsv:sortCondition.</para>
     /// </summary>
-    public partial class SortCondition : TypedOpenXmlLeafElement
+    public partial class SortCondition : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the SortCondition class.
@@ -1199,7 +1199,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xnsv:richSortCondition.</para>
     /// </summary>
-    public partial class RichSortCondition : TypedOpenXmlLeafElement
+    public partial class RichSortCondition : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the RichSortCondition class.

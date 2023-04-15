@@ -21,7 +21,7 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.DocumentClassification
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is aclsh:classification.</para>
     /// </summary>
-    public partial class ClassificationOutcome : TypedOpenXmlLeafElement
+    public partial class ClassificationOutcome : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ClassificationOutcome class.

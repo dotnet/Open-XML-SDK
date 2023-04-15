@@ -21,7 +21,7 @@ namespace DocumentFormat.OpenXml.Office2019.Presentation
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p1710:readonlyRecommended.</para>
     /// </summary>
-    public partial class ReadonlyRecommended : TypedOpenXmlLeafElement
+    public partial class ReadonlyRecommended : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ReadonlyRecommended class.

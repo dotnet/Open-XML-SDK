@@ -28,7 +28,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.DynamicArray
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.DynamicArray.ExtensionList" /> <c>&lt;xda:extLst></c></description></item>
     /// </list>
     /// </remark>
-    public partial class DynamicArrayProperties : TypedOpenXmlCompositeElement
+    public partial class DynamicArrayProperties : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the DynamicArrayProperties class.
@@ -124,7 +124,7 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.DynamicArray
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Extension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ExtensionList : TypedOpenXmlCompositeElement
+    public partial class ExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ExtensionList class.

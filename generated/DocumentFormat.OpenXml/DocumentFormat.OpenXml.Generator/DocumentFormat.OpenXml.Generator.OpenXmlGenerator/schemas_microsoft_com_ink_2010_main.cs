@@ -29,7 +29,7 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Ink.ContextNodeProperty" /> <c>&lt;msink:property></c></description></item>
     /// </list>
     /// </remark>
-    public partial class ContextNode : TypedOpenXmlCompositeElement
+    public partial class ContextNode : OpenXmlCompositeElement
     {
         /// <summary>
         /// Initializes a new instance of the ContextNode class.
@@ -379,7 +379,7 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is msink:property.</para>
     /// </summary>
-    public partial class ContextNodeProperty : TypedOpenXmlLeafTextElement
+    public partial class ContextNodeProperty : OpenXmlLeafTextElement
     {
         /// <summary>
         /// Initializes a new instance of the ContextNodeProperty class.
@@ -479,7 +479,7 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    public abstract partial class ContextLinkType : TypedOpenXmlLeafElement
+    public abstract partial class ContextLinkType : OpenXmlLeafElement
     {
         /// <summary>
         /// Initializes a new instance of the ContextLinkType class.
