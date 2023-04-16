@@ -183,233 +183,73 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Adds a CustomPropertyPart to the WorksheetPart
         /// </summary>
-        /// <param name="contentType">The content type of the CustomPropertyPart</param>
+        /// <param name="partType">The part type information for the CustomPropertyPart. Required.</param>
+        /// <param name="contentType">The content type of the CustomPropertyPart. Optional, default to null.</param>
+        /// <param name="id">The relationship id. Optional, default to null.</param>
         /// <return>The newly added part</return>
-        public CustomPropertyPart AddCustomPropertyPart(string contentType)
+        public CustomPropertyPart AddCustomPropertyPart(PartTypeInfo partType, string? contentType = null, string? id = null)
         {
-            var childPart = new CustomPropertyPart();
-            InitPart(childPart, contentType);
-            return childPart;
-        }
-
-        /// <summary>
-        /// Adds a CustomPropertyPart to the WorksheetPart
-        /// </summary>
-        /// <param name="contentType">The content type of the CustomPropertyPart</param>
-        /// <param name="id">The relationship id</param>
-        /// <return>The newly added part</return>
-        public CustomPropertyPart AddCustomPropertyPart(string contentType, string id)
-        {
-            var childPart = new CustomPropertyPart();
-            InitPart(childPart, contentType, id);
-            return childPart;
-        }
-
-        /// <summary>
-        /// Adds a CustomPropertyPart to the WorksheetPart
-        /// </summary>
-        /// <param name="partType">The part type of the CustomPropertyPart</param>
-        /// <param name="id">The relationship id</param>
-        /// <return>The newly added part</return>
-        public CustomPropertyPart AddCustomPropertyPart(CustomPropertyPartType partType, string id)
-        {
-            var contentType = CustomPropertyPartTypeInfo.GetContentType(partType);
-            var partExtension = CustomPropertyPartTypeInfo.GetTargetExtension();
-            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
-            return AddCustomPropertyPart(contentType, id);
-        }
-
-        /// <summary>
-        /// Adds a CustomPropertyPart to the WorksheetPart
-        /// </summary>
-        /// <param name="partType">The part type of the CustomPropertyPart</param>
-        /// <return>The newly added part</return>
-        public CustomPropertyPart AddCustomPropertyPart(CustomPropertyPartType partType)
-        {
-            var contentType = CustomPropertyPartTypeInfo.GetContentType(partType);
-            var partExtension = CustomPropertyPartTypeInfo.GetTargetExtension();
-            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
-            return AddCustomPropertyPart(contentType);
+            return (CustomPropertyPart)OpenXmlPartExtensions.InitPart(this, new CustomPropertyPart(), partType, contentType, id);
         }
 
         /// <summary>
         /// Adds a EmbeddedControlPersistenceBinaryDataPart to the WorksheetPart
         /// </summary>
-        /// <param name="contentType">The content type of the EmbeddedControlPersistenceBinaryDataPart</param>
+        /// <param name="partType">The part type information for the EmbeddedControlPersistenceBinaryDataPart. Required.</param>
+        /// <param name="contentType">The content type of the EmbeddedControlPersistenceBinaryDataPart. Optional, default to null.</param>
+        /// <param name="id">The relationship id. Optional, default to null.</param>
         /// <return>The newly added part</return>
-        public EmbeddedControlPersistenceBinaryDataPart AddEmbeddedControlPersistenceBinaryDataPart(string contentType)
+        public EmbeddedControlPersistenceBinaryDataPart AddEmbeddedControlPersistenceBinaryDataPart(PartTypeInfo partType, string? contentType = null, string? id = null)
         {
-            var childPart = new EmbeddedControlPersistenceBinaryDataPart();
-            InitPart(childPart, contentType);
-            return childPart;
-        }
-
-        /// <summary>
-        /// Adds a EmbeddedControlPersistenceBinaryDataPart to the WorksheetPart
-        /// </summary>
-        /// <param name="contentType">The content type of the EmbeddedControlPersistenceBinaryDataPart</param>
-        /// <param name="id">The relationship id</param>
-        /// <return>The newly added part</return>
-        public EmbeddedControlPersistenceBinaryDataPart AddEmbeddedControlPersistenceBinaryDataPart(string contentType, string id)
-        {
-            var childPart = new EmbeddedControlPersistenceBinaryDataPart();
-            InitPart(childPart, contentType, id);
-            return childPart;
-        }
-
-        /// <summary>
-        /// Adds a EmbeddedControlPersistenceBinaryDataPart to the WorksheetPart
-        /// </summary>
-        /// <param name="partType">The part type of the EmbeddedControlPersistenceBinaryDataPart</param>
-        /// <param name="id">The relationship id</param>
-        /// <return>The newly added part</return>
-        public EmbeddedControlPersistenceBinaryDataPart AddEmbeddedControlPersistenceBinaryDataPart(EmbeddedControlPersistenceBinaryDataPartType partType, string id)
-        {
-            var contentType = EmbeddedControlPersistenceBinaryDataPartTypeInfo.GetContentType(partType);
-            var partExtension = EmbeddedControlPersistenceBinaryDataPartTypeInfo.GetTargetExtension();
-            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
-            return AddEmbeddedControlPersistenceBinaryDataPart(contentType, id);
-        }
-
-        /// <summary>
-        /// Adds a EmbeddedControlPersistenceBinaryDataPart to the WorksheetPart
-        /// </summary>
-        /// <param name="partType">The part type of the EmbeddedControlPersistenceBinaryDataPart</param>
-        /// <return>The newly added part</return>
-        public EmbeddedControlPersistenceBinaryDataPart AddEmbeddedControlPersistenceBinaryDataPart(EmbeddedControlPersistenceBinaryDataPartType partType)
-        {
-            var contentType = EmbeddedControlPersistenceBinaryDataPartTypeInfo.GetContentType(partType);
-            var partExtension = EmbeddedControlPersistenceBinaryDataPartTypeInfo.GetTargetExtension();
-            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
-            return AddEmbeddedControlPersistenceBinaryDataPart(contentType);
+            return (EmbeddedControlPersistenceBinaryDataPart)OpenXmlPartExtensions.InitPart(this, new EmbeddedControlPersistenceBinaryDataPart(), partType, contentType, id);
         }
 
         /// <summary>
         /// Adds a EmbeddedControlPersistencePart to the WorksheetPart
         /// </summary>
-        /// <param name="contentType">The content type of the EmbeddedControlPersistencePart</param>
+        /// <param name="partType">The part type information for the EmbeddedControlPersistencePart. Required.</param>
+        /// <param name="contentType">The content type of the EmbeddedControlPersistencePart. Optional, default to null.</param>
+        /// <param name="id">The relationship id. Optional, default to null.</param>
         /// <return>The newly added part</return>
-        public EmbeddedControlPersistencePart AddEmbeddedControlPersistencePart(string contentType)
+        public EmbeddedControlPersistencePart AddEmbeddedControlPersistencePart(PartTypeInfo partType, string? contentType = null, string? id = null)
         {
-            var childPart = new EmbeddedControlPersistencePart();
-            InitPart(childPart, contentType);
-            return childPart;
-        }
-
-        /// <summary>
-        /// Adds a EmbeddedControlPersistencePart to the WorksheetPart
-        /// </summary>
-        /// <param name="contentType">The content type of the EmbeddedControlPersistencePart</param>
-        /// <param name="id">The relationship id</param>
-        /// <return>The newly added part</return>
-        public EmbeddedControlPersistencePart AddEmbeddedControlPersistencePart(string contentType, string id)
-        {
-            var childPart = new EmbeddedControlPersistencePart();
-            InitPart(childPart, contentType, id);
-            return childPart;
-        }
-
-        /// <summary>
-        /// Adds a EmbeddedControlPersistencePart to the WorksheetPart
-        /// </summary>
-        /// <param name="partType">The part type of the EmbeddedControlPersistencePart</param>
-        /// <param name="id">The relationship id</param>
-        /// <return>The newly added part</return>
-        public EmbeddedControlPersistencePart AddEmbeddedControlPersistencePart(EmbeddedControlPersistencePartType partType, string id)
-        {
-            var contentType = EmbeddedControlPersistencePartTypeInfo.GetContentType(partType);
-            var partExtension = EmbeddedControlPersistencePartTypeInfo.GetTargetExtension(partType);
-            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
-            return AddEmbeddedControlPersistencePart(contentType, id);
-        }
-
-        /// <summary>
-        /// Adds a EmbeddedControlPersistencePart to the WorksheetPart
-        /// </summary>
-        /// <param name="partType">The part type of the EmbeddedControlPersistencePart</param>
-        /// <return>The newly added part</return>
-        public EmbeddedControlPersistencePart AddEmbeddedControlPersistencePart(EmbeddedControlPersistencePartType partType)
-        {
-            var contentType = EmbeddedControlPersistencePartTypeInfo.GetContentType(partType);
-            var partExtension = EmbeddedControlPersistencePartTypeInfo.GetTargetExtension(partType);
-            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
-            return AddEmbeddedControlPersistencePart(contentType);
+            return (EmbeddedControlPersistencePart)OpenXmlPartExtensions.InitPart(this, new EmbeddedControlPersistencePart(), partType, contentType, id);
         }
 
         /// <summary>
         /// Adds a EmbeddedObjectPart to the WorksheetPart
         /// </summary>
-        /// <param name="contentType">The content type of the EmbeddedObjectPart</param>
+        /// <param name="partType">The part type information for the EmbeddedObjectPart. Required.</param>
+        /// <param name="contentType">The content type of the EmbeddedObjectPart. Optional, default to null.</param>
+        /// <param name="id">The relationship id. Optional, default to null.</param>
         /// <return>The newly added part</return>
-        public EmbeddedObjectPart AddEmbeddedObjectPart(string contentType)
+        public EmbeddedObjectPart AddEmbeddedObjectPart(PartTypeInfo partType, string? contentType = null, string? id = null)
         {
-            var childPart = new EmbeddedObjectPart();
-            InitPart(childPart, contentType);
-            return childPart;
+            return (EmbeddedObjectPart)OpenXmlPartExtensions.InitPart(this, new EmbeddedObjectPart(), partType, contentType, id);
         }
 
         /// <summary>
         /// Adds a EmbeddedPackagePart to the WorksheetPart
         /// </summary>
-        /// <param name="contentType">The content type of the EmbeddedPackagePart</param>
+        /// <param name="partType">The part type information for the EmbeddedPackagePart. Required.</param>
+        /// <param name="contentType">The content type of the EmbeddedPackagePart. Optional, default to null.</param>
+        /// <param name="id">The relationship id. Optional, default to null.</param>
         /// <return>The newly added part</return>
-        public EmbeddedPackagePart AddEmbeddedPackagePart(string contentType)
+        public EmbeddedPackagePart AddEmbeddedPackagePart(PartTypeInfo partType, string? contentType = null, string? id = null)
         {
-            var childPart = new EmbeddedPackagePart();
-            InitPart(childPart, contentType);
-            return childPart;
+            return (EmbeddedPackagePart)OpenXmlPartExtensions.InitPart(this, new EmbeddedPackagePart(), partType, contentType, id);
         }
 
         /// <summary>
         /// Adds a ImagePart to the WorksheetPart
         /// </summary>
-        /// <param name="contentType">The content type of the ImagePart</param>
+        /// <param name="partType">The part type information for the ImagePart. Required.</param>
+        /// <param name="contentType">The content type of the ImagePart. Optional, default to null.</param>
+        /// <param name="id">The relationship id. Optional, default to null.</param>
         /// <return>The newly added part</return>
-        public ImagePart AddImagePart(string contentType)
+        public ImagePart AddImagePart(PartTypeInfo partType, string? contentType = null, string? id = null)
         {
-            var childPart = new ImagePart();
-            InitPart(childPart, contentType);
-            return childPart;
-        }
-
-        /// <summary>
-        /// Adds a ImagePart to the WorksheetPart
-        /// </summary>
-        /// <param name="contentType">The content type of the ImagePart</param>
-        /// <param name="id">The relationship id</param>
-        /// <return>The newly added part</return>
-        public ImagePart AddImagePart(string contentType, string id)
-        {
-            var childPart = new ImagePart();
-            InitPart(childPart, contentType, id);
-            return childPart;
-        }
-
-        /// <summary>
-        /// Adds a ImagePart to the WorksheetPart
-        /// </summary>
-        /// <param name="partType">The part type of the ImagePart</param>
-        /// <param name="id">The relationship id</param>
-        /// <return>The newly added part</return>
-        public ImagePart AddImagePart(ImagePartType partType, string id)
-        {
-            var contentType = ImagePartTypeInfo.GetContentType(partType);
-            var partExtension = ImagePartTypeInfo.GetTargetExtension(partType);
-            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
-            return AddImagePart(contentType, id);
-        }
-
-        /// <summary>
-        /// Adds a ImagePart to the WorksheetPart
-        /// </summary>
-        /// <param name="partType">The part type of the ImagePart</param>
-        /// <return>The newly added part</return>
-        public ImagePart AddImagePart(ImagePartType partType)
-        {
-            var contentType = ImagePartTypeInfo.GetContentType(partType);
-            var partExtension = ImagePartTypeInfo.GetTargetExtension(partType);
-            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
-            return AddImagePart(contentType);
+            return (ImagePart)OpenXmlPartExtensions.InitPart(this, new ImagePart(), partType, contentType, id);
         }
         
         /// <inheritdoc/>

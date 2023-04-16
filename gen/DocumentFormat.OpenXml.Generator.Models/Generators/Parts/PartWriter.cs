@@ -500,16 +500,9 @@ public static class PartWriter
                 yield return new Item(ItemType.Method, $"Add{p.Name}", writer => GenerateAddPartMethod(writer, type, p, AddPartParameter.MediaDataPart, false));
                 yield return new Item(ItemType.Method, $"Add{p.Name}", writer => GenerateAddPartMethod(writer, type, p, AddPartParameter.MediaDataPart, true));
             }
-            else if (p.IsSpecialEmbeddedPart)
-            {
-                yield return new Item(ItemType.Method, $"Add{p.Name}", writer => GenerateAddPartMethod(writer, type, p, AddPartParameter.ContentType, false));
-            }
             else
             {
-                yield return new Item(ItemType.Method, $"Add{p.Name}", writer => GenerateAddPartMethod(writer, type, p, AddPartParameter.ContentType, false));
-                yield return new Item(ItemType.Method, $"Add{p.Name}", writer => GenerateAddPartMethod(writer, type, p, AddPartParameter.ContentType, true));
-                yield return new Item(ItemType.Method, $"Add{p.Name}", writer => GenerateAddPartMethod(writer, type, p, AddPartParameter.PartType, true));
-                yield return new Item(ItemType.Method, $"Add{p.Name}", writer => GenerateAddPartMethod(writer, type, p, AddPartParameter.PartType, false));
+                yield return new Item(ItemType.Method, $"Add{p.Name}", writer => GenerateLiteAddPartMethod(writer, type, p, AddPartParameter.ContentType, true));
             }
         }
 
@@ -652,6 +645,54 @@ public static class PartWriter
 
                 writer.WriteLine(");");
             }
+        }
+    }
+
+    private static void GenerateLiteAddPartMethod(IndentedTextWriter writer, Part type, PartChild p, AddPartParameter partParameter, bool hasId)
+    {
+        const string ContentTypeParameterName = "contentType";
+        const string PartTypeParameterName = "partType";
+        const string IdParameterName = "id";
+
+        writer.WriteDocumentationComment(new DocumentCommentOptions
+        {
+            Summary = $"Adds a {p.Name} to the {type.Name}",
+            Parameters = GetParameters(),
+            Return = "The newly added part",
+        });
+
+        Parameters GetParameters()
+        {
+            var parameterComments = new Parameters
+            {
+                { PartTypeParameterName, $"The part type information for the {p.Name}. Required." },
+                { ContentTypeParameterName, $"The content type of the {p.Name}. Optional, default to null." },
+                { IdParameterName, "The relationship id. Optional, default to null." },
+            };
+
+            return parameterComments;
+        }
+
+        writer.Write("public ");
+        writer.Write(p.Name);
+        writer.Write(" Add");
+        writer.Write(p.Name);
+        writer.Write("(");
+
+        // writer.Write(p.Name);
+        // writer.Write("Type " + PartTypeParameterName + ", ");
+        writer.Write("PartTypeInfo " + PartTypeParameterName + ", ");
+        writer.Write("string? " + ContentTypeParameterName + " = null, ");
+
+        writer.Write("string? " + IdParameterName + " = null");
+
+        writer.WriteLine(")");
+
+        using (writer.AddBlock(_options))
+        {
+            // writer.Write($"return {p.Name}Extensions.Add{p.Name}(this, {PartTypeParameterName}, {ContentTypeParameterName}, {IdParameterName}");
+            writer.Write($"return ({p.Name})OpenXmlPartExtensions.InitPart(this, new {p.Name}(), {PartTypeParameterName}, {ContentTypeParameterName}, {IdParameterName}");
+            writer.WriteLine(");");
         }
     }
 }

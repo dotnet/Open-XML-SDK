@@ -23,7 +23,7 @@ namespace SvgExample
             return memoryStream;
         }
 
-        public static void AddImagePart(SlidePart slidePart, ImagePartType imagePartType, string id, Stream stream)
+        public static void AddImagePart(SlidePart slidePart, PartTypeInfo imagePartType, string id, Stream stream)
         {
             stream.Seek(0, SeekOrigin.Begin);
             ImagePart imagePart = slidePart.AddImagePart(imagePartType, id);

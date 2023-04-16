@@ -154,105 +154,25 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Adds a CustomXmlPart to the PresentationPart
         /// </summary>
-        /// <param name="contentType">The content type of the CustomXmlPart</param>
+        /// <param name="partType">The part type information for the CustomXmlPart. Required.</param>
+        /// <param name="contentType">The content type of the CustomXmlPart. Optional, default to null.</param>
+        /// <param name="id">The relationship id. Optional, default to null.</param>
         /// <return>The newly added part</return>
-        public CustomXmlPart AddCustomXmlPart(string contentType)
+        public CustomXmlPart AddCustomXmlPart(PartTypeInfo partType, string? contentType = null, string? id = null)
         {
-            var childPart = new CustomXmlPart();
-            InitPart(childPart, contentType);
-            return childPart;
-        }
-
-        /// <summary>
-        /// Adds a CustomXmlPart to the PresentationPart
-        /// </summary>
-        /// <param name="contentType">The content type of the CustomXmlPart</param>
-        /// <param name="id">The relationship id</param>
-        /// <return>The newly added part</return>
-        public CustomXmlPart AddCustomXmlPart(string contentType, string id)
-        {
-            var childPart = new CustomXmlPart();
-            InitPart(childPart, contentType, id);
-            return childPart;
-        }
-
-        /// <summary>
-        /// Adds a CustomXmlPart to the PresentationPart
-        /// </summary>
-        /// <param name="partType">The part type of the CustomXmlPart</param>
-        /// <param name="id">The relationship id</param>
-        /// <return>The newly added part</return>
-        public CustomXmlPart AddCustomXmlPart(CustomXmlPartType partType, string id)
-        {
-            var contentType = CustomXmlPartTypeInfo.GetContentType(partType);
-            var partExtension = CustomXmlPartTypeInfo.GetTargetExtension();
-            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
-            return AddCustomXmlPart(contentType, id);
-        }
-
-        /// <summary>
-        /// Adds a CustomXmlPart to the PresentationPart
-        /// </summary>
-        /// <param name="partType">The part type of the CustomXmlPart</param>
-        /// <return>The newly added part</return>
-        public CustomXmlPart AddCustomXmlPart(CustomXmlPartType partType)
-        {
-            var contentType = CustomXmlPartTypeInfo.GetContentType(partType);
-            var partExtension = CustomXmlPartTypeInfo.GetTargetExtension();
-            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
-            return AddCustomXmlPart(contentType);
+            return (CustomXmlPart)OpenXmlPartExtensions.InitPart(this, new CustomXmlPart(), partType, contentType, id);
         }
 
         /// <summary>
         /// Adds a FontPart to the PresentationPart
         /// </summary>
-        /// <param name="contentType">The content type of the FontPart</param>
+        /// <param name="partType">The part type information for the FontPart. Required.</param>
+        /// <param name="contentType">The content type of the FontPart. Optional, default to null.</param>
+        /// <param name="id">The relationship id. Optional, default to null.</param>
         /// <return>The newly added part</return>
-        public FontPart AddFontPart(string contentType)
+        public FontPart AddFontPart(PartTypeInfo partType, string? contentType = null, string? id = null)
         {
-            var childPart = new FontPart();
-            InitPart(childPart, contentType);
-            return childPart;
-        }
-
-        /// <summary>
-        /// Adds a FontPart to the PresentationPart
-        /// </summary>
-        /// <param name="contentType">The content type of the FontPart</param>
-        /// <param name="id">The relationship id</param>
-        /// <return>The newly added part</return>
-        public FontPart AddFontPart(string contentType, string id)
-        {
-            var childPart = new FontPart();
-            InitPart(childPart, contentType, id);
-            return childPart;
-        }
-
-        /// <summary>
-        /// Adds a FontPart to the PresentationPart
-        /// </summary>
-        /// <param name="partType">The part type of the FontPart</param>
-        /// <param name="id">The relationship id</param>
-        /// <return>The newly added part</return>
-        public FontPart AddFontPart(FontPartType partType, string id)
-        {
-            var contentType = FontPartTypeInfo.GetContentType(partType);
-            var partExtension = FontPartTypeInfo.GetTargetExtension(partType);
-            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
-            return AddFontPart(contentType, id);
-        }
-
-        /// <summary>
-        /// Adds a FontPart to the PresentationPart
-        /// </summary>
-        /// <param name="partType">The part type of the FontPart</param>
-        /// <return>The newly added part</return>
-        public FontPart AddFontPart(FontPartType partType)
-        {
-            var contentType = FontPartTypeInfo.GetContentType(partType);
-            var partExtension = FontPartTypeInfo.GetTargetExtension(partType);
-            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
-            return AddFontPart(contentType);
+            return (FontPart)OpenXmlPartExtensions.InitPart(this, new FontPart(), partType, contentType, id);
         }
         
         /// <inheritdoc/>

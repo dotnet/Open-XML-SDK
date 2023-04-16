@@ -6,11 +6,11 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines EmbeddedControlPersistenceBinaryDataPartType - types of EmbeddedControlPart.
     /// </summary>
-    public enum EmbeddedControlPersistenceBinaryDataPartType
+    public static class EmbeddedControlPersistenceBinaryDataPartType
     {
         /// <summary>
-        /// ActieveX (.bin).
+        /// Defines type information for ActiveXBin embedded control persistence binary data part.
         /// </summary>
-        ActiveXBin,
+        public static readonly PartTypeInfo ActiveXBin = new("application/vnd.ms-office.activeX", ".bin");
     }
 }

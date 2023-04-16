@@ -35,6 +35,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Removed mutable properties on OpenXmlAttribute and marked as `readonly`
 - Removed `OpenXmlPackage.Close` in favor of Dispose (#1373)
 - OpenXmlPart/OpenXmlContainer/OpenXmlPackage and derived types all have internal constructors
+- Consolidate add part methods (e.g. `AddEmbeddedPackagePart`, `AddImagePart`, etc...) to use one InitPart extension (#1391)
 - Removed `OpenXmlPackage.SaveAs` in favor of Clone (#1376)
 
 ### Fixed

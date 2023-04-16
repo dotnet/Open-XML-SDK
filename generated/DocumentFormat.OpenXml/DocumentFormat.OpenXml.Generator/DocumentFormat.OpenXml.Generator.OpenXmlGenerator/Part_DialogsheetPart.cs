@@ -98,13 +98,13 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Adds a EmbeddedObjectPart to the DialogsheetPart
         /// </summary>
-        /// <param name="contentType">The content type of the EmbeddedObjectPart</param>
+        /// <param name="partType">The part type information for the EmbeddedObjectPart. Required.</param>
+        /// <param name="contentType">The content type of the EmbeddedObjectPart. Optional, default to null.</param>
+        /// <param name="id">The relationship id. Optional, default to null.</param>
         /// <return>The newly added part</return>
-        public EmbeddedObjectPart AddEmbeddedObjectPart(string contentType)
+        public EmbeddedObjectPart AddEmbeddedObjectPart(PartTypeInfo partType, string? contentType = null, string? id = null)
         {
-            var childPart = new EmbeddedObjectPart();
-            InitPart(childPart, contentType);
-            return childPart;
+            return (EmbeddedObjectPart)OpenXmlPartExtensions.InitPart(this, new EmbeddedObjectPart(), partType, contentType, id);
         }
         
         /// <inheritdoc/>

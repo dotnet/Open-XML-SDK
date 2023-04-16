@@ -1,31 +1,33 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using static DocumentFormat.OpenXml.Packaging.OpenXmlPartExtensions;
+
 namespace DocumentFormat.OpenXml.Packaging
 {
     /// <summary>
     /// Defines CustomXmlPartType - types of CustomXmlPart.
     /// </summary>
-    public enum CustomXmlPartType
+    public static class CustomXmlPartType
     {
         /// <summary>
-        /// Additional characteristics (application/xml).
+        /// Defines type information for AdditionalCharacteristicsInfo part.
         /// </summary>
-        AdditionalCharacteristics,
+        public static readonly PartTypeInfo AdditionalCharacteristicsInfo = new("application/xml", ".xml");
 
         /// <summary>
-        /// Bibliography (application/xml).
+        /// Defines type information for Bibliography part.
         /// </summary>
-        Bibliography,
+        public static readonly PartTypeInfo Bibliography = new("application/xml", ".xml");
 
         /// <summary>
-        /// Custom XML (application/xml).
+        /// Defines type information for CustomXml part.
         /// </summary>
-        CustomXml,
+        public static readonly PartTypeInfo CustomXml = new("application/xml", ".xml");
 
         /// <summary>
-        /// Ink content (application/inkml+xml).
+        /// Defines type information for InkContent part.
         /// </summary>
-        InkContent,
+        public static readonly PartTypeInfo InkContent = new("application/inkml+xml", ".xml");
     }
 }

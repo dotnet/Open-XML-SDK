@@ -83,53 +83,13 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Adds a FontPart to the FontTablePart
         /// </summary>
-        /// <param name="contentType">The content type of the FontPart</param>
+        /// <param name="partType">The part type information for the FontPart. Required.</param>
+        /// <param name="contentType">The content type of the FontPart. Optional, default to null.</param>
+        /// <param name="id">The relationship id. Optional, default to null.</param>
         /// <return>The newly added part</return>
-        public FontPart AddFontPart(string contentType)
+        public FontPart AddFontPart(PartTypeInfo partType, string? contentType = null, string? id = null)
         {
-            var childPart = new FontPart();
-            InitPart(childPart, contentType);
-            return childPart;
-        }
-
-        /// <summary>
-        /// Adds a FontPart to the FontTablePart
-        /// </summary>
-        /// <param name="contentType">The content type of the FontPart</param>
-        /// <param name="id">The relationship id</param>
-        /// <return>The newly added part</return>
-        public FontPart AddFontPart(string contentType, string id)
-        {
-            var childPart = new FontPart();
-            InitPart(childPart, contentType, id);
-            return childPart;
-        }
-
-        /// <summary>
-        /// Adds a FontPart to the FontTablePart
-        /// </summary>
-        /// <param name="partType">The part type of the FontPart</param>
-        /// <param name="id">The relationship id</param>
-        /// <return>The newly added part</return>
-        public FontPart AddFontPart(FontPartType partType, string id)
-        {
-            var contentType = FontPartTypeInfo.GetContentType(partType);
-            var partExtension = FontPartTypeInfo.GetTargetExtension(partType);
-            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
-            return AddFontPart(contentType, id);
-        }
-
-        /// <summary>
-        /// Adds a FontPart to the FontTablePart
-        /// </summary>
-        /// <param name="partType">The part type of the FontPart</param>
-        /// <return>The newly added part</return>
-        public FontPart AddFontPart(FontPartType partType)
-        {
-            var contentType = FontPartTypeInfo.GetContentType(partType);
-            var partExtension = FontPartTypeInfo.GetTargetExtension(partType);
-            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
-            return AddFontPart(contentType);
+            return (FontPart)OpenXmlPartExtensions.InitPart(this, new FontPart(), partType, contentType, id);
         }
         
         /// <inheritdoc/>

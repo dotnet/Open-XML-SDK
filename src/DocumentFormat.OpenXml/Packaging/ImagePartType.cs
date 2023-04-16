@@ -28,41 +28,41 @@ namespace DocumentFormat.OpenXml.Packaging
     /// L".svg",    L"image/svg+xml",
     /// ]]>
     /// </summary>
-    public enum ImagePartType
+    public static class ImagePartType
     {
         /// <summary>
-        /// Windows Bitmap Graphics (.bmp).
+        /// Defines type information for Bmp image part.
         /// </summary>
-        Bmp,
+        public static readonly PartTypeInfo Bmp = new("image/bmp", ".bmp");
 
         /// <summary>
-        /// Graphic Interchange Format (.gif).
+        /// Defines type information for Gif image part.
         /// </summary>
-        Gif,
+        public static readonly PartTypeInfo Gif = new("image/gif", ".gif");
 
         /// <summary>
-        /// Portable (Public) Network Graphic (.png).
+        /// Defines type information for Png image part.
         /// </summary>
-        Png,
+        public static readonly PartTypeInfo Png = new("image/png", ".png");
 
         /// <summary>
-        /// Tagged Image Format File (.tiff).
+        /// Defines type information for Tiff image part.
         /// </summary>
-        Tiff,
+        public static readonly PartTypeInfo Tiff = new("image/tiff", ".tiff");
         ///// <summary>
         ///// X Bitmap Graphic (.xbm).
         ///// </summary>
         // Xbm,
 
         /// <summary>
-        /// Windows Icon (.ico).
+        /// Defines type information for Icon image part.
         /// </summary>
-        Icon,
+        public static readonly PartTypeInfo Icon = new("image/x-icon", ".ico");
 
         /// <summary>
-        /// PC Paintbrush Bitmap Graphic (.pcx).
+        /// Defines type information for Pcx image part.
         /// </summary>
-        Pcx,
+        public static readonly PartTypeInfo Pcx = new("image/x-pcx", ".pcx");
         ///// <summary>
         ///// Compressed Macintosh PICT (.pcz).
         ///// </summary>
@@ -75,23 +75,23 @@ namespace DocumentFormat.OpenXml.Packaging
         // Pict,
 
         /// <summary>
-        /// JPEG/JIFF Image (.jpeg).
+        /// Defines type information for Jpeg image part.
         /// </summary>
-        Jpeg,
+        public static readonly PartTypeInfo Jpeg = new("image/jpeg", ".jpg");
 
         /// <summary>
-        /// Extended (Enhanced) Windows Metafile Format (.emf).
+        /// Defines type information for Emf image part.
         /// </summary>
-        Emf,
+        public static readonly PartTypeInfo Emf = new("image/x-emf", ".emf");
 
         /// <summary>
-        /// Windows Metafile (.wmf).
+        /// Defines type information for Wmf image part.
         /// </summary>
-        Wmf,
+        public static readonly PartTypeInfo Wmf = new("image/x-wmf", ".wmf");
 
         /// <summary>
-        /// Scalable Vector Graphics (.svg).
+        /// Defines type information for Svg image part.
         /// </summary>
-        Svg,
+        public static readonly PartTypeInfo Svg = new("image/svg+xml", ".svg");
     }
 }
