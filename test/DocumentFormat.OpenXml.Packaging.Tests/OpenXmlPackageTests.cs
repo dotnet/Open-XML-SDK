@@ -118,7 +118,7 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
 
         private static AltChunk CreateAltChunkWithXmlContent(
             WordprocessingDocument wordDocument,
-            AlternativeFormatImportPartType contentType,
+            PartTypeInfo contentType,
             string xmlContent)
         {
             string altChunkId = "XmlAltChunkId-" + Guid.NewGuid();

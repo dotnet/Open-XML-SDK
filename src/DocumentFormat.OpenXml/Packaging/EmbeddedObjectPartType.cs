@@ -6,16 +6,11 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines EmbeddedPackagePartType - types of EmbeddedPackagePart.
     /// </summary>
-    public enum EmbeddedObjectPartType
+    public static class EmbeddedObjectPartType
     {
         /// <summary>
-        /// Object type unknown
+        /// Defines type information for Binary embedded object part.
         /// </summary>
-        Unknown = 0,
-
-        /// <summary>
-        /// Office Document OLE Embedded object
-        /// </summary>
-        Binary,
+        public static readonly PartTypeInfo Binary = new("application/vnd.openxmlformats-officedocument.oleObject", ".bin");
     }
 }

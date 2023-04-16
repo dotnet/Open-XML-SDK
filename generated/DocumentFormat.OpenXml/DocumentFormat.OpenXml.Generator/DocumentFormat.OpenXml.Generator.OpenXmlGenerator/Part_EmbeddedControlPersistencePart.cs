@@ -37,13 +37,13 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Adds a EmbeddedControlPersistenceBinaryDataPart to the EmbeddedControlPersistencePart
         /// </summary>
-        /// <param name="partType">The part type of the EmbeddedControlPersistenceBinaryDataPart. Required, may be Unknown.</param>
+        /// <param name="partType">The part type information for the EmbeddedControlPersistenceBinaryDataPart. Required.</param>
         /// <param name="contentType">The content type of the EmbeddedControlPersistenceBinaryDataPart. Optional, default to null.</param>
         /// <param name="id">The relationship id. Optional, default to null.</param>
         /// <return>The newly added part</return>
-        public EmbeddedControlPersistenceBinaryDataPart AddEmbeddedControlPersistenceBinaryDataPart(EmbeddedControlPersistenceBinaryDataPartType partType, string? contentType = null, string? id = null)
+        public EmbeddedControlPersistenceBinaryDataPart AddEmbeddedControlPersistenceBinaryDataPart(PartTypeInfo partType, string? contentType = null, string? id = null)
         {
-            return EmbeddedControlPersistenceBinaryDataPartExtensions.AddEmbeddedControlPersistenceBinaryDataPart(this, partType, contentType, id);
+            return (EmbeddedControlPersistenceBinaryDataPart)OpenXmlPartExtensions.InitPart(this, new EmbeddedControlPersistenceBinaryDataPart(), partType, contentType, id);
         }
         
         /// <inheritdoc/>

@@ -189,61 +189,61 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Adds a CustomXmlPart to the NotesSlidePart
         /// </summary>
-        /// <param name="partType">The part type of the CustomXmlPart. Required, may be Unknown.</param>
+        /// <param name="partType">The part type information for the CustomXmlPart. Required.</param>
         /// <param name="contentType">The content type of the CustomXmlPart. Optional, default to null.</param>
         /// <param name="id">The relationship id. Optional, default to null.</param>
         /// <return>The newly added part</return>
-        public CustomXmlPart AddCustomXmlPart(CustomXmlPartType partType, string? contentType = null, string? id = null)
+        public CustomXmlPart AddCustomXmlPart(PartTypeInfo partType, string? contentType = null, string? id = null)
         {
-            return CustomXmlPartExtensions.AddCustomXmlPart(this, partType, contentType, id);
+            return (CustomXmlPart)OpenXmlPartExtensions.InitPart(this, new CustomXmlPart(), partType, contentType, id);
         }
 
         /// <summary>
         /// Adds a EmbeddedControlPersistenceBinaryDataPart to the NotesSlidePart
         /// </summary>
-        /// <param name="partType">The part type of the EmbeddedControlPersistenceBinaryDataPart. Required, may be Unknown.</param>
+        /// <param name="partType">The part type information for the EmbeddedControlPersistenceBinaryDataPart. Required.</param>
         /// <param name="contentType">The content type of the EmbeddedControlPersistenceBinaryDataPart. Optional, default to null.</param>
         /// <param name="id">The relationship id. Optional, default to null.</param>
         /// <return>The newly added part</return>
-        public EmbeddedControlPersistenceBinaryDataPart AddEmbeddedControlPersistenceBinaryDataPart(EmbeddedControlPersistenceBinaryDataPartType partType, string? contentType = null, string? id = null)
+        public EmbeddedControlPersistenceBinaryDataPart AddEmbeddedControlPersistenceBinaryDataPart(PartTypeInfo partType, string? contentType = null, string? id = null)
         {
-            return EmbeddedControlPersistenceBinaryDataPartExtensions.AddEmbeddedControlPersistenceBinaryDataPart(this, partType, contentType, id);
+            return (EmbeddedControlPersistenceBinaryDataPart)OpenXmlPartExtensions.InitPart(this, new EmbeddedControlPersistenceBinaryDataPart(), partType, contentType, id);
         }
 
         /// <summary>
         /// Adds a EmbeddedObjectPart to the NotesSlidePart
         /// </summary>
-        /// <param name="partType">The part type of the EmbeddedObjectPart. Required, may be Unknown.</param>
+        /// <param name="partType">The part type information for the EmbeddedObjectPart. Required.</param>
         /// <param name="contentType">The content type of the EmbeddedObjectPart. Optional, default to null.</param>
         /// <param name="id">The relationship id. Optional, default to null.</param>
         /// <return>The newly added part</return>
-        public EmbeddedObjectPart AddEmbeddedObjectPart(EmbeddedObjectPartType partType, string? contentType = null, string? id = null)
+        public EmbeddedObjectPart AddEmbeddedObjectPart(PartTypeInfo partType, string? contentType = null, string? id = null)
         {
-            return EmbeddedObjectPartExtensions.AddEmbeddedObjectPart(this, partType, contentType, id);
+            return (EmbeddedObjectPart)OpenXmlPartExtensions.InitPart(this, new EmbeddedObjectPart(), partType, contentType, id);
         }
 
         /// <summary>
         /// Adds a EmbeddedPackagePart to the NotesSlidePart
         /// </summary>
-        /// <param name="partType">The part type of the EmbeddedPackagePart. Required, may be Unknown.</param>
+        /// <param name="partType">The part type information for the EmbeddedPackagePart. Required.</param>
         /// <param name="contentType">The content type of the EmbeddedPackagePart. Optional, default to null.</param>
         /// <param name="id">The relationship id. Optional, default to null.</param>
         /// <return>The newly added part</return>
-        public EmbeddedPackagePart AddEmbeddedPackagePart(EmbeddedPackagePartType partType, string? contentType = null, string? id = null)
+        public EmbeddedPackagePart AddEmbeddedPackagePart(PartTypeInfo partType, string? contentType = null, string? id = null)
         {
-            return EmbeddedPackagePartExtensions.AddEmbeddedPackagePart(this, partType, contentType, id);
+            return (EmbeddedPackagePart)OpenXmlPartExtensions.InitPart(this, new EmbeddedPackagePart(), partType, contentType, id);
         }
 
         /// <summary>
         /// Adds a ImagePart to the NotesSlidePart
         /// </summary>
-        /// <param name="partType">The part type of the ImagePart. Required, may be Unknown.</param>
+        /// <param name="partType">The part type information for the ImagePart. Required.</param>
         /// <param name="contentType">The content type of the ImagePart. Optional, default to null.</param>
         /// <param name="id">The relationship id. Optional, default to null.</param>
         /// <return>The newly added part</return>
-        public ImagePart AddImagePart(ImagePartType partType, string? contentType = null, string? id = null)
+        public ImagePart AddImagePart(PartTypeInfo partType, string? contentType = null, string? id = null)
         {
-            return ImagePartExtensions.AddImagePart(this, partType, contentType, id);
+            return (ImagePart)OpenXmlPartExtensions.InitPart(this, new ImagePart(), partType, contentType, id);
         }
 
         /// <summary>

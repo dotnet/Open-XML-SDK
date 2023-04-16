@@ -6,111 +6,106 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines EmbeddedPackagePartType - types of EmbeddedPackagePart.
     /// </summary>
-    public enum EmbeddedPackagePartType
+    public static class EmbeddedPackagePartType
     {
         /// <summary>
-        /// Default to unknown package type.
+        /// Defines type information for Docm embedded package part.
         /// </summary>
-        Unknown = 0,
+        public static readonly PartTypeInfo Docm = new("application/vnd.ms-word.document.macroEnabled.12", ".docm");
 
         /// <summary>
-        /// Office Open XML macro-enabled document (.docm).
+        /// Defines type information for Docx embedded package part.
         /// </summary>
-        Docm,
+        public static readonly PartTypeInfo Docx = new("application/vnd.openxmlformats-officedocument.wordprocessingml.document", ".docx");
 
         /// <summary>
-        /// Office Open XML document (.docx).
+        /// Defines type information for Dotm embedded package part.
         /// </summary>
-        Docx,
+        public static readonly PartTypeInfo Dotm = new("application/vnd.ms-word.template.macroEnabled.12", ".dotm");
 
         /// <summary>
-        /// Office Open XML macro-enabled document template (.dotm).
+        /// Defines type information for Dotx embedded package part.
         /// </summary>
-        Dotm,
+        public static readonly PartTypeInfo Dotx = new("application/vnd.openxmlformats-officedocument.wordprocessingml.template", ".dotx");
 
         /// <summary>
-        /// Office Open XML document template (.dotx).
+        /// Defines type information for Potm embedded package part.
         /// </summary>
-        Dotx,
+        public static readonly PartTypeInfo Potm = new("application/vnd.ms-powerpoint.template.macroEnabled.12", ".potm");
 
         /// <summary>
-        /// Office Open XML macro-enabled presentation template (.potm).
+        /// Defines type information for Potx embedded package part.
         /// </summary>
-        Potm,
+        public static readonly PartTypeInfo Potx = new("application/vnd.openxmlformats-officedocument.presentationml.template", ".potx");
 
         /// <summary>
-        /// Office Open XML presentation template (.potx).
+        /// Defines type information for Ppam embedded package part.
         /// </summary>
-        Potx,
+        public static readonly PartTypeInfo Ppam = new("application/vnd.ms-powerpoint.addin.macroEnabled.12", ".ppam");
 
         /// <summary>
-        /// Office Open XML macro-enabled presentation add-in (.ppam).
+        /// Defines type information for Ppsm embedded package part.
         /// </summary>
-        Ppam,
+        public static readonly PartTypeInfo Ppsm = new("application/vnd.ms-powerpoint.slideshow.macroEnabled.12", ".ppsm");
 
         /// <summary>
-        /// Office Open XML macroe-enabled show (.ppsm).
+        /// Defines type information for Ppsx embedded package part.
         /// </summary>
-        Ppsm,
+        public static readonly PartTypeInfo Ppsx = new("application/vnd.openxmlformats-officedocument.presentationml.slideshow", ".ppsx");
 
         /// <summary>
-        /// Office Open XML show (.ppsx).
+        /// Defines type information for Pptm embedded package part.
         /// </summary>
-        Ppsx,
+        public static readonly PartTypeInfo Pptm = new("application/vnd.ms-powerpoint.presentation.macroEnabled.12", ".pptm");
 
         /// <summary>
-        /// Office Open XML macro-enabled presentation (.pptm).
+        /// Defines type information for Pptx embedded package part.
         /// </summary>
-        Pptm,
+        public static readonly PartTypeInfo Pptx = new("application/vnd.openxmlformats-officedocument.presentationml.presentation", ".pptx");
 
         /// <summary>
-        /// Office Open XML presentation (.pptx).
+        /// Defines type information for Sldm embedded package part.
         /// </summary>
-        Pptx,
+        public static readonly PartTypeInfo Sldm = new("application/vnd.ms-powerpoint.slide.macroEnabled.12", ".sldm");
 
         /// <summary>
-        /// Office Open XML macro-enabled slide (.sldm).
+        /// Defines type information for Sldx embedded package part.
         /// </summary>
-        Sldm,
+        public static readonly PartTypeInfo Sldx = new("application/vnd.openxmlformats-officedocument.presentationml.slide", ".sldx");
 
         /// <summary>
-        /// Office Open XML slide (.sldx).
+        /// Defines type information for Thmx embedded package part.
         /// </summary>
-        Sldx,
+        public static readonly PartTypeInfo Thmx = new("application/vnd.ms-officetheme", ".thmx");
 
         /// <summary>
-        /// Office Open XML office theme (.thmx).
+        /// Defines type information for Xlam embedded package part.
         /// </summary>
-        Thmx,
+        public static readonly PartTypeInfo Xlam = new("application/vnd.ms-excel.addin.macroEnabled.12", ".xlam");
 
         /// <summary>
-        /// Office Open XML macro-enabled add-in (.xlam).
+        /// Defines type information for Xlsb embedded package part.
         /// </summary>
-        Xlam,
+        public static readonly PartTypeInfo Xlsb = new("application/vnd.ms-excel.sheet.binary.macroEnabled.12", ".xlsb");
 
         /// <summary>
-        /// Office Open XML binary workbook (.xlsb).
+        /// Defines type information for Xlsm embedded package part.
         /// </summary>
-        Xlsb,
+        public static readonly PartTypeInfo Xlsm = new("application/vnd.ms-excel.sheet.macroEnabled.12", ".xlsm");
 
         /// <summary>
-        /// Office Open XML macro-enabled workbook (.xlsm).
+        /// Defines type information for Xlsx embedded package part.
         /// </summary>
-        Xlsm,
+        public static readonly PartTypeInfo Xlsx = new("application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", ".xlsx");
 
         /// <summary>
-        /// Office Open XML workbook (.xlsx).
+        /// Defines type information for Xltm embedded package part.
         /// </summary>
-        Xlsx,
+        public static readonly PartTypeInfo Xltm = new("application/vnd.ms-excel.template.macroEnabled.12", ".xltm");
 
         /// <summary>
-        /// Office Open XML macro-enabled workbook template (.xltm).
+        /// Defines type information for Xltx embedded package part.
         /// </summary>
-        Xltm,
-
-        /// <summary>
-        /// Office Open XML workbook template (.xltx).
-        /// </summary>
-        Xltx,
+        public static readonly PartTypeInfo Xltx = new("application/vnd.openxmlformats-officedocument.spreadsheetml.template", ".xltx");
     }
 }

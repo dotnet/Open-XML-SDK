@@ -154,25 +154,25 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Adds a CustomXmlPart to the PresentationPart
         /// </summary>
-        /// <param name="partType">The part type of the CustomXmlPart. Required, may be Unknown.</param>
+        /// <param name="partType">The part type information for the CustomXmlPart. Required.</param>
         /// <param name="contentType">The content type of the CustomXmlPart. Optional, default to null.</param>
         /// <param name="id">The relationship id. Optional, default to null.</param>
         /// <return>The newly added part</return>
-        public CustomXmlPart AddCustomXmlPart(CustomXmlPartType partType, string? contentType = null, string? id = null)
+        public CustomXmlPart AddCustomXmlPart(PartTypeInfo partType, string? contentType = null, string? id = null)
         {
-            return CustomXmlPartExtensions.AddCustomXmlPart(this, partType, contentType, id);
+            return (CustomXmlPart)OpenXmlPartExtensions.InitPart(this, new CustomXmlPart(), partType, contentType, id);
         }
 
         /// <summary>
         /// Adds a FontPart to the PresentationPart
         /// </summary>
-        /// <param name="partType">The part type of the FontPart. Required, may be Unknown.</param>
+        /// <param name="partType">The part type information for the FontPart. Required.</param>
         /// <param name="contentType">The content type of the FontPart. Optional, default to null.</param>
         /// <param name="id">The relationship id. Optional, default to null.</param>
         /// <return>The newly added part</return>
-        public FontPart AddFontPart(FontPartType partType, string? contentType = null, string? id = null)
+        public FontPart AddFontPart(PartTypeInfo partType, string? contentType = null, string? id = null)
         {
-            return FontPartExtensions.AddFontPart(this, partType, contentType, id);
+            return (FontPart)OpenXmlPartExtensions.InitPart(this, new FontPart(), partType, contentType, id);
         }
         
         /// <inheritdoc/>

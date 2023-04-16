@@ -665,7 +665,7 @@ public static class PartWriter
         {
             var parameterComments = new Parameters
             {
-                { PartTypeParameterName, $"The part type of the {p.Name}. Required, may be Unknown." },
+                { PartTypeParameterName, $"The part type information for the {p.Name}. Required." },
                 { ContentTypeParameterName, $"The content type of the {p.Name}. Optional, default to null." },
                 { IdParameterName, "The relationship id. Optional, default to null." },
             };
@@ -679,8 +679,9 @@ public static class PartWriter
         writer.Write(p.Name);
         writer.Write("(");
 
-        writer.Write(p.Name);
-        writer.Write("Type " + PartTypeParameterName + ", ");
+        // writer.Write(p.Name);
+        // writer.Write("Type " + PartTypeParameterName + ", ");
+        writer.Write("PartTypeInfo " + PartTypeParameterName + ", ");
         writer.Write("string? " + ContentTypeParameterName + " = null, ");
 
         writer.Write("string? " + IdParameterName + " = null");
@@ -689,7 +690,8 @@ public static class PartWriter
 
         using (writer.AddBlock(_options))
         {
-            writer.Write($"return {p.Name}Extensions.Add{p.Name}(this, {PartTypeParameterName}, {ContentTypeParameterName}, {IdParameterName}");
+            // writer.Write($"return {p.Name}Extensions.Add{p.Name}(this, {PartTypeParameterName}, {ContentTypeParameterName}, {IdParameterName}");
+            writer.Write($"return ({p.Name})OpenXmlPartExtensions.InitPart(this, new {p.Name}(), {PartTypeParameterName}, {ContentTypeParameterName}, {IdParameterName}");
             writer.WriteLine(");");
         }
     }

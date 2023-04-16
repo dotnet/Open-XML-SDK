@@ -8,49 +8,49 @@ namespace DocumentFormat.OpenXml.Packaging
 {
     internal static class EmbeddedControlPersistenceBinaryDataPartTypeInfo
     {
-        internal static string GetContentType(EmbeddedControlPersistenceBinaryDataPartType controlType)
-            => controlType switch
-            {
-                EmbeddedControlPersistenceBinaryDataPartType.ActiveXBin => "application/vnd.ms-office.activeX",
-                _ => throw new ArgumentOutOfRangeException(nameof(controlType)),
-            };
+        // internal static string GetContentType(EmbeddedControlPersistenceBinaryDataPartType controlType)
+        //    => controlType switch
+        //    {
+        //        EmbeddedControlPersistenceBinaryDataPartType.ActiveXBin => "application/vnd.ms-office.activeX",
+        //        _ => throw new ArgumentOutOfRangeException(nameof(controlType)),
+        //    };
 
-        internal static string GetTargetExtension() => ".bin";
+        // internal static string GetTargetExtension() => ".bin";
 
-        internal static EmbeddedControlPersistenceBinaryDataPartType GetEmbeddedControlPersistenceBinaryDataPartTypeFromContentType(string contenttype)
-            => contenttype.ToLower(CultureInfo.CurrentCulture) switch
-            {
-                // If just application/xml, then just use EmbeddedControlPersistenceBinaryData type.
-                "application/vnd.ms-office.activeX" => EmbeddedControlPersistenceBinaryDataPartType.ActiveXBin,
-                _ => throw new NotSupportedException($"{contenttype} is not supported"),
-            };
+        // internal static EmbeddedControlPersistenceBinaryDataPartType GetEmbeddedControlPersistenceBinaryDataPartTypeFromContentType(string contenttype)
+        //    => contenttype.ToLower(CultureInfo.CurrentCulture) switch
+        //    {
+        //        // If just application/xml, then just use EmbeddedControlPersistenceBinaryData type.
+        //        "application/vnd.ms-office.activeX" => EmbeddedControlPersistenceBinaryDataPartType.ActiveXBin,
+        //        _ => throw new NotSupportedException($"{contenttype} is not supported"),
+        //    };
 
-        internal static bool TryGetEmbeddedControlPersistenceBinaryDataPartTypeFromContentType(string contentType)
-        {
-            try
-            {
-                _ = GetEmbeddedControlPersistenceBinaryDataPartTypeFromContentType(contentType);
-                return true;
-            }
-            catch (NotSupportedException)
-            {
-            }
+        // internal static bool TryGetEmbeddedControlPersistenceBinaryDataPartTypeFromContentType(string contentType)
+        // {
+        //    try
+        //    {
+        //        _ = GetEmbeddedControlPersistenceBinaryDataPartTypeFromContentType(contentType);
+        //        return true;
+        //    }
+        //    catch (NotSupportedException)
+        //    {
+        //    }
 
-            return false;
-        }
+        // return false;
+        // }
 
-        internal static bool TryGetContentType(EmbeddedControlPersistenceBinaryDataPartType partType)
-        {
-            try
-            {
-                _ = GetContentType(partType);
-                return true;
-            }
-            catch (NotSupportedException)
-            {
-            }
+        // internal static bool TryGetContentType(EmbeddedControlPersistenceBinaryDataPartType partType)
+        // {
+        //    try
+        //    {
+        //        _ = GetContentType(partType);
+        //        return true;
+        //    }
+        //    catch (NotSupportedException)
+        //    {
+        //    }
 
-            return false;
-        }
+        // return false;
+        // }
     }
 }

@@ -83,13 +83,13 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Adds a FontPart to the FontTablePart
         /// </summary>
-        /// <param name="partType">The part type of the FontPart. Required, may be Unknown.</param>
+        /// <param name="partType">The part type information for the FontPart. Required.</param>
         /// <param name="contentType">The content type of the FontPart. Optional, default to null.</param>
         /// <param name="id">The relationship id. Optional, default to null.</param>
         /// <return>The newly added part</return>
-        public FontPart AddFontPart(FontPartType partType, string? contentType = null, string? id = null)
+        public FontPart AddFontPart(PartTypeInfo partType, string? contentType = null, string? id = null)
         {
-            return FontPartExtensions.AddFontPart(this, partType, contentType, id);
+            return (FontPart)OpenXmlPartExtensions.InitPart(this, new FontPart(), partType, contentType, id);
         }
         
         /// <inheritdoc/>

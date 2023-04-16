@@ -6,26 +6,21 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines ThumbnailPartType - types of ThumbnailPart.
     /// </summary>
-    public enum ThumbnailPartType
+    public static class ThumbnailPartType
     {
         /// <summary>
-        /// Unknown part type
+        /// Defines type information for JPEG/JIFF Image (.jpeg) thumbnail part.
         /// </summary>
-        Unknown = 0,
+        public static readonly PartTypeInfo Jpeg = new("image/jpeg", ".jpg");
 
         /// <summary>
-        /// JPEG/JIFF Image (.jpeg).
+        /// Defines type information for Extended (Enhanced) Windows Metafile Format (.emf) thumbnail part.
         /// </summary>
-        Jpeg,
+        public static readonly PartTypeInfo Emf = new("image/x-emf", ".emf");
 
         /// <summary>
-        /// Extended (Enhanced) Windows Metafile Format (.emf).
+        /// Defines type information for Windows Metafile (.wmf) thumbnail part.
         /// </summary>
-        Emf,
-
-        /// <summary>
-        /// Windows Metafile (.wmf).
-        /// </summary>
-        Wmf,
+        public static readonly PartTypeInfo Wmf = new("image/x-wmf", ".wmf");
     }
 }

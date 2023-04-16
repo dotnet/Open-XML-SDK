@@ -108,25 +108,25 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Adds a EmbeddedPackagePart to the ExtendedChartPart
         /// </summary>
-        /// <param name="partType">The part type of the EmbeddedPackagePart. Required, may be Unknown.</param>
+        /// <param name="partType">The part type information for the EmbeddedPackagePart. Required.</param>
         /// <param name="contentType">The content type of the EmbeddedPackagePart. Optional, default to null.</param>
         /// <param name="id">The relationship id. Optional, default to null.</param>
         /// <return>The newly added part</return>
-        public EmbeddedPackagePart AddEmbeddedPackagePart(EmbeddedPackagePartType partType, string? contentType = null, string? id = null)
+        public EmbeddedPackagePart AddEmbeddedPackagePart(PartTypeInfo partType, string? contentType = null, string? id = null)
         {
-            return EmbeddedPackagePartExtensions.AddEmbeddedPackagePart(this, partType, contentType, id);
+            return (EmbeddedPackagePart)OpenXmlPartExtensions.InitPart(this, new EmbeddedPackagePart(), partType, contentType, id);
         }
 
         /// <summary>
         /// Adds a ImagePart to the ExtendedChartPart
         /// </summary>
-        /// <param name="partType">The part type of the ImagePart. Required, may be Unknown.</param>
+        /// <param name="partType">The part type information for the ImagePart. Required.</param>
         /// <param name="contentType">The content type of the ImagePart. Optional, default to null.</param>
         /// <param name="id">The relationship id. Optional, default to null.</param>
         /// <return>The newly added part</return>
-        public ImagePart AddImagePart(ImagePartType partType, string? contentType = null, string? id = null)
+        public ImagePart AddImagePart(PartTypeInfo partType, string? contentType = null, string? id = null)
         {
-            return ImagePartExtensions.AddImagePart(this, partType, contentType, id);
+            return (ImagePart)OpenXmlPartExtensions.InitPart(this, new ImagePart(), partType, contentType, id);
         }
         
         /// <inheritdoc/>

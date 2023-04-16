@@ -8,89 +8,89 @@ namespace DocumentFormat.OpenXml.Packaging
 {
     internal static class AlternativeFormatImportPartTypeInfo
     {
-        internal static string GetContentType(AlternativeFormatImportPartType partType)
-            => partType switch
-            {
-                // AlternativeFormatImportPartType.Text => "application/text/plain",
-                AlternativeFormatImportPartType.Xhtml => "application/xhtml+xml",
-                AlternativeFormatImportPartType.Mht => "message/rfc822",
-                AlternativeFormatImportPartType.Xml => "application/xml",
+        // internal static string GetContentType(PartTypeInfo partType)
+        //    => partType switch
+        //    {
+        //        // AlternativeFormatImportPartType.Text => "application/text/plain",
+        //        AlternativeFormatImportPartType.Xhtml => "application/xhtml+xml",
+        //        AlternativeFormatImportPartType.Mht => "message/rfc822",
+        //        AlternativeFormatImportPartType.Xml => "application/xml",
 
-                // AlternativeFormatImportPartType.TextXml => "text/xml",
-                AlternativeFormatImportPartType.TextPlain => "text/plain",
-                AlternativeFormatImportPartType.WordprocessingML => "application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml",
-                AlternativeFormatImportPartType.OfficeWordMacroEnabled => "application/vnd.ms-word.document.macroEnabled.main+xml",
-                AlternativeFormatImportPartType.OfficeWordTemplate => "application/vnd.openxmlformats-officedocument.wordprocessingml.template.main+xml",
-                AlternativeFormatImportPartType.OfficeWordMacroEnabledTemplate => "application/vnd.ms-word.template.macroEnabledTemplate.main+xml",
-                AlternativeFormatImportPartType.Rtf => "application/rtf",
-                AlternativeFormatImportPartType.Html => "text/html",
-                _ => throw new ArgumentOutOfRangeException(nameof(partType)),
-            };
+        // // AlternativeFormatImportPartType.TextXml => "text/xml",
+        //        AlternativeFormatImportPartType.TextPlain => "text/plain",
+        //        AlternativeFormatImportPartType.WordprocessingML => "application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml",
+        //        AlternativeFormatImportPartType.OfficeWordMacroEnabled => "application/vnd.ms-word.document.macroEnabled.main+xml",
+        //        AlternativeFormatImportPartType.OfficeWordTemplate => "application/vnd.openxmlformats-officedocument.wordprocessingml.template.main+xml",
+        //        AlternativeFormatImportPartType.OfficeWordMacroEnabledTemplate => "application/vnd.ms-word.template.macroEnabledTemplate.main+xml",
+        //        AlternativeFormatImportPartType.Rtf => "application/rtf",
+        //        AlternativeFormatImportPartType.Html => "text/html",
+        //        _ => throw new ArgumentOutOfRangeException(nameof(partType)),
+        //    };
 
-        internal static string GetTargetExtension(AlternativeFormatImportPartType imageType)
-            => imageType switch
-            {
-                // AlternativeFormatImportPartType.Text => ".txt",
-                AlternativeFormatImportPartType.Xhtml => ".xhtml",
-                AlternativeFormatImportPartType.Mht => ".mht",
-                AlternativeFormatImportPartType.Xml => ".xml",
+        // internal static string GetTargetExtension(AlternativeFormatImportPartType imageType)
+        //    => imageType switch
+        //    {
+        //        // AlternativeFormatImportPartType.Text => ".txt",
+        //        AlternativeFormatImportPartType.Xhtml => ".xhtml",
+        //        AlternativeFormatImportPartType.Mht => ".mht",
+        //        AlternativeFormatImportPartType.Xml => ".xml",
 
-                // AlternativeFormatImportPartType.TextXml => ".xml",
-                AlternativeFormatImportPartType.TextPlain => ".txt",
-                AlternativeFormatImportPartType.WordprocessingML => ".docx",
-                AlternativeFormatImportPartType.OfficeWordMacroEnabled => ".docm",
-                AlternativeFormatImportPartType.OfficeWordTemplate => ".dotx",
-                AlternativeFormatImportPartType.OfficeWordMacroEnabledTemplate => ".dotm",
-                AlternativeFormatImportPartType.Rtf => ".rtf",
-                AlternativeFormatImportPartType.Html => ".htm",
-                _ => ".dat",
-            };
+        // // AlternativeFormatImportPartType.TextXml => ".xml",
+        //        AlternativeFormatImportPartType.TextPlain => ".txt",
+        //        AlternativeFormatImportPartType.WordprocessingML => ".docx",
+        //        AlternativeFormatImportPartType.OfficeWordMacroEnabled => ".docm",
+        //        AlternativeFormatImportPartType.OfficeWordTemplate => ".dotx",
+        //        AlternativeFormatImportPartType.OfficeWordMacroEnabledTemplate => ".dotm",
+        //        AlternativeFormatImportPartType.Rtf => ".rtf",
+        //        AlternativeFormatImportPartType.Html => ".htm",
+        //        _ => ".dat",
+        //    };
 
-        internal static AlternativeFormatImportPartType GetAlternativeFormatImportPartTypeFromContentType(string contenttype)
-            => contenttype.ToLower(CultureInfo.CurrentCulture) switch
-            {
-                // "application/text/plain" => AlternativeFormatImportPartType.Text,
-                "application/xhtml+xml" => AlternativeFormatImportPartType.Xhtml,
-                "message/rfc822" => AlternativeFormatImportPartType.Mht,
-                "application/xml" => AlternativeFormatImportPartType.Xml,
+        // internal static AlternativeFormatImportPartType GetAlternativeFormatImportPartTypeFromContentType(string contenttype)
+        //    => contenttype.ToLower(CultureInfo.CurrentCulture) switch
+        //    {
+        //        // "application/text/plain" => AlternativeFormatImportPartType.Text,
+        //        "application/xhtml+xml" => AlternativeFormatImportPartType.Xhtml,
+        //        "message/rfc822" => AlternativeFormatImportPartType.Mht,
+        //        "application/xml" => AlternativeFormatImportPartType.Xml,
 
-                // "text/xml" => AlternativeFormatImportPartType.TextXml,
-                "text/plain" => AlternativeFormatImportPartType.TextPlain,
-                "application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml" => AlternativeFormatImportPartType.WordprocessingML,
-                "application/vnd.ms-word.document.macroEnabled.main+xml" => AlternativeFormatImportPartType.OfficeWordMacroEnabled,
-                "application/vnd.openxmlformats-officedocument.wordprocessingml.template.main+xml" => AlternativeFormatImportPartType.OfficeWordTemplate,
-                "application/vnd.ms-word.template.macroEnabledTemplate.main+xml" => AlternativeFormatImportPartType.OfficeWordMacroEnabledTemplate,
-                "application/rtf" => AlternativeFormatImportPartType.Rtf,
-                "text/html" => AlternativeFormatImportPartType.Html,
-                _ => throw new NotSupportedException($"{contenttype} is not supported"),
-            };
+        // // "text/xml" => AlternativeFormatImportPartType.TextXml,
+        //        "text/plain" => AlternativeFormatImportPartType.TextPlain,
+        //        "application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml" => AlternativeFormatImportPartType.WordprocessingML,
+        //        "application/vnd.ms-word.document.macroEnabled.main+xml" => AlternativeFormatImportPartType.OfficeWordMacroEnabled,
+        //        "application/vnd.openxmlformats-officedocument.wordprocessingml.template.main+xml" => AlternativeFormatImportPartType.OfficeWordTemplate,
+        //        "application/vnd.ms-word.template.macroEnabledTemplate.main+xml" => AlternativeFormatImportPartType.OfficeWordMacroEnabledTemplate,
+        //        "application/rtf" => AlternativeFormatImportPartType.Rtf,
+        //        "text/html" => AlternativeFormatImportPartType.Html,
+        //        _ => throw new NotSupportedException($"{contenttype} is not supported"),
+        //    };
 
-        internal static bool TryGetAlternativeFormatImportPartTypeFromContentType(string contentType)
-        {
-            try
-            {
-                _ = GetAlternativeFormatImportPartTypeFromContentType(contentType);
-                return true;
-            }
-            catch (NotSupportedException)
-            {
-            }
+        // internal static bool TryGetAlternativeFormatImportPartTypeFromContentType(string contentType)
+        // {
+        //    try
+        //    {
+        //        _ = GetAlternativeFormatImportPartTypeFromContentType(contentType);
+        //        return true;
+        //    }
+        //    catch (NotSupportedException)
+        //    {
+        //    }
 
-            return false;
-        }
+        // return false;
+        // }
 
-        internal static bool TryGetContentType(AlternativeFormatImportPartType partType)
-        {
-            try
-            {
-                _ = GetContentType(partType);
-                return true;
-            }
-            catch (NotSupportedException)
-            {
-            }
+        // internal static bool TryGetContentType(AlternativeFormatImportPartType partType)
+        // {
+        //    try
+        //    {
+        //        _ = GetContentType(partType);
+        //        return true;
+        //    }
+        //    catch (NotSupportedException)
+        //    {
+        //    }
 
-            return false;
-        }
+        // return false;
+        // }
     }
 }

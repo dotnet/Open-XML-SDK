@@ -74,7 +74,7 @@ namespace DocumentFormat.OpenXml.Tests
                 doc.AddExtendedPart("relType", "contentType/xml", ".xml");
                 var tnPart = doc.AddThumbnailPart(ThumbnailPartType.Jpeg);
                 doc.DeletePart(tnPart);
-                tnPart = doc.AddThumbnailPart("image/jpg");
+                tnPart = doc.AddThumbnailPart(ThumbnailPartType.Jpeg, "image/jpg");
 
                 var v = new OpenXmlValidator(FileFormatVersions.Office2013);
                 var errs = v.Validate(doc);

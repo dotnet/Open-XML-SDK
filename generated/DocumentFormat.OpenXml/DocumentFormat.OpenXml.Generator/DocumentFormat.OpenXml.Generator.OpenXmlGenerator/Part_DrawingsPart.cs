@@ -128,25 +128,25 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Adds a CustomXmlPart to the DrawingsPart
         /// </summary>
-        /// <param name="partType">The part type of the CustomXmlPart. Required, may be Unknown.</param>
+        /// <param name="partType">The part type information for the CustomXmlPart. Required.</param>
         /// <param name="contentType">The content type of the CustomXmlPart. Optional, default to null.</param>
         /// <param name="id">The relationship id. Optional, default to null.</param>
         /// <return>The newly added part</return>
-        public CustomXmlPart AddCustomXmlPart(CustomXmlPartType partType, string? contentType = null, string? id = null)
+        public CustomXmlPart AddCustomXmlPart(PartTypeInfo partType, string? contentType = null, string? id = null)
         {
-            return CustomXmlPartExtensions.AddCustomXmlPart(this, partType, contentType, id);
+            return (CustomXmlPart)OpenXmlPartExtensions.InitPart(this, new CustomXmlPart(), partType, contentType, id);
         }
 
         /// <summary>
         /// Adds a ImagePart to the DrawingsPart
         /// </summary>
-        /// <param name="partType">The part type of the ImagePart. Required, may be Unknown.</param>
+        /// <param name="partType">The part type information for the ImagePart. Required.</param>
         /// <param name="contentType">The content type of the ImagePart. Optional, default to null.</param>
         /// <param name="id">The relationship id. Optional, default to null.</param>
         /// <return>The newly added part</return>
-        public ImagePart AddImagePart(ImagePartType partType, string? contentType = null, string? id = null)
+        public ImagePart AddImagePart(PartTypeInfo partType, string? contentType = null, string? id = null)
         {
-            return ImagePartExtensions.AddImagePart(this, partType, contentType, id);
+            return (ImagePart)OpenXmlPartExtensions.InitPart(this, new ImagePart(), partType, contentType, id);
         }
         
         /// <inheritdoc/>

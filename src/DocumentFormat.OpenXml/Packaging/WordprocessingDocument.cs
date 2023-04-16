@@ -378,29 +378,15 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// Adds a ThumbnailPart to the WordprocessingDocument.
+        /// Adds a ThumbnailPart to the MainDocumentPart
         /// </summary>
-        /// <param name="contentType">The content type of the ThumbnailPart.</param>
-        /// <returns>The newly added ThumbnailPart.</returns>
-        public ThumbnailPart AddThumbnailPart(string contentType)
+        /// <param name="partType">The part type information for the ThumbnailPart. Required.</param>
+        /// <param name="contentType">The content type of the ThumbnailPart. Optional, default to null.</param>
+        /// <param name="id">The relationship id. Optional, default to null.</param>
+        /// <return>The newly added part</return>
+        public ThumbnailPart AddThumbnailPart(PartTypeInfo partType, string? contentType = null, string? id = null)
         {
-            ThumbnailPart childPart = new();
-            InitPart(childPart, contentType);
-            return childPart;
-        }
-
-        /// <summary>
-        /// Adds a ThumbnailPart to the WordprocessingDocument.
-        /// </summary>
-        /// <param name="partType">The type of the ThumbnailPart.</param>
-        /// <returns>The newly added ThumbnailPart.</returns>
-        public ThumbnailPart AddThumbnailPart(ThumbnailPartType partType)
-        {
-            string contentType = ThumbnailPartTypeInfo.GetContentType(partType);
-            string partExtension = ThumbnailPartTypeInfo.GetTargetExtension(partType);
-            PartExtensions.Register(contentType, partExtension);
-
-            return AddThumbnailPart(contentType);
+            return (ThumbnailPart)OpenXmlPartExtensions.InitPart(this, new ThumbnailPart(), partType, contentType, id);
         }
 
         /// <summary>

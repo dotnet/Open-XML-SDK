@@ -6,21 +6,16 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines MailMergeRecipientDataPartType - types of MailMergeRecipientDataPart.
     /// </summary>
-    public enum MailMergeRecipientDataPartType
+    public static class MailMergeRecipientDataPartType
     {
         /// <summary>
-        /// Unknown part type.
+        /// Defines type information for OpenXmlMailMergeRecipientData mail merge recipient data part.
         /// </summary>
-        Unknown = 0,
+        public static readonly PartTypeInfo OpenXmlMailMergeRecipientData = new("application/vnd.openxmlformats-officedocument.wordprocessingml.mailMergeRecipientData+xml", ".xml");
 
         /// <summary>
-        /// OpenXml Mail Merge Recipient Data.
+        /// Defines type information for MsWordMailMergeRecipientData mail merge recipient data part.
         /// </summary>
-        OpenXmlMailMergeRecipientData,
-
-        /// <summary>
-        /// Microsoft Word Mail Merge Recipient Data.
-        /// </summary>
-        MsWordMailMergeRecipientData,
+        public static readonly PartTypeInfo MsWordMailMergeRecipientData = new("application/vnd.ms-word.mailMergeRecipientData+xml", ".xml");
     }
 }

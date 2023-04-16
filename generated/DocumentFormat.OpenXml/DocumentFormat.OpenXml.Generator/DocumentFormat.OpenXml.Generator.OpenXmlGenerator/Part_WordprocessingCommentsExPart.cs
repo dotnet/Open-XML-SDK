@@ -143,61 +143,61 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Adds a AlternativeFormatImportPart to the WordprocessingCommentsExPart
         /// </summary>
-        /// <param name="partType">The part type of the AlternativeFormatImportPart. Required, may be Unknown.</param>
+        /// <param name="partType">The part type information for the AlternativeFormatImportPart. Required.</param>
         /// <param name="contentType">The content type of the AlternativeFormatImportPart. Optional, default to null.</param>
         /// <param name="id">The relationship id. Optional, default to null.</param>
         /// <return>The newly added part</return>
-        public AlternativeFormatImportPart AddAlternativeFormatImportPart(AlternativeFormatImportPartType partType, string? contentType = null, string? id = null)
+        public AlternativeFormatImportPart AddAlternativeFormatImportPart(PartTypeInfo partType, string? contentType = null, string? id = null)
         {
-            return AlternativeFormatImportPartExtensions.AddAlternativeFormatImportPart(this, partType, contentType, id);
+            return (AlternativeFormatImportPart)OpenXmlPartExtensions.InitPart(this, new AlternativeFormatImportPart(), partType, contentType, id);
         }
 
         /// <summary>
         /// Adds a EmbeddedControlPersistencePart to the WordprocessingCommentsExPart
         /// </summary>
-        /// <param name="partType">The part type of the EmbeddedControlPersistencePart. Required, may be Unknown.</param>
+        /// <param name="partType">The part type information for the EmbeddedControlPersistencePart. Required.</param>
         /// <param name="contentType">The content type of the EmbeddedControlPersistencePart. Optional, default to null.</param>
         /// <param name="id">The relationship id. Optional, default to null.</param>
         /// <return>The newly added part</return>
-        public EmbeddedControlPersistencePart AddEmbeddedControlPersistencePart(EmbeddedControlPersistencePartType partType, string? contentType = null, string? id = null)
+        public EmbeddedControlPersistencePart AddEmbeddedControlPersistencePart(PartTypeInfo partType, string? contentType = null, string? id = null)
         {
-            return EmbeddedControlPersistencePartExtensions.AddEmbeddedControlPersistencePart(this, partType, contentType, id);
+            return (EmbeddedControlPersistencePart)OpenXmlPartExtensions.InitPart(this, new EmbeddedControlPersistencePart(), partType, contentType, id);
         }
 
         /// <summary>
         /// Adds a EmbeddedObjectPart to the WordprocessingCommentsExPart
         /// </summary>
-        /// <param name="partType">The part type of the EmbeddedObjectPart. Required, may be Unknown.</param>
+        /// <param name="partType">The part type information for the EmbeddedObjectPart. Required.</param>
         /// <param name="contentType">The content type of the EmbeddedObjectPart. Optional, default to null.</param>
         /// <param name="id">The relationship id. Optional, default to null.</param>
         /// <return>The newly added part</return>
-        public EmbeddedObjectPart AddEmbeddedObjectPart(EmbeddedObjectPartType partType, string? contentType = null, string? id = null)
+        public EmbeddedObjectPart AddEmbeddedObjectPart(PartTypeInfo partType, string? contentType = null, string? id = null)
         {
-            return EmbeddedObjectPartExtensions.AddEmbeddedObjectPart(this, partType, contentType, id);
+            return (EmbeddedObjectPart)OpenXmlPartExtensions.InitPart(this, new EmbeddedObjectPart(), partType, contentType, id);
         }
 
         /// <summary>
         /// Adds a EmbeddedPackagePart to the WordprocessingCommentsExPart
         /// </summary>
-        /// <param name="partType">The part type of the EmbeddedPackagePart. Required, may be Unknown.</param>
+        /// <param name="partType">The part type information for the EmbeddedPackagePart. Required.</param>
         /// <param name="contentType">The content type of the EmbeddedPackagePart. Optional, default to null.</param>
         /// <param name="id">The relationship id. Optional, default to null.</param>
         /// <return>The newly added part</return>
-        public EmbeddedPackagePart AddEmbeddedPackagePart(EmbeddedPackagePartType partType, string? contentType = null, string? id = null)
+        public EmbeddedPackagePart AddEmbeddedPackagePart(PartTypeInfo partType, string? contentType = null, string? id = null)
         {
-            return EmbeddedPackagePartExtensions.AddEmbeddedPackagePart(this, partType, contentType, id);
+            return (EmbeddedPackagePart)OpenXmlPartExtensions.InitPart(this, new EmbeddedPackagePart(), partType, contentType, id);
         }
 
         /// <summary>
         /// Adds a ImagePart to the WordprocessingCommentsExPart
         /// </summary>
-        /// <param name="partType">The part type of the ImagePart. Required, may be Unknown.</param>
+        /// <param name="partType">The part type information for the ImagePart. Required.</param>
         /// <param name="contentType">The content type of the ImagePart. Optional, default to null.</param>
         /// <param name="id">The relationship id. Optional, default to null.</param>
         /// <return>The newly added part</return>
-        public ImagePart AddImagePart(ImagePartType partType, string? contentType = null, string? id = null)
+        public ImagePart AddImagePart(PartTypeInfo partType, string? contentType = null, string? id = null)
         {
-            return ImagePartExtensions.AddImagePart(this, partType, contentType, id);
+            return (ImagePart)OpenXmlPartExtensions.InitPart(this, new ImagePart(), partType, contentType, id);
         }
 
         /// <summary>

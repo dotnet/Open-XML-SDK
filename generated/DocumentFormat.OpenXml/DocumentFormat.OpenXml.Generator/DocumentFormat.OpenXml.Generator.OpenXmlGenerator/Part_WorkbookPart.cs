@@ -239,25 +239,25 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Adds a CustomXmlPart to the WorkbookPart
         /// </summary>
-        /// <param name="partType">The part type of the CustomXmlPart. Required, may be Unknown.</param>
+        /// <param name="partType">The part type information for the CustomXmlPart. Required.</param>
         /// <param name="contentType">The content type of the CustomXmlPart. Optional, default to null.</param>
         /// <param name="id">The relationship id. Optional, default to null.</param>
         /// <return>The newly added part</return>
-        public CustomXmlPart AddCustomXmlPart(CustomXmlPartType partType, string? contentType = null, string? id = null)
+        public CustomXmlPart AddCustomXmlPart(PartTypeInfo partType, string? contentType = null, string? id = null)
         {
-            return CustomXmlPartExtensions.AddCustomXmlPart(this, partType, contentType, id);
+            return (CustomXmlPart)OpenXmlPartExtensions.InitPart(this, new CustomXmlPart(), partType, contentType, id);
         }
 
         /// <summary>
         /// Adds a ThumbnailPart to the WorkbookPart
         /// </summary>
-        /// <param name="partType">The part type of the ThumbnailPart. Required, may be Unknown.</param>
+        /// <param name="partType">The part type information for the ThumbnailPart. Required.</param>
         /// <param name="contentType">The content type of the ThumbnailPart. Optional, default to null.</param>
         /// <param name="id">The relationship id. Optional, default to null.</param>
         /// <return>The newly added part</return>
-        public ThumbnailPart AddThumbnailPart(ThumbnailPartType partType, string? contentType = null, string? id = null)
+        public ThumbnailPart AddThumbnailPart(PartTypeInfo partType, string? contentType = null, string? id = null)
         {
-            return ThumbnailPartExtensions.AddThumbnailPart(this, partType, contentType, id);
+            return (ThumbnailPart)OpenXmlPartExtensions.InitPart(this, new ThumbnailPart(), partType, contentType, id);
         }
         
         /// <inheritdoc/>
