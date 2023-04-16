@@ -6,6 +6,30 @@ using System;
 
 namespace DocumentFormat.OpenXml.Packaging
 {
+    internal static class OpenXmlPartExtensions
+    {
+        internal static OpenXmlPart InitPart(this OpenXmlPartContainer parent, OpenXmlPart childPart, PartTypeInfo partType, string? contentType = null, string? relId = null)
+        {
+            if (parent == null)
+            {
+                throw new ArgumentNullException(message: "Parent part MUST be provided.", paramName: nameof(parent));
+            }
+
+            contentType ??= partType.ContentType ?? throw new InvalidOperationException("No content type specified");
+
+            var partExtension = partType.Extension;
+            parent.Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
+
+            if (relId == null || relId.Length == 0)
+            {
+                relId = null;
+            }
+
+            parent.InitPart(childPart, contentType, relId);
+            return childPart;
+        }
+    }
+
     /// <summary>
     /// Defines information used in creating a new part.
     /// </summary>
@@ -29,29 +53,5 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the file extension for the part.
         /// </summary>
         public string Extension { get; }
-    }
-
-    internal static class OpenXmlPartExtensions
-    {
-        internal static OpenXmlPart InitPart(this OpenXmlPartContainer parent, OpenXmlPart childPart, PartTypeInfo partType, string? contentType = null, string? relId = null)
-        {
-            if (parent == null)
-            {
-                throw new ArgumentNullException(message: "Parent part MUST be provided.", paramName: nameof(parent));
-            }
-
-            contentType ??= partType.ContentType ?? throw new InvalidOperationException("No content type specified");
-
-            var partExtension = partType.Extension;
-            parent.Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
-
-            if (relId == null || relId.Length == 0)
-            {
-                relId = null;
-            }
-
-            parent.InitPart(childPart, contentType, relId);
-            return childPart;
-        }
     }
 }
