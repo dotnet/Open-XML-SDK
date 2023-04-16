@@ -8,47 +8,6 @@ namespace DocumentFormat.OpenXml.Packaging
 {
     internal static class ImagePartTypeInfo
     {
-        // internal static string GetContentType(ImagePartType imageType)
-        //    => imageType switch
-        //    {
-        //        ImagePartType.Bmp => "image/bmp",
-        //        ImagePartType.Gif => "image/gif",
-        //        ImagePartType.Png => "image/png",
-        //        ImagePartType.Tiff => "image/tiff",
-
-        // // ImagePartType.Xbm => "image/xbm",
-        //        ImagePartType.Icon => "image/x-icon",
-        //        ImagePartType.Pcx => "image/x-pcx",
-
-        // // ImagePartType.Pcz => "image/x-pcz",
-        //        // ImagePartType.Pict => "image/pict",
-        //        ImagePartType.Jpeg => "image/jpeg",
-        //        ImagePartType.Emf => "image/x-emf",
-        //        ImagePartType.Wmf => "image/x-wmf",
-        //        ImagePartType.Svg => "image/svg+xml",
-        //        _ => throw new ArgumentOutOfRangeException(nameof(imageType)),
-        //    };
-
-        // internal static string GetTargetExtension(ImagePartType imageType)
-        //    => imageType switch
-        //    {
-        //        ImagePartType.Bmp => ".bmp",
-        //        ImagePartType.Gif => ".gif",
-        //        ImagePartType.Png => ".png",
-        //        ImagePartType.Tiff => ".tiff",
-
-        // // ImagePartType.Xbm => ".xbm",
-        //        ImagePartType.Icon => ".ico",
-        //        ImagePartType.Pcx => ".pcx",
-
-        // // ImagePartType.Pcz => ".pcz",
-        //        // ImagePartType.Pict => ".pict",
-        //        ImagePartType.Jpeg => ".jpg",
-        //        ImagePartType.Emf => ".emf",
-        //        ImagePartType.Wmf => ".wmf",
-        //        ImagePartType.Svg => ".svg",
-        //        _ => ".image",
-        //    };
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Globalization", "CA1308:Normalize strings to uppercase", Justification = "Extensions")]
         internal static PartTypeInfo GetImagePartType(string extension)
             => extension.ToLowerInvariant() switch
@@ -67,54 +26,5 @@ namespace DocumentFormat.OpenXml.Packaging
                 ".wmf" => ImagePartType.Wmf,
                 _ => throw new NotSupportedException($"{extension} is not supported"),
             };
-
-        // internal static ImagePartType GetImagePartTypeFromContentType(string contenttype)
-        //    => contenttype.ToLower(CultureInfo.CurrentCulture) switch
-        //    {
-        //        "image/bmp" => ImagePartType.Bmp,
-        //        "image/gif" => ImagePartType.Gif,
-        //        "image/png" => ImagePartType.Png,
-        //        "image/tiff" => ImagePartType.Tiff,
-
-        // // "image/xbm" => ImagePartType.Xbm,
-        //        "image/x-icon" => ImagePartType.Icon,
-        //        "image/x-pcx" => ImagePartType.Pcx,
-
-        // // "image/x-pcz" => ImagePartType.Pcz,
-        //        // "image/pict" => ImagePartType.Pict,
-        //        "image/jpeg" => ImagePartType.Jpeg,
-        //        "image/x-emf" => ImagePartType.Emf,
-        //        "image/x-wmf" => ImagePartType.Wmf,
-        //        "image/svg+xml" => ImagePartType.Svg,
-        //        _ => throw new NotSupportedException($"{contenttype} is not supported"),
-        //    };
-
-        // internal static bool TryGetImagePartTypeFromContentType(string contentType)
-        // {
-        //    try
-        //    {
-        //        _ = GetImagePartTypeFromContentType(contentType);
-        //        return true;
-        //    }
-        //    catch (NotSupportedException)
-        //    {
-        //    }
-
-        // return false;
-        // }
-
-        // internal static bool TryGetContentType(ImagePartType partType)
-        // {
-        //    try
-        //    {
-        //        _ = GetContentType(partType);
-        //        return true;
-        //    }
-        //    catch (NotSupportedException)
-        //    {
-        //    }
-
-        // return false;
-        // }
     }
 }
