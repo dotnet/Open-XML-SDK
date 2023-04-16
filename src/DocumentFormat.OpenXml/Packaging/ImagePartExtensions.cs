@@ -24,6 +24,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 throw new ArgumentNullException(nameof(main));
             }
+
             if (string.IsNullOrEmpty(extension))
             {
                 throw new ArgumentException($"'{nameof(extension)}' cannot be null or empty.", nameof(extension));
