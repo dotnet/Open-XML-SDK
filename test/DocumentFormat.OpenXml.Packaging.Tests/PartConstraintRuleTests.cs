@@ -38,7 +38,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void AllExpectedParts()
         {
             var fromFramework = new[] { typeof(ExtendedPart), typeof(OpenXmlPart) };
-            var actual = typeof(TypedFeatures)
+            var actual = typeof(SpreadsheetDocument)
                 .GetTypeInfo()
                 .Assembly
                 .DefinedTypes
@@ -124,7 +124,7 @@ namespace DocumentFormat.OpenXml.Tests
             var appType = Substitute.For<IApplicationTypeFeature>();
             appType.Type.Returns(ApplicationType.None);
 
-            var parts = typeof(TypedFeatures)
+            var parts = typeof(SpreadsheetDocument)
                 .GetTypeInfo()
                 .Assembly
                 .GetTypes()

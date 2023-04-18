@@ -82,7 +82,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
 
         private static IEnumerable<LookupData> GetBuiltIn()
         {
-            return typeof(TypedFeatures).GetTypeInfo().Assembly.GetTypes()
+            return typeof(SpreadsheetDocument).GetTypeInfo().Assembly.GetTypes()
                 .Where(t => !t.GetTypeInfo().IsAbstract && typeof(OpenXmlElement).GetTypeInfo().IsAssignableFrom(t))
                 .Concat(TypesFromFramework)
                 .Distinct()

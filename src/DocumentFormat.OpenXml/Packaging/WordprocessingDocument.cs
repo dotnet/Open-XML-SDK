@@ -17,7 +17,7 @@ namespace DocumentFormat.OpenXml.Packaging
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Reliability", "CA2000:Dispose objects before losing scope", Justification = "Disposable is returned")]
     public partial class WordprocessingDocument : OpenXmlPackage
     {
-        private WordprocessingDocument()
+        internal WordprocessingDocument()
             : base()
         {
         }

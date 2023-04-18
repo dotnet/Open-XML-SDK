@@ -165,7 +165,7 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
                 typeof(OpenXmlMiscNode),
             };
 
-            var elements = typeof(TypedFeatures).GetTypeInfo().Assembly.GetTypes()
+            var elements = typeof(SpreadsheetDocument).GetTypeInfo().Assembly.GetTypes()
                 .Where(t => !t.GetTypeInfo().IsAbstract && typeof(OpenXmlElement).IsAssignableFrom(t))
                 .Where(t => !exclude.Contains(t));
 
