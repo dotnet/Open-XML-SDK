@@ -114,16 +114,20 @@ public static class FactoryGenerator
         writer.WriteFileHeader();
 
         writer.WriteLine("using DocumentFormat.OpenXml;");
-        writer.WriteLine("using DocumentFormat.OpenXml.Packaging;");
+        writer.WriteLine("using DocumentFormat.OpenXml.Features;");
         writer.WriteLine("using DocumentFormat.OpenXml.Framework;");
         writer.WriteLine("using System;");
         writer.WriteLine("using System.Collections.Generic;");
         writer.WriteLine("using System.Diagnostics.CodeAnalysis;");
         writer.WriteLine();
-        writer.WriteLine("namespace DocumentFormat.OpenXml.Features;");
+        writer.WriteLine("namespace DocumentFormat.OpenXml.Packaging;");
         writer.WriteLine();
 
-        writer.WriteLine("internal sealed class TypedRootElementFeature : IRootElementFeature");
+        writer.WriteLine("internal abstract partial class TypedPackageFeatureCollection<TDocumentType, TMainPart> : IRootElementFeature");
+        writer.Indent++;
+        writer.WriteLine("where TDocumentType : struct, System.Enum");
+        writer.WriteLine("where TMainPart : OpenXmlPart");
+        writer.Indent--;
 
         using (writer.AddBlock())
         {
@@ -153,7 +157,7 @@ public static class FactoryGenerator
 
             writer.WriteLine();
 
-            writer.WriteLine("public bool TryCreate(in OpenXmlQualifiedName qname, [NotNullWhen(true)] out OpenXmlElement? element)");
+            writer.WriteLine("bool IRootElementFeature.TryCreate(in OpenXmlQualifiedName qname, [NotNullWhen(true)] out OpenXmlElement? element)");
 
             using (writer.AddBlock())
             {

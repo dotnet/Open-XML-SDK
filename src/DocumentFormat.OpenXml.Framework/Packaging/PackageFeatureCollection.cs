@@ -27,10 +27,10 @@ internal partial class PackageFeatureCollection :
     private LinkedList<DataPart>? _dataParts;
     private Dictionary<Uri, OpenXmlPart>? _parts;
 
-    public PackageFeatureCollection(OpenXmlPackage package, IFeatureCollection? parent)
+    public PackageFeatureCollection(OpenXmlPackage package)
     {
         Package = package;
-        _parent = parent;
+        _parent = FeatureCollection.Default;
     }
 
     protected OpenXmlPackage Package { get; }

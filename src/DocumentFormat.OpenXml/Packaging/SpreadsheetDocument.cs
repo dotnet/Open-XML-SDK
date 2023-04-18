@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml.Packaging
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Reliability", "CA2000:Dispose objects before losing scope", Justification = "Disposable is returned")]
     public partial class SpreadsheetDocument : OpenXmlPackage
     {
-        private SpreadsheetDocument()
+        internal SpreadsheetDocument()
             : base()
         {
         }

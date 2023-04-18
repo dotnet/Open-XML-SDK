@@ -328,33 +328,32 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         public bool AutoSave => OpenSettings.AutoSave;
 
-        private IPackage SavePartContents(bool save)
+        private void SavePartContents(bool save)
         {
-            var package = Features.GetRequired<IPackageFeature>().Package;
-
-            if (package.FileOpenAccess == FileAccess.Read)
+            if (Features.Get<IPackageFeature>() is { Package: { } package })
             {
-                return package; // do nothing if the package is open in read-only mode.
+                if (package.FileOpenAccess == FileAccess.Read)
+                {
+                    return; // do nothing if the package is open in read-only mode.
+                }
+
+                // When this.StrictRelationshipFound is true, we ignore the save argument to do the translation if isAnyPartChanged is true. That's the way to keep consistency.
+                if (!save && !StrictRelationshipFound)
+                {
+                    return; // do nothing if saving is false.
+                }
+
+                var saveFeature = Features.Get<ISaveFeature>();
+
+                saveFeature?.Save(this);
+
+                foreach (var part in this.GetAllParts())
+                {
+                    saveFeature?.Save(part);
+
+                    TrySavePartContent(part);
+                }
             }
-
-            // When this.StrictRelationshipFound is true, we ignore the save argument to do the translation if isAnyPartChanged is true. That's the way to keep consistency.
-            if (!save && !StrictRelationshipFound)
-            {
-                return package; // do nothing if saving is false.
-            }
-
-            var saveFeature = Features.Get<ISaveFeature>();
-
-            saveFeature?.Save(this);
-
-            foreach (var part in this.GetAllParts())
-            {
-                saveFeature?.Save(part);
-
-                TrySavePartContent(part);
-            }
-
-            return package;
         }
 
         // Check if the part content changed and save it if yes.
@@ -911,6 +910,6 @@ namespace DocumentFormat.OpenXml.Packaging
         #endregion saving and cloning
 
         /// <inheritdoc/>
-        public override IFeatureCollection Features => _features ??= new PackageFeatureCollection(this, FeatureCollection.Default);
+        public override IFeatureCollection Features => _features ??= new PackageFeatureCollection(this);
     }
 }

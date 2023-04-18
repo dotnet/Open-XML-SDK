@@ -22,7 +22,7 @@ internal abstract partial class TypedPackageFeatureCollection<TDocumentType, TMa
     private TDocumentType? _documentType;
 
     protected TypedPackageFeatureCollection(OpenXmlPackage package)
-        : base(package, TypedFeatures.Shared)
+        : base(package)
     {
     }
 

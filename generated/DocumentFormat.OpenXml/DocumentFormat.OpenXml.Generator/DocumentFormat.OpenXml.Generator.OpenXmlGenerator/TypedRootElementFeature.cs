@@ -6,15 +6,17 @@
 #nullable enable
 
 using DocumentFormat.OpenXml;
-using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Framework;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 
-namespace DocumentFormat.OpenXml.Features;
+namespace DocumentFormat.OpenXml.Packaging;
 
-internal sealed class TypedRootElementFeature : IRootElementFeature
+internal abstract partial class TypedPackageFeatureCollection<TDocumentType, TMainPart> : IRootElementFeature
+    where TDocumentType : struct, System.Enum
+    where TMainPart : OpenXmlPart
 {
     private readonly Dictionary<OpenXmlQualifiedName, Func<OpenXmlElement>> _factory = new ()
     {
@@ -122,7 +124,7 @@ internal sealed class TypedRootElementFeature : IRootElementFeature
         { new OpenXmlQualifiedName("http://www.w3.org/2003/InkML", "ink"), () => new DocumentFormat.OpenXml.InkML.Ink() },
     };
     
-    public bool TryCreate(in OpenXmlQualifiedName qname, [NotNullWhen(true)] out OpenXmlElement? element)
+    bool IRootElementFeature.TryCreate(in OpenXmlQualifiedName qname, [NotNullWhen(true)] out OpenXmlElement? element)
     {
         if (_factory.TryGetValue(qname, out var factory))
         {
