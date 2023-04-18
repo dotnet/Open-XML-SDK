@@ -159,37 +159,51 @@ namespace DocumentFormat.OpenXml.AdditionalCharacteristics
     /// <summary>
     /// Characteristic Relationship Types
     /// </summary>
-    public enum RelationValues
+    public readonly record struct RelationValues : IEnumValue, IEnumValueFactory<RelationValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new RelationValues enum instance
+        /// </summary>
+        public RelationValues(string value) => _value = value;
+        RelationValues IEnumValueFactory<RelationValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "ge" => true,
+            "le" => true,
+            "gt" => true,
+            "lt" => true,
+            "eq" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "ge";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// Greater Than or Equal to.
         /// <para>When the item is serialized out as xml, its value is "ge".</para>
         /// </summary>
-        [EnumString("ge")]
-        GreaterThanOrEqualTo,
+        public static RelationValues GreaterThanOrEqualTo => new("ge");
         /// <summary>
         /// Less Than or Equal To.
         /// <para>When the item is serialized out as xml, its value is "le".</para>
         /// </summary>
-        [EnumString("le")]
-        LessThanOrEqualTo,
+        public static RelationValues LessThanOrEqualTo => new("le");
         /// <summary>
         /// Greater Than.
         /// <para>When the item is serialized out as xml, its value is "gt".</para>
         /// </summary>
-        [EnumString("gt")]
-        GreaterThan,
+        public static RelationValues GreaterThan => new("gt");
         /// <summary>
         /// Less Than.
         /// <para>When the item is serialized out as xml, its value is "lt".</para>
         /// </summary>
-        [EnumString("lt")]
-        LessThan,
+        public static RelationValues LessThan => new("lt");
         /// <summary>
         /// Equal To.
         /// <para>When the item is serialized out as xml, its value is "eq".</para>
         /// </summary>
-        [EnumString("eq")]
-        EqualTo
+        public static RelationValues EqualTo => new("eq");
+    
     }
 }

@@ -9798,807 +9798,1101 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <summary>
     /// Defines the DisplayBlanksAsValues enumeration.
     /// </summary>
-    public enum DisplayBlanksAsValues
+    public readonly record struct DisplayBlanksAsValues : IEnumValue, IEnumValueFactory<DisplayBlanksAsValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new DisplayBlanksAsValues enum instance
+        /// </summary>
+        public DisplayBlanksAsValues(string value) => _value = value;
+        DisplayBlanksAsValues IEnumValueFactory<DisplayBlanksAsValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "span" => true,
+            "gap" => true,
+            "zero" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "span";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2010;
         /// <summary>
         /// span.
         /// <para>When the item is serialized out as xml, its value is "span".</para>
         /// </summary>
-        [EnumString("span")]
-        Span,
+        public static DisplayBlanksAsValues Span => new("span");
         /// <summary>
         /// gap.
         /// <para>When the item is serialized out as xml, its value is "gap".</para>
         /// </summary>
-        [EnumString("gap")]
-        Gap,
+        public static DisplayBlanksAsValues Gap => new("gap");
         /// <summary>
         /// zero.
         /// <para>When the item is serialized out as xml, its value is "zero".</para>
         /// </summary>
-        [EnumString("zero")]
-        Zero
+        public static DisplayBlanksAsValues Zero => new("zero");
+    
     }
 
     /// <summary>
     /// Defines the SparklineAxisMinMaxValues enumeration.
     /// </summary>
-    public enum SparklineAxisMinMaxValues
+    public readonly record struct SparklineAxisMinMaxValues : IEnumValue, IEnumValueFactory<SparklineAxisMinMaxValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new SparklineAxisMinMaxValues enum instance
+        /// </summary>
+        public SparklineAxisMinMaxValues(string value) => _value = value;
+        SparklineAxisMinMaxValues IEnumValueFactory<SparklineAxisMinMaxValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "individual" => true,
+            "group" => true,
+            "custom" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "individual";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2010;
         /// <summary>
         /// individual.
         /// <para>When the item is serialized out as xml, its value is "individual".</para>
         /// </summary>
-        [EnumString("individual")]
-        Individual,
+        public static SparklineAxisMinMaxValues Individual => new("individual");
         /// <summary>
         /// group.
         /// <para>When the item is serialized out as xml, its value is "group".</para>
         /// </summary>
-        [EnumString("group")]
-        Group,
+        public static SparklineAxisMinMaxValues Group => new("group");
         /// <summary>
         /// custom.
         /// <para>When the item is serialized out as xml, its value is "custom".</para>
         /// </summary>
-        [EnumString("custom")]
-        Custom
+        public static SparklineAxisMinMaxValues Custom => new("custom");
+    
     }
 
     /// <summary>
     /// Defines the SparklineTypeValues enumeration.
     /// </summary>
-    public enum SparklineTypeValues
+    public readonly record struct SparklineTypeValues : IEnumValue, IEnumValueFactory<SparklineTypeValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new SparklineTypeValues enum instance
+        /// </summary>
+        public SparklineTypeValues(string value) => _value = value;
+        SparklineTypeValues IEnumValueFactory<SparklineTypeValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "line" => true,
+            "column" => true,
+            "stacked" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "line";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2010;
         /// <summary>
         /// line.
         /// <para>When the item is serialized out as xml, its value is "line".</para>
         /// </summary>
-        [EnumString("line")]
-        Line,
+        public static SparklineTypeValues Line => new("line");
         /// <summary>
         /// column.
         /// <para>When the item is serialized out as xml, its value is "column".</para>
         /// </summary>
-        [EnumString("column")]
-        Column,
+        public static SparklineTypeValues Column => new("column");
         /// <summary>
         /// stacked.
         /// <para>When the item is serialized out as xml, its value is "stacked".</para>
         /// </summary>
-        [EnumString("stacked")]
-        Stacked
+        public static SparklineTypeValues Stacked => new("stacked");
+    
     }
 
     /// <summary>
     /// Defines the PivotShowAsValues enumeration.
     /// </summary>
-    public enum PivotShowAsValues
+    public readonly record struct PivotShowAsValues : IEnumValue, IEnumValueFactory<PivotShowAsValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new PivotShowAsValues enum instance
+        /// </summary>
+        public PivotShowAsValues(string value) => _value = value;
+        PivotShowAsValues IEnumValueFactory<PivotShowAsValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "percentOfParent" => true,
+            "percentOfParentRow" => true,
+            "percentOfParentCol" => true,
+            "percentOfRunningTotal" => true,
+            "rankAscending" => true,
+            "rankDescending" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "percentOfParent";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2010;
         /// <summary>
         /// percentOfParent.
         /// <para>When the item is serialized out as xml, its value is "percentOfParent".</para>
         /// </summary>
-        [EnumString("percentOfParent")]
-        PercentOfParent,
+        public static PivotShowAsValues PercentOfParent => new("percentOfParent");
         /// <summary>
         /// percentOfParentRow.
         /// <para>When the item is serialized out as xml, its value is "percentOfParentRow".</para>
         /// </summary>
-        [EnumString("percentOfParentRow")]
-        PercentOfParentRow,
+        public static PivotShowAsValues PercentOfParentRow => new("percentOfParentRow");
         /// <summary>
         /// percentOfParentCol.
         /// <para>When the item is serialized out as xml, its value is "percentOfParentCol".</para>
         /// </summary>
-        [EnumString("percentOfParentCol")]
-        PercentOfParentColumn,
+        public static PivotShowAsValues PercentOfParentColumn => new("percentOfParentCol");
         /// <summary>
         /// percentOfRunningTotal.
         /// <para>When the item is serialized out as xml, its value is "percentOfRunningTotal".</para>
         /// </summary>
-        [EnumString("percentOfRunningTotal")]
-        PercentOfRunningTotal,
+        public static PivotShowAsValues PercentOfRunningTotal => new("percentOfRunningTotal");
         /// <summary>
         /// rankAscending.
         /// <para>When the item is serialized out as xml, its value is "rankAscending".</para>
         /// </summary>
-        [EnumString("rankAscending")]
-        RankAscending,
+        public static PivotShowAsValues RankAscending => new("rankAscending");
         /// <summary>
         /// rankDescending.
         /// <para>When the item is serialized out as xml, its value is "rankDescending".</para>
         /// </summary>
-        [EnumString("rankDescending")]
-        RankDescending
+        public static PivotShowAsValues RankDescending => new("rankDescending");
+    
     }
 
     /// <summary>
     /// Defines the DataBarDirectionValues enumeration.
     /// </summary>
-    public enum DataBarDirectionValues
+    public readonly record struct DataBarDirectionValues : IEnumValue, IEnumValueFactory<DataBarDirectionValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new DataBarDirectionValues enum instance
+        /// </summary>
+        public DataBarDirectionValues(string value) => _value = value;
+        DataBarDirectionValues IEnumValueFactory<DataBarDirectionValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "context" => true,
+            "leftToRight" => true,
+            "rightToLeft" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "context";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2010;
         /// <summary>
         /// context.
         /// <para>When the item is serialized out as xml, its value is "context".</para>
         /// </summary>
-        [EnumString("context")]
-        Context,
+        public static DataBarDirectionValues Context => new("context");
         /// <summary>
         /// leftToRight.
         /// <para>When the item is serialized out as xml, its value is "leftToRight".</para>
         /// </summary>
-        [EnumString("leftToRight")]
-        LeftToRight,
+        public static DataBarDirectionValues LeftToRight => new("leftToRight");
         /// <summary>
         /// rightToLeft.
         /// <para>When the item is serialized out as xml, its value is "rightToLeft".</para>
         /// </summary>
-        [EnumString("rightToLeft")]
-        RightToLeft
+        public static DataBarDirectionValues RightToLeft => new("rightToLeft");
+    
     }
 
     /// <summary>
     /// Defines the DataBarAxisPositionValues enumeration.
     /// </summary>
-    public enum DataBarAxisPositionValues
+    public readonly record struct DataBarAxisPositionValues : IEnumValue, IEnumValueFactory<DataBarAxisPositionValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new DataBarAxisPositionValues enum instance
+        /// </summary>
+        public DataBarAxisPositionValues(string value) => _value = value;
+        DataBarAxisPositionValues IEnumValueFactory<DataBarAxisPositionValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "automatic" => true,
+            "middle" => true,
+            "none" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "automatic";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2010;
         /// <summary>
         /// automatic.
         /// <para>When the item is serialized out as xml, its value is "automatic".</para>
         /// </summary>
-        [EnumString("automatic")]
-        Automatic,
+        public static DataBarAxisPositionValues Automatic => new("automatic");
         /// <summary>
         /// middle.
         /// <para>When the item is serialized out as xml, its value is "middle".</para>
         /// </summary>
-        [EnumString("middle")]
-        Middle,
+        public static DataBarAxisPositionValues Middle => new("middle");
         /// <summary>
         /// none.
         /// <para>When the item is serialized out as xml, its value is "none".</para>
         /// </summary>
-        [EnumString("none")]
-        None
+        public static DataBarAxisPositionValues None => new("none");
+    
     }
 
     /// <summary>
     /// Defines the ConditionalFormattingValueObjectTypeValues enumeration.
     /// </summary>
-    public enum ConditionalFormattingValueObjectTypeValues
+    public readonly record struct ConditionalFormattingValueObjectTypeValues : IEnumValue, IEnumValueFactory<ConditionalFormattingValueObjectTypeValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new ConditionalFormattingValueObjectTypeValues enum instance
+        /// </summary>
+        public ConditionalFormattingValueObjectTypeValues(string value) => _value = value;
+        ConditionalFormattingValueObjectTypeValues IEnumValueFactory<ConditionalFormattingValueObjectTypeValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "num" => true,
+            "percent" => true,
+            "max" => true,
+            "min" => true,
+            "formula" => true,
+            "percentile" => true,
+            "autoMin" => true,
+            "autoMax" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "num";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2010;
         /// <summary>
         /// num.
         /// <para>When the item is serialized out as xml, its value is "num".</para>
         /// </summary>
-        [EnumString("num")]
-        Numeric,
+        public static ConditionalFormattingValueObjectTypeValues Numeric => new("num");
         /// <summary>
         /// percent.
         /// <para>When the item is serialized out as xml, its value is "percent".</para>
         /// </summary>
-        [EnumString("percent")]
-        Percent,
+        public static ConditionalFormattingValueObjectTypeValues Percent => new("percent");
         /// <summary>
         /// max.
         /// <para>When the item is serialized out as xml, its value is "max".</para>
         /// </summary>
-        [EnumString("max")]
-        Max,
+        public static ConditionalFormattingValueObjectTypeValues Max => new("max");
         /// <summary>
         /// min.
         /// <para>When the item is serialized out as xml, its value is "min".</para>
         /// </summary>
-        [EnumString("min")]
-        Min,
+        public static ConditionalFormattingValueObjectTypeValues Min => new("min");
         /// <summary>
         /// formula.
         /// <para>When the item is serialized out as xml, its value is "formula".</para>
         /// </summary>
-        [EnumString("formula")]
-        Formula,
+        public static ConditionalFormattingValueObjectTypeValues Formula => new("formula");
         /// <summary>
         /// percentile.
         /// <para>When the item is serialized out as xml, its value is "percentile".</para>
         /// </summary>
-        [EnumString("percentile")]
-        Percentile,
+        public static ConditionalFormattingValueObjectTypeValues Percentile => new("percentile");
         /// <summary>
         /// autoMin.
         /// <para>When the item is serialized out as xml, its value is "autoMin".</para>
         /// </summary>
-        [EnumString("autoMin")]
-        AutoMin,
+        public static ConditionalFormattingValueObjectTypeValues AutoMin => new("autoMin");
         /// <summary>
         /// autoMax.
         /// <para>When the item is serialized out as xml, its value is "autoMax".</para>
         /// </summary>
-        [EnumString("autoMax")]
-        AutoMax
+        public static ConditionalFormattingValueObjectTypeValues AutoMax => new("autoMax");
+    
     }
 
     /// <summary>
     /// Defines the IconSetTypeValues enumeration.
     /// </summary>
-    public enum IconSetTypeValues
+    public readonly record struct IconSetTypeValues : IEnumValue, IEnumValueFactory<IconSetTypeValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new IconSetTypeValues enum instance
+        /// </summary>
+        public IconSetTypeValues(string value) => _value = value;
+        IconSetTypeValues IEnumValueFactory<IconSetTypeValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "3Arrows" => true,
+            "3ArrowsGray" => true,
+            "3Flags" => true,
+            "3TrafficLights1" => true,
+            "3TrafficLights2" => true,
+            "3Signs" => true,
+            "3Symbols" => true,
+            "3Symbols2" => true,
+            "4Arrows" => true,
+            "4ArrowsGray" => true,
+            "4RedToBlack" => true,
+            "4Rating" => true,
+            "4TrafficLights" => true,
+            "5Arrows" => true,
+            "5ArrowsGray" => true,
+            "5Rating" => true,
+            "5Quarters" => true,
+            "3Stars" => true,
+            "3Triangles" => true,
+            "5Boxes" => true,
+            "NoIcons" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "3Arrows";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2010;
         /// <summary>
         /// 3Arrows.
         /// <para>When the item is serialized out as xml, its value is "3Arrows".</para>
         /// </summary>
-        [EnumString("3Arrows")]
-        ThreeArrows,
+        public static IconSetTypeValues ThreeArrows => new("3Arrows");
         /// <summary>
         /// 3ArrowsGray.
         /// <para>When the item is serialized out as xml, its value is "3ArrowsGray".</para>
         /// </summary>
-        [EnumString("3ArrowsGray")]
-        ThreeArrowsGray,
+        public static IconSetTypeValues ThreeArrowsGray => new("3ArrowsGray");
         /// <summary>
         /// 3Flags.
         /// <para>When the item is serialized out as xml, its value is "3Flags".</para>
         /// </summary>
-        [EnumString("3Flags")]
-        ThreeFlags,
+        public static IconSetTypeValues ThreeFlags => new("3Flags");
         /// <summary>
         /// 3TrafficLights1.
         /// <para>When the item is serialized out as xml, its value is "3TrafficLights1".</para>
         /// </summary>
-        [EnumString("3TrafficLights1")]
-        ThreeTrafficLights1,
+        public static IconSetTypeValues ThreeTrafficLights1 => new("3TrafficLights1");
         /// <summary>
         /// 3TrafficLights2.
         /// <para>When the item is serialized out as xml, its value is "3TrafficLights2".</para>
         /// </summary>
-        [EnumString("3TrafficLights2")]
-        ThreeTrafficLights2,
+        public static IconSetTypeValues ThreeTrafficLights2 => new("3TrafficLights2");
         /// <summary>
         /// 3Signs.
         /// <para>When the item is serialized out as xml, its value is "3Signs".</para>
         /// </summary>
-        [EnumString("3Signs")]
-        ThreeSigns,
+        public static IconSetTypeValues ThreeSigns => new("3Signs");
         /// <summary>
         /// 3Symbols.
         /// <para>When the item is serialized out as xml, its value is "3Symbols".</para>
         /// </summary>
-        [EnumString("3Symbols")]
-        ThreeSymbols,
+        public static IconSetTypeValues ThreeSymbols => new("3Symbols");
         /// <summary>
         /// 3Symbols2.
         /// <para>When the item is serialized out as xml, its value is "3Symbols2".</para>
         /// </summary>
-        [EnumString("3Symbols2")]
-        ThreeSymbols2,
+        public static IconSetTypeValues ThreeSymbols2 => new("3Symbols2");
         /// <summary>
         /// 4Arrows.
         /// <para>When the item is serialized out as xml, its value is "4Arrows".</para>
         /// </summary>
-        [EnumString("4Arrows")]
-        FourArrows,
+        public static IconSetTypeValues FourArrows => new("4Arrows");
         /// <summary>
         /// 4ArrowsGray.
         /// <para>When the item is serialized out as xml, its value is "4ArrowsGray".</para>
         /// </summary>
-        [EnumString("4ArrowsGray")]
-        FourArrowsGray,
+        public static IconSetTypeValues FourArrowsGray => new("4ArrowsGray");
         /// <summary>
         /// 4RedToBlack.
         /// <para>When the item is serialized out as xml, its value is "4RedToBlack".</para>
         /// </summary>
-        [EnumString("4RedToBlack")]
-        FourRedToBlack,
+        public static IconSetTypeValues FourRedToBlack => new("4RedToBlack");
         /// <summary>
         /// 4Rating.
         /// <para>When the item is serialized out as xml, its value is "4Rating".</para>
         /// </summary>
-        [EnumString("4Rating")]
-        FourRating,
+        public static IconSetTypeValues FourRating => new("4Rating");
         /// <summary>
         /// 4TrafficLights.
         /// <para>When the item is serialized out as xml, its value is "4TrafficLights".</para>
         /// </summary>
-        [EnumString("4TrafficLights")]
-        FourTrafficLights,
+        public static IconSetTypeValues FourTrafficLights => new("4TrafficLights");
         /// <summary>
         /// 5Arrows.
         /// <para>When the item is serialized out as xml, its value is "5Arrows".</para>
         /// </summary>
-        [EnumString("5Arrows")]
-        FiveArrows,
+        public static IconSetTypeValues FiveArrows => new("5Arrows");
         /// <summary>
         /// 5ArrowsGray.
         /// <para>When the item is serialized out as xml, its value is "5ArrowsGray".</para>
         /// </summary>
-        [EnumString("5ArrowsGray")]
-        FiveArrowsGray,
+        public static IconSetTypeValues FiveArrowsGray => new("5ArrowsGray");
         /// <summary>
         /// 5Rating.
         /// <para>When the item is serialized out as xml, its value is "5Rating".</para>
         /// </summary>
-        [EnumString("5Rating")]
-        FiveRating,
+        public static IconSetTypeValues FiveRating => new("5Rating");
         /// <summary>
         /// 5Quarters.
         /// <para>When the item is serialized out as xml, its value is "5Quarters".</para>
         /// </summary>
-        [EnumString("5Quarters")]
-        FiveQuarters,
+        public static IconSetTypeValues FiveQuarters => new("5Quarters");
         /// <summary>
         /// 3Stars.
         /// <para>When the item is serialized out as xml, its value is "3Stars".</para>
         /// </summary>
-        [EnumString("3Stars")]
-        ThreeStars,
+        public static IconSetTypeValues ThreeStars => new("3Stars");
         /// <summary>
         /// 3Triangles.
         /// <para>When the item is serialized out as xml, its value is "3Triangles".</para>
         /// </summary>
-        [EnumString("3Triangles")]
-        ThreeTriangles,
+        public static IconSetTypeValues ThreeTriangles => new("3Triangles");
         /// <summary>
         /// 5Boxes.
         /// <para>When the item is serialized out as xml, its value is "5Boxes".</para>
         /// </summary>
-        [EnumString("5Boxes")]
-        FiveBoxes,
+        public static IconSetTypeValues FiveBoxes => new("5Boxes");
         /// <summary>
         /// NoIcons.
         /// <para>When the item is serialized out as xml, its value is "NoIcons".</para>
         /// </summary>
-        [EnumString("NoIcons")]
-        NoIcons
+        public static IconSetTypeValues NoIcons => new("NoIcons");
+    
     }
 
     /// <summary>
     /// Defines the PivotEditValueTypeValues enumeration.
     /// </summary>
-    public enum PivotEditValueTypeValues
+    public readonly record struct PivotEditValueTypeValues : IEnumValue, IEnumValueFactory<PivotEditValueTypeValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new PivotEditValueTypeValues enum instance
+        /// </summary>
+        public PivotEditValueTypeValues(string value) => _value = value;
+        PivotEditValueTypeValues IEnumValueFactory<PivotEditValueTypeValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "number" => true,
+            "dateTime" => true,
+            "string" => true,
+            "boolean" => true,
+            "error" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "number";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2010;
         /// <summary>
         /// number.
         /// <para>When the item is serialized out as xml, its value is "number".</para>
         /// </summary>
-        [EnumString("number")]
-        Number,
+        public static PivotEditValueTypeValues Number => new("number");
         /// <summary>
         /// dateTime.
         /// <para>When the item is serialized out as xml, its value is "dateTime".</para>
         /// </summary>
-        [EnumString("dateTime")]
-        DateTime,
+        public static PivotEditValueTypeValues DateTime => new("dateTime");
         /// <summary>
         /// string.
         /// <para>When the item is serialized out as xml, its value is "string".</para>
         /// </summary>
-        [EnumString("string")]
-        String,
+        public static PivotEditValueTypeValues String => new("string");
         /// <summary>
         /// boolean.
         /// <para>When the item is serialized out as xml, its value is "boolean".</para>
         /// </summary>
-        [EnumString("boolean")]
-        Boolean,
+        public static PivotEditValueTypeValues Boolean => new("boolean");
         /// <summary>
         /// error.
         /// <para>When the item is serialized out as xml, its value is "error".</para>
         /// </summary>
-        [EnumString("error")]
-        Error
+        public static PivotEditValueTypeValues Error => new("error");
+    
     }
 
     /// <summary>
     /// Defines the AllocationMethodValues enumeration.
     /// </summary>
-    public enum AllocationMethodValues
+    public readonly record struct AllocationMethodValues : IEnumValue, IEnumValueFactory<AllocationMethodValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new AllocationMethodValues enum instance
+        /// </summary>
+        public AllocationMethodValues(string value) => _value = value;
+        AllocationMethodValues IEnumValueFactory<AllocationMethodValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "equalAllocation" => true,
+            "equalIncrement" => true,
+            "weightedAllocation" => true,
+            "weightedIncrement" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "equalAllocation";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2010;
         /// <summary>
         /// equalAllocation.
         /// <para>When the item is serialized out as xml, its value is "equalAllocation".</para>
         /// </summary>
-        [EnumString("equalAllocation")]
-        EqualAllocation,
+        public static AllocationMethodValues EqualAllocation => new("equalAllocation");
         /// <summary>
         /// equalIncrement.
         /// <para>When the item is serialized out as xml, its value is "equalIncrement".</para>
         /// </summary>
-        [EnumString("equalIncrement")]
-        EqualIncrement,
+        public static AllocationMethodValues EqualIncrement => new("equalIncrement");
         /// <summary>
         /// weightedAllocation.
         /// <para>When the item is serialized out as xml, its value is "weightedAllocation".</para>
         /// </summary>
-        [EnumString("weightedAllocation")]
-        WeightedAllocation,
+        public static AllocationMethodValues WeightedAllocation => new("weightedAllocation");
         /// <summary>
         /// weightedIncrement.
         /// <para>When the item is serialized out as xml, its value is "weightedIncrement".</para>
         /// </summary>
-        [EnumString("weightedIncrement")]
-        WeightedIncrement
+        public static AllocationMethodValues WeightedIncrement => new("weightedIncrement");
+    
     }
 
     /// <summary>
     /// Defines the SlicerStyleTypeValues enumeration.
     /// </summary>
-    public enum SlicerStyleTypeValues
+    public readonly record struct SlicerStyleTypeValues : IEnumValue, IEnumValueFactory<SlicerStyleTypeValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new SlicerStyleTypeValues enum instance
+        /// </summary>
+        public SlicerStyleTypeValues(string value) => _value = value;
+        SlicerStyleTypeValues IEnumValueFactory<SlicerStyleTypeValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "unselectedItemWithData" => true,
+            "selectedItemWithData" => true,
+            "unselectedItemWithNoData" => true,
+            "selectedItemWithNoData" => true,
+            "hoveredUnselectedItemWithData" => true,
+            "hoveredSelectedItemWithData" => true,
+            "hoveredUnselectedItemWithNoData" => true,
+            "hoveredSelectedItemWithNoData" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "unselectedItemWithData";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2010;
         /// <summary>
         /// unselectedItemWithData.
         /// <para>When the item is serialized out as xml, its value is "unselectedItemWithData".</para>
         /// </summary>
-        [EnumString("unselectedItemWithData")]
-        UnselectedItemWithData,
+        public static SlicerStyleTypeValues UnselectedItemWithData => new("unselectedItemWithData");
         /// <summary>
         /// selectedItemWithData.
         /// <para>When the item is serialized out as xml, its value is "selectedItemWithData".</para>
         /// </summary>
-        [EnumString("selectedItemWithData")]
-        SelectedItemWithData,
+        public static SlicerStyleTypeValues SelectedItemWithData => new("selectedItemWithData");
         /// <summary>
         /// unselectedItemWithNoData.
         /// <para>When the item is serialized out as xml, its value is "unselectedItemWithNoData".</para>
         /// </summary>
-        [EnumString("unselectedItemWithNoData")]
-        UnselectedItemWithNoData,
+        public static SlicerStyleTypeValues UnselectedItemWithNoData => new("unselectedItemWithNoData");
         /// <summary>
         /// selectedItemWithNoData.
         /// <para>When the item is serialized out as xml, its value is "selectedItemWithNoData".</para>
         /// </summary>
-        [EnumString("selectedItemWithNoData")]
-        SelectedItemWithNoData,
+        public static SlicerStyleTypeValues SelectedItemWithNoData => new("selectedItemWithNoData");
         /// <summary>
         /// hoveredUnselectedItemWithData.
         /// <para>When the item is serialized out as xml, its value is "hoveredUnselectedItemWithData".</para>
         /// </summary>
-        [EnumString("hoveredUnselectedItemWithData")]
-        HoveredUnselectedItemWithData,
+        public static SlicerStyleTypeValues HoveredUnselectedItemWithData => new("hoveredUnselectedItemWithData");
         /// <summary>
         /// hoveredSelectedItemWithData.
         /// <para>When the item is serialized out as xml, its value is "hoveredSelectedItemWithData".</para>
         /// </summary>
-        [EnumString("hoveredSelectedItemWithData")]
-        HoveredSelectedItemWithData,
+        public static SlicerStyleTypeValues HoveredSelectedItemWithData => new("hoveredSelectedItemWithData");
         /// <summary>
         /// hoveredUnselectedItemWithNoData.
         /// <para>When the item is serialized out as xml, its value is "hoveredUnselectedItemWithNoData".</para>
         /// </summary>
-        [EnumString("hoveredUnselectedItemWithNoData")]
-        HoveredUnselectedItemWithNoData,
+        public static SlicerStyleTypeValues HoveredUnselectedItemWithNoData => new("hoveredUnselectedItemWithNoData");
         /// <summary>
         /// hoveredSelectedItemWithNoData.
         /// <para>When the item is serialized out as xml, its value is "hoveredSelectedItemWithNoData".</para>
         /// </summary>
-        [EnumString("hoveredSelectedItemWithNoData")]
-        HoveredSelectedItemWithNoData
+        public static SlicerStyleTypeValues HoveredSelectedItemWithNoData => new("hoveredSelectedItemWithNoData");
+    
     }
 
     /// <summary>
     /// Defines the CheckedValues enumeration.
     /// </summary>
-    public enum CheckedValues
+    public readonly record struct CheckedValues : IEnumValue, IEnumValueFactory<CheckedValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new CheckedValues enum instance
+        /// </summary>
+        public CheckedValues(string value) => _value = value;
+        CheckedValues IEnumValueFactory<CheckedValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "Unchecked" => true,
+            "Checked" => true,
+            "Mixed" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "Unchecked";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2010;
         /// <summary>
         /// Unchecked.
         /// <para>When the item is serialized out as xml, its value is "Unchecked".</para>
         /// </summary>
-        [EnumString("Unchecked")]
-        Unchecked,
+        public static CheckedValues Unchecked => new("Unchecked");
         /// <summary>
         /// Checked.
         /// <para>When the item is serialized out as xml, its value is "Checked".</para>
         /// </summary>
-        [EnumString("Checked")]
-        Checked,
+        public static CheckedValues Checked => new("Checked");
         /// <summary>
         /// Mixed.
         /// <para>When the item is serialized out as xml, its value is "Mixed".</para>
         /// </summary>
-        [EnumString("Mixed")]
-        Mixed
+        public static CheckedValues Mixed => new("Mixed");
+    
     }
 
     /// <summary>
     /// Defines the DropStyleValues enumeration.
     /// </summary>
-    public enum DropStyleValues
+    public readonly record struct DropStyleValues : IEnumValue, IEnumValueFactory<DropStyleValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new DropStyleValues enum instance
+        /// </summary>
+        public DropStyleValues(string value) => _value = value;
+        DropStyleValues IEnumValueFactory<DropStyleValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "combo" => true,
+            "comboedit" => true,
+            "simple" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "combo";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2010;
         /// <summary>
         /// combo.
         /// <para>When the item is serialized out as xml, its value is "combo".</para>
         /// </summary>
-        [EnumString("combo")]
-        Combo,
+        public static DropStyleValues Combo => new("combo");
         /// <summary>
         /// comboedit.
         /// <para>When the item is serialized out as xml, its value is "comboedit".</para>
         /// </summary>
-        [EnumString("comboedit")]
-        ComboEdit,
+        public static DropStyleValues ComboEdit => new("comboedit");
         /// <summary>
         /// simple.
         /// <para>When the item is serialized out as xml, its value is "simple".</para>
         /// </summary>
-        [EnumString("simple")]
-        Simple
+        public static DropStyleValues Simple => new("simple");
+    
     }
 
     /// <summary>
     /// Defines the SelectionTypeValues enumeration.
     /// </summary>
-    public enum SelectionTypeValues
+    public readonly record struct SelectionTypeValues : IEnumValue, IEnumValueFactory<SelectionTypeValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new SelectionTypeValues enum instance
+        /// </summary>
+        public SelectionTypeValues(string value) => _value = value;
+        SelectionTypeValues IEnumValueFactory<SelectionTypeValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "single" => true,
+            "multi" => true,
+            "extended" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "single";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2010;
         /// <summary>
         /// single.
         /// <para>When the item is serialized out as xml, its value is "single".</para>
         /// </summary>
-        [EnumString("single")]
-        Single,
+        public static SelectionTypeValues Single => new("single");
         /// <summary>
         /// multi.
         /// <para>When the item is serialized out as xml, its value is "multi".</para>
         /// </summary>
-        [EnumString("multi")]
-        Multiple,
+        public static SelectionTypeValues Multiple => new("multi");
         /// <summary>
         /// extended.
         /// <para>When the item is serialized out as xml, its value is "extended".</para>
         /// </summary>
-        [EnumString("extended")]
-        Extended
+        public static SelectionTypeValues Extended => new("extended");
+    
     }
 
     /// <summary>
     /// Defines the TextHorizontalAlignmentValues enumeration.
     /// </summary>
-    public enum TextHorizontalAlignmentValues
+    public readonly record struct TextHorizontalAlignmentValues : IEnumValue, IEnumValueFactory<TextHorizontalAlignmentValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new TextHorizontalAlignmentValues enum instance
+        /// </summary>
+        public TextHorizontalAlignmentValues(string value) => _value = value;
+        TextHorizontalAlignmentValues IEnumValueFactory<TextHorizontalAlignmentValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "left" => true,
+            "center" => true,
+            "right" => true,
+            "justify" => true,
+            "distributed" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "left";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2010;
         /// <summary>
         /// left.
         /// <para>When the item is serialized out as xml, its value is "left".</para>
         /// </summary>
-        [EnumString("left")]
-        Left,
+        public static TextHorizontalAlignmentValues Left => new("left");
         /// <summary>
         /// center.
         /// <para>When the item is serialized out as xml, its value is "center".</para>
         /// </summary>
-        [EnumString("center")]
-        Center,
+        public static TextHorizontalAlignmentValues Center => new("center");
         /// <summary>
         /// right.
         /// <para>When the item is serialized out as xml, its value is "right".</para>
         /// </summary>
-        [EnumString("right")]
-        Right,
+        public static TextHorizontalAlignmentValues Right => new("right");
         /// <summary>
         /// justify.
         /// <para>When the item is serialized out as xml, its value is "justify".</para>
         /// </summary>
-        [EnumString("justify")]
-        Justify,
+        public static TextHorizontalAlignmentValues Justify => new("justify");
         /// <summary>
         /// distributed.
         /// <para>When the item is serialized out as xml, its value is "distributed".</para>
         /// </summary>
-        [EnumString("distributed")]
-        Distributed
+        public static TextHorizontalAlignmentValues Distributed => new("distributed");
+    
     }
 
     /// <summary>
     /// Defines the TextVerticalAlignmentValues enumeration.
     /// </summary>
-    public enum TextVerticalAlignmentValues
+    public readonly record struct TextVerticalAlignmentValues : IEnumValue, IEnumValueFactory<TextVerticalAlignmentValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new TextVerticalAlignmentValues enum instance
+        /// </summary>
+        public TextVerticalAlignmentValues(string value) => _value = value;
+        TextVerticalAlignmentValues IEnumValueFactory<TextVerticalAlignmentValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "top" => true,
+            "center" => true,
+            "bottom" => true,
+            "justify" => true,
+            "distributed" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "top";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2010;
         /// <summary>
         /// top.
         /// <para>When the item is serialized out as xml, its value is "top".</para>
         /// </summary>
-        [EnumString("top")]
-        Top,
+        public static TextVerticalAlignmentValues Top => new("top");
         /// <summary>
         /// center.
         /// <para>When the item is serialized out as xml, its value is "center".</para>
         /// </summary>
-        [EnumString("center")]
-        Center,
+        public static TextVerticalAlignmentValues Center => new("center");
         /// <summary>
         /// bottom.
         /// <para>When the item is serialized out as xml, its value is "bottom".</para>
         /// </summary>
-        [EnumString("bottom")]
-        Bottom,
+        public static TextVerticalAlignmentValues Bottom => new("bottom");
         /// <summary>
         /// justify.
         /// <para>When the item is serialized out as xml, its value is "justify".</para>
         /// </summary>
-        [EnumString("justify")]
-        Justify,
+        public static TextVerticalAlignmentValues Justify => new("justify");
         /// <summary>
         /// distributed.
         /// <para>When the item is serialized out as xml, its value is "distributed".</para>
         /// </summary>
-        [EnumString("distributed")]
-        Distributed
+        public static TextVerticalAlignmentValues Distributed => new("distributed");
+    
     }
 
     /// <summary>
     /// Defines the EditValidationValues enumeration.
     /// </summary>
-    public enum EditValidationValues
+    public readonly record struct EditValidationValues : IEnumValue, IEnumValueFactory<EditValidationValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new EditValidationValues enum instance
+        /// </summary>
+        public EditValidationValues(string value) => _value = value;
+        EditValidationValues IEnumValueFactory<EditValidationValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "text" => true,
+            "integer" => true,
+            "number" => true,
+            "reference" => true,
+            "formula" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "text";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2010;
         /// <summary>
         /// text.
         /// <para>When the item is serialized out as xml, its value is "text".</para>
         /// </summary>
-        [EnumString("text")]
-        Text,
+        public static EditValidationValues Text => new("text");
         /// <summary>
         /// integer.
         /// <para>When the item is serialized out as xml, its value is "integer".</para>
         /// </summary>
-        [EnumString("integer")]
-        Integer,
+        public static EditValidationValues Integer => new("integer");
         /// <summary>
         /// number.
         /// <para>When the item is serialized out as xml, its value is "number".</para>
         /// </summary>
-        [EnumString("number")]
-        Number,
+        public static EditValidationValues Number => new("number");
         /// <summary>
         /// reference.
         /// <para>When the item is serialized out as xml, its value is "reference".</para>
         /// </summary>
-        [EnumString("reference")]
-        Reference,
+        public static EditValidationValues Reference => new("reference");
         /// <summary>
         /// formula.
         /// <para>When the item is serialized out as xml, its value is "formula".</para>
         /// </summary>
-        [EnumString("formula")]
-        Formula
+        public static EditValidationValues Formula => new("formula");
+    
     }
 
     /// <summary>
     /// Defines the OlapSlicerCacheSortOrderValues enumeration.
     /// </summary>
-    public enum OlapSlicerCacheSortOrderValues
+    public readonly record struct OlapSlicerCacheSortOrderValues : IEnumValue, IEnumValueFactory<OlapSlicerCacheSortOrderValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new OlapSlicerCacheSortOrderValues enum instance
+        /// </summary>
+        public OlapSlicerCacheSortOrderValues(string value) => _value = value;
+        OlapSlicerCacheSortOrderValues IEnumValueFactory<OlapSlicerCacheSortOrderValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "natural" => true,
+            "ascending" => true,
+            "descending" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "natural";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2010;
         /// <summary>
         /// natural.
         /// <para>When the item is serialized out as xml, its value is "natural".</para>
         /// </summary>
-        [EnumString("natural")]
-        Natural,
+        public static OlapSlicerCacheSortOrderValues Natural => new("natural");
         /// <summary>
         /// ascending.
         /// <para>When the item is serialized out as xml, its value is "ascending".</para>
         /// </summary>
-        [EnumString("ascending")]
-        Ascending,
+        public static OlapSlicerCacheSortOrderValues Ascending => new("ascending");
         /// <summary>
         /// descending.
         /// <para>When the item is serialized out as xml, its value is "descending".</para>
         /// </summary>
-        [EnumString("descending")]
-        Descending
+        public static OlapSlicerCacheSortOrderValues Descending => new("descending");
+    
     }
 
     /// <summary>
     /// Defines the TabularSlicerCacheSortOrderValues enumeration.
     /// </summary>
-    public enum TabularSlicerCacheSortOrderValues
+    public readonly record struct TabularSlicerCacheSortOrderValues : IEnumValue, IEnumValueFactory<TabularSlicerCacheSortOrderValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new TabularSlicerCacheSortOrderValues enum instance
+        /// </summary>
+        public TabularSlicerCacheSortOrderValues(string value) => _value = value;
+        TabularSlicerCacheSortOrderValues IEnumValueFactory<TabularSlicerCacheSortOrderValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "ascending" => true,
+            "descending" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "ascending";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2010;
         /// <summary>
         /// ascending.
         /// <para>When the item is serialized out as xml, its value is "ascending".</para>
         /// </summary>
-        [EnumString("ascending")]
-        Ascending,
+        public static TabularSlicerCacheSortOrderValues Ascending => new("ascending");
         /// <summary>
         /// descending.
         /// <para>When the item is serialized out as xml, its value is "descending".</para>
         /// </summary>
-        [EnumString("descending")]
-        Descending
+        public static TabularSlicerCacheSortOrderValues Descending => new("descending");
+    
     }
 
     /// <summary>
     /// Defines the SlicerCacheCrossFilterValues enumeration.
     /// </summary>
-    public enum SlicerCacheCrossFilterValues
+    public readonly record struct SlicerCacheCrossFilterValues : IEnumValue, IEnumValueFactory<SlicerCacheCrossFilterValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new SlicerCacheCrossFilterValues enum instance
+        /// </summary>
+        public SlicerCacheCrossFilterValues(string value) => _value = value;
+        SlicerCacheCrossFilterValues IEnumValueFactory<SlicerCacheCrossFilterValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "none" => true,
+            "showItemsWithDataAtTop" => true,
+            "showItemsWithNoData" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "none";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2010;
         /// <summary>
         /// none.
         /// <para>When the item is serialized out as xml, its value is "none".</para>
         /// </summary>
-        [EnumString("none")]
-        None,
+        public static SlicerCacheCrossFilterValues None => new("none");
         /// <summary>
         /// showItemsWithDataAtTop.
         /// <para>When the item is serialized out as xml, its value is "showItemsWithDataAtTop".</para>
         /// </summary>
-        [EnumString("showItemsWithDataAtTop")]
-        ShowItemsWithDataAtTop,
+        public static SlicerCacheCrossFilterValues ShowItemsWithDataAtTop => new("showItemsWithDataAtTop");
         /// <summary>
         /// showItemsWithNoData.
         /// <para>When the item is serialized out as xml, its value is "showItemsWithNoData".</para>
         /// </summary>
-        [EnumString("showItemsWithNoData")]
-        ShowItemsWithNoData
+        public static SlicerCacheCrossFilterValues ShowItemsWithNoData => new("showItemsWithNoData");
+    
     }
 
     /// <summary>
     /// Defines the ObjectTypeValues enumeration.
     /// </summary>
-    public enum ObjectTypeValues
+    public readonly record struct ObjectTypeValues : IEnumValue, IEnumValueFactory<ObjectTypeValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new ObjectTypeValues enum instance
+        /// </summary>
+        public ObjectTypeValues(string value) => _value = value;
+        ObjectTypeValues IEnumValueFactory<ObjectTypeValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "Button" => true,
+            "CheckBox" => true,
+            "Drop" => true,
+            "GBox" => true,
+            "Label" => true,
+            "List" => true,
+            "Radio" => true,
+            "Scroll" => true,
+            "Spin" => true,
+            "EditBox" => true,
+            "Dialog" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "Button";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2010;
         /// <summary>
         /// Button.
         /// <para>When the item is serialized out as xml, its value is "Button".</para>
         /// </summary>
-        [EnumString("Button")]
-        Button,
+        public static ObjectTypeValues Button => new("Button");
         /// <summary>
         /// CheckBox.
         /// <para>When the item is serialized out as xml, its value is "CheckBox".</para>
         /// </summary>
-        [EnumString("CheckBox")]
-        CheckBox,
+        public static ObjectTypeValues CheckBox => new("CheckBox");
         /// <summary>
         /// Drop.
         /// <para>When the item is serialized out as xml, its value is "Drop".</para>
         /// </summary>
-        [EnumString("Drop")]
-        Drop,
+        public static ObjectTypeValues Drop => new("Drop");
         /// <summary>
         /// GBox.
         /// <para>When the item is serialized out as xml, its value is "GBox".</para>
         /// </summary>
-        [EnumString("GBox")]
-        GroupBox,
+        public static ObjectTypeValues GroupBox => new("GBox");
         /// <summary>
         /// Label.
         /// <para>When the item is serialized out as xml, its value is "Label".</para>
         /// </summary>
-        [EnumString("Label")]
-        Label,
+        public static ObjectTypeValues Label => new("Label");
         /// <summary>
         /// List.
         /// <para>When the item is serialized out as xml, its value is "List".</para>
         /// </summary>
-        [EnumString("List")]
-        List,
+        public static ObjectTypeValues List => new("List");
         /// <summary>
         /// Radio.
         /// <para>When the item is serialized out as xml, its value is "Radio".</para>
         /// </summary>
-        [EnumString("Radio")]
-        Radio,
+        public static ObjectTypeValues Radio => new("Radio");
         /// <summary>
         /// Scroll.
         /// <para>When the item is serialized out as xml, its value is "Scroll".</para>
         /// </summary>
-        [EnumString("Scroll")]
-        Scroll,
+        public static ObjectTypeValues Scroll => new("Scroll");
         /// <summary>
         /// Spin.
         /// <para>When the item is serialized out as xml, its value is "Spin".</para>
         /// </summary>
-        [EnumString("Spin")]
-        Spin,
+        public static ObjectTypeValues Spin => new("Spin");
         /// <summary>
         /// EditBox.
         /// <para>When the item is serialized out as xml, its value is "EditBox".</para>
         /// </summary>
-        [EnumString("EditBox")]
-        EditBox,
+        public static ObjectTypeValues EditBox => new("EditBox");
         /// <summary>
         /// Dialog.
         /// <para>When the item is serialized out as xml, its value is "Dialog".</para>
         /// </summary>
-        [EnumString("Dialog")]
-        Dialog
+        public static ObjectTypeValues Dialog => new("Dialog");
+    
     }
 }

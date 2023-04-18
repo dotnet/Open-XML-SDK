@@ -10294,342 +10294,510 @@ namespace DocumentFormat.OpenXml.Math
     /// <summary>
     /// Defines the HorizontalAlignmentValues enumeration.
     /// </summary>
-    public enum HorizontalAlignmentValues
+    public readonly record struct HorizontalAlignmentValues : IEnumValue, IEnumValueFactory<HorizontalAlignmentValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new HorizontalAlignmentValues enum instance
+        /// </summary>
+        public HorizontalAlignmentValues(string value) => _value = value;
+        HorizontalAlignmentValues IEnumValueFactory<HorizontalAlignmentValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "left" => true,
+            "center" => true,
+            "right" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "left";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// Left Justification.
         /// <para>When the item is serialized out as xml, its value is "left".</para>
         /// </summary>
-        [EnumString("left")]
-        Left,
+        public static HorizontalAlignmentValues Left => new("left");
         /// <summary>
         /// Center.
         /// <para>When the item is serialized out as xml, its value is "center".</para>
         /// </summary>
-        [EnumString("center")]
-        Center,
+        public static HorizontalAlignmentValues Center => new("center");
         /// <summary>
         /// Right.
         /// <para>When the item is serialized out as xml, its value is "right".</para>
         /// </summary>
-        [EnumString("right")]
-        Right
+        public static HorizontalAlignmentValues Right => new("right");
+    
     }
 
     /// <summary>
     /// Defines the ShapeDelimiterValues enumeration.
     /// </summary>
-    public enum ShapeDelimiterValues
+    public readonly record struct ShapeDelimiterValues : IEnumValue, IEnumValueFactory<ShapeDelimiterValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new ShapeDelimiterValues enum instance
+        /// </summary>
+        public ShapeDelimiterValues(string value) => _value = value;
+        ShapeDelimiterValues IEnumValueFactory<ShapeDelimiterValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "centered" => true,
+            "match" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "centered";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// Centered (Delimiters).
         /// <para>When the item is serialized out as xml, its value is "centered".</para>
         /// </summary>
-        [EnumString("centered")]
-        Centered,
+        public static ShapeDelimiterValues Centered => new("centered");
         /// <summary>
         /// Match.
         /// <para>When the item is serialized out as xml, its value is "match".</para>
         /// </summary>
-        [EnumString("match")]
-        Match
+        public static ShapeDelimiterValues Match => new("match");
+    
     }
 
     /// <summary>
     /// Defines the FractionTypeValues enumeration.
     /// </summary>
-    public enum FractionTypeValues
+    public readonly record struct FractionTypeValues : IEnumValue, IEnumValueFactory<FractionTypeValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new FractionTypeValues enum instance
+        /// </summary>
+        public FractionTypeValues(string value) => _value = value;
+        FractionTypeValues IEnumValueFactory<FractionTypeValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "bar" => true,
+            "skw" => true,
+            "lin" => true,
+            "noBar" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "bar";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// Bar Fraction.
         /// <para>When the item is serialized out as xml, its value is "bar".</para>
         /// </summary>
-        [EnumString("bar")]
-        Bar,
+        public static FractionTypeValues Bar => new("bar");
         /// <summary>
         /// Skewed.
         /// <para>When the item is serialized out as xml, its value is "skw".</para>
         /// </summary>
-        [EnumString("skw")]
-        Skewed,
+        public static FractionTypeValues Skewed => new("skw");
         /// <summary>
         /// Linear Fraction.
         /// <para>When the item is serialized out as xml, its value is "lin".</para>
         /// </summary>
-        [EnumString("lin")]
-        Linear,
+        public static FractionTypeValues Linear => new("lin");
         /// <summary>
         /// No-Bar Fraction (Stack).
         /// <para>When the item is serialized out as xml, its value is "noBar".</para>
         /// </summary>
-        [EnumString("noBar")]
-        NoBar
+        public static FractionTypeValues NoBar => new("noBar");
+    
     }
 
     /// <summary>
     /// Defines the LimitLocationValues enumeration.
     /// </summary>
-    public enum LimitLocationValues
+    public readonly record struct LimitLocationValues : IEnumValue, IEnumValueFactory<LimitLocationValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new LimitLocationValues enum instance
+        /// </summary>
+        public LimitLocationValues(string value) => _value = value;
+        LimitLocationValues IEnumValueFactory<LimitLocationValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "undOvr" => true,
+            "subSup" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "undOvr";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// Under-Over location.
         /// <para>When the item is serialized out as xml, its value is "undOvr".</para>
         /// </summary>
-        [EnumString("undOvr")]
-        UnderOver,
+        public static LimitLocationValues UnderOver => new("undOvr");
         /// <summary>
         /// Subscript-Superscript location.
         /// <para>When the item is serialized out as xml, its value is "subSup".</para>
         /// </summary>
-        [EnumString("subSup")]
-        SubscriptSuperscript
+        public static LimitLocationValues SubscriptSuperscript => new("subSup");
+    
     }
 
     /// <summary>
     /// Defines the VerticalJustificationValues enumeration.
     /// </summary>
-    public enum VerticalJustificationValues
+    public readonly record struct VerticalJustificationValues : IEnumValue, IEnumValueFactory<VerticalJustificationValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new VerticalJustificationValues enum instance
+        /// </summary>
+        public VerticalJustificationValues(string value) => _value = value;
+        VerticalJustificationValues IEnumValueFactory<VerticalJustificationValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "top" => true,
+            "bot" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "top";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// Top.
         /// <para>When the item is serialized out as xml, its value is "top".</para>
         /// </summary>
-        [EnumString("top")]
-        Top,
+        public static VerticalJustificationValues Top => new("top");
         /// <summary>
         /// Bottom Alignment.
         /// <para>When the item is serialized out as xml, its value is "bot".</para>
         /// </summary>
-        [EnumString("bot")]
-        Bottom
+        public static VerticalJustificationValues Bottom => new("bot");
+    
     }
 
     /// <summary>
     /// Defines the ScriptValues enumeration.
     /// </summary>
-    public enum ScriptValues
+    public readonly record struct ScriptValues : IEnumValue, IEnumValueFactory<ScriptValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new ScriptValues enum instance
+        /// </summary>
+        public ScriptValues(string value) => _value = value;
+        ScriptValues IEnumValueFactory<ScriptValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "roman" => true,
+            "script" => true,
+            "fraktur" => true,
+            "double-struck" => true,
+            "sans-serif" => true,
+            "monospace" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "roman";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// Roman.
         /// <para>When the item is serialized out as xml, its value is "roman".</para>
         /// </summary>
-        [EnumString("roman")]
-        Roman,
+        public static ScriptValues Roman => new("roman");
         /// <summary>
         /// Script.
         /// <para>When the item is serialized out as xml, its value is "script".</para>
         /// </summary>
-        [EnumString("script")]
-        Script,
+        public static ScriptValues Script => new("script");
         /// <summary>
         /// Fraktur.
         /// <para>When the item is serialized out as xml, its value is "fraktur".</para>
         /// </summary>
-        [EnumString("fraktur")]
-        Fraktur,
+        public static ScriptValues Fraktur => new("fraktur");
         /// <summary>
         /// double-struck.
         /// <para>When the item is serialized out as xml, its value is "double-struck".</para>
         /// </summary>
-        [EnumString("double-struck")]
-        DoubleStruck,
+        public static ScriptValues DoubleStruck => new("double-struck");
         /// <summary>
         /// Sans-Serif.
         /// <para>When the item is serialized out as xml, its value is "sans-serif".</para>
         /// </summary>
-        [EnumString("sans-serif")]
-        SansSerif,
+        public static ScriptValues SansSerif => new("sans-serif");
         /// <summary>
         /// Monospace.
         /// <para>When the item is serialized out as xml, its value is "monospace".</para>
         /// </summary>
-        [EnumString("monospace")]
-        Monospace
+        public static ScriptValues Monospace => new("monospace");
+    
     }
 
     /// <summary>
     /// Defines the StyleValues enumeration.
     /// </summary>
-    public enum StyleValues
+    public readonly record struct StyleValues : IEnumValue, IEnumValueFactory<StyleValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new StyleValues enum instance
+        /// </summary>
+        public StyleValues(string value) => _value = value;
+        StyleValues IEnumValueFactory<StyleValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "p" => true,
+            "b" => true,
+            "i" => true,
+            "bi" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "p";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// Plain.
         /// <para>When the item is serialized out as xml, its value is "p".</para>
         /// </summary>
-        [EnumString("p")]
-        Plain,
+        public static StyleValues Plain => new("p");
         /// <summary>
         /// Bold.
         /// <para>When the item is serialized out as xml, its value is "b".</para>
         /// </summary>
-        [EnumString("b")]
-        Bold,
+        public static StyleValues Bold => new("b");
         /// <summary>
         /// Italic.
         /// <para>When the item is serialized out as xml, its value is "i".</para>
         /// </summary>
-        [EnumString("i")]
-        Italic,
+        public static StyleValues Italic => new("i");
         /// <summary>
         /// Bold-Italic.
         /// <para>When the item is serialized out as xml, its value is "bi".</para>
         /// </summary>
-        [EnumString("bi")]
-        BoldItalic
+        public static StyleValues BoldItalic => new("bi");
+    
     }
 
     /// <summary>
     /// Defines the JustificationValues enumeration.
     /// </summary>
-    public enum JustificationValues
+    public readonly record struct JustificationValues : IEnumValue, IEnumValueFactory<JustificationValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new JustificationValues enum instance
+        /// </summary>
+        public JustificationValues(string value) => _value = value;
+        JustificationValues IEnumValueFactory<JustificationValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "left" => true,
+            "right" => true,
+            "center" => true,
+            "centerGroup" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "left";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// Left Justification.
         /// <para>When the item is serialized out as xml, its value is "left".</para>
         /// </summary>
-        [EnumString("left")]
-        Left,
+        public static JustificationValues Left => new("left");
         /// <summary>
         /// Right.
         /// <para>When the item is serialized out as xml, its value is "right".</para>
         /// </summary>
-        [EnumString("right")]
-        Right,
+        public static JustificationValues Right => new("right");
         /// <summary>
         /// Center (Equation).
         /// <para>When the item is serialized out as xml, its value is "center".</para>
         /// </summary>
-        [EnumString("center")]
-        Center,
+        public static JustificationValues Center => new("center");
         /// <summary>
         /// Centered as Group (Equations).
         /// <para>When the item is serialized out as xml, its value is "centerGroup".</para>
         /// </summary>
-        [EnumString("centerGroup")]
-        CenterGroup
+        public static JustificationValues CenterGroup => new("centerGroup");
+    
     }
 
     /// <summary>
     /// Defines the BreakBinaryOperatorValues enumeration.
     /// </summary>
-    public enum BreakBinaryOperatorValues
+    public readonly record struct BreakBinaryOperatorValues : IEnumValue, IEnumValueFactory<BreakBinaryOperatorValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new BreakBinaryOperatorValues enum instance
+        /// </summary>
+        public BreakBinaryOperatorValues(string value) => _value = value;
+        BreakBinaryOperatorValues IEnumValueFactory<BreakBinaryOperatorValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "before" => true,
+            "after" => true,
+            "repeat" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "before";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// Before.
         /// <para>When the item is serialized out as xml, its value is "before".</para>
         /// </summary>
-        [EnumString("before")]
-        Before,
+        public static BreakBinaryOperatorValues Before => new("before");
         /// <summary>
         /// After.
         /// <para>When the item is serialized out as xml, its value is "after".</para>
         /// </summary>
-        [EnumString("after")]
-        After,
+        public static BreakBinaryOperatorValues After => new("after");
         /// <summary>
         /// Repeat.
         /// <para>When the item is serialized out as xml, its value is "repeat".</para>
         /// </summary>
-        [EnumString("repeat")]
-        Repeat
+        public static BreakBinaryOperatorValues Repeat => new("repeat");
+    
     }
 
     /// <summary>
     /// Defines the BreakBinarySubtractionValues enumeration.
     /// </summary>
-    public enum BreakBinarySubtractionValues
+    public readonly record struct BreakBinarySubtractionValues : IEnumValue, IEnumValueFactory<BreakBinarySubtractionValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new BreakBinarySubtractionValues enum instance
+        /// </summary>
+        public BreakBinarySubtractionValues(string value) => _value = value;
+        BreakBinarySubtractionValues IEnumValueFactory<BreakBinarySubtractionValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "--" => true,
+            "-+" => true,
+            "+-" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "--";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// Minus Minus.
         /// <para>When the item is serialized out as xml, its value is "--".</para>
         /// </summary>
-        [EnumString("--")]
-        MinusMinus,
+        public static BreakBinarySubtractionValues MinusMinus => new("--");
         /// <summary>
         /// Minus Plus.
         /// <para>When the item is serialized out as xml, its value is "-+".</para>
         /// </summary>
-        [EnumString("-+")]
-        MinusPlus,
+        public static BreakBinarySubtractionValues MinusPlus => new("-+");
         /// <summary>
         /// Plus Minus.
         /// <para>When the item is serialized out as xml, its value is "+-".</para>
         /// </summary>
-        [EnumString("+-")]
-        PlusMinus
+        public static BreakBinarySubtractionValues PlusMinus => new("+-");
+    
     }
 
     /// <summary>
     /// Defines the VerticalAlignmentValues enumeration.
     /// </summary>
-    public enum VerticalAlignmentValues
+    public readonly record struct VerticalAlignmentValues : IEnumValue, IEnumValueFactory<VerticalAlignmentValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new VerticalAlignmentValues enum instance
+        /// </summary>
+        public VerticalAlignmentValues(string value) => _value = value;
+        VerticalAlignmentValues IEnumValueFactory<VerticalAlignmentValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "top" => true,
+            "center" => true,
+            "bottom" => true,
+            "bot" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "top";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// Top.
         /// <para>When the item is serialized out as xml, its value is "top".</para>
         /// </summary>
-        [EnumString("top")]
-        Top,
+        public static VerticalAlignmentValues Top => new("top");
         /// <summary>
         /// Center (Function).
         /// <para>When the item is serialized out as xml, its value is "center".</para>
         /// </summary>
-        [EnumString("center")]
-        Center,
+        public static VerticalAlignmentValues Center => new("center");
         /// <summary>
         /// bottom.
         /// <para>When the item is serialized out as xml, its value is "bottom".</para>
         /// </summary>
-        [EnumString("bottom")]
-        Bottom,
+        public static VerticalAlignmentValues Bottom => new("bottom");
         /// <summary>
         /// Bottom Alignment.
         /// <para>When the item is serialized out as xml, its value is "bot".</para>
         /// </summary>
-        [EnumString("bot")]
-        Bot
+        public static VerticalAlignmentValues Bot => new("bot");
+    
     }
 
     /// <summary>
     /// Defines the BooleanValues enumeration.
     /// </summary>
-    public enum BooleanValues
+    public readonly record struct BooleanValues : IEnumValue, IEnumValueFactory<BooleanValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new BooleanValues enum instance
+        /// </summary>
+        public BooleanValues(string value) => _value = value;
+        BooleanValues IEnumValueFactory<BooleanValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "true" => true,
+            "false" => true,
+            "on" => true,
+            "off" => true,
+            "0" => true,
+            "1" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "true";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// true.
         /// <para>When the item is serialized out as xml, its value is "true".</para>
         /// </summary>
-        [EnumString("true")]
-        True,
+        public static BooleanValues True => new("true");
         /// <summary>
         /// false.
         /// <para>When the item is serialized out as xml, its value is "false".</para>
         /// </summary>
-        [EnumString("false")]
-        False,
+        public static BooleanValues False => new("false");
         /// <summary>
         /// On.
         /// <para>When the item is serialized out as xml, its value is "on".</para>
         /// </summary>
-        [EnumString("on")]
-        On,
+        public static BooleanValues On => new("on");
         /// <summary>
         /// Off.
         /// <para>When the item is serialized out as xml, its value is "off".</para>
         /// </summary>
-        [EnumString("off")]
-        Off,
+        public static BooleanValues Off => new("off");
         /// <summary>
         /// 0.
         /// <para>When the item is serialized out as xml, its value is "0".</para>
         /// </summary>
-        [EnumString("0")]
-        Zero,
+        public static BooleanValues Zero => new("0");
         /// <summary>
         /// 1.
         /// <para>When the item is serialized out as xml, its value is "1".</para>
         /// </summary>
-        [EnumString("1")]
-        One
+        public static BooleanValues One => new("1");
+    
     }
 }

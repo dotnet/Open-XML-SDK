@@ -2825,195 +2825,237 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <summary>
     /// Clipboard Format Type
     /// </summary>
-    public enum ClipboardFormatValues
+    public readonly record struct ClipboardFormatValues : IEnumValue, IEnumValueFactory<ClipboardFormatValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new ClipboardFormatValues enum instance
+        /// </summary>
+        public ClipboardFormatValues(string value) => _value = value;
+        ClipboardFormatValues IEnumValueFactory<ClipboardFormatValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "PictOld" => true,
+            "Pict" => true,
+            "Bitmap" => true,
+            "PictPrint" => true,
+            "PictScreen" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "PictOld";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// WMF.
         /// <para>When the item is serialized out as xml, its value is "PictOld".</para>
         /// </summary>
-        [EnumString("PictOld")]
-        PictureOld,
+        public static ClipboardFormatValues PictureOld => new("PictOld");
         /// <summary>
         /// EMF.
         /// <para>When the item is serialized out as xml, its value is "Pict".</para>
         /// </summary>
-        [EnumString("Pict")]
-        Picture,
+        public static ClipboardFormatValues Picture => new("Pict");
         /// <summary>
         /// Bitmap.
         /// <para>When the item is serialized out as xml, its value is "Bitmap".</para>
         /// </summary>
-        [EnumString("Bitmap")]
-        Bitmap,
+        public static ClipboardFormatValues Bitmap => new("Bitmap");
         /// <summary>
         /// Printer Picture.
         /// <para>When the item is serialized out as xml, its value is "PictPrint".</para>
         /// </summary>
-        [EnumString("PictPrint")]
-        PicturePrint,
+        public static ClipboardFormatValues PicturePrint => new("PictPrint");
         /// <summary>
         /// Screen Picture EMF.
         /// <para>When the item is serialized out as xml, its value is "PictScreen".</para>
         /// </summary>
-        [EnumString("PictScreen")]
-        PictureScreen
+        public static ClipboardFormatValues PictureScreen => new("PictScreen");
+    
     }
 
     /// <summary>
     /// Object Type
     /// </summary>
-    public enum ObjectValues
+    public readonly record struct ObjectValues : IEnumValue, IEnumValueFactory<ObjectValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new ObjectValues enum instance
+        /// </summary>
+        public ObjectValues(string value) => _value = value;
+        ObjectValues IEnumValueFactory<ObjectValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "Button" => true,
+            "Checkbox" => true,
+            "Dialog" => true,
+            "Drop" => true,
+            "Edit" => true,
+            "GBox" => true,
+            "Label" => true,
+            "LineA" => true,
+            "List" => true,
+            "Movie" => true,
+            "Note" => true,
+            "Pict" => true,
+            "Radio" => true,
+            "RectA" => true,
+            "Scroll" => true,
+            "Spin" => true,
+            "Shape" => true,
+            "Group" => true,
+            "Rect" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "Button";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// Pushbutton.
         /// <para>When the item is serialized out as xml, its value is "Button".</para>
         /// </summary>
-        [EnumString("Button")]
-        Button,
+        public static ObjectValues Button => new("Button");
         /// <summary>
         /// Checkbox.
         /// <para>When the item is serialized out as xml, its value is "Checkbox".</para>
         /// </summary>
-        [EnumString("Checkbox")]
-        Checkbox,
+        public static ObjectValues Checkbox => new("Checkbox");
         /// <summary>
         /// Dialog.
         /// <para>When the item is serialized out as xml, its value is "Dialog".</para>
         /// </summary>
-        [EnumString("Dialog")]
-        Dialog,
+        public static ObjectValues Dialog => new("Dialog");
         /// <summary>
         /// Dropdown Box.
         /// <para>When the item is serialized out as xml, its value is "Drop".</para>
         /// </summary>
-        [EnumString("Drop")]
-        Drop,
+        public static ObjectValues Drop => new("Drop");
         /// <summary>
         /// Editable Text Field.
         /// <para>When the item is serialized out as xml, its value is "Edit".</para>
         /// </summary>
-        [EnumString("Edit")]
-        Edit,
+        public static ObjectValues Edit => new("Edit");
         /// <summary>
         /// Group Box.
         /// <para>When the item is serialized out as xml, its value is "GBox".</para>
         /// </summary>
-        [EnumString("GBox")]
-        GroupBox,
+        public static ObjectValues GroupBox => new("GBox");
         /// <summary>
         /// Label.
         /// <para>When the item is serialized out as xml, its value is "Label".</para>
         /// </summary>
-        [EnumString("Label")]
-        Label,
+        public static ObjectValues Label => new("Label");
         /// <summary>
         /// Auditing Line.
         /// <para>When the item is serialized out as xml, its value is "LineA".</para>
         /// </summary>
-        [EnumString("LineA")]
-        AuditingLine,
+        public static ObjectValues AuditingLine => new("LineA");
         /// <summary>
         /// List Box.
         /// <para>When the item is serialized out as xml, its value is "List".</para>
         /// </summary>
-        [EnumString("List")]
-        List,
+        public static ObjectValues List => new("List");
         /// <summary>
         /// Movie.
         /// <para>When the item is serialized out as xml, its value is "Movie".</para>
         /// </summary>
-        [EnumString("Movie")]
-        Movie,
+        public static ObjectValues Movie => new("Movie");
         /// <summary>
         /// Comment.
         /// <para>When the item is serialized out as xml, its value is "Note".</para>
         /// </summary>
-        [EnumString("Note")]
-        Note,
+        public static ObjectValues Note => new("Note");
         /// <summary>
         /// Image.
         /// <para>When the item is serialized out as xml, its value is "Pict".</para>
         /// </summary>
-        [EnumString("Pict")]
-        Picture,
+        public static ObjectValues Picture => new("Pict");
         /// <summary>
         /// Radio Button.
         /// <para>When the item is serialized out as xml, its value is "Radio".</para>
         /// </summary>
-        [EnumString("Radio")]
-        Radio,
+        public static ObjectValues Radio => new("Radio");
         /// <summary>
         /// Auditing Rectangle.
         /// <para>When the item is serialized out as xml, its value is "RectA".</para>
         /// </summary>
-        [EnumString("RectA")]
-        AuditingRectangle,
+        public static ObjectValues AuditingRectangle => new("RectA");
         /// <summary>
         /// Scroll Bar.
         /// <para>When the item is serialized out as xml, its value is "Scroll".</para>
         /// </summary>
-        [EnumString("Scroll")]
-        Scroll,
+        public static ObjectValues Scroll => new("Scroll");
         /// <summary>
         /// Spin Button.
         /// <para>When the item is serialized out as xml, its value is "Spin".</para>
         /// </summary>
-        [EnumString("Spin")]
-        Spin,
+        public static ObjectValues Spin => new("Spin");
         /// <summary>
         /// Plain Shape.
         /// <para>When the item is serialized out as xml, its value is "Shape".</para>
         /// </summary>
-        [EnumString("Shape")]
-        Shape,
+        public static ObjectValues Shape => new("Shape");
         /// <summary>
         /// Group.
         /// <para>When the item is serialized out as xml, its value is "Group".</para>
         /// </summary>
-        [EnumString("Group")]
-        Group,
+        public static ObjectValues Group => new("Group");
         /// <summary>
         /// Plain Rectangle.
         /// <para>When the item is serialized out as xml, its value is "Rect".</para>
         /// </summary>
-        [EnumString("Rect")]
-        Rectangle
+        public static ObjectValues Rectangle => new("Rect");
+    
     }
 
     /// <summary>
     /// Boolean Value with Blank State
     /// </summary>
-    public enum BooleanEntryWithBlankValues
+    public readonly record struct BooleanEntryWithBlankValues : IEnumValue, IEnumValueFactory<BooleanEntryWithBlankValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new BooleanEntryWithBlankValues enum instance
+        /// </summary>
+        public BooleanEntryWithBlankValues(string value) => _value = value;
+        BooleanEntryWithBlankValues IEnumValueFactory<BooleanEntryWithBlankValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "True" => true,
+            "t" => true,
+            "False" => true,
+            "f" => true,
+            "" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "True";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// Logical True.
         /// <para>When the item is serialized out as xml, its value is "True".</para>
         /// </summary>
-        [EnumString("True")]
-        True,
+        public static BooleanEntryWithBlankValues True => new("True");
         /// <summary>
         /// Logical True.
         /// <para>When the item is serialized out as xml, its value is "t".</para>
         /// </summary>
-        [EnumString("t")]
-        T,
+        public static BooleanEntryWithBlankValues T => new("t");
         /// <summary>
         /// Logical False.
         /// <para>When the item is serialized out as xml, its value is "False".</para>
         /// </summary>
-        [EnumString("False")]
-        False,
+        public static BooleanEntryWithBlankValues False => new("False");
         /// <summary>
         /// Logical False.
         /// <para>When the item is serialized out as xml, its value is "f".</para>
         /// </summary>
-        [EnumString("f")]
-        F,
+        public static BooleanEntryWithBlankValues F => new("f");
         /// <summary>
         /// Blank - Default Value.
         /// <para>When the item is serialized out as xml, its value is "".</para>
         /// </summary>
-        [EnumString("")]
-        Empty
+        public static BooleanEntryWithBlankValues Empty => new(string.Empty);
+    
     }
 }

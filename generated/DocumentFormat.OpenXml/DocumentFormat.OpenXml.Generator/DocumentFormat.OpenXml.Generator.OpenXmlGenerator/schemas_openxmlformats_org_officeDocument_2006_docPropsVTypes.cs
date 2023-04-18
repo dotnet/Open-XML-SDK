@@ -2163,242 +2163,270 @@ namespace DocumentFormat.OpenXml.VariantTypes
     /// <summary>
     /// Vector Base Type Simple Type
     /// </summary>
-    public enum VectorBaseValues
+    public readonly record struct VectorBaseValues : IEnumValue, IEnumValueFactory<VectorBaseValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new VectorBaseValues enum instance
+        /// </summary>
+        public VectorBaseValues(string value) => _value = value;
+        VectorBaseValues IEnumValueFactory<VectorBaseValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "variant" => true,
+            "i1" => true,
+            "i2" => true,
+            "i4" => true,
+            "i8" => true,
+            "ui1" => true,
+            "ui2" => true,
+            "ui4" => true,
+            "ui8" => true,
+            "r4" => true,
+            "r8" => true,
+            "lpstr" => true,
+            "lpwstr" => true,
+            "bstr" => true,
+            "date" => true,
+            "filetime" => true,
+            "bool" => true,
+            "cy" => true,
+            "error" => true,
+            "clsid" => true,
+            "cf" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "variant";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// Variant Base Type.
         /// <para>When the item is serialized out as xml, its value is "variant".</para>
         /// </summary>
-        [EnumString("variant")]
-        Variant,
+        public static VectorBaseValues Variant => new("variant");
         /// <summary>
         /// Vector Base Type Enumeration Value.
         /// <para>When the item is serialized out as xml, its value is "i1".</para>
         /// </summary>
-        [EnumString("i1")]
-        OneByteSignedInteger,
+        public static VectorBaseValues OneByteSignedInteger => new("i1");
         /// <summary>
         /// 2-Byte Signed Integer Base Type.
         /// <para>When the item is serialized out as xml, its value is "i2".</para>
         /// </summary>
-        [EnumString("i2")]
-        TwoBytesSignedInteger,
+        public static VectorBaseValues TwoBytesSignedInteger => new("i2");
         /// <summary>
         /// 4-Byte Signed Integer Base Type.
         /// <para>When the item is serialized out as xml, its value is "i4".</para>
         /// </summary>
-        [EnumString("i4")]
-        FourBytesSignedInteger,
+        public static VectorBaseValues FourBytesSignedInteger => new("i4");
         /// <summary>
         /// 8-Byte Signed Integer Base Type.
         /// <para>When the item is serialized out as xml, its value is "i8".</para>
         /// </summary>
-        [EnumString("i8")]
-        EightBytesSignedInteger,
+        public static VectorBaseValues EightBytesSignedInteger => new("i8");
         /// <summary>
         /// 1-Byte Unsigned Integer Base Type.
         /// <para>When the item is serialized out as xml, its value is "ui1".</para>
         /// </summary>
-        [EnumString("ui1")]
-        OneByteUnsignedInteger,
+        public static VectorBaseValues OneByteUnsignedInteger => new("ui1");
         /// <summary>
         /// 2-Byte Unsigned Integer Base Type.
         /// <para>When the item is serialized out as xml, its value is "ui2".</para>
         /// </summary>
-        [EnumString("ui2")]
-        TwoBytesUnsignedInteger,
+        public static VectorBaseValues TwoBytesUnsignedInteger => new("ui2");
         /// <summary>
         /// 4-Byte Unsigned Integer Base Type.
         /// <para>When the item is serialized out as xml, its value is "ui4".</para>
         /// </summary>
-        [EnumString("ui4")]
-        FourBytesUnsignedInteger,
+        public static VectorBaseValues FourBytesUnsignedInteger => new("ui4");
         /// <summary>
         /// 8-Byte Unsigned Integer Base Type.
         /// <para>When the item is serialized out as xml, its value is "ui8".</para>
         /// </summary>
-        [EnumString("ui8")]
-        EightBytesUnsignedInteger,
+        public static VectorBaseValues EightBytesUnsignedInteger => new("ui8");
         /// <summary>
         /// 4-Byte Real Number Base Type.
         /// <para>When the item is serialized out as xml, its value is "r4".</para>
         /// </summary>
-        [EnumString("r4")]
-        FourBytesReal,
+        public static VectorBaseValues FourBytesReal => new("r4");
         /// <summary>
         /// 8-Byte Real Number Base Type.
         /// <para>When the item is serialized out as xml, its value is "r8".</para>
         /// </summary>
-        [EnumString("r8")]
-        EightBytesReal,
+        public static VectorBaseValues EightBytesReal => new("r8");
         /// <summary>
         /// LPSTR Base Type.
         /// <para>When the item is serialized out as xml, its value is "lpstr".</para>
         /// </summary>
-        [EnumString("lpstr")]
-        Lpstr,
+        public static VectorBaseValues Lpstr => new("lpstr");
         /// <summary>
         /// LPWSTR Base Type.
         /// <para>When the item is serialized out as xml, its value is "lpwstr".</para>
         /// </summary>
-        [EnumString("lpwstr")]
-        Lpwstr,
+        public static VectorBaseValues Lpwstr => new("lpwstr");
         /// <summary>
         /// Basic String Base Type.
         /// <para>When the item is serialized out as xml, its value is "bstr".</para>
         /// </summary>
-        [EnumString("bstr")]
-        Bstr,
+        public static VectorBaseValues Bstr => new("bstr");
         /// <summary>
         /// Date and Time Base Type.
         /// <para>When the item is serialized out as xml, its value is "date".</para>
         /// </summary>
-        [EnumString("date")]
-        Date,
+        public static VectorBaseValues Date => new("date");
         /// <summary>
         /// File Time Base Type.
         /// <para>When the item is serialized out as xml, its value is "filetime".</para>
         /// </summary>
-        [EnumString("filetime")]
-        Filetime,
+        public static VectorBaseValues Filetime => new("filetime");
         /// <summary>
         /// Boolean Base Type.
         /// <para>When the item is serialized out as xml, its value is "bool".</para>
         /// </summary>
-        [EnumString("bool")]
-        Bool,
+        public static VectorBaseValues Bool => new("bool");
         /// <summary>
         /// Currency Base Type.
         /// <para>When the item is serialized out as xml, its value is "cy".</para>
         /// </summary>
-        [EnumString("cy")]
-        Currency,
+        public static VectorBaseValues Currency => new("cy");
         /// <summary>
         /// Error Status Code Base Type.
         /// <para>When the item is serialized out as xml, its value is "error".</para>
         /// </summary>
-        [EnumString("error")]
-        Error,
+        public static VectorBaseValues Error => new("error");
         /// <summary>
         /// Class ID Base Type.
         /// <para>When the item is serialized out as xml, its value is "clsid".</para>
         /// </summary>
-        [EnumString("clsid")]
-        ClassId,
+        public static VectorBaseValues ClassId => new("clsid");
         /// <summary>
         /// Clipboard Data Base Type.
         /// <para>When the item is serialized out as xml, its value is "cf".</para>
         /// </summary>
-        [EnumString("cf")]
-        ClipboardData
+        public static VectorBaseValues ClipboardData => new("cf");
+    
     }
 
     /// <summary>
     /// Array Base Type Simple Type
     /// </summary>
-    public enum ArrayBaseValues
+    public readonly record struct ArrayBaseValues : IEnumValue, IEnumValueFactory<ArrayBaseValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new ArrayBaseValues enum instance
+        /// </summary>
+        public ArrayBaseValues(string value) => _value = value;
+        ArrayBaseValues IEnumValueFactory<ArrayBaseValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "variant" => true,
+            "i1" => true,
+            "i2" => true,
+            "i4" => true,
+            "int" => true,
+            "ui1" => true,
+            "ui2" => true,
+            "ui4" => true,
+            "uint" => true,
+            "r4" => true,
+            "r8" => true,
+            "decimal" => true,
+            "bstr" => true,
+            "date" => true,
+            "bool" => true,
+            "cy" => true,
+            "error" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "variant";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// Variant Base Type.
         /// <para>When the item is serialized out as xml, its value is "variant".</para>
         /// </summary>
-        [EnumString("variant")]
-        Variant,
+        public static ArrayBaseValues Variant => new("variant");
         /// <summary>
         /// 1-Byte Signed Integer Base Type.
         /// <para>When the item is serialized out as xml, its value is "i1".</para>
         /// </summary>
-        [EnumString("i1")]
-        OneByteSignedInteger,
+        public static ArrayBaseValues OneByteSignedInteger => new("i1");
         /// <summary>
         /// 2-Byte Signed Integer Base Type.
         /// <para>When the item is serialized out as xml, its value is "i2".</para>
         /// </summary>
-        [EnumString("i2")]
-        TwoBytesSignedInteger,
+        public static ArrayBaseValues TwoBytesSignedInteger => new("i2");
         /// <summary>
         /// 4-Byte Signed Integer Base Type.
         /// <para>When the item is serialized out as xml, its value is "i4".</para>
         /// </summary>
-        [EnumString("i4")]
-        FourBytesSignedInteger,
+        public static ArrayBaseValues FourBytesSignedInteger => new("i4");
         /// <summary>
         /// Integer Base Type.
         /// <para>When the item is serialized out as xml, its value is "int".</para>
         /// </summary>
-        [EnumString("int")]
-        Integer,
+        public static ArrayBaseValues Integer => new("int");
         /// <summary>
         /// 1-Byte Unsigned Integer Base Type.
         /// <para>When the item is serialized out as xml, its value is "ui1".</para>
         /// </summary>
-        [EnumString("ui1")]
-        OneByteUnsignedInteger,
+        public static ArrayBaseValues OneByteUnsignedInteger => new("ui1");
         /// <summary>
         /// 2-Byte Unsigned Integer Base Type.
         /// <para>When the item is serialized out as xml, its value is "ui2".</para>
         /// </summary>
-        [EnumString("ui2")]
-        TwoBytesUnsignedInteger,
+        public static ArrayBaseValues TwoBytesUnsignedInteger => new("ui2");
         /// <summary>
         /// 4-Byte Unsigned Integer Base Type.
         /// <para>When the item is serialized out as xml, its value is "ui4".</para>
         /// </summary>
-        [EnumString("ui4")]
-        FourBytesUnsignedInteger,
+        public static ArrayBaseValues FourBytesUnsignedInteger => new("ui4");
         /// <summary>
         /// Unsigned Integer Base Type.
         /// <para>When the item is serialized out as xml, its value is "uint".</para>
         /// </summary>
-        [EnumString("uint")]
-        UnsignedInteger,
+        public static ArrayBaseValues UnsignedInteger => new("uint");
         /// <summary>
         /// 4-Byte Real Number Base Type.
         /// <para>When the item is serialized out as xml, its value is "r4".</para>
         /// </summary>
-        [EnumString("r4")]
-        FourBytesReal,
+        public static ArrayBaseValues FourBytesReal => new("r4");
         /// <summary>
         /// 8-Byte Real Number Base Type.
         /// <para>When the item is serialized out as xml, its value is "r8".</para>
         /// </summary>
-        [EnumString("r8")]
-        EightBytesReal,
+        public static ArrayBaseValues EightBytesReal => new("r8");
         /// <summary>
         /// Decimal Base Type.
         /// <para>When the item is serialized out as xml, its value is "decimal".</para>
         /// </summary>
-        [EnumString("decimal")]
-        Decimal,
+        public static ArrayBaseValues Decimal => new("decimal");
         /// <summary>
         /// Basic String Base Type.
         /// <para>When the item is serialized out as xml, its value is "bstr".</para>
         /// </summary>
-        [EnumString("bstr")]
-        Bstr,
+        public static ArrayBaseValues Bstr => new("bstr");
         /// <summary>
         /// Date and Time Base Type.
         /// <para>When the item is serialized out as xml, its value is "date".</para>
         /// </summary>
-        [EnumString("date")]
-        Date,
+        public static ArrayBaseValues Date => new("date");
         /// <summary>
         /// Boolean Base Type.
         /// <para>When the item is serialized out as xml, its value is "bool".</para>
         /// </summary>
-        [EnumString("bool")]
-        Bool,
+        public static ArrayBaseValues Bool => new("bool");
         /// <summary>
         /// Currency Base Type.
         /// <para>When the item is serialized out as xml, its value is "cy".</para>
         /// </summary>
-        [EnumString("cy")]
-        Currency,
+        public static ArrayBaseValues Currency => new("cy");
         /// <summary>
         /// Error Status Code Base Type.
         /// <para>When the item is serialized out as xml, its value is "error".</para>
         /// </summary>
-        [EnumString("error")]
-        Error
+        public static ArrayBaseValues Error => new("error");
+    
     }
 }

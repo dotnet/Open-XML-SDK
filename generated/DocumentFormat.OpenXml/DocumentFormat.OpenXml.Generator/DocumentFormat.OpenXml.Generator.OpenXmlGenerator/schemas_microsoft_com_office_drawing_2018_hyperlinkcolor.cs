@@ -60,19 +60,33 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.HyperLinkColor
     /// <summary>
     /// Defines the HyperlinkColorEnum enumeration.
     /// </summary>
-    public enum HyperlinkColorEnum
+    public readonly record struct HyperlinkColorEnum : IEnumValue, IEnumValueFactory<HyperlinkColorEnum>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new HyperlinkColorEnum enum instance
+        /// </summary>
+        public HyperlinkColorEnum(string value) => _value = value;
+        HyperlinkColorEnum IEnumValueFactory<HyperlinkColorEnum>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "hlink" => true,
+            "tx" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "hlink";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2019;
         /// <summary>
         /// hlink.
         /// <para>When the item is serialized out as xml, its value is "hlink".</para>
         /// </summary>
-        [EnumString("hlink")]
-        HLink,
+        public static HyperlinkColorEnum HLink => new("hlink");
         /// <summary>
         /// tx.
         /// <para>When the item is serialized out as xml, its value is "tx".</para>
         /// </summary>
-        [EnumString("tx")]
-        Tx
+        public static HyperlinkColorEnum Tx => new("tx");
+    
     }
 }

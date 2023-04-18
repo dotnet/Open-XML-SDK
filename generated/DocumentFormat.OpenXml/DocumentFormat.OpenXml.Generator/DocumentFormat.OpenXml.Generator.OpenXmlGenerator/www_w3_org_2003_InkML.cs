@@ -2783,964 +2783,1272 @@ namespace DocumentFormat.OpenXml.InkML
     /// <summary>
     /// Defines the ChannelDataTypeValues enumeration.
     /// </summary>
-    public enum ChannelDataTypeValues
+    public readonly record struct ChannelDataTypeValues : IEnumValue, IEnumValueFactory<ChannelDataTypeValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new ChannelDataTypeValues enum instance
+        /// </summary>
+        public ChannelDataTypeValues(string value) => _value = value;
+        ChannelDataTypeValues IEnumValueFactory<ChannelDataTypeValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "integer" => true,
+            "decimal" => true,
+            "boolean" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "integer";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// integer.
         /// <para>When the item is serialized out as xml, its value is "integer".</para>
         /// </summary>
-        [EnumString("integer")]
-        Integer,
+        public static ChannelDataTypeValues Integer => new("integer");
         /// <summary>
         /// decimal.
         /// <para>When the item is serialized out as xml, its value is "decimal".</para>
         /// </summary>
-        [EnumString("decimal")]
-        Decimal,
+        public static ChannelDataTypeValues Decimal => new("decimal");
         /// <summary>
         /// boolean.
         /// <para>When the item is serialized out as xml, its value is "boolean".</para>
         /// </summary>
-        [EnumString("boolean")]
-        Boolean
+        public static ChannelDataTypeValues Boolean => new("boolean");
+    
     }
 
     /// <summary>
     /// Defines the ChannelValueOrientationValues enumeration.
     /// </summary>
-    public enum ChannelValueOrientationValues
+    public readonly record struct ChannelValueOrientationValues : IEnumValue, IEnumValueFactory<ChannelValueOrientationValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new ChannelValueOrientationValues enum instance
+        /// </summary>
+        public ChannelValueOrientationValues(string value) => _value = value;
+        ChannelValueOrientationValues IEnumValueFactory<ChannelValueOrientationValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "+ve" => true,
+            "-ve" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "+ve";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// +ve.
         /// <para>When the item is serialized out as xml, its value is "+ve".</para>
         /// </summary>
-        [EnumString("+ve")]
-        PlusVe,
+        public static ChannelValueOrientationValues PlusVe => new("+ve");
         /// <summary>
         /// -ve.
         /// <para>When the item is serialized out as xml, its value is "-ve".</para>
         /// </summary>
-        [EnumString("-ve")]
-        MinusVe
+        public static ChannelValueOrientationValues MinusVe => new("-ve");
+    
     }
 
     /// <summary>
     /// Defines the StandardChannelPropertyNameValues enumeration.
     /// </summary>
-    public enum StandardChannelPropertyNameValues
+    public readonly record struct StandardChannelPropertyNameValues : IEnumValue, IEnumValueFactory<StandardChannelPropertyNameValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new StandardChannelPropertyNameValues enum instance
+        /// </summary>
+        public StandardChannelPropertyNameValues(string value) => _value = value;
+        StandardChannelPropertyNameValues IEnumValueFactory<StandardChannelPropertyNameValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "threshold" => true,
+            "resolution" => true,
+            "quantization" => true,
+            "noise" => true,
+            "accuracy" => true,
+            "crossCoupling" => true,
+            "skew" => true,
+            "minBandwidth" => true,
+            "peakRate" => true,
+            "distortion" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "threshold";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// threshold.
         /// <para>When the item is serialized out as xml, its value is "threshold".</para>
         /// </summary>
-        [EnumString("threshold")]
-        Threshold,
+        public static StandardChannelPropertyNameValues Threshold => new("threshold");
         /// <summary>
         /// resolution.
         /// <para>When the item is serialized out as xml, its value is "resolution".</para>
         /// </summary>
-        [EnumString("resolution")]
-        Resolution,
+        public static StandardChannelPropertyNameValues Resolution => new("resolution");
         /// <summary>
         /// quantization.
         /// <para>When the item is serialized out as xml, its value is "quantization".</para>
         /// </summary>
-        [EnumString("quantization")]
-        Quantization,
+        public static StandardChannelPropertyNameValues Quantization => new("quantization");
         /// <summary>
         /// noise.
         /// <para>When the item is serialized out as xml, its value is "noise".</para>
         /// </summary>
-        [EnumString("noise")]
-        Noise,
+        public static StandardChannelPropertyNameValues Noise => new("noise");
         /// <summary>
         /// accuracy.
         /// <para>When the item is serialized out as xml, its value is "accuracy".</para>
         /// </summary>
-        [EnumString("accuracy")]
-        Accuracy,
+        public static StandardChannelPropertyNameValues Accuracy => new("accuracy");
         /// <summary>
         /// crossCoupling.
         /// <para>When the item is serialized out as xml, its value is "crossCoupling".</para>
         /// </summary>
-        [EnumString("crossCoupling")]
-        CrossCoupling,
+        public static StandardChannelPropertyNameValues CrossCoupling => new("crossCoupling");
         /// <summary>
         /// skew.
         /// <para>When the item is serialized out as xml, its value is "skew".</para>
         /// </summary>
-        [EnumString("skew")]
-        Skew,
+        public static StandardChannelPropertyNameValues Skew => new("skew");
         /// <summary>
         /// minBandwidth.
         /// <para>When the item is serialized out as xml, its value is "minBandwidth".</para>
         /// </summary>
-        [EnumString("minBandwidth")]
-        MinBandwidth,
+        public static StandardChannelPropertyNameValues MinBandwidth => new("minBandwidth");
         /// <summary>
         /// peakRate.
         /// <para>When the item is serialized out as xml, its value is "peakRate".</para>
         /// </summary>
-        [EnumString("peakRate")]
-        PeakRate,
+        public static StandardChannelPropertyNameValues PeakRate => new("peakRate");
         /// <summary>
         /// distortion.
         /// <para>When the item is serialized out as xml, its value is "distortion".</para>
         /// </summary>
-        [EnumString("distortion")]
-        Distortion
+        public static StandardChannelPropertyNameValues Distortion => new("distortion");
+    
     }
 
     /// <summary>
     /// Defines the StandardBrushPropertyNameValues enumeration.
     /// </summary>
-    public enum StandardBrushPropertyNameValues
+    public readonly record struct StandardBrushPropertyNameValues : IEnumValue, IEnumValueFactory<StandardBrushPropertyNameValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new StandardBrushPropertyNameValues enum instance
+        /// </summary>
+        public StandardBrushPropertyNameValues(string value) => _value = value;
+        StandardBrushPropertyNameValues IEnumValueFactory<StandardBrushPropertyNameValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "width" => true,
+            "height" => true,
+            "color" => true,
+            "transparency" => true,
+            "tip" => true,
+            "rasterOp" => true,
+            "antiAliased" => true,
+            "fitToCurve" => true,
+            "ignorePressure" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "width";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// width.
         /// <para>When the item is serialized out as xml, its value is "width".</para>
         /// </summary>
-        [EnumString("width")]
-        Width,
+        public static StandardBrushPropertyNameValues Width => new("width");
         /// <summary>
         /// height.
         /// <para>When the item is serialized out as xml, its value is "height".</para>
         /// </summary>
-        [EnumString("height")]
-        Height,
+        public static StandardBrushPropertyNameValues Height => new("height");
         /// <summary>
         /// color.
         /// <para>When the item is serialized out as xml, its value is "color".</para>
         /// </summary>
-        [EnumString("color")]
-        Color,
+        public static StandardBrushPropertyNameValues Color => new("color");
         /// <summary>
         /// transparency.
         /// <para>When the item is serialized out as xml, its value is "transparency".</para>
         /// </summary>
-        [EnumString("transparency")]
-        Transparency,
+        public static StandardBrushPropertyNameValues Transparency => new("transparency");
         /// <summary>
         /// tip.
         /// <para>When the item is serialized out as xml, its value is "tip".</para>
         /// </summary>
-        [EnumString("tip")]
-        Tip,
+        public static StandardBrushPropertyNameValues Tip => new("tip");
         /// <summary>
         /// rasterOp.
         /// <para>When the item is serialized out as xml, its value is "rasterOp".</para>
         /// </summary>
-        [EnumString("rasterOp")]
-        RasterOp,
+        public static StandardBrushPropertyNameValues RasterOp => new("rasterOp");
         /// <summary>
         /// antiAliased.
         /// <para>When the item is serialized out as xml, its value is "antiAliased".</para>
         /// </summary>
-        [EnumString("antiAliased")]
-        AntiAliased,
+        public static StandardBrushPropertyNameValues AntiAliased => new("antiAliased");
         /// <summary>
         /// fitToCurve.
         /// <para>When the item is serialized out as xml, its value is "fitToCurve".</para>
         /// </summary>
-        [EnumString("fitToCurve")]
-        FitToCurve,
+        public static StandardBrushPropertyNameValues FitToCurve => new("fitToCurve");
         /// <summary>
         /// ignorePressure.
         /// <para>When the item is serialized out as xml, its value is "ignorePressure".</para>
         /// </summary>
-        [EnumString("ignorePressure")]
-        IgnorePressure
+        public static StandardBrushPropertyNameValues IgnorePressure => new("ignorePressure");
+    
     }
 
     /// <summary>
     /// Defines the StandardChannelNameValues enumeration.
     /// </summary>
-    public enum StandardChannelNameValues
+    public readonly record struct StandardChannelNameValues : IEnumValue, IEnumValueFactory<StandardChannelNameValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new StandardChannelNameValues enum instance
+        /// </summary>
+        public StandardChannelNameValues(string value) => _value = value;
+        StandardChannelNameValues IEnumValueFactory<StandardChannelNameValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "X" => true,
+            "Y" => true,
+            "Z" => true,
+            "F" => true,
+            "TP" => true,
+            "BP" => true,
+            "S" => true,
+            "B1" => true,
+            "B2" => true,
+            "B3" => true,
+            "B4" => true,
+            "E" => true,
+            "OTx" => true,
+            "OTy" => true,
+            "OA" => true,
+            "OE" => true,
+            "OR" => true,
+            "RP" => true,
+            "RR" => true,
+            "RY" => true,
+            "C" => true,
+            "CR" => true,
+            "CG" => true,
+            "CB" => true,
+            "CC" => true,
+            "CM" => true,
+            "CY" => true,
+            "CK" => true,
+            "W" => true,
+            "T" => true,
+            "SN" => true,
+            "TW" => true,
+            "TH" => true,
+            "TC" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "X";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// X.
         /// <para>When the item is serialized out as xml, its value is "X".</para>
         /// </summary>
-        [EnumString("X")]
-        XCoordinate,
+        public static StandardChannelNameValues XCoordinate => new("X");
         /// <summary>
         /// Y.
         /// <para>When the item is serialized out as xml, its value is "Y".</para>
         /// </summary>
-        [EnumString("Y")]
-        YCoordinate,
+        public static StandardChannelNameValues YCoordinate => new("Y");
         /// <summary>
         /// Z.
         /// <para>When the item is serialized out as xml, its value is "Z".</para>
         /// </summary>
-        [EnumString("Z")]
-        ZCoordinate,
+        public static StandardChannelNameValues ZCoordinate => new("Z");
         /// <summary>
         /// F.
         /// <para>When the item is serialized out as xml, its value is "F".</para>
         /// </summary>
-        [EnumString("F")]
-        PenTipForce,
+        public static StandardChannelNameValues PenTipForce => new("F");
         /// <summary>
         /// TP.
         /// <para>When the item is serialized out as xml, its value is "TP".</para>
         /// </summary>
-        [EnumString("TP")]
-        TangentPressure,
+        public static StandardChannelNameValues TangentPressure => new("TP");
         /// <summary>
         /// BP.
         /// <para>When the item is serialized out as xml, its value is "BP".</para>
         /// </summary>
-        [EnumString("BP")]
-        ButtonPressure,
+        public static StandardChannelNameValues ButtonPressure => new("BP");
         /// <summary>
         /// S.
         /// <para>When the item is serialized out as xml, its value is "S".</para>
         /// </summary>
-        [EnumString("S")]
-        TipSwitchState,
+        public static StandardChannelNameValues TipSwitchState => new("S");
         /// <summary>
         /// B1.
         /// <para>When the item is serialized out as xml, its value is "B1".</para>
         /// </summary>
-        [EnumString("B1")]
-        SideButton1State,
+        public static StandardChannelNameValues SideButton1State => new("B1");
         /// <summary>
         /// B2.
         /// <para>When the item is serialized out as xml, its value is "B2".</para>
         /// </summary>
-        [EnumString("B2")]
-        SideButton2State,
+        public static StandardChannelNameValues SideButton2State => new("B2");
         /// <summary>
         /// B3.
         /// <para>When the item is serialized out as xml, its value is "B3".</para>
         /// </summary>
-        [EnumString("B3")]
-        SideButton3State,
+        public static StandardChannelNameValues SideButton3State => new("B3");
         /// <summary>
         /// B4.
         /// <para>When the item is serialized out as xml, its value is "B4".</para>
         /// </summary>
-        [EnumString("B4")]
-        SideButton4State,
+        public static StandardChannelNameValues SideButton4State => new("B4");
         /// <summary>
         /// E.
         /// <para>When the item is serialized out as xml, its value is "E".</para>
         /// </summary>
-        [EnumString("E")]
-        PenInverted,
+        public static StandardChannelNameValues PenInverted => new("E");
         /// <summary>
         /// OTx.
         /// <para>When the item is serialized out as xml, its value is "OTx".</para>
         /// </summary>
-        [EnumString("OTx")]
-        TiltAlongXAxis,
+        public static StandardChannelNameValues TiltAlongXAxis => new("OTx");
         /// <summary>
         /// OTy.
         /// <para>When the item is serialized out as xml, its value is "OTy".</para>
         /// </summary>
-        [EnumString("OTy")]
-        TiltAlongYAxis,
+        public static StandardChannelNameValues TiltAlongYAxis => new("OTy");
         /// <summary>
         /// OA.
         /// <para>When the item is serialized out as xml, its value is "OA".</para>
         /// </summary>
-        [EnumString("OA")]
-        PenAzimuthAngle,
+        public static StandardChannelNameValues PenAzimuthAngle => new("OA");
         /// <summary>
         /// OE.
         /// <para>When the item is serialized out as xml, its value is "OE".</para>
         /// </summary>
-        [EnumString("OE")]
-        PenElevationAngle,
+        public static StandardChannelNameValues PenElevationAngle => new("OE");
         /// <summary>
         /// OR.
         /// <para>When the item is serialized out as xml, its value is "OR".</para>
         /// </summary>
-        [EnumString("OR")]
-        PexAxisRotation,
+        public static StandardChannelNameValues PexAxisRotation => new("OR");
         /// <summary>
         /// RP.
         /// <para>When the item is serialized out as xml, its value is "RP".</para>
         /// </summary>
-        [EnumString("RP")]
-        PitchRotation,
+        public static StandardChannelNameValues PitchRotation => new("RP");
         /// <summary>
         /// RR.
         /// <para>When the item is serialized out as xml, its value is "RR".</para>
         /// </summary>
-        [EnumString("RR")]
-        RollRotation,
+        public static StandardChannelNameValues RollRotation => new("RR");
         /// <summary>
         /// RY.
         /// <para>When the item is serialized out as xml, its value is "RY".</para>
         /// </summary>
-        [EnumString("RY")]
-        YawRotation,
+        public static StandardChannelNameValues YawRotation => new("RY");
         /// <summary>
         /// C.
         /// <para>When the item is serialized out as xml, its value is "C".</para>
         /// </summary>
-        [EnumString("C")]
-        ColorValue,
+        public static StandardChannelNameValues ColorValue => new("C");
         /// <summary>
         /// CR.
         /// <para>When the item is serialized out as xml, its value is "CR".</para>
         /// </summary>
-        [EnumString("CR")]
-        RedColorValue,
+        public static StandardChannelNameValues RedColorValue => new("CR");
         /// <summary>
         /// CG.
         /// <para>When the item is serialized out as xml, its value is "CG".</para>
         /// </summary>
-        [EnumString("CG")]
-        GreenColorValue,
+        public static StandardChannelNameValues GreenColorValue => new("CG");
         /// <summary>
         /// CB.
         /// <para>When the item is serialized out as xml, its value is "CB".</para>
         /// </summary>
-        [EnumString("CB")]
-        BlueColorValue,
+        public static StandardChannelNameValues BlueColorValue => new("CB");
         /// <summary>
         /// CC.
         /// <para>When the item is serialized out as xml, its value is "CC".</para>
         /// </summary>
-        [EnumString("CC")]
-        CyanColorValue,
+        public static StandardChannelNameValues CyanColorValue => new("CC");
         /// <summary>
         /// CM.
         /// <para>When the item is serialized out as xml, its value is "CM".</para>
         /// </summary>
-        [EnumString("CM")]
-        MegentaColorValue,
+        public static StandardChannelNameValues MegentaColorValue => new("CM");
         /// <summary>
         /// CY.
         /// <para>When the item is serialized out as xml, its value is "CY".</para>
         /// </summary>
-        [EnumString("CY")]
-        YellowColorValue,
+        public static StandardChannelNameValues YellowColorValue => new("CY");
         /// <summary>
         /// CK.
         /// <para>When the item is serialized out as xml, its value is "CK".</para>
         /// </summary>
-        [EnumString("CK")]
-        BlackColorValue,
+        public static StandardChannelNameValues BlackColorValue => new("CK");
         /// <summary>
         /// W.
         /// <para>When the item is serialized out as xml, its value is "W".</para>
         /// </summary>
-        [EnumString("W")]
-        StrokesWidth,
+        public static StandardChannelNameValues StrokesWidth => new("W");
         /// <summary>
         /// T.
         /// <para>When the item is serialized out as xml, its value is "T".</para>
         /// </summary>
-        [EnumString("T")]
-        Time,
+        public static StandardChannelNameValues Time => new("T");
         /// <summary>
         /// SN.
         /// <para>When the item is serialized out as xml, its value is "SN".</para>
         /// </summary>
-        [EnumString("SN")]
-        SerialNumber,
+        public static StandardChannelNameValues SerialNumber => new("SN");
         /// <summary>
         /// TW.
         /// <para>When the item is serialized out as xml, its value is "TW".</para>
         /// </summary>
-        [EnumString("TW")]
-        TouchWidth,
+        public static StandardChannelNameValues TouchWidth => new("TW");
         /// <summary>
         /// TH.
         /// <para>When the item is serialized out as xml, its value is "TH".</para>
         /// </summary>
-        [EnumString("TH")]
-        TouchHeight,
+        public static StandardChannelNameValues TouchHeight => new("TH");
         /// <summary>
         /// TC.
         /// <para>When the item is serialized out as xml, its value is "TC".</para>
         /// </summary>
-        [EnumString("TC")]
-        FingerTouch
+        public static StandardChannelNameValues FingerTouch => new("TC");
+    
     }
 
     /// <summary>
     /// Defines the StandardLengthUnitsValues enumeration.
     /// </summary>
-    public enum StandardLengthUnitsValues
+    public readonly record struct StandardLengthUnitsValues : IEnumValue, IEnumValueFactory<StandardLengthUnitsValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new StandardLengthUnitsValues enum instance
+        /// </summary>
+        public StandardLengthUnitsValues(string value) => _value = value;
+        StandardLengthUnitsValues IEnumValueFactory<StandardLengthUnitsValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "m" => true,
+            "cm" => true,
+            "mm" => true,
+            "in" => true,
+            "pt" => true,
+            "pc" => true,
+            "em" => true,
+            "ex" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "m";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// m.
         /// <para>When the item is serialized out as xml, its value is "m".</para>
         /// </summary>
-        [EnumString("m")]
-        Meter,
+        public static StandardLengthUnitsValues Meter => new("m");
         /// <summary>
         /// cm.
         /// <para>When the item is serialized out as xml, its value is "cm".</para>
         /// </summary>
-        [EnumString("cm")]
-        Centimeter,
+        public static StandardLengthUnitsValues Centimeter => new("cm");
         /// <summary>
         /// mm.
         /// <para>When the item is serialized out as xml, its value is "mm".</para>
         /// </summary>
-        [EnumString("mm")]
-        Millimeter,
+        public static StandardLengthUnitsValues Millimeter => new("mm");
         /// <summary>
         /// in.
         /// <para>When the item is serialized out as xml, its value is "in".</para>
         /// </summary>
-        [EnumString("in")]
-        Inche,
+        public static StandardLengthUnitsValues Inche => new("in");
         /// <summary>
         /// pt.
         /// <para>When the item is serialized out as xml, its value is "pt".</para>
         /// </summary>
-        [EnumString("pt")]
-        Point,
+        public static StandardLengthUnitsValues Point => new("pt");
         /// <summary>
         /// pc.
         /// <para>When the item is serialized out as xml, its value is "pc".</para>
         /// </summary>
-        [EnumString("pc")]
-        Pica,
+        public static StandardLengthUnitsValues Pica => new("pc");
         /// <summary>
         /// em.
         /// <para>When the item is serialized out as xml, its value is "em".</para>
         /// </summary>
-        [EnumString("em")]
-        Em,
+        public static StandardLengthUnitsValues Em => new("em");
         /// <summary>
         /// ex.
         /// <para>When the item is serialized out as xml, its value is "ex".</para>
         /// </summary>
-        [EnumString("ex")]
-        Ex
+        public static StandardLengthUnitsValues Ex => new("ex");
+    
     }
 
     /// <summary>
     /// Defines the StandardPerLengthUnitsValues enumeration.
     /// </summary>
-    public enum StandardPerLengthUnitsValues
+    public readonly record struct StandardPerLengthUnitsValues : IEnumValue, IEnumValueFactory<StandardPerLengthUnitsValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new StandardPerLengthUnitsValues enum instance
+        /// </summary>
+        public StandardPerLengthUnitsValues(string value) => _value = value;
+        StandardPerLengthUnitsValues IEnumValueFactory<StandardPerLengthUnitsValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "1/m" => true,
+            "1/cm" => true,
+            "1/mm" => true,
+            "1/in" => true,
+            "1/pt" => true,
+            "1/pc" => true,
+            "1/em" => true,
+            "1/ex" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "1/m";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// 1/m.
         /// <para>When the item is serialized out as xml, its value is "1/m".</para>
         /// </summary>
-        [EnumString("1/m")]
-        PerMeter,
+        public static StandardPerLengthUnitsValues PerMeter => new("1/m");
         /// <summary>
         /// 1/cm.
         /// <para>When the item is serialized out as xml, its value is "1/cm".</para>
         /// </summary>
-        [EnumString("1/cm")]
-        PerCentimeter,
+        public static StandardPerLengthUnitsValues PerCentimeter => new("1/cm");
         /// <summary>
         /// 1/mm.
         /// <para>When the item is serialized out as xml, its value is "1/mm".</para>
         /// </summary>
-        [EnumString("1/mm")]
-        PerMillimeter,
+        public static StandardPerLengthUnitsValues PerMillimeter => new("1/mm");
         /// <summary>
         /// 1/in.
         /// <para>When the item is serialized out as xml, its value is "1/in".</para>
         /// </summary>
-        [EnumString("1/in")]
-        PerInche,
+        public static StandardPerLengthUnitsValues PerInche => new("1/in");
         /// <summary>
         /// 1/pt.
         /// <para>When the item is serialized out as xml, its value is "1/pt".</para>
         /// </summary>
-        [EnumString("1/pt")]
-        PerPoint,
+        public static StandardPerLengthUnitsValues PerPoint => new("1/pt");
         /// <summary>
         /// 1/pc.
         /// <para>When the item is serialized out as xml, its value is "1/pc".</para>
         /// </summary>
-        [EnumString("1/pc")]
-        PerPica,
+        public static StandardPerLengthUnitsValues PerPica => new("1/pc");
         /// <summary>
         /// 1/em.
         /// <para>When the item is serialized out as xml, its value is "1/em".</para>
         /// </summary>
-        [EnumString("1/em")]
-        PerEm,
+        public static StandardPerLengthUnitsValues PerEm => new("1/em");
         /// <summary>
         /// 1/ex.
         /// <para>When the item is serialized out as xml, its value is "1/ex".</para>
         /// </summary>
-        [EnumString("1/ex")]
-        PerEx
+        public static StandardPerLengthUnitsValues PerEx => new("1/ex");
+    
     }
 
     /// <summary>
     /// Defines the StandardTimeUnitsValues enumeration.
     /// </summary>
-    public enum StandardTimeUnitsValues
+    public readonly record struct StandardTimeUnitsValues : IEnumValue, IEnumValueFactory<StandardTimeUnitsValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new StandardTimeUnitsValues enum instance
+        /// </summary>
+        public StandardTimeUnitsValues(string value) => _value = value;
+        StandardTimeUnitsValues IEnumValueFactory<StandardTimeUnitsValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "s" => true,
+            "ms" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "s";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// s.
         /// <para>When the item is serialized out as xml, its value is "s".</para>
         /// </summary>
-        [EnumString("s")]
-        Second,
+        public static StandardTimeUnitsValues Second => new("s");
         /// <summary>
         /// ms.
         /// <para>When the item is serialized out as xml, its value is "ms".</para>
         /// </summary>
-        [EnumString("ms")]
-        Millisecond
+        public static StandardTimeUnitsValues Millisecond => new("ms");
+    
     }
 
     /// <summary>
     /// Defines the StandardPerTimeUnitsValues enumeration.
     /// </summary>
-    public enum StandardPerTimeUnitsValues
+    public readonly record struct StandardPerTimeUnitsValues : IEnumValue, IEnumValueFactory<StandardPerTimeUnitsValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new StandardPerTimeUnitsValues enum instance
+        /// </summary>
+        public StandardPerTimeUnitsValues(string value) => _value = value;
+        StandardPerTimeUnitsValues IEnumValueFactory<StandardPerTimeUnitsValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "1/s" => true,
+            "1/ms" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "1/s";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// 1/s.
         /// <para>When the item is serialized out as xml, its value is "1/s".</para>
         /// </summary>
-        [EnumString("1/s")]
-        PerSecond,
+        public static StandardPerTimeUnitsValues PerSecond => new("1/s");
         /// <summary>
         /// 1/ms.
         /// <para>When the item is serialized out as xml, its value is "1/ms".</para>
         /// </summary>
-        [EnumString("1/ms")]
-        PerMillisecond
+        public static StandardPerTimeUnitsValues PerMillisecond => new("1/ms");
+    
     }
 
     /// <summary>
     /// Defines the StandardMassForceUnitsValues enumeration.
     /// </summary>
-    public enum StandardMassForceUnitsValues
+    public readonly record struct StandardMassForceUnitsValues : IEnumValue, IEnumValueFactory<StandardMassForceUnitsValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new StandardMassForceUnitsValues enum instance
+        /// </summary>
+        public StandardMassForceUnitsValues(string value) => _value = value;
+        StandardMassForceUnitsValues IEnumValueFactory<StandardMassForceUnitsValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "Kg" => true,
+            "g" => true,
+            "mg" => true,
+            "N" => true,
+            "lb" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "Kg";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// Kg.
         /// <para>When the item is serialized out as xml, its value is "Kg".</para>
         /// </summary>
-        [EnumString("Kg")]
-        Kilogram,
+        public static StandardMassForceUnitsValues Kilogram => new("Kg");
         /// <summary>
         /// g.
         /// <para>When the item is serialized out as xml, its value is "g".</para>
         /// </summary>
-        [EnumString("g")]
-        Gram,
+        public static StandardMassForceUnitsValues Gram => new("g");
         /// <summary>
         /// mg.
         /// <para>When the item is serialized out as xml, its value is "mg".</para>
         /// </summary>
-        [EnumString("mg")]
-        Milligram,
+        public static StandardMassForceUnitsValues Milligram => new("mg");
         /// <summary>
         /// N.
         /// <para>When the item is serialized out as xml, its value is "N".</para>
         /// </summary>
-        [EnumString("N")]
-        Newton,
+        public static StandardMassForceUnitsValues Newton => new("N");
         /// <summary>
         /// lb.
         /// <para>When the item is serialized out as xml, its value is "lb".</para>
         /// </summary>
-        [EnumString("lb")]
-        Pond
+        public static StandardMassForceUnitsValues Pond => new("lb");
+    
     }
 
     /// <summary>
     /// Defines the StandardPerMassForceUnitsValues enumeration.
     /// </summary>
-    public enum StandardPerMassForceUnitsValues
+    public readonly record struct StandardPerMassForceUnitsValues : IEnumValue, IEnumValueFactory<StandardPerMassForceUnitsValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new StandardPerMassForceUnitsValues enum instance
+        /// </summary>
+        public StandardPerMassForceUnitsValues(string value) => _value = value;
+        StandardPerMassForceUnitsValues IEnumValueFactory<StandardPerMassForceUnitsValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "1/Kg" => true,
+            "1/g" => true,
+            "1/mg" => true,
+            "1/N" => true,
+            "1/lb" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "1/Kg";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// 1/Kg.
         /// <para>When the item is serialized out as xml, its value is "1/Kg".</para>
         /// </summary>
-        [EnumString("1/Kg")]
-        PerKilogram,
+        public static StandardPerMassForceUnitsValues PerKilogram => new("1/Kg");
         /// <summary>
         /// 1/g.
         /// <para>When the item is serialized out as xml, its value is "1/g".</para>
         /// </summary>
-        [EnumString("1/g")]
-        PerGram,
+        public static StandardPerMassForceUnitsValues PerGram => new("1/g");
         /// <summary>
         /// 1/mg.
         /// <para>When the item is serialized out as xml, its value is "1/mg".</para>
         /// </summary>
-        [EnumString("1/mg")]
-        PerMilligram,
+        public static StandardPerMassForceUnitsValues PerMilligram => new("1/mg");
         /// <summary>
         /// 1/N.
         /// <para>When the item is serialized out as xml, its value is "1/N".</para>
         /// </summary>
-        [EnumString("1/N")]
-        PerNewton,
+        public static StandardPerMassForceUnitsValues PerNewton => new("1/N");
         /// <summary>
         /// 1/lb.
         /// <para>When the item is serialized out as xml, its value is "1/lb".</para>
         /// </summary>
-        [EnumString("1/lb")]
-        PerPond
+        public static StandardPerMassForceUnitsValues PerPond => new("1/lb");
+    
     }
 
     /// <summary>
     /// Defines the StandardAngleUnitsValues enumeration.
     /// </summary>
-    public enum StandardAngleUnitsValues
+    public readonly record struct StandardAngleUnitsValues : IEnumValue, IEnumValueFactory<StandardAngleUnitsValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new StandardAngleUnitsValues enum instance
+        /// </summary>
+        public StandardAngleUnitsValues(string value) => _value = value;
+        StandardAngleUnitsValues IEnumValueFactory<StandardAngleUnitsValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "deg" => true,
+            "rad" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "deg";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// deg.
         /// <para>When the item is serialized out as xml, its value is "deg".</para>
         /// </summary>
-        [EnumString("deg")]
-        Degree,
+        public static StandardAngleUnitsValues Degree => new("deg");
         /// <summary>
         /// rad.
         /// <para>When the item is serialized out as xml, its value is "rad".</para>
         /// </summary>
-        [EnumString("rad")]
-        Radian
+        public static StandardAngleUnitsValues Radian => new("rad");
+    
     }
 
     /// <summary>
     /// Defines the StandardPerAngleUnitsValues enumeration.
     /// </summary>
-    public enum StandardPerAngleUnitsValues
+    public readonly record struct StandardPerAngleUnitsValues : IEnumValue, IEnumValueFactory<StandardPerAngleUnitsValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new StandardPerAngleUnitsValues enum instance
+        /// </summary>
+        public StandardPerAngleUnitsValues(string value) => _value = value;
+        StandardPerAngleUnitsValues IEnumValueFactory<StandardPerAngleUnitsValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "1/deg" => true,
+            "1/rad" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "1/deg";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// 1/deg.
         /// <para>When the item is serialized out as xml, its value is "1/deg".</para>
         /// </summary>
-        [EnumString("1/deg")]
-        PerDegree,
+        public static StandardPerAngleUnitsValues PerDegree => new("1/deg");
         /// <summary>
         /// 1/rad.
         /// <para>When the item is serialized out as xml, its value is "1/rad".</para>
         /// </summary>
-        [EnumString("1/rad")]
-        PerRadian
+        public static StandardPerAngleUnitsValues PerRadian => new("1/rad");
+    
     }
 
     /// <summary>
     /// Defines the StandardOtherUnitsValues enumeration.
     /// </summary>
-    public enum StandardOtherUnitsValues
+    public readonly record struct StandardOtherUnitsValues : IEnumValue, IEnumValueFactory<StandardOtherUnitsValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new StandardOtherUnitsValues enum instance
+        /// </summary>
+        public StandardOtherUnitsValues(string value) => _value = value;
+        StandardOtherUnitsValues IEnumValueFactory<StandardOtherUnitsValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "%" => true,
+            "dev" => true,
+            "none" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "%";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// %.
         /// <para>When the item is serialized out as xml, its value is "%".</para>
         /// </summary>
-        [EnumString("%")]
-        Percentage,
+        public static StandardOtherUnitsValues Percentage => new("%");
         /// <summary>
         /// dev.
         /// <para>When the item is serialized out as xml, its value is "dev".</para>
         /// </summary>
-        [EnumString("dev")]
-        DeviceResolution,
+        public static StandardOtherUnitsValues DeviceResolution => new("dev");
         /// <summary>
         /// none.
         /// <para>When the item is serialized out as xml, its value is "none".</para>
         /// </summary>
-        [EnumString("none")]
-        None
+        public static StandardOtherUnitsValues None => new("none");
+    
     }
 
     /// <summary>
     /// Defines the StandardPerOtherUnitsValues enumeration.
     /// </summary>
-    public enum StandardPerOtherUnitsValues
+    public readonly record struct StandardPerOtherUnitsValues : IEnumValue, IEnumValueFactory<StandardPerOtherUnitsValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new StandardPerOtherUnitsValues enum instance
+        /// </summary>
+        public StandardPerOtherUnitsValues(string value) => _value = value;
+        StandardPerOtherUnitsValues IEnumValueFactory<StandardPerOtherUnitsValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "1/%" => true,
+            "1/dev" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "1/%";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// 1/%.
         /// <para>When the item is serialized out as xml, its value is "1/%".</para>
         /// </summary>
-        [EnumString("1/%")]
-        PerPercentage,
+        public static StandardPerOtherUnitsValues PerPercentage => new("1/%");
         /// <summary>
         /// 1/dev.
         /// <para>When the item is serialized out as xml, its value is "1/dev".</para>
         /// </summary>
-        [EnumString("1/dev")]
-        PerDeviceResolution
+        public static StandardPerOtherUnitsValues PerDeviceResolution => new("1/dev");
+    
     }
 
     /// <summary>
     /// Defines the TraceTypeValues enumeration.
     /// </summary>
-    public enum TraceTypeValues
+    public readonly record struct TraceTypeValues : IEnumValue, IEnumValueFactory<TraceTypeValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new TraceTypeValues enum instance
+        /// </summary>
+        public TraceTypeValues(string value) => _value = value;
+        TraceTypeValues IEnumValueFactory<TraceTypeValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "penDown" => true,
+            "penUp" => true,
+            "indeterminate" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "penDown";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// penDown.
         /// <para>When the item is serialized out as xml, its value is "penDown".</para>
         /// </summary>
-        [EnumString("penDown")]
-        PenDown,
+        public static TraceTypeValues PenDown => new("penDown");
         /// <summary>
         /// penUp.
         /// <para>When the item is serialized out as xml, its value is "penUp".</para>
         /// </summary>
-        [EnumString("penUp")]
-        PenUp,
+        public static TraceTypeValues PenUp => new("penUp");
         /// <summary>
         /// indeterminate.
         /// <para>When the item is serialized out as xml, its value is "indeterminate".</para>
         /// </summary>
-        [EnumString("indeterminate")]
-        Indeterminate
+        public static TraceTypeValues Indeterminate => new("indeterminate");
+    
     }
 
     /// <summary>
     /// Defines the TraceContinuationValues enumeration.
     /// </summary>
-    public enum TraceContinuationValues
+    public readonly record struct TraceContinuationValues : IEnumValue, IEnumValueFactory<TraceContinuationValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new TraceContinuationValues enum instance
+        /// </summary>
+        public TraceContinuationValues(string value) => _value = value;
+        TraceContinuationValues IEnumValueFactory<TraceContinuationValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "begin" => true,
+            "end" => true,
+            "middle" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "begin";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// begin.
         /// <para>When the item is serialized out as xml, its value is "begin".</para>
         /// </summary>
-        [EnumString("begin")]
-        Begin,
+        public static TraceContinuationValues Begin => new("begin");
         /// <summary>
         /// end.
         /// <para>When the item is serialized out as xml, its value is "end".</para>
         /// </summary>
-        [EnumString("end")]
-        End,
+        public static TraceContinuationValues End => new("end");
         /// <summary>
         /// middle.
         /// <para>When the item is serialized out as xml, its value is "middle".</para>
         /// </summary>
-        [EnumString("middle")]
-        Middle
+        public static TraceContinuationValues Middle => new("middle");
+    
     }
 
     /// <summary>
     /// Defines the RasterOperationValues enumeration.
     /// </summary>
-    public enum RasterOperationValues
+    public readonly record struct RasterOperationValues : IEnumValue, IEnumValueFactory<RasterOperationValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new RasterOperationValues enum instance
+        /// </summary>
+        public RasterOperationValues(string value) => _value = value;
+        RasterOperationValues IEnumValueFactory<RasterOperationValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "black" => true,
+            "notMergePen" => true,
+            "maskNotPen" => true,
+            "notCopyPen" => true,
+            "maskPenNot" => true,
+            "not" => true,
+            "xOrPen" => true,
+            "notMaskPen" => true,
+            "maskPen" => true,
+            "notXOrPen" => true,
+            "noOperation" => true,
+            "mergeNotPen" => true,
+            "copyPen" => true,
+            "mergePenNot" => true,
+            "mergePen" => true,
+            "white" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "black";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// black.
         /// <para>When the item is serialized out as xml, its value is "black".</para>
         /// </summary>
-        [EnumString("black")]
-        Black,
+        public static RasterOperationValues Black => new("black");
         /// <summary>
         /// notMergePen.
         /// <para>When the item is serialized out as xml, its value is "notMergePen".</para>
         /// </summary>
-        [EnumString("notMergePen")]
-        NotMergePen,
+        public static RasterOperationValues NotMergePen => new("notMergePen");
         /// <summary>
         /// maskNotPen.
         /// <para>When the item is serialized out as xml, its value is "maskNotPen".</para>
         /// </summary>
-        [EnumString("maskNotPen")]
-        MaskNotPen,
+        public static RasterOperationValues MaskNotPen => new("maskNotPen");
         /// <summary>
         /// notCopyPen.
         /// <para>When the item is serialized out as xml, its value is "notCopyPen".</para>
         /// </summary>
-        [EnumString("notCopyPen")]
-        NotCopyPen,
+        public static RasterOperationValues NotCopyPen => new("notCopyPen");
         /// <summary>
         /// maskPenNot.
         /// <para>When the item is serialized out as xml, its value is "maskPenNot".</para>
         /// </summary>
-        [EnumString("maskPenNot")]
-        MaskPenNot,
+        public static RasterOperationValues MaskPenNot => new("maskPenNot");
         /// <summary>
         /// not.
         /// <para>When the item is serialized out as xml, its value is "not".</para>
         /// </summary>
-        [EnumString("not")]
-        Not,
+        public static RasterOperationValues Not => new("not");
         /// <summary>
         /// xOrPen.
         /// <para>When the item is serialized out as xml, its value is "xOrPen".</para>
         /// </summary>
-        [EnumString("xOrPen")]
-        XOrPen,
+        public static RasterOperationValues XOrPen => new("xOrPen");
         /// <summary>
         /// notMaskPen.
         /// <para>When the item is serialized out as xml, its value is "notMaskPen".</para>
         /// </summary>
-        [EnumString("notMaskPen")]
-        NotMaskPen,
+        public static RasterOperationValues NotMaskPen => new("notMaskPen");
         /// <summary>
         /// maskPen.
         /// <para>When the item is serialized out as xml, its value is "maskPen".</para>
         /// </summary>
-        [EnumString("maskPen")]
-        MaskPen,
+        public static RasterOperationValues MaskPen => new("maskPen");
         /// <summary>
         /// notXOrPen.
         /// <para>When the item is serialized out as xml, its value is "notXOrPen".</para>
         /// </summary>
-        [EnumString("notXOrPen")]
-        NotXOrPen,
+        public static RasterOperationValues NotXOrPen => new("notXOrPen");
         /// <summary>
         /// noOperation.
         /// <para>When the item is serialized out as xml, its value is "noOperation".</para>
         /// </summary>
-        [EnumString("noOperation")]
-        NoOperation,
+        public static RasterOperationValues NoOperation => new("noOperation");
         /// <summary>
         /// mergeNotPen.
         /// <para>When the item is serialized out as xml, its value is "mergeNotPen".</para>
         /// </summary>
-        [EnumString("mergeNotPen")]
-        MergeNotPen,
+        public static RasterOperationValues MergeNotPen => new("mergeNotPen");
         /// <summary>
         /// copyPen.
         /// <para>When the item is serialized out as xml, its value is "copyPen".</para>
         /// </summary>
-        [EnumString("copyPen")]
-        CopyPen,
+        public static RasterOperationValues CopyPen => new("copyPen");
         /// <summary>
         /// mergePenNot.
         /// <para>When the item is serialized out as xml, its value is "mergePenNot".</para>
         /// </summary>
-        [EnumString("mergePenNot")]
-        MergePenNot,
+        public static RasterOperationValues MergePenNot => new("mergePenNot");
         /// <summary>
         /// mergePen.
         /// <para>When the item is serialized out as xml, its value is "mergePen".</para>
         /// </summary>
-        [EnumString("mergePen")]
-        MergePen,
+        public static RasterOperationValues MergePen => new("mergePen");
         /// <summary>
         /// white.
         /// <para>When the item is serialized out as xml, its value is "white".</para>
         /// </summary>
-        [EnumString("white")]
-        White
+        public static RasterOperationValues White => new("white");
+    
     }
 
     /// <summary>
     /// Defines the PenTipShapeValues enumeration.
     /// </summary>
-    public enum PenTipShapeValues
+    public readonly record struct PenTipShapeValues : IEnumValue, IEnumValueFactory<PenTipShapeValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new PenTipShapeValues enum instance
+        /// </summary>
+        public PenTipShapeValues(string value) => _value = value;
+        PenTipShapeValues IEnumValueFactory<PenTipShapeValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "ellipse" => true,
+            "rectangle" => true,
+            "drop" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "ellipse";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// ellipse.
         /// <para>When the item is serialized out as xml, its value is "ellipse".</para>
         /// </summary>
-        [EnumString("ellipse")]
-        Ellipse,
+        public static PenTipShapeValues Ellipse => new("ellipse");
         /// <summary>
         /// rectangle.
         /// <para>When the item is serialized out as xml, its value is "rectangle".</para>
         /// </summary>
-        [EnumString("rectangle")]
-        Rectangle,
+        public static PenTipShapeValues Rectangle => new("rectangle");
         /// <summary>
         /// drop.
         /// <para>When the item is serialized out as xml, its value is "drop".</para>
         /// </summary>
-        [EnumString("drop")]
-        Drop
+        public static PenTipShapeValues Drop => new("drop");
+    
     }
 
     /// <summary>
     /// Defines the MappingTypeValues enumeration.
     /// </summary>
-    public enum MappingTypeValues
+    public readonly record struct MappingTypeValues : IEnumValue, IEnumValueFactory<MappingTypeValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new MappingTypeValues enum instance
+        /// </summary>
+        public MappingTypeValues(string value) => _value = value;
+        MappingTypeValues IEnumValueFactory<MappingTypeValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "identity" => true,
+            "lookup" => true,
+            "affine" => true,
+            "mathml" => true,
+            "product" => true,
+            "unknown" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "identity";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// identity.
         /// <para>When the item is serialized out as xml, its value is "identity".</para>
         /// </summary>
-        [EnumString("identity")]
-        Identity,
+        public static MappingTypeValues Identity => new("identity");
         /// <summary>
         /// lookup.
         /// <para>When the item is serialized out as xml, its value is "lookup".</para>
         /// </summary>
-        [EnumString("lookup")]
-        Lookup,
+        public static MappingTypeValues Lookup => new("lookup");
         /// <summary>
         /// affine.
         /// <para>When the item is serialized out as xml, its value is "affine".</para>
         /// </summary>
-        [EnumString("affine")]
-        Affine,
+        public static MappingTypeValues Affine => new("affine");
         /// <summary>
         /// mathml.
         /// <para>When the item is serialized out as xml, its value is "mathml".</para>
         /// </summary>
-        [EnumString("mathml")]
-        MathML,
+        public static MappingTypeValues MathML => new("mathml");
         /// <summary>
         /// product.
         /// <para>When the item is serialized out as xml, its value is "product".</para>
         /// </summary>
-        [EnumString("product")]
-        Product,
+        public static MappingTypeValues Product => new("product");
         /// <summary>
         /// unknown.
         /// <para>When the item is serialized out as xml, its value is "unknown".</para>
         /// </summary>
-        [EnumString("unknown")]
-        Unknown
+        public static MappingTypeValues Unknown => new("unknown");
+    
     }
 
     /// <summary>
     /// Defines the TableApplyValues enumeration.
     /// </summary>
-    public enum TableApplyValues
+    public readonly record struct TableApplyValues : IEnumValue, IEnumValueFactory<TableApplyValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new TableApplyValues enum instance
+        /// </summary>
+        public TableApplyValues(string value) => _value = value;
+        TableApplyValues IEnumValueFactory<TableApplyValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "absolute" => true,
+            "relative" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "absolute";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// absolute.
         /// <para>When the item is serialized out as xml, its value is "absolute".</para>
         /// </summary>
-        [EnumString("absolute")]
-        Absolute,
+        public static TableApplyValues Absolute => new("absolute");
         /// <summary>
         /// relative.
         /// <para>When the item is serialized out as xml, its value is "relative".</para>
         /// </summary>
-        [EnumString("relative")]
-        Relative
+        public static TableApplyValues Relative => new("relative");
+    
     }
 
     /// <summary>
     /// Defines the TableInterpolationValues enumeration.
     /// </summary>
-    public enum TableInterpolationValues
+    public readonly record struct TableInterpolationValues : IEnumValue, IEnumValueFactory<TableInterpolationValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new TableInterpolationValues enum instance
+        /// </summary>
+        public TableInterpolationValues(string value) => _value = value;
+        TableInterpolationValues IEnumValueFactory<TableInterpolationValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "floor" => true,
+            "middle" => true,
+            "ceiling" => true,
+            "linear" => true,
+            "cubic" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "floor";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// floor.
         /// <para>When the item is serialized out as xml, its value is "floor".</para>
         /// </summary>
-        [EnumString("floor")]
-        Floor,
+        public static TableInterpolationValues Floor => new("floor");
         /// <summary>
         /// middle.
         /// <para>When the item is serialized out as xml, its value is "middle".</para>
         /// </summary>
-        [EnumString("middle")]
-        Middle,
+        public static TableInterpolationValues Middle => new("middle");
         /// <summary>
         /// ceiling.
         /// <para>When the item is serialized out as xml, its value is "ceiling".</para>
         /// </summary>
-        [EnumString("ceiling")]
-        Ceiling,
+        public static TableInterpolationValues Ceiling => new("ceiling");
         /// <summary>
         /// linear.
         /// <para>When the item is serialized out as xml, its value is "linear".</para>
         /// </summary>
-        [EnumString("linear")]
-        Linear,
+        public static TableInterpolationValues Linear => new("linear");
         /// <summary>
         /// cubic.
         /// <para>When the item is serialized out as xml, its value is "cubic".</para>
         /// </summary>
-        [EnumString("cubic")]
-        Cubic
+        public static TableInterpolationValues Cubic => new("cubic");
+    
     }
 }

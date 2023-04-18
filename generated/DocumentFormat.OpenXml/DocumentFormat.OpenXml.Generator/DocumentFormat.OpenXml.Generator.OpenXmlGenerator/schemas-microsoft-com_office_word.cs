@@ -265,287 +265,357 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
     /// <summary>
     /// Border Type
     /// </summary>
-    public enum BorderValues
+    public readonly record struct BorderValues : IEnumValue, IEnumValueFactory<BorderValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new BorderValues enum instance
+        /// </summary>
+        public BorderValues(string value) => _value = value;
+        BorderValues IEnumValueFactory<BorderValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "none" => true,
+            "single" => true,
+            "thick" => true,
+            "double" => true,
+            "hairline" => true,
+            "dot" => true,
+            "dash" => true,
+            "dotDash" => true,
+            "dashDotDot" => true,
+            "triple" => true,
+            "thinThickSmall" => true,
+            "thickThinSmall" => true,
+            "thickBetweenThinSmall" => true,
+            "thinThick" => true,
+            "thickThin" => true,
+            "thickBetweenThin" => true,
+            "thinThickLarge" => true,
+            "thickThinLarge" => true,
+            "thickBetweenThinLarge" => true,
+            "wave" => true,
+            "doubleWave" => true,
+            "dashedSmall" => true,
+            "dashDotStroked" => true,
+            "threeDEmboss" => true,
+            "threeDEngrave" => true,
+            "HTMLOutset" => true,
+            "HTMLInset" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "none";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// No Border.
         /// <para>When the item is serialized out as xml, its value is "none".</para>
         /// </summary>
-        [EnumString("none")]
-        None,
+        public static BorderValues None => new("none");
         /// <summary>
         /// Single Line Border.
         /// <para>When the item is serialized out as xml, its value is "single".</para>
         /// </summary>
-        [EnumString("single")]
-        Single,
+        public static BorderValues Single => new("single");
         /// <summary>
         /// Thick Line Border.
         /// <para>When the item is serialized out as xml, its value is "thick".</para>
         /// </summary>
-        [EnumString("thick")]
-        Thick,
+        public static BorderValues Thick => new("thick");
         /// <summary>
         /// Double Line Border.
         /// <para>When the item is serialized out as xml, its value is "double".</para>
         /// </summary>
-        [EnumString("double")]
-        Double,
+        public static BorderValues Double => new("double");
         /// <summary>
         /// Hairline Border.
         /// <para>When the item is serialized out as xml, its value is "hairline".</para>
         /// </summary>
-        [EnumString("hairline")]
-        Hairline,
+        public static BorderValues Hairline => new("hairline");
         /// <summary>
         /// Dotted Border.
         /// <para>When the item is serialized out as xml, its value is "dot".</para>
         /// </summary>
-        [EnumString("dot")]
-        Dot,
+        public static BorderValues Dot => new("dot");
         /// <summary>
         /// pecifies a line border consisting of a dashed line around the parent object..
         /// <para>When the item is serialized out as xml, its value is "dash".</para>
         /// </summary>
-        [EnumString("dash")]
-        Dash,
+        public static BorderValues Dash => new("dash");
         /// <summary>
         /// Dot Dash Border.
         /// <para>When the item is serialized out as xml, its value is "dotDash".</para>
         /// </summary>
-        [EnumString("dotDash")]
-        DotDash,
+        public static BorderValues DotDash => new("dotDash");
         /// <summary>
         /// Dash Dot Dot Border.
         /// <para>When the item is serialized out as xml, its value is "dashDotDot".</para>
         /// </summary>
-        [EnumString("dashDotDot")]
-        DashDotDot,
+        public static BorderValues DashDotDot => new("dashDotDot");
         /// <summary>
         /// Triple Line Border.
         /// <para>When the item is serialized out as xml, its value is "triple".</para>
         /// </summary>
-        [EnumString("triple")]
-        Triple,
+        public static BorderValues Triple => new("triple");
         /// <summary>
         /// Thin Thick Small Gap Border.
         /// <para>When the item is serialized out as xml, its value is "thinThickSmall".</para>
         /// </summary>
-        [EnumString("thinThickSmall")]
-        ThinThickSmall,
+        public static BorderValues ThinThickSmall => new("thinThickSmall");
         /// <summary>
         /// Small thick-thin lines border.
         /// <para>When the item is serialized out as xml, its value is "thickThinSmall".</para>
         /// </summary>
-        [EnumString("thickThinSmall")]
-        ThickThinSmall,
+        public static BorderValues ThickThinSmall => new("thickThinSmall");
         /// <summary>
         /// Small thin-thick-thin Lines Border.
         /// <para>When the item is serialized out as xml, its value is "thickBetweenThinSmall".</para>
         /// </summary>
-        [EnumString("thickBetweenThinSmall")]
-        ThickBetweenThinSmall,
+        public static BorderValues ThickBetweenThinSmall => new("thickBetweenThinSmall");
         /// <summary>
         /// Thin Thick Line Border.
         /// <para>When the item is serialized out as xml, its value is "thinThick".</para>
         /// </summary>
-        [EnumString("thinThick")]
-        ThinThick,
+        public static BorderValues ThinThick => new("thinThick");
         /// <summary>
         /// Thick Thin Line Border.
         /// <para>When the item is serialized out as xml, its value is "thickThin".</para>
         /// </summary>
-        [EnumString("thickThin")]
-        ThickThin,
+        public static BorderValues ThickThin => new("thickThin");
         /// <summary>
         /// Thin-thick-thin Border.
         /// <para>When the item is serialized out as xml, its value is "thickBetweenThin".</para>
         /// </summary>
-        [EnumString("thickBetweenThin")]
-        ThickBetweenThin,
+        public static BorderValues ThickBetweenThin => new("thickBetweenThin");
         /// <summary>
         /// Thin Thick Large Gap Border.
         /// <para>When the item is serialized out as xml, its value is "thinThickLarge".</para>
         /// </summary>
-        [EnumString("thinThickLarge")]
-        ThinThickLarge,
+        public static BorderValues ThinThickLarge => new("thinThickLarge");
         /// <summary>
         /// Thick Thin Large Gap Border.
         /// <para>When the item is serialized out as xml, its value is "thickThinLarge".</para>
         /// </summary>
-        [EnumString("thickThinLarge")]
-        ThickThinLarge,
+        public static BorderValues ThickThinLarge => new("thickThinLarge");
         /// <summary>
         /// Large thin-thick-thin Border.
         /// <para>When the item is serialized out as xml, its value is "thickBetweenThinLarge".</para>
         /// </summary>
-        [EnumString("thickBetweenThinLarge")]
-        ThickBetweenThinLarge,
+        public static BorderValues ThickBetweenThinLarge => new("thickBetweenThinLarge");
         /// <summary>
         /// Wavy Border.
         /// <para>When the item is serialized out as xml, its value is "wave".</para>
         /// </summary>
-        [EnumString("wave")]
-        Wave,
+        public static BorderValues Wave => new("wave");
         /// <summary>
         /// Double Wavy Lines Border.
         /// <para>When the item is serialized out as xml, its value is "doubleWave".</para>
         /// </summary>
-        [EnumString("doubleWave")]
-        DoubleWave,
+        public static BorderValues DoubleWave => new("doubleWave");
         /// <summary>
         /// Small Dash Border.
         /// <para>When the item is serialized out as xml, its value is "dashedSmall".</para>
         /// </summary>
-        [EnumString("dashedSmall")]
-        DashedSmall,
+        public static BorderValues DashedSmall => new("dashedSmall");
         /// <summary>
         /// Stroked Dash Dot Border.
         /// <para>When the item is serialized out as xml, its value is "dashDotStroked".</para>
         /// </summary>
-        [EnumString("dashDotStroked")]
-        DashDotStroked,
+        public static BorderValues DashDotStroked => new("dashDotStroked");
         /// <summary>
         /// 3D Embossed Border.
         /// <para>When the item is serialized out as xml, its value is "threeDEmboss".</para>
         /// </summary>
-        [EnumString("threeDEmboss")]
-        ThreeDEmboss,
+        public static BorderValues ThreeDEmboss => new("threeDEmboss");
         /// <summary>
         /// 3D Engraved Border.
         /// <para>When the item is serialized out as xml, its value is "threeDEngrave".</para>
         /// </summary>
-        [EnumString("threeDEngrave")]
-        ThreeDEngrave,
+        public static BorderValues ThreeDEngrave => new("threeDEngrave");
         /// <summary>
         /// Outset Border.
         /// <para>When the item is serialized out as xml, its value is "HTMLOutset".</para>
         /// </summary>
-        [EnumString("HTMLOutset")]
-        HTMLOutset,
+        public static BorderValues HTMLOutset => new("HTMLOutset");
         /// <summary>
         /// Inset Border.
         /// <para>When the item is serialized out as xml, its value is "HTMLInset".</para>
         /// </summary>
-        [EnumString("HTMLInset")]
-        HTMLInset
+        public static BorderValues HTMLInset => new("HTMLInset");
+    
     }
 
     /// <summary>
     /// Text Wrapping Type
     /// </summary>
-    public enum WrapValues
+    public readonly record struct WrapValues : IEnumValue, IEnumValueFactory<WrapValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new WrapValues enum instance
+        /// </summary>
+        public WrapValues(string value) => _value = value;
+        WrapValues IEnumValueFactory<WrapValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "topAndBottom" => true,
+            "square" => true,
+            "none" => true,
+            "tight" => true,
+            "through" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "topAndBottom";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// Top and bottom wrapping.
         /// <para>When the item is serialized out as xml, its value is "topAndBottom".</para>
         /// </summary>
-        [EnumString("topAndBottom")]
-        TopAndBottom,
+        public static WrapValues TopAndBottom => new("topAndBottom");
         /// <summary>
         /// Square wrapping.
         /// <para>When the item is serialized out as xml, its value is "square".</para>
         /// </summary>
-        [EnumString("square")]
-        Square,
+        public static WrapValues Square => new("square");
         /// <summary>
         /// No wrapping.
         /// <para>When the item is serialized out as xml, its value is "none".</para>
         /// </summary>
-        [EnumString("none")]
-        None,
+        public static WrapValues None => new("none");
         /// <summary>
         /// Tight wrapping.
         /// <para>When the item is serialized out as xml, its value is "tight".</para>
         /// </summary>
-        [EnumString("tight")]
-        Tight,
+        public static WrapValues Tight => new("tight");
         /// <summary>
         /// Through wrapping.
         /// <para>When the item is serialized out as xml, its value is "through".</para>
         /// </summary>
-        [EnumString("through")]
-        Through
+        public static WrapValues Through => new("through");
+    
     }
 
     /// <summary>
     /// Text Wrapping Side
     /// </summary>
-    public enum WrapSideValues
+    public readonly record struct WrapSideValues : IEnumValue, IEnumValueFactory<WrapSideValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new WrapSideValues enum instance
+        /// </summary>
+        public WrapSideValues(string value) => _value = value;
+        WrapSideValues IEnumValueFactory<WrapSideValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "both" => true,
+            "left" => true,
+            "right" => true,
+            "largest" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "both";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// Both sides.
         /// <para>When the item is serialized out as xml, its value is "both".</para>
         /// </summary>
-        [EnumString("both")]
-        Both,
+        public static WrapSideValues Both => new("both");
         /// <summary>
         /// Left side.
         /// <para>When the item is serialized out as xml, its value is "left".</para>
         /// </summary>
-        [EnumString("left")]
-        Left,
+        public static WrapSideValues Left => new("left");
         /// <summary>
         /// Right side.
         /// <para>When the item is serialized out as xml, its value is "right".</para>
         /// </summary>
-        [EnumString("right")]
-        Right,
+        public static WrapSideValues Right => new("right");
         /// <summary>
         /// Largest side.
         /// <para>When the item is serialized out as xml, its value is "largest".</para>
         /// </summary>
-        [EnumString("largest")]
-        Largest
+        public static WrapSideValues Largest => new("largest");
+    
     }
 
     /// <summary>
     /// Horizontal Anchor Type
     /// </summary>
-    public enum HorizontalAnchorValues
+    public readonly record struct HorizontalAnchorValues : IEnumValue, IEnumValueFactory<HorizontalAnchorValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new HorizontalAnchorValues enum instance
+        /// </summary>
+        public HorizontalAnchorValues(string value) => _value = value;
+        HorizontalAnchorValues IEnumValueFactory<HorizontalAnchorValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "margin" => true,
+            "page" => true,
+            "text" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "margin";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// Margin.
         /// <para>When the item is serialized out as xml, its value is "margin".</para>
         /// </summary>
-        [EnumString("margin")]
-        Margin,
+        public static HorizontalAnchorValues Margin => new("margin");
         /// <summary>
         /// Page.
         /// <para>When the item is serialized out as xml, its value is "page".</para>
         /// </summary>
-        [EnumString("page")]
-        Page,
+        public static HorizontalAnchorValues Page => new("page");
         /// <summary>
         /// Text.
         /// <para>When the item is serialized out as xml, its value is "text".</para>
         /// </summary>
-        [EnumString("text")]
-        Text
+        public static HorizontalAnchorValues Text => new("text");
+    
     }
 
     /// <summary>
     /// Vertical Anchor Type
     /// </summary>
-    public enum VerticalAnchorValues
+    public readonly record struct VerticalAnchorValues : IEnumValue, IEnumValueFactory<VerticalAnchorValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new VerticalAnchorValues enum instance
+        /// </summary>
+        public VerticalAnchorValues(string value) => _value = value;
+        VerticalAnchorValues IEnumValueFactory<VerticalAnchorValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "margin" => true,
+            "page" => true,
+            "text" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "margin";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// Margin.
         /// <para>When the item is serialized out as xml, its value is "margin".</para>
         /// </summary>
-        [EnumString("margin")]
-        Margin,
+        public static VerticalAnchorValues Margin => new("margin");
         /// <summary>
         /// Page.
         /// <para>When the item is serialized out as xml, its value is "page".</para>
         /// </summary>
-        [EnumString("page")]
-        Page,
+        public static VerticalAnchorValues Page => new("page");
         /// <summary>
         /// Text.
         /// <para>When the item is serialized out as xml, its value is "text".</para>
         /// </summary>
-        [EnumString("text")]
-        Text
+        public static VerticalAnchorValues Text => new("text");
+    
     }
 }

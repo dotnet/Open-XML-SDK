@@ -55691,5635 +55691,7073 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <summary>
     /// Defines the OnOffOnlyValues enumeration.
     /// </summary>
-    public enum OnOffOnlyValues
+    public readonly record struct OnOffOnlyValues : IEnumValue, IEnumValueFactory<OnOffOnlyValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new OnOffOnlyValues enum instance
+        /// </summary>
+        public OnOffOnlyValues(string value) => _value = value;
+        OnOffOnlyValues IEnumValueFactory<OnOffOnlyValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "on" => true,
+            "off" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "on";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// on.
         /// <para>When the item is serialized out as xml, its value is "on".</para>
         /// </summary>
-        [EnumString("on")]
-        On,
+        public static OnOffOnlyValues On => new("on");
         /// <summary>
         /// off.
         /// <para>When the item is serialized out as xml, its value is "off".</para>
         /// </summary>
-        [EnumString("off")]
-        Off
+        public static OnOffOnlyValues Off => new("off");
+    
     }
 
     /// <summary>
     /// Defines the HighlightColorValues enumeration.
     /// </summary>
-    public enum HighlightColorValues
+    public readonly record struct HighlightColorValues : IEnumValue, IEnumValueFactory<HighlightColorValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new HighlightColorValues enum instance
+        /// </summary>
+        public HighlightColorValues(string value) => _value = value;
+        HighlightColorValues IEnumValueFactory<HighlightColorValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "black" => true,
+            "blue" => true,
+            "cyan" => true,
+            "green" => true,
+            "magenta" => true,
+            "red" => true,
+            "yellow" => true,
+            "white" => true,
+            "darkBlue" => true,
+            "darkCyan" => true,
+            "darkGreen" => true,
+            "darkMagenta" => true,
+            "darkRed" => true,
+            "darkYellow" => true,
+            "darkGray" => true,
+            "lightGray" => true,
+            "none" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "black";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// Black Highlighting Color.
         /// <para>When the item is serialized out as xml, its value is "black".</para>
         /// </summary>
-        [EnumString("black")]
-        Black,
+        public static HighlightColorValues Black => new("black");
         /// <summary>
         /// Blue Highlighting Color.
         /// <para>When the item is serialized out as xml, its value is "blue".</para>
         /// </summary>
-        [EnumString("blue")]
-        Blue,
+        public static HighlightColorValues Blue => new("blue");
         /// <summary>
         /// Cyan Highlighting Color.
         /// <para>When the item is serialized out as xml, its value is "cyan".</para>
         /// </summary>
-        [EnumString("cyan")]
-        Cyan,
+        public static HighlightColorValues Cyan => new("cyan");
         /// <summary>
         /// Green Highlighting Color.
         /// <para>When the item is serialized out as xml, its value is "green".</para>
         /// </summary>
-        [EnumString("green")]
-        Green,
+        public static HighlightColorValues Green => new("green");
         /// <summary>
         /// Magenta Highlighting Color.
         /// <para>When the item is serialized out as xml, its value is "magenta".</para>
         /// </summary>
-        [EnumString("magenta")]
-        Magenta,
+        public static HighlightColorValues Magenta => new("magenta");
         /// <summary>
         /// Red Highlighting Color.
         /// <para>When the item is serialized out as xml, its value is "red".</para>
         /// </summary>
-        [EnumString("red")]
-        Red,
+        public static HighlightColorValues Red => new("red");
         /// <summary>
         /// Yellow Highlighting Color.
         /// <para>When the item is serialized out as xml, its value is "yellow".</para>
         /// </summary>
-        [EnumString("yellow")]
-        Yellow,
+        public static HighlightColorValues Yellow => new("yellow");
         /// <summary>
         /// White Highlighting Color.
         /// <para>When the item is serialized out as xml, its value is "white".</para>
         /// </summary>
-        [EnumString("white")]
-        White,
+        public static HighlightColorValues White => new("white");
         /// <summary>
         /// Dark Blue Highlighting Color.
         /// <para>When the item is serialized out as xml, its value is "darkBlue".</para>
         /// </summary>
-        [EnumString("darkBlue")]
-        DarkBlue,
+        public static HighlightColorValues DarkBlue => new("darkBlue");
         /// <summary>
         /// Dark Cyan Highlighting Color.
         /// <para>When the item is serialized out as xml, its value is "darkCyan".</para>
         /// </summary>
-        [EnumString("darkCyan")]
-        DarkCyan,
+        public static HighlightColorValues DarkCyan => new("darkCyan");
         /// <summary>
         /// Dark Green Highlighting Color.
         /// <para>When the item is serialized out as xml, its value is "darkGreen".</para>
         /// </summary>
-        [EnumString("darkGreen")]
-        DarkGreen,
+        public static HighlightColorValues DarkGreen => new("darkGreen");
         /// <summary>
         /// Dark Magenta Highlighting Color.
         /// <para>When the item is serialized out as xml, its value is "darkMagenta".</para>
         /// </summary>
-        [EnumString("darkMagenta")]
-        DarkMagenta,
+        public static HighlightColorValues DarkMagenta => new("darkMagenta");
         /// <summary>
         /// Dark Red Highlighting Color.
         /// <para>When the item is serialized out as xml, its value is "darkRed".</para>
         /// </summary>
-        [EnumString("darkRed")]
-        DarkRed,
+        public static HighlightColorValues DarkRed => new("darkRed");
         /// <summary>
         /// Dark Yellow Highlighting Color.
         /// <para>When the item is serialized out as xml, its value is "darkYellow".</para>
         /// </summary>
-        [EnumString("darkYellow")]
-        DarkYellow,
+        public static HighlightColorValues DarkYellow => new("darkYellow");
         /// <summary>
         /// Dark Gray Highlighting Color.
         /// <para>When the item is serialized out as xml, its value is "darkGray".</para>
         /// </summary>
-        [EnumString("darkGray")]
-        DarkGray,
+        public static HighlightColorValues DarkGray => new("darkGray");
         /// <summary>
         /// Light Gray Highlighting Color.
         /// <para>When the item is serialized out as xml, its value is "lightGray".</para>
         /// </summary>
-        [EnumString("lightGray")]
-        LightGray,
+        public static HighlightColorValues LightGray => new("lightGray");
         /// <summary>
         /// No Text Highlighting.
         /// <para>When the item is serialized out as xml, its value is "none".</para>
         /// </summary>
-        [EnumString("none")]
-        None
+        public static HighlightColorValues None => new("none");
+    
     }
 
     /// <summary>
     /// Defines the AutomaticColorValues enumeration.
     /// </summary>
-    public enum AutomaticColorValues
+    public readonly record struct AutomaticColorValues : IEnumValue, IEnumValueFactory<AutomaticColorValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new AutomaticColorValues enum instance
+        /// </summary>
+        public AutomaticColorValues(string value) => _value = value;
+        AutomaticColorValues IEnumValueFactory<AutomaticColorValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "auto" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "auto";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// Automatically Determined Color.
         /// <para>When the item is serialized out as xml, its value is "auto".</para>
         /// </summary>
-        [EnumString("auto")]
-        Auto
+        public static AutomaticColorValues Auto => new("auto");
+    
     }
 
     /// <summary>
     /// Defines the UnderlineValues enumeration.
     /// </summary>
-    public enum UnderlineValues
+    public readonly record struct UnderlineValues : IEnumValue, IEnumValueFactory<UnderlineValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new UnderlineValues enum instance
+        /// </summary>
+        public UnderlineValues(string value) => _value = value;
+        UnderlineValues IEnumValueFactory<UnderlineValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "single" => true,
+            "words" => true,
+            "double" => true,
+            "thick" => true,
+            "dotted" => true,
+            "dottedHeavy" => true,
+            "dash" => true,
+            "dashedHeavy" => true,
+            "dashLong" => true,
+            "dashLongHeavy" => true,
+            "dotDash" => true,
+            "dashDotHeavy" => true,
+            "dotDotDash" => true,
+            "dashDotDotHeavy" => true,
+            "wave" => true,
+            "wavyHeavy" => true,
+            "wavyDouble" => true,
+            "none" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "single";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// Single Underline.
         /// <para>When the item is serialized out as xml, its value is "single".</para>
         /// </summary>
-        [EnumString("single")]
-        Single,
+        public static UnderlineValues Single => new("single");
         /// <summary>
         /// Underline Non-Space Characters Only.
         /// <para>When the item is serialized out as xml, its value is "words".</para>
         /// </summary>
-        [EnumString("words")]
-        Words,
+        public static UnderlineValues Words => new("words");
         /// <summary>
         /// Double Underline.
         /// <para>When the item is serialized out as xml, its value is "double".</para>
         /// </summary>
-        [EnumString("double")]
-        Double,
+        public static UnderlineValues Double => new("double");
         /// <summary>
         /// Thick Underline.
         /// <para>When the item is serialized out as xml, its value is "thick".</para>
         /// </summary>
-        [EnumString("thick")]
-        Thick,
+        public static UnderlineValues Thick => new("thick");
         /// <summary>
         /// Dotted Underline.
         /// <para>When the item is serialized out as xml, its value is "dotted".</para>
         /// </summary>
-        [EnumString("dotted")]
-        Dotted,
+        public static UnderlineValues Dotted => new("dotted");
         /// <summary>
         /// Thick Dotted Underline.
         /// <para>When the item is serialized out as xml, its value is "dottedHeavy".</para>
         /// </summary>
-        [EnumString("dottedHeavy")]
-        DottedHeavy,
+        public static UnderlineValues DottedHeavy => new("dottedHeavy");
         /// <summary>
         /// Dashed Underline.
         /// <para>When the item is serialized out as xml, its value is "dash".</para>
         /// </summary>
-        [EnumString("dash")]
-        Dash,
+        public static UnderlineValues Dash => new("dash");
         /// <summary>
         /// Thick Dashed Underline.
         /// <para>When the item is serialized out as xml, its value is "dashedHeavy".</para>
         /// </summary>
-        [EnumString("dashedHeavy")]
-        DashedHeavy,
+        public static UnderlineValues DashedHeavy => new("dashedHeavy");
         /// <summary>
         /// Long Dashed Underline.
         /// <para>When the item is serialized out as xml, its value is "dashLong".</para>
         /// </summary>
-        [EnumString("dashLong")]
-        DashLong,
+        public static UnderlineValues DashLong => new("dashLong");
         /// <summary>
         /// Thick Long Dashed Underline.
         /// <para>When the item is serialized out as xml, its value is "dashLongHeavy".</para>
         /// </summary>
-        [EnumString("dashLongHeavy")]
-        DashLongHeavy,
+        public static UnderlineValues DashLongHeavy => new("dashLongHeavy");
         /// <summary>
         /// Dash-Dot Underline.
         /// <para>When the item is serialized out as xml, its value is "dotDash".</para>
         /// </summary>
-        [EnumString("dotDash")]
-        DotDash,
+        public static UnderlineValues DotDash => new("dotDash");
         /// <summary>
         /// Thick Dash-Dot Underline.
         /// <para>When the item is serialized out as xml, its value is "dashDotHeavy".</para>
         /// </summary>
-        [EnumString("dashDotHeavy")]
-        DashDotHeavy,
+        public static UnderlineValues DashDotHeavy => new("dashDotHeavy");
         /// <summary>
         /// Dash-Dot-Dot Underline.
         /// <para>When the item is serialized out as xml, its value is "dotDotDash".</para>
         /// </summary>
-        [EnumString("dotDotDash")]
-        DotDotDash,
+        public static UnderlineValues DotDotDash => new("dotDotDash");
         /// <summary>
         /// Thick Dash-Dot-Dot Underline.
         /// <para>When the item is serialized out as xml, its value is "dashDotDotHeavy".</para>
         /// </summary>
-        [EnumString("dashDotDotHeavy")]
-        DashDotDotHeavy,
+        public static UnderlineValues DashDotDotHeavy => new("dashDotDotHeavy");
         /// <summary>
         /// Wave Underline.
         /// <para>When the item is serialized out as xml, its value is "wave".</para>
         /// </summary>
-        [EnumString("wave")]
-        Wave,
+        public static UnderlineValues Wave => new("wave");
         /// <summary>
         /// Heavy Wave Underline.
         /// <para>When the item is serialized out as xml, its value is "wavyHeavy".</para>
         /// </summary>
-        [EnumString("wavyHeavy")]
-        WavyHeavy,
+        public static UnderlineValues WavyHeavy => new("wavyHeavy");
         /// <summary>
         /// Double Wave Underline.
         /// <para>When the item is serialized out as xml, its value is "wavyDouble".</para>
         /// </summary>
-        [EnumString("wavyDouble")]
-        WavyDouble,
+        public static UnderlineValues WavyDouble => new("wavyDouble");
         /// <summary>
         /// No Underline.
         /// <para>When the item is serialized out as xml, its value is "none".</para>
         /// </summary>
-        [EnumString("none")]
-        None
+        public static UnderlineValues None => new("none");
+    
     }
 
     /// <summary>
     /// Defines the TextEffectValues enumeration.
     /// </summary>
-    public enum TextEffectValues
+    public readonly record struct TextEffectValues : IEnumValue, IEnumValueFactory<TextEffectValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new TextEffectValues enum instance
+        /// </summary>
+        public TextEffectValues(string value) => _value = value;
+        TextEffectValues IEnumValueFactory<TextEffectValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "blinkBackground" => true,
+            "lights" => true,
+            "antsBlack" => true,
+            "antsRed" => true,
+            "shimmer" => true,
+            "sparkle" => true,
+            "none" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "blinkBackground";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// Blinking Background Animation.
         /// <para>When the item is serialized out as xml, its value is "blinkBackground".</para>
         /// </summary>
-        [EnumString("blinkBackground")]
-        BlinkBackground,
+        public static TextEffectValues BlinkBackground => new("blinkBackground");
         /// <summary>
         /// Colored Lights Animation.
         /// <para>When the item is serialized out as xml, its value is "lights".</para>
         /// </summary>
-        [EnumString("lights")]
-        Lights,
+        public static TextEffectValues Lights => new("lights");
         /// <summary>
         /// Black Dashed Line Animation.
         /// <para>When the item is serialized out as xml, its value is "antsBlack".</para>
         /// </summary>
-        [EnumString("antsBlack")]
-        AntsBlack,
+        public static TextEffectValues AntsBlack => new("antsBlack");
         /// <summary>
         /// Marching Red Ants.
         /// <para>When the item is serialized out as xml, its value is "antsRed".</para>
         /// </summary>
-        [EnumString("antsRed")]
-        AntsRed,
+        public static TextEffectValues AntsRed => new("antsRed");
         /// <summary>
         /// Shimmer Animation.
         /// <para>When the item is serialized out as xml, its value is "shimmer".</para>
         /// </summary>
-        [EnumString("shimmer")]
-        Shimmer,
+        public static TextEffectValues Shimmer => new("shimmer");
         /// <summary>
         /// Sparkling Lights Animation.
         /// <para>When the item is serialized out as xml, its value is "sparkle".</para>
         /// </summary>
-        [EnumString("sparkle")]
-        Sparkle,
+        public static TextEffectValues Sparkle => new("sparkle");
         /// <summary>
         /// No Animation.
         /// <para>When the item is serialized out as xml, its value is "none".</para>
         /// </summary>
-        [EnumString("none")]
-        None
+        public static TextEffectValues None => new("none");
+    
     }
 
     /// <summary>
     /// Defines the VerticalPositionValues enumeration.
     /// </summary>
-    public enum VerticalPositionValues
+    public readonly record struct VerticalPositionValues : IEnumValue, IEnumValueFactory<VerticalPositionValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new VerticalPositionValues enum instance
+        /// </summary>
+        public VerticalPositionValues(string value) => _value = value;
+        VerticalPositionValues IEnumValueFactory<VerticalPositionValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "baseline" => true,
+            "superscript" => true,
+            "subscript" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "baseline";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// Regular Vertical Positioning.
         /// <para>When the item is serialized out as xml, its value is "baseline".</para>
         /// </summary>
-        [EnumString("baseline")]
-        Baseline,
+        public static VerticalPositionValues Baseline => new("baseline");
         /// <summary>
         /// Superscript.
         /// <para>When the item is serialized out as xml, its value is "superscript".</para>
         /// </summary>
-        [EnumString("superscript")]
-        Superscript,
+        public static VerticalPositionValues Superscript => new("superscript");
         /// <summary>
         /// Subscript.
         /// <para>When the item is serialized out as xml, its value is "subscript".</para>
         /// </summary>
-        [EnumString("subscript")]
-        Subscript
+        public static VerticalPositionValues Subscript => new("subscript");
+    
     }
 
     /// <summary>
     /// Defines the EmphasisMarkValues enumeration.
     /// </summary>
-    public enum EmphasisMarkValues
+    public readonly record struct EmphasisMarkValues : IEnumValue, IEnumValueFactory<EmphasisMarkValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new EmphasisMarkValues enum instance
+        /// </summary>
+        public EmphasisMarkValues(string value) => _value = value;
+        EmphasisMarkValues IEnumValueFactory<EmphasisMarkValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "none" => true,
+            "dot" => true,
+            "comma" => true,
+            "circle" => true,
+            "underDot" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "none";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// No Emphasis Mark.
         /// <para>When the item is serialized out as xml, its value is "none".</para>
         /// </summary>
-        [EnumString("none")]
-        None,
+        public static EmphasisMarkValues None => new("none");
         /// <summary>
         /// Dot Emphasis Mark Above Characters.
         /// <para>When the item is serialized out as xml, its value is "dot".</para>
         /// </summary>
-        [EnumString("dot")]
-        Dot,
+        public static EmphasisMarkValues Dot => new("dot");
         /// <summary>
         /// Comma Emphasis Mark Above Characters.
         /// <para>When the item is serialized out as xml, its value is "comma".</para>
         /// </summary>
-        [EnumString("comma")]
-        Comma,
+        public static EmphasisMarkValues Comma => new("comma");
         /// <summary>
         /// Circle Emphasis Mark Above Characters.
         /// <para>When the item is serialized out as xml, its value is "circle".</para>
         /// </summary>
-        [EnumString("circle")]
-        Circle,
+        public static EmphasisMarkValues Circle => new("circle");
         /// <summary>
         /// Dot Emphasis Mark Below Characters.
         /// <para>When the item is serialized out as xml, its value is "underDot".</para>
         /// </summary>
-        [EnumString("underDot")]
-        UnderDot
+        public static EmphasisMarkValues UnderDot => new("underDot");
+    
     }
 
     /// <summary>
     /// Defines the CombineBracketValues enumeration.
     /// </summary>
-    public enum CombineBracketValues
+    public readonly record struct CombineBracketValues : IEnumValue, IEnumValueFactory<CombineBracketValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new CombineBracketValues enum instance
+        /// </summary>
+        public CombineBracketValues(string value) => _value = value;
+        CombineBracketValues IEnumValueFactory<CombineBracketValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "none" => true,
+            "round" => true,
+            "square" => true,
+            "angle" => true,
+            "curly" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "none";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// No Enclosing Brackets.
         /// <para>When the item is serialized out as xml, its value is "none".</para>
         /// </summary>
-        [EnumString("none")]
-        None,
+        public static CombineBracketValues None => new("none");
         /// <summary>
         /// Round Brackets.
         /// <para>When the item is serialized out as xml, its value is "round".</para>
         /// </summary>
-        [EnumString("round")]
-        Round,
+        public static CombineBracketValues Round => new("round");
         /// <summary>
         /// Square Brackets.
         /// <para>When the item is serialized out as xml, its value is "square".</para>
         /// </summary>
-        [EnumString("square")]
-        Square,
+        public static CombineBracketValues Square => new("square");
         /// <summary>
         /// Angle Brackets.
         /// <para>When the item is serialized out as xml, its value is "angle".</para>
         /// </summary>
-        [EnumString("angle")]
-        Angle,
+        public static CombineBracketValues Angle => new("angle");
         /// <summary>
         /// Curly Brackets.
         /// <para>When the item is serialized out as xml, its value is "curly".</para>
         /// </summary>
-        [EnumString("curly")]
-        Curly
+        public static CombineBracketValues Curly => new("curly");
+    
     }
 
     /// <summary>
     /// Defines the HorizontalAlignmentValues enumeration.
     /// </summary>
-    public enum HorizontalAlignmentValues
+    public readonly record struct HorizontalAlignmentValues : IEnumValue, IEnumValueFactory<HorizontalAlignmentValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new HorizontalAlignmentValues enum instance
+        /// </summary>
+        public HorizontalAlignmentValues(string value) => _value = value;
+        HorizontalAlignmentValues IEnumValueFactory<HorizontalAlignmentValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "left" => true,
+            "center" => true,
+            "right" => true,
+            "inside" => true,
+            "outside" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "left";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// Left Aligned Horizontally.
         /// <para>When the item is serialized out as xml, its value is "left".</para>
         /// </summary>
-        [EnumString("left")]
-        Left,
+        public static HorizontalAlignmentValues Left => new("left");
         /// <summary>
         /// Centered Horizontally.
         /// <para>When the item is serialized out as xml, its value is "center".</para>
         /// </summary>
-        [EnumString("center")]
-        Center,
+        public static HorizontalAlignmentValues Center => new("center");
         /// <summary>
         /// Right Aligned Horizontally.
         /// <para>When the item is serialized out as xml, its value is "right".</para>
         /// </summary>
-        [EnumString("right")]
-        Right,
+        public static HorizontalAlignmentValues Right => new("right");
         /// <summary>
         /// Inside.
         /// <para>When the item is serialized out as xml, its value is "inside".</para>
         /// </summary>
-        [EnumString("inside")]
-        Inside,
+        public static HorizontalAlignmentValues Inside => new("inside");
         /// <summary>
         /// Outside.
         /// <para>When the item is serialized out as xml, its value is "outside".</para>
         /// </summary>
-        [EnumString("outside")]
-        Outside
+        public static HorizontalAlignmentValues Outside => new("outside");
+    
     }
 
     /// <summary>
     /// Defines the VerticalAlignmentValues enumeration.
     /// </summary>
-    public enum VerticalAlignmentValues
+    public readonly record struct VerticalAlignmentValues : IEnumValue, IEnumValueFactory<VerticalAlignmentValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new VerticalAlignmentValues enum instance
+        /// </summary>
+        public VerticalAlignmentValues(string value) => _value = value;
+        VerticalAlignmentValues IEnumValueFactory<VerticalAlignmentValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "inline" => true,
+            "top" => true,
+            "center" => true,
+            "bottom" => true,
+            "inside" => true,
+            "outside" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "inline";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// In line With Text.
         /// <para>When the item is serialized out as xml, its value is "inline".</para>
         /// </summary>
-        [EnumString("inline")]
-        Inline,
+        public static VerticalAlignmentValues Inline => new("inline");
         /// <summary>
         /// Top.
         /// <para>When the item is serialized out as xml, its value is "top".</para>
         /// </summary>
-        [EnumString("top")]
-        Top,
+        public static VerticalAlignmentValues Top => new("top");
         /// <summary>
         /// Centered Vertically.
         /// <para>When the item is serialized out as xml, its value is "center".</para>
         /// </summary>
-        [EnumString("center")]
-        Center,
+        public static VerticalAlignmentValues Center => new("center");
         /// <summary>
         /// Bottom.
         /// <para>When the item is serialized out as xml, its value is "bottom".</para>
         /// </summary>
-        [EnumString("bottom")]
-        Bottom,
+        public static VerticalAlignmentValues Bottom => new("bottom");
         /// <summary>
         /// Inside Anchor Extents.
         /// <para>When the item is serialized out as xml, its value is "inside".</para>
         /// </summary>
-        [EnumString("inside")]
-        Inside,
+        public static VerticalAlignmentValues Inside => new("inside");
         /// <summary>
         /// Outside Anchor Extents.
         /// <para>When the item is serialized out as xml, its value is "outside".</para>
         /// </summary>
-        [EnumString("outside")]
-        Outside
+        public static VerticalAlignmentValues Outside => new("outside");
+    
     }
 
     /// <summary>
     /// Defines the HeightRuleValues enumeration.
     /// </summary>
-    public enum HeightRuleValues
+    public readonly record struct HeightRuleValues : IEnumValue, IEnumValueFactory<HeightRuleValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new HeightRuleValues enum instance
+        /// </summary>
+        public HeightRuleValues(string value) => _value = value;
+        HeightRuleValues IEnumValueFactory<HeightRuleValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "auto" => true,
+            "exact" => true,
+            "atLeast" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "auto";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// Determine Height Based On Contents.
         /// <para>When the item is serialized out as xml, its value is "auto".</para>
         /// </summary>
-        [EnumString("auto")]
-        Auto,
+        public static HeightRuleValues Auto => new("auto");
         /// <summary>
         /// Exact Height.
         /// <para>When the item is serialized out as xml, its value is "exact".</para>
         /// </summary>
-        [EnumString("exact")]
-        Exact,
+        public static HeightRuleValues Exact => new("exact");
         /// <summary>
         /// Minimum Height.
         /// <para>When the item is serialized out as xml, its value is "atLeast".</para>
         /// </summary>
-        [EnumString("atLeast")]
-        AtLeast
+        public static HeightRuleValues AtLeast => new("atLeast");
+    
     }
 
     /// <summary>
     /// Defines the TextWrappingValues enumeration.
     /// </summary>
-    public enum TextWrappingValues
+    public readonly record struct TextWrappingValues : IEnumValue, IEnumValueFactory<TextWrappingValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new TextWrappingValues enum instance
+        /// </summary>
+        public TextWrappingValues(string value) => _value = value;
+        TextWrappingValues IEnumValueFactory<TextWrappingValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "auto" => true,
+            "notBeside" => true,
+            "around" => true,
+            "tight" => true,
+            "through" => true,
+            "none" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "auto";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// Default Text Wrapping Around Frame.
         /// <para>When the item is serialized out as xml, its value is "auto".</para>
         /// </summary>
-        [EnumString("auto")]
-        Auto,
+        public static TextWrappingValues Auto => new("auto");
         /// <summary>
         /// No Text Wrapping Beside Frame.
         /// <para>When the item is serialized out as xml, its value is "notBeside".</para>
         /// </summary>
-        [EnumString("notBeside")]
-        NotBeside,
+        public static TextWrappingValues NotBeside => new("notBeside");
         /// <summary>
         /// Allow Text Wrapping Around Frame.
         /// <para>When the item is serialized out as xml, its value is "around".</para>
         /// </summary>
-        [EnumString("around")]
-        Around,
+        public static TextWrappingValues Around => new("around");
         /// <summary>
         /// Tight Text Wrapping Around Frame.
         /// <para>When the item is serialized out as xml, its value is "tight".</para>
         /// </summary>
-        [EnumString("tight")]
-        Tight,
+        public static TextWrappingValues Tight => new("tight");
         /// <summary>
         /// Through Text Wrapping Around Frame.
         /// <para>When the item is serialized out as xml, its value is "through".</para>
         /// </summary>
-        [EnumString("through")]
-        Through,
+        public static TextWrappingValues Through => new("through");
         /// <summary>
         /// No Text Wrapping Around Frame.
         /// <para>When the item is serialized out as xml, its value is "none".</para>
         /// </summary>
-        [EnumString("none")]
-        None
+        public static TextWrappingValues None => new("none");
+    
     }
 
     /// <summary>
     /// Defines the VerticalAnchorValues enumeration.
     /// </summary>
-    public enum VerticalAnchorValues
+    public readonly record struct VerticalAnchorValues : IEnumValue, IEnumValueFactory<VerticalAnchorValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new VerticalAnchorValues enum instance
+        /// </summary>
+        public VerticalAnchorValues(string value) => _value = value;
+        VerticalAnchorValues IEnumValueFactory<VerticalAnchorValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "text" => true,
+            "margin" => true,
+            "page" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "text";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// Relative To Vertical Text Extents.
         /// <para>When the item is serialized out as xml, its value is "text".</para>
         /// </summary>
-        [EnumString("text")]
-        Text,
+        public static VerticalAnchorValues Text => new("text");
         /// <summary>
         /// Relative To Margin.
         /// <para>When the item is serialized out as xml, its value is "margin".</para>
         /// </summary>
-        [EnumString("margin")]
-        Margin,
+        public static VerticalAnchorValues Margin => new("margin");
         /// <summary>
         /// Relative To Page.
         /// <para>When the item is serialized out as xml, its value is "page".</para>
         /// </summary>
-        [EnumString("page")]
-        Page
+        public static VerticalAnchorValues Page => new("page");
+    
     }
 
     /// <summary>
     /// Defines the HorizontalAnchorValues enumeration.
     /// </summary>
-    public enum HorizontalAnchorValues
+    public readonly record struct HorizontalAnchorValues : IEnumValue, IEnumValueFactory<HorizontalAnchorValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new HorizontalAnchorValues enum instance
+        /// </summary>
+        public HorizontalAnchorValues(string value) => _value = value;
+        HorizontalAnchorValues IEnumValueFactory<HorizontalAnchorValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "text" => true,
+            "margin" => true,
+            "page" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "text";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// Relative to Text Extents.
         /// <para>When the item is serialized out as xml, its value is "text".</para>
         /// </summary>
-        [EnumString("text")]
-        Text,
+        public static HorizontalAnchorValues Text => new("text");
         /// <summary>
         /// Relative To Margin.
         /// <para>When the item is serialized out as xml, its value is "margin".</para>
         /// </summary>
-        [EnumString("margin")]
-        Margin,
+        public static HorizontalAnchorValues Margin => new("margin");
         /// <summary>
         /// Relative to Page.
         /// <para>When the item is serialized out as xml, its value is "page".</para>
         /// </summary>
-        [EnumString("page")]
-        Page
+        public static HorizontalAnchorValues Page => new("page");
+    
     }
 
     /// <summary>
     /// Defines the DropCapLocationValues enumeration.
     /// </summary>
-    public enum DropCapLocationValues
+    public readonly record struct DropCapLocationValues : IEnumValue, IEnumValueFactory<DropCapLocationValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new DropCapLocationValues enum instance
+        /// </summary>
+        public DropCapLocationValues(string value) => _value = value;
+        DropCapLocationValues IEnumValueFactory<DropCapLocationValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "none" => true,
+            "drop" => true,
+            "margin" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "none";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// Not Drop Cap.
         /// <para>When the item is serialized out as xml, its value is "none".</para>
         /// </summary>
-        [EnumString("none")]
-        None,
+        public static DropCapLocationValues None => new("none");
         /// <summary>
         /// Drop Cap Inside Margin.
         /// <para>When the item is serialized out as xml, its value is "drop".</para>
         /// </summary>
-        [EnumString("drop")]
-        Drop,
+        public static DropCapLocationValues Drop => new("drop");
         /// <summary>
         /// Drop Cap Outside Margin.
         /// <para>When the item is serialized out as xml, its value is "margin".</para>
         /// </summary>
-        [EnumString("margin")]
-        Margin
+        public static DropCapLocationValues Margin => new("margin");
+    
     }
 
     /// <summary>
     /// Defines the TabStopLeaderCharValues enumeration.
     /// </summary>
-    public enum TabStopLeaderCharValues
+    public readonly record struct TabStopLeaderCharValues : IEnumValue, IEnumValueFactory<TabStopLeaderCharValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new TabStopLeaderCharValues enum instance
+        /// </summary>
+        public TabStopLeaderCharValues(string value) => _value = value;
+        TabStopLeaderCharValues IEnumValueFactory<TabStopLeaderCharValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "none" => true,
+            "dot" => true,
+            "hyphen" => true,
+            "underscore" => true,
+            "heavy" => true,
+            "middleDot" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "none";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// No tab stop leader.
         /// <para>When the item is serialized out as xml, its value is "none".</para>
         /// </summary>
-        [EnumString("none")]
-        None,
+        public static TabStopLeaderCharValues None => new("none");
         /// <summary>
         /// Dotted leader line.
         /// <para>When the item is serialized out as xml, its value is "dot".</para>
         /// </summary>
-        [EnumString("dot")]
-        Dot,
+        public static TabStopLeaderCharValues Dot => new("dot");
         /// <summary>
         /// Dashed tab stop leader line.
         /// <para>When the item is serialized out as xml, its value is "hyphen".</para>
         /// </summary>
-        [EnumString("hyphen")]
-        Hyphen,
+        public static TabStopLeaderCharValues Hyphen => new("hyphen");
         /// <summary>
         /// Solid leader line.
         /// <para>When the item is serialized out as xml, its value is "underscore".</para>
         /// </summary>
-        [EnumString("underscore")]
-        Underscore,
+        public static TabStopLeaderCharValues Underscore => new("underscore");
         /// <summary>
         /// Heavy solid leader line.
         /// <para>When the item is serialized out as xml, its value is "heavy".</para>
         /// </summary>
-        [EnumString("heavy")]
-        Heavy,
+        public static TabStopLeaderCharValues Heavy => new("heavy");
         /// <summary>
         /// Middle dot leader line.
         /// <para>When the item is serialized out as xml, its value is "middleDot".</para>
         /// </summary>
-        [EnumString("middleDot")]
-        MiddleDot
+        public static TabStopLeaderCharValues MiddleDot => new("middleDot");
+    
     }
 
     /// <summary>
     /// Defines the LineSpacingRuleValues enumeration.
     /// </summary>
-    public enum LineSpacingRuleValues
+    public readonly record struct LineSpacingRuleValues : IEnumValue, IEnumValueFactory<LineSpacingRuleValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new LineSpacingRuleValues enum instance
+        /// </summary>
+        public LineSpacingRuleValues(string value) => _value = value;
+        LineSpacingRuleValues IEnumValueFactory<LineSpacingRuleValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "auto" => true,
+            "exact" => true,
+            "atLeast" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "auto";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// Automatically Determined Line Height.
         /// <para>When the item is serialized out as xml, its value is "auto".</para>
         /// </summary>
-        [EnumString("auto")]
-        Auto,
+        public static LineSpacingRuleValues Auto => new("auto");
         /// <summary>
         /// Exact Line Height.
         /// <para>When the item is serialized out as xml, its value is "exact".</para>
         /// </summary>
-        [EnumString("exact")]
-        Exact,
+        public static LineSpacingRuleValues Exact => new("exact");
         /// <summary>
         /// Minimum Line Height.
         /// <para>When the item is serialized out as xml, its value is "atLeast".</para>
         /// </summary>
-        [EnumString("atLeast")]
-        AtLeast
+        public static LineSpacingRuleValues AtLeast => new("atLeast");
+    
     }
 
     /// <summary>
     /// Defines the TableRowAlignmentValues enumeration.
     /// </summary>
-    public enum TableRowAlignmentValues
+    public readonly record struct TableRowAlignmentValues : IEnumValue, IEnumValueFactory<TableRowAlignmentValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new TableRowAlignmentValues enum instance
+        /// </summary>
+        public TableRowAlignmentValues(string value) => _value = value;
+        TableRowAlignmentValues IEnumValueFactory<TableRowAlignmentValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "left" => true,
+            "center" => true,
+            "right" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "left";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// left.
         /// <para>When the item is serialized out as xml, its value is "left".</para>
         /// </summary>
-        [EnumString("left")]
-        Left,
+        public static TableRowAlignmentValues Left => new("left");
         /// <summary>
         /// center.
         /// <para>When the item is serialized out as xml, its value is "center".</para>
         /// </summary>
-        [EnumString("center")]
-        Center,
+        public static TableRowAlignmentValues Center => new("center");
         /// <summary>
         /// right.
         /// <para>When the item is serialized out as xml, its value is "right".</para>
         /// </summary>
-        [EnumString("right")]
-        Right
+        public static TableRowAlignmentValues Right => new("right");
+    
     }
 
     /// <summary>
     /// Defines the ViewValues enumeration.
     /// </summary>
-    public enum ViewValues
+    public readonly record struct ViewValues : IEnumValue, IEnumValueFactory<ViewValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new ViewValues enum instance
+        /// </summary>
+        public ViewValues(string value) => _value = value;
+        ViewValues IEnumValueFactory<ViewValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "none" => true,
+            "print" => true,
+            "outline" => true,
+            "masterPages" => true,
+            "normal" => true,
+            "web" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "none";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// Default View.
         /// <para>When the item is serialized out as xml, its value is "none".</para>
         /// </summary>
-        [EnumString("none")]
-        None,
+        public static ViewValues None => new("none");
         /// <summary>
         /// Print Layout View.
         /// <para>When the item is serialized out as xml, its value is "print".</para>
         /// </summary>
-        [EnumString("print")]
-        Print,
+        public static ViewValues Print => new("print");
         /// <summary>
         /// Outline View.
         /// <para>When the item is serialized out as xml, its value is "outline".</para>
         /// </summary>
-        [EnumString("outline")]
-        Outline,
+        public static ViewValues Outline => new("outline");
         /// <summary>
         /// Master Document View.
         /// <para>When the item is serialized out as xml, its value is "masterPages".</para>
         /// </summary>
-        [EnumString("masterPages")]
-        MasterPages,
+        public static ViewValues MasterPages => new("masterPages");
         /// <summary>
         /// Draft View.
         /// <para>When the item is serialized out as xml, its value is "normal".</para>
         /// </summary>
-        [EnumString("normal")]
-        Normal,
+        public static ViewValues Normal => new("normal");
         /// <summary>
         /// Web Page View.
         /// <para>When the item is serialized out as xml, its value is "web".</para>
         /// </summary>
-        [EnumString("web")]
-        Web
+        public static ViewValues Web => new("web");
+    
     }
 
     /// <summary>
     /// Defines the PresetZoomValues enumeration.
     /// </summary>
-    public enum PresetZoomValues
+    public readonly record struct PresetZoomValues : IEnumValue, IEnumValueFactory<PresetZoomValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new PresetZoomValues enum instance
+        /// </summary>
+        public PresetZoomValues(string value) => _value = value;
+        PresetZoomValues IEnumValueFactory<PresetZoomValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "none" => true,
+            "fullPage" => true,
+            "bestFit" => true,
+            "textFit" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "none";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// No Preset Magnification.
         /// <para>When the item is serialized out as xml, its value is "none".</para>
         /// </summary>
-        [EnumString("none")]
-        None,
+        public static PresetZoomValues None => new("none");
         /// <summary>
         /// Display One Full Page.
         /// <para>When the item is serialized out as xml, its value is "fullPage".</para>
         /// </summary>
-        [EnumString("fullPage")]
-        FullPage,
+        public static PresetZoomValues FullPage => new("fullPage");
         /// <summary>
         /// Display Page Width.
         /// <para>When the item is serialized out as xml, its value is "bestFit".</para>
         /// </summary>
-        [EnumString("bestFit")]
-        BestFit,
+        public static PresetZoomValues BestFit => new("bestFit");
         /// <summary>
         /// Display Text Width.
         /// <para>When the item is serialized out as xml, its value is "textFit".</para>
         /// </summary>
-        [EnumString("textFit")]
-        TextFit
+        public static PresetZoomValues TextFit => new("textFit");
+    
     }
 
     /// <summary>
     /// Defines the ProofingStateValues enumeration.
     /// </summary>
-    public enum ProofingStateValues
+    public readonly record struct ProofingStateValues : IEnumValue, IEnumValueFactory<ProofingStateValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new ProofingStateValues enum instance
+        /// </summary>
+        public ProofingStateValues(string value) => _value = value;
+        ProofingStateValues IEnumValueFactory<ProofingStateValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "clean" => true,
+            "dirty" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "clean";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// Check Completed.
         /// <para>When the item is serialized out as xml, its value is "clean".</para>
         /// </summary>
-        [EnumString("clean")]
-        Clean,
+        public static ProofingStateValues Clean => new("clean");
         /// <summary>
         /// Check Not Completed.
         /// <para>When the item is serialized out as xml, its value is "dirty".</para>
         /// </summary>
-        [EnumString("dirty")]
-        Dirty
+        public static ProofingStateValues Dirty => new("dirty");
+    
     }
 
     /// <summary>
     /// Defines the DocumentTypeValues enumeration.
     /// </summary>
-    public enum DocumentTypeValues
+    public readonly record struct DocumentTypeValues : IEnumValue, IEnumValueFactory<DocumentTypeValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new DocumentTypeValues enum instance
+        /// </summary>
+        public DocumentTypeValues(string value) => _value = value;
+        DocumentTypeValues IEnumValueFactory<DocumentTypeValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "notSpecified" => true,
+            "letter" => true,
+            "eMail" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "notSpecified";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// Default Document.
         /// <para>When the item is serialized out as xml, its value is "notSpecified".</para>
         /// </summary>
-        [EnumString("notSpecified")]
-        NotSpecified,
+        public static DocumentTypeValues NotSpecified => new("notSpecified");
         /// <summary>
         /// Letter.
         /// <para>When the item is serialized out as xml, its value is "letter".</para>
         /// </summary>
-        [EnumString("letter")]
-        Letter,
+        public static DocumentTypeValues Letter => new("letter");
         /// <summary>
         /// E-Mail Message.
         /// <para>When the item is serialized out as xml, its value is "eMail".</para>
         /// </summary>
-        [EnumString("eMail")]
-        Email
+        public static DocumentTypeValues Email => new("eMail");
+    
     }
 
     /// <summary>
     /// Defines the DocumentProtectionValues enumeration.
     /// </summary>
-    public enum DocumentProtectionValues
+    public readonly record struct DocumentProtectionValues : IEnumValue, IEnumValueFactory<DocumentProtectionValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new DocumentProtectionValues enum instance
+        /// </summary>
+        public DocumentProtectionValues(string value) => _value = value;
+        DocumentProtectionValues IEnumValueFactory<DocumentProtectionValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "none" => true,
+            "readOnly" => true,
+            "comments" => true,
+            "trackedChanges" => true,
+            "forms" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "none";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// No Editing Restrictions.
         /// <para>When the item is serialized out as xml, its value is "none".</para>
         /// </summary>
-        [EnumString("none")]
-        None,
+        public static DocumentProtectionValues None => new("none");
         /// <summary>
         /// Allow No Editing.
         /// <para>When the item is serialized out as xml, its value is "readOnly".</para>
         /// </summary>
-        [EnumString("readOnly")]
-        ReadOnly,
+        public static DocumentProtectionValues ReadOnly => new("readOnly");
         /// <summary>
         /// Allow Editing of Comments.
         /// <para>When the item is serialized out as xml, its value is "comments".</para>
         /// </summary>
-        [EnumString("comments")]
-        Comments,
+        public static DocumentProtectionValues Comments => new("comments");
         /// <summary>
         /// Allow Editing With Revision Tracking.
         /// <para>When the item is serialized out as xml, its value is "trackedChanges".</para>
         /// </summary>
-        [EnumString("trackedChanges")]
-        TrackedChanges,
+        public static DocumentProtectionValues TrackedChanges => new("trackedChanges");
         /// <summary>
         /// Allow Editing of Form Fields.
         /// <para>When the item is serialized out as xml, its value is "forms".</para>
         /// </summary>
-        [EnumString("forms")]
-        Forms
+        public static DocumentProtectionValues Forms => new("forms");
+    
     }
 
     /// <summary>
     /// Defines the MailMergeDocumentValues enumeration.
     /// </summary>
-    public enum MailMergeDocumentValues
+    public readonly record struct MailMergeDocumentValues : IEnumValue, IEnumValueFactory<MailMergeDocumentValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new MailMergeDocumentValues enum instance
+        /// </summary>
+        public MailMergeDocumentValues(string value) => _value = value;
+        MailMergeDocumentValues IEnumValueFactory<MailMergeDocumentValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "catalog" => true,
+            "envelopes" => true,
+            "mailingLabels" => true,
+            "formLetters" => true,
+            "email" => true,
+            "fax" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "catalog";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// Catalog Source Document.
         /// <para>When the item is serialized out as xml, its value is "catalog".</para>
         /// </summary>
-        [EnumString("catalog")]
-        Catalog,
+        public static MailMergeDocumentValues Catalog => new("catalog");
         /// <summary>
         /// Envelope Source Document.
         /// <para>When the item is serialized out as xml, its value is "envelopes".</para>
         /// </summary>
-        [EnumString("envelopes")]
-        Envelope,
+        public static MailMergeDocumentValues Envelope => new("envelopes");
         /// <summary>
         /// Mailing Label Source Document.
         /// <para>When the item is serialized out as xml, its value is "mailingLabels".</para>
         /// </summary>
-        [EnumString("mailingLabels")]
-        MailingLabel,
+        public static MailMergeDocumentValues MailingLabel => new("mailingLabels");
         /// <summary>
         /// Form Letter Source Document.
         /// <para>When the item is serialized out as xml, its value is "formLetters".</para>
         /// </summary>
-        [EnumString("formLetters")]
-        FormLetter,
+        public static MailMergeDocumentValues FormLetter => new("formLetters");
         /// <summary>
         /// E-Mail Source Document.
         /// <para>When the item is serialized out as xml, its value is "email".</para>
         /// </summary>
-        [EnumString("email")]
-        Email,
+        public static MailMergeDocumentValues Email => new("email");
         /// <summary>
         /// Fax Source Document.
         /// <para>When the item is serialized out as xml, its value is "fax".</para>
         /// </summary>
-        [EnumString("fax")]
-        Fax
+        public static MailMergeDocumentValues Fax => new("fax");
+    
     }
 
     /// <summary>
     /// Defines the MailMergeDataValues enumeration.
     /// </summary>
-    public enum MailMergeDataValues
+    public readonly record struct MailMergeDataValues : IEnumValue, IEnumValueFactory<MailMergeDataValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new MailMergeDataValues enum instance
+        /// </summary>
+        public MailMergeDataValues(string value) => _value = value;
+        MailMergeDataValues IEnumValueFactory<MailMergeDataValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "textFile" => true,
+            "database" => true,
+            "spreadsheet" => true,
+            "query" => true,
+            "odbc" => true,
+            "native" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "textFile";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// Text File Data Source.
         /// <para>When the item is serialized out as xml, its value is "textFile".</para>
         /// </summary>
-        [EnumString("textFile")]
-        TextFile,
+        public static MailMergeDataValues TextFile => new("textFile");
         /// <summary>
         /// Database Data Source.
         /// <para>When the item is serialized out as xml, its value is "database".</para>
         /// </summary>
-        [EnumString("database")]
-        Database,
+        public static MailMergeDataValues Database => new("database");
         /// <summary>
         /// Spreadsheet Data Source.
         /// <para>When the item is serialized out as xml, its value is "spreadsheet".</para>
         /// </summary>
-        [EnumString("spreadsheet")]
-        Spreadsheet,
+        public static MailMergeDataValues Spreadsheet => new("spreadsheet");
         /// <summary>
         /// Query Data Source.
         /// <para>When the item is serialized out as xml, its value is "query".</para>
         /// </summary>
-        [EnumString("query")]
-        Query,
+        public static MailMergeDataValues Query => new("query");
         /// <summary>
         /// Open Database Connectivity Data Source.
         /// <para>When the item is serialized out as xml, its value is "odbc".</para>
         /// </summary>
-        [EnumString("odbc")]
-        Odbc,
+        public static MailMergeDataValues Odbc => new("odbc");
         /// <summary>
         /// Office Data Source Object Data Source.
         /// <para>When the item is serialized out as xml, its value is "native".</para>
         /// </summary>
-        [EnumString("native")]
-        Native
+        public static MailMergeDataValues Native => new("native");
+    
     }
 
     /// <summary>
     /// Defines the MailMergeDestinationValues enumeration.
     /// </summary>
-    public enum MailMergeDestinationValues
+    public readonly record struct MailMergeDestinationValues : IEnumValue, IEnumValueFactory<MailMergeDestinationValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new MailMergeDestinationValues enum instance
+        /// </summary>
+        public MailMergeDestinationValues(string value) => _value = value;
+        MailMergeDestinationValues IEnumValueFactory<MailMergeDestinationValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "newDocument" => true,
+            "printer" => true,
+            "email" => true,
+            "fax" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "newDocument";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// Send Merged Documents to New Documents.
         /// <para>When the item is serialized out as xml, its value is "newDocument".</para>
         /// </summary>
-        [EnumString("newDocument")]
-        NewDocument,
+        public static MailMergeDestinationValues NewDocument => new("newDocument");
         /// <summary>
         /// Send Merged Documents to Printer.
         /// <para>When the item is serialized out as xml, its value is "printer".</para>
         /// </summary>
-        [EnumString("printer")]
-        Printer,
+        public static MailMergeDestinationValues Printer => new("printer");
         /// <summary>
         /// Send Merged Documents as E-mail Messages.
         /// <para>When the item is serialized out as xml, its value is "email".</para>
         /// </summary>
-        [EnumString("email")]
-        Email,
+        public static MailMergeDestinationValues Email => new("email");
         /// <summary>
         /// Send Merged Documents as Faxes.
         /// <para>When the item is serialized out as xml, its value is "fax".</para>
         /// </summary>
-        [EnumString("fax")]
-        Fax
+        public static MailMergeDestinationValues Fax => new("fax");
+    
     }
 
     /// <summary>
     /// Defines the MailMergeOdsoFieldValues enumeration.
     /// </summary>
-    public enum MailMergeOdsoFieldValues
+    public readonly record struct MailMergeOdsoFieldValues : IEnumValue, IEnumValueFactory<MailMergeOdsoFieldValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new MailMergeOdsoFieldValues enum instance
+        /// </summary>
+        public MailMergeOdsoFieldValues(string value) => _value = value;
+        MailMergeOdsoFieldValues IEnumValueFactory<MailMergeOdsoFieldValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "null" => true,
+            "dbColumn" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "null";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// Field Not Mapped.
         /// <para>When the item is serialized out as xml, its value is "null".</para>
         /// </summary>
-        [EnumString("null")]
-        Null,
+        public static MailMergeOdsoFieldValues Null => new("null");
         /// <summary>
         /// Field Mapping to Data Source Column.
         /// <para>When the item is serialized out as xml, its value is "dbColumn".</para>
         /// </summary>
-        [EnumString("dbColumn")]
-        DbColumn
+        public static MailMergeOdsoFieldValues DbColumn => new("dbColumn");
+    
     }
 
     /// <summary>
     /// Defines the VerticalTextAlignmentValues enumeration.
     /// </summary>
-    public enum VerticalTextAlignmentValues
+    public readonly record struct VerticalTextAlignmentValues : IEnumValue, IEnumValueFactory<VerticalTextAlignmentValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new VerticalTextAlignmentValues enum instance
+        /// </summary>
+        public VerticalTextAlignmentValues(string value) => _value = value;
+        VerticalTextAlignmentValues IEnumValueFactory<VerticalTextAlignmentValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "top" => true,
+            "center" => true,
+            "baseline" => true,
+            "bottom" => true,
+            "auto" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "top";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// Align Text at Top.
         /// <para>When the item is serialized out as xml, its value is "top".</para>
         /// </summary>
-        [EnumString("top")]
-        Top,
+        public static VerticalTextAlignmentValues Top => new("top");
         /// <summary>
         /// Align Text at Center.
         /// <para>When the item is serialized out as xml, its value is "center".</para>
         /// </summary>
-        [EnumString("center")]
-        Center,
+        public static VerticalTextAlignmentValues Center => new("center");
         /// <summary>
         /// Align Text at Baseline.
         /// <para>When the item is serialized out as xml, its value is "baseline".</para>
         /// </summary>
-        [EnumString("baseline")]
-        Baseline,
+        public static VerticalTextAlignmentValues Baseline => new("baseline");
         /// <summary>
         /// Align Text at Bottom.
         /// <para>When the item is serialized out as xml, its value is "bottom".</para>
         /// </summary>
-        [EnumString("bottom")]
-        Bottom,
+        public static VerticalTextAlignmentValues Bottom => new("bottom");
         /// <summary>
         /// Automatically Determine Alignment.
         /// <para>When the item is serialized out as xml, its value is "auto".</para>
         /// </summary>
-        [EnumString("auto")]
-        Auto
+        public static VerticalTextAlignmentValues Auto => new("auto");
+    
     }
 
     /// <summary>
     /// Defines the DisplacedByCustomXmlValues enumeration.
     /// </summary>
-    public enum DisplacedByCustomXmlValues
+    public readonly record struct DisplacedByCustomXmlValues : IEnumValue, IEnumValueFactory<DisplacedByCustomXmlValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new DisplacedByCustomXmlValues enum instance
+        /// </summary>
+        public DisplacedByCustomXmlValues(string value) => _value = value;
+        DisplacedByCustomXmlValues IEnumValueFactory<DisplacedByCustomXmlValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "next" => true,
+            "prev" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "next";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// Displaced by Next Custom XML Markup Tag.
         /// <para>When the item is serialized out as xml, its value is "next".</para>
         /// </summary>
-        [EnumString("next")]
-        Next,
+        public static DisplacedByCustomXmlValues Next => new("next");
         /// <summary>
         /// Displaced by Previous Custom XML Markup Tag.
         /// <para>When the item is serialized out as xml, its value is "prev".</para>
         /// </summary>
-        [EnumString("prev")]
-        Previous
+        public static DisplacedByCustomXmlValues Previous => new("prev");
+    
     }
 
     /// <summary>
     /// Defines the VerticalMergeRevisionValues enumeration.
     /// </summary>
-    public enum VerticalMergeRevisionValues
+    public readonly record struct VerticalMergeRevisionValues : IEnumValue, IEnumValueFactory<VerticalMergeRevisionValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new VerticalMergeRevisionValues enum instance
+        /// </summary>
+        public VerticalMergeRevisionValues(string value) => _value = value;
+        VerticalMergeRevisionValues IEnumValueFactory<VerticalMergeRevisionValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "cont" => true,
+            "rest" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "cont";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// Vertically Merged Cell.
         /// <para>When the item is serialized out as xml, its value is "cont".</para>
         /// </summary>
-        [EnumString("cont")]
-        Continue,
+        public static VerticalMergeRevisionValues Continue => new("cont");
         /// <summary>
         /// Vertically Split Cell.
         /// <para>When the item is serialized out as xml, its value is "rest".</para>
         /// </summary>
-        [EnumString("rest")]
-        Restart
+        public static VerticalMergeRevisionValues Restart => new("rest");
+    
     }
 
     /// <summary>
     /// Defines the TextBoxTightWrapValues enumeration.
     /// </summary>
-    public enum TextBoxTightWrapValues
+    public readonly record struct TextBoxTightWrapValues : IEnumValue, IEnumValueFactory<TextBoxTightWrapValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new TextBoxTightWrapValues enum instance
+        /// </summary>
+        public TextBoxTightWrapValues(string value) => _value = value;
+        TextBoxTightWrapValues IEnumValueFactory<TextBoxTightWrapValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "none" => true,
+            "allLines" => true,
+            "firstAndLastLine" => true,
+            "firstLineOnly" => true,
+            "lastLineOnly" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "none";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// Do Not Tight Wrap.
         /// <para>When the item is serialized out as xml, its value is "none".</para>
         /// </summary>
-        [EnumString("none")]
-        None,
+        public static TextBoxTightWrapValues None => new("none");
         /// <summary>
         /// Tight Wrap All Lines.
         /// <para>When the item is serialized out as xml, its value is "allLines".</para>
         /// </summary>
-        [EnumString("allLines")]
-        AllLines,
+        public static TextBoxTightWrapValues AllLines => new("allLines");
         /// <summary>
         /// Tight Wrap First and Last Lines.
         /// <para>When the item is serialized out as xml, its value is "firstAndLastLine".</para>
         /// </summary>
-        [EnumString("firstAndLastLine")]
-        FirstAndLastLine,
+        public static TextBoxTightWrapValues FirstAndLastLine => new("firstAndLastLine");
         /// <summary>
         /// Tight Wrap First Line.
         /// <para>When the item is serialized out as xml, its value is "firstLineOnly".</para>
         /// </summary>
-        [EnumString("firstLineOnly")]
-        FirstLineOnly,
+        public static TextBoxTightWrapValues FirstLineOnly => new("firstLineOnly");
         /// <summary>
         /// Tight Wrap Last Line.
         /// <para>When the item is serialized out as xml, its value is "lastLineOnly".</para>
         /// </summary>
-        [EnumString("lastLineOnly")]
-        LastLineOnly
+        public static TextBoxTightWrapValues LastLineOnly => new("lastLineOnly");
+    
     }
 
     /// <summary>
     /// Defines the FieldCharValues enumeration.
     /// </summary>
-    public enum FieldCharValues
+    public readonly record struct FieldCharValues : IEnumValue, IEnumValueFactory<FieldCharValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new FieldCharValues enum instance
+        /// </summary>
+        public FieldCharValues(string value) => _value = value;
+        FieldCharValues IEnumValueFactory<FieldCharValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "begin" => true,
+            "separate" => true,
+            "end" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "begin";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// Start Character.
         /// <para>When the item is serialized out as xml, its value is "begin".</para>
         /// </summary>
-        [EnumString("begin")]
-        Begin,
+        public static FieldCharValues Begin => new("begin");
         /// <summary>
         /// Separator Character.
         /// <para>When the item is serialized out as xml, its value is "separate".</para>
         /// </summary>
-        [EnumString("separate")]
-        Separate,
+        public static FieldCharValues Separate => new("separate");
         /// <summary>
         /// End Character.
         /// <para>When the item is serialized out as xml, its value is "end".</para>
         /// </summary>
-        [EnumString("end")]
-        End
+        public static FieldCharValues End => new("end");
+    
     }
 
     /// <summary>
     /// Defines the InfoTextValues enumeration.
     /// </summary>
-    public enum InfoTextValues
+    public readonly record struct InfoTextValues : IEnumValue, IEnumValueFactory<InfoTextValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new InfoTextValues enum instance
+        /// </summary>
+        public InfoTextValues(string value) => _value = value;
+        InfoTextValues IEnumValueFactory<InfoTextValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "text" => true,
+            "autoText" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "text";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// Literal Text.
         /// <para>When the item is serialized out as xml, its value is "text".</para>
         /// </summary>
-        [EnumString("text")]
-        Text,
+        public static InfoTextValues Text => new("text");
         /// <summary>
         /// Glossary Document Entry.
         /// <para>When the item is serialized out as xml, its value is "autoText".</para>
         /// </summary>
-        [EnumString("autoText")]
-        AutoText
+        public static InfoTextValues AutoText => new("autoText");
+    
     }
 
     /// <summary>
     /// Defines the TextBoxFormFieldValues enumeration.
     /// </summary>
-    public enum TextBoxFormFieldValues
+    public readonly record struct TextBoxFormFieldValues : IEnumValue, IEnumValueFactory<TextBoxFormFieldValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new TextBoxFormFieldValues enum instance
+        /// </summary>
+        public TextBoxFormFieldValues(string value) => _value = value;
+        TextBoxFormFieldValues IEnumValueFactory<TextBoxFormFieldValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "regular" => true,
+            "number" => true,
+            "date" => true,
+            "currentTime" => true,
+            "currentDate" => true,
+            "calculated" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "regular";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// Text Box.
         /// <para>When the item is serialized out as xml, its value is "regular".</para>
         /// </summary>
-        [EnumString("regular")]
-        Regular,
+        public static TextBoxFormFieldValues Regular => new("regular");
         /// <summary>
         /// Number.
         /// <para>When the item is serialized out as xml, its value is "number".</para>
         /// </summary>
-        [EnumString("number")]
-        Number,
+        public static TextBoxFormFieldValues Number => new("number");
         /// <summary>
         /// Date.
         /// <para>When the item is serialized out as xml, its value is "date".</para>
         /// </summary>
-        [EnumString("date")]
-        Date,
+        public static TextBoxFormFieldValues Date => new("date");
         /// <summary>
         /// Current Time Display.
         /// <para>When the item is serialized out as xml, its value is "currentTime".</para>
         /// </summary>
-        [EnumString("currentTime")]
-        CurrentTime,
+        public static TextBoxFormFieldValues CurrentTime => new("currentTime");
         /// <summary>
         /// Current Date Display.
         /// <para>When the item is serialized out as xml, its value is "currentDate".</para>
         /// </summary>
-        [EnumString("currentDate")]
-        CurrentDate,
+        public static TextBoxFormFieldValues CurrentDate => new("currentDate");
         /// <summary>
         /// Field Calculation.
         /// <para>When the item is serialized out as xml, its value is "calculated".</para>
         /// </summary>
-        [EnumString("calculated")]
-        Calculated
+        public static TextBoxFormFieldValues Calculated => new("calculated");
+    
     }
 
     /// <summary>
     /// Defines the SectionMarkValues enumeration.
     /// </summary>
-    public enum SectionMarkValues
+    public readonly record struct SectionMarkValues : IEnumValue, IEnumValueFactory<SectionMarkValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new SectionMarkValues enum instance
+        /// </summary>
+        public SectionMarkValues(string value) => _value = value;
+        SectionMarkValues IEnumValueFactory<SectionMarkValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "nextPage" => true,
+            "nextColumn" => true,
+            "continuous" => true,
+            "evenPage" => true,
+            "oddPage" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "nextPage";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// Next Page Section Break.
         /// <para>When the item is serialized out as xml, its value is "nextPage".</para>
         /// </summary>
-        [EnumString("nextPage")]
-        NextPage,
+        public static SectionMarkValues NextPage => new("nextPage");
         /// <summary>
         /// Column Section Break.
         /// <para>When the item is serialized out as xml, its value is "nextColumn".</para>
         /// </summary>
-        [EnumString("nextColumn")]
-        NextColumn,
+        public static SectionMarkValues NextColumn => new("nextColumn");
         /// <summary>
         /// Continuous Section Break.
         /// <para>When the item is serialized out as xml, its value is "continuous".</para>
         /// </summary>
-        [EnumString("continuous")]
-        Continuous,
+        public static SectionMarkValues Continuous => new("continuous");
         /// <summary>
         /// Even Page Section Break.
         /// <para>When the item is serialized out as xml, its value is "evenPage".</para>
         /// </summary>
-        [EnumString("evenPage")]
-        EvenPage,
+        public static SectionMarkValues EvenPage => new("evenPage");
         /// <summary>
         /// Odd Page Section Break.
         /// <para>When the item is serialized out as xml, its value is "oddPage".</para>
         /// </summary>
-        [EnumString("oddPage")]
-        OddPage
+        public static SectionMarkValues OddPage => new("oddPage");
+    
     }
 
     /// <summary>
     /// Defines the PageOrientationValues enumeration.
     /// </summary>
-    public enum PageOrientationValues
+    public readonly record struct PageOrientationValues : IEnumValue, IEnumValueFactory<PageOrientationValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new PageOrientationValues enum instance
+        /// </summary>
+        public PageOrientationValues(string value) => _value = value;
+        PageOrientationValues IEnumValueFactory<PageOrientationValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "portrait" => true,
+            "landscape" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "portrait";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// Portrait Mode.
         /// <para>When the item is serialized out as xml, its value is "portrait".</para>
         /// </summary>
-        [EnumString("portrait")]
-        Portrait,
+        public static PageOrientationValues Portrait => new("portrait");
         /// <summary>
         /// Landscape Mode.
         /// <para>When the item is serialized out as xml, its value is "landscape".</para>
         /// </summary>
-        [EnumString("landscape")]
-        Landscape
+        public static PageOrientationValues Landscape => new("landscape");
+    
     }
 
     /// <summary>
     /// Defines the PageBorderZOrderValues enumeration.
     /// </summary>
-    public enum PageBorderZOrderValues
+    public readonly record struct PageBorderZOrderValues : IEnumValue, IEnumValueFactory<PageBorderZOrderValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new PageBorderZOrderValues enum instance
+        /// </summary>
+        public PageBorderZOrderValues(string value) => _value = value;
+        PageBorderZOrderValues IEnumValueFactory<PageBorderZOrderValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "front" => true,
+            "back" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "front";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// Page Border Ahead of Text.
         /// <para>When the item is serialized out as xml, its value is "front".</para>
         /// </summary>
-        [EnumString("front")]
-        Front,
+        public static PageBorderZOrderValues Front => new("front");
         /// <summary>
         /// Page Border Behind Text.
         /// <para>When the item is serialized out as xml, its value is "back".</para>
         /// </summary>
-        [EnumString("back")]
-        Back
+        public static PageBorderZOrderValues Back => new("back");
+    
     }
 
     /// <summary>
     /// Defines the PageBorderDisplayValues enumeration.
     /// </summary>
-    public enum PageBorderDisplayValues
+    public readonly record struct PageBorderDisplayValues : IEnumValue, IEnumValueFactory<PageBorderDisplayValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new PageBorderDisplayValues enum instance
+        /// </summary>
+        public PageBorderDisplayValues(string value) => _value = value;
+        PageBorderDisplayValues IEnumValueFactory<PageBorderDisplayValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "allPages" => true,
+            "firstPage" => true,
+            "notFirstPage" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "allPages";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// Display Page Border on All Pages.
         /// <para>When the item is serialized out as xml, its value is "allPages".</para>
         /// </summary>
-        [EnumString("allPages")]
-        AllPages,
+        public static PageBorderDisplayValues AllPages => new("allPages");
         /// <summary>
         /// Display Page Border on First Page.
         /// <para>When the item is serialized out as xml, its value is "firstPage".</para>
         /// </summary>
-        [EnumString("firstPage")]
-        FirstPage,
+        public static PageBorderDisplayValues FirstPage => new("firstPage");
         /// <summary>
         /// Display Page Border on All Pages Except First.
         /// <para>When the item is serialized out as xml, its value is "notFirstPage".</para>
         /// </summary>
-        [EnumString("notFirstPage")]
-        NotFirstPage
+        public static PageBorderDisplayValues NotFirstPage => new("notFirstPage");
+    
     }
 
     /// <summary>
     /// Defines the PageBorderOffsetValues enumeration.
     /// </summary>
-    public enum PageBorderOffsetValues
+    public readonly record struct PageBorderOffsetValues : IEnumValue, IEnumValueFactory<PageBorderOffsetValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new PageBorderOffsetValues enum instance
+        /// </summary>
+        public PageBorderOffsetValues(string value) => _value = value;
+        PageBorderOffsetValues IEnumValueFactory<PageBorderOffsetValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "page" => true,
+            "text" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "page";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// Page Border Is Positioned Relative to Page Edges.
         /// <para>When the item is serialized out as xml, its value is "page".</para>
         /// </summary>
-        [EnumString("page")]
-        Page,
+        public static PageBorderOffsetValues Page => new("page");
         /// <summary>
         /// Page Border Is Positioned Relative to Text Extents.
         /// <para>When the item is serialized out as xml, its value is "text".</para>
         /// </summary>
-        [EnumString("text")]
-        Text
+        public static PageBorderOffsetValues Text => new("text");
+    
     }
 
     /// <summary>
     /// Defines the ChapterSeparatorValues enumeration.
     /// </summary>
-    public enum ChapterSeparatorValues
+    public readonly record struct ChapterSeparatorValues : IEnumValue, IEnumValueFactory<ChapterSeparatorValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new ChapterSeparatorValues enum instance
+        /// </summary>
+        public ChapterSeparatorValues(string value) => _value = value;
+        ChapterSeparatorValues IEnumValueFactory<ChapterSeparatorValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "hyphen" => true,
+            "period" => true,
+            "colon" => true,
+            "emDash" => true,
+            "enDash" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "hyphen";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// Hyphen Chapter Separator.
         /// <para>When the item is serialized out as xml, its value is "hyphen".</para>
         /// </summary>
-        [EnumString("hyphen")]
-        Hyphen,
+        public static ChapterSeparatorValues Hyphen => new("hyphen");
         /// <summary>
         /// Period Chapter Separator.
         /// <para>When the item is serialized out as xml, its value is "period".</para>
         /// </summary>
-        [EnumString("period")]
-        Period,
+        public static ChapterSeparatorValues Period => new("period");
         /// <summary>
         /// Colon Chapter Separator.
         /// <para>When the item is serialized out as xml, its value is "colon".</para>
         /// </summary>
-        [EnumString("colon")]
-        Colon,
+        public static ChapterSeparatorValues Colon => new("colon");
         /// <summary>
         /// Em Dash Chapter Separator.
         /// <para>When the item is serialized out as xml, its value is "emDash".</para>
         /// </summary>
-        [EnumString("emDash")]
-        EmDash,
+        public static ChapterSeparatorValues EmDash => new("emDash");
         /// <summary>
         /// En Dash Chapter Separator.
         /// <para>When the item is serialized out as xml, its value is "enDash".</para>
         /// </summary>
-        [EnumString("enDash")]
-        EnDash
+        public static ChapterSeparatorValues EnDash => new("enDash");
+    
     }
 
     /// <summary>
     /// Defines the LineNumberRestartValues enumeration.
     /// </summary>
-    public enum LineNumberRestartValues
+    public readonly record struct LineNumberRestartValues : IEnumValue, IEnumValueFactory<LineNumberRestartValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new LineNumberRestartValues enum instance
+        /// </summary>
+        public LineNumberRestartValues(string value) => _value = value;
+        LineNumberRestartValues IEnumValueFactory<LineNumberRestartValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "newPage" => true,
+            "newSection" => true,
+            "continuous" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "newPage";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// Restart Line Numbering on Each Page.
         /// <para>When the item is serialized out as xml, its value is "newPage".</para>
         /// </summary>
-        [EnumString("newPage")]
-        NewPage,
+        public static LineNumberRestartValues NewPage => new("newPage");
         /// <summary>
         /// Restart Line Numbering for Each Section.
         /// <para>When the item is serialized out as xml, its value is "newSection".</para>
         /// </summary>
-        [EnumString("newSection")]
-        NewSection,
+        public static LineNumberRestartValues NewSection => new("newSection");
         /// <summary>
         /// Continue Line Numbering From Previous Section.
         /// <para>When the item is serialized out as xml, its value is "continuous".</para>
         /// </summary>
-        [EnumString("continuous")]
-        Continuous
+        public static LineNumberRestartValues Continuous => new("continuous");
+    
     }
 
     /// <summary>
     /// Defines the VerticalJustificationValues enumeration.
     /// </summary>
-    public enum VerticalJustificationValues
+    public readonly record struct VerticalJustificationValues : IEnumValue, IEnumValueFactory<VerticalJustificationValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new VerticalJustificationValues enum instance
+        /// </summary>
+        public VerticalJustificationValues(string value) => _value = value;
+        VerticalJustificationValues IEnumValueFactory<VerticalJustificationValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "top" => true,
+            "center" => true,
+            "both" => true,
+            "bottom" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "top";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// Align Top.
         /// <para>When the item is serialized out as xml, its value is "top".</para>
         /// </summary>
-        [EnumString("top")]
-        Top,
+        public static VerticalJustificationValues Top => new("top");
         /// <summary>
         /// Align Center.
         /// <para>When the item is serialized out as xml, its value is "center".</para>
         /// </summary>
-        [EnumString("center")]
-        Center,
+        public static VerticalJustificationValues Center => new("center");
         /// <summary>
         /// Vertical Justification.
         /// <para>When the item is serialized out as xml, its value is "both".</para>
         /// </summary>
-        [EnumString("both")]
-        Both,
+        public static VerticalJustificationValues Both => new("both");
         /// <summary>
         /// Align Bottom.
         /// <para>When the item is serialized out as xml, its value is "bottom".</para>
         /// </summary>
-        [EnumString("bottom")]
-        Bottom
+        public static VerticalJustificationValues Bottom => new("bottom");
+    
     }
 
     /// <summary>
     /// Defines the TableVerticalAlignmentValues enumeration.
     /// </summary>
-    public enum TableVerticalAlignmentValues
+    public readonly record struct TableVerticalAlignmentValues : IEnumValue, IEnumValueFactory<TableVerticalAlignmentValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new TableVerticalAlignmentValues enum instance
+        /// </summary>
+        public TableVerticalAlignmentValues(string value) => _value = value;
+        TableVerticalAlignmentValues IEnumValueFactory<TableVerticalAlignmentValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "top" => true,
+            "center" => true,
+            "bottom" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "top";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// top.
         /// <para>When the item is serialized out as xml, its value is "top".</para>
         /// </summary>
-        [EnumString("top")]
-        Top,
+        public static TableVerticalAlignmentValues Top => new("top");
         /// <summary>
         /// center.
         /// <para>When the item is serialized out as xml, its value is "center".</para>
         /// </summary>
-        [EnumString("center")]
-        Center,
+        public static TableVerticalAlignmentValues Center => new("center");
         /// <summary>
         /// bottom.
         /// <para>When the item is serialized out as xml, its value is "bottom".</para>
         /// </summary>
-        [EnumString("bottom")]
-        Bottom
+        public static TableVerticalAlignmentValues Bottom => new("bottom");
+    
     }
 
     /// <summary>
     /// Defines the DocGridValues enumeration.
     /// </summary>
-    public enum DocGridValues
+    public readonly record struct DocGridValues : IEnumValue, IEnumValueFactory<DocGridValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new DocGridValues enum instance
+        /// </summary>
+        public DocGridValues(string value) => _value = value;
+        DocGridValues IEnumValueFactory<DocGridValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "default" => true,
+            "lines" => true,
+            "linesAndChars" => true,
+            "snapToChars" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "default";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// No Document Grid.
         /// <para>When the item is serialized out as xml, its value is "default".</para>
         /// </summary>
-        [EnumString("default")]
-        Default,
+        public static DocGridValues Default => new("default");
         /// <summary>
         /// Line Grid Only.
         /// <para>When the item is serialized out as xml, its value is "lines".</para>
         /// </summary>
-        [EnumString("lines")]
-        Lines,
+        public static DocGridValues Lines => new("lines");
         /// <summary>
         /// Line and Character Grid.
         /// <para>When the item is serialized out as xml, its value is "linesAndChars".</para>
         /// </summary>
-        [EnumString("linesAndChars")]
-        LinesAndChars,
+        public static DocGridValues LinesAndChars => new("linesAndChars");
         /// <summary>
         /// Character Grid Only.
         /// <para>When the item is serialized out as xml, its value is "snapToChars".</para>
         /// </summary>
-        [EnumString("snapToChars")]
-        SnapToChars
+        public static DocGridValues SnapToChars => new("snapToChars");
+    
     }
 
     /// <summary>
     /// Defines the HeaderFooterValues enumeration.
     /// </summary>
-    public enum HeaderFooterValues
+    public readonly record struct HeaderFooterValues : IEnumValue, IEnumValueFactory<HeaderFooterValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new HeaderFooterValues enum instance
+        /// </summary>
+        public HeaderFooterValues(string value) => _value = value;
+        HeaderFooterValues IEnumValueFactory<HeaderFooterValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "even" => true,
+            "default" => true,
+            "first" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "even";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// Even Numbered Pages Only.
         /// <para>When the item is serialized out as xml, its value is "even".</para>
         /// </summary>
-        [EnumString("even")]
-        Even,
+        public static HeaderFooterValues Even => new("even");
         /// <summary>
         /// Default Header or Footer.
         /// <para>When the item is serialized out as xml, its value is "default".</para>
         /// </summary>
-        [EnumString("default")]
-        Default,
+        public static HeaderFooterValues Default => new("default");
         /// <summary>
         /// First Page Only.
         /// <para>When the item is serialized out as xml, its value is "first".</para>
         /// </summary>
-        [EnumString("first")]
-        First
+        public static HeaderFooterValues First => new("first");
+    
     }
 
     /// <summary>
     /// Defines the FootnoteEndnoteValues enumeration.
     /// </summary>
-    public enum FootnoteEndnoteValues
+    public readonly record struct FootnoteEndnoteValues : IEnumValue, IEnumValueFactory<FootnoteEndnoteValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new FootnoteEndnoteValues enum instance
+        /// </summary>
+        public FootnoteEndnoteValues(string value) => _value = value;
+        FootnoteEndnoteValues IEnumValueFactory<FootnoteEndnoteValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "normal" => true,
+            "separator" => true,
+            "continuationSeparator" => true,
+            "continuationNotice" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "normal";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// Normal Footnote/Endnote.
         /// <para>When the item is serialized out as xml, its value is "normal".</para>
         /// </summary>
-        [EnumString("normal")]
-        Normal,
+        public static FootnoteEndnoteValues Normal => new("normal");
         /// <summary>
         /// Separator.
         /// <para>When the item is serialized out as xml, its value is "separator".</para>
         /// </summary>
-        [EnumString("separator")]
-        Separator,
+        public static FootnoteEndnoteValues Separator => new("separator");
         /// <summary>
         /// Continuation Separator.
         /// <para>When the item is serialized out as xml, its value is "continuationSeparator".</para>
         /// </summary>
-        [EnumString("continuationSeparator")]
-        ContinuationSeparator,
+        public static FootnoteEndnoteValues ContinuationSeparator => new("continuationSeparator");
         /// <summary>
         /// Continuation Notice Separator.
         /// <para>When the item is serialized out as xml, its value is "continuationNotice".</para>
         /// </summary>
-        [EnumString("continuationNotice")]
-        ContinuationNotice
+        public static FootnoteEndnoteValues ContinuationNotice => new("continuationNotice");
+    
     }
 
     /// <summary>
     /// Defines the BreakValues enumeration.
     /// </summary>
-    public enum BreakValues
+    public readonly record struct BreakValues : IEnumValue, IEnumValueFactory<BreakValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new BreakValues enum instance
+        /// </summary>
+        public BreakValues(string value) => _value = value;
+        BreakValues IEnumValueFactory<BreakValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "page" => true,
+            "column" => true,
+            "textWrapping" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "page";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// Page Break.
         /// <para>When the item is serialized out as xml, its value is "page".</para>
         /// </summary>
-        [EnumString("page")]
-        Page,
+        public static BreakValues Page => new("page");
         /// <summary>
         /// Column Break.
         /// <para>When the item is serialized out as xml, its value is "column".</para>
         /// </summary>
-        [EnumString("column")]
-        Column,
+        public static BreakValues Column => new("column");
         /// <summary>
         /// Line Break.
         /// <para>When the item is serialized out as xml, its value is "textWrapping".</para>
         /// </summary>
-        [EnumString("textWrapping")]
-        TextWrapping
+        public static BreakValues TextWrapping => new("textWrapping");
+    
     }
 
     /// <summary>
     /// Defines the BreakTextRestartLocationValues enumeration.
     /// </summary>
-    public enum BreakTextRestartLocationValues
+    public readonly record struct BreakTextRestartLocationValues : IEnumValue, IEnumValueFactory<BreakTextRestartLocationValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new BreakTextRestartLocationValues enum instance
+        /// </summary>
+        public BreakTextRestartLocationValues(string value) => _value = value;
+        BreakTextRestartLocationValues IEnumValueFactory<BreakTextRestartLocationValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "none" => true,
+            "left" => true,
+            "right" => true,
+            "all" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "none";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// Restart On Next Line.
         /// <para>When the item is serialized out as xml, its value is "none".</para>
         /// </summary>
-        [EnumString("none")]
-        None,
+        public static BreakTextRestartLocationValues None => new("none");
         /// <summary>
         /// Restart In Next Text Region When In Leftmost Position.
         /// <para>When the item is serialized out as xml, its value is "left".</para>
         /// </summary>
-        [EnumString("left")]
-        Left,
+        public static BreakTextRestartLocationValues Left => new("left");
         /// <summary>
         /// Restart In Next Text Region When In Rightmost Position.
         /// <para>When the item is serialized out as xml, its value is "right".</para>
         /// </summary>
-        [EnumString("right")]
-        Right,
+        public static BreakTextRestartLocationValues Right => new("right");
         /// <summary>
         /// Restart On Next Full Line.
         /// <para>When the item is serialized out as xml, its value is "all".</para>
         /// </summary>
-        [EnumString("all")]
-        All
+        public static BreakTextRestartLocationValues All => new("all");
+    
     }
 
     /// <summary>
     /// Defines the AbsolutePositionTabAlignmentValues enumeration.
     /// </summary>
-    public enum AbsolutePositionTabAlignmentValues
+    public readonly record struct AbsolutePositionTabAlignmentValues : IEnumValue, IEnumValueFactory<AbsolutePositionTabAlignmentValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new AbsolutePositionTabAlignmentValues enum instance
+        /// </summary>
+        public AbsolutePositionTabAlignmentValues(string value) => _value = value;
+        AbsolutePositionTabAlignmentValues IEnumValueFactory<AbsolutePositionTabAlignmentValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "left" => true,
+            "center" => true,
+            "right" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "left";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// Left.
         /// <para>When the item is serialized out as xml, its value is "left".</para>
         /// </summary>
-        [EnumString("left")]
-        Left,
+        public static AbsolutePositionTabAlignmentValues Left => new("left");
         /// <summary>
         /// Center.
         /// <para>When the item is serialized out as xml, its value is "center".</para>
         /// </summary>
-        [EnumString("center")]
-        Center,
+        public static AbsolutePositionTabAlignmentValues Center => new("center");
         /// <summary>
         /// Right.
         /// <para>When the item is serialized out as xml, its value is "right".</para>
         /// </summary>
-        [EnumString("right")]
-        Right
+        public static AbsolutePositionTabAlignmentValues Right => new("right");
+    
     }
 
     /// <summary>
     /// Defines the AbsolutePositionTabPositioningBaseValues enumeration.
     /// </summary>
-    public enum AbsolutePositionTabPositioningBaseValues
+    public readonly record struct AbsolutePositionTabPositioningBaseValues : IEnumValue, IEnumValueFactory<AbsolutePositionTabPositioningBaseValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new AbsolutePositionTabPositioningBaseValues enum instance
+        /// </summary>
+        public AbsolutePositionTabPositioningBaseValues(string value) => _value = value;
+        AbsolutePositionTabPositioningBaseValues IEnumValueFactory<AbsolutePositionTabPositioningBaseValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "margin" => true,
+            "indent" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "margin";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// Relative To Text Margins.
         /// <para>When the item is serialized out as xml, its value is "margin".</para>
         /// </summary>
-        [EnumString("margin")]
-        Margin,
+        public static AbsolutePositionTabPositioningBaseValues Margin => new("margin");
         /// <summary>
         /// Relative To Indents.
         /// <para>When the item is serialized out as xml, its value is "indent".</para>
         /// </summary>
-        [EnumString("indent")]
-        Indent
+        public static AbsolutePositionTabPositioningBaseValues Indent => new("indent");
+    
     }
 
     /// <summary>
     /// Defines the AbsolutePositionTabLeaderCharValues enumeration.
     /// </summary>
-    public enum AbsolutePositionTabLeaderCharValues
+    public readonly record struct AbsolutePositionTabLeaderCharValues : IEnumValue, IEnumValueFactory<AbsolutePositionTabLeaderCharValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new AbsolutePositionTabLeaderCharValues enum instance
+        /// </summary>
+        public AbsolutePositionTabLeaderCharValues(string value) => _value = value;
+        AbsolutePositionTabLeaderCharValues IEnumValueFactory<AbsolutePositionTabLeaderCharValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "none" => true,
+            "dot" => true,
+            "hyphen" => true,
+            "underscore" => true,
+            "middleDot" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "none";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// No Leader Character.
         /// <para>When the item is serialized out as xml, its value is "none".</para>
         /// </summary>
-        [EnumString("none")]
-        None,
+        public static AbsolutePositionTabLeaderCharValues None => new("none");
         /// <summary>
         /// Dot Leader Character.
         /// <para>When the item is serialized out as xml, its value is "dot".</para>
         /// </summary>
-        [EnumString("dot")]
-        Dot,
+        public static AbsolutePositionTabLeaderCharValues Dot => new("dot");
         /// <summary>
         /// Hyphen Leader Character.
         /// <para>When the item is serialized out as xml, its value is "hyphen".</para>
         /// </summary>
-        [EnumString("hyphen")]
-        Hyphen,
+        public static AbsolutePositionTabLeaderCharValues Hyphen => new("hyphen");
         /// <summary>
         /// Underscore Leader Character.
         /// <para>When the item is serialized out as xml, its value is "underscore".</para>
         /// </summary>
-        [EnumString("underscore")]
-        Underscore,
+        public static AbsolutePositionTabLeaderCharValues Underscore => new("underscore");
         /// <summary>
         /// Centered Dot Leader Character.
         /// <para>When the item is serialized out as xml, its value is "middleDot".</para>
         /// </summary>
-        [EnumString("middleDot")]
-        MiddleDot
+        public static AbsolutePositionTabLeaderCharValues MiddleDot => new("middleDot");
+    
     }
 
     /// <summary>
     /// Defines the ProofingErrorValues enumeration.
     /// </summary>
-    public enum ProofingErrorValues
+    public readonly record struct ProofingErrorValues : IEnumValue, IEnumValueFactory<ProofingErrorValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new ProofingErrorValues enum instance
+        /// </summary>
+        public ProofingErrorValues(string value) => _value = value;
+        ProofingErrorValues IEnumValueFactory<ProofingErrorValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "spellStart" => true,
+            "spellEnd" => true,
+            "gramStart" => true,
+            "gramEnd" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "spellStart";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// Start of Region Marked as Spelling Error.
         /// <para>When the item is serialized out as xml, its value is "spellStart".</para>
         /// </summary>
-        [EnumString("spellStart")]
-        SpellStart,
+        public static ProofingErrorValues SpellStart => new("spellStart");
         /// <summary>
         /// End of Region Marked as Spelling Error.
         /// <para>When the item is serialized out as xml, its value is "spellEnd".</para>
         /// </summary>
-        [EnumString("spellEnd")]
-        SpellEnd,
+        public static ProofingErrorValues SpellEnd => new("spellEnd");
         /// <summary>
         /// Start of Region Marked as Grammatical Error.
         /// <para>When the item is serialized out as xml, its value is "gramStart".</para>
         /// </summary>
-        [EnumString("gramStart")]
-        GrammarStart,
+        public static ProofingErrorValues GrammarStart => new("gramStart");
         /// <summary>
         /// End of Region Marked as Grammatical Error.
         /// <para>When the item is serialized out as xml, its value is "gramEnd".</para>
         /// </summary>
-        [EnumString("gramEnd")]
-        GrammarEnd
+        public static ProofingErrorValues GrammarEnd => new("gramEnd");
+    
     }
 
     /// <summary>
     /// Defines the RangePermissionEditingGroupValues enumeration.
     /// </summary>
-    public enum RangePermissionEditingGroupValues
+    public readonly record struct RangePermissionEditingGroupValues : IEnumValue, IEnumValueFactory<RangePermissionEditingGroupValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new RangePermissionEditingGroupValues enum instance
+        /// </summary>
+        public RangePermissionEditingGroupValues(string value) => _value = value;
+        RangePermissionEditingGroupValues IEnumValueFactory<RangePermissionEditingGroupValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "none" => true,
+            "everyone" => true,
+            "administrators" => true,
+            "contributors" => true,
+            "editors" => true,
+            "owners" => true,
+            "current" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "none";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// No Users Have Editing Permissions.
         /// <para>When the item is serialized out as xml, its value is "none".</para>
         /// </summary>
-        [EnumString("none")]
-        None,
+        public static RangePermissionEditingGroupValues None => new("none");
         /// <summary>
         /// All Users Have Editing Permissions.
         /// <para>When the item is serialized out as xml, its value is "everyone".</para>
         /// </summary>
-        [EnumString("everyone")]
-        Everyone,
+        public static RangePermissionEditingGroupValues Everyone => new("everyone");
         /// <summary>
         /// Administrator Group.
         /// <para>When the item is serialized out as xml, its value is "administrators".</para>
         /// </summary>
-        [EnumString("administrators")]
-        Administrators,
+        public static RangePermissionEditingGroupValues Administrators => new("administrators");
         /// <summary>
         /// Contributors Group.
         /// <para>When the item is serialized out as xml, its value is "contributors".</para>
         /// </summary>
-        [EnumString("contributors")]
-        Contributors,
+        public static RangePermissionEditingGroupValues Contributors => new("contributors");
         /// <summary>
         /// Editors Group.
         /// <para>When the item is serialized out as xml, its value is "editors".</para>
         /// </summary>
-        [EnumString("editors")]
-        Editors,
+        public static RangePermissionEditingGroupValues Editors => new("editors");
         /// <summary>
         /// Owners Group.
         /// <para>When the item is serialized out as xml, its value is "owners".</para>
         /// </summary>
-        [EnumString("owners")]
-        Owners,
+        public static RangePermissionEditingGroupValues Owners => new("owners");
         /// <summary>
         /// Current Group.
         /// <para>When the item is serialized out as xml, its value is "current".</para>
         /// </summary>
-        [EnumString("current")]
-        Current
+        public static RangePermissionEditingGroupValues Current => new("current");
+    
     }
 
     /// <summary>
     /// Defines the FontTypeHintValues enumeration.
     /// </summary>
-    public enum FontTypeHintValues
+    public readonly record struct FontTypeHintValues : IEnumValue, IEnumValueFactory<FontTypeHintValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new FontTypeHintValues enum instance
+        /// </summary>
+        public FontTypeHintValues(string value) => _value = value;
+        FontTypeHintValues IEnumValueFactory<FontTypeHintValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "default" => true,
+            "eastAsia" => true,
+            "cs" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "default";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// High ANSI Font.
         /// <para>When the item is serialized out as xml, its value is "default".</para>
         /// </summary>
-        [EnumString("default")]
-        Default,
+        public static FontTypeHintValues Default => new("default");
         /// <summary>
         /// East Asian Font.
         /// <para>When the item is serialized out as xml, its value is "eastAsia".</para>
         /// </summary>
-        [EnumString("eastAsia")]
-        EastAsia,
+        public static FontTypeHintValues EastAsia => new("eastAsia");
         /// <summary>
         /// Complex Script Font.
         /// <para>When the item is serialized out as xml, its value is "cs".</para>
         /// </summary>
-        [EnumString("cs")]
-        ComplexScript
+        public static FontTypeHintValues ComplexScript => new("cs");
+    
     }
 
     /// <summary>
     /// Defines the ThemeFontValues enumeration.
     /// </summary>
-    public enum ThemeFontValues
+    public readonly record struct ThemeFontValues : IEnumValue, IEnumValueFactory<ThemeFontValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new ThemeFontValues enum instance
+        /// </summary>
+        public ThemeFontValues(string value) => _value = value;
+        ThemeFontValues IEnumValueFactory<ThemeFontValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "majorEastAsia" => true,
+            "majorBidi" => true,
+            "majorAscii" => true,
+            "majorHAnsi" => true,
+            "minorEastAsia" => true,
+            "minorBidi" => true,
+            "minorAscii" => true,
+            "minorHAnsi" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "majorEastAsia";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// Major East Asian Theme Font.
         /// <para>When the item is serialized out as xml, its value is "majorEastAsia".</para>
         /// </summary>
-        [EnumString("majorEastAsia")]
-        MajorEastAsia,
+        public static ThemeFontValues MajorEastAsia => new("majorEastAsia");
         /// <summary>
         /// Major Complex Script Theme Font.
         /// <para>When the item is serialized out as xml, its value is "majorBidi".</para>
         /// </summary>
-        [EnumString("majorBidi")]
-        MajorBidi,
+        public static ThemeFontValues MajorBidi => new("majorBidi");
         /// <summary>
         /// Major ASCII Theme Font.
         /// <para>When the item is serialized out as xml, its value is "majorAscii".</para>
         /// </summary>
-        [EnumString("majorAscii")]
-        MajorAscii,
+        public static ThemeFontValues MajorAscii => new("majorAscii");
         /// <summary>
         /// Major High ANSI Theme Font.
         /// <para>When the item is serialized out as xml, its value is "majorHAnsi".</para>
         /// </summary>
-        [EnumString("majorHAnsi")]
-        MajorHighAnsi,
+        public static ThemeFontValues MajorHighAnsi => new("majorHAnsi");
         /// <summary>
         /// Minor East Asian Theme Font.
         /// <para>When the item is serialized out as xml, its value is "minorEastAsia".</para>
         /// </summary>
-        [EnumString("minorEastAsia")]
-        MinorEastAsia,
+        public static ThemeFontValues MinorEastAsia => new("minorEastAsia");
         /// <summary>
         /// Minor Complex Script Theme Font.
         /// <para>When the item is serialized out as xml, its value is "minorBidi".</para>
         /// </summary>
-        [EnumString("minorBidi")]
-        MinorBidi,
+        public static ThemeFontValues MinorBidi => new("minorBidi");
         /// <summary>
         /// Minor ASCII Theme Font.
         /// <para>When the item is serialized out as xml, its value is "minorAscii".</para>
         /// </summary>
-        [EnumString("minorAscii")]
-        MinorAscii,
+        public static ThemeFontValues MinorAscii => new("minorAscii");
         /// <summary>
         /// Minor High ANSI Theme Font.
         /// <para>When the item is serialized out as xml, its value is "minorHAnsi".</para>
         /// </summary>
-        [EnumString("minorHAnsi")]
-        MinorHighAnsi
+        public static ThemeFontValues MinorHighAnsi => new("minorHAnsi");
+    
     }
 
     /// <summary>
     /// Defines the RubyAlignValues enumeration.
     /// </summary>
-    public enum RubyAlignValues
+    public readonly record struct RubyAlignValues : IEnumValue, IEnumValueFactory<RubyAlignValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new RubyAlignValues enum instance
+        /// </summary>
+        public RubyAlignValues(string value) => _value = value;
+        RubyAlignValues IEnumValueFactory<RubyAlignValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "center" => true,
+            "distributeLetter" => true,
+            "distributeSpace" => true,
+            "left" => true,
+            "right" => true,
+            "rightVertical" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "center";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// Center.
         /// <para>When the item is serialized out as xml, its value is "center".</para>
         /// </summary>
-        [EnumString("center")]
-        Center,
+        public static RubyAlignValues Center => new("center");
         /// <summary>
         /// Distribute All Characters.
         /// <para>When the item is serialized out as xml, its value is "distributeLetter".</para>
         /// </summary>
-        [EnumString("distributeLetter")]
-        DistributeLetter,
+        public static RubyAlignValues DistributeLetter => new("distributeLetter");
         /// <summary>
         /// Distribute all Characters w/ Additional Space On Either Side.
         /// <para>When the item is serialized out as xml, its value is "distributeSpace".</para>
         /// </summary>
-        [EnumString("distributeSpace")]
-        DistributeSpace,
+        public static RubyAlignValues DistributeSpace => new("distributeSpace");
         /// <summary>
         /// Left Aligned.
         /// <para>When the item is serialized out as xml, its value is "left".</para>
         /// </summary>
-        [EnumString("left")]
-        Left,
+        public static RubyAlignValues Left => new("left");
         /// <summary>
         /// Right Aligned.
         /// <para>When the item is serialized out as xml, its value is "right".</para>
         /// </summary>
-        [EnumString("right")]
-        Right,
+        public static RubyAlignValues Right => new("right");
         /// <summary>
         /// Vertically Aligned to Right of Base Text.
         /// <para>When the item is serialized out as xml, its value is "rightVertical".</para>
         /// </summary>
-        [EnumString("rightVertical")]
-        RightVertical
+        public static RubyAlignValues RightVertical => new("rightVertical");
+    
     }
 
     /// <summary>
     /// Defines the LockingValues enumeration.
     /// </summary>
-    public enum LockingValues
+    public readonly record struct LockingValues : IEnumValue, IEnumValueFactory<LockingValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new LockingValues enum instance
+        /// </summary>
+        public LockingValues(string value) => _value = value;
+        LockingValues IEnumValueFactory<LockingValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "sdtLocked" => true,
+            "contentLocked" => true,
+            "unlocked" => true,
+            "sdtContentLocked" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "sdtLocked";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// SDT Cannot Be Deleted.
         /// <para>When the item is serialized out as xml, its value is "sdtLocked".</para>
         /// </summary>
-        [EnumString("sdtLocked")]
-        SdtLocked,
+        public static LockingValues SdtLocked => new("sdtLocked");
         /// <summary>
         /// Contents Cannot Be Edited At Runtime.
         /// <para>When the item is serialized out as xml, its value is "contentLocked".</para>
         /// </summary>
-        [EnumString("contentLocked")]
-        ContentLocked,
+        public static LockingValues ContentLocked => new("contentLocked");
         /// <summary>
         /// No Locking.
         /// <para>When the item is serialized out as xml, its value is "unlocked".</para>
         /// </summary>
-        [EnumString("unlocked")]
-        Unlocked,
+        public static LockingValues Unlocked => new("unlocked");
         /// <summary>
         /// Contents Cannot Be Edited At Runtime And SDT Cannot Be Deleted.
         /// <para>When the item is serialized out as xml, its value is "sdtContentLocked".</para>
         /// </summary>
-        [EnumString("sdtContentLocked")]
-        SdtContentLocked
+        public static LockingValues SdtContentLocked => new("sdtContentLocked");
+    
     }
 
     /// <summary>
     /// Defines the DateFormatValues enumeration.
     /// </summary>
-    public enum DateFormatValues
+    public readonly record struct DateFormatValues : IEnumValue, IEnumValueFactory<DateFormatValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new DateFormatValues enum instance
+        /// </summary>
+        public DateFormatValues(string value) => _value = value;
+        DateFormatValues IEnumValueFactory<DateFormatValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "text" => true,
+            "date" => true,
+            "dateTime" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "text";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// Same As Display.
         /// <para>When the item is serialized out as xml, its value is "text".</para>
         /// </summary>
-        [EnumString("text")]
-        Text,
+        public static DateFormatValues Text => new("text");
         /// <summary>
         /// XML Schema Date Format.
         /// <para>When the item is serialized out as xml, its value is "date".</para>
         /// </summary>
-        [EnumString("date")]
-        Date,
+        public static DateFormatValues Date => new("date");
         /// <summary>
         /// XML Schema DateTime Format.
         /// <para>When the item is serialized out as xml, its value is "dateTime".</para>
         /// </summary>
-        [EnumString("dateTime")]
-        DateTime
+        public static DateFormatValues DateTime => new("dateTime");
+    
     }
 
     /// <summary>
     /// Defines the TableWidthUnitValues enumeration.
     /// </summary>
-    public enum TableWidthUnitValues
+    public readonly record struct TableWidthUnitValues : IEnumValue, IEnumValueFactory<TableWidthUnitValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new TableWidthUnitValues enum instance
+        /// </summary>
+        public TableWidthUnitValues(string value) => _value = value;
+        TableWidthUnitValues IEnumValueFactory<TableWidthUnitValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "nil" => true,
+            "pct" => true,
+            "dxa" => true,
+            "auto" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "nil";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// No Width.
         /// <para>When the item is serialized out as xml, its value is "nil".</para>
         /// </summary>
-        [EnumString("nil")]
-        Nil,
+        public static TableWidthUnitValues Nil => new("nil");
         /// <summary>
         /// Width in Fiftieths of a Percent.
         /// <para>When the item is serialized out as xml, its value is "pct".</para>
         /// </summary>
-        [EnumString("pct")]
-        Pct,
+        public static TableWidthUnitValues Pct => new("pct");
         /// <summary>
         /// Width in Twentieths of a Point.
         /// <para>When the item is serialized out as xml, its value is "dxa".</para>
         /// </summary>
-        [EnumString("dxa")]
-        Dxa,
+        public static TableWidthUnitValues Dxa => new("dxa");
         /// <summary>
         /// Automatically Determined Width.
         /// <para>When the item is serialized out as xml, its value is "auto".</para>
         /// </summary>
-        [EnumString("auto")]
-        Auto
+        public static TableWidthUnitValues Auto => new("auto");
+    
     }
 
     /// <summary>
     /// Defines the TableWidthValues enumeration.
     /// </summary>
-    public enum TableWidthValues
+    public readonly record struct TableWidthValues : IEnumValue, IEnumValueFactory<TableWidthValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new TableWidthValues enum instance
+        /// </summary>
+        public TableWidthValues(string value) => _value = value;
+        TableWidthValues IEnumValueFactory<TableWidthValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "nil" => true,
+            "dxa" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "nil";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// nil.
         /// <para>When the item is serialized out as xml, its value is "nil".</para>
         /// </summary>
-        [EnumString("nil")]
-        Nil,
+        public static TableWidthValues Nil => new("nil");
         /// <summary>
         /// dxa.
         /// <para>When the item is serialized out as xml, its value is "dxa".</para>
         /// </summary>
-        [EnumString("dxa")]
-        Dxa
+        public static TableWidthValues Dxa => new("dxa");
+    
     }
 
     /// <summary>
     /// Defines the MergedCellValues enumeration.
     /// </summary>
-    public enum MergedCellValues
+    public readonly record struct MergedCellValues : IEnumValue, IEnumValueFactory<MergedCellValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new MergedCellValues enum instance
+        /// </summary>
+        public MergedCellValues(string value) => _value = value;
+        MergedCellValues IEnumValueFactory<MergedCellValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "continue" => true,
+            "restart" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "continue";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// Continue Merged Region.
         /// <para>When the item is serialized out as xml, its value is "continue".</para>
         /// </summary>
-        [EnumString("continue")]
-        Continue,
+        public static MergedCellValues Continue => new("continue");
         /// <summary>
         /// Start/Restart Merged Region.
         /// <para>When the item is serialized out as xml, its value is "restart".</para>
         /// </summary>
-        [EnumString("restart")]
-        Restart
+        public static MergedCellValues Restart => new("restart");
+    
     }
 
     /// <summary>
     /// Defines the TableLayoutValues enumeration.
     /// </summary>
-    public enum TableLayoutValues
+    public readonly record struct TableLayoutValues : IEnumValue, IEnumValueFactory<TableLayoutValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new TableLayoutValues enum instance
+        /// </summary>
+        public TableLayoutValues(string value) => _value = value;
+        TableLayoutValues IEnumValueFactory<TableLayoutValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "fixed" => true,
+            "autofit" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "fixed";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// Fixed Width Table Layout.
         /// <para>When the item is serialized out as xml, its value is "fixed".</para>
         /// </summary>
-        [EnumString("fixed")]
-        Fixed,
+        public static TableLayoutValues Fixed => new("fixed");
         /// <summary>
         /// AutoFit Table Layout.
         /// <para>When the item is serialized out as xml, its value is "autofit".</para>
         /// </summary>
-        [EnumString("autofit")]
-        Autofit
+        public static TableLayoutValues Autofit => new("autofit");
+    
     }
 
     /// <summary>
     /// Defines the TableOverlapValues enumeration.
     /// </summary>
-    public enum TableOverlapValues
+    public readonly record struct TableOverlapValues : IEnumValue, IEnumValueFactory<TableOverlapValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new TableOverlapValues enum instance
+        /// </summary>
+        public TableOverlapValues(string value) => _value = value;
+        TableOverlapValues IEnumValueFactory<TableOverlapValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "never" => true,
+            "overlap" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "never";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// Floating Table Cannot Overlap.
         /// <para>When the item is serialized out as xml, its value is "never".</para>
         /// </summary>
-        [EnumString("never")]
-        Never,
+        public static TableOverlapValues Never => new("never");
         /// <summary>
         /// Floating Table Can Overlap.
         /// <para>When the item is serialized out as xml, its value is "overlap".</para>
         /// </summary>
-        [EnumString("overlap")]
-        Overlap
+        public static TableOverlapValues Overlap => new("overlap");
+    
     }
 
     /// <summary>
     /// Defines the FootnotePositionValues enumeration.
     /// </summary>
-    public enum FootnotePositionValues
+    public readonly record struct FootnotePositionValues : IEnumValue, IEnumValueFactory<FootnotePositionValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new FootnotePositionValues enum instance
+        /// </summary>
+        public FootnotePositionValues(string value) => _value = value;
+        FootnotePositionValues IEnumValueFactory<FootnotePositionValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "pageBottom" => true,
+            "beneathText" => true,
+            "sectEnd" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "pageBottom";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// Footnotes Positioned at Page Bottom.
         /// <para>When the item is serialized out as xml, its value is "pageBottom".</para>
         /// </summary>
-        [EnumString("pageBottom")]
-        PageBottom,
+        public static FootnotePositionValues PageBottom => new("pageBottom");
         /// <summary>
         /// Footnotes Positioned Beneath Text.
         /// <para>When the item is serialized out as xml, its value is "beneathText".</para>
         /// </summary>
-        [EnumString("beneathText")]
-        BeneathText,
+        public static FootnotePositionValues BeneathText => new("beneathText");
         /// <summary>
         /// Footnotes Positioned At End of Section.
         /// <para>When the item is serialized out as xml, its value is "sectEnd".</para>
         /// </summary>
-        [EnumString("sectEnd")]
-        SectionEnd
+        public static FootnotePositionValues SectionEnd => new("sectEnd");
+    
     }
 
     /// <summary>
     /// Defines the EndnotePositionValues enumeration.
     /// </summary>
-    public enum EndnotePositionValues
+    public readonly record struct EndnotePositionValues : IEnumValue, IEnumValueFactory<EndnotePositionValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new EndnotePositionValues enum instance
+        /// </summary>
+        public EndnotePositionValues(string value) => _value = value;
+        EndnotePositionValues IEnumValueFactory<EndnotePositionValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "sectEnd" => true,
+            "docEnd" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "sectEnd";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// Endnotes Positioned at End of Section.
         /// <para>When the item is serialized out as xml, its value is "sectEnd".</para>
         /// </summary>
-        [EnumString("sectEnd")]
-        SectionEnd,
+        public static EndnotePositionValues SectionEnd => new("sectEnd");
         /// <summary>
         /// Endnotes Positioned at End of Document.
         /// <para>When the item is serialized out as xml, its value is "docEnd".</para>
         /// </summary>
-        [EnumString("docEnd")]
-        DocumentEnd
+        public static EndnotePositionValues DocumentEnd => new("docEnd");
+    
     }
 
     /// <summary>
     /// Defines the RestartNumberValues enumeration.
     /// </summary>
-    public enum RestartNumberValues
+    public readonly record struct RestartNumberValues : IEnumValue, IEnumValueFactory<RestartNumberValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new RestartNumberValues enum instance
+        /// </summary>
+        public RestartNumberValues(string value) => _value = value;
+        RestartNumberValues IEnumValueFactory<RestartNumberValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "continuous" => true,
+            "eachSect" => true,
+            "eachPage" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "continuous";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// Continue Numbering From Previous Section.
         /// <para>When the item is serialized out as xml, its value is "continuous".</para>
         /// </summary>
-        [EnumString("continuous")]
-        Continuous,
+        public static RestartNumberValues Continuous => new("continuous");
         /// <summary>
         /// Restart Numbering For Each Section.
         /// <para>When the item is serialized out as xml, its value is "eachSect".</para>
         /// </summary>
-        [EnumString("eachSect")]
-        EachSection,
+        public static RestartNumberValues EachSection => new("eachSect");
         /// <summary>
         /// Restart Numbering On Each Page.
         /// <para>When the item is serialized out as xml, its value is "eachPage".</para>
         /// </summary>
-        [EnumString("eachPage")]
-        EachPage
+        public static RestartNumberValues EachPage => new("eachPage");
+    
     }
 
     /// <summary>
     /// Defines the MailMergeSourceValues enumeration.
     /// </summary>
-    public enum MailMergeSourceValues
+    public readonly record struct MailMergeSourceValues : IEnumValue, IEnumValueFactory<MailMergeSourceValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new MailMergeSourceValues enum instance
+        /// </summary>
+        public MailMergeSourceValues(string value) => _value = value;
+        MailMergeSourceValues IEnumValueFactory<MailMergeSourceValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "database" => true,
+            "addressBook" => true,
+            "document1" => true,
+            "document2" => true,
+            "text" => true,
+            "email" => true,
+            "native" => true,
+            "legacy" => true,
+            "master" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "database";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// Database Data Source.
         /// <para>When the item is serialized out as xml, its value is "database".</para>
         /// </summary>
-        [EnumString("database")]
-        Database,
+        public static MailMergeSourceValues Database => new("database");
         /// <summary>
         /// Address Book Data Source.
         /// <para>When the item is serialized out as xml, its value is "addressBook".</para>
         /// </summary>
-        [EnumString("addressBook")]
-        AddressBook,
+        public static MailMergeSourceValues AddressBook => new("addressBook");
         /// <summary>
         /// Alternate Document Format Data Source.
         /// <para>When the item is serialized out as xml, its value is "document1".</para>
         /// </summary>
-        [EnumString("document1")]
-        Document1,
+        public static MailMergeSourceValues Document1 => new("document1");
         /// <summary>
         /// Alternate Document Format Data Source Two.
         /// <para>When the item is serialized out as xml, its value is "document2".</para>
         /// </summary>
-        [EnumString("document2")]
-        Document2,
+        public static MailMergeSourceValues Document2 => new("document2");
         /// <summary>
         /// Text File Data Source.
         /// <para>When the item is serialized out as xml, its value is "text".</para>
         /// </summary>
-        [EnumString("text")]
-        Text,
+        public static MailMergeSourceValues Text => new("text");
         /// <summary>
         /// E-Mail Program Data Source.
         /// <para>When the item is serialized out as xml, its value is "email".</para>
         /// </summary>
-        [EnumString("email")]
-        Email,
+        public static MailMergeSourceValues Email => new("email");
         /// <summary>
         /// Native Data Source.
         /// <para>When the item is serialized out as xml, its value is "native".</para>
         /// </summary>
-        [EnumString("native")]
-        Native,
+        public static MailMergeSourceValues Native => new("native");
         /// <summary>
         /// Legacy Document Format Data Source.
         /// <para>When the item is serialized out as xml, its value is "legacy".</para>
         /// </summary>
-        [EnumString("legacy")]
-        Legacy,
+        public static MailMergeSourceValues Legacy => new("legacy");
         /// <summary>
         /// Aggregate Data Source.
         /// <para>When the item is serialized out as xml, its value is "master".</para>
         /// </summary>
-        [EnumString("master")]
-        Master
+        public static MailMergeSourceValues Master => new("master");
+    
     }
 
     /// <summary>
     /// Defines the TargetScreenSizeValues enumeration.
     /// </summary>
-    public enum TargetScreenSizeValues
+    public readonly record struct TargetScreenSizeValues : IEnumValue, IEnumValueFactory<TargetScreenSizeValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new TargetScreenSizeValues enum instance
+        /// </summary>
+        public TargetScreenSizeValues(string value) => _value = value;
+        TargetScreenSizeValues IEnumValueFactory<TargetScreenSizeValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "544x376" => true,
+            "640x480" => true,
+            "720x512" => true,
+            "800x600" => true,
+            "1024x768" => true,
+            "1152x882" => true,
+            "1152x900" => true,
+            "1280x1024" => true,
+            "1600x1200" => true,
+            "1800x1440" => true,
+            "1920x1200" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "544x376";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// Optimize for 544x376.
         /// <para>When the item is serialized out as xml, its value is "544x376".</para>
         /// </summary>
-        [EnumString("544x376")]
-        Sz544x376,
+        public static TargetScreenSizeValues Sz544x376 => new("544x376");
         /// <summary>
         /// Optimize for 640x480.
         /// <para>When the item is serialized out as xml, its value is "640x480".</para>
         /// </summary>
-        [EnumString("640x480")]
-        Sz640x480,
+        public static TargetScreenSizeValues Sz640x480 => new("640x480");
         /// <summary>
         /// Optimize for 720x512.
         /// <para>When the item is serialized out as xml, its value is "720x512".</para>
         /// </summary>
-        [EnumString("720x512")]
-        Sz720x512,
+        public static TargetScreenSizeValues Sz720x512 => new("720x512");
         /// <summary>
         /// Optimize for 800x600.
         /// <para>When the item is serialized out as xml, its value is "800x600".</para>
         /// </summary>
-        [EnumString("800x600")]
-        Sz800x600,
+        public static TargetScreenSizeValues Sz800x600 => new("800x600");
         /// <summary>
         /// Optimize for 1024x768.
         /// <para>When the item is serialized out as xml, its value is "1024x768".</para>
         /// </summary>
-        [EnumString("1024x768")]
-        Sz1024x768,
+        public static TargetScreenSizeValues Sz1024x768 => new("1024x768");
         /// <summary>
         /// Optimize for 1152x882.
         /// <para>When the item is serialized out as xml, its value is "1152x882".</para>
         /// </summary>
-        [EnumString("1152x882")]
-        Sz1152x882,
+        public static TargetScreenSizeValues Sz1152x882 => new("1152x882");
         /// <summary>
         /// Optimize for 1152x900.
         /// <para>When the item is serialized out as xml, its value is "1152x900".</para>
         /// </summary>
-        [EnumString("1152x900")]
-        Sz1152x900,
+        public static TargetScreenSizeValues Sz1152x900 => new("1152x900");
         /// <summary>
         /// Optimize for 1280x1024.
         /// <para>When the item is serialized out as xml, its value is "1280x1024".</para>
         /// </summary>
-        [EnumString("1280x1024")]
-        Sz1280x1024,
+        public static TargetScreenSizeValues Sz1280x1024 => new("1280x1024");
         /// <summary>
         /// Optimize for 1600x1200.
         /// <para>When the item is serialized out as xml, its value is "1600x1200".</para>
         /// </summary>
-        [EnumString("1600x1200")]
-        Sz1600x1200,
+        public static TargetScreenSizeValues Sz1600x1200 => new("1600x1200");
         /// <summary>
         /// Optimize for 1800x1440.
         /// <para>When the item is serialized out as xml, its value is "1800x1440".</para>
         /// </summary>
-        [EnumString("1800x1440")]
-        Sz1800x1440,
+        public static TargetScreenSizeValues Sz1800x1440 => new("1800x1440");
         /// <summary>
         /// Optimize for 1920x1200.
         /// <para>When the item is serialized out as xml, its value is "1920x1200".</para>
         /// </summary>
-        [EnumString("1920x1200")]
-        Sz1920x1200
+        public static TargetScreenSizeValues Sz1920x1200 => new("1920x1200");
+    
     }
 
     /// <summary>
     /// Defines the CharacterSpacingValues enumeration.
     /// </summary>
-    public enum CharacterSpacingValues
+    public readonly record struct CharacterSpacingValues : IEnumValue, IEnumValueFactory<CharacterSpacingValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new CharacterSpacingValues enum instance
+        /// </summary>
+        public CharacterSpacingValues(string value) => _value = value;
+        CharacterSpacingValues IEnumValueFactory<CharacterSpacingValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "doNotCompress" => true,
+            "compressPunctuation" => true,
+            "compressPunctuationAndJapaneseKana" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "doNotCompress";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// Do Not Compress Whitespace.
         /// <para>When the item is serialized out as xml, its value is "doNotCompress".</para>
         /// </summary>
-        [EnumString("doNotCompress")]
-        DoNotCompress,
+        public static CharacterSpacingValues DoNotCompress => new("doNotCompress");
         /// <summary>
         /// Compress Whitespace From Punctuation Characters.
         /// <para>When the item is serialized out as xml, its value is "compressPunctuation".</para>
         /// </summary>
-        [EnumString("compressPunctuation")]
-        CompressPunctuation,
+        public static CharacterSpacingValues CompressPunctuation => new("compressPunctuation");
         /// <summary>
         /// Compress Whitespace From Both Japanese Kana And Punctuation Characters.
         /// <para>When the item is serialized out as xml, its value is "compressPunctuationAndJapaneseKana".</para>
         /// </summary>
-        [EnumString("compressPunctuationAndJapaneseKana")]
-        CompressPunctuationAndJapaneseKana
+        public static CharacterSpacingValues CompressPunctuationAndJapaneseKana => new("compressPunctuationAndJapaneseKana");
+    
     }
 
     /// <summary>
     /// Defines the ColorSchemeIndexValues enumeration.
     /// </summary>
-    public enum ColorSchemeIndexValues
+    public readonly record struct ColorSchemeIndexValues : IEnumValue, IEnumValueFactory<ColorSchemeIndexValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new ColorSchemeIndexValues enum instance
+        /// </summary>
+        public ColorSchemeIndexValues(string value) => _value = value;
+        ColorSchemeIndexValues IEnumValueFactory<ColorSchemeIndexValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "dark1" => true,
+            "light1" => true,
+            "dark2" => true,
+            "light2" => true,
+            "accent1" => true,
+            "accent2" => true,
+            "accent3" => true,
+            "accent4" => true,
+            "accent5" => true,
+            "accent6" => true,
+            "hyperlink" => true,
+            "followedHyperlink" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "dark1";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// Dark 1 Theme Color Reference.
         /// <para>When the item is serialized out as xml, its value is "dark1".</para>
         /// </summary>
-        [EnumString("dark1")]
-        Dark1,
+        public static ColorSchemeIndexValues Dark1 => new("dark1");
         /// <summary>
         /// Light 1 Theme Color Reference.
         /// <para>When the item is serialized out as xml, its value is "light1".</para>
         /// </summary>
-        [EnumString("light1")]
-        Light1,
+        public static ColorSchemeIndexValues Light1 => new("light1");
         /// <summary>
         /// Dark 2 Theme Color Reference.
         /// <para>When the item is serialized out as xml, its value is "dark2".</para>
         /// </summary>
-        [EnumString("dark2")]
-        Dark2,
+        public static ColorSchemeIndexValues Dark2 => new("dark2");
         /// <summary>
         /// Light 2 Theme Color Reference.
         /// <para>When the item is serialized out as xml, its value is "light2".</para>
         /// </summary>
-        [EnumString("light2")]
-        Light2,
+        public static ColorSchemeIndexValues Light2 => new("light2");
         /// <summary>
         /// Accent 1 Theme Color Reference.
         /// <para>When the item is serialized out as xml, its value is "accent1".</para>
         /// </summary>
-        [EnumString("accent1")]
-        Accent1,
+        public static ColorSchemeIndexValues Accent1 => new("accent1");
         /// <summary>
         /// Accent 2 Theme Color Reference.
         /// <para>When the item is serialized out as xml, its value is "accent2".</para>
         /// </summary>
-        [EnumString("accent2")]
-        Accent2,
+        public static ColorSchemeIndexValues Accent2 => new("accent2");
         /// <summary>
         /// Accent 3 Theme Color Reference.
         /// <para>When the item is serialized out as xml, its value is "accent3".</para>
         /// </summary>
-        [EnumString("accent3")]
-        Accent3,
+        public static ColorSchemeIndexValues Accent3 => new("accent3");
         /// <summary>
         /// Accent4 Theme Color Reference.
         /// <para>When the item is serialized out as xml, its value is "accent4".</para>
         /// </summary>
-        [EnumString("accent4")]
-        Accent4,
+        public static ColorSchemeIndexValues Accent4 => new("accent4");
         /// <summary>
         /// Accent5 Theme Color Reference.
         /// <para>When the item is serialized out as xml, its value is "accent5".</para>
         /// </summary>
-        [EnumString("accent5")]
-        Accent5,
+        public static ColorSchemeIndexValues Accent5 => new("accent5");
         /// <summary>
         /// Accent 6 Theme Color Reference.
         /// <para>When the item is serialized out as xml, its value is "accent6".</para>
         /// </summary>
-        [EnumString("accent6")]
-        Accent6,
+        public static ColorSchemeIndexValues Accent6 => new("accent6");
         /// <summary>
         /// Hyperlink Theme Color Reference.
         /// <para>When the item is serialized out as xml, its value is "hyperlink".</para>
         /// </summary>
-        [EnumString("hyperlink")]
-        Hyperlink,
+        public static ColorSchemeIndexValues Hyperlink => new("hyperlink");
         /// <summary>
         /// Followed Hyperlink Theme Color Reference.
         /// <para>When the item is serialized out as xml, its value is "followedHyperlink".</para>
         /// </summary>
-        [EnumString("followedHyperlink")]
-        FollowedHyperlink
+        public static ColorSchemeIndexValues FollowedHyperlink => new("followedHyperlink");
+    
     }
 
     /// <summary>
     /// Defines the FrameScrollbarVisibilityValues enumeration.
     /// </summary>
-    public enum FrameScrollbarVisibilityValues
+    public readonly record struct FrameScrollbarVisibilityValues : IEnumValue, IEnumValueFactory<FrameScrollbarVisibilityValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new FrameScrollbarVisibilityValues enum instance
+        /// </summary>
+        public FrameScrollbarVisibilityValues(string value) => _value = value;
+        FrameScrollbarVisibilityValues IEnumValueFactory<FrameScrollbarVisibilityValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "on" => true,
+            "off" => true,
+            "auto" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "on";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// Always Show Scrollbar.
         /// <para>When the item is serialized out as xml, its value is "on".</para>
         /// </summary>
-        [EnumString("on")]
-        On,
+        public static FrameScrollbarVisibilityValues On => new("on");
         /// <summary>
         /// Never Show Scrollbar.
         /// <para>When the item is serialized out as xml, its value is "off".</para>
         /// </summary>
-        [EnumString("off")]
-        Off,
+        public static FrameScrollbarVisibilityValues Off => new("off");
         /// <summary>
         /// Automatically Show Scrollbar As Needed.
         /// <para>When the item is serialized out as xml, its value is "auto".</para>
         /// </summary>
-        [EnumString("auto")]
-        Auto
+        public static FrameScrollbarVisibilityValues Auto => new("auto");
+    
     }
 
     /// <summary>
     /// Defines the FrameLayoutValues enumeration.
     /// </summary>
-    public enum FrameLayoutValues
+    public readonly record struct FrameLayoutValues : IEnumValue, IEnumValueFactory<FrameLayoutValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new FrameLayoutValues enum instance
+        /// </summary>
+        public FrameLayoutValues(string value) => _value = value;
+        FrameLayoutValues IEnumValueFactory<FrameLayoutValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "rows" => true,
+            "cols" => true,
+            "none" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "rows";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// Stack Frames Vertically.
         /// <para>When the item is serialized out as xml, its value is "rows".</para>
         /// </summary>
-        [EnumString("rows")]
-        Rows,
+        public static FrameLayoutValues Rows => new("rows");
         /// <summary>
         /// Stack Frames Horizontally.
         /// <para>When the item is serialized out as xml, its value is "cols".</para>
         /// </summary>
-        [EnumString("cols")]
-        Columns,
+        public static FrameLayoutValues Columns => new("cols");
         /// <summary>
         /// Do Not Stack Frames.
         /// <para>When the item is serialized out as xml, its value is "none".</para>
         /// </summary>
-        [EnumString("none")]
-        None
+        public static FrameLayoutValues None => new("none");
+    
     }
 
     /// <summary>
     /// Defines the LevelSuffixValues enumeration.
     /// </summary>
-    public enum LevelSuffixValues
+    public readonly record struct LevelSuffixValues : IEnumValue, IEnumValueFactory<LevelSuffixValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new LevelSuffixValues enum instance
+        /// </summary>
+        public LevelSuffixValues(string value) => _value = value;
+        LevelSuffixValues IEnumValueFactory<LevelSuffixValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "tab" => true,
+            "space" => true,
+            "nothing" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "tab";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// Tab Between Numbering and Text.
         /// <para>When the item is serialized out as xml, its value is "tab".</para>
         /// </summary>
-        [EnumString("tab")]
-        Tab,
+        public static LevelSuffixValues Tab => new("tab");
         /// <summary>
         /// Space Between Numbering and Text.
         /// <para>When the item is serialized out as xml, its value is "space".</para>
         /// </summary>
-        [EnumString("space")]
-        Space,
+        public static LevelSuffixValues Space => new("space");
         /// <summary>
         /// Nothing Between Numbering and Text.
         /// <para>When the item is serialized out as xml, its value is "nothing".</para>
         /// </summary>
-        [EnumString("nothing")]
-        Nothing
+        public static LevelSuffixValues Nothing => new("nothing");
+    
     }
 
     /// <summary>
     /// Defines the MultiLevelValues enumeration.
     /// </summary>
-    public enum MultiLevelValues
+    public readonly record struct MultiLevelValues : IEnumValue, IEnumValueFactory<MultiLevelValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new MultiLevelValues enum instance
+        /// </summary>
+        public MultiLevelValues(string value) => _value = value;
+        MultiLevelValues IEnumValueFactory<MultiLevelValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "singleLevel" => true,
+            "multilevel" => true,
+            "hybridMultilevel" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "singleLevel";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// Single Level Numbering Definition.
         /// <para>When the item is serialized out as xml, its value is "singleLevel".</para>
         /// </summary>
-        [EnumString("singleLevel")]
-        SingleLevel,
+        public static MultiLevelValues SingleLevel => new("singleLevel");
         /// <summary>
         /// Multilevel Numbering Definition.
         /// <para>When the item is serialized out as xml, its value is "multilevel".</para>
         /// </summary>
-        [EnumString("multilevel")]
-        Multilevel,
+        public static MultiLevelValues Multilevel => new("multilevel");
         /// <summary>
         /// Hybrid Multilevel Numbering Definition.
         /// <para>When the item is serialized out as xml, its value is "hybridMultilevel".</para>
         /// </summary>
-        [EnumString("hybridMultilevel")]
-        HybridMultilevel
+        public static MultiLevelValues HybridMultilevel => new("hybridMultilevel");
+    
     }
 
     /// <summary>
     /// Defines the TableStyleOverrideValues enumeration.
     /// </summary>
-    public enum TableStyleOverrideValues
+    public readonly record struct TableStyleOverrideValues : IEnumValue, IEnumValueFactory<TableStyleOverrideValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new TableStyleOverrideValues enum instance
+        /// </summary>
+        public TableStyleOverrideValues(string value) => _value = value;
+        TableStyleOverrideValues IEnumValueFactory<TableStyleOverrideValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "wholeTable" => true,
+            "firstRow" => true,
+            "lastRow" => true,
+            "firstCol" => true,
+            "lastCol" => true,
+            "band1Vert" => true,
+            "band2Vert" => true,
+            "band1Horz" => true,
+            "band2Horz" => true,
+            "neCell" => true,
+            "nwCell" => true,
+            "seCell" => true,
+            "swCell" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "wholeTable";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// Whole table formatting.
         /// <para>When the item is serialized out as xml, its value is "wholeTable".</para>
         /// </summary>
-        [EnumString("wholeTable")]
-        WholeTable,
+        public static TableStyleOverrideValues WholeTable => new("wholeTable");
         /// <summary>
         /// First Row Conditional Formatting.
         /// <para>When the item is serialized out as xml, its value is "firstRow".</para>
         /// </summary>
-        [EnumString("firstRow")]
-        FirstRow,
+        public static TableStyleOverrideValues FirstRow => new("firstRow");
         /// <summary>
         /// Last table row formatting.
         /// <para>When the item is serialized out as xml, its value is "lastRow".</para>
         /// </summary>
-        [EnumString("lastRow")]
-        LastRow,
+        public static TableStyleOverrideValues LastRow => new("lastRow");
         /// <summary>
         /// First Column Conditional Formatting.
         /// <para>When the item is serialized out as xml, its value is "firstCol".</para>
         /// </summary>
-        [EnumString("firstCol")]
-        FirstColumn,
+        public static TableStyleOverrideValues FirstColumn => new("firstCol");
         /// <summary>
         /// Last table column formatting.
         /// <para>When the item is serialized out as xml, its value is "lastCol".</para>
         /// </summary>
-        [EnumString("lastCol")]
-        LastColumn,
+        public static TableStyleOverrideValues LastColumn => new("lastCol");
         /// <summary>
         /// Banded Column Conditional Formatting.
         /// <para>When the item is serialized out as xml, its value is "band1Vert".</para>
         /// </summary>
-        [EnumString("band1Vert")]
-        Band1Vertical,
+        public static TableStyleOverrideValues Band1Vertical => new("band1Vert");
         /// <summary>
         /// Even Column Stripe Conditional Formatting.
         /// <para>When the item is serialized out as xml, its value is "band2Vert".</para>
         /// </summary>
-        [EnumString("band2Vert")]
-        Band2Vertical,
+        public static TableStyleOverrideValues Band2Vertical => new("band2Vert");
         /// <summary>
         /// Banded Row Conditional Formatting.
         /// <para>When the item is serialized out as xml, its value is "band1Horz".</para>
         /// </summary>
-        [EnumString("band1Horz")]
-        Band1Horizontal,
+        public static TableStyleOverrideValues Band1Horizontal => new("band1Horz");
         /// <summary>
         /// Even Row Stripe Conditional Formatting.
         /// <para>When the item is serialized out as xml, its value is "band2Horz".</para>
         /// </summary>
-        [EnumString("band2Horz")]
-        Band2Horizontal,
+        public static TableStyleOverrideValues Band2Horizontal => new("band2Horz");
         /// <summary>
         /// Top right table cell formatting.
         /// <para>When the item is serialized out as xml, its value is "neCell".</para>
         /// </summary>
-        [EnumString("neCell")]
-        NorthEastCell,
+        public static TableStyleOverrideValues NorthEastCell => new("neCell");
         /// <summary>
         /// Top left table cell formatting.
         /// <para>When the item is serialized out as xml, its value is "nwCell".</para>
         /// </summary>
-        [EnumString("nwCell")]
-        NorthWestCell,
+        public static TableStyleOverrideValues NorthWestCell => new("nwCell");
         /// <summary>
         /// Bottom right table cell formatting.
         /// <para>When the item is serialized out as xml, its value is "seCell".</para>
         /// </summary>
-        [EnumString("seCell")]
-        SouthEastCell,
+        public static TableStyleOverrideValues SouthEastCell => new("seCell");
         /// <summary>
         /// Bottom left table cell formatting.
         /// <para>When the item is serialized out as xml, its value is "swCell".</para>
         /// </summary>
-        [EnumString("swCell")]
-        SouthWestCell
+        public static TableStyleOverrideValues SouthWestCell => new("swCell");
+    
     }
 
     /// <summary>
     /// Defines the StyleValues enumeration.
     /// </summary>
-    public enum StyleValues
+    public readonly record struct StyleValues : IEnumValue, IEnumValueFactory<StyleValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new StyleValues enum instance
+        /// </summary>
+        public StyleValues(string value) => _value = value;
+        StyleValues IEnumValueFactory<StyleValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "paragraph" => true,
+            "character" => true,
+            "table" => true,
+            "numbering" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "paragraph";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// Paragraph Style.
         /// <para>When the item is serialized out as xml, its value is "paragraph".</para>
         /// </summary>
-        [EnumString("paragraph")]
-        Paragraph,
+        public static StyleValues Paragraph => new("paragraph");
         /// <summary>
         /// Character Style.
         /// <para>When the item is serialized out as xml, its value is "character".</para>
         /// </summary>
-        [EnumString("character")]
-        Character,
+        public static StyleValues Character => new("character");
         /// <summary>
         /// Table Style.
         /// <para>When the item is serialized out as xml, its value is "table".</para>
         /// </summary>
-        [EnumString("table")]
-        Table,
+        public static StyleValues Table => new("table");
         /// <summary>
         /// Numbering Style.
         /// <para>When the item is serialized out as xml, its value is "numbering".</para>
         /// </summary>
-        [EnumString("numbering")]
-        Numbering
+        public static StyleValues Numbering => new("numbering");
+    
     }
 
     /// <summary>
     /// Defines the FontFamilyValues enumeration.
     /// </summary>
-    public enum FontFamilyValues
+    public readonly record struct FontFamilyValues : IEnumValue, IEnumValueFactory<FontFamilyValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new FontFamilyValues enum instance
+        /// </summary>
+        public FontFamilyValues(string value) => _value = value;
+        FontFamilyValues IEnumValueFactory<FontFamilyValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "decorative" => true,
+            "modern" => true,
+            "roman" => true,
+            "script" => true,
+            "swiss" => true,
+            "auto" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "decorative";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// Novelty Font.
         /// <para>When the item is serialized out as xml, its value is "decorative".</para>
         /// </summary>
-        [EnumString("decorative")]
-        Decorative,
+        public static FontFamilyValues Decorative => new("decorative");
         /// <summary>
         /// Monospace Font.
         /// <para>When the item is serialized out as xml, its value is "modern".</para>
         /// </summary>
-        [EnumString("modern")]
-        Modern,
+        public static FontFamilyValues Modern => new("modern");
         /// <summary>
         /// Proportional Font With Serifs.
         /// <para>When the item is serialized out as xml, its value is "roman".</para>
         /// </summary>
-        [EnumString("roman")]
-        Roman,
+        public static FontFamilyValues Roman => new("roman");
         /// <summary>
         /// Script Font.
         /// <para>When the item is serialized out as xml, its value is "script".</para>
         /// </summary>
-        [EnumString("script")]
-        Script,
+        public static FontFamilyValues Script => new("script");
         /// <summary>
         /// Proportional Font Without Serifs.
         /// <para>When the item is serialized out as xml, its value is "swiss".</para>
         /// </summary>
-        [EnumString("swiss")]
-        Swiss,
+        public static FontFamilyValues Swiss => new("swiss");
         /// <summary>
         /// No Font Family.
         /// <para>When the item is serialized out as xml, its value is "auto".</para>
         /// </summary>
-        [EnumString("auto")]
-        Auto
+        public static FontFamilyValues Auto => new("auto");
+    
     }
 
     /// <summary>
     /// Defines the FontPitchValues enumeration.
     /// </summary>
-    public enum FontPitchValues
+    public readonly record struct FontPitchValues : IEnumValue, IEnumValueFactory<FontPitchValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new FontPitchValues enum instance
+        /// </summary>
+        public FontPitchValues(string value) => _value = value;
+        FontPitchValues IEnumValueFactory<FontPitchValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "fixed" => true,
+            "variable" => true,
+            "default" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "fixed";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// Fixed Width.
         /// <para>When the item is serialized out as xml, its value is "fixed".</para>
         /// </summary>
-        [EnumString("fixed")]
-        Fixed,
+        public static FontPitchValues Fixed => new("fixed");
         /// <summary>
         /// Proportional Width.
         /// <para>When the item is serialized out as xml, its value is "variable".</para>
         /// </summary>
-        [EnumString("variable")]
-        Variable,
+        public static FontPitchValues Variable => new("variable");
         /// <summary>
         /// Default.
         /// <para>When the item is serialized out as xml, its value is "default".</para>
         /// </summary>
-        [EnumString("default")]
-        Default
+        public static FontPitchValues Default => new("default");
+    
     }
 
     /// <summary>
     /// Defines the ThemeColorValues enumeration.
     /// </summary>
-    public enum ThemeColorValues
+    public readonly record struct ThemeColorValues : IEnumValue, IEnumValueFactory<ThemeColorValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new ThemeColorValues enum instance
+        /// </summary>
+        public ThemeColorValues(string value) => _value = value;
+        ThemeColorValues IEnumValueFactory<ThemeColorValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "dark1" => true,
+            "light1" => true,
+            "dark2" => true,
+            "light2" => true,
+            "accent1" => true,
+            "accent2" => true,
+            "accent3" => true,
+            "accent4" => true,
+            "accent5" => true,
+            "accent6" => true,
+            "hyperlink" => true,
+            "followedHyperlink" => true,
+            "none" => true,
+            "background1" => true,
+            "text1" => true,
+            "background2" => true,
+            "text2" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "dark1";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// Dark 1 Theme Color.
         /// <para>When the item is serialized out as xml, its value is "dark1".</para>
         /// </summary>
-        [EnumString("dark1")]
-        Dark1,
+        public static ThemeColorValues Dark1 => new("dark1");
         /// <summary>
         /// Light 1 Theme Color.
         /// <para>When the item is serialized out as xml, its value is "light1".</para>
         /// </summary>
-        [EnumString("light1")]
-        Light1,
+        public static ThemeColorValues Light1 => new("light1");
         /// <summary>
         /// Dark 2 Theme Color.
         /// <para>When the item is serialized out as xml, its value is "dark2".</para>
         /// </summary>
-        [EnumString("dark2")]
-        Dark2,
+        public static ThemeColorValues Dark2 => new("dark2");
         /// <summary>
         /// Light 2 Theme Color.
         /// <para>When the item is serialized out as xml, its value is "light2".</para>
         /// </summary>
-        [EnumString("light2")]
-        Light2,
+        public static ThemeColorValues Light2 => new("light2");
         /// <summary>
         /// Accent 1 Theme Color.
         /// <para>When the item is serialized out as xml, its value is "accent1".</para>
         /// </summary>
-        [EnumString("accent1")]
-        Accent1,
+        public static ThemeColorValues Accent1 => new("accent1");
         /// <summary>
         /// Accent 2 Theme Color.
         /// <para>When the item is serialized out as xml, its value is "accent2".</para>
         /// </summary>
-        [EnumString("accent2")]
-        Accent2,
+        public static ThemeColorValues Accent2 => new("accent2");
         /// <summary>
         /// Accent 3 Theme Color.
         /// <para>When the item is serialized out as xml, its value is "accent3".</para>
         /// </summary>
-        [EnumString("accent3")]
-        Accent3,
+        public static ThemeColorValues Accent3 => new("accent3");
         /// <summary>
         /// Accent 4 Theme Color.
         /// <para>When the item is serialized out as xml, its value is "accent4".</para>
         /// </summary>
-        [EnumString("accent4")]
-        Accent4,
+        public static ThemeColorValues Accent4 => new("accent4");
         /// <summary>
         /// Accent 5 Theme Color.
         /// <para>When the item is serialized out as xml, its value is "accent5".</para>
         /// </summary>
-        [EnumString("accent5")]
-        Accent5,
+        public static ThemeColorValues Accent5 => new("accent5");
         /// <summary>
         /// Accent 6 Theme Color.
         /// <para>When the item is serialized out as xml, its value is "accent6".</para>
         /// </summary>
-        [EnumString("accent6")]
-        Accent6,
+        public static ThemeColorValues Accent6 => new("accent6");
         /// <summary>
         /// Hyperlink Theme Color.
         /// <para>When the item is serialized out as xml, its value is "hyperlink".</para>
         /// </summary>
-        [EnumString("hyperlink")]
-        Hyperlink,
+        public static ThemeColorValues Hyperlink => new("hyperlink");
         /// <summary>
         /// Followed Hyperlink Theme Color.
         /// <para>When the item is serialized out as xml, its value is "followedHyperlink".</para>
         /// </summary>
-        [EnumString("followedHyperlink")]
-        FollowedHyperlink,
+        public static ThemeColorValues FollowedHyperlink => new("followedHyperlink");
         /// <summary>
         /// No Theme Color.
         /// <para>When the item is serialized out as xml, its value is "none".</para>
         /// </summary>
-        [EnumString("none")]
-        None,
+        public static ThemeColorValues None => new("none");
         /// <summary>
         /// Background 1 Theme Color.
         /// <para>When the item is serialized out as xml, its value is "background1".</para>
         /// </summary>
-        [EnumString("background1")]
-        Background1,
+        public static ThemeColorValues Background1 => new("background1");
         /// <summary>
         /// Text 1 Theme Color.
         /// <para>When the item is serialized out as xml, its value is "text1".</para>
         /// </summary>
-        [EnumString("text1")]
-        Text1,
+        public static ThemeColorValues Text1 => new("text1");
         /// <summary>
         /// Background 2 Theme Color.
         /// <para>When the item is serialized out as xml, its value is "background2".</para>
         /// </summary>
-        [EnumString("background2")]
-        Background2,
+        public static ThemeColorValues Background2 => new("background2");
         /// <summary>
         /// Text 2 Theme Color.
         /// <para>When the item is serialized out as xml, its value is "text2".</para>
         /// </summary>
-        [EnumString("text2")]
-        Text2
+        public static ThemeColorValues Text2 => new("text2");
+    
     }
 
     /// <summary>
     /// Defines the DocPartBehaviorValues enumeration.
     /// </summary>
-    public enum DocPartBehaviorValues
+    public readonly record struct DocPartBehaviorValues : IEnumValue, IEnumValueFactory<DocPartBehaviorValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new DocPartBehaviorValues enum instance
+        /// </summary>
+        public DocPartBehaviorValues(string value) => _value = value;
+        DocPartBehaviorValues IEnumValueFactory<DocPartBehaviorValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "content" => true,
+            "p" => true,
+            "pg" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "content";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// Insert Content At Specified Location.
         /// <para>When the item is serialized out as xml, its value is "content".</para>
         /// </summary>
-        [EnumString("content")]
-        Content,
+        public static DocPartBehaviorValues Content => new("content");
         /// <summary>
         /// Ensure Entry Is In New Paragraph.
         /// <para>When the item is serialized out as xml, its value is "p".</para>
         /// </summary>
-        [EnumString("p")]
-        Paragraph,
+        public static DocPartBehaviorValues Paragraph => new("p");
         /// <summary>
         /// Ensure Entry Is On New Page.
         /// <para>When the item is serialized out as xml, its value is "pg".</para>
         /// </summary>
-        [EnumString("pg")]
-        Page
+        public static DocPartBehaviorValues Page => new("pg");
+    
     }
 
     /// <summary>
     /// Defines the DocPartValues enumeration.
     /// </summary>
-    public enum DocPartValues
+    public readonly record struct DocPartValues : IEnumValue, IEnumValueFactory<DocPartValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new DocPartValues enum instance
+        /// </summary>
+        public DocPartValues(string value) => _value = value;
+        DocPartValues IEnumValueFactory<DocPartValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "none" => true,
+            "normal" => true,
+            "autoExp" => true,
+            "toolbar" => true,
+            "speller" => true,
+            "formFld" => true,
+            "bbPlcHdr" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "none";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// No Type.
         /// <para>When the item is serialized out as xml, its value is "none".</para>
         /// </summary>
-        [EnumString("none")]
-        None,
+        public static DocPartValues None => new("none");
         /// <summary>
         /// Normal.
         /// <para>When the item is serialized out as xml, its value is "normal".</para>
         /// </summary>
-        [EnumString("normal")]
-        Normal,
+        public static DocPartValues Normal => new("normal");
         /// <summary>
         /// Automatically Replace Name With Content.
         /// <para>When the item is serialized out as xml, its value is "autoExp".</para>
         /// </summary>
-        [EnumString("autoExp")]
-        AutoExp,
+        public static DocPartValues AutoExp => new("autoExp");
         /// <summary>
         /// AutoText User Interface Entry.
         /// <para>When the item is serialized out as xml, its value is "toolbar".</para>
         /// </summary>
-        [EnumString("toolbar")]
-        Toolbar,
+        public static DocPartValues Toolbar => new("toolbar");
         /// <summary>
         /// AutoCorrect Entry.
         /// <para>When the item is serialized out as xml, its value is "speller".</para>
         /// </summary>
-        [EnumString("speller")]
-        Speller,
+        public static DocPartValues Speller => new("speller");
         /// <summary>
         /// Form Field Help Text.
         /// <para>When the item is serialized out as xml, its value is "formFld".</para>
         /// </summary>
-        [EnumString("formFld")]
-        FormField,
+        public static DocPartValues FormField => new("formFld");
         /// <summary>
         /// Structured Document Tag Placeholder Text.
         /// <para>When the item is serialized out as xml, its value is "bbPlcHdr".</para>
         /// </summary>
-        [EnumString("bbPlcHdr")]
-        SdtPlaceholder
+        public static DocPartValues SdtPlaceholder => new("bbPlcHdr");
+    
     }
 
     /// <summary>
     /// Defines the DocPartGalleryValues enumeration.
     /// </summary>
-    public enum DocPartGalleryValues
+    public readonly record struct DocPartGalleryValues : IEnumValue, IEnumValueFactory<DocPartGalleryValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new DocPartGalleryValues enum instance
+        /// </summary>
+        public DocPartGalleryValues(string value) => _value = value;
+        DocPartGalleryValues IEnumValueFactory<DocPartGalleryValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "placeholder" => true,
+            "any" => true,
+            "default" => true,
+            "docParts" => true,
+            "coverPg" => true,
+            "eq" => true,
+            "ftrs" => true,
+            "hdrs" => true,
+            "pgNum" => true,
+            "tbls" => true,
+            "watermarks" => true,
+            "autoTxt" => true,
+            "txtBox" => true,
+            "pgNumT" => true,
+            "pgNumB" => true,
+            "pgNumMargins" => true,
+            "tblOfContents" => true,
+            "bib" => true,
+            "custQuickParts" => true,
+            "custCoverPg" => true,
+            "custEq" => true,
+            "custFtrs" => true,
+            "custHdrs" => true,
+            "custPgNum" => true,
+            "custTbls" => true,
+            "custWatermarks" => true,
+            "custAutoTxt" => true,
+            "custTxtBox" => true,
+            "custPgNumT" => true,
+            "custPgNumB" => true,
+            "custPgNumMargins" => true,
+            "custTblOfContents" => true,
+            "custBib" => true,
+            "custom1" => true,
+            "custom2" => true,
+            "custom3" => true,
+            "custom4" => true,
+            "custom5" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "placeholder";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// Structured Document Tag Placeholder Text Gallery.
         /// <para>When the item is serialized out as xml, its value is "placeholder".</para>
         /// </summary>
-        [EnumString("placeholder")]
-        Placeholder,
+        public static DocPartGalleryValues Placeholder => new("placeholder");
         /// <summary>
         /// All Galleries.
         /// <para>When the item is serialized out as xml, its value is "any".</para>
         /// </summary>
-        [EnumString("any")]
-        Any,
+        public static DocPartGalleryValues Any => new("any");
         /// <summary>
         /// No Gallery Classification.
         /// <para>When the item is serialized out as xml, its value is "default".</para>
         /// </summary>
-        [EnumString("default")]
-        Default,
+        public static DocPartGalleryValues Default => new("default");
         /// <summary>
         /// Document Parts Gallery.
         /// <para>When the item is serialized out as xml, its value is "docParts".</para>
         /// </summary>
-        [EnumString("docParts")]
-        DocumentPart,
+        public static DocPartGalleryValues DocumentPart => new("docParts");
         /// <summary>
         /// Cover Page Gallery.
         /// <para>When the item is serialized out as xml, its value is "coverPg".</para>
         /// </summary>
-        [EnumString("coverPg")]
-        CoverPage,
+        public static DocPartGalleryValues CoverPage => new("coverPg");
         /// <summary>
         /// Equations Gallery.
         /// <para>When the item is serialized out as xml, its value is "eq".</para>
         /// </summary>
-        [EnumString("eq")]
-        Equation,
+        public static DocPartGalleryValues Equation => new("eq");
         /// <summary>
         /// Footers Gallery.
         /// <para>When the item is serialized out as xml, its value is "ftrs".</para>
         /// </summary>
-        [EnumString("ftrs")]
-        Footer,
+        public static DocPartGalleryValues Footer => new("ftrs");
         /// <summary>
         /// Headers Gallery.
         /// <para>When the item is serialized out as xml, its value is "hdrs".</para>
         /// </summary>
-        [EnumString("hdrs")]
-        Header,
+        public static DocPartGalleryValues Header => new("hdrs");
         /// <summary>
         /// Page Numbers Gallery.
         /// <para>When the item is serialized out as xml, its value is "pgNum".</para>
         /// </summary>
-        [EnumString("pgNum")]
-        PageNumber,
+        public static DocPartGalleryValues PageNumber => new("pgNum");
         /// <summary>
         /// Table Gallery.
         /// <para>When the item is serialized out as xml, its value is "tbls".</para>
         /// </summary>
-        [EnumString("tbls")]
-        Table,
+        public static DocPartGalleryValues Table => new("tbls");
         /// <summary>
         /// Watermark Gallery.
         /// <para>When the item is serialized out as xml, its value is "watermarks".</para>
         /// </summary>
-        [EnumString("watermarks")]
-        WaterMark,
+        public static DocPartGalleryValues WaterMark => new("watermarks");
         /// <summary>
         /// AutoText Gallery.
         /// <para>When the item is serialized out as xml, its value is "autoTxt".</para>
         /// </summary>
-        [EnumString("autoTxt")]
-        AutoText,
+        public static DocPartGalleryValues AutoText => new("autoTxt");
         /// <summary>
         /// Text Box Gallery.
         /// <para>When the item is serialized out as xml, its value is "txtBox".</para>
         /// </summary>
-        [EnumString("txtBox")]
-        TextBox,
+        public static DocPartGalleryValues TextBox => new("txtBox");
         /// <summary>
         /// Page Numbers At Top Gallery.
         /// <para>When the item is serialized out as xml, its value is "pgNumT".</para>
         /// </summary>
-        [EnumString("pgNumT")]
-        PageNumberTop,
+        public static DocPartGalleryValues PageNumberTop => new("pgNumT");
         /// <summary>
         /// Page Numbers At Bottom Gallery.
         /// <para>When the item is serialized out as xml, its value is "pgNumB".</para>
         /// </summary>
-        [EnumString("pgNumB")]
-        PageNumberBottom,
+        public static DocPartGalleryValues PageNumberBottom => new("pgNumB");
         /// <summary>
         /// Page Numbers At Margins Gallery.
         /// <para>When the item is serialized out as xml, its value is "pgNumMargins".</para>
         /// </summary>
-        [EnumString("pgNumMargins")]
-        PageNumberMargins,
+        public static DocPartGalleryValues PageNumberMargins => new("pgNumMargins");
         /// <summary>
         /// Table of Contents Gallery.
         /// <para>When the item is serialized out as xml, its value is "tblOfContents".</para>
         /// </summary>
-        [EnumString("tblOfContents")]
-        TableOfContents,
+        public static DocPartGalleryValues TableOfContents => new("tblOfContents");
         /// <summary>
         /// Bibliography Gallery.
         /// <para>When the item is serialized out as xml, its value is "bib".</para>
         /// </summary>
-        [EnumString("bib")]
-        Bibliography,
+        public static DocPartGalleryValues Bibliography => new("bib");
         /// <summary>
         /// Custom Quick Parts Gallery.
         /// <para>When the item is serialized out as xml, its value is "custQuickParts".</para>
         /// </summary>
-        [EnumString("custQuickParts")]
-        CustomQuickParts,
+        public static DocPartGalleryValues CustomQuickParts => new("custQuickParts");
         /// <summary>
         /// Custom Cover Page Gallery.
         /// <para>When the item is serialized out as xml, its value is "custCoverPg".</para>
         /// </summary>
-        [EnumString("custCoverPg")]
-        CustomCoverPage,
+        public static DocPartGalleryValues CustomCoverPage => new("custCoverPg");
         /// <summary>
         /// Custom Equation Gallery.
         /// <para>When the item is serialized out as xml, its value is "custEq".</para>
         /// </summary>
-        [EnumString("custEq")]
-        CustomEquation,
+        public static DocPartGalleryValues CustomEquation => new("custEq");
         /// <summary>
         /// Custom Footer Gallery.
         /// <para>When the item is serialized out as xml, its value is "custFtrs".</para>
         /// </summary>
-        [EnumString("custFtrs")]
-        CustomFooter,
+        public static DocPartGalleryValues CustomFooter => new("custFtrs");
         /// <summary>
         /// Custom Header Gallery.
         /// <para>When the item is serialized out as xml, its value is "custHdrs".</para>
         /// </summary>
-        [EnumString("custHdrs")]
-        CustomHeaders,
+        public static DocPartGalleryValues CustomHeaders => new("custHdrs");
         /// <summary>
         /// Custom Page Number Gallery.
         /// <para>When the item is serialized out as xml, its value is "custPgNum".</para>
         /// </summary>
-        [EnumString("custPgNum")]
-        CustomPageNumber,
+        public static DocPartGalleryValues CustomPageNumber => new("custPgNum");
         /// <summary>
         /// Custom Table Gallery.
         /// <para>When the item is serialized out as xml, its value is "custTbls".</para>
         /// </summary>
-        [EnumString("custTbls")]
-        CustomTable,
+        public static DocPartGalleryValues CustomTable => new("custTbls");
         /// <summary>
         /// Custom Watermark Gallery.
         /// <para>When the item is serialized out as xml, its value is "custWatermarks".</para>
         /// </summary>
-        [EnumString("custWatermarks")]
-        CustomWatermark,
+        public static DocPartGalleryValues CustomWatermark => new("custWatermarks");
         /// <summary>
         /// Custom AutoText Gallery.
         /// <para>When the item is serialized out as xml, its value is "custAutoTxt".</para>
         /// </summary>
-        [EnumString("custAutoTxt")]
-        CustomAutoText,
+        public static DocPartGalleryValues CustomAutoText => new("custAutoTxt");
         /// <summary>
         /// Custom Text Box Gallery.
         /// <para>When the item is serialized out as xml, its value is "custTxtBox".</para>
         /// </summary>
-        [EnumString("custTxtBox")]
-        CustomTextBox,
+        public static DocPartGalleryValues CustomTextBox => new("custTxtBox");
         /// <summary>
         /// Custom Page Number At Top Gallery.
         /// <para>When the item is serialized out as xml, its value is "custPgNumT".</para>
         /// </summary>
-        [EnumString("custPgNumT")]
-        CustomPageNumberTop,
+        public static DocPartGalleryValues CustomPageNumberTop => new("custPgNumT");
         /// <summary>
         /// Custom Page Number At Bottom Gallery.
         /// <para>When the item is serialized out as xml, its value is "custPgNumB".</para>
         /// </summary>
-        [EnumString("custPgNumB")]
-        CustomPageNumberBottom,
+        public static DocPartGalleryValues CustomPageNumberBottom => new("custPgNumB");
         /// <summary>
         /// Custom Page Number At Margins Gallery.
         /// <para>When the item is serialized out as xml, its value is "custPgNumMargins".</para>
         /// </summary>
-        [EnumString("custPgNumMargins")]
-        CustomPageNumberMargin,
+        public static DocPartGalleryValues CustomPageNumberMargin => new("custPgNumMargins");
         /// <summary>
         /// Custom Table of Contents Gallery.
         /// <para>When the item is serialized out as xml, its value is "custTblOfContents".</para>
         /// </summary>
-        [EnumString("custTblOfContents")]
-        CustomTableOfContents,
+        public static DocPartGalleryValues CustomTableOfContents => new("custTblOfContents");
         /// <summary>
         /// Custom Bibliography Gallery.
         /// <para>When the item is serialized out as xml, its value is "custBib".</para>
         /// </summary>
-        [EnumString("custBib")]
-        CustomBibliography,
+        public static DocPartGalleryValues CustomBibliography => new("custBib");
         /// <summary>
         /// Custom 1 Gallery.
         /// <para>When the item is serialized out as xml, its value is "custom1".</para>
         /// </summary>
-        [EnumString("custom1")]
-        Custom1,
+        public static DocPartGalleryValues Custom1 => new("custom1");
         /// <summary>
         /// Custom 2 Gallery.
         /// <para>When the item is serialized out as xml, its value is "custom2".</para>
         /// </summary>
-        [EnumString("custom2")]
-        Custom2,
+        public static DocPartGalleryValues Custom2 => new("custom2");
         /// <summary>
         /// Custom 3 Gallery.
         /// <para>When the item is serialized out as xml, its value is "custom3".</para>
         /// </summary>
-        [EnumString("custom3")]
-        Custom3,
+        public static DocPartGalleryValues Custom3 => new("custom3");
         /// <summary>
         /// Custom 4 Gallery.
         /// <para>When the item is serialized out as xml, its value is "custom4".</para>
         /// </summary>
-        [EnumString("custom4")]
-        Custom4,
+        public static DocPartGalleryValues Custom4 => new("custom4");
         /// <summary>
         /// Custom 5 Gallery.
         /// <para>When the item is serialized out as xml, its value is "custom5".</para>
         /// </summary>
-        [EnumString("custom5")]
-        Custom5
+        public static DocPartGalleryValues Custom5 => new("custom5");
+    
     }
 
     /// <summary>
     /// Automatic Caption Positioning Values
     /// </summary>
-    public enum CaptionPositionValues
+    public readonly record struct CaptionPositionValues : IEnumValue, IEnumValueFactory<CaptionPositionValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new CaptionPositionValues enum instance
+        /// </summary>
+        public CaptionPositionValues(string value) => _value = value;
+        CaptionPositionValues IEnumValueFactory<CaptionPositionValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "above" => true,
+            "below" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "above";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// Position Caption Above Object.
         /// <para>When the item is serialized out as xml, its value is "above".</para>
         /// </summary>
-        [EnumString("above")]
-        Above,
+        public static CaptionPositionValues Above => new("above");
         /// <summary>
         /// Position Caption Below Object.
         /// <para>When the item is serialized out as xml, its value is "below".</para>
         /// </summary>
-        [EnumString("below")]
-        Below
+        public static CaptionPositionValues Below => new("below");
+    
     }
 
     /// <summary>
     /// Horizontal Alignment Type
     /// </summary>
-    public enum LevelJustificationValues
+    public readonly record struct LevelJustificationValues : IEnumValue, IEnumValueFactory<LevelJustificationValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new LevelJustificationValues enum instance
+        /// </summary>
+        public LevelJustificationValues(string value) => _value = value;
+        LevelJustificationValues IEnumValueFactory<LevelJustificationValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "left" => true,
+            "center" => true,
+            "right" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "left";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// Align Left.
         /// <para>When the item is serialized out as xml, its value is "left".</para>
         /// </summary>
-        [EnumString("left")]
-        Left,
+        public static LevelJustificationValues Left => new("left");
         /// <summary>
         /// Align Center.
         /// <para>When the item is serialized out as xml, its value is "center".</para>
         /// </summary>
-        [EnumString("center")]
-        Center,
+        public static LevelJustificationValues Center => new("center");
         /// <summary>
         /// Align Right.
         /// <para>When the item is serialized out as xml, its value is "right".</para>
         /// </summary>
-        [EnumString("right")]
-        Right
+        public static LevelJustificationValues Right => new("right");
+    
     }
 
     /// <summary>
     /// Defines the ShadingPatternValues enumeration.
     /// </summary>
-    public enum ShadingPatternValues
+    public readonly record struct ShadingPatternValues : IEnumValue, IEnumValueFactory<ShadingPatternValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new ShadingPatternValues enum instance
+        /// </summary>
+        public ShadingPatternValues(string value) => _value = value;
+        ShadingPatternValues IEnumValueFactory<ShadingPatternValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "nil" => true,
+            "clear" => true,
+            "solid" => true,
+            "horzStripe" => true,
+            "vertStripe" => true,
+            "reverseDiagStripe" => true,
+            "diagStripe" => true,
+            "horzCross" => true,
+            "diagCross" => true,
+            "thinHorzStripe" => true,
+            "thinVertStripe" => true,
+            "thinReverseDiagStripe" => true,
+            "thinDiagStripe" => true,
+            "thinHorzCross" => true,
+            "thinDiagCross" => true,
+            "pct5" => true,
+            "pct10" => true,
+            "pct12" => true,
+            "pct15" => true,
+            "pct20" => true,
+            "pct25" => true,
+            "pct30" => true,
+            "pct35" => true,
+            "pct37" => true,
+            "pct40" => true,
+            "pct45" => true,
+            "pct50" => true,
+            "pct55" => true,
+            "pct60" => true,
+            "pct62" => true,
+            "pct65" => true,
+            "pct70" => true,
+            "pct75" => true,
+            "pct80" => true,
+            "pct85" => true,
+            "pct87" => true,
+            "pct90" => true,
+            "pct95" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "nil";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// No Pattern.
         /// <para>When the item is serialized out as xml, its value is "nil".</para>
         /// </summary>
-        [EnumString("nil")]
-        Nil,
+        public static ShadingPatternValues Nil => new("nil");
         /// <summary>
         /// No Pattern.
         /// <para>When the item is serialized out as xml, its value is "clear".</para>
         /// </summary>
-        [EnumString("clear")]
-        Clear,
+        public static ShadingPatternValues Clear => new("clear");
         /// <summary>
         /// 100% Fill Pattern.
         /// <para>When the item is serialized out as xml, its value is "solid".</para>
         /// </summary>
-        [EnumString("solid")]
-        Solid,
+        public static ShadingPatternValues Solid => new("solid");
         /// <summary>
         /// Horizontal Stripe Pattern.
         /// <para>When the item is serialized out as xml, its value is "horzStripe".</para>
         /// </summary>
-        [EnumString("horzStripe")]
-        HorizontalStripe,
+        public static ShadingPatternValues HorizontalStripe => new("horzStripe");
         /// <summary>
         /// Vertical Stripe Pattern.
         /// <para>When the item is serialized out as xml, its value is "vertStripe".</para>
         /// </summary>
-        [EnumString("vertStripe")]
-        VerticalStripe,
+        public static ShadingPatternValues VerticalStripe => new("vertStripe");
         /// <summary>
         /// Reverse Diagonal Stripe Pattern.
         /// <para>When the item is serialized out as xml, its value is "reverseDiagStripe".</para>
         /// </summary>
-        [EnumString("reverseDiagStripe")]
-        ReverseDiagonalStripe,
+        public static ShadingPatternValues ReverseDiagonalStripe => new("reverseDiagStripe");
         /// <summary>
         /// Diagonal Stripe Pattern.
         /// <para>When the item is serialized out as xml, its value is "diagStripe".</para>
         /// </summary>
-        [EnumString("diagStripe")]
-        DiagonalStripe,
+        public static ShadingPatternValues DiagonalStripe => new("diagStripe");
         /// <summary>
         /// Horizontal Cross Pattern.
         /// <para>When the item is serialized out as xml, its value is "horzCross".</para>
         /// </summary>
-        [EnumString("horzCross")]
-        HorizontalCross,
+        public static ShadingPatternValues HorizontalCross => new("horzCross");
         /// <summary>
         /// Diagonal Cross Pattern.
         /// <para>When the item is serialized out as xml, its value is "diagCross".</para>
         /// </summary>
-        [EnumString("diagCross")]
-        DiagonalCross,
+        public static ShadingPatternValues DiagonalCross => new("diagCross");
         /// <summary>
         /// Thin Horizontal Stripe Pattern.
         /// <para>When the item is serialized out as xml, its value is "thinHorzStripe".</para>
         /// </summary>
-        [EnumString("thinHorzStripe")]
-        ThinHorizontalStripe,
+        public static ShadingPatternValues ThinHorizontalStripe => new("thinHorzStripe");
         /// <summary>
         /// Thin Vertical Stripe Pattern.
         /// <para>When the item is serialized out as xml, its value is "thinVertStripe".</para>
         /// </summary>
-        [EnumString("thinVertStripe")]
-        ThinVerticalStripe,
+        public static ShadingPatternValues ThinVerticalStripe => new("thinVertStripe");
         /// <summary>
         /// Thin Reverse Diagonal Stripe Pattern.
         /// <para>When the item is serialized out as xml, its value is "thinReverseDiagStripe".</para>
         /// </summary>
-        [EnumString("thinReverseDiagStripe")]
-        ThinReverseDiagonalStripe,
+        public static ShadingPatternValues ThinReverseDiagonalStripe => new("thinReverseDiagStripe");
         /// <summary>
         /// Thin Diagonal Stripe Pattern.
         /// <para>When the item is serialized out as xml, its value is "thinDiagStripe".</para>
         /// </summary>
-        [EnumString("thinDiagStripe")]
-        ThinDiagonalStripe,
+        public static ShadingPatternValues ThinDiagonalStripe => new("thinDiagStripe");
         /// <summary>
         /// Thin Horizontal Cross Pattern.
         /// <para>When the item is serialized out as xml, its value is "thinHorzCross".</para>
         /// </summary>
-        [EnumString("thinHorzCross")]
-        ThinHorizontalCross,
+        public static ShadingPatternValues ThinHorizontalCross => new("thinHorzCross");
         /// <summary>
         /// Thin Diagonal Cross Pattern.
         /// <para>When the item is serialized out as xml, its value is "thinDiagCross".</para>
         /// </summary>
-        [EnumString("thinDiagCross")]
-        ThinDiagonalCross,
+        public static ShadingPatternValues ThinDiagonalCross => new("thinDiagCross");
         /// <summary>
         /// 5% Fill Pattern.
         /// <para>When the item is serialized out as xml, its value is "pct5".</para>
         /// </summary>
-        [EnumString("pct5")]
-        Percent5,
+        public static ShadingPatternValues Percent5 => new("pct5");
         /// <summary>
         /// 10% Fill Pattern.
         /// <para>When the item is serialized out as xml, its value is "pct10".</para>
         /// </summary>
-        [EnumString("pct10")]
-        Percent10,
+        public static ShadingPatternValues Percent10 => new("pct10");
         /// <summary>
         /// 12.5% Fill Pattern.
         /// <para>When the item is serialized out as xml, its value is "pct12".</para>
         /// </summary>
-        [EnumString("pct12")]
-        Percent12,
+        public static ShadingPatternValues Percent12 => new("pct12");
         /// <summary>
         /// 15% Fill Pattern.
         /// <para>When the item is serialized out as xml, its value is "pct15".</para>
         /// </summary>
-        [EnumString("pct15")]
-        Percent15,
+        public static ShadingPatternValues Percent15 => new("pct15");
         /// <summary>
         /// 20% Fill Pattern.
         /// <para>When the item is serialized out as xml, its value is "pct20".</para>
         /// </summary>
-        [EnumString("pct20")]
-        Percent20,
+        public static ShadingPatternValues Percent20 => new("pct20");
         /// <summary>
         /// 25% Fill Pattern.
         /// <para>When the item is serialized out as xml, its value is "pct25".</para>
         /// </summary>
-        [EnumString("pct25")]
-        Percent25,
+        public static ShadingPatternValues Percent25 => new("pct25");
         /// <summary>
         /// 30% Fill Pattern.
         /// <para>When the item is serialized out as xml, its value is "pct30".</para>
         /// </summary>
-        [EnumString("pct30")]
-        Percent30,
+        public static ShadingPatternValues Percent30 => new("pct30");
         /// <summary>
         /// 35% Fill Pattern.
         /// <para>When the item is serialized out as xml, its value is "pct35".</para>
         /// </summary>
-        [EnumString("pct35")]
-        Percent35,
+        public static ShadingPatternValues Percent35 => new("pct35");
         /// <summary>
         /// 37.5% Fill Pattern.
         /// <para>When the item is serialized out as xml, its value is "pct37".</para>
         /// </summary>
-        [EnumString("pct37")]
-        Percent37,
+        public static ShadingPatternValues Percent37 => new("pct37");
         /// <summary>
         /// 40% Fill Pattern.
         /// <para>When the item is serialized out as xml, its value is "pct40".</para>
         /// </summary>
-        [EnumString("pct40")]
-        Percent40,
+        public static ShadingPatternValues Percent40 => new("pct40");
         /// <summary>
         /// 45% Fill Pattern.
         /// <para>When the item is serialized out as xml, its value is "pct45".</para>
         /// </summary>
-        [EnumString("pct45")]
-        Percent45,
+        public static ShadingPatternValues Percent45 => new("pct45");
         /// <summary>
         /// 50% Fill Pattern.
         /// <para>When the item is serialized out as xml, its value is "pct50".</para>
         /// </summary>
-        [EnumString("pct50")]
-        Percent50,
+        public static ShadingPatternValues Percent50 => new("pct50");
         /// <summary>
         /// 55% Fill Pattern.
         /// <para>When the item is serialized out as xml, its value is "pct55".</para>
         /// </summary>
-        [EnumString("pct55")]
-        Percent55,
+        public static ShadingPatternValues Percent55 => new("pct55");
         /// <summary>
         /// 60% Fill Pattern.
         /// <para>When the item is serialized out as xml, its value is "pct60".</para>
         /// </summary>
-        [EnumString("pct60")]
-        Percent60,
+        public static ShadingPatternValues Percent60 => new("pct60");
         /// <summary>
         /// 62.5% Fill Pattern.
         /// <para>When the item is serialized out as xml, its value is "pct62".</para>
         /// </summary>
-        [EnumString("pct62")]
-        Percent62,
+        public static ShadingPatternValues Percent62 => new("pct62");
         /// <summary>
         /// 65% Fill Pattern.
         /// <para>When the item is serialized out as xml, its value is "pct65".</para>
         /// </summary>
-        [EnumString("pct65")]
-        Percent65,
+        public static ShadingPatternValues Percent65 => new("pct65");
         /// <summary>
         /// 70% Fill Pattern.
         /// <para>When the item is serialized out as xml, its value is "pct70".</para>
         /// </summary>
-        [EnumString("pct70")]
-        Percent70,
+        public static ShadingPatternValues Percent70 => new("pct70");
         /// <summary>
         /// 75% Fill Pattern.
         /// <para>When the item is serialized out as xml, its value is "pct75".</para>
         /// </summary>
-        [EnumString("pct75")]
-        Percent75,
+        public static ShadingPatternValues Percent75 => new("pct75");
         /// <summary>
         /// 80% Fill Pattern.
         /// <para>When the item is serialized out as xml, its value is "pct80".</para>
         /// </summary>
-        [EnumString("pct80")]
-        Percent80,
+        public static ShadingPatternValues Percent80 => new("pct80");
         /// <summary>
         /// 85% Fill Pattern.
         /// <para>When the item is serialized out as xml, its value is "pct85".</para>
         /// </summary>
-        [EnumString("pct85")]
-        Percent85,
+        public static ShadingPatternValues Percent85 => new("pct85");
         /// <summary>
         /// 87.5% Fill Pattern.
         /// <para>When the item is serialized out as xml, its value is "pct87".</para>
         /// </summary>
-        [EnumString("pct87")]
-        Percent87,
+        public static ShadingPatternValues Percent87 => new("pct87");
         /// <summary>
         /// 90% Fill Pattern.
         /// <para>When the item is serialized out as xml, its value is "pct90".</para>
         /// </summary>
-        [EnumString("pct90")]
-        Percent90,
+        public static ShadingPatternValues Percent90 => new("pct90");
         /// <summary>
         /// 95% Fill Pattern.
         /// <para>When the item is serialized out as xml, its value is "pct95".</para>
         /// </summary>
-        [EnumString("pct95")]
-        Percent95
+        public static ShadingPatternValues Percent95 => new("pct95");
+    
     }
 
     /// <summary>
     /// Defines the StylePaneSortMethodsValues enumeration.
     /// </summary>
-    public enum StylePaneSortMethodsValues
+    public readonly record struct StylePaneSortMethodsValues : IEnumValue, IEnumValueFactory<StylePaneSortMethodsValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new StylePaneSortMethodsValues enum instance
+        /// </summary>
+        public StylePaneSortMethodsValues(string value) => _value = value;
+        StylePaneSortMethodsValues IEnumValueFactory<StylePaneSortMethodsValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "0000" => true,
+            "name" => true,
+            "0001" => true,
+            "priority" => true,
+            "0002" => true,
+            "font" => true,
+            "0003" => true,
+            "basedOn" => true,
+            "0004" => true,
+            "type" => true,
+            "0005" => true,
+            "default" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "0000";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// 0000.
         /// <para>When the item is serialized out as xml, its value is "0000".</para>
         /// </summary>
-        [EnumString("0000")]
-        Zero,
+        public static StylePaneSortMethodsValues Zero => new("0000");
         /// <summary>
         /// name.
         /// <para>When the item is serialized out as xml, its value is "name".</para>
         /// </summary>
-        [EnumString("name")]
-        Name,
+        public static StylePaneSortMethodsValues Name => new("name");
         /// <summary>
         /// 0001.
         /// <para>When the item is serialized out as xml, its value is "0001".</para>
         /// </summary>
-        [EnumString("0001")]
-        One,
+        public static StylePaneSortMethodsValues One => new("0001");
         /// <summary>
         /// priority.
         /// <para>When the item is serialized out as xml, its value is "priority".</para>
         /// </summary>
-        [EnumString("priority")]
-        Priority,
+        public static StylePaneSortMethodsValues Priority => new("priority");
         /// <summary>
         /// 0002.
         /// <para>When the item is serialized out as xml, its value is "0002".</para>
         /// </summary>
-        [EnumString("0002")]
-        Two,
+        public static StylePaneSortMethodsValues Two => new("0002");
         /// <summary>
         /// font.
         /// <para>When the item is serialized out as xml, its value is "font".</para>
         /// </summary>
-        [EnumString("font")]
-        Font,
+        public static StylePaneSortMethodsValues Font => new("font");
         /// <summary>
         /// 0003.
         /// <para>When the item is serialized out as xml, its value is "0003".</para>
         /// </summary>
-        [EnumString("0003")]
-        Three,
+        public static StylePaneSortMethodsValues Three => new("0003");
         /// <summary>
         /// basedOn.
         /// <para>When the item is serialized out as xml, its value is "basedOn".</para>
         /// </summary>
-        [EnumString("basedOn")]
-        BasedOn,
+        public static StylePaneSortMethodsValues BasedOn => new("basedOn");
         /// <summary>
         /// 0004.
         /// <para>When the item is serialized out as xml, its value is "0004".</para>
         /// </summary>
-        [EnumString("0004")]
-        Four,
+        public static StylePaneSortMethodsValues Four => new("0004");
         /// <summary>
         /// type.
         /// <para>When the item is serialized out as xml, its value is "type".</para>
         /// </summary>
-        [EnumString("type")]
-        Type,
+        public static StylePaneSortMethodsValues Type => new("type");
         /// <summary>
         /// 0005.
         /// <para>When the item is serialized out as xml, its value is "0005".</para>
         /// </summary>
-        [EnumString("0005")]
-        Five,
+        public static StylePaneSortMethodsValues Five => new("0005");
         /// <summary>
         /// default.
         /// <para>When the item is serialized out as xml, its value is "default".</para>
         /// </summary>
-        [EnumString("default")]
-        Default
+        public static StylePaneSortMethodsValues Default => new("default");
+    
     }
 
     /// <summary>
     /// Defines the DirectionValues enumeration.
     /// </summary>
-    public enum DirectionValues
+    public readonly record struct DirectionValues : IEnumValue, IEnumValueFactory<DirectionValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new DirectionValues enum instance
+        /// </summary>
+        public DirectionValues(string value) => _value = value;
+        DirectionValues IEnumValueFactory<DirectionValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "ltr" => true,
+            "rtl" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "ltr";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// ltr.
         /// <para>When the item is serialized out as xml, its value is "ltr".</para>
         /// </summary>
-        [EnumString("ltr")]
-        Ltr,
+        public static DirectionValues Ltr => new("ltr");
         /// <summary>
         /// rtl.
         /// <para>When the item is serialized out as xml, its value is "rtl".</para>
         /// </summary>
-        [EnumString("rtl")]
-        Rtl
+        public static DirectionValues Rtl => new("rtl");
+    
     }
 
     /// <summary>
     /// Defines the CalendarValues enumeration.
     /// </summary>
-    public enum CalendarValues
+    public readonly record struct CalendarValues : IEnumValue, IEnumValueFactory<CalendarValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new CalendarValues enum instance
+        /// </summary>
+        public CalendarValues(string value) => _value = value;
+        CalendarValues IEnumValueFactory<CalendarValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "gregorian" => true,
+            "hijri" => true,
+            "umalqura" => true,
+            "hebrew" => true,
+            "taiwan" => true,
+            "japan" => true,
+            "thai" => true,
+            "korea" => true,
+            "saka" => true,
+            "gregorianXlitEnglish" => true,
+            "gregorianXlitFrench" => true,
+            "gregorianUs" => true,
+            "gregorianMeFrench" => true,
+            "gregorianArabic" => true,
+            "none" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "gregorian";
+        FileFormatVersions IEnumValue.Version => InternalValue switch
+        {
+            "umalqura" => FileFormatVersions.Office2010,
+            "gregorianUs" => FileFormatVersions.Office2010,
+            "gregorianMeFrench" => FileFormatVersions.Office2010,
+            "gregorianArabic" => FileFormatVersions.Office2010,
+            "none" => FileFormatVersions.Office2010,
+            _ => FileFormatVersions.Office2007,
+        };
         /// <summary>
         /// Gregorian.
         /// <para>When the item is serialized out as xml, its value is "gregorian".</para>
         /// </summary>
-        [EnumString("gregorian")]
-        Gregorian,
+        public static CalendarValues Gregorian => new("gregorian");
         /// <summary>
         /// Hijri.
         /// <para>When the item is serialized out as xml, its value is "hijri".</para>
         /// </summary>
-        [EnumString("hijri")]
-        Hijri,
+        public static CalendarValues Hijri => new("hijri");
         /// <summary>
         /// umalqura.
         /// <para>When the item is serialized out as xml, its value is "umalqura".</para>
         /// <para>This item is only available in Office 2010 and later.</para>
         /// </summary>
-        [EnumString("umalqura")]
-        [OfficeAvailability(FileFormatVersions.Office2007)]
-        Umalqura,
+        public static CalendarValues Umalqura => new("umalqura");
         /// <summary>
         /// Hebrew.
         /// <para>When the item is serialized out as xml, its value is "hebrew".</para>
         /// </summary>
-        [EnumString("hebrew")]
-        Hebrew,
+        public static CalendarValues Hebrew => new("hebrew");
         /// <summary>
         /// Taiwan.
         /// <para>When the item is serialized out as xml, its value is "taiwan".</para>
         /// </summary>
-        [EnumString("taiwan")]
-        Taiwan,
+        public static CalendarValues Taiwan => new("taiwan");
         /// <summary>
         /// Japanese Emperor Era.
         /// <para>When the item is serialized out as xml, its value is "japan".</para>
         /// </summary>
-        [EnumString("japan")]
-        Japan,
+        public static CalendarValues Japan => new("japan");
         /// <summary>
         /// Thai.
         /// <para>When the item is serialized out as xml, its value is "thai".</para>
         /// </summary>
-        [EnumString("thai")]
-        Thai,
+        public static CalendarValues Thai => new("thai");
         /// <summary>
         /// Korean Tangun Era.
         /// <para>When the item is serialized out as xml, its value is "korea".</para>
         /// </summary>
-        [EnumString("korea")]
-        Korea,
+        public static CalendarValues Korea => new("korea");
         /// <summary>
         /// Saka Era.
         /// <para>When the item is serialized out as xml, its value is "saka".</para>
         /// </summary>
-        [EnumString("saka")]
-        Saka,
+        public static CalendarValues Saka => new("saka");
         /// <summary>
         /// Gregorian transliterated English.
         /// <para>When the item is serialized out as xml, its value is "gregorianXlitEnglish".</para>
         /// </summary>
-        [EnumString("gregorianXlitEnglish")]
-        GregorianTransliteratedEnglish,
+        public static CalendarValues GregorianTransliteratedEnglish => new("gregorianXlitEnglish");
         /// <summary>
         /// Gregorian transliterated French.
         /// <para>When the item is serialized out as xml, its value is "gregorianXlitFrench".</para>
         /// </summary>
-        [EnumString("gregorianXlitFrench")]
-        GregorianTransliteratedFrench,
+        public static CalendarValues GregorianTransliteratedFrench => new("gregorianXlitFrench");
         /// <summary>
         /// gregorianUs.
         /// <para>When the item is serialized out as xml, its value is "gregorianUs".</para>
         /// <para>This item is only available in Office 2010 and later.</para>
         /// </summary>
-        [EnumString("gregorianUs")]
-        [OfficeAvailability(FileFormatVersions.Office2007)]
-        GregorianUs,
+        public static CalendarValues GregorianUs => new("gregorianUs");
         /// <summary>
         /// gregorianMeFrench.
         /// <para>When the item is serialized out as xml, its value is "gregorianMeFrench".</para>
         /// <para>This item is only available in Office 2010 and later.</para>
         /// </summary>
-        [EnumString("gregorianMeFrench")]
-        [OfficeAvailability(FileFormatVersions.Office2007)]
-        GregorianMeFrench,
+        public static CalendarValues GregorianMeFrench => new("gregorianMeFrench");
         /// <summary>
         /// gregorianArabic.
         /// <para>When the item is serialized out as xml, its value is "gregorianArabic".</para>
         /// <para>This item is only available in Office 2010 and later.</para>
         /// </summary>
-        [EnumString("gregorianArabic")]
-        [OfficeAvailability(FileFormatVersions.Office2007)]
-        GregorianArabic,
+        public static CalendarValues GregorianArabic => new("gregorianArabic");
         /// <summary>
         /// none.
         /// <para>When the item is serialized out as xml, its value is "none".</para>
         /// <para>This item is only available in Office 2010 and later.</para>
         /// </summary>
-        [EnumString("none")]
-        [OfficeAvailability(FileFormatVersions.Office2007)]
-        None
+        public static CalendarValues None => new("none");
+    
     }
 
     /// <summary>
     /// Defines the NumberFormatValues enumeration.
     /// </summary>
-    public enum NumberFormatValues
+    public readonly record struct NumberFormatValues : IEnumValue, IEnumValueFactory<NumberFormatValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new NumberFormatValues enum instance
+        /// </summary>
+        public NumberFormatValues(string value) => _value = value;
+        NumberFormatValues IEnumValueFactory<NumberFormatValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "decimal" => true,
+            "upperRoman" => true,
+            "lowerRoman" => true,
+            "upperLetter" => true,
+            "lowerLetter" => true,
+            "ordinal" => true,
+            "cardinalText" => true,
+            "ordinalText" => true,
+            "hex" => true,
+            "chicago" => true,
+            "ideographDigital" => true,
+            "japaneseCounting" => true,
+            "aiueo" => true,
+            "iroha" => true,
+            "decimalFullWidth" => true,
+            "decimalHalfWidth" => true,
+            "japaneseLegal" => true,
+            "japaneseDigitalTenThousand" => true,
+            "decimalEnclosedCircle" => true,
+            "decimalFullWidth2" => true,
+            "aiueoFullWidth" => true,
+            "irohaFullWidth" => true,
+            "decimalZero" => true,
+            "bullet" => true,
+            "ganada" => true,
+            "chosung" => true,
+            "decimalEnclosedFullstop" => true,
+            "decimalEnclosedParen" => true,
+            "decimalEnclosedCircleChinese" => true,
+            "ideographEnclosedCircle" => true,
+            "ideographTraditional" => true,
+            "ideographZodiac" => true,
+            "ideographZodiacTraditional" => true,
+            "taiwaneseCounting" => true,
+            "ideographLegalTraditional" => true,
+            "taiwaneseCountingThousand" => true,
+            "taiwaneseDigital" => true,
+            "chineseCounting" => true,
+            "chineseLegalSimplified" => true,
+            "chineseCountingThousand" => true,
+            "koreanDigital" => true,
+            "koreanCounting" => true,
+            "koreanLegal" => true,
+            "koreanDigital2" => true,
+            "vietnameseCounting" => true,
+            "russianLower" => true,
+            "russianUpper" => true,
+            "none" => true,
+            "numberInDash" => true,
+            "hebrew1" => true,
+            "hebrew2" => true,
+            "arabicAlpha" => true,
+            "arabicAbjad" => true,
+            "hindiVowels" => true,
+            "hindiConsonants" => true,
+            "hindiNumbers" => true,
+            "hindiCounting" => true,
+            "thaiLetters" => true,
+            "thaiNumbers" => true,
+            "thaiCounting" => true,
+            "bahtText" => true,
+            "dollarText" => true,
+            "custom" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "decimal";
+        FileFormatVersions IEnumValue.Version => InternalValue switch
+        {
+            "bahtText" => FileFormatVersions.Office2010,
+            "dollarText" => FileFormatVersions.Office2010,
+            "custom" => FileFormatVersions.Office2010,
+            _ => FileFormatVersions.Office2007,
+        };
         /// <summary>
         /// Decimal Numbers.
         /// <para>When the item is serialized out as xml, its value is "decimal".</para>
         /// </summary>
-        [EnumString("decimal")]
-        Decimal,
+        public static NumberFormatValues Decimal => new("decimal");
         /// <summary>
         /// Uppercase Roman Numerals.
         /// <para>When the item is serialized out as xml, its value is "upperRoman".</para>
         /// </summary>
-        [EnumString("upperRoman")]
-        UpperRoman,
+        public static NumberFormatValues UpperRoman => new("upperRoman");
         /// <summary>
         /// Lowercase Roman Numerals.
         /// <para>When the item is serialized out as xml, its value is "lowerRoman".</para>
         /// </summary>
-        [EnumString("lowerRoman")]
-        LowerRoman,
+        public static NumberFormatValues LowerRoman => new("lowerRoman");
         /// <summary>
         /// Uppercase Latin Alphabet.
         /// <para>When the item is serialized out as xml, its value is "upperLetter".</para>
         /// </summary>
-        [EnumString("upperLetter")]
-        UpperLetter,
+        public static NumberFormatValues UpperLetter => new("upperLetter");
         /// <summary>
         /// Lowercase Latin Alphabet.
         /// <para>When the item is serialized out as xml, its value is "lowerLetter".</para>
         /// </summary>
-        [EnumString("lowerLetter")]
-        LowerLetter,
+        public static NumberFormatValues LowerLetter => new("lowerLetter");
         /// <summary>
         /// Ordinal.
         /// <para>When the item is serialized out as xml, its value is "ordinal".</para>
         /// </summary>
-        [EnumString("ordinal")]
-        Ordinal,
+        public static NumberFormatValues Ordinal => new("ordinal");
         /// <summary>
         /// Cardinal Text.
         /// <para>When the item is serialized out as xml, its value is "cardinalText".</para>
         /// </summary>
-        [EnumString("cardinalText")]
-        CardinalText,
+        public static NumberFormatValues CardinalText => new("cardinalText");
         /// <summary>
         /// Ordinal Text.
         /// <para>When the item is serialized out as xml, its value is "ordinalText".</para>
         /// </summary>
-        [EnumString("ordinalText")]
-        OrdinalText,
+        public static NumberFormatValues OrdinalText => new("ordinalText");
         /// <summary>
         /// Hexadecimal Numbering.
         /// <para>When the item is serialized out as xml, its value is "hex".</para>
         /// </summary>
-        [EnumString("hex")]
-        Hex,
+        public static NumberFormatValues Hex => new("hex");
         /// <summary>
         /// Chicago Manual of Style.
         /// <para>When the item is serialized out as xml, its value is "chicago".</para>
         /// </summary>
-        [EnumString("chicago")]
-        Chicago,
+        public static NumberFormatValues Chicago => new("chicago");
         /// <summary>
         /// Ideographs.
         /// <para>When the item is serialized out as xml, its value is "ideographDigital".</para>
         /// </summary>
-        [EnumString("ideographDigital")]
-        IdeographDigital,
+        public static NumberFormatValues IdeographDigital => new("ideographDigital");
         /// <summary>
         /// Japanese Counting System.
         /// <para>When the item is serialized out as xml, its value is "japaneseCounting".</para>
         /// </summary>
-        [EnumString("japaneseCounting")]
-        JapaneseCounting,
+        public static NumberFormatValues JapaneseCounting => new("japaneseCounting");
         /// <summary>
         /// AIUEO Order Hiragana.
         /// <para>When the item is serialized out as xml, its value is "aiueo".</para>
         /// </summary>
-        [EnumString("aiueo")]
-        Aiueo,
+        public static NumberFormatValues Aiueo => new("aiueo");
         /// <summary>
         /// Iroha Ordered Katakana.
         /// <para>When the item is serialized out as xml, its value is "iroha".</para>
         /// </summary>
-        [EnumString("iroha")]
-        Iroha,
+        public static NumberFormatValues Iroha => new("iroha");
         /// <summary>
         /// Double Byte Arabic Numerals.
         /// <para>When the item is serialized out as xml, its value is "decimalFullWidth".</para>
         /// </summary>
-        [EnumString("decimalFullWidth")]
-        DecimalFullWidth,
+        public static NumberFormatValues DecimalFullWidth => new("decimalFullWidth");
         /// <summary>
         /// Single Byte Arabic Numerals.
         /// <para>When the item is serialized out as xml, its value is "decimalHalfWidth".</para>
         /// </summary>
-        [EnumString("decimalHalfWidth")]
-        DecimalHalfWidth,
+        public static NumberFormatValues DecimalHalfWidth => new("decimalHalfWidth");
         /// <summary>
         /// Japanese Legal Numbering.
         /// <para>When the item is serialized out as xml, its value is "japaneseLegal".</para>
         /// </summary>
-        [EnumString("japaneseLegal")]
-        JapaneseLegal,
+        public static NumberFormatValues JapaneseLegal => new("japaneseLegal");
         /// <summary>
         /// Japanese Digital Ten Thousand Counting System.
         /// <para>When the item is serialized out as xml, its value is "japaneseDigitalTenThousand".</para>
         /// </summary>
-        [EnumString("japaneseDigitalTenThousand")]
-        JapaneseDigitalTenThousand,
+        public static NumberFormatValues JapaneseDigitalTenThousand => new("japaneseDigitalTenThousand");
         /// <summary>
         /// Decimal Numbers Enclosed in a Circle.
         /// <para>When the item is serialized out as xml, its value is "decimalEnclosedCircle".</para>
         /// </summary>
-        [EnumString("decimalEnclosedCircle")]
-        DecimalEnclosedCircle,
+        public static NumberFormatValues DecimalEnclosedCircle => new("decimalEnclosedCircle");
         /// <summary>
         /// Double Byte Arabic Numerals Alternate.
         /// <para>When the item is serialized out as xml, its value is "decimalFullWidth2".</para>
         /// </summary>
-        [EnumString("decimalFullWidth2")]
-        DecimalFullWidth2,
+        public static NumberFormatValues DecimalFullWidth2 => new("decimalFullWidth2");
         /// <summary>
         /// Full-Width AIUEO Order Hiragana.
         /// <para>When the item is serialized out as xml, its value is "aiueoFullWidth".</para>
         /// </summary>
-        [EnumString("aiueoFullWidth")]
-        AiueoFullWidth,
+        public static NumberFormatValues AiueoFullWidth => new("aiueoFullWidth");
         /// <summary>
         /// Full-Width Iroha Ordered Katakana.
         /// <para>When the item is serialized out as xml, its value is "irohaFullWidth".</para>
         /// </summary>
-        [EnumString("irohaFullWidth")]
-        IrohaFullWidth,
+        public static NumberFormatValues IrohaFullWidth => new("irohaFullWidth");
         /// <summary>
         /// Initial Zero Arabic Numerals.
         /// <para>When the item is serialized out as xml, its value is "decimalZero".</para>
         /// </summary>
-        [EnumString("decimalZero")]
-        DecimalZero,
+        public static NumberFormatValues DecimalZero => new("decimalZero");
         /// <summary>
         /// Bullet.
         /// <para>When the item is serialized out as xml, its value is "bullet".</para>
         /// </summary>
-        [EnumString("bullet")]
-        Bullet,
+        public static NumberFormatValues Bullet => new("bullet");
         /// <summary>
         /// Korean Ganada Numbering.
         /// <para>When the item is serialized out as xml, its value is "ganada".</para>
         /// </summary>
-        [EnumString("ganada")]
-        Ganada,
+        public static NumberFormatValues Ganada => new("ganada");
         /// <summary>
         /// Korean Chosung Numbering.
         /// <para>When the item is serialized out as xml, its value is "chosung".</para>
         /// </summary>
-        [EnumString("chosung")]
-        Chosung,
+        public static NumberFormatValues Chosung => new("chosung");
         /// <summary>
         /// Decimal Numbers Followed by a Period.
         /// <para>When the item is serialized out as xml, its value is "decimalEnclosedFullstop".</para>
         /// </summary>
-        [EnumString("decimalEnclosedFullstop")]
-        DecimalEnclosedFullstop,
+        public static NumberFormatValues DecimalEnclosedFullstop => new("decimalEnclosedFullstop");
         /// <summary>
         /// Decimal Numbers Enclosed in Parenthesis.
         /// <para>When the item is serialized out as xml, its value is "decimalEnclosedParen".</para>
         /// </summary>
-        [EnumString("decimalEnclosedParen")]
-        DecimalEnclosedParen,
+        public static NumberFormatValues DecimalEnclosedParen => new("decimalEnclosedParen");
         /// <summary>
         /// Decimal Numbers Enclosed in a Circle.
         /// <para>When the item is serialized out as xml, its value is "decimalEnclosedCircleChinese".</para>
         /// </summary>
-        [EnumString("decimalEnclosedCircleChinese")]
-        DecimalEnclosedCircleChinese,
+        public static NumberFormatValues DecimalEnclosedCircleChinese => new("decimalEnclosedCircleChinese");
         /// <summary>
         /// Ideographs Enclosed in a Circle.
         /// <para>When the item is serialized out as xml, its value is "ideographEnclosedCircle".</para>
         /// </summary>
-        [EnumString("ideographEnclosedCircle")]
-        IdeographEnclosedCircle,
+        public static NumberFormatValues IdeographEnclosedCircle => new("ideographEnclosedCircle");
         /// <summary>
         /// Traditional Ideograph Format.
         /// <para>When the item is serialized out as xml, its value is "ideographTraditional".</para>
         /// </summary>
-        [EnumString("ideographTraditional")]
-        IdeographTraditional,
+        public static NumberFormatValues IdeographTraditional => new("ideographTraditional");
         /// <summary>
         /// Zodiac Ideograph Format.
         /// <para>When the item is serialized out as xml, its value is "ideographZodiac".</para>
         /// </summary>
-        [EnumString("ideographZodiac")]
-        IdeographZodiac,
+        public static NumberFormatValues IdeographZodiac => new("ideographZodiac");
         /// <summary>
         /// Traditional Zodiac Ideograph Format.
         /// <para>When the item is serialized out as xml, its value is "ideographZodiacTraditional".</para>
         /// </summary>
-        [EnumString("ideographZodiacTraditional")]
-        IdeographZodiacTraditional,
+        public static NumberFormatValues IdeographZodiacTraditional => new("ideographZodiacTraditional");
         /// <summary>
         /// Taiwanese Counting System.
         /// <para>When the item is serialized out as xml, its value is "taiwaneseCounting".</para>
         /// </summary>
-        [EnumString("taiwaneseCounting")]
-        TaiwaneseCounting,
+        public static NumberFormatValues TaiwaneseCounting => new("taiwaneseCounting");
         /// <summary>
         /// Traditional Legal Ideograph Format.
         /// <para>When the item is serialized out as xml, its value is "ideographLegalTraditional".</para>
         /// </summary>
-        [EnumString("ideographLegalTraditional")]
-        IdeographLegalTraditional,
+        public static NumberFormatValues IdeographLegalTraditional => new("ideographLegalTraditional");
         /// <summary>
         /// Taiwanese Counting Thousand System.
         /// <para>When the item is serialized out as xml, its value is "taiwaneseCountingThousand".</para>
         /// </summary>
-        [EnumString("taiwaneseCountingThousand")]
-        TaiwaneseCountingThousand,
+        public static NumberFormatValues TaiwaneseCountingThousand => new("taiwaneseCountingThousand");
         /// <summary>
         /// Taiwanese Digital Counting System.
         /// <para>When the item is serialized out as xml, its value is "taiwaneseDigital".</para>
         /// </summary>
-        [EnumString("taiwaneseDigital")]
-        TaiwaneseDigital,
+        public static NumberFormatValues TaiwaneseDigital => new("taiwaneseDigital");
         /// <summary>
         /// Chinese Counting System.
         /// <para>When the item is serialized out as xml, its value is "chineseCounting".</para>
         /// </summary>
-        [EnumString("chineseCounting")]
-        ChineseCounting,
+        public static NumberFormatValues ChineseCounting => new("chineseCounting");
         /// <summary>
         /// Chinese Legal Simplified Format.
         /// <para>When the item is serialized out as xml, its value is "chineseLegalSimplified".</para>
         /// </summary>
-        [EnumString("chineseLegalSimplified")]
-        ChineseLegalSimplified,
+        public static NumberFormatValues ChineseLegalSimplified => new("chineseLegalSimplified");
         /// <summary>
         /// Chinese Counting Thousand System.
         /// <para>When the item is serialized out as xml, its value is "chineseCountingThousand".</para>
         /// </summary>
-        [EnumString("chineseCountingThousand")]
-        ChineseCountingThousand,
+        public static NumberFormatValues ChineseCountingThousand => new("chineseCountingThousand");
         /// <summary>
         /// Korean Digital Counting System.
         /// <para>When the item is serialized out as xml, its value is "koreanDigital".</para>
         /// </summary>
-        [EnumString("koreanDigital")]
-        KoreanDigital,
+        public static NumberFormatValues KoreanDigital => new("koreanDigital");
         /// <summary>
         /// Korean Counting System.
         /// <para>When the item is serialized out as xml, its value is "koreanCounting".</para>
         /// </summary>
-        [EnumString("koreanCounting")]
-        KoreanCounting,
+        public static NumberFormatValues KoreanCounting => new("koreanCounting");
         /// <summary>
         /// Korean Legal Numbering.
         /// <para>When the item is serialized out as xml, its value is "koreanLegal".</para>
         /// </summary>
-        [EnumString("koreanLegal")]
-        KoreanLegal,
+        public static NumberFormatValues KoreanLegal => new("koreanLegal");
         /// <summary>
         /// Korean Digital Counting System Alternate.
         /// <para>When the item is serialized out as xml, its value is "koreanDigital2".</para>
         /// </summary>
-        [EnumString("koreanDigital2")]
-        KoreanDigital2,
+        public static NumberFormatValues KoreanDigital2 => new("koreanDigital2");
         /// <summary>
         /// Vietnamese Numerals.
         /// <para>When the item is serialized out as xml, its value is "vietnameseCounting".</para>
         /// </summary>
-        [EnumString("vietnameseCounting")]
-        VietnameseCounting,
+        public static NumberFormatValues VietnameseCounting => new("vietnameseCounting");
         /// <summary>
         /// Lowercase Russian Alphabet.
         /// <para>When the item is serialized out as xml, its value is "russianLower".</para>
         /// </summary>
-        [EnumString("russianLower")]
-        RussianLower,
+        public static NumberFormatValues RussianLower => new("russianLower");
         /// <summary>
         /// Uppercase Russian Alphabet.
         /// <para>When the item is serialized out as xml, its value is "russianUpper".</para>
         /// </summary>
-        [EnumString("russianUpper")]
-        RussianUpper,
+        public static NumberFormatValues RussianUpper => new("russianUpper");
         /// <summary>
         /// No Numbering.
         /// <para>When the item is serialized out as xml, its value is "none".</para>
         /// </summary>
-        [EnumString("none")]
-        None,
+        public static NumberFormatValues None => new("none");
         /// <summary>
         /// Number With Dashes.
         /// <para>When the item is serialized out as xml, its value is "numberInDash".</para>
         /// </summary>
-        [EnumString("numberInDash")]
-        NumberInDash,
+        public static NumberFormatValues NumberInDash => new("numberInDash");
         /// <summary>
         /// Hebrew Numerals.
         /// <para>When the item is serialized out as xml, its value is "hebrew1".</para>
         /// </summary>
-        [EnumString("hebrew1")]
-        Hebrew1,
+        public static NumberFormatValues Hebrew1 => new("hebrew1");
         /// <summary>
         /// Hebrew Alphabet.
         /// <para>When the item is serialized out as xml, its value is "hebrew2".</para>
         /// </summary>
-        [EnumString("hebrew2")]
-        Hebrew2,
+        public static NumberFormatValues Hebrew2 => new("hebrew2");
         /// <summary>
         /// Arabic Alphabet.
         /// <para>When the item is serialized out as xml, its value is "arabicAlpha".</para>
         /// </summary>
-        [EnumString("arabicAlpha")]
-        ArabicAlpha,
+        public static NumberFormatValues ArabicAlpha => new("arabicAlpha");
         /// <summary>
         /// Arabic Abjad Numerals.
         /// <para>When the item is serialized out as xml, its value is "arabicAbjad".</para>
         /// </summary>
-        [EnumString("arabicAbjad")]
-        ArabicAbjad,
+        public static NumberFormatValues ArabicAbjad => new("arabicAbjad");
         /// <summary>
         /// Hindi Vowels.
         /// <para>When the item is serialized out as xml, its value is "hindiVowels".</para>
         /// </summary>
-        [EnumString("hindiVowels")]
-        HindiVowels,
+        public static NumberFormatValues HindiVowels => new("hindiVowels");
         /// <summary>
         /// Hindi Consonants.
         /// <para>When the item is serialized out as xml, its value is "hindiConsonants".</para>
         /// </summary>
-        [EnumString("hindiConsonants")]
-        HindiConsonants,
+        public static NumberFormatValues HindiConsonants => new("hindiConsonants");
         /// <summary>
         /// Hindi Numbers.
         /// <para>When the item is serialized out as xml, its value is "hindiNumbers".</para>
         /// </summary>
-        [EnumString("hindiNumbers")]
-        HindiNumbers,
+        public static NumberFormatValues HindiNumbers => new("hindiNumbers");
         /// <summary>
         /// Hindi Counting System.
         /// <para>When the item is serialized out as xml, its value is "hindiCounting".</para>
         /// </summary>
-        [EnumString("hindiCounting")]
-        HindiCounting,
+        public static NumberFormatValues HindiCounting => new("hindiCounting");
         /// <summary>
         /// Thai Letters.
         /// <para>When the item is serialized out as xml, its value is "thaiLetters".</para>
         /// </summary>
-        [EnumString("thaiLetters")]
-        ThaiLetters,
+        public static NumberFormatValues ThaiLetters => new("thaiLetters");
         /// <summary>
         /// Thai Numerals.
         /// <para>When the item is serialized out as xml, its value is "thaiNumbers".</para>
         /// </summary>
-        [EnumString("thaiNumbers")]
-        ThaiNumbers,
+        public static NumberFormatValues ThaiNumbers => new("thaiNumbers");
         /// <summary>
         /// Thai Counting System.
         /// <para>When the item is serialized out as xml, its value is "thaiCounting".</para>
         /// </summary>
-        [EnumString("thaiCounting")]
-        ThaiCounting,
+        public static NumberFormatValues ThaiCounting => new("thaiCounting");
         /// <summary>
         /// bahtText.
         /// <para>When the item is serialized out as xml, its value is "bahtText".</para>
         /// <para>This item is only available in Office 2010 and later.</para>
         /// </summary>
-        [EnumString("bahtText")]
-        [OfficeAvailability(FileFormatVersions.Office2007)]
-        BahtText,
+        public static NumberFormatValues BahtText => new("bahtText");
         /// <summary>
         /// dollarText.
         /// <para>When the item is serialized out as xml, its value is "dollarText".</para>
         /// <para>This item is only available in Office 2010 and later.</para>
         /// </summary>
-        [EnumString("dollarText")]
-        [OfficeAvailability(FileFormatVersions.Office2007)]
-        DollarText,
+        public static NumberFormatValues DollarText => new("dollarText");
         /// <summary>
         /// custom.
         /// <para>When the item is serialized out as xml, its value is "custom".</para>
         /// <para>This item is only available in Office 2010 and later.</para>
         /// </summary>
-        [EnumString("custom")]
-        [OfficeAvailability(FileFormatVersions.Office2007)]
-        Custom
+        public static NumberFormatValues Custom => new("custom");
+    
     }
 
     /// <summary>
     /// Defines the TextDirectionValues enumeration.
     /// </summary>
-    public enum TextDirectionValues
+    public readonly record struct TextDirectionValues : IEnumValue, IEnumValueFactory<TextDirectionValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new TextDirectionValues enum instance
+        /// </summary>
+        public TextDirectionValues(string value) => _value = value;
+        TextDirectionValues IEnumValueFactory<TextDirectionValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "lrTb" => true,
+            "tb" => true,
+            "tbRl" => true,
+            "rl" => true,
+            "btLr" => true,
+            "lr" => true,
+            "lrTbV" => true,
+            "tbV" => true,
+            "tbRlV" => true,
+            "rlV" => true,
+            "tbLrV" => true,
+            "lrV" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "lrTb";
+        FileFormatVersions IEnumValue.Version => InternalValue switch
+        {
+            "tb" => FileFormatVersions.Office2010,
+            "rl" => FileFormatVersions.Office2010,
+            "lr" => FileFormatVersions.Office2010,
+            "tbV" => FileFormatVersions.Office2010,
+            "rlV" => FileFormatVersions.Office2010,
+            "lrV" => FileFormatVersions.Office2010,
+            _ => FileFormatVersions.Office2007,
+        };
         /// <summary>
         /// Left to Right, Top to Bottom.
         /// <para>When the item is serialized out as xml, its value is "lrTb".</para>
         /// </summary>
-        [EnumString("lrTb")]
-        LefToRightTopToBottom,
+        public static TextDirectionValues LefToRightTopToBottom => new("lrTb");
         /// <summary>
         /// tb.
         /// <para>When the item is serialized out as xml, its value is "tb".</para>
         /// <para>This item is only available in Office 2010 and later.</para>
         /// </summary>
-        [EnumString("tb")]
-        [OfficeAvailability(FileFormatVersions.Office2007)]
-        LeftToRightTopToBottom2010,
+        public static TextDirectionValues LeftToRightTopToBottom2010 => new("tb");
         /// <summary>
         /// Top to Bottom, Right to Left.
         /// <para>When the item is serialized out as xml, its value is "tbRl".</para>
         /// </summary>
-        [EnumString("tbRl")]
-        TopToBottomRightToLeft,
+        public static TextDirectionValues TopToBottomRightToLeft => new("tbRl");
         /// <summary>
         /// rl.
         /// <para>When the item is serialized out as xml, its value is "rl".</para>
         /// <para>This item is only available in Office 2010 and later.</para>
         /// </summary>
-        [EnumString("rl")]
-        [OfficeAvailability(FileFormatVersions.Office2007)]
-        TopToBottomRightToLeft2010,
+        public static TextDirectionValues TopToBottomRightToLeft2010 => new("rl");
         /// <summary>
         /// Bottom to Top, Left to Right.
         /// <para>When the item is serialized out as xml, its value is "btLr".</para>
         /// </summary>
-        [EnumString("btLr")]
-        BottomToTopLeftToRight,
+        public static TextDirectionValues BottomToTopLeftToRight => new("btLr");
         /// <summary>
         /// lr.
         /// <para>When the item is serialized out as xml, its value is "lr".</para>
         /// <para>This item is only available in Office 2010 and later.</para>
         /// </summary>
-        [EnumString("lr")]
-        [OfficeAvailability(FileFormatVersions.Office2007)]
-        BottomToTopLeftToRight2010,
+        public static TextDirectionValues BottomToTopLeftToRight2010 => new("lr");
         /// <summary>
         /// Left to Right, Top to Bottom Rotated.
         /// <para>When the item is serialized out as xml, its value is "lrTbV".</para>
         /// </summary>
-        [EnumString("lrTbV")]
-        LefttoRightTopToBottomRotated,
+        public static TextDirectionValues LefttoRightTopToBottomRotated => new("lrTbV");
         /// <summary>
         /// tbV.
         /// <para>When the item is serialized out as xml, its value is "tbV".</para>
         /// <para>This item is only available in Office 2010 and later.</para>
         /// </summary>
-        [EnumString("tbV")]
-        [OfficeAvailability(FileFormatVersions.Office2007)]
-        LeftToRightTopToBottomRotated2010,
+        public static TextDirectionValues LeftToRightTopToBottomRotated2010 => new("tbV");
         /// <summary>
         /// Top to Bottom, Right to Left Rotated.
         /// <para>When the item is serialized out as xml, its value is "tbRlV".</para>
         /// </summary>
-        [EnumString("tbRlV")]
-        TopToBottomRightToLeftRotated,
+        public static TextDirectionValues TopToBottomRightToLeftRotated => new("tbRlV");
         /// <summary>
         /// rlV.
         /// <para>When the item is serialized out as xml, its value is "rlV".</para>
         /// <para>This item is only available in Office 2010 and later.</para>
         /// </summary>
-        [EnumString("rlV")]
-        [OfficeAvailability(FileFormatVersions.Office2007)]
-        TopToBottomRightToLeftRotated2010,
+        public static TextDirectionValues TopToBottomRightToLeftRotated2010 => new("rlV");
         /// <summary>
         /// Top to Bottom, Left to Right Rotated.
         /// <para>When the item is serialized out as xml, its value is "tbLrV".</para>
         /// </summary>
-        [EnumString("tbLrV")]
-        TopToBottomLeftToRightRotated,
+        public static TextDirectionValues TopToBottomLeftToRightRotated => new("tbLrV");
         /// <summary>
         /// lrV.
         /// <para>When the item is serialized out as xml, its value is "lrV".</para>
         /// <para>This item is only available in Office 2010 and later.</para>
         /// </summary>
-        [EnumString("lrV")]
-        [OfficeAvailability(FileFormatVersions.Office2007)]
-        TopToBottomLeftToRightRotated2010
+        public static TextDirectionValues TopToBottomLeftToRightRotated2010 => new("lrV");
+    
     }
 
     /// <summary>
     /// Defines the CryptAlgorithmValues enumeration.
     /// </summary>
-    public enum CryptAlgorithmValues
+    public readonly record struct CryptAlgorithmValues : IEnumValue, IEnumValueFactory<CryptAlgorithmValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new CryptAlgorithmValues enum instance
+        /// </summary>
+        public CryptAlgorithmValues(string value) => _value = value;
+        CryptAlgorithmValues IEnumValueFactory<CryptAlgorithmValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "typeAny" => true,
+            "custom" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "typeAny";
+        FileFormatVersions IEnumValue.Version => InternalValue switch
+        {
+            "custom" => FileFormatVersions.Office2010,
+            _ => FileFormatVersions.Office2007,
+        };
         /// <summary>
         /// Any Type.
         /// <para>When the item is serialized out as xml, its value is "typeAny".</para>
         /// </summary>
-        [EnumString("typeAny")]
-        TypeAny,
+        public static CryptAlgorithmValues TypeAny => new("typeAny");
         /// <summary>
         /// custom.
         /// <para>When the item is serialized out as xml, its value is "custom".</para>
         /// <para>This item is only available in Office 2010 and later.</para>
         /// </summary>
-        [EnumString("custom")]
-        [OfficeAvailability(FileFormatVersions.Office2007)]
-        Custom
+        public static CryptAlgorithmValues Custom => new("custom");
+    
     }
 
     /// <summary>
     /// Defines the CryptAlgorithmClassValues enumeration.
     /// </summary>
-    public enum CryptAlgorithmClassValues
+    public readonly record struct CryptAlgorithmClassValues : IEnumValue, IEnumValueFactory<CryptAlgorithmClassValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new CryptAlgorithmClassValues enum instance
+        /// </summary>
+        public CryptAlgorithmClassValues(string value) => _value = value;
+        CryptAlgorithmClassValues IEnumValueFactory<CryptAlgorithmClassValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "hash" => true,
+            "custom" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "hash";
+        FileFormatVersions IEnumValue.Version => InternalValue switch
+        {
+            "custom" => FileFormatVersions.Office2010,
+            _ => FileFormatVersions.Office2007,
+        };
         /// <summary>
         /// Hashing.
         /// <para>When the item is serialized out as xml, its value is "hash".</para>
         /// </summary>
-        [EnumString("hash")]
-        Hash,
+        public static CryptAlgorithmClassValues Hash => new("hash");
         /// <summary>
         /// custom.
         /// <para>When the item is serialized out as xml, its value is "custom".</para>
         /// <para>This item is only available in Office 2010 and later.</para>
         /// </summary>
-        [EnumString("custom")]
-        [OfficeAvailability(FileFormatVersions.Office2007)]
-        Custom
+        public static CryptAlgorithmClassValues Custom => new("custom");
+    
     }
 
     /// <summary>
     /// Defines the CryptProviderValues enumeration.
     /// </summary>
-    public enum CryptProviderValues
+    public readonly record struct CryptProviderValues : IEnumValue, IEnumValueFactory<CryptProviderValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new CryptProviderValues enum instance
+        /// </summary>
+        public CryptProviderValues(string value) => _value = value;
+        CryptProviderValues IEnumValueFactory<CryptProviderValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "rsaAES" => true,
+            "rsaFull" => true,
+            "custom" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "rsaAES";
+        FileFormatVersions IEnumValue.Version => InternalValue switch
+        {
+            "custom" => FileFormatVersions.Office2010,
+            _ => FileFormatVersions.Office2007,
+        };
         /// <summary>
         /// AES Provider.
         /// <para>When the item is serialized out as xml, its value is "rsaAES".</para>
         /// </summary>
-        [EnumString("rsaAES")]
-        RsaAdvancedEncryptionStandard,
+        public static CryptProviderValues RsaAdvancedEncryptionStandard => new("rsaAES");
         /// <summary>
         /// Any Provider.
         /// <para>When the item is serialized out as xml, its value is "rsaFull".</para>
         /// </summary>
-        [EnumString("rsaFull")]
-        RsaFull,
+        public static CryptProviderValues RsaFull => new("rsaFull");
         /// <summary>
         /// custom.
         /// <para>When the item is serialized out as xml, its value is "custom".</para>
         /// <para>This item is only available in Office 2010 and later.</para>
         /// </summary>
-        [EnumString("custom")]
-        [OfficeAvailability(FileFormatVersions.Office2007)]
-        Custom
+        public static CryptProviderValues Custom => new("custom");
+    
     }
 
     /// <summary>
     /// Defines the JustificationValues enumeration.
     /// </summary>
-    public enum JustificationValues
+    public readonly record struct JustificationValues : IEnumValue, IEnumValueFactory<JustificationValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new JustificationValues enum instance
+        /// </summary>
+        public JustificationValues(string value) => _value = value;
+        JustificationValues IEnumValueFactory<JustificationValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "left" => true,
+            "start" => true,
+            "center" => true,
+            "right" => true,
+            "end" => true,
+            "both" => true,
+            "mediumKashida" => true,
+            "distribute" => true,
+            "numTab" => true,
+            "highKashida" => true,
+            "lowKashida" => true,
+            "thaiDistribute" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "left";
+        FileFormatVersions IEnumValue.Version => InternalValue switch
+        {
+            "start" => FileFormatVersions.Office2010,
+            "end" => FileFormatVersions.Office2010,
+            _ => FileFormatVersions.Office2007,
+        };
         /// <summary>
         /// Align Left.
         /// <para>When the item is serialized out as xml, its value is "left".</para>
         /// </summary>
-        [EnumString("left")]
-        Left,
+        public static JustificationValues Left => new("left");
         /// <summary>
         /// start.
         /// <para>When the item is serialized out as xml, its value is "start".</para>
         /// <para>This item is only available in Office 2010 and later.</para>
         /// </summary>
-        [EnumString("start")]
-        [OfficeAvailability(FileFormatVersions.Office2007)]
-        Start,
+        public static JustificationValues Start => new("start");
         /// <summary>
         /// Align Center.
         /// <para>When the item is serialized out as xml, its value is "center".</para>
         /// </summary>
-        [EnumString("center")]
-        Center,
+        public static JustificationValues Center => new("center");
         /// <summary>
         /// Align Right.
         /// <para>When the item is serialized out as xml, its value is "right".</para>
         /// </summary>
-        [EnumString("right")]
-        Right,
+        public static JustificationValues Right => new("right");
         /// <summary>
         /// end.
         /// <para>When the item is serialized out as xml, its value is "end".</para>
         /// <para>This item is only available in Office 2010 and later.</para>
         /// </summary>
-        [EnumString("end")]
-        [OfficeAvailability(FileFormatVersions.Office2007)]
-        End,
+        public static JustificationValues End => new("end");
         /// <summary>
         /// Justified.
         /// <para>When the item is serialized out as xml, its value is "both".</para>
         /// </summary>
-        [EnumString("both")]
-        Both,
+        public static JustificationValues Both => new("both");
         /// <summary>
         /// Medium Kashida Length.
         /// <para>When the item is serialized out as xml, its value is "mediumKashida".</para>
         /// </summary>
-        [EnumString("mediumKashida")]
-        MediumKashida,
+        public static JustificationValues MediumKashida => new("mediumKashida");
         /// <summary>
         /// Distribute All Characters Equally.
         /// <para>When the item is serialized out as xml, its value is "distribute".</para>
         /// </summary>
-        [EnumString("distribute")]
-        Distribute,
+        public static JustificationValues Distribute => new("distribute");
         /// <summary>
         /// Align to List Tab.
         /// <para>When the item is serialized out as xml, its value is "numTab".</para>
         /// </summary>
-        [EnumString("numTab")]
-        NumTab,
+        public static JustificationValues NumTab => new("numTab");
         /// <summary>
         /// Widest Kashida Length.
         /// <para>When the item is serialized out as xml, its value is "highKashida".</para>
         /// </summary>
-        [EnumString("highKashida")]
-        HighKashida,
+        public static JustificationValues HighKashida => new("highKashida");
         /// <summary>
         /// Low Kashida Length.
         /// <para>When the item is serialized out as xml, its value is "lowKashida".</para>
         /// </summary>
-        [EnumString("lowKashida")]
-        LowKashida,
+        public static JustificationValues LowKashida => new("lowKashida");
         /// <summary>
         /// Thai Language Justification.
         /// <para>When the item is serialized out as xml, its value is "thaiDistribute".</para>
         /// </summary>
-        [EnumString("thaiDistribute")]
-        ThaiDistribute
+        public static JustificationValues ThaiDistribute => new("thaiDistribute");
+    
     }
 
     /// <summary>
     /// Defines the TabStopValues enumeration.
     /// </summary>
-    public enum TabStopValues
+    public readonly record struct TabStopValues : IEnumValue, IEnumValueFactory<TabStopValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new TabStopValues enum instance
+        /// </summary>
+        public TabStopValues(string value) => _value = value;
+        TabStopValues IEnumValueFactory<TabStopValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "clear" => true,
+            "left" => true,
+            "start" => true,
+            "center" => true,
+            "right" => true,
+            "end" => true,
+            "decimal" => true,
+            "bar" => true,
+            "num" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "clear";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// No Tab Stop.
         /// <para>When the item is serialized out as xml, its value is "clear".</para>
         /// </summary>
-        [EnumString("clear")]
-        Clear,
+        public static TabStopValues Clear => new("clear");
         /// <summary>
         /// Left Tab.
         /// <para>When the item is serialized out as xml, its value is "left".</para>
         /// </summary>
-        [EnumString("left")]
-        Left,
+        public static TabStopValues Left => new("left");
         /// <summary>
         /// start.
         /// <para>When the item is serialized out as xml, its value is "start".</para>
         /// </summary>
-        [EnumString("start")]
-        Start,
+        public static TabStopValues Start => new("start");
         /// <summary>
         /// Centered Tab.
         /// <para>When the item is serialized out as xml, its value is "center".</para>
         /// </summary>
-        [EnumString("center")]
-        Center,
+        public static TabStopValues Center => new("center");
         /// <summary>
         /// Right Tab.
         /// <para>When the item is serialized out as xml, its value is "right".</para>
         /// </summary>
-        [EnumString("right")]
-        Right,
+        public static TabStopValues Right => new("right");
         /// <summary>
         /// end.
         /// <para>When the item is serialized out as xml, its value is "end".</para>
         /// </summary>
-        [EnumString("end")]
-        End,
+        public static TabStopValues End => new("end");
         /// <summary>
         /// Decimal Tab.
         /// <para>When the item is serialized out as xml, its value is "decimal".</para>
         /// </summary>
-        [EnumString("decimal")]
-        Decimal,
+        public static TabStopValues Decimal => new("decimal");
         /// <summary>
         /// Bar Tab.
         /// <para>When the item is serialized out as xml, its value is "bar".</para>
         /// </summary>
-        [EnumString("bar")]
-        Bar,
+        public static TabStopValues Bar => new("bar");
         /// <summary>
         /// List Tab.
         /// <para>When the item is serialized out as xml, its value is "num".</para>
         /// </summary>
-        [EnumString("num")]
-        Number
+        public static TabStopValues Number => new("num");
+    
     }
 
     /// <summary>
     /// Defines the BorderValues enumeration.
     /// </summary>
-    public enum BorderValues
+    public readonly record struct BorderValues : IEnumValue, IEnumValueFactory<BorderValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new BorderValues enum instance
+        /// </summary>
+        public BorderValues(string value) => _value = value;
+        BorderValues IEnumValueFactory<BorderValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "nil" => true,
+            "none" => true,
+            "single" => true,
+            "thick" => true,
+            "double" => true,
+            "dotted" => true,
+            "dashed" => true,
+            "dotDash" => true,
+            "dotDotDash" => true,
+            "triple" => true,
+            "thinThickSmallGap" => true,
+            "thickThinSmallGap" => true,
+            "thinThickThinSmallGap" => true,
+            "thinThickMediumGap" => true,
+            "thickThinMediumGap" => true,
+            "thinThickThinMediumGap" => true,
+            "thinThickLargeGap" => true,
+            "thickThinLargeGap" => true,
+            "thinThickThinLargeGap" => true,
+            "wave" => true,
+            "doubleWave" => true,
+            "dashSmallGap" => true,
+            "dashDotStroked" => true,
+            "threeDEmboss" => true,
+            "threeDEngrave" => true,
+            "outset" => true,
+            "inset" => true,
+            "apples" => true,
+            "archedScallops" => true,
+            "babyPacifier" => true,
+            "babyRattle" => true,
+            "balloons3Colors" => true,
+            "balloonsHotAir" => true,
+            "basicBlackDashes" => true,
+            "basicBlackDots" => true,
+            "basicBlackSquares" => true,
+            "basicThinLines" => true,
+            "basicWhiteDashes" => true,
+            "basicWhiteDots" => true,
+            "basicWhiteSquares" => true,
+            "basicWideInline" => true,
+            "basicWideMidline" => true,
+            "basicWideOutline" => true,
+            "bats" => true,
+            "birds" => true,
+            "birdsFlight" => true,
+            "cabins" => true,
+            "cakeSlice" => true,
+            "candyCorn" => true,
+            "celticKnotwork" => true,
+            "certificateBanner" => true,
+            "chainLink" => true,
+            "champagneBottle" => true,
+            "checkedBarBlack" => true,
+            "checkedBarColor" => true,
+            "checkered" => true,
+            "christmasTree" => true,
+            "circlesLines" => true,
+            "circlesRectangles" => true,
+            "classicalWave" => true,
+            "clocks" => true,
+            "compass" => true,
+            "confetti" => true,
+            "confettiGrays" => true,
+            "confettiOutline" => true,
+            "confettiStreamers" => true,
+            "confettiWhite" => true,
+            "cornerTriangles" => true,
+            "couponCutoutDashes" => true,
+            "couponCutoutDots" => true,
+            "crazyMaze" => true,
+            "creaturesButterfly" => true,
+            "creaturesFish" => true,
+            "creaturesInsects" => true,
+            "creaturesLadyBug" => true,
+            "crossStitch" => true,
+            "cup" => true,
+            "decoArch" => true,
+            "decoArchColor" => true,
+            "decoBlocks" => true,
+            "diamondsGray" => true,
+            "doubleD" => true,
+            "doubleDiamonds" => true,
+            "earth1" => true,
+            "earth2" => true,
+            "eclipsingSquares1" => true,
+            "eclipsingSquares2" => true,
+            "eggsBlack" => true,
+            "fans" => true,
+            "film" => true,
+            "firecrackers" => true,
+            "flowersBlockPrint" => true,
+            "flowersDaisies" => true,
+            "flowersModern1" => true,
+            "flowersModern2" => true,
+            "flowersPansy" => true,
+            "flowersRedRose" => true,
+            "flowersRoses" => true,
+            "flowersTeacup" => true,
+            "flowersTiny" => true,
+            "gems" => true,
+            "gingerbreadMan" => true,
+            "gradient" => true,
+            "handmade1" => true,
+            "handmade2" => true,
+            "heartBalloon" => true,
+            "heartGray" => true,
+            "hearts" => true,
+            "heebieJeebies" => true,
+            "holly" => true,
+            "houseFunky" => true,
+            "hypnotic" => true,
+            "iceCreamCones" => true,
+            "lightBulb" => true,
+            "lightning1" => true,
+            "lightning2" => true,
+            "mapPins" => true,
+            "mapleLeaf" => true,
+            "mapleMuffins" => true,
+            "marquee" => true,
+            "marqueeToothed" => true,
+            "moons" => true,
+            "mosaic" => true,
+            "musicNotes" => true,
+            "northwest" => true,
+            "ovals" => true,
+            "packages" => true,
+            "palmsBlack" => true,
+            "palmsColor" => true,
+            "paperClips" => true,
+            "papyrus" => true,
+            "partyFavor" => true,
+            "partyGlass" => true,
+            "pencils" => true,
+            "people" => true,
+            "peopleWaving" => true,
+            "peopleHats" => true,
+            "poinsettias" => true,
+            "postageStamp" => true,
+            "pumpkin1" => true,
+            "pushPinNote2" => true,
+            "pushPinNote1" => true,
+            "pyramids" => true,
+            "pyramidsAbove" => true,
+            "quadrants" => true,
+            "rings" => true,
+            "safari" => true,
+            "sawtooth" => true,
+            "sawtoothGray" => true,
+            "scaredCat" => true,
+            "seattle" => true,
+            "shadowedSquares" => true,
+            "sharksTeeth" => true,
+            "shorebirdTracks" => true,
+            "skyrocket" => true,
+            "snowflakeFancy" => true,
+            "snowflakes" => true,
+            "sombrero" => true,
+            "southwest" => true,
+            "stars" => true,
+            "starsTop" => true,
+            "stars3d" => true,
+            "starsBlack" => true,
+            "starsShadowed" => true,
+            "sun" => true,
+            "swirligig" => true,
+            "tornPaper" => true,
+            "tornPaperBlack" => true,
+            "trees" => true,
+            "triangleParty" => true,
+            "triangles" => true,
+            "tribal1" => true,
+            "tribal2" => true,
+            "tribal3" => true,
+            "tribal4" => true,
+            "tribal5" => true,
+            "tribal6" => true,
+            "triangle1" => true,
+            "triangle2" => true,
+            "triangleCircle1" => true,
+            "triangleCircle2" => true,
+            "shapes1" => true,
+            "shapes2" => true,
+            "twistedLines1" => true,
+            "twistedLines2" => true,
+            "vine" => true,
+            "waveline" => true,
+            "weavingAngles" => true,
+            "weavingBraid" => true,
+            "weavingRibbon" => true,
+            "weavingStrips" => true,
+            "whiteFlowers" => true,
+            "woodwork" => true,
+            "xIllusions" => true,
+            "zanyTriangles" => true,
+            "zigZag" => true,
+            "zigZagStitch" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "nil";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// No Border.
         /// <para>When the item is serialized out as xml, its value is "nil".</para>
         /// </summary>
-        [EnumString("nil")]
-        Nil,
+        public static BorderValues Nil => new("nil");
         /// <summary>
         /// No Border.
         /// <para>When the item is serialized out as xml, its value is "none".</para>
         /// </summary>
-        [EnumString("none")]
-        None,
+        public static BorderValues None => new("none");
         /// <summary>
         /// Single Line Border.
         /// <para>When the item is serialized out as xml, its value is "single".</para>
         /// </summary>
-        [EnumString("single")]
-        Single,
+        public static BorderValues Single => new("single");
         /// <summary>
         /// Single Line Border.
         /// <para>When the item is serialized out as xml, its value is "thick".</para>
         /// </summary>
-        [EnumString("thick")]
-        Thick,
+        public static BorderValues Thick => new("thick");
         /// <summary>
         /// Double Line Border.
         /// <para>When the item is serialized out as xml, its value is "double".</para>
         /// </summary>
-        [EnumString("double")]
-        Double,
+        public static BorderValues Double => new("double");
         /// <summary>
         /// Dotted Line Border.
         /// <para>When the item is serialized out as xml, its value is "dotted".</para>
         /// </summary>
-        [EnumString("dotted")]
-        Dotted,
+        public static BorderValues Dotted => new("dotted");
         /// <summary>
         /// Dashed Line Border.
         /// <para>When the item is serialized out as xml, its value is "dashed".</para>
         /// </summary>
-        [EnumString("dashed")]
-        Dashed,
+        public static BorderValues Dashed => new("dashed");
         /// <summary>
         /// Dot Dash Line Border.
         /// <para>When the item is serialized out as xml, its value is "dotDash".</para>
         /// </summary>
-        [EnumString("dotDash")]
-        DotDash,
+        public static BorderValues DotDash => new("dotDash");
         /// <summary>
         /// Dot Dot Dash Line Border.
         /// <para>When the item is serialized out as xml, its value is "dotDotDash".</para>
         /// </summary>
-        [EnumString("dotDotDash")]
-        DotDotDash,
+        public static BorderValues DotDotDash => new("dotDotDash");
         /// <summary>
         /// Triple Line Border.
         /// <para>When the item is serialized out as xml, its value is "triple".</para>
         /// </summary>
-        [EnumString("triple")]
-        Triple,
+        public static BorderValues Triple => new("triple");
         /// <summary>
         /// Thin, Thick Line Border.
         /// <para>When the item is serialized out as xml, its value is "thinThickSmallGap".</para>
         /// </summary>
-        [EnumString("thinThickSmallGap")]
-        ThinThickSmallGap,
+        public static BorderValues ThinThickSmallGap => new("thinThickSmallGap");
         /// <summary>
         /// Thick, Thin Line Border.
         /// <para>When the item is serialized out as xml, its value is "thickThinSmallGap".</para>
         /// </summary>
-        [EnumString("thickThinSmallGap")]
-        ThickThinSmallGap,
+        public static BorderValues ThickThinSmallGap => new("thickThinSmallGap");
         /// <summary>
         /// Thin, Thick, Thin Line Border.
         /// <para>When the item is serialized out as xml, its value is "thinThickThinSmallGap".</para>
         /// </summary>
-        [EnumString("thinThickThinSmallGap")]
-        ThinThickThinSmallGap,
+        public static BorderValues ThinThickThinSmallGap => new("thinThickThinSmallGap");
         /// <summary>
         /// Thin, Thick Line Border.
         /// <para>When the item is serialized out as xml, its value is "thinThickMediumGap".</para>
         /// </summary>
-        [EnumString("thinThickMediumGap")]
-        ThinThickMediumGap,
+        public static BorderValues ThinThickMediumGap => new("thinThickMediumGap");
         /// <summary>
         /// Thick, Thin Line Border.
         /// <para>When the item is serialized out as xml, its value is "thickThinMediumGap".</para>
         /// </summary>
-        [EnumString("thickThinMediumGap")]
-        ThickThinMediumGap,
+        public static BorderValues ThickThinMediumGap => new("thickThinMediumGap");
         /// <summary>
         /// Thin, Thick, Thin Line Border.
         /// <para>When the item is serialized out as xml, its value is "thinThickThinMediumGap".</para>
         /// </summary>
-        [EnumString("thinThickThinMediumGap")]
-        ThinThickThinMediumGap,
+        public static BorderValues ThinThickThinMediumGap => new("thinThickThinMediumGap");
         /// <summary>
         /// Thin, Thick Line Border.
         /// <para>When the item is serialized out as xml, its value is "thinThickLargeGap".</para>
         /// </summary>
-        [EnumString("thinThickLargeGap")]
-        ThinThickLargeGap,
+        public static BorderValues ThinThickLargeGap => new("thinThickLargeGap");
         /// <summary>
         /// Thick, Thin Line Border.
         /// <para>When the item is serialized out as xml, its value is "thickThinLargeGap".</para>
         /// </summary>
-        [EnumString("thickThinLargeGap")]
-        ThickThinLargeGap,
+        public static BorderValues ThickThinLargeGap => new("thickThinLargeGap");
         /// <summary>
         /// Thin, Thick, Thin Line Border.
         /// <para>When the item is serialized out as xml, its value is "thinThickThinLargeGap".</para>
         /// </summary>
-        [EnumString("thinThickThinLargeGap")]
-        ThinThickThinLargeGap,
+        public static BorderValues ThinThickThinLargeGap => new("thinThickThinLargeGap");
         /// <summary>
         /// Wavy Line Border.
         /// <para>When the item is serialized out as xml, its value is "wave".</para>
         /// </summary>
-        [EnumString("wave")]
-        Wave,
+        public static BorderValues Wave => new("wave");
         /// <summary>
         /// Double Wave Line Border.
         /// <para>When the item is serialized out as xml, its value is "doubleWave".</para>
         /// </summary>
-        [EnumString("doubleWave")]
-        DoubleWave,
+        public static BorderValues DoubleWave => new("doubleWave");
         /// <summary>
         /// Dashed Line Border.
         /// <para>When the item is serialized out as xml, its value is "dashSmallGap".</para>
         /// </summary>
-        [EnumString("dashSmallGap")]
-        DashSmallGap,
+        public static BorderValues DashSmallGap => new("dashSmallGap");
         /// <summary>
         /// Dash Dot Strokes Line Border.
         /// <para>When the item is serialized out as xml, its value is "dashDotStroked".</para>
         /// </summary>
-        [EnumString("dashDotStroked")]
-        DashDotStroked,
+        public static BorderValues DashDotStroked => new("dashDotStroked");
         /// <summary>
         /// 3D Embossed Line Border.
         /// <para>When the item is serialized out as xml, its value is "threeDEmboss".</para>
         /// </summary>
-        [EnumString("threeDEmboss")]
-        ThreeDEmboss,
+        public static BorderValues ThreeDEmboss => new("threeDEmboss");
         /// <summary>
         /// 3D Engraved Line Border.
         /// <para>When the item is serialized out as xml, its value is "threeDEngrave".</para>
         /// </summary>
-        [EnumString("threeDEngrave")]
-        ThreeDEngrave,
+        public static BorderValues ThreeDEngrave => new("threeDEngrave");
         /// <summary>
         /// Outset Line Border.
         /// <para>When the item is serialized out as xml, its value is "outset".</para>
         /// </summary>
-        [EnumString("outset")]
-        Outset,
+        public static BorderValues Outset => new("outset");
         /// <summary>
         /// Inset Line Border.
         /// <para>When the item is serialized out as xml, its value is "inset".</para>
         /// </summary>
-        [EnumString("inset")]
-        Inset,
+        public static BorderValues Inset => new("inset");
         /// <summary>
         /// Apples Art Border.
         /// <para>When the item is serialized out as xml, its value is "apples".</para>
         /// </summary>
-        [EnumString("apples")]
-        Apples,
+        public static BorderValues Apples => new("apples");
         /// <summary>
         /// Arched Scallops Art Border.
         /// <para>When the item is serialized out as xml, its value is "archedScallops".</para>
         /// </summary>
-        [EnumString("archedScallops")]
-        ArchedScallops,
+        public static BorderValues ArchedScallops => new("archedScallops");
         /// <summary>
         /// Baby Pacifier Art Border.
         /// <para>When the item is serialized out as xml, its value is "babyPacifier".</para>
         /// </summary>
-        [EnumString("babyPacifier")]
-        BabyPacifier,
+        public static BorderValues BabyPacifier => new("babyPacifier");
         /// <summary>
         /// Baby Rattle Art Border.
         /// <para>When the item is serialized out as xml, its value is "babyRattle".</para>
         /// </summary>
-        [EnumString("babyRattle")]
-        BabyRattle,
+        public static BorderValues BabyRattle => new("babyRattle");
         /// <summary>
         /// Three Color Balloons Art Border.
         /// <para>When the item is serialized out as xml, its value is "balloons3Colors".</para>
         /// </summary>
-        [EnumString("balloons3Colors")]
-        Balloons3Colors,
+        public static BorderValues Balloons3Colors => new("balloons3Colors");
         /// <summary>
         /// Hot Air Balloons Art Border.
         /// <para>When the item is serialized out as xml, its value is "balloonsHotAir".</para>
         /// </summary>
-        [EnumString("balloonsHotAir")]
-        BalloonsHotAir,
+        public static BorderValues BalloonsHotAir => new("balloonsHotAir");
         /// <summary>
         /// Black Dash Art Border.
         /// <para>When the item is serialized out as xml, its value is "basicBlackDashes".</para>
         /// </summary>
-        [EnumString("basicBlackDashes")]
-        BasicBlackDashes,
+        public static BorderValues BasicBlackDashes => new("basicBlackDashes");
         /// <summary>
         /// Black Dot Art Border.
         /// <para>When the item is serialized out as xml, its value is "basicBlackDots".</para>
         /// </summary>
-        [EnumString("basicBlackDots")]
-        BasicBlackDots,
+        public static BorderValues BasicBlackDots => new("basicBlackDots");
         /// <summary>
         /// Black Square Art Border.
         /// <para>When the item is serialized out as xml, its value is "basicBlackSquares".</para>
         /// </summary>
-        [EnumString("basicBlackSquares")]
-        BasicBlackSquares,
+        public static BorderValues BasicBlackSquares => new("basicBlackSquares");
         /// <summary>
         /// Thin Line Art Border.
         /// <para>When the item is serialized out as xml, its value is "basicThinLines".</para>
         /// </summary>
-        [EnumString("basicThinLines")]
-        BasicThinLines,
+        public static BorderValues BasicThinLines => new("basicThinLines");
         /// <summary>
         /// White Dash Art Border.
         /// <para>When the item is serialized out as xml, its value is "basicWhiteDashes".</para>
         /// </summary>
-        [EnumString("basicWhiteDashes")]
-        BasicWhiteDashes,
+        public static BorderValues BasicWhiteDashes => new("basicWhiteDashes");
         /// <summary>
         /// White Dot Art Border.
         /// <para>When the item is serialized out as xml, its value is "basicWhiteDots".</para>
         /// </summary>
-        [EnumString("basicWhiteDots")]
-        BasicWhiteDots,
+        public static BorderValues BasicWhiteDots => new("basicWhiteDots");
         /// <summary>
         /// White Square Art Border.
         /// <para>When the item is serialized out as xml, its value is "basicWhiteSquares".</para>
         /// </summary>
-        [EnumString("basicWhiteSquares")]
-        BasicWhiteSquares,
+        public static BorderValues BasicWhiteSquares => new("basicWhiteSquares");
         /// <summary>
         /// Wide Inline Art Border.
         /// <para>When the item is serialized out as xml, its value is "basicWideInline".</para>
         /// </summary>
-        [EnumString("basicWideInline")]
-        BasicWideInline,
+        public static BorderValues BasicWideInline => new("basicWideInline");
         /// <summary>
         /// Wide Midline Art Border.
         /// <para>When the item is serialized out as xml, its value is "basicWideMidline".</para>
         /// </summary>
-        [EnumString("basicWideMidline")]
-        BasicWideMidline,
+        public static BorderValues BasicWideMidline => new("basicWideMidline");
         /// <summary>
         /// Wide Outline Art Border.
         /// <para>When the item is serialized out as xml, its value is "basicWideOutline".</para>
         /// </summary>
-        [EnumString("basicWideOutline")]
-        BasicWideOutline,
+        public static BorderValues BasicWideOutline => new("basicWideOutline");
         /// <summary>
         /// Bats Art Border.
         /// <para>When the item is serialized out as xml, its value is "bats".</para>
         /// </summary>
-        [EnumString("bats")]
-        Bats,
+        public static BorderValues Bats => new("bats");
         /// <summary>
         /// Birds Art Border.
         /// <para>When the item is serialized out as xml, its value is "birds".</para>
         /// </summary>
-        [EnumString("birds")]
-        Birds,
+        public static BorderValues Birds => new("birds");
         /// <summary>
         /// Birds Flying Art Border.
         /// <para>When the item is serialized out as xml, its value is "birdsFlight".</para>
         /// </summary>
-        [EnumString("birdsFlight")]
-        BirdsFlight,
+        public static BorderValues BirdsFlight => new("birdsFlight");
         /// <summary>
         /// Cabin Art Border.
         /// <para>When the item is serialized out as xml, its value is "cabins".</para>
         /// </summary>
-        [EnumString("cabins")]
-        Cabins,
+        public static BorderValues Cabins => new("cabins");
         /// <summary>
         /// Cake Art Border.
         /// <para>When the item is serialized out as xml, its value is "cakeSlice".</para>
         /// </summary>
-        [EnumString("cakeSlice")]
-        CakeSlice,
+        public static BorderValues CakeSlice => new("cakeSlice");
         /// <summary>
         /// Candy Corn Art Border.
         /// <para>When the item is serialized out as xml, its value is "candyCorn".</para>
         /// </summary>
-        [EnumString("candyCorn")]
-        CandyCorn,
+        public static BorderValues CandyCorn => new("candyCorn");
         /// <summary>
         /// Knot Work Art Border.
         /// <para>When the item is serialized out as xml, its value is "celticKnotwork".</para>
         /// </summary>
-        [EnumString("celticKnotwork")]
-        CelticKnotwork,
+        public static BorderValues CelticKnotwork => new("celticKnotwork");
         /// <summary>
         /// Certificate Banner Art Border.
         /// <para>When the item is serialized out as xml, its value is "certificateBanner".</para>
         /// </summary>
-        [EnumString("certificateBanner")]
-        CertificateBanner,
+        public static BorderValues CertificateBanner => new("certificateBanner");
         /// <summary>
         /// Chain Link Art Border.
         /// <para>When the item is serialized out as xml, its value is "chainLink".</para>
         /// </summary>
-        [EnumString("chainLink")]
-        ChainLink,
+        public static BorderValues ChainLink => new("chainLink");
         /// <summary>
         /// Champagne Bottle Art Border.
         /// <para>When the item is serialized out as xml, its value is "champagneBottle".</para>
         /// </summary>
-        [EnumString("champagneBottle")]
-        ChampagneBottle,
+        public static BorderValues ChampagneBottle => new("champagneBottle");
         /// <summary>
         /// Black and White Bar Art Border.
         /// <para>When the item is serialized out as xml, its value is "checkedBarBlack".</para>
         /// </summary>
-        [EnumString("checkedBarBlack")]
-        CheckedBarBlack,
+        public static BorderValues CheckedBarBlack => new("checkedBarBlack");
         /// <summary>
         /// Color Checked Bar Art Border.
         /// <para>When the item is serialized out as xml, its value is "checkedBarColor".</para>
         /// </summary>
-        [EnumString("checkedBarColor")]
-        CheckedBarColor,
+        public static BorderValues CheckedBarColor => new("checkedBarColor");
         /// <summary>
         /// Checkerboard Art Border.
         /// <para>When the item is serialized out as xml, its value is "checkered".</para>
         /// </summary>
-        [EnumString("checkered")]
-        Checkered,
+        public static BorderValues Checkered => new("checkered");
         /// <summary>
         /// Christmas Tree Art Border.
         /// <para>When the item is serialized out as xml, its value is "christmasTree".</para>
         /// </summary>
-        [EnumString("christmasTree")]
-        ChristmasTree,
+        public static BorderValues ChristmasTree => new("christmasTree");
         /// <summary>
         /// Circles And Lines Art Border.
         /// <para>When the item is serialized out as xml, its value is "circlesLines".</para>
         /// </summary>
-        [EnumString("circlesLines")]
-        CirclesLines,
+        public static BorderValues CirclesLines => new("circlesLines");
         /// <summary>
         /// Circles and Rectangles Art Border.
         /// <para>When the item is serialized out as xml, its value is "circlesRectangles".</para>
         /// </summary>
-        [EnumString("circlesRectangles")]
-        CirclesRectangles,
+        public static BorderValues CirclesRectangles => new("circlesRectangles");
         /// <summary>
         /// Wave Art Border.
         /// <para>When the item is serialized out as xml, its value is "classicalWave".</para>
         /// </summary>
-        [EnumString("classicalWave")]
-        ClassicalWave,
+        public static BorderValues ClassicalWave => new("classicalWave");
         /// <summary>
         /// Clocks Art Border.
         /// <para>When the item is serialized out as xml, its value is "clocks".</para>
         /// </summary>
-        [EnumString("clocks")]
-        Clocks,
+        public static BorderValues Clocks => new("clocks");
         /// <summary>
         /// Compass Art Border.
         /// <para>When the item is serialized out as xml, its value is "compass".</para>
         /// </summary>
-        [EnumString("compass")]
-        Compass,
+        public static BorderValues Compass => new("compass");
         /// <summary>
         /// Confetti Art Border.
         /// <para>When the item is serialized out as xml, its value is "confetti".</para>
         /// </summary>
-        [EnumString("confetti")]
-        Confetti,
+        public static BorderValues Confetti => new("confetti");
         /// <summary>
         /// Confetti Art Border.
         /// <para>When the item is serialized out as xml, its value is "confettiGrays".</para>
         /// </summary>
-        [EnumString("confettiGrays")]
-        ConfettiGrays,
+        public static BorderValues ConfettiGrays => new("confettiGrays");
         /// <summary>
         /// Confetti Art Border.
         /// <para>When the item is serialized out as xml, its value is "confettiOutline".</para>
         /// </summary>
-        [EnumString("confettiOutline")]
-        ConfettiOutline,
+        public static BorderValues ConfettiOutline => new("confettiOutline");
         /// <summary>
         /// Confetti Streamers Art Border.
         /// <para>When the item is serialized out as xml, its value is "confettiStreamers".</para>
         /// </summary>
-        [EnumString("confettiStreamers")]
-        ConfettiStreamers,
+        public static BorderValues ConfettiStreamers => new("confettiStreamers");
         /// <summary>
         /// Confetti Art Border.
         /// <para>When the item is serialized out as xml, its value is "confettiWhite".</para>
         /// </summary>
-        [EnumString("confettiWhite")]
-        ConfettiWhite,
+        public static BorderValues ConfettiWhite => new("confettiWhite");
         /// <summary>
         /// Corner Triangle Art Border.
         /// <para>When the item is serialized out as xml, its value is "cornerTriangles".</para>
         /// </summary>
-        [EnumString("cornerTriangles")]
-        CornerTriangles,
+        public static BorderValues CornerTriangles => new("cornerTriangles");
         /// <summary>
         /// Dashed Line Art Border.
         /// <para>When the item is serialized out as xml, its value is "couponCutoutDashes".</para>
         /// </summary>
-        [EnumString("couponCutoutDashes")]
-        CouponCutoutDashes,
+        public static BorderValues CouponCutoutDashes => new("couponCutoutDashes");
         /// <summary>
         /// Dotted Line Art Border.
         /// <para>When the item is serialized out as xml, its value is "couponCutoutDots".</para>
         /// </summary>
-        [EnumString("couponCutoutDots")]
-        CouponCutoutDots,
+        public static BorderValues CouponCutoutDots => new("couponCutoutDots");
         /// <summary>
         /// Maze Art Border.
         /// <para>When the item is serialized out as xml, its value is "crazyMaze".</para>
         /// </summary>
-        [EnumString("crazyMaze")]
-        CrazyMaze,
+        public static BorderValues CrazyMaze => new("crazyMaze");
         /// <summary>
         /// Butterfly Art Border.
         /// <para>When the item is serialized out as xml, its value is "creaturesButterfly".</para>
         /// </summary>
-        [EnumString("creaturesButterfly")]
-        CreaturesButterfly,
+        public static BorderValues CreaturesButterfly => new("creaturesButterfly");
         /// <summary>
         /// Fish Art Border.
         /// <para>When the item is serialized out as xml, its value is "creaturesFish".</para>
         /// </summary>
-        [EnumString("creaturesFish")]
-        CreaturesFish,
+        public static BorderValues CreaturesFish => new("creaturesFish");
         /// <summary>
         /// Insects Art Border.
         /// <para>When the item is serialized out as xml, its value is "creaturesInsects".</para>
         /// </summary>
-        [EnumString("creaturesInsects")]
-        CreaturesInsects,
+        public static BorderValues CreaturesInsects => new("creaturesInsects");
         /// <summary>
         /// Ladybug Art Border.
         /// <para>When the item is serialized out as xml, its value is "creaturesLadyBug".</para>
         /// </summary>
-        [EnumString("creaturesLadyBug")]
-        CreaturesLadyBug,
+        public static BorderValues CreaturesLadyBug => new("creaturesLadyBug");
         /// <summary>
         /// Cross-stitch Art Border.
         /// <para>When the item is serialized out as xml, its value is "crossStitch".</para>
         /// </summary>
-        [EnumString("crossStitch")]
-        CrossStitch,
+        public static BorderValues CrossStitch => new("crossStitch");
         /// <summary>
         /// Cupid Art Border.
         /// <para>When the item is serialized out as xml, its value is "cup".</para>
         /// </summary>
-        [EnumString("cup")]
-        Cup,
+        public static BorderValues Cup => new("cup");
         /// <summary>
         /// Archway Art Border.
         /// <para>When the item is serialized out as xml, its value is "decoArch".</para>
         /// </summary>
-        [EnumString("decoArch")]
-        DecoArch,
+        public static BorderValues DecoArch => new("decoArch");
         /// <summary>
         /// Color Archway Art Border.
         /// <para>When the item is serialized out as xml, its value is "decoArchColor".</para>
         /// </summary>
-        [EnumString("decoArchColor")]
-        DecoArchColor,
+        public static BorderValues DecoArchColor => new("decoArchColor");
         /// <summary>
         /// Blocks Art Border.
         /// <para>When the item is serialized out as xml, its value is "decoBlocks".</para>
         /// </summary>
-        [EnumString("decoBlocks")]
-        DecoBlocks,
+        public static BorderValues DecoBlocks => new("decoBlocks");
         /// <summary>
         /// Gray Diamond Art Border.
         /// <para>When the item is serialized out as xml, its value is "diamondsGray".</para>
         /// </summary>
-        [EnumString("diamondsGray")]
-        DiamondsGray,
+        public static BorderValues DiamondsGray => new("diamondsGray");
         /// <summary>
         /// Double D Art Border.
         /// <para>When the item is serialized out as xml, its value is "doubleD".</para>
         /// </summary>
-        [EnumString("doubleD")]
-        DoubleD,
+        public static BorderValues DoubleD => new("doubleD");
         /// <summary>
         /// Diamond Art Border.
         /// <para>When the item is serialized out as xml, its value is "doubleDiamonds".</para>
         /// </summary>
-        [EnumString("doubleDiamonds")]
-        DoubleDiamonds,
+        public static BorderValues DoubleDiamonds => new("doubleDiamonds");
         /// <summary>
         /// Earth Art Border.
         /// <para>When the item is serialized out as xml, its value is "earth1".</para>
         /// </summary>
-        [EnumString("earth1")]
-        Earth1,
+        public static BorderValues Earth1 => new("earth1");
         /// <summary>
         /// Earth Art Border.
         /// <para>When the item is serialized out as xml, its value is "earth2".</para>
         /// </summary>
-        [EnumString("earth2")]
-        Earth2,
+        public static BorderValues Earth2 => new("earth2");
         /// <summary>
         /// Shadowed Square Art Border.
         /// <para>When the item is serialized out as xml, its value is "eclipsingSquares1".</para>
         /// </summary>
-        [EnumString("eclipsingSquares1")]
-        EclipsingSquares1,
+        public static BorderValues EclipsingSquares1 => new("eclipsingSquares1");
         /// <summary>
         /// Shadowed Square Art Border.
         /// <para>When the item is serialized out as xml, its value is "eclipsingSquares2".</para>
         /// </summary>
-        [EnumString("eclipsingSquares2")]
-        EclipsingSquares2,
+        public static BorderValues EclipsingSquares2 => new("eclipsingSquares2");
         /// <summary>
         /// Painted Egg Art Border.
         /// <para>When the item is serialized out as xml, its value is "eggsBlack".</para>
         /// </summary>
-        [EnumString("eggsBlack")]
-        EggsBlack,
+        public static BorderValues EggsBlack => new("eggsBlack");
         /// <summary>
         /// Fans Art Border.
         /// <para>When the item is serialized out as xml, its value is "fans".</para>
         /// </summary>
-        [EnumString("fans")]
-        Fans,
+        public static BorderValues Fans => new("fans");
         /// <summary>
         /// Film Reel Art Border.
         /// <para>When the item is serialized out as xml, its value is "film".</para>
         /// </summary>
-        [EnumString("film")]
-        Film,
+        public static BorderValues Film => new("film");
         /// <summary>
         /// Firecracker Art Border.
         /// <para>When the item is serialized out as xml, its value is "firecrackers".</para>
         /// </summary>
-        [EnumString("firecrackers")]
-        Firecrackers,
+        public static BorderValues Firecrackers => new("firecrackers");
         /// <summary>
         /// Flowers Art Border.
         /// <para>When the item is serialized out as xml, its value is "flowersBlockPrint".</para>
         /// </summary>
-        [EnumString("flowersBlockPrint")]
-        FlowersBlockPrint,
+        public static BorderValues FlowersBlockPrint => new("flowersBlockPrint");
         /// <summary>
         /// Daisy Art Border.
         /// <para>When the item is serialized out as xml, its value is "flowersDaisies".</para>
         /// </summary>
-        [EnumString("flowersDaisies")]
-        FlowersDaisies,
+        public static BorderValues FlowersDaisies => new("flowersDaisies");
         /// <summary>
         /// Flowers Art Border.
         /// <para>When the item is serialized out as xml, its value is "flowersModern1".</para>
         /// </summary>
-        [EnumString("flowersModern1")]
-        FlowersModern1,
+        public static BorderValues FlowersModern1 => new("flowersModern1");
         /// <summary>
         /// Flowers Art Border.
         /// <para>When the item is serialized out as xml, its value is "flowersModern2".</para>
         /// </summary>
-        [EnumString("flowersModern2")]
-        FlowersModern2,
+        public static BorderValues FlowersModern2 => new("flowersModern2");
         /// <summary>
         /// Pansy Art Border.
         /// <para>When the item is serialized out as xml, its value is "flowersPansy".</para>
         /// </summary>
-        [EnumString("flowersPansy")]
-        FlowersPansy,
+        public static BorderValues FlowersPansy => new("flowersPansy");
         /// <summary>
         /// Red Rose Art Border.
         /// <para>When the item is serialized out as xml, its value is "flowersRedRose".</para>
         /// </summary>
-        [EnumString("flowersRedRose")]
-        FlowersRedRose,
+        public static BorderValues FlowersRedRose => new("flowersRedRose");
         /// <summary>
         /// Roses Art Border.
         /// <para>When the item is serialized out as xml, its value is "flowersRoses".</para>
         /// </summary>
-        [EnumString("flowersRoses")]
-        FlowersRoses,
+        public static BorderValues FlowersRoses => new("flowersRoses");
         /// <summary>
         /// Flowers in a Teacup Art Border.
         /// <para>When the item is serialized out as xml, its value is "flowersTeacup".</para>
         /// </summary>
-        [EnumString("flowersTeacup")]
-        FlowersTeacup,
+        public static BorderValues FlowersTeacup => new("flowersTeacup");
         /// <summary>
         /// Small Flower Art Border.
         /// <para>When the item is serialized out as xml, its value is "flowersTiny".</para>
         /// </summary>
-        [EnumString("flowersTiny")]
-        FlowersTiny,
+        public static BorderValues FlowersTiny => new("flowersTiny");
         /// <summary>
         /// Gems Art Border.
         /// <para>When the item is serialized out as xml, its value is "gems".</para>
         /// </summary>
-        [EnumString("gems")]
-        Gems,
+        public static BorderValues Gems => new("gems");
         /// <summary>
         /// Gingerbread Man Art Border.
         /// <para>When the item is serialized out as xml, its value is "gingerbreadMan".</para>
         /// </summary>
-        [EnumString("gingerbreadMan")]
-        GingerbreadMan,
+        public static BorderValues GingerbreadMan => new("gingerbreadMan");
         /// <summary>
         /// Triangle Gradient Art Border.
         /// <para>When the item is serialized out as xml, its value is "gradient".</para>
         /// </summary>
-        [EnumString("gradient")]
-        Gradient,
+        public static BorderValues Gradient => new("gradient");
         /// <summary>
         /// Handmade Art Border.
         /// <para>When the item is serialized out as xml, its value is "handmade1".</para>
         /// </summary>
-        [EnumString("handmade1")]
-        Handmade1,
+        public static BorderValues Handmade1 => new("handmade1");
         /// <summary>
         /// Handmade Art Border.
         /// <para>When the item is serialized out as xml, its value is "handmade2".</para>
         /// </summary>
-        [EnumString("handmade2")]
-        Handmade2,
+        public static BorderValues Handmade2 => new("handmade2");
         /// <summary>
         /// Heart-Shaped Balloon Art Border.
         /// <para>When the item is serialized out as xml, its value is "heartBalloon".</para>
         /// </summary>
-        [EnumString("heartBalloon")]
-        HeartBalloon,
+        public static BorderValues HeartBalloon => new("heartBalloon");
         /// <summary>
         /// Gray Heart Art Border.
         /// <para>When the item is serialized out as xml, its value is "heartGray".</para>
         /// </summary>
-        [EnumString("heartGray")]
-        HeartGray,
+        public static BorderValues HeartGray => new("heartGray");
         /// <summary>
         /// Hearts Art Border.
         /// <para>When the item is serialized out as xml, its value is "hearts".</para>
         /// </summary>
-        [EnumString("hearts")]
-        Hearts,
+        public static BorderValues Hearts => new("hearts");
         /// <summary>
         /// Pattern Art Border.
         /// <para>When the item is serialized out as xml, its value is "heebieJeebies".</para>
         /// </summary>
-        [EnumString("heebieJeebies")]
-        HeebieJeebies,
+        public static BorderValues HeebieJeebies => new("heebieJeebies");
         /// <summary>
         /// Holly Art Border.
         /// <para>When the item is serialized out as xml, its value is "holly".</para>
         /// </summary>
-        [EnumString("holly")]
-        Holly,
+        public static BorderValues Holly => new("holly");
         /// <summary>
         /// House Art Border.
         /// <para>When the item is serialized out as xml, its value is "houseFunky".</para>
         /// </summary>
-        [EnumString("houseFunky")]
-        HouseFunky,
+        public static BorderValues HouseFunky => new("houseFunky");
         /// <summary>
         /// Circular Art Border.
         /// <para>When the item is serialized out as xml, its value is "hypnotic".</para>
         /// </summary>
-        [EnumString("hypnotic")]
-        Hypnotic,
+        public static BorderValues Hypnotic => new("hypnotic");
         /// <summary>
         /// Ice Cream Cone Art Border.
         /// <para>When the item is serialized out as xml, its value is "iceCreamCones".</para>
         /// </summary>
-        [EnumString("iceCreamCones")]
-        IceCreamCones,
+        public static BorderValues IceCreamCones => new("iceCreamCones");
         /// <summary>
         /// Light Bulb Art Border.
         /// <para>When the item is serialized out as xml, its value is "lightBulb".</para>
         /// </summary>
-        [EnumString("lightBulb")]
-        LightBulb,
+        public static BorderValues LightBulb => new("lightBulb");
         /// <summary>
         /// Lightning Art Border.
         /// <para>When the item is serialized out as xml, its value is "lightning1".</para>
         /// </summary>
-        [EnumString("lightning1")]
-        Lightning1,
+        public static BorderValues Lightning1 => new("lightning1");
         /// <summary>
         /// Lightning Art Border.
         /// <para>When the item is serialized out as xml, its value is "lightning2".</para>
         /// </summary>
-        [EnumString("lightning2")]
-        Lightning2,
+        public static BorderValues Lightning2 => new("lightning2");
         /// <summary>
         /// Map Pins Art Border.
         /// <para>When the item is serialized out as xml, its value is "mapPins".</para>
         /// </summary>
-        [EnumString("mapPins")]
-        MapPins,
+        public static BorderValues MapPins => new("mapPins");
         /// <summary>
         /// Maple Leaf Art Border.
         /// <para>When the item is serialized out as xml, its value is "mapleLeaf".</para>
         /// </summary>
-        [EnumString("mapleLeaf")]
-        MapleLeaf,
+        public static BorderValues MapleLeaf => new("mapleLeaf");
         /// <summary>
         /// Muffin Art Border.
         /// <para>When the item is serialized out as xml, its value is "mapleMuffins".</para>
         /// </summary>
-        [EnumString("mapleMuffins")]
-        MapleMuffins,
+        public static BorderValues MapleMuffins => new("mapleMuffins");
         /// <summary>
         /// Marquee Art Border.
         /// <para>When the item is serialized out as xml, its value is "marquee".</para>
         /// </summary>
-        [EnumString("marquee")]
-        Marquee,
+        public static BorderValues Marquee => new("marquee");
         /// <summary>
         /// Marquee Art Border.
         /// <para>When the item is serialized out as xml, its value is "marqueeToothed".</para>
         /// </summary>
-        [EnumString("marqueeToothed")]
-        MarqueeToothed,
+        public static BorderValues MarqueeToothed => new("marqueeToothed");
         /// <summary>
         /// Moon Art Border.
         /// <para>When the item is serialized out as xml, its value is "moons".</para>
         /// </summary>
-        [EnumString("moons")]
-        Moons,
+        public static BorderValues Moons => new("moons");
         /// <summary>
         /// Mosaic Art Border.
         /// <para>When the item is serialized out as xml, its value is "mosaic".</para>
         /// </summary>
-        [EnumString("mosaic")]
-        Mosaic,
+        public static BorderValues Mosaic => new("mosaic");
         /// <summary>
         /// Musical Note Art Border.
         /// <para>When the item is serialized out as xml, its value is "musicNotes".</para>
         /// </summary>
-        [EnumString("musicNotes")]
-        MusicNotes,
+        public static BorderValues MusicNotes => new("musicNotes");
         /// <summary>
         /// Patterned Art Border.
         /// <para>When the item is serialized out as xml, its value is "northwest".</para>
         /// </summary>
-        [EnumString("northwest")]
-        Northwest,
+        public static BorderValues Northwest => new("northwest");
         /// <summary>
         /// Oval Art Border.
         /// <para>When the item is serialized out as xml, its value is "ovals".</para>
         /// </summary>
-        [EnumString("ovals")]
-        Ovals,
+        public static BorderValues Ovals => new("ovals");
         /// <summary>
         /// Package Art Border.
         /// <para>When the item is serialized out as xml, its value is "packages".</para>
         /// </summary>
-        [EnumString("packages")]
-        Packages,
+        public static BorderValues Packages => new("packages");
         /// <summary>
         /// Black Palm Tree Art Border.
         /// <para>When the item is serialized out as xml, its value is "palmsBlack".</para>
         /// </summary>
-        [EnumString("palmsBlack")]
-        PalmsBlack,
+        public static BorderValues PalmsBlack => new("palmsBlack");
         /// <summary>
         /// Color Palm Tree Art Border.
         /// <para>When the item is serialized out as xml, its value is "palmsColor".</para>
         /// </summary>
-        [EnumString("palmsColor")]
-        PalmsColor,
+        public static BorderValues PalmsColor => new("palmsColor");
         /// <summary>
         /// Paper Clip Art Border.
         /// <para>When the item is serialized out as xml, its value is "paperClips".</para>
         /// </summary>
-        [EnumString("paperClips")]
-        PaperClips,
+        public static BorderValues PaperClips => new("paperClips");
         /// <summary>
         /// Papyrus Art Border.
         /// <para>When the item is serialized out as xml, its value is "papyrus".</para>
         /// </summary>
-        [EnumString("papyrus")]
-        Papyrus,
+        public static BorderValues Papyrus => new("papyrus");
         /// <summary>
         /// Party Favor Art Border.
         /// <para>When the item is serialized out as xml, its value is "partyFavor".</para>
         /// </summary>
-        [EnumString("partyFavor")]
-        PartyFavor,
+        public static BorderValues PartyFavor => new("partyFavor");
         /// <summary>
         /// Party Glass Art Border.
         /// <para>When the item is serialized out as xml, its value is "partyGlass".</para>
         /// </summary>
-        [EnumString("partyGlass")]
-        PartyGlass,
+        public static BorderValues PartyGlass => new("partyGlass");
         /// <summary>
         /// Pencils Art Border.
         /// <para>When the item is serialized out as xml, its value is "pencils".</para>
         /// </summary>
-        [EnumString("pencils")]
-        Pencils,
+        public static BorderValues Pencils => new("pencils");
         /// <summary>
         /// Character Art Border.
         /// <para>When the item is serialized out as xml, its value is "people".</para>
         /// </summary>
-        [EnumString("people")]
-        People,
+        public static BorderValues People => new("people");
         /// <summary>
         /// Waving Character Border.
         /// <para>When the item is serialized out as xml, its value is "peopleWaving".</para>
         /// </summary>
-        [EnumString("peopleWaving")]
-        PeopleWaving,
+        public static BorderValues PeopleWaving => new("peopleWaving");
         /// <summary>
         /// Character With Hat Art Border.
         /// <para>When the item is serialized out as xml, its value is "peopleHats".</para>
         /// </summary>
-        [EnumString("peopleHats")]
-        PeopleHats,
+        public static BorderValues PeopleHats => new("peopleHats");
         /// <summary>
         /// Poinsettia Art Border.
         /// <para>When the item is serialized out as xml, its value is "poinsettias".</para>
         /// </summary>
-        [EnumString("poinsettias")]
-        Poinsettias,
+        public static BorderValues Poinsettias => new("poinsettias");
         /// <summary>
         /// Postage Stamp Art Border.
         /// <para>When the item is serialized out as xml, its value is "postageStamp".</para>
         /// </summary>
-        [EnumString("postageStamp")]
-        PostageStamp,
+        public static BorderValues PostageStamp => new("postageStamp");
         /// <summary>
         /// Pumpkin Art Border.
         /// <para>When the item is serialized out as xml, its value is "pumpkin1".</para>
         /// </summary>
-        [EnumString("pumpkin1")]
-        Pumpkin1,
+        public static BorderValues Pumpkin1 => new("pumpkin1");
         /// <summary>
         /// Push Pin Art Border.
         /// <para>When the item is serialized out as xml, its value is "pushPinNote2".</para>
         /// </summary>
-        [EnumString("pushPinNote2")]
-        PushPinNote2,
+        public static BorderValues PushPinNote2 => new("pushPinNote2");
         /// <summary>
         /// Push Pin Art Border.
         /// <para>When the item is serialized out as xml, its value is "pushPinNote1".</para>
         /// </summary>
-        [EnumString("pushPinNote1")]
-        PushPinNote1,
+        public static BorderValues PushPinNote1 => new("pushPinNote1");
         /// <summary>
         /// Pyramid Art Border.
         /// <para>When the item is serialized out as xml, its value is "pyramids".</para>
         /// </summary>
-        [EnumString("pyramids")]
-        Pyramids,
+        public static BorderValues Pyramids => new("pyramids");
         /// <summary>
         /// Pyramid Art Border.
         /// <para>When the item is serialized out as xml, its value is "pyramidsAbove".</para>
         /// </summary>
-        [EnumString("pyramidsAbove")]
-        PyramidsAbove,
+        public static BorderValues PyramidsAbove => new("pyramidsAbove");
         /// <summary>
         /// Quadrants Art Border.
         /// <para>When the item is serialized out as xml, its value is "quadrants".</para>
         /// </summary>
-        [EnumString("quadrants")]
-        Quadrants,
+        public static BorderValues Quadrants => new("quadrants");
         /// <summary>
         /// Rings Art Border.
         /// <para>When the item is serialized out as xml, its value is "rings".</para>
         /// </summary>
-        [EnumString("rings")]
-        Rings,
+        public static BorderValues Rings => new("rings");
         /// <summary>
         /// Safari Art Border.
         /// <para>When the item is serialized out as xml, its value is "safari".</para>
         /// </summary>
-        [EnumString("safari")]
-        Safari,
+        public static BorderValues Safari => new("safari");
         /// <summary>
         /// Saw tooth Art Border.
         /// <para>When the item is serialized out as xml, its value is "sawtooth".</para>
         /// </summary>
-        [EnumString("sawtooth")]
-        Sawtooth,
+        public static BorderValues Sawtooth => new("sawtooth");
         /// <summary>
         /// Gray Saw tooth Art Border.
         /// <para>When the item is serialized out as xml, its value is "sawtoothGray".</para>
         /// </summary>
-        [EnumString("sawtoothGray")]
-        SawtoothGray,
+        public static BorderValues SawtoothGray => new("sawtoothGray");
         /// <summary>
         /// Scared Cat Art Border.
         /// <para>When the item is serialized out as xml, its value is "scaredCat".</para>
         /// </summary>
-        [EnumString("scaredCat")]
-        ScaredCat,
+        public static BorderValues ScaredCat => new("scaredCat");
         /// <summary>
         /// Umbrella Art Border.
         /// <para>When the item is serialized out as xml, its value is "seattle".</para>
         /// </summary>
-        [EnumString("seattle")]
-        Seattle,
+        public static BorderValues Seattle => new("seattle");
         /// <summary>
         /// Shadowed Squares Art Border.
         /// <para>When the item is serialized out as xml, its value is "shadowedSquares".</para>
         /// </summary>
-        [EnumString("shadowedSquares")]
-        ShadowedSquares,
+        public static BorderValues ShadowedSquares => new("shadowedSquares");
         /// <summary>
         /// Shark Tooth Art Border.
         /// <para>When the item is serialized out as xml, its value is "sharksTeeth".</para>
         /// </summary>
-        [EnumString("sharksTeeth")]
-        SharksTeeth,
+        public static BorderValues SharksTeeth => new("sharksTeeth");
         /// <summary>
         /// Bird Tracks Art Border.
         /// <para>When the item is serialized out as xml, its value is "shorebirdTracks".</para>
         /// </summary>
-        [EnumString("shorebirdTracks")]
-        ShorebirdTracks,
+        public static BorderValues ShorebirdTracks => new("shorebirdTracks");
         /// <summary>
         /// Rocket Art Border.
         /// <para>When the item is serialized out as xml, its value is "skyrocket".</para>
         /// </summary>
-        [EnumString("skyrocket")]
-        Skyrocket,
+        public static BorderValues Skyrocket => new("skyrocket");
         /// <summary>
         /// Snowflake Art Border.
         /// <para>When the item is serialized out as xml, its value is "snowflakeFancy".</para>
         /// </summary>
-        [EnumString("snowflakeFancy")]
-        SnowflakeFancy,
+        public static BorderValues SnowflakeFancy => new("snowflakeFancy");
         /// <summary>
         /// Snowflake Art Border.
         /// <para>When the item is serialized out as xml, its value is "snowflakes".</para>
         /// </summary>
-        [EnumString("snowflakes")]
-        Snowflakes,
+        public static BorderValues Snowflakes => new("snowflakes");
         /// <summary>
         /// Sombrero Art Border.
         /// <para>When the item is serialized out as xml, its value is "sombrero".</para>
         /// </summary>
-        [EnumString("sombrero")]
-        Sombrero,
+        public static BorderValues Sombrero => new("sombrero");
         /// <summary>
         /// Southwest-themed Art Border.
         /// <para>When the item is serialized out as xml, its value is "southwest".</para>
         /// </summary>
-        [EnumString("southwest")]
-        Southwest,
+        public static BorderValues Southwest => new("southwest");
         /// <summary>
         /// Stars Art Border.
         /// <para>When the item is serialized out as xml, its value is "stars".</para>
         /// </summary>
-        [EnumString("stars")]
-        Stars,
+        public static BorderValues Stars => new("stars");
         /// <summary>
         /// Stars On Top Art Border.
         /// <para>When the item is serialized out as xml, its value is "starsTop".</para>
         /// </summary>
-        [EnumString("starsTop")]
-        StarsTop,
+        public static BorderValues StarsTop => new("starsTop");
         /// <summary>
         /// 3-D Stars Art Border.
         /// <para>When the item is serialized out as xml, its value is "stars3d".</para>
         /// </summary>
-        [EnumString("stars3d")]
-        Stars3d,
+        public static BorderValues Stars3d => new("stars3d");
         /// <summary>
         /// Stars Art Border.
         /// <para>When the item is serialized out as xml, its value is "starsBlack".</para>
         /// </summary>
-        [EnumString("starsBlack")]
-        StarsBlack,
+        public static BorderValues StarsBlack => new("starsBlack");
         /// <summary>
         /// Stars With Shadows Art Border.
         /// <para>When the item is serialized out as xml, its value is "starsShadowed".</para>
         /// </summary>
-        [EnumString("starsShadowed")]
-        StarsShadowed,
+        public static BorderValues StarsShadowed => new("starsShadowed");
         /// <summary>
         /// Sun Art Border.
         /// <para>When the item is serialized out as xml, its value is "sun".</para>
         /// </summary>
-        [EnumString("sun")]
-        Sun,
+        public static BorderValues Sun => new("sun");
         /// <summary>
         /// Whirligig Art Border.
         /// <para>When the item is serialized out as xml, its value is "swirligig".</para>
         /// </summary>
-        [EnumString("swirligig")]
-        Swirligig,
+        public static BorderValues Swirligig => new("swirligig");
         /// <summary>
         /// Torn Paper Art Border.
         /// <para>When the item is serialized out as xml, its value is "tornPaper".</para>
         /// </summary>
-        [EnumString("tornPaper")]
-        TornPaper,
+        public static BorderValues TornPaper => new("tornPaper");
         /// <summary>
         /// Black Torn Paper Art Border.
         /// <para>When the item is serialized out as xml, its value is "tornPaperBlack".</para>
         /// </summary>
-        [EnumString("tornPaperBlack")]
-        TornPaperBlack,
+        public static BorderValues TornPaperBlack => new("tornPaperBlack");
         /// <summary>
         /// Tree Art Border.
         /// <para>When the item is serialized out as xml, its value is "trees".</para>
         /// </summary>
-        [EnumString("trees")]
-        Trees,
+        public static BorderValues Trees => new("trees");
         /// <summary>
         /// Triangle Art Border.
         /// <para>When the item is serialized out as xml, its value is "triangleParty".</para>
         /// </summary>
-        [EnumString("triangleParty")]
-        TriangleParty,
+        public static BorderValues TriangleParty => new("triangleParty");
         /// <summary>
         /// Triangles Art Border.
         /// <para>When the item is serialized out as xml, its value is "triangles".</para>
         /// </summary>
-        [EnumString("triangles")]
-        Triangles,
+        public static BorderValues Triangles => new("triangles");
         /// <summary>
         /// Tribal Art Border One.
         /// <para>When the item is serialized out as xml, its value is "tribal1".</para>
         /// </summary>
-        [EnumString("tribal1")]
-        Tribal1,
+        public static BorderValues Tribal1 => new("tribal1");
         /// <summary>
         /// Tribal Art Border Two.
         /// <para>When the item is serialized out as xml, its value is "tribal2".</para>
         /// </summary>
-        [EnumString("tribal2")]
-        Tribal2,
+        public static BorderValues Tribal2 => new("tribal2");
         /// <summary>
         /// Tribal Art Border Three.
         /// <para>When the item is serialized out as xml, its value is "tribal3".</para>
         /// </summary>
-        [EnumString("tribal3")]
-        Tribal3,
+        public static BorderValues Tribal3 => new("tribal3");
         /// <summary>
         /// Tribal Art Border Four.
         /// <para>When the item is serialized out as xml, its value is "tribal4".</para>
         /// </summary>
-        [EnumString("tribal4")]
-        Tribal4,
+        public static BorderValues Tribal4 => new("tribal4");
         /// <summary>
         /// Tribal Art Border Five.
         /// <para>When the item is serialized out as xml, its value is "tribal5".</para>
         /// </summary>
-        [EnumString("tribal5")]
-        Tribal5,
+        public static BorderValues Tribal5 => new("tribal5");
         /// <summary>
         /// Tribal Art Border Six.
         /// <para>When the item is serialized out as xml, its value is "tribal6".</para>
         /// </summary>
-        [EnumString("tribal6")]
-        Tribal6,
+        public static BorderValues Tribal6 => new("tribal6");
         /// <summary>
         /// triangle1.
         /// <para>When the item is serialized out as xml, its value is "triangle1".</para>
         /// </summary>
-        [EnumString("triangle1")]
-        Triangle1,
+        public static BorderValues Triangle1 => new("triangle1");
         /// <summary>
         /// triangle2.
         /// <para>When the item is serialized out as xml, its value is "triangle2".</para>
         /// </summary>
-        [EnumString("triangle2")]
-        Triangle2,
+        public static BorderValues Triangle2 => new("triangle2");
         /// <summary>
         /// triangleCircle1.
         /// <para>When the item is serialized out as xml, its value is "triangleCircle1".</para>
         /// </summary>
-        [EnumString("triangleCircle1")]
-        TriangleCircle1,
+        public static BorderValues TriangleCircle1 => new("triangleCircle1");
         /// <summary>
         /// triangleCircle2.
         /// <para>When the item is serialized out as xml, its value is "triangleCircle2".</para>
         /// </summary>
-        [EnumString("triangleCircle2")]
-        TriangleCircle2,
+        public static BorderValues TriangleCircle2 => new("triangleCircle2");
         /// <summary>
         /// shapes1.
         /// <para>When the item is serialized out as xml, its value is "shapes1".</para>
         /// </summary>
-        [EnumString("shapes1")]
-        Shapes1,
+        public static BorderValues Shapes1 => new("shapes1");
         /// <summary>
         /// shapes2.
         /// <para>When the item is serialized out as xml, its value is "shapes2".</para>
         /// </summary>
-        [EnumString("shapes2")]
-        Shapes2,
+        public static BorderValues Shapes2 => new("shapes2");
         /// <summary>
         /// Twisted Lines Art Border.
         /// <para>When the item is serialized out as xml, its value is "twistedLines1".</para>
         /// </summary>
-        [EnumString("twistedLines1")]
-        TwistedLines1,
+        public static BorderValues TwistedLines1 => new("twistedLines1");
         /// <summary>
         /// Twisted Lines Art Border.
         /// <para>When the item is serialized out as xml, its value is "twistedLines2".</para>
         /// </summary>
-        [EnumString("twistedLines2")]
-        TwistedLines2,
+        public static BorderValues TwistedLines2 => new("twistedLines2");
         /// <summary>
         /// Vine Art Border.
         /// <para>When the item is serialized out as xml, its value is "vine".</para>
         /// </summary>
-        [EnumString("vine")]
-        Vine,
+        public static BorderValues Vine => new("vine");
         /// <summary>
         /// Wavy Line Art Border.
         /// <para>When the item is serialized out as xml, its value is "waveline".</para>
         /// </summary>
-        [EnumString("waveline")]
-        Waveline,
+        public static BorderValues Waveline => new("waveline");
         /// <summary>
         /// Weaving Angles Art Border.
         /// <para>When the item is serialized out as xml, its value is "weavingAngles".</para>
         /// </summary>
-        [EnumString("weavingAngles")]
-        WeavingAngles,
+        public static BorderValues WeavingAngles => new("weavingAngles");
         /// <summary>
         /// Weaving Braid Art Border.
         /// <para>When the item is serialized out as xml, its value is "weavingBraid".</para>
         /// </summary>
-        [EnumString("weavingBraid")]
-        WeavingBraid,
+        public static BorderValues WeavingBraid => new("weavingBraid");
         /// <summary>
         /// Weaving Ribbon Art Border.
         /// <para>When the item is serialized out as xml, its value is "weavingRibbon".</para>
         /// </summary>
-        [EnumString("weavingRibbon")]
-        WeavingRibbon,
+        public static BorderValues WeavingRibbon => new("weavingRibbon");
         /// <summary>
         /// Weaving Strips Art Border.
         /// <para>When the item is serialized out as xml, its value is "weavingStrips".</para>
         /// </summary>
-        [EnumString("weavingStrips")]
-        WeavingStrips,
+        public static BorderValues WeavingStrips => new("weavingStrips");
         /// <summary>
         /// White Flowers Art Border.
         /// <para>When the item is serialized out as xml, its value is "whiteFlowers".</para>
         /// </summary>
-        [EnumString("whiteFlowers")]
-        WhiteFlowers,
+        public static BorderValues WhiteFlowers => new("whiteFlowers");
         /// <summary>
         /// Woodwork Art Border.
         /// <para>When the item is serialized out as xml, its value is "woodwork".</para>
         /// </summary>
-        [EnumString("woodwork")]
-        Woodwork,
+        public static BorderValues Woodwork => new("woodwork");
         /// <summary>
         /// Crisscross Art Border.
         /// <para>When the item is serialized out as xml, its value is "xIllusions".</para>
         /// </summary>
-        [EnumString("xIllusions")]
-        XIllusions,
+        public static BorderValues XIllusions => new("xIllusions");
         /// <summary>
         /// Triangle Art Border.
         /// <para>When the item is serialized out as xml, its value is "zanyTriangles".</para>
         /// </summary>
-        [EnumString("zanyTriangles")]
-        ZanyTriangles,
+        public static BorderValues ZanyTriangles => new("zanyTriangles");
         /// <summary>
         /// Zigzag Art Border.
         /// <para>When the item is serialized out as xml, its value is "zigZag".</para>
         /// </summary>
-        [EnumString("zigZag")]
-        ZigZag,
+        public static BorderValues ZigZag => new("zigZag");
         /// <summary>
         /// Zigzag stitch.
         /// <para>When the item is serialized out as xml, its value is "zigZagStitch".</para>
         /// </summary>
-        [EnumString("zigZagStitch")]
-        ZigZagStitch
+        public static BorderValues ZigZagStitch => new("zigZagStitch");
+    
     }
 
     /// <summary>
     /// Defines the DocumentConformance enumeration.
     /// </summary>
-    public enum DocumentConformance
+    public readonly record struct DocumentConformance : IEnumValue, IEnumValueFactory<DocumentConformance>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new DocumentConformance enum instance
+        /// </summary>
+        public DocumentConformance(string value) => _value = value;
+        DocumentConformance IEnumValueFactory<DocumentConformance>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "transitional" => true,
+            "strict" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "transitional";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// transitional.
         /// <para>When the item is serialized out as xml, its value is "transitional".</para>
         /// </summary>
-        [EnumString("transitional")]
-        transitional,
+        public static DocumentConformance transitional => new("transitional");
         /// <summary>
         /// strict.
         /// <para>When the item is serialized out as xml, its value is "strict".</para>
         /// </summary>
-        [EnumString("strict")]
-        strict
+        public static DocumentConformance strict => new("strict");
+    
     }
 
     /// <summary>
     /// Defines the StrictCharacterSet enumeration.
     /// </summary>
-    public enum StrictCharacterSet
+    public readonly record struct StrictCharacterSet : IEnumValue, IEnumValueFactory<StrictCharacterSet>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new StrictCharacterSet enum instance
+        /// </summary>
+        public StrictCharacterSet(string value) => _value = value;
+        StrictCharacterSet IEnumValueFactory<StrictCharacterSet>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "iso-8859-1" => true,
+            "macintosh" => true,
+            "shift_jis" => true,
+            "ks_c-5601-1987" => true,
+            "KS_C-5601-1992" => true,
+            "GBK" => true,
+            "Big5" => true,
+            "windows-1253" => true,
+            "iso-8859-9" => true,
+            "windows-1258" => true,
+            "windows-1255" => true,
+            "windows-1256" => true,
+            "windows-1257" => true,
+            "windows-1251" => true,
+            "windows-874" => true,
+            "windows-1250" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "iso-8859-1";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// iso-8859-1.
         /// <para>When the item is serialized out as xml, its value is "iso-8859-1".</para>
         /// </summary>
-        [EnumString("iso-8859-1")]
-        chsAnsi,
+        public static StrictCharacterSet chsAnsi => new("iso-8859-1");
         /// <summary>
         /// macintosh.
         /// <para>When the item is serialized out as xml, its value is "macintosh".</para>
         /// </summary>
-        [EnumString("macintosh")]
-        chsMacFfn,
+        public static StrictCharacterSet chsMacFfn => new("macintosh");
         /// <summary>
         /// shift_jis.
         /// <para>When the item is serialized out as xml, its value is "shift_jis".</para>
         /// </summary>
-        [EnumString("shift_jis")]
-        chsShiftJIS,
+        public static StrictCharacterSet chsShiftJIS => new("shift_jis");
         /// <summary>
         /// ks_c-5601-1987.
         /// <para>When the item is serialized out as xml, its value is "ks_c-5601-1987".</para>
         /// </summary>
-        [EnumString("ks_c-5601-1987")]
-        chsHangeul,
+        public static StrictCharacterSet chsHangeul => new("ks_c-5601-1987");
         /// <summary>
         /// KS_C-5601-1992.
         /// <para>When the item is serialized out as xml, its value is "KS_C-5601-1992".</para>
         /// </summary>
-        [EnumString("KS_C-5601-1992")]
-        chsJohab,
+        public static StrictCharacterSet chsJohab => new("KS_C-5601-1992");
         /// <summary>
         /// GBK.
         /// <para>When the item is serialized out as xml, its value is "GBK".</para>
         /// </summary>
-        [EnumString("GBK")]
-        chsGB2312,
+        public static StrictCharacterSet chsGB2312 => new("GBK");
         /// <summary>
         /// Big5.
         /// <para>When the item is serialized out as xml, its value is "Big5".</para>
         /// </summary>
-        [EnumString("Big5")]
-        chsChinese5,
+        public static StrictCharacterSet chsChinese5 => new("Big5");
         /// <summary>
         /// windows-1253.
         /// <para>When the item is serialized out as xml, its value is "windows-1253".</para>
         /// </summary>
-        [EnumString("windows-1253")]
-        chsGreek,
+        public static StrictCharacterSet chsGreek => new("windows-1253");
         /// <summary>
         /// iso-8859-9.
         /// <para>When the item is serialized out as xml, its value is "iso-8859-9".</para>
         /// </summary>
-        [EnumString("iso-8859-9")]
-        chsTurkish,
+        public static StrictCharacterSet chsTurkish => new("iso-8859-9");
         /// <summary>
         /// windows-1258.
         /// <para>When the item is serialized out as xml, its value is "windows-1258".</para>
         /// </summary>
-        [EnumString("windows-1258")]
-        chsVietnamese,
+        public static StrictCharacterSet chsVietnamese => new("windows-1258");
         /// <summary>
         /// windows-1255.
         /// <para>When the item is serialized out as xml, its value is "windows-1255".</para>
         /// </summary>
-        [EnumString("windows-1255")]
-        chsHebrew,
+        public static StrictCharacterSet chsHebrew => new("windows-1255");
         /// <summary>
         /// windows-1256.
         /// <para>When the item is serialized out as xml, its value is "windows-1256".</para>
         /// </summary>
-        [EnumString("windows-1256")]
-        chsArabic,
+        public static StrictCharacterSet chsArabic => new("windows-1256");
         /// <summary>
         /// windows-1257.
         /// <para>When the item is serialized out as xml, its value is "windows-1257".</para>
         /// </summary>
-        [EnumString("windows-1257")]
-        chsBaltic,
+        public static StrictCharacterSet chsBaltic => new("windows-1257");
         /// <summary>
         /// windows-1251.
         /// <para>When the item is serialized out as xml, its value is "windows-1251".</para>
         /// </summary>
-        [EnumString("windows-1251")]
-        chsRussian,
+        public static StrictCharacterSet chsRussian => new("windows-1251");
         /// <summary>
         /// windows-874.
         /// <para>When the item is serialized out as xml, its value is "windows-874".</para>
         /// </summary>
-        [EnumString("windows-874")]
-        chsThai,
+        public static StrictCharacterSet chsThai => new("windows-874");
         /// <summary>
         /// windows-1250.
         /// <para>When the item is serialized out as xml, its value is "windows-1250".</para>
         /// </summary>
-        [EnumString("windows-1250")]
-        chsEastEurope
+        public static StrictCharacterSet chsEastEurope => new("windows-1250");
+    
     }
 
     /// <summary>
     /// Defines the ObjectDrawAspect enumeration.
     /// </summary>
-    public enum ObjectDrawAspect
+    public readonly record struct ObjectDrawAspect : IEnumValue, IEnumValueFactory<ObjectDrawAspect>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new ObjectDrawAspect enum instance
+        /// </summary>
+        public ObjectDrawAspect(string value) => _value = value;
+        ObjectDrawAspect IEnumValueFactory<ObjectDrawAspect>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "content" => true,
+            "icon" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "content";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// content.
         /// <para>When the item is serialized out as xml, its value is "content".</para>
         /// </summary>
-        [EnumString("content")]
-        content,
+        public static ObjectDrawAspect content => new("content");
         /// <summary>
         /// icon.
         /// <para>When the item is serialized out as xml, its value is "icon".</para>
         /// </summary>
-        [EnumString("icon")]
-        icon
+        public static ObjectDrawAspect icon => new("icon");
+    
     }
 
     /// <summary>
     /// Linked Object Update Modes
     /// </summary>
-    public enum ObjectUpdateMode
+    public readonly record struct ObjectUpdateMode : IEnumValue, IEnumValueFactory<ObjectUpdateMode>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new ObjectUpdateMode enum instance
+        /// </summary>
+        public ObjectUpdateMode(string value) => _value = value;
+        ObjectUpdateMode IEnumValueFactory<ObjectUpdateMode>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "always" => true,
+            "onCall" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "always";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// always.
         /// <para>When the item is serialized out as xml, its value is "always".</para>
         /// </summary>
-        [EnumString("always")]
-        always,
+        public static ObjectUpdateMode always => new("always");
         /// <summary>
         /// onCall.
         /// <para>When the item is serialized out as xml, its value is "onCall".</para>
         /// </summary>
-        [EnumString("onCall")]
-        onCall
+        public static ObjectUpdateMode onCall => new("onCall");
+    
     }
 
     /// <summary>
     /// Defines the CompatSettingNameValues enumeration.
     /// </summary>
-    public enum CompatSettingNameValues
+    public readonly record struct CompatSettingNameValues : IEnumValue, IEnumValueFactory<CompatSettingNameValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new CompatSettingNameValues enum instance
+        /// </summary>
+        public CompatSettingNameValues(string value) => _value = value;
+        CompatSettingNameValues IEnumValueFactory<CompatSettingNameValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "compatibilityMode" => true,
+            "overrideTableStyleFontSizeAndJustification" => true,
+            "enableOpenTypeFeatures" => true,
+            "doNotFlipMirrorIndents" => true,
+            "differentiateMultirowTableHeaders" => true,
+            "useWord2013TrackBottomHyphenation" => true,
+            "allowHyphenationAtTrackBottom" => true,
+            "allowTextAfterFloatingTableBreak" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "compatibilityMode";
+        FileFormatVersions IEnumValue.Version => InternalValue switch
+        {
+            "useWord2013TrackBottomHyphenation" => FileFormatVersions.Office2016,
+            "allowHyphenationAtTrackBottom" => FileFormatVersions.Office2016,
+            "allowTextAfterFloatingTableBreak" => FileFormatVersions.Office2013,
+            _ => FileFormatVersions.Office2007,
+        };
         /// <summary>
         /// compatibilityMode.
         /// <para>When the item is serialized out as xml, its value is "compatibilityMode".</para>
         /// </summary>
-        [EnumString("compatibilityMode")]
-        CompatibilityMode,
+        public static CompatSettingNameValues CompatibilityMode => new("compatibilityMode");
         /// <summary>
         /// overrideTableStyleFontSizeAndJustification.
         /// <para>When the item is serialized out as xml, its value is "overrideTableStyleFontSizeAndJustification".</para>
         /// </summary>
-        [EnumString("overrideTableStyleFontSizeAndJustification")]
-        OverrideTableStyleFontSizeAndJustification,
+        public static CompatSettingNameValues OverrideTableStyleFontSizeAndJustification => new("overrideTableStyleFontSizeAndJustification");
         /// <summary>
         /// enableOpenTypeFeatures.
         /// <para>When the item is serialized out as xml, its value is "enableOpenTypeFeatures".</para>
         /// </summary>
-        [EnumString("enableOpenTypeFeatures")]
-        EnableOpenTypeFeatures,
+        public static CompatSettingNameValues EnableOpenTypeFeatures => new("enableOpenTypeFeatures");
         /// <summary>
         /// doNotFlipMirrorIndents.
         /// <para>When the item is serialized out as xml, its value is "doNotFlipMirrorIndents".</para>
         /// </summary>
-        [EnumString("doNotFlipMirrorIndents")]
-        DoNotFlipMirrorIndents,
+        public static CompatSettingNameValues DoNotFlipMirrorIndents => new("doNotFlipMirrorIndents");
         /// <summary>
         /// differentiateMultirowTableHeaders.
         /// <para>When the item is serialized out as xml, its value is "differentiateMultirowTableHeaders".</para>
         /// </summary>
-        [EnumString("differentiateMultirowTableHeaders")]
-        DifferentiateMultirowTableHeaders,
+        public static CompatSettingNameValues DifferentiateMultirowTableHeaders => new("differentiateMultirowTableHeaders");
         /// <summary>
         /// useWord2013TrackBottomHyphenation.
         /// <para>When the item is serialized out as xml, its value is "useWord2013TrackBottomHyphenation".</para>
         /// <para>This item is only available in Office 2016 and later.</para>
         /// </summary>
-        [EnumString("useWord2013TrackBottomHyphenation")]
-        [OfficeAvailability(FileFormatVersions.Office2007)]
-        UseWord2013TrackBottomHyphenation,
+        public static CompatSettingNameValues UseWord2013TrackBottomHyphenation => new("useWord2013TrackBottomHyphenation");
         /// <summary>
         /// allowHyphenationAtTrackBottom.
         /// <para>When the item is serialized out as xml, its value is "allowHyphenationAtTrackBottom".</para>
         /// <para>This item is only available in Office 2016 and later.</para>
         /// </summary>
-        [EnumString("allowHyphenationAtTrackBottom")]
-        [OfficeAvailability(FileFormatVersions.Office2007)]
-        AllowHyphenationAtTrackBottom,
+        public static CompatSettingNameValues AllowHyphenationAtTrackBottom => new("allowHyphenationAtTrackBottom");
         /// <summary>
         /// allowTextAfterFloatingTableBreak.
         /// <para>When the item is serialized out as xml, its value is "allowTextAfterFloatingTableBreak".</para>
         /// <para>This item is only available in Office 2013 and later.</para>
         /// </summary>
-        [EnumString("allowTextAfterFloatingTableBreak")]
-        [OfficeAvailability(FileFormatVersions.Office2007)]
-        AllowTextAfterFloatingTableBreak
+        public static CompatSettingNameValues AllowTextAfterFloatingTableBreak => new("allowTextAfterFloatingTableBreak");
+    
     }
 }

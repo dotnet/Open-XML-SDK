@@ -354,86 +354,114 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
     /// <summary>
     /// Defines the SizeRelativeHorizontallyValues enumeration.
     /// </summary>
-    public enum SizeRelativeHorizontallyValues
+    public readonly record struct SizeRelativeHorizontallyValues : IEnumValue, IEnumValueFactory<SizeRelativeHorizontallyValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new SizeRelativeHorizontallyValues enum instance
+        /// </summary>
+        public SizeRelativeHorizontallyValues(string value) => _value = value;
+        SizeRelativeHorizontallyValues IEnumValueFactory<SizeRelativeHorizontallyValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "margin" => true,
+            "page" => true,
+            "leftMargin" => true,
+            "rightMargin" => true,
+            "insideMargin" => true,
+            "outsideMargin" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "margin";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2010;
         /// <summary>
         /// margin.
         /// <para>When the item is serialized out as xml, its value is "margin".</para>
         /// </summary>
-        [EnumString("margin")]
-        Margin,
+        public static SizeRelativeHorizontallyValues Margin => new("margin");
         /// <summary>
         /// page.
         /// <para>When the item is serialized out as xml, its value is "page".</para>
         /// </summary>
-        [EnumString("page")]
-        Page,
+        public static SizeRelativeHorizontallyValues Page => new("page");
         /// <summary>
         /// leftMargin.
         /// <para>When the item is serialized out as xml, its value is "leftMargin".</para>
         /// </summary>
-        [EnumString("leftMargin")]
-        LeftMargin,
+        public static SizeRelativeHorizontallyValues LeftMargin => new("leftMargin");
         /// <summary>
         /// rightMargin.
         /// <para>When the item is serialized out as xml, its value is "rightMargin".</para>
         /// </summary>
-        [EnumString("rightMargin")]
-        RightMargin,
+        public static SizeRelativeHorizontallyValues RightMargin => new("rightMargin");
         /// <summary>
         /// insideMargin.
         /// <para>When the item is serialized out as xml, its value is "insideMargin".</para>
         /// </summary>
-        [EnumString("insideMargin")]
-        InsideMargin,
+        public static SizeRelativeHorizontallyValues InsideMargin => new("insideMargin");
         /// <summary>
         /// outsideMargin.
         /// <para>When the item is serialized out as xml, its value is "outsideMargin".</para>
         /// </summary>
-        [EnumString("outsideMargin")]
-        OutsideMargin
+        public static SizeRelativeHorizontallyValues OutsideMargin => new("outsideMargin");
+    
     }
 
     /// <summary>
     /// Defines the SizeRelativeVerticallyValues enumeration.
     /// </summary>
-    public enum SizeRelativeVerticallyValues
+    public readonly record struct SizeRelativeVerticallyValues : IEnumValue, IEnumValueFactory<SizeRelativeVerticallyValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new SizeRelativeVerticallyValues enum instance
+        /// </summary>
+        public SizeRelativeVerticallyValues(string value) => _value = value;
+        SizeRelativeVerticallyValues IEnumValueFactory<SizeRelativeVerticallyValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "margin" => true,
+            "page" => true,
+            "topMargin" => true,
+            "bottomMargin" => true,
+            "insideMargin" => true,
+            "outsideMargin" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "margin";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2010;
         /// <summary>
         /// margin.
         /// <para>When the item is serialized out as xml, its value is "margin".</para>
         /// </summary>
-        [EnumString("margin")]
-        Margin,
+        public static SizeRelativeVerticallyValues Margin => new("margin");
         /// <summary>
         /// page.
         /// <para>When the item is serialized out as xml, its value is "page".</para>
         /// </summary>
-        [EnumString("page")]
-        Page,
+        public static SizeRelativeVerticallyValues Page => new("page");
         /// <summary>
         /// topMargin.
         /// <para>When the item is serialized out as xml, its value is "topMargin".</para>
         /// </summary>
-        [EnumString("topMargin")]
-        TopMargin,
+        public static SizeRelativeVerticallyValues TopMargin => new("topMargin");
         /// <summary>
         /// bottomMargin.
         /// <para>When the item is serialized out as xml, its value is "bottomMargin".</para>
         /// </summary>
-        [EnumString("bottomMargin")]
-        BottomMargin,
+        public static SizeRelativeVerticallyValues BottomMargin => new("bottomMargin");
         /// <summary>
         /// insideMargin.
         /// <para>When the item is serialized out as xml, its value is "insideMargin".</para>
         /// </summary>
-        [EnumString("insideMargin")]
-        InsideMargin,
+        public static SizeRelativeVerticallyValues InsideMargin => new("insideMargin");
         /// <summary>
         /// outsideMargin.
         /// <para>When the item is serialized out as xml, its value is "outsideMargin".</para>
         /// </summary>
-        [EnumString("outsideMargin")]
-        OutsideMargin
+        public static SizeRelativeVerticallyValues OutsideMargin => new("outsideMargin");
+    
     }
 }

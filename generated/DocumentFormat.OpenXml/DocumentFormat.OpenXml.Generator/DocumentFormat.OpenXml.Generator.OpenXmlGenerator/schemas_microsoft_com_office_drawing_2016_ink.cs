@@ -19,98 +19,126 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Ink
     /// <summary>
     /// Defines the ExtendedBrushPropertyName enumeration.
     /// </summary>
-    public enum ExtendedBrushPropertyName
+    public readonly record struct ExtendedBrushPropertyName : IEnumValue, IEnumValueFactory<ExtendedBrushPropertyName>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new ExtendedBrushPropertyName enum instance
+        /// </summary>
+        public ExtendedBrushPropertyName(string value) => _value = value;
+        ExtendedBrushPropertyName IEnumValueFactory<ExtendedBrushPropertyName>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "inkEffects" => true,
+            "anchorX" => true,
+            "anchorY" => true,
+            "scaleFactor" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "inkEffects";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2019;
         /// <summary>
         /// inkEffects.
         /// <para>When the item is serialized out as xml, its value is "inkEffects".</para>
         /// </summary>
-        [EnumString("inkEffects")]
-        InkEffects,
+        public static ExtendedBrushPropertyName InkEffects => new("inkEffects");
         /// <summary>
         /// anchorX.
         /// <para>When the item is serialized out as xml, its value is "anchorX".</para>
         /// </summary>
-        [EnumString("anchorX")]
-        AnchorX,
+        public static ExtendedBrushPropertyName AnchorX => new("anchorX");
         /// <summary>
         /// anchorY.
         /// <para>When the item is serialized out as xml, its value is "anchorY".</para>
         /// </summary>
-        [EnumString("anchorY")]
-        AnchorY,
+        public static ExtendedBrushPropertyName AnchorY => new("anchorY");
         /// <summary>
         /// scaleFactor.
         /// <para>When the item is serialized out as xml, its value is "scaleFactor".</para>
         /// </summary>
-        [EnumString("scaleFactor")]
-        ScaleFactor
+        public static ExtendedBrushPropertyName ScaleFactor => new("scaleFactor");
+    
     }
 
     /// <summary>
     /// Defines the InkEffectsType enumeration.
     /// </summary>
-    public enum InkEffectsType
+    public readonly record struct InkEffectsType : IEnumValue, IEnumValueFactory<InkEffectsType>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new InkEffectsType enum instance
+        /// </summary>
+        public InkEffectsType(string value) => _value = value;
+        InkEffectsType IEnumValueFactory<InkEffectsType>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "none" => true,
+            "pencil" => true,
+            "rainbow" => true,
+            "galaxy" => true,
+            "gold" => true,
+            "silver" => true,
+            "lava" => true,
+            "ocean" => true,
+            "rosegold" => true,
+            "bronze" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "none";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2019;
         /// <summary>
         /// none.
         /// <para>When the item is serialized out as xml, its value is "none".</para>
         /// </summary>
-        [EnumString("none")]
-        None,
+        public static InkEffectsType None => new("none");
         /// <summary>
         /// pencil.
         /// <para>When the item is serialized out as xml, its value is "pencil".</para>
         /// </summary>
-        [EnumString("pencil")]
-        Pencil,
+        public static InkEffectsType Pencil => new("pencil");
         /// <summary>
         /// rainbow.
         /// <para>When the item is serialized out as xml, its value is "rainbow".</para>
         /// </summary>
-        [EnumString("rainbow")]
-        Rainbow,
+        public static InkEffectsType Rainbow => new("rainbow");
         /// <summary>
         /// galaxy.
         /// <para>When the item is serialized out as xml, its value is "galaxy".</para>
         /// </summary>
-        [EnumString("galaxy")]
-        Galaxy,
+        public static InkEffectsType Galaxy => new("galaxy");
         /// <summary>
         /// gold.
         /// <para>When the item is serialized out as xml, its value is "gold".</para>
         /// </summary>
-        [EnumString("gold")]
-        Gold,
+        public static InkEffectsType Gold => new("gold");
         /// <summary>
         /// silver.
         /// <para>When the item is serialized out as xml, its value is "silver".</para>
         /// </summary>
-        [EnumString("silver")]
-        Silver,
+        public static InkEffectsType Silver => new("silver");
         /// <summary>
         /// lava.
         /// <para>When the item is serialized out as xml, its value is "lava".</para>
         /// </summary>
-        [EnumString("lava")]
-        Lava,
+        public static InkEffectsType Lava => new("lava");
         /// <summary>
         /// ocean.
         /// <para>When the item is serialized out as xml, its value is "ocean".</para>
         /// </summary>
-        [EnumString("ocean")]
-        Ocean,
+        public static InkEffectsType Ocean => new("ocean");
         /// <summary>
         /// rosegold.
         /// <para>When the item is serialized out as xml, its value is "rosegold".</para>
         /// </summary>
-        [EnumString("rosegold")]
-        Rosegold,
+        public static InkEffectsType Rosegold => new("rosegold");
         /// <summary>
         /// bronze.
         /// <para>When the item is serialized out as xml, its value is "bronze".</para>
         /// </summary>
-        [EnumString("bronze")]
-        Bronze
+        public static InkEffectsType Bronze => new("bronze");
+    
     }
 }

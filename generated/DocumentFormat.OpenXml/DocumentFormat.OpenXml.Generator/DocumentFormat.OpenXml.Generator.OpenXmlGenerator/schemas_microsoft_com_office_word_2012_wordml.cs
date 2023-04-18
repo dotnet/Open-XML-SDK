@@ -1058,25 +1058,39 @@ namespace DocumentFormat.OpenXml.Office2013.Word
     /// <summary>
     /// Defines the SdtAppearance enumeration.
     /// </summary>
-    public enum SdtAppearance
+    public readonly record struct SdtAppearance : IEnumValue, IEnumValueFactory<SdtAppearance>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new SdtAppearance enum instance
+        /// </summary>
+        public SdtAppearance(string value) => _value = value;
+        SdtAppearance IEnumValueFactory<SdtAppearance>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "boundingBox" => true,
+            "tags" => true,
+            "hidden" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "boundingBox";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2013;
         /// <summary>
         /// boundingBox.
         /// <para>When the item is serialized out as xml, its value is "boundingBox".</para>
         /// </summary>
-        [EnumString("boundingBox")]
-        BoundingBox,
+        public static SdtAppearance BoundingBox => new("boundingBox");
         /// <summary>
         /// tags.
         /// <para>When the item is serialized out as xml, its value is "tags".</para>
         /// </summary>
-        [EnumString("tags")]
-        Tags,
+        public static SdtAppearance Tags => new("tags");
         /// <summary>
         /// hidden.
         /// <para>When the item is serialized out as xml, its value is "hidden".</para>
         /// </summary>
-        [EnumString("hidden")]
-        Hidden
+        public static SdtAppearance Hidden => new("hidden");
+    
     }
 }

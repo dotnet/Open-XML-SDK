@@ -237,13 +237,27 @@ namespace DocumentFormat.OpenXml.Office.MetaAttributes
     /// <summary>
     /// Defines the TrueOnlyValues enumeration.
     /// </summary>
-    public enum TrueOnlyValues
+    public readonly record struct TrueOnlyValues : IEnumValue, IEnumValueFactory<TrueOnlyValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new TrueOnlyValues enum instance
+        /// </summary>
+        public TrueOnlyValues(string value) => _value = value;
+        TrueOnlyValues IEnumValueFactory<TrueOnlyValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "true" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "true";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// true.
         /// <para>When the item is serialized out as xml, its value is "true".</para>
         /// </summary>
-        [EnumString("true")]
-        True
+        public static TrueOnlyValues True => new("true");
+    
     }
 }

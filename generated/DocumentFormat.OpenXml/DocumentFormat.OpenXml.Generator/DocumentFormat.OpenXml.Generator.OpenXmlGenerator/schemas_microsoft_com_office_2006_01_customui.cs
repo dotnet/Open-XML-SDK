@@ -13641,57 +13641,99 @@ namespace DocumentFormat.OpenXml.Office.CustomUI
     /// <summary>
     /// Defines the SizeValues enumeration.
     /// </summary>
-    public enum SizeValues
+    public readonly record struct SizeValues : IEnumValue, IEnumValueFactory<SizeValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new SizeValues enum instance
+        /// </summary>
+        public SizeValues(string value) => _value = value;
+        SizeValues IEnumValueFactory<SizeValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "normal" => true,
+            "large" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "normal";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// normal.
         /// <para>When the item is serialized out as xml, its value is "normal".</para>
         /// </summary>
-        [EnumString("normal")]
-        Normal,
+        public static SizeValues Normal => new("normal");
         /// <summary>
         /// large.
         /// <para>When the item is serialized out as xml, its value is "large".</para>
         /// </summary>
-        [EnumString("large")]
-        Large
+        public static SizeValues Large => new("large");
+    
     }
 
     /// <summary>
     /// Defines the ItemSizeValues enumeration.
     /// </summary>
-    public enum ItemSizeValues
+    public readonly record struct ItemSizeValues : IEnumValue, IEnumValueFactory<ItemSizeValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new ItemSizeValues enum instance
+        /// </summary>
+        public ItemSizeValues(string value) => _value = value;
+        ItemSizeValues IEnumValueFactory<ItemSizeValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "normal" => true,
+            "large" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "normal";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// normal.
         /// <para>When the item is serialized out as xml, its value is "normal".</para>
         /// </summary>
-        [EnumString("normal")]
-        Normal,
+        public static ItemSizeValues Normal => new("normal");
         /// <summary>
         /// large.
         /// <para>When the item is serialized out as xml, its value is "large".</para>
         /// </summary>
-        [EnumString("large")]
-        Large
+        public static ItemSizeValues Large => new("large");
+    
     }
 
     /// <summary>
     /// Defines the BoxStyleValues enumeration.
     /// </summary>
-    public enum BoxStyleValues
+    public readonly record struct BoxStyleValues : IEnumValue, IEnumValueFactory<BoxStyleValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new BoxStyleValues enum instance
+        /// </summary>
+        public BoxStyleValues(string value) => _value = value;
+        BoxStyleValues IEnumValueFactory<BoxStyleValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "horizontal" => true,
+            "vertical" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "horizontal";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// horizontal.
         /// <para>When the item is serialized out as xml, its value is "horizontal".</para>
         /// </summary>
-        [EnumString("horizontal")]
-        Horizontal,
+        public static BoxStyleValues Horizontal => new("horizontal");
         /// <summary>
         /// vertical.
         /// <para>When the item is serialized out as xml, its value is "vertical".</para>
         /// </summary>
-        [EnumString("vertical")]
-        Vertical
+        public static BoxStyleValues Vertical => new("vertical");
+    
     }
 }

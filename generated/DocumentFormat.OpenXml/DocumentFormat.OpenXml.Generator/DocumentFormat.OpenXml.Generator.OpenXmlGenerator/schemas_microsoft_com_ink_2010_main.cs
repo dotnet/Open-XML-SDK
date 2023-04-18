@@ -527,243 +527,285 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
     /// <summary>
     /// Defines the KnownContextNodeTypeValues enumeration.
     /// </summary>
-    public enum KnownContextNodeTypeValues
+    public readonly record struct KnownContextNodeTypeValues : IEnumValue, IEnumValueFactory<KnownContextNodeTypeValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new KnownContextNodeTypeValues enum instance
+        /// </summary>
+        public KnownContextNodeTypeValues(string value) => _value = value;
+        KnownContextNodeTypeValues IEnumValueFactory<KnownContextNodeTypeValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "root" => true,
+            "unclassifiedInk" => true,
+            "writingRegion" => true,
+            "analysisHint" => true,
+            "object" => true,
+            "inkDrawing" => true,
+            "image" => true,
+            "paragraph" => true,
+            "line" => true,
+            "inkBullet" => true,
+            "inkWord" => true,
+            "textWord" => true,
+            "customRecognizer" => true,
+            "mathRegion" => true,
+            "mathEquation" => true,
+            "mathStruct" => true,
+            "mathSymbol" => true,
+            "mathIdentifier" => true,
+            "mathOperator" => true,
+            "mathNumber" => true,
+            "nonInkDrawing" => true,
+            "groupNode" => true,
+            "mixedDrawing" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "root";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// root.
         /// <para>When the item is serialized out as xml, its value is "root".</para>
         /// </summary>
-        [EnumString("root")]
-        Root,
+        public static KnownContextNodeTypeValues Root => new("root");
         /// <summary>
         /// unclassifiedInk.
         /// <para>When the item is serialized out as xml, its value is "unclassifiedInk".</para>
         /// </summary>
-        [EnumString("unclassifiedInk")]
-        UnclassifiedInk,
+        public static KnownContextNodeTypeValues UnclassifiedInk => new("unclassifiedInk");
         /// <summary>
         /// writingRegion.
         /// <para>When the item is serialized out as xml, its value is "writingRegion".</para>
         /// </summary>
-        [EnumString("writingRegion")]
-        WritingRegion,
+        public static KnownContextNodeTypeValues WritingRegion => new("writingRegion");
         /// <summary>
         /// analysisHint.
         /// <para>When the item is serialized out as xml, its value is "analysisHint".</para>
         /// </summary>
-        [EnumString("analysisHint")]
-        AnalysisHint,
+        public static KnownContextNodeTypeValues AnalysisHint => new("analysisHint");
         /// <summary>
         /// object.
         /// <para>When the item is serialized out as xml, its value is "object".</para>
         /// </summary>
-        [EnumString("object")]
-        Object,
+        public static KnownContextNodeTypeValues Object => new("object");
         /// <summary>
         /// inkDrawing.
         /// <para>When the item is serialized out as xml, its value is "inkDrawing".</para>
         /// </summary>
-        [EnumString("inkDrawing")]
-        InkDrawing,
+        public static KnownContextNodeTypeValues InkDrawing => new("inkDrawing");
         /// <summary>
         /// image.
         /// <para>When the item is serialized out as xml, its value is "image".</para>
         /// </summary>
-        [EnumString("image")]
-        Image,
+        public static KnownContextNodeTypeValues Image => new("image");
         /// <summary>
         /// paragraph.
         /// <para>When the item is serialized out as xml, its value is "paragraph".</para>
         /// </summary>
-        [EnumString("paragraph")]
-        Paragraph,
+        public static KnownContextNodeTypeValues Paragraph => new("paragraph");
         /// <summary>
         /// line.
         /// <para>When the item is serialized out as xml, its value is "line".</para>
         /// </summary>
-        [EnumString("line")]
-        Line,
+        public static KnownContextNodeTypeValues Line => new("line");
         /// <summary>
         /// inkBullet.
         /// <para>When the item is serialized out as xml, its value is "inkBullet".</para>
         /// </summary>
-        [EnumString("inkBullet")]
-        InkBullet,
+        public static KnownContextNodeTypeValues InkBullet => new("inkBullet");
         /// <summary>
         /// inkWord.
         /// <para>When the item is serialized out as xml, its value is "inkWord".</para>
         /// </summary>
-        [EnumString("inkWord")]
-        InkWord,
+        public static KnownContextNodeTypeValues InkWord => new("inkWord");
         /// <summary>
         /// textWord.
         /// <para>When the item is serialized out as xml, its value is "textWord".</para>
         /// </summary>
-        [EnumString("textWord")]
-        TextWord,
+        public static KnownContextNodeTypeValues TextWord => new("textWord");
         /// <summary>
         /// customRecognizer.
         /// <para>When the item is serialized out as xml, its value is "customRecognizer".</para>
         /// </summary>
-        [EnumString("customRecognizer")]
-        CustomRecognizer,
+        public static KnownContextNodeTypeValues CustomRecognizer => new("customRecognizer");
         /// <summary>
         /// mathRegion.
         /// <para>When the item is serialized out as xml, its value is "mathRegion".</para>
         /// </summary>
-        [EnumString("mathRegion")]
-        MathRegion,
+        public static KnownContextNodeTypeValues MathRegion => new("mathRegion");
         /// <summary>
         /// mathEquation.
         /// <para>When the item is serialized out as xml, its value is "mathEquation".</para>
         /// </summary>
-        [EnumString("mathEquation")]
-        MathEquation,
+        public static KnownContextNodeTypeValues MathEquation => new("mathEquation");
         /// <summary>
         /// mathStruct.
         /// <para>When the item is serialized out as xml, its value is "mathStruct".</para>
         /// </summary>
-        [EnumString("mathStruct")]
-        MathStruct,
+        public static KnownContextNodeTypeValues MathStruct => new("mathStruct");
         /// <summary>
         /// mathSymbol.
         /// <para>When the item is serialized out as xml, its value is "mathSymbol".</para>
         /// </summary>
-        [EnumString("mathSymbol")]
-        MathSymbol,
+        public static KnownContextNodeTypeValues MathSymbol => new("mathSymbol");
         /// <summary>
         /// mathIdentifier.
         /// <para>When the item is serialized out as xml, its value is "mathIdentifier".</para>
         /// </summary>
-        [EnumString("mathIdentifier")]
-        MathIdentifier,
+        public static KnownContextNodeTypeValues MathIdentifier => new("mathIdentifier");
         /// <summary>
         /// mathOperator.
         /// <para>When the item is serialized out as xml, its value is "mathOperator".</para>
         /// </summary>
-        [EnumString("mathOperator")]
-        MathOperator,
+        public static KnownContextNodeTypeValues MathOperator => new("mathOperator");
         /// <summary>
         /// mathNumber.
         /// <para>When the item is serialized out as xml, its value is "mathNumber".</para>
         /// </summary>
-        [EnumString("mathNumber")]
-        MathNumber,
+        public static KnownContextNodeTypeValues MathNumber => new("mathNumber");
         /// <summary>
         /// nonInkDrawing.
         /// <para>When the item is serialized out as xml, its value is "nonInkDrawing".</para>
         /// </summary>
-        [EnumString("nonInkDrawing")]
-        NonInkDrawing,
+        public static KnownContextNodeTypeValues NonInkDrawing => new("nonInkDrawing");
         /// <summary>
         /// groupNode.
         /// <para>When the item is serialized out as xml, its value is "groupNode".</para>
         /// </summary>
-        [EnumString("groupNode")]
-        GroupNode,
+        public static KnownContextNodeTypeValues GroupNode => new("groupNode");
         /// <summary>
         /// mixedDrawing.
         /// <para>When the item is serialized out as xml, its value is "mixedDrawing".</para>
         /// </summary>
-        [EnumString("mixedDrawing")]
-        MixedDrawing
+        public static KnownContextNodeTypeValues MixedDrawing => new("mixedDrawing");
+    
     }
 
     /// <summary>
     /// Defines the LinkDirectionValues enumeration.
     /// </summary>
-    public enum LinkDirectionValues
+    public readonly record struct LinkDirectionValues : IEnumValue, IEnumValueFactory<LinkDirectionValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new LinkDirectionValues enum instance
+        /// </summary>
+        public LinkDirectionValues(string value) => _value = value;
+        LinkDirectionValues IEnumValueFactory<LinkDirectionValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "to" => true,
+            "from" => true,
+            "with" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "to";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// to.
         /// <para>When the item is serialized out as xml, its value is "to".</para>
         /// </summary>
-        [EnumString("to")]
-        To,
+        public static LinkDirectionValues To => new("to");
         /// <summary>
         /// from.
         /// <para>When the item is serialized out as xml, its value is "from".</para>
         /// </summary>
-        [EnumString("from")]
-        From,
+        public static LinkDirectionValues From => new("from");
         /// <summary>
         /// with.
         /// <para>When the item is serialized out as xml, its value is "with".</para>
         /// </summary>
-        [EnumString("with")]
-        With
+        public static LinkDirectionValues With => new("with");
+    
     }
 
     /// <summary>
     /// Defines the KnownSemanticTypeValues enumeration.
     /// </summary>
-    public enum KnownSemanticTypeValues
+    public readonly record struct KnownSemanticTypeValues : IEnumValue, IEnumValueFactory<KnownSemanticTypeValues>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new KnownSemanticTypeValues enum instance
+        /// </summary>
+        public KnownSemanticTypeValues(string value) => _value = value;
+        KnownSemanticTypeValues IEnumValueFactory<KnownSemanticTypeValues>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "none" => true,
+            "underline" => true,
+            "strikethrough" => true,
+            "highlight" => true,
+            "scratchOut" => true,
+            "verticalRange" => true,
+            "callout" => true,
+            "enclosure" => true,
+            "comment" => true,
+            "container" => true,
+            "connector" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "none";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2007;
         /// <summary>
         /// none.
         /// <para>When the item is serialized out as xml, its value is "none".</para>
         /// </summary>
-        [EnumString("none")]
-        None,
+        public static KnownSemanticTypeValues None => new("none");
         /// <summary>
         /// underline.
         /// <para>When the item is serialized out as xml, its value is "underline".</para>
         /// </summary>
-        [EnumString("underline")]
-        Underline,
+        public static KnownSemanticTypeValues Underline => new("underline");
         /// <summary>
         /// strikethrough.
         /// <para>When the item is serialized out as xml, its value is "strikethrough".</para>
         /// </summary>
-        [EnumString("strikethrough")]
-        Strikethrough,
+        public static KnownSemanticTypeValues Strikethrough => new("strikethrough");
         /// <summary>
         /// highlight.
         /// <para>When the item is serialized out as xml, its value is "highlight".</para>
         /// </summary>
-        [EnumString("highlight")]
-        Highlight,
+        public static KnownSemanticTypeValues Highlight => new("highlight");
         /// <summary>
         /// scratchOut.
         /// <para>When the item is serialized out as xml, its value is "scratchOut".</para>
         /// </summary>
-        [EnumString("scratchOut")]
-        ScratchOut,
+        public static KnownSemanticTypeValues ScratchOut => new("scratchOut");
         /// <summary>
         /// verticalRange.
         /// <para>When the item is serialized out as xml, its value is "verticalRange".</para>
         /// </summary>
-        [EnumString("verticalRange")]
-        VerticalRange,
+        public static KnownSemanticTypeValues VerticalRange => new("verticalRange");
         /// <summary>
         /// callout.
         /// <para>When the item is serialized out as xml, its value is "callout".</para>
         /// </summary>
-        [EnumString("callout")]
-        Callout,
+        public static KnownSemanticTypeValues Callout => new("callout");
         /// <summary>
         /// enclosure.
         /// <para>When the item is serialized out as xml, its value is "enclosure".</para>
         /// </summary>
-        [EnumString("enclosure")]
-        Enclosure,
+        public static KnownSemanticTypeValues Enclosure => new("enclosure");
         /// <summary>
         /// comment.
         /// <para>When the item is serialized out as xml, its value is "comment".</para>
         /// </summary>
-        [EnumString("comment")]
-        Comment,
+        public static KnownSemanticTypeValues Comment => new("comment");
         /// <summary>
         /// container.
         /// <para>When the item is serialized out as xml, its value is "container".</para>
         /// </summary>
-        [EnumString("container")]
-        Container,
+        public static KnownSemanticTypeValues Container => new("container");
         /// <summary>
         /// connector.
         /// <para>When the item is serialized out as xml, its value is "connector".</para>
         /// </summary>
-        [EnumString("connector")]
-        Connector
+        public static KnownSemanticTypeValues Connector => new("connector");
+    
     }
 }

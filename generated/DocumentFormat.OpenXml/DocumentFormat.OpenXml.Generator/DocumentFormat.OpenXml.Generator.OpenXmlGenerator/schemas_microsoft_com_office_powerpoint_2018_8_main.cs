@@ -1129,25 +1129,39 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
     /// <summary>
     /// Defines the CommentStatus enumeration.
     /// </summary>
-    public enum CommentStatus
+    public readonly record struct CommentStatus : IEnumValue, IEnumValueFactory<CommentStatus>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new CommentStatus enum instance
+        /// </summary>
+        public CommentStatus(string value) => _value = value;
+        CommentStatus IEnumValueFactory<CommentStatus>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "active" => true,
+            "resolved" => true,
+            "closed" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "active";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2021;
         /// <summary>
         /// active.
         /// <para>When the item is serialized out as xml, its value is "active".</para>
         /// </summary>
-        [EnumString("active")]
-        Active,
+        public static CommentStatus Active => new("active");
         /// <summary>
         /// resolved.
         /// <para>When the item is serialized out as xml, its value is "resolved".</para>
         /// </summary>
-        [EnumString("resolved")]
-        Resolved,
+        public static CommentStatus Resolved => new("resolved");
         /// <summary>
         /// closed.
         /// <para>When the item is serialized out as xml, its value is "closed".</para>
         /// </summary>
-        [EnumString("closed")]
-        Closed
+        public static CommentStatus Closed => new("closed");
+    
     }
 }

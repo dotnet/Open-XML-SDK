@@ -2998,160 +2998,216 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData2
     /// <summary>
     /// Defines the SupportingPropertyBagValueType enumeration.
     /// </summary>
-    public enum SupportingPropertyBagValueType
+    public readonly record struct SupportingPropertyBagValueType : IEnumValue, IEnumValueFactory<SupportingPropertyBagValueType>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new SupportingPropertyBagValueType enum instance
+        /// </summary>
+        public SupportingPropertyBagValueType(string value) => _value = value;
+        SupportingPropertyBagValueType IEnumValueFactory<SupportingPropertyBagValueType>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "d" => true,
+            "i" => true,
+            "b" => true,
+            "s" => true,
+            "spb" => true,
+            "spba" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "d";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2019;
         /// <summary>
         /// d.
         /// <para>When the item is serialized out as xml, its value is "d".</para>
         /// </summary>
-        [EnumString("d")]
-        D,
+        public static SupportingPropertyBagValueType D => new("d");
         /// <summary>
         /// i.
         /// <para>When the item is serialized out as xml, its value is "i".</para>
         /// </summary>
-        [EnumString("i")]
-        I,
+        public static SupportingPropertyBagValueType I => new("i");
         /// <summary>
         /// b.
         /// <para>When the item is serialized out as xml, its value is "b".</para>
         /// </summary>
-        [EnumString("b")]
-        B,
+        public static SupportingPropertyBagValueType B => new("b");
         /// <summary>
         /// s.
         /// <para>When the item is serialized out as xml, its value is "s".</para>
         /// </summary>
-        [EnumString("s")]
-        S,
+        public static SupportingPropertyBagValueType S => new("s");
         /// <summary>
         /// spb.
         /// <para>When the item is serialized out as xml, its value is "spb".</para>
         /// </summary>
-        [EnumString("spb")]
-        Spb,
+        public static SupportingPropertyBagValueType Spb => new("spb");
         /// <summary>
         /// spba.
         /// <para>When the item is serialized out as xml, its value is "spba".</para>
         /// </summary>
-        [EnumString("spba")]
-        Spba
+        public static SupportingPropertyBagValueType Spba => new("spba");
+    
     }
 
     /// <summary>
     /// Defines the SupportingPropertyBagArrayValueType enumeration.
     /// </summary>
-    public enum SupportingPropertyBagArrayValueType
+    public readonly record struct SupportingPropertyBagArrayValueType : IEnumValue, IEnumValueFactory<SupportingPropertyBagArrayValueType>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new SupportingPropertyBagArrayValueType enum instance
+        /// </summary>
+        public SupportingPropertyBagArrayValueType(string value) => _value = value;
+        SupportingPropertyBagArrayValueType IEnumValueFactory<SupportingPropertyBagArrayValueType>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "d" => true,
+            "i" => true,
+            "b" => true,
+            "s" => true,
+            "spb" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "d";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2019;
         /// <summary>
         /// d.
         /// <para>When the item is serialized out as xml, its value is "d".</para>
         /// </summary>
-        [EnumString("d")]
-        D,
+        public static SupportingPropertyBagArrayValueType D => new("d");
         /// <summary>
         /// i.
         /// <para>When the item is serialized out as xml, its value is "i".</para>
         /// </summary>
-        [EnumString("i")]
-        I,
+        public static SupportingPropertyBagArrayValueType I => new("i");
         /// <summary>
         /// b.
         /// <para>When the item is serialized out as xml, its value is "b".</para>
         /// </summary>
-        [EnumString("b")]
-        B,
+        public static SupportingPropertyBagArrayValueType B => new("b");
         /// <summary>
         /// s.
         /// <para>When the item is serialized out as xml, its value is "s".</para>
         /// </summary>
-        [EnumString("s")]
-        S,
+        public static SupportingPropertyBagArrayValueType S => new("s");
         /// <summary>
         /// spb.
         /// <para>When the item is serialized out as xml, its value is "spb".</para>
         /// </summary>
-        [EnumString("spb")]
-        Spb
+        public static SupportingPropertyBagArrayValueType Spb => new("spb");
+    
     }
 
     /// <summary>
     /// Defines the ArrayValueType enumeration.
     /// </summary>
-    public enum ArrayValueType
+    public readonly record struct ArrayValueType : IEnumValue, IEnumValueFactory<ArrayValueType>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new ArrayValueType enum instance
+        /// </summary>
+        public ArrayValueType(string value) => _value = value;
+        ArrayValueType IEnumValueFactory<ArrayValueType>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "d" => true,
+            "i" => true,
+            "b" => true,
+            "e" => true,
+            "s" => true,
+            "r" => true,
+            "a" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "d";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2019;
         /// <summary>
         /// d.
         /// <para>When the item is serialized out as xml, its value is "d".</para>
         /// </summary>
-        [EnumString("d")]
-        D,
+        public static ArrayValueType D => new("d");
         /// <summary>
         /// i.
         /// <para>When the item is serialized out as xml, its value is "i".</para>
         /// </summary>
-        [EnumString("i")]
-        I,
+        public static ArrayValueType I => new("i");
         /// <summary>
         /// b.
         /// <para>When the item is serialized out as xml, its value is "b".</para>
         /// </summary>
-        [EnumString("b")]
-        B,
+        public static ArrayValueType B => new("b");
         /// <summary>
         /// e.
         /// <para>When the item is serialized out as xml, its value is "e".</para>
         /// </summary>
-        [EnumString("e")]
-        E,
+        public static ArrayValueType E => new("e");
         /// <summary>
         /// s.
         /// <para>When the item is serialized out as xml, its value is "s".</para>
         /// </summary>
-        [EnumString("s")]
-        S,
+        public static ArrayValueType S => new("s");
         /// <summary>
         /// r.
         /// <para>When the item is serialized out as xml, its value is "r".</para>
         /// </summary>
-        [EnumString("r")]
-        R,
+        public static ArrayValueType R => new("r");
         /// <summary>
         /// a.
         /// <para>When the item is serialized out as xml, its value is "a".</para>
         /// </summary>
-        [EnumString("a")]
-        A
+        public static ArrayValueType A => new("a");
+    
     }
 
     /// <summary>
     /// Defines the RichFormatPropertyType enumeration.
     /// </summary>
-    public enum RichFormatPropertyType
+    public readonly record struct RichFormatPropertyType : IEnumValue, IEnumValueFactory<RichFormatPropertyType>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new RichFormatPropertyType enum instance
+        /// </summary>
+        public RichFormatPropertyType(string value) => _value = value;
+        RichFormatPropertyType IEnumValueFactory<RichFormatPropertyType>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "b" => true,
+            "n" => true,
+            "i" => true,
+            "s" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "b";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2019;
         /// <summary>
         /// b.
         /// <para>When the item is serialized out as xml, its value is "b".</para>
         /// </summary>
-        [EnumString("b")]
-        B,
+        public static RichFormatPropertyType B => new("b");
         /// <summary>
         /// n.
         /// <para>When the item is serialized out as xml, its value is "n".</para>
         /// </summary>
-        [EnumString("n")]
-        N,
+        public static RichFormatPropertyType N => new("n");
         /// <summary>
         /// i.
         /// <para>When the item is serialized out as xml, its value is "i".</para>
         /// </summary>
-        [EnumString("i")]
-        I,
+        public static RichFormatPropertyType I => new("i");
         /// <summary>
         /// s.
         /// <para>When the item is serialized out as xml, its value is "s".</para>
         /// </summary>
-        [EnumString("s")]
-        S
+        public static RichFormatPropertyType S => new("s");
+    
     }
 }

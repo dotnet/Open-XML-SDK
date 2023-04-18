@@ -6815,391 +6815,573 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <summary>
     /// Defines the RevisionContext enumeration.
     /// </summary>
-    public enum RevisionContext
+    public readonly record struct RevisionContext : IEnumValue, IEnumValueFactory<RevisionContext>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new RevisionContext enum instance
+        /// </summary>
+        public RevisionContext(string value) => _value = value;
+        RevisionContext IEnumValueFactory<RevisionContext>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "normal" => true,
+            "undo" => true,
+            "redo" => true,
+            "copy" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "normal";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2016;
         /// <summary>
         /// normal.
         /// <para>When the item is serialized out as xml, its value is "normal".</para>
         /// </summary>
-        [EnumString("normal")]
-        Normal,
+        public static RevisionContext Normal => new("normal");
         /// <summary>
         /// undo.
         /// <para>When the item is serialized out as xml, its value is "undo".</para>
         /// </summary>
-        [EnumString("undo")]
-        Undo,
+        public static RevisionContext Undo => new("undo");
         /// <summary>
         /// redo.
         /// <para>When the item is serialized out as xml, its value is "redo".</para>
         /// </summary>
-        [EnumString("redo")]
-        Redo,
+        public static RevisionContext Redo => new("redo");
         /// <summary>
         /// copy.
         /// <para>When the item is serialized out as xml, its value is "copy".</para>
         /// </summary>
-        [EnumString("copy")]
-        Copy
+        public static RevisionContext Copy => new("copy");
+    
     }
 
     /// <summary>
     /// Defines the RwColAction enumeration.
     /// </summary>
-    public enum RwColAction
+    public readonly record struct RwColAction : IEnumValue, IEnumValueFactory<RwColAction>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new RwColAction enum instance
+        /// </summary>
+        public RwColAction(string value) => _value = value;
+        RwColAction IEnumValueFactory<RwColAction>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "insr" => true,
+            "delr" => true,
+            "insc" => true,
+            "delc" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "insr";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2016;
         /// <summary>
         /// insr.
         /// <para>When the item is serialized out as xml, its value is "insr".</para>
         /// </summary>
-        [EnumString("insr")]
-        Insr,
+        public static RwColAction Insr => new("insr");
         /// <summary>
         /// delr.
         /// <para>When the item is serialized out as xml, its value is "delr".</para>
         /// </summary>
-        [EnumString("delr")]
-        Delr,
+        public static RwColAction Delr => new("delr");
         /// <summary>
         /// insc.
         /// <para>When the item is serialized out as xml, its value is "insc".</para>
         /// </summary>
-        [EnumString("insc")]
-        Insc,
+        public static RwColAction Insc => new("insc");
         /// <summary>
         /// delc.
         /// <para>When the item is serialized out as xml, its value is "delc".</para>
         /// </summary>
-        [EnumString("delc")]
-        Delc
+        public static RwColAction Delc => new("delc");
+    
     }
 
     /// <summary>
     /// Defines the FeatureType enumeration.
     /// </summary>
-    public enum FeatureType
+    public readonly record struct FeatureType : IEnumValue, IEnumValueFactory<FeatureType>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new FeatureType enum instance
+        /// </summary>
+        public FeatureType(string value) => _value = value;
+        FeatureType IEnumValueFactory<FeatureType>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "dataValidation" => true,
+            "hyperlink" => true,
+            "rowColVisualOps" => true,
+            "freezePanes" => true,
+            "sparklines" => true,
+            "hideUnhideSheet" => true,
+            "showGridlinesHeadings" => true,
+            "comment" => true,
+            "outlines" => true,
+            "drawingElement" => true,
+            "autoFilter" => true,
+            "pivotTable" => true,
+            "future" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "dataValidation";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2016;
         /// <summary>
         /// dataValidation.
         /// <para>When the item is serialized out as xml, its value is "dataValidation".</para>
         /// </summary>
-        [EnumString("dataValidation")]
-        DataValidation,
+        public static FeatureType DataValidation => new("dataValidation");
         /// <summary>
         /// hyperlink.
         /// <para>When the item is serialized out as xml, its value is "hyperlink".</para>
         /// </summary>
-        [EnumString("hyperlink")]
-        Hyperlink,
+        public static FeatureType Hyperlink => new("hyperlink");
         /// <summary>
         /// rowColVisualOps.
         /// <para>When the item is serialized out as xml, its value is "rowColVisualOps".</para>
         /// </summary>
-        [EnumString("rowColVisualOps")]
-        RowColVisualOps,
+        public static FeatureType RowColVisualOps => new("rowColVisualOps");
         /// <summary>
         /// freezePanes.
         /// <para>When the item is serialized out as xml, its value is "freezePanes".</para>
         /// </summary>
-        [EnumString("freezePanes")]
-        FreezePanes,
+        public static FeatureType FreezePanes => new("freezePanes");
         /// <summary>
         /// sparklines.
         /// <para>When the item is serialized out as xml, its value is "sparklines".</para>
         /// </summary>
-        [EnumString("sparklines")]
-        Sparklines,
+        public static FeatureType Sparklines => new("sparklines");
         /// <summary>
         /// hideUnhideSheet.
         /// <para>When the item is serialized out as xml, its value is "hideUnhideSheet".</para>
         /// </summary>
-        [EnumString("hideUnhideSheet")]
-        HideUnhideSheet,
+        public static FeatureType HideUnhideSheet => new("hideUnhideSheet");
         /// <summary>
         /// showGridlinesHeadings.
         /// <para>When the item is serialized out as xml, its value is "showGridlinesHeadings".</para>
         /// </summary>
-        [EnumString("showGridlinesHeadings")]
-        ShowGridlinesHeadings,
+        public static FeatureType ShowGridlinesHeadings => new("showGridlinesHeadings");
         /// <summary>
         /// comment.
         /// <para>When the item is serialized out as xml, its value is "comment".</para>
         /// </summary>
-        [EnumString("comment")]
-        Comment,
+        public static FeatureType Comment => new("comment");
         /// <summary>
         /// outlines.
         /// <para>When the item is serialized out as xml, its value is "outlines".</para>
         /// </summary>
-        [EnumString("outlines")]
-        Outlines,
+        public static FeatureType Outlines => new("outlines");
         /// <summary>
         /// drawingElement.
         /// <para>When the item is serialized out as xml, its value is "drawingElement".</para>
         /// </summary>
-        [EnumString("drawingElement")]
-        DrawingElement,
+        public static FeatureType DrawingElement => new("drawingElement");
         /// <summary>
         /// autoFilter.
         /// <para>When the item is serialized out as xml, its value is "autoFilter".</para>
         /// </summary>
-        [EnumString("autoFilter")]
-        AutoFilter,
+        public static FeatureType AutoFilter => new("autoFilter");
         /// <summary>
         /// pivotTable.
         /// <para>When the item is serialized out as xml, its value is "pivotTable".</para>
         /// </summary>
-        [EnumString("pivotTable")]
-        PivotTable,
+        public static FeatureType PivotTable => new("pivotTable");
         /// <summary>
         /// future.
         /// <para>When the item is serialized out as xml, its value is "future".</para>
         /// </summary>
-        [EnumString("future")]
-        Future
+        public static FeatureType Future => new("future");
+    
     }
 
     /// <summary>
     /// Defines the ExtFeatureType enumeration.
     /// </summary>
-    public enum ExtFeatureType
+    public readonly record struct ExtFeatureType : IEnumValue, IEnumValueFactory<ExtFeatureType>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new ExtFeatureType enum instance
+        /// </summary>
+        public ExtFeatureType(string value) => _value = value;
+        ExtFeatureType IEnumValueFactory<ExtFeatureType>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "reserved" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "reserved";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2016;
         /// <summary>
         /// reserved.
         /// <para>When the item is serialized out as xml, its value is "reserved".</para>
         /// </summary>
-        [EnumString("reserved")]
-        Reserved
+        public static ExtFeatureType Reserved => new("reserved");
+    
     }
 
     /// <summary>
     /// Defines the SubFeatureType enumeration.
     /// </summary>
-    public enum SubFeatureType
+    public readonly record struct SubFeatureType : IEnumValue, IEnumValueFactory<SubFeatureType>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new SubFeatureType enum instance
+        /// </summary>
+        public SubFeatureType(string value) => _value = value;
+        SubFeatureType IEnumValueFactory<SubFeatureType>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "none" => true,
+            "future" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "none";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2016;
         /// <summary>
         /// none.
         /// <para>When the item is serialized out as xml, its value is "none".</para>
         /// </summary>
-        [EnumString("none")]
-        None,
+        public static SubFeatureType None => new("none");
         /// <summary>
         /// future.
         /// <para>When the item is serialized out as xml, its value is "future".</para>
         /// </summary>
-        [EnumString("future")]
-        Future
+        public static SubFeatureType Future => new("future");
+    
     }
 
     /// <summary>
     /// Defines the ExtSubFeatureType enumeration.
     /// </summary>
-    public enum ExtSubFeatureType
+    public readonly record struct ExtSubFeatureType : IEnumValue, IEnumValueFactory<ExtSubFeatureType>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new ExtSubFeatureType enum instance
+        /// </summary>
+        public ExtSubFeatureType(string value) => _value = value;
+        ExtSubFeatureType IEnumValueFactory<ExtSubFeatureType>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "reserved" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "reserved";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2016;
         /// <summary>
         /// reserved.
         /// <para>When the item is serialized out as xml, its value is "reserved".</para>
         /// </summary>
-        [EnumString("reserved")]
-        Reserved
+        public static ExtSubFeatureType Reserved => new("reserved");
+    
     }
 
     /// <summary>
     /// Defines the RowColVisualOp enumeration.
     /// </summary>
-    public enum RowColVisualOp
+    public readonly record struct RowColVisualOp : IEnumValue, IEnumValueFactory<RowColVisualOp>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new RowColVisualOp enum instance
+        /// </summary>
+        public RowColVisualOp(string value) => _value = value;
+        RowColVisualOp IEnumValueFactory<RowColVisualOp>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "hide" => true,
+            "unhide" => true,
+            "resize" => true,
+            "autosize" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "hide";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2016;
         /// <summary>
         /// hide.
         /// <para>When the item is serialized out as xml, its value is "hide".</para>
         /// </summary>
-        [EnumString("hide")]
-        Hide,
+        public static RowColVisualOp Hide => new("hide");
         /// <summary>
         /// unhide.
         /// <para>When the item is serialized out as xml, its value is "unhide".</para>
         /// </summary>
-        [EnumString("unhide")]
-        Unhide,
+        public static RowColVisualOp Unhide => new("unhide");
         /// <summary>
         /// resize.
         /// <para>When the item is serialized out as xml, its value is "resize".</para>
         /// </summary>
-        [EnumString("resize")]
-        Resize,
+        public static RowColVisualOp Resize => new("resize");
         /// <summary>
         /// autosize.
         /// <para>When the item is serialized out as xml, its value is "autosize".</para>
         /// </summary>
-        [EnumString("autosize")]
-        Autosize
+        public static RowColVisualOp Autosize => new("autosize");
+    
     }
 
     /// <summary>
     /// Defines the SheetOp enumeration.
     /// </summary>
-    public enum SheetOp
+    public readonly record struct SheetOp : IEnumValue, IEnumValueFactory<SheetOp>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new SheetOp enum instance
+        /// </summary>
+        public SheetOp(string value) => _value = value;
+        SheetOp IEnumValueFactory<SheetOp>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "insert" => true,
+            "delete" => true,
+            "reorder" => true,
+            "rename" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "insert";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2016;
         /// <summary>
         /// insert.
         /// <para>When the item is serialized out as xml, its value is "insert".</para>
         /// </summary>
-        [EnumString("insert")]
-        Insert,
+        public static SheetOp Insert => new("insert");
         /// <summary>
         /// delete.
         /// <para>When the item is serialized out as xml, its value is "delete".</para>
         /// </summary>
-        [EnumString("delete")]
-        Delete,
+        public static SheetOp Delete => new("delete");
         /// <summary>
         /// reorder.
         /// <para>When the item is serialized out as xml, its value is "reorder".</para>
         /// </summary>
-        [EnumString("reorder")]
-        Reorder,
+        public static SheetOp Reorder => new("reorder");
         /// <summary>
         /// rename.
         /// <para>When the item is serialized out as xml, its value is "rename".</para>
         /// </summary>
-        [EnumString("rename")]
-        Rename
+        public static SheetOp Rename => new("rename");
+    
     }
 
     /// <summary>
     /// Defines the FillType enumeration.
     /// </summary>
-    public enum FillType
+    public readonly record struct FillType : IEnumValue, IEnumValueFactory<FillType>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new FillType enum instance
+        /// </summary>
+        public FillType(string value) => _value = value;
+        FillType IEnumValueFactory<FillType>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "fill" => true,
+            "array" => true,
+            "future" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "fill";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2016;
         /// <summary>
         /// fill.
         /// <para>When the item is serialized out as xml, its value is "fill".</para>
         /// </summary>
-        [EnumString("fill")]
-        Fill,
+        public static FillType Fill => new("fill");
         /// <summary>
         /// array.
         /// <para>When the item is serialized out as xml, its value is "array".</para>
         /// </summary>
-        [EnumString("array")]
-        Array,
+        public static FillType Array => new("array");
         /// <summary>
         /// future.
         /// <para>When the item is serialized out as xml, its value is "future".</para>
         /// </summary>
-        [EnumString("future")]
-        Future
+        public static FillType Future => new("future");
+    
     }
 
     /// <summary>
     /// Defines the FillTypeExt enumeration.
     /// </summary>
-    public enum FillTypeExt
+    public readonly record struct FillTypeExt : IEnumValue, IEnumValueFactory<FillTypeExt>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new FillTypeExt enum instance
+        /// </summary>
+        public FillTypeExt(string value) => _value = value;
+        FillTypeExt IEnumValueFactory<FillTypeExt>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "test" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "test";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2016;
         /// <summary>
         /// test.
         /// <para>When the item is serialized out as xml, its value is "test".</para>
         /// </summary>
-        [EnumString("test")]
-        Test
+        public static FillTypeExt Test => new("test");
+    
     }
 
     /// <summary>
     /// Defines the AdjustType enumeration.
     /// </summary>
-    public enum AdjustType
+    public readonly record struct AdjustType : IEnumValue, IEnumValueFactory<AdjustType>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new AdjustType enum instance
+        /// </summary>
+        public AdjustType(string value) => _value = value;
+        AdjustType IEnumValueFactory<AdjustType>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "fmla" => true,
+            "format" => true,
+            "condFmt" => true,
+            "sparkline" => true,
+            "anchor" => true,
+            "fmlaNoSticky" => true,
+            "noAdj" => true,
+            "fragile" => true,
+            "future" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "fmla";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2016;
         /// <summary>
         /// fmla.
         /// <para>When the item is serialized out as xml, its value is "fmla".</para>
         /// </summary>
-        [EnumString("fmla")]
-        Fmla,
+        public static AdjustType Fmla => new("fmla");
         /// <summary>
         /// format.
         /// <para>When the item is serialized out as xml, its value is "format".</para>
         /// </summary>
-        [EnumString("format")]
-        Format,
+        public static AdjustType Format => new("format");
         /// <summary>
         /// condFmt.
         /// <para>When the item is serialized out as xml, its value is "condFmt".</para>
         /// </summary>
-        [EnumString("condFmt")]
-        CondFmt,
+        public static AdjustType CondFmt => new("condFmt");
         /// <summary>
         /// sparkline.
         /// <para>When the item is serialized out as xml, its value is "sparkline".</para>
         /// </summary>
-        [EnumString("sparkline")]
-        Sparkline,
+        public static AdjustType Sparkline => new("sparkline");
         /// <summary>
         /// anchor.
         /// <para>When the item is serialized out as xml, its value is "anchor".</para>
         /// </summary>
-        [EnumString("anchor")]
-        Anchor,
+        public static AdjustType Anchor => new("anchor");
         /// <summary>
         /// fmlaNoSticky.
         /// <para>When the item is serialized out as xml, its value is "fmlaNoSticky".</para>
         /// </summary>
-        [EnumString("fmlaNoSticky")]
-        FmlaNoSticky,
+        public static AdjustType FmlaNoSticky => new("fmlaNoSticky");
         /// <summary>
         /// noAdj.
         /// <para>When the item is serialized out as xml, its value is "noAdj".</para>
         /// </summary>
-        [EnumString("noAdj")]
-        NoAdj,
+        public static AdjustType NoAdj => new("noAdj");
         /// <summary>
         /// fragile.
         /// <para>When the item is serialized out as xml, its value is "fragile".</para>
         /// </summary>
-        [EnumString("fragile")]
-        Fragile,
+        public static AdjustType Fragile => new("fragile");
         /// <summary>
         /// future.
         /// <para>When the item is serialized out as xml, its value is "future".</para>
         /// </summary>
-        [EnumString("future")]
-        Future
+        public static AdjustType Future => new("future");
+    
     }
 
     /// <summary>
     /// Defines the AdjustTypeExt enumeration.
     /// </summary>
-    public enum AdjustTypeExt
+    public readonly record struct AdjustTypeExt : IEnumValue, IEnumValueFactory<AdjustTypeExt>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new AdjustTypeExt enum instance
+        /// </summary>
+        public AdjustTypeExt(string value) => _value = value;
+        AdjustTypeExt IEnumValueFactory<AdjustTypeExt>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "test" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "test";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2016;
         /// <summary>
         /// test.
         /// <para>When the item is serialized out as xml, its value is "test".</para>
         /// </summary>
-        [EnumString("test")]
-        Test
+        public static AdjustTypeExt Test => new("test");
+    
     }
 
     /// <summary>
     /// Defines the OartAnchorType enumeration.
     /// </summary>
-    public enum OartAnchorType
+    public readonly record struct OartAnchorType : IEnumValue, IEnumValueFactory<OartAnchorType>
     {
+        private readonly string? _value;
+        /// <summary>
+        /// Creates a new OartAnchorType enum instance
+        /// </summary>
+        public OartAnchorType(string value) => _value = value;
+        OartAnchorType IEnumValueFactory<OartAnchorType>.Create(string name) => new(name);
+        bool IEnumValue.IsValid => InternalValue switch
+        {
+            "twoCell" => true,
+            "oneCell" => true,
+            "absolute" => true,
+            _ => false
+        };
+        string IEnumValue.Value => InternalValue;
+        private string InternalValue => _value ?? "twoCell";
+        FileFormatVersions IEnumValue.Version => FileFormatVersions.Office2016;
         /// <summary>
         /// twoCell.
         /// <para>When the item is serialized out as xml, its value is "twoCell".</para>
         /// </summary>
-        [EnumString("twoCell")]
-        TwoCell,
+        public static OartAnchorType TwoCell => new("twoCell");
         /// <summary>
         /// oneCell.
         /// <para>When the item is serialized out as xml, its value is "oneCell".</para>
         /// </summary>
-        [EnumString("oneCell")]
-        OneCell,
+        public static OartAnchorType OneCell => new("oneCell");
         /// <summary>
         /// absolute.
         /// <para>When the item is serialized out as xml, its value is "absolute".</para>
         /// </summary>
-        [EnumString("absolute")]
-        Absolute
+        public static OartAnchorType Absolute => new("absolute");
+    
     }
 }
