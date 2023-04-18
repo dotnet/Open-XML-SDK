@@ -11,8 +11,8 @@ namespace DocumentFormat.OpenXml.Features;
 public interface IDisposableFeature
 {
     /// <summary>
-    /// Register an <see cref="IDisposable"/> to be called on package or part close.
+    /// Register an action to be called on package or part close.
     /// </summary>
     /// <param name="disposable">Disposable to be called when a package or part is closed.</param>
-    public void Register(IDisposable disposable);
+    public void Register(Action disposable);
 }

@@ -3,6 +3,7 @@
 
 using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Framework;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -13,9 +14,12 @@ internal partial class PartFeatureCollection :
     ITargetFeature,
     IPartConstraintFeature,
     IContentTypeFeature,
-    IKnownDataPartFeature
+    IKnownDataPartFeature,
+    IDisposableFeature,
+    IContainerDisposableFeature
 {
     private readonly OpenXmlPart _part;
+    private Action? _disposable;
 
     private FeatureContainer _container;
 
@@ -78,4 +82,12 @@ internal partial class PartFeatureCollection :
     }
 
     bool IKnownDataPartFeature.IsKnown(string relationshipId) => false;
+
+    void IDisposableFeature.Register(Action disposable) => _disposable = disposable + _disposable;
+
+    void IContainerDisposableFeature.Dispose()
+    {
+        _disposable?.Invoke();
+        _disposable = null;
+    }
 }

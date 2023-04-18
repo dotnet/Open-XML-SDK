@@ -8,7 +8,6 @@ using NSubstitute;
 using System;
 using System.IO;
 using System.IO.Packaging;
-using System.Linq;
 using System.Text;
 using Xunit;
 
@@ -248,7 +247,7 @@ public class PackageUriHandlingTests
 
         void IDisposable.Dispose() => _dispose?.Invoke();
 
-        void IDisposableFeature.Register(IDisposable disposable)
-            => _dispose = disposable.Dispose + _dispose;
+        void IDisposableFeature.Register(Action disposable)
+            => _dispose = disposable + _dispose;
     }
 }
