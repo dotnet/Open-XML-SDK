@@ -598,8 +598,11 @@ namespace DocumentFormat.OpenXml.Packaging
 
             public void Dispose()
             {
-                _part?.CleanUp();
-                _part = null;
+                if (_part is { } current)
+                {
+                    _part = null;
+                    current.CleanUp();
+                }
             }
         }
     }
