@@ -109,13 +109,22 @@ namespace DocumentFormat.OpenXml.Packaging
             // set the _openXmlPackage so ThrowIfObjectDisposed( ) do not throw.
             _openXmlPackage = openXmlPackage ?? throw new InvalidOperationException();
 
-            // Regsiter disposal of this part on package dispose or part removal
-            // We use a container class for this so that if a part is destroyed, the reference to it will be removed.
-            // Without this, the part would destroy itself, but the dispose would still hold onto the part and
-            // any type it is referencing.
-            var cleanup = new CleanupRemove(this);
-            _openXmlPackage.Features.GetRequired<IDisposableFeature>().Register(cleanup.Dispose);
-            Features.GetRequired<IDisposableFeature>().Register(cleanup.Dispose);
+            RegisterForDisposal(_openXmlPackage, this);
+        }
+
+        private static void RegisterForDisposal(OpenXmlPackage package, OpenXmlPart part)
+        {
+            void Cleanup()
+            {
+                if (part is { } p)
+                {
+                    part = null!;
+                    p.CleanUp();
+                }
+            }
+
+            package.Features.GetRequired<IDisposableFeature>().Register(Cleanup);
+            part.Features.GetRequired<IDisposableFeature>().Register(Cleanup);
         }
 
         private ITargetFeature GetAndVerifyTargetFeature(string contentType, string? targetExt)
@@ -586,24 +595,5 @@ namespace DocumentFormat.OpenXml.Packaging
         internal MarkupCompatibilityProcessSettings? MCSettings { get; set; }
 
         #endregion
-
-        private sealed class CleanupRemove
-        {
-            private OpenXmlPart? _part;
-
-            public CleanupRemove(OpenXmlPart part)
-            {
-                _part = part;
-            }
-
-            public void Dispose()
-            {
-                if (_part is { } current)
-                {
-                    _part = null;
-                    current.CleanUp();
-                }
-            }
-        }
     }
 }
