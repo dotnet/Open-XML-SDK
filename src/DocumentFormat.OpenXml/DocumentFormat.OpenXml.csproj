@@ -68,25 +68,9 @@
       </ItemGroup>
     </When>
 
-    <When Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+    <When Condition="'$(TargetFramework)' == 'netstandard2.0' OR '$(TargetFramework)' == 'net6.0' OR '$(TargetFramework)' == 'net7.0' ">
       <ItemGroup>
         <PackageReference Include="System.IO.Packaging" />
-      </ItemGroup>
-
-      <!-- In order to support .NET Native, we need to include an appropriate .rd.xml -->
-      <ItemGroup>
-        <EmbeddedResource Include="Properties\DocumentFormat.OpenXml.rd.xml" />
-      </ItemGroup>
-    </When>
-
-    <When Condition=" '$(TargetFramework)' == 'net6.0' OR '$(TargetFramework)' == 'net7.0' ">
-      <ItemGroup>
-        <PackageReference Include="System.IO.Packaging" />
-      </ItemGroup>
-
-      <!-- In order to support .NET Native, we need to include an appropriate .rd.xml -->
-      <ItemGroup>
-        <EmbeddedResource Include="Properties\DocumentFormat.OpenXml.rd.xml" />
       </ItemGroup>
     </When>
   </Choose>
