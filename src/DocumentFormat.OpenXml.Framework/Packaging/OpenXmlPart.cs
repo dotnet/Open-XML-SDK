@@ -108,6 +108,33 @@ namespace DocumentFormat.OpenXml.Packaging
 
             // set the _openXmlPackage so ThrowIfObjectDisposed( ) do not throw.
             _openXmlPackage = openXmlPackage ?? throw new InvalidOperationException();
+
+            RegisterForDisposal(_openXmlPackage, this);
+        }
+
+        private static void RegisterForDisposal(OpenXmlPackage package, OpenXmlPart part)
+        {
+            void Cleanup()
+            {
+                if (part is { } p)
+                {
+                    part = null!;
+                    p.CleanUp();
+                }
+            }
+
+            var packageFeature = package.Features.Get<IDisposableFeature>();
+            var partFeature = part.Features.Get<IDisposableFeature>();
+
+            if (ReferenceEquals(packageFeature, partFeature) && packageFeature is not null)
+            {
+                packageFeature.Register(Cleanup);
+            }
+            else
+            {
+                packageFeature?.Register(Cleanup);
+                partFeature?.Register(Cleanup);
+            }
         }
 
         private ITargetFeature GetAndVerifyTargetFeature(string contentType, string? targetExt)
@@ -507,9 +534,24 @@ namespace DocumentFormat.OpenXml.Packaging
             events?.OnChange(EventType.Created, this);
         }
 
+        internal void CleanUp()
+        {
+            if (Features.Get<IContainerDisposableFeature>() is { } dispose)
+            {
+                if (ReferenceEquals(dispose, _openXmlPackage?.Features.Get<IContainerDisposableFeature>()))
+                {
+                    return;
+                }
+
+                dispose.Dispose();
+            }
+        }
+
         // destroy itself (aka. dispose)
         internal void Destroy()
         {
+            CleanUp();
+
             OpenXmlPackage.Package.DeletePart(Uri);
 
             _openXmlPackage = null;

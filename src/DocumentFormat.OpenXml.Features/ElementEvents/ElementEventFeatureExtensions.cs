@@ -16,7 +16,10 @@ namespace DocumentFormat.OpenXml.Features
 
                 var rootEvent = package.Features.GetRequired<IPartRootEventsFeature>();
 
-                package.Features.SetDisposable<IElementEventFeature>(new ElementEventFeature(rootEvent));
+                var feature = new ElementEventFeature(rootEvent);
+
+                package.Features.GetRequired<IDisposableFeature>().Register(feature);
+                package.Features.Set<IElementEventFeature>(feature);
             }
         }
     }

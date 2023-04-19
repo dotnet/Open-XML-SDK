@@ -69,7 +69,9 @@ namespace DocumentFormat.OpenXml.Features
 
             var paragraphIdCollection = doc.Features.GetRequired<IParagraphIdCollectionFeature>();
             shared.Add(paragraphIdCollection);
-            doc.Features.SetDisposable(new ParagraphIdSnapshotGenerator(paragraphIdCollection, shared, doc.Features.GetRequired<IPackageEventsFeature>()));
+
+            var feature = new ParagraphIdSnapshotGenerator(paragraphIdCollection, shared, doc.Features.GetRequired<IPackageEventsFeature>());
+            doc.Features.GetRequired<IDisposableFeature>().Register(feature);
             doc.Features.Set(shared);
             doc.Features.Set(shared.Composite);
 

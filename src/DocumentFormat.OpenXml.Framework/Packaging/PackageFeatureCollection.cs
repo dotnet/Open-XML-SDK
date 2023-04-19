@@ -78,9 +78,13 @@ internal partial class PackageFeatureCollection :
 
     OpenXmlPart? IPartFactoryFeature.Create(string relationshipType) => null;
 
-    void IDisposableFeature.Register(IDisposable disposable) => _disposable = disposable.Dispose + _disposable;
+    void IDisposableFeature.Register(Action disposable) => _disposable = disposable + _disposable;
 
-    void IContainerDisposableFeature.Dispose() => _disposable?.Invoke();
+    void IContainerDisposableFeature.Dispose()
+    {
+        _disposable?.Invoke();
+        _disposable = null;
+    }
 
     void ISaveFeature.Save(OpenXmlPartContainer container)
         => _save?.Invoke(container);

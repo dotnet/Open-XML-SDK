@@ -24,7 +24,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - OpenXmlPackage.CanSave is now an instance property (#1307)
 - Removed `OpenXmlSettings.RelationshipErrorHandlerFactory` and associated types and replaced with a built-in mechanism to enable this
 - IdPartPair is now a readonly struct rather than a class
-- IDisposableFeature is now a part of the framework package and is available by default on a package. Extension methods to manage this feature have been removed as it no longer needs to be opted into. It now registers all disposable actions to be done at the package level instead of adding support at the part level.
+- IDisposableFeature is now a part of the framework package and is available by default on a package or part.
 - Removed `OpenXmlPackage.Package` property. A `OpenXmlPackage` is now backed by an internal (for now) type `IPackage` instead of `System.IO.Packaging.Package`
 - Renamed PartExtensionProvider to IPartExtensionFeature and reduced its surface area to only two methods (instead of a full Dictionary<,>). The property to access this off of OpenXmlPackage has been removed, but may be accessed via `Features.Get<IPartExtensionFeature>()` if needed.
 - Removed unused `SchemaAttrAttribute`
@@ -36,11 +36,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Removed `OpenXmlPackage.Close` in favor of Dispose (#1373)
 - OpenXmlPart/OpenXmlContainer/OpenXmlPackage and derived types all have internal constructors
 - Removed `OpenXmlPackage.SaveAs` in favor of Clone (#1376)
-
-### Fixed
-- Fixed incorrect file extensions for vbaProject files (#1292)
-- Fixed incorrect casing for customXml (#1351)
-- Fixed AddEmbeddedPackagePart to support correct extensions for various content types (#1387)
 
 ## [2.20.0]
 
