@@ -481,7 +481,6 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the RibbonAndBackstageCustomizationsPart of the SpreadsheetDocument, only available in Office2010.
         /// </summary>
-        [OfficeAvailability(FileFormatVersions.Office2010)]
         public RibbonAndBackstageCustomizationsPart? RibbonAndBackstageCustomizationsPart
         {
             get { return GetSubPartOfType<RibbonAndBackstageCustomizationsPart>(); }
@@ -490,7 +489,6 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the WebExTaskpanesPart of the SpreadsheetDocument, only available in Office2013.
         /// </summary>
-        [OfficeAvailability(FileFormatVersions.Office2013)]
         public WebExTaskpanesPart? WebExTaskpanesPart
         {
             get { return GetSubPartOfType<WebExTaskpanesPart>(); }
@@ -499,7 +497,6 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the LabelInfoPart of the SpreadsheetDocument, only available in Office2021.
         /// </summary>
-        [OfficeAvailability(FileFormatVersions.Office2021)]
         public LabelInfoPart? LabelInfoPart
         {
             get { return GetSubPartOfType<LabelInfoPart>(); }
