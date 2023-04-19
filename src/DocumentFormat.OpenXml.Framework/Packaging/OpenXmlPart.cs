@@ -123,8 +123,18 @@ namespace DocumentFormat.OpenXml.Packaging
                 }
             }
 
-            package.Features.GetRequired<IDisposableFeature>().Register(Cleanup);
-            part.Features.GetRequired<IDisposableFeature>().Register(Cleanup);
+            var packageFeature = package.Features.Get<IDisposableFeature>();
+            var partFeature = part.Features.Get<IDisposableFeature>();
+
+            if (ReferenceEquals(packageFeature, partFeature) && packageFeature is not null)
+            {
+                packageFeature.Register(Cleanup);
+            }
+            else
+            {
+                packageFeature?.Register(Cleanup);
+                partFeature?.Register(Cleanup);
+            }
         }
 
         private ITargetFeature GetAndVerifyTargetFeature(string contentType, string? targetExt)
