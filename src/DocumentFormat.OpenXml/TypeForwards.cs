@@ -22,7 +22,6 @@
 [assembly:System.Runtime.CompilerServices.TypeForwardedTo(typeof(DocumentFormat.OpenXml.ListValue<>))]
 [assembly:System.Runtime.CompilerServices.TypeForwardedTo(typeof(DocumentFormat.OpenXml.MarkupCompatibilityAttributes))]
 [assembly:System.Runtime.CompilerServices.TypeForwardedTo(typeof(DocumentFormat.OpenXml.NamespaceNotUnderstandException))]
-[assembly:System.Runtime.CompilerServices.TypeForwardedTo(typeof(DocumentFormat.OpenXml.OfficeAvailabilityAttribute))]
 [assembly:System.Runtime.CompilerServices.TypeForwardedTo(typeof(DocumentFormat.OpenXml.OnOffValue))]
 [assembly:System.Runtime.CompilerServices.TypeForwardedTo(typeof(DocumentFormat.OpenXml.OpenXmlAttribute))]
 [assembly:System.Runtime.CompilerServices.TypeForwardedTo(typeof(DocumentFormat.OpenXml.OpenXmlComparableSimpleReference<>))]

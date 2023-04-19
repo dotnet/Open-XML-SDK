@@ -15,7 +15,6 @@ namespace DocumentFormat.OpenXml
     /// <summary>
     /// Represents elements that are not defined in the Office Open XML ECMA standard.
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.None)]
     public class OpenXmlUnknownElement : OpenXmlCompositeElement
     {
         private string _namespaceUri;
