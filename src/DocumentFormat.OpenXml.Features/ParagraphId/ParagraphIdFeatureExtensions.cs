@@ -35,7 +35,8 @@ namespace DocumentFormat.OpenXml.Features
                     doc.Features.GetRequired<IPartEventsFeature>(),
                     doc.Features.GetRequired<IElementEventFeature>());
 
-                doc.Features.SetDisposable<IParagraphIdCollectionFeature>(feature);
+                doc.Features.GetRequired<IDisposableFeature>().Register(feature);
+                doc.Features.Set<IParagraphIdCollectionFeature>(feature);
 
                 feature.Initialize();
             }
