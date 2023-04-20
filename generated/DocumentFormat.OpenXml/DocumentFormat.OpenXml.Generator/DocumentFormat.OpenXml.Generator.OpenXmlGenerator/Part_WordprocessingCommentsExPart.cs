@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the WordprocessingCommentsExPart
     /// </summary>
-    public partial class WordprocessingCommentsExPart : OpenXmlPart, ISupportExtensibleRelationship<AlternativeFormatImportPart>, ISupportExtensibleRelationship<EmbeddedControlPersistencePart>, ISupportExtensibleRelationship<EmbeddedObjectPart>, ISupportExtensibleRelationship<EmbeddedPackagePart>, ISupportExtensibleRelationship<ImagePart>, IFixedContentTypePart
+    public partial class WordprocessingCommentsExPart : OpenXmlPart, ISupportRelationship<AlternativeFormatImportPart>, ISupportRelationship<EmbeddedControlPersistencePart>, ISupportRelationship<EmbeddedObjectPart>, ISupportRelationship<EmbeddedPackagePart>, ISupportRelationship<ImagePart>, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.wordprocessingml.commentsExtended+xml";
         internal const string RelationshipTypeConstant = "http://schemas.microsoft.com/office/2011/relationships/commentsExtended";

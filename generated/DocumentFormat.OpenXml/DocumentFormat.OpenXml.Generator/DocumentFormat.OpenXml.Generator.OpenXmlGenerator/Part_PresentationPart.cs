@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the PresentationPart
     /// </summary>
-    public partial class PresentationPart : OpenXmlPart, ISupportExtensibleRelationship<CustomXmlPart>, ISupportExtensibleRelationship<FontPart>
+    public partial class PresentationPart : OpenXmlPart, ISupportRelationship<CustomXmlPart>, ISupportRelationship<FontPart>
     {
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument";
         private DocumentFormat.OpenXml.Presentation.Presentation? _rootElement;

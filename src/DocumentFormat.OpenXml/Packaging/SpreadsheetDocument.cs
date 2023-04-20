@@ -337,6 +337,17 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
+        /// Adds a ThumbnailPart to the WordprocessingDocument
+        /// </summary>
+        /// <param name="contentType">The content type information for the ThumbnailPart. Required.</param>
+        /// <param name="id">The relationship id. Optional, default to null.</param>
+        /// <return>The newly added part</return>
+        public ThumbnailPart AddThumbnailPart(string contentType, string? id = null)
+        {
+            return this.AddThumbnailPart(contentType, id);
+        }
+
+        /// <summary>
         /// Adds a ThumbnailPart to the SpreadsheetDocument
         /// </summary>
         /// <param name="partType">The part type information for the ThumbnailPart. Required.</param>
@@ -344,7 +355,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <return>The newly added part</return>
         public ThumbnailPart AddThumbnailPart(PartTypeInfo partType, string? id = null)
         {
-            return (ThumbnailPart)this.AddThumbnailPart(partType, id);
+            return this.AddThumbnailPart(partType, id);
         }
 
         /// <summary>
