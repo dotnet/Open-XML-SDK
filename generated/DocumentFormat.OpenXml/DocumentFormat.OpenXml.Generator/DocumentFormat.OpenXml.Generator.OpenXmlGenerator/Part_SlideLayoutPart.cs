@@ -15,7 +15,14 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the SlideLayoutPart
     /// </summary>
-    public partial class SlideLayoutPart : OpenXmlPart, ISupportedRelationship<CustomXmlPart>, ISupportedRelationship<EmbeddedObjectPart>, ISupportedRelationship<EmbeddedPackagePart>, ISupportedRelationship<ImagePart>, ISupportedRelationship<EmbeddedControlPersistenceBinaryDataPart>, ISupportedRelationship<EmbeddedControlPersistencePart>, IFixedContentTypePart
+    public partial class SlideLayoutPart : OpenXmlPart,
+        IFixedContentTypePart,
+        ISupportedRelationship<CustomXmlPart>,
+        ISupportedRelationship<EmbeddedControlPersistenceBinaryDataPart>,
+        ISupportedRelationship<EmbeddedControlPersistencePart>,
+        ISupportedRelationship<EmbeddedObjectPart>,
+        ISupportedRelationship<EmbeddedPackagePart>,
+        ISupportedRelationship<ImagePart>
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.presentationml.slideLayout+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideLayout";

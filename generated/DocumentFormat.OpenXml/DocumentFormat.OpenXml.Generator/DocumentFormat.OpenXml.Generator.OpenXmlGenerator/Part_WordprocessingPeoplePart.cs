@@ -15,7 +15,8 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the WordprocessingPeoplePart
     /// </summary>
-    public partial class WordprocessingPeoplePart : OpenXmlPart, IFixedContentTypePart
+    public partial class WordprocessingPeoplePart : OpenXmlPart,
+        IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.wordprocessingml.people+xml";
         internal const string RelationshipTypeConstant = "http://schemas.microsoft.com/office/2011/relationships/people";

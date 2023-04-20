@@ -15,7 +15,8 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the QuickAccessToolbarCustomizationsPart
     /// </summary>
-    public partial class QuickAccessToolbarCustomizationsPart : CustomUIPart, IFixedContentTypePart
+    public partial class QuickAccessToolbarCustomizationsPart : CustomUIPart,
+        IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/xml";
         internal const string RelationshipTypeConstant = "http://schemas.microsoft.com/office/2006/relationships/ui/userCustomization";

@@ -15,7 +15,13 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the NotesSlidePart
     /// </summary>
-    public partial class NotesSlidePart : OpenXmlPart, ISupportedRelationship<CustomXmlPart>, ISupportedRelationship<EmbeddedObjectPart>, ISupportedRelationship<EmbeddedPackagePart>, ISupportedRelationship<ImagePart>, ISupportedRelationship<EmbeddedControlPersistenceBinaryDataPart>, IFixedContentTypePart
+    public partial class NotesSlidePart : OpenXmlPart,
+        IFixedContentTypePart,
+        ISupportedRelationship<CustomXmlPart>,
+        ISupportedRelationship<EmbeddedControlPersistenceBinaryDataPart>,
+        ISupportedRelationship<EmbeddedObjectPart>,
+        ISupportedRelationship<EmbeddedPackagePart>,
+        ISupportedRelationship<ImagePart>
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.presentationml.notesSlide+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/notesSlide";

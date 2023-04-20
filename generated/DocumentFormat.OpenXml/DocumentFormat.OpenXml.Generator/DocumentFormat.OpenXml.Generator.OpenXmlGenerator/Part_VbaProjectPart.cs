@@ -15,7 +15,8 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the VbaProjectPart
     /// </summary>
-    public partial class VbaProjectPart : OpenXmlPart, IFixedContentTypePart
+    public partial class VbaProjectPart : OpenXmlPart,
+        IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.ms-office.vbaProject";
         internal const string RelationshipTypeConstant = "http://schemas.microsoft.com/office/2006/relationships/vbaProject";

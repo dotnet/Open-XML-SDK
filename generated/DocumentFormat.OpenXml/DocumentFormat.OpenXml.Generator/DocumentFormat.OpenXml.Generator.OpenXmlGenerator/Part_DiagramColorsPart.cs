@@ -15,7 +15,8 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the DiagramColorsPart
     /// </summary>
-    public partial class DiagramColorsPart : OpenXmlPart, IFixedContentTypePart
+    public partial class DiagramColorsPart : OpenXmlPart,
+        IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.drawingml.diagramColors+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramColors";

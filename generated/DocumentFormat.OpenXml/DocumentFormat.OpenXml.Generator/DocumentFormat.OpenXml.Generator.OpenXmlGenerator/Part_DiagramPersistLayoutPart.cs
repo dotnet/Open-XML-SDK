@@ -15,7 +15,9 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the DiagramPersistLayoutPart
     /// </summary>
-    public partial class DiagramPersistLayoutPart : OpenXmlPart, ISupportedRelationship<ImagePart>, IFixedContentTypePart
+    public partial class DiagramPersistLayoutPart : OpenXmlPart,
+        IFixedContentTypePart,
+        ISupportedRelationship<ImagePart>
     {
         internal const string ContentTypeConstant = "application/vnd.ms-office.drawingml.diagramDrawing+xml";
         internal const string RelationshipTypeConstant = "http://schemas.microsoft.com/office/2007/relationships/diagramDrawing";

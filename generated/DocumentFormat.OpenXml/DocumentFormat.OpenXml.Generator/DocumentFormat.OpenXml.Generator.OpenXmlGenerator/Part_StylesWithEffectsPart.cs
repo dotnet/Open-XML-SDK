@@ -15,7 +15,8 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the StylesWithEffectsPart
     /// </summary>
-    public partial class StylesWithEffectsPart : StylesPart, IFixedContentTypePart
+    public partial class StylesWithEffectsPart : StylesPart,
+        IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.ms-word.stylesWithEffects+xml";
         internal const string RelationshipTypeConstant = "http://schemas.microsoft.com/office/2007/relationships/stylesWithEffects";

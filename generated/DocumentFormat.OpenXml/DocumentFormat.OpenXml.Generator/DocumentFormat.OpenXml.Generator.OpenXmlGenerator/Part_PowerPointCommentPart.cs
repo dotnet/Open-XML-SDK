@@ -15,7 +15,8 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the PowerPointCommentPart
     /// </summary>
-    public partial class PowerPointCommentPart : OpenXmlPart, IFixedContentTypePart
+    public partial class PowerPointCommentPart : OpenXmlPart,
+        IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.ms-powerpoint.comments+xml";
         internal const string RelationshipTypeConstant = "http://schemas.microsoft.com/office/2018/10/relationships/comments";

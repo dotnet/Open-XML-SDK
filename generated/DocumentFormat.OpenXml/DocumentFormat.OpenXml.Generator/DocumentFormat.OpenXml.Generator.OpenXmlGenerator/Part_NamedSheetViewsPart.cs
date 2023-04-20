@@ -15,7 +15,8 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the NamedSheetViewsPart
     /// </summary>
-    public partial class NamedSheetViewsPart : OpenXmlPart, IFixedContentTypePart
+    public partial class NamedSheetViewsPart : OpenXmlPart,
+        IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.ms-excel.namedsheetviews+xml";
         internal const string RelationshipTypeConstant = "http://schemas.microsoft.com/office/2019/04/relationships/namedSheetView";

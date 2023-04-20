@@ -15,7 +15,9 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the DiagramDataPart
     /// </summary>
-    public partial class DiagramDataPart : OpenXmlPart, ISupportedRelationship<ImagePart>, IFixedContentTypePart
+    public partial class DiagramDataPart : OpenXmlPart,
+        IFixedContentTypePart,
+        ISupportedRelationship<ImagePart>
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.drawingml.diagramData+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramData";

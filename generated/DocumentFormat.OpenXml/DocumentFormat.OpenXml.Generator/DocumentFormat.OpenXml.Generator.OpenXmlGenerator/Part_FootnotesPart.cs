@@ -15,7 +15,13 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the FootnotesPart
     /// </summary>
-    public partial class FootnotesPart : OpenXmlPart, ISupportedRelationship<AlternativeFormatImportPart>, ISupportedRelationship<EmbeddedControlPersistencePart>, ISupportedRelationship<EmbeddedObjectPart>, ISupportedRelationship<EmbeddedPackagePart>, ISupportedRelationship<ImagePart>, IFixedContentTypePart
+    public partial class FootnotesPart : OpenXmlPart,
+        IFixedContentTypePart,
+        ISupportedRelationship<AlternativeFormatImportPart>,
+        ISupportedRelationship<EmbeddedControlPersistencePart>,
+        ISupportedRelationship<EmbeddedObjectPart>,
+        ISupportedRelationship<EmbeddedPackagePart>,
+        ISupportedRelationship<ImagePart>
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.wordprocessingml.footnotes+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/footnotes";

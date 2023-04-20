@@ -15,7 +15,13 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the HeaderPart
     /// </summary>
-    public partial class HeaderPart : OpenXmlPart, ISupportedRelationship<AlternativeFormatImportPart>, ISupportedRelationship<EmbeddedControlPersistencePart>, ISupportedRelationship<EmbeddedObjectPart>, ISupportedRelationship<EmbeddedPackagePart>, ISupportedRelationship<ImagePart>, IFixedContentTypePart
+    public partial class HeaderPart : OpenXmlPart,
+        IFixedContentTypePart,
+        ISupportedRelationship<AlternativeFormatImportPart>,
+        ISupportedRelationship<EmbeddedControlPersistencePart>,
+        ISupportedRelationship<EmbeddedObjectPart>,
+        ISupportedRelationship<EmbeddedPackagePart>,
+        ISupportedRelationship<ImagePart>
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.wordprocessingml.header+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/header";

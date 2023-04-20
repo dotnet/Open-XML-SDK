@@ -15,7 +15,8 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the ExternalWorkbookPart
     /// </summary>
-    public partial class ExternalWorkbookPart : OpenXmlPart, IFixedContentTypePart
+    public partial class ExternalWorkbookPart : OpenXmlPart,
+        IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.spreadsheetml.externalLink+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/externalLink";

@@ -15,7 +15,9 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the SpreadsheetDocument
     /// </summary>
-    public partial class SpreadsheetDocument
+    public partial class SpreadsheetDocument : OpenXmlPackage,
+        ISupportedRelationship<ThumbnailPart>,
+        ISupportedRelationship<WorkbookPart>
     {
         private partial class SpreadsheetDocumentFeatures : IPartConstraintFeature
         {

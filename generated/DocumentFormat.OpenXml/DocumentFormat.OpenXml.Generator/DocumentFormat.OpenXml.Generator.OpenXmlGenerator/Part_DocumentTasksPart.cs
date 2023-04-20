@@ -15,7 +15,8 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the DocumentTasksPart
     /// </summary>
-    public partial class DocumentTasksPart : OpenXmlPart, IFixedContentTypePart
+    public partial class DocumentTasksPart : OpenXmlPart,
+        IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.ms-office.documenttasks+xml";
         internal const string RelationshipTypeConstant = "http://schemas.microsoft.com/office/2019/05/relationships/documenttasks";

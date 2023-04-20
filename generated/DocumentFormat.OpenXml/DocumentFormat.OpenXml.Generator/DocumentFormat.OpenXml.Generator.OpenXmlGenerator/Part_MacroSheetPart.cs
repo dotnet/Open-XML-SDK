@@ -15,7 +15,12 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the MacroSheetPart
     /// </summary>
-    public partial class MacroSheetPart : OpenXmlPart, ISupportedRelationship<CustomPropertyPart>, ISupportedRelationship<EmbeddedObjectPart>, ISupportedRelationship<EmbeddedPackagePart>, ISupportedRelationship<ImagePart>, IFixedContentTypePart
+    public partial class MacroSheetPart : OpenXmlPart,
+        IFixedContentTypePart,
+        ISupportedRelationship<CustomPropertyPart>,
+        ISupportedRelationship<EmbeddedObjectPart>,
+        ISupportedRelationship<EmbeddedPackagePart>,
+        ISupportedRelationship<ImagePart>
     {
         internal const string ContentTypeConstant = "application/vnd.ms-excel.macrosheet+xml";
         internal const string RelationshipTypeConstant = "http://schemas.microsoft.com/office/2006/relationships/xlMacrosheet";

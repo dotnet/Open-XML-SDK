@@ -15,7 +15,8 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the Model3DReferenceRelationshipPart
     /// </summary>
-    public partial class Model3DReferenceRelationshipPart : OpenXmlPart, IFixedContentTypePart
+    public partial class Model3DReferenceRelationshipPart : OpenXmlPart,
+        IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "model/gltf-binary";
         internal const string RelationshipTypeConstant = "http://schemas.microsoft.com/office/2017/06/relationships/model3d";

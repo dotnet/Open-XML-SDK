@@ -15,7 +15,8 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the PivotTableCacheDefinitionPart
     /// </summary>
-    public partial class PivotTableCacheDefinitionPart : OpenXmlPart, IFixedContentTypePart
+    public partial class PivotTableCacheDefinitionPart : OpenXmlPart,
+        IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.spreadsheetml.pivotCacheDefinition+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/pivotCacheDefinition";

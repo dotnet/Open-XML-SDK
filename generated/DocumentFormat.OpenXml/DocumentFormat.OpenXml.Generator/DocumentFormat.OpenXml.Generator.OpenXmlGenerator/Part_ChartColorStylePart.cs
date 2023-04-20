@@ -15,7 +15,8 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the ChartColorStylePart
     /// </summary>
-    public partial class ChartColorStylePart : OpenXmlPart, IFixedContentTypePart
+    public partial class ChartColorStylePart : OpenXmlPart,
+        IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.ms-office.chartcolorstyle+xml";
         internal const string RelationshipTypeConstant = "http://schemas.microsoft.com/office/2011/relationships/chartColorStyle";

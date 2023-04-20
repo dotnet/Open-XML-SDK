@@ -15,7 +15,8 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the TimeLineCachePart
     /// </summary>
-    public partial class TimeLineCachePart : OpenXmlPart, IFixedContentTypePart
+    public partial class TimeLineCachePart : OpenXmlPart,
+        IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.ms-excel.timelineCache+xml";
         internal const string RelationshipTypeConstant = "http://schemas.microsoft.com/office/2011/relationships/timelineCache";

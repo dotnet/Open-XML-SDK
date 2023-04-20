@@ -15,7 +15,10 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the DocumentSettingsPart
     /// </summary>
-    public partial class DocumentSettingsPart : OpenXmlPart, ISupportedRelationship<MailMergeRecipientDataPart>, ISupportedRelationship<ImagePart>, IFixedContentTypePart
+    public partial class DocumentSettingsPart : OpenXmlPart,
+        IFixedContentTypePart,
+        ISupportedRelationship<ImagePart>,
+        ISupportedRelationship<MailMergeRecipientDataPart>
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.wordprocessingml.settings+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/settings";

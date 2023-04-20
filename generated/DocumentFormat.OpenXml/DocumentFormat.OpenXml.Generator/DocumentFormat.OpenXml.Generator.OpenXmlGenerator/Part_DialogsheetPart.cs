@@ -15,7 +15,9 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the DialogsheetPart
     /// </summary>
-    public partial class DialogsheetPart : OpenXmlPart, ISupportedRelationship<EmbeddedObjectPart>, IFixedContentTypePart
+    public partial class DialogsheetPart : OpenXmlPart,
+        IFixedContentTypePart,
+        ISupportedRelationship<EmbeddedObjectPart>
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.spreadsheetml.dialogsheet+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/dialogsheet";

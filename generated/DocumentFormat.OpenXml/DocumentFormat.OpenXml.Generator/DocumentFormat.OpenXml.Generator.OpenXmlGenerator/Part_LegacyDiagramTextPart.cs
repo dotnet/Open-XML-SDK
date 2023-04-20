@@ -15,7 +15,8 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the LegacyDiagramTextPart
     /// </summary>
-    public partial class LegacyDiagramTextPart : OpenXmlPart, IFixedContentTypePart
+    public partial class LegacyDiagramTextPart : OpenXmlPart,
+        IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.ms-office.legacyDiagramText";
         internal const string RelationshipTypeConstant = "http://schemas.microsoft.com/office/2006/relationships/legacyDiagramText";

@@ -15,7 +15,8 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the WorkbookRevisionLogPart
     /// </summary>
-    public partial class WorkbookRevisionLogPart : OpenXmlPart, IFixedContentTypePart
+    public partial class WorkbookRevisionLogPart : OpenXmlPart,
+        IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.spreadsheetml.revisionLog+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/revisionLog";

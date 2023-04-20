@@ -15,7 +15,8 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the RdArrayPart
     /// </summary>
-    public partial class RdArrayPart : OpenXmlPart, IFixedContentTypePart
+    public partial class RdArrayPart : OpenXmlPart,
+        IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.ms-excel.rdarray+xml";
         internal const string RelationshipTypeConstant = "http://schemas.microsoft.com/office/2017/06/relationships/rdArray";

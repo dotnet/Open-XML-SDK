@@ -15,7 +15,9 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the WorkbookPart
     /// </summary>
-    public partial class WorkbookPart : OpenXmlPart, ISupportedRelationship<CustomXmlPart>, ISupportedRelationship<ThumbnailPart>
+    public partial class WorkbookPart : OpenXmlPart,
+        ISupportedRelationship<CustomXmlPart>,
+        ISupportedRelationship<ThumbnailPart>
     {
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument";
         private DocumentFormat.OpenXml.Spreadsheet.Workbook? _rootElement;

@@ -15,7 +15,8 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the ExcelAttachedToolbarsPart
     /// </summary>
-    public partial class ExcelAttachedToolbarsPart : OpenXmlPart, IFixedContentTypePart
+    public partial class ExcelAttachedToolbarsPart : OpenXmlPart,
+        IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.ms-excel.attachedToolbars";
         internal const string RelationshipTypeConstant = "http://schemas.microsoft.com/office/2006/relationships/attachedToolbars";

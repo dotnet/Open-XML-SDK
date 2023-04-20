@@ -15,7 +15,8 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the CoreFilePropertiesPart
     /// </summary>
-    public partial class CoreFilePropertiesPart : OpenXmlPart, IFixedContentTypePart
+    public partial class CoreFilePropertiesPart : OpenXmlPart,
+        IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-package.core-properties+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/package/2006/relationships/metadata/core-properties";

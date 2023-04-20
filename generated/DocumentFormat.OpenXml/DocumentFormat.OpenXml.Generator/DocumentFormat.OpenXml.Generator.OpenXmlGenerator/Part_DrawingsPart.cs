@@ -15,7 +15,10 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the DrawingsPart
     /// </summary>
-    public partial class DrawingsPart : OpenXmlPart, ISupportedRelationship<ImagePart>, ISupportedRelationship<CustomXmlPart>, IFixedContentTypePart
+    public partial class DrawingsPart : OpenXmlPart,
+        IFixedContentTypePart,
+        ISupportedRelationship<CustomXmlPart>,
+        ISupportedRelationship<ImagePart>
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.drawing+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/drawing";

@@ -15,7 +15,8 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the RdSupportingPropertyBagStructurePart
     /// </summary>
-    public partial class RdSupportingPropertyBagStructurePart : OpenXmlPart, IFixedContentTypePart
+    public partial class RdSupportingPropertyBagStructurePart : OpenXmlPart,
+        IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.ms-excel.rdsupportingpropertybagstructure+xml";
         internal const string RelationshipTypeConstant = "http://schemas.microsoft.com/office/2017/06/relationships/rdSupportingPropertyBagStructure";

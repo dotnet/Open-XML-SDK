@@ -15,7 +15,8 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the RdRichValueStructurePart
     /// </summary>
-    public partial class RdRichValueStructurePart : OpenXmlPart, IFixedContentTypePart
+    public partial class RdRichValueStructurePart : OpenXmlPart,
+        IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.ms-excel.rdrichvaluestructure+xml";
         internal const string RelationshipTypeConstant = "http://schemas.microsoft.com/office/2017/06/relationships/rdRichValueStructure";

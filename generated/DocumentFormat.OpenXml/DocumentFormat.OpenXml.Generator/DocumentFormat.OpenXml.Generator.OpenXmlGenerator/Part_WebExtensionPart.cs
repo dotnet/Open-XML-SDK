@@ -15,7 +15,9 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the WebExtensionPart
     /// </summary>
-    public partial class WebExtensionPart : OpenXmlPart, ISupportedRelationship<ImagePart>, IFixedContentTypePart
+    public partial class WebExtensionPart : OpenXmlPart,
+        IFixedContentTypePart,
+        ISupportedRelationship<ImagePart>
     {
         internal const string ContentTypeConstant = "application/vnd.ms-office.webextension+xml";
         internal const string RelationshipTypeConstant = "http://schemas.microsoft.com/office/2011/relationships/webextension";

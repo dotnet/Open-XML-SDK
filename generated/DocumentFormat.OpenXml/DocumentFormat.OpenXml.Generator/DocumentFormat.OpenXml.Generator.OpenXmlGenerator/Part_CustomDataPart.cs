@@ -15,7 +15,8 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the CustomDataPart
     /// </summary>
-    public partial class CustomDataPart : OpenXmlPart, IFixedContentTypePart
+    public partial class CustomDataPart : OpenXmlPart,
+        IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/binary";
         internal const string RelationshipTypeConstant = "http://schemas.microsoft.com/office/2007/relationships/customData";

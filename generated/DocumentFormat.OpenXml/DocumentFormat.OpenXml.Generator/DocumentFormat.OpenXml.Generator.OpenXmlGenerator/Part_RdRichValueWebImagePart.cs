@@ -15,7 +15,8 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the RdRichValueWebImagePart
     /// </summary>
-    public partial class RdRichValueWebImagePart : OpenXmlPart, IFixedContentTypePart
+    public partial class RdRichValueWebImagePart : OpenXmlPart,
+        IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.ms-excel.rdrichvaluewebimage+xml";
         internal const string RelationshipTypeConstant = "http://schemas.microsoft.com/office/2020/07/relationships/rdrichvaluewebimage";

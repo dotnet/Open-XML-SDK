@@ -15,7 +15,8 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the CustomizationPart
     /// </summary>
-    public partial class CustomizationPart : OpenXmlPart, IFixedContentTypePart
+    public partial class CustomizationPart : OpenXmlPart,
+        IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.ms-word.keyMapCustomizations+xml";
         internal const string RelationshipTypeConstant = "http://schemas.microsoft.com/office/2006/relationships/keyMapCustomizations";

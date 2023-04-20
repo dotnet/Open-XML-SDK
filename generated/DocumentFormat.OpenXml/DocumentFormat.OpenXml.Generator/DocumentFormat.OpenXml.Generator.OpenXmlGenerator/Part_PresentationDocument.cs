@@ -15,7 +15,9 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the PresentationDocument
     /// </summary>
-    public partial class PresentationDocument
+    public partial class PresentationDocument : OpenXmlPackage,
+        ISupportedRelationship<PresentationPart>,
+        ISupportedRelationship<ThumbnailPart>
     {
         private partial class PresentationDocumentFeatures : IPartConstraintFeature
         {

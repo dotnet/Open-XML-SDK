@@ -15,7 +15,14 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the MainDocumentPart
     /// </summary>
-    public partial class MainDocumentPart : OpenXmlPart, ISupportedRelationship<CustomXmlPart>, ISupportedRelationship<ThumbnailPart>, ISupportedRelationship<AlternativeFormatImportPart>, ISupportedRelationship<EmbeddedControlPersistencePart>, ISupportedRelationship<EmbeddedObjectPart>, ISupportedRelationship<EmbeddedPackagePart>, ISupportedRelationship<ImagePart>
+    public partial class MainDocumentPart : OpenXmlPart,
+        ISupportedRelationship<AlternativeFormatImportPart>,
+        ISupportedRelationship<CustomXmlPart>,
+        ISupportedRelationship<EmbeddedControlPersistencePart>,
+        ISupportedRelationship<EmbeddedObjectPart>,
+        ISupportedRelationship<EmbeddedPackagePart>,
+        ISupportedRelationship<ImagePart>,
+        ISupportedRelationship<ThumbnailPart>
     {
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument";
         private DocumentFormat.OpenXml.Wordprocessing.Document? _rootElement;

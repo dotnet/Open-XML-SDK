@@ -15,7 +15,8 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the RichStylesPart
     /// </summary>
-    public partial class RichStylesPart : OpenXmlPart, IFixedContentTypePart
+    public partial class RichStylesPart : OpenXmlPart,
+        IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.ms-excel.richstyles+xml";
         internal const string RelationshipTypeConstant = "http://schemas.microsoft.com/office/2017/06/relationships/richStyles";

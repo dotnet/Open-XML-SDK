@@ -15,7 +15,10 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the ExtendedChartPart
     /// </summary>
-    public partial class ExtendedChartPart : OpenXmlPart, ISupportedRelationship<EmbeddedPackagePart>, ISupportedRelationship<ImagePart>, IFixedContentTypePart
+    public partial class ExtendedChartPart : OpenXmlPart,
+        IFixedContentTypePart,
+        ISupportedRelationship<EmbeddedPackagePart>,
+        ISupportedRelationship<ImagePart>
     {
         internal const string ContentTypeConstant = "application/vnd.ms-office.chartex+xml";
         internal const string RelationshipTypeConstant = "http://schemas.microsoft.com/office/2014/relationships/chartEx";

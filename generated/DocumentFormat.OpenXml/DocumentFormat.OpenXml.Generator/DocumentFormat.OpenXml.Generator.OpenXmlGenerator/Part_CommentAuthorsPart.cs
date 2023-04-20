@@ -15,7 +15,8 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the CommentAuthorsPart
     /// </summary>
-    public partial class CommentAuthorsPart : OpenXmlPart, IFixedContentTypePart
+    public partial class CommentAuthorsPart : OpenXmlPart,
+        IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.presentationml.commentAuthors+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/commentAuthors";
