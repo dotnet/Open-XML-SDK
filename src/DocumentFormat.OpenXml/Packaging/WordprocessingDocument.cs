@@ -14,7 +14,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// Defines WordprocessingDocument - an OpenXmlPackage represents a Word document.
     /// </summary>
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Reliability", "CA2000:Dispose objects before losing scope", Justification = "Disposable is returned")]
-    public partial class WordprocessingDocument : OpenXmlPackage, ISupportedRelationship<ThumbnailPart>
+    public partial class WordprocessingDocument : OpenXmlPackage
     {
         private WordprocessingDocument()
             : base()

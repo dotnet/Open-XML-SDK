@@ -13,7 +13,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// Defines PresentationDocument - an OpenXmlPackage represents a Presentation document
     /// </summary>
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Reliability", "CA2000:Dispose objects before losing scope", Justification = "Disposable is returned")]
-    public partial class PresentationDocument : OpenXmlPackage, ISupportedRelationship<ThumbnailPart>
+    public partial class PresentationDocument : OpenXmlPackage
     {
         private PresentationDocument()
             : base()
@@ -306,6 +306,32 @@ namespace DocumentFormat.OpenXml.Packaging
             DigitalSignatureOriginPart childPart = new DigitalSignatureOriginPart();
             InitPart(childPart, DigitalSignatureOriginPart.ContentTypeConstant);
             return childPart;
+        }
+
+        /// <summary>
+        /// Adds a new part of type <typeparamref name="T"/>.
+        /// </summary>
+        /// <typeparam name="T">The class of the part.</typeparam>
+        /// <param name="contentType">The content type of the part. Must match the defined content type if the part is fixed content type.</param>
+        /// <param name="id">The relationship id. The id will be automatically generated if this param is null.</param>
+        /// <returns>The added part.</returns>
+        /// <exception cref="OpenXmlPackageException">When the part is not allowed to be referenced by this part.</exception>
+        /// <exception cref="ArgumentOutOfRangeException">When the part is fixed content type and the passed in contentType does not match the defined content type.</exception>
+        /// <exception cref="ArgumentNullException">Thrown when "contentType" is null reference.</exception>
+        /// <remarks>Mainly used for adding not-fixed content type part - ImagePart, etc.</remarks>
+        public override T AddNewPart<T>(string contentType, string id)
+        {
+            if (contentType is null)
+            {
+                throw new ArgumentNullException(nameof(contentType));
+            }
+
+            if (typeof(PresentationPart).GetTypeInfo().IsAssignableFrom(typeof(T).GetTypeInfo()) && contentType != Features.GetRequired<IMainPartFeature>().ContentType)
+            {
+                throw new OpenXmlPackageException(ExceptionMessages.ErrorContentType);
+            }
+
+            return base.AddNewPart<T>(contentType, id);
         }
 
         /// <summary>
