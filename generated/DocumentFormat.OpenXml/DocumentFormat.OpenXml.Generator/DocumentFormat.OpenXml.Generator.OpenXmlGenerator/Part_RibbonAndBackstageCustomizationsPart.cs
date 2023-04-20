@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the RibbonAndBackstageCustomizationsPart
     /// </summary>
-    public partial class RibbonAndBackstageCustomizationsPart : OpenXmlPart, IFixedContentTypePart
+    public partial class RibbonAndBackstageCustomizationsPart : OpenXmlPart, IAddExtensiblePartSupport<ImagePart>, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/xml";
         internal const string RelationshipTypeConstant = "http://schemas.microsoft.com/office/2007/relationships/ui/extensibility";
@@ -79,18 +79,6 @@ namespace DocumentFormat.OpenXml.Packaging
 
         /// <inheritdoc/>
         public sealed override string RelationshipType => RelationshipTypeConstant;
-
-        /// <summary>
-        /// Adds a ImagePart to the RibbonAndBackstageCustomizationsPart
-        /// </summary>
-        /// <param name="partType">The part type information for the ImagePart. Required.</param>
-        /// <param name="contentType">The content type of the ImagePart. Optional, default to null.</param>
-        /// <param name="id">The relationship id. Optional, default to null.</param>
-        /// <return>The newly added part</return>
-        public ImagePart AddImagePart(PartTypeInfo partType, string? contentType = null, string? id = null)
-        {
-            return (ImagePart)OpenXmlPartExtensions.InitPart(this, new ImagePart(), partType, contentType, id);
-        }
 
         internal override bool IsInVersion(FileFormatVersions version)
         {

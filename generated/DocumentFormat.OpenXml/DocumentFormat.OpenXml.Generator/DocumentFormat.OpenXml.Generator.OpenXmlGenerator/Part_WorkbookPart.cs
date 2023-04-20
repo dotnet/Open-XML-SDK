@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the WorkbookPart
     /// </summary>
-    public partial class WorkbookPart : OpenXmlPart
+    public partial class WorkbookPart : OpenXmlPart, IAddExtensiblePartSupport<CustomXmlPart>, IAddExtensiblePartSupport<ThumbnailPart>
     {
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument";
         private DocumentFormat.OpenXml.Spreadsheet.Workbook? _rootElement;
@@ -235,30 +235,6 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the WorksheetParts of the WorkbookPart
         /// </summary>
         public IEnumerable<WorksheetPart> WorksheetParts => GetPartsOfType<WorksheetPart>();
-
-        /// <summary>
-        /// Adds a CustomXmlPart to the WorkbookPart
-        /// </summary>
-        /// <param name="partType">The part type information for the CustomXmlPart. Required.</param>
-        /// <param name="contentType">The content type of the CustomXmlPart. Optional, default to null.</param>
-        /// <param name="id">The relationship id. Optional, default to null.</param>
-        /// <return>The newly added part</return>
-        public CustomXmlPart AddCustomXmlPart(PartTypeInfo partType, string? contentType = null, string? id = null)
-        {
-            return (CustomXmlPart)OpenXmlPartExtensions.InitPart(this, new CustomXmlPart(), partType, contentType, id);
-        }
-
-        /// <summary>
-        /// Adds a ThumbnailPart to the WorkbookPart
-        /// </summary>
-        /// <param name="partType">The part type information for the ThumbnailPart. Required.</param>
-        /// <param name="contentType">The content type of the ThumbnailPart. Optional, default to null.</param>
-        /// <param name="id">The relationship id. Optional, default to null.</param>
-        /// <return>The newly added part</return>
-        public ThumbnailPart AddThumbnailPart(PartTypeInfo partType, string? contentType = null, string? id = null)
-        {
-            return (ThumbnailPart)OpenXmlPartExtensions.InitPart(this, new ThumbnailPart(), partType, contentType, id);
-        }
         
         /// <inheritdoc/>
         public override IFeatureCollection Features => _features ??= new GeneratedFeatures(this);

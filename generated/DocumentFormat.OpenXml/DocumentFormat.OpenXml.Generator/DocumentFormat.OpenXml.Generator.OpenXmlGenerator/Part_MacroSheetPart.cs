@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the MacroSheetPart
     /// </summary>
-    public partial class MacroSheetPart : OpenXmlPart, IFixedContentTypePart
+    public partial class MacroSheetPart : OpenXmlPart, IAddExtensiblePartSupport<CustomPropertyPart>, IAddExtensiblePartSupport<EmbeddedObjectPart>, IAddExtensiblePartSupport<EmbeddedPackagePart>, IAddExtensiblePartSupport<ImagePart>, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.ms-excel.macrosheet+xml";
         internal const string RelationshipTypeConstant = "http://schemas.microsoft.com/office/2006/relationships/xlMacrosheet";
@@ -114,54 +114,6 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the WorksheetCommentsPart of the MacroSheetPart
         /// </summary>
         public WorksheetCommentsPart? WorksheetCommentsPart => GetSubPartOfType<WorksheetCommentsPart>();
-
-        /// <summary>
-        /// Adds a CustomPropertyPart to the MacroSheetPart
-        /// </summary>
-        /// <param name="partType">The part type information for the CustomPropertyPart. Required.</param>
-        /// <param name="contentType">The content type of the CustomPropertyPart. Optional, default to null.</param>
-        /// <param name="id">The relationship id. Optional, default to null.</param>
-        /// <return>The newly added part</return>
-        public CustomPropertyPart AddCustomPropertyPart(PartTypeInfo partType, string? contentType = null, string? id = null)
-        {
-            return (CustomPropertyPart)OpenXmlPartExtensions.InitPart(this, new CustomPropertyPart(), partType, contentType, id);
-        }
-
-        /// <summary>
-        /// Adds a EmbeddedObjectPart to the MacroSheetPart
-        /// </summary>
-        /// <param name="partType">The part type information for the EmbeddedObjectPart. Required.</param>
-        /// <param name="contentType">The content type of the EmbeddedObjectPart. Optional, default to null.</param>
-        /// <param name="id">The relationship id. Optional, default to null.</param>
-        /// <return>The newly added part</return>
-        public EmbeddedObjectPart AddEmbeddedObjectPart(PartTypeInfo partType, string? contentType = null, string? id = null)
-        {
-            return (EmbeddedObjectPart)OpenXmlPartExtensions.InitPart(this, new EmbeddedObjectPart(), partType, contentType, id);
-        }
-
-        /// <summary>
-        /// Adds a EmbeddedPackagePart to the MacroSheetPart
-        /// </summary>
-        /// <param name="partType">The part type information for the EmbeddedPackagePart. Required.</param>
-        /// <param name="contentType">The content type of the EmbeddedPackagePart. Optional, default to null.</param>
-        /// <param name="id">The relationship id. Optional, default to null.</param>
-        /// <return>The newly added part</return>
-        public EmbeddedPackagePart AddEmbeddedPackagePart(PartTypeInfo partType, string? contentType = null, string? id = null)
-        {
-            return (EmbeddedPackagePart)OpenXmlPartExtensions.InitPart(this, new EmbeddedPackagePart(), partType, contentType, id);
-        }
-
-        /// <summary>
-        /// Adds a ImagePart to the MacroSheetPart
-        /// </summary>
-        /// <param name="partType">The part type information for the ImagePart. Required.</param>
-        /// <param name="contentType">The content type of the ImagePart. Optional, default to null.</param>
-        /// <param name="id">The relationship id. Optional, default to null.</param>
-        /// <return>The newly added part</return>
-        public ImagePart AddImagePart(PartTypeInfo partType, string? contentType = null, string? id = null)
-        {
-            return (ImagePart)OpenXmlPartExtensions.InitPart(this, new ImagePart(), partType, contentType, id);
-        }
         
         /// <inheritdoc/>
         public override IFeatureCollection Features => _features ??= new GeneratedFeatures(this);

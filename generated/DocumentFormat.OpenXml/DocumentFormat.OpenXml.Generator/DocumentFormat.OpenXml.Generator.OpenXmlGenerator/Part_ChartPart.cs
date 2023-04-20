@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the ChartPart
     /// </summary>
-    public partial class ChartPart : OpenXmlPart, IFixedContentTypePart
+    public partial class ChartPart : OpenXmlPart, IAddExtensiblePartSupport<EmbeddedPackagePart>, IAddExtensiblePartSupport<ImagePart>, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.drawingml.chart+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/chart";
@@ -104,30 +104,6 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the ThemeOverridePart of the ChartPart
         /// </summary>
         public ThemeOverridePart? ThemeOverridePart => GetSubPartOfType<ThemeOverridePart>();
-
-        /// <summary>
-        /// Adds a EmbeddedPackagePart to the ChartPart
-        /// </summary>
-        /// <param name="partType">The part type information for the EmbeddedPackagePart. Required.</param>
-        /// <param name="contentType">The content type of the EmbeddedPackagePart. Optional, default to null.</param>
-        /// <param name="id">The relationship id. Optional, default to null.</param>
-        /// <return>The newly added part</return>
-        public EmbeddedPackagePart AddEmbeddedPackagePart(PartTypeInfo partType, string? contentType = null, string? id = null)
-        {
-            return (EmbeddedPackagePart)OpenXmlPartExtensions.InitPart(this, new EmbeddedPackagePart(), partType, contentType, id);
-        }
-
-        /// <summary>
-        /// Adds a ImagePart to the ChartPart
-        /// </summary>
-        /// <param name="partType">The part type information for the ImagePart. Required.</param>
-        /// <param name="contentType">The content type of the ImagePart. Optional, default to null.</param>
-        /// <param name="id">The relationship id. Optional, default to null.</param>
-        /// <return>The newly added part</return>
-        public ImagePart AddImagePart(PartTypeInfo partType, string? contentType = null, string? id = null)
-        {
-            return (ImagePart)OpenXmlPartExtensions.InitPart(this, new ImagePart(), partType, contentType, id);
-        }
         
         /// <inheritdoc/>
         public override IFeatureCollection Features => _features ??= new GeneratedFeatures(this);

@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the RibbonExtensibilityPart
     /// </summary>
-    public partial class RibbonExtensibilityPart : CustomUIPart, IFixedContentTypePart
+    public partial class RibbonExtensibilityPart : CustomUIPart, IAddExtensiblePartSupport<ImagePart>, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/xml";
         internal const string RelationshipTypeConstant = "http://schemas.microsoft.com/office/2006/relationships/ui/extensibility";
@@ -37,18 +37,6 @@ namespace DocumentFormat.OpenXml.Packaging
 
         /// <inheritdoc/>
         public sealed override string RelationshipType => RelationshipTypeConstant;
-
-        /// <summary>
-        /// Adds a ImagePart to the RibbonExtensibilityPart
-        /// </summary>
-        /// <param name="partType">The part type information for the ImagePart. Required.</param>
-        /// <param name="contentType">The content type of the ImagePart. Optional, default to null.</param>
-        /// <param name="id">The relationship id. Optional, default to null.</param>
-        /// <return>The newly added part</return>
-        public ImagePart AddImagePart(PartTypeInfo partType, string? contentType = null, string? id = null)
-        {
-            return (ImagePart)OpenXmlPartExtensions.InitPart(this, new ImagePart(), partType, contentType, id);
-        }
         
         /// <inheritdoc/>
         public override IFeatureCollection Features => _features ??= new GeneratedFeatures(this);

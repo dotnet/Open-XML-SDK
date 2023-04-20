@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the DocumentSettingsPart
     /// </summary>
-    public partial class DocumentSettingsPart : OpenXmlPart, IFixedContentTypePart
+    public partial class DocumentSettingsPart : OpenXmlPart, IAddExtensiblePartSupport<MailMergeRecipientDataPart>, IAddExtensiblePartSupport<ImagePart>, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.wordprocessingml.settings+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/settings";
@@ -83,30 +83,6 @@ namespace DocumentFormat.OpenXml.Packaging
 
                 SetDomTree(value);
             }
-        }
-
-        /// <summary>
-        /// Adds a ImagePart to the DocumentSettingsPart
-        /// </summary>
-        /// <param name="partType">The part type information for the ImagePart. Required.</param>
-        /// <param name="contentType">The content type of the ImagePart. Optional, default to null.</param>
-        /// <param name="id">The relationship id. Optional, default to null.</param>
-        /// <return>The newly added part</return>
-        public ImagePart AddImagePart(PartTypeInfo partType, string? contentType = null, string? id = null)
-        {
-            return (ImagePart)OpenXmlPartExtensions.InitPart(this, new ImagePart(), partType, contentType, id);
-        }
-
-        /// <summary>
-        /// Adds a MailMergeRecipientDataPart to the DocumentSettingsPart
-        /// </summary>
-        /// <param name="partType">The part type information for the MailMergeRecipientDataPart. Required.</param>
-        /// <param name="contentType">The content type of the MailMergeRecipientDataPart. Optional, default to null.</param>
-        /// <param name="id">The relationship id. Optional, default to null.</param>
-        /// <return>The newly added part</return>
-        public MailMergeRecipientDataPart AddMailMergeRecipientDataPart(PartTypeInfo partType, string? contentType = null, string? id = null)
-        {
-            return (MailMergeRecipientDataPart)OpenXmlPartExtensions.InitPart(this, new MailMergeRecipientDataPart(), partType, contentType, id);
         }
         
         /// <inheritdoc/>

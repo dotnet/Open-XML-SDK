@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the FootnotesPart
     /// </summary>
-    public partial class FootnotesPart : OpenXmlPart, IFixedContentTypePart
+    public partial class FootnotesPart : OpenXmlPart, IAddExtensiblePartSupport<AlternativeFormatImportPart>, IAddExtensiblePartSupport<EmbeddedControlPersistencePart>, IAddExtensiblePartSupport<EmbeddedObjectPart>, IAddExtensiblePartSupport<EmbeddedPackagePart>, IAddExtensiblePartSupport<ImagePart>, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.wordprocessingml.footnotes+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/footnotes";
@@ -139,66 +139,6 @@ namespace DocumentFormat.OpenXml.Packaging
 
         /// <inheritdoc/>
         public sealed override string RelationshipType => RelationshipTypeConstant;
-
-        /// <summary>
-        /// Adds a AlternativeFormatImportPart to the FootnotesPart
-        /// </summary>
-        /// <param name="partType">The part type information for the AlternativeFormatImportPart. Required.</param>
-        /// <param name="contentType">The content type of the AlternativeFormatImportPart. Optional, default to null.</param>
-        /// <param name="id">The relationship id. Optional, default to null.</param>
-        /// <return>The newly added part</return>
-        public AlternativeFormatImportPart AddAlternativeFormatImportPart(PartTypeInfo partType, string? contentType = null, string? id = null)
-        {
-            return (AlternativeFormatImportPart)OpenXmlPartExtensions.InitPart(this, new AlternativeFormatImportPart(), partType, contentType, id);
-        }
-
-        /// <summary>
-        /// Adds a EmbeddedControlPersistencePart to the FootnotesPart
-        /// </summary>
-        /// <param name="partType">The part type information for the EmbeddedControlPersistencePart. Required.</param>
-        /// <param name="contentType">The content type of the EmbeddedControlPersistencePart. Optional, default to null.</param>
-        /// <param name="id">The relationship id. Optional, default to null.</param>
-        /// <return>The newly added part</return>
-        public EmbeddedControlPersistencePart AddEmbeddedControlPersistencePart(PartTypeInfo partType, string? contentType = null, string? id = null)
-        {
-            return (EmbeddedControlPersistencePart)OpenXmlPartExtensions.InitPart(this, new EmbeddedControlPersistencePart(), partType, contentType, id);
-        }
-
-        /// <summary>
-        /// Adds a EmbeddedObjectPart to the FootnotesPart
-        /// </summary>
-        /// <param name="partType">The part type information for the EmbeddedObjectPart. Required.</param>
-        /// <param name="contentType">The content type of the EmbeddedObjectPart. Optional, default to null.</param>
-        /// <param name="id">The relationship id. Optional, default to null.</param>
-        /// <return>The newly added part</return>
-        public EmbeddedObjectPart AddEmbeddedObjectPart(PartTypeInfo partType, string? contentType = null, string? id = null)
-        {
-            return (EmbeddedObjectPart)OpenXmlPartExtensions.InitPart(this, new EmbeddedObjectPart(), partType, contentType, id);
-        }
-
-        /// <summary>
-        /// Adds a EmbeddedPackagePart to the FootnotesPart
-        /// </summary>
-        /// <param name="partType">The part type information for the EmbeddedPackagePart. Required.</param>
-        /// <param name="contentType">The content type of the EmbeddedPackagePart. Optional, default to null.</param>
-        /// <param name="id">The relationship id. Optional, default to null.</param>
-        /// <return>The newly added part</return>
-        public EmbeddedPackagePart AddEmbeddedPackagePart(PartTypeInfo partType, string? contentType = null, string? id = null)
-        {
-            return (EmbeddedPackagePart)OpenXmlPartExtensions.InitPart(this, new EmbeddedPackagePart(), partType, contentType, id);
-        }
-
-        /// <summary>
-        /// Adds a ImagePart to the FootnotesPart
-        /// </summary>
-        /// <param name="partType">The part type information for the ImagePart. Required.</param>
-        /// <param name="contentType">The content type of the ImagePart. Optional, default to null.</param>
-        /// <param name="id">The relationship id. Optional, default to null.</param>
-        /// <return>The newly added part</return>
-        public ImagePart AddImagePart(PartTypeInfo partType, string? contentType = null, string? id = null)
-        {
-            return (ImagePart)OpenXmlPartExtensions.InitPart(this, new ImagePart(), partType, contentType, id);
-        }
 
         /// <summary>
         /// Adds a VideoReferenceRelationship to the FootnotesPart

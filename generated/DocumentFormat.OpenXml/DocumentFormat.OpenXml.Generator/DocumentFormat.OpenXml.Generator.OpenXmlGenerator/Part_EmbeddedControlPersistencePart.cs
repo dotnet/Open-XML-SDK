@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the EmbeddedControlPersistencePart
     /// </summary>
-    public partial class EmbeddedControlPersistencePart : OpenXmlPart
+    public partial class EmbeddedControlPersistencePart : OpenXmlPart, IAddExtensiblePartSupport<EmbeddedControlPersistenceBinaryDataPart>
     {
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/control";
 
@@ -33,18 +33,6 @@ namespace DocumentFormat.OpenXml.Packaging
 
         /// <inheritdoc/>
         public sealed override string RelationshipType => RelationshipTypeConstant;
-
-        /// <summary>
-        /// Adds a EmbeddedControlPersistenceBinaryDataPart to the EmbeddedControlPersistencePart
-        /// </summary>
-        /// <param name="partType">The part type information for the EmbeddedControlPersistenceBinaryDataPart. Required.</param>
-        /// <param name="contentType">The content type of the EmbeddedControlPersistenceBinaryDataPart. Optional, default to null.</param>
-        /// <param name="id">The relationship id. Optional, default to null.</param>
-        /// <return>The newly added part</return>
-        public EmbeddedControlPersistenceBinaryDataPart AddEmbeddedControlPersistenceBinaryDataPart(PartTypeInfo partType, string? contentType = null, string? id = null)
-        {
-            return (EmbeddedControlPersistenceBinaryDataPart)OpenXmlPartExtensions.InitPart(this, new EmbeddedControlPersistenceBinaryDataPart(), partType, contentType, id);
-        }
         
         /// <inheritdoc/>
         public override IFeatureCollection Features => _features ??= new GeneratedFeatures(this);

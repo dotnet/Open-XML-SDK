@@ -164,7 +164,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 var tnPart = doc.AddThumbnailPart(ThumbnailPartType.Jpeg);
                 doc.DeletePart(tnPart);
-                tnPart = doc.AddThumbnailPart(ThumbnailPartType.Jpeg, "image/jpg");
+                tnPart = doc.AddThumbnailPart(ThumbnailPartType.Jpeg);
 
                 var v = new OpenXmlValidator(FileFormatVersions.Office2013);
                 var errs = v.Validate(doc);

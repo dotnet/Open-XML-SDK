@@ -340,12 +340,11 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Adds a ThumbnailPart to the MainDocumentPart
         /// </summary>
         /// <param name="partType">The part type information for the ThumbnailPart. Required.</param>
-        /// <param name="contentType">The content type of the ThumbnailPart. Optional, default to null.</param>
         /// <param name="id">The relationship id. Optional, default to null.</param>
         /// <return>The newly added part</return>
-        public ThumbnailPart AddThumbnailPart(PartTypeInfo partType, string? contentType = null, string? id = null)
+        public ThumbnailPart AddThumbnailPart(PartTypeInfo partType, string? id = null)
         {
-            return (ThumbnailPart)OpenXmlPartExtensions.InitPart(this, new ThumbnailPart(), partType, contentType, id);
+            return (ThumbnailPart)OpenXmlPartExtensions.InitPart(this, new ThumbnailPart(), partType, id);
         }
 
         /// <summary>

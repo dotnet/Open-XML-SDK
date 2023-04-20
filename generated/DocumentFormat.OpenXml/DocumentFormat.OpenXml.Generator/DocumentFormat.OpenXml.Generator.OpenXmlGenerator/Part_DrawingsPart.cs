@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the DrawingsPart
     /// </summary>
-    public partial class DrawingsPart : OpenXmlPart, IFixedContentTypePart
+    public partial class DrawingsPart : OpenXmlPart, IAddExtensiblePartSupport<ImagePart>, IAddExtensiblePartSupport<CustomXmlPart>, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.drawing+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/drawing";
@@ -123,30 +123,6 @@ namespace DocumentFormat.OpenXml.Packaging
 
                 SetDomTree(value);
             }
-        }
-
-        /// <summary>
-        /// Adds a CustomXmlPart to the DrawingsPart
-        /// </summary>
-        /// <param name="partType">The part type information for the CustomXmlPart. Required.</param>
-        /// <param name="contentType">The content type of the CustomXmlPart. Optional, default to null.</param>
-        /// <param name="id">The relationship id. Optional, default to null.</param>
-        /// <return>The newly added part</return>
-        public CustomXmlPart AddCustomXmlPart(PartTypeInfo partType, string? contentType = null, string? id = null)
-        {
-            return (CustomXmlPart)OpenXmlPartExtensions.InitPart(this, new CustomXmlPart(), partType, contentType, id);
-        }
-
-        /// <summary>
-        /// Adds a ImagePart to the DrawingsPart
-        /// </summary>
-        /// <param name="partType">The part type information for the ImagePart. Required.</param>
-        /// <param name="contentType">The content type of the ImagePart. Optional, default to null.</param>
-        /// <param name="id">The relationship id. Optional, default to null.</param>
-        /// <return>The newly added part</return>
-        public ImagePart AddImagePart(PartTypeInfo partType, string? contentType = null, string? id = null)
-        {
-            return (ImagePart)OpenXmlPartExtensions.InitPart(this, new ImagePart(), partType, contentType, id);
         }
         
         /// <inheritdoc/>

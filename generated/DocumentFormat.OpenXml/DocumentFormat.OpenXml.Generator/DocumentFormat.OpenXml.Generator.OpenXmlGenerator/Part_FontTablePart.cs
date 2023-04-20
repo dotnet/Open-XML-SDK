@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the FontTablePart
     /// </summary>
-    public partial class FontTablePart : OpenXmlPart, IFixedContentTypePart
+    public partial class FontTablePart : OpenXmlPart, IAddExtensiblePartSupport<FontPart>, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.wordprocessingml.fontTable+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/fontTable";
@@ -79,18 +79,6 @@ namespace DocumentFormat.OpenXml.Packaging
 
         /// <inheritdoc/>
         public sealed override string RelationshipType => RelationshipTypeConstant;
-
-        /// <summary>
-        /// Adds a FontPart to the FontTablePart
-        /// </summary>
-        /// <param name="partType">The part type information for the FontPart. Required.</param>
-        /// <param name="contentType">The content type of the FontPart. Optional, default to null.</param>
-        /// <param name="id">The relationship id. Optional, default to null.</param>
-        /// <return>The newly added part</return>
-        public FontPart AddFontPart(PartTypeInfo partType, string? contentType = null, string? id = null)
-        {
-            return (FontPart)OpenXmlPartExtensions.InitPart(this, new FontPart(), partType, contentType, id);
-        }
         
         /// <inheritdoc/>
         public override IFeatureCollection Features => _features ??= new GeneratedFeatures(this);

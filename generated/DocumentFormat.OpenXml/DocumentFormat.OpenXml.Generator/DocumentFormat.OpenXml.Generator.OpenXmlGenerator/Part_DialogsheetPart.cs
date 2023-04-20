@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the DialogsheetPart
     /// </summary>
-    public partial class DialogsheetPart : OpenXmlPart, IFixedContentTypePart
+    public partial class DialogsheetPart : OpenXmlPart, IAddExtensiblePartSupport<EmbeddedObjectPart>, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.spreadsheetml.dialogsheet+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/dialogsheet";
@@ -94,18 +94,6 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the VmlDrawingParts of the DialogsheetPart
         /// </summary>
         public IEnumerable<VmlDrawingPart> VmlDrawingParts => GetPartsOfType<VmlDrawingPart>();
-
-        /// <summary>
-        /// Adds a EmbeddedObjectPart to the DialogsheetPart
-        /// </summary>
-        /// <param name="partType">The part type information for the EmbeddedObjectPart. Required.</param>
-        /// <param name="contentType">The content type of the EmbeddedObjectPart. Optional, default to null.</param>
-        /// <param name="id">The relationship id. Optional, default to null.</param>
-        /// <return>The newly added part</return>
-        public EmbeddedObjectPart AddEmbeddedObjectPart(PartTypeInfo partType, string? contentType = null, string? id = null)
-        {
-            return (EmbeddedObjectPart)OpenXmlPartExtensions.InitPart(this, new EmbeddedObjectPart(), partType, contentType, id);
-        }
         
         /// <inheritdoc/>
         public override IFeatureCollection Features => _features ??= new GeneratedFeatures(this);

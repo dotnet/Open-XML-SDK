@@ -15,10 +15,10 @@ namespace DocumentFormat.OpenXml.Packaging
     /// L".ico",    L"image/x-icon",
     /// L".pcx",    L"image/x-pcx",
     /// L".pcz",    L"image/x-pcz",
-    /// // Note: [danjump] EMZ and WMZ should never be used.
+    /// // Note: EMZ and WMZ should never be used.
     /// L".emz",    L"image/x-emz",
     /// L".wmz",    L"image/x-wmz",
-    /// // Note: [danjump] Jpeg-Wmf are used by thumbnail.  Don't add between them
+    /// // Note: Jpeg-Wmf are used by thumbnail.  Don't add between them
     /// L".jpeg",   L"image/jpeg",
     /// L".emf",    L"image/x-emf",
     /// L".wmf",    L"image/x-wmf",

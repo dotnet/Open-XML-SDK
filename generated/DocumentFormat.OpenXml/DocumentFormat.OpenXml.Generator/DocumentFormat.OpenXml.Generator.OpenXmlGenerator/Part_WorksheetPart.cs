@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the WorksheetPart
     /// </summary>
-    public partial class WorksheetPart : OpenXmlPart, IFixedContentTypePart
+    public partial class WorksheetPart : OpenXmlPart, IAddExtensiblePartSupport<EmbeddedControlPersistencePart>, IAddExtensiblePartSupport<EmbeddedObjectPart>, IAddExtensiblePartSupport<EmbeddedPackagePart>, IAddExtensiblePartSupport<ImagePart>, IAddExtensiblePartSupport<CustomPropertyPart>, IAddExtensiblePartSupport<EmbeddedControlPersistenceBinaryDataPart>, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet";
@@ -179,78 +179,6 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the WorksheetThreadedCommentsParts of the WorksheetPart
         /// </summary>
         public IEnumerable<WorksheetThreadedCommentsPart> WorksheetThreadedCommentsParts => GetPartsOfType<WorksheetThreadedCommentsPart>();
-
-        /// <summary>
-        /// Adds a CustomPropertyPart to the WorksheetPart
-        /// </summary>
-        /// <param name="partType">The part type information for the CustomPropertyPart. Required.</param>
-        /// <param name="contentType">The content type of the CustomPropertyPart. Optional, default to null.</param>
-        /// <param name="id">The relationship id. Optional, default to null.</param>
-        /// <return>The newly added part</return>
-        public CustomPropertyPart AddCustomPropertyPart(PartTypeInfo partType, string? contentType = null, string? id = null)
-        {
-            return (CustomPropertyPart)OpenXmlPartExtensions.InitPart(this, new CustomPropertyPart(), partType, contentType, id);
-        }
-
-        /// <summary>
-        /// Adds a EmbeddedControlPersistenceBinaryDataPart to the WorksheetPart
-        /// </summary>
-        /// <param name="partType">The part type information for the EmbeddedControlPersistenceBinaryDataPart. Required.</param>
-        /// <param name="contentType">The content type of the EmbeddedControlPersistenceBinaryDataPart. Optional, default to null.</param>
-        /// <param name="id">The relationship id. Optional, default to null.</param>
-        /// <return>The newly added part</return>
-        public EmbeddedControlPersistenceBinaryDataPart AddEmbeddedControlPersistenceBinaryDataPart(PartTypeInfo partType, string? contentType = null, string? id = null)
-        {
-            return (EmbeddedControlPersistenceBinaryDataPart)OpenXmlPartExtensions.InitPart(this, new EmbeddedControlPersistenceBinaryDataPart(), partType, contentType, id);
-        }
-
-        /// <summary>
-        /// Adds a EmbeddedControlPersistencePart to the WorksheetPart
-        /// </summary>
-        /// <param name="partType">The part type information for the EmbeddedControlPersistencePart. Required.</param>
-        /// <param name="contentType">The content type of the EmbeddedControlPersistencePart. Optional, default to null.</param>
-        /// <param name="id">The relationship id. Optional, default to null.</param>
-        /// <return>The newly added part</return>
-        public EmbeddedControlPersistencePart AddEmbeddedControlPersistencePart(PartTypeInfo partType, string? contentType = null, string? id = null)
-        {
-            return (EmbeddedControlPersistencePart)OpenXmlPartExtensions.InitPart(this, new EmbeddedControlPersistencePart(), partType, contentType, id);
-        }
-
-        /// <summary>
-        /// Adds a EmbeddedObjectPart to the WorksheetPart
-        /// </summary>
-        /// <param name="partType">The part type information for the EmbeddedObjectPart. Required.</param>
-        /// <param name="contentType">The content type of the EmbeddedObjectPart. Optional, default to null.</param>
-        /// <param name="id">The relationship id. Optional, default to null.</param>
-        /// <return>The newly added part</return>
-        public EmbeddedObjectPart AddEmbeddedObjectPart(PartTypeInfo partType, string? contentType = null, string? id = null)
-        {
-            return (EmbeddedObjectPart)OpenXmlPartExtensions.InitPart(this, new EmbeddedObjectPart(), partType, contentType, id);
-        }
-
-        /// <summary>
-        /// Adds a EmbeddedPackagePart to the WorksheetPart
-        /// </summary>
-        /// <param name="partType">The part type information for the EmbeddedPackagePart. Required.</param>
-        /// <param name="contentType">The content type of the EmbeddedPackagePart. Optional, default to null.</param>
-        /// <param name="id">The relationship id. Optional, default to null.</param>
-        /// <return>The newly added part</return>
-        public EmbeddedPackagePart AddEmbeddedPackagePart(PartTypeInfo partType, string? contentType = null, string? id = null)
-        {
-            return (EmbeddedPackagePart)OpenXmlPartExtensions.InitPart(this, new EmbeddedPackagePart(), partType, contentType, id);
-        }
-
-        /// <summary>
-        /// Adds a ImagePart to the WorksheetPart
-        /// </summary>
-        /// <param name="partType">The part type information for the ImagePart. Required.</param>
-        /// <param name="contentType">The content type of the ImagePart. Optional, default to null.</param>
-        /// <param name="id">The relationship id. Optional, default to null.</param>
-        /// <return>The newly added part</return>
-        public ImagePart AddImagePart(PartTypeInfo partType, string? contentType = null, string? id = null)
-        {
-            return (ImagePart)OpenXmlPartExtensions.InitPart(this, new ImagePart(), partType, contentType, id);
-        }
         
         /// <inheritdoc/>
         public override IFeatureCollection Features => _features ??= new GeneratedFeatures(this);

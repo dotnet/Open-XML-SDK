@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the PresentationPart
     /// </summary>
-    public partial class PresentationPart : OpenXmlPart
+    public partial class PresentationPart : OpenXmlPart, IAddExtensiblePartSupport<CustomXmlPart>, IAddExtensiblePartSupport<FontPart>
     {
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument";
         private DocumentFormat.OpenXml.Presentation.Presentation? _rootElement;
@@ -150,30 +150,6 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the ViewPropertiesPart of the PresentationPart
         /// </summary>
         public ViewPropertiesPart? ViewPropertiesPart => GetSubPartOfType<ViewPropertiesPart>();
-
-        /// <summary>
-        /// Adds a CustomXmlPart to the PresentationPart
-        /// </summary>
-        /// <param name="partType">The part type information for the CustomXmlPart. Required.</param>
-        /// <param name="contentType">The content type of the CustomXmlPart. Optional, default to null.</param>
-        /// <param name="id">The relationship id. Optional, default to null.</param>
-        /// <return>The newly added part</return>
-        public CustomXmlPart AddCustomXmlPart(PartTypeInfo partType, string? contentType = null, string? id = null)
-        {
-            return (CustomXmlPart)OpenXmlPartExtensions.InitPart(this, new CustomXmlPart(), partType, contentType, id);
-        }
-
-        /// <summary>
-        /// Adds a FontPart to the PresentationPart
-        /// </summary>
-        /// <param name="partType">The part type information for the FontPart. Required.</param>
-        /// <param name="contentType">The content type of the FontPart. Optional, default to null.</param>
-        /// <param name="id">The relationship id. Optional, default to null.</param>
-        /// <return>The newly added part</return>
-        public FontPart AddFontPart(PartTypeInfo partType, string? contentType = null, string? id = null)
-        {
-            return (FontPart)OpenXmlPartExtensions.InitPart(this, new FontPart(), partType, contentType, id);
-        }
         
         /// <inheritdoc/>
         public override IFeatureCollection Features => _features ??= new GeneratedFeatures(this);

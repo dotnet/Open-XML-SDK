@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the WebExtensionPart
     /// </summary>
-    public partial class WebExtensionPart : OpenXmlPart, IFixedContentTypePart
+    public partial class WebExtensionPart : OpenXmlPart, IAddExtensiblePartSupport<ImagePart>, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.ms-office.webextension+xml";
         internal const string RelationshipTypeConstant = "http://schemas.microsoft.com/office/2011/relationships/webextension";
@@ -78,18 +78,6 @@ namespace DocumentFormat.OpenXml.Packaging
 
                 SetDomTree(value);
             }
-        }
-
-        /// <summary>
-        /// Adds a ImagePart to the WebExtensionPart
-        /// </summary>
-        /// <param name="partType">The part type information for the ImagePart. Required.</param>
-        /// <param name="contentType">The content type of the ImagePart. Optional, default to null.</param>
-        /// <param name="id">The relationship id. Optional, default to null.</param>
-        /// <return>The newly added part</return>
-        public ImagePart AddImagePart(PartTypeInfo partType, string? contentType = null, string? id = null)
-        {
-            return (ImagePart)OpenXmlPartExtensions.InitPart(this, new ImagePart(), partType, contentType, id);
         }
 
         internal override bool IsInVersion(FileFormatVersions version)
