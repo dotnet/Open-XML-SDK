@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the RibbonExtensibilityPart
     /// </summary>
-    public partial class RibbonExtensibilityPart : CustomUIPart, IAddExtensiblePartSupport<ImagePart>, IFixedContentTypePart
+    public partial class RibbonExtensibilityPart : CustomUIPart, ISupportExtensibleRelationship<ImagePart>, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/xml";
         internal const string RelationshipTypeConstant = "http://schemas.microsoft.com/office/2006/relationships/ui/extensibility";

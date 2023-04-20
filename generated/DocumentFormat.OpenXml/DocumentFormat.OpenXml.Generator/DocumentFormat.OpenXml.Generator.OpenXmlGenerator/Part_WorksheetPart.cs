@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the WorksheetPart
     /// </summary>
-    public partial class WorksheetPart : OpenXmlPart, IAddExtensiblePartSupport<EmbeddedControlPersistencePart>, IAddExtensiblePartSupport<EmbeddedObjectPart>, IAddExtensiblePartSupport<EmbeddedPackagePart>, IAddExtensiblePartSupport<ImagePart>, IAddExtensiblePartSupport<CustomPropertyPart>, IAddExtensiblePartSupport<EmbeddedControlPersistenceBinaryDataPart>, IFixedContentTypePart
+    public partial class WorksheetPart : OpenXmlPart, ISupportExtensibleRelationship<EmbeddedControlPersistencePart>, ISupportExtensibleRelationship<EmbeddedObjectPart>, ISupportExtensibleRelationship<EmbeddedPackagePart>, ISupportExtensibleRelationship<ImagePart>, ISupportExtensibleRelationship<CustomPropertyPart>, ISupportExtensibleRelationship<EmbeddedControlPersistenceBinaryDataPart>, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet";

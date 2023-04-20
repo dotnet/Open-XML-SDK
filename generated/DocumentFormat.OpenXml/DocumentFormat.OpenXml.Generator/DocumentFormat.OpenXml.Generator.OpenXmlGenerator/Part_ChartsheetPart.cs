@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the ChartsheetPart
     /// </summary>
-    public partial class ChartsheetPart : OpenXmlPart, IAddExtensiblePartSupport<ImagePart>, IFixedContentTypePart
+    public partial class ChartsheetPart : OpenXmlPart, ISupportExtensibleRelationship<ImagePart>, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.spreadsheetml.chartsheet+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/chartsheet";

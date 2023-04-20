@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the SlidePart
     /// </summary>
-    public partial class SlidePart : OpenXmlPart, IAddExtensiblePartSupport<CustomXmlPart>, IAddExtensiblePartSupport<EmbeddedObjectPart>, IAddExtensiblePartSupport<EmbeddedPackagePart>, IAddExtensiblePartSupport<ImagePart>, IAddExtensiblePartSupport<EmbeddedControlPersistenceBinaryDataPart>, IAddExtensiblePartSupport<EmbeddedControlPersistencePart>, IFixedContentTypePart
+    public partial class SlidePart : OpenXmlPart, ISupportExtensibleRelationship<CustomXmlPart>, ISupportExtensibleRelationship<EmbeddedObjectPart>, ISupportExtensibleRelationship<EmbeddedPackagePart>, ISupportExtensibleRelationship<ImagePart>, ISupportExtensibleRelationship<EmbeddedControlPersistenceBinaryDataPart>, ISupportExtensibleRelationship<EmbeddedControlPersistencePart>, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.presentationml.slide+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/slide";

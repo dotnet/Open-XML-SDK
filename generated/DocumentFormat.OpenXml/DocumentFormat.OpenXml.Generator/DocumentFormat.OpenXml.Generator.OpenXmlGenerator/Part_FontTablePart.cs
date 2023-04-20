@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the FontTablePart
     /// </summary>
-    public partial class FontTablePart : OpenXmlPart, IAddExtensiblePartSupport<FontPart>, IFixedContentTypePart
+    public partial class FontTablePart : OpenXmlPart, ISupportExtensibleRelationship<FontPart>, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.wordprocessingml.fontTable+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/fontTable";

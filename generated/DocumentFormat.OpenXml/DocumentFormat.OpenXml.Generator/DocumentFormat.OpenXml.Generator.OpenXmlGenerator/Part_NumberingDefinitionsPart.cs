@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the NumberingDefinitionsPart
     /// </summary>
-    public partial class NumberingDefinitionsPart : OpenXmlPart, IAddExtensiblePartSupport<ImagePart>, IFixedContentTypePart
+    public partial class NumberingDefinitionsPart : OpenXmlPart, ISupportExtensibleRelationship<ImagePart>, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.wordprocessingml.numbering+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/numbering";

@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the VmlDrawingPart
     /// </summary>
-    public partial class VmlDrawingPart : OpenXmlPart, IAddExtensiblePartSupport<ImagePart>, IFixedContentTypePart
+    public partial class VmlDrawingPart : OpenXmlPart, ISupportExtensibleRelationship<ImagePart>, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.vmlDrawing";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/vmlDrawing";

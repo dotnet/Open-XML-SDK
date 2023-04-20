@@ -31,18 +31,5 @@ namespace DocumentFormat.OpenXml.Packaging
             // return main.AddImagePart(ImagePartTypeInfo.GetImagePartType(extension));
             return (ImagePart)OpenXmlPartExtensions.InitPart(main, new ImagePart(), ImagePartTypeInfo.GetImagePartType(extension));
         }
-
-        /// <summary>
-        /// Adds a ImagePart to a parent IAddExtensiblePart class.
-        /// </summary>
-        /// <param name="parent">The parent part requesting to add. Required.</param>
-        /// <param name="partType">The part type information for the added extensible part. Required.</param>
-        /// <param name="id">The relationship id. Optional, default to null.</param>
-        /// <return>The newly added part</return>
-        public static ImagePart AddImagePart<T>(this T parent, PartTypeInfo partType, string? id = null)
-            where T : OpenXmlPart, IAddExtensiblePartSupport<ImagePart>
-        {
-            return (ImagePart)OpenXmlPartExtensions.InitPart(parent, new ImagePart(), partType, id);
-        }
     }
 }

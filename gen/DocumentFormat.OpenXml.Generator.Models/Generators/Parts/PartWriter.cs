@@ -56,10 +56,9 @@ public static class PartWriter
 
                 foreach (PartChild child in type.Children.Where(p => (!p.HasFixedContent && !p.IsDataPartReference)))
                 {
-                    writer.Write(", IAddExtensiblePartSupport<" + child.Name + ">");
+                    writer.Write(", ISupportExtensibleRelationship<" + child.Name + ">");
                 }
             }
-
 
             if (type.HasFixedContent)
             {

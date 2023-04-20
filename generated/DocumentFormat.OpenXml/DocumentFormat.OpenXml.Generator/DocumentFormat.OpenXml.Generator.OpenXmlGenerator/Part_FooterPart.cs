@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the FooterPart
     /// </summary>
-    public partial class FooterPart : OpenXmlPart, IAddExtensiblePartSupport<AlternativeFormatImportPart>, IAddExtensiblePartSupport<EmbeddedControlPersistencePart>, IAddExtensiblePartSupport<EmbeddedObjectPart>, IAddExtensiblePartSupport<EmbeddedPackagePart>, IAddExtensiblePartSupport<ImagePart>, IFixedContentTypePart
+    public partial class FooterPart : OpenXmlPart, ISupportExtensibleRelationship<AlternativeFormatImportPart>, ISupportExtensibleRelationship<EmbeddedControlPersistencePart>, ISupportExtensibleRelationship<EmbeddedObjectPart>, ISupportExtensibleRelationship<EmbeddedPackagePart>, ISupportExtensibleRelationship<ImagePart>, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.wordprocessingml.footer+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/footer";
