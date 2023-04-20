@@ -47,265 +47,243 @@ public static class OpenXmlSupportedRelationshipExtensions
     }
 
     /// <summary>
-    /// Adds a AlternativeFormatImportPart as a relationship to the parent part
+    /// Adds a <see cref="AlternativeFormatImportPart"/> as a relationship to the parent part
     /// </summary>
     /// <param name="parent">The parent part requesting to add.</param>
     /// <param name="partType">The part type information for the added extensible part.</param>
     /// <param name="id">The relationship id. Optional, default to null.</param>
     /// <return>The newly added part</return>
-    /// <see cref="AlternativeFormatImportPart"/>
     public static AlternativeFormatImportPart AddAlternativeFormatImportPart<T>(this T parent, PartTypeInfo partType, string? id = null)
         where T : OpenXmlPartContainer, ISupportedRelationship<AlternativeFormatImportPart>
         => InitPart(parent, new AlternativeFormatImportPart(), partType, id);
 
     /// <summary>
-    /// Adds a AlternativeFormatImportPart as a relationship to the parent part
+    /// Adds a <see cref="AlternativeFormatImportPart"/> as a relationship to the parent part
     /// </summary>
     /// <param name="parent">The parent part requesting to add.</param>
     /// <param name="contentType">The content type information for the added extensible part.</param>
     /// <param name="id">The relationship id. Optional, default to null.</param>
     /// <return>The newly added part</return>
-    /// <see cref="AlternativeFormatImportPart"/>
     public static AlternativeFormatImportPart AddAlternativeFormatImportPart<T>(this T parent, string contentType, string? id = null)
         where T : OpenXmlPartContainer, ISupportedRelationship<AlternativeFormatImportPart>
         => DoInitPart(parent, new AlternativeFormatImportPart(), contentType, id);
 
     /// <summary>
-    /// Adds a CustomPropertyPart as a relationship to the parent part
+    /// Adds a <see cref="CustomPropertyPart"/> as a relationship to the parent part
     /// </summary>
     /// <param name="parent">The parent part requesting to add.</param>
     /// <param name="partType">The part type information for the added extensible part.</param>
     /// <param name="id">The relationship id. Optional, default to null.</param>
     /// <return>The newly added part</return>
-    /// <see cref="CustomPropertyPart"/>
     public static CustomPropertyPart AddCustomPropertyPart<T>(this T parent, PartTypeInfo partType, string? id = null)
         where T : OpenXmlPartContainer, ISupportedRelationship<CustomPropertyPart>
         => InitPart(parent, new CustomPropertyPart(), partType, id);
 
     /// <summary>
-    /// Adds a CustomPropertyPart as a relationship to the parent part
+    /// Adds a <see cref="CustomPropertyPart"/> as a relationship to the parent part
     /// </summary>
     /// <param name="parent">The parent part requesting to add.</param>
     /// <param name="contentType">The content type information for the added extensible part.</param>
     /// <param name="id">The relationship id. Optional, default to null.</param>
     /// <return>The newly added part</return>
-    /// <see cref="CustomPropertyPart"/>
     public static CustomPropertyPart AddCustomPropertyPart<T>(this T parent, string contentType, string? id = null)
         where T : OpenXmlPartContainer, ISupportedRelationship<CustomPropertyPart>
         => DoInitPart(parent, new CustomPropertyPart(), contentType, id);
 
     /// <summary>
-    /// Adds a CustomXmlPart as a relationship to the parent part
+    /// Adds a <see cref="CustomXmlPart"/> as a relationship to the parent part
     /// </summary>
     /// <param name="parent">The parent part requesting to add.</param>
     /// <param name="partType">The part type information for the added extensible part.</param>
     /// <param name="id">The relationship id. Optional, default to null.</param>
     /// <return>The newly added part</return>
-    /// <see cref="CustomXmlPart"/>
     public static CustomXmlPart AddCustomXmlPart<T>(this T parent, PartTypeInfo partType, string? id = null)
         where T : OpenXmlPartContainer, ISupportedRelationship<CustomXmlPart>
         => InitPart(parent, new CustomXmlPart(), partType, id);
 
     /// <summary>
-    /// Adds a CustomXmlPart as a relationship to the parent part
+    /// Adds a <see cref="CustomXmlPart"/> as a relationship to the parent part
     /// </summary>
     /// <param name="parent">The parent part requesting to add.</param>
     /// <param name="contentType">The content type information for the added extensible part.</param>
     /// <param name="id">The relationship id. Optional, default to null.</param>
     /// <return>The newly added part</return>
-    /// <see cref="CustomXmlPart"/>
     public static CustomXmlPart AddCustomXmlPart<T>(this T parent, string contentType, string? id = null)
         where T : OpenXmlPartContainer, ISupportedRelationship<CustomXmlPart>
         => DoInitPart(parent, new CustomXmlPart(), contentType, id);
 
     /// <summary>
-    /// Adds a EmbeddedControlPersistenceBinaryDataPart as a relationship to the parent part
+    /// Adds a <see cref="EmbeddedControlPersistenceBinaryDataPart"/> as a relationship to the parent part
     /// </summary>
     /// <param name="parent">The parent part requesting to add.</param>
     /// <param name="partType">The part type information for the added extensible part.</param>
     /// <param name="id">The relationship id. Optional, default to null.</param>
     /// <return>The newly added part</return>
-    /// <see cref="EmbeddedControlPersistenceBinaryDataPart"/>
     public static EmbeddedControlPersistenceBinaryDataPart AddEmbeddedControlPersistenceBinaryDataPart<T>(this T parent, PartTypeInfo partType, string? id = null)
         where T : OpenXmlPartContainer, ISupportedRelationship<EmbeddedControlPersistenceBinaryDataPart>
         => InitPart(parent, new EmbeddedControlPersistenceBinaryDataPart(), partType, id);
 
     /// <summary>
-    /// Adds a EmbeddedControlPersistenceBinaryDataPart as a relationship to the parent part
+    /// Adds a <see cref="EmbeddedControlPersistenceBinaryDataPart"/> as a relationship to the parent part
     /// </summary>
     /// <param name="parent">The parent part requesting to add.</param>
     /// <param name="contentType">The content type information for the added extensible part.</param>
     /// <param name="id">The relationship id. Optional, default to null.</param>
     /// <return>The newly added part</return>
-    /// <see cref="EmbeddedControlPersistenceBinaryDataPart"/>
     public static EmbeddedControlPersistenceBinaryDataPart AddEmbeddedControlPersistenceBinaryDataPart<T>(this T parent, string contentType, string? id = null)
         where T : OpenXmlPartContainer, ISupportedRelationship<EmbeddedControlPersistenceBinaryDataPart>
         => DoInitPart(parent, new EmbeddedControlPersistenceBinaryDataPart(), contentType, id);
 
     /// <summary>
-    /// Adds a EmbeddedControlPersistencePart as a relationship to the parent part
+    /// Adds a <see cref="EmbeddedControlPersistencePart"/> as a relationship to the parent part
     /// </summary>
     /// <param name="parent">The parent part requesting to add.</param>
     /// <param name="partType">The part type information for the added extensible part.</param>
     /// <param name="id">The relationship id. Optional, default to null.</param>
     /// <return>The newly added part</return>
-    /// <see cref="EmbeddedControlPersistencePart"/>
     public static EmbeddedControlPersistencePart AddEmbeddedControlPersistencePart<T>(this T parent, PartTypeInfo partType, string? id = null)
         where T : OpenXmlPartContainer, ISupportedRelationship<EmbeddedControlPersistencePart>
         => InitPart(parent, new EmbeddedControlPersistencePart(), partType, id);
 
     /// <summary>
-    /// Adds a EmbeddedControlPersistencePart as a relationship to the parent part
+    /// Adds a <see cref="EmbeddedControlPersistencePart"/> as a relationship to the parent part
     /// </summary>
     /// <param name="parent">The parent part requesting to add.</param>
     /// <param name="contentType">The content type information for the added extensible part.</param>
     /// <param name="id">The relationship id. Optional, default to null.</param>
     /// <return>The newly added part</return>
-    /// <see cref="EmbeddedControlPersistencePart"/>
     public static EmbeddedControlPersistencePart AddEmbeddedControlPersistencePart<T>(this T parent, string contentType, string? id = null)
         where T : OpenXmlPartContainer, ISupportedRelationship<EmbeddedControlPersistencePart>
         => DoInitPart(parent, new EmbeddedControlPersistencePart(), contentType, id);
 
     /// <summary>
-    /// Adds a EmbeddedObjectPart as a relationship to the parent part
+    /// Adds a <see cref="EmbeddedObjectPart"/> as a relationship to the parent part
     /// </summary>
     /// <param name="parent">The parent part requesting to add.</param>
     /// <param name="partType">The part type information for the added extensible part.</param>
     /// <param name="id">The relationship id. Optional, default to null.</param>
     /// <return>The newly added part</return>
-    /// <see cref="EmbeddedObjectPart"/>
     public static EmbeddedObjectPart AddEmbeddedObjectPart<T>(this T parent, PartTypeInfo partType, string? id = null)
         where T : OpenXmlPartContainer, ISupportedRelationship<EmbeddedObjectPart>
         => InitPart(parent, new EmbeddedObjectPart(), partType, id);
 
     /// <summary>
-    /// Adds a EmbeddedObjectPart as a relationship to the parent part
+    /// Adds a <see cref="EmbeddedObjectPart"/> as a relationship to the parent part
     /// </summary>
     /// <param name="parent">The parent part requesting to add.</param>
     /// <param name="contentType">The content type information for the added extensible part.</param>
     /// <param name="id">The relationship id. Optional, default to null.</param>
     /// <return>The newly added part</return>
-    /// <see cref="EmbeddedObjectPart"/>
     public static EmbeddedObjectPart AddEmbeddedObjectPart<T>(this T parent, string contentType, string? id = null)
         where T : OpenXmlPartContainer, ISupportedRelationship<EmbeddedObjectPart>
         => DoInitPart(parent, new EmbeddedObjectPart(), contentType, id);
 
     /// <summary>
-    /// Adds a EmbeddedPackagePart as a relationship to the parent part
+    /// Adds a <see cref="EmbeddedPackagePart"/> as a relationship to the parent part
     /// </summary>
     /// <param name="parent">The parent part requesting to add.</param>
     /// <param name="partType">The part type information for the added extensible part.</param>
     /// <param name="id">The relationship id. Optional, default to null.</param>
     /// <return>The newly added part</return>
-    /// <see cref="EmbeddedPackagePart"/>
     public static EmbeddedPackagePart AddEmbeddedPackagePart<T>(this T parent, PartTypeInfo partType, string? id = null)
         where T : OpenXmlPartContainer, ISupportedRelationship<EmbeddedPackagePart>
         => InitPart(parent, new EmbeddedPackagePart(), partType, id);
 
     /// <summary>
-    /// Adds a EmbeddedPackagePart as a relationship to the parent part
+    /// Adds a <see cref="EmbeddedPackagePart"/> as a relationship to the parent part
     /// </summary>
     /// <param name="parent">The parent part requesting to add.</param>
     /// <param name="contentType">The content type information for the added extensible part.</param>
     /// <param name="id">The relationship id. Optional, default to null.</param>
     /// <return>The newly added part</return>
-    /// <see cref="EmbeddedPackagePart"/>
     public static EmbeddedPackagePart AddEmbeddedPackagePart<T>(this T parent, string contentType, string? id = null)
         where T : OpenXmlPartContainer, ISupportedRelationship<EmbeddedPackagePart>
         => DoInitPart(parent, new EmbeddedPackagePart(), contentType, id);
 
     /// <summary>
-    /// Adds a FontPart as a relationship to the parent part
+    /// Adds a <see cref="FontPart"/> as a relationship to the parent part
     /// </summary>
     /// <param name="parent">The parent part requesting to add.</param>
     /// <param name="partType">The part type information for the added extensible part.</param>
     /// <param name="id">The relationship id. Optional, default to null.</param>
     /// <return>The newly added part</return>
-    /// <see cref="FontPart"/>
     public static FontPart AddFontPart<T>(this T parent, PartTypeInfo partType, string? id = null)
         where T : OpenXmlPartContainer, ISupportedRelationship<FontPart>
         => InitPart(parent, new FontPart(), partType, id);
 
     /// <summary>
-    /// Adds a FontPart as a relationship to the parent part
+    /// Adds a <see cref="FontPart"/> as a relationship to the parent part
     /// </summary>
     /// <param name="parent">The parent part requesting to add.</param>
     /// <param name="contentType">The content type information for the added extensible part.</param>
     /// <param name="id">The relationship id. Optional, default to null.</param>
     /// <return>The newly added part</return>
-    /// <see cref="FontPart"/>
     public static FontPart AddFontPart<T>(this T parent, string contentType, string? id = null)
         where T : OpenXmlPartContainer, ISupportedRelationship<FontPart>
         => DoInitPart(parent, new FontPart(), contentType, id);
 
     /// <summary>
-    /// Adds an ImagePart as a relationship to the parent part
+    /// Adds an ImagePart"/> as a relationship to the parent part
     /// </summary>
     /// <param name="parent">The parent part requesting to add.</param>
     /// <param name="partType">The part type information for the added extensible part.</param>
     /// <param name="id">The relationship id. Optional, default to null.</param>
     /// <return>The newly added part</return>
-    /// <see cref="ImagePart"/>
     public static ImagePart AddImagePart<T>(this T parent, PartTypeInfo partType, string? id = null)
         where T : OpenXmlPartContainer, ISupportedRelationship<ImagePart>
         => InitPart(parent, new ImagePart(), partType, id);
 
     /// <summary>
-    /// Adds a ImagePart as a relationship to the parent part
+    /// Adds a <see cref="ImagePart"/> as a relationship to the parent part
     /// </summary>
     /// <param name="parent">The parent part requesting to add.</param>
     /// <param name="contentType">The content type information for the added extensible part.</param>
     /// <param name="id">The relationship id. Optional, default to null.</param>
     /// <return>The newly added part</return>
-    /// <see cref="ImagePart"/>
     public static ImagePart AddImagePart<T>(this T parent, string contentType, string? id = null)
         where T : OpenXmlPartContainer, ISupportedRelationship<ImagePart>
         => DoInitPart(parent, new ImagePart(), contentType, id);
 
     /// <summary>
-    /// Adds a MailMergeRecipientDataPart as a relationship to the parent part
+    /// Adds a <see cref="MailMergeRecipientDataPart"/> as a relationship to the parent part
     /// </summary>
     /// <param name="parent">The parent part requesting to add.</param>
     /// <param name="partType">The part type information for the added extensible part.</param>
     /// <param name="id">The relationship id. Optional, default to null.</param>
     /// <return>The newly added part</return>
-    /// <see cref="MailMergeRecipientDataPart"/>
     public static MailMergeRecipientDataPart AddMailMergeRecipientDataPart<T>(this T parent, PartTypeInfo partType, string? id = null)
         where T : OpenXmlPartContainer, ISupportedRelationship<MailMergeRecipientDataPart>
         => InitPart(parent, new MailMergeRecipientDataPart(), partType, id);
 
     /// <summary>
-    /// Adds a MailMergeRecipientDataPart as a relationship to the parent part
+    /// Adds a <see cref="MailMergeRecipientDataPart"/> as a relationship to the parent part
     /// </summary>
     /// <param name="parent">The parent part requesting to add.</param>
     /// <param name="contentType">The content type information for the added extensible part.</param>
     /// <param name="id">The relationship id. Optional, default to null.</param>
     /// <return>The newly added part</return>
-    /// <see cref="MailMergeRecipientDataPart"/>
     public static MailMergeRecipientDataPart AddMailMergeRecipientDataPart<T>(this T parent, string contentType, string? id = null)
         where T : OpenXmlPartContainer, ISupportedRelationship<MailMergeRecipientDataPart>
         => DoInitPart(parent, new MailMergeRecipientDataPart(), contentType, id);
 
     /// <summary>
-    /// Adds a ThumbnailPart as a relationship to the parent part.
+    /// Adds a <see cref="ThumbnailPart"/> as a relationship to the parent part.
     /// </summary>
     /// <param name="parent">The parent part requesting to add.</param>
     /// <param name="partType">The part type information for the added extensible part.</param>
     /// <param name="id">The relationship id. Optional, default to null.</param>
     /// <return>The newly added part</return>
-    /// <see cref="ThumbnailPart"/>
     public static ThumbnailPart AddThumbnailPart<T>(this T parent, PartTypeInfo partType, string? id = null)
         where T : OpenXmlPartContainer, ISupportedRelationship<ThumbnailPart>
         => InitPart(parent, new ThumbnailPart(), partType, id);
 
     /// <summary>
-    /// Adds a ThumbnailPart as a relationship to the parent part
+    /// Adds a <see cref="ThumbnailPart"/> as a relationship to the parent part
     /// </summary>
     /// <param name="parent">The parent part requesting to add.</param>
     /// <param name="contentType">The content type information for the added extensible part.</param>
     /// <param name="id">The relationship id. Optional, default to null.</param>
     /// <return>The newly added part</return>
-    /// <see cref="ThumbnailPart"/>
     public static ThumbnailPart AddThumbnailPart<T>(this T parent, string contentType, string? id = null)
         where T : OpenXmlPartContainer, ISupportedRelationship<ThumbnailPart>
         => DoInitPart(parent, new ThumbnailPart(), contentType, id);
