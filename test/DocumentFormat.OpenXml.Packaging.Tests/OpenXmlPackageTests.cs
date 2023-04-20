@@ -95,7 +95,7 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
         {
             string altChunkId = "BinaryAltChunkId-" + Guid.NewGuid();
             AlternativeFormatImportPart chunk = wordDocument.MainDocumentPart.AddAlternativeFormatImportPart(
-                AlternativeFormatImportPartType.WordprocessingML, id: altChunkId);
+                AlternativeFormatImportPartType.WordprocessingML, altChunkId);
 
             using (Stream stream = chunk.GetStream(FileMode.Create))
             using (var writer = new BinaryWriter(stream))
@@ -118,12 +118,12 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
 
         private static AltChunk CreateAltChunkWithXmlContent(
             WordprocessingDocument wordDocument,
-            PartTypeInfo contentType,
+            PartTypeInfo partType,
             string xmlContent)
         {
             string altChunkId = "XmlAltChunkId-" + Guid.NewGuid();
             AlternativeFormatImportPart chunk = wordDocument.MainDocumentPart.AddAlternativeFormatImportPart(
-                contentType, id: altChunkId);
+                partType, altChunkId);
 
             using (Stream stream = chunk.GetStream(FileMode.Create))
             using (var writer = new StreamWriter(stream))
