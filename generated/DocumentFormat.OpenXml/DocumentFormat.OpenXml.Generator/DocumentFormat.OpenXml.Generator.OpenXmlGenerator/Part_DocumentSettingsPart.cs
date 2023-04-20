@@ -15,7 +15,10 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the DocumentSettingsPart
     /// </summary>
-    public partial class DocumentSettingsPart : OpenXmlPart, IFixedContentTypePart
+    public partial class DocumentSettingsPart : OpenXmlPart,
+        IFixedContentTypePart,
+        ISupportedRelationship<ImagePart>,
+        ISupportedRelationship<MailMergeRecipientDataPart>
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.wordprocessingml.settings+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/settings";
@@ -83,110 +86,6 @@ namespace DocumentFormat.OpenXml.Packaging
 
                 SetDomTree(value);
             }
-        }
-
-        /// <summary>
-        /// Adds a ImagePart to the DocumentSettingsPart
-        /// </summary>
-        /// <param name="contentType">The content type of the ImagePart</param>
-        /// <return>The newly added part</return>
-        public ImagePart AddImagePart(string contentType)
-        {
-            var childPart = new ImagePart();
-            InitPart(childPart, contentType);
-            return childPart;
-        }
-
-        /// <summary>
-        /// Adds a ImagePart to the DocumentSettingsPart
-        /// </summary>
-        /// <param name="contentType">The content type of the ImagePart</param>
-        /// <param name="id">The relationship id</param>
-        /// <return>The newly added part</return>
-        public ImagePart AddImagePart(string contentType, string id)
-        {
-            var childPart = new ImagePart();
-            InitPart(childPart, contentType, id);
-            return childPart;
-        }
-
-        /// <summary>
-        /// Adds a ImagePart to the DocumentSettingsPart
-        /// </summary>
-        /// <param name="partType">The part type of the ImagePart</param>
-        /// <param name="id">The relationship id</param>
-        /// <return>The newly added part</return>
-        public ImagePart AddImagePart(ImagePartType partType, string id)
-        {
-            var contentType = ImagePartTypeInfo.GetContentType(partType);
-            var partExtension = ImagePartTypeInfo.GetTargetExtension(partType);
-            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
-            return AddImagePart(contentType, id);
-        }
-
-        /// <summary>
-        /// Adds a ImagePart to the DocumentSettingsPart
-        /// </summary>
-        /// <param name="partType">The part type of the ImagePart</param>
-        /// <return>The newly added part</return>
-        public ImagePart AddImagePart(ImagePartType partType)
-        {
-            var contentType = ImagePartTypeInfo.GetContentType(partType);
-            var partExtension = ImagePartTypeInfo.GetTargetExtension(partType);
-            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
-            return AddImagePart(contentType);
-        }
-
-        /// <summary>
-        /// Adds a MailMergeRecipientDataPart to the DocumentSettingsPart
-        /// </summary>
-        /// <param name="contentType">The content type of the MailMergeRecipientDataPart</param>
-        /// <return>The newly added part</return>
-        public MailMergeRecipientDataPart AddMailMergeRecipientDataPart(string contentType)
-        {
-            var childPart = new MailMergeRecipientDataPart();
-            InitPart(childPart, contentType);
-            return childPart;
-        }
-
-        /// <summary>
-        /// Adds a MailMergeRecipientDataPart to the DocumentSettingsPart
-        /// </summary>
-        /// <param name="contentType">The content type of the MailMergeRecipientDataPart</param>
-        /// <param name="id">The relationship id</param>
-        /// <return>The newly added part</return>
-        public MailMergeRecipientDataPart AddMailMergeRecipientDataPart(string contentType, string id)
-        {
-            var childPart = new MailMergeRecipientDataPart();
-            InitPart(childPart, contentType, id);
-            return childPart;
-        }
-
-        /// <summary>
-        /// Adds a MailMergeRecipientDataPart to the DocumentSettingsPart
-        /// </summary>
-        /// <param name="partType">The part type of the MailMergeRecipientDataPart</param>
-        /// <param name="id">The relationship id</param>
-        /// <return>The newly added part</return>
-        public MailMergeRecipientDataPart AddMailMergeRecipientDataPart(MailMergeRecipientDataPartType partType, string id)
-        {
-            var contentType = MailMergeRecipientDataPartTypeInfo.GetContentType(partType);
-            var partExtension = MailMergeRecipientDataPartTypeInfo.GetTargetExtension(partType);
-            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
-            return AddMailMergeRecipientDataPart(contentType, id);
-        }
-
-        /// <summary>
-        /// Adds a MailMergeRecipientDataPart to the DocumentSettingsPart
-        /// </summary>
-        /// <param name="partType">The part type of the MailMergeRecipientDataPart</param>
-        /// <return>The newly added part</return>
-        public MailMergeRecipientDataPart AddMailMergeRecipientDataPart(MailMergeRecipientDataPartType partType)
-        {
-            var contentType = MailMergeRecipientDataPartTypeInfo.GetContentType(partType);
-            var partExtension = MailMergeRecipientDataPartTypeInfo.GetTargetExtension(partType);
-            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
-            return AddMailMergeRecipientDataPart(contentType);
         }
         
         /// <inheritdoc/>

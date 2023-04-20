@@ -15,7 +15,8 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the WebExTaskpanesPart
     /// </summary>
-    public partial class WebExTaskpanesPart : OpenXmlPart, IFixedContentTypePart
+    public partial class WebExTaskpanesPart : OpenXmlPart,
+        IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.ms-office.webextensiontaskpanes+xml";
         internal const string RelationshipTypeConstant = "http://schemas.microsoft.com/office/2011/relationships/webextensiontaskpanes";

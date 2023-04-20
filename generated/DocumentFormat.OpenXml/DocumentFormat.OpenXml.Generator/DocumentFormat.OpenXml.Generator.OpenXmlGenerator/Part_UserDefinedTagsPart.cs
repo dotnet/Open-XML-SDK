@@ -15,7 +15,8 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the UserDefinedTagsPart
     /// </summary>
-    public partial class UserDefinedTagsPart : OpenXmlPart, IFixedContentTypePart
+    public partial class UserDefinedTagsPart : OpenXmlPart,
+        IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.presentationml.tags+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/tags";

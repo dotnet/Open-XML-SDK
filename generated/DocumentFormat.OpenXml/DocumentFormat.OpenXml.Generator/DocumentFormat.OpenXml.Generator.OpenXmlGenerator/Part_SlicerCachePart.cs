@@ -15,7 +15,8 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the SlicerCachePart
     /// </summary>
-    public partial class SlicerCachePart : OpenXmlPart, IFixedContentTypePart
+    public partial class SlicerCachePart : OpenXmlPart,
+        IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.ms-excel.slicerCache+xml";
         internal const string RelationshipTypeConstant = "http://schemas.microsoft.com/office/2007/relationships/slicerCache";

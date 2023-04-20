@@ -15,7 +15,9 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the WebExtensionPart
     /// </summary>
-    public partial class WebExtensionPart : OpenXmlPart, IFixedContentTypePart
+    public partial class WebExtensionPart : OpenXmlPart,
+        IFixedContentTypePart,
+        ISupportedRelationship<ImagePart>
     {
         internal const string ContentTypeConstant = "application/vnd.ms-office.webextension+xml";
         internal const string RelationshipTypeConstant = "http://schemas.microsoft.com/office/2011/relationships/webextension";
@@ -78,58 +80,6 @@ namespace DocumentFormat.OpenXml.Packaging
 
                 SetDomTree(value);
             }
-        }
-
-        /// <summary>
-        /// Adds a ImagePart to the WebExtensionPart
-        /// </summary>
-        /// <param name="contentType">The content type of the ImagePart</param>
-        /// <return>The newly added part</return>
-        public ImagePart AddImagePart(string contentType)
-        {
-            var childPart = new ImagePart();
-            InitPart(childPart, contentType);
-            return childPart;
-        }
-
-        /// <summary>
-        /// Adds a ImagePart to the WebExtensionPart
-        /// </summary>
-        /// <param name="contentType">The content type of the ImagePart</param>
-        /// <param name="id">The relationship id</param>
-        /// <return>The newly added part</return>
-        public ImagePart AddImagePart(string contentType, string id)
-        {
-            var childPart = new ImagePart();
-            InitPart(childPart, contentType, id);
-            return childPart;
-        }
-
-        /// <summary>
-        /// Adds a ImagePart to the WebExtensionPart
-        /// </summary>
-        /// <param name="partType">The part type of the ImagePart</param>
-        /// <param name="id">The relationship id</param>
-        /// <return>The newly added part</return>
-        public ImagePart AddImagePart(ImagePartType partType, string id)
-        {
-            var contentType = ImagePartTypeInfo.GetContentType(partType);
-            var partExtension = ImagePartTypeInfo.GetTargetExtension(partType);
-            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
-            return AddImagePart(contentType, id);
-        }
-
-        /// <summary>
-        /// Adds a ImagePart to the WebExtensionPart
-        /// </summary>
-        /// <param name="partType">The part type of the ImagePart</param>
-        /// <return>The newly added part</return>
-        public ImagePart AddImagePart(ImagePartType partType)
-        {
-            var contentType = ImagePartTypeInfo.GetContentType(partType);
-            var partExtension = ImagePartTypeInfo.GetTargetExtension(partType);
-            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
-            return AddImagePart(contentType);
         }
 
         internal override bool IsInVersion(FileFormatVersions version)

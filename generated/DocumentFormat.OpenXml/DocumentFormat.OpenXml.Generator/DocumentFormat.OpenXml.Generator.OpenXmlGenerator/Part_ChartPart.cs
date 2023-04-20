@@ -15,7 +15,10 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the ChartPart
     /// </summary>
-    public partial class ChartPart : OpenXmlPart, IFixedContentTypePart
+    public partial class ChartPart : OpenXmlPart,
+        IFixedContentTypePart,
+        ISupportedRelationship<EmbeddedPackagePart>,
+        ISupportedRelationship<ImagePart>
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.drawingml.chart+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/chart";
@@ -104,70 +107,6 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the ThemeOverridePart of the ChartPart
         /// </summary>
         public ThemeOverridePart? ThemeOverridePart => GetSubPartOfType<ThemeOverridePart>();
-
-        /// <summary>
-        /// Adds a EmbeddedPackagePart to the ChartPart
-        /// </summary>
-        /// <param name="contentType">The content type of the EmbeddedPackagePart</param>
-        /// <return>The newly added part</return>
-        public EmbeddedPackagePart AddEmbeddedPackagePart(string contentType)
-        {
-            var childPart = new EmbeddedPackagePart();
-            InitPart(childPart, contentType);
-            return childPart;
-        }
-
-        /// <summary>
-        /// Adds a ImagePart to the ChartPart
-        /// </summary>
-        /// <param name="contentType">The content type of the ImagePart</param>
-        /// <return>The newly added part</return>
-        public ImagePart AddImagePart(string contentType)
-        {
-            var childPart = new ImagePart();
-            InitPart(childPart, contentType);
-            return childPart;
-        }
-
-        /// <summary>
-        /// Adds a ImagePart to the ChartPart
-        /// </summary>
-        /// <param name="contentType">The content type of the ImagePart</param>
-        /// <param name="id">The relationship id</param>
-        /// <return>The newly added part</return>
-        public ImagePart AddImagePart(string contentType, string id)
-        {
-            var childPart = new ImagePart();
-            InitPart(childPart, contentType, id);
-            return childPart;
-        }
-
-        /// <summary>
-        /// Adds a ImagePart to the ChartPart
-        /// </summary>
-        /// <param name="partType">The part type of the ImagePart</param>
-        /// <param name="id">The relationship id</param>
-        /// <return>The newly added part</return>
-        public ImagePart AddImagePart(ImagePartType partType, string id)
-        {
-            var contentType = ImagePartTypeInfo.GetContentType(partType);
-            var partExtension = ImagePartTypeInfo.GetTargetExtension(partType);
-            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
-            return AddImagePart(contentType, id);
-        }
-
-        /// <summary>
-        /// Adds a ImagePart to the ChartPart
-        /// </summary>
-        /// <param name="partType">The part type of the ImagePart</param>
-        /// <return>The newly added part</return>
-        public ImagePart AddImagePart(ImagePartType partType)
-        {
-            var contentType = ImagePartTypeInfo.GetContentType(partType);
-            var partExtension = ImagePartTypeInfo.GetTargetExtension(partType);
-            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
-            return AddImagePart(contentType);
-        }
         
         /// <inheritdoc/>
         public override IFeatureCollection Features => _features ??= new GeneratedFeatures(this);

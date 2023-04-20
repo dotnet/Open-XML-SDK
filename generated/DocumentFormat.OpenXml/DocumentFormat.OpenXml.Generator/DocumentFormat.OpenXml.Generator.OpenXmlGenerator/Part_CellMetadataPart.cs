@@ -15,7 +15,8 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the CellMetadataPart
     /// </summary>
-    public partial class CellMetadataPart : OpenXmlPart, IFixedContentTypePart
+    public partial class CellMetadataPart : OpenXmlPart,
+        IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheetMetadata+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/sheetMetadata";

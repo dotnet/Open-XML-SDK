@@ -337,32 +337,6 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// Add a ThumbnailPart to the SpreadsheetDocument.
-        /// </summary>
-        /// <param name="contentType">The content type of the ThumbnailPart.</param>
-        /// <returns>The newly added ThumbnailPart.</returns>
-        public ThumbnailPart AddThumbnailPart(string contentType)
-        {
-            ThumbnailPart childPart = new ThumbnailPart();
-            InitPart(childPart, contentType);
-            return childPart;
-        }
-
-        /// <summary>
-        /// Adds a ThumbnailPart to the SpreadsheetDocument.
-        /// </summary>
-        /// <param name="partType">The type of the ThumbnailPart.</param>
-        /// <returns>The newly added ThumbnailPart.</returns>
-        public ThumbnailPart AddThumbnailPart(ThumbnailPartType partType)
-        {
-            string contentType = ThumbnailPartTypeInfo.GetContentType(partType);
-            string partExtension = ThumbnailPartTypeInfo.GetTargetExtension(partType);
-            PartExtensions.Register(contentType, partExtension);
-
-            return AddThumbnailPart(contentType);
-        }
-
-        /// <summary>
         /// Adds a QuickAccessToolbarCustomizationsPart to the SpreadsheetDocument.
         /// </summary>
         /// <returns>The newly added QuickAccessToolbarCustomizationsPart.</returns>

@@ -15,7 +15,9 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the FontTablePart
     /// </summary>
-    public partial class FontTablePart : OpenXmlPart, IFixedContentTypePart
+    public partial class FontTablePart : OpenXmlPart,
+        IFixedContentTypePart,
+        ISupportedRelationship<FontPart>
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.wordprocessingml.fontTable+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/fontTable";
@@ -79,58 +81,6 @@ namespace DocumentFormat.OpenXml.Packaging
 
         /// <inheritdoc/>
         public sealed override string RelationshipType => RelationshipTypeConstant;
-
-        /// <summary>
-        /// Adds a FontPart to the FontTablePart
-        /// </summary>
-        /// <param name="contentType">The content type of the FontPart</param>
-        /// <return>The newly added part</return>
-        public FontPart AddFontPart(string contentType)
-        {
-            var childPart = new FontPart();
-            InitPart(childPart, contentType);
-            return childPart;
-        }
-
-        /// <summary>
-        /// Adds a FontPart to the FontTablePart
-        /// </summary>
-        /// <param name="contentType">The content type of the FontPart</param>
-        /// <param name="id">The relationship id</param>
-        /// <return>The newly added part</return>
-        public FontPart AddFontPart(string contentType, string id)
-        {
-            var childPart = new FontPart();
-            InitPart(childPart, contentType, id);
-            return childPart;
-        }
-
-        /// <summary>
-        /// Adds a FontPart to the FontTablePart
-        /// </summary>
-        /// <param name="partType">The part type of the FontPart</param>
-        /// <param name="id">The relationship id</param>
-        /// <return>The newly added part</return>
-        public FontPart AddFontPart(FontPartType partType, string id)
-        {
-            var contentType = FontPartTypeInfo.GetContentType(partType);
-            var partExtension = FontPartTypeInfo.GetTargetExtension(partType);
-            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
-            return AddFontPart(contentType, id);
-        }
-
-        /// <summary>
-        /// Adds a FontPart to the FontTablePart
-        /// </summary>
-        /// <param name="partType">The part type of the FontPart</param>
-        /// <return>The newly added part</return>
-        public FontPart AddFontPart(FontPartType partType)
-        {
-            var contentType = FontPartTypeInfo.GetContentType(partType);
-            var partExtension = FontPartTypeInfo.GetTargetExtension(partType);
-            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
-            return AddFontPart(contentType);
-        }
         
         /// <inheritdoc/>
         public override IFeatureCollection Features => _features ??= new GeneratedFeatures(this);

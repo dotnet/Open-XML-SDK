@@ -29,6 +29,19 @@ public static class PartWriter
         IncludeTrailingNewline = false,
     };
 
+    private static IEnumerable<string> GetInterfaces(Part type)
+    {
+        if (type.HasFixedContent)
+        {
+            yield return "IFixedContentTypePart";
+        }
+
+        foreach (var child in type.Children.Where(p => (!p.HasFixedContent && !p.IsDataPartReference)))
+        {
+            yield return $"ISupportedRelationship<{child.Name}>";
+        }
+    }
+
     public static void WritePart(this IndentedTextWriter writer, OpenXmlGeneratorServices services, Part type)
     {
         var items = new List<Item>();
@@ -49,18 +62,21 @@ public static class PartWriter
             writer.Write("public partial class ");
             writer.Write(type.Name);
 
-            if (!type.IsPackage)
+            writer.Write(" : ");
+            writer.Write(type.Base);
+
+            writer.Indent++;
+
+            foreach (var i in GetInterfaces(type).OrderBy(i => i))
             {
-                writer.Write(" : ");
-                writer.Write(type.Base);
+                writer.WriteLine(",");
+                writer.Write(i);
             }
 
-            if (type.HasFixedContent)
-            {
-                writer.Write(", IFixedContentTypePart");
-            }
+            writer.Indent--;
 
             writer.WriteLine();
+
             using (writer.AddBlock(_options with { AddNewLineBeforeClosing = true }))
             {
                 if (!type.IsPackage)
@@ -499,17 +515,6 @@ public static class PartWriter
             {
                 yield return new Item(ItemType.Method, $"Add{p.Name}", writer => GenerateAddPartMethod(writer, type, p, AddPartParameter.MediaDataPart, false));
                 yield return new Item(ItemType.Method, $"Add{p.Name}", writer => GenerateAddPartMethod(writer, type, p, AddPartParameter.MediaDataPart, true));
-            }
-            else if (p.IsSpecialEmbeddedPart)
-            {
-                yield return new Item(ItemType.Method, $"Add{p.Name}", writer => GenerateAddPartMethod(writer, type, p, AddPartParameter.ContentType, false));
-            }
-            else
-            {
-                yield return new Item(ItemType.Method, $"Add{p.Name}", writer => GenerateAddPartMethod(writer, type, p, AddPartParameter.ContentType, false));
-                yield return new Item(ItemType.Method, $"Add{p.Name}", writer => GenerateAddPartMethod(writer, type, p, AddPartParameter.ContentType, true));
-                yield return new Item(ItemType.Method, $"Add{p.Name}", writer => GenerateAddPartMethod(writer, type, p, AddPartParameter.PartType, true));
-                yield return new Item(ItemType.Method, $"Add{p.Name}", writer => GenerateAddPartMethod(writer, type, p, AddPartParameter.PartType, false));
             }
         }
 

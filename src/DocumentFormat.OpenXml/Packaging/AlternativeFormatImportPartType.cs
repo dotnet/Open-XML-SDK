@@ -15,65 +15,65 @@ namespace DocumentFormat.OpenXml.Packaging
     /// L".ico",    L"image/x-icon",
     /// L".pcx",    L"image/x-pcx",
     /// L".pcz",    L"image/x-pcz",
-    /// // Note: [danjump] EMZ and WMZ should never be used.
+    /// // Note: EMZ and WMZ should never be used.
     /// L".emz",    L"image/x-emz",
     /// L".wmz",    L"image/x-wmz",
-    /// // Note: [danjump] Jpeg-Wmf are used by thumbnail.  Don't add between them
+    /// // Note: Jpeg-Wmf are used by thumbnail.  Don't add between them
     /// L".jpeg",   L"image/jpeg",
     /// L".emf",    L"image/x-emf",
     /// L".wmf",    L"image/x-wmf",
     /// ]]>
     /// </summary>
-    public enum AlternativeFormatImportPartType
+    public static class AlternativeFormatImportPartType
     {
         /// <summary>
-        /// Extensible HyperText Markup Language File (.xhtml).
+        /// Defines type information for Xhtml alternative format import part.
         /// </summary>
-        Xhtml,
+        public static readonly PartTypeInfo Xhtml = new("application/xhtml+xml", ".xhtml");
 
         /// <summary>
-        /// MHTML Document (.mht).
+        /// Defines type information for Mht alternative format import part.
         /// </summary>
-        Mht,
+        public static readonly PartTypeInfo Mht = new("message/rfc822", ".mht");
 
         /// <summary>
-        /// application/xml (.xml).
+        /// Defines type information for Xml alternative format import part.
         /// </summary>
-        Xml,
+        public static readonly PartTypeInfo Xml = new("application/xml", ".xml");
 
         /// <summary>
-        /// Text (.txt).
+        /// Defines type information for TextPlain alternative format import part.
         /// </summary>
-        TextPlain,
+        public static readonly PartTypeInfo TextPlain = new("text/plain", ".txt");
 
         /// <summary>
-        /// Wordprocessing (.docx).
+        /// Defines type information for WordprocessingML alternative format import part.
         /// </summary>
-        WordprocessingML,
+        public static readonly PartTypeInfo WordprocessingML = new("application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml", ".docx");
 
         /// <summary>
-        /// Office Word Macro Enabled (.docm).
+        /// Defines type information for OfficeWordMacroEnabled alternative format import part.
         /// </summary>
-        OfficeWordMacroEnabled,
+        public static readonly PartTypeInfo OfficeWordMacroEnabled = new("application/vnd.ms-word.document.macroEnabled.main+xml", ".docm");
 
         /// <summary>
-        /// Office Word Template (.dotx).
+        /// Defines type information for OfficeWordTemplate alternative format import part.
         /// </summary>
-        OfficeWordTemplate,
+        public static readonly PartTypeInfo OfficeWordTemplate = new("application/vnd.openxmlformats-officedocument.wordprocessingml.template.main+xml", ".dotx");
 
         /// <summary>
-        /// Office Word Macro Enabled Template (.dotm).
+        /// Defines type information for OfficeWordMacroEnabledTemplate alternative format import part.
         /// </summary>
-        OfficeWordMacroEnabledTemplate,
+        public static readonly PartTypeInfo OfficeWordMacroEnabledTemplate = new("application/vnd.ms-word.template.macroEnabledTemplate.main+xml", ".dotm");
 
         /// <summary>
-        /// Rich Text Format (.rtf).
+        /// Defines type information for Rtf alternative format import part.
         /// </summary>
-        Rtf,
+        public static readonly PartTypeInfo Rtf = new("application/rtf", ".rtf");
 
         /// <summary>
-        /// HyperText Markup Language File (.htm).
+        /// Defines type information for Html alternative format import part.
         /// </summary>
-        Html,
+        public static readonly PartTypeInfo Html = new("text/html", ".htm");
     }
 }

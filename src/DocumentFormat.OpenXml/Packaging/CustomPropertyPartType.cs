@@ -6,16 +6,16 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines CustomPropertyPartType - types of CustomPropertyPart.
     /// </summary>
-    public enum CustomPropertyPartType
+    public static class CustomPropertyPartType
     {
         /// <summary>
-        /// application/vnd.openxmlformats-officedocument.spreadsheetml.customProperty.
+        /// Defines type information for spreadsheet custom property part.
         /// </summary>
-        Spreadsheet,
+        public static readonly PartTypeInfo Spreadsheet = new("application/vnd.openxmlformats-officedocument.spreadsheetml.customProperty", ".xml");
 
         /// <summary>
-        /// application/xml.
+        /// Defines type information for xml custom property part.
         /// </summary>
-        Xml,
+        public static readonly PartTypeInfo Xml = new("application/xml", ".xml");
     }
 }

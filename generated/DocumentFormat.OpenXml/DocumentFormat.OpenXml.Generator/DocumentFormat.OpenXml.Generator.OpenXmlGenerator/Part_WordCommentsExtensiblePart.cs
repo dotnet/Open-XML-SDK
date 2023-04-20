@@ -15,7 +15,8 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the WordCommentsExtensiblePart
     /// </summary>
-    public partial class WordCommentsExtensiblePart : OpenXmlPart, IFixedContentTypePart
+    public partial class WordCommentsExtensiblePart : OpenXmlPart,
+        IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.wordprocessingml.commentsExtensible+xml";
         internal const string RelationshipTypeConstant = "http://schemas.microsoft.com/office/2018/08/relationships/commentsExtensible";

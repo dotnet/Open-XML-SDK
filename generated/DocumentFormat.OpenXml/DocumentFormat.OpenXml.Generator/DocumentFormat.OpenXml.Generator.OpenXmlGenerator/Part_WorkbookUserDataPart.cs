@@ -15,7 +15,8 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the WorkbookUserDataPart
     /// </summary>
-    public partial class WorkbookUserDataPart : OpenXmlPart, IFixedContentTypePart
+    public partial class WorkbookUserDataPart : OpenXmlPart,
+        IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.spreadsheetml.userNames+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/usernames";

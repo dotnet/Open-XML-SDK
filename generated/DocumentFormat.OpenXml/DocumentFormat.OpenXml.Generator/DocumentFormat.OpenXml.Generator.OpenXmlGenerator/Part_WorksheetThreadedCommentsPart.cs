@@ -15,7 +15,8 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the WorksheetThreadedCommentsPart
     /// </summary>
-    public partial class WorksheetThreadedCommentsPart : OpenXmlPart, IFixedContentTypePart
+    public partial class WorksheetThreadedCommentsPart : OpenXmlPart,
+        IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.ms-excel.threadedcomments+xml";
         internal const string RelationshipTypeConstant = "http://schemas.microsoft.com/office/2017/10/relationships/threadedComment";

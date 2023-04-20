@@ -15,7 +15,8 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the StyleDefinitionsPart
     /// </summary>
-    public partial class StyleDefinitionsPart : StylesPart, IFixedContentTypePart
+    public partial class StyleDefinitionsPart : StylesPart,
+        IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.wordprocessingml.styles+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles";

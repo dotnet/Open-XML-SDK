@@ -6,21 +6,21 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines FontPartType - types of FontPart.
     /// </summary>
-    public enum FontPartType
+    public static class FontPartType
     {
         /// <summary>
-        /// Font Data (.fntdata).
+        /// Defines type information for FontData font part.
         /// </summary>
-        FontData,
+        public static readonly PartTypeInfo FontData = new("application/x-fontdata", ".fntdata");
 
         /// <summary>
-        /// TrueType Font (.ttf).
+        /// Defines type information for FontTtf font part.
         /// </summary>
-        FontTtf,
+        public static readonly PartTypeInfo FontTtf = new("application/x-font-ttf", ".ttf");
 
         /// <summary>
-        /// Obfuscated TTF Font (.odttf).
+        /// Defines type information for FontOdttf font part.
         /// </summary>
-        FontOdttf,
+        public static readonly PartTypeInfo FontOdttf = new("application/vnd.openxmlformats-officedocument.obfuscatedFont", ".odttf");
     }
 }

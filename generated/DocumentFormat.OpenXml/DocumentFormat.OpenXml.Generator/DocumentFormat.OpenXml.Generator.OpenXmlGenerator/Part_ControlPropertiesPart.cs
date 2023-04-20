@@ -15,7 +15,8 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the ControlPropertiesPart
     /// </summary>
-    public partial class ControlPropertiesPart : OpenXmlPart, IFixedContentTypePart
+    public partial class ControlPropertiesPart : OpenXmlPart,
+        IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.ms-excel.controlproperties+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/ctrlProp";

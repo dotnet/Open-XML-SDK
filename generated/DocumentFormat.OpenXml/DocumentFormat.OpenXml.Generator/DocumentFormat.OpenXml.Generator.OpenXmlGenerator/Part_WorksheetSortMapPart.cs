@@ -15,7 +15,8 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the WorksheetSortMapPart
     /// </summary>
-    public partial class WorksheetSortMapPart : OpenXmlPart, IFixedContentTypePart
+    public partial class WorksheetSortMapPart : OpenXmlPart,
+        IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.ms-excel.wsSortMap+xml";
         internal const string RelationshipTypeConstant = "http://schemas.microsoft.com/office/2006/relationships/wsSortMap";

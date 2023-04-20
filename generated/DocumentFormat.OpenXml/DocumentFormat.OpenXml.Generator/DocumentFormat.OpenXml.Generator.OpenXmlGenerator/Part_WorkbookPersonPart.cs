@@ -15,7 +15,8 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the WorkbookPersonPart
     /// </summary>
-    public partial class WorkbookPersonPart : OpenXmlPart, IFixedContentTypePart
+    public partial class WorkbookPersonPart : OpenXmlPart,
+        IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.ms-excel.person+xml";
         internal const string RelationshipTypeConstant = "http://schemas.microsoft.com/office/2017/10/relationships/person";

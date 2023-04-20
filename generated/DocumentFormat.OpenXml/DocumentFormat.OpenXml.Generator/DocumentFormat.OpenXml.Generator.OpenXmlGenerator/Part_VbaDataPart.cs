@@ -15,7 +15,8 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the VbaDataPart
     /// </summary>
-    public partial class VbaDataPart : OpenXmlPart, IFixedContentTypePart
+    public partial class VbaDataPart : OpenXmlPart,
+        IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.ms-word.vbaData+xml";
         internal const string RelationshipTypeConstant = "http://schemas.microsoft.com/office/2006/relationships/wordVbaData";

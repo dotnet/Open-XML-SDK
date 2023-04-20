@@ -15,7 +15,8 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the VolatileDependenciesPart
     /// </summary>
-    public partial class VolatileDependenciesPart : OpenXmlPart, IFixedContentTypePart
+    public partial class VolatileDependenciesPart : OpenXmlPart,
+        IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.spreadsheetml.volatileDependencies+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/volatileDependencies";

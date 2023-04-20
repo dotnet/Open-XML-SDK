@@ -15,7 +15,13 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the NotesSlidePart
     /// </summary>
-    public partial class NotesSlidePart : OpenXmlPart, IFixedContentTypePart
+    public partial class NotesSlidePart : OpenXmlPart,
+        IFixedContentTypePart,
+        ISupportedRelationship<CustomXmlPart>,
+        ISupportedRelationship<EmbeddedControlPersistenceBinaryDataPart>,
+        ISupportedRelationship<EmbeddedObjectPart>,
+        ISupportedRelationship<EmbeddedPackagePart>,
+        ISupportedRelationship<ImagePart>
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.presentationml.notesSlide+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/notesSlide";
@@ -184,186 +190,6 @@ namespace DocumentFormat.OpenXml.Packaging
         public AudioReferenceRelationship AddAudioReferenceRelationship(MediaDataPart mediaDataPart, string id)
         {
             return AddDataPartReferenceRelationship<AudioReferenceRelationship>(mediaDataPart, id);
-        }
-
-        /// <summary>
-        /// Adds a CustomXmlPart to the NotesSlidePart
-        /// </summary>
-        /// <param name="contentType">The content type of the CustomXmlPart</param>
-        /// <return>The newly added part</return>
-        public CustomXmlPart AddCustomXmlPart(string contentType)
-        {
-            var childPart = new CustomXmlPart();
-            InitPart(childPart, contentType);
-            return childPart;
-        }
-
-        /// <summary>
-        /// Adds a CustomXmlPart to the NotesSlidePart
-        /// </summary>
-        /// <param name="contentType">The content type of the CustomXmlPart</param>
-        /// <param name="id">The relationship id</param>
-        /// <return>The newly added part</return>
-        public CustomXmlPart AddCustomXmlPart(string contentType, string id)
-        {
-            var childPart = new CustomXmlPart();
-            InitPart(childPart, contentType, id);
-            return childPart;
-        }
-
-        /// <summary>
-        /// Adds a CustomXmlPart to the NotesSlidePart
-        /// </summary>
-        /// <param name="partType">The part type of the CustomXmlPart</param>
-        /// <param name="id">The relationship id</param>
-        /// <return>The newly added part</return>
-        public CustomXmlPart AddCustomXmlPart(CustomXmlPartType partType, string id)
-        {
-            var contentType = CustomXmlPartTypeInfo.GetContentType(partType);
-            var partExtension = CustomXmlPartTypeInfo.GetTargetExtension();
-            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
-            return AddCustomXmlPart(contentType, id);
-        }
-
-        /// <summary>
-        /// Adds a CustomXmlPart to the NotesSlidePart
-        /// </summary>
-        /// <param name="partType">The part type of the CustomXmlPart</param>
-        /// <return>The newly added part</return>
-        public CustomXmlPart AddCustomXmlPart(CustomXmlPartType partType)
-        {
-            var contentType = CustomXmlPartTypeInfo.GetContentType(partType);
-            var partExtension = CustomXmlPartTypeInfo.GetTargetExtension();
-            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
-            return AddCustomXmlPart(contentType);
-        }
-
-        /// <summary>
-        /// Adds a EmbeddedControlPersistenceBinaryDataPart to the NotesSlidePart
-        /// </summary>
-        /// <param name="contentType">The content type of the EmbeddedControlPersistenceBinaryDataPart</param>
-        /// <return>The newly added part</return>
-        public EmbeddedControlPersistenceBinaryDataPart AddEmbeddedControlPersistenceBinaryDataPart(string contentType)
-        {
-            var childPart = new EmbeddedControlPersistenceBinaryDataPart();
-            InitPart(childPart, contentType);
-            return childPart;
-        }
-
-        /// <summary>
-        /// Adds a EmbeddedControlPersistenceBinaryDataPart to the NotesSlidePart
-        /// </summary>
-        /// <param name="contentType">The content type of the EmbeddedControlPersistenceBinaryDataPart</param>
-        /// <param name="id">The relationship id</param>
-        /// <return>The newly added part</return>
-        public EmbeddedControlPersistenceBinaryDataPart AddEmbeddedControlPersistenceBinaryDataPart(string contentType, string id)
-        {
-            var childPart = new EmbeddedControlPersistenceBinaryDataPart();
-            InitPart(childPart, contentType, id);
-            return childPart;
-        }
-
-        /// <summary>
-        /// Adds a EmbeddedControlPersistenceBinaryDataPart to the NotesSlidePart
-        /// </summary>
-        /// <param name="partType">The part type of the EmbeddedControlPersistenceBinaryDataPart</param>
-        /// <param name="id">The relationship id</param>
-        /// <return>The newly added part</return>
-        public EmbeddedControlPersistenceBinaryDataPart AddEmbeddedControlPersistenceBinaryDataPart(EmbeddedControlPersistenceBinaryDataPartType partType, string id)
-        {
-            var contentType = EmbeddedControlPersistenceBinaryDataPartTypeInfo.GetContentType(partType);
-            var partExtension = EmbeddedControlPersistenceBinaryDataPartTypeInfo.GetTargetExtension();
-            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
-            return AddEmbeddedControlPersistenceBinaryDataPart(contentType, id);
-        }
-
-        /// <summary>
-        /// Adds a EmbeddedControlPersistenceBinaryDataPart to the NotesSlidePart
-        /// </summary>
-        /// <param name="partType">The part type of the EmbeddedControlPersistenceBinaryDataPart</param>
-        /// <return>The newly added part</return>
-        public EmbeddedControlPersistenceBinaryDataPart AddEmbeddedControlPersistenceBinaryDataPart(EmbeddedControlPersistenceBinaryDataPartType partType)
-        {
-            var contentType = EmbeddedControlPersistenceBinaryDataPartTypeInfo.GetContentType(partType);
-            var partExtension = EmbeddedControlPersistenceBinaryDataPartTypeInfo.GetTargetExtension();
-            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
-            return AddEmbeddedControlPersistenceBinaryDataPart(contentType);
-        }
-
-        /// <summary>
-        /// Adds a EmbeddedObjectPart to the NotesSlidePart
-        /// </summary>
-        /// <param name="contentType">The content type of the EmbeddedObjectPart</param>
-        /// <return>The newly added part</return>
-        public EmbeddedObjectPart AddEmbeddedObjectPart(string contentType)
-        {
-            var childPart = new EmbeddedObjectPart();
-            InitPart(childPart, contentType);
-            return childPart;
-        }
-
-        /// <summary>
-        /// Adds a EmbeddedPackagePart to the NotesSlidePart
-        /// </summary>
-        /// <param name="contentType">The content type of the EmbeddedPackagePart</param>
-        /// <return>The newly added part</return>
-        public EmbeddedPackagePart AddEmbeddedPackagePart(string contentType)
-        {
-            var childPart = new EmbeddedPackagePart();
-            InitPart(childPart, contentType);
-            return childPart;
-        }
-
-        /// <summary>
-        /// Adds a ImagePart to the NotesSlidePart
-        /// </summary>
-        /// <param name="contentType">The content type of the ImagePart</param>
-        /// <return>The newly added part</return>
-        public ImagePart AddImagePart(string contentType)
-        {
-            var childPart = new ImagePart();
-            InitPart(childPart, contentType);
-            return childPart;
-        }
-
-        /// <summary>
-        /// Adds a ImagePart to the NotesSlidePart
-        /// </summary>
-        /// <param name="contentType">The content type of the ImagePart</param>
-        /// <param name="id">The relationship id</param>
-        /// <return>The newly added part</return>
-        public ImagePart AddImagePart(string contentType, string id)
-        {
-            var childPart = new ImagePart();
-            InitPart(childPart, contentType, id);
-            return childPart;
-        }
-
-        /// <summary>
-        /// Adds a ImagePart to the NotesSlidePart
-        /// </summary>
-        /// <param name="partType">The part type of the ImagePart</param>
-        /// <param name="id">The relationship id</param>
-        /// <return>The newly added part</return>
-        public ImagePart AddImagePart(ImagePartType partType, string id)
-        {
-            var contentType = ImagePartTypeInfo.GetContentType(partType);
-            var partExtension = ImagePartTypeInfo.GetTargetExtension(partType);
-            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
-            return AddImagePart(contentType, id);
-        }
-
-        /// <summary>
-        /// Adds a ImagePart to the NotesSlidePart
-        /// </summary>
-        /// <param name="partType">The part type of the ImagePart</param>
-        /// <return>The newly added part</return>
-        public ImagePart AddImagePart(ImagePartType partType)
-        {
-            var contentType = ImagePartTypeInfo.GetContentType(partType);
-            var partExtension = ImagePartTypeInfo.GetTargetExtension(partType);
-            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
-            return AddImagePart(contentType);
         }
 
         /// <summary>

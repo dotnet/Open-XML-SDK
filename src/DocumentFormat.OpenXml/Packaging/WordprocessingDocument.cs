@@ -2,7 +2,6 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Features;
-using DocumentFormat.OpenXml.Packaging.Builder;
 using DocumentFormat.OpenXml.Wordprocessing;
 using System;
 using System.IO;
@@ -375,32 +374,6 @@ namespace DocumentFormat.OpenXml.Packaging
             DigitalSignatureOriginPart childPart = new();
             InitPart(childPart, DigitalSignatureOriginPart.ContentTypeConstant);
             return childPart;
-        }
-
-        /// <summary>
-        /// Adds a ThumbnailPart to the WordprocessingDocument.
-        /// </summary>
-        /// <param name="contentType">The content type of the ThumbnailPart.</param>
-        /// <returns>The newly added ThumbnailPart.</returns>
-        public ThumbnailPart AddThumbnailPart(string contentType)
-        {
-            ThumbnailPart childPart = new();
-            InitPart(childPart, contentType);
-            return childPart;
-        }
-
-        /// <summary>
-        /// Adds a ThumbnailPart to the WordprocessingDocument.
-        /// </summary>
-        /// <param name="partType">The type of the ThumbnailPart.</param>
-        /// <returns>The newly added ThumbnailPart.</returns>
-        public ThumbnailPart AddThumbnailPart(ThumbnailPartType partType)
-        {
-            string contentType = ThumbnailPartTypeInfo.GetContentType(partType);
-            string partExtension = ThumbnailPartTypeInfo.GetTargetExtension(partType);
-            PartExtensions.Register(contentType, partExtension);
-
-            return AddThumbnailPart(contentType);
         }
 
         /// <summary>

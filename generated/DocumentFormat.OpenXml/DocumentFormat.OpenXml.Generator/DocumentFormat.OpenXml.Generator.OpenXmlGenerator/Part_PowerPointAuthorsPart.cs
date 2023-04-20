@@ -15,7 +15,8 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the PowerPointAuthorsPart
     /// </summary>
-    public partial class PowerPointAuthorsPart : OpenXmlPart, IFixedContentTypePart
+    public partial class PowerPointAuthorsPart : OpenXmlPart,
+        IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.ms-powerpoint.authors+xml";
         internal const string RelationshipTypeConstant = "http://schemas.microsoft.com/office/2018/10/relationships/authors";

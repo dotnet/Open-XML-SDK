@@ -118,12 +118,12 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
 
         private static AltChunk CreateAltChunkWithXmlContent(
             WordprocessingDocument wordDocument,
-            AlternativeFormatImportPartType contentType,
+            PartTypeInfo partType,
             string xmlContent)
         {
             string altChunkId = "XmlAltChunkId-" + Guid.NewGuid();
             AlternativeFormatImportPart chunk = wordDocument.MainDocumentPart.AddAlternativeFormatImportPart(
-                contentType, altChunkId);
+                partType, altChunkId);
 
             using (Stream stream = chunk.GetStream(FileMode.Create))
             using (var writer = new StreamWriter(stream))

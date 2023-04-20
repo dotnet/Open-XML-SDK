@@ -15,7 +15,9 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the WordprocessingDocument
     /// </summary>
-    public partial class WordprocessingDocument
+    public partial class WordprocessingDocument : OpenXmlPackage,
+        ISupportedRelationship<MainDocumentPart>,
+        ISupportedRelationship<ThumbnailPart>
     {
         private partial class WordprocessingDocumentFeatures : IPartConstraintFeature
         {

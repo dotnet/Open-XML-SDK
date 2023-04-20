@@ -15,7 +15,12 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the InternationalMacroSheetPart
     /// </summary>
-    public partial class InternationalMacroSheetPart : OpenXmlPart, IFixedContentTypePart
+    public partial class InternationalMacroSheetPart : OpenXmlPart,
+        IFixedContentTypePart,
+        ISupportedRelationship<CustomPropertyPart>,
+        ISupportedRelationship<EmbeddedObjectPart>,
+        ISupportedRelationship<EmbeddedPackagePart>,
+        ISupportedRelationship<ImagePart>
     {
         internal const string ContentTypeConstant = "application/vnd.ms-excel.intlmacrosheet+xml";
         internal const string RelationshipTypeConstant = "http://schemas.microsoft.com/office/2006/relationships/xlIntlMacrosheet";
@@ -72,134 +77,6 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the WorksheetCommentsPart of the InternationalMacroSheetPart
         /// </summary>
         public WorksheetCommentsPart? WorksheetCommentsPart => GetSubPartOfType<WorksheetCommentsPart>();
-
-        /// <summary>
-        /// Adds a CustomPropertyPart to the InternationalMacroSheetPart
-        /// </summary>
-        /// <param name="contentType">The content type of the CustomPropertyPart</param>
-        /// <return>The newly added part</return>
-        public CustomPropertyPart AddCustomPropertyPart(string contentType)
-        {
-            var childPart = new CustomPropertyPart();
-            InitPart(childPart, contentType);
-            return childPart;
-        }
-
-        /// <summary>
-        /// Adds a CustomPropertyPart to the InternationalMacroSheetPart
-        /// </summary>
-        /// <param name="contentType">The content type of the CustomPropertyPart</param>
-        /// <param name="id">The relationship id</param>
-        /// <return>The newly added part</return>
-        public CustomPropertyPart AddCustomPropertyPart(string contentType, string id)
-        {
-            var childPart = new CustomPropertyPart();
-            InitPart(childPart, contentType, id);
-            return childPart;
-        }
-
-        /// <summary>
-        /// Adds a CustomPropertyPart to the InternationalMacroSheetPart
-        /// </summary>
-        /// <param name="partType">The part type of the CustomPropertyPart</param>
-        /// <param name="id">The relationship id</param>
-        /// <return>The newly added part</return>
-        public CustomPropertyPart AddCustomPropertyPart(CustomPropertyPartType partType, string id)
-        {
-            var contentType = CustomPropertyPartTypeInfo.GetContentType(partType);
-            var partExtension = CustomPropertyPartTypeInfo.GetTargetExtension();
-            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
-            return AddCustomPropertyPart(contentType, id);
-        }
-
-        /// <summary>
-        /// Adds a CustomPropertyPart to the InternationalMacroSheetPart
-        /// </summary>
-        /// <param name="partType">The part type of the CustomPropertyPart</param>
-        /// <return>The newly added part</return>
-        public CustomPropertyPart AddCustomPropertyPart(CustomPropertyPartType partType)
-        {
-            var contentType = CustomPropertyPartTypeInfo.GetContentType(partType);
-            var partExtension = CustomPropertyPartTypeInfo.GetTargetExtension();
-            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
-            return AddCustomPropertyPart(contentType);
-        }
-
-        /// <summary>
-        /// Adds a EmbeddedObjectPart to the InternationalMacroSheetPart
-        /// </summary>
-        /// <param name="contentType">The content type of the EmbeddedObjectPart</param>
-        /// <return>The newly added part</return>
-        public EmbeddedObjectPart AddEmbeddedObjectPart(string contentType)
-        {
-            var childPart = new EmbeddedObjectPart();
-            InitPart(childPart, contentType);
-            return childPart;
-        }
-
-        /// <summary>
-        /// Adds a EmbeddedPackagePart to the InternationalMacroSheetPart
-        /// </summary>
-        /// <param name="contentType">The content type of the EmbeddedPackagePart</param>
-        /// <return>The newly added part</return>
-        public EmbeddedPackagePart AddEmbeddedPackagePart(string contentType)
-        {
-            var childPart = new EmbeddedPackagePart();
-            InitPart(childPart, contentType);
-            return childPart;
-        }
-
-        /// <summary>
-        /// Adds a ImagePart to the InternationalMacroSheetPart
-        /// </summary>
-        /// <param name="contentType">The content type of the ImagePart</param>
-        /// <return>The newly added part</return>
-        public ImagePart AddImagePart(string contentType)
-        {
-            var childPart = new ImagePart();
-            InitPart(childPart, contentType);
-            return childPart;
-        }
-
-        /// <summary>
-        /// Adds a ImagePart to the InternationalMacroSheetPart
-        /// </summary>
-        /// <param name="contentType">The content type of the ImagePart</param>
-        /// <param name="id">The relationship id</param>
-        /// <return>The newly added part</return>
-        public ImagePart AddImagePart(string contentType, string id)
-        {
-            var childPart = new ImagePart();
-            InitPart(childPart, contentType, id);
-            return childPart;
-        }
-
-        /// <summary>
-        /// Adds a ImagePart to the InternationalMacroSheetPart
-        /// </summary>
-        /// <param name="partType">The part type of the ImagePart</param>
-        /// <param name="id">The relationship id</param>
-        /// <return>The newly added part</return>
-        public ImagePart AddImagePart(ImagePartType partType, string id)
-        {
-            var contentType = ImagePartTypeInfo.GetContentType(partType);
-            var partExtension = ImagePartTypeInfo.GetTargetExtension(partType);
-            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
-            return AddImagePart(contentType, id);
-        }
-
-        /// <summary>
-        /// Adds a ImagePart to the InternationalMacroSheetPart
-        /// </summary>
-        /// <param name="partType">The part type of the ImagePart</param>
-        /// <return>The newly added part</return>
-        public ImagePart AddImagePart(ImagePartType partType)
-        {
-            var contentType = ImagePartTypeInfo.GetContentType(partType);
-            var partExtension = ImagePartTypeInfo.GetTargetExtension(partType);
-            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
-            return AddImagePart(contentType);
-        }
         
         /// <inheritdoc/>
         public override IFeatureCollection Features => _features ??= new GeneratedFeatures(this);

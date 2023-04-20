@@ -15,7 +15,8 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the TimeLinePart
     /// </summary>
-    public partial class TimeLinePart : OpenXmlPart, IFixedContentTypePart
+    public partial class TimeLinePart : OpenXmlPart,
+        IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.ms-excel.timeline+xml";
         internal const string RelationshipTypeConstant = "http://schemas.microsoft.com/office/2011/relationships/timeline";

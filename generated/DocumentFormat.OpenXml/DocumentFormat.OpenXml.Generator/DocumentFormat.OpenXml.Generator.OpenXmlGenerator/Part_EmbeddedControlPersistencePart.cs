@@ -15,7 +15,8 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the EmbeddedControlPersistencePart
     /// </summary>
-    public partial class EmbeddedControlPersistencePart : OpenXmlPart
+    public partial class EmbeddedControlPersistencePart : OpenXmlPart,
+        ISupportedRelationship<EmbeddedControlPersistenceBinaryDataPart>
     {
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/control";
 
@@ -33,58 +34,6 @@ namespace DocumentFormat.OpenXml.Packaging
 
         /// <inheritdoc/>
         public sealed override string RelationshipType => RelationshipTypeConstant;
-
-        /// <summary>
-        /// Adds a EmbeddedControlPersistenceBinaryDataPart to the EmbeddedControlPersistencePart
-        /// </summary>
-        /// <param name="contentType">The content type of the EmbeddedControlPersistenceBinaryDataPart</param>
-        /// <return>The newly added part</return>
-        public EmbeddedControlPersistenceBinaryDataPart AddEmbeddedControlPersistenceBinaryDataPart(string contentType)
-        {
-            var childPart = new EmbeddedControlPersistenceBinaryDataPart();
-            InitPart(childPart, contentType);
-            return childPart;
-        }
-
-        /// <summary>
-        /// Adds a EmbeddedControlPersistenceBinaryDataPart to the EmbeddedControlPersistencePart
-        /// </summary>
-        /// <param name="contentType">The content type of the EmbeddedControlPersistenceBinaryDataPart</param>
-        /// <param name="id">The relationship id</param>
-        /// <return>The newly added part</return>
-        public EmbeddedControlPersistenceBinaryDataPart AddEmbeddedControlPersistenceBinaryDataPart(string contentType, string id)
-        {
-            var childPart = new EmbeddedControlPersistenceBinaryDataPart();
-            InitPart(childPart, contentType, id);
-            return childPart;
-        }
-
-        /// <summary>
-        /// Adds a EmbeddedControlPersistenceBinaryDataPart to the EmbeddedControlPersistencePart
-        /// </summary>
-        /// <param name="partType">The part type of the EmbeddedControlPersistenceBinaryDataPart</param>
-        /// <param name="id">The relationship id</param>
-        /// <return>The newly added part</return>
-        public EmbeddedControlPersistenceBinaryDataPart AddEmbeddedControlPersistenceBinaryDataPart(EmbeddedControlPersistenceBinaryDataPartType partType, string id)
-        {
-            var contentType = EmbeddedControlPersistenceBinaryDataPartTypeInfo.GetContentType(partType);
-            var partExtension = EmbeddedControlPersistenceBinaryDataPartTypeInfo.GetTargetExtension();
-            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
-            return AddEmbeddedControlPersistenceBinaryDataPart(contentType, id);
-        }
-
-        /// <summary>
-        /// Adds a EmbeddedControlPersistenceBinaryDataPart to the EmbeddedControlPersistencePart
-        /// </summary>
-        /// <param name="partType">The part type of the EmbeddedControlPersistenceBinaryDataPart</param>
-        /// <return>The newly added part</return>
-        public EmbeddedControlPersistenceBinaryDataPart AddEmbeddedControlPersistenceBinaryDataPart(EmbeddedControlPersistenceBinaryDataPartType partType)
-        {
-            var contentType = EmbeddedControlPersistenceBinaryDataPartTypeInfo.GetContentType(partType);
-            var partExtension = EmbeddedControlPersistenceBinaryDataPartTypeInfo.GetTargetExtension();
-            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
-            return AddEmbeddedControlPersistenceBinaryDataPart(contentType);
-        }
         
         /// <inheritdoc/>
         public override IFeatureCollection Features => _features ??= new GeneratedFeatures(this);

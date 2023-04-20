@@ -15,7 +15,9 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the WorkbookPart
     /// </summary>
-    public partial class WorkbookPart : OpenXmlPart
+    public partial class WorkbookPart : OpenXmlPart,
+        ISupportedRelationship<CustomXmlPart>,
+        ISupportedRelationship<ThumbnailPart>
     {
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument";
         private DocumentFormat.OpenXml.Spreadsheet.Workbook? _rootElement;
@@ -235,110 +237,6 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the WorksheetParts of the WorkbookPart
         /// </summary>
         public IEnumerable<WorksheetPart> WorksheetParts => GetPartsOfType<WorksheetPart>();
-
-        /// <summary>
-        /// Adds a CustomXmlPart to the WorkbookPart
-        /// </summary>
-        /// <param name="contentType">The content type of the CustomXmlPart</param>
-        /// <return>The newly added part</return>
-        public CustomXmlPart AddCustomXmlPart(string contentType)
-        {
-            var childPart = new CustomXmlPart();
-            InitPart(childPart, contentType);
-            return childPart;
-        }
-
-        /// <summary>
-        /// Adds a CustomXmlPart to the WorkbookPart
-        /// </summary>
-        /// <param name="contentType">The content type of the CustomXmlPart</param>
-        /// <param name="id">The relationship id</param>
-        /// <return>The newly added part</return>
-        public CustomXmlPart AddCustomXmlPart(string contentType, string id)
-        {
-            var childPart = new CustomXmlPart();
-            InitPart(childPart, contentType, id);
-            return childPart;
-        }
-
-        /// <summary>
-        /// Adds a CustomXmlPart to the WorkbookPart
-        /// </summary>
-        /// <param name="partType">The part type of the CustomXmlPart</param>
-        /// <param name="id">The relationship id</param>
-        /// <return>The newly added part</return>
-        public CustomXmlPart AddCustomXmlPart(CustomXmlPartType partType, string id)
-        {
-            var contentType = CustomXmlPartTypeInfo.GetContentType(partType);
-            var partExtension = CustomXmlPartTypeInfo.GetTargetExtension();
-            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
-            return AddCustomXmlPart(contentType, id);
-        }
-
-        /// <summary>
-        /// Adds a CustomXmlPart to the WorkbookPart
-        /// </summary>
-        /// <param name="partType">The part type of the CustomXmlPart</param>
-        /// <return>The newly added part</return>
-        public CustomXmlPart AddCustomXmlPart(CustomXmlPartType partType)
-        {
-            var contentType = CustomXmlPartTypeInfo.GetContentType(partType);
-            var partExtension = CustomXmlPartTypeInfo.GetTargetExtension();
-            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
-            return AddCustomXmlPart(contentType);
-        }
-
-        /// <summary>
-        /// Adds a ThumbnailPart to the WorkbookPart
-        /// </summary>
-        /// <param name="contentType">The content type of the ThumbnailPart</param>
-        /// <return>The newly added part</return>
-        public ThumbnailPart AddThumbnailPart(string contentType)
-        {
-            var childPart = new ThumbnailPart();
-            InitPart(childPart, contentType);
-            return childPart;
-        }
-
-        /// <summary>
-        /// Adds a ThumbnailPart to the WorkbookPart
-        /// </summary>
-        /// <param name="contentType">The content type of the ThumbnailPart</param>
-        /// <param name="id">The relationship id</param>
-        /// <return>The newly added part</return>
-        public ThumbnailPart AddThumbnailPart(string contentType, string id)
-        {
-            var childPart = new ThumbnailPart();
-            InitPart(childPart, contentType, id);
-            return childPart;
-        }
-
-        /// <summary>
-        /// Adds a ThumbnailPart to the WorkbookPart
-        /// </summary>
-        /// <param name="partType">The part type of the ThumbnailPart</param>
-        /// <param name="id">The relationship id</param>
-        /// <return>The newly added part</return>
-        public ThumbnailPart AddThumbnailPart(ThumbnailPartType partType, string id)
-        {
-            var contentType = ThumbnailPartTypeInfo.GetContentType(partType);
-            var partExtension = ThumbnailPartTypeInfo.GetTargetExtension(partType);
-            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
-            return AddThumbnailPart(contentType, id);
-        }
-
-        /// <summary>
-        /// Adds a ThumbnailPart to the WorkbookPart
-        /// </summary>
-        /// <param name="partType">The part type of the ThumbnailPart</param>
-        /// <return>The newly added part</return>
-        public ThumbnailPart AddThumbnailPart(ThumbnailPartType partType)
-        {
-            var contentType = ThumbnailPartTypeInfo.GetContentType(partType);
-            var partExtension = ThumbnailPartTypeInfo.GetTargetExtension(partType);
-            Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
-            return AddThumbnailPart(contentType);
-        }
         
         /// <inheritdoc/>
         public override IFeatureCollection Features => _features ??= new GeneratedFeatures(this);

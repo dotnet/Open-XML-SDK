@@ -309,32 +309,6 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// Adds a ThumbnailPart to the PresentationDocument.
-        /// </summary>
-        /// <param name="contentType">The content type of the ThumbnailPart.</param>
-        /// <returns>The newly added ThumbnailPart.</returns>
-        public ThumbnailPart AddThumbnailPart(string contentType)
-        {
-            ThumbnailPart childPart = new ThumbnailPart();
-            InitPart(childPart, contentType);
-            return childPart;
-        }
-
-        /// <summary>
-        /// Adds a ThumbnailPart to the PresentationDocument.
-        /// </summary>
-        /// <param name="partType">The type of the ThumbnailPart.</param>
-        /// <returns>The newly added ThumbnailPart.</returns>
-        public ThumbnailPart AddThumbnailPart(ThumbnailPartType partType)
-        {
-            string contentType = ThumbnailPartTypeInfo.GetContentType(partType);
-            string partExtension = ThumbnailPartTypeInfo.GetTargetExtension(partType);
-            PartExtensions.Register(contentType, partExtension);
-
-            return AddThumbnailPart(contentType);
-        }
-
-        /// <summary>
         /// Adds a new part of type <typeparamref name="T"/>.
         /// </summary>
         /// <typeparam name="T">The class of the part.</typeparam>

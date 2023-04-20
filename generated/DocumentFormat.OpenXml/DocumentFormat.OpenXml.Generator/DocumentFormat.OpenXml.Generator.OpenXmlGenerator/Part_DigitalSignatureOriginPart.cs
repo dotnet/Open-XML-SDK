@@ -15,7 +15,8 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the DigitalSignatureOriginPart
     /// </summary>
-    public partial class DigitalSignatureOriginPart : OpenXmlPart, IFixedContentTypePart
+    public partial class DigitalSignatureOriginPart : OpenXmlPart,
+        IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-package.digital-signature-origin";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/package/2006/relationships/digital-signature/origin";
