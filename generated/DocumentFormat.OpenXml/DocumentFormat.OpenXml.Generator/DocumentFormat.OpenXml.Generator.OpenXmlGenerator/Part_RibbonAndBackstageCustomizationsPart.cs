@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the RibbonAndBackstageCustomizationsPart
     /// </summary>
-    public partial class RibbonAndBackstageCustomizationsPart : OpenXmlPart, ISupportRelationship<ImagePart>, IFixedContentTypePart
+    public partial class RibbonAndBackstageCustomizationsPart : OpenXmlPart, ISupportedRelationship<ImagePart>, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/xml";
         internal const string RelationshipTypeConstant = "http://schemas.microsoft.com/office/2007/relationships/ui/extensibility";

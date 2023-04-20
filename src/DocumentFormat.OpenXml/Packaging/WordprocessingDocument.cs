@@ -14,7 +14,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// Defines WordprocessingDocument - an OpenXmlPackage represents a Word document.
     /// </summary>
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Reliability", "CA2000:Dispose objects before losing scope", Justification = "Disposable is returned")]
-    public partial class WordprocessingDocument : OpenXmlPackage
+    public partial class WordprocessingDocument : OpenXmlPackage, ISupportedRelationship<ThumbnailPart>
     {
         private WordprocessingDocument()
             : base()
@@ -374,28 +374,6 @@ namespace DocumentFormat.OpenXml.Packaging
             DigitalSignatureOriginPart childPart = new();
             InitPart(childPart, DigitalSignatureOriginPart.ContentTypeConstant);
             return childPart;
-        }
-
-        /// <summary>
-        /// Adds a ThumbnailPart to the WordprocessingDocument
-        /// </summary>
-        /// <param name="contentType">The content type information for the ThumbnailPart. Required.</param>
-        /// <param name="id">The relationship id. Optional, default to null.</param>
-        /// <return>The newly added part</return>
-        public ThumbnailPart AddThumbnailPart(string contentType, string? id = null)
-        {
-            return this.AddThumbnailPart(contentType, id);
-        }
-
-        /// <summary>
-        /// Adds a ThumbnailPart to the WordprocessingDocument
-        /// </summary>
-        /// <param name="partType">The part type information for the ThumbnailPart. Required.</param>
-        /// <param name="id">The relationship id. Optional, default to null.</param>
-        /// <return>The newly added part</return>
-        public ThumbnailPart AddThumbnailPart(PartTypeInfo partType, string? id = null)
-        {
-            return this.AddThumbnailPart(partType, id);
         }
 
         /// <summary>

@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the EmbeddedControlPersistencePart
     /// </summary>
-    public partial class EmbeddedControlPersistencePart : OpenXmlPart, ISupportRelationship<EmbeddedControlPersistenceBinaryDataPart>
+    public partial class EmbeddedControlPersistencePart : OpenXmlPart, ISupportedRelationship<EmbeddedControlPersistenceBinaryDataPart>
     {
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/control";
 

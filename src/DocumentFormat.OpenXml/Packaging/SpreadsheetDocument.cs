@@ -13,7 +13,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// Defines SpreadsheetDocument - an OpenXmlPackage represents a Spreadsheet document.
     /// </summary>
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Reliability", "CA2000:Dispose objects before losing scope", Justification = "Disposable is returned")]
-    public partial class SpreadsheetDocument : OpenXmlPackage
+    public partial class SpreadsheetDocument : OpenXmlPackage, ISupportedRelationship<ThumbnailPart>
     {
         private SpreadsheetDocument()
             : base()
@@ -334,28 +334,6 @@ namespace DocumentFormat.OpenXml.Packaging
             DigitalSignatureOriginPart childPart = new DigitalSignatureOriginPart();
             InitPart(childPart, DigitalSignatureOriginPart.ContentTypeConstant);
             return childPart;
-        }
-
-        /// <summary>
-        /// Adds a ThumbnailPart to the WordprocessingDocument
-        /// </summary>
-        /// <param name="contentType">The content type information for the ThumbnailPart. Required.</param>
-        /// <param name="id">The relationship id. Optional, default to null.</param>
-        /// <return>The newly added part</return>
-        public ThumbnailPart AddThumbnailPart(string contentType, string? id = null)
-        {
-            return this.AddThumbnailPart(contentType, id);
-        }
-
-        /// <summary>
-        /// Adds a ThumbnailPart to the SpreadsheetDocument
-        /// </summary>
-        /// <param name="partType">The part type information for the ThumbnailPart. Required.</param>
-        /// <param name="id">The relationship id. Optional, default to null.</param>
-        /// <return>The newly added part</return>
-        public ThumbnailPart AddThumbnailPart(PartTypeInfo partType, string? id = null)
-        {
-            return this.AddThumbnailPart(partType, id);
         }
 
         /// <summary>

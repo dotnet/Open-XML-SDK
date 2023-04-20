@@ -9,7 +9,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines extensions for part relationships
     /// </summary>
-    public static class OpenXmlPartExtensions
+    public static class OpenXmlSupportedRelationshipExtensions
     {
         private static TChild InitPart<TChild>(this OpenXmlPartContainer parent, TChild childPart, PartTypeInfo partType, string? relId = null)
             where TChild : OpenXmlPart
@@ -22,7 +22,7 @@ namespace DocumentFormat.OpenXml.Packaging
             string contentType = partType.ContentType;
 
             var partExtension = partType.Extension;
-            parent.Features.GetRequired<IPartExtensionFeature>().Register(contentType, partExtension);
+            parent.Features.Get<IPartExtensionFeature>()?.Register(contentType, partExtension);
 
             if (relId == null || relId.Length == 0)
             {
@@ -42,7 +42,8 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <return>The newly added part</return>
         /// <see cref="AlternativeFormatImportPart"/>
         public static AlternativeFormatImportPart AddAlternativeFormatImportPart<T>(this T parent, PartTypeInfo partType, string? id = null)
-            where T : OpenXmlPart, ISupportRelationship<AlternativeFormatImportPart> => OpenXmlPartExtensions.InitPart<AlternativeFormatImportPart>(parent, new AlternativeFormatImportPart(), partType, id);
+            where T : OpenXmlPartContainer, ISupportedRelationship<AlternativeFormatImportPart>
+            => InitPart(parent, new AlternativeFormatImportPart(), partType, id);
 
         /// <summary>
         /// Adds a AlternativeFormatImportPart as a relationship to the parent part
@@ -53,7 +54,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <return>The newly added part</return>
         /// <see cref="AlternativeFormatImportPart"/>
         public static AlternativeFormatImportPart AddAlternativeFormatImportPart<T>(this T parent, string contentType, string? id = null)
-            where T : OpenXmlPart, ISupportRelationship<AlternativeFormatImportPart>
+            where T : OpenXmlPartContainer, ISupportedRelationship<AlternativeFormatImportPart>
         {
             AlternativeFormatImportPart childPart = new();
 
@@ -75,7 +76,8 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <return>The newly added part</return>
         /// <see cref="CustomPropertyPart"/>
         public static CustomPropertyPart AddCustomPropertyPart<T>(this T parent, PartTypeInfo partType, string? id = null)
-            where T : OpenXmlPart, ISupportRelationship<CustomPropertyPart> => OpenXmlPartExtensions.InitPart<CustomPropertyPart>(parent, new CustomPropertyPart(), partType, id);
+            where T : OpenXmlPartContainer, ISupportedRelationship<CustomPropertyPart>
+            => InitPart(parent, new CustomPropertyPart(), partType, id);
 
         /// <summary>
         /// Adds a CustomPropertyPart as a relationship to the parent part
@@ -86,7 +88,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <return>The newly added part</return>
         /// <see cref="CustomPropertyPart"/>
         public static CustomPropertyPart AddCustomPropertyPart<T>(this T parent, string contentType, string? id = null)
-            where T : OpenXmlPart, ISupportRelationship<CustomPropertyPart>
+            where T : OpenXmlPartContainer, ISupportedRelationship<CustomPropertyPart>
         {
             CustomPropertyPart childPart = new();
 
@@ -108,7 +110,8 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <return>The newly added part</return>
         /// <see cref="CustomXmlPart"/>
         public static CustomXmlPart AddCustomXmlPart<T>(this T parent, PartTypeInfo partType, string? id = null)
-            where T : OpenXmlPart, ISupportRelationship<CustomXmlPart> => OpenXmlPartExtensions.InitPart<CustomXmlPart>(parent, new CustomXmlPart(), partType, id);
+            where T : OpenXmlPartContainer, ISupportedRelationship<CustomXmlPart>
+            => InitPart(parent, new CustomXmlPart(), partType, id);
 
         /// <summary>
         /// Adds a CustomXmlPart as a relationship to the parent part
@@ -119,7 +122,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <return>The newly added part</return>
         /// <see cref="CustomXmlPart"/>
         public static CustomXmlPart AddCustomXmlPart<T>(this T parent, string contentType, string? id = null)
-            where T : OpenXmlPart, ISupportRelationship<CustomXmlPart>
+            where T : OpenXmlPartContainer, ISupportedRelationship<CustomXmlPart>
         {
             CustomXmlPart childPart = new();
 
@@ -141,7 +144,8 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <return>The newly added part</return>
         /// <see cref="EmbeddedControlPersistenceBinaryDataPart"/>
         public static EmbeddedControlPersistenceBinaryDataPart AddEmbeddedControlPersistenceBinaryDataPart<T>(this T parent, PartTypeInfo partType, string? id = null)
-            where T : OpenXmlPart, ISupportRelationship<EmbeddedControlPersistenceBinaryDataPart> => OpenXmlPartExtensions.InitPart<EmbeddedControlPersistenceBinaryDataPart>(parent, new EmbeddedControlPersistenceBinaryDataPart(), partType, id);
+            where T : OpenXmlPartContainer, ISupportedRelationship<EmbeddedControlPersistenceBinaryDataPart>
+            => InitPart(parent, new EmbeddedControlPersistenceBinaryDataPart(), partType, id);
 
         /// <summary>
         /// Adds a EmbeddedControlPersistenceBinaryDataPart as a relationship to the parent part
@@ -152,7 +156,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <return>The newly added part</return>
         /// <see cref="EmbeddedControlPersistenceBinaryDataPart"/>
         public static EmbeddedControlPersistenceBinaryDataPart AddEmbeddedControlPersistenceBinaryDataPart<T>(this T parent, string contentType, string? id = null)
-            where T : OpenXmlPart, ISupportRelationship<EmbeddedControlPersistenceBinaryDataPart>
+            where T : OpenXmlPartContainer, ISupportedRelationship<EmbeddedControlPersistenceBinaryDataPart>
         {
             EmbeddedControlPersistenceBinaryDataPart childPart = new();
 
@@ -174,7 +178,8 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <return>The newly added part</return>
         /// <see cref="EmbeddedControlPersistencePart"/>
         public static EmbeddedControlPersistencePart AddEmbeddedControlPersistencePart<T>(this T parent, PartTypeInfo partType, string? id = null)
-            where T : OpenXmlPart, ISupportRelationship<EmbeddedControlPersistencePart> => OpenXmlPartExtensions.InitPart<EmbeddedControlPersistencePart>(parent, new EmbeddedControlPersistencePart(), partType, id);
+            where T : OpenXmlPartContainer, ISupportedRelationship<EmbeddedControlPersistencePart>
+            => InitPart(parent, new EmbeddedControlPersistencePart(), partType, id);
 
         /// <summary>
         /// Adds a EmbeddedControlPersistencePart as a relationship to the parent part
@@ -185,7 +190,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <return>The newly added part</return>
         /// <see cref="EmbeddedControlPersistencePart"/>
         public static EmbeddedControlPersistencePart AddEmbeddedControlPersistencePart<T>(this T parent, string contentType, string? id = null)
-            where T : OpenXmlPart, ISupportRelationship<EmbeddedControlPersistencePart>
+            where T : OpenXmlPartContainer, ISupportedRelationship<EmbeddedControlPersistencePart>
         {
             EmbeddedControlPersistencePart childPart = new();
 
@@ -207,7 +212,8 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <return>The newly added part</return>
         /// <see cref="EmbeddedObjectPart"/>
         public static EmbeddedObjectPart AddEmbeddedObjectPart<T>(this T parent, PartTypeInfo partType, string? id = null)
-            where T : OpenXmlPart, ISupportRelationship<EmbeddedObjectPart> => OpenXmlPartExtensions.InitPart<EmbeddedObjectPart>(parent, new EmbeddedObjectPart(), partType, id);
+            where T : OpenXmlPartContainer, ISupportedRelationship<EmbeddedObjectPart>
+            => InitPart(parent, new EmbeddedObjectPart(), partType, id);
 
         /// <summary>
         /// Adds a EmbeddedObjectPart as a relationship to the parent part
@@ -218,7 +224,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <return>The newly added part</return>
         /// <see cref="EmbeddedObjectPart"/>
         public static EmbeddedObjectPart AddEmbeddedObjectPart<T>(this T parent, string contentType, string? id = null)
-            where T : OpenXmlPart, ISupportRelationship<EmbeddedObjectPart>
+            where T : OpenXmlPartContainer, ISupportedRelationship<EmbeddedObjectPart>
         {
             EmbeddedObjectPart childPart = new();
 
@@ -240,7 +246,8 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <return>The newly added part</return>
         /// <see cref="EmbeddedPackagePart"/>
         public static EmbeddedPackagePart AddEmbeddedPackagePart<T>(this T parent, PartTypeInfo partType, string? id = null)
-            where T : OpenXmlPart, ISupportRelationship<EmbeddedPackagePart> => OpenXmlPartExtensions.InitPart<EmbeddedPackagePart>(parent, new EmbeddedPackagePart(), partType, id);
+            where T : OpenXmlPartContainer, ISupportedRelationship<EmbeddedPackagePart>
+            => InitPart(parent, new EmbeddedPackagePart(), partType, id);
 
         /// <summary>
         /// Adds a EmbeddedPackagePart as a relationship to the parent part
@@ -251,7 +258,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <return>The newly added part</return>
         /// <see cref="EmbeddedPackagePart"/>
         public static EmbeddedPackagePart AddEmbeddedPackagePart<T>(this T parent, string contentType, string? id = null)
-            where T : OpenXmlPart, ISupportRelationship<EmbeddedPackagePart>
+            where T : OpenXmlPartContainer, ISupportedRelationship<EmbeddedPackagePart>
         {
             EmbeddedPackagePart childPart = new();
 
@@ -273,7 +280,8 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <return>The newly added part</return>
         /// <see cref="FontPart"/>
         public static FontPart AddFontPart<T>(this T parent, PartTypeInfo partType, string? id = null)
-            where T : OpenXmlPart, ISupportRelationship<FontPart> => OpenXmlPartExtensions.InitPart<FontPart>(parent, new FontPart(), partType, id);
+            where T : OpenXmlPartContainer, ISupportedRelationship<FontPart>
+            => InitPart(parent, new FontPart(), partType, id);
 
         /// <summary>
         /// Adds a FontPart as a relationship to the parent part
@@ -284,7 +292,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <return>The newly added part</return>
         /// <see cref="FontPart"/>
         public static FontPart AddFontPart<T>(this T parent, string contentType, string? id = null)
-            where T : OpenXmlPart, ISupportRelationship<FontPart>
+            where T : OpenXmlPartContainer, ISupportedRelationship<FontPart>
         {
             FontPart childPart = new();
 
@@ -306,7 +314,8 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <return>The newly added part</return>
         /// <see cref="ImagePart"/>
         public static ImagePart AddImagePart<T>(this T parent, PartTypeInfo partType, string? id = null)
-            where T : OpenXmlPart, ISupportRelationship<ImagePart> => OpenXmlPartExtensions.InitPart<ImagePart>(parent, new ImagePart(), partType, id);
+            where T : OpenXmlPartContainer, ISupportedRelationship<ImagePart>
+            => InitPart(parent, new ImagePart(), partType, id);
 
         /// <summary>
         /// Adds a ImagePart as a relationship to the parent part
@@ -317,7 +326,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <return>The newly added part</return>
         /// <see cref="ImagePart"/>
         public static ImagePart AddImagePart<T>(this T parent, string contentType, string? id = null)
-            where T : OpenXmlPart, ISupportRelationship<ImagePart>
+            where T : OpenXmlPartContainer, ISupportedRelationship<ImagePart>
         {
             ImagePart childPart = new();
 
@@ -339,7 +348,8 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <return>The newly added part</return>
         /// <see cref="MailMergeRecipientDataPart"/>
         public static MailMergeRecipientDataPart AddMailMergeRecipientDataPart<T>(this T parent, PartTypeInfo partType, string? id = null)
-            where T : OpenXmlPart, ISupportRelationship<MailMergeRecipientDataPart> => OpenXmlPartExtensions.InitPart<MailMergeRecipientDataPart>(parent, new MailMergeRecipientDataPart(), partType, id);
+            where T : OpenXmlPartContainer, ISupportedRelationship<MailMergeRecipientDataPart>
+            => InitPart(parent, new MailMergeRecipientDataPart(), partType, id);
 
         /// <summary>
         /// Adds a MailMergeRecipientDataPart as a relationship to the parent part
@@ -350,7 +360,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <return>The newly added part</return>
         /// <see cref="MailMergeRecipientDataPart"/>
         public static MailMergeRecipientDataPart AddMailMergeRecipientDataPart<T>(this T parent, string contentType, string? id = null)
-            where T : OpenXmlPart, ISupportRelationship<MailMergeRecipientDataPart>
+            where T : OpenXmlPartContainer, ISupportedRelationship<MailMergeRecipientDataPart>
         {
             MailMergeRecipientDataPart childPart = new();
 
@@ -372,7 +382,8 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <return>The newly added part</return>
         /// <see cref="ThumbnailPart"/>
         public static ThumbnailPart AddThumbnailPart<T>(this T parent, PartTypeInfo partType, string? id = null)
-            where T : OpenXmlPart, ISupportRelationship<ThumbnailPart> => OpenXmlPartExtensions.InitPart<ThumbnailPart>(parent, new ThumbnailPart(), partType, id);
+            where T : OpenXmlPartContainer, ISupportedRelationship<ThumbnailPart>
+            => InitPart(parent, new ThumbnailPart(), partType, id);
 
         /// <summary>
         /// Adds a ThumbnailPart as a relationship to the parent part
@@ -383,7 +394,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <return>The newly added part</return>
         /// <see cref="ThumbnailPart"/>
         public static ThumbnailPart AddThumbnailPart<T>(this T parent, string contentType, string? id = null)
-            where T : OpenXmlPart, ISupportRelationship<ThumbnailPart>
+            where T : OpenXmlPartContainer, ISupportedRelationship<ThumbnailPart>
         {
             ThumbnailPart childPart = new();
 

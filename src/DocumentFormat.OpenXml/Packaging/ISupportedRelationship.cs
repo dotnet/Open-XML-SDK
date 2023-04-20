@@ -11,7 +11,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// </summary>
     /// <typeparam name="TPart">Extensible part type that is supported by the implementing class.</typeparam>
 #pragma warning disable CA1040 // Avoid empty interfaces
-    public interface ISupportRelationship<TPart>
+    public interface ISupportedRelationship<TPart>
 #pragma warning restore CA1040 // Avoid empty interfaces
         where TPart : OpenXmlPart
     {
