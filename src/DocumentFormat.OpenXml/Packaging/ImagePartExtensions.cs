@@ -28,8 +28,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentException($"'{nameof(extension)}' cannot be null or empty.", nameof(extension));
             }
 
-            // return main.AddImagePart(ImagePartTypeInfo.GetImagePartType(extension));
-            return (ImagePart)OpenXmlPartExtensions.InitPart(main, new ImagePart(), ImagePartTypeInfo.GetImagePartType(extension));
+            return main.AddImagePart(ImagePartTypeInfo.GetImagePartType(extension));
         }
     }
 }
