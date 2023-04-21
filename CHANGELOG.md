@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 - Packages can now be saved on .NET Core and .NET 5+ if constructed with a path or stream (#1307).
 - Packages can now support malformed URIs (such as relationships with a URI such as `mailto:person@`)
-- 
+
 ### Changed
 - When validation finds incorrect part, it will now include the relationship type rather than a class name
 
