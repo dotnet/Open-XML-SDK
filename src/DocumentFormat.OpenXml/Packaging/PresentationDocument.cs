@@ -548,6 +548,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <inheritdoc/>
         public override IFeatureCollection Features => _features ??= new PresentationDocumentFeatures(this);
 
+        [DocumentFormat.OpenXml.Generator.OpenXmlPackage("PresentationDocument")]
         private partial class PresentationDocumentFeatures : TypedPackageFeatureCollection<PresentationDocumentType, PresentationPart>,
             IApplicationTypeFeature,
             IMainPartFeature,

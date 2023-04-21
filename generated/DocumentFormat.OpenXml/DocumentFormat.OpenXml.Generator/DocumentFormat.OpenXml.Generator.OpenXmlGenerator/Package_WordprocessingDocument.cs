@@ -5,14 +5,12 @@
 
 #nullable enable
 
-using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Features;
-
 namespace DocumentFormat.OpenXml.Packaging;
 
-partial class WordprocessingDocument
+partial class WordprocessingDocument 
 {
-    partial class WordprocessingDocumentFeatures : IPartFactoryFeature
+    partial class WordprocessingDocumentFeatures : IPartFactoryFeature 
     {
         OpenXmlPart? IPartFactoryFeature.Create(string relationship) => relationship switch
         {

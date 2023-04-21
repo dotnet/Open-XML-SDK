@@ -590,6 +590,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <inheritdoc/>
         public override IFeatureCollection Features => _features ??= new WordprocessingDocumentFeatures(this);
 
+        [DocumentFormat.OpenXml.Generator.OpenXmlPackage("WordprocessingDocument")]
         private partial class WordprocessingDocumentFeatures : TypedPackageFeatureCollection<WordprocessingDocumentType, MainDocumentPart>,
             IApplicationTypeFeature,
             IMainPartFeature,

@@ -22,7 +22,7 @@ public static class PartGenerator
         var sw = new StringWriter(sb);
         var writer = new IndentedTextWriter(sw);
 
-        foreach (var part in openXml.Context.Parts.Concat(openXml.Context.Packages))
+        foreach (var part in openXml.DataSource.Parts.Concat(openXml.DataSource.Packages))
         {
             sb.Clear();
 

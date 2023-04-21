@@ -19,7 +19,7 @@ public class OpenXmlGeneratorServices
     private readonly Dictionary<string, Part> _parts;
     private readonly Dictionary<TypedQName, SchemaType> _types;
 
-    public OpenXmlGeneratorServices(OpenXmlGeneratorContext context)
+    public OpenXmlGeneratorServices(OpenXmlGeneratorDataSource context)
     {
         _prefixToApi = context.TypedNamespaces.ToDictionary(c => c.Prefix, c => c.Namespace);
         _namespacesByPrefix = context.KnownNamespaces.ToDictionary(i => i.Prefix);
@@ -42,7 +42,7 @@ public class OpenXmlGeneratorServices
         _parts = context.Parts
             .ToDictionary(p => p.Name);
 
-        Context = context;
+        DataSource = context;
     }
 
     public Part GetPart(string name) => _parts[name];
@@ -61,7 +61,7 @@ public class OpenXmlGeneratorServices
         return false;
     }
 
-    public OpenXmlGeneratorContext Context { get; }
+    public OpenXmlGeneratorDataSource DataSource { get; }
 
     public IEnumerable<SchematronEntry> GetSchematrons(QName qname)
     {
@@ -70,7 +70,7 @@ public class OpenXmlGeneratorServices
             qname = new("ovml", qname.Name);
         }
 
-        return Context.Schematrons.Where(s => s.Context.Equals(qname));
+        return DataSource.Schematrons.Where(s => s.Context.Equals(qname));
     }
 
     public SchemaType FindType(TypedQName type) => _types[type];

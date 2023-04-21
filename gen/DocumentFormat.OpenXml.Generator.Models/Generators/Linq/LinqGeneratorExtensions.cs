@@ -283,7 +283,7 @@ public static class LinqGeneratorExtensions
         var visitedElementTypes = new HashSet<SchemaType>();
         var elementMetadataCollection = new List<SchemaType>();
 
-        foreach (var model in services.Context.Namespaces)
+        foreach (var model in services.DataSource.Namespaces)
         {
             foreach (var type in model.Types)
             {
