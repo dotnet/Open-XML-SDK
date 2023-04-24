@@ -13,12 +13,11 @@ namespace DocumentFormat.OpenXml.Packaging
                 ImagePartType.Bmp => "image/bmp",
                 ImagePartType.Gif => "image/gif",
                 ImagePartType.Png => "image/png",
-                ImagePartType.Tiff => "image/tiff",
-
+				ImagePartType.Tif => "image/tif",
+				ImagePartType.Tiff => "image/tiff",
                 // ImagePartType.Xbm => "image/xbm",
                 ImagePartType.Icon => "image/x-icon",
                 ImagePartType.Pcx => "image/x-pcx",
-
                 // ImagePartType.Pcz => "image/x-pcz",
                 // ImagePartType.Pict => "image/pict",
                 ImagePartType.Jpeg => "image/jpeg",
@@ -34,12 +33,11 @@ namespace DocumentFormat.OpenXml.Packaging
                 ImagePartType.Bmp => ".bmp",
                 ImagePartType.Gif => ".gif",
                 ImagePartType.Png => ".png",
-                ImagePartType.Tiff => ".tiff",
-
+				ImagePartType.Tif => ".tif",
+				ImagePartType.Tiff => ".tiff",
                 // ImagePartType.Xbm => ".xbm",
                 ImagePartType.Icon => ".ico",
                 ImagePartType.Pcx => ".pcx",
-
                 // ImagePartType.Pcz => ".pcz",
                 // ImagePartType.Pict => ".pict",
                 ImagePartType.Jpeg => ".jpg",
@@ -61,7 +59,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 ".pcx" => ImagePartType.Pcx,
                 ".png" => ImagePartType.Png,
                 ".svg" => ImagePartType.Svg,
-                ".tif" => ImagePartType.Tiff,
+                ".tif" => ImagePartType.Tif,
                 ".tiff" => ImagePartType.Tiff,
                 ".wmf" => ImagePartType.Wmf,
                 _ => throw new NotSupportedException($"{extension} is not supported"),
