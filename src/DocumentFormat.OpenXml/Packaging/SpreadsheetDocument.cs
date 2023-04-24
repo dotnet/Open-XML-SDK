@@ -550,6 +550,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <inheritdoc/>
         public override IFeatureCollection Features => _features ??= new SpreadsheetDocumentFeatures(this);
 
+        [DocumentFormat.OpenXml.Generator.OpenXmlPackage("SpreadsheetDocument")]
         private partial class SpreadsheetDocumentFeatures : TypedPackageFeatureCollection<SpreadsheetDocumentType, WorkbookPart>,
             IApplicationTypeFeature,
             IMainPartFeature

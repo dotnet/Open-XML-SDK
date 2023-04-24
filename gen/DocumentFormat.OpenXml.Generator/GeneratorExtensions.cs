@@ -89,7 +89,7 @@ public static class GeneratorExtensions
             .SelectMany((s, _) => s ?? Enumerable.Empty<StronglyTypedNamespace>())
             .Collect();
 
-    public static IncrementalValueProvider<OpenXmlGeneratorContext> GetOpenXmlGeneratorContext(this IncrementalOpenXmlTextValuesProvider openXmlFiles)
+    public static IncrementalValueProvider<OpenXmlGeneratorDataSource> GetOpenXmlGeneratorContext(this IncrementalOpenXmlTextValuesProvider openXmlFiles)
     {
         var namespaces = openXmlFiles.GetKnownNamespaces();
         var namespaceTypes = openXmlFiles.GetNamespaceTypes();
@@ -99,7 +99,7 @@ public static class GeneratorExtensions
         var stronglyTypedNamespace = openXmlFiles.GetStronglyTypedNamespace();
 
         return namespaces.Combine(namespaceTypes).Combine(parts).Combine(schematrons).Combine(stronglyTypedSchema).Combine(stronglyTypedNamespace)
-            .Select((arg, token) => new OpenXmlGeneratorContext
+            .Select((arg, token) => new OpenXmlGeneratorDataSource
             {
                 KnownNamespaces = arg.Left.Left.Left.Left.Left,
                 Namespaces = arg.Left.Left.Left.Left.Right,
@@ -111,7 +111,7 @@ public static class GeneratorExtensions
             });
     }
 
-    public static IncrementalValueProvider<OpenXmlGeneratorServices> GetOpenXmlServices(this IncrementalValueProvider<OpenXmlGeneratorContext> context)
+    public static IncrementalValueProvider<OpenXmlGeneratorServices> GetOpenXmlServices(this IncrementalValueProvider<OpenXmlGeneratorDataSource> context)
         => context.Select((context, _) => new OpenXmlGeneratorServices(context));
 
     public static IncrementalOpenXmlTextValuesProvider GetOpenXmlDataFiles(this IncrementalGeneratorInitializationContext context)
@@ -128,6 +128,48 @@ public static class GeneratorExtensions
                 })
                 .Where(args => args != default);
 
+    // Some parts serve in multiple places and end up getting pulled in here unintentionally
+    private static readonly Dictionary<string, HashSet<string>> _invalidParts = new Dictionary<string, HashSet<string>>()
+    {
+        { "PresentationDocument", new() { "WorksheetCommentsPart", "SpreadsheetPrinterSettingsPart" } },
+        { "SpreadsheetDocument", new() { "SlideCommentsPart" } },
+        { "WordprocessingDocument", new() { "WorksheetCommentsPart", "SlideCommentsPart", "SpreadsheetPrinterSettingsPart" } },
+    };
+
+    public static ImmutableArray<Part> GetParts(this OpenXmlGeneratorServices o, string package)
+    {
+        var doc = o.DataSource.Packages.FirstOrDefault(p => p.Name == package);
+
+        if (doc is null)
+        {
+            return ImmutableArray.Create<Part>();
+        }
+
+        var result = ImmutableArray.CreateBuilder<Part>();
+        var dict = o.DataSource.Parts.ToDictionary(p => p.Name);
+
+        var invalid = _invalidParts[doc.Name];
+        var seen = new HashSet<string>();
+        var queue = new Queue<Part>();
+        queue.Enqueue(doc);
+
+        while (queue.Count > 0)
+        {
+            var part = queue.Dequeue();
+
+            foreach (var child in part.Children)
+            {
+                if (!child.IsDataPartReference && !invalid.Contains(child.Name) && seen.Add(child.Name) && dict.TryGetValue(child.Name, out var childPart))
+                {
+                    queue.Enqueue(childPart);
+                    result.Add(childPart);
+                }
+            }
+        }
+
+        return result.ToImmutable();
+    }
+
     public static IncrementalValueProvider<ImmutableArray<PackageInformation>> GetPackageFactories(this IncrementalValueProvider<OpenXmlGeneratorServices?> services)
         => services.Select((o, token) =>
         {
@@ -136,41 +178,14 @@ public static class GeneratorExtensions
                 return ImmutableArray.Create<PackageInformation>();
             }
 
-            // Some parts serve in multiple places and end up getting pulled in here unintentionally
-            var invalidParts = new Dictionary<string, HashSet<string>>
-            {
-                { "PresentationDocument", new() { "WorksheetCommentsPart", "SpreadsheetPrinterSettingsPart" } },
-                { "SpreadsheetDocument", new() { "SlideCommentsPart" } },
-                { "WordprocessingDocument", new() { "WorksheetCommentsPart", "SlideCommentsPart", "SpreadsheetPrinterSettingsPart" } },
-            };
-
             var result = ImmutableArray.CreateBuilder<PackageInformation>();
 
-            var dict = o.Context.Parts.ToDictionary(p => p.Name);
+            var dict = o.DataSource.Parts.ToDictionary(p => p.Name);
 
-            foreach (var doc in o.Context.Packages)
+            foreach (var doc in o.DataSource.Packages)
             {
-                var invalid = invalidParts[doc.Name];
-                var seen = new HashSet<string>();
-                var queue = new Queue<Part>();
-                queue.Enqueue(doc);
-                var partResult = ImmutableArray.CreateBuilder<Part>();
-
-                while (queue.Count > 0)
-                {
-                    var part = queue.Dequeue();
-
-                    foreach (var child in part.Children)
-                    {
-                        if (!child.IsDataPartReference && !invalid.Contains(child.Name) && seen.Add(child.Name) && dict.TryGetValue(child.Name, out var childPart))
-                        {
-                            queue.Enqueue(childPart);
-                            partResult.Add(childPart);
-                        }
-                    }
-                }
-
-                result.Add(new(doc.Name, partResult.ToImmutable()));
+                var partResults = o.GetParts(doc.Name);
+                result.Add(new(doc.Name, partResults));
             }
 
             return result.ToImmutable();
@@ -180,5 +195,5 @@ public static class GeneratorExtensions
         => types.Where(t => string.Equals(t.Type, type, StringComparison.Ordinal)).Select((t, _) => t.Text);
 
     private static IncrementalValuesProvider<T> Deserialize<T>(this IncrementalValuesProvider<AdditionalText> texts)
-        => texts.Select((t, token) => OpenXmlGeneratorContext.Deserialize<T>(t.GetText(token)?.ToString())).Where(t => t is not null)!;
+        => texts.Select((t, token) => OpenXmlGeneratorDataSource.Deserialize<T>(t.GetText(token)?.ToString())).Where(t => t is not null)!;
 }

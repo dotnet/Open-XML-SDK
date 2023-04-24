@@ -66,6 +66,22 @@ public static class TextWriterExtensions
         writer.Write(value.ToString());
     }
 
+    public static void WriteJoin<T>(this TextWriter writer, string separator, IEnumerable<T> items)
+    {
+        var written = false;
+
+        foreach (var item in items)
+        {
+            if (written)
+            {
+                writer.Write(separator);
+            }
+
+            written = true;
+            writer.Write(item);
+        }
+    }
+
     public static void WriteList<T1, T2>(this TextWriter writer, T1 item1, T2 item2)
     {
         writer.Write("{ ");
