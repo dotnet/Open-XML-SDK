@@ -476,84 +476,14 @@ namespace DocumentFormat.OpenXml.Packaging
             get { return GetSubPartOfType<LabelInfoPart>(); }
         }
 
-        #region cloning
-
-        #region Stream-based cloning
-
-        /// <summary>
-        /// Creates a new OpenXmlPackage on the given stream.
-        /// </summary>
-        /// <param name="stream">The stream on which the concrete OpenXml package will be created.</param>
-        /// <returns>A new instance of OpenXmlPackage.</returns>
-        protected override OpenXmlPackage CreateClone(Stream stream)
-        {
-            return SpreadsheetDocument.Create(stream, DocumentType, OpenSettings.AutoSave);
-        }
-
-        /// <summary>
-        /// Opens the cloned OpenXml package on the given stream.
-        /// </summary>
-        /// <param name="stream">The stream on which the cloned OpenXml package will be opened.</param>
-        /// <param name="isEditable">In ReadWrite mode. False for Read only mode.</param>
-        /// <param name="openSettings">The advanced settings for opening a document.</param>
-        /// <returns>A new instance of OpenXmlPackage.</returns>
-        protected override OpenXmlPackage OpenClone(Stream stream, bool isEditable, OpenSettings openSettings)
-        {
-            return SpreadsheetDocument.Open(stream, isEditable, openSettings);
-        }
-
-        #endregion Stream-based cloning
-
-        #region File-based cloning
-
-        /// <summary>
-        /// Creates a new OpenXml package on the given file.
-        /// </summary>
-        /// <param name="path">The path and file name of the target OpenXml package.</param>
-        /// <returns>A new instance of OpenXmlPackage.</returns>
-        protected override OpenXmlPackage CreateClone(string path)
-        {
-            return SpreadsheetDocument.Create(path, DocumentType, OpenSettings.AutoSave);
-        }
-
-        /// <summary>
-        /// Opens the cloned OpenXml package on the given file.
-        /// </summary>
-        /// <param name="path">The path and file name of the target OpenXml package.</param>
-        /// <param name="isEditable">In ReadWrite mode. False for Read only mode.</param>
-        /// <param name="openSettings">The advanced settings for opening a document.</param>
-        /// <returns>A new instance of OpenXmlPackage.</returns>
-        protected override OpenXmlPackage OpenClone(string path, bool isEditable, OpenSettings openSettings)
-        {
-            return SpreadsheetDocument.Open(path, isEditable, openSettings);
-        }
-
-        #endregion File-based cloning
-
-        #region Package-based cloning
-
-        /// <summary>
-        /// Creates a new instance of OpenXmlPackage on the specified instance
-        /// of Package.
-        /// </summary>
-        /// <param name="package">The specified instance of Package.</param>
-        /// <returns>A new instance of OpenXmlPackage.</returns>
-        protected override OpenXmlPackage CreateClone(Package package)
-        {
-            return SpreadsheetDocument.Create(package, DocumentType, OpenSettings.AutoSave);
-        }
-
-        #endregion Package-based cloning
-
-        #endregion cloning
-
         /// <inheritdoc/>
         public override IFeatureCollection Features => _features ??= new SpreadsheetDocumentFeatures(this);
 
         [DocumentFormat.OpenXml.Generator.OpenXmlPackage("SpreadsheetDocument")]
         private partial class SpreadsheetDocumentFeatures : TypedPackageFeatureCollection<SpreadsheetDocumentType, WorkbookPart>,
             IApplicationTypeFeature,
-            IMainPartFeature
+            IMainPartFeature,
+            IPackageFactoryFeature
         {
             public SpreadsheetDocumentFeatures(OpenXmlPackage package)
                 : base(package)
@@ -585,6 +515,8 @@ namespace DocumentFormat.OpenXml.Packaging
                 "application/vnd.ms-excel.addin.macroEnabled.main+xml" => SpreadsheetDocumentType.AddIn,
                 _ => default,
             };
+
+            OpenXmlPackage IPackageFactoryFeature.Create() => new SpreadsheetDocument();
         }
     }
 }

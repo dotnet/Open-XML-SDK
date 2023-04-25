@@ -16,11 +16,10 @@ internal static class WriteableStreamExtensions
     public static bool EnableWriteableStream(this IFeatureCollection features)
     {
         if (features.Get<IPackageStreamFeature>() is { Stream.CanWrite: false } feature &&
-            features.Get<IPackageFeature>() is { } packageFeature && packageFeature.Capabilities.HasFlagFast(PackageCapabilities.Reload))
+            features.Get<IPackageFeature>() is { } packageFeature &&
+            packageFeature.Capabilities.HasFlagFast(PackageCapabilities.Reload))
         {
             var tempStream = new TemporaryFile();
-
-            features.GetRequired<IDisposableFeature>().Register(tempStream);
 
             feature.Stream.Position = 0;
             feature.Stream.CopyTo(tempStream.Stream);
