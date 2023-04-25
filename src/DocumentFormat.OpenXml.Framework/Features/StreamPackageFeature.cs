@@ -12,14 +12,12 @@ namespace DocumentFormat.OpenXml.Features;
 
 internal class StreamPackageFeature : PackageFeatureBase, IDisposable, IPackageStreamFeature
 {
-    private readonly FileAccess _access;
-    private readonly FileMode _mode;
-
     private Package _package;
-    private bool _disposedValue;
     private Stream _stream;
+    private bool _disposedValue;
+    private bool _isOwned;
 
-    public StreamPackageFeature(Stream stream, PackageOpenMode openMode)
+    public StreamPackageFeature(Stream stream, PackageOpenMode openMode, bool isOwned = false)
     {
         if (stream is null)
         {
@@ -39,7 +37,6 @@ internal class StreamPackageFeature : PackageFeatureBase, IDisposable, IPackageS
         // Ensure the stream we're operating on is readonly if that is the requested mode
         _stream = openMode == PackageOpenMode.Read && stream.CanWrite ? new ReadOnlyStream(stream) : stream;
 
-        _access = openMode == PackageOpenMode.Read ? FileAccess.Read : FileAccess.ReadWrite;
         var initialMode = openMode switch
         {
             PackageOpenMode.Create => FileMode.Create,
@@ -48,27 +45,72 @@ internal class StreamPackageFeature : PackageFeatureBase, IDisposable, IPackageS
             _ => throw new NotImplementedException(),
         };
 
-        // Only the inital should create, after that, it should be open
-        _mode = initialMode == FileMode.Create ? _mode = FileMode.Open : initialMode;
+        // Only the initial should create, after that, it should be open
+        Mode = initialMode == FileMode.Create ? Mode = FileMode.Open : initialMode;
+        Access = openMode == PackageOpenMode.Read ? FileAccess.Read : FileAccess.ReadWrite;
 
-        InitializePackage(initialMode, _access);
+        InitializePackage(initialMode, Access);
+        _isOwned = isOwned;
     }
+
+    protected FileAccess Access { get; }
+
+    protected FileMode Mode { get; }
 
     public Stream Stream
     {
         get => _stream;
         set
         {
-            _stream = value;
-            Reload();
+            if (SetStream(value))
+            {
+                // Once we set a new stream, it will be owned by the package
+                _isOwned = true;
+
+                Reload();
+            }
         }
     }
+
+    [MemberNotNull(nameof(_stream))]
+    private bool SetStream(Stream stream)
+    {
+        if (ReferenceEquals(_stream, stream))
+        {
+            return false;
+        }
+
+        DisposeStreamIfOwned();
+
+        _stream = stream;
+        return true;
+    }
+
+    protected void DisposeStreamIfOwned()
+    {
+        if (_isOwned && _stream is not null)
+        {
+            _stream.Dispose();
+            _stream = null!;
+        }
+    }
+
+    protected virtual Stream GetStream(FileMode mode, FileAccess access) => Stream;
 
     [MemberNotNull(nameof(_package))]
     private void InitializePackage(FileMode? mode = default, FileAccess? access = default)
     {
+        mode ??= Mode;
+        access ??= Access;
+
         _package?.Close();
-        _package = Package.Open(Stream, mode ?? _mode, access ?? _access);
+
+        if (_stream is null || Mode != mode || Access != access)
+        {
+            SetStream(GetStream(mode.Value, access.Value));
+        }
+
+        _package = Package.Open(_stream, mode.Value, access.Value);
     }
 
     protected override Package Package => _package;
@@ -88,6 +130,11 @@ internal class StreamPackageFeature : PackageFeatureBase, IDisposable, IPackageS
             if (disposing)
             {
                 _package.Close();
+
+                if (_isOwned)
+                {
+                    _stream.Dispose();
+                }
             }
 
             _disposedValue = true;
