@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <IsShipped>true</IsShipped>
-    <NoWarn>$(NoWarn);3003</NoWarn>
+    <NoWarn>$(NoWarn);3003;CS0436</NoWarn>
 
     <!-- For now, we have internal access to the framework assembly. That should be removed, and then we'll need to turn this on. -->
     <IncludeFrameworkShims>false</IncludeFrameworkShims>

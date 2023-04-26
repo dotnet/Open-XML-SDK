@@ -4,59 +4,11 @@
 using DocumentFormat.OpenXml.Generator.Editor;
 using Microsoft.CodeAnalysis;
 using System.CodeDom.Compiler;
-using System.Collections.Immutable;
 
 namespace DocumentFormat.OpenXml.Generator;
 
 public static class FactoryGenerator
 {
-    public static void GenerateDocumentSpecificPartFeature(SourceProductionContext context, ImmutableArray<PackageInformation> packages)
-    {
-        foreach (var package in packages)
-        {
-            using var sw = new StringWriter();
-            using var writer = new IndentedTextWriter(sw);
-
-            writer.WriteFileHeader();
-
-            writer.WriteLine("using DocumentFormat.OpenXml;");
-            writer.WriteLine("using DocumentFormat.OpenXml.Features;");
-            writer.WriteLine();
-            writer.WriteLine("namespace DocumentFormat.OpenXml.Packaging;");
-            writer.WriteLine();
-
-            writer.Write("partial class ");
-            writer.WriteLine(package.ClassName);
-
-            using (writer.AddBlock())
-            {
-                writer.Write("partial class ");
-                writer.Write(package.ClassName);
-                writer.WriteLine("Features : IPartFactoryFeature");
-
-                using (writer.AddBlock())
-                {
-                    writer.WriteLine("OpenXmlPart? IPartFactoryFeature.Create(string relationship) => relationship switch");
-
-                    using (writer.AddBlock(new() { IncludeSemiColon = true }))
-                    {
-                        foreach (var relationship in package.Parts)
-                        {
-                            writer.Write(relationship.Name);
-                            writer.Write(".RelationshipTypeConstant => new ");
-                            writer.Write(relationship.Name);
-                            writer.WriteLine("(),");
-                        }
-
-                        writer.WriteLine("_ => default,");
-                    }
-                }
-            }
-
-            context.AddSource($"{package.ClassName}PartFactoryFeature", sw.ToString());
-        }
-    }
-
     public static void GeneratePartFactory(SourceProductionContext context, OpenXmlGeneratorServices openXml)
     {
         using var sw = new StringWriter();
@@ -83,7 +35,7 @@ public static class FactoryGenerator
 
             using (writer.AddBlock())
             {
-                foreach (var part in openXml.Context.Parts)
+                foreach (var part in openXml.DataSource.Parts)
                 {
                     writer.Write("if (typeof(T) == typeof(");
                     writer.Write(part.Name);
@@ -135,7 +87,7 @@ public static class FactoryGenerator
 
             using (writer.AddBlock(new() { IncludeSemiColon = true }))
             {
-                foreach (var model in openXml.Context.Namespaces)
+                foreach (var model in openXml.DataSource.Namespaces)
                 {
                     foreach (var type in model.Types)
                     {

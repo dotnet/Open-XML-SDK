@@ -8,9 +8,12 @@ namespace DocumentFormat.OpenXml.Features;
 
 internal sealed class FilePackageFeature : StreamPackageFeature, IPackageStreamFeature
 {
+    private readonly string _path;
+
     public FilePackageFeature(string path, PackageOpenMode mode)
-        : base(CreateStream(path, mode), mode)
+        : base(CreateStream(path, mode), mode, isOwned: true)
     {
+        _path = path;
     }
 
     private static Stream CreateStream(string path, PackageOpenMode openMode)
@@ -28,24 +31,22 @@ internal sealed class FilePackageFeature : StreamPackageFeature, IPackageStreamF
         return File.Open(path, mode, access, share);
     }
 
-    Stream IPackageStreamFeature.Stream
+    protected override Stream GetStream(FileMode mode, FileAccess access)
     {
-        get => Stream;
-        set
+        if (_path is null)
         {
-            var previous = Stream;
-            Stream = value;
-            previous.Dispose();
+            return Stream;
         }
-    }
 
-    protected override void Dispose(bool disposing)
-    {
-        base.Dispose(disposing);
-
-        if (disposing)
+        if (Mode == mode && Access == access)
         {
-            Stream.Dispose();
+            return Stream;
         }
+
+        DisposeStreamIfOwned();
+
+        var share = access == FileAccess.ReadWrite ? FileShare.None : FileShare.Read;
+
+        return File.Open(_path, mode, access, share);
     }
 }

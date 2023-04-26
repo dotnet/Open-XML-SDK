@@ -10,7 +10,7 @@ using System.Collections.Immutable;
 
 namespace DocumentFormat.OpenXml.Generator;
 
-public record OpenXmlGeneratorContext
+public record OpenXmlGeneratorDataSource
 {
     private static readonly JsonSerializerSettings _settings = new()
     {
