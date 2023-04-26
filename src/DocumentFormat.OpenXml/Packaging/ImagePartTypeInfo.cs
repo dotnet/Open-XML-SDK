@@ -17,7 +17,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 ".jpg" => ImagePartType.Jpeg,
                 ".jpeg" => ImagePartType.Jpeg,
                 ".jp2" => ImagePartType.Jp2,
-				".pcx" => ImagePartType.Pcx,
+                ".pcx" => ImagePartType.Pcx,
                 ".png" => ImagePartType.Png,
                 ".svg" => ImagePartType.Svg,
                 ".tif" => ImagePartType.Tif,
