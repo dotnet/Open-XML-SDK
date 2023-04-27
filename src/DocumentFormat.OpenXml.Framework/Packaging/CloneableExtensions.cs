@@ -19,7 +19,8 @@ public static class CloneableExtensions
     /// default OpenSettings.
     /// </summary>
     /// <returns>The cloned OpenXml package.</returns>
-    public static OpenXmlPackage Clone(this OpenXmlPackage openXmlPackage)
+    public static TPackage Clone<TPackage>(this TPackage openXmlPackage)
+        where TPackage : OpenXmlPackage
         => openXmlPackage.Clone(new MemoryStream(), true, new OpenSettings());
 
     /// <summary>
@@ -30,7 +31,8 @@ public static class CloneableExtensions
     /// <param name="openXmlPackage"></param>
     /// <param name="stream">The IO stream on which to open the OpenXml package.</param>
     /// <returns>The cloned OpenXml package.</returns>
-    public static OpenXmlPackage Clone(this OpenXmlPackage openXmlPackage, Stream stream)
+    public static TPackage Clone<TPackage>(this TPackage openXmlPackage, Stream stream)
+        where TPackage : OpenXmlPackage
     {
         if (openXmlPackage is null)
         {
@@ -54,7 +56,8 @@ public static class CloneableExtensions
     /// <param name="stream">The IO stream on which to open the OpenXml package.</param>
     /// <param name="isEditable">In ReadWrite mode. False for Read only mode.</param>
     /// <returns>The cloned OpenXml package.</returns>
-    public static OpenXmlPackage Clone(this OpenXmlPackage openXmlPackage, Stream stream, bool isEditable)
+    public static TPackage Clone<TPackage>(this TPackage openXmlPackage, Stream stream, bool isEditable)
+        where TPackage : OpenXmlPackage
     {
         if (openXmlPackage is null)
         {
@@ -77,7 +80,8 @@ public static class CloneableExtensions
     /// <param name="isEditable">In ReadWrite mode. False for Read only mode.</param>
     /// <param name="openSettings">The advanced settings for opening a document.</param>
     /// <returns>The cloned OpenXml package.</returns>
-    public static OpenXmlPackage Clone(this OpenXmlPackage openXmlPackage, Stream stream, bool isEditable, OpenSettings openSettings)
+    public static TPackage Clone<TPackage>(this TPackage openXmlPackage, Stream stream, bool isEditable, OpenSettings openSettings)
+        where TPackage : OpenXmlPackage
     {
         if (openXmlPackage is null)
         {
@@ -89,7 +93,7 @@ public static class CloneableExtensions
             throw new ArgumentNullException(nameof(stream));
         }
 
-        return openXmlPackage.Features.GetRequired<IPackageFactoryFeature>()
+        return openXmlPackage.Features.GetRequired<IPackageFactoryFeature<TPackage>>()
             .Create()
             .WithSettings(openSettings)
             .WithStorage(stream, PackageOpenMode.Create)
@@ -107,7 +111,8 @@ public static class CloneableExtensions
     /// <param name="openXmlPackage"></param>
     /// <param name="path">The path and file name of the target document.</param>
     /// <returns>The cloned document.</returns>
-    public static OpenXmlPackage Clone(this OpenXmlPackage openXmlPackage, string path)
+    public static TPackage Clone<TPackage>(this TPackage openXmlPackage, string path)
+        where TPackage : OpenXmlPackage
     {
         if (openXmlPackage is null)
         {
@@ -132,7 +137,8 @@ public static class CloneableExtensions
     /// <param name="path">The path and file name of the target document.</param>
     /// <param name="isEditable">In ReadWrite mode. False for Read only mode.</param>
     /// <returns>The cloned document.</returns>
-    public static OpenXmlPackage Clone(this OpenXmlPackage openXmlPackage, string path, bool isEditable)
+    public static TPackage Clone<TPackage>(this TPackage openXmlPackage, string path, bool isEditable)
+        where TPackage : OpenXmlPackage
     {
         if (openXmlPackage is null)
         {
@@ -156,7 +162,8 @@ public static class CloneableExtensions
     /// <param name="isEditable">In ReadWrite mode. False for Read only mode.</param>
     /// <param name="openSettings">The advanced settings for opening a document.</param>
     /// <returns>The cloned document.</returns>
-    public static OpenXmlPackage Clone(this OpenXmlPackage openXmlPackage, string path, bool isEditable, OpenSettings? openSettings)
+    public static TPackage Clone<TPackage>(this TPackage openXmlPackage, string path, bool isEditable, OpenSettings? openSettings)
+        where TPackage : OpenXmlPackage
     {
         if (openXmlPackage is null)
         {
@@ -168,7 +175,7 @@ public static class CloneableExtensions
             throw new ArgumentNullException(nameof(path));
         }
 
-        return openXmlPackage.Features.GetRequired<IPackageFactoryFeature>()
+        return openXmlPackage.Features.GetRequired<IPackageFactoryFeature<TPackage>>()
               .Create()
               .WithSettings(openSettings ?? new())
               .WithStorage(path, PackageOpenMode.Create)
@@ -185,7 +192,8 @@ public static class CloneableExtensions
     /// <param name="openXmlPackage"></param>
     /// <param name="package">The specified instance of Package.</param>
     /// <returns>The cloned OpenXml package.</returns>
-    public static OpenXmlPackage Clone(this OpenXmlPackage openXmlPackage, Package package)
+    public static TPackage Clone<TPackage>(this TPackage openXmlPackage, Package package)
+        where TPackage : OpenXmlPackage
     {
         if (openXmlPackage is null)
         {
@@ -208,7 +216,8 @@ public static class CloneableExtensions
     /// <param name="package">The specified instance of Package.</param>
     /// <param name="openSettings">The advanced settings for opening a document.</param>
     /// <returns>The cloned OpenXml package.</returns>
-    public static OpenXmlPackage Clone(this OpenXmlPackage openXmlPackage, Package package, OpenSettings openSettings)
+    public static TPackage Clone<TPackage>(this TPackage openXmlPackage, Package package, OpenSettings openSettings)
+        where TPackage : OpenXmlPackage
     {
         if (openXmlPackage is null)
         {
@@ -220,7 +229,7 @@ public static class CloneableExtensions
             throw new ArgumentNullException(nameof(package));
         }
 
-        return openXmlPackage.Features.GetRequired<IPackageFactoryFeature>()
+        return openXmlPackage.Features.GetRequired<IPackageFactoryFeature<TPackage>>()
               .Create()
               .WithSettings(openSettings ?? new())
               .WithStorage(package)
@@ -228,7 +237,8 @@ public static class CloneableExtensions
               .UseDefaultBehavior();
     }
 
-    private static OpenXmlPackage CopyFrom(this OpenXmlPackage destination, OpenXmlPackage source, OpenSettings? settings = null)
+    private static TPackage CopyFrom<TPackage>(this TPackage destination, TPackage source, OpenSettings? settings = null)
+        where TPackage : OpenXmlPackage
     {
         lock (source.Features.GetRequired<ILockFeature>().SyncLock)
         {
@@ -250,7 +260,8 @@ public static class CloneableExtensions
         }
     }
 
-    private static OpenXmlPackage Reload(this OpenXmlPackage openXmlPackage, bool isEditable)
+    private static TPackage Reload<TPackage>(this TPackage openXmlPackage, bool isEditable)
+        where TPackage : OpenXmlPackage
     {
         if (openXmlPackage.Features.Get<IPackageFeature>() is { } package && package.Capabilities.HasFlagFast(PackageCapabilities.Reload))
         {

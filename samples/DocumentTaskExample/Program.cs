@@ -42,7 +42,7 @@ namespace DocumentTaskSample
             using WordprocessingDocument docPackage = WordprocessingDocument.Open(filePath, true);
             string newFn = filePath.Replace(".docx", "_new.docx");
 
-            using WordprocessingDocument newDocumentPackage = (WordprocessingDocument)docPackage.Clone(newFn.ToString());
+            using WordprocessingDocument newDocumentPackage = docPackage.Clone(newFn.ToString());
             newDocumentPackage.AddParagraphIdFeature();
             MainDocumentPart mdp = newDocumentPackage.MainDocumentPart;
 

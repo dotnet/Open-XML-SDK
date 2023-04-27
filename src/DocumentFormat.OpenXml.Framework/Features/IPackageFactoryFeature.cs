@@ -5,7 +5,7 @@ using DocumentFormat.OpenXml.Packaging;
 
 namespace DocumentFormat.OpenXml.Features;
 
-internal interface IPackageFactoryFeature
+internal interface IPackageFactoryFeature<TPackage>
 {
-    OpenXmlPackage Create();
+    TPackage Create();
 }

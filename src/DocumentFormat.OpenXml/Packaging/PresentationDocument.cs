@@ -141,7 +141,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 // We've opened the template in read-only mode to let multiple processes or
                 // threads open it without running into problems.
-                PresentationDocument document = (PresentationDocument)template.Clone();
+                PresentationDocument document = template.Clone();
 
                 // If the template is a document rather than a template, we are done.
                 if (extension == ".pptx" || extension == ".pptm")
@@ -482,7 +482,7 @@ namespace DocumentFormat.OpenXml.Packaging
             IApplicationTypeFeature,
             IMainPartFeature,
             IProgrammaticIdentifierFeature,
-            IPackageFactoryFeature
+            IPackageFactoryFeature<PresentationDocument>
         {
             public PresentationDocumentFeatures(OpenXmlPackage package)
                 : base(package)
@@ -521,7 +521,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 _ => default,
             };
 
-            OpenXmlPackage IPackageFactoryFeature.Create() => new PresentationDocument();
+            PresentationDocument IPackageFactoryFeature<PresentationDocument>.Create() => new();
         }
     }
 }

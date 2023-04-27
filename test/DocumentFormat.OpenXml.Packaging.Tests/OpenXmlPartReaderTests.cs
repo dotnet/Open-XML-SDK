@@ -15,8 +15,8 @@ public class OpenXmlPartReaderTests
     [Fact]
     public void ThrowsNull()
     {
-        Assert.Throws<ArgumentNullException>(() => new OpenXmlPartReader((OpenXmlPart)null));
-        Assert.Throws<ArgumentNullException>(() => new OpenXmlPartReader((OpenXmlPart)null, true));
+        Assert.Throws<ArgumentNullException>(() => new OpenXmlPartReader(null));
+        Assert.Throws<ArgumentNullException>(() => new OpenXmlPartReader(null, true));
     }
 
     [InlineData("<?xml version='1.0' encoding='UTF-8' standalone='yes'?><root/>", "UTF-8", true)]

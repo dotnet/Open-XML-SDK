@@ -142,7 +142,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 // We've opened the template in read-only mode to let multiple processes or
                 // threads open it without running into problems.
-                SpreadsheetDocument document = (SpreadsheetDocument)template.Clone();
+                SpreadsheetDocument document = template.Clone();
 
                 // If the template is a document rather than a template, we are done.
                 if (extension == ".xlsx" || extension == ".xlsm")
@@ -483,7 +483,7 @@ namespace DocumentFormat.OpenXml.Packaging
         private partial class SpreadsheetDocumentFeatures : TypedPackageFeatureCollection<SpreadsheetDocumentType, WorkbookPart>,
             IApplicationTypeFeature,
             IMainPartFeature,
-            IPackageFactoryFeature
+            IPackageFactoryFeature<SpreadsheetDocument>
         {
             public SpreadsheetDocumentFeatures(OpenXmlPackage package)
                 : base(package)
@@ -516,7 +516,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 _ => default,
             };
 
-            OpenXmlPackage IPackageFactoryFeature.Create() => new SpreadsheetDocument();
+            SpreadsheetDocument IPackageFactoryFeature<SpreadsheetDocument>.Create() => new();
         }
     }
 }
