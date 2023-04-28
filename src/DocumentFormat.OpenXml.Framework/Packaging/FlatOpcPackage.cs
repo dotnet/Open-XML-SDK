@@ -252,10 +252,19 @@ public static class FlatOpcExtensions
             throw new ArgumentNullException(nameof(p));
         }
 
-        return package.WithStorage(p)
-            .LoadFlatOpc(document)
-            .Reload()
-            .UseDefaultBehavior();
+        package
+            .WithStorage(p)
+            .LoadFlatOpc(document);
+
+        // TODO: Why is this needed?
+#if NETFRAMEWORk
+        if (package.CanSave)
+        {
+            package.Save();
+        }
+#endif
+
+        return package.UseDefaultBehavior();
     }
 
     private static void AddPackageParts(XElement flatOpcPackage, IPackage package)
