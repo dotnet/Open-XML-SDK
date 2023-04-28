@@ -1201,7 +1201,7 @@ namespace DocumentFormat.OpenXml.Tests
                 val.Equals(expectedValue),
                 "{0} operator result {1} does NOT equal to expected {2}.", typeof(T).Name, val, expectedValue);
 
-            val = oxObj as OpenXmlSimpleValue<T>;
+            val = oxObj;
             Log.VerifyTrue(
                 val.Equals(expectedValue),
                 "{0} operator result {1} does NOT equal to expected {2}.", typeof(OpenXmlSimpleValue<T>).Name, val, expectedValue);

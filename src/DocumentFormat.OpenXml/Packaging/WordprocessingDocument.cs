@@ -166,7 +166,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 // We've opened the template in read-only mode to let multiple processes
                 // open it without running into problems.
-                WordprocessingDocument document = (WordprocessingDocument)template.Clone();
+                WordprocessingDocument document = template.Clone();
 
                 // If the template is a document rather than a template, we are done.
                 if (extension == ".docx" || extension == ".docm")
@@ -524,7 +524,7 @@ namespace DocumentFormat.OpenXml.Packaging
             IApplicationTypeFeature,
             IMainPartFeature,
             IProgrammaticIdentifierFeature,
-            IPackageFactoryFeature
+            IPackageFactoryFeature<WordprocessingDocument>
         {
             public WordprocessingDocumentFeatures(OpenXmlPackage package)
                 : base(package)
@@ -557,7 +557,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 _ => default,
             };
 
-            OpenXmlPackage IPackageFactoryFeature.Create() => new WordprocessingDocument();
+            WordprocessingDocument IPackageFactoryFeature<WordprocessingDocument>.Create() => new();
         }
     }
 }

@@ -242,7 +242,7 @@ namespace DocumentFormat.OpenXml.Tests
             {
                 var part = package.DescendantParts().PickFirst(p => p.IsReflectable());
 
-                using (OpenXmlReader reader = OpenXmlReader.Create(part as OpenXmlPart))
+                using (OpenXmlReader reader = OpenXmlReader.Create(part))
                 {
                     if (reader.Read())
                     {
