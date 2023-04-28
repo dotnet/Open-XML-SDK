@@ -55,7 +55,7 @@ namespace ThreadedCommentsExample
 
             if (sd != null)
             {
-                ExampleUtilities.InsertText((SpreadsheetDocument)sd, sheetName, @"Please comment on this cell.", column, row);
+                ExampleUtilities.InsertText(sd, sheetName, @"Please comment on this cell.", column, row);
             }
 
             if (!(sd is null))

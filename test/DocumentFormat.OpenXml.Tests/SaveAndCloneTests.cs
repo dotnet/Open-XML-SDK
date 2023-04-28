@@ -29,7 +29,7 @@ namespace DocumentFormat.OpenXml.Tests
             {
                 using (var stream = GetStream(TestFiles.Document))
                 using (var source = WordprocessingDocument.Open(stream, false))
-                using (var clone = (WordprocessingDocument)source.Clone())
+                using (var clone = source.Clone())
                 {
                     var body = clone.MainDocumentPart.Document.Body;
                     body.InsertBefore(new Paragraph(new Run(new Text("Hello World"))), body.FirstChild);
@@ -93,14 +93,14 @@ namespace DocumentFormat.OpenXml.Tests
             {
                 Parallel.For(0, 10, index =>
                 {
-                    using (var clone1 = (WordprocessingDocument)source.Clone())
+                    using (var clone1 = source.Clone())
                     {
                         var body1 = clone1.MainDocumentPart.Document.Body;
                         body1.GetFirstChild<Paragraph>()
                             .InsertBeforeSelf(new Paragraph(new Run(new Text("Clone 1"))));
 
                         using (var tempFile = TemporaryFile.Create())
-                        using (var clone2 = (WordprocessingDocument)clone1.Clone(tempFile.Path))
+                        using (var clone2 = clone1.Clone(tempFile.Path))
                         {
                             var body2 = clone2.MainDocumentPart.Document.Body;
                             body2.GetFirstChild<Paragraph>()
@@ -108,7 +108,7 @@ namespace DocumentFormat.OpenXml.Tests
                         }
 
                         // Clone clone1 again.
-                        using (WordprocessingDocument clone3 = (WordprocessingDocument)clone1.Clone())
+                        using (WordprocessingDocument clone3 = clone1.Clone())
                         {
                             var body3 = clone3.MainDocumentPart.Document.Body;
                             body3.GetFirstChild<Paragraph>()
@@ -116,7 +116,7 @@ namespace DocumentFormat.OpenXml.Tests
                         }
 
                         // Clone source again.
-                        using (WordprocessingDocument clone4 = (WordprocessingDocument)source.Clone())
+                        using (WordprocessingDocument clone4 = source.Clone())
                         {
                             var body4 = clone4.MainDocumentPart.Document.Body;
                             body4.GetFirstChild<Paragraph>()
@@ -135,7 +135,7 @@ namespace DocumentFormat.OpenXml.Tests
             {
                 Parallel.For(0, 10, index =>
                 {
-                    using (var clone = (WordprocessingDocument)source.Clone())
+                    using (var clone = source.Clone())
                     {
                         var body = clone.MainDocumentPart.Document.Body;
                         body.GetFirstChild<Paragraph>().InsertBeforeSelf(new Paragraph(new Run(new Text("Hello"))));
@@ -152,9 +152,9 @@ namespace DocumentFormat.OpenXml.Tests
             {
                 Parallel.For(0, 10, index =>
                 {
-                    using (var clone = (WordprocessingDocument)wordDoc.Clone())
+                    using (var clone = wordDoc.Clone())
                     {
-                        var secondClone = (WordprocessingDocument)clone.Clone();
+                        var secondClone = clone.Clone();
                         secondClone.MainDocumentPart.Document.Body
                             .GetFirstChild<Paragraph>()
                             .InsertBeforeSelf(new Paragraph(new Run(new Text("Changes."))));
@@ -178,7 +178,7 @@ namespace DocumentFormat.OpenXml.Tests
                         // Flush the clone (the removal of which fixed the original error).
                         clone.Package.Save();
 
-                        var thirdClone = (WordprocessingDocument)clone.Clone();
+                        var thirdClone = clone.Clone();
                         thirdClone.MainDocumentPart.Document.Body
                             .GetFirstChild<Paragraph>()
                             .InsertBeforeSelf(new Paragraph(new Run(new Text("Changes."))));
@@ -291,7 +291,7 @@ namespace DocumentFormat.OpenXml.Tests
             using (var stream = GetStream(TestFiles.Document))
             using (var source = WordprocessingDocument.Open(stream, false))
             using (var memoryStream = new MemoryStream())
-            using (var dest = (WordprocessingDocument)source.Clone(memoryStream))
+            using (var dest = source.Clone(memoryStream))
             {
                 var document = dest.MainDocumentPart.Document;
                 var body = document.Body;
@@ -492,7 +492,7 @@ namespace DocumentFormat.OpenXml.Tests
             var slidePart = presentationPart.AddNewPart<SlidePart>();
 
             // Act
-            using var duplicate = (PresentationDocument)presentation.Clone();
+            using var duplicate = presentation.Clone();
             duplicate.PresentationPart.AddNewPart<SlidePart>();
             duplicate.Save();
 

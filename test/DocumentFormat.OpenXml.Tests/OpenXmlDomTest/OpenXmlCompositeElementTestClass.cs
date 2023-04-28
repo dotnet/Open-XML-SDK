@@ -2090,7 +2090,7 @@ namespace DocumentFormat.OpenXml.Tests
             {
                 var root = testpackage.MainPart().RootElement();
                 var root2 = new Document(sourcePackage.MainPart().RootElement().OuterXml);
-                (root2 as Document).Save(testpackage.MainPart() as MainDocumentPart);
+                root2.Save(testpackage.MainPart() as MainDocumentPart);
             }
         }
 
