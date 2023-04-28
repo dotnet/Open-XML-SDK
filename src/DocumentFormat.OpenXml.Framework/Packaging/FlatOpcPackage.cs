@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Builder;
 using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Framework;
 using System;
@@ -167,7 +168,7 @@ public static class FlatOpcExtensions
     /// <param name="package">Package to load into.</param>
     /// <param name="document">Document to load.</param>
     /// <exception cref="InvalidOperationException">Exception thrown if package is not empty.</exception>
-    internal static TPackage LoadFlatOpc<TPackage>(this TPackage package, XDocument document)
+    private static TPackage LoadFlatOpc<TPackage>(this TPackage package, XDocument document)
         where TPackage : OpenXmlPackage
     {
         var p = package.Features.GetRequired<IPackageFeature>().Package;
@@ -177,19 +178,14 @@ public static class FlatOpcExtensions
             throw new InvalidOperationException("FlatOpc must be loaded into an empty package");
         }
 
-        LoadFlatOpc(p, document);
-
-        return package;
-    }
-
-    private static void LoadFlatOpc(IPackage package, XDocument document)
-    {
         if (document.Root is not null)
         {
             // Add package parts and relationships.
-            AddPackageParts(document.Root, package);
-            AddPackageRelationships(document.Root, package);
+            AddPackageParts(document.Root, p);
+            AddPackageRelationships(document.Root, p);
         }
+
+        return package;
     }
 
     internal static TPackage LoadFlatOpcInternal<TPackage>(this TPackage package, XDocument document, Stream stream, bool isEditable)
@@ -205,13 +201,10 @@ public static class FlatOpcExtensions
             throw new ArgumentNullException(nameof(stream));
         }
 
-        using (var streamPackage = new StreamPackageFeature(stream, PackageOpenMode.Create))
-        {
-            LoadFlatOpc(streamPackage, document);
-        }
-
         return package
-            .WithStorage(stream, isEditable ? PackageOpenMode.ReadWrite : PackageOpenMode.Read)
+            .WithStorage(stream, PackageOpenMode.Create)
+            .LoadFlatOpc(document)
+            .Reload(isEditable)
             .UseDefaultBehavior();
     }
 
@@ -240,13 +233,10 @@ public static class FlatOpcExtensions
             throw new ArgumentNullException(nameof(path));
         }
 
-        using (var streamPackage = new FilePackageFeature(path, PackageOpenMode.Create))
-        {
-            LoadFlatOpc(streamPackage, document);
-        }
-
         return package
-            .WithStorage(path, isEditable ? PackageOpenMode.ReadWrite : PackageOpenMode.Read)
+            .WithStorage(path, PackageOpenMode.Create)
+            .LoadFlatOpc(document)
+            .Reload(isEditable)
             .UseDefaultBehavior();
     }
 
@@ -263,19 +253,10 @@ public static class FlatOpcExtensions
             throw new ArgumentNullException(nameof(p));
         }
 
-        // TODO: Figure out why the .NET Framework needs this
-#if NETFRAMEWORK
-        var packageFeature = new PackageFeature(p);
-        LoadFlatOpc(packageFeature, document);
-        p.Flush();
-
-        return package.WithStorage(p)
-            .UseDefaultBehavior();
-#else
         return package.WithStorage(p)
             .LoadFlatOpc(document)
+            .Reload()
             .UseDefaultBehavior();
-#endif
     }
 
     private static void AddPackageParts(XElement flatOpcPackage, IPackage package)
