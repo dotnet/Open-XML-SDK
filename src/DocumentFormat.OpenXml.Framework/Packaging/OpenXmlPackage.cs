@@ -48,6 +48,11 @@ namespace DocumentFormat.OpenXml.Packaging
         internal IPackage Package => Features.GetRequired<IPackageFeature>().Package;
 
         /// <summary>
+        /// Gets the package properties.
+        /// </summary>
+        public IPackageProperties PackageProperties => Features.GetRequired<IPackageFeature>().Package.PackageProperties;
+
+        /// <summary>
         /// Gets the FileAccess setting for the document.
         /// The current I/O access settings are: Read, Write, or ReadWrite.
         /// </summary>
