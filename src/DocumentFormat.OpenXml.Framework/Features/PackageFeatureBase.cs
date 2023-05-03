@@ -161,8 +161,6 @@ internal abstract class PackageFeatureBase : IPackage, IPackageFeature, IRelatio
 
         public IRelationshipCollection Relationships => _relationships;
 
-        public IReadOnlyCollection<IPackageRelationship> GetRelationships() => _relationships;
-
         public Stream GetStream(FileMode open, FileAccess write)
             => Part.GetStream(open, write);
     }

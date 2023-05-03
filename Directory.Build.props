@@ -20,6 +20,11 @@
   </PropertyGroup>
 
   <PropertyGroup>
+    <!-- Experimental APIs currently use obsolete messages -->
+    <NoWarn>$(NoWarn);CS0436;OOXML0001</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup>
     <IncludeSourceGenerator>false</IncludeSourceGenerator>
   </PropertyGroup>
 

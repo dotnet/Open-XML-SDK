@@ -9,7 +9,8 @@ namespace DocumentFormat.OpenXml.Packaging;
 /// <summary>
 /// An abstraction for <see cref="System.IO.Packaging.PackagePart"/> that is easier to override.
 /// </summary>
-internal interface IPackagePart
+[Obsolete(ExperimentalApis.PackageApis.Message, DiagnosticId = ExperimentalApis.PackageApis.DiagnosticId, UrlFormat = ExperimentalApis.UrlFormat)]
+public interface IPackagePart
 {
     /// <summary>
     /// Gets a reference to the containing package.

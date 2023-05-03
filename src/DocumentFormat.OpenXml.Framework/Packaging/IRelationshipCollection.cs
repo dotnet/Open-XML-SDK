@@ -7,7 +7,11 @@ using System.IO.Packaging;
 
 namespace DocumentFormat.OpenXml.Packaging;
 
-internal interface IRelationshipCollection : IEnumerable<IPackageRelationship>, IReadOnlyCollection<IPackageRelationship>
+/// <summary>
+/// A collection of relationships for a <see cref="IPackage"/> of <see cref="IPackagePart"/>.
+/// </summary>
+[Obsolete(ExperimentalApis.PackageApis.Message, DiagnosticId = ExperimentalApis.PackageApis.DiagnosticId, UrlFormat = ExperimentalApis.UrlFormat)]
+public interface IRelationshipCollection : IEnumerable<IPackageRelationship>
 {
     /// <summary>
     /// Creates a relationship to a part with a given URI, target mode, relationship type, and (optional) identifier.
@@ -31,6 +35,11 @@ internal interface IRelationshipCollection : IEnumerable<IPackageRelationship>, 
     /// <param name="id">Id of relationship</param>
     /// <returns>A package relationship</returns>
     IPackageRelationship this[string id] { get; }
+
+    /// <summary>
+    /// Gets a count of the registered relationships.
+    /// </summary>
+    public int Count { get; }
 
     /// <summary>
     /// Indicates whether a relationship with a given ID is defined.
