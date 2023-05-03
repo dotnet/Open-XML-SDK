@@ -54,11 +54,6 @@ namespace DocumentFormat.OpenXml.Packaging
         public FileAccess FileOpenAccess => Package.FileOpenAccess;
 
         /// <summary>
-        /// Gets the core package properties of the Open XML document.
-        /// </summary>
-        public PackageProperties PackageProperties => Package.PackageProperties;
-
-        /// <summary>
         /// Gets or sets the compression level for the content of the new part
         /// </summary>
         public CompressionOption CompressionOption { get; set; } = CompressionOption.Normal;

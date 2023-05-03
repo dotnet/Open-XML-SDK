@@ -22,7 +22,7 @@ public interface IPackage
     /// <summary>
     /// Gets the core properties of the package
     /// </summary>
-    PackageProperties PackageProperties { get; }
+    IPackageProperties PackageProperties { get; }
 
     /// <summary>
     /// Returns a collection of parts for the package

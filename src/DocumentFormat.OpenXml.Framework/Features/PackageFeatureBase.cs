@@ -13,7 +13,7 @@ using System.IO.Packaging;
 
 namespace DocumentFormat.OpenXml.Features;
 
-internal abstract class PackageFeatureBase : IPackage, IPackageFeature, IRelationshipFilterFeature
+internal abstract class PackageFeatureBase : IPackage, IPackageFeature, IRelationshipFilterFeature, IPackageProperties
 {
     private RelationshipCollection? _relationships;
     private Action<PackageRelationshipBuilder>? _relationshipFilter;
@@ -139,6 +139,40 @@ internal abstract class PackageFeatureBase : IPackage, IPackageFeature, IRelatio
 
     void IRelationshipFilterFeature.AddFilter(Action<PackageRelationshipBuilder> action)
         => _relationshipFilter += action;
+
+    IPackageProperties IPackage.PackageProperties => this;
+
+    string? IPackageProperties.Title { get => Package.PackageProperties.Title; set => Package.PackageProperties.Title = value; }
+
+    string? IPackageProperties.Subject { get => Package.PackageProperties.Subject; set => Package.PackageProperties.Subject = value; }
+
+    string? IPackageProperties.Creator { get => Package.PackageProperties.Creator; set => Package.PackageProperties.Creator = value; }
+
+    string? IPackageProperties.Keywords { get => Package.PackageProperties.Keywords; set => Package.PackageProperties.Keywords = value; }
+
+    string? IPackageProperties.Description { get => Package.PackageProperties.Description; set => Package.PackageProperties.Description = value; }
+
+    string? IPackageProperties.LastModifiedBy { get => Package.PackageProperties.LastModifiedBy; set => Package.PackageProperties.LastModifiedBy = value; }
+
+    string? IPackageProperties.Revision { get => Package.PackageProperties.Revision; set => Package.PackageProperties.Revision = value; }
+
+    DateTime? IPackageProperties.LastPrinted { get => Package.PackageProperties.LastPrinted; set => Package.PackageProperties.LastPrinted = value; }
+
+    DateTime? IPackageProperties.Created { get => Package.PackageProperties.Created; set => Package.PackageProperties.Created = value; }
+
+    DateTime? IPackageProperties.Modified { get => Package.PackageProperties.Modified; set => Package.PackageProperties.Modified = value; }
+
+    string? IPackageProperties.Category { get => Package.PackageProperties.Category; set => Package.PackageProperties.Category = value; }
+
+    string? IPackageProperties.Identifier { get => Package.PackageProperties.Identifier; set => Package.PackageProperties.Identifier = value; }
+
+    string? IPackageProperties.ContentType { get => Package.PackageProperties.ContentType; set => Package.PackageProperties.ContentType = value; }
+
+    string? IPackageProperties.Language { get => Package.PackageProperties.Language; set => Package.PackageProperties.Language = value; }
+
+    string? IPackageProperties.Version { get => Package.PackageProperties.Version; set => Package.PackageProperties.Version = value; }
+
+    string? IPackageProperties.ContentStatus { get => Package.PackageProperties.ContentStatus; set => Package.PackageProperties.ContentStatus = value; }
 
     private sealed class PackagePart : IPackagePart
     {
