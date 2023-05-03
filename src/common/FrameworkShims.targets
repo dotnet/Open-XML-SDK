@@ -7,6 +7,7 @@
   <ItemGroup>
     <ShimFile Include="$(MSBuildThisFileDirectory)System\IO\StreamReadExtensions.cs" />
     <ShimFile Include="$(MSBuildThisFileDirectory)System\EnumExtensions.cs" />
+    <ShimFile Include="$(MSBuildThisFileDirectory)System\ObsoleteAttribute.cs" />
   </ItemGroup>
 
   <ItemGroup Condition=" '$(TargetFramework)' == 'net35' ">

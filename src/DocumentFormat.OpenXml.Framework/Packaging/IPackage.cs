@@ -11,7 +11,8 @@ namespace DocumentFormat.OpenXml.Packaging;
 /// <summary>
 /// An abstraction similar to <see cref="System.IO.Packaging.Package"/> that allows for pass through implementations
 /// </summary>
-internal interface IPackage
+[Obsolete(ExperimentalApis.PackageApis.Message, DiagnosticId = ExperimentalApis.PackageApis.DiagnosticId, UrlFormat = ExperimentalApis.UrlFormat)]
+public interface IPackage
 {
     /// <summary>
     /// Gets the file access of the package
@@ -21,7 +22,7 @@ internal interface IPackage
     /// <summary>
     /// Gets the core properties of the package
     /// </summary>
-    PackageProperties PackageProperties { get; }
+    IPackageProperties PackageProperties { get; }
 
     /// <summary>
     /// Returns a collection of parts for the package

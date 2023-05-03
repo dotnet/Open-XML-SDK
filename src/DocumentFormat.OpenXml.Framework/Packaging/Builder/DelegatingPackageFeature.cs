@@ -22,7 +22,7 @@ internal abstract class DelegatingPackageFeature : IPackage, IPackageFeature
 
     public virtual FileAccess FileOpenAccess => Package.FileOpenAccess;
 
-    public virtual PackageProperties PackageProperties => Package.PackageProperties;
+    public virtual IPackageProperties PackageProperties => Package.PackageProperties;
 
     IPackage IPackageFeature.Package => this;
 

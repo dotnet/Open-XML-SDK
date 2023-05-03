@@ -323,7 +323,6 @@ namespace DocumentFormat.OpenXml
                 case XmlNodeType.DocumentFragment:
                 case XmlNodeType.EndEntity:
                 default:
-                    Debug.Assert(false, xmlReader.NodeType.ToString());
                     break;
             }
         }
