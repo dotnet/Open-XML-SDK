@@ -1,12 +1,14 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Builder;
 using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Wordprocessing;
 using System;
 using System.IO;
 using System.IO.Packaging;
 using System.Reflection;
+using System.Reflection.Metadata;
 
 namespace DocumentFormat.OpenXml.Packaging
 {
@@ -19,6 +21,24 @@ namespace DocumentFormat.OpenXml.Packaging
         internal WordprocessingDocument()
             : base()
         {
+        }
+
+        private static readonly OpenXmlPackageBuilder<WordprocessingDocument> _defaultBuilder = new Builder().ConfigureDefaults();
+
+        internal static OpenXmlPackageBuilder<WordprocessingDocument> CreateBuilder() => new Builder();
+
+        internal static OpenXmlPackageBuilder<WordprocessingDocument> CreateDefaultBuilder() => _defaultBuilder.New();
+
+        private sealed class Builder : OpenXmlPackageBuilder<WordprocessingDocument>
+        {
+            public Builder(Builder? builder = null)
+                : base(builder)
+            {
+            }
+
+            internal override WordprocessingDocument Create() => new();
+
+            internal override OpenXmlPackageBuilder<WordprocessingDocument> New() => new Builder(this);
         }
 
         /// <summary>
@@ -80,11 +100,13 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <returns>A new instance of WordprocessingDocument.</returns>
         /// <exception cref="ArgumentNullException">Thrown when "path" is null reference.</exception>
         public static WordprocessingDocument Create(string path, WordprocessingDocumentType type, bool autoSave)
-            => new WordprocessingDocument()
-                .WithAutosave(autoSave)
-                .WithStorage(path, PackageOpenMode.Create)
-                .AddAction(p => p.DocumentType = type)
-                .UseDefaultBehavior();
+            => CreateDefaultBuilder()
+                .Configure(package =>
+                {
+                    package.DocumentType = type;
+                    package.OpenSettings.AutoSave = autoSave;
+                })
+                .Open(path, PackageOpenMode.Create);
 
         /// <summary>
         /// Creates a new instance of the WordprocessingDocument class from the IO stream.
@@ -96,11 +118,13 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="ArgumentNullException">Thrown when "stream" is null reference.</exception>
         /// <exception cref="IOException">Thrown when "stream" is not opened with Write access.</exception>
         public static WordprocessingDocument Create(Stream stream, WordprocessingDocumentType type, bool autoSave)
-            => new WordprocessingDocument()
-                .WithAutosave(autoSave)
-                .WithStorage(stream, PackageOpenMode.Create)
-                .AddAction(p => p.DocumentType = type)
-                .UseDefaultBehavior();
+            => CreateDefaultBuilder()
+                .Configure(package =>
+                {
+                    package.DocumentType = type;
+                    package.OpenSettings.AutoSave = autoSave;
+                })
+                .Open(stream, PackageOpenMode.Create);
 
         /// <summary>
         /// Creates a new instance of the WordprocessingDocument class from the specified package.
@@ -112,11 +136,13 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="ArgumentNullException">Thrown when "package" is null reference.</exception>
         /// <exception cref="IOException">Thrown when "package" is not opened with Write access.</exception>
         public static WordprocessingDocument Create(Package package, WordprocessingDocumentType type, bool autoSave)
-            => new WordprocessingDocument()
-                .WithAutosave(autoSave)
-                .WithStorage(package)
-                .AddAction(p => p.DocumentType = type)
-                .UseDefaultBehavior();
+            => CreateDefaultBuilder()
+                .Configure(package =>
+                {
+                    package.DocumentType = type;
+                    package.OpenSettings.AutoSave = autoSave;
+                })
+                .Open(package);
 
         /// <summary>
         /// Creates an editable WordprocessingDocument from a template, opened on
@@ -154,51 +180,28 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentNullException(nameof(path));
             }
 
-            // Check extensions as the template must have a valid Word Open XML extension.
-            string extension = Path.GetExtension(path);
-
-            if (extension != ".docx" && extension != ".docm" && extension != ".dotx" && extension != ".dotm")
-            {
-                throw new ArgumentException($"Illegal template file: {path}", nameof(path));
-            }
-
-            using (WordprocessingDocument template = WordprocessingDocument.Open(path, false))
-            {
-                // We've opened the template in read-only mode to let multiple processes
-                // open it without running into problems.
-                WordprocessingDocument document = template.Clone();
-
-                // If the template is a document rather than a template, we are done.
-                if (extension == ".docx" || extension == ".docm")
+            return CreateDefaultBuilder()
+                .ConfigureTemplate(path, WordprocessingDocumentType.Document)
+                .Configure((package, next) =>
                 {
-                    return document;
-                }
+                    next(package);
 
-                // Otherwise, we'll have to do some more work.
-                // Firstly, we'll change the document type from Template to Document.
-                document.ChangeDocumentType(WordprocessingDocumentType.Document);
-
-                // Secondly, we'll attach the template to our new document if so desired.
-                if (isTemplateAttached)
-                {
-                    // Create a relative or absolute external relationship to the template.
-                    // TODO: Check whether relative URIs are universally supported. They work in Office 2010.
-                    var documentSettingsPart = document.MainDocumentPart?.DocumentSettingsPart;
-
-                    if (documentSettingsPart is not null)
+                    if (isTemplateAttached)
                     {
-                        var relationship = documentSettingsPart.AddExternalRelationship(
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/attachedTemplate",
-                            new Uri(path, UriHelper.RelativeOrAbsolute));
-                        documentSettingsPart.Settings.AppendChild(new AttachedTemplate { Id = relationship.Id });
-                    }
-                }
+                        // Create a relative or absolute external relationship to the template.
+                        // TODO: Check whether relative URIs are universally supported. They work in Office 2010.
+                        var documentSettingsPart = package.MainDocumentPart?.DocumentSettingsPart;
 
-                // We are done, so save and return.
-                // TODO: Check whether it would be safe to return without saving.
-                document.Save();
-                return document;
-            }
+                        if (documentSettingsPart is not null)
+                        {
+                            var relationship = documentSettingsPart.AddExternalRelationship(
+                                "http://schemas.openxmlformats.org/officeDocument/2006/relationships/attachedTemplate",
+                                new Uri(path, UriHelper.RelativeOrAbsolute));
+                            documentSettingsPart.Settings.AppendChild(new AttachedTemplate { Id = relationship.Id });
+                        }
+                    }
+                })
+                .Open(new MemoryStream(), PackageOpenMode.Create);
         }
 
         /// <summary>
@@ -235,10 +238,9 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="OpenXmlPackageException">Thrown when the package is not valid Open XML WordprocessingDocument.</exception>
         /// <exception cref="ArgumentException">Thrown when specified to process the markup compatibility but the given target FileFormatVersion is incorrect.</exception>
         public static WordprocessingDocument Open(string path, bool isEditable, OpenSettings openSettings)
-            => new WordprocessingDocument()
-                .WithSettings(openSettings)
-                .WithStorage(path, isEditable ? PackageOpenMode.ReadWrite : PackageOpenMode.Read)
-                .UseDefaultBehavior();
+            => CreateDefaultBuilder()
+                .ConfigureSettings(openSettings)
+                .Open(path, isEditable);
 
         /// <summary>
         /// Creates a new instance of the WordprocessingDocument class from the IO stream.
@@ -252,10 +254,9 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="OpenXmlPackageException">Thrown when the package is not valid Open XML WordprocessingDocument.</exception>
         /// <exception cref="ArgumentException">Thrown when specified to process the markup compatibility but the given target FileFormatVersion is incorrect.</exception>
         public static WordprocessingDocument Open(Stream stream, bool isEditable, OpenSettings openSettings)
-            => new WordprocessingDocument()
-                .WithSettings(openSettings)
-                .WithStorage(stream, isEditable ? PackageOpenMode.ReadWrite : PackageOpenMode.Read)
-                .UseDefaultBehavior();
+            => CreateDefaultBuilder()
+                .ConfigureSettings(openSettings)
+                .Open(stream, isEditable);
 
         /// <summary>
         /// Creates a new instance of the WordprocessingDocument class from the specified package.
@@ -268,10 +269,9 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="OpenXmlPackageException">Thrown when the package is not a valid Open XML document.</exception>
         /// <exception cref="ArgumentException">Thrown when specified to process the markup compatibility but the given target FileFormatVersion is incorrect.</exception>
         public static WordprocessingDocument Open(Package package, OpenSettings openSettings)
-            => new WordprocessingDocument()
-                .WithSettings(openSettings)
-                .WithStorage(package)
-                .UseDefaultBehavior();
+            => CreateDefaultBuilder()
+                .ConfigureSettings(openSettings)
+                .Open(package);
 
         /// <summary>
         /// Creates a new instance of the WordprocessingDocument class from the specified package.
@@ -523,8 +523,7 @@ namespace DocumentFormat.OpenXml.Packaging
         private partial class WordprocessingDocumentFeatures : TypedPackageFeatureCollection<WordprocessingDocumentType, MainDocumentPart>,
             IApplicationTypeFeature,
             IMainPartFeature,
-            IProgrammaticIdentifierFeature,
-            IPackageFactoryFeature<WordprocessingDocument>
+            IProgrammaticIdentifierFeature
         {
             public WordprocessingDocumentFeatures(OpenXmlPackage package)
                 : base(package)
@@ -556,8 +555,6 @@ namespace DocumentFormat.OpenXml.Packaging
                 "application/vnd.ms-word.template.macroEnabledTemplate.main+xml" => WordprocessingDocumentType.MacroEnabledTemplate,
                 _ => default,
             };
-
-            WordprocessingDocument IPackageFactoryFeature<WordprocessingDocument>.Create() => new();
         }
     }
 }

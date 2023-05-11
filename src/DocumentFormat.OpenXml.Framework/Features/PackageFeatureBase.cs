@@ -13,7 +13,7 @@ using System.IO.Packaging;
 
 namespace DocumentFormat.OpenXml.Features;
 
-internal abstract class PackageFeatureBase : IPackage, IPackageFeature, IRelationshipFilterFeature, IPackageProperties
+internal abstract class PackageFeatureBase : IPackage, IPackageFeature, IRelationshipFilterFeature, IPackageProperties, IPackageInitializer
 {
     private RelationshipCollection? _relationships;
     private Action<PackageRelationshipBuilder>? _relationshipFilter;
@@ -139,6 +139,14 @@ internal abstract class PackageFeatureBase : IPackage, IPackageFeature, IRelatio
 
     void IRelationshipFilterFeature.AddFilter(Action<PackageRelationshipBuilder> action)
         => _relationshipFilter += action;
+
+    protected virtual void Register(IFeatureCollection features)
+    {
+        features.Set<IPackageFeature>(this);
+        features.Set<IRelationshipFilterFeature>(this);
+    }
+
+    void IPackageInitializer.Register(OpenXmlPackage package) => Register(package.Features);
 
     IPackageProperties IPackage.PackageProperties => this;
 

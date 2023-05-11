@@ -146,4 +146,12 @@ internal class StreamPackageFeature : PackageFeatureBase, IDisposable, IPackageS
         Dispose(disposing: true);
         GC.SuppressFinalize(this);
     }
+
+    protected override void Register(IFeatureCollection features)
+    {
+        base.Register(features);
+
+        features.Set<IPackageStreamFeature>(this);
+        features.GetRequired<IDisposableFeature>().Register(this);
+    }
 }

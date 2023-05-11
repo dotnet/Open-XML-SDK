@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Builder;
 using DocumentFormat.OpenXml.Features;
 using System;
 using System.IO;
@@ -95,12 +96,15 @@ public static class CloneableExtensions
 
         return openXmlPackage.Features.GetRequired<IPackageFactoryFeature<TPackage>>()
             .Create()
-            .WithSettings(openSettings)
-            .WithStorage(stream, PackageOpenMode.Create)
+            .ConfigureSettings(openSettings)
+            .Open(stream, PackageOpenMode.Create)
             .CopyFrom(openXmlPackage)
-            .Reload(isEditable)
-            .UseDefaultBehavior();
+            .Reload(isEditable);
     }
+
+    internal static void Clone<TPackage>(this TPackage source, TPackage destination)
+        where TPackage : OpenXmlPackage
+        => destination.CopyFrom(source).Reload();
 
     /// <summary>
     /// Creates a clone of this OpenXml package opened from the given file
@@ -177,11 +181,10 @@ public static class CloneableExtensions
 
         return openXmlPackage.Features.GetRequired<IPackageFactoryFeature<TPackage>>()
               .Create()
-              .WithSettings(openSettings ?? new())
-              .WithStorage(path, PackageOpenMode.Create)
+              .ConfigureSettings(openSettings ?? new())
+              .Open(path, PackageOpenMode.Create)
               .CopyFrom(openXmlPackage)
-              .Reload(isEditable)
-              .UseDefaultBehavior();
+              .Reload(isEditable);
     }
 
     /// <summary>
@@ -231,10 +234,9 @@ public static class CloneableExtensions
 
         return openXmlPackage.Features.GetRequired<IPackageFactoryFeature<TPackage>>()
               .Create()
-              .WithSettings(openSettings ?? new())
-              .WithStorage(package)
-              .CopyFrom(openXmlPackage)
-              .UseDefaultBehavior();
+              .ConfigureSettings(openSettings ?? new())
+              .Open(package)
+              .CopyFrom(openXmlPackage);
     }
 
     private static TPackage CopyFrom<TPackage>(this TPackage destination, TPackage source, OpenSettings? settings = null)
@@ -265,14 +267,14 @@ public static class CloneableExtensions
     {
         if (openXmlPackage.Features.Get<IPackageFeature>() is { } package && package.Capabilities.HasFlagFast(PackageCapabilities.Reload))
         {
-            FileAccess? access = isEditable switch
+            if (isEditable.HasValue)
             {
-                true => FileAccess.ReadWrite,
-                false => FileAccess.Read,
-                _ => default,
-            };
-
-            package.Reload(access: access);
+                package.Reload(access: isEditable.Value ? FileAccess.ReadWrite : FileAccess.Read);
+            }
+            else
+            {
+                package.Reload();
+            }
         }
 
         return openXmlPackage;
