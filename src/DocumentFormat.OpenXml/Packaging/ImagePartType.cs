@@ -11,6 +11,8 @@ namespace DocumentFormat.OpenXml.Packaging
     /// L".bmp",    L"image/bmp",
     /// L".gif",    L"image/gif",
     /// L".png",    L"image/png",
+    /// L".jp2",    L"image/jp2",
+    /// L".tif",    L"image/tif",
     /// L".tiff",   L"image/tiff",
     /// L".xbm",    L"image/xbm",
     /// L".ico",    L"image/x-icon",
@@ -44,9 +46,15 @@ namespace DocumentFormat.OpenXml.Packaging
         public static readonly PartTypeInfo Png = new("image/png", ".png");
 
         /// <summary>
+        /// Defines type information for Tif image part.
+        /// </summary>
+        public static readonly PartTypeInfo Tif = new("image/tif", ".tif");
+
+        /// <summary>
         /// Defines type information for Tiff image part.
         /// </summary>
         public static readonly PartTypeInfo Tiff = new("image/tiff", ".tiff");
+
         ///// <summary>
         ///// X Bitmap Graphic (.xbm).
         ///// </summary>
@@ -61,6 +69,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Defines type information for Pcx image part.
         /// </summary>
         public static readonly PartTypeInfo Pcx = new("image/x-pcx", ".pcx");
+
         ///// <summary>
         ///// Compressed Macintosh PICT (.pcz).
         ///// </summary>
@@ -76,6 +85,11 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Defines type information for Jpeg image part.
         /// </summary>
         public static readonly PartTypeInfo Jpeg = new("image/jpeg", ".jpg");
+
+        /// <summary>
+        /// Defines type information for Jpeg image part.
+        /// </summary>
+        public static readonly PartTypeInfo Jp2 = new("image/jp2", ".jp2");
 
         /// <summary>
         /// Defines type information for Emf image part.

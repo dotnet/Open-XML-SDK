@@ -3,6 +3,7 @@
 
 using DocumentFormat.OpenXml.Packaging;
 using System;
+using System.Globalization;
 
 namespace DocumentFormat.OpenXml
 {
@@ -205,7 +206,9 @@ namespace DocumentFormat.OpenXml
 
         private static string GetOfficeYear(this FileFormatVersions version)
         {
+#pragma warning disable CA1305
             return version.ToString().Substring("Office".Length);
+#pragma warning restore CA1305
         }
     }
 }

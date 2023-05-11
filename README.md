@@ -4,9 +4,7 @@ Open XML SDK
 
 > NOTICE: 
 > 
-> The v2.20.0 release (`release/v2.20.0`) is limited in scope and focuses on obsoleting types that will be removed in v3.0.0. This provides a stepping stone for migrating to v3.0.0.
-> 
-> v3.0.0-Beta1 will refactor a number of things to address some technical debt, with the goal being to retain (as much as possible) source compatibility. This means, we hope to maintain things such that you can update your package and recompile with limited changes. However, binary compatibility will not be a goal and will break that for some changes. However, we plan on keeping these documented. PRs that introduce such changes will be marked with a `breaking-change` label and will be added to a list to help migrating to v3.0.0. These changes will occur on the `main` branch.
+> [v3.0.0 beta 1](https://www.nuget.org/packages/DocumentFormat.OpenXml/3.0.0-ci0083) refactors and addresses some technical debt, with the goal to retain (as much as possible) source compatibility. We hope to maintain things such that you can update your package and recompile with limited changes. However, binary compatibility is not a goal and will break that for some changes which we plan on keeping documented. PRs that introduce such changes are marked with a `breaking-change` label and are added to a list to help migrating to v3.0.0.
 >
 > Please see the [v3.0.0 milestone](https://github.com/OfficeDev/Open-XML-SDK/milestone/1) for issues and PRs that are included in this change. For discussions about this change, please join us at [this issue](https://github.com/OfficeDev/Open-XML-SDK/issues/1270).
 
