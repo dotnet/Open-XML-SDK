@@ -184,6 +184,13 @@ public static class FlatOpcExtensions
             AddPackageRelationships(document.Root, p);
         }
 
+#if NETFRAMEWORK
+        if (package.CanSave)
+        {
+            package.Save();
+        }
+#endif
+
         return package;
     }
 
@@ -252,19 +259,10 @@ public static class FlatOpcExtensions
             throw new ArgumentNullException(nameof(p));
         }
 
-        package
+        return package
             .WithStorage(p)
-            .LoadFlatOpc(document);
-
-        // TODO: Why is this needed?
-#if NETFRAMEWORk
-        if (package.CanSave)
-        {
-            package.Save();
-        }
-#endif
-
-        return package.UseDefaultBehavior();
+            .LoadFlatOpc(document)
+            .UseDefaultBehavior();
     }
 
     private static void AddPackageParts(XElement flatOpcPackage, IPackage package)
