@@ -260,12 +260,19 @@ public static class CloneableExtensions
         }
     }
 
-    private static TPackage Reload<TPackage>(this TPackage openXmlPackage, bool isEditable)
+    internal static TPackage Reload<TPackage>(this TPackage openXmlPackage, bool? isEditable = default)
         where TPackage : OpenXmlPackage
     {
         if (openXmlPackage.Features.Get<IPackageFeature>() is { } package && package.Capabilities.HasFlagFast(PackageCapabilities.Reload))
         {
-            package.Reload(access: isEditable ? FileAccess.ReadWrite : FileAccess.Read);
+            FileAccess? access = isEditable switch
+            {
+                true => FileAccess.ReadWrite,
+                false => FileAccess.Read,
+                _ => default,
+            };
+
+            package.Reload(access: access);
         }
 
         return openXmlPackage;
