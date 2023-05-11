@@ -6,7 +6,6 @@ using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Packaging;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
@@ -25,7 +24,7 @@ namespace DocumentFormat.OpenXml
     /// <remarks>
     /// Annotations will not be cloned when calling <see cref="Clone"/> and <see cref="CloneNode(bool)"/>.
     /// </remarks>
-    public abstract partial class OpenXmlElement : IEnumerable<OpenXmlElement>, ICloneable
+    public abstract partial class OpenXmlElement : ICloneable
     {
         private IFeatureCollection? _features;
 
@@ -304,7 +303,7 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Gets all the child nodes of the current element.
         /// </summary>
-        public virtual OpenXmlElementList ChildElements => HasChildren ? new OpenXmlChildElements(this) : OpenXmlElementList.Empty;
+        public OpenXmlElementList ChildElements => new(this);
 
         /// <summary>
         /// Gets the parent element of the current element.
@@ -1992,22 +1991,6 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="type">The type of the annotations to remove.</param>
         public void RemoveAnnotations(Type type) => Features.GetRequired<AnnotationsFeature>().RemoveAnnotations(type);
-
-        #endregion
-
-        #region IEnumerable<OpenXmlElement> Members
-
-        /// <summary>
-        /// Returns an enumerator that iterates through the child collection.
-        /// </summary>
-        /// <returns>An IEnumerator object that can be used to iterate through the child collection. </returns>
-        public IEnumerator<OpenXmlElement> GetEnumerator() => new OpenXmlChildElements(this).GetEnumerator();
-
-        #endregion
-
-        #region IEnumerable Members
-
-        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() => new OpenXmlChildElements(this).GetEnumerator();
 
         #endregion
 
