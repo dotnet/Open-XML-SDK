@@ -2,11 +2,8 @@
 
   <PropertyGroup>
     <EnablePackageValidation>true</EnablePackageValidation>
-    <EnablePackageValidation Condition=" '$(IsNew)' == 'true' ">false</EnablePackageValidation>
-    <PackageValidationBaselineVersion>2.18.0</PackageValidationBaselineVersion>
-
-    <!-- Disabled because of https://github.com/dotnet/sdk/issues/18676 -->
-    <EnablePackageValidation>false</EnablePackageValidation>
+    <!--Update once v3.0 ships-->
+    <!--<PackageValidationBaselineVersion>2.18.0</PackageValidationBaselineVersion>-->
   </PropertyGroup>
 
   <Import Project="$(MSBuildThisFileDirectory)\PEVerify.targets" />
