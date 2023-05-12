@@ -310,7 +310,7 @@ namespace DocumentFormat.OpenXml.Tests
             var r3 = para.AppendChild(new Run());
 
             t1.Remove();
-            Assert.Equal(1, r1.ChildElements.Count);
+            Assert.Single(r1.ChildElements);
             Assert.Null(t1.Parent);
             Assert.NotNull(r1.FirstChild);
             Assert.NotNull(r1.LastChild);
@@ -689,32 +689,32 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Same(rPr, enumerator.Current);
 
             // rPr, one child
-            Assert.Equal(1, rPr.ChildElements.Count);
+            Assert.Single(rPr.ChildElements);
             enumerator = rPr.ChildElements.GetEnumerator();
             Assert.True(enumerator.MoveNext());
 
             // b, leaf element
-            Assert.Equal(0, b.ChildElements.Count);
+            Assert.Empty(b.ChildElements);
             enumerator = b.ChildElements.GetEnumerator();
             Assert.False(enumerator.MoveNext());
 
             // t, leaf text element
-            Assert.Equal(0, t.ChildElements.Count);
+            Assert.Empty(t.ChildElements);
             enumerator = t.ChildElements.GetEnumerator();
             Assert.False(enumerator.MoveNext());
 
             // unknown1, one child
-            Assert.Equal(1, unknown1.ChildElements.Count);
+            Assert.Single(unknown1.ChildElements);
             enumerator = unknown1.ChildElements.GetEnumerator();
             Assert.True(enumerator.MoveNext());
 
             // unknown2, empty children
-            Assert.Equal(0, unknown2.ChildElements.Count);
+            Assert.Empty(unknown2.ChildElements);
             enumerator = unknown2.ChildElements.GetEnumerator();
             Assert.False(enumerator.MoveNext());
 
             // miscNode
-            Assert.Equal(0, miscNode.ChildElements.Count);
+            Assert.Empty(miscNode.ChildElements);
             enumerator = miscNode.ChildElements.GetEnumerator();
             Assert.False(enumerator.MoveNext());
         }
