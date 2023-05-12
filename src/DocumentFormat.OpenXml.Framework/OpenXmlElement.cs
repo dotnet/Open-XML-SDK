@@ -6,6 +6,7 @@ using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Packaging;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
@@ -24,7 +25,7 @@ namespace DocumentFormat.OpenXml
     /// <remarks>
     /// Annotations will not be cloned when calling <see cref="Clone"/> and <see cref="CloneNode(bool)"/>.
     /// </remarks>
-    public abstract partial class OpenXmlElement : ICloneable
+    public abstract partial class OpenXmlElement : IEnumerable<OpenXmlElement>, ICloneable
     {
         private IFeatureCollection? _features;
 
@@ -1993,6 +1994,16 @@ namespace DocumentFormat.OpenXml
         public void RemoveAnnotations(Type type) => Features.GetRequired<AnnotationsFeature>().RemoveAnnotations(type);
 
         #endregion
+
+#pragma warning disable CA1033 // Interface methods should be callable by child types
+        /// <summary>
+        /// Returns an enumerator that iterates through the child collection.
+        /// </summary>
+        /// <returns>An IEnumerator object that can be used to iterate through the child collection. </returns>
+        IEnumerator<OpenXmlElement> IEnumerable<OpenXmlElement>.GetEnumerator() => ChildElements.GetEnumerator();
+
+        IEnumerator IEnumerable.GetEnumerator() => ChildElements.GetEnumerator();
+#pragma warning restore CA1033 // Interface methods should be callable by child types
 
         #region ICloneable Members
 

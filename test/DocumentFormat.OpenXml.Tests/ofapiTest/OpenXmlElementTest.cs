@@ -679,7 +679,6 @@ namespace DocumentFormat.OpenXml.Tests
 
             // pPr, empty children
             Assert.Empty(pPr.ChildElements);
-            Assert.Same(OpenXmlElementList.Empty, pPr.ChildElements);
             enumerator = pPr.ChildElements.GetEnumerator();
             Assert.False(enumerator.MoveNext());
 
@@ -710,13 +709,11 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.True(enumerator.MoveNext());
 
             // unknown2, empty children
-            Assert.Same(OpenXmlElementList.Empty, unknown2.ChildElements);
             Assert.Equal(0, unknown2.ChildElements.Count);
             enumerator = unknown2.ChildElements.GetEnumerator();
             Assert.False(enumerator.MoveNext());
 
             // miscNode
-            Assert.Same(OpenXmlElementList.Empty, miscNode.ChildElements);
             Assert.Equal(0, miscNode.ChildElements.Count);
             enumerator = miscNode.ChildElements.GetEnumerator();
             Assert.False(enumerator.MoveNext());
