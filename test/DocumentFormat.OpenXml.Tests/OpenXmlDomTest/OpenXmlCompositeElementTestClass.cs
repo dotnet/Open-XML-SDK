@@ -66,9 +66,7 @@ namespace DocumentFormat.OpenXml.Tests
                 var part = package.DescendantParts().Where(p => p.IsReflectable()).FirstOrDefault();
                 var dom = part.RootElement;
                 var e1 = dom.Descendants().Where(d => !d.HasChildren).PickSecond();
-                Assert.NotNull(e1.ChildElements);
                 var e2 = dom.Descendants().Where(d => !d.HasChildren).PickFirst(d => d != e1);
-                Assert.NotNull(e2.ChildElements);
                 Assert.Equal(e1.ChildElements, e2.ChildElements);
             }
         }
