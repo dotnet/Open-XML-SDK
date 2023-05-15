@@ -95,6 +95,21 @@ public readonly record struct OpenXmlElementList :
         return default;
     }
 
+    /// <inheritdoc/>
+    public bool Equals(OpenXmlElementList other)
+    {
+        if (ReferenceEquals(other._container, _container))
+        {
+            return true;
+        }
+
+        // Lists are equal if both elements have no children
+        return !other._container.HasChildren && !_container.HasChildren;
+    }
+
+    /// <inheritdoc/>
+    public override int GetHashCode() => _container.HasChildren ? _container.GetHashCode() : Array.Empty<OpenXmlElement>().GetHashCode();
+
     IEnumerator<OpenXmlElement> IEnumerable<OpenXmlElement>.GetEnumerator() => GetEnumerator();
 
     IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
@@ -105,16 +120,18 @@ public readonly record struct OpenXmlElementList :
     public struct Enumerator : IEnumerator<OpenXmlElement>
     {
         private OpenXmlElement? _element;
+        private OpenXmlElement? _current;
 
         internal Enumerator(OpenXmlElement element)
         {
-            _element = element.FirstChild;
+            _element = element;
+            _current = null;
         }
 
         /// <summary>
         /// Gets the current <see cref="OpenXmlElement"/> for the enumerator.
         /// </summary>
-        public OpenXmlElement Current => _element!;
+        public OpenXmlElement Current => _current!;
 
         object IEnumerator.Current => Current;
 
@@ -124,13 +141,17 @@ public readonly record struct OpenXmlElementList :
         /// <returns><c>true</c> if it was moved, <c>false</c> otherwise.</returns>
         public bool MoveNext()
         {
-            if (_element is null)
+            if (_current is not null)
             {
-                return false;
+                _current = _current.NextSibling();
+            }
+            else if (_element is not null)
+            {
+                _current = _element.FirstChild;
+                _element = null;
             }
 
-            _element = _element.NextSibling();
-            return true;
+            return _current is not null;
         }
 
         void IDisposable.Dispose()
