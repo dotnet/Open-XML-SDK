@@ -48,7 +48,7 @@ steps:
   # Run the signing command
   - pwsh: |
       .\sign code azure-key-vault `
-      '*.nupkg'
+      '*.nupkg' `
       --base-directory  '$(Pipeline.Workspace)\unsigned\raw' `
       --publisher-name "Microsoft" `
       --description "DocumentFormat.OpenXml DLL Signing" `
