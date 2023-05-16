@@ -30,7 +30,6 @@ steps:
       .\sign code azure-key-vault `
       '**\DocumentFormat.OpenXml*.dll' `
       --base-directory  '$(Pipeline.Workspace)\unsigned\raw' `
-      # --file-list "$(Pipeline.Workspace)\config\filelist.txt" `
       --publisher-name "Microsoft" `
       --description "DocumentFormat.OpenXml DLL Signing" `
       --description-url "https://github.com/dotnet/sign" `
@@ -51,7 +50,6 @@ steps:
       .\sign code azure-key-vault `
       '*.nupkg'
       --base-directory  '$(Pipeline.Workspace)\unsigned\raw' `
-      # --file-list "$(Pipeline.Workspace)\config\filelist.txt" `
       --publisher-name "Microsoft" `
       --description "DocumentFormat.OpenXml DLL Signing" `
       --description-url "https://github.com/dotnet/sign" `
