@@ -2,14 +2,17 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using System.Collections.ObjectModel;
+using System.Runtime.CompilerServices;
 
 namespace DocumentFormat.OpenXml.Framework
 {
     internal static class Cached
     {
 #if !NET35 && !NET40
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static T[] Array<T>() => System.Array.Empty<T>();
 #else
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static T[] Array<T>() => EmptyArray<T>.Value;
 
         private static class EmptyArray<T>
@@ -18,6 +21,7 @@ namespace DocumentFormat.OpenXml.Framework
         }
 #endif
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ReadOnlyCollection<T> ReadOnlyCollection<T>() => ReadOnlyCollectionCache<T>.Value;
 
         private static class ReadOnlyCollectionCache<T>

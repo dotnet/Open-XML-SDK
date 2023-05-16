@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Framework;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -108,7 +109,7 @@ public readonly record struct OpenXmlElementList :
     }
 
     /// <inheritdoc/>
-    public override int GetHashCode() => _container.HasChildren ? _container.GetHashCode() : Array.Empty<OpenXmlElement>().GetHashCode();
+    public override int GetHashCode() => _container.HasChildren ? _container.GetHashCode() : Cached.Array<OpenXmlElement>().GetHashCode();
 
     IEnumerator<OpenXmlElement> IEnumerable<OpenXmlElement>.GetEnumerator() => GetEnumerator();
 
