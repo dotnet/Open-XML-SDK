@@ -51,12 +51,14 @@ stages:
                   name: 'linux'
 
   - stage: Sign
+    dependsOn: Build
+    condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
     jobs:
     - job: Sign
       displayName: Sign assemblies and package
       pool:
         vmImage: 'windows-latest'
+      variables:
+        - group: OpenXML SDK DNF Signing Credentials
       steps:
         - template: sign.yml
-    dependsOn: Build
-    condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))

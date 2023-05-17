@@ -13,80 +13,52 @@ steps:
     workingDirectory: '$(Pipeline.Workspace)/unsigned'
 
   - task: UseDotNet@2
-    displayName: 'Install .NET Core 2.1 for signing'
+    displayName: 'Use .NET SDK 6.x for DNF Signing'
     inputs:
-      packageType: 'sdk'
-      version: 2.1.818
+      version: 6.x
 
-  - task: SFP.build-tasks.custom-build-task-1.EsrpCodeSigning@1
-    displayName: 'OpenXML SDK Assembly ESRP CodeSigning'
+  # Install the code signing tool
+  - task: DotNetCoreCLI@2
     inputs:
-      ConnectedServiceName: 'Open-XML-SDK-ESRP-2023'
-      FolderPath: '$(Pipeline.Workspace)\unsigned\raw'
-      Pattern: '**\DocumentFormat.OpenXml*.dll'
-      UseMinimatch: true
-      signConfigType: inlineSignParams
-      inlineOperation: |
-        [
-          {
-            "keyCode": "CP-230012",
-            "operationSetCode": "SigntoolSign",
-            "parameters": [
-              {
-                "parameterName": "OpusName",
-                "parameterValue": "Microsoft"
-              },
-              {
-                "parameterName": "OpusInfo",
-                "parameterValue": "http://www.microsoft.com"
-              },
-              {
-                "parameterName": "PageHash",
-                "parameterValue": "/NPH"
-              },
-              {
-                "parameterName": "FileDigest",
-                "parameterValue": "/fd sha256"
-              },
-              {
-                "parameterName": "TimeStamp",
-                "parameterValue": "/tr \"http://rfc3161.gtm.corp.microsoft.com/TSS/HttpTspServer\" /td sha256"
-              }
-            ],
-            "toolName": "signtool.exe",
-            "toolVersion": "6.2.9304.0"
-          }
-        ]
+      command: custom
+      custom: tool
+      arguments: install --tool-path . sign --version 0.9.0-beta.23127.3
+    displayName: Install SignTool tool
+
+  # Run the signing command
+  - pwsh: |
+      .\sign code azure-key-vault `
+      '**\DocumentFormat.OpenXml*.dll' `
+      --base-directory  '$(Pipeline.Workspace)\unsigned\raw' `
+      --publisher-name "Microsoft" `
+      --description "DocumentFormat.OpenXml DLL Signing" `
+      --description-url "https://github.com/dotnet/sign" `
+      --azure-key-vault-tenant-id "$(SignTenantId)" `
+      --azure-key-vault-client-id "$(SignClientId)" `
+      --azure-key-vault-client-secret '$(SignClientSecret)' `
+      --azure-key-vault-certificate "$(SignKeyVaultCertificate)" `
+      --azure-key-vault-url "$(SignKeyVaultUrl)"
+    displayName: Sign packages
 
   - pwsh: |
       gci -r CodeSignSummary | rm
       gci -Directory | % { [IO.Compression.ZipFile]::CreateFromDirectory($_, "$_.nupkg") }
     workingDirectory: '$(Pipeline.Workspace)/unsigned/raw'
 
-  - task: SFP.build-tasks.custom-build-task-1.EsrpCodeSigning@1
-    displayName: 'OpenXML SDK Nuget Pkg ESRP CodeSigning'
-    inputs:
-      ConnectedServiceName: 'Open-XML-SDK-ESRP-2023'
-      FolderPath: '$(Pipeline.Workspace)/unsigned/raw'
-      Pattern: '*.nupkg'
-      signConfigType: inlineSignParams
-      inlineOperation: |
-        [
-            {
-                "keyCode": "CP-401405",
-                "operationSetCode": "NuGetSign",
-                "parameters": [ ],
-                "toolName": "sign",
-                "toolVersion": "1.0"
-            },
-            {
-                "keyCode": "CP-401405",
-                "operationSetCode": "NuGetVerify",
-                "parameters": [ ],
-                "toolName": "sign",
-                "toolVersion": "1.0"
-            }
-        ]
+  # Run the signing command
+  - pwsh: |
+      .\sign code azure-key-vault `
+      '*.nupkg' `
+      --base-directory  '$(Pipeline.Workspace)\unsigned\raw' `
+      --publisher-name "Microsoft" `
+      --description "DocumentFormat.OpenXml DLL Signing" `
+      --description-url "https://github.com/dotnet/sign" `
+      --azure-key-vault-tenant-id "$(SignTenantId)" `
+      --azure-key-vault-client-id "$(SignClientId)" `
+      --azure-key-vault-client-secret '$(SignClientSecret)' `
+      --azure-key-vault-certificate "$(SignKeyVaultCertificate)" `
+      --azure-key-vault-url "$(SignKeyVaultUrl)"
+    displayName: Sign packages
 
   - task: CopyFiles@2
     inputs:
