@@ -7,5 +7,5 @@ namespace DocumentFormat.OpenXml.Generator;
 
 public interface IFeatureImplementationBuilder
 {
-    void AddFeature(string name, Func<OpenXmlGeneratorContext, bool> isApplicable, Action<IndentedTextWriter, OpenXmlGeneratorContext> action);
+    IFeatureImplementationBuilder AddFeature(string name, Func<OpenXmlGeneratorContext, bool> isApplicable, Action<IndentedTextWriter, OpenXmlGeneratorContext> action);
 }
