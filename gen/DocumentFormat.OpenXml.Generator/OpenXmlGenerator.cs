@@ -5,7 +5,6 @@ using DocumentFormat.OpenXml.Generator.Editor;
 using DocumentFormat.OpenXml.Generator.Models;
 using DocumentFormat.OpenXml.Generator.NamespaceGeneration;
 using Microsoft.CodeAnalysis;
-using System.CodeDom.Compiler;
 using System.Collections.Immutable;
 
 namespace DocumentFormat.OpenXml.Generator;
@@ -69,7 +68,7 @@ public class OpenXmlGenerator : IIncrementalGenerator
             {
                 writer.WriteLine("private readonly Dictionary<OpenXmlQualifiedName, Func<OpenXmlElement>> _factory = new ()");
 
-                using (writer.AddBlock(new() { IncludeSemiColon = true }))
+                IEnumerable<SchemaType> GetRootElements()
                 {
                     foreach (var model in context.Services.DataSource.Namespaces)
                     {
@@ -77,7 +76,23 @@ public class OpenXmlGenerator : IIncrementalGenerator
                         {
                             if (type.IsRootElement)
                             {
+                                yield return type;
+                            }
+                        }
+                    }
+                }
+
+                using (writer.AddBlock(new() { IncludeSemiColon = true }))
+                {
+                    foreach (var type in GetRootElements().OrderBy(t => t.Part).ThenBy(t => t.Name))
+                    {
                                 var className = context.Services.FindClassName(type.Name, fullyQualified: true);
+
+                        if (!string.IsNullOrEmpty(type.Part))
+                        {
+                            writer.Write("// ");
+                            writer.WriteLine(type.Part);
+                        }
 
                                 writer.Write("{ new OpenXmlQualifiedName(");
                                 writer.WriteString(context.Services.GetNamespaceInfo(type.Name.QName.Prefix).Uri);
@@ -88,8 +103,6 @@ public class OpenXmlGenerator : IIncrementalGenerator
                                 writer.WriteLine("() },");
                             }
                         }
-                    }
-                }
 
                 writer.WriteLine();
 

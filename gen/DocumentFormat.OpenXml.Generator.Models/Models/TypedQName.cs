@@ -3,7 +3,7 @@
 
 namespace DocumentFormat.OpenXml.Generator.Models;
 
-public sealed record class TypedQName
+public sealed record class TypedQName : IComparable<TypedQName>
 {
     public TypedQName(QName type, QName name)
     {
@@ -14,6 +14,18 @@ public sealed record class TypedQName
     public QName Type { get; }
 
     public QName QName { get; }
+
+    public int CompareTo(TypedQName other)
+    {
+        var first = Type.CompareTo(other.Type);
+
+        if (first != 0)
+        {
+            return first;
+        }
+
+        return QName.CompareTo(other.QName);
+    }
 
     public override string ToString() => $"{Type}/{QName}";
 }
