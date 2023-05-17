@@ -61,4 +61,4 @@ stages:
       variables:
         - group: OpenXML SDK DNF Signing Credentials
       steps:
-        - template: dnfsign.yml
+        - template: sign.yml
