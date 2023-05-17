@@ -304,7 +304,7 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Gets all the child nodes of the current element.
         /// </summary>
-        public virtual OpenXmlElementList ChildElements => HasChildren ? new OpenXmlChildElements(this) : OpenXmlElementList.Empty;
+        public OpenXmlElementList ChildElements => new(this);
 
         /// <summary>
         /// Gets the parent element of the current element.
@@ -1995,21 +1995,15 @@ namespace DocumentFormat.OpenXml
 
         #endregion
 
-        #region IEnumerable<OpenXmlElement> Members
-
+#pragma warning disable CA1033 // Interface methods should be callable by child types
         /// <summary>
         /// Returns an enumerator that iterates through the child collection.
         /// </summary>
         /// <returns>An IEnumerator object that can be used to iterate through the child collection. </returns>
-        public IEnumerator<OpenXmlElement> GetEnumerator() => new OpenXmlChildElements(this).GetEnumerator();
+        IEnumerator<OpenXmlElement> IEnumerable<OpenXmlElement>.GetEnumerator() => ChildElements.GetEnumerator();
 
-        #endregion
-
-        #region IEnumerable Members
-
-        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() => new OpenXmlChildElements(this).GetEnumerator();
-
-        #endregion
+        IEnumerator IEnumerable.GetEnumerator() => ChildElements.GetEnumerator();
+#pragma warning restore CA1033 // Interface methods should be callable by child types
 
         #region ICloneable Members
 

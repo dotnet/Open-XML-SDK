@@ -1,113 +1,167 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Framework;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 
-namespace DocumentFormat.OpenXml
+namespace DocumentFormat.OpenXml;
+
+/// <summary>
+/// A struct that helps enumerate the child elements of an <see cref="OpenXmlElement"/>
+/// </summary>
+public readonly record struct OpenXmlElementList :
+#if NET46 || NETCOREAPP || NETSTANDARD
+    IReadOnlyList<OpenXmlElement>,
+#endif
+    IEnumerable<OpenXmlElement>
 {
+    private readonly OpenXmlElement _container;
+
     /// <summary>
-    /// Represents an ordered collection of OpenXmlElement elements.
+    /// Creates an instance of <see cref="OpenXmlElementList"/>.
     /// </summary>
-    public abstract class OpenXmlElementList : IEnumerable<OpenXmlElement>
+    /// <param name="container"></param>
+    public OpenXmlElementList(OpenXmlElement container)
     {
-        /// <summary>
-        /// Initializes a new instance of the OpenXmlElementList class.
-        /// </summary>
-        protected OpenXmlElementList()
+        _container = container;
+    }
+
+    /// <summary>
+    /// Gets a node at the specified index.
+    /// </summary>
+    /// <param name="index">Index to retrieve the element.</param>
+    /// <returns>The element if found.</returns>
+    public OpenXmlElement this[int index]
+    {
+        get
         {
-        }
-
-        internal static OpenXmlElementList Empty { get; } = new EmptyElementList();
-
-        /// <summary>
-        /// Gets the OpenXmlElement element at the specified index.
-        /// </summary>
-        /// <param name="index">
-        /// A zero-based integer that represents an index in the list of elements.
-        /// </param>
-        /// <returns>
-        /// An OpenXmlElement element at the specified index in the collection. Returns
-        ///  null (Nothing in Visual Basic) if the index is greater than or equal
-        ///  to the number of elements in the list.
-        /// </returns>
-        public abstract OpenXmlElement GetItem(int index);
-
-        /// <summary>
-        /// Gets the number of OpenXmlElement elements in the OpenXmlElementList.
-        /// </summary>
-        public abstract int Count { get; }
-
-        /// <summary>
-        /// Gets a node at the specified index.
-        /// </summary>
-        /// <param name="i"></param>
-        /// <returns></returns>
-        public virtual OpenXmlElement this[int i]
-        {
-            get
+            foreach (var item in this)
             {
-                return GetItem(i);
-            }
-        }
-
-        /// <summary>
-        /// Finds the first child element of type T.
-        /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <returns></returns>
-        public T? First<T>()
-            where T : OpenXmlElement
-        {
-            foreach (OpenXmlElement item in this)
-            {
-                if (item is T element)
+                if (index == 0)
                 {
-                    return element;
+                    return item;
+                }
+
+                index--;
+            }
+
+            throw new ArgumentOutOfRangeException(nameof(index));
+        }
+    }
+
+    /// <summary>
+    /// Gets the number of children the element has.
+    /// </summary>
+    public int Count
+    {
+        get
+        {
+            int num = 0;
+            if (_container.HasChildren)
+            {
+                for (var element = _container.FirstChild; element is not null; element = element.NextSibling())
+                {
+                    num++;
                 }
             }
 
-            return null;
+            return num;
+        }
+    }
+
+    /// <summary>
+    /// Gets an <see cref="Enumerator"/> for the collection.
+    /// </summary>
+    /// <returns>The enumerator.</returns>
+    public Enumerator GetEnumerator() => new(_container);
+
+    /// <summary>
+    /// Gets the first item of type <typeparamref name="T"/> in the children.
+    /// </summary>
+    /// <typeparam name="T">Type to search for.</typeparam>
+    /// <returns>First instance if found.</returns>
+    public T? First<T>()
+        where T : OpenXmlElement
+    {
+        foreach (var item in this)
+        {
+            if (item is T t)
+            {
+                return t;
+            }
+        }
+
+        return default;
+    }
+
+    /// <inheritdoc/>
+    public bool Equals(OpenXmlElementList other)
+    {
+        if (ReferenceEquals(other._container, _container))
+        {
+            return true;
+        }
+
+        // Lists are equal if both elements have no children
+        return !other._container.HasChildren && !_container.HasChildren;
+    }
+
+    /// <inheritdoc/>
+    public override int GetHashCode() => _container.HasChildren ? _container.GetHashCode() : Cached.Array<OpenXmlElement>().GetHashCode();
+
+    IEnumerator<OpenXmlElement> IEnumerable<OpenXmlElement>.GetEnumerator() => GetEnumerator();
+
+    IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+
+    /// <summary>
+    /// An enumerator used for <see cref="OpenXmlElementList"/>.
+    /// </summary>
+    public struct Enumerator : IEnumerator<OpenXmlElement>
+    {
+        private OpenXmlElement? _element;
+        private OpenXmlElement? _current;
+
+        internal Enumerator(OpenXmlElement element)
+        {
+            _element = element;
+            _current = null;
         }
 
         /// <summary>
-        /// Gets an IEnumerable for a specific type of element.
+        /// Gets the current <see cref="OpenXmlElement"/> for the enumerator.
         /// </summary>
-        /// <typeparam name="T">Type of element</typeparam>
-        /// <returns></returns>
-        public IEnumerable<T> OfType<T>()
-            where T : OpenXmlElement
-        {
-            foreach (OpenXmlElement item in this)
-            {
-                if (item is T t)
-                {
-                    yield return t;
-                }
-            }
-        }
+        public OpenXmlElement Current => _current!;
+
+        object IEnumerator.Current => Current;
 
         /// <summary>
-        /// Gets an enumerator that iterates through the collection.
+        /// Moves the enumerator forward.
         /// </summary>
-        /// <returns>An IEnumerator object that can be used to iterate through the collection. </returns>
-        public abstract IEnumerator<OpenXmlElement> GetEnumerator();
-
-        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() => GetEnumerator();
-
-        private sealed class EmptyElementList : OpenXmlElementList
+        /// <returns><c>true</c> if it was moved, <c>false</c> otherwise.</returns>
+        public bool MoveNext()
         {
-            public override OpenXmlElement GetItem(int index)
+            if (_current is not null)
             {
-                throw new ArgumentOutOfRangeException(nameof(index));
+                _current = _current.NextSibling();
+            }
+            else if (_element is not null)
+            {
+                _current = _element.FirstChild;
+                _element = null;
             }
 
-            public override int Count => 0;
+            return _current is not null;
+        }
 
-            public override IEnumerator<OpenXmlElement> GetEnumerator()
-            {
-                yield break;
-            }
+        void IDisposable.Dispose()
+        {
+        }
+
+        void IEnumerator.Reset()
+        {
+            throw new NotImplementedException();
         }
     }
 }

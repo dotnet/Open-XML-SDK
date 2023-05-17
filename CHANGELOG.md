@@ -36,6 +36,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - `IDisposableFeature` is now a part of the framework package and is available by default on a package or part.
 - Renamed PartExtensionProvider to IPartExtensionFeature and reduced its surface area to only two methods (instead of a full Dictionary<,>). The property to access this off of OpenXmlPackage has been removed, but may be accessed via `Features.Get<IPartExtensionFeature>()` if needed.
 - `OpenXmlPart`/`OpenXmlContainer`/`OpenXmlPackage` and derived types now have internal constructors (these had internal abstract methods so most likely weren't subclassed externally)
+- `OpenXmlElementList` is now a struct that implements `IEnumerable<OpenXmlElement>` and `IReadOnlyList<OpenXmlElement>` (where available)
 
 ## [2.20.0]
 
