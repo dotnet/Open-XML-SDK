@@ -26,13 +26,13 @@ public class OpenXmlGenerator : IIncrementalGenerator
 
                 using (writer.AddBlock(new() { IncludeSemiColon = true }))
                 {
-                    var parts = context.Services.GetParts(context.Properties["OpenXmlPackage"]);
+                    var parts = context.Services.GetParts(context.Properties["OpenXmlPackage"]).OrderBy(p => p.Name);
 
-                    foreach (var relationship in parts)
+                    foreach (var part in parts)
                     {
-                        writer.Write(relationship.Name);
+                        writer.Write(part.Name);
                         writer.Write(".RelationshipTypeConstant => new ");
-                        writer.Write(relationship.Name);
+                        writer.Write(part.Name);
                         writer.WriteLine("(),");
                     }
 
