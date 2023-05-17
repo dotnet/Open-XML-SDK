@@ -12,7 +12,6 @@ namespace DocumentFormat.OpenXml.Framework
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static T[] Array<T>() => System.Array.Empty<T>();
 #else
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static T[] Array<T>() => EmptyArray<T>.Value;
 
         private static class EmptyArray<T>
@@ -21,7 +20,6 @@ namespace DocumentFormat.OpenXml.Framework
         }
 #endif
 
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ReadOnlyCollection<T> ReadOnlyCollection<T>() => ReadOnlyCollectionCache<T>.Value;
 
         private static class ReadOnlyCollectionCache<T>
