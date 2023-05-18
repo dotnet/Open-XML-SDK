@@ -86,7 +86,7 @@ public class OpenXmlGenerator : IIncrementalGenerator
                 {
                     foreach (var type in GetRootElements().OrderBy(t => t.Part).ThenBy(t => t.Name))
                     {
-                                var className = context.Services.FindClassName(type.Name, fullyQualified: true);
+                        var className = context.Services.FindClassName(type.Name, fullyQualified: true);
 
                         if (!string.IsNullOrEmpty(type.Part))
                         {
@@ -94,15 +94,15 @@ public class OpenXmlGenerator : IIncrementalGenerator
                             writer.WriteLine(type.Part);
                         }
 
-                                writer.Write("{ new OpenXmlQualifiedName(");
-                                writer.WriteString(context.Services.GetNamespaceInfo(type.Name.QName.Prefix).Uri);
-                                writer.Write(", ");
-                                writer.WriteString(type.Name.QName.Name);
-                                writer.Write("), () => new ");
-                                writer.Write(className);
-                                writer.WriteLine("() },");
-                            }
-                        }
+                        writer.Write("{ new OpenXmlQualifiedName(");
+                        writer.WriteString(context.Services.GetNamespaceInfo(type.Name.QName.Prefix).Uri);
+                        writer.Write(", ");
+                        writer.WriteString(type.Name.QName.Name);
+                        writer.Write("), () => new ");
+                        writer.Write(className);
+                        writer.WriteLine("() },");
+                    }
+                }
 
                 writer.WriteLine();
 
