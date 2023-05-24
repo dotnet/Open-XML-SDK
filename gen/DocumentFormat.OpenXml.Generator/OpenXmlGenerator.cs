@@ -45,7 +45,9 @@ public class OpenXmlGenerator : IIncrementalGenerator
 
                 using (writer.AddBlock())
                 {
-                    foreach (var part in context.Services.DataSource.Parts)
+                    var parts = context.Services.GetParts(context.Properties["OpenXmlPackage"]).OrderBy(p => p.Name);
+
+                    foreach (var part in parts)
                     {
                         writer.Write("if (typeof(T) == typeof(");
                         writer.Write(part.Name);
@@ -82,25 +84,31 @@ public class OpenXmlGenerator : IIncrementalGenerator
                     }
                 }
 
+                var parts = context.Services.GetParts(context.Properties["OpenXmlPackage"]).Select(p => p.Name).ToImmutableHashSet();
+
                 using (writer.AddBlock(new() { IncludeSemiColon = true }))
                 {
                     foreach (var type in GetRootElements().OrderBy(t => t.Part).ThenBy(t => t.Name))
                     {
-                        var className = context.Services.FindClassName(type.Name, fullyQualified: true);
-
-                        if (!string.IsNullOrEmpty(type.Part))
+                        // TODO: Do we want to include elements that don't have a registered type?
+                        if (string.IsNullOrEmpty(type.Part) || parts.Contains(type.Part))
                         {
-                            writer.Write("// ");
-                            writer.WriteLine(type.Part);
-                        }
+                            var className = context.Services.FindClassName(type.Name, fullyQualified: true);
 
-                        writer.Write("{ new OpenXmlQualifiedName(");
-                        writer.WriteString(context.Services.GetNamespaceInfo(type.Name.QName.Prefix).Uri);
-                        writer.Write(", ");
-                        writer.WriteString(type.Name.QName.Name);
-                        writer.Write("), () => new ");
-                        writer.Write(className);
-                        writer.WriteLine("() },");
+                            if (!string.IsNullOrEmpty(type.Part))
+                            {
+                                writer.Write("// ");
+                                writer.WriteLine(type.Part);
+                            }
+
+                            writer.Write("{ new OpenXmlQualifiedName(");
+                            writer.WriteString(context.Services.GetNamespaceInfo(type.Name.QName.Prefix).Uri);
+                            writer.Write(", ");
+                            writer.WriteString(type.Name.QName.Name);
+                            writer.Write("), () => new ");
+                            writer.Write(className);
+                            writer.WriteLine("() },");
+                        }
                     }
                 }
 
