@@ -6,6 +6,7 @@ using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using System.CodeDom.Compiler;
+using System.Text;
 
 namespace DocumentFormat.OpenXml.Generator;
 
@@ -55,7 +56,12 @@ internal static class PackageGeneratorExtensions
 
         var namespaces = new[]
         {
+            "DocumentFormat.OpenXml",
             "DocumentFormat.OpenXml.Features",
+            "DocumentFormat.OpenXml.Framework",
+            "System",
+            "System.Collections.Generic",
+            "System.Diagnostics.CodeAnalysis",
         }.OrderBy(t => t).ToArray();
 
         context.RegisterSourceOutput(package.Combine(services), (context, data) =>
@@ -73,61 +79,64 @@ internal static class PackageGeneratorExtensions
 
             var features = builder.Build(gContext).ToList();
 
-            using var s = new StringWriter();
-            var writer = new IndentedTextWriter(s);
+            var sb = new StringBuilder();
+            var writer = new IndentedTextWriter(new StringWriter(sb));
 
-            writer.WriteFileHeader();
-
-            foreach (var n in namespaces)
+            foreach (var feature in features)
             {
-                writer.Write("using ");
-                writer.Write(n);
-                writer.WriteLine(";");
-            }
+                sb.Clear();
 
-            writer.Write("namespace ");
-            writer.Write(source.Namespace);
-            writer.WriteLine(";");
-            writer.WriteLine();
+                writer.WriteFileHeader();
 
-            var count = writer.Indent;
-
-            var c = source.Chain;
-
-            while (c is not null)
-            {
-                writer.Write("partial ");
-                writer.Write(c.Keyword);
-                writer.Write(' ');
-                writer.Write(c.Name);
-
-                if (c.Child is null)
+                foreach (var n in namespaces)
                 {
-                    writer.Write(" : ");
-                    writer.WriteJoin(",", features.Select(f => f.Name));
+                    writer.Write("using ");
+                    writer.Write(n);
+                    writer.WriteLine(";");
                 }
 
-                writer.Write(' ');
-                writer.WriteLine(c.Constraints);
-                writer.WriteLine("{");
+                writer.WriteLine();
+                writer.Write("namespace ");
+                writer.Write(source.Namespace);
+                writer.WriteLine(";");
+                writer.WriteLine();
 
-                writer.Indent++;
+                var count = writer.Indent;
 
-                c = c.Child;
+                var c = source.Chain;
+
+                while (c is not null)
+                {
+                    writer.Write("partial ");
+                    writer.Write(c.Keyword);
+                    writer.Write(' ');
+                    writer.Write(c.Name);
+
+                    if (c.Child is null)
+                    {
+                        writer.Write(" : ");
+                        writer.Write(feature.Name);
+                    }
+
+                    writer.Write(' ');
+                    writer.WriteLine(c.Constraints);
+                    writer.WriteLine("{");
+
+                    writer.Indent++;
+
+                    c = c.Child;
+                }
+
+                feature.Action(writer, gContext);
+
+                while (writer.Indent > count)
+                {
+                    writer.Indent--;
+                    writer.WriteLine("}");
+                }
+
+                context.AddSource($"Package_{source.PackageName}_{feature.Name}", sb.ToString());
             }
-
-            foreach (var action in features)
-            {
-                action.Action(writer, gContext);
-            }
-
-            while (writer.Indent > count)
-            {
-                writer.Indent--;
-                writer.WriteLine("}");
-            }
-
-            context.AddSource($"Package_{source.PackageName}", s.ToString());
         });
 
         return builder;
@@ -137,9 +146,10 @@ internal static class PackageGeneratorExtensions
     {
         private readonly List<(string, Func<OpenXmlGeneratorContext, bool>, Action<IndentedTextWriter, OpenXmlGeneratorContext>)> _list = new();
 
-        void IFeatureImplementationBuilder.AddFeature(string name, Func<OpenXmlGeneratorContext, bool> isApplicable, Action<IndentedTextWriter, OpenXmlGeneratorContext> action)
+        IFeatureImplementationBuilder IFeatureImplementationBuilder.AddFeature(string name, Func<OpenXmlGeneratorContext, bool> isApplicable, Action<IndentedTextWriter, OpenXmlGeneratorContext> action)
         {
             _list.Add((name, isApplicable, action));
+            return this;
         }
 
         public IEnumerable<(string Name, Action<IndentedTextWriter, OpenXmlGeneratorContext> Action)> Build(OpenXmlGeneratorContext context)
