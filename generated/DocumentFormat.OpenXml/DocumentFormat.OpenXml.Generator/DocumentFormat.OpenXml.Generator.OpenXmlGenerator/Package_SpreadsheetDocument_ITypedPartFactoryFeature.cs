@@ -20,11 +20,6 @@ partial class SpreadsheetDocument
     {
         T? ITypedPartFactoryFeature.Create<T>() where T : class
         {
-            if (typeof(T) == typeof(AlternativeFormatImportPart))
-            {
-                return (T)(object)new AlternativeFormatImportPart();
-            }
-            
             if (typeof(T) == typeof(CalculationChainPart))
             {
                 return (T)(object)new CalculationChainPart();
@@ -60,11 +55,6 @@ partial class SpreadsheetDocument
                 return (T)(object)new ChartStylePart();
             }
             
-            if (typeof(T) == typeof(CommentAuthorsPart))
-            {
-                return (T)(object)new CommentAuthorsPart();
-            }
-            
             if (typeof(T) == typeof(ConnectionsPart))
             {
                 return (T)(object)new ConnectionsPart();
@@ -93,11 +83,6 @@ partial class SpreadsheetDocument
             if (typeof(T) == typeof(CustomFilePropertiesPart))
             {
                 return (T)(object)new CustomFilePropertiesPart();
-            }
-            
-            if (typeof(T) == typeof(CustomizationPart))
-            {
-                return (T)(object)new CustomizationPart();
             }
             
             if (typeof(T) == typeof(CustomPropertyPart))
@@ -155,16 +140,6 @@ partial class SpreadsheetDocument
                 return (T)(object)new DigitalSignatureOriginPart();
             }
             
-            if (typeof(T) == typeof(DocumentSettingsPart))
-            {
-                return (T)(object)new DocumentSettingsPart();
-            }
-            
-            if (typeof(T) == typeof(DocumentTasksPart))
-            {
-                return (T)(object)new DocumentTasksPart();
-            }
-            
             if (typeof(T) == typeof(DrawingsPart))
             {
                 return (T)(object)new DrawingsPart();
@@ -190,11 +165,6 @@ partial class SpreadsheetDocument
                 return (T)(object)new EmbeddedPackagePart();
             }
             
-            if (typeof(T) == typeof(EndnotesPart))
-            {
-                return (T)(object)new EndnotesPart();
-            }
-            
             if (typeof(T) == typeof(ExcelAttachedToolbarsPart))
             {
                 return (T)(object)new ExcelAttachedToolbarsPart();
@@ -215,41 +185,6 @@ partial class SpreadsheetDocument
                 return (T)(object)new ExternalWorkbookPart();
             }
             
-            if (typeof(T) == typeof(FontPart))
-            {
-                return (T)(object)new FontPart();
-            }
-            
-            if (typeof(T) == typeof(FontTablePart))
-            {
-                return (T)(object)new FontTablePart();
-            }
-            
-            if (typeof(T) == typeof(FooterPart))
-            {
-                return (T)(object)new FooterPart();
-            }
-            
-            if (typeof(T) == typeof(FootnotesPart))
-            {
-                return (T)(object)new FootnotesPart();
-            }
-            
-            if (typeof(T) == typeof(GlossaryDocumentPart))
-            {
-                return (T)(object)new GlossaryDocumentPart();
-            }
-            
-            if (typeof(T) == typeof(HandoutMasterPart))
-            {
-                return (T)(object)new HandoutMasterPart();
-            }
-            
-            if (typeof(T) == typeof(HeaderPart))
-            {
-                return (T)(object)new HeaderPart();
-            }
-            
             if (typeof(T) == typeof(ImagePart))
             {
                 return (T)(object)new ImagePart();
@@ -265,11 +200,6 @@ partial class SpreadsheetDocument
                 return (T)(object)new LabelInfoPart();
             }
             
-            if (typeof(T) == typeof(LegacyDiagramTextInfoPart))
-            {
-                return (T)(object)new LegacyDiagramTextInfoPart();
-            }
-            
             if (typeof(T) == typeof(LegacyDiagramTextPart))
             {
                 return (T)(object)new LegacyDiagramTextPart();
@@ -278,16 +208,6 @@ partial class SpreadsheetDocument
             if (typeof(T) == typeof(MacroSheetPart))
             {
                 return (T)(object)new MacroSheetPart();
-            }
-            
-            if (typeof(T) == typeof(MailMergeRecipientDataPart))
-            {
-                return (T)(object)new MailMergeRecipientDataPart();
-            }
-            
-            if (typeof(T) == typeof(MainDocumentPart))
-            {
-                return (T)(object)new MainDocumentPart();
             }
             
             if (typeof(T) == typeof(Model3DReferenceRelationshipPart))
@@ -310,11 +230,6 @@ partial class SpreadsheetDocument
                 return (T)(object)new NotesSlidePart();
             }
             
-            if (typeof(T) == typeof(NumberingDefinitionsPart))
-            {
-                return (T)(object)new NumberingDefinitionsPart();
-            }
-            
             if (typeof(T) == typeof(PivotTableCacheDefinitionPart))
             {
                 return (T)(object)new PivotTableCacheDefinitionPart();
@@ -330,24 +245,9 @@ partial class SpreadsheetDocument
                 return (T)(object)new PivotTablePart();
             }
             
-            if (typeof(T) == typeof(PowerPointAuthorsPart))
-            {
-                return (T)(object)new PowerPointAuthorsPart();
-            }
-            
             if (typeof(T) == typeof(PowerPointCommentPart))
             {
                 return (T)(object)new PowerPointCommentPart();
-            }
-            
-            if (typeof(T) == typeof(PresentationPart))
-            {
-                return (T)(object)new PresentationPart();
-            }
-            
-            if (typeof(T) == typeof(PresentationPropertiesPart))
-            {
-                return (T)(object)new PresentationPropertiesPart();
             }
             
             if (typeof(T) == typeof(QueryTablePart))
@@ -430,11 +330,6 @@ partial class SpreadsheetDocument
                 return (T)(object)new SlicersPart();
             }
             
-            if (typeof(T) == typeof(SlideCommentsPart))
-            {
-                return (T)(object)new SlideCommentsPart();
-            }
-            
             if (typeof(T) == typeof(SlideLayoutPart))
             {
                 return (T)(object)new SlideLayoutPart();
@@ -460,24 +355,9 @@ partial class SpreadsheetDocument
                 return (T)(object)new SpreadsheetPrinterSettingsPart();
             }
             
-            if (typeof(T) == typeof(StyleDefinitionsPart))
-            {
-                return (T)(object)new StyleDefinitionsPart();
-            }
-            
-            if (typeof(T) == typeof(StylesWithEffectsPart))
-            {
-                return (T)(object)new StylesWithEffectsPart();
-            }
-            
             if (typeof(T) == typeof(TableDefinitionPart))
             {
                 return (T)(object)new TableDefinitionPart();
-            }
-            
-            if (typeof(T) == typeof(TableStylesPart))
-            {
-                return (T)(object)new TableStylesPart();
             }
             
             if (typeof(T) == typeof(ThemeOverridePart))
@@ -520,11 +400,6 @@ partial class SpreadsheetDocument
                 return (T)(object)new VbaProjectPart();
             }
             
-            if (typeof(T) == typeof(ViewPropertiesPart))
-            {
-                return (T)(object)new ViewPropertiesPart();
-            }
-            
             if (typeof(T) == typeof(VmlDrawingPart))
             {
                 return (T)(object)new VmlDrawingPart();
@@ -543,46 +418,6 @@ partial class SpreadsheetDocument
             if (typeof(T) == typeof(WebExtensionPart))
             {
                 return (T)(object)new WebExtensionPart();
-            }
-            
-            if (typeof(T) == typeof(WebSettingsPart))
-            {
-                return (T)(object)new WebSettingsPart();
-            }
-            
-            if (typeof(T) == typeof(WordAttachedToolbarsPart))
-            {
-                return (T)(object)new WordAttachedToolbarsPart();
-            }
-            
-            if (typeof(T) == typeof(WordCommentsExtensiblePart))
-            {
-                return (T)(object)new WordCommentsExtensiblePart();
-            }
-            
-            if (typeof(T) == typeof(WordprocessingCommentsExPart))
-            {
-                return (T)(object)new WordprocessingCommentsExPart();
-            }
-            
-            if (typeof(T) == typeof(WordprocessingCommentsIdsPart))
-            {
-                return (T)(object)new WordprocessingCommentsIdsPart();
-            }
-            
-            if (typeof(T) == typeof(WordprocessingCommentsPart))
-            {
-                return (T)(object)new WordprocessingCommentsPart();
-            }
-            
-            if (typeof(T) == typeof(WordprocessingPeoplePart))
-            {
-                return (T)(object)new WordprocessingPeoplePart();
-            }
-            
-            if (typeof(T) == typeof(WordprocessingPrinterSettingsPart))
-            {
-                return (T)(object)new WordprocessingPrinterSettingsPart();
             }
             
             if (typeof(T) == typeof(WorkbookPart))

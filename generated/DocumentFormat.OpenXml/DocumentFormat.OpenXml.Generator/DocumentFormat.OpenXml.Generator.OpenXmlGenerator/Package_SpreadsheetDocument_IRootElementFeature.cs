@@ -41,8 +41,6 @@ partial class SpreadsheetDocument
             { new OpenXmlQualifiedName("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "chartsheet"), () => new DocumentFormat.OpenXml.Spreadsheet.Chartsheet() },
             // ChartStylePart
             { new OpenXmlQualifiedName("http://schemas.microsoft.com/office/drawing/2012/chartStyle", "chartStyle"), () => new DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.ChartStyle() },
-            // CommentAuthorsPart
-            { new OpenXmlQualifiedName("http://schemas.openxmlformats.org/presentationml/2006/main", "cmAuthorLst"), () => new DocumentFormat.OpenXml.Presentation.CommentAuthorList() },
             // ConnectionsPart
             { new OpenXmlQualifiedName("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "connections"), () => new DocumentFormat.OpenXml.Spreadsheet.Connections() },
             // ControlPropertiesPart
@@ -51,8 +49,6 @@ partial class SpreadsheetDocument
             { new OpenXmlQualifiedName("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "datastoreItem"), () => new DocumentFormat.OpenXml.Office2010.Excel.DatastoreItem() },
             // CustomFilePropertiesPart
             { new OpenXmlQualifiedName("http://schemas.openxmlformats.org/officeDocument/2006/custom-properties", "Properties"), () => new DocumentFormat.OpenXml.CustomProperties.Properties() },
-            // CustomizationPart
-            { new OpenXmlQualifiedName("http://schemas.microsoft.com/office/word/2006/wordml", "tcg"), () => new DocumentFormat.OpenXml.Office.Word.TemplateCommandGroup() },
             // CustomXmlMappingsPart
             { new OpenXmlQualifiedName("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "MapInfo"), () => new DocumentFormat.OpenXml.Spreadsheet.MapInfo() },
             // CustomXmlPropertiesPart
@@ -69,60 +65,32 @@ partial class SpreadsheetDocument
             { new OpenXmlQualifiedName("http://schemas.openxmlformats.org/drawingml/2006/diagram", "styleDef"), () => new DocumentFormat.OpenXml.Drawing.Diagrams.StyleDefinition() },
             // DialogsheetPart
             { new OpenXmlQualifiedName("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "dialogsheet"), () => new DocumentFormat.OpenXml.Spreadsheet.DialogSheet() },
-            // DocumentSettingsPart
-            { new OpenXmlQualifiedName("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "settings"), () => new DocumentFormat.OpenXml.Wordprocessing.Settings() },
-            // DocumentTasksPart
-            { new OpenXmlQualifiedName("http://schemas.microsoft.com/office/tasks/2019/documenttasks", "Tasks"), () => new DocumentFormat.OpenXml.Office2021.DocumentTasks.Tasks() },
             // DrawingsPart
             { new OpenXmlQualifiedName("http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing", "wsDr"), () => new DocumentFormat.OpenXml.Drawing.Spreadsheet.WorksheetDrawing() },
-            // EndnotesPart
-            { new OpenXmlQualifiedName("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "endnotes"), () => new DocumentFormat.OpenXml.Wordprocessing.Endnotes() },
             // ExtendedChartPart
             { new OpenXmlQualifiedName("http://schemas.microsoft.com/office/drawing/2014/chartex", "chartSpace"), () => new DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ChartSpace() },
             // ExtendedFilePropertiesPart
             { new OpenXmlQualifiedName("http://schemas.openxmlformats.org/officeDocument/2006/extended-properties", "Properties"), () => new DocumentFormat.OpenXml.ExtendedProperties.Properties() },
             // ExternalWorkbookPart
             { new OpenXmlQualifiedName("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "externalLink"), () => new DocumentFormat.OpenXml.Spreadsheet.ExternalLink() },
-            // FontTablePart
-            { new OpenXmlQualifiedName("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "fonts"), () => new DocumentFormat.OpenXml.Wordprocessing.Fonts() },
-            // FooterPart
-            { new OpenXmlQualifiedName("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "ftr"), () => new DocumentFormat.OpenXml.Wordprocessing.Footer() },
-            // FootnotesPart
-            { new OpenXmlQualifiedName("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "footnotes"), () => new DocumentFormat.OpenXml.Wordprocessing.Footnotes() },
-            // GlossaryDocumentPart
-            { new OpenXmlQualifiedName("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "glossaryDocument"), () => new DocumentFormat.OpenXml.Wordprocessing.GlossaryDocument() },
-            // HandoutMasterPart
-            { new OpenXmlQualifiedName("http://schemas.openxmlformats.org/presentationml/2006/main", "handoutMaster"), () => new DocumentFormat.OpenXml.Presentation.HandoutMaster() },
-            // HeaderPart
-            { new OpenXmlQualifiedName("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "hdr"), () => new DocumentFormat.OpenXml.Wordprocessing.Header() },
             // LabelInfoPart
             { new OpenXmlQualifiedName("http://schemas.microsoft.com/office/2020/mipLabelMetadata", "labelList"), () => new DocumentFormat.OpenXml.Office2021.MipLabelMetaData.ClassificationLabelList() },
             // MacroSheetPart
             { new OpenXmlQualifiedName("http://schemas.microsoft.com/office/excel/2006/main", "macrosheet"), () => new DocumentFormat.OpenXml.Office.Excel.Macrosheet() },
-            // MainDocumentPart
-            { new OpenXmlQualifiedName("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "document"), () => new DocumentFormat.OpenXml.Wordprocessing.Document() },
             // NamedSheetViewsPart
             { new OpenXmlQualifiedName("http://schemas.microsoft.com/office/spreadsheetml/2019/namedsheetviews", "namedSheetViews"), () => new DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.NamedSheetViews() },
             // NotesMasterPart
             { new OpenXmlQualifiedName("http://schemas.openxmlformats.org/presentationml/2006/main", "notesMaster"), () => new DocumentFormat.OpenXml.Presentation.NotesMaster() },
             // NotesSlidePart
             { new OpenXmlQualifiedName("http://schemas.openxmlformats.org/presentationml/2006/main", "notes"), () => new DocumentFormat.OpenXml.Presentation.NotesSlide() },
-            // NumberingDefinitionsPart
-            { new OpenXmlQualifiedName("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "numbering"), () => new DocumentFormat.OpenXml.Wordprocessing.Numbering() },
             // PivotTableCacheDefinitionPart
             { new OpenXmlQualifiedName("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pivotCacheDefinition"), () => new DocumentFormat.OpenXml.Spreadsheet.PivotCacheDefinition() },
             // PivotTableCacheRecordsPart
             { new OpenXmlQualifiedName("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pivotCacheRecords"), () => new DocumentFormat.OpenXml.Spreadsheet.PivotCacheRecords() },
             // PivotTablePart
             { new OpenXmlQualifiedName("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "pivotTableDefinition"), () => new DocumentFormat.OpenXml.Spreadsheet.PivotTableDefinition() },
-            // PowerPointAuthorsPart
-            { new OpenXmlQualifiedName("http://schemas.microsoft.com/office/powerpoint/2018/8/main", "authorLst"), () => new DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.AuthorList() },
             // PowerPointCommentPart
             { new OpenXmlQualifiedName("http://schemas.microsoft.com/office/powerpoint/2018/8/main", "cmLst"), () => new DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.CommentList() },
-            // PresentationPart
-            { new OpenXmlQualifiedName("http://schemas.openxmlformats.org/presentationml/2006/main", "presentation"), () => new DocumentFormat.OpenXml.Presentation.Presentation() },
-            // PresentationPropertiesPart
-            { new OpenXmlQualifiedName("http://schemas.openxmlformats.org/presentationml/2006/main", "presentationPr"), () => new DocumentFormat.OpenXml.Presentation.PresentationProperties() },
             // QueryTablePart
             { new OpenXmlQualifiedName("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "queryTable"), () => new DocumentFormat.OpenXml.Spreadsheet.QueryTable() },
             // RdArrayPart
@@ -151,8 +119,6 @@ partial class SpreadsheetDocument
             { new OpenXmlQualifiedName("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "slicerCacheDefinition"), () => new DocumentFormat.OpenXml.Office2010.Excel.SlicerCacheDefinition() },
             // SlicersPart
             { new OpenXmlQualifiedName("http://schemas.microsoft.com/office/spreadsheetml/2009/9/main", "slicers"), () => new DocumentFormat.OpenXml.Office2010.Excel.Slicers() },
-            // SlideCommentsPart
-            { new OpenXmlQualifiedName("http://schemas.openxmlformats.org/presentationml/2006/main", "cmLst"), () => new DocumentFormat.OpenXml.Presentation.CommentList() },
             // SlideLayoutPart
             { new OpenXmlQualifiedName("http://schemas.openxmlformats.org/presentationml/2006/main", "sldLayout"), () => new DocumentFormat.OpenXml.Presentation.SlideLayout() },
             // SlideMasterPart
@@ -163,8 +129,6 @@ partial class SpreadsheetDocument
             { new OpenXmlQualifiedName("http://schemas.openxmlformats.org/presentationml/2006/main", "sldSyncPr"), () => new DocumentFormat.OpenXml.Presentation.SlideSyncProperties() },
             // TableDefinitionPart
             { new OpenXmlQualifiedName("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "table"), () => new DocumentFormat.OpenXml.Spreadsheet.Table() },
-            // TableStylesPart
-            { new OpenXmlQualifiedName("http://schemas.openxmlformats.org/drawingml/2006/main", "tblStyleLst"), () => new DocumentFormat.OpenXml.Drawing.TableStyleList() },
             // ThemeOverridePart
             { new OpenXmlQualifiedName("http://schemas.openxmlformats.org/drawingml/2006/main", "themeOverride"), () => new DocumentFormat.OpenXml.Drawing.ThemeOverride() },
             // ThemePart
@@ -177,26 +141,12 @@ partial class SpreadsheetDocument
             { new OpenXmlQualifiedName("http://schemas.openxmlformats.org/presentationml/2006/main", "tagLst"), () => new DocumentFormat.OpenXml.Presentation.TagList() },
             // VbaDataPart
             { new OpenXmlQualifiedName("http://schemas.microsoft.com/office/word/2006/wordml", "vbaSuppData"), () => new DocumentFormat.OpenXml.Office.Word.VbaSuppData() },
-            // ViewPropertiesPart
-            { new OpenXmlQualifiedName("http://schemas.openxmlformats.org/presentationml/2006/main", "viewPr"), () => new DocumentFormat.OpenXml.Presentation.ViewProperties() },
             // VolatileDependenciesPart
             { new OpenXmlQualifiedName("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "volTypes"), () => new DocumentFormat.OpenXml.Spreadsheet.VolatileTypes() },
             // WebExTaskpanesPart
             { new OpenXmlQualifiedName("http://schemas.microsoft.com/office/webextensions/taskpanes/2010/11", "taskpanes"), () => new DocumentFormat.OpenXml.Office2013.WebExtentionPane.Taskpanes() },
             // WebExtensionPart
             { new OpenXmlQualifiedName("http://schemas.microsoft.com/office/webextensions/webextension/2010/11", "webextension"), () => new DocumentFormat.OpenXml.Office2013.WebExtension.WebExtension() },
-            // WebSettingsPart
-            { new OpenXmlQualifiedName("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "webSettings"), () => new DocumentFormat.OpenXml.Wordprocessing.WebSettings() },
-            // WordCommentsExtensiblePart
-            { new OpenXmlQualifiedName("http://schemas.microsoft.com/office/word/2018/wordml/cex", "commentsExtensible"), () => new DocumentFormat.OpenXml.Office2021.Word.CommentsExt.CommentsExtensible() },
-            // WordprocessingCommentsExPart
-            { new OpenXmlQualifiedName("http://schemas.microsoft.com/office/word/2012/wordml", "commentsEx"), () => new DocumentFormat.OpenXml.Office2013.Word.CommentsEx() },
-            // WordprocessingCommentsIdsPart
-            { new OpenXmlQualifiedName("http://schemas.microsoft.com/office/word/2016/wordml/cid", "commentsIds"), () => new DocumentFormat.OpenXml.Office2019.Word.Cid.CommentsIds() },
-            // WordprocessingCommentsPart
-            { new OpenXmlQualifiedName("http://schemas.openxmlformats.org/wordprocessingml/2006/main", "comments"), () => new DocumentFormat.OpenXml.Wordprocessing.Comments() },
-            // WordprocessingPeoplePart
-            { new OpenXmlQualifiedName("http://schemas.microsoft.com/office/word/2012/wordml", "people"), () => new DocumentFormat.OpenXml.Office2013.Word.People() },
             // WorkbookPart
             { new OpenXmlQualifiedName("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "workbook"), () => new DocumentFormat.OpenXml.Spreadsheet.Workbook() },
             // WorkbookPersonPart
