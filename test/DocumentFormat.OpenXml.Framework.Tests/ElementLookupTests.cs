@@ -7,6 +7,7 @@ using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Tests;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.Linq;
 using System.Reflection;
@@ -40,11 +41,14 @@ namespace DocumentFormat.OpenXml.Framework.Tests
         }
 
         [Fact]
-        public void VerifyTypedRootsCanBeCreated()
+        public void VerifyTypedRootsCanBeCreatedWord()
         {
             // Arrange
-            using var doc = WordprocessingDocument.Create(new MemoryStream(), WordprocessingDocumentType.Document);
-            var feature = doc.Features.GetRequired<IRootElementFeature>();
+            using var word = WordprocessingDocument.Create(new MemoryStream(), WordprocessingDocumentType.Document);
+            using var excel = SpreadsheetDocument.Create(new MemoryStream(), SpreadsheetDocumentType.Workbook);
+            using var ppt = PresentationDocument.Create(new MemoryStream(), PresentationDocumentType.Presentation);
+
+            var feature = new CompositeRootElementFeature(word, excel, ppt);
             var allTypedParts = typeof(WordprocessingDocument).Assembly
                 .GetTypes()
                 .Where(t => !t.IsAbstract && typeof(OpenXmlPartRootElement).IsAssignableFrom(t))
@@ -88,6 +92,30 @@ namespace DocumentFormat.OpenXml.Framework.Tests
                 .Distinct()
                 .OrderBy(type => type.FullName, StringComparer.Ordinal)
                 .Select(type => new LookupData(type));
+        }
+
+        private sealed class CompositeRootElementFeature : IRootElementFeature
+        {
+            private readonly IRootElementFeature[] _features;
+
+            public CompositeRootElementFeature(params OpenXmlPackage[] package)
+            {
+                _features = package.Select(p => p.Features.GetRequired<IRootElementFeature>()).ToArray();
+            }
+
+            public bool TryCreate(in OpenXmlQualifiedName qname, [NotNullWhen(true)] out OpenXmlElement element)
+            {
+                foreach (var feature in _features)
+                {
+                    if (feature.TryCreate(qname, out element))
+                    {
+                        return true;
+                    }
+                }
+
+                element = null;
+                return false;
+            }
         }
 
         private class LookupData : IEquatable<LookupData>
