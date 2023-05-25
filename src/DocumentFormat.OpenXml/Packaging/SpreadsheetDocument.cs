@@ -28,13 +28,13 @@ namespace DocumentFormat.OpenXml.Packaging
             get
             {
                 ThrowIfObjectDisposed();
-                return Features.GetRequired<IDocumentTypeFeature<SpreadsheetDocumentType>>().Type;
+                return Features.GetRequired<IDocumentTypeFeature<SpreadsheetDocumentType>>().Current;
             }
 
             private set
             {
                 ThrowIfObjectDisposed();
-                Features.GetRequired<IDocumentTypeFeature<SpreadsheetDocumentType>>().Type = value;
+                Features.GetRequired<IDocumentTypeFeature<SpreadsheetDocumentType>>().Current = value;
             }
         }
 
@@ -496,7 +496,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             protected override string RelationshipType => WorkbookPart.RelationshipTypeConstant;
 
-            protected override string? GetContentType(SpreadsheetDocumentType type) => type switch
+            public override string? GetContentType(SpreadsheetDocumentType type) => type switch
             {
                 SpreadsheetDocumentType.Workbook => "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet.main+xml",
                 SpreadsheetDocumentType.Template => "application/vnd.openxmlformats-officedocument.spreadsheetml.template.main+xml",
@@ -506,7 +506,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 _ => default,
             };
 
-            protected override SpreadsheetDocumentType? GetType(string contentPart) => contentPart switch
+            public override SpreadsheetDocumentType? GetDocumentType(string contentPart) => contentPart switch
             {
                 "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet.main+xml" => SpreadsheetDocumentType.Workbook,
                 "application/vnd.openxmlformats-officedocument.spreadsheetml.template.main+xml" => SpreadsheetDocumentType.Template,

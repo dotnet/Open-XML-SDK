@@ -28,13 +28,13 @@ namespace DocumentFormat.OpenXml.Packaging
             get
             {
                 ThrowIfObjectDisposed();
-                return Features.GetRequired<IDocumentTypeFeature<PresentationDocumentType>>().Type;
+                return Features.GetRequired<IDocumentTypeFeature<PresentationDocumentType>>().Current;
             }
 
             private set
             {
                 ThrowIfObjectDisposed();
-                Features.GetRequired<IDocumentTypeFeature<PresentationDocumentType>>().Type = value;
+                Features.GetRequired<IDocumentTypeFeature<PresentationDocumentType>>().Current = value;
             }
         }
 
@@ -497,7 +497,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             protected override PresentationPart CreateMainPart() => new();
 
-            protected override string? GetContentType(PresentationDocumentType type) => type switch
+            public override string? GetContentType(PresentationDocumentType type) => type switch
             {
                 PresentationDocumentType.Presentation => "application/vnd.openxmlformats-officedocument.presentationml.presentation.main+xml",
                 PresentationDocumentType.Template => "application/vnd.openxmlformats-officedocument.presentationml.template.main+xml",
@@ -509,7 +509,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 _ => default,
             };
 
-            protected override PresentationDocumentType? GetType(string contentPart) => contentPart switch
+            public override PresentationDocumentType? GetDocumentType(string contentPart) => contentPart switch
             {
                 "application/vnd.openxmlformats-officedocument.presentationml.presentation.main+xml" => PresentationDocumentType.Presentation,
                 "application/vnd.openxmlformats-officedocument.presentationml.template.main+xml" => PresentationDocumentType.Template,

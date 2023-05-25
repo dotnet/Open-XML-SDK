@@ -29,13 +29,13 @@ namespace DocumentFormat.OpenXml.Packaging
             get
             {
                 ThrowIfObjectDisposed();
-                return Features.GetRequired<IDocumentTypeFeature<WordprocessingDocumentType>>().Type;
+                return Features.GetRequired<IDocumentTypeFeature<WordprocessingDocumentType>>().Current;
             }
 
             private set
             {
                 ThrowIfObjectDisposed();
-                Features.GetRequired<IDocumentTypeFeature<WordprocessingDocumentType>>().Type = value;
+                Features.GetRequired<IDocumentTypeFeature<WordprocessingDocumentType>>().Current = value;
             }
         }
 
@@ -539,7 +539,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             string IProgrammaticIdentifierFeature.ProgramId => "Word.Document";
 
-            protected override string? GetContentType(WordprocessingDocumentType type) => type switch
+            public override string? GetContentType(WordprocessingDocumentType type) => type switch
             {
                 WordprocessingDocumentType.Document => "application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml",
                 WordprocessingDocumentType.Template => "application/vnd.openxmlformats-officedocument.wordprocessingml.template.main+xml",
@@ -548,7 +548,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 _ => default,
             };
 
-            protected override WordprocessingDocumentType? GetType(string contentPart) => contentPart switch
+            public override WordprocessingDocumentType? GetDocumentType(string contentPart) => contentPart switch
             {
                 "application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml" => WordprocessingDocumentType.Document,
                 "application/vnd.openxmlformats-officedocument.wordprocessingml.template.main+xml" => WordprocessingDocumentType.Template,
