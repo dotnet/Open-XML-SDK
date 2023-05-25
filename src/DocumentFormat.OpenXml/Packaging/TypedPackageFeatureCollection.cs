@@ -45,7 +45,7 @@ internal abstract partial class TypedPackageFeatureCollection<TDocumentType, TMa
                         var uriTarget = PackUriHelper.ResolvePartUri(OpenXmlPackage.Uri, relationship.TargetUri);
                         var metroPart = package.GetPart(uriTarget);
 
-                        _documentType = GetType(metroPart.ContentType);
+                        _documentType = GetDocumentType(metroPart.ContentType);
                         break;
                     }
                 }
@@ -65,7 +65,7 @@ internal abstract partial class TypedPackageFeatureCollection<TDocumentType, TMa
         }
     }
 
-    TDocumentType IDocumentTypeFeature<TDocumentType>.Type
+    TDocumentType IDocumentTypeFeature<TDocumentType>.Current
     {
         get => _documentType ?? default;
         set => _documentType = value;
@@ -113,9 +113,9 @@ internal abstract partial class TypedPackageFeatureCollection<TDocumentType, TMa
 
     protected abstract string RelationshipType { get; }
 
-    protected abstract string? GetContentType(TDocumentType type);
+    public abstract string? GetContentType(TDocumentType type);
 
-    protected abstract TDocumentType? GetType(string contentPart);
+    public abstract TDocumentType? GetDocumentType(string contentPart);
 
     protected abstract TMainPart CreateMainPart();
 
