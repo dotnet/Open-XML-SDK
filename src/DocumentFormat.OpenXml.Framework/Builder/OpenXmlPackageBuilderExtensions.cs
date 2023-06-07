@@ -26,43 +26,31 @@ internal static class OpenXmlPackageBuilderExtensions
        where TPackage : OpenXmlPackage
        => builder.Configure(package => package.OpenSettings = settings);
 
-    internal static OpenXmlPackageBuilder<TPackage> ConfigureSettings<TPackage>(this OpenXmlPackageBuilder<TPackage> builder, Action<OpenSettings> configure)
-        where TPackage : OpenXmlPackage
-        => builder.Configure((package, next) =>
-        {
-            configure(package.OpenSettings);
-            next(package);
-        });
-
     internal static OpenXmlPackageBuilder<TPackage> ConfigureDefaults<TPackage>(this OpenXmlPackageBuilder<TPackage> builder)
         where TPackage : OpenXmlPackage
+    => builder.Configure((package, next) =>
     {
-        builder.Configure((package, next) =>
+        package.UseTransitionalRelationshipNamespaces();
+        package.IgnoreRelationship("http://schemas.microsoft.com/office/2006/relationships/recovered");
+
+        next(package);
+
+        ValidateSettings(package);
+
+        var compatLevel = package.OpenSettings.CompatibilityLevel;
+
+        if (compatLevel >= CompatibilityLevel.Version_3_0)
         {
-            package.UseTransitionalRelationshipNamespaces();
-            package.IgnoreRelationship("http://schemas.microsoft.com/office/2006/relationships/recovered");
+            package.EnableSavePackage();
+            package.EnableUriHandling();
+        }
 
-            next(package);
-
-            ValidateSettings(package);
-
-            var compatLevel = package.OpenSettings.CompatibilityLevel;
-
-            if (compatLevel >= CompatibilityLevel.Version_3_0)
-            {
-                package.EnableSavePackage();
-                package.EnableUriHandling();
-            }
-
-            if (compatLevel == CompatibilityLevel.Version_2_20)
-            {
-                // Before v3.0, all parts were eagerly loaded
-                package.LoadAllParts();
-            }
-        });
-
-        return builder;
-    }
+        if (compatLevel == CompatibilityLevel.Version_2_20)
+        {
+            // Before v3.0, all parts were eagerly loaded
+            package.LoadAllParts();
+        }
+    });
 
     internal static TPackage UseDefaultBehavior<TPackage>(this TPackage package)
         where TPackage : OpenXmlPackage

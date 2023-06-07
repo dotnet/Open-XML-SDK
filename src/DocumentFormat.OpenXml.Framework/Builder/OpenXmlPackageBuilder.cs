@@ -5,6 +5,7 @@ using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Packaging;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.IO;
 
 namespace DocumentFormat.OpenXml.Builder;
@@ -12,9 +13,9 @@ namespace DocumentFormat.OpenXml.Builder;
 internal abstract class OpenXmlPackageBuilder<TPackage>
     where TPackage : OpenXmlPackage
 {
-    private MiddlewareCollection? _middleware;
-
+    private List<Func<Action<TPackage>, Action<TPackage>>>? _middleware;
     private Action<TPackage>? _pipeline;
+    private bool _isLocked;
 
     internal OpenXmlPackageBuilder(OpenXmlPackageBuilder<TPackage>? parent)
     {
@@ -31,9 +32,14 @@ internal abstract class OpenXmlPackageBuilder<TPackage>
 
     public OpenXmlPackageBuilder<TPackage> Configure(Func<Action<TPackage>, Action<TPackage>> configure)
     {
-        // Reset pipeline if new middleware is added
+        if (_isLocked)
+        {
+            throw new InvalidOperationException("Middleware cannot be added after pipeline has been built. Call `.New()` to create a copy that can be added to.");
+        }
+
         _pipeline = null;
         (_middleware ??= new()).Add(configure);
+
         return this;
     }
 
@@ -41,14 +47,9 @@ internal abstract class OpenXmlPackageBuilder<TPackage>
 
     internal abstract TPackage Create();
 
-    private void Initialize(TPackage package)
-    {
-        GetPipeline()(package);
-    }
-
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Reliability", "CA2000:Dispose objects before losing scope", Justification = "Disposable is registered with package")]
     public virtual TPackage Open(Stream stream, PackageOpenMode mode)
-        => Open(new StreamPackageFeature(stream, mode));
+       => Open(new StreamPackageFeature(stream, mode));
 
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Reliability", "CA2000:Dispose objects before losing scope", Justification = "Disposable is registered with package")]
     public virtual TPackage Open(string file, PackageOpenMode mode)
@@ -59,28 +60,29 @@ internal abstract class OpenXmlPackageBuilder<TPackage>
 
     public virtual TPackage Open(IPackageInitializer register)
     {
+        Build();
+
         var package = Create();
 
         register.Register(package);
 
-        Initialize(package);
+        _pipeline(package);
 
         return package;
     }
 
-    private Action<TPackage> GetPipeline()
+    [MemberNotNull(nameof(_pipeline))]
+    internal void Build()
     {
-        if (_pipeline is { } p)
+        if (_pipeline is { })
         {
-            return p;
+            return;
         }
 
-        Action<TPackage> pipeline = null!;
+        _isLocked = true;
 
-        pipeline = (TPackage package) =>
-        {
-            package.Features.Set<IPackageFactoryFeature<TPackage>>(new InnerBuilder(this));
-        };
+        var packageFactoryFeature = new PackageFactory(New());
+        var pipeline = packageFactoryFeature.Process;
 
         if (_middleware is not null)
         {
@@ -90,41 +92,24 @@ internal abstract class OpenXmlPackageBuilder<TPackage>
             }
         }
 
-        return _pipeline = pipeline;
+        _pipeline = pipeline;
     }
 
-    private sealed class InnerBuilder : IPackageFactoryFeature<TPackage>
+    private sealed class PackageFactory : IPackageFactoryFeature<TPackage>
     {
         private readonly OpenXmlPackageBuilder<TPackage> _other;
 
-        public InnerBuilder(OpenXmlPackageBuilder<TPackage> other)
+        public PackageFactory(OpenXmlPackageBuilder<TPackage> other)
         {
             _other = other;
         }
 
         public OpenXmlPackageBuilder<TPackage> Create()
             => _other.New();
-    }
 
-    private sealed class MiddlewareCollection : List<Func<Action<TPackage>, Action<TPackage>>>
-    {
-        public MiddlewareCollection()
+        public void Process(TPackage package)
         {
-        }
-
-        public MiddlewareCollection(MiddlewareCollection other)
-            : base(other)
-        {
-        }
-
-        public Action<TPackage> Build(Action<TPackage> pipeline)
-        {
-            for (int i = Count - 1; i >= 0; i--)
-            {
-                pipeline = this[i](pipeline);
-            }
-
-            return pipeline;
+            package.Features.Set<IPackageFactoryFeature<TPackage>>(this);
         }
     }
 }
