@@ -59,20 +59,13 @@ For latests changes, please see the [changelog](CHANGELOG.md)
 
 ## Framework Support
 
-The package currently supports the following frameworks:
+The package currently supports the following targets:
 
-- .NET Framework 3.5+
-- .NET Standard 1.3+
-- .NET Core 1.0+
-- .NET 5+
-- Mono 4.6+
-- Xamarin.iOS 10.0+
-- Xamarin.Mac 3.0+
-- Xamarin.Android 7.0+
-- UWP 10.0+
-- Unity 2018.1+
+- .NET Framework 3.5, 4.0, 4.6
+- .NET Standard 2.0
+- .NET 6.0
 
-For details on platform support, please see the docs at https://docs.microsoft.com/en-us/dotnet/standard/net-standard.
+For details on platform support, including other runtimes such as Mono and Unity, please see the docs at https://docs.microsoft.com/en-us/dotnet/standard/net-standard.
 
 - [Microsoft Q&A Forums](https://docs.microsoft.com/en-us/answers/topics/office-addins-dev.html) (tag: **office-addins-dev**)
 - [Stack Overflow](http://stackoverflow.com) (tags: **openxml** or **openxml-sdk**)
