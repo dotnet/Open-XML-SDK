@@ -4,7 +4,8 @@
     <IsShipped>true</IsShipped>
     <NoWarn>$(NoWarn);3003</NoWarn>
     <IncludeFrameworkShims>true</IncludeFrameworkShims>
-    <IsNew>true</IsNew>
+    <IsNew>true</IsNew>    
+    <TargetFrameworks>$(FrameworkTargetFrameworks)</TargetFrameworks>
   </PropertyGroup>
 
   <PropertyGroup>

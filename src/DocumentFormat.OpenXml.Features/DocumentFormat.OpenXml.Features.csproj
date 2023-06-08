@@ -3,6 +3,7 @@
   <PropertyGroup>
     <IsShipped>true</IsShipped>
     <IncludeFrameworkShims>true</IncludeFrameworkShims>
+    <TargetFrameworks>$(ProductTargetFrameworks)</TargetFrameworks>
   </PropertyGroup>
 
   <PropertyGroup>
