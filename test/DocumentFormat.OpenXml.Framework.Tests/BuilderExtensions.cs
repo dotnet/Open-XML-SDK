@@ -17,7 +17,7 @@ internal static class BuilderExtensions
 
     private sealed class EmptyInitializer : IPackageInitializer
     {
-        public void Register(OpenXmlPackage package)
+        public void Initialize(OpenXmlPackage package)
         {
         }
     }

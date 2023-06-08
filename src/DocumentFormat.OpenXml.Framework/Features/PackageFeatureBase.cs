@@ -146,7 +146,7 @@ internal abstract class PackageFeatureBase : IPackage, IPackageFeature, IRelatio
         features.Set<IRelationshipFilterFeature>(this);
     }
 
-    void IPackageInitializer.Register(OpenXmlPackage package) => Register(package.Features);
+    void IPackageInitializer.Initialize(OpenXmlPackage package) => Register(package.Features);
 
     IPackageProperties IPackage.PackageProperties => this;
 

@@ -57,7 +57,7 @@ internal static class TemplateBuilderExtensions
         {
             void Combined(OpenXmlPackage package)
             {
-                register.Register(package);
+                register.Initialize(package);
                 LoadTemplate((TPackage)package);
             }
 
@@ -73,7 +73,7 @@ internal static class TemplateBuilderExtensions
                 _wrapped = wrapped;
             }
 
-            public void Register(OpenXmlPackage package) => _wrapped(package);
+            public void Initialize(OpenXmlPackage package) => _wrapped(package);
         }
 
         private void LoadTemplate(TPackage package)

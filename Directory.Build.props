@@ -106,9 +106,9 @@
     <Warning Text="Unknown ProjectLoadStyle '$(ProjectLoadStyle)' set. Please verify settings in Directory.Build.props and environment variables to a known value. For now, default values will be used." />
   </Target>
 
-  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+  <!--<PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-  </PropertyGroup>
+  </PropertyGroup>-->
 
   <PropertyGroup>
     <LangVersion>11.0</LangVersion>

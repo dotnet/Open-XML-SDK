@@ -4,9 +4,14 @@
 using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Packaging;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.IO;
+
+#if NET6_0_OR_GREATER
+using System.Collections.Immutable;
+#endif
 
 namespace DocumentFormat.OpenXml.Builder;
 
@@ -14,6 +19,7 @@ internal abstract class OpenXmlPackageBuilder<TPackage>
     where TPackage : OpenXmlPackage
 {
     private List<Func<Action<TPackage>, Action<TPackage>>>? _middleware;
+    private CopyOnWrite? _startups;
     private Action<TPackage>? _pipeline;
     private bool _isLocked;
 
@@ -28,6 +34,11 @@ internal abstract class OpenXmlPackageBuilder<TPackage>
                 _middleware = new(parent._middleware);
             }
         }
+    }
+
+    public void AddStartup(IPackageInitializer startup)
+    {
+        (_startups ??= new()).Add(startup);
     }
 
     public OpenXmlPackageBuilder<TPackage> Configure(Func<Action<TPackage>, Action<TPackage>> configure)
@@ -64,9 +75,17 @@ internal abstract class OpenXmlPackageBuilder<TPackage>
 
         var package = Create();
 
-        register.Register(package);
+        register.Initialize(package);
 
         _pipeline(package);
+
+        if (_startups is { } startups)
+        {
+            foreach (var startup in startups)
+            {
+                startup.Initialize(package);
+            }
+        }
 
         return package;
     }
@@ -111,5 +130,66 @@ internal abstract class OpenXmlPackageBuilder<TPackage>
         {
             package.Features.Set<IPackageFactoryFeature<TPackage>>(this);
         }
+    }
+
+    private sealed class CopyOnWrite
+    {
+#if !NET6_0_OR_GREATER
+        private ImmutableList<IPackageInitializer> _list;
+
+        public CopyOnWrite(CopyOnWrite? other = null)
+        {
+            if (other is not null)
+            {
+                _list = other._list;
+            }
+            else
+            {
+                _list = ImmutableList<IPackageInitializer>.Empty;
+            }
+        }
+
+        public void Add(IPackageInitializer package)
+        {
+            _list = _list.Add(package);
+        }
+
+        public ImmutableList<IPackageInitializer>.Enumerator GetEnumerator() => _list.GetEnumerator();
+#else
+        private List<IPackageInitializer>? _list;
+        private bool _owned;
+
+        public CopyOnWrite(CopyOnWrite? other = null)
+        {
+            _list = other?._list;
+        }
+
+        public void Add(IPackageInitializer package)
+        {
+            EnsureOwnership();
+            _list.Add(package);
+        }
+
+        [MemberNotNull(nameof(_list))]
+        private void EnsureOwnership()
+        {
+            if (!_owned)
+            {
+                _owned = true;
+
+                if (_list is not null)
+                {
+                    _list = new(_list);
+                }
+            }
+
+            if (_list is null)
+            {
+                _list = new();
+            }
+        }
+
+        public List<IPackageInitializer>.Enumerator GetEnumerator() => _list?.GetEnumerator() ?? default;
+#endif
     }
 }

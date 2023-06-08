@@ -23,7 +23,7 @@ namespace DocumentFormat.OpenXml.Benchmarks
             var switcher = new BenchmarkSwitcher(typeof(Program).Assembly);
             var config = GetConfig(input);
 
-            switcher.Run(new[] { "--filter", "*" }, config);
+            switcher.Run(new[] { "--filter", "*BuilderTests*" }, config);
         }
 
         private static IConfig GetConfig(string[] args)

@@ -83,7 +83,7 @@ namespace DocumentFormat.OpenXml.Benchmarks
 
             internal override OpenXmlPackageBuilder<MyPackage> New() => new TestBuilder(this);
 
-            void IPackageInitializer.Register(OpenXmlPackage package)
+            void IPackageInitializer.Initialize(OpenXmlPackage package)
             {
             }
 

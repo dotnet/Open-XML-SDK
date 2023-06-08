@@ -7,5 +7,5 @@ namespace DocumentFormat.OpenXml.Features;
 
 internal interface IPackageInitializer
 {
-    void Register(OpenXmlPackage package);
+    void Initialize(OpenXmlPackage package);
 }
