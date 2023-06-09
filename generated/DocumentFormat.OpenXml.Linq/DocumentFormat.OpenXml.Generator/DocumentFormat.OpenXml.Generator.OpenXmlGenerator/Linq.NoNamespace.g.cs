@@ -4542,7 +4542,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML attribute, it:</para>
         /// <list type="bullet">
         /// <item><description>is contained in the following XML elements: <see cref="DGM.prSet" />.</description></item>
-        /// <item><description>corresponds to the following strongly-typed properties: PropertySet.HightScale.</description></item>
+        /// <item><description>corresponds to the following strongly-typed properties: PropertySet.HeightScale.</description></item>
         /// </list>
         /// </remarks>
         public static readonly XName custScaleY = "custScaleY";
