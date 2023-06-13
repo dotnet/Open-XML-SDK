@@ -2174,7 +2174,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.FlatText" /> <c>&lt;a:flatTx></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PresetTextWrap" /> <c>&lt;a:prstTxWarp></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PresetTextWarp" /> <c>&lt;a:prstTxWarp></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Scene3DType" /> <c>&lt;a:scene3d></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Shape3DType" /> <c>&lt;a:sp3d></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NoAutoFit" /> <c>&lt;a:noAutofit></c></description></item>
@@ -2412,7 +2412,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
             builder.Availability = FileFormatVersions.Office2013;
             builder.AddChild<DocumentFormat.OpenXml.Drawing.FlatText>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetTextWrap>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.PresetTextWarp>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Scene3DType>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.Shape3DType>();
             builder.AddChild<DocumentFormat.OpenXml.Drawing.NoAutoFit>();
@@ -2461,7 +2461,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
                 .AddAttribute("compatLnSpc", a => a.CompatibleLineSpacing);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetTextWrap), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.PresetTextWarp), 0, 1),
                 new CompositeParticle.Builder(ParticleType.Group, 0, 1)
                 {
                     new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
@@ -2491,9 +2491,9 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
         /// <remark>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Drawing.PresetTextWrap? PresetTextWrap
+        public DocumentFormat.OpenXml.Drawing.PresetTextWarp? PresetTextWarp
         {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.PresetTextWrap>();
+            get => GetElement<DocumentFormat.OpenXml.Drawing.PresetTextWarp>();
             set => SetElement(value);
         }
 

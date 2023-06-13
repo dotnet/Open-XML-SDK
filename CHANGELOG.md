@@ -38,6 +38,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - `OpenXmlPart`/`OpenXmlContainer`/`OpenXmlPackage` and derived types now have internal constructors (these had internal abstract methods so most likely weren't subclassed externally)
 - `OpenXmlElementList` is now a struct that implements `IEnumerable<OpenXmlElement>` and `IReadOnlyList<OpenXmlElement>` (where available)
 - Individual implementations of `OpenXmlPartReader` are available now for each package type (i.e. `WordprocessingDocumentPartReader`, `SpreadsheetDocumentPartReader`, `PresentationDocumentPartReader`), and the previous `TypedOpenXmlPartReader` has been removed.
+- Changed DocumentFormat.OpenXml.PresetTextWrap to DocumentFormat.OpenXml.PresetTextWarp
 
 ## [2.20.0]
 

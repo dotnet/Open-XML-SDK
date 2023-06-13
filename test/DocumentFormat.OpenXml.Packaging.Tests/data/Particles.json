@@ -1592,7 +1592,7 @@
     "Value": {
      "ChildrenParticles": [
       {
-       "ElementType": "DocumentFormat.OpenXml.Drawing.PresetTextWrap",
+       "ElementType": "DocumentFormat.OpenXml.Drawing.PresetTextWarp",
        "MinOccurs": 0
       },
       {
@@ -16778,7 +16778,7 @@
   ]
  },
  {
-  "Key": "DocumentFormat.OpenXml.Drawing.PresetTextWrap",
+  "Key": "DocumentFormat.OpenXml.Drawing.PresetTextWarp",
   "Value": [
    {
     "Key": "Office2007, Office2010, Office2013, Office2016, Office2019, Office2021, Microsoft365",
@@ -39616,7 +39616,7 @@
     "Value": {
      "ChildrenParticles": [
       {
-       "ElementType": "DocumentFormat.OpenXml.Drawing.PresetTextWrap",
+       "ElementType": "DocumentFormat.OpenXml.Drawing.PresetTextWarp",
        "MinOccurs": 0
       },
       {
@@ -44175,7 +44175,7 @@
     "Value": {
      "ChildrenParticles": [
       {
-       "ElementType": "DocumentFormat.OpenXml.Drawing.PresetTextWrap",
+       "ElementType": "DocumentFormat.OpenXml.Drawing.PresetTextWarp",
        "MinOccurs": 0
       },
       {
@@ -49808,7 +49808,7 @@
     "Value": {
      "ChildrenParticles": [
       {
-       "ElementType": "DocumentFormat.OpenXml.Drawing.PresetTextWrap",
+       "ElementType": "DocumentFormat.OpenXml.Drawing.PresetTextWarp",
        "MinOccurs": 0
       },
       {

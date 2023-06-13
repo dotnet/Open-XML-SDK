@@ -6910,7 +6910,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Height Scale</para>
         /// <para>Represents the following attribute in the schema: custScaleY</para>
         /// </summary>
-        public Int32Value? HeightScale
+        public Int32Value? HightScale
         {
             get => GetAttribute<Int32Value>();
             set => SetAttribute(value);
@@ -7020,7 +7020,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
                 .AddAttribute("custSzX", a => a.FixedWidthOverride)
                 .AddAttribute("custSzY", a => a.FixedHeightOverride)
                 .AddAttribute("custScaleX", a => a.WidthScale)
-                .AddAttribute("custScaleY", a => a.HeightScale)
+                .AddAttribute("custScaleY", a => a.HightScale)
                 .AddAttribute("custT", a => a.TextChanged)
                 .AddAttribute("custLinFactX", a => a.FactorWidth)
                 .AddAttribute("custLinFactY", a => a.FactorHeight)

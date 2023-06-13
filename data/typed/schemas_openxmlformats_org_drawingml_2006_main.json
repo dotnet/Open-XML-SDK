@@ -1165,7 +1165,7 @@
   },
   {
     "Name": "a:CT_PresetTextShape/a:prstTxWarp",
-    "ClassName": "PresetTextWrap"
+    "ClassName": "PresetTextWarp"
   },
   {
     "Name": "a:CT_AdjPoint2D/a:pt",

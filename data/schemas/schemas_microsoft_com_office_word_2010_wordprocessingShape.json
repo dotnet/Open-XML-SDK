@@ -929,7 +929,7 @@
       "Children": [
         {
           "Name": "a:CT_PresetTextShape/a:prstTxWarp",
-          "PropertyName": "PresetTextWrap",
+          "PropertyName": "PresetTextWarp",
           "PropertyComments": "Preset Text Shape"
         },
         {

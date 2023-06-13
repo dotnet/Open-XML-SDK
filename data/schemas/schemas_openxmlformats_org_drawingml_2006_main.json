@@ -5610,7 +5610,7 @@
     },
     {
       "Name": "a:CT_PresetTextShape/a:prstTxWarp",
-      "ClassName": "PresetTextWrap",
+      "ClassName": "PresetTextWarp",
       "Summary": "Preset Text Warp.",
       "CompositeType": "OneSequence",
       "BaseClass": "OpenXmlCompositeElement",
@@ -16109,7 +16109,7 @@
       "Children": [
         {
           "Name": "a:CT_PresetTextShape/a:prstTxWarp",
-          "PropertyName": "PresetTextWrap",
+          "PropertyName": "PresetTextWarp",
           "PropertyComments": "Preset Text Shape"
         },
         {
