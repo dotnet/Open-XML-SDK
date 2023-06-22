@@ -2,14 +2,12 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using System;
-using System.Runtime.Serialization;
 
 namespace DocumentFormat.OpenXml
 {
     /// <summary>
     /// The exception that is thrown for Markup Compatibility content errors.
     /// </summary>
-    [Serializable]
     public sealed class NamespaceNotUnderstandException : Exception
     {
         /// <summary>
@@ -26,16 +24,6 @@ namespace DocumentFormat.OpenXml
         /// <param name="message">The message that describes the error. </param>
         public NamespaceNotUnderstandException(string message)
             : base(message)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the InvalidMCContentException class with serialized data.
-        /// </summary>
-        /// <param name="info">The SerializationInfo that holds the serialized object data about the exception being thrown.</param>
-        /// <param name="context">The StreamingContext that contains contextual information about the source or destination.</param>
-        private NamespaceNotUnderstandException(SerializationInfo info, StreamingContext context)
-            : base(info, context)
         {
         }
 

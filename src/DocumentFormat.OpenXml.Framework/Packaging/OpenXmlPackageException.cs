@@ -2,14 +2,12 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using System;
-using System.Runtime.Serialization;
 
 namespace DocumentFormat.OpenXml.Packaging
 {
     /// <summary>
     /// Represents an Open XML package exception class for errors.
     /// </summary>
-    [Serializable]
     public sealed class OpenXmlPackageException : Exception
     {
         /// <summary>
@@ -26,16 +24,6 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <param name="message">The message that describes the error. </param>
         public OpenXmlPackageException(string message)
             : base(message)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the OpenXmlPackageException class using the supplied serialized data.
-        /// </summary>
-        /// <param name="info">The serialized object data about the exception being thrown.</param>
-        /// <param name="context">The contextual information about the source or destination.</param>
-        private OpenXmlPackageException(SerializationInfo info, StreamingContext context)
-            : base(info, context)
         {
         }
 
