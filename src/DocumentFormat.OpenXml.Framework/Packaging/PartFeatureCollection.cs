@@ -10,7 +10,7 @@ using System.Linq;
 namespace DocumentFormat.OpenXml.Packaging;
 
 internal partial class PartFeatureCollection :
-    IFeatureCollection,
+    FeatureCollectionBase,
     ITargetFeature,
     IPartConstraintFeature,
     IContentTypeFeature,
@@ -20,19 +20,14 @@ internal partial class PartFeatureCollection :
 {
     private readonly OpenXmlPart _part;
     private Action? _disposable;
-
-    private FeatureContainer _container;
+    private AnnotationsFeature? _annotationsFeature;
 
     public PartFeatureCollection(OpenXmlPart part)
     {
         _part = part;
     }
 
-    public bool IsReadOnly => false;
-
-    public int Revision => _container.Revision + (Parent?.Revision ?? 0);
-
-    private IFeatureCollection? Parent => _part?._openXmlPackage?.Features;
+    protected override IFeatureCollection? Parent => _part?._openXmlPackage?.Features;
 
     string ITargetFeature.Path => ".";
 
@@ -40,36 +35,17 @@ internal partial class PartFeatureCollection :
 
     string ITargetFeature.Name => string.Empty;
 
-    public TFeature? Get<TFeature>()
+    protected override object? GetKnown(Type key)
     {
-        if (_container.Get<TFeature>() is { } other)
+        if (key == typeof(AnnotationsFeature))
         {
-            return other;
+            return _annotationsFeature ??= new();
         }
 
-        if (this is TFeature @this)
-        {
-            return @this;
-        }
-
-        if (GetInternal<TFeature>() is { } @internal)
-        {
-            return @internal;
-        }
-
-        if (Parent is { } parent && parent.Get<TFeature>() is { } fromParent)
-        {
-            return fromParent;
-        }
-
-        return default;
+        return null;
     }
 
-    [KnownFeature(typeof(AnnotationsFeature))]
-    private partial T? GetInternal<T>();
-
-    public void Set<TFeature>(TFeature? instance)
-        => _container.Set(instance);
+    protected override IEnumerable<Type> KnownTypes => new[] { typeof(AnnotationsFeature) };
 
     IEnumerable<PartConstraintRule> IPartConstraintFeature.Rules => Enumerable.Empty<PartConstraintRule>();
 

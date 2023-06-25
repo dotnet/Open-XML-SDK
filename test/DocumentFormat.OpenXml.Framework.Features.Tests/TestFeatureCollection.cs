@@ -3,6 +3,7 @@
 
 using NSubstitute;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 
 namespace DocumentFormat.OpenXml.Features.Tests
@@ -19,7 +20,7 @@ namespace DocumentFormat.OpenXml.Features.Tests
 
         public bool IsReadOnly => false;
 
-        public int Revision => throw new NotImplementedException();
+        public int Revision => 0;
 
         public TFeature? Get<TFeature>()
         {
@@ -38,5 +39,9 @@ namespace DocumentFormat.OpenXml.Features.Tests
         {
             _types[typeof(TFeature)] = instance;
         }
+
+        public IEnumerator<KeyValuePair<Type, object>> GetEnumerator() => _types.GetEnumerator();
+
+        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
     }
 }

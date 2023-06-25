@@ -3,12 +3,15 @@
 
 #pragma warning disable CA1716 // Identifiers should not match keywords
 
+using System;
+using System.Collections.Generic;
+
 namespace DocumentFormat.OpenXml.Features;
 
 /// <summary>
 /// Represents a collection of features.
 /// </summary>
-public interface IFeatureCollection
+public interface IFeatureCollection : IEnumerable<KeyValuePair<Type, object>>
 {
     /// <summary>
     /// Gets a value indicating whether the collection can be modified.
@@ -19,6 +22,13 @@ public interface IFeatureCollection
     /// Gets a value that is incremented for each modification and can be used to verify cached results.
     /// </summary>
     int Revision { get; }
+
+    /// <summary>
+    /// Gets or sets a given feature. Setting a null value removes the feature.
+    /// </summary>
+    /// <param name="key"></param>
+    /// <returns>The requested feature, or null if it is not present.</returns>
+    object? this[Type key] { get; set; }
 
     /// <summary>
     /// Retrieves the requested feature from the collection.
