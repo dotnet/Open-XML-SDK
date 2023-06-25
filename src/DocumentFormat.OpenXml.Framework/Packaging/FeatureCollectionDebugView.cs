@@ -28,12 +28,37 @@ internal sealed class FeatureCollectionDebugView
 
     [DebuggerTypeProxy(typeof(FlattenHierarchyProxy))]
     [DebuggerDisplay("{Value.GetType().ToString(),nq}", Name = "{Type.ToString(),nq}")]
-    internal record class FeatureView(Type Type, object Value);
+    internal sealed class FeatureView
+    {
+        public FeatureView(Type type, object value)
+        {
+            Type = type;
+            Value = value;
+        }
+
+        public Type Type { get; }
+
+        public object Value { get; }
+    }
 
     private sealed class FlattenHierarchyProxy
     {
         [DebuggerDisplay("{Value}", Name = "{Name,nq}", Type = "{Type.ToString(),nq}")]
-        internal readonly record struct Member(string Name, object? Value, Type Type);
+        internal readonly struct Member
+        {
+            public Member(string name, object? value, Type type)
+            {
+                Name = name;
+                Value = value;
+                Type = type;
+            }
+
+            public string Name { get; }
+
+            public object? Value { get; }
+
+            public Type Type { get; }
+        }
 
         [DebuggerBrowsable(DebuggerBrowsableState.Never)]
         private readonly object _target;
@@ -57,6 +82,7 @@ internal sealed class FeatureCollectionDebugView
         private List<Member> BuildMemberList()
         {
             var list = new List<Member>();
+
             if (_target == null)
             {
                 return list;
