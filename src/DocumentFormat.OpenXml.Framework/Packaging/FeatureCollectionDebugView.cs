@@ -27,7 +27,7 @@ internal sealed class FeatureCollectionDebugView
     public FeatureItem[] Items => _features.Select(pair => new FeatureItem(pair.Key, pair.Value)).ToArray();
 
     [DebuggerTypeProxy(typeof(FeatureItemDebugView))]
-    [DebuggerDisplay("{Value.GetType().ToString(),nq}", Name = "{Type.ToString(),nq}")]
+    [DebuggerDisplay("{Value.ToString(),nq}", Name = "{Type.ToString(),nq}", Type = "{Value.GetType().ToString(),nq}")]
     internal sealed class FeatureItem
     {
         public FeatureItem(Type type, object value)
