@@ -24,13 +24,13 @@ internal sealed class FeatureCollectionDebugView
     public int Revision => _features.Revision;
 
     [DebuggerBrowsable(DebuggerBrowsableState.RootHidden)]
-    public FeatureView[] Items => _features.Select(pair => new FeatureView(pair.Key, pair.Value)).ToArray();
+    public FeatureItem[] Items => _features.Select(pair => new FeatureItem(pair.Key, pair.Value)).ToArray();
 
-    [DebuggerTypeProxy(typeof(FlattenHierarchyProxy))]
+    [DebuggerTypeProxy(typeof(FeatureItemDebugView))]
     [DebuggerDisplay("{Value.GetType().ToString(),nq}", Name = "{Type.ToString(),nq}")]
-    internal sealed class FeatureView
+    internal sealed class FeatureItem
     {
-        public FeatureView(Type type, object value)
+        public FeatureItem(Type type, object value)
         {
             Type = type;
             Value = value;
@@ -41,7 +41,7 @@ internal sealed class FeatureCollectionDebugView
         public object Value { get; }
     }
 
-    private sealed class FlattenHierarchyProxy
+    private sealed class FeatureItemDebugView
     {
         [DebuggerDisplay("{Value}", Name = "{Name,nq}", Type = "{Type.ToString(),nq}")]
         internal readonly struct Member
@@ -72,7 +72,7 @@ internal sealed class FeatureCollectionDebugView
         [DebuggerBrowsable(DebuggerBrowsableState.RootHidden)]
         internal Member[] Items => _memberList ??= BuildMemberList().ToArray();
 
-        public FlattenHierarchyProxy(FeatureView view)
+        public FeatureItemDebugView(FeatureItem view)
         {
             _target = view.Value;
             _type = view.Type;
