@@ -14,31 +14,20 @@ namespace DocumentFormat.OpenXml.Features.Tests
 
         public object? this[Type key]
         {
-            get => throw new NotImplementedException();
-            set => throw new NotImplementedException();
+            get => _types.TryGetValue(key, out var result) ? result : null;
+            set => _types[key] = value;
         }
 
         public bool IsReadOnly => false;
 
         public int Revision => 0;
 
-        public TFeature? Get<TFeature>()
-        {
-            if (_types.TryGetValue(typeof(TFeature), out var result) && result is TFeature t)
-            {
-                return t;
-            }
-
-            return default;
-        }
+        public TFeature? Get<TFeature>() => (TFeature?)this[typeof(TFeature)];
 
         public void AddMock<T>()
             where T : class => Set(Substitute.For<T>());
 
-        public void Set<TFeature>(TFeature? instance)
-        {
-            _types[typeof(TFeature)] = instance;
-        }
+        public void Set<TFeature>(TFeature? instance) => this[typeof(TFeature)] = instance;
 
         public IEnumerator<KeyValuePair<Type, object>> GetEnumerator() => _types.GetEnumerator();
 

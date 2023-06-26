@@ -82,22 +82,9 @@ internal abstract class FeatureCollectionBase : IFeatureCollection
     {
         get
         {
-            foreach (var type in _container.Types)
-            {
-                yield return type;
-            }
-
             foreach (var known in KnownTypes)
             {
                 yield return known;
-            }
-
-            if (Parent is not null)
-            {
-                foreach (var type in Parent)
-                {
-                    yield return type.Key;
-                }
             }
 
             foreach (var @interface in GetType().GetInterfaces())
