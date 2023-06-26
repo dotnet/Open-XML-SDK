@@ -125,7 +125,7 @@ Assert.NotEqual(p1.ParagraphId, p2.ParagraphId);
 Assert.Equal(2, shared.Count);
 ```
 
-## DocumentFormat.OpenXml.Linq - unreleased
+## DocumentFormat.OpenXml.Linq
 
 ### IPartRootXElementFeature
 
