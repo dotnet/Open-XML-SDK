@@ -3,44 +3,49 @@
 
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
-namespace DocumentFormat.OpenXml.Features
+namespace DocumentFormat.OpenXml.Features;
+
+internal struct FeatureContainer
 {
-    internal struct FeatureContainer
+    private readonly int _initialCapacity = 2;
+    private Dictionary<Type, object>? _features;
+    private volatile int _containerRevision;
+
+    public FeatureContainer(int initialCapacity = 2)
     {
-        private readonly int _initialCapacity = 2;
-        private Dictionary<Type, object>? _features;
-        private volatile int _containerRevision;
-
-        public FeatureContainer(int initialCapacity = 2)
+        if (initialCapacity < 0)
         {
-            if (initialCapacity < 0)
-            {
-                throw new ArgumentOutOfRangeException(nameof(initialCapacity));
-            }
-
-            _initialCapacity = initialCapacity;
-            _features = null;
-            _containerRevision = 0;
+            throw new ArgumentOutOfRangeException(nameof(initialCapacity));
         }
 
-        public int Revision => _containerRevision;
+        _initialCapacity = initialCapacity;
+        _features = null;
+        _containerRevision = 0;
+    }
 
-        public TFeature? Get<TFeature>()
+    public int Revision => _containerRevision;
+
+    public IEnumerable<Type> Types => _features?.Keys ?? Enumerable.Empty<Type>();
+
+    public object? this[Type key]
+    {
+        get
         {
-            if (_features is not null && _features.TryGetValue(typeof(TFeature), out var feature) && feature is TFeature t)
+            if (_features is null)
             {
-                return t;
+                return null;
             }
 
-            return default;
+            return _features.TryGetValue(key, out var value) ? value : null;
         }
 
-        public void Set<TFeature>(TFeature? instance)
+        set
         {
-            if (instance is null)
+            if (value is null)
             {
-                if (_features is not null && _features.Remove(typeof(TFeature)))
+                if (_features is not null && _features.Remove(key))
                 {
                     _containerRevision++;
                 }
@@ -53,8 +58,12 @@ namespace DocumentFormat.OpenXml.Features
                 _features = new(_initialCapacity);
             }
 
-            _features[typeof(TFeature)] = instance;
+            _features[key] = value;
             _containerRevision++;
         }
     }
+
+    public TFeature? Get<TFeature>() => (TFeature?)this[typeof(TFeature)];
+
+    public void Set<TFeature>(TFeature? instance) => this[typeof(TFeature)] = instance;
 }
