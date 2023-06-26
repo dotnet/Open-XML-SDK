@@ -14,7 +14,7 @@ The in-box implementations of the `IFeatureCollection` provide a helpful debug v
 
 ## Current Features
 
-The features that are currently available are described below and at what scope they are available. This is important, because and element by itself will not have any features available, while an element in one part may have different features than another part.
+The features that are currently available are described below and at what scope they are available:
 
 ### IDisposableFeature
 
@@ -27,6 +27,8 @@ package.Features.Get<IDisposableFeature>().Register(() => /* Some action that is
 OpenXmlPart part = GetSomePart();
 part.Features.Get<IDisposableFeature>().Register(() => /* Some action that is called when the part is removed or closed */);
 ```
+
+Packages and parts will have their own implementations of this feature. Elements will retrieve the feature for their containing part if available.
 
 ### IPackageEventsFeature
 
