@@ -49,12 +49,7 @@ internal abstract class FeatureCollectionBase : IFeatureCollection
                 return this;
             }
 
-            if (Parent is not null)
-            {
-                return Parent[key];
-            }
-
-            return null;
+            return Parent?[key];
         }
 
         set
