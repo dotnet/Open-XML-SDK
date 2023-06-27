@@ -20,11 +20,11 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-dotnet@v1
       - name: Run benchmark
-        run: cd tests/DocumentFormat.OpenXml.Benchmarks; dotnet run --exporters json --filter '*'
+        run: cd test/DocumentFormat.OpenXml.Benchmarks; dotnet run --exporters json --filter '*'
         shell: pwsh
       - name: List folders
         shell: pwsh
-        run: cd tests/DocumentFormat.OpenXml.Benchmarks; ls -recurse
+        run: cd test/DocumentFormat.OpenXml.Benchmarks; ls -recurse
       - name: Store benchmark result
         uses: rhysd/github-action-benchmark@v1
         with:
