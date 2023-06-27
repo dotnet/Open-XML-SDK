@@ -28,12 +28,12 @@ jobs:
       - name: List folders
         shell: pwsh
         run: cd test/DocumentFormat.OpenXml.Benchmarks; ls -recurse
-      - name: Store benchmark result
+      - name: Store Validation
         uses: rhysd/github-action-benchmark@v1
         with:
-          name: OpenXmlSdk Benchmark
+          name: Validation
           tool: 'benchmarkdotnet'
-          output-file-path: tests/DocumentFormat.OpenXml.Benchmarks/results/results/DocumentFormat.OpenXml.Benchmarks.ValidationTests-report-full-compressed.json
+          output-file-path: test/DocumentFormat.OpenXml.Benchmarks/results/results/DocumentFormat.OpenXml.Benchmarks.ValidationTests-report-full-compressed.json
           github-token: ${{ secrets.GITHUB_TOKEN }}
           auto-push: true
           # Show alert with commit comment on detecting possible performance regression
@@ -41,4 +41,3 @@ jobs:
           comment-on-alert: true
           fail-on-alert: true
           alert-comment-cc-users: '@twsouthwick'
-
