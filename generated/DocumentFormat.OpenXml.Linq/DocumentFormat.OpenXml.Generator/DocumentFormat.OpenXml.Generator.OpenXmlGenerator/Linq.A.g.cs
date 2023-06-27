@@ -3000,7 +3000,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <item><description>has the following parent XML elements: <see cref="bodyPr" />, <see cref="CS.bodyPr" />, <see cref="WPS.bodyPr" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="avLst" />.</description></item>
         /// <item><description>has the following XML attributes: <see cref="NoNamespace.prst" />.</description></item>
-        /// <item><description>corresponds to the following strongly-typed classes: PresetTextWrap.</description></item>
+        /// <item><description>corresponds to the following strongly-typed classes: PresetTextWarp.</description></item>
         /// </list>
         /// </remarks>
         public static readonly XName prstTxWarp = a + "prstTxWarp";

@@ -12,7 +12,7 @@ Each element in the SDK is derived from the XSD definitions for OpenXML document
 The particles within this SDK are of the following types:
 
 - *Element:* Defines the actual child element.
-- *Group:* Defines a reuseable group of child elements that are combined into the parent composite particle.
+- *Group:* Defines a reusable group of child elements that are combined into the parent composite particle.
 - *Sequence:* Defines a list of items where order matters.
 - *All:* Defines a list of items where order does not matter.
 - *Choice:* Defines a list of items where only one of them may occur.

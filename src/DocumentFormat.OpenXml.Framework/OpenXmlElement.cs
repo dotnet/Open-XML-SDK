@@ -196,7 +196,7 @@ namespace DocumentFormat.OpenXml
         internal IElementMetadata Metadata => Features.GetRequired<IElementMetadata>();
 
         /// <summary>
-        /// Gets an array of fixed attributes which will be parsed out if they are not yet parsed. If parsing is not requried, please
+        /// Gets an array of fixed attributes which will be parsed out if they are not yet parsed. If parsing is not required, please
         /// use <see cref="RawState"/>.
         /// </summary>
         internal Framework.Metadata.ElementState ParsedState

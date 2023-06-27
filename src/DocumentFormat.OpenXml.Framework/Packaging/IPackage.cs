@@ -61,7 +61,7 @@ public interface IPackage
     /// <summary>
     /// Deletes a part with a given URI from the package.
     /// </summary>
-    /// <param name="uri">The URI fo the part to delete.</param>
+    /// <param name="uri">The URI of the part to delete.</param>
     void DeletePart(Uri uri);
 
     /// <summary>

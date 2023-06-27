@@ -892,7 +892,7 @@ namespace DocumentFormat.OpenXml {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to An unknown error occured. Original message: &apos;{0}&apos;.
+        ///   Looks up a localized string similar to An unknown error occurred. Original message: &apos;{0}&apos;.
         /// </summary>
         internal static string UnknownError {
             get {

@@ -696,7 +696,7 @@ namespace DocumentFormat.OpenXml
 
                                         if (newnode is not OpenXmlUnknownElement)
                                         {
-                                            // The following method will load teh element in MCMode.Full
+                                            // The following method will load the element in MCMode.Full
                                             // since the node is already MC-processed when loading as unknown type, full loading the outerXml is fine
                                             newnode.OuterXml = node.OuterXml;
 

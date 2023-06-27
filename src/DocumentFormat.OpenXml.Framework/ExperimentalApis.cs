@@ -10,6 +10,6 @@ internal static class ExperimentalApis
     internal static class PackageApis
     {
         public const string DiagnosticId = "OOXML0001";
-        public const string Message = "IPackage related APIs are currently experimental. Future versions may (or may not) change their shape before stabalizing.";
+        public const string Message = "IPackage related APIs are currently experimental. Future versions may (or may not) change their shape before stabilizing.";
     }
 }

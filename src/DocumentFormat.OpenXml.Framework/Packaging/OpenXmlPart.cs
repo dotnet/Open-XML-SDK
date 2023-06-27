@@ -350,7 +350,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets a value that indicates the maximum allowable number of characters in an Open XML part. A zero (0) value specifies that the part can have an unlimited number of characters. A non-zero value specifies the maximum allowable number of characters in the part.
         /// </summary>
         /// <remarks>
-        /// This property allows you to mitigate denial of service attacks where the attacker submits package with extremely large Opexn XML part. By limiting the size of a part, you can detect the attack and recover reliably.
+        /// This property allows you to mitigate denial of service attacks where the attacker submits package with extremely large Open XML part. By limiting the size of a part, you can detect the attack and recover reliably.
         /// </remarks>
         internal long MaxCharactersInPart
         {
