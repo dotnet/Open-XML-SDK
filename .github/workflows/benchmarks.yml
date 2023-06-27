@@ -23,37 +23,17 @@ jobs:
         run: cd test/DocumentFormat.OpenXml.Benchmarks; dotnet build -c RELEASE
         shell: pwsh
       - name: Run benchmarks
-        run: cd test/DocumentFormat.OpenXml.Benchmarks; dotnet run -c RELEASE -- results --exporters json --filter '*'
+        run: cd test/DocumentFormat.OpenXml.Benchmarks; dotnet run -c RELEASE -- results --exporters json --filter '*Validation*'
         shell: pwsh
       - name: List folders
         shell: pwsh
         run: cd test/DocumentFormat.OpenXml.Benchmarks; ls -recurse
-      - name: Combine results
-        shell: pwsh
-        run: |
-          cd test/DocumentFormat.OpenXml.Benchmarks/results/results
-
-          function fold([scriptblock]$fold, [Collections.IEnumerable]$x, $a) {
-              $x.ForEach({
-                  $a = & $fold $a $_
-              })
-              return $a
-          }
-
-          $files = gci *-full-compressed.json | % { Get-Content $_ -Raw } | ConvertFrom-Json
-          $empty = "" | ConvertFrom-Json
-
-          Write-Output $files
-
-          fold { param($x, $y) $x + $y } $files $empty | ConvertTo-Json -Depth 15 | Out-File -FilePath results.json
-
-          ls
       - name: Store benchmark result
         uses: rhysd/github-action-benchmark@v1
         with:
           name: OpenXmlSdk Benchmark
           tool: 'benchmarkdotnet'
-          output-file-path: tests/DocumentFormat.OpenXml.Benchmarks/results/results/results.json
+          output-file-path: tests/DocumentFormat.OpenXml.Benchmarks/results/results/DocumentFormat.OpenXml.Benchmarks.ValidationTests-report-full-compressed.json
           github-token: ${{ secrets.GITHUB_TOKEN }}
           auto-push: true
           # Show alert with commit comment on detecting possible performance regression
