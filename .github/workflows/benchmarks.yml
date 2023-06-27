@@ -41,3 +41,43 @@ jobs:
           comment-on-alert: true
           fail-on-alert: true
           alert-comment-cc-users: '@twsouthwick'
+      - name: Store CompiledParticle
+        uses: rhysd/github-action-benchmark@v1
+        with:
+          name: CompiledParticle
+          tool: 'benchmarkdotnet'
+          output-file-path: test/DocumentFormat.OpenXml.Benchmarks/results/results/DocumentFormat.OpenXml.Benchmarks.CompiledParticle-report-full-compressed.json
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          auto-push: true
+          # Show alert with commit comment on detecting possible performance regression
+          alert-threshold: '200%'
+          comment-on-alert: true
+          fail-on-alert: true
+          alert-comment-cc-users: '@twsouthwick'
+      - name: Store Documents
+        uses: rhysd/github-action-benchmark@v1
+        with:
+          name: Documents
+          tool: 'benchmarkdotnet'
+          output-file-path: test/DocumentFormat.OpenXml.Benchmarks/results/results/DocumentFormat.OpenXml.Benchmarks.Documents-report-full-compressed.json
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          auto-push: true
+          # Show alert with commit comment on detecting possible performance regression
+          alert-threshold: '200%'
+          comment-on-alert: true
+          fail-on-alert: true
+          alert-comment-cc-users: '@twsouthwick'
+      - name: Store ElementMetadataTests
+        uses: rhysd/github-action-benchmark@v1
+        with:
+          name: ElementMetadataTests
+          tool: 'benchmarkdotnet'
+          output-file-path: test/DocumentFormat.OpenXml.Benchmarks/results/results/DocumentFormat.OpenXml.Benchmarks.ElementMetadataTests-report-full-compressed.json
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          auto-push: true
+          # Show alert with commit comment on detecting possible performance regression
+          alert-threshold: '200%'
+          comment-on-alert: true
+          fail-on-alert: true
+          alert-comment-cc-users: '@twsouthwick'
+
