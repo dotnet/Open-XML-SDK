@@ -19,7 +19,10 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-dotnet@v1
-      - name: Run benchmark
+      - name: Build benchmarks
+        run: cd test/DocumentFormat.OpenXml.Benchmarks; dotnet build -c RELEASE
+        shell: pwsh
+      - name: Run benchmarks
         run: cd test/DocumentFormat.OpenXml.Benchmarks; dotnet run -c RELEASE -- results --exporters json --filter '*'
         shell: pwsh
       - name: List folders
@@ -30,7 +33,7 @@ jobs:
         with:
           name: OpenXmlSdk Benchmark
           tool: 'benchmarkdotnet'
-          output-file-path: tests/DocumentFormat.OpenXml.Benchmarks/results/results/*-full-compressed.json
+          output-file-path: tests/DocumentFormat.OpenXml.Benchmarks/results/results/DocumentFormat.OpenXml.Benchmarks.ValidationTests-report-full-compressed.json
           github-token: ${{ secrets.GITHUB_TOKEN }}
           auto-push: true
           # Show alert with commit comment on detecting possible performance regression
@@ -38,3 +41,4 @@ jobs:
           comment-on-alert: true
           fail-on-alert: true
           alert-comment-cc-users: '@twsouthwick'
+

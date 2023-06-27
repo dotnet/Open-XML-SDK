@@ -59,7 +59,6 @@ namespace DocumentFormat.OpenXml.Benchmarks
                 // Exporters
                 AddExporter(AsciiDocExporter.Default);
                 AddExporter(HtmlExporter.Default);
-                AddExporter(JsonExporter.FullCompressed);
             }
         }
     }
