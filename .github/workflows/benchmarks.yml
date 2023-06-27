@@ -23,7 +23,7 @@ jobs:
         run: cd test/DocumentFormat.OpenXml.Benchmarks; dotnet build -c RELEASE
         shell: pwsh
       - name: Run benchmarks
-        run: cd test/DocumentFormat.OpenXml.Benchmarks; dotnet run -c RELEASE -- results --exporters json --filter '*Validation*'
+        run: cd test/DocumentFormat.OpenXml.Benchmarks; dotnet run -c RELEASE -- results --exporters json --filter '*'
         shell: pwsh
       - name: List folders
         shell: pwsh
