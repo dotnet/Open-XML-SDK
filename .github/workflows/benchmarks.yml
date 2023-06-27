@@ -28,12 +28,28 @@ jobs:
       - name: List folders
         shell: pwsh
         run: cd test/DocumentFormat.OpenXml.Benchmarks; ls -recurse
+      - name: Combine results
+        shell: pwsh
+        run:
+          cd test/DocumentFormat.OpenXml.Benchmarks
+
+          function fold([scriptblock]$fold, [Collections.IEnumerable]$x, $a) {
+              $x.ForEach({
+                  $a = & $fold $a $_
+              })
+              return $a
+          }
+
+          $filesk = gci *-full-compressed.json | % { Get-Content $_ -Raw } | ConvertFrom-Json
+          $empty = "" | ConvertFrom-Json
+          fold { param($x, $y) $x + $y } $files $empty | ConvertTo-Json -Depth 15 | Out-File -FilePath result.json
+          
       - name: Store benchmark result
         uses: rhysd/github-action-benchmark@v1
         with:
           name: OpenXmlSdk Benchmark
           tool: 'benchmarkdotnet'
-          output-file-path: tests/DocumentFormat.OpenXml.Benchmarks/results/results/DocumentFormat.OpenXml.Benchmarks.ValidationTests-report-full-compressed.json
+          output-file-path: tests/DocumentFormat.OpenXml.Benchmarks/results/results/results.json
           github-token: ${{ secrets.GITHUB_TOKEN }}
           auto-push: true
           # Show alert with commit comment on detecting possible performance regression
