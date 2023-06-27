@@ -11,6 +11,7 @@ using Xunit.Abstractions;
 
 namespace DocumentFormat.OpenXml.Framework.Tests;
 
+#if NET462 || NET
 public class ObjectSizeTests
 {
     private readonly ITestOutputHelper _output;
@@ -135,3 +136,4 @@ public class ObjectSizeTests
     {
     }
 }
+#endif
