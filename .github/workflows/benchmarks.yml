@@ -40,7 +40,7 @@ jobs:
               return $a
           }
 
-          $filesk = gci *-full-compressed.json | % { Get-Content $_ -Raw } | ConvertFrom-Json
+          $files = gci *-full-compressed.json | % { Get-Content $_ -Raw } | ConvertFrom-Json
           $empty = "" | ConvertFrom-Json
           fold { param($x, $y) $x + $y } $files $empty | ConvertTo-Json -Depth 15 | Out-File -FilePath results.json
 
