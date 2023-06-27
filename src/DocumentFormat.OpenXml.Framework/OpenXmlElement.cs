@@ -2616,7 +2616,7 @@ namespace DocumentFormat.OpenXml
 
         [DebuggerDisplay("Count = {GetCount()}")]
         [DebuggerTypeProxy(typeof(FeatureCollectionDebugView))]
-        private protected partial class ElementFeatureCollection : IFeatureCollection
+        internal class ElementFeatureCollection : IFeatureCollection
         {
             private readonly OpenXmlElement _owner;
 

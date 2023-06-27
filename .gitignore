@@ -192,3 +192,5 @@ msbuild.binlog
 
 Microsoft.Interop.JavaScript.JSImportGenerator/
 Microsoft.Interop.LibraryImportGenerator/
+
+BenchmarkDotNet.Artifacts/
