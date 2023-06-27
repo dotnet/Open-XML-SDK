@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - master
+      - benchmarks
   pull_request:
     branches:
       - master
