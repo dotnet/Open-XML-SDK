@@ -82,5 +82,5 @@ jobs:
           alert-comment-cc-users: '@twsouthwick'
       # Push gh-pages branch by yourself ONLY on PRs
       - name: Push benchmark result
-          run: git push 'https://twsouthwick:${{ secrets.GITHUB_TOKEN }}@github.com/dotnet/Open-XML-SDK.git' gh-pages:gh-pages
-          if: github.event_name != 'pull_request'
+        run: git push 'https://twsouthwick:${{ secrets.GITHUB_TOKEN }}@github.com/dotnet/Open-XML-SDK.git' gh-pages:gh-pages
+        if: github.event_name != 'pull_request'
