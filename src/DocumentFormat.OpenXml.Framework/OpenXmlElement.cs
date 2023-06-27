@@ -2614,9 +2614,14 @@ namespace DocumentFormat.OpenXml
             return root as OpenXmlPartRootElement;
         }
 
+        [DebuggerDisplay("Count = {GetCount()}")]
+        [DebuggerTypeProxy(typeof(FeatureCollectionDebugView))]
         private protected partial class ElementFeatureCollection : IFeatureCollection
         {
             private readonly OpenXmlElement _owner;
+
+            private AnnotationsFeature? _annotationsFeature;
+            private IElementMetadata? _elementMetadataFeature;
 
             public ElementFeatureCollection(OpenXmlElement owner)
             {
@@ -2629,19 +2634,39 @@ namespace DocumentFormat.OpenXml
 
             public virtual IFeatureCollection Default => FeatureCollection.Default;
 
-            [KnownFeature(typeof(AnnotationsFeature))]
-            [KnownFeature(typeof(IElementMetadata), Factory = nameof(CreateMetadata))]
-            [DelegatedFeature(nameof(GetPartFeatures))]
-            [DelegatedFeature(nameof(Default))]
-            private partial T? GetBuiltIn<T>();
+            public object? this[Type key]
+            {
+                get
+                {
+                    if (key == typeof(AnnotationsFeature))
+                    {
+                        return _annotationsFeature ??= new();
+                    }
 
-            public virtual T? Get<T>() => GetBuiltIn<T>();
+                    if (key == typeof(IElementMetadata))
+                    {
+                        return _elementMetadataFeature ??= CreateMetadata();
+                    }
+
+                    return GetPartFeatures()?[key] ?? Default?[key];
+                }
+
+                set => throw new NotImplementedException();
+            }
+
+            private int GetCount() => this.Count();
 
             private IFeatureCollection? GetPartFeatures() => _owner.GetPart()?.Features;
 
             private IElementMetadata CreateMetadata() => this.GetRequired<IElementMetadataFactoryFeature>().GetMetadata(_owner);
 
-            public void Set<TFeature>(TFeature? instance)
+            public void Set<TFeature>(TFeature? instance) => this[typeof(TFeature)] = instance;
+
+            public TFeature? Get<TFeature>() => (TFeature?)this[typeof(TFeature)];
+
+            public IEnumerator<KeyValuePair<Type, object>> GetEnumerator() => FeatureCollection.CreateEnumerator(this, new[] { typeof(AnnotationsFeature), typeof(IElementMetadata) }, default, GetPartFeatures(), Default);
+
+            IEnumerator IEnumerable.GetEnumerator()
             {
                 throw new NotImplementedException();
             }

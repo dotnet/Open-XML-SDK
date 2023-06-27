@@ -10,6 +10,7 @@ using System.Linq;
 namespace DocumentFormat.OpenXml.Packaging;
 
 internal partial class PackageFeatureCollection :
+    FeatureCollectionBase,
     IFeatureCollection,
     IPartFactoryFeature,
     IApplicationTypeFeature,
@@ -20,62 +21,48 @@ internal partial class PackageFeatureCollection :
     IPartsFeature,
     ILockFeature
 {
-    private readonly IFeatureCollection? _parent;
-
     private Action<OpenXmlPartContainer>? _save;
     private Action? _disposable;
-    private FeatureContainer _container;
     private LinkedList<DataPart>? _dataParts;
     private Dictionary<Uri, OpenXmlPart>? _parts;
 
+    private IPartUriFeature? _partUriFeature;
+    private AnnotationsFeature? _annotationFeature;
+    private IPartExtensionFeature? _partExtensionFeature;
+
+    private static readonly Type[] _known = new[] { typeof(IPartUriFeature), typeof(AnnotationsFeature), typeof(IPartExtensionFeature) };
+
     public PackageFeatureCollection(OpenXmlPackage package)
+        : base(FeatureCollection.Default)
     {
         Package = package;
-        _parent = FeatureCollection.Default;
     }
 
     protected OpenXmlPackage Package { get; }
 
-    public bool IsReadOnly => false;
-
-    public int Revision => _container.Revision + (_parent?.Revision ?? 0);
-
     ApplicationType IApplicationTypeFeature.Type => ApplicationType.None;
 
-    public TFeature? Get<TFeature>()
+    protected override object? GetKnown(Type key)
     {
-        if (_container.Get<TFeature>() is { } other)
+        if (key == typeof(IPartUriFeature))
         {
-            return other;
+            return _partUriFeature ??= new PackagePartUriHelper(this.GetRequired<IPackageFeature>().Package);
         }
 
-        if (this is TFeature @this)
+        if (key == typeof(AnnotationsFeature))
         {
-            return @this;
+            return _annotationFeature ??= new();
         }
 
-        if (GetInternal<TFeature>() is { } @internal)
+        if (key == typeof(IPartExtensionFeature))
         {
-            return @internal;
+            return _partExtensionFeature ??= new PartExtensionProvider();
         }
 
-        if (_parent is { } p && p.Get<TFeature>() is { } parent)
-        {
-            return parent;
-        }
-
-        return default;
+        return null;
     }
 
-    [KnownFeature(typeof(IPartUriFeature), Factory = nameof(CreatePartUri))]
-    [KnownFeature(typeof(AnnotationsFeature))]
-    [KnownFeature(typeof(IPartExtensionFeature), typeof(PartExtensionProvider))]
-    private partial T? GetInternal<T>();
-
-    private IPartUriFeature CreatePartUri() => new PackagePartUriHelper(this.GetRequired<IPackageFeature>().Package);
-
-    public void Set<TFeature>(TFeature? instance)
-        => _container.Set(instance);
+    protected override IEnumerable<Type> KnownTypes => _known;
 
     OpenXmlPart? IPartFactoryFeature.Create(string relationshipType) => null;
 
