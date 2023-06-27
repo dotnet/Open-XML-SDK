@@ -36,7 +36,7 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           auto-push: true
           # Show alert with commit comment on detecting possible performance regression
-          alert-threshold: '200%'
+          alert-threshold: '150%'
           comment-on-alert: true
           fail-on-alert: true
           alert-comment-cc-users: '@twsouthwick'
@@ -49,7 +49,7 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           auto-push: true
           # Show alert with commit comment on detecting possible performance regression
-          alert-threshold: '200%'
+          alert-threshold: '150%'
           comment-on-alert: true
           fail-on-alert: true
           alert-comment-cc-users: '@twsouthwick'
@@ -62,7 +62,7 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           auto-push: true
           # Show alert with commit comment on detecting possible performance regression
-          alert-threshold: '200%'
+          alert-threshold: '150%'
           comment-on-alert: true
           fail-on-alert: true
           alert-comment-cc-users: '@twsouthwick'
@@ -75,7 +75,7 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           auto-push: false
           # Show alert with commit comment on detecting possible performance regression
-          alert-threshold: '125%'
+          alert-threshold: '150%'
           comment-on-alert: true
           comment-always: true
           fail-on-alert: true
