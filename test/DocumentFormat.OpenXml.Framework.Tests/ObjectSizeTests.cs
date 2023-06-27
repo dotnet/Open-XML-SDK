@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+#if NET462 || NET
+
 using DocumentFormat.OpenXml.Packaging;
 using ObjectLayoutInspector;
 using System;
@@ -11,7 +13,6 @@ using Xunit.Abstractions;
 
 namespace DocumentFormat.OpenXml.Framework.Tests;
 
-#if NET462 || NET
 public class ObjectSizeTests
 {
     private readonly ITestOutputHelper _output;
@@ -136,4 +137,5 @@ public class ObjectSizeTests
     {
     }
 }
+
 #endif
