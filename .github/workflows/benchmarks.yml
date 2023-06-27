@@ -20,7 +20,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-dotnet@v1
       - name: Run benchmark
-        run: cd test/DocumentFormat.OpenXml.Benchmarks; dotnet run results --exporters json --filter '*'
+        run: cd test/DocumentFormat.OpenXml.Benchmarks; dotnet run -c RELEASE -- results --exporters json --filter '*'
         shell: pwsh
       - name: List folders
         shell: pwsh

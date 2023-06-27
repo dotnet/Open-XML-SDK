@@ -4,6 +4,7 @@
 using BenchmarkDotNet.Configs;
 using BenchmarkDotNet.Diagnosers;
 using BenchmarkDotNet.Exporters;
+using BenchmarkDotNet.Exporters.Json;
 using BenchmarkDotNet.Jobs;
 using BenchmarkDotNet.Loggers;
 using BenchmarkDotNet.Running;
@@ -23,7 +24,9 @@ namespace DocumentFormat.OpenXml.Benchmarks
             var switcher = new BenchmarkSwitcher(typeof(Program).Assembly);
             var config = GetConfig(input);
 
-            switcher.Run(new[] { "--filter", "*" }, config);
+            var args = input.Length == 0 ? new[] { "--filter", "*" } : input;
+
+            switcher.Run(args, config);
         }
 
         private static IConfig GetConfig(string[] args)
@@ -56,8 +59,7 @@ namespace DocumentFormat.OpenXml.Benchmarks
                 // Exporters
                 AddExporter(AsciiDocExporter.Default);
                 AddExporter(HtmlExporter.Default);
-
-                AddJob(Job.InProcess);
+                AddExporter(JsonExporter.FullCompressed);
             }
         }
     }
