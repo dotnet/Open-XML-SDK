@@ -5,6 +5,7 @@ using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Packaging;
 using System;
 using System.Collections.Generic;
+using System.Threading;
 
 #pragma warning disable CA1001 // Types that own disposable fields should be disposable
 

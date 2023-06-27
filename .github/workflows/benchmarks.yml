@@ -2,10 +2,10 @@ name: Benchmarks
 on:
   push:
     branches:
-      - master
+      - master      
   pull_request:
-    branches:
-      - master
+    # The branches below must be a subset of the branches above
+    branches: [ main ]
 
 permissions:
   contents: write
