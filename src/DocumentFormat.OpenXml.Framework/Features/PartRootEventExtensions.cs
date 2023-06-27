@@ -12,7 +12,7 @@ namespace DocumentFormat.OpenXml.Features
     public static class PartRootEventExtensions
     {
         /// <summary>
-        /// Adds a feature to track eventing for a package lifecycle events.
+        /// Adds a feature to track eventing for package life cycle events.
         /// </summary>
         /// <param name="container">Container to add the feature to.</param>
         public static void AddPartRootEventsFeature(this OpenXmlPartContainer container)

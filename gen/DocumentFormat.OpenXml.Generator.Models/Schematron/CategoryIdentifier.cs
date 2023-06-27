@@ -47,9 +47,9 @@ namespace DocumentFormat.OpenXml.Generator.Schematron
 
             // root.Category = "1.1";
 
-            // Category modality is compsed by a keywords sequence.
+            // Category modality is composed by a keywords sequence.
             // Only operator and function name are treated as keyword in schematron.
-            // Single category may have mutiple modalities due to optional parameters.
+            // Single category may have multiple modalities due to optional parameters.
             AddCategoryModality("1.1", new string[] { "@" }, -1, -1);
 
             AddCategoryModality("1.2", new string[] { "fn:matches", "@" }, -1, -1);

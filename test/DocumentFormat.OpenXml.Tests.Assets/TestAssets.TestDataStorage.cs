@@ -180,7 +180,7 @@ namespace DocumentFormat.OpenXml.Tests
                     public const string HCrestoredLeft_NormalViewRestoredTop_sz_100000_pptx = "TestDataStorage.O14ISOStrict.PowerPoint.[HC]restoredLeft-NormalViewRestoredTop-sz-100000.pptx";
                     public const string HCsndtgt_SoundTarget_builtIn_pptx = "TestDataStorage.O14ISOStrict.PowerPoint.[HC]sndtgt-SoundTarget-builtIn.pptx";
                     public const string HCtavlst_Time_tav_tm_pptx = "TestDataStorage.O14ISOStrict.PowerPoint.[HC]tavlst-Time-tav-tm.pptx";
-                    public const string HCval_Boolean_Varient_boolVal_pptx = "TestDataStorage.O14ISOStrict.PowerPoint.[HC]val-Boolean Varient-boolVal.pptx";
+                    public const string HCval_Boolean_Variant_boolVal_pptx = "TestDataStorage.O14ISOStrict.PowerPoint.[HC]val-Boolean Variant-boolVal.pptx";
                     public const string HCviewPr_PresentationViewProperties_showComments_1_pptx = "TestDataStorage.O14ISOStrict.PowerPoint.[HC]viewPr-PresentationViewProperties-showComments-1.pptx";
                 }
             }
@@ -289,13 +289,13 @@ namespace DocumentFormat.OpenXml.Tests
                     public const string AllSlidesConverterSc = "TestDataStorage.v2FxTestFiles.presentation.AllSlidesConverterSC.pptx";
                     public const string AllSlidesConverterTc = "TestDataStorage.v2FxTestFiles.presentation.AllSlidesConverterTC.pptx";
                     public const string AutoShapes_2D_Default_styles = "TestDataStorage.v2FxTestFiles.presentation.AutoShapes_2D (Default Styles).pptx";
-                    public const string AutoShapes_2D_Reflection = "TestDataStorage.v2FxTestFiles.presentation.AutoShapes_2D_Reflectioin (full).pptx";
+                    public const string AutoShapes_2D_Reflection = "TestDataStorage.v2FxTestFiles.presentation.AutoShapes_2D_Reflection (full).pptx";
                     public const string AutoShapes_2D_Shadow = "TestDataStorage.v2FxTestFiles.presentation.AutoShapes_2D_Shadow (Offset, Diagonal).pptx";
                     public const string AutoShapes_2D_Soft_Edges = "TestDataStorage.v2FxTestFiles.presentation.AutoShapes_2D_Soft Edges (5 Point).pptx";
                     public const string AutoShapes_3D_Bevel_Circle_Shadow = "TestDataStorage.v2FxTestFiles.presentation.AutoShapes_3D_Bevel (Circle)+Shadow (Offset, Diagonal).pptx";
                     public const string AutoShapes_3D_Bevel_Circle_Soft_Edges = "TestDataStorage.v2FxTestFiles.presentation.AutoShapes_3D_Bevel (Circle)+Soft Edges (5 Point).pptx";
                     public const string AutoShapes_3D_Bevel_Circle = "TestDataStorage.v2FxTestFiles.presentation.AutoShapes_3D_Bevel (Circle).pptx";
-                    public const string AutoShapes_3D_Bevel_Riblet_Reflection = "TestDataStorage.v2FxTestFiles.presentation.AutoShapes_3D_Bevel (Riblet)+Reflectioin (full).pptx";
+                    public const string AutoShapes_3D_Bevel_Riblet_Reflection = "TestDataStorage.v2FxTestFiles.presentation.AutoShapes_3D_Bevel (Riblet)+Reflection (full).pptx";
                     public const string AutoShapes_3D_Rotation_Parallel = "TestDataStorage.v2FxTestFiles.presentation.AutoShapes_3D_Rotation_Parallel (Isometric Right Up).pptx";
                     public const string Block_hyperlink_crash = "TestDataStorage.v2FxTestFiles.presentation.block_hyperlink_crash.pptx";
                     public const string Chart_2D_Animation_Box_In_One_Object = "TestDataStorage.v2FxTestFiles.presentation.Chart_2D+Animation (Box In, as one object).pptx";

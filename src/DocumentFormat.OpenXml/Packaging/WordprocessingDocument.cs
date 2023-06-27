@@ -300,7 +300,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         /// <typeparam name="T">The class of the part.</typeparam>
         /// <param name="contentType">The content type of the part. Must match the defined content type if the part is fixed content type.</param>
-        /// <param name="id">The relationship id. The id will be automaticly generated if this param is null.</param>
+        /// <param name="id">The relationship id. The id will be automatically generated if this param is null.</param>
         /// <returns>The added part.</returns>
         /// <exception cref="OpenXmlPackageException">When the part is not allowed to be referenced by this part.</exception>
         /// <exception cref="ArgumentOutOfRangeException">When the part is fixed content type and the passed in contentType does not match the defined content type.</exception>

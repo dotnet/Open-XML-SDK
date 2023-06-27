@@ -17,7 +17,7 @@ namespace DocumentFormat.OpenXml.Features
         /// </summary>
         /// <param name="doc">Document to add feature to.</param>
         /// <param name="options">Options of how paragraph ids should be generated.</param>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Reliability", "CA2000:Dispose objects before losing scope", Justification = "Regsitered for disposal")]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Reliability", "CA2000:Dispose objects before losing scope", Justification = "Registered for disposal")]
         public static void AddParagraphIdFeature(this WordprocessingDocument doc, ParagraphIdOptions? options = default)
         {
             options ??= new();

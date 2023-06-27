@@ -47,7 +47,7 @@ namespace DocumentFormat.OpenXml.Validation
         public bool Valid => Errors.Count == 0;
 
         /// <summary>
-        /// If a <see cref="CancellationToken"/> is used and is cancelled, this will throw. Otherwise, it will
+        /// If a <see cref="CancellationToken"/> is used and is canceled, this will throw. Otherwise, it will
         /// check the number of errors against the <see cref="MaxNumberOfErrors"/>.
         /// </summary>
         /// <returns><c>true</c> if error count is too high.</returns>

@@ -136,10 +136,10 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         /// <summary>
-        /// Check if current part is reflectable (with xml content).
+        /// Check if current part is reflect-able (with xml content).
         /// </summary>
         /// <param name="part">Current part</param>
-        /// <returns>return true if it has non-null root element, otherwise rturn false.</returns>
+        /// <returns>return true if it has non-null root element, otherwise return false.</returns>
         public static bool IsReflectable(this OpenXmlPart part)
         {
             if (part is null)
