@@ -28,7 +28,7 @@ jobs:
         shell: pwsh
         run: cd test/DocumentFormat.OpenXml.Benchmarks; ls -recurse
       - name: Store Validation
-        uses: rhysd/github-action-benchmark@v1
+        uses: benchmark-action/github-action-benchmark@v1
         with:
           name: Validation
           tool: 'benchmarkdotnet'
@@ -41,7 +41,7 @@ jobs:
           fail-on-alert: true
           alert-comment-cc-users: '@twsouthwick'
       - name: Store CompiledParticle
-        uses: rhysd/github-action-benchmark@v1
+        uses: benchmark-action/github-action-benchmark@v1
         with:
           name: CompiledParticle
           tool: 'benchmarkdotnet'
@@ -54,7 +54,7 @@ jobs:
           fail-on-alert: true
           alert-comment-cc-users: '@twsouthwick'
       - name: Store Documents
-        uses: rhysd/github-action-benchmark@v1
+        uses: benchmark-action/github-action-benchmark@v1
         with:
           name: Documents
           tool: 'benchmarkdotnet'
@@ -67,7 +67,7 @@ jobs:
           fail-on-alert: true
           alert-comment-cc-users: '@twsouthwick'
       - name: Store ElementMetadataTests
-        uses: rhysd/github-action-benchmark@v1
+        uses: benchmark-action/github-action-benchmark@v1
         with:
           name: ElementMetadataTests
           tool: 'benchmarkdotnet'
