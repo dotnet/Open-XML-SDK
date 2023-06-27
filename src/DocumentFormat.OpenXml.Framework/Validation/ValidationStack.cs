@@ -30,7 +30,7 @@ namespace DocumentFormat.OpenXml.Validation
         public IDisposable Push(OpenXmlPackage? package = null, OpenXmlPart? part = null, OpenXmlElement? element = null)
         {
             // Done for testing benchmark stuff
-            Thread.Sleep(200);
+            Thread.Sleep(20);
 
             var current = Current;
             var updated = GetOrCreateElement();
