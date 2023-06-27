@@ -40,9 +40,9 @@
       <PropertyGroup>
         <ProductTargetFrameworks>net35</ProductTargetFrameworks>
         <FrameworkTargetFrameworks>net35</FrameworkTargetFrameworks>
-        <TestTargetFrameworks>net452</TestTargetFrameworks>
-        <AssetsTargetFrameworks>net452</AssetsTargetFrameworks>
-        <LatestTargetFramework>net461</LatestTargetFramework>
+        <TestTargetFrameworks>net462</TestTargetFrameworks>
+        <AssetsTargetFrameworks>net462</AssetsTargetFrameworks>
+        <LatestTargetFramework>net462</LatestTargetFramework>
         <SamplesFrameworks>net472</SamplesFrameworks>
       </PropertyGroup>
     </When>
@@ -50,9 +50,9 @@
       <PropertyGroup>
         <ProductTargetFrameworks>net40</ProductTargetFrameworks>
         <FrameworkTargetFrameworks>net40</FrameworkTargetFrameworks>
-        <TestTargetFrameworks>net452</TestTargetFrameworks>
+        <TestTargetFrameworks>net462</TestTargetFrameworks>
         <AssetsTargetFrameworks>net452</AssetsTargetFrameworks>
-        <LatestTargetFramework>net461</LatestTargetFramework>
+        <LatestTargetFramework>net462</LatestTargetFramework>
         <SamplesFrameworks>net472</SamplesFrameworks>
       </PropertyGroup>
     </When>
@@ -60,9 +60,9 @@
       <PropertyGroup>
         <ProductTargetFrameworks>net46</ProductTargetFrameworks>
         <FrameworkTargetFrameworks>net46</FrameworkTargetFrameworks>
-        <TestTargetFrameworks>net46</TestTargetFrameworks>
-        <AssetsTargetFrameworks>net452</AssetsTargetFrameworks>
-        <LatestTargetFramework>net461</LatestTargetFramework>
+        <TestTargetFrameworks>net462</TestTargetFrameworks>
+        <AssetsTargetFrameworks>net462</AssetsTargetFrameworks>
+        <LatestTargetFramework>net462</LatestTargetFramework>
         <SamplesFrameworks>net472</SamplesFrameworks>
       </PropertyGroup>
     </When>
@@ -91,7 +91,7 @@
         <ProductTargetFrameworks>netstandard2.0;net35;net40</ProductTargetFrameworks>
         <FrameworkTargetFrameworks>netstandard2.0;net6.0;net35;net40;net46</FrameworkTargetFrameworks>
         <AssetsTargetFrameworks>net452;netstandard2.0</AssetsTargetFrameworks>
-        <TestTargetFrameworks>net452;net462;net6.0;net7.0</TestTargetFrameworks>
+        <TestTargetFrameworks>net462;net6.0;net7.0</TestTargetFrameworks>
         <LatestTargetFramework>net7.0</LatestTargetFramework>
         <SamplesFrameworks>net472;net7.0</SamplesFrameworks>
       </PropertyGroup>
