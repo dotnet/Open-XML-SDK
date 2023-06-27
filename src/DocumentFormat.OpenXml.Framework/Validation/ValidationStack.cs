@@ -5,6 +5,7 @@ using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Packaging;
 using System;
 using System.Collections.Generic;
+using System.Threading;
 
 #pragma warning disable CA1001 // Types that own disposable fields should be disposable
 
@@ -28,6 +29,9 @@ namespace DocumentFormat.OpenXml.Validation
 
         public IDisposable Push(OpenXmlPackage? package = null, OpenXmlPart? part = null, OpenXmlElement? element = null)
         {
+            // Done for testing benchmark stuff
+            Thread.Sleep(200);
+
             var current = Current;
             var updated = GetOrCreateElement();
 
