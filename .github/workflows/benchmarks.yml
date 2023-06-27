@@ -30,7 +30,7 @@ jobs:
         run: cd test/DocumentFormat.OpenXml.Benchmarks; ls -recurse
       - name: Combine results
         shell: pwsh
-        run:
+        run: |
           cd test/DocumentFormat.OpenXml.Benchmarks
 
           function fold([scriptblock]$fold, [Collections.IEnumerable]$x, $a) {
