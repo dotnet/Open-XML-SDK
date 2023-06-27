@@ -1,0 +1,39 @@
+name: Benchmarks
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+permissions:
+  contents: write
+  deployments: write
+
+jobs:
+  benchmark:
+    name: Run benchmarks
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-dotnet@v1
+      - name: Run benchmark
+        run: cd tests/DocumentFormat.OpenXml.Benchmarks; dotnet run --exporters json --filter '*'
+        shell: pwsh
+      - name: List folders
+        shell: pwsh
+        run: cd tests/DocumentFormat.OpenXml.Benchmarks; ls -recurse
+      - name: Store benchmark result
+        uses: rhysd/github-action-benchmark@v1
+        with:
+          name: OpenXmlSdk Benchmark
+          tool: 'benchmarkdotnet'
+          output-file-path: tests/DocumentFormat.OpenXml.Benchmarks/BenchmarkDotNet.Artifacts/results/Sample.Benchmarks-report-full-compressed.json
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          auto-push: true
+          # Show alert with commit comment on detecting possible performance regression
+          alert-threshold: '200%'
+          comment-on-alert: true
+          fail-on-alert: true
+          alert-comment-cc-users: '@twsouthwick'
