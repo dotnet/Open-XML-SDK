@@ -31,7 +31,7 @@ jobs:
       - name: Combine results
         shell: pwsh
         run: |
-          cd test/DocumentFormat.OpenXml.Benchmarks
+          cd test/DocumentFormat.OpenXml.Benchmarks/results/results
 
           function fold([scriptblock]$fold, [Collections.IEnumerable]$x, $a) {
               $x.ForEach({
