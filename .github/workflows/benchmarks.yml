@@ -1,11 +1,11 @@
 name: Benchmarks
+
 on:
   push:
-    branches:
-      - master
+    branches: [ main, release/* ]
   pull_request:
-    branches:
-      - master
+    # The branches below must be a subset of the branches above
+    branches: [ main ]
 
 permissions:
   contents: write
@@ -28,7 +28,7 @@ jobs:
         shell: pwsh
         run: cd test/DocumentFormat.OpenXml.Benchmarks; ls -recurse
       - name: Store Validation
-        uses: rhysd/github-action-benchmark@v1
+        uses: benchmark-action/github-action-benchmark@v1
         with:
           name: Validation
           tool: 'benchmarkdotnet'
@@ -36,12 +36,12 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           auto-push: true
           # Show alert with commit comment on detecting possible performance regression
-          alert-threshold: '200%'
+          alert-threshold: '150%'
           comment-on-alert: true
           fail-on-alert: true
           alert-comment-cc-users: '@twsouthwick'
       - name: Store CompiledParticle
-        uses: rhysd/github-action-benchmark@v1
+        uses: benchmark-action/github-action-benchmark@v1
         with:
           name: CompiledParticle
           tool: 'benchmarkdotnet'
@@ -49,12 +49,12 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           auto-push: true
           # Show alert with commit comment on detecting possible performance regression
-          alert-threshold: '200%'
+          alert-threshold: '150%'
           comment-on-alert: true
           fail-on-alert: true
           alert-comment-cc-users: '@twsouthwick'
       - name: Store Documents
-        uses: rhysd/github-action-benchmark@v1
+        uses: benchmark-action/github-action-benchmark@v1
         with:
           name: Documents
           tool: 'benchmarkdotnet'
@@ -62,21 +62,25 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           auto-push: true
           # Show alert with commit comment on detecting possible performance regression
-          alert-threshold: '200%'
+          alert-threshold: '150%'
           comment-on-alert: true
           fail-on-alert: true
           alert-comment-cc-users: '@twsouthwick'
       - name: Store ElementMetadataTests
-        uses: rhysd/github-action-benchmark@v1
+        uses: benchmark-action/github-action-benchmark@v1
         with:
           name: ElementMetadataTests
           tool: 'benchmarkdotnet'
           output-file-path: test/DocumentFormat.OpenXml.Benchmarks/results/results/DocumentFormat.OpenXml.Benchmarks.ElementMetadataTests-report-full-compressed.json
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          auto-push: true
+          auto-push: false
           # Show alert with commit comment on detecting possible performance regression
-          alert-threshold: '200%'
+          alert-threshold: '150%'
           comment-on-alert: true
+          comment-always: true
           fail-on-alert: true
           alert-comment-cc-users: '@twsouthwick'
-
+      # Push gh-pages branch by yourself ONLY on PRs
+      - name: Push benchmark result
+        run: git push 'https://twsouthwick:${{ secrets.GITHUB_TOKEN }}@github.com/dotnet/Open-XML-SDK.git' gh-pages:gh-pages
+        if: github.event_name != 'pull_request'
