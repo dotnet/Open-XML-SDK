@@ -3,6 +3,7 @@
 
 using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Framework;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -12,6 +13,8 @@ namespace DocumentFormat.OpenXml
 {
     internal class MCContext
     {
+        private static readonly char[] Separator = new[] { ' ' };
+
         internal delegate string? LookupNamespace(string prefix);
 
         private readonly IOpenXmlNamespaceResolver _resolver;
@@ -94,9 +97,20 @@ namespace DocumentFormat.OpenXml
         /// <returns>True to stop parsing; False to continue.</returns>
         internal delegate bool OnInvalidValue(string value);
 
+        internal static string[] GetPrefixes(string? value)
+        {
+            if (value is null)
+            {
+                return Cached.Array<string>();
+            }
+
+            return value.Split(Separator, StringSplitOptions.RemoveEmptyEntries);
+        }
+
         internal IEnumerable<string> ParsePrefixList(string ignorable, OnInvalidValue onInvalidPrefix)
         {
-            var prefixes = ignorable.Trim().Split(new char[] { ' ' });
+            var prefixes = GetPrefixes(ignorable);
+
             foreach (var prefix in prefixes)
             {
                 var ns = LookupNamespaceDelegate?.Invoke(prefix);
@@ -120,7 +134,8 @@ namespace DocumentFormat.OpenXml
         {
             Debug.Assert(!string.IsNullOrEmpty(qnameList));
 
-            var qnames = qnameList.Trim().Split(new char[] { ' ' });
+            var qnames = GetPrefixes(qnameList);
+
             foreach (var qname in qnames)
             {
                 var items = qname.Split(':');
@@ -419,7 +434,7 @@ namespace DocumentFormat.OpenXml
                 }
 
                 bool chooce = true;
-                foreach (var req in reqs.Split(new char[] { ' ' }))
+                foreach (var req in GetPrefixes(reqs))
                 {
                     // fix bug 537858
                     // the LookupNamespaceDeleget is from xmlReader
