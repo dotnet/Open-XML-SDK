@@ -5,6 +5,7 @@ using DocumentFormat.OpenXml.Features;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Reflection;
 
@@ -36,6 +37,9 @@ internal sealed class FeatureCollectionDebugView
             Value = value;
         }
 
+#if NET6_0_OR_GREATER
+        [DynamicallyAccessedMembers(DynamicallyAccessedMemberTypes.PublicFields | DynamicallyAccessedMemberTypes.NonPublicFields | DynamicallyAccessedMemberTypes.PublicProperties | DynamicallyAccessedMemberTypes.NonPublicProperties)]
+#endif
         public Type Type { get; }
 
         public object Value { get; }
@@ -64,6 +68,9 @@ internal sealed class FeatureCollectionDebugView
         private readonly object _target;
 
         [DebuggerBrowsable(DebuggerBrowsableState.Never)]
+#if NET6_0_OR_GREATER
+        [DynamicallyAccessedMembers(DynamicallyAccessedMemberTypes.PublicFields | DynamicallyAccessedMemberTypes.NonPublicFields | DynamicallyAccessedMemberTypes.PublicProperties | DynamicallyAccessedMemberTypes.NonPublicProperties)]
+#endif
         private readonly Type _type;
 
         [DebuggerBrowsable(DebuggerBrowsableState.Never)]
@@ -78,7 +85,6 @@ internal sealed class FeatureCollectionDebugView
             _type = view.Type;
         }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Trimming", "IL2080:'this' argument does not satisfy 'DynamicallyAccessedMembersAttribute' in call to target method. The source field does not have matching annotations.", Justification = "This is only used for debug views and won't work in IL trimmed scenarios")]
         private List<Member> BuildMemberList()
         {
             var list = new List<Member>();

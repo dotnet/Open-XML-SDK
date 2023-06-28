@@ -14,7 +14,7 @@ namespace DocumentFormat.OpenXml.Packaging;
 [DebuggerDisplay("Count = {GetCount()}")]
 [DebuggerTypeProxy(typeof(FeatureCollectionDebugView))]
 #if NET6_0_OR_GREATER
-[DynamicallyAccessedMembers(DynamicallyAccessedMemberTypes.PublicProperties)]
+[DynamicallyAccessedMembers(DynamicallyAccessedMemberTypes.Interfaces)]
 #endif
 internal abstract class FeatureCollectionBase : IFeatureCollection
 {
