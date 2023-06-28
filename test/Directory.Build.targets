@@ -12,7 +12,6 @@
         </Compile>
       </ItemGroup>
       <ItemGroup>
-        <!-- Need to bring this in manually as the test framework itself tries to bring in 9.0.0 -->
         <PackageReference Include="Newtonsoft.Json" />
         <PackageReference Include="System.ValueTuple" />
         <PackageReference Include="Microsoft.NET.Test.Sdk" />

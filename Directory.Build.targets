@@ -11,6 +11,7 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
     </PackageReference>
+    <Reference Condition="$(IsFramework)" Include="WindowsBase" />
   </ItemGroup>
   <!-- The tool is used by default, but we don't want it to. It must be set in a target to ensure it is not overridden -->
   <Target Name="BeforeResGen" Condition=" '$(TargetFramework)' == 'net35' ">
@@ -27,7 +28,4 @@
     <PackageOutputPath>$(MSBuildThisFileDirectory)bin\$(Configuration)\packages\</PackageOutputPath>
     <PackageOutputPath Condition="$(IsShipped)">$(PackageOutputPath)shipping\</PackageOutputPath>
   </PropertyGroup>
-  <ItemGroup Condition=" '$(TargetFramework)' == 'net35' OR $(TargetFramework.StartsWith('net4'))">
-    <Reference Include="WindowsBase" />
-  </ItemGroup>
 </Project>

@@ -122,6 +122,8 @@
   <PropertyGroup>
     <SupportsNetStandard>true</SupportsNetStandard>
     <SupportsNetStandard Condition=" '$(TargetFramework)' == 'net35' OR '$(TargetFramework)' == 'net40' OR '$(TargetFramework)' == 'net452'  OR '$(TargetFramework)' == 'net46' ">false</SupportsNetStandard>
+    <IsFramework>false</IsFramework>
+    <IsFramework Condition=" '$(TargetFramework)' == 'net35' OR $(TargetFramework.StartsWith('net4')) ">true</IsFramework>
   </PropertyGroup>
 
   <Target Name="UnknownProjectLoadStyle" BeforeTargets="Build" Condition="$(__InvalidProjectLoadStyle)">
