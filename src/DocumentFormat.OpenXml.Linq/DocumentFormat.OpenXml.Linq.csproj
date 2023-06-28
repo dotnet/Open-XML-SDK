@@ -18,31 +18,8 @@
     <ProjectReference Include="..\DocumentFormat.OpenXml.Framework\DocumentFormat.OpenXml.Framework.csproj" />
   </ItemGroup>
 
-  <Choose>
-    <When Condition=" '$(TargetFramework)' == 'net35'">
-      <ItemGroup>
-        <Reference Include="System" />
-        <Reference Include="System.Xml" />
-        <Reference Include="System.Xml.Linq" />
-      </ItemGroup>
-    </When>
-
-    <When Condition=" '$(TargetFramework)' == 'net40'">
-      <ItemGroup>
-        <Reference Include="System" />
-        <Reference Include="System.Xml" />
-        <Reference Include="System.Xml.Linq" />
-      </ItemGroup>
-    </When>
-
-    <When Condition=" '$(TargetFramework)' == 'net46'">
-      <ItemGroup>
-        <Reference Include="System" />
-        <Reference Include="System.Xml" />
-        <Reference Include="System.Xml.Linq" />
-      </ItemGroup>
-    </When>
-
-  </Choose>
+  <ItemGroup Condition="$(IsFramework)">
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
 
 </Project>

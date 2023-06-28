@@ -29,46 +29,9 @@
     <RootNamespace>DocumentFormat.OpenXml</RootNamespace>
   </PropertyGroup>
 
-  <Choose>
-    <When Condition=" '$(TargetFramework)' == 'net35'">
-      <PropertyGroup>
-        <CompileWithPeVerify>true</CompileWithPeVerify>
-      </PropertyGroup>
-
-      <ItemGroup>
-        <Reference Include="System" />
-        <Reference Include="System.Xml" />
-      </ItemGroup>
-    </When>
-
-    <When Condition=" '$(TargetFramework)' == 'net40' ">
-      <PropertyGroup>
-        <CompileWithPeVerify>true</CompileWithPeVerify>
-      </PropertyGroup>
-
-      <ItemGroup>
-        <Reference Include="System" />
-        <Reference Include="System.Xml" />
-      </ItemGroup>
-    </When>
-
-    <When Condition=" '$(TargetFramework)' == 'net46' ">
-      <PropertyGroup>
-        <CompileWithPeVerify>true</CompileWithPeVerify>
-      </PropertyGroup>
-
-      <ItemGroup>
-        <Reference Include="System" />
-        <Reference Include="System.Xml" />
-      </ItemGroup>
-    </When>
-
-    <When Condition="'$(TargetFramework)' == 'netstandard2.0' OR '$(TargetFramework)' == 'net6.0' OR '$(TargetFramework)' == 'net7.0' ">
-      <ItemGroup>
-        <PackageReference Include="System.IO.Packaging" />
-      </ItemGroup>
-    </When>
-  </Choose>
+  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0' OR '$(TargetFramework)' == 'net6.0' OR '$(TargetFramework)' == 'net7.0' ">
+    <PackageReference Include="System.IO.Packaging" />
+  </ItemGroup>
 
   <ItemGroup>
     <Compile Update="Resources\ExceptionMessages.Designer.cs">

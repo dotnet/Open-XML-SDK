@@ -35,45 +35,4 @@
     <ProjectReference Include="../DocumentFormat.OpenXml.Framework/DocumentFormat.OpenXml.Framework.csproj" />
   </ItemGroup>
 
-  <Choose>
-    <When Condition=" '$(TargetFramework)' == 'net35'">
-      <PropertyGroup>
-        <CompileWithPeVerify>true</CompileWithPeVerify>
-      </PropertyGroup>
-
-      <ItemGroup>
-        <Reference Include="System" />
-        <Reference Include="System.Xml" />
-      </ItemGroup>
-    </When>
-
-    <When Condition=" '$(TargetFramework)' == 'net40' ">
-      <PropertyGroup>
-        <CompileWithPeVerify>true</CompileWithPeVerify>
-      </PropertyGroup>
-
-      <ItemGroup>
-        <Reference Include="System" />
-        <Reference Include="System.Xml" />
-      </ItemGroup>
-    </When>
-
-    <When Condition=" '$(TargetFramework)' == 'net46' ">
-      <PropertyGroup>
-        <CompileWithPeVerify>true</CompileWithPeVerify>
-      </PropertyGroup>
-
-      <ItemGroup>
-        <Reference Include="System" />
-        <Reference Include="System.Xml" />
-      </ItemGroup>
-    </When>
-
-    <When Condition="'$(TargetFramework)' == 'netstandard2.0' OR '$(TargetFramework)' == 'net6.0' OR '$(TargetFramework)' == 'net7.0' ">
-      <ItemGroup>
-        <PackageReference Include="System.IO.Packaging" />
-      </ItemGroup>
-    </When>
-  </Choose>
-
 </Project>
