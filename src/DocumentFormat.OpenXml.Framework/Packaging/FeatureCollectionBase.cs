@@ -6,12 +6,16 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 
 namespace DocumentFormat.OpenXml.Packaging;
 
 [DebuggerDisplay("Count = {GetCount()}")]
 [DebuggerTypeProxy(typeof(FeatureCollectionDebugView))]
+#if NET6_0_OR_GREATER
+[DynamicallyAccessedMembers(DynamicallyAccessedMemberTypes.Interfaces)]
+#endif
 internal abstract class FeatureCollectionBase : IFeatureCollection
 {
     private static readonly HashSet<Type> Ignored = new HashSet<Type>(new[]
