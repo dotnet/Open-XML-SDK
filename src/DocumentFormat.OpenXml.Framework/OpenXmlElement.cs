@@ -1642,7 +1642,7 @@ namespace DocumentFormat.OpenXml
             if (mcAttributes.MustUnderstand is not null && !string.IsNullOrEmpty(mcAttributes.MustUnderstand.Value))
             {
                 var resolver = Features.GetNamespaceResolver();
-                var prefixes = mcAttributes.MustUnderstand.Value!.Trim().Split(new char[] { ' ' });
+                var prefixes = MCContext.GetPrefixes(mcAttributes.MustUnderstand.Value);
 
                 foreach (var prefix in prefixes)
                 {
@@ -1678,7 +1678,7 @@ namespace DocumentFormat.OpenXml
             if (MCAttributes.MustUnderstand is not null && !string.IsNullOrEmpty(MCAttributes.MustUnderstand.Value))
             {
                 var resolver = Features.GetNamespaceResolver();
-                var prefixes = MCAttributes.MustUnderstand.Value!.Trim().Split(new char[] { ' ' });
+                var prefixes = MCContext.GetPrefixes(MCAttributes.MustUnderstand.Value);
 
                 foreach (var prefix in prefixes)
                 {
@@ -2251,7 +2251,7 @@ namespace DocumentFormat.OpenXml
         /// Adds the MC attributes to the "attributes" collection.
         /// </summary>
         /// <param name="attributes"></param>
-        private void AddMCAttributes(ICollection<OpenXmlAttribute> attributes)
+        private void AddMCAttributes(List<OpenXmlAttribute> attributes)
         {
             var mcPrefix = LookupPrefix(AlternateContent.MarkupCompatibilityNamespace);
 

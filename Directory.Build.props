@@ -13,9 +13,10 @@
          - net46:              .NET Framework 4.6
          - net6_0:             .NET 6.0
          - net7_0:             .NET 7.0
+         - net8_0:             .NET 7.0
          - All:                Will build for all platforms
          -->
-    <ProjectLoadStyle Condition=" '$(ProjectLoadStyle)' == '' ">net7_0</ProjectLoadStyle>
+    <ProjectLoadStyle Condition=" '$(ProjectLoadStyle)' == '' ">net8_0</ProjectLoadStyle>
     <__InvalidProjectLoadStyle>false</__InvalidProjectLoadStyle>
   </PropertyGroup>
 
@@ -84,6 +85,16 @@
         <AssetsTargetFrameworks>netstandard2.0</AssetsTargetFrameworks>
         <LatestTargetFramework>net7.0</LatestTargetFramework>
         <SamplesFrameworks>net7.0</SamplesFrameworks>
+      </PropertyGroup>
+    </When>
+    <When Condition=" '$(ProjectLoadStyle)' == 'net8_0' ">
+      <PropertyGroup>
+        <ProductTargetFrameworks>net8.0</ProductTargetFrameworks>
+        <FrameworkTargetFrameworks>net8.0</FrameworkTargetFrameworks>
+        <TestTargetFrameworks>net8.0</TestTargetFrameworks>
+        <AssetsTargetFrameworks>netstandard2.0</AssetsTargetFrameworks>
+        <LatestTargetFramework>net8.0</LatestTargetFramework>
+        <SamplesFrameworks>net8.0</SamplesFrameworks>
       </PropertyGroup>
     </When>
     <When Condition=" '$(ProjectLoadStyle)' == 'All' ">
