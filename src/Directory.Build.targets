@@ -6,6 +6,11 @@
     <!--<PackageValidationBaselineVersion>2.18.0</PackageValidationBaselineVersion>-->
   </PropertyGroup>
 
+  <ItemGroup Condition="$(IsFramework)">
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+
   <Import Project="$(MSBuildThisFileDirectory)\PEVerify.targets" />
 
   <Import Project="..\Directory.Build.targets" />
