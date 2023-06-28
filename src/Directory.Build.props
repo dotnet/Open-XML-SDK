@@ -8,7 +8,7 @@
   <PropertyGroup>
     <AnalysisLevel>latest-All</AnalysisLevel>
     <EnableNETAnalyzers>true</EnableNETAnalyzers>
-    <IsTrimmable Condition=" '$(TargetFramework)' == 'net6.0' OR '$(TargetFramework)' == 'net7.0' ">true</IsTrimmable>
+    <IsTrimmable Condition=" '$(TargetFramework)' == 'net6.0' OR '$(TargetFramework)' == 'net7.0' OR '$(TargetFramework)' == 'net8.0' ">true</IsTrimmable>
     <Nullable>enable</Nullable>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>

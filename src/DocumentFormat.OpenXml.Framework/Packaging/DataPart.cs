@@ -203,7 +203,7 @@ namespace DocumentFormat.OpenXml.Packaging
             _metroPart = packagePart;
             _uri = packagePart.Uri;
 
-            if (_metroPart.Relationships.Any())
+            if (_metroPart.Relationships.Count != 0)
             {
                 // Media (Audio, Video) parts should not reference any other parts.
                 throw new OpenXmlPackageException(ExceptionMessages.MediaDataPartShouldNotReferenceOtherParts);
