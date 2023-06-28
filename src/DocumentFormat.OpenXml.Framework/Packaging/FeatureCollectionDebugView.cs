@@ -79,7 +79,9 @@ internal sealed class FeatureCollectionDebugView
             _type = view.Type;
         }
 
+#if NET6_0_OR_GREATER
         [UnconditionalSuppressMessage("ReflectionAnalysis", "IL2080", Justification = "This is only required for debug views")]
+#endif
         private List<Member> BuildMemberList()
         {
             var list = new List<Member>();
