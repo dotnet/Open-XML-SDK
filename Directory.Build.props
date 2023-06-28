@@ -13,7 +13,7 @@
          - net46:              .NET Framework 4.6
          - net6_0:             .NET 6.0
          - net7_0:             .NET 7.0
-         - net8_0:             .NET 7.0
+         - net8_0:             .NET 8.0
          - All:                Will build for all platforms
          -->
     <ProjectLoadStyle Condition=" '$(ProjectLoadStyle)' == '' ">net8_0</ProjectLoadStyle>
