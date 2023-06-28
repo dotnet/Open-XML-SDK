@@ -12,7 +12,6 @@ on:
 
 env:
   PublishAot: true
-  SummaryOutDir: "${{ env.GITHUB_WORKSPACE }}/summary"
   Configuration: RELEASE
 
 jobs:
@@ -23,17 +22,15 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-dotnet@v1
-      - name: Test
-        run: echo $(SummaryOutDir)
       - name: SunburstChartExample
-        run: dotnet publish samples/SunburstChartExample/ -f net7.0
+        run: dotnet publish samples/SunburstChartExample/ -f net7.0 /p:SummaryOutDir=$GITHUB_WORKSPACE/summary
       - name: LinqSvgExample
-        run: dotnet publish samples/Linq/SvgExample -f net7.0
+        run: dotnet publish samples/Linq/SvgExample -f net7.0 /p:SummaryOutDir=$GITHUB_WORKSPACE/summary
       - name: ThreadedCommentExample
-        run: dotnet publish samples/ThreadedCommentExample/ -f net7.0
+        run: dotnet publish samples/ThreadedCommentExample/ -f net7.0 /p:SummaryOutDir=$GITHUB_WORKSPACE/summary
       - name: Write summary
         run: |
-          cd $SummaryOutDir
+          cd $GITHUB_WORKSPACE/summary
           for FILE in *.summary.md
           do
             cat ${FILE} >> $GITHUB_STEP_SUMMARY
