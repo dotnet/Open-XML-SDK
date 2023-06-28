@@ -1,0 +1,33 @@
+name: AOT Checker
+
+on:
+  push:
+    branches: [ main, release/* ]
+  pull_request:
+    # The branches below must be a subset of the branches above
+    branches: [ main ]
+
+jobs:
+  benchmark:
+    name: Run benchmarks
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-dotnet@v1
+      - name: Build Sample
+        run: cd samples/SunburstChartExample && dotnet build -c RELEASE
+      - uses: mshick/add-pr-comment@v2
+        if: always()
+        with:
+          message: |
+            **Hello MAIN**
+      - name: Publish Sample
+        run: cd samples/SunburstChartExample && dotnet publish -c RELEASE /p:PublishAot=true  -o publish/sunburst
+      - name: Get contents
+        run: ls publish/sunburst > result.txt
+      - uses: mshick/add-pr-comment@v2
+        if: always()
+        with:
+          message-path: |
+            result.txt
+  
