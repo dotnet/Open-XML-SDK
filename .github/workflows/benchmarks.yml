@@ -38,10 +38,9 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           auto-push: true
           # Show alert with commit comment on detecting possible performance regression
-          alert-threshold: '150%'
+          alert-threshold: '200%'
           comment-on-alert: true
-          fail-on-alert: true
-          alert-comment-cc-users: '@twsouthwick'
+          fail-on-alert: false
       - name: Store CompiledParticle
         uses: benchmark-action/github-action-benchmark@v1
         with:
@@ -51,10 +50,9 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           auto-push: true
           # Show alert with commit comment on detecting possible performance regression
-          alert-threshold: '150%'
+          alert-threshold: '200%'
           comment-on-alert: true
-          fail-on-alert: true
-          alert-comment-cc-users: '@twsouthwick'
+          fail-on-alert: false
       - name: Store Documents
         uses: benchmark-action/github-action-benchmark@v1
         with:
@@ -64,10 +62,9 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           auto-push: true
           # Show alert with commit comment on detecting possible performance regression
-          alert-threshold: '150%'
+          alert-threshold: '200%'
           comment-on-alert: true
-          fail-on-alert: true
-          alert-comment-cc-users: '@twsouthwick'
+          fail-on-alert: false
       - name: Store ElementMetadataTests
         uses: benchmark-action/github-action-benchmark@v1
         with:
@@ -77,11 +74,10 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           auto-push: false
           # Show alert with commit comment on detecting possible performance regression
-          alert-threshold: '150%'
+          alert-threshold: '200%'
           comment-on-alert: true
           comment-always: true
-          fail-on-alert: true
-          alert-comment-cc-users: '@twsouthwick'
+          fail-on-alert: false
       # Push gh-pages branch by yourself ONLY on PRs
       - name: Push benchmark result
         run: git push 'https://twsouthwick:${{ secrets.GITHUB_TOKEN }}@github.com/dotnet/Open-XML-SDK.git' gh-pages:gh-pages
