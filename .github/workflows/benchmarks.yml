@@ -13,8 +13,8 @@ permissions:
 
 jobs:
   benchmark:
-    name: Run benchmarks
-    runs-on: windows-latest
+    name: Run
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-dotnet@v1
@@ -24,9 +24,11 @@ jobs:
       - name: Run benchmarks
         run: cd test/DocumentFormat.OpenXml.Benchmarks; dotnet run -c RELEASE -- results --exporters json --filter '*'
         shell: pwsh
-      - name: List folders
+      - name: Write summary
         shell: pwsh
-        run: cd test/DocumentFormat.OpenXml.Benchmarks; ls -recurse
+        run: |
+          $files = gci test/DocumentFormat.OpenXml.Benchmarks/results/results/*.asciidoc
+          $files | % { gc $_ } >> $env:GITHUB_STEP_SUMMARY
       - name: Store Validation
         uses: benchmark-action/github-action-benchmark@v1
         with:

@@ -1,0 +1,71 @@
+<Project>
+
+  <UsingTask 
+    TaskName="GetPublishOutputDetails" 
+    TaskFactory="RoslynCodeTaskFactory"
+    AssemblyFile="$(MSBuildToolsPath)\Microsoft.Build.Tasks.Core.dll" >
+    <ParameterGroup>
+      <Items ParameterType="Microsoft.Build.Framework.ITaskItem[]" Required="true" />
+      <Result ParameterType="Microsoft.Build.Framework.ITaskItem[]" Output="true"/>
+    </ParameterGroup>
+    <Task>
+      <Using Namespace="System.IO"/>
+      <Using Namespace="Microsoft.Build.Framework"/>
+      <Code Type="Fragment" Language="cs"><![CDATA[
+        Result = new ITaskItem[Items.Length];
+
+        for(int i = 0; i < Items.Length; i++)
+        {
+            var file = Items[i];
+            var fi = new FileInfo(file.ItemSpec);
+            var result = new TaskItem(file.GetMetadata("RelativePath"));
+
+            var size = (double)fi.Length;
+            var str = "";
+
+            if (size < 1000) {
+                str = $"{size} bytes";
+            } else {
+                size = size / 1024;
+
+                if (size < 1000) {
+                    str = $"{size:N1} kb";
+                } else {
+                    size = size / 1024;
+                    str = $"{size:N1} mb";
+                }
+            }
+
+            result.SetMetadata("Size", str);
+
+            Result[i] = result;
+        }
+  ]]></Code>
+    </Task>
+  </UsingTask>
+
+  <Target Name="WriteMarkdownSummary" Condition=" '$(SummaryOutDir)' != '' " AfterTargets="PublishItemsOutputGroup">
+    <PropertyGroup>
+        <SummaryFile>$([MSBuild]::NormalizePath('$(SummaryOutDir)/$(TargetName).summary.md'))</SummaryFile>
+    </PropertyGroup>
+
+    <GetPublishOutputDetails  Items="@(PublishItemsOutputGroupOutputs)">
+      <Output TaskParameter="Result" ItemName="PublishItemsOutputInfo" />
+    </GetPublishOutputDetails>
+
+    <ItemGroup>
+      <_Contents Include="### $(TargetName)" />
+      <_Contents Include="| File | Size |" />
+      <_Contents Include="|---|---|" />
+      <_Contents Include="| %(PublishItemsOutputInfo.Identity) | %(PublishItemsOutputInfo.Size) |" />
+    </ItemGroup>
+
+    <WriteLinesToFile
+        File="$(SummaryOutDir)/$(TargetName).summary.md"
+        Lines="@(_Contents)"
+        Overwrite="true" />
+
+    <Message Text="Wrote summary file to $(SummaryFile)" Importance="High" />
+  </Target>
+  
+</Project>
