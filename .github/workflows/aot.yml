@@ -12,7 +12,7 @@ on:
 
 env:
   PublishAot: true
-  SummaryOutDir: "$GITHUB_WORKSPACE/summary"
+  SummaryOutDir: "${{ env.GITHUB_WORKSPACE }}/summary"
   Configuration: RELEASE
 
 jobs:
