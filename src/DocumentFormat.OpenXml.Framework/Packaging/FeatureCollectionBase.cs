@@ -44,7 +44,7 @@ internal abstract class FeatureCollectionBase : IFeatureCollection
                 return known;
             }
 
-            if (GetType().GetInterfaces().Contains(key) && !Ignored.Contains(key))
+            if (!Ignored.Contains(key) && key.IsAssignableFrom(GetType()))
             {
                 return this;
             }
