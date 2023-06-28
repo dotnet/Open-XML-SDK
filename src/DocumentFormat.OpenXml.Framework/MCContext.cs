@@ -13,6 +13,8 @@ namespace DocumentFormat.OpenXml
 {
     internal class MCContext
     {
+        private static readonly char[] Separator = new[] { ' ' };
+
         internal delegate string? LookupNamespace(string prefix);
 
         private readonly IOpenXmlNamespaceResolver _resolver;
@@ -102,7 +104,7 @@ namespace DocumentFormat.OpenXml
                 return Cached.Array<string>();
             }
 
-            return value.Split(" ", StringSplitOptions.RemoveEmptyEntries);
+            return value.Split(Separator, StringSplitOptions.RemoveEmptyEntries);
         }
 
         internal IEnumerable<string> ParsePrefixList(string ignorable, OnInvalidValue onInvalidPrefix)
