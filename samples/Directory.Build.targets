@@ -10,7 +10,7 @@
     <ProjectReference Include="$(MSBuildThisFileDirectory)..\src\DocumentFormat.OpenXml.Framework\DocumentFormat.OpenXml.Framework.csproj" />
   </ItemGroup>
 
-  <Import Condition="$(PublishAot)" Project="$(MSBuildThisFileDirectory)Samples.Aot.targets" />
+  <Import Condition=" '$(PublishAot)' == 'true' " Project="$(MSBuildThisFileDirectory)Samples.Aot.targets" />
    
   <Import Project="$(MSBuildThisFileDirectory)..\Directory.Build.targets" />
 </Project>
