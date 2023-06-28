@@ -31,9 +31,7 @@ internal sealed class FeatureCollectionDebugView
     [DebuggerDisplay("{Value.ToString(),nq}", Name = "{Type.ToString(),nq}", Type = "{Value.GetType().ToString(),nq}")]
     internal sealed class FeatureItem
     {
-        public FeatureItem(
-            Type type,
-            object value)
+        public FeatureItem(Type type, object value)
         {
             Type = type;
             Value = value;
