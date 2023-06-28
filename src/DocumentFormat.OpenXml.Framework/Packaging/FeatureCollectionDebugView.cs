@@ -31,15 +31,14 @@ internal sealed class FeatureCollectionDebugView
     [DebuggerDisplay("{Value.ToString(),nq}", Name = "{Type.ToString(),nq}", Type = "{Value.GetType().ToString(),nq}")]
     internal sealed class FeatureItem
     {
-        public FeatureItem(Type type, object value)
+        public FeatureItem(
+            Type type,
+            object value)
         {
             Type = type;
             Value = value;
         }
 
-#if NET6_0_OR_GREATER
-        [DynamicallyAccessedMembers(DynamicallyAccessedMemberTypes.PublicFields | DynamicallyAccessedMemberTypes.NonPublicFields | DynamicallyAccessedMemberTypes.PublicProperties | DynamicallyAccessedMemberTypes.NonPublicProperties)]
-#endif
         public Type Type { get; }
 
         public object Value { get; }
@@ -68,9 +67,6 @@ internal sealed class FeatureCollectionDebugView
         private readonly object _target;
 
         [DebuggerBrowsable(DebuggerBrowsableState.Never)]
-#if NET6_0_OR_GREATER
-        [DynamicallyAccessedMembers(DynamicallyAccessedMemberTypes.PublicFields | DynamicallyAccessedMemberTypes.NonPublicFields | DynamicallyAccessedMemberTypes.PublicProperties | DynamicallyAccessedMemberTypes.NonPublicProperties)]
-#endif
         private readonly Type _type;
 
         [DebuggerBrowsable(DebuggerBrowsableState.Never)]
@@ -85,6 +81,7 @@ internal sealed class FeatureCollectionDebugView
             _type = view.Type;
         }
 
+        [UnconditionalSuppressMessage("ReflectionAnalysis", "IL2080", Justification = "This is only required for debug views")]
         private List<Member> BuildMemberList()
         {
             var list = new List<Member>();
