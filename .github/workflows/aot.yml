@@ -13,7 +13,7 @@ on:
 env:
   PublishAot: true
   SummaryOutDir: "$GITHUB_WORKSPACE/summary"
-  Conifugration: RELEASE
+  Configuration: RELEASE
 
 jobs:
   benchmark:
@@ -23,6 +23,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-dotnet@v1
+      - name: Test
+        run: echo $(SummaryOutDir)
       - name: SunburstChartExample
         run: dotnet publish samples/SunburstChartExample/ -f net7.0
       - name: LinqSvgExample
