@@ -5,6 +5,7 @@ using DocumentFormat.OpenXml.Features;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Reflection;
 
@@ -78,7 +79,9 @@ internal sealed class FeatureCollectionDebugView
             _type = view.Type;
         }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Trimming", "IL2080:'this' argument does not satisfy 'DynamicallyAccessedMembersAttribute' in call to target method. The source field does not have matching annotations.", Justification = "This is only used for debug views and won't work in IL trimmed scenarios")]
+#if NET6_0_OR_GREATER
+        [UnconditionalSuppressMessage("ReflectionAnalysis", "IL2080", Justification = "This is only required for debug views")]
+#endif
         private List<Member> BuildMemberList()
         {
             var list = new List<Member>();
