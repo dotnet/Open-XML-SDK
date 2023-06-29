@@ -148,7 +148,7 @@ namespace DocumentFormat.OpenXml
                     // because XmlReader can not be created on InnerXml ( InnerXml may have several root elements ).
                     using (var w = new StringWriter(CultureInfo.InvariantCulture))
                     {
-                        using (XmlWriter writer2 = new XmlDOMTextWriter(w))
+                        using (var writer2 = new XmlDOMTextWriter(w))
                         {
                             writer2.WriteStartElement(Prefix, LocalName, NamespaceUri);
                             writer2.WriteRaw(value);
@@ -696,7 +696,7 @@ namespace DocumentFormat.OpenXml
 
                                         if (newnode is not OpenXmlUnknownElement)
                                         {
-                                            // The following method will load teh element in MCMode.Full
+                                            // The following method will load the element in MCMode.Full
                                             // since the node is already MC-processed when loading as unknown type, full loading the outerXml is fine
                                             newnode.OuterXml = node.OuterXml;
 

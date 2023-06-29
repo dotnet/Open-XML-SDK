@@ -16,7 +16,7 @@ internal sealed class FilePackageFeature : StreamPackageFeature, IPackageStreamF
         _path = path;
     }
 
-    private static Stream CreateStream(string path, PackageOpenMode openMode)
+    private static FileStream CreateStream(string path, PackageOpenMode openMode)
     {
         var access = openMode == PackageOpenMode.Read ? FileAccess.Read : FileAccess.ReadWrite;
         var mode = openMode switch

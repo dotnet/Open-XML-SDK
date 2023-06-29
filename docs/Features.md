@@ -2,11 +2,33 @@
 
 Features are a new concept in v2.14 and later that allows for behavior and state to be contained within the document or part. This is accessed via `Features` property  on packages, parts, and elements. Elements inherit part features, and parts inherit package features.
 
-This is inspired by the pattern ASP.NET Core uses to modify behavior of HttpContext: https://learn.microsoft.com/aspnet/core/fundamentals/request-features
+This is inspired by the pattern ASP.NET Core uses to modify behavior of HttpContext: https://learn.microsoft.com/aspnet/core/fundamentals/request-features. This is an implementation of the [strategy pattern](https://refactoring.guru/design-patterns/strategy) that makes it easy to replace behavior on the fly.
+
+As of v3.0, the `IFeatureCollection` includes the ability to enumerate registered features. 
+
+## Visualizing Registered Features
+
+The in-box implementations of the `IFeatureCollection` provide a helpful debug view so you can see what features are available and what their properties/fields are:
+
+![Features Debug View](feature-debug-view.png)
 
 ## Current Features
 
-The features that are currently available are described below and at what scope they are available. This is important, because and element by itself will not have any features available, while an element in one part may have different features than another part.
+The features that are currently available are described below and at what scope they are available:
+
+### IDisposableFeature
+
+This feature allows for registering actions that need to run when a package or a part is destroyed or disposed:
+
+```csharp
+OpenXmlPackage package = GetSomePackage();
+package.Features.Get<IDisposableFeature>().Register(() => /* Some action that is called when the package is disposed */);
+
+OpenXmlPart part = GetSomePart();
+part.Features.Get<IDisposableFeature>().Register(() => /* Some action that is called when the part is removed or closed */);
+```
+
+Packages and parts will have their own implementations of this feature. Elements will retrieve the feature for their containing part if available.
 
 ### IPackageEventsFeature
 
@@ -51,27 +73,9 @@ Generally, assume that there may be a singleton implementation for the events an
 
 > Note: There may be times when the part root is changed but an event is not fired. Not all areas have been identified where it would make sense to raise an event. Please file an issue if you find one.
 
-## DocumentFormat.OpenXml.Features - unreleased
+## DocumentFormat.OpenXml.Features
 
 This library contains additional (non-core) features that build on top of built-in features and functionality.
-
-### IDisposableFeature
-
-This feature allows for registering features that need to be disposed at the same time as the feature goes out of scope. This allows a feature to be created, but its lifetime managed concurrently with the collection it is added to. The recommended way to use it is simply to call the following method:
-
-```csharp
-OpenXmlPackage package = GetSomePackage();
-package.TryAddDisposableFeature();
-
-OpenXmlPart part = GetSomePart();
-part.SetDisposable(new ExampleFeature());
-
-public class ExampleFeature : IDisposable
-{
-}
-```
-
-This will add `ExampleFeature` to the part feature, and register it to be disposed when the part is disposed.
 
 ### IRandomNumberGeneratorFeature
 This feature allows for a shared service to generate random numbers and fill an array.
@@ -121,7 +125,7 @@ Assert.NotEqual(p1.ParagraphId, p2.ParagraphId);
 Assert.Equal(2, shared.Count);
 ```
 
-## DocumentFormat.OpenXml.Linq - unreleased
+## DocumentFormat.OpenXml.Linq
 
 ### IPartRootXElementFeature
 

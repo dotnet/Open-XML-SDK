@@ -4,6 +4,7 @@
 using BenchmarkDotNet.Configs;
 using BenchmarkDotNet.Diagnosers;
 using BenchmarkDotNet.Exporters;
+using BenchmarkDotNet.Exporters.Json;
 using BenchmarkDotNet.Jobs;
 using BenchmarkDotNet.Loggers;
 using BenchmarkDotNet.Running;
@@ -21,23 +22,11 @@ namespace DocumentFormat.OpenXml.Benchmarks
             }
 
             var switcher = new BenchmarkSwitcher(typeof(Program).Assembly);
-            var config = GetConfig(input);
-
-            switcher.Run(new[] { "--filter", "*BuilderTests*" }, config);
-        }
-
-        private static IConfig GetConfig(string[] args)
-        {
             var config = new CustomConfig();
 
-            if (args.Length > 0)
-            {
-                return config.WithArtifactsPath(args[0]);
-            }
-            else
-            {
-                return config;
-            }
+            var args = input.Length == 0 ? new[] { "--filter", "*" } : input;
+
+            switcher.Run(args, config);
         }
 
         private class CustomConfig : ManualConfig
@@ -54,10 +43,8 @@ namespace DocumentFormat.OpenXml.Benchmarks
                 AddLogger(ConsoleLogger.Default);
 
                 // Exporters
-                AddExporter(AsciiDocExporter.Default);
-                AddExporter(HtmlExporter.Default);
-
-                AddJob(Job.InProcess);
+                AddExporter(JsonExporter.FullCompressed);
+                AddExporter(MarkdownExporter.GitHub);
             }
         }
     }

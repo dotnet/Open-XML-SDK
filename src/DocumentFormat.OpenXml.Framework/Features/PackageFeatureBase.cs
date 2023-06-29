@@ -25,7 +25,7 @@ internal abstract class PackageFeatureBase : IPackage, IPackageFeature, IRelatio
 
     protected abstract Package Package { get; }
 
-    private IPackagePart GetOrCreatePart(System.IO.Packaging.PackagePart part)
+    private PackagePart GetOrCreatePart(System.IO.Packaging.PackagePart part)
     {
         if (_parts is not null && _parts.TryGetValue(part.Uri, out var existing))
         {

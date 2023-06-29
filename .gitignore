@@ -190,7 +190,4 @@ msbuild.binlog
 
 /.idea/
 
-Microsoft.Interop.JavaScript.JSImportGenerator/
-Microsoft.Interop.LibraryImportGenerator/
-/.vscode
-/test/DocumentFormat.OpenXml.Benchmarks/-filter/results
+BenchmarkDotNet.Artifacts/

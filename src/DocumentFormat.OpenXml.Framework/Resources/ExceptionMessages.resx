@@ -397,7 +397,7 @@
     <value>Schemas with ParticleType.Any is not supported</value>
   </data>
   <data name="UnknownError" xml:space="preserve">
-    <value>An unknown error occured. Original message: '{0}'</value>
+    <value>An unknown error occurred. Original message: '{0}'</value>
   </data>
   <data name="FeatureNotRegistered" xml:space="preserve">
     <value>Feature {0} is not available in this collection.</value>

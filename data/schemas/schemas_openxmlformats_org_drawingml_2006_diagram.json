@@ -5023,7 +5023,7 @@
         },
         {
           "QName": ":custScaleY",
-          "PropertyName": "HightScale",
+          "PropertyName": "HeightScale",
           "Type": "Int32Value",
           "PropertyComments": "Height Scale"
         },

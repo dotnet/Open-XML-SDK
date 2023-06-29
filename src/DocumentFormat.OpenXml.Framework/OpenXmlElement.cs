@@ -196,7 +196,7 @@ namespace DocumentFormat.OpenXml
         internal IElementMetadata Metadata => Features.GetRequired<IElementMetadata>();
 
         /// <summary>
-        /// Gets an array of fixed attributes which will be parsed out if they are not yet parsed. If parsing is not requried, please
+        /// Gets an array of fixed attributes which will be parsed out if they are not yet parsed. If parsing is not required, please
         /// use <see cref="RawState"/>.
         /// </summary>
         internal Framework.Metadata.ElementState ParsedState
@@ -1642,7 +1642,7 @@ namespace DocumentFormat.OpenXml
             if (mcAttributes.MustUnderstand is not null && !string.IsNullOrEmpty(mcAttributes.MustUnderstand.Value))
             {
                 var resolver = Features.GetNamespaceResolver();
-                var prefixes = mcAttributes.MustUnderstand.Value!.Trim().Split(new char[] { ' ' });
+                var prefixes = MCContext.GetPrefixes(mcAttributes.MustUnderstand.Value);
 
                 foreach (var prefix in prefixes)
                 {
@@ -1678,7 +1678,7 @@ namespace DocumentFormat.OpenXml
             if (MCAttributes.MustUnderstand is not null && !string.IsNullOrEmpty(MCAttributes.MustUnderstand.Value))
             {
                 var resolver = Features.GetNamespaceResolver();
-                var prefixes = MCAttributes.MustUnderstand.Value!.Trim().Split(new char[] { ' ' });
+                var prefixes = MCContext.GetPrefixes(MCAttributes.MustUnderstand.Value);
 
                 foreach (var prefix in prefixes)
                 {
@@ -2251,7 +2251,7 @@ namespace DocumentFormat.OpenXml
         /// Adds the MC attributes to the "attributes" collection.
         /// </summary>
         /// <param name="attributes"></param>
-        private void AddMCAttributes(ICollection<OpenXmlAttribute> attributes)
+        private void AddMCAttributes(List<OpenXmlAttribute> attributes)
         {
             var mcPrefix = LookupPrefix(AlternateContent.MarkupCompatibilityNamespace);
 
@@ -2614,9 +2614,14 @@ namespace DocumentFormat.OpenXml
             return root as OpenXmlPartRootElement;
         }
 
-        private protected partial class ElementFeatureCollection : IFeatureCollection
+        [DebuggerDisplay("Count = {GetCount()}")]
+        [DebuggerTypeProxy(typeof(FeatureCollectionDebugView))]
+        internal class ElementFeatureCollection : IFeatureCollection
         {
             private readonly OpenXmlElement _owner;
+
+            private AnnotationsFeature? _annotationsFeature;
+            private IElementMetadata? _elementMetadataFeature;
 
             public ElementFeatureCollection(OpenXmlElement owner)
             {
@@ -2629,19 +2634,39 @@ namespace DocumentFormat.OpenXml
 
             public virtual IFeatureCollection Default => FeatureCollection.Default;
 
-            [KnownFeature(typeof(AnnotationsFeature))]
-            [KnownFeature(typeof(IElementMetadata), Factory = nameof(CreateMetadata))]
-            [DelegatedFeature(nameof(GetPartFeatures))]
-            [DelegatedFeature(nameof(Default))]
-            private partial T? GetBuiltIn<T>();
+            public object? this[Type key]
+            {
+                get
+                {
+                    if (key == typeof(AnnotationsFeature))
+                    {
+                        return _annotationsFeature ??= new();
+                    }
 
-            public virtual T? Get<T>() => GetBuiltIn<T>();
+                    if (key == typeof(IElementMetadata))
+                    {
+                        return _elementMetadataFeature ??= CreateMetadata();
+                    }
+
+                    return GetPartFeatures()?[key] ?? Default?[key];
+                }
+
+                set => throw new NotImplementedException();
+            }
+
+            private int GetCount() => this.Count();
 
             private IFeatureCollection? GetPartFeatures() => _owner.GetPart()?.Features;
 
             private IElementMetadata CreateMetadata() => this.GetRequired<IElementMetadataFactoryFeature>().GetMetadata(_owner);
 
-            public void Set<TFeature>(TFeature? instance)
+            public void Set<TFeature>(TFeature? instance) => this[typeof(TFeature)] = instance;
+
+            public TFeature? Get<TFeature>() => (TFeature?)this[typeof(TFeature)];
+
+            public IEnumerator<KeyValuePair<Type, object>> GetEnumerator() => FeatureCollection.CreateEnumerator(this, new[] { typeof(AnnotationsFeature), typeof(IElementMetadata) }, default, GetPartFeatures(), Default);
+
+            IEnumerator IEnumerable.GetEnumerator()
             {
                 throw new NotImplementedException();
             }

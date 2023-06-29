@@ -85,11 +85,11 @@ namespace DocumentFormat.OpenXml.Generator.Schematron
         /// <summary>
         /// Identify keyword from specified text.
         /// </summary>
-        /// <param name="text">Source text from which this method will indentify keyword.</param>
+        /// <param name="text">Source text from which this method will identify keyword.</param>
         /// <param name="pos">
         /// Index of specified text.
-        /// As input, it specifies start index of idenfication.
-        /// As output, it specifies index of matched keyword's last character in soure text.
+        /// As input, it specifies start index of identification.
+        /// As output, it specifies index of matched keyword's last character in source text.
         /// i.e. if test="A KEYWORD B", matchedKeyword="KEYWORD" then pos=8 (index of 'D' in "A KEYWORD B").
         /// </param>
         /// <param name="keywordCandidates">Keyword candidates.</param>

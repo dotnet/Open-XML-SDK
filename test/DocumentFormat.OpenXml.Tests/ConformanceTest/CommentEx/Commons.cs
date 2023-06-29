@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml.Tests.CommentEx
     public static class Commons
     {
         /// <summary>
-        /// Comment object, Get support mothod.
+        /// Comment object, Get support method.
         /// </summary>
         /// <param name="commentsPart">Target comment include commentsPart</param>
         /// <param name="commentID">Comment ID</param>
@@ -31,7 +31,7 @@ namespace DocumentFormat.OpenXml.Tests.CommentEx
         }
 
         /// <summary>
-        /// CommentEx object, Get support mothod.
+        /// CommentEx object, Get support method.
         /// </summary>
         /// <param name="commentsPart">Target comment include commentsPart</param>
         /// <param name="commentsExPart">Target comment include commentsExPart</param>

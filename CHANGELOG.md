@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 - Packages can now be saved on .NET Core and .NET 5+ if constructed with a path or stream (#1307).
 - Packages can now support malformed URIs (such as relationships with a URI such as `mailto:person@`)
+- `IFeatureCollection` can now be enumerated and has a helpful debug view to see what features are registered (#1452)
 
 ### Changed
 - When validation finds incorrect part, it will now include the relationship type rather than a class name
@@ -38,6 +39,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - `OpenXmlPart`/`OpenXmlContainer`/`OpenXmlPackage` and derived types now have internal constructors (these had internal abstract methods so most likely weren't subclassed externally)
 - `OpenXmlElementList` is now a struct that implements `IEnumerable<OpenXmlElement>` and `IReadOnlyList<OpenXmlElement>` (where available)
 - Individual implementations of `OpenXmlPartReader` are available now for each package type (i.e. `WordprocessingDocumentPartReader`, `SpreadsheetDocumentPartReader`, `PresentationDocumentPartReader`), and the previous `TypedOpenXmlPartReader` has been removed.
+- Changed DocumentFormat.OpenXml.PresetTextWrap to DocumentFormat.OpenXml.PresetTextWarp
 
 ## [2.20.0]
 

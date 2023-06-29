@@ -65,8 +65,9 @@ namespace DocumentFormat.OpenXml.Tests
 
         [MemberData(nameof(GetOpenXmlParts))]
         [Theory]
-        public void ValidatePart(OpenXmlPart part)
+        public void ValidatePart(Type partType)
         {
+            var part = InitializePart(partType);
             var expectedConstraints = GetConstraintData(part);
             var constraints = part.Features.GetRequired<IPartConstraintFeature>();
 
@@ -96,6 +97,7 @@ namespace DocumentFormat.OpenXml.Tests
         public void ExportData()
         {
             var result = GetParts()
+                .Select(InitializePart)
                 .Select(t =>
                 {
                     var targets = t.Features.GetRequired<ITargetFeature>();
@@ -119,26 +121,24 @@ namespace DocumentFormat.OpenXml.Tests
 
         public static IEnumerable<object[]> GetOpenXmlParts() => GetParts().Select(p => new[] { p });
 
-        private static IEnumerable<OpenXmlPart> GetParts()
+        private static IEnumerable<Type> GetParts() => typeof(SpreadsheetDocument)
+            .GetTypeInfo()
+            .Assembly
+            .GetTypes()
+            .Where(t => !t.IsAbstract)
+            .Where(typeof(OpenXmlPart).IsAssignableFrom)
+            .Where(a => !_abstractOpenXmlParts.Contains(a));
+
+        private static OpenXmlPart InitializePart(Type type)
         {
+            var part = (OpenXmlPart)Activator.CreateInstance(type, true);
+
             var appType = Substitute.For<IApplicationTypeFeature>();
             appType.Type.Returns(ApplicationType.None);
 
-            var parts = typeof(SpreadsheetDocument)
-                .GetTypeInfo()
-                .Assembly
-                .GetTypes()
-                .Where(t => !t.IsAbstract)
-                .Where(typeof(OpenXmlPart).IsAssignableFrom)
-                .Where(a => !_abstractOpenXmlParts.Contains(a))
-                .Select(a => (OpenXmlPart)Activator.CreateInstance(a, true));
+            part.Features.Set(appType);
 
-            foreach (var part in parts)
-            {
-                part.Features.Set(appType);
-
-                yield return part;
-            }
+            return part;
         }
 
         private static ConstraintData GetConstraintData(OpenXmlPart part) => _cachedConstraintData.Value[part.GetType().FullName];

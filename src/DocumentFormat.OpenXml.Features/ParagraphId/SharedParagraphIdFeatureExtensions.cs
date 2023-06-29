@@ -46,12 +46,12 @@ namespace DocumentFormat.OpenXml.Features
         }
 
         /// <summary>
-        /// Registers a document to use a shared paragragraph collection, which potentially may ensure uniqueness among many documents.
+        /// Registers a document to use a shared paragraph collection, which potentially may ensure uniqueness among many documents.
         /// </summary>
         /// <param name="shared">Shared collection feature.</param>
         /// <param name="doc">Document to register with shared paragraph collection.</param>
         /// <returns></returns>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Reliability", "CA2000:Dispose objects before losing scope", Justification = "Regsitered for disposal")]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Reliability", "CA2000:Dispose objects before losing scope", Justification = "Registered for disposal")]
         public static ISharedFeature<IParagraphIdCollectionFeature> Add(this ISharedFeature<IParagraphIdCollectionFeature> shared, WordprocessingDocument doc)
         {
             if (shared is null)

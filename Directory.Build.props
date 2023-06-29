@@ -91,7 +91,7 @@
         <ProductTargetFrameworks>netstandard2.0;net35;net40</ProductTargetFrameworks>
         <FrameworkTargetFrameworks>netstandard2.0;net6.0;net35;net40;net46</FrameworkTargetFrameworks>
         <AssetsTargetFrameworks>net452;netstandard2.0</AssetsTargetFrameworks>
-        <TestTargetFrameworks>net452;net46;net6.0;net7.0</TestTargetFrameworks>
+        <TestTargetFrameworks>net452;net462;net6.0;net7.0</TestTargetFrameworks>
         <LatestTargetFramework>net7.0</LatestTargetFramework>
         <SamplesFrameworks>net472;net7.0</SamplesFrameworks>
       </PropertyGroup>
@@ -107,6 +107,13 @@
       </PropertyGroup>
     </Otherwise>
   </Choose>
+
+  <PropertyGroup>
+    <SupportsNetStandard>true</SupportsNetStandard>
+    <SupportsNetStandard Condition=" '$(TargetFramework)' == 'net35' OR '$(TargetFramework)' == 'net40' OR '$(TargetFramework)' == 'net452'  OR '$(TargetFramework)' == 'net46' ">false</SupportsNetStandard>
+    <IsFramework>false</IsFramework>
+    <IsFramework Condition=" '$(TargetFramework)' == 'net35' OR $(TargetFramework.StartsWith('net4')) ">true</IsFramework>
+  </PropertyGroup>
 
   <Target Name="UnknownProjectLoadStyle" BeforeTargets="Build" Condition="$(__InvalidProjectLoadStyle)">
     <Warning Text="Unknown ProjectLoadStyle '$(ProjectLoadStyle)' set. Please verify settings in Directory.Build.props and environment variables to a known value. For now, default values will be used." />

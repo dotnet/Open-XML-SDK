@@ -7,7 +7,7 @@ namespace DocumentFormat.OpenXml.Features
 {
     internal static class ElementEventFeatureExtensions
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Reliability", "CA2000:Dispose objects before losing scope", Justification = "Regsitered for disposal")]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Reliability", "CA2000:Dispose objects before losing scope", Justification = "Registered for disposal")]
         public static void AddElementEventFeature(this OpenXmlPackage package)
         {
             if (package.Features.Get<IElementEventFeature>() is null)

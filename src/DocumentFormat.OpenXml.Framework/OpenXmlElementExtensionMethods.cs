@@ -146,7 +146,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Trys to create an OpenXmlElement from the specified namespace URI and local name.
+        /// Tries to create an OpenXmlElement from the specified namespace URI and local name.
         /// </summary>
         /// <param name="parent">The parent element.</param>
         /// <param name="fileFormat">The specified file format version.</param>

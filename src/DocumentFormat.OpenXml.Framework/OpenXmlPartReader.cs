@@ -46,7 +46,7 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Initializes a new instance of the <see cref="OpenXmlPartReader"/> class.
         /// </summary>
-        /// <param name="openXmlPart">The <see cref="OpenXmlPart"/> ro read.</param>
+        /// <param name="openXmlPart">The <see cref="OpenXmlPart"/> to read.</param>
         /// <param name="options">Options on how to read the part.</param>
         public OpenXmlPartReader(OpenXmlPart openXmlPart, OpenXmlPartReaderOptions options)
             : this(GetPartStream(openXmlPart), openXmlPart.Features, options.UpdateForPart(openXmlPart))
@@ -719,7 +719,7 @@ namespace DocumentFormat.OpenXml
             Debug.Assert(_elementStack.Count == 0);
 
             // TODO: should we take care of entity? <!DOCTYPE page [ <!ENTITY company "Microsoft"> ]>
-            // TODO: is it OK that we skip all prolog ( DOCTYPE, Comment, PT ) ?
+            // TODO: is it OK that we skip all prologue ( DOCTYPE, Comment, PT ) ?
             _xmlReader.MoveToContent();
 
             while (!_xmlReader.EOF && _xmlReader.NodeType != XmlNodeType.Element)

@@ -690,7 +690,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             Wps.TextBodyProperties textBodyProperties3 = new Wps.TextBodyProperties() { Rotation = 0, UseParagraphSpacing = false, VerticalOverflow = A.TextVerticalOverflowValues.Overflow, HorizontalOverflow = A.TextHorizontalOverflowValues.Overflow, Vertical = A.TextVerticalValues.Horizontal, Wrap = A.TextWrappingValues.Square, LeftInset = 91440, TopInset = 45720, RightInset = 91440, BottomInset = 45720, ColumnCount = 1, ColumnSpacing = 0, RightToLeftColumns = false, FromWordArt = false, Anchor = A.TextAnchoringTypeValues.Center, AnchorCenter = false, ForceAntiAlias = false, CompatibleLineSpacing = true };
 
-            A.PresetTextWrap presetTextWrap1 = new A.PresetTextWrap() { Preset = A.TextShapeValues.TextNoShape };
+            A.PresetTextWarp presetTextWrap1 = new A.PresetTextWarp() { Preset = A.TextShapeValues.TextNoShape };
             A.AdjustValueList adjustValueList4 = new A.AdjustValueList();
 
             presetTextWrap1.Append(adjustValueList4);
@@ -830,7 +830,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             Wps.TextBodyProperties textBodyProperties4 = new Wps.TextBodyProperties() { Rotation = 0, UseParagraphSpacing = false, VerticalOverflow = A.TextVerticalOverflowValues.Overflow, HorizontalOverflow = A.TextHorizontalOverflowValues.Overflow, Vertical = A.TextVerticalValues.Horizontal, Wrap = A.TextWrappingValues.Square, LeftInset = 91440, TopInset = 45720, RightInset = 91440, BottomInset = 45720, ColumnCount = 1, ColumnSpacing = 0, RightToLeftColumns = false, FromWordArt = false, Anchor = A.TextAnchoringTypeValues.Center, AnchorCenter = false, ForceAntiAlias = false, CompatibleLineSpacing = true };
 
-            A.PresetTextWrap presetTextWrap2 = new A.PresetTextWrap() { Preset = A.TextShapeValues.TextNoShape };
+            A.PresetTextWarp presetTextWrap2 = new A.PresetTextWarp() { Preset = A.TextShapeValues.TextNoShape };
             A.AdjustValueList adjustValueList6 = new A.AdjustValueList();
 
             presetTextWrap2.Append(adjustValueList6);
@@ -1001,7 +1001,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             Wps.TextBodyProperties textBodyProperties5 = new Wps.TextBodyProperties() { Rotation = 0, UseParagraphSpacing = false, VerticalOverflow = A.TextVerticalOverflowValues.Overflow, HorizontalOverflow = A.TextHorizontalOverflowValues.Overflow, Vertical = A.TextVerticalValues.Horizontal, Wrap = A.TextWrappingValues.Square, LeftInset = 91440, TopInset = 45720, RightInset = 91440, BottomInset = 45720, ColumnCount = 1, ColumnSpacing = 0, RightToLeftColumns = false, FromWordArt = false, Anchor = A.TextAnchoringTypeValues.Center, AnchorCenter = false, ForceAntiAlias = false, CompatibleLineSpacing = true };
 
-            A.PresetTextWrap presetTextWrap3 = new A.PresetTextWrap() { Preset = A.TextShapeValues.TextNoShape };
+            A.PresetTextWarp presetTextWrap3 = new A.PresetTextWarp() { Preset = A.TextShapeValues.TextNoShape };
             A.AdjustValueList adjustValueList8 = new A.AdjustValueList();
 
             presetTextWrap3.Append(adjustValueList8);
@@ -3038,7 +3038,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             Wps.TextBodyProperties textBodyProperties6 = new Wps.TextBodyProperties() { Rotation = 0, UseParagraphSpacing = false, VerticalOverflow = A.TextVerticalOverflowValues.Overflow, HorizontalOverflow = A.TextHorizontalOverflowValues.Overflow, Vertical = A.TextVerticalValues.Horizontal, Wrap = A.TextWrappingValues.Square, LeftInset = 91440, TopInset = 45720, RightInset = 91440, BottomInset = 45720, ColumnCount = 1, ColumnSpacing = 0, RightToLeftColumns = false, FromWordArt = false, Anchor = A.TextAnchoringTypeValues.Bottom, AnchorCenter = false, ForceAntiAlias = false, CompatibleLineSpacing = true };
 
-            A.PresetTextWrap presetTextWrap4 = new A.PresetTextWrap() { Preset = A.TextShapeValues.TextNoShape };
+            A.PresetTextWarp presetTextWrap4 = new A.PresetTextWarp() { Preset = A.TextShapeValues.TextNoShape };
             A.AdjustValueList adjustValueList12 = new A.AdjustValueList();
 
             presetTextWrap4.Append(adjustValueList12);
@@ -3331,7 +3331,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             Wps.TextBodyProperties textBodyProperties7 = new Wps.TextBodyProperties() { Rotation = 0, UseParagraphSpacing = false, VerticalOverflow = A.TextVerticalOverflowValues.Overflow, HorizontalOverflow = A.TextHorizontalOverflowValues.Overflow, Vertical = A.TextVerticalValues.Horizontal, Wrap = A.TextWrappingValues.Square, LeftInset = 274320, TopInset = 45720, RightInset = 274320, BottomInset = 45720, ColumnCount = 1, ColumnSpacing = 0, RightToLeftColumns = false, FromWordArt = false, Anchor = A.TextAnchoringTypeValues.Center, AnchorCenter = false, ForceAntiAlias = false, CompatibleLineSpacing = true };
 
-            A.PresetTextWrap presetTextWrap5 = new A.PresetTextWrap() { Preset = A.TextShapeValues.TextNoShape };
+            A.PresetTextWarp presetTextWrap5 = new A.PresetTextWarp() { Preset = A.TextShapeValues.TextNoShape };
             A.AdjustValueList adjustValueList14 = new A.AdjustValueList();
 
             presetTextWrap5.Append(adjustValueList14);
@@ -3637,7 +3637,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             Wps.TextBodyProperties textBodyProperties8 = new Wps.TextBodyProperties() { Rotation = 0, UseParagraphSpacing = false, VerticalOverflow = A.TextVerticalOverflowValues.Overflow, HorizontalOverflow = A.TextHorizontalOverflowValues.Overflow, Vertical = A.TextVerticalValues.Horizontal, Wrap = A.TextWrappingValues.Square, LeftInset = 182880, TopInset = 182880, RightInset = 182880, BottomInset = 365760, ColumnCount = 1, ColumnSpacing = 0, RightToLeftColumns = false, FromWordArt = false, Anchor = A.TextAnchoringTypeValues.Bottom, AnchorCenter = false, ForceAntiAlias = false, CompatibleLineSpacing = true };
 
-            A.PresetTextWrap presetTextWrap6 = new A.PresetTextWrap() { Preset = A.TextShapeValues.TextNoShape };
+            A.PresetTextWarp presetTextWrap6 = new A.PresetTextWarp() { Preset = A.TextShapeValues.TextNoShape };
             A.AdjustValueList adjustValueList16 = new A.AdjustValueList();
 
             presetTextWrap6.Append(adjustValueList16);
@@ -3934,7 +3934,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             Wps.TextBodyProperties textBodyProperties9 = new Wps.TextBodyProperties() { Rotation = 0, UseParagraphSpacing = false, VerticalOverflow = A.TextVerticalOverflowValues.Overflow, HorizontalOverflow = A.TextHorizontalOverflowValues.Overflow, Vertical = A.TextVerticalValues.Horizontal, Wrap = A.TextWrappingValues.Square, LeftInset = 91440, TopInset = 45720, RightInset = 91440, BottomInset = 45720, ColumnCount = 1, ColumnSpacing = 0, RightToLeftColumns = false, FromWordArt = false, Anchor = A.TextAnchoringTypeValues.Center, AnchorCenter = false, ForceAntiAlias = false, CompatibleLineSpacing = true };
 
-            A.PresetTextWrap presetTextWrap7 = new A.PresetTextWrap() { Preset = A.TextShapeValues.TextNoShape };
+            A.PresetTextWarp presetTextWrap7 = new A.PresetTextWarp() { Preset = A.TextShapeValues.TextNoShape };
             A.AdjustValueList adjustValueList18 = new A.AdjustValueList();
 
             presetTextWrap7.Append(adjustValueList18);
@@ -4136,7 +4136,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             Wps.TextBodyProperties textBodyProperties10 = new Wps.TextBodyProperties() { Rotation = 0, UseParagraphSpacing = false, VerticalOverflow = A.TextVerticalOverflowValues.Overflow, HorizontalOverflow = A.TextHorizontalOverflowValues.Overflow, Vertical = A.TextVerticalValues.Horizontal, Wrap = A.TextWrappingValues.Square, LeftInset = 91440, TopInset = 45720, RightInset = 91440, BottomInset = 45720, ColumnCount = 1, ColumnSpacing = 0, RightToLeftColumns = false, FromWordArt = false, Anchor = A.TextAnchoringTypeValues.Center, AnchorCenter = false, ForceAntiAlias = false, CompatibleLineSpacing = true };
 
-            A.PresetTextWrap presetTextWrap8 = new A.PresetTextWrap() { Preset = A.TextShapeValues.TextNoShape };
+            A.PresetTextWarp presetTextWrap8 = new A.PresetTextWarp() { Preset = A.TextShapeValues.TextNoShape };
             A.AdjustValueList adjustValueList20 = new A.AdjustValueList();
 
             presetTextWrap8.Append(adjustValueList20);
@@ -4482,7 +4482,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             Wps.TextBodyProperties textBodyProperties11 = new Wps.TextBodyProperties() { Rotation = 0, UseParagraphSpacing = false, VerticalOverflow = A.TextVerticalOverflowValues.Overflow, HorizontalOverflow = A.TextHorizontalOverflowValues.Overflow, Vertical = A.TextVerticalValues.Horizontal, Wrap = A.TextWrappingValues.Square, LeftInset = 91440, TopInset = 45720, RightInset = 91440, BottomInset = 45720, ColumnCount = 1, ColumnSpacing = 0, RightToLeftColumns = false, FromWordArt = false, Anchor = A.TextAnchoringTypeValues.Top, AnchorCenter = false, ForceAntiAlias = false, CompatibleLineSpacing = true };
 
-            A.PresetTextWrap presetTextWrap9 = new A.PresetTextWrap() { Preset = A.TextShapeValues.TextNoShape };
+            A.PresetTextWarp presetTextWrap9 = new A.PresetTextWarp() { Preset = A.TextShapeValues.TextNoShape };
             A.AdjustValueList adjustValueList22 = new A.AdjustValueList();
 
             presetTextWrap9.Append(adjustValueList22);
