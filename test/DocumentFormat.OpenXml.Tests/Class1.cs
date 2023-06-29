@@ -23,7 +23,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             var builder3 = builder.New();
 
-            builder3.Configure((package, next) =>
+            builder3.Use((package, next) =>
             {
                 next(package);
             });

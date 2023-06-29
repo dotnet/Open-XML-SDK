@@ -26,25 +26,25 @@ internal static class OpenXmlPackageBuilderExtensions
         where TPackage : OpenXmlPackage
         => builder.Open(new PackageFeature(package));
 
-    public static OpenXmlPackageBuilder<TPackage> Configure<TPackage>(this OpenXmlPackageBuilder<TPackage> builder, Action<TPackage> action)
+    public static OpenXmlPackageBuilder<TPackage> Use<TPackage>(this OpenXmlPackageBuilder<TPackage> builder, Action<TPackage> action)
         where TPackage : OpenXmlPackage
-        => builder.Configure((package, next) =>
+        => builder.Use((package, next) =>
         {
             action(package);
             next(package);
         });
 
-    public static OpenXmlPackageBuilder<TPackage> Configure<TPackage>(this OpenXmlPackageBuilder<TPackage> builder, Action<TPackage, Action<TPackage>> middleware)
+    public static OpenXmlPackageBuilder<TPackage> Use<TPackage>(this OpenXmlPackageBuilder<TPackage> builder, Action<TPackage, Action<TPackage>> middleware)
         where TPackage : OpenXmlPackage
-        => builder.Configure(next => package => middleware(package, next));
+        => builder.Use(next => package => middleware(package, next));
 
-    internal static OpenXmlPackageBuilder<TPackage> ConfigureSettings<TPackage>(this OpenXmlPackageBuilder<TPackage> builder, OpenSettings settings)
+    internal static OpenXmlPackageBuilder<TPackage> UseSettings<TPackage>(this OpenXmlPackageBuilder<TPackage> builder, OpenSettings settings)
        where TPackage : OpenXmlPackage
-       => builder.Configure(package => package.OpenSettings = settings);
+       => builder.Use(package => package.OpenSettings = settings);
 
-    internal static OpenXmlPackageBuilder<TPackage> ConfigureDefaults<TPackage>(this OpenXmlPackageBuilder<TPackage> builder)
+    internal static OpenXmlPackageBuilder<TPackage> UseDefaultBehavior<TPackage>(this OpenXmlPackageBuilder<TPackage> builder)
         where TPackage : OpenXmlPackage
-    => builder.Configure((package, next) =>
+    => builder.Use((package, next) =>
     {
         package.UseTransitionalRelationshipNamespaces();
         package.IgnoreRelationship("http://schemas.microsoft.com/office/2006/relationships/recovered");

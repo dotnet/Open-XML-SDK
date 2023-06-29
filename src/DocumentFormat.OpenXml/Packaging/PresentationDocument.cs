@@ -21,7 +21,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
         }
 
-        private static readonly OpenXmlPackageBuilder<PresentationDocument> _defaultBuilder = new Builder().ConfigureDefaults();
+        private static readonly OpenXmlPackageBuilder<PresentationDocument> _defaultBuilder = new Builder().UseDefaultBehavior();
 
         internal static OpenXmlPackageBuilder<PresentationDocument> CreateBuilder() => new Builder();
 
@@ -99,7 +99,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="ArgumentNullException">Thrown when "path" is null reference.</exception>
         public static PresentationDocument Create(string path, PresentationDocumentType type, bool autoSave)
             => CreateDefaultBuilder()
-                .Configure(package =>
+                .Use(package =>
                 {
                     package.DocumentType = type;
                     package.OpenSettings.AutoSave = autoSave;
@@ -117,7 +117,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="IOException">Thrown when "stream" is not opened with Write access.</exception>
         public static PresentationDocument Create(Stream stream, PresentationDocumentType type, bool autoSave)
             => CreateDefaultBuilder()
-                .Configure(package =>
+                .Use(package =>
                 {
                     package.DocumentType = type;
                     package.OpenSettings.AutoSave = autoSave;
@@ -135,7 +135,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="IOException">Thrown when "package" is not opened with Write access.</exception>
         public static PresentationDocument Create(Package package, PresentationDocumentType type, bool autoSave)
             => CreateDefaultBuilder()
-                .Configure(package =>
+                .Use(package =>
                 {
                     package.DocumentType = type;
                     package.OpenSettings.AutoSave = autoSave;
@@ -206,7 +206,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="ArgumentException">Thrown when specified to process the markup compatibility but the given target FileFormatVersion is incorrect.</exception>
         public static PresentationDocument Open(string path, bool isEditable, OpenSettings openSettings)
             => CreateDefaultBuilder()
-                .ConfigureSettings(openSettings)
+                .UseSettings(openSettings)
                 .Open(path, isEditable);
 
         /// <summary>
@@ -222,7 +222,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="ArgumentException">Thrown when specified to process the markup compatibility but the given target FileFormatVersion is incorrect.</exception>
         public static PresentationDocument Open(Stream stream, bool isEditable, OpenSettings openSettings)
             => CreateDefaultBuilder()
-                .ConfigureSettings(openSettings)
+                .UseSettings(openSettings)
                 .Open(stream, isEditable);
 
         /// <summary>
@@ -237,7 +237,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="ArgumentException">Thrown when specified to process the markup compatibility but the given target FileFormatVersion is incorrect.</exception>
         public static PresentationDocument Open(Package package, OpenSettings openSettings)
             => CreateDefaultBuilder()
-                .ConfigureSettings(openSettings)
+                .UseSettings(openSettings)
                 .Open(package);
 
         /// <summary>

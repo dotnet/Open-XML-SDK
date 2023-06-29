@@ -27,7 +27,7 @@ internal static class DebugPackageBuilderExtensions
     {
         var info = new DebugInfo();
 
-        builder.Configure((package, next) =>
+        builder.Use((package, next) =>
         {
             package.Features.Set<IDebugPackageInformation>(info);
 

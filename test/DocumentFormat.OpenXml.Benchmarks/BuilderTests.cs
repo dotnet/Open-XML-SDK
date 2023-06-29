@@ -32,7 +32,7 @@ namespace DocumentFormat.OpenXml.Benchmarks
             for (int i = 0; i < 2; i++)
             {
                 builder
-                    .Configure((package, next) =>
+                    .Use((package, next) =>
                     {
                         package.Count++;
                         next(package);
@@ -58,7 +58,7 @@ namespace DocumentFormat.OpenXml.Benchmarks
         {
             var builder = (TestBuilder)_builder.New();
 
-            builder.Configure((package, next) =>
+            builder.Use((package, next) =>
             {
                 next(package);
             });

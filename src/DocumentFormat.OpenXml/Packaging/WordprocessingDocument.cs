@@ -23,7 +23,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
         }
 
-        private static readonly OpenXmlPackageBuilder<WordprocessingDocument> _defaultBuilder = new Builder().ConfigureDefaults();
+        private static readonly OpenXmlPackageBuilder<WordprocessingDocument> _defaultBuilder = new Builder().UseDefaultBehavior();
 
         internal static OpenXmlPackageBuilder<WordprocessingDocument> CreateBuilder() => new Builder();
 
@@ -101,7 +101,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="ArgumentNullException">Thrown when "path" is null reference.</exception>
         public static WordprocessingDocument Create(string path, WordprocessingDocumentType type, bool autoSave)
             => CreateDefaultBuilder()
-                .Configure(package =>
+                .Use(package =>
                 {
                     package.DocumentType = type;
                     package.OpenSettings.AutoSave = autoSave;
@@ -119,7 +119,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="IOException">Thrown when "stream" is not opened with Write access.</exception>
         public static WordprocessingDocument Create(Stream stream, WordprocessingDocumentType type, bool autoSave)
             => CreateDefaultBuilder()
-                .Configure(package =>
+                .Use(package =>
                 {
                     package.DocumentType = type;
                     package.OpenSettings.AutoSave = autoSave;
@@ -137,7 +137,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="IOException">Thrown when "package" is not opened with Write access.</exception>
         public static WordprocessingDocument Create(Package package, WordprocessingDocumentType type, bool autoSave)
             => CreateDefaultBuilder()
-                .Configure(package =>
+                .Use(package =>
                 {
                     package.DocumentType = type;
                     package.OpenSettings.AutoSave = autoSave;
@@ -182,7 +182,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             return CreateDefaultBuilder()
                 .ConfigureTemplate(path, WordprocessingDocumentType.Document)
-                .Configure((package, next) =>
+                .Use((package, next) =>
                 {
                     next(package);
 
@@ -239,7 +239,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="ArgumentException">Thrown when specified to process the markup compatibility but the given target FileFormatVersion is incorrect.</exception>
         public static WordprocessingDocument Open(string path, bool isEditable, OpenSettings openSettings)
             => CreateDefaultBuilder()
-                .ConfigureSettings(openSettings)
+                .UseSettings(openSettings)
                 .Open(path, isEditable);
 
         /// <summary>
@@ -255,7 +255,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="ArgumentException">Thrown when specified to process the markup compatibility but the given target FileFormatVersion is incorrect.</exception>
         public static WordprocessingDocument Open(Stream stream, bool isEditable, OpenSettings openSettings)
             => CreateDefaultBuilder()
-                .ConfigureSettings(openSettings)
+                .UseSettings(openSettings)
                 .Open(stream, isEditable);
 
         /// <summary>
@@ -270,7 +270,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="ArgumentException">Thrown when specified to process the markup compatibility but the given target FileFormatVersion is incorrect.</exception>
         public static WordprocessingDocument Open(Package package, OpenSettings openSettings)
             => CreateDefaultBuilder()
-                .ConfigureSettings(openSettings)
+                .UseSettings(openSettings)
                 .Open(package);
 
         /// <summary>

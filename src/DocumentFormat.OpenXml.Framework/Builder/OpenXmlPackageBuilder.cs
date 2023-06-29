@@ -40,7 +40,7 @@ internal abstract class OpenXmlPackageBuilder<TPackage>
         (_startups ??= new()).Add(startup);
     }
 
-    public OpenXmlPackageBuilder<TPackage> Configure(Func<Action<TPackage>, Action<TPackage>> configure)
+    public OpenXmlPackageBuilder<TPackage> Use(Func<Action<TPackage>, Action<TPackage>> configure)
     {
         if (_isLocked)
         {

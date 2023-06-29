@@ -34,7 +34,7 @@ public class BuilderTests
 
         // Act
         var result = builder
-            .Configure(package => Add(package, 1))
+            .Use(package => Add(package, 1))
             .Build();
 
         // Arrange
@@ -49,8 +49,8 @@ public class BuilderTests
 
         // Act
         var result = builder
-            .Configure(package => Add(package, 1))
-            .Configure(package => Add(package, 2))
+            .Use(package => Add(package, 1))
+            .Use(package => Add(package, 2))
             .Build();
 
         // Arrange
@@ -65,13 +65,13 @@ public class BuilderTests
 
         // Act
         var result = builder
-            .Configure((package, next) =>
+            .Use((package, next) =>
             {
                 Add(package, 1);
                 next(package);
                 Add(package, 4);
             })
-            .Configure((package, next) =>
+            .Use((package, next) =>
             {
                 Add(package, 2);
                 next(package);
@@ -91,13 +91,13 @@ public class BuilderTests
 
         // Act
         builder1
-            .Configure((package, next) =>
+            .Use((package, next) =>
             {
                 Add(package, 1);
                 next(package);
                 Add(package, 2);
             })
-            .Configure((package, next) =>
+            .Use((package, next) =>
             {
                 Add(package, 3);
                 next(package);
@@ -105,7 +105,7 @@ public class BuilderTests
             });
 
         var builder2 = builder1.New()
-            .Configure((package, next) =>
+            .Use((package, next) =>
             {
                 Add(package, 5);
                 next(package);
@@ -123,13 +123,13 @@ public class BuilderTests
     {
         // Arrange
         var builder = new Builder()
-            .Configure((package, next) =>
+            .Use((package, next) =>
             {
                 Add(package, 1);
                 next(package);
                 Add(package, 2);
             })
-            .Configure((package, next) =>
+            .Use((package, next) =>
             {
                 Add(package, 3);
                 next(package);
@@ -153,13 +153,13 @@ public class BuilderTests
 
         // Act
         builder1
-            .Configure((package, next) =>
+            .Use((package, next) =>
             {
                 Add(package, 1);
                 next(package);
                 Add(package, 2);
             })
-            .Configure((package, next) =>
+            .Use((package, next) =>
             {
                 Add(package, 3);
                 next(package);
@@ -167,7 +167,7 @@ public class BuilderTests
             });
 
         var builder2 = builder1.New()
-            .Configure((package, next) =>
+            .Use((package, next) =>
             {
                 Add(package, 5);
                 next(package);
@@ -175,7 +175,7 @@ public class BuilderTests
             });
 
         builder1
-            .Configure((package, next) =>
+            .Use((package, next) =>
             {
                 Add(package, 7);
                 next(package);
@@ -196,13 +196,13 @@ public class BuilderTests
 
         // Act
         builder1
-            .Configure((package, next) =>
+            .Use((package, next) =>
             {
                 Add(package, 1);
                 next(package);
                 Add(package, 2);
             })
-            .Configure((package, next) =>
+            .Use((package, next) =>
             {
                 Add(package, 3);
                 next(package);
@@ -210,7 +210,7 @@ public class BuilderTests
             });
 
         var builder2 = builder1.New()
-            .Configure((package, next) =>
+            .Use((package, next) =>
             {
                 Add(package, 5);
                 next(package);
@@ -218,7 +218,7 @@ public class BuilderTests
             });
 
         var builder3 = builder1.New()
-            .Configure((package, next) =>
+            .Use((package, next) =>
             {
                 Add(package, 7);
                 next(package);
