@@ -22,19 +22,26 @@ jobs:
         run: cd test/DocumentFormat.OpenXml.Benchmarks; dotnet build -c RELEASE
         shell: pwsh
       - name: Run benchmarks
-        run: cd test/DocumentFormat.OpenXml.Benchmarks; dotnet run -c RELEASE -f net7.0 -- results --exporters json --filter '*'
+        run: cd test/DocumentFormat.OpenXml.Benchmarks; dotnet run -c RELEASE -f net7.0
         shell: pwsh
       - name: Write summary
         shell: pwsh
         run: |
-          $files = gci test/DocumentFormat.OpenXml.Benchmarks/results/results/*.asciidoc
-          $files | % { gc $_ } >> $env:GITHUB_STEP_SUMMARY
+          $files = gci test/DocumentFormat.OpenXml.Benchmarks/BenchmarkDotNet.Artifacts/results/*-report-github.md
+
+          foreach ($file in $files){
+            $name = $file.Name.Replace("-report-github.md", "").Replace("DocumentFormat.OpenXml.Benchmarks.", "")
+            "## $name" >> $env:GITHUB_STEP_SUMMARY
+            gc $file >> $env:GITHUB_STEP_SUMMARY
+          }
+
+          gci test/DocumentFormat.OpenXml.Benchmarks -recurse
       - name: Store Validation
         uses: benchmark-action/github-action-benchmark@v1
         with:
           name: Validation
           tool: 'benchmarkdotnet'
-          output-file-path: test/DocumentFormat.OpenXml.Benchmarks/results/results/DocumentFormat.OpenXml.Benchmarks.ValidationTests-report-full-compressed.json
+          output-file-path: test/DocumentFormat.OpenXml.Benchmarks/BenchmarkDotNet.Artifacts/results/DocumentFormat.OpenXml.Benchmarks.ValidationTests-report-full-compressed.json
           github-token: ${{ secrets.GITHUB_TOKEN }}
           auto-push: true
           # Show alert with commit comment on detecting possible performance regression
@@ -46,7 +53,7 @@ jobs:
         with:
           name: CompiledParticle
           tool: 'benchmarkdotnet'
-          output-file-path: test/DocumentFormat.OpenXml.Benchmarks/results/results/DocumentFormat.OpenXml.Benchmarks.CompiledParticle-report-full-compressed.json
+          output-file-path: test/DocumentFormat.OpenXml.Benchmarks/BenchmarkDotNet.Artifacts/results/DocumentFormat.OpenXml.Benchmarks.CompiledParticle-report-full-compressed.json
           github-token: ${{ secrets.GITHUB_TOKEN }}
           auto-push: true
           # Show alert with commit comment on detecting possible performance regression
@@ -58,7 +65,7 @@ jobs:
         with:
           name: Documents
           tool: 'benchmarkdotnet'
-          output-file-path: test/DocumentFormat.OpenXml.Benchmarks/results/results/DocumentFormat.OpenXml.Benchmarks.Documents-report-full-compressed.json
+          output-file-path: test/DocumentFormat.OpenXml.Benchmarks/BenchmarkDotNet.Artifacts/results/DocumentFormat.OpenXml.Benchmarks.Documents-report-full-compressed.json
           github-token: ${{ secrets.GITHUB_TOKEN }}
           auto-push: true
           # Show alert with commit comment on detecting possible performance regression
@@ -70,7 +77,7 @@ jobs:
         with:
           name: ElementMetadataTests
           tool: 'benchmarkdotnet'
-          output-file-path: test/DocumentFormat.OpenXml.Benchmarks/results/results/DocumentFormat.OpenXml.Benchmarks.ElementMetadataTests-report-full-compressed.json
+          output-file-path: test/DocumentFormat.OpenXml.Benchmarks/BenchmarkDotNet.Artifacts/results/DocumentFormat.OpenXml.Benchmarks.ElementMetadataTests-report-full-compressed.json
           github-token: ${{ secrets.GITHUB_TOKEN }}
           auto-push: false
           # Show alert with commit comment on detecting possible performance regression
