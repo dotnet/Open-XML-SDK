@@ -497,7 +497,8 @@ namespace DocumentFormat.OpenXml
             OpenXmlQualifiedName tQName = this.ParsedState.Metadata.QName;
             OpenXmlQualifiedName oQName = other.ParsedState.Metadata.QName;
 
-            // TODO: If we are allowed to do the below optimization, then this check is enough, since it also does it.
+            // TODO: If we can just compare Namespace.URI instead of prefix comparsion, then we can save quite a bit here.
+            // Please verify if that is legal.
             if (!tQName.Equals(oQName))
             {
                 return false;
@@ -505,11 +506,6 @@ namespace DocumentFormat.OpenXml
 
             string turi = tQName.Namespace.Uri;
             string ouri = oQName.Namespace.Uri;
-
-            if (string.Equals(turi, ouri, StringComparison.Ordinal))
-            {
-                return true;
-            }
 
             // TODO: Check with Taylor if we can somehow be smart about this, since it is the most expensive part.
             // Maybe we can just validate Namespace.URI is the same for both, avoiding the prefix lookup.
@@ -672,7 +668,7 @@ namespace DocumentFormat.OpenXml
             {
                 if (this.ParsedState.Attributes[i].Value != null)
                 {
-                    hc = HashCode.Combine(hc, this.ParsedState.Attributes[i].Value.GetHashCode());
+                    hc = HashCode.Combine(hc, this.ParsedState.Attributes[i].Value?.GetHashCode() ?? 0);
                 }
             }
 
