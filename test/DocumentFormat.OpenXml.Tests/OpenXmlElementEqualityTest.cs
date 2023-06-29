@@ -43,6 +43,12 @@ namespace DocumentFormat.OpenXml.Tests
 
             // Different attribute values should not be the same.
             Assert.False(para.Equals(paraDifferentAttributeValue));
+
+            para.MakeSureParsed();
+            paraDifferentAttributeValue.MakeSureParsed();
+
+            // Different attribute values should not be the same.
+            Assert.False(para.Equals(paraDifferentAttributeValue));
         }
 
         /// <summary>
@@ -85,13 +91,18 @@ namespace DocumentFormat.OpenXml.Tests
             Paragraph paraChildRun2 = new Paragraph(paraChildRun2Xml);
 
             Assert.False(paraChildRun1.Equals(paraChildRun2));
+
+            paraChildRun1.MakeSureParsed();
+            paraChildRun2.MakeSureParsed();
+
+            Assert.False(paraChildRun1.Equals(paraChildRun2));
         }
 
         /// <summary>
         /// Test that documents the specified order of children matters for unparsed equality checks, but not parse equality checks.
         /// </summary>
         [Fact]
-        public void ChildrenOrderingTest()
+        public void ChildrenOrderingSameButDifferentNamespace()
         {
             string paraXml1 = "<w:p w:rsidP=\"001\" xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><m:r xmlns:m=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"/><w:r/></w:p>";
             string paraXml2 = "<w:p w:rsidP=\"001\" xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><w:r/><m:r xmlns:m=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"/></w:p>";
@@ -103,7 +114,26 @@ namespace DocumentFormat.OpenXml.Tests
             para1.MakeSureParsed();
             para2.MakeSureParsed();
 
-            Assert.True(para1.Equals(para2));
+            Assert.False(para1.Equals(para2));
+        }
+
+        /// <summary>
+        /// Test that documents the specified order of children isn't guaranteed for equality.
+        /// </summary>
+        [Fact]
+        public void ChildrenOrderingDifferentChildren()
+        {
+            string paraXml1 = "<w:p w:rsidP=\"001\" xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><w:sdt/><w:r/></w:p>";
+            string paraXml2 = "<w:p w:rsidP=\"001\" xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><w:r/><w:sdt/></w:p>";
+            Paragraph para1 = new Paragraph(paraXml1);
+            Paragraph para2 = new Paragraph(paraXml2);
+
+            Assert.False(para1.Equals(para2));
+
+            para1.MakeSureParsed();
+            para2.MakeSureParsed();
+
+            Assert.False(para1.Equals(para2));
         }
 
         [Fact]
@@ -113,6 +143,11 @@ namespace DocumentFormat.OpenXml.Tests
             string paraChildRun2Xml = "<w:p w:rsidP=\"001\" xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><w:r/><w:t/></w:p>";
             Paragraph paraChildRun1 = new Paragraph(paraChildRun1Xml);
             Paragraph paraChildRun2 = new Paragraph(paraChildRun2Xml);
+
+            Assert.False(paraChildRun1.Equals(paraChildRun2));
+
+            paraChildRun1.MakeSureParsed();
+            paraChildRun2.MakeSureParsed();
 
             Assert.False(paraChildRun1.Equals(paraChildRun2));
         }
@@ -128,6 +163,11 @@ namespace DocumentFormat.OpenXml.Tests
             string paraChildRun2Xml = "<q:p q:rsidP=\"001\" xmlns:q=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><q:r><q:t>Run Text.</q:t><q:t>Run 1.</q:t></q:r></q:p>";
             Paragraph paraChildRun1 = new Paragraph(paraChildRun1Xml);
             Paragraph paraChildRun2 = new Paragraph(paraChildRun2Xml);
+
+            Assert.False(paraChildRun1.Equals(paraChildRun2));
+
+            paraChildRun1.MakeSureParsed();
+            paraChildRun2.MakeSureParsed();
 
             Assert.False(paraChildRun1.Equals(paraChildRun2));
         }
@@ -166,6 +206,12 @@ namespace DocumentFormat.OpenXml.Tests
             Paragraph paraChildRun2 = new Paragraph(paraChildRun2Xml);
 
             Assert.False(paraChildRun1.Equals(paraChildRun2));
+
+            // Order is still important after parsing, since schema doesn't define order for extended attributes.
+            paraChildRun1.MakeSureParsed();
+            paraChildRun2.MakeSureParsed();
+
+            Assert.False(paraChildRun1.Equals(paraChildRun2));
         }
 
         /// <summary>
@@ -201,6 +247,9 @@ namespace DocumentFormat.OpenXml.Tests
             string paraXml = "<w:p w:rsidP=\"001\" xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><w:r><w:t>Run Text.</w:t><w:t>Run 1.</w:t></w:r></w:p>";
             Paragraph para1 = new Paragraph(paraXml);
             Paragraph para2 = new Paragraph(paraXml);
+
+            para1.MakeSureParsed();
+            para2.MakeSureParsed();
 
             hs.Add(para1);
 
