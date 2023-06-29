@@ -28,7 +28,12 @@ jobs:
         shell: pwsh
         run: |
           $files = gci test/DocumentFormat.OpenXml.Benchmarks/BenchmarkDotNet.Artifacts/results/*-report-github.md
-          $files | % { gc $_ } >> $env:GITHUB_STEP_SUMMARY
+
+          foreach ($file in $files){
+            $name = $file.Name.Replace("-report-github.md", "").Replace("DocumentFormat.OpenXml.Benchmarks.", "")
+            "## $name" >> $env:GITHUB_STEP_SUMMARY
+            gc $file >> $env:GITHUB_STEP_SUMMARY
+          }
       - name: Store Validation
         uses: benchmark-action/github-action-benchmark@v1
         with:
