@@ -1,4 +1,4 @@
-name: dotnet/Open-XML-SDK main pipeline
+name: Build
 
 concurrency:
   group: ${{ github.ref }}
