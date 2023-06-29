@@ -7,7 +7,7 @@ using System;
 using System.Collections.Generic;
 
 namespace DocumentFormat.OpenXml.Framework
-{
+{    
     internal class CompiledParticle : IComparer<OpenXmlElement>
     {
         private readonly Lazy<LookupItem[]> _lookup;
