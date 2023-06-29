@@ -34,6 +34,8 @@ jobs:
             "## $name" >> $env:GITHUB_STEP_SUMMARY
             gc $file >> $env:GITHUB_STEP_SUMMARY
           }
+
+          gci test/DocumentFormat.OpenXml.Benchmarks -recurse
       - name: Store Validation
         uses: benchmark-action/github-action-benchmark@v1
         with:
