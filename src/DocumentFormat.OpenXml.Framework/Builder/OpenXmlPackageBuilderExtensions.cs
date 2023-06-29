@@ -5,11 +5,27 @@ using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Packaging.Builder;
 using System;
+using System.IO;
 
 namespace DocumentFormat.OpenXml.Builder;
 
 internal static class OpenXmlPackageBuilderExtensions
 {
+
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Reliability", "CA2000:Dispose objects before losing scope", Justification = "Disposable is registered with package")]
+    public static TPackage Open<TPackage>(this OpenXmlPackageBuilder<TPackage> builder, Stream stream, PackageOpenMode mode)
+        where TPackage : OpenXmlPackage
+       => builder.Open(new StreamPackageFeature(stream, mode));
+
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Reliability", "CA2000:Dispose objects before losing scope", Justification = "Disposable is registered with package")]
+    public static TPackage Open<TPackage>(this OpenXmlPackageBuilder<TPackage> builder, string file, PackageOpenMode mode)
+        where TPackage : OpenXmlPackage
+        => builder.Open(new FilePackageFeature(file, mode));
+
+    public static TPackage Open<TPackage>(this OpenXmlPackageBuilder<TPackage> builder, System.IO.Packaging.Package package)
+        where TPackage : OpenXmlPackage
+        => builder.Open(new PackageFeature(package));
+
     public static OpenXmlPackageBuilder<TPackage> Configure<TPackage>(this OpenXmlPackageBuilder<TPackage> builder, Action<TPackage> action)
         where TPackage : OpenXmlPackage
         => builder.Configure((package, next) =>

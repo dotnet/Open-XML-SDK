@@ -1,10 +1,9 @@
-﻿// Copyright (c) Microsoft. All rights reserved.
+// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Packaging;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.IO;
@@ -57,17 +56,6 @@ internal abstract class OpenXmlPackageBuilder<TPackage>
     internal abstract OpenXmlPackageBuilder<TPackage> New();
 
     internal abstract TPackage Create();
-
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Reliability", "CA2000:Dispose objects before losing scope", Justification = "Disposable is registered with package")]
-    public virtual TPackage Open(Stream stream, PackageOpenMode mode)
-       => Open(new StreamPackageFeature(stream, mode));
-
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Reliability", "CA2000:Dispose objects before losing scope", Justification = "Disposable is registered with package")]
-    public virtual TPackage Open(string file, PackageOpenMode mode)
-        => Open(new FilePackageFeature(file, mode));
-
-    public virtual TPackage Open(System.IO.Packaging.Package package)
-        => Open(new PackageFeature(package));
 
     public virtual TPackage Open(IPackageInitializer register)
     {
