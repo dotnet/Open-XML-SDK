@@ -25,7 +25,7 @@ namespace DocumentFormat.OpenXml
     /// <remarks>
     /// Annotations will not be cloned when calling <see cref="Clone"/> and <see cref="CloneNode(bool)"/>.
     /// </remarks>
-    public abstract partial class OpenXmlElement : IEnumerable<OpenXmlElement>, ICloneable
+    public abstract partial class OpenXmlElement : IEnumerable<OpenXmlElement>, ICloneable, IEquatable<OpenXmlElement>
     {
         private IFeatureCollection? _features;
 
@@ -280,7 +280,7 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Gets all extended attributes (attributes not defined in the schema) of the current element.
         /// </summary>
-        public IEnumerable<OpenXmlAttribute> ExtendedAttributes
+        public IReadOnlyList<OpenXmlAttribute> ExtendedAttributes
         {
             get
             {
@@ -291,7 +291,7 @@ namespace DocumentFormat.OpenXml
                 }
                 else
                 {
-                    return Enumerable.Empty<OpenXmlAttribute>();
+                    return Array.Empty<OpenXmlAttribute>();
                 }
             }
         }
@@ -472,6 +472,225 @@ namespace DocumentFormat.OpenXml
         #endregion
 
         #region public methods
+
+        private static bool MoveNextAndTrackCount(ref OpenXmlElementList.Enumerator e1, ref OpenXmlElementList.Enumerator e2, ref int e1ctr, ref int e2ctr)
+        {
+            if (e1.MoveNext())
+            {
+                e1ctr++;
+                if (e2.MoveNext())
+                {
+                    e2ctr++;
+                    return true;
+                }
+            }
+            else if (e2.MoveNext())
+            {
+                e2ctr++;
+            }
+
+            return false;
+        }
+
+        private bool PrefixAndQNameEqual(OpenXmlElement other)
+        {
+            OpenXmlQualifiedName tQName = this.ParsedState.Metadata.QName;
+            OpenXmlQualifiedName oQName = other.ParsedState.Metadata.QName;
+
+            // TODO: If we are allowed to do the below optimization, then this check is enough, since it also does it.
+            if (!tQName.Equals(oQName))
+            {
+                return false;
+            }
+
+            string turi = tQName.Namespace.Uri;
+            string ouri = oQName.Namespace.Uri;
+
+            if (string.Equals(turi, ouri, StringComparison.Ordinal))
+            {
+                return true;
+            }
+
+            // TODO: Check with Taylor if we can somehow be smart about this, since it is the most expensive part.
+            // Maybe we can just validate Namespace.URI is the same for both, avoiding the prefix lookup.
+            var tPrefix = this.LookupPrefixLocal(ouri);
+            var oPrefix = other.LookupPrefixLocal(ouri);
+
+            if (string.IsNullOrEmpty(tPrefix))
+            {
+               tPrefix = this.Features.GetNamespaceResolver().LookupPrefix(turi);
+            }
+
+            if (string.IsNullOrEmpty(oPrefix))
+            {
+                oPrefix = other.Features.GetNamespaceResolver().LookupPrefix(ouri);
+            }
+
+            return string.Equals(tPrefix, oPrefix, StringComparison.Ordinal);
+        }
+
+        /// <inheritdoc/>
+        public override bool Equals(object? obj)
+        {
+            return this.Equals(obj as OpenXmlElement);
+        }
+
+        /// <inheritdoc/>
+        public bool Equals(OpenXmlElement? other)
+        {
+            if (other == null)
+            {
+                return false;
+            }
+
+            if (object.ReferenceEquals(this, other))
+            {
+                return true;
+            }
+
+            if (this.GetType() != other.GetType())
+            {
+                return false;
+            }
+
+            if (!this.XmlParsed && !other.XmlParsed)
+            {
+                return string.Equals(this.RawOuterXml, other.RawOuterXml, StringComparison.Ordinal);
+            }
+
+            this.MakeSureParsed();
+            other.MakeSureParsed();
+
+            if (this.HasChildren != other.HasChildren)
+            {
+                return false;
+            }
+
+            var thisHasAttributes = this.HasAttributes;
+            var otherHasAttributes = other.HasAttributes;
+            if (thisHasAttributes != otherHasAttributes)
+            {
+                return false;
+            }
+
+            if (thisHasAttributes && this.ParsedState.Attributes.Length != other.ParsedState.Attributes.Length)
+            {
+                return false;
+            }
+
+            // TODO: This seems strange that this is the only one that requires special behaviour, verify with Taylor.
+            if (this is OpenXmlLeafTextElement)
+            {
+                if (!string.Equals(this.InnerText, other.InnerText, StringComparison.Ordinal))
+                {
+                    return false;
+                }
+            }
+
+            if (!this.PrefixAndQNameEqual(other))
+            {
+                return false;
+            }
+
+            if (this.HasChildren)
+            {
+                // DEVNOTE: Do not refactor this to use "simpler" for construct.
+                // The indexer on ChildElement walks the linked list for each operation,
+                // not maintaining state so it turns into a O(n^2) operation.
+                OpenXmlElementList.Enumerator tChilds = this.ChildElements.GetEnumerator();
+                OpenXmlElementList.Enumerator oChilds = other.ChildElements.GetEnumerator();
+
+                int e1 = 0, e2 = 0;
+                while (MoveNextAndTrackCount(ref tChilds, ref oChilds, ref e1, ref e2))
+                {
+                    if (!tChilds.Current.Equals(oChilds.Current))
+                    {
+                        return false;
+                    }
+                }
+
+                // Different amount of children.
+                if (e1 != e2)
+                {
+                    return false;
+                }
+            }
+
+            if (thisHasAttributes)
+            {
+                if (this.ExtendedAttributes.Count != other.ExtendedAttributes.Count)
+                {
+                    return false;
+                }
+
+                for (int i = 0; i < this.ExtendedAttributes.Count; i++)
+                {
+                    if (!this.ExtendedAttributes[i].Equals(other.ExtendedAttributes[i]))
+                    {
+                        return false;
+                    }
+                }
+
+                for (int i = 0; i < this.ParsedState.Attributes.Length; i++)
+                {
+                    var tAttr = this.ParsedState.Attributes[i];
+                    var oAttr = other.ParsedState.Attributes[i];
+
+                    if ((tAttr.Value == null && oAttr.Value != null) || (tAttr.Value != null && oAttr.Value == null))
+                    {
+                        return false;
+                    }
+
+                    if (tAttr.Value == null)
+                    {
+                        continue;
+                    }
+
+                    // TODO: Figure out if this assumption is valid.
+                    // looking at it it seems that these are all OpenXmlComparableSimpleValue types, which supports IEqutable.
+                    if (!tAttr.Value.Equals(oAttr.Value))
+                    {
+                        return false;
+                    }
+                }
+
+                if (this.MCAttributes == null != (other.MCAttributes == null) || (this.MCAttributes != null && !this.MCAttributes.Equals(other.MCAttributes)))
+                {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+        /// <inheritdoc/>
+        public override int GetHashCode()
+        {
+            int hc = this.MCAttributes?.GetHashCode() ?? 0;
+
+            for (int i = 0; i < this.ParsedState.Attributes.Length; i++)
+            {
+                if (this.ParsedState.Attributes[i].Value != null)
+                {
+                    hc = HashCode.Combine(hc, this.ParsedState.Attributes[i].Value.GetHashCode());
+                }
+            }
+
+            foreach (var attr in this.ExtendedAttributes)
+            {
+                hc = HashCode.Combine(hc, attr.GetHashCode());
+            }
+
+            if (this.HasChildren)
+            {
+                foreach (var child in this.ChildElements)
+                {
+                    hc = HashCode.Combine(hc, child.GetHashCode());
+                }
+            }
+
+            return hc;
+        }
 
         /// <summary>
         /// Gets an Open XML attribute with the specified tag name and namespace URI.
