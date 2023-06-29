@@ -22,7 +22,7 @@ jobs:
         run: cd test/DocumentFormat.OpenXml.Benchmarks; dotnet build -c RELEASE
         shell: pwsh
       - name: Run benchmarks
-        run: cd test/DocumentFormat.OpenXml.Benchmarks; dotnet run -c RELEASE -f net7.0
+        run: cd test/DocumentFormat.OpenXml.Benchmarks; dotnet run -c RELEASE -f net8.0
         shell: pwsh
       - name: Write summary
         shell: pwsh
@@ -34,8 +34,6 @@ jobs:
             "## $name" >> $env:GITHUB_STEP_SUMMARY
             gc $file >> $env:GITHUB_STEP_SUMMARY
           }
-
-          gci test/DocumentFormat.OpenXml.Benchmarks -recurse
       - name: Store Validation
         uses: benchmark-action/github-action-benchmark@v1
         with:
