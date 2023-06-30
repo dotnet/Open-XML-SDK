@@ -19,7 +19,6 @@ jobs:
     env:
       Solution_Name: Open-XML-SDK.sln  
       Configuration: Release
-      ProjectLoadStyle: All
           
     runs-on: windows-latest
     
