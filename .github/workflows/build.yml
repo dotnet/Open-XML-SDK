@@ -16,7 +16,15 @@ env:
   RunPeVerify: true 
   
 jobs: 
-
+  event_file: # Used for test reporting
+    name: "Event File"
+    runs-on: ubuntu-latest
+    steps:
+    - name: Upload
+      uses: actions/upload-artifact@v3
+      with:
+        name: Event File
+        path: ${{ github.event_path }}
   build_and_test:
     name: Build and Test
     strategy:
@@ -57,4 +65,11 @@ jobs:
       run: dotnet build --no-restore --verbosity normal 
 
     - name: Run All Tests
-      run: dotnet test --no-restore --verbosity normal 
+      run: dotnet test --no-restore --verbosity normal --logger "trx;LogFileName=test-results.trx"
+
+    - name: Upload Test Results
+      if: always()
+      uses: actions/upload-artifact@v3
+      with:
+        name: Test Results (${{ matrix.os }} ${{ matrix.configuration }}} ${{ matrix.projectloadstyle }})
+        path: test-results.trx
