@@ -122,7 +122,7 @@ internal abstract class OpenXmlPackageBuilder<TPackage>
 
     private sealed class CopyOnWrite
     {
-#if !NET6_0_OR_GREATER
+#if NET6_0_OR_GREATER
         private ImmutableList<IPackageInitializer> _list;
 
         public CopyOnWrite(CopyOnWrite? other = null)

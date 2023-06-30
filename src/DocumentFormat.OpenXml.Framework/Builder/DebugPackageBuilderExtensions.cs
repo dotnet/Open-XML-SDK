@@ -5,10 +5,10 @@ using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Packaging;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 
 #if NET6_0_OR_GREATER
 using System.Collections.Immutable;
-using System.Diagnostics.CodeAnalysis;
 #else
 using System.Linq;
 #endif
