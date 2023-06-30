@@ -1,9 +1,5 @@
 name: Build
-
-concurrency:
-  group: ${{ github.ref }}
-  cancel-in-progress: false
-  
+ 
 on:
   push:
     branches: 
@@ -21,7 +17,8 @@ env:
   
 jobs: 
 
-  build: 
+  build_and_test:
+    name: Build and Test
     strategy:
           matrix:
             configuration: [ debug, release ]
@@ -37,6 +34,8 @@ jobs:
 
     env:
           Solution_Name: Open-XML-SDK.sln  
+          Configuration: ${{ matrix.configuration }}
+          ProjectLoadStyle: ${{ matrix.projectloadstyle }}
           
     runs-on: ${{ matrix.os }}
     
@@ -53,18 +52,9 @@ jobs:
 
     - name: Restore the Projects
       run: dotnet restore --verbosity normal
-      env:
-          Configuration: ${{ matrix.configuration }}
-          ProjectLoadStyle: ${{ matrix.projectloadstyle }}
           
     - name: Build the Projects
       run: dotnet build --no-restore --verbosity normal 
-      env:
-          Configuration: ${{ matrix.configuration }}
-          ProjectLoadStyle: ${{ matrix.projectloadstyle }}
 
     - name: Run All Tests
       run: dotnet test --no-restore --verbosity normal 
-      env: 
-          Configuration: ${{ matrix.configuration }}
-          ProjectLoadStyle: ${{ matrix.projectloadstyle }}
