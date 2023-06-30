@@ -65,11 +65,11 @@ jobs:
       run: dotnet build --no-restore --verbosity normal 
 
     - name: Run All Tests
-      run: dotnet test --no-restore --verbosity normal --logger "trx;LogFileName=test-results.trx"
+      run: dotnet test --no-restore --verbosity normal --logger "trx;LogFileName=$GITHUB_WORKSPACE/test-results.trx"
 
     - name: Upload Test Results
       if: always()
       uses: actions/upload-artifact@v3
       with:
         name: Test Results (${{ matrix.os }} ${{ matrix.configuration }}} ${{ matrix.projectloadstyle }})
-        path: test-results.trx
+        path: $$GITHUB_WORKSPACE/test-results.trx
