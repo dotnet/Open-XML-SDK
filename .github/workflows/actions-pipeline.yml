@@ -17,59 +17,54 @@ on:
       - '!/*.md'
 
 env:
-  RunPeVerify: true  
+  RunPeVerify: true 
   
-jobs:
+jobs: 
 
-  build:
-
+  build: 
     strategy:
-      matrix:
-        configuration: [Debug, Release]
-        projectloadstyle: [ net35, net40, net46, net6_0, net7_0 ]
-
-    runs-on: windows-latest  # For a list of available runner types, refer to
-                             # https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idruns-on
+          matrix:
+            configuration: [ debug, release ]
+            projectloadstyle: [ net35, net40, net46, net6_0, net7_0 ]
+            os: [ windows-latest, ubuntu-latest ]
+            exclude: 
+              - projectloadstyle: net35
+                os: ubuntu-latest
+              - projectloadstyle: net40
+                os: ubuntu-latest
+              - projectloadstyle: net46
+                os: ubuntu-latest
 
     env:
-      Solution_Name: Open-XML-SDK.sln                         # Replace with your solution name, i.e. MyWpfApp.sln.
-
+          Solution_Name: Open-XML-SDK.sln  
+          
+    runs-on: ${{ matrix.os }}
+    
     steps:
     - name: Checkout
       uses: actions/checkout@v3
       with:
         fetch-depth: 0
 
-    # Install the .NET Core workload
     - name: Install .NET Core
       uses: actions/setup-dotnet@v3
       with:
-        dotnet-version: 6.0.x
+          dotnet-version: 6.0.x
 
-    # Add  MSBuild to the PATH: https://github.com/microsoft/setup-msbuild
-    - name: Setup MSBuild.exe
-      uses: microsoft/setup-msbuild@v1.0.2
-
-    # Execute all unit tests in the solution
-    # - name: Execute unit tests
-    #  run: dotnet test
-
-    # Restore the projects
     - name: Restore the Projects
-      run: msbuild $env:Solution_Name /t:Restore /p:Configuration=$env:Configuration
+      run: dotnet restore --verbosity normal
       env:
-        Configuration: ${{ matrix.configuration }}
-        ProjectLoadStyle: ${{ matrix.projectloadstyle }}
-        
-            # Restore the projects
+          Configuration: ${{ matrix.configuration }}
+          ProjectLoadStyle: ${{ matrix.projectloadstyle }}
+          
     - name: Build the Projects
-      run: msbuild $env:Solution_Name /p:Configuration=$env:Configuration
+      run: dotnet build --no-restore --verbosity normal 
       env:
-        Configuration: ${{ matrix.configuration }}
-        ProjectLoadStyle: ${{ matrix.projectloadstyle }}
-        
+          Configuration: ${{ matrix.configuration }}
+          ProjectLoadStyle: ${{ matrix.projectloadstyle }}
+
     - name: Run All Tests
-      run: dotnet test --no-restore --verbosity normal --configuration ${{ matrix.configuration }}
+      run: dotnet test --no-restore --verbosity normal 
       env: 
-        Configuration: ${{ matrix.configuration }}
-        ProjectLoadStyle: ${{ matrix.projectloadstyle }}
+          Configuration: ${{ matrix.configuration }}
+          ProjectLoadStyle: ${{ matrix.projectloadstyle }}
