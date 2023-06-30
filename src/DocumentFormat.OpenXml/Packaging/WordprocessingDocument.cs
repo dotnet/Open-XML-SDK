@@ -7,6 +7,7 @@ using DocumentFormat.OpenXml.Wordprocessing;
 using System;
 using System.IO;
 using System.IO.Packaging;
+using System.Reflection;
 
 namespace DocumentFormat.OpenXml.Packaging
 {
