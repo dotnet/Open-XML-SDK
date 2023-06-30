@@ -1,3 +1,5 @@
+# This is used to publish test results to PRs so that we can support external forks
+
 name: Test Results
 
 on:
@@ -31,3 +33,8 @@ jobs:
           event_file: artifacts/Event File/event.json
           event_name: ${{ github.event.workflow_run.event }}
           files: "artifacts/**/*.trx"
+      - name: Add Coverage PR Comment
+        uses: marocchino/sticky-pull-request-comment@v2
+        with:
+          recreate: true
+          path: 'artifacts/Code Coverage/code-coverage-results.md'

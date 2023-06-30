@@ -1,0 +1,67 @@
+name: Code Coverage
+ 
+on:
+  push:
+    branches: 
+      - 'main'
+      - 'release/*'
+  pull_request:
+    branches: 
+      - 'main'
+      - 'release/*'
+      - '!/docs/'
+      - '!/*.md'
+  
+jobs:
+  build_and_test:
+    name: Run
+
+    env:
+          Solution_Name: Open-XML-SDK.sln  
+          Configuration: Release
+          ProjectLoadStyle: All
+          
+    runs-on: windows-latest
+    
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
+
+    - name: Install .NET Core
+      uses: actions/setup-dotnet@v3
+
+    - name: Restore
+      run: dotnet restore --verbosity normal
+          
+    - name: Build
+      run: dotnet build --no-restore --verbosity normal 
+
+    - name: Test
+      run: dotnet test --no-restore --verbosity normal --collect:"XPlat Code Coverage" --logger trx --results-directory coverage
+
+    - name: Code Coverage Report
+      uses: irongut/CodeCoverageSummary@v1.3.0
+      with:
+        filename: coverage/**/coverage.cobertura.xml
+        badge: true
+        fail_below_min: true
+        format: markdown
+        hide_branch_rate: false
+        hide_complexity: true
+        indicators: true
+        output: both
+        thresholds: '60 80'
+    
+    - name: Move output
+      run: |
+        cat code-coverage-results.md >> $GITHUB_STEP_SUMMARY
+        mv code-coverage-results.md coverage/code-coverage-results.md
+    
+    - name: Upload Test Results
+      if: always()
+      uses: actions/upload-artifact@v3
+      with:
+        name: Code Coverage
+        path: coverage/*
