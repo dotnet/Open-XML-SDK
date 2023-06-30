@@ -7,8 +7,6 @@ using DocumentFormat.OpenXml.Wordprocessing;
 using System;
 using System.IO;
 using System.IO.Packaging;
-using System.Reflection;
-using System.Reflection.Metadata;
 
 namespace DocumentFormat.OpenXml.Packaging
 {

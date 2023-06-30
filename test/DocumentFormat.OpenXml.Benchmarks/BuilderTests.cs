@@ -40,7 +40,7 @@ namespace DocumentFormat.OpenXml.Benchmarks
             }
 
             // Create a single instance
-            builder.Build();
+            builder.BuildPipeline();
 
             return builder;
         }

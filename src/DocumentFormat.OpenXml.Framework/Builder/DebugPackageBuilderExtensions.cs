@@ -87,7 +87,7 @@ internal static class DebugPackageBuilderExtensions
             }
         }
 
-        IEnumerable<string> IDebugPackageInformation.Relationships 
+        IEnumerable<string> IDebugPackageInformation.Relationships
         {
             get
             {
