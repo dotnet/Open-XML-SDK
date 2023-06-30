@@ -59,7 +59,7 @@ internal abstract class OpenXmlPackageBuilder<TPackage>
 
     public virtual TPackage Open(IPackageInitializer register)
     {
-        Build();
+        BuildPipeline();
 
         var package = Create();
 
@@ -79,7 +79,7 @@ internal abstract class OpenXmlPackageBuilder<TPackage>
     }
 
     [MemberNotNull(nameof(_pipeline))]
-    internal void Build()
+    internal void BuildPipeline()
     {
         if (_pipeline is { })
         {

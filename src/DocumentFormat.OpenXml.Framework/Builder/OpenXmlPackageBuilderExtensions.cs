@@ -11,7 +11,6 @@ namespace DocumentFormat.OpenXml.Builder;
 
 internal static class OpenXmlPackageBuilderExtensions
 {
-
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Reliability", "CA2000:Dispose objects before losing scope", Justification = "Disposable is registered with package")]
     public static TPackage Open<TPackage>(this OpenXmlPackageBuilder<TPackage> builder, Stream stream, PackageOpenMode mode)
         where TPackage : OpenXmlPackage
