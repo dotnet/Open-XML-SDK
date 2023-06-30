@@ -8,7 +8,7 @@ namespace DocumentFormat.OpenXml.Features;
 
 internal interface IDebugPackageInformation
 {
-    IReadOnlyCollection<OpenXmlQualifiedName> RootElements { get; }
+    IEnumerable<OpenXmlQualifiedName> RootElements { get; }
 
-    IReadOnlyCollection<string> Relationships { get; }
+    IEnumerable<string> Relationships { get; }
 }

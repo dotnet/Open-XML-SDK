@@ -50,9 +50,9 @@ internal static class DebugPackageBuilderExtensions
 
         public void Add(string relationship) => _relationships.Add(relationship);
 
-        IReadOnlyCollection<OpenXmlQualifiedName> IDebugPackageInformation.RootElements => _rootElements;
+        IEnumerable<OpenXmlQualifiedName> IDebugPackageInformation.RootElements => _rootElements;
 
-        IReadOnlyCollection<string> IDebugPackageInformation.Relationships => _relationships;
+        IEnumerable<string> IDebugPackageInformation.Relationships => _relationships;
     }
 #else
     private sealed class DebugInfo : IDebugPackageInformation
@@ -76,7 +76,7 @@ internal static class DebugPackageBuilderExtensions
             }
         }
 
-        IReadOnlyCollection<OpenXmlQualifiedName> IDebugPackageInformation.RootElements
+        IEnumerable<OpenXmlQualifiedName> IDebugPackageInformation.RootElements
         {
             get
             {
@@ -87,7 +87,7 @@ internal static class DebugPackageBuilderExtensions
             }
         }
 
-        IReadOnlyCollection<string> IDebugPackageInformation.Relationships 
+        IEnumerable<string> IDebugPackageInformation.Relationships 
         {
             get
             {
