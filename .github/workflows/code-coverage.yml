@@ -17,9 +17,9 @@ jobs:
     name: Run
 
     env:
-          Solution_Name: Open-XML-SDK.sln  
-          Configuration: Release
-          ProjectLoadStyle: All
+      Solution_Name: Open-XML-SDK.sln  
+      Configuration: Release
+      ProjectLoadStyle: All
           
     runs-on: windows-latest
     
@@ -41,7 +41,7 @@ jobs:
     - name: Test
       run: dotnet test --no-restore --verbosity normal --collect:"XPlat Code Coverage" --logger trx --results-directory coverage
 
-    - name: Code Coverage Report
+    - name: Generate Report
       uses: irongut/CodeCoverageSummary@v1.3.0
       with:
         filename: coverage/**/coverage.cobertura.xml
@@ -54,7 +54,7 @@ jobs:
         output: both
         thresholds: '60 80'
     
-    - name: Move output
+    - name: Post results
       run: |
         cat code-coverage-results.md >> $GITHUB_STEP_SUMMARY
         mv code-coverage-results.md coverage/code-coverage-results.md
