@@ -34,6 +34,7 @@ public static class SchemaGenerator
         sb.Replace('/', '_');
         sb.Replace('.', '_');
         sb.Replace(':', '_');
+        sb.Append("g.cs");
 
         return sb.ToString();
     }
