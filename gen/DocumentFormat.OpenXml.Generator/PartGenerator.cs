@@ -29,7 +29,7 @@ public static class PartGenerator
             writer.WriteFileHeader();
             writer.WritePart(openXml, part);
 
-            context.AddSource($"Part_{part.Name}", sb.ToString());
+            context.AddSource($"Part_{part.Name}.g.cs", sb.ToString());
         }
     }
 }

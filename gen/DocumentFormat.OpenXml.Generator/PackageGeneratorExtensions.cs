@@ -135,7 +135,7 @@ internal static class PackageGeneratorExtensions
                     writer.WriteLine("}");
                 }
 
-                context.AddSource($"Package_{source.PackageName}_{feature.Name}", sb.ToString());
+                context.AddSource($"Package_{source.PackageName}_{feature.Name}.g.cs", sb.ToString());
             }
         });
 

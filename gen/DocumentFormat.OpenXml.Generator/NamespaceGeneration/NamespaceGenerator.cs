@@ -20,7 +20,7 @@ public static class NamespaceGenerator
 
         try
         {
-            context.AddSource("Namespaces", namespaces.Generate());
+            context.AddSource("Namespaces.g.cs", namespaces.Generate());
         }
         catch (Exception)
         {

@@ -21,7 +21,7 @@ public static class SchemaGenerator
 
         if (writer.GetDataModelSyntax(openXml, namespaces))
         {
-            context.AddSource(GetPath(namespaces.TargetNamespace), sw.ToString());
+            context.AddSource(GetPath(namespaces.TargetNamespace) + ".g.cs", sw.ToString());
         }
     }
 
