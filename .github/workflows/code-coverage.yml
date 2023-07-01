@@ -38,29 +38,25 @@ jobs:
       run: dotnet build --no-restore --verbosity normal 
 
     - name: Test
-      run: dotnet test --no-restore --verbosity normal --collect:"XPlat Code Coverage" --logger trx --results-directory coverage
+      run: dotnet test --no-restore --verbosity normal --collect:"XPlat Code Coverage" --results-directory coverage
 
-    - name: Generate Report
-      uses: irongut/CodeCoverageSummary@v1.3.0
+    - name: ReportGenerator
+      uses: danielpalme/ReportGenerator-GitHub-Action@5.1.22
       with:
-        filename: coverage/**/coverage.cobertura.xml
-        badge: true
-        fail_below_min: false
-        format: markdown
-        hide_branch_rate: false
-        hide_complexity: true
-        indicators: true
-        output: both
-        thresholds: '60 80'
-    
+        reports: coverage/**/coverage.cobertura.xml
+        targetdir: coveragereport
+        reporttypes: MarkdownSummaryGithub;MarkdownDeltaSummary
+        assemblyfilters: +DocumentFormat.OpenXml.Framework;+DocumentFormat.OpenXml;+DocumentFormat.OpenXml.Linq;+DocumentFormat.OpenXml.Features
+        filefilters: -*.g.cs
+        tag: '${{ github.run_number }}_${{ github.run_id }}' # Optional tag or build version.
+           
     - name: Post results
       run: |
-        cat code-coverage-results.md >> $GITHUB_STEP_SUMMARY
-        mv code-coverage-results.md coverage/code-coverage-results.md
+        cat coveragereport/SummaryGithub.md >> $GITHUB_STEP_SUMMARY
     
     - name: Upload Test Results
       if: always()
       uses: actions/upload-artifact@v3
       with:
         name: Code Coverage
-        path: coverage/*
+        path: coveragereport/*
