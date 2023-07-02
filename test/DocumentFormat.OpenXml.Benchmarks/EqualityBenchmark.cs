@@ -4,9 +4,11 @@
 using BenchmarkDotNet.Attributes;
 
 using DocumentFormat.OpenXml.Drawing;
+using DocumentFormat.OpenXml.Equality;
 using DocumentFormat.OpenXml.Spreadsheet;
 
 using System;
+using System.Collections.Generic;
 
 namespace DocumentFormat.OpenXml.Benchmarks
 {
@@ -22,6 +24,9 @@ namespace DocumentFormat.OpenXml.Benchmarks
 
         private OpenXmlElement _smallElementParsed;
         private OpenXmlElement _smallElement2Parsed;
+
+        private IEqualityComparer<OpenXmlElement> _defaultEqualityComparer = OpenXmlElementEqualityComparer.Default;
+        private IEqualityComparer<OpenXmlElement> _fast = OpenXmlElementEqualityComparer.GetEqualityComparer(OpenXmlElementEqualityOptions.Default | OpenXmlElementEqualityOptions.CompareNamespaceInsteadOfPrefix);
 
         [GlobalSetup]
         public void Setup()
@@ -70,7 +75,13 @@ namespace DocumentFormat.OpenXml.Benchmarks
         [Benchmark]
         public bool EqualsLargeElement()
         {
-            return _largeElement.Equals(_largeElement2);
+            return _defaultEqualityComparer.Equals(_largeElement, _largeElement2);
+        }
+
+        [Benchmark]
+        public bool EqualsLargeElementSkipPrefix()
+        {
+            return _fast.Equals(_largeElement, _largeElement2);
         }
 
         [Benchmark]
@@ -82,7 +93,7 @@ namespace DocumentFormat.OpenXml.Benchmarks
         [Benchmark]
         public bool UnparsedEquals()
         {
-            return _smallElementUnParsed.Equals(_smallElement2UnParsed);
+            return _defaultEqualityComparer.Equals(_smallElementUnParsed, _smallElement2UnParsed);
         }
 
         [Benchmark]
@@ -94,7 +105,13 @@ namespace DocumentFormat.OpenXml.Benchmarks
         [Benchmark]
         public bool SmallEquals()
         {
-            return _smallElementParsed.Equals(_smallElement2Parsed);
+            return _defaultEqualityComparer.Equals(_smallElementParsed, _smallElement2Parsed);
+        }
+
+        [Benchmark]
+        public bool SmallEqualsSkipPrefix()
+        {
+            return _fast.Equals(_smallElementParsed, _smallElement2Parsed);
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Equality;
 using DocumentFormat.OpenXml.Wordprocessing;
 
 using System.Collections.Generic;
@@ -11,13 +12,18 @@ namespace DocumentFormat.OpenXml.Tests
 {
     public class OpenXmlElementEqualityTest
     {
+        private static readonly IEqualityComparer<OpenXmlElement> dc = OpenXmlElementEqualityComparer.Default;
+        private static readonly IEqualityComparer<OpenXmlElement> dcRequireParsed = OpenXmlElementEqualityComparer.GetEqualityComparer(OpenXmlElementEqualityOptions.Default | OpenXmlElementEqualityOptions.RequireParsed);
+        private static readonly IEqualityComparer<OpenXmlElement> dcMinusMC = OpenXmlElementEqualityComparer.GetEqualityComparer(OpenXmlElementEqualityOptions.Default ^ OpenXmlElementEqualityOptions.IncludeMCAttributes);
+        private static readonly IEqualityComparer<OpenXmlElement> dcMinusExtended = OpenXmlElementEqualityComparer.GetEqualityComparer(OpenXmlElementEqualityOptions.Default ^ OpenXmlElementEqualityOptions.IncludeExtendedAttributes);
+
         [Fact]
         public void NullTest()
         {
             string paragraphOuterXmlrsidP001 = "<w:p w:rsidP=\"001\" xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><w:r><w:t>Run Text.</w:t><w:t>Run 2.</w:t></w:r></w:p>";
             Paragraph para = new Paragraph(paragraphOuterXmlrsidP001);
 
-            Assert.False(para.Equals(null));
+            Assert.NotEqual(para, null, dc);
         }
 
         [Fact]
@@ -27,7 +33,7 @@ namespace DocumentFormat.OpenXml.Tests
             string paragraphOuterXmlrsidP001 = "<w:p w:rsidP=\"001\" xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><w:r><w:t>Run Text.</w:t><w:t>Run 2.</w:t></w:r></w:p>";
             Paragraph para = new Paragraph(paragraphOuterXmlrsidP001);
 
-            Assert.True(para.Equals(para));
+            Assert.Equal(para, para, dc);
         }
 
         [Fact]
@@ -39,16 +45,16 @@ namespace DocumentFormat.OpenXml.Tests
             Paragraph para = new Paragraph(paragraphOuterXmlrsidP001);
             Paragraph paraDifferentAttributeValue = new Paragraph(paragraphOuterXmlrsidP002);
 
-            Assert.True(para.Equals(para));
+            Assert.Equal(para, para, dc);
 
             // Different attribute values should not be the same.
-            Assert.False(para.Equals(paraDifferentAttributeValue));
+            Assert.NotEqual(para, paraDifferentAttributeValue, dc);
 
             para.MakeSureParsed();
             paraDifferentAttributeValue.MakeSureParsed();
 
             // Different attribute values should not be the same.
-            Assert.False(para.Equals(paraDifferentAttributeValue));
+            Assert.NotEqual(para, paraDifferentAttributeValue, dc);
         }
 
         /// <summary>
@@ -68,17 +74,29 @@ namespace DocumentFormat.OpenXml.Tests
             Paragraph paraBarExtendedAttribute = new Paragraph(paragraphWithBarExtendedAttribute);
             Paragraph paraNoExtendedAttribute = new Paragraph(paragraphWithBarNoExtendedAttribute);
 
-            Assert.True(para.Equals(para)); // Ref equality should always be equal.
-            Assert.True(para.Equals(para2)); // Identity equality.
+            Assert.Equal(para, para, dc); // Ref equality should always be equal.
+            Assert.Equal(para, para2, dc); // Identity equality.
+
+            para.MakeSureParsed();
+            para2.MakeSureParsed();
+            paraFooExtendedAttribute.MakeSureParsed();
+            paraBarExtendedAttribute.MakeSureParsed();
+            paraNoExtendedAttribute.MakeSureParsed();
 
             // Extended attributes with same attribute name but different value.
-            Assert.False(para.Equals(paraFooExtendedAttribute));
+            Assert.NotEqual(para, paraFooExtendedAttribute, dc);
+            // Unless extended attributes are not considered.
+            Assert.Equal(para, paraFooExtendedAttribute, dcMinusExtended);
 
             // Extended attribute with different attribute name.
-            Assert.False(para.Equals(paraBarExtendedAttribute));
+            Assert.NotEqual(para, paraBarExtendedAttribute, dc);
+            // Unless extended attributes are not considered.
+            Assert.Equal(para, paraBarExtendedAttribute, dcMinusExtended);
 
             // With different amount of extended attributes.
-            Assert.False(para.Equals(paraNoExtendedAttribute));
+            Assert.NotEqual(para, paraNoExtendedAttribute, dc);
+            // Unless extended attributes are not considered.
+            Assert.Equal(para, paraNoExtendedAttribute, dcMinusExtended);
         }
 
         [Fact]
@@ -90,12 +108,12 @@ namespace DocumentFormat.OpenXml.Tests
             Paragraph paraChildRun1 = new Paragraph(paraChildRun1Xml);
             Paragraph paraChildRun2 = new Paragraph(paraChildRun2Xml);
 
-            Assert.False(paraChildRun1.Equals(paraChildRun2));
+            Assert.NotEqual(paraChildRun1, paraChildRun2, dc);
 
             paraChildRun1.MakeSureParsed();
             paraChildRun2.MakeSureParsed();
 
-            Assert.False(paraChildRun1.Equals(paraChildRun2));
+            Assert.NotEqual(paraChildRun1, paraChildRun2, dc);
         }
 
         /// <summary>
@@ -109,12 +127,12 @@ namespace DocumentFormat.OpenXml.Tests
             Paragraph para1 = new Paragraph(paraXml1);
             Paragraph para2 = new Paragraph(paraXml2);
 
-            Assert.False(para1.Equals(para2));
+            Assert.NotEqual(para1, para2, dc);
 
             para1.MakeSureParsed();
             para2.MakeSureParsed();
 
-            Assert.False(para1.Equals(para2));
+            Assert.NotEqual(para1, para2, dc);
         }
 
         /// <summary>
@@ -128,12 +146,12 @@ namespace DocumentFormat.OpenXml.Tests
             Paragraph para1 = new Paragraph(paraXml1);
             Paragraph para2 = new Paragraph(paraXml2);
 
-            Assert.False(para1.Equals(para2));
+            Assert.NotEqual(para1, para2, dc);
 
             para1.MakeSureParsed();
             para2.MakeSureParsed();
 
-            Assert.False(para1.Equals(para2));
+            Assert.NotEqual(para1, para2, dc);
         }
 
         [Fact]
@@ -144,12 +162,12 @@ namespace DocumentFormat.OpenXml.Tests
             Paragraph paraChildRun1 = new Paragraph(paraChildRun1Xml);
             Paragraph paraChildRun2 = new Paragraph(paraChildRun2Xml);
 
-            Assert.False(paraChildRun1.Equals(paraChildRun2));
+            Assert.NotEqual(paraChildRun1, paraChildRun2, dc);
 
             paraChildRun1.MakeSureParsed();
             paraChildRun2.MakeSureParsed();
 
-            Assert.False(paraChildRun1.Equals(paraChildRun2));
+            Assert.NotEqual(paraChildRun1, paraChildRun2, dc);
         }
 
         /// <summary>
@@ -164,12 +182,12 @@ namespace DocumentFormat.OpenXml.Tests
             Paragraph paraChildRun1 = new Paragraph(paraChildRun1Xml);
             Paragraph paraChildRun2 = new Paragraph(paraChildRun2Xml);
 
-            Assert.False(paraChildRun1.Equals(paraChildRun2));
+            Assert.NotEqual(paraChildRun1, paraChildRun2, dc);
 
             paraChildRun1.MakeSureParsed();
             paraChildRun2.MakeSureParsed();
 
-            Assert.False(paraChildRun1.Equals(paraChildRun2));
+            Assert.NotEqual(paraChildRun1, paraChildRun2, dc);
         }
 
         /// <summary>
@@ -185,13 +203,13 @@ namespace DocumentFormat.OpenXml.Tests
 
             // While unparsed, there is no guarantees for ordering on attributes fpr equality.
             // The order in the input XML doc is used.
-            Assert.False(para1.Equals(para2));
+            Assert.NotEqual(para1, para2, dc);
 
             para1.MakeSureParsed();
             para2.MakeSureParsed();
 
             // After parsing the order from schema is used.
-            Assert.True(para1.Equals(para2));
+            Assert.Equal(para1, para2, dc);
         }
 
         /// <summary>
@@ -202,16 +220,16 @@ namespace DocumentFormat.OpenXml.Tests
         {
             string paraChildRun1Xml = "<w:p w:rsidR=\"123\" xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" foo1=\"bar1\" foo2=\"bar2\"/>";
             string paraChildRun2Xml = "<w:p w:rsidR=\"123\" xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" foo2=\"bar2\" foo1=\"bar1\" />";
-            Paragraph paraChildRun1 = new Paragraph(paraChildRun1Xml);
-            Paragraph paraChildRun2 = new Paragraph(paraChildRun2Xml);
+            Paragraph para1 = new Paragraph(paraChildRun1Xml);
+            Paragraph para2 = new Paragraph(paraChildRun2Xml);
 
-            Assert.False(paraChildRun1.Equals(paraChildRun2));
+            Assert.NotEqual(para1, para2, dc);
 
             // Order is still important after parsing, since schema doesn't define order for extended attributes.
-            paraChildRun1.MakeSureParsed();
-            paraChildRun2.MakeSureParsed();
+            para1.MakeSureParsed();
+            para2.MakeSureParsed();
 
-            Assert.False(paraChildRun1.Equals(paraChildRun2));
+            Assert.NotEqual(para1, para2, dc);
         }
 
         /// <summary>
@@ -224,25 +242,45 @@ namespace DocumentFormat.OpenXml.Tests
             Paragraph para1 = new Paragraph(xml);
             Paragraph para2 = new Paragraph(xml);
 
-            Assert.True(para1.Equals(para2));
+            Assert.True(OpenXmlElementEqualityComparer.Default.Equals(para1, para2));
 
             para2.SetPreserveElements("*");
 
-            Assert.False(para1.Equals(para2));
+            Assert.NotEqual(para1, para2, dc);
 
             para1.SetPreserveAttributes("*");
 
             // Test that different MC attributes are not equal.
-            Assert.False(para1.Equals(para2));
+            Assert.NotEqual(para1, para2, dc);
+
+            // Unless it is selected that it shouldn't be considered in equality tests.
+            Assert.Equal(para1, para1, dcMinusMC);
         }
 
         /// <summary>
-        /// Test that documents that GetHashCode is stable, allowing for GetHashCode/Equals to be used in 
+        /// Test that shows <see cref="OpenXmlElementEqualityOptions.RequireParsed"/> will triggering parsing.
+        /// </summary>
+        [Fact]
+        public void IgnoreParseTest()
+        {
+            string paraXml1 = "<w:p w:rsidP=\"001\" xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" w:rsidR=\"123\"/>";
+            string paraXml2 = "<w:p w:rsidR=\"123\" xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" w:rsidP=\"001\"/>";
+            Paragraph para1 = new Paragraph(paraXml1);
+            Paragraph para2 = new Paragraph(paraXml2);
+
+            // While unparsed, there is no guarantees for ordering on attributes fpr equality.
+            // The order in the input XML doc is used. Use Comparer to ensure parsed.
+            Assert.NotEqual(para1, para2, dc);
+            Assert.Equal(para1, para2, dcRequireParsed);
+        }
+
+        /// <summary>
+        /// Test that documents that GetHashCode is stable, allowing for GetHashCode/Equals to be used in dictionary/hashset.
         /// </summary>
         [Fact]
         public void GetHashCodeEqualityTest()
         {
-            var hs = new HashSet<OpenXmlElement>();
+            var hs = new HashSet<OpenXmlElement>(dc);
 
             string paraXml = "<w:p w:rsidP=\"001\" xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><w:r><w:t>Run Text.</w:t><w:t>Run 1.</w:t></w:r></w:p>";
             Paragraph para1 = new Paragraph(paraXml);

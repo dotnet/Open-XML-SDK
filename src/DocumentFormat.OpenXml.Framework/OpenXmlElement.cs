@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Equality;
 using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -25,7 +26,7 @@ namespace DocumentFormat.OpenXml
     /// <remarks>
     /// Annotations will not be cloned when calling <see cref="Clone"/> and <see cref="CloneNode(bool)"/>.
     /// </remarks>
-    public abstract partial class OpenXmlElement : IEnumerable<OpenXmlElement>, ICloneable, IEquatable<OpenXmlElement>
+    public abstract partial class OpenXmlElement : IEnumerable<OpenXmlElement>, ICloneable
     {
         private IFeatureCollection? _features;
 
@@ -280,7 +281,7 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Gets all extended attributes (attributes not defined in the schema) of the current element.
         /// </summary>
-        public IReadOnlyList<OpenXmlAttribute> ExtendedAttributes
+        public IEnumerable<OpenXmlAttribute> ExtendedAttributes
         {
             get
             {
@@ -492,23 +493,24 @@ namespace DocumentFormat.OpenXml
             return false;
         }
 
-        private bool PrefixAndQNameEqual(OpenXmlElement other)
+        private bool PrefixAndQNameEqual(OpenXmlElement other, OpenXmlElementEqualityOptions options)
         {
             OpenXmlQualifiedName tQName = this.ParsedState.Metadata.QName;
             OpenXmlQualifiedName oQName = other.ParsedState.Metadata.QName;
 
-            // TODO: If we can just compare Namespace.URI instead of prefix comparsion, then we can save quite a bit here.
-            // Please verify if that is legal.
             if (!tQName.Equals(oQName))
             {
                 return false;
             }
 
+            if (options.HasFlagFast(OpenXmlElementEqualityOptions.CompareNamespaceInsteadOfPrefix))
+            {
+                return true;
+            }
+
             string turi = tQName.Namespace.Uri;
             string ouri = oQName.Namespace.Uri;
 
-            // TODO: Check with Taylor if we can somehow be smart about this, since it is the most expensive part.
-            // Maybe we can just validate Namespace.URI is the same for both, avoiding the prefix lookup.
             var tPrefix = this.LookupPrefixLocal(ouri);
             var oPrefix = other.LookupPrefixLocal(ouri);
 
@@ -525,14 +527,13 @@ namespace DocumentFormat.OpenXml
             return string.Equals(tPrefix, oPrefix, StringComparison.Ordinal);
         }
 
-        /// <inheritdoc/>
-        public override bool Equals(object? obj)
-        {
-            return this.Equals(obj as OpenXmlElement);
-        }
-
-        /// <inheritdoc/>
-        public bool Equals(OpenXmlElement? other)
+        /// <summary>
+        /// Determines value equality of this to <paramref name="other"/> based on the equality as defined by the <paramref name="comparer"/>'s options.
+        /// </summary>
+        /// <param name="other">The other OpenXmlElement to equate with.</param>
+        /// <param name="comparer">The comparer used for this equality determination.</param>
+        /// <returns></returns>
+        internal bool ValueEquality(OpenXmlElement? other, OpenXmlElementEqualityComparer comparer)
         {
             if (other == null)
             {
@@ -549,9 +550,12 @@ namespace DocumentFormat.OpenXml
                 return false;
             }
 
-            if (!this.XmlParsed && !other.XmlParsed)
+            if (!comparer.Options.HasFlagFast(OpenXmlElementEqualityOptions.RequireParsed))
             {
-                return string.Equals(this.RawOuterXml, other.RawOuterXml, StringComparison.Ordinal);
+                if (!this.XmlParsed && !other.XmlParsed)
+                {
+                    return string.Equals(this.RawOuterXml, other.RawOuterXml, StringComparison.Ordinal);
+                }
             }
 
             this.MakeSureParsed();
@@ -562,30 +566,17 @@ namespace DocumentFormat.OpenXml
                 return false;
             }
 
-            var thisHasAttributes = this.HasAttributes;
-            var otherHasAttributes = other.HasAttributes;
-            if (thisHasAttributes != otherHasAttributes)
+            if (!this.PrefixAndQNameEqual(other, comparer.Options))
             {
                 return false;
             }
 
-            if (thisHasAttributes && this.ParsedState.Attributes.Length != other.ParsedState.Attributes.Length)
-            {
-                return false;
-            }
-
-            // TODO: This seems strange that this is the only one that requires special behaviour, verify with Taylor.
             if (this is OpenXmlLeafTextElement)
             {
                 if (!string.Equals(this.InnerText, other.InnerText, StringComparison.Ordinal))
                 {
                     return false;
                 }
-            }
-
-            if (!this.PrefixAndQNameEqual(other))
-            {
-                return false;
             }
 
             if (this.HasChildren)
@@ -599,7 +590,7 @@ namespace DocumentFormat.OpenXml
                 int e1 = 0, e2 = 0;
                 while (MoveNextAndTrackCount(ref tChilds, ref oChilds, ref e1, ref e2))
                 {
-                    if (!tChilds.Current.Equals(oChilds.Current))
+                    if (!comparer.Equals(tChilds.Current, oChilds.Current))
                     {
                         return false;
                     }
@@ -612,44 +603,53 @@ namespace DocumentFormat.OpenXml
                 }
             }
 
-            if (thisHasAttributes)
+            if (comparer.Options.HasFlagFast(OpenXmlElementEqualityOptions.IncludeExtendedAttributes))
             {
-                if (this.ExtendedAttributes.Count != other.ExtendedAttributes.Count)
+                if (this.ExtendedAttributesField == null != (other.ExtendedAttributesField == null))
                 {
                     return false;
                 }
 
-                for (int i = 0; i < this.ExtendedAttributes.Count; i++)
+                if (this.ExtendedAttributesField != null && other.ExtendedAttributesField != null)
                 {
-                    if (!this.ExtendedAttributes[i].Equals(other.ExtendedAttributes[i]))
+                    if (this.ExtendedAttributesField.Count != other.ExtendedAttributesField.Count)
                     {
                         return false;
+                    }
+
+                    for (int i = 0; i < this.ExtendedAttributesField.Count; i++)
+                    {
+                        if (!this.ExtendedAttributesField[i].Equals(other.ExtendedAttributesField[i]))
+                        {
+                            return false;
+                        }
                     }
                 }
+            }
 
-                for (int i = 0; i < this.ParsedState.Attributes.Length; i++)
+            for (int i = 0; i < this.ParsedState.Attributes.Length; i++)
+            {
+                var tAttr = this.ParsedState.Attributes[i];
+                var oAttr = other.ParsedState.Attributes[i];
+
+                if ((tAttr.Value == null && oAttr.Value != null) || (tAttr.Value != null && oAttr.Value == null))
                 {
-                    var tAttr = this.ParsedState.Attributes[i];
-                    var oAttr = other.ParsedState.Attributes[i];
-
-                    if ((tAttr.Value == null && oAttr.Value != null) || (tAttr.Value != null && oAttr.Value == null))
-                    {
-                        return false;
-                    }
-
-                    if (tAttr.Value == null)
-                    {
-                        continue;
-                    }
-
-                    // TODO: Figure out if this assumption is valid.
-                    // looking at it it seems that these are all OpenXmlComparableSimpleValue types, which supports IEqutable.
-                    if (!tAttr.Value.Equals(oAttr.Value))
-                    {
-                        return false;
-                    }
+                    return false;
                 }
 
+                if (tAttr.Value == null)
+                {
+                    continue;
+                }
+
+                if (!tAttr.Value.Equals(oAttr.Value))
+                {
+                    return false;
+                }
+            }
+
+            if (comparer.Options.HasFlagFast(OpenXmlElementEqualityOptions.IncludeMCAttributes))
+            {
                 if (this.MCAttributes == null != (other.MCAttributes == null) || (this.MCAttributes != null && !this.MCAttributes.Equals(other.MCAttributes)))
                 {
                     return false;
@@ -659,10 +659,14 @@ namespace DocumentFormat.OpenXml
             return true;
         }
 
-        /// <inheritdoc/>
-        public override int GetHashCode()
+        /// <summary>
+        /// Gets a hashcode with values as defined by <paramref name="options"/>.
+        /// </summary>
+        /// <param name="options">The options defining what to include.</param>
+        /// <returns></returns>
+        internal int GetValueHashCode(OpenXmlElementEqualityOptions options)
         {
-            int hc = this.MCAttributes?.GetHashCode() ?? 0;
+            int hc = options.HasFlagFast(OpenXmlElementEqualityOptions.IncludeMCAttributes) && this.MCAttributes != null ? this.MCAttributes.GetHashCode() : 0;
 
             for (int i = 0; i < this.ParsedState.Attributes.Length; i++)
             {
@@ -672,9 +676,12 @@ namespace DocumentFormat.OpenXml
                 }
             }
 
-            foreach (var attr in this.ExtendedAttributes)
+            if (options.HasFlagFast(OpenXmlElementEqualityOptions.IncludeExtendedAttributes))
             {
-                hc = HashCode.Combine(hc, attr.GetHashCode());
+                foreach (var attr in this.ExtendedAttributes)
+                {
+                    hc = HashCode.Combine(hc, attr.GetHashCode());
+                }
             }
 
             if (this.HasChildren)
