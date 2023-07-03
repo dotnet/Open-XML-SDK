@@ -35,9 +35,11 @@ jobs:
           fetch-depth: 0
       - name: Install .NET Core
         uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '6.x'
       - name: GitVersion
         run: |
-          dotnet tool install --global GitVersion.Tool
+          dotnet tool install --global GitVersion.Tool --version 5.12.0
           dotnet gitversion /output buildserver /nofetch
       - name: Restore
         run: dotnet restore --verbosity normal
