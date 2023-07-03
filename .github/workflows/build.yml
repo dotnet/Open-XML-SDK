@@ -25,6 +25,37 @@ jobs:
       with:
         name: Event File
         path: ${{ github.event_path }}
+  validate_gen:
+    name: "Validate generated files"
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
+
+    - name: Remove generated files for baseline
+      run: Remove-Item generated/ -Include *.g.cs -Recurse
+      shell: pwsh
+
+    - name: Install .NET Core
+      uses: actions/setup-dotnet@v3
+
+    - name: Restore
+      run: dotnet restore --verbosity normal
+          
+    - name: Build
+      run: dotnet build --no-restore --verbosity normal
+    
+    - name: Validate generated files
+      shell: pwsh
+      run: |
+        git status >> $env:GITHB_OUTPUT
+        git diff
+        if(git status --porcelain -- .\generated){
+          Write-Host  "::error::Generated files are not correct. To fix, please build locally after removing the ./generated folder"
+          exit 1
+        }
   build_and_test:
     name: Build and Test
     strategy:
