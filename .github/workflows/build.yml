@@ -11,9 +11,6 @@ on:
       - 'release/*'
       - '!/docs/'
       - '!/*.md'
-
-env:
-  RunPeVerify: true 
   
 jobs: 
   event_file: # Used for test reporting
@@ -27,7 +24,7 @@ jobs:
         path: ${{ github.event_path }}
   pack:
     name: "Pack"
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     env:
       Configuration: Release
       ProjectLoadStyle: All
@@ -36,14 +33,19 @@ jobs:
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
+
       - name: Install .NET Core
         uses: actions/setup-dotnet@v3
+
       - name: Restore
         run: dotnet restore --verbosity normal
+
       - name: Build
         run: dotnet build --no-restore --verbosity normal
+
       - name: Pack
         run: dotnet pack --no-build
+
       - name: Upload
         uses: actions/upload-artifact@v3
         with:
@@ -72,12 +74,11 @@ jobs:
       run: dotnet build --no-restore --verbosity normal
     
     - name: Validate generated files
-      shell: pwsh
       run: |
-        git status >> $env:GITHB_OUTPUT
+        git status >> $GITHB_OUTPUT
         git diff
         if(git status --porcelain -- .\generated){
-          Write-Host  "::error::Generated files are not correct. To fix, please build locally after removing the ./generated folder"
+          echo "::error::Generated files are not correct. To fix, please build locally after removing the ./generated folder"
           exit 1
         }
   build_and_test:
@@ -103,6 +104,7 @@ jobs:
             os: macos-latest
 
     env:
+      RunPeVerify: true 
       Solution_Name: Open-XML-SDK.sln  
       Configuration: ${{ matrix.configuration }}
       ProjectLoadStyle: ${{ matrix.projectloadstyle }}
