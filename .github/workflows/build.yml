@@ -33,19 +33,18 @@ jobs:
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
-
       - name: Install .NET Core
         uses: actions/setup-dotnet@v3
-
+      - name: GitVersion
+        run: |
+          dotnet tool install --global GitVersion.Tool
+          dotnet gitversion /output buildserver /nofetch
       - name: Restore
         run: dotnet restore --verbosity normal
-
       - name: Build
         run: dotnet build --no-restore --verbosity normal
-
       - name: Pack
         run: dotnet pack --no-build
-
       - name: Upload
         uses: actions/upload-artifact@v3
         with:
@@ -59,20 +58,15 @@ jobs:
       uses: actions/checkout@v3
       with:
         fetch-depth: 0
-
     - name: Remove generated files for baseline
       run: Remove-Item generated/ -Include *.g.cs -Recurse
       shell: pwsh
-
     - name: Install .NET Core
       uses: actions/setup-dotnet@v3
-
     - name: Restore
-      run: dotnet restore --verbosity normal
-          
+      run: dotnet restore --verbosity normal          
     - name: Build
-      run: dotnet build --no-restore --verbosity normal
-    
+      run: dotnet build --no-restore --verbosity normal    
     - name: Validate generated files
       run: |
         if [ "$(git diff --ignore-space-at-eol generated/ | wc -l)" -gt "0" ]; then
@@ -120,16 +114,12 @@ jobs:
       uses: actions/setup-dotnet@v3
       with:
           dotnet-version: 6.0.x
-
-    - name: Restore the Projects
-      run: dotnet restore --verbosity normal
-          
-    - name: Build the Projects
-      run: dotnet build --no-restore --verbosity normal 
-
-    - name: Run All Tests
+    - name: Restore
+      run: dotnet restore --verbosity normal          
+    - name: Build
+      run: dotnet build --no-restore --verbosity normal
+    - name: Test
       run: dotnet test --no-restore --verbosity normal --logger trx --results-directory test-results/
-
     - name: Upload Test Results
       if: always()
       uses: actions/upload-artifact@v3
