@@ -75,12 +75,11 @@ jobs:
     
     - name: Validate generated files
       run: |
-        git status >> $GITHB_OUTPUT
-        git diff
-        if(git status --porcelain -- .\generated){
-          echo "::error::Generated files are not correct. To fix, please build locally after removing the ./generated folder"
+        if [ "$(git diff --ignore-space-at-eol generated/ | wc -l)" -gt "0" ]; then
+          echo "Detected uncommitted changes after build.  See status below:"
+          git diff
           exit 1
-        }
+        fi
   build_and_test:
     name: Build and Test
     strategy:
