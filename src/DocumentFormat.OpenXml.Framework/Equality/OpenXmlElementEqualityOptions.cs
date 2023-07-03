@@ -1,44 +1,31 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using System;
-
-namespace DocumentFormat.OpenXml.Equality
+namespace DocumentFormat.OpenXml
 {
     /// <summary>
     /// Options defining the behaviour of equality for <see cref="OpenXmlElement"/>.
     /// </summary>
-    [Flags]
-    public enum OpenXmlElementEqualityOptions
+    public sealed class OpenXmlElementEqualityOptions
     {
         /// <summary>
-        /// Only consider elements and their nested elements.
+        /// Gets a value indicating whether extended attributes should be considered when determining equality.
         /// </summary>
-        None = 0,
+        public bool IncludeExtendedAttributes { get; init; } = true;
 
         /// <summary>
-        /// Specifies if extended attributes should be considered when determining equality.
+        /// Gets a value indicating whether MC attributes should be considered when determining equality.
         /// </summary>
-        IncludeExtendedAttributes = 1,
+        public bool IncludeMCAttributes { get; init; } = true;
 
         /// <summary>
-        /// Specifies if MC attributes should be considered when determining equality.
+        /// Gets a value indicating whether namespace should alone be used when comparing idenity of elements, skipping prefix lookup.
         /// </summary>
-        IncludeMCAttributes = 2,
+        public bool CompareNamespaceInsteadOfPrefix { get; init; } = false;
 
         /// <summary>
-        /// Specifies if namespace should alone be used when comparing idenity of elements, skipping prefix lookup.
+        /// Gets a value indicating whether elements must be parsed which ensures order of schema is used instead of input ordering.
         /// </summary>
-        CompareNamespaceInsteadOfPrefix = 4,
-
-        /// <summary>
-        /// Specifies that elements must be parsed which ensures order of schema is used instead of input ordering.
-        /// </summary>
-        RequireParsed = 8,
-
-        /// <summary>
-        /// The default.
-        /// </summary>
-        Default = IncludeExtendedAttributes | IncludeMCAttributes,
+        public bool RequireParsed { get; init; } = false;
     }
 }

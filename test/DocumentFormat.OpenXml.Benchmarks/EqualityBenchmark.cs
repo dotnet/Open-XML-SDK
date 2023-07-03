@@ -4,7 +4,6 @@
 using BenchmarkDotNet.Attributes;
 
 using DocumentFormat.OpenXml.Drawing;
-using DocumentFormat.OpenXml.Equality;
 using DocumentFormat.OpenXml.Spreadsheet;
 
 using System;
@@ -25,8 +24,8 @@ namespace DocumentFormat.OpenXml.Benchmarks
         private OpenXmlElement _smallElementParsed;
         private OpenXmlElement _smallElement2Parsed;
 
-        private IEqualityComparer<OpenXmlElement> _defaultEqualityComparer = OpenXmlElementEqualityComparer.Default;
-        private IEqualityComparer<OpenXmlElement> _fast = OpenXmlElementEqualityComparer.GetEqualityComparer(OpenXmlElementEqualityOptions.Default | OpenXmlElementEqualityOptions.CompareNamespaceInsteadOfPrefix);
+        private IEqualityComparer<OpenXmlElement> _defaultEqualityComparer = OpenXmlElementEqualityComparerFactory.Default;
+        private IEqualityComparer<OpenXmlElement> _fast = OpenXmlElementEqualityComparerFactory.GetEqualityComparer(new OpenXmlElementEqualityOptions() { CompareNamespaceInsteadOfPrefix = true });
 
         [GlobalSetup]
         public void Setup()

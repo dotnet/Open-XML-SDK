@@ -1,7 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using DocumentFormat.OpenXml.Equality;
 using DocumentFormat.OpenXml.Wordprocessing;
 
 using System.Collections.Generic;
@@ -12,10 +11,21 @@ namespace DocumentFormat.OpenXml.Tests
 {
     public class OpenXmlElementEqualityTest
     {
-        private static readonly IEqualityComparer<OpenXmlElement> dc = OpenXmlElementEqualityComparer.Default;
-        private static readonly IEqualityComparer<OpenXmlElement> dcRequireParsed = OpenXmlElementEqualityComparer.GetEqualityComparer(OpenXmlElementEqualityOptions.Default | OpenXmlElementEqualityOptions.RequireParsed);
-        private static readonly IEqualityComparer<OpenXmlElement> dcMinusMC = OpenXmlElementEqualityComparer.GetEqualityComparer(OpenXmlElementEqualityOptions.Default ^ OpenXmlElementEqualityOptions.IncludeMCAttributes);
-        private static readonly IEqualityComparer<OpenXmlElement> dcMinusExtended = OpenXmlElementEqualityComparer.GetEqualityComparer(OpenXmlElementEqualityOptions.Default ^ OpenXmlElementEqualityOptions.IncludeExtendedAttributes);
+        private static readonly IEqualityComparer<OpenXmlElement> dc = OpenXmlElementEqualityComparerFactory.Default;
+        private static readonly IEqualityComparer<OpenXmlElement> dcRequireParsed = OpenXmlElementEqualityComparerFactory.GetEqualityComparer(new OpenXmlElementEqualityOptions
+        {
+            RequireParsed = true,
+        });
+
+        private static readonly IEqualityComparer<OpenXmlElement> dcMinusMC = OpenXmlElementEqualityComparerFactory.GetEqualityComparer(new OpenXmlElementEqualityOptions
+        {
+            IncludeMCAttributes = false,
+        });
+
+        private static readonly IEqualityComparer<OpenXmlElement> dcMinusExtended = OpenXmlElementEqualityComparerFactory.GetEqualityComparer(new OpenXmlElementEqualityOptions
+        {
+            IncludeExtendedAttributes = false,
+        });
 
         [Fact]
         public void NullTest()
@@ -242,7 +252,7 @@ namespace DocumentFormat.OpenXml.Tests
             Paragraph para1 = new Paragraph(xml);
             Paragraph para2 = new Paragraph(xml);
 
-            Assert.True(OpenXmlElementEqualityComparer.Default.Equals(para1, para2));
+            Assert.True(dc.Equals(para1, para2));
 
             para2.SetPreserveElements("*");
 

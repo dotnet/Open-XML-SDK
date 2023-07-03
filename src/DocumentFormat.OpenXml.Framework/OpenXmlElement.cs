@@ -1,7 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using DocumentFormat.OpenXml.Equality;
 using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
@@ -292,7 +291,7 @@ namespace DocumentFormat.OpenXml
                 }
                 else
                 {
-                    return Array.Empty<OpenXmlAttribute>();
+                    return Enumerable.Empty<OpenXmlAttribute>();
                 }
             }
         }
@@ -474,25 +473,6 @@ namespace DocumentFormat.OpenXml
 
         #region public methods
 
-        private static bool MoveNextAndTrackCount(ref OpenXmlElementList.Enumerator e1, ref OpenXmlElementList.Enumerator e2, ref int e1ctr, ref int e2ctr)
-        {
-            if (e1.MoveNext())
-            {
-                e1ctr++;
-                if (e2.MoveNext())
-                {
-                    e2ctr++;
-                    return true;
-                }
-            }
-            else if (e2.MoveNext())
-            {
-                e2ctr++;
-            }
-
-            return false;
-        }
-
         private bool PrefixAndQNameEqual(OpenXmlElement other, OpenXmlElementEqualityOptions options)
         {
             OpenXmlQualifiedName tQName = this.ParsedState.Metadata.QName;
@@ -503,7 +483,7 @@ namespace DocumentFormat.OpenXml
                 return false;
             }
 
-            if (options.HasFlagFast(OpenXmlElementEqualityOptions.CompareNamespaceInsteadOfPrefix))
+            if (options.CompareNamespaceInsteadOfPrefix)
             {
                 return true;
             }
@@ -533,7 +513,7 @@ namespace DocumentFormat.OpenXml
         /// <param name="other">The other OpenXmlElement to equate with.</param>
         /// <param name="comparer">The comparer used for this equality determination.</param>
         /// <returns></returns>
-        internal bool ValueEquality(OpenXmlElement? other, OpenXmlElementEqualityComparer comparer)
+        internal bool ValueEquality(OpenXmlElement? other, OpenXmlElementEqualityComparerFactory.OpenXmlElementEqualityComparer comparer)
         {
             if (other == null)
             {
@@ -550,7 +530,7 @@ namespace DocumentFormat.OpenXml
                 return false;
             }
 
-            if (!comparer.Options.HasFlagFast(OpenXmlElementEqualityOptions.RequireParsed))
+            if (!comparer.Options.RequireParsed)
             {
                 if (!this.XmlParsed && !other.XmlParsed)
                 {
@@ -588,7 +568,7 @@ namespace DocumentFormat.OpenXml
                 OpenXmlElementList.Enumerator oChilds = other.ChildElements.GetEnumerator();
 
                 int e1 = 0, e2 = 0;
-                while (MoveNextAndTrackCount(ref tChilds, ref oChilds, ref e1, ref e2))
+                while (OpenXmlElementEqualityComparerFactory.MoveNextAndTrackCount(ref tChilds, ref oChilds, ref e1, ref e2))
                 {
                     if (!comparer.Equals(tChilds.Current, oChilds.Current))
                     {
@@ -603,7 +583,7 @@ namespace DocumentFormat.OpenXml
                 }
             }
 
-            if (comparer.Options.HasFlagFast(OpenXmlElementEqualityOptions.IncludeExtendedAttributes))
+            if (comparer.Options.IncludeExtendedAttributes)
             {
                 if (this.ExtendedAttributesField == null != (other.ExtendedAttributesField == null))
                 {
@@ -648,7 +628,7 @@ namespace DocumentFormat.OpenXml
                 }
             }
 
-            if (comparer.Options.HasFlagFast(OpenXmlElementEqualityOptions.IncludeMCAttributes))
+            if (comparer.Options.IncludeMCAttributes)
             {
                 if (this.MCAttributes == null != (other.MCAttributes == null) || (this.MCAttributes != null && !this.MCAttributes.Equals(other.MCAttributes)))
                 {
@@ -666,7 +646,7 @@ namespace DocumentFormat.OpenXml
         /// <returns></returns>
         internal int GetValueHashCode(OpenXmlElementEqualityOptions options)
         {
-            int hc = options.HasFlagFast(OpenXmlElementEqualityOptions.IncludeMCAttributes) && this.MCAttributes != null ? this.MCAttributes.GetHashCode() : 0;
+            int hc = options.IncludeMCAttributes && this.MCAttributes != null ? this.MCAttributes.GetHashCode() : 0;
 
             for (int i = 0; i < this.ParsedState.Attributes.Length; i++)
             {
@@ -676,7 +656,7 @@ namespace DocumentFormat.OpenXml
                 }
             }
 
-            if (options.HasFlagFast(OpenXmlElementEqualityOptions.IncludeExtendedAttributes))
+            if (options.IncludeExtendedAttributes)
             {
                 foreach (var attr in this.ExtendedAttributes)
                 {
