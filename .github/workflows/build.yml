@@ -50,7 +50,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: Unsigned
-          path: "bin/$(Configuration)/packages/shipping/*"
+          path: "bin/${{ env.Configuration }}/packages/shipping/*"
   validate_gen:
     name: "Validate generated files"
     runs-on: ubuntu-latest
