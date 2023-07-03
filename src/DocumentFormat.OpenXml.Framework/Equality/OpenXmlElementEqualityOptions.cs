@@ -21,11 +21,11 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Gets a value indicating whether namespace should alone be used when comparing idenity of elements, skipping prefix lookup.
         /// </summary>
-        public bool CompareNamespaceInsteadOfPrefix { get; init; } = false;
+        public bool CompareNamespaceInsteadOfPrefix { get; init; }
 
         /// <summary>
         /// Gets a value indicating whether elements must be parsed which ensures order of schema is used instead of input ordering.
         /// </summary>
-        public bool RequireParsed { get; init; } = false;
+        public bool RequireParsed { get; init; }
     }
 }

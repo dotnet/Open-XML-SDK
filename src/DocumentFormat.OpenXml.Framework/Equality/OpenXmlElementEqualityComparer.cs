@@ -6,73 +6,52 @@ using System.Diagnostics.CodeAnalysis;
 
 namespace DocumentFormat.OpenXml
 {
-    /// <summary>
-    /// Equality comparer for determining value equality for <see cref="OpenXmlElement"/>.
-    /// </summary>
-    public static class OpenXmlElementEqualityComparerFactory
+    internal sealed class OpenXmlElementEqualityComparer : IEqualityComparer<OpenXmlElement>
     {
         /// <summary>
-        /// Gets the default equality comparer.
+        /// Gets the options regulating how equality is defined.
         /// </summary>
-        public static readonly IEqualityComparer<OpenXmlElement> Default = GetEqualityComparer(new OpenXmlElementEqualityOptions());
+        internal OpenXmlElementEqualityOptions Options { get; }
 
-        /// <summary>
-        /// Gets the <see cref="IEqualityComparer{OpenXmlElement}"/> based on the given options./>
-        /// </summary>
-        /// <param name="openXmlElementEqualityOptions">The options defining equality.</param>
-        /// <returns></returns>
-        public static IEqualityComparer<OpenXmlElement> GetEqualityComparer(OpenXmlElementEqualityOptions openXmlElementEqualityOptions)
+        internal OpenXmlElementEqualityComparer(OpenXmlElementEqualityOptions options)
         {
-            return new OpenXmlElementEqualityComparer(openXmlElementEqualityOptions);
+            this.Options = options;
         }
 
-        internal sealed class OpenXmlElementEqualityComparer : IEqualityComparer<OpenXmlElement>
+        /// <summary>
+        /// Determines equality for two given <see cref="OpenXmlElement"/>.
+        /// </summary>
+        /// <param name="x">First object.</param>
+        /// <param name="y">Second object.</param>
+        /// <returns></returns>
+        public bool Equals(OpenXmlElement? x, OpenXmlElement? y)
         {
-            /// <summary>
-            /// Gets the options regulating how equality is defined.
-            /// </summary>
-            internal OpenXmlElementEqualityOptions Options { get; }
-
-            internal OpenXmlElementEqualityComparer(OpenXmlElementEqualityOptions options)
+            if (ReferenceEquals(x, y))
             {
-                this.Options = options;
+                return true;
             }
 
-            /// <summary>
-            /// Determines equality for two given <see cref="OpenXmlElement"/>.
-            /// </summary>
-            /// <param name="x">First object.</param>
-            /// <param name="y">Second object.</param>
-            /// <returns></returns>
-            public bool Equals(OpenXmlElement? x, OpenXmlElement? y)
+            if (x == null || y == null)
             {
-                if (ReferenceEquals(x, y))
-                {
-                    return true;
-                }
-
-                if (x == null || y == null)
-                {
-                    return false;
-                }
-
-                return x.ValueEquality(y, this);
+                return false;
             }
 
-            /// <summary>
-            /// Calculates a hashcode based on the given <see cref="OpenXmlElement"/> object.
-            /// </summary>
-            /// <param name="obj">The object to get a hashcode for.</param>
-            /// <returns></returns>
-            public int GetHashCode([DisallowNull] OpenXmlElement obj)
-            {
-                if (obj == null)
-                {
-                    return 0;
-                }
+            return x.ValueEquality(y, this);
+        }
 
-                return obj.GetValueHashCode(this.Options);
+        /// <summary>
+        /// Calculates a hashcode based on the given <see cref="OpenXmlElement"/> object.
+        /// </summary>
+        /// <param name="obj">The object to get a hashcode for.</param>
+        /// <returns></returns>
+        public int GetHashCode([DisallowNull] OpenXmlElement obj)
+        {
+            if (obj == null)
+            {
+                return 0;
             }
+
+            return obj.GetValueHashCode(this.Options);
         }
 
         internal static bool MoveNextAndTrackCount(ref OpenXmlElementList.Enumerator e1, ref OpenXmlElementList.Enumerator e2, ref int e1ctr, ref int e2ctr)
@@ -93,6 +72,5 @@ namespace DocumentFormat.OpenXml
 
             return false;
         }
-
     }
 }

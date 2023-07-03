@@ -513,7 +513,7 @@ namespace DocumentFormat.OpenXml
         /// <param name="other">The other OpenXmlElement to equate with.</param>
         /// <param name="comparer">The comparer used for this equality determination.</param>
         /// <returns></returns>
-        internal bool ValueEquality(OpenXmlElement? other, OpenXmlElementEqualityComparerFactory.OpenXmlElementEqualityComparer comparer)
+        internal bool ValueEquality(OpenXmlElement? other, OpenXmlElementEqualityComparer comparer)
         {
             if (other == null)
             {
@@ -568,7 +568,7 @@ namespace DocumentFormat.OpenXml
                 OpenXmlElementList.Enumerator oChilds = other.ChildElements.GetEnumerator();
 
                 int e1 = 0, e2 = 0;
-                while (OpenXmlElementEqualityComparerFactory.MoveNextAndTrackCount(ref tChilds, ref oChilds, ref e1, ref e2))
+                while (OpenXmlElementEqualityComparer.MoveNextAndTrackCount(ref tChilds, ref oChilds, ref e1, ref e2))
                 {
                     if (!comparer.Equals(tChilds.Current, oChilds.Current))
                     {
