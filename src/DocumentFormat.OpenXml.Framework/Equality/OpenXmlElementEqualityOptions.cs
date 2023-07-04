@@ -9,23 +9,23 @@ namespace DocumentFormat.OpenXml
     public sealed class OpenXmlElementEqualityOptions
     {
         /// <summary>
-        /// Gets a value indicating whether extended attributes should be considered when determining equality.
+        /// Gets or sets a value indicating whether extended attributes should be considered when determining equality.
         /// </summary>
-        public bool IncludeExtendedAttributes { get; init; } = true;
+        public bool IncludeExtendedAttributes { get; set; } = true;
 
         /// <summary>
-        /// Gets a value indicating whether MC attributes should be considered when determining equality.
+        /// Gets or sets a value indicating whether mC attributes should be considered when determining equality.
         /// </summary>
-        public bool IncludeMCAttributes { get; init; } = true;
+        public bool IncludeMCAttributes { get; set; } = true;
 
         /// <summary>
-        /// Gets a value indicating whether namespace should alone be used when comparing idenity of elements, skipping prefix lookup.
+        /// Gets or sets a value indicating whether namespace should alone be used when comparing idenity of elements, skipping prefix lookup to improve performance.
         /// </summary>
-        public bool CompareNamespaceInsteadOfPrefix { get; init; }
+        public bool SkipPrefixComparison { get; set; }
 
         /// <summary>
-        /// Gets a value indicating whether elements must be parsed which ensures order of schema is used instead of input ordering.
+        /// Gets or sets a value indicating whether elements must be parsed which ensures order of schema is used instead of input ordering.
         /// </summary>
-        public bool RequireParsed { get; init; }
+        public bool RequireParsed { get; set; }
     }
 }

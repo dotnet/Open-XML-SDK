@@ -473,40 +473,6 @@ namespace DocumentFormat.OpenXml
 
         #region public methods
 
-        private bool PrefixAndQNameEqual(OpenXmlElement other, OpenXmlElementEqualityOptions options)
-        {
-            OpenXmlQualifiedName tQName = this.ParsedState.Metadata.QName;
-            OpenXmlQualifiedName oQName = other.ParsedState.Metadata.QName;
-
-            if (!tQName.Equals(oQName))
-            {
-                return false;
-            }
-
-            if (options.CompareNamespaceInsteadOfPrefix)
-            {
-                return true;
-            }
-
-            string turi = tQName.Namespace.Uri;
-            string ouri = oQName.Namespace.Uri;
-
-            var tPrefix = this.LookupPrefixLocal(ouri);
-            var oPrefix = other.LookupPrefixLocal(ouri);
-
-            if (string.IsNullOrEmpty(tPrefix))
-            {
-               tPrefix = this.Features.GetNamespaceResolver().LookupPrefix(turi);
-            }
-
-            if (string.IsNullOrEmpty(oPrefix))
-            {
-                oPrefix = other.Features.GetNamespaceResolver().LookupPrefix(ouri);
-            }
-
-            return string.Equals(tPrefix, oPrefix, StringComparison.Ordinal);
-        }
-
         /// <summary>
         /// Determines value equality of this to <paramref name="other"/> based on the equality as defined by the <paramref name="comparer"/>'s options.
         /// </summary>
@@ -546,7 +512,7 @@ namespace DocumentFormat.OpenXml
                 return false;
             }
 
-            if (!this.PrefixAndQNameEqual(other, comparer.Options))
+            if (!OpenXmlElementEqualityComparer.PrefixAndQNameEqual(this, other, comparer.Options))
             {
                 return false;
             }

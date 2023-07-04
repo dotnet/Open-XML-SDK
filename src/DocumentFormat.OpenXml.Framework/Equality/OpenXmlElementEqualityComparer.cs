@@ -1,6 +1,9 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Framework;
+
+using System;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 
@@ -52,6 +55,40 @@ namespace DocumentFormat.OpenXml
             }
 
             return obj.GetValueHashCode(this.Options);
+        }
+
+        internal static bool PrefixAndQNameEqual(OpenXmlElement x, OpenXmlElement y, OpenXmlElementEqualityOptions options)
+        {
+            OpenXmlQualifiedName tQName = x.ParsedState.Metadata.QName;
+            OpenXmlQualifiedName oQName = y.ParsedState.Metadata.QName;
+
+            if (!tQName.Equals(oQName))
+            {
+                return false;
+            }
+
+            if (options.SkipPrefixComparison)
+            {
+                return true;
+            }
+
+            string turi = tQName.Namespace.Uri;
+            string ouri = oQName.Namespace.Uri;
+
+            var tPrefix = x.LookupPrefixLocal(ouri);
+            var oPrefix = y.LookupPrefixLocal(ouri);
+
+            if (string.IsNullOrEmpty(tPrefix))
+            {
+               tPrefix = x.Features.GetNamespaceResolver().LookupPrefix(turi);
+            }
+
+            if (string.IsNullOrEmpty(oPrefix))
+            {
+                oPrefix = y.Features.GetNamespaceResolver().LookupPrefix(ouri);
+            }
+
+            return string.Equals(tPrefix, oPrefix, StringComparison.Ordinal);
         }
 
         internal static bool MoveNextAndTrackCount(ref OpenXmlElementList.Enumerator e1, ref OpenXmlElementList.Enumerator e2, ref int e1ctr, ref int e2ctr)
