@@ -25,7 +25,7 @@ namespace DocumentFormat.OpenXml.Benchmarks
         private OpenXmlElement _smallElement2Parsed;
 
         private IEqualityComparer<OpenXmlElement> _defaultEqualityComparer = OpenXmlElementEqualityComparerFactory.Default;
-        private IEqualityComparer<OpenXmlElement> _fast = OpenXmlElementEqualityComparerFactory.GetEqualityComparer(new OpenXmlElementEqualityOptions() { CompareNamespaceInsteadOfPrefix = true });
+        private IEqualityComparer<OpenXmlElement> _fast = OpenXmlElementEqualityComparerFactory.GetEqualityComparer(new OpenXmlElementEqualityOptions() { SkipPrefixComparison = true });
 
         [GlobalSetup]
         public void Setup()
