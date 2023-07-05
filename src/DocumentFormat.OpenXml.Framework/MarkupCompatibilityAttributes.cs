@@ -79,12 +79,15 @@ namespace DocumentFormat.OpenXml
         /// <inheritdoc/>
         public override int GetHashCode()
         {
-            return HashCode.Combine(
-                this.Ignorable?.GetHashCode() ?? 0,
-                this.ProcessContent?.GetHashCode() ?? 0,
-                this.PreserveElements?.GetHashCode() ?? 0,
-                this.PreserveAttributes?.GetHashCode() ?? 0,
-                this.MustUnderstand?.GetHashCode() ?? 0);
+            var hc = default(HashCode);
+
+            hc.Add(this.Ignorable);
+            hc.Add(this.ProcessContent);
+            hc.Add(this.PreserveElements);
+            hc.Add(this.PreserveAttributes);
+            hc.Add(this.MustUnderstand);
+
+            return hc.GetHash;
         }
     }
 }

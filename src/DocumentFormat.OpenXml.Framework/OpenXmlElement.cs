@@ -612,13 +612,17 @@ namespace DocumentFormat.OpenXml
         /// <returns></returns>
         internal int GetValueHashCode(OpenXmlElementEqualityOptions options)
         {
-            int hc = options.IncludeMCAttributes && this.MCAttributes != null ? this.MCAttributes.GetHashCode() : 0;
+            HashCode hc = default;
+            if (options.IncludeMCAttributes)
+            {
+                hc.Add(options.IncludeMCAttributes);
+            }
 
             for (int i = 0; i < this.ParsedState.Attributes.Length; i++)
             {
                 if (this.ParsedState.Attributes[i].Value != null)
                 {
-                    hc = HashCode.Combine(hc, this.ParsedState.Attributes[i].Value?.GetHashCode() ?? 0);
+                    hc.Add(this.ParsedState.Attributes[i].Value);
                 }
             }
 
@@ -626,7 +630,7 @@ namespace DocumentFormat.OpenXml
             {
                 foreach (var attr in this.ExtendedAttributes)
                 {
-                    hc = HashCode.Combine(hc, attr.GetHashCode());
+                    hc.Add(attr);
                 }
             }
 
@@ -634,11 +638,11 @@ namespace DocumentFormat.OpenXml
             {
                 foreach (var child in this.ChildElements)
                 {
-                    hc = HashCode.Combine(hc, child.GetHashCode());
+                    hc.Add(child);
                 }
             }
 
-            return hc;
+            return hc.GetHash;
         }
 
         /// <summary>
