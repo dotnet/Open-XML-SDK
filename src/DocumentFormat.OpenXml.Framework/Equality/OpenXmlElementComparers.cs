@@ -8,7 +8,7 @@ namespace DocumentFormat.OpenXml
     /// <summary>
     /// Equality comparer for determining value equality for <see cref="OpenXmlElement"/>.
     /// </summary>
-    public static class OpenXmlElementEqualityComparerFactory
+    public static class OpenXmlElementComparers
     {
         /// <summary>
         /// Gets the default equality comparer.

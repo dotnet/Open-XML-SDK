@@ -11,18 +11,18 @@ namespace DocumentFormat.OpenXml.Tests
 {
     public class OpenXmlElementEqualityTest
     {
-        private static readonly IEqualityComparer<OpenXmlElement> DefaultComparer = OpenXmlElementEqualityComparerFactory.Default;
-        private static readonly IEqualityComparer<OpenXmlElement> DefaultComparerRequireParsed = OpenXmlElementEqualityComparerFactory.GetEqualityComparer(new OpenXmlElementEqualityOptions
+        private static readonly IEqualityComparer<OpenXmlElement> DefaultComparer = OpenXmlElementComparers.Default;
+        private static readonly IEqualityComparer<OpenXmlElement> DefaultComparerRequireParsed = OpenXmlElementComparers.GetEqualityComparer(new OpenXmlElementEqualityOptions
         {
             RequireParsed = true,
         });
 
-        private static readonly IEqualityComparer<OpenXmlElement> DefaultComparerMinusMC = OpenXmlElementEqualityComparerFactory.GetEqualityComparer(new OpenXmlElementEqualityOptions
+        private static readonly IEqualityComparer<OpenXmlElement> DefaultComparerMinusMC = OpenXmlElementComparers.GetEqualityComparer(new OpenXmlElementEqualityOptions
         {
             IncludeMCAttributes = false,
         });
 
-        private static readonly IEqualityComparer<OpenXmlElement> DefaulttComparerMinusExtended = OpenXmlElementEqualityComparerFactory.GetEqualityComparer(new OpenXmlElementEqualityOptions
+        private static readonly IEqualityComparer<OpenXmlElement> DefaulttComparerMinusExtended = OpenXmlElementComparers.GetEqualityComparer(new OpenXmlElementEqualityOptions
         {
             IncludeExtendedAttributes = false,
         });

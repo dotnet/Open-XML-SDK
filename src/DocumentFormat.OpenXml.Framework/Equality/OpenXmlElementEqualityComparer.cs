@@ -6,6 +6,7 @@ using DocumentFormat.OpenXml.Framework;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
+using System.Linq;
 
 namespace DocumentFormat.OpenXml
 {
@@ -39,7 +40,118 @@ namespace DocumentFormat.OpenXml
                 return false;
             }
 
-            return x.ValueEquality(y, this);
+            if (x.GetType() != y.GetType())
+            {
+                return false;
+            }
+
+            if (!this.Options.RequireParsed)
+            {
+                if (!x.XmlParsed && !y.XmlParsed)
+                {
+                    return string.Equals(x.RawOuterXml, y.RawOuterXml, StringComparison.Ordinal);
+                }
+            }
+
+            x.MakeSureParsed();
+            y.MakeSureParsed();
+
+            if (x.HasChildren != y.HasChildren)
+            {
+                return false;
+            }
+
+            if (!OpenXmlElementEqualityComparer.PrefixAndQNameEqual(x, y, this.Options))
+            {
+                return false;
+            }
+
+            if (x is OpenXmlLeafTextElement)
+            {
+                if (!string.Equals(x.InnerText, y.InnerText, StringComparison.Ordinal))
+                {
+                    return false;
+                }
+            }
+
+            if (x.HasChildren)
+            {
+                // DEVNOTE: Do not refactor this to use "simpler" for construct.
+                // The indexer on ChildElement walks the linked list for each operation,
+                // not maintaining state so it turns into a O(n^2) operation.
+                OpenXmlElementList.Enumerator tChilds = x.ChildElements.GetEnumerator();
+                OpenXmlElementList.Enumerator oChilds = y.ChildElements.GetEnumerator();
+
+                int e1 = 0, e2 = 0;
+                while (OpenXmlElementEqualityComparer.MoveNextAndTrackCount(ref tChilds, ref oChilds, ref e1, ref e2))
+                {
+                    if (!this.Equals(tChilds.Current, oChilds.Current))
+                    {
+                        return false;
+                    }
+                }
+
+                // Different amount of children.
+                if (e1 != e2)
+                {
+                    return false;
+                }
+            }
+
+            if (this.Options.IncludeExtendedAttributes)
+            {
+                if (x.ExtendedAttributes == null != (y.ExtendedAttributes == null))
+                {
+                    return false;
+                }
+
+                if (x.ExtendedAttributes != null && y.ExtendedAttributes != null)
+                {
+                    if (x.ExtendedAttributes.Count() != y.ExtendedAttributes.Count())
+                    {
+                        return false;
+                    }
+
+                    for (int i = 0; i < x.ExtendedAttributes.Count(); i++)
+                    {
+                        if (!x.ExtendedAttributes.ElementAt(i).Equals(y.ExtendedAttributes.ElementAt(i)))
+                        {
+                            return false;
+                        }
+                    }
+                }
+            }
+
+            for (int i = 0; i < x.ParsedState.Attributes.Length; i++)
+            {
+                var tAttr = x.ParsedState.Attributes[i];
+                var oAttr = y.ParsedState.Attributes[i];
+
+                if ((tAttr.Value == null && oAttr.Value != null) || (tAttr.Value != null && oAttr.Value == null))
+                {
+                    return false;
+                }
+
+                if (tAttr.Value == null)
+                {
+                    continue;
+                }
+
+                if (!tAttr.Value.Equals(oAttr.Value))
+                {
+                    return false;
+                }
+            }
+
+            if (this.Options.IncludeMCAttributes)
+            {
+                if (x.MCAttributes == null != (y.MCAttributes == null) || (x.MCAttributes != null && !x.MCAttributes.Equals(y.MCAttributes)))
+                {
+                    return false;
+                }
+            }
+
+            return true;
         }
 
         /// <summary>
@@ -54,7 +166,37 @@ namespace DocumentFormat.OpenXml
                 return 0;
             }
 
-            return obj.GetValueHashCode(this.Options);
+            var hc = default(FrameworkHashCode);
+            if (this.Options.IncludeMCAttributes)
+            {
+                hc.Add(obj.MCAttributes);
+            }
+
+            for (int i = 0; i < obj.ParsedState.Attributes.Length; i++)
+            {
+                if (obj.ParsedState.Attributes[i].Value != null)
+                {
+                    hc.Add(obj.ParsedState.Attributes[i].Value);
+                }
+            }
+
+            if (this.Options.IncludeExtendedAttributes)
+            {
+                foreach (OpenXmlAttribute attr in obj.ExtendedAttributes)
+                {
+                    hc.Add(attr);
+                }
+            }
+
+            if (obj.HasChildren)
+            {
+                foreach (OpenXmlElement child in obj.ChildElements)
+                {
+                    hc.Add(child);
+                }
+            }
+
+            return hc.GetHash;
         }
 
         internal static bool PrefixAndQNameEqual(OpenXmlElement x, OpenXmlElement y, OpenXmlElementEqualityOptions options)
