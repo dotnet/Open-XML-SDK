@@ -3,14 +3,14 @@
 
 namespace DocumentFormat.OpenXml
 {
-    internal ref struct HashCode
+    internal ref struct FrameworkHashCode
     {
         private const int Seed = 23;
         private const int Combinator = 37;
 
         private int _code;
 
-        public HashCode()
+        public FrameworkHashCode()
         {
             this._code = Seed;
         }

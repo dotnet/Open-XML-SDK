@@ -612,10 +612,10 @@ namespace DocumentFormat.OpenXml
         /// <returns></returns>
         internal int GetValueHashCode(OpenXmlElementEqualityOptions options)
         {
-            HashCode hc = default;
+            var hc = default(FrameworkHashCode);
             if (options.IncludeMCAttributes)
             {
-                hc.Add(options.IncludeMCAttributes);
+                hc.Add(this.MCAttributes);
             }
 
             for (int i = 0; i < this.ParsedState.Attributes.Length; i++)

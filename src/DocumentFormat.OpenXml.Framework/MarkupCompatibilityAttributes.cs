@@ -79,7 +79,7 @@ namespace DocumentFormat.OpenXml
         /// <inheritdoc/>
         public override int GetHashCode()
         {
-            var hc = default(HashCode);
+            var hc = default(FrameworkHashCode);
 
             hc.Add(this.Ignorable);
             hc.Add(this.ProcessContent);
