@@ -166,7 +166,8 @@ namespace DocumentFormat.OpenXml
                 return 0;
             }
 
-            var hc = default(FrameworkHashCode);
+            var hc = default(HashCode);
+
             if (this.Options.IncludeMCAttributes)
             {
                 hc.Add(obj.MCAttributes);
@@ -196,7 +197,7 @@ namespace DocumentFormat.OpenXml
                 }
             }
 
-            return hc.GetHash;
+            return hc.ToHashCode();
         }
 
         internal static bool PrefixAndQNameEqual(OpenXmlElement x, OpenXmlElement y, OpenXmlElementEqualityOptions options)

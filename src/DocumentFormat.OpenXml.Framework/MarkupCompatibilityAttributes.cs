@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Framework;
 using System;
 
 namespace DocumentFormat.OpenXml
@@ -79,7 +80,7 @@ namespace DocumentFormat.OpenXml
         /// <inheritdoc/>
         public override int GetHashCode()
         {
-            var hc = default(FrameworkHashCode);
+            var hc = default(HashCode);
 
             hc.Add(this.Ignorable);
             hc.Add(this.ProcessContent);
@@ -87,7 +88,7 @@ namespace DocumentFormat.OpenXml
             hc.Add(this.PreserveAttributes);
             hc.Add(this.MustUnderstand);
 
-            return hc.GetHash;
+            return hc.ToHashCode();
         }
     }
 }
