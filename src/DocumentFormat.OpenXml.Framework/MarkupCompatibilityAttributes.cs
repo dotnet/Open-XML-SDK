@@ -65,16 +65,11 @@ namespace DocumentFormat.OpenXml
                 return true;
             }
 
-            return (this.Ignorable == null == (other.Ignorable == null)) &&
-                (this.Ignorable == null || this.Ignorable.Equals(other.Ignorable)) &&
-                (this.ProcessContent == null == (other.ProcessContent == null)) &&
-                (this.ProcessContent == null || this.ProcessContent.Equals(other.ProcessContent)) &&
-                (this.PreserveElements == null == (other.PreserveElements == null)) &&
-                (this.PreserveElements == null || this.PreserveElements.Equals(other.PreserveElements)) &&
-                (this.PreserveAttributes == null == (other.PreserveAttributes == null)) &&
-                (this.PreserveAttributes == null || this.PreserveAttributes.Equals(other.PreserveAttributes)) &&
-                (this.MustUnderstand == null == (other.MustUnderstand == null)) &&
-                (this.MustUnderstand == null || this.MustUnderstand.Equals(other.MustUnderstand));
+            return Equals(this.Ignorable, other.Ignorable) &&
+                Equals(this.ProcessContent, other.ProcessContent) &&
+                Equals(this.PreserveElements, other.PreserveElements) &&
+                Equals(this.PreserveAttributes, other.PreserveAttributes) &&
+                Equals(this.MustUnderstand, other.MustUnderstand);
         }
 
         /// <inheritdoc/>
