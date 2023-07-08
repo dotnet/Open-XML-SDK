@@ -45,16 +45,10 @@ namespace DocumentFormat.OpenXml
                 return false;
             }
 
-            if (!this.Options.RequireParsed)
+            if (!this.CheckAndEquateSpecialOptions(x, y))
             {
-                if (!x.XmlParsed && !y.XmlParsed)
-                {
-                    return string.Equals(x.RawOuterXml, y.RawOuterXml, StringComparison.Ordinal);
-                }
+                return false;
             }
-
-            x.MakeSureParsed();
-            y.MakeSureParsed();
 
             if (x.HasChildren != y.HasChildren)
             {
@@ -98,6 +92,46 @@ namespace DocumentFormat.OpenXml
                 }
             }
 
+            for (int i = 0; i < x.ParsedState.Attributes.Length; i++)
+            {
+                var tAttr = x.ParsedState.Attributes[i];
+                var oAttr = y.ParsedState.Attributes[i];
+
+                if ((tAttr.Value == null && oAttr.Value != null) || (tAttr.Value != null && oAttr.Value == null))
+                {
+                    return false;
+                }
+
+                if (tAttr.Value == null)
+                {
+                    continue;
+                }
+
+                if (!tAttr.Value.Equals(oAttr.Value))
+                {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+        /// <summary>
+        /// Handles checking of all options that changes the behaviour of equality based on options in <see cref="OpenXmlElementEqualityOptions"/>.
+        /// </summary>
+        private bool CheckAndEquateSpecialOptions(OpenXmlElement x, OpenXmlElement y)
+        {
+            if (!this.Options.RequireParsed)
+            {
+                if (!x.XmlParsed && !y.XmlParsed)
+                {
+                    return string.Equals(x.RawOuterXml, y.RawOuterXml, StringComparison.Ordinal);
+                }
+            }
+
+            x.MakeSureParsed();
+            y.MakeSureParsed();
+
             if (this.Options.IncludeExtendedAttributes)
             {
                 if (x.ExtendedAttributes == null != (y.ExtendedAttributes == null))
@@ -119,27 +153,6 @@ namespace DocumentFormat.OpenXml
                             return false;
                         }
                     }
-                }
-            }
-
-            for (int i = 0; i < x.ParsedState.Attributes.Length; i++)
-            {
-                var tAttr = x.ParsedState.Attributes[i];
-                var oAttr = y.ParsedState.Attributes[i];
-
-                if ((tAttr.Value == null && oAttr.Value != null) || (tAttr.Value != null && oAttr.Value == null))
-                {
-                    return false;
-                }
-
-                if (tAttr.Value == null)
-                {
-                    continue;
-                }
-
-                if (!tAttr.Value.Equals(oAttr.Value))
-                {
-                    return false;
                 }
             }
 
@@ -199,7 +212,7 @@ namespace DocumentFormat.OpenXml
             return hc.GetHash;
         }
 
-        internal static bool PrefixAndQNameEqual(OpenXmlElement x, OpenXmlElement y, OpenXmlElementEqualityOptions options)
+        private static bool PrefixAndQNameEqual(OpenXmlElement x, OpenXmlElement y, OpenXmlElementEqualityOptions options)
         {
             OpenXmlQualifiedName tQName = x.ParsedState.Metadata.QName;
             OpenXmlQualifiedName oQName = y.ParsedState.Metadata.QName;
@@ -233,7 +246,7 @@ namespace DocumentFormat.OpenXml
             return string.Equals(tPrefix, oPrefix, StringComparison.Ordinal);
         }
 
-        internal static bool MoveNextAndTrackCount(ref OpenXmlElementList.Enumerator e1, ref OpenXmlElementList.Enumerator e2, ref int e1ctr, ref int e2ctr)
+        private static bool MoveNextAndTrackCount(ref OpenXmlElementList.Enumerator e1, ref OpenXmlElementList.Enumerator e2, ref int e1ctr, ref int e2ctr)
         {
             if (e1.MoveNext())
             {

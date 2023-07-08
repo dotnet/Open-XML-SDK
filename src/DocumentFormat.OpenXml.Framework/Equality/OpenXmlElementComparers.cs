@@ -13,14 +13,14 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Gets the default equality comparer.
         /// </summary>
-        public static readonly IEqualityComparer<OpenXmlElement> Default = GetEqualityComparer(new OpenXmlElementEqualityOptions());
+        public static readonly IEqualityComparer<OpenXmlElement> Default = Create(new OpenXmlElementEqualityOptions());
 
         /// <summary>
-        /// Gets the <see cref="IEqualityComparer{OpenXmlElement}"/> based on the given options./>
+        /// Creates a <see cref="IEqualityComparer{OpenXmlElement}"/> based on the given options./>
         /// </summary>
         /// <param name="openXmlElementEqualityOptions">The options defining equality.</param>
         /// <returns></returns>
-        public static IEqualityComparer<OpenXmlElement> GetEqualityComparer(OpenXmlElementEqualityOptions openXmlElementEqualityOptions)
+        public static IEqualityComparer<OpenXmlElement> Create(OpenXmlElementEqualityOptions openXmlElementEqualityOptions)
         {
             return new OpenXmlElementEqualityComparer(openXmlElementEqualityOptions);
         }

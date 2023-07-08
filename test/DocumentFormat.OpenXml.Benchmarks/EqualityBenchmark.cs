@@ -15,6 +15,9 @@ namespace DocumentFormat.OpenXml.Benchmarks
     {
         private const string FontXml = "<x:font xmlns:x=\"http://schemas.openxmlformats.org/spreadsheetml/2006/main\"><x:sz val=\"11\" /><x:name val=\"Calibri\" /><x:family val=\"2\" /><x:scheme val=\"minor\" /></x:font>";
 
+        private readonly IEqualityComparer<OpenXmlElement> _defaultEqualityComparer = OpenXmlElementComparers.Default;
+        private readonly IEqualityComparer<OpenXmlElement> _skipPrefixComparer = OpenXmlElementComparers.Create(new OpenXmlElementEqualityOptions() { SkipPrefixComparison = true });
+
         private OpenXmlElement _largeElement;
         private OpenXmlElement _largeElement2;
 
@@ -23,9 +26,6 @@ namespace DocumentFormat.OpenXml.Benchmarks
 
         private OpenXmlElement _smallElementParsed;
         private OpenXmlElement _smallElement2Parsed;
-
-        private IEqualityComparer<OpenXmlElement> _defaultEqualityComparer = OpenXmlElementComparers.Default;
-        private IEqualityComparer<OpenXmlElement> _fast = OpenXmlElementComparers.GetEqualityComparer(new OpenXmlElementEqualityOptions() { SkipPrefixComparison = true });
 
         [GlobalSetup]
         public void Setup()
@@ -80,7 +80,7 @@ namespace DocumentFormat.OpenXml.Benchmarks
         [Benchmark]
         public bool EqualsLargeElementSkipPrefix()
         {
-            return _fast.Equals(_largeElement, _largeElement2);
+            return _skipPrefixComparer.Equals(_largeElement, _largeElement2);
         }
 
         [Benchmark]
@@ -110,7 +110,7 @@ namespace DocumentFormat.OpenXml.Benchmarks
         [Benchmark]
         public bool SmallEqualsSkipPrefix()
         {
-            return _fast.Equals(_smallElementParsed, _smallElement2Parsed);
+            return _skipPrefixComparer.Equals(_smallElementParsed, _smallElement2Parsed);
         }
     }
 }
