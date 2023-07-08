@@ -65,11 +65,11 @@ namespace DocumentFormat.OpenXml
                 return true;
             }
 
-            return Equals(this.Ignorable, other.Ignorable) &&
-                Equals(this.ProcessContent, other.ProcessContent) &&
-                Equals(this.PreserveElements, other.PreserveElements) &&
-                Equals(this.PreserveAttributes, other.PreserveAttributes) &&
-                Equals(this.MustUnderstand, other.MustUnderstand);
+            return Equals(this.Ignorable, other.Ignorable)
+                && Equals(this.ProcessContent, other.ProcessContent)
+                && Equals(this.PreserveElements, other.PreserveElements)
+                && Equals(this.PreserveAttributes, other.PreserveAttributes)
+                && Equals(this.MustUnderstand, other.MustUnderstand);
         }
 
         /// <inheritdoc/>
