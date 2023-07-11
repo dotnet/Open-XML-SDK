@@ -12,20 +12,28 @@ namespace DocumentFormat.OpenXml.Builder;
 internal static class OpenXmlPackageBuilderExtensions
 {
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Reliability", "CA2000:Dispose objects before losing scope", Justification = "Disposable is registered with package")]
-    public static TPackage Open<TPackage>(this OpenXmlPackageBuilder<TPackage> builder, Stream stream, PackageOpenMode mode)
+    public static TPackage Open<TPackage>(this IPackageBuilder<TPackage> builder, Stream stream, PackageOpenMode mode)
         where TPackage : OpenXmlPackage
        => builder.Open(new StreamPackageFeature(stream, mode));
 
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Reliability", "CA2000:Dispose objects before losing scope", Justification = "Disposable is registered with package")]
-    public static TPackage Open<TPackage>(this OpenXmlPackageBuilder<TPackage> builder, string file, PackageOpenMode mode)
+    public static TPackage Open<TPackage>(this IPackageBuilder<TPackage> builder, string file, PackageOpenMode mode)
         where TPackage : OpenXmlPackage
         => builder.Open(new FilePackageFeature(file, mode));
 
-    public static TPackage Open<TPackage>(this OpenXmlPackageBuilder<TPackage> builder, System.IO.Packaging.Package package)
+    public static TPackage Open<TPackage>(this IPackageBuilder<TPackage> builder, string file, bool isEditing)
+        where TPackage : OpenXmlPackage
+        => builder.Open(file, isEditing ? PackageOpenMode.ReadWrite : PackageOpenMode.Read);
+
+    public static TPackage Open<TPackage>(this IPackageBuilder<TPackage> builder, Stream stream, bool isEditing)
+        where TPackage : OpenXmlPackage
+        => builder.Open(stream, isEditing ? PackageOpenMode.ReadWrite : PackageOpenMode.Read);
+
+    public static TPackage Open<TPackage>(this IPackageBuilder<TPackage> builder, System.IO.Packaging.Package package)
         where TPackage : OpenXmlPackage
         => builder.Open(new PackageFeature(package));
 
-    public static OpenXmlPackageBuilder<TPackage> Use<TPackage>(this OpenXmlPackageBuilder<TPackage> builder, Action<TPackage> action)
+    public static IPackageBuilder<TPackage> Use<TPackage>(this IPackageBuilder<TPackage> builder, Action<TPackage> action)
         where TPackage : OpenXmlPackage
         => builder.Use((package, next) =>
         {
@@ -33,39 +41,39 @@ internal static class OpenXmlPackageBuilderExtensions
             next(package);
         });
 
-    public static OpenXmlPackageBuilder<TPackage> Use<TPackage>(this OpenXmlPackageBuilder<TPackage> builder, Action<TPackage, Action<TPackage>> middleware)
+    public static IPackageBuilder<TPackage> Use<TPackage>(this IPackageBuilder<TPackage> builder, Action<TPackage, Action<TPackage>> middleware)
         where TPackage : OpenXmlPackage
         => builder.Use(next => package => middleware(package, next));
 
-    internal static OpenXmlPackageBuilder<TPackage> UseSettings<TPackage>(this OpenXmlPackageBuilder<TPackage> builder, OpenSettings settings)
+    internal static IPackageBuilder<TPackage> UseSettings<TPackage>(this IPackageBuilder<TPackage> builder, OpenSettings settings)
        where TPackage : OpenXmlPackage
        => builder.Use(package => package.OpenSettings = settings);
 
-    internal static OpenXmlPackageBuilder<TPackage> UseDefaultBehavior<TPackage>(this OpenXmlPackageBuilder<TPackage> builder)
+    internal static IPackageBuilder<TPackage> UseDefaultBehavior<TPackage>(this IPackageBuilder<TPackage> builder)
         where TPackage : OpenXmlPackage
-    => builder.Use((package, next) =>
-    {
-        package.UseTransitionalRelationshipNamespaces();
-        package.IgnoreRelationship("http://schemas.microsoft.com/office/2006/relationships/recovered");
-
-        next(package);
-
-        ValidateSettings(package);
-
-        var compatLevel = package.OpenSettings.CompatibilityLevel;
-
-        if (compatLevel >= CompatibilityLevel.Version_3_0)
+        => builder.Use((package, next) =>
         {
-            package.EnableSavePackage();
-            package.EnableUriHandling();
-        }
+            package.UseTransitionalRelationshipNamespaces();
+            package.IgnoreRelationship("http://schemas.microsoft.com/office/2006/relationships/recovered");
 
-        if (compatLevel == CompatibilityLevel.Version_2_20)
-        {
-            // Before v3.0, all parts were eagerly loaded
-            package.LoadAllParts();
-        }
-    });
+            next(package);
+
+            ValidateSettings(package);
+
+            var compatLevel = package.OpenSettings.CompatibilityLevel;
+
+            if (compatLevel >= CompatibilityLevel.Version_3_0)
+            {
+                package.EnableSavePackage();
+                package.EnableUriHandling();
+            }
+
+            if (compatLevel == CompatibilityLevel.Version_2_20)
+            {
+                // Before v3.0, all parts were eagerly loaded
+                package.LoadAllParts();
+            }
+        });
 
     internal static TPackage UseDefaultBehavior<TPackage>(this TPackage package)
         where TPackage : OpenXmlPackage

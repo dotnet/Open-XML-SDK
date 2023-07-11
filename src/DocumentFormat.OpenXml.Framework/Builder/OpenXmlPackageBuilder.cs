@@ -14,7 +14,7 @@ using System.Collections.Immutable;
 
 namespace DocumentFormat.OpenXml.Builder;
 
-internal abstract class OpenXmlPackageBuilder<TPackage>
+internal abstract class OpenXmlPackageBuilder<TPackage> : IPackageBuilder<TPackage>
     where TPackage : OpenXmlPackage
 {
     private List<Func<Action<TPackage>, Action<TPackage>>>? _middleware;
@@ -53,7 +53,13 @@ internal abstract class OpenXmlPackageBuilder<TPackage>
         return this;
     }
 
+    IPackageBuilder<TPackage> IPackageBuilder<TPackage>.Use(Func<Action<TPackage>, Action<TPackage>> configure) => Use(configure);
+
+    IPackageBuilder<TPackage> IPackageBuilder<TPackage>.New() => New();
+
     internal abstract OpenXmlPackageBuilder<TPackage> New();
+
+    TPackage IPackageBuilder<TPackage>.Create() => Create();
 
     internal abstract TPackage Create();
 

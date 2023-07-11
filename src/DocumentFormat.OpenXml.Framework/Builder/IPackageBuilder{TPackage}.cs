@@ -10,6 +10,8 @@ namespace DocumentFormat.OpenXml.Builder;
 internal interface IPackageBuilder<TPackage>
     where TPackage : OpenXmlPackage
 {
+    TPackage Create();
+
     IPackageBuilder<TPackage> Use(Func<Action<TPackage>, Action<TPackage>> configure);
 
     IPackageBuilder<TPackage> New();
