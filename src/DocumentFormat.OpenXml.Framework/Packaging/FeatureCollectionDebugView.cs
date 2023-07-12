@@ -25,7 +25,7 @@ internal sealed class FeatureCollectionDebugView
     public int Revision => _features.Revision;
 
     [DebuggerBrowsable(DebuggerBrowsableState.RootHidden)]
-    public FeatureItem[] Items => _features.Select(pair => new FeatureItem(pair.Key, pair.Value)).ToArray();
+    public object[] Items => _features.Select(pair => new FeatureItem(pair.Key, pair.Value)).ToArray();
 
     [DebuggerTypeProxy(typeof(FeatureItemDebugView))]
     [DebuggerDisplay("{Value.ToString(),nq}", Name = "{Type.ToString(),nq}", Type = "{Value.GetType().ToString(),nq}")]
