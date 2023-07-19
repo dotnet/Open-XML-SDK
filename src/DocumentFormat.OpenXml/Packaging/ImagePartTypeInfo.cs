@@ -62,6 +62,16 @@ namespace DocumentFormat.OpenXml.Packaging
                 ".svg" => ImagePartType.Svg,
                 ".tiff" => ImagePartType.Tiff,
                 ".wmf" => ImagePartType.Wmf,
+                "image/bmp" => ImagePartType.Bmp,
+                "image/gif" => ImagePartType.Gif,
+                "image/png" => ImagePartType.Png,
+                "image/tiff" => ImagePartType.Tiff,
+                "image/x-icon" => ImagePartType.Icon,
+                "image/x-pcx" => ImagePartType.Pcx,
+                "image/jpeg" => ImagePartType.Jpeg,
+                "image/x-emf" => ImagePartType.Emf,
+                "image/x-wmf" => ImagePartType.Wmf,
+                "image/svg+xml" => ImagePartType.Svg,
                 _ => throw new NotSupportedException($"{extension} is not supported"),
             };
     }
