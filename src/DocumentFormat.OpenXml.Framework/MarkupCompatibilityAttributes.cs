@@ -1,12 +1,15 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Framework;
+using System;
+
 namespace DocumentFormat.OpenXml
 {
     /// <summary>
     /// Defines the Markup Compatibility Attributes.
     /// </summary>
-    public class MarkupCompatibilityAttributes
+    public class MarkupCompatibilityAttributes : IEquatable<MarkupCompatibilityAttributes>
     {
         /// <summary>
         /// Gets or sets a whitespace-delimited list of prefixes, where each
@@ -42,5 +45,45 @@ namespace DocumentFormat.OpenXml
         ///  a set of namespace names.
         /// </summary>
         public StringValue? MustUnderstand { get; set; }
+
+        /// <inheritdoc/>
+        public override bool Equals(object? obj)
+        {
+            return this.Equals(obj as MarkupCompatibilityAttributes);
+        }
+
+        /// <inheritdoc/>
+        public bool Equals(MarkupCompatibilityAttributes? other)
+        {
+            if (other == null)
+            {
+                return false;
+            }
+
+            if (object.ReferenceEquals(this, other))
+            {
+                return true;
+            }
+
+            return Equals(this.Ignorable, other.Ignorable)
+                && Equals(this.ProcessContent, other.ProcessContent)
+                && Equals(this.PreserveElements, other.PreserveElements)
+                && Equals(this.PreserveAttributes, other.PreserveAttributes)
+                && Equals(this.MustUnderstand, other.MustUnderstand);
+        }
+
+        /// <inheritdoc/>
+        public override int GetHashCode()
+        {
+            var hc = default(HashCode);
+
+            hc.Add(this.Ignorable);
+            hc.Add(this.ProcessContent);
+            hc.Add(this.PreserveElements);
+            hc.Add(this.PreserveAttributes);
+            hc.Add(this.MustUnderstand);
+
+            return hc.ToHashCode();
+        }
     }
 }
