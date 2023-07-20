@@ -144,7 +144,7 @@ jobs:
          - name: Install SignTool tool
            run: dotnet tool install --tool-path . sign --version 0.9.0-beta.23127.3
 
-         - name: Download Unsiged Packages
+         - name: Download Unsigned Packages
            uses: actions/download-artifact@v3
            with: 
                 name: Unsigned
@@ -158,7 +158,6 @@ jobs:
               gci ..\*.nupkg | % { Expand-Archive $_ }
               cd ..
               gci -r
-              workingDirectory: '$(github.workspace)/unsigned'
 
          - name: Sign the DLLs
            run: |
