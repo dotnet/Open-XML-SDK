@@ -135,7 +135,7 @@ jobs:
     name: "Sign NUPKGs and DLLs"
     if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
-    needs: [ build_and_test ]
+    needs: [ pack ]
     steps: 
          - name: Install .NET Core
            uses: actions/setup-dotnet@v3
