@@ -50,7 +50,7 @@ jobs:
       - name: Upload
         uses: actions/upload-artifact@v3
         with:
-          name: Unsigned
+          name: Unsigned-${{ github.sha }}
           path: "bin/${{ env.Configuration }}/packages/shipping/*"
 
   validate_gen:
