@@ -61,49 +61,51 @@ jobs:
                 name: Unsigned
                 path: '${{ github.workspace }}/unsigned' 
 
-         - name: Expand Packages For Signing
-           shell: pwsh 
-           run: |
-              cd ${{ github.workspace }}/unsigned
-              mkdir raw
-              cd raw
-              gci ..\*.nupkg | % { Expand-Archive $_ }
-              cd ..\..
-              gci -r
+         #- name: Expand Packages For Signing
+         #  shell: pwsh 
+         #  run: |
+         #     cd ${{ github.workspace }}/unsigned
+         #     mkdir raw
+         #     cd raw
+         #     gci ..\*.nupkg | % { Expand-Archive $_ }
+         #     cd ..\..
+         #     gci -r
 
-         - name: Sign the DLLs
-           run: >
-               ./sign code azure-key-vault
-               '${{ github.workspace }}/unsigned/raw/**/DocumentFormat.OpenXml*.dll' 
-               --publisher-name "Microsoft" 
-               --description "DocumentFormat.OpenXml DLL Signing" 
-               --description-url "https://github.com/dotnet/sign" 
-               --azure-key-vault-tenant-id "${{ secrets.SignTenantId }}" 
-               --azure-key-vault-client-id "${{ secrets.SignClientId }}" 
-               --azure-key-vault-client-secret '${{ secrets.SignClientSecret }}' 
-               --azure-key-vault-certificate "${{ secrets.SignKeyVaultCertificate }}" 
-               --azure-key-vault-url "${{ secrets.SignKeyVaultUrl }}"
+         #- name: Sign the DLLs
+         #  shell: pwsh
+         #  run: >
+         #      ./sign code azure-key-vault
+         #      **/DocumentFormat.OpenXml*.dll 
+         #      --base-directory  "${{ github.workspace }}/unsigned/raw"
+         #      --publisher-name "Microsoft" 
+         #      --description "DocumentFormat.OpenXml DLL Signing" 
+         #      --description-url "https://github.com/dotnet/sign" 
+         #      --azure-key-vault-tenant-id "${{ secrets.SignTenantId }}" 
+         #      --azure-key-vault-client-id "${{ secrets.SignClientId }}" 
+         #      --azure-key-vault-client-secret '${{ secrets.SignClientSecret }}' 
+         #      --azure-key-vault-certificate "${{ secrets.SignKeyVaultCertificate }}" 
+         #      --azure-key-vault-url "${{ secrets.SignKeyVaultUrl }}"
 
-         - name: Create Signed NUPKG
-           shell: pwsh 
-           run: | 
-               gci -r CodeSignSummary | rm
-               gci -Directory | % { [IO.Compression.ZipFile]::CreateFromDirectory($_, "$_.nupkg") }
-               workingDirectory: '${{ github.workspace }}/unsigned/raw'
+         #- name: Create Signed NUPKG
+         #  shell: pwsh 
+         #  run: | 
+         #      gci -r CodeSignSummary | rm
+         #      gci -Directory | % { [IO.Compression.ZipFile]::CreateFromDirectory($_, "$_.nupkg") }
+         #      workingDirectory: '${{ github.workspace }}/unsigned/raw'
 
          - name: Sign the NUPKGs
            shell: pwsh
            run: |
-              ./NuGetKeyVaultSignTool sign code azure-key-vault `
-              '*.nupkg' `
-              --base-directory  '${{ github.workspace }}/unsigned/raw' `
-              --publisher-name "Microsoft" `
-              --description "DocumentFormat.OpenXml DLL Signing" `
-              --description-url "https://github.com/dotnet/sign" `
-              --azure-key-vault-tenant-id "${{ secrets.SignTenantId }}" `
-              --azure-key-vault-client-id "${{ secrets.SignClientId }}" `
-              --azure-key-vault-client-secret '${{ secrets.SignClientSecret }}' `
-              --azure-key-vault-certificate "${{ secrets.SignKeyVaultCertificate }}" `
+              ./NuGetKeyVaultSignTool sign code azure-key-vault 
+              *.nupkg 
+              --base-directory  "${{ github.workspace }}/unsigned" 
+              --publisher-name "Microsoft" 
+              --description "DocumentFormat.OpenXml DLL Signing" 
+              --description-url "https://github.com/dotnet/sign" 
+              --azure-key-vault-tenant-id "${{ secrets.SignTenantId }}" 
+              --azure-key-vault-client-id "${{ secrets.SignClientId }}" 
+              --azure-key-vault-client-secret '${{ secrets.SignClientSecret }}' 
+              --azure-key-vault-certificate "${{ secrets.SignKeyVaultCertificate }}" 
               --azure-key-vault-url "${{ secrets.SignKeyVaultUrl }}"
              
          - uses: actions/upload-artifact@v3
@@ -111,4 +113,4 @@ jobs:
              name: Signed
              path: |
                '${{ github.workspace }}/unsigned/*.snupkg'
-               '${{ github.workspace }}/unsigned/raw/*.nupkg'
+               '${{ github.workspace }}/unsigned/*.nupkg'
