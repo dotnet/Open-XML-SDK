@@ -18,6 +18,7 @@ jobs:
       - name: Setup .NET Core
         uses: actions/setup-dotnet@v3
 
+        # Publish to Nuget using our API key.
       - name: Publish NuGet package
         run: |
           foreach($file in (Get-ChildItem "${github.workspace}/signed" -Recurse -Include *.nupkg)) {
