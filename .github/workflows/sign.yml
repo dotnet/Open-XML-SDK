@@ -10,7 +10,7 @@ jobs:
   pack:
     name: "Pack"
     # if: ${{ github.event.workflow_run.conclusion == 'success' }} && github.event_name == 'pull_request'
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     env:
       Configuration: Release
       ProjectLoadStyle: All
@@ -42,7 +42,7 @@ jobs:
   sign:
     name: "Sign Package"
     needs: [pack] 
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps: 
          - name: Install .NET Core
            uses: actions/setup-dotnet@v3
