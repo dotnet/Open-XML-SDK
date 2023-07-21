@@ -59,15 +59,16 @@ jobs:
            uses: actions/download-artifact@v3
            with: 
                 name: Unsigned
-                path: '$(github.workspace)/unsigned' 
+                path: '${{ github.workspace }}/unsigned' 
 
          - name: Expand Packages For Signing
            shell: pwsh 
            run: |
+              cd ${{ github.workspace }}/unsigned
               mkdir raw
               cd raw
               gci ..\*.nupkg | % { Expand-Archive $_ }
-              cd ..
+              cd ..\..
               gci -r
          - name: Sign the DLLs
            shell: pwsh
