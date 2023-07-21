@@ -6,9 +6,41 @@ on:
     types: [completed]
 
 jobs: 
+  pack:
+    name: "Pack"
+    if: ${{ github.event.workflow_run.conclusion == 'success' }} && github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    env:
+      Configuration: Release
+      ProjectLoadStyle: All
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Install .NET Core
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '6.x'
+      - name: GitVersion
+        run: |
+          dotnet tool install --global GitVersion.Tool --version 5.12.0
+          dotnet gitversion /output buildserver /nofetch
+      - name: Restore
+        run: dotnet restore --verbosity normal
+      - name: Build
+        run: dotnet build --no-restore --verbosity normal
+      - name: Pack
+        run: dotnet pack --no-build
+      - name: Upload
+        uses: actions/upload-artifact@v3
+        with:
+          name: Unsigned
+          path: "bin/${{ env.Configuration }}/packages/shipping/*"
+
   sign:
     name: "Sign Package"
-    if: ${{ github.event.workflow_run.conclusion == 'success' }} && github.event_name == 'pull_request'
+    needs: [pack] 
     runs-on: ubuntu-latest
     steps: 
          - name: Install .NET Core
