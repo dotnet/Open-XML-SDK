@@ -72,8 +72,7 @@ jobs:
          - name: Sign the DLLs
            shell: pwsh
            run: |
-               ./sign code azure-key-vault '**./DocumentFormat.OpenXml*.dll' --publisher-name "Microsoft" --description "DocumentFormat.OpenXml DLL Signing" --description-url "https://github.com/dotnet/sign" --azure-key-vault-tenant-id "${{ secrets.SignTenantId }}" --azure-key-vault-client-id "${{ secrets.SignClientId }}" --azure-key-vault-client-secret '${{ secrets.SignClientSecret }}' --azure-key-vault-certificate "${{ secrets.SignKeyVaultCertificate }}" --azure-key-vault-url "${{ secrets.SignKeyVaultUrl }}"
-               workingDirectory: '$(github.workspace)/unsigned/raw'  
+               ./sign code azure-key-vault '**./DocumentFormat.OpenXml*.dll' --base-directory  '${{ github.workspace }}/unsigned/raw' --publisher-name "Microsoft" --description "DocumentFormat.OpenXml DLL Signing" --description-url "https://github.com/dotnet/sign" --azure-key-vault-tenant-id "${{ secrets.SignTenantId }}" --azure-key-vault-client-id "${{ secrets.SignClientId }}" --azure-key-vault-client-secret '${{ secrets.SignClientSecret }}' --azure-key-vault-certificate "${{ secrets.SignKeyVaultCertificate }}" --azure-key-vault-url "${{ secrets.SignKeyVaultUrl }}"
          - name: Create Signed NUPKG
            shell: pwsh 
            run: | 
