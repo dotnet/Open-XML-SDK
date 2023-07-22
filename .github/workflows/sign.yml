@@ -95,7 +95,7 @@ jobs:
               --description-url "https://github.com/dotnet/sign" 
               --azure-key-vault-tenant-id "${{ secrets.SignTenantId }}" 
               --azure-key-vault-client-id "${{ secrets.SignClientId }}" 
-              --azure-key-vault-client-secret '${{ secrets.SignClientSecret }}' 
+              --azure-key-vault-client-secret "${{ secrets.SignClientSecret }}"
               --azure-key-vault-certificate "${{ secrets.SignKeyVaultCertificate }}" 
               --azure-key-vault-url "${{ secrets.SignKeyVaultUrl }}"
              
@@ -103,5 +103,5 @@ jobs:
            with:
              name: Signed
              path: |
-               '${{ github.workspace }}\unsigned\*.snupkg'
-               '${{ github.workspace }}\unsigned\raw\*.nupkg'
+               ${{ github.workspace }}\unsigned\*.snupkg
+               ${{ github.workspace }}\unsigned\raw\*.nupkg
