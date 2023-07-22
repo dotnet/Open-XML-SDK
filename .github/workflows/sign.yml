@@ -103,5 +103,5 @@ jobs:
            with:
              name: Signed
              path: |
-               '${{ github.workspace }}/unsigned/*.snupkg'
-               '${{ github.workspace }}/unsigned/raw/*.nupkg'
+               '${{ github.workspace }}\unsigned\*.snupkg'
+               '${{ github.workspace }}\unsigned\raw\*.nupkg'
