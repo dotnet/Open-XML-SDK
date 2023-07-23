@@ -1,14 +1,16 @@
 name: Sign
- 
-on: 
-    workflow_run:
-        workflows: [Build] 
-        types: [completed]
+
+# Testing only, manually trigger this workflow. 
+on: workflow_dispatch 
+
+    # workflow_run:
+    #     workflows: [Build] 
+    #     types: [completed]
 
 jobs: 
   pack:
     name: "Pack"
-    if: ${{ github.event.workflow_run.conclusion == 'success' }} && github.event_name == 'pull_request'
+    # if: ${{ github.event.workflow_run.conclusion == 'success' }} && github.event_name == 'pull_request'
     runs-on: windows-latest
     env:
       Configuration: Release
@@ -104,3 +106,23 @@ jobs:
              path: |
                ${{ github.workspace }}\unsigned\*.snupkg
                ${{ github.workspace }}\unsigned\raw\*.nupkg
+
+  deploy:
+    name: "Deploy Packages to Nuget"
+    environment: nuget
+    runs-on: windows-latest
+    needs: [ sign ]
+    steps:
+      - uses: actions/download-artifact@v3
+        with:
+          name: Signed
+          path: '${{ github.workspace }}/signed'
+
+      - name: Setup .NET Core
+        uses: actions/setup-dotnet@v3
+
+      - name: Publish NuGet package
+        run: |
+          foreach($file in (Get-ChildItem "${{ github.workspace }}/signed" -Recurse -Include *.nupkg)) {
+              dotnet nuget push $file --api-key "${{ secrets.NUGET_APIKEY }}" --source https://api.nuget.org/v3/index.json --skip-duplicate
+          }
