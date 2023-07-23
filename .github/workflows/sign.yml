@@ -1,15 +1,14 @@
 name: Sign
  
-on: workflow_dispatch
-  
-  # workflow_run:
-  #   workflows: [Build] 
-  #   types: [completed]
+on: 
+    workflow_run:
+        workflows: [Build] 
+        types: [completed]
 
 jobs: 
   pack:
     name: "Pack"
-    # if: ${{ github.event.workflow_run.conclusion == 'success' }} && github.event_name == 'pull_request'
+    if: ${{ github.event.workflow_run.conclusion == 'success' }} && github.event_name == 'pull_request'
     runs-on: windows-latest
     env:
       Configuration: Release
