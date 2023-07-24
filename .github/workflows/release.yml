@@ -1,44 +1,51 @@
 name: Release
 
+#on:
+#  release: 
+#    types: [published]
+
 on:
-  release: 
-    types: [published]
+    workflow_run:
+      workflows: ["Build"]
+      types:
+        - completed
+permissions: {}
 
 jobs: 
-  pack:
-    name: "Pack"
-    if: github.event_name == 'release'
-    runs-on: windows-latest
-    env:
-      Configuration: Release
-      ProjectLoadStyle: All
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-      - name: Install .NET Core
-        uses: actions/setup-dotnet@v3
-        with:
-          dotnet-version: '6.x'
-      - name: GitVersion
-        run: |
-          dotnet tool install --global GitVersion.Tool --version 5.12.0
-          dotnet gitversion /output buildserver /nofetch
-      - name: Restore
-        run: dotnet restore --verbosity normal
-      - name: Build
-        run: dotnet build --no-restore --verbosity normal
-      - name: Pack
-        run: dotnet pack --no-build
-      - name: Upload
-        uses: actions/upload-artifact@v3
-        with:
-          name: Unsigned
-          path: "bin/${{ env.Configuration }}/packages/shipping/*"
+  #pack:
+  #  name: "Pack"
+  #  runs-on: windows-latest
+  #  env:
+  #    Configuration: Release
+  #    ProjectLoadStyle: All
+  #  steps:
+  #    - name: Checkout
+  #      uses: actions/checkout@v3
+  #      with:
+  #        fetch-depth: 0
+  #    - name: Install .NET Core
+  #      uses: actions/setup-dotnet@v3
+  #      with:
+  #        dotnet-version: '6.x'
+  #    - name: GitVersion
+  #      run: |
+  #        dotnet tool install --global GitVersion.Tool --version 5.12.0
+  #        dotnet gitversion /output buildserver /nofetch
+  #    - name: Restore
+  #      run: dotnet restore --verbosity normal
+  #    - name: Build
+  #      run: dotnet build --no-restore --verbosity normal
+  #    - name: Pack
+  #      run: dotnet pack --no-build
+  #    - name: Upload
+  #      uses: actions/upload-artifact@v3
+  #      with:
+  #        name: Unsigned
+  #        path: "bin/${{ env.Configuration }}/packages/shipping/*"
 
   sign:
     name: "Sign Package"
+    if: ${{ github.event.workflow_run.conclusion == 'success' }} && github.event_name == 'release'
     needs: [pack] 
     runs-on: windows-latest
     steps: 
@@ -53,11 +60,18 @@ jobs:
          - name: Install Nuget Sign Tool
            run: dotnet tool install --global NuGetKeyVaultSignTool
 
-         - name: Download Unsigned Packages
-           uses: actions/download-artifact@v3
-           with: 
-                name: Unsigned
-                path: '${{ github.workspace }}/unsigned' 
+         - name: Download and Extract Artifacts from build
+           uses: dawidd6/action-download-artifact@v2
+           with:
+             run_id: ${{ github.event.workflow_run.id }}
+             name: Unsigned
+             path: '${{ github.workspace }}/unsigned' 
+             
+         #- name: Download Unsigned Packages
+         #  uses: actions/download-artifact@v3
+         #  with: 
+         #       name: Unsigned
+         #       path: '${{ github.workspace }}/unsigned' 
 
          - name: Expand Packages For Signing
            shell: pwsh 
@@ -104,22 +118,22 @@ jobs:
                ${{ github.workspace }}\unsigned\*.snupkg
                ${{ github.workspace }}\unsigned\raw\*.nupkg
 
-  deploy:
-    name: "Deploy Packages to Nuget"
-    environment: nuget
-    runs-on: windows-latest
-    needs: [ sign ]
-    steps:
-      - uses: actions/download-artifact@v3
-        with:
-          name: Signed
-          path: '${{ github.workspace }}/signed'
+  #deploy:
+  #  name: "Deploy Packages to Nuget"
+  #  environment: nuget
+  #  runs-on: windows-latest
+  #  needs: [ sign ]
+  #  steps:
+  #    - uses: actions/download-artifact@v3
+  #      with:
+  #        name: Signed
+  #        path: '${{ github.workspace }}/signed'
 
-      - name: Setup .NET Core
-        uses: actions/setup-dotnet@v3
+  #    - name: Setup .NET Core
+  #      uses: actions/setup-dotnet@v3
 
-      - name: Publish NuGet package
-        run: |
-          foreach($file in (Get-ChildItem "${{ github.workspace }}/signed" -Recurse -Include *.nupkg)) {
-              dotnet nuget push $file --api-key "${{ secrets.NUGET_APIKEY }}" --source https://api.nuget.org/v3/index.json --skip-duplicate
-          }
+  #    - name: Publish NuGet package
+  #      run: |
+  #        foreach($file in (Get-ChildItem "${{ github.workspace }}/signed" -Recurse -Include *.nupkg)) {
+  #            dotnet nuget push $file --api-key "${{ secrets.NUGET_APIKEY }}" --source https://api.nuget.org/v3/index.json --skip-duplicate
+  #        }
