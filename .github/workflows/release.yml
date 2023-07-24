@@ -1,16 +1,13 @@
-name: Sign
+name: Release
 
-# Testing only, manually trigger this workflow. 
-on: workflow_dispatch 
-
-    # workflow_run:
-    #     workflows: [Build] 
-    #     types: [completed]
+on:
+  release: 
+    types: [published]
 
 jobs: 
   pack:
     name: "Pack"
-    # if: ${{ github.event.workflow_run.conclusion == 'success' }} && github.event_name == 'pull_request'
+    if: github.event_name == 'release'
     runs-on: windows-latest
     env:
       Configuration: Release
