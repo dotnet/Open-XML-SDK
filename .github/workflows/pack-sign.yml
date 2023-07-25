@@ -107,4 +107,3 @@ jobs:
              path: |
                ${{ github.workspace }}\unsigned\*.snupkg
                ${{ github.workspace }}\unsigned\raw\*.nupkg 
-             retention-days: 5
