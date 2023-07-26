@@ -24,6 +24,18 @@ jobs:
         - name: Setup .NET Core
           uses: actions/setup-dotnet@v3
 
+        - name: Approve
+          uses: trstringer/manual-approval@v1
+          with:
+              secret: ${{ github.TOKEN }}
+              approvers: mikeebowen,tomjebo,twsouthwick,alfredhellstern
+              minimum-approvals: 1
+              issue-title: "Approval for publishing to Nuget.org"
+              issue-body: "Please approve or deny the deployment to Nuget.org"
+              exclude-workflow-initiator-as-approver: false
+              additional-approved-words: ''
+              additional-denied-words: ''
+
         - name: Publish NuGet package
           run: |
             foreach($file in (Get-ChildItem "${{ github.workspace }}/signed" -Recurse -Include *.nupkg)) {
