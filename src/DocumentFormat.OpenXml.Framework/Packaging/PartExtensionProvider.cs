@@ -19,6 +19,42 @@ namespace DocumentFormat.OpenXml.Packaging
         public PartExtensionProvider()
             : base(StringComparer.Ordinal)
         {
+            this["image/unknown"] = ".bin";
+            this["image/bmp"] = ".bmp";
+            this["image/gif"] = ".gif";
+            this["image/png"] = ".png";
+            this["image/jp2"] = ".jp2";
+            this["image/tif"] = ".tif";
+            this["image/tiff"] = ".tiff";
+            this["image/xbm"] = ".xbm";
+            this["image/x-icon"] = ".ico";
+            this["image/x-pcx"] = ".pcx";
+            this["image/x-pcz"] = ".pcz";
+            this["image/x-emz"] = ".emz";
+            this["image/x-wmz"] = ".wmz";
+            this["image/jpeg"] = ".jpeg";
+            this["image/x-emf"] = ".emf";
+            this["image/x-wmf"] = ".wmf";
+            this["image/svg+xml"] = ".svg";
+            this["audio/aiff"] = ".aiff";
+            this["audio/midi"] = ".midi";
+            this["audio/mp3"] = ".mp3";
+            this["audio/mpegurl"] = ".m3u";
+            this["audio/wav"] = ".wav";
+            this["audio/x-ms-wma"] = ".wma";
+            this["audio/mpeg"] = ".mpeg";
+            this["audio/ogg"] = ".ogg";
+            this["video/x-ms-asf-plugin"] = ".asx";
+            this["video/avi"] = ".avi";
+            this["video/mp4"] = ".mp4";
+            this["video/mpg"] = ".mpg";
+            this["video/mpeg"] = ".mpeg";
+            this["video/x-ms-wmv"] = ".wmv";
+            this["video/x-ms-wmx"] = ".wmx";
+            this["video/x-ms-wvx"] = ".wvx";
+            this["video/quicktime"] = ".mov";
+            this["video/ogg"] = ".ogg";
+            this["video/vc1"] = ".wmv";
         }
 
         /// <summary>

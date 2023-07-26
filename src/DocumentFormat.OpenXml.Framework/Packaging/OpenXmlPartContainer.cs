@@ -1112,15 +1112,7 @@ namespace DocumentFormat.OpenXml.Packaging
                     throw new ArgumentOutOfRangeException(nameof(newPart));
                 }
 
-                string? targetExt = null;
-                var typeExtensions = new TypeExtensions();
-
-                if (typeExtensions.ContainsKey(contentType))
-                {
-                    targetExt = typeExtensions[contentType];
-                }
-
-                newPart.CreateInternal(InternalOpenXmlPackage, ThisOpenXmlPart, contentType, targetExt);
+                newPart.CreateInternal(InternalOpenXmlPackage, ThisOpenXmlPart, contentType, targetExt: null);
 
                 ChildrenRelationshipParts.Add(newPart, id);
 
