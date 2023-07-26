@@ -38,6 +38,6 @@ jobs:
 
         - name: Publish NuGet package
           run: |
-            foreach($file in (Get-ChildItem "${{ github.workspace }}/signed" -Recurse -Include *.nupkg)) {
+            foreach($file in (Get-ChildItem "${{ github.workspace }}/artifacts" -Recurse -Include *.nupkg)) {
                 dotnet nuget push $file --api-key "${{ secrets.NUGET_APIKEY }}" --source https://api.nuget.org/v3/index.json --skip-duplicate
             }
