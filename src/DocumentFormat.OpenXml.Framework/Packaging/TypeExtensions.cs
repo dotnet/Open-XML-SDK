@@ -27,6 +27,37 @@ namespace DocumentFormat.OpenXml.Packaging
             this["image/x-emf"] = ".emf";
             this["image/x-wmf"] = ".wmf";
             this["image/svg+xml"] = ".svg";
+            this["application/xml"] = ".xml";
+            this["application/vnd.openxmlformats-officedocument.spreadsheetml.customProperty"] = ".xml";
+            this["application/inkml+xml"] = ".xml";
+            this["application/vnd.ms-office.activeX"] = ".bin";
+            this["application/vnd.ms-office.activeX+xml"] = ".xml";
+            this["application/vnd.openxmlformats-officedocument.oleObject"] = ".bin";
+            this["application/vnd.ms-word.document.macroEnabled.12"] = ".docm";
+            this["application/vnd.openxmlformats-officedocument.wordprocessingml.document"] = ".docx";
+            this["application/vnd.ms-word.template.macroEnabled.12"] = ".dotm";
+            this["application/vnd.openxmlformats-officedocument.wordprocessingml.template"] = ".dotx";
+            this["application/vnd.ms-powerpoint.template.macroEnabled.12"] = ".potm";
+            this["application/vnd.openxmlformats-officedocument.presentationml.template"] = ".potx";
+            this["application/vnd.ms-powerpoint.addin.macroEnabled.12"] = ".ppam";
+            this["application/vnd.ms-powerpoint.slideshow.macroEnabled.12"] = ".ppsm";
+            this["application/vnd.openxmlformats-officedocument.presentationml.slideshow"] = ".ppsx";
+            this["application/vnd.ms-powerpoint.presentation.macroEnabled.12"] = ".pptm";
+            this["application/vnd.openxmlformats-officedocument.presentationml.presentation"] = ".pptx";
+            this["application/vnd.ms-powerpoint.slide.macroEnabled.12"] = ".sldm";
+            this["application/vnd.openxmlformats-officedocument.presentationml.slide"] = ".sldx";
+            this["application/vnd.ms-officetheme"] = ".thmx";
+            this["application/vnd.ms-excel.addin.macroEnabled.12"] = ".xlam";
+            this["application/vnd.ms-excel.sheet.binary.macroEnabled.12"] = ".xlsb";
+            this["application/vnd.ms-excel.sheet.macroEnabled.12"] = ".xlsm";
+            this["application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"] = ".xlsx";
+            this["application/vnd.ms-excel.template.macroEnabled.12"] = ".xltm";
+            this["application/vnd.openxmlformats-officedocument.spreadsheetml.template"] = ".xltx";
+            this["application/x-fontdata"] = ".fntdata";
+            this["application/x-font-ttf"] = ".ttf";
+            this["application/vnd.openxmlformats-officedocument.obfuscatedFont"] = ".odttf";
+            this["application/vnd.openxmlformats-officedocument.wordprocessingml.mailMergeRecipientData+xml"] = ".xml";
+            this["application/vnd.ms-word.mailMergeRecipientData+xml"] = ".xml";
         }
     }
 }
