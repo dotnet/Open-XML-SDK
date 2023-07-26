@@ -6,7 +6,7 @@ name: Release
 
 on:
     workflow_run:
-      workflows: ["Pack-Sign"]
+      workflows: ["Package"]
       types:
         - completed
 permissions: {}
@@ -15,7 +15,7 @@ jobs:
     deploy:
       name: "Deploy Packages to Nuget"
       environment: nuget
-      if: ${{ github.event.workflow_run.conclusion == 'success' }} && github.event_name == 'release'
+      if: ${{ github.event.workflow_run.conclusion == 'success' && github.event_name == 'release' }}
       runs-on: windows-latest
       steps:
         #- uses: actions/download-artifact@v3

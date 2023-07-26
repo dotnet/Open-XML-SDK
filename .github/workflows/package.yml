@@ -1,4 +1,4 @@
-name: Pack-Sign
+name: Package
 
 on:
   release: 
