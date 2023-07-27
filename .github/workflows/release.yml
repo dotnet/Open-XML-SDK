@@ -29,7 +29,7 @@ jobs:
           uses: trstringer/manual-approval@v1
           with:
               secret: ${{ github.TOKEN }}
-              approvers: mikeebowen,tomjebo,twsouthwick,alfredhellstern
+              approvers: twsouthwick
               minimum-approvals: 1
               issue-title: "Approval for publishing to Nuget.org"
               issue-body: "Please approve or deny the deployment to Nuget.org"
