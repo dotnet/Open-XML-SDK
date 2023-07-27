@@ -11,7 +11,6 @@ permissions:
 jobs: 
     deploy:
       name: "Deploy Packages to Nuget"
-      environment: nuget
       if: ${{ github.event.workflow_run.conclusion == 'success' }} && github.event_name == 'release'      
       runs-on: ubuntu-latest
       steps:
