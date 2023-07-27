@@ -6,5 +6,10 @@ branches:
     tag: beta
     increment: None
     is-release-branch: true
+  test:
+    regex: ^test?
+    tag: DONOTUSE
+    increment: None
+    is-release-branch: true
 ignore:
   sha: []
