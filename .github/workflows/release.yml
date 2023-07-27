@@ -5,14 +5,15 @@ on:
       workflows: ["Package"]
       types:
         - completed
-permissions: {}
+permissions: 
+    issues: write
 
 jobs: 
     deploy:
       name: "Deploy Packages to Nuget"
       environment: nuget
-      if: ${{ github.event.workflow_run.conclusion == 'success' && github.event_name == 'release' }}
-      runs-on: windows-latest
+      if: ${{ github.event.workflow_run.conclusion == 'success' }} && github.event_name == 'release'      
+      runs-on: ubuntu-latest
       steps:
         - name: Download and Extract Artifacts from build
           uses: dawidd6/action-download-artifact@v2
