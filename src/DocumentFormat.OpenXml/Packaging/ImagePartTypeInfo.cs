@@ -49,8 +49,8 @@ namespace DocumentFormat.OpenXml.Packaging
                 _ => ".image",
             };
 
-        internal static ImagePartType GetImagePartType(string extension)
-            => extension.ToLower() switch
+        internal static ImagePartType GetImagePartType(string extensionOrMimeType)
+            => extensionOrMimeType.ToLower() switch
             {
                 ".bmp" => ImagePartType.Bmp,
                 ".emf" => ImagePartType.Emf,
@@ -62,7 +62,17 @@ namespace DocumentFormat.OpenXml.Packaging
                 ".svg" => ImagePartType.Svg,
                 ".tiff" => ImagePartType.Tiff,
                 ".wmf" => ImagePartType.Wmf,
-                _ => throw new NotSupportedException($"{extension} is not supported"),
+                "image/bmp" => ImagePartType.Bmp,
+                "image/gif" => ImagePartType.Gif,
+                "image/png" => ImagePartType.Png,
+                "image/tiff" => ImagePartType.Tiff,
+                "image/x-icon" => ImagePartType.Icon,
+                "image/x-pcx" => ImagePartType.Pcx,
+                "image/jpeg" => ImagePartType.Jpeg,
+                "image/x-emf" => ImagePartType.Emf,
+                "image/x-wmf" => ImagePartType.Wmf,
+                "image/svg+xml" => ImagePartType.Svg,
+                _ => throw new NotSupportedException($"{extensionOrMimeType} is not supported"),
             };
     }
 }

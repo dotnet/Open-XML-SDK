@@ -11,10 +11,10 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Extends an overloaded AddImagePart method that
         /// handles the process of determining the ImagePartType
-        /// for you based on a provided file extension.
+        /// for you based on a provided file extension or mime type.
         /// </summary>
         /// <param name="main">The source MainDocumentPart that is adding the ImagePart.</param>
-        /// <param name="extension">The file extension of the image.</param>
+        /// <param name="extension">The file extension or mime type of the image.</param>
         /// <see cref="MainDocumentPart.AddImagePart(ImagePartType)" />
         public static ImagePart AddImagePart(this MainDocumentPart main, string extension) =>
             main.AddImagePart(ImagePartTypeInfo.GetImagePartType(extension));
