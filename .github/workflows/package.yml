@@ -42,7 +42,7 @@ jobs:
 
   sign:
     name: "Sign Package"
-    if: ${{ github.event.workflow_run.conclusion == 'success' }} && github.event_name == 'release'
+    if: github.event.workflow_run.conclusion == 'success' && github.event_name == 'release'
     needs: [pack] 
     runs-on: windows-latest
     steps: 
@@ -107,3 +107,16 @@ jobs:
              path: |
                ${{ github.workspace }}\unsigned\*.snupkg
                ${{ github.workspace }}\unsigned\raw\*.nupkg 
+  releaseInfo:
+    name: Release Info
+    needs: [sign]
+    runs-on: windows-latest
+    steps:
+      - name: Get Release Info
+        run: >
+          echo ${{ github.event_name == 'release' }} >> release-info.txt
+      - name: Upload Release Info
+        uses: actions/upload-artifact@v3
+        with:
+          name: release-info
+          path: release-info.txt
