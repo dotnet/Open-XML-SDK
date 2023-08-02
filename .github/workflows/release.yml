@@ -9,9 +9,33 @@ permissions:
     issues: write
 
 jobs: 
+    releaseInfo: 
+        name: Check for Release
+        runs-on: windows-latest
+        outputs:
+          IS_RELEASE: ${{ steps.releaseInfoStep.outputs.isRelease}}
+        if: github.event.workflow_run.conclusion == 'success'
+        steps:
+        - name: Download Release Info
+          uses: dawidd6/action-download-artifact@v2
+          with:
+           run_id: ${{ github.event.workflow_run.id }}
+           name: release-info
+        - name: Check if workflow is release
+          id: releaseInfoStep
+          shell: pwsh
+          run: |
+            $isRelease = Get-Content -Path release-info.txt
+
+            if ($isRelease -eq 'true') {
+              echo "isRelease=true" >> $env:GITHUB_OUTPUT
+            } else {
+              echo "isRelease=false" >> $env:GITHUB_OUTPUT
+            }
     deploy:
       name: "Deploy Packages to Nuget"
-      if: ${{ github.event.workflow_run.conclusion == 'success' }} && github.event_name == 'release'      
+      needs: [releaseInfo]
+      if: needs.releaseInfo.outputs.IS_RELEASE == 'true'      
       runs-on: ubuntu-latest
       steps:
         - name: Download and Extract Artifacts from build
@@ -28,7 +52,7 @@ jobs:
           uses: trstringer/manual-approval@v1
           with:
               secret: ${{ github.TOKEN }}
-              approvers: twsouthwick
+              approvers: twsouthwick,tomjebo,mikeebowen
               minimum-approvals: 1
               issue-title: "Approval for publishing to Nuget.org"
               issue-body: "Please approve or deny the deployment to Nuget.org"
