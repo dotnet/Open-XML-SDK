@@ -54,7 +54,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Removed `OpenXmlSettings.RelationshipErrorHandlerFactory` and associated types and replaced with a built-in mechanism to enable this
 - `IdPartPair` is now a readonly struct rather than a class
 - `IDisposableFeature` is now a part of the framework package and is available by default on a package or part.
-- Renamed PartExtensionProvider to IPartExtensionFeature and reduced its surface area to only two methods (instead of a full Dictionary<,>). The property to access this off of OpenXmlPackage has been removed, but may be accessed via `Features.Get<IPartExtensionFeature>()` if needed.
+- Renamed `PartExtensionProvider` to `IPartExtensionFeature` and reduced its surface area to only two methods (instead of a full `Dictionary<,>`). The property to access this off of `OpenXmlPackage` has been removed, but may be accessed via `Features.Get<IPartExtensionFeature>()` if needed.
 - `OpenXmlPart`/`OpenXmlContainer`/`OpenXmlPackage` and derived types now have internal constructors (these had internal abstract methods so most likely weren't subclassed externally)
 
 ## [2.20.0]
