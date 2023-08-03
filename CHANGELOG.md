@@ -4,12 +4,31 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [3.0.0]
+## [3.0.0 Beta 3]
+
+### Added
+
+- Introduce equality comparers for `OpenXmlElement` (#1476)
+- `IFeatureCollection` can now be enumerated and has a helpful debug view to see what features are registered (#1452)
+- Add mime types to part creation (#1498)
+
+### Breaking change
+
+- Simplified target frameworks, including removing .NET Standard 1.3
+- Changed DocumentFormat.OpenXml.PresetTextWrap to DocumentFormat.OpenXml.PresetTextWarp
+
+## [3.0.0 Beta 2]
+
+### Breaking Change
+
+- `OpenXmlElementList` is now a struct that implements `IEnumerable<OpenXmlElement>` and `IReadOnlyList<OpenXmlElement>` (where available)
+- Individual implementations of `OpenXmlPartReader` are available now for each package type (i.e. `WordprocessingDocumentPartReader`, `SpreadsheetDocumentPartReader`, `PresentationDocumentPartReader`), and the previous `TypedOpenXmlPartReader` has been removed.
+
+## [3.0.0 Beta 1]
 
 ### Added
 - Packages can now be saved on .NET Core and .NET 5+ if constructed with a path or stream (#1307).
 - Packages can now support malformed URIs (such as relationships with a URI such as `mailto:person@`)
-- `IFeatureCollection` can now be enumerated and has a helpful debug view to see what features are registered (#1452)
 
 ### Changed
 - When validation finds incorrect part, it will now include the relationship type rather than a class name
@@ -37,9 +56,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - `IDisposableFeature` is now a part of the framework package and is available by default on a package or part.
 - Renamed PartExtensionProvider to IPartExtensionFeature and reduced its surface area to only two methods (instead of a full Dictionary<,>). The property to access this off of OpenXmlPackage has been removed, but may be accessed via `Features.Get<IPartExtensionFeature>()` if needed.
 - `OpenXmlPart`/`OpenXmlContainer`/`OpenXmlPackage` and derived types now have internal constructors (these had internal abstract methods so most likely weren't subclassed externally)
-- `OpenXmlElementList` is now a struct that implements `IEnumerable<OpenXmlElement>` and `IReadOnlyList<OpenXmlElement>` (where available)
-- Individual implementations of `OpenXmlPartReader` are available now for each package type (i.e. `WordprocessingDocumentPartReader`, `SpreadsheetDocumentPartReader`, `PresentationDocumentPartReader`), and the previous `TypedOpenXmlPartReader` has been removed.
-- Changed DocumentFormat.OpenXml.PresetTextWrap to DocumentFormat.OpenXml.PresetTextWarp
 
 ## [2.20.0]
 
