@@ -15,14 +15,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Breaking changes
 
 - Reduced unnecessary target frameworks for packages besides DocumentFormat.OpenXml.Framework (#1471)
-- Changed some spelling issues (#1463, #1444)
+- Changed some spelling issues for property names (#1463, #1444)
 
 ## [3.0.0 Beta 2]
 
 ### Breaking Changes
 
-- `OpenXmlElementList` is now a struct that implements `IEnumerable<OpenXmlElement>` and `IReadOnlyList<OpenXmlElement>` (where available)
-- Individual implementations of `OpenXmlPartReader` are available now for each package type (i.e. `WordprocessingDocumentPartReader`, `SpreadsheetDocumentPartReader`, `PresentationDocumentPartReader`), and the previous `TypedOpenXmlPartReader` has been removed.
+- `OpenXmlElementList` is now a struct that implements `IEnumerable<OpenXmlElement>` and `IReadOnlyList<OpenXmlElement>` where available (#1429)
+- Individual implementations of `OpenXmlPartReader` are available now for each package type (i.e. `WordprocessingDocumentPartReader`, `SpreadsheetDocumentPartReader`, `PresentationDocumentPartReader`), and the previous `TypedOpenXmlPartReader` has been removed. (#1403)
 
 ## [3.0.0 Beta 1]
 
@@ -35,12 +35,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Removed
 - .NET Standard 1.3 is no longer a supported platform. .NET Standard 2.0 is the lowest .NET Standard supported.
-- Removed unused `SchemaAttrAttribute`
-- Removed unused `ChildElementInfoAttribute`
-- Removed `OpenXmlSimpleType.TextValue`. This property was never meant to be used externally
-- Removed obsolete validation logic from v1 of the SDK
-- Removed obsoleted methods from 2.x
-- Removed mutable properties on OpenXmlAttribute and marked as `readonly`
+- Removed unused `SchemaAttrAttribute` (#1316)
+- Removed unused `ChildElementInfoAttribute` (#1316)
+- Removed `OpenXmlSimpleType.TextValue`. This property was never meant to be used externally (#1316)
+- Removed obsolete validation logic from v1 of the SDK (#1316)
+- Removed obsoleted methods from 2.x (#1316)
+- Removed mutable properties on OpenXmlAttribute and marked as `readonly` (#1282)
 - Removed `OpenXmlPackage.Close` in favor of Dispose (#1373)
 - Removed `OpenXmlPackage.SaveAs` in favor of Clone (#1376)
 - Removed `OpenXmlPackage.Package` property. A `OpenXmlPackage` is now backed by an internal (for now) type `IPackage` instead of `System.IO.Packaging.Package`
