@@ -14,8 +14,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Breaking changes
 
-- Reduced unnecessary target frameworks for packages besides DocumentFormat.OpenXml.Framework
-- Changed DocumentFormat.OpenXml.PresetTextWrap to DocumentFormat.OpenXml.PresetTextWarp
+- Reduced unnecessary target frameworks for packages besides DocumentFormat.OpenXml.Framework (#1471)
+- Changed some spelling issues (#1463, #1444)
 
 ## [3.0.0 Beta 2]
 
