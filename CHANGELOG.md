@@ -12,14 +12,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - `IFeatureCollection` can now be enumerated and has a helpful debug view to see what features are registered (#1452)
 - Add mime types to part creation (#1498)
 
-### Breaking change
+### Breaking changes
 
-- Simplified target frameworks, including removing .NET Standard 1.3
+- Reduced unnecessary target frameworks for packages besides DocumentFormat.OpenXml.Framework
 - Changed DocumentFormat.OpenXml.PresetTextWrap to DocumentFormat.OpenXml.PresetTextWarp
 
 ## [3.0.0 Beta 2]
 
-### Breaking Change
+### Breaking Changes
 
 - `OpenXmlElementList` is now a struct that implements `IEnumerable<OpenXmlElement>` and `IReadOnlyList<OpenXmlElement>` (where available)
 - Individual implementations of `OpenXmlPartReader` are available now for each package type (i.e. `WordprocessingDocumentPartReader`, `SpreadsheetDocumentPartReader`, `PresentationDocumentPartReader`), and the previous `TypedOpenXmlPartReader` has been removed.
@@ -45,7 +45,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Removed `OpenXmlPackage.SaveAs` in favor of Clone (#1376)
 - Removed `OpenXmlPackage.Package` property. A `OpenXmlPackage` is now backed by an internal (for now) type `IPackage` instead of `System.IO.Packaging.Package`
 
-### Breaking change
+### Breaking changes
 - Core infrastructure is now contained in a new package DocumentFormat.OpenXml.Framework. Typed classes are still in DocumentFormat.OpenXml. This means that you may reference DocumentFormat.OpenXml and still compile the same types, but if you want a smaller package, you may rely on just the framework package.
 - `EnumValue<T>` now is used to box a struct rather than a `System.Enum`. This allows us to enable behavior on it without resorting to reflection
 - Methods on parts to add child parts (i.e. `AddImagePart`) are now implemented as extension methods off of a new marker interface `ISupportedRelationship<T>`
