@@ -10,7 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Introduce equality comparers for `OpenXmlElement` (#1476)
 - `IFeatureCollection` can now be enumerated and has a helpful debug view to see what features are registered (#1452)
-- Add mime types to part creation (#1498)
+- Add mime types to part creation (#1488)
 
 ### Breaking changes
 
