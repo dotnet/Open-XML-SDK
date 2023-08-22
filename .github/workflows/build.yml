@@ -15,6 +15,7 @@ on:
     paths-ignore:
       - 'docs/**'
       - '**.md'
+  workflow_dispatch: 
 
 jobs: 
   event_file: # Used for test reporting
