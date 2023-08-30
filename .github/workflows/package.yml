@@ -33,7 +33,7 @@ jobs:
       - name: Build
         run: dotnet build --no-restore --verbosity normal
       - name: Pack
-        run: dotnet pack --no-build -p:PackageVersion=3.0.0-beta3
+        run: dotnet pack --no-build -p:PackageVersion=3.0.0-beta0003
       - name: Upload
         uses: actions/upload-artifact@v3
         with:

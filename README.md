@@ -4,9 +4,9 @@ Open XML SDK
 
 > NOTICE: 
 > 
-> [v3.0.0 beta 1](https://www.nuget.org/packages/DocumentFormat.OpenXml/3.0.0-ci0083) refactors and addresses some technical debt, with the goal to retain (as much as possible) source compatibility. We hope to maintain things such that you can update your package and recompile with limited changes. However, binary compatibility is not a goal and will break that for some changes which we plan on keeping documented. PRs that introduce such changes are marked with a `breaking-change` label and are added to a list to help migrating to v3.0.0.
+> [v3.0.0 beta 3](https://www.nuget.org/packages/DocumentFormat.OpenXml/3.0.0-beta0003) refactors and addresses some technical debt, with the goal to retain (as much as possible) source compatibility. We hope to maintain things such that you can update your package and recompile with limited changes. However, binary compatibility is not a goal and will break that for some changes which we plan on keeping documented. PRs that introduce such changes are marked with a `breaking-change` label and are added to a list to help migrating to v3.0.0.
 >
-> Please see the [v3.0.0 milestone](https://github.com/OfficeDev/Open-XML-SDK/milestone/1) for issues and PRs that are included in this change. For discussions about this change, please join us at [this issue](https://github.com/OfficeDev/Open-XML-SDK/issues/1270).
+> Please see the [v3.0.0 milestone](https://github.com/OfficeDev/Open-XML-SDK/milestone/1) for issues and PRs that are included. For discussions, please join us at [this issue](https://github.com/OfficeDev/Open-XML-SDK/issues/1270).
 
 
 [![Downloads](https://img.shields.io/nuget/dt/DocumentFormat.OpenXml.svg)](https://www.nuget.org/packages/DocumentFormat.OpenXml)
@@ -78,7 +78,7 @@ For details on platform support, including other runtimes such as Mono and Unity
 
 # Documentation
 
-The functionality of the specific classes in this version of the Open XML SDK is similar to version 2.5, therefore the [Open XML SDK 2.5 for Office](http://msdn.microsoft.com/en-us/library/office/bb448854.aspx) documentation available on MSDN is still accurate.
+The functionality of the specific classes in this version of the Open XML SDK is similar to version 2.5, therefore the [Open XML SDK 2.5 for Office](https://learn.microsoft.com/en-us/office/open-xml/open-xml-sdk) documentation available on Microsoft Learn still applies.
 
 In addition to open sourcing of the SDK, Microsoft has opened up the conceptual documentation for public review / contributions.  A copy of the documentation is  available for you to edit and review [in GitHub](https://github.com/OfficeDev/office-content).
 
