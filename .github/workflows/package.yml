@@ -25,6 +25,7 @@ jobs:
         with:
           dotnet-version: '6.x'
       - name: GitVersion
+        shell: pwsh
         run: |
           dotnet tool install --global GitVersion.Tool --version 5.*
           dotnet gitversion /output buildserver /nofetch
