@@ -29,17 +29,17 @@ jobs:
           dotnet tool install --global GitVersion.Tool --version 5.12.0
           dotnet gitversion /output buildserver /nofetch
           cat $env:GITHUB_ENV
-      - name: Restore
-        run: dotnet restore --verbosity normal
-      - name: Build
-        run: dotnet build --no-restore --verbosity normal
-      - name: Pack
-        run: dotnet pack --no-build 
-      - name: Upload
-        uses: actions/upload-artifact@v3
-        with:
-          name: Unsigned
-          path: "bin/${{ env.Configuration }}/packages/shipping/*"
+      # - name: Restore
+      #   run: dotnet restore --verbosity normal
+      # - name: Build
+      #   run: dotnet build --no-restore --verbosity normal
+      # - name: Pack
+      #   run: dotnet pack --no-build 
+      # - name: Upload
+      #   uses: actions/upload-artifact@v3
+      #   with:
+      #     name: Unsigned
+      #     path: "bin/${{ env.Configuration }}/packages/shipping/*"
 
   # sign:
   #   name: "Sign Package"
