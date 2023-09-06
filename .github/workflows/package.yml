@@ -26,7 +26,7 @@ jobs:
           dotnet-version: '6.x'
       - name: GitVersion
         run: |
-          dotnet tool install --global GitVersion.Tool --version 5.12.0
+          dotnet tool install --global GitVersion.Tool --version 5.*
           dotnet gitversion /output buildserver /nofetch
           cat $env:GITHUB_ENV
       # - name: Restore
