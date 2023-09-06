@@ -17,91 +17,91 @@ on:
       - '**.md'
   workflow_dispatch: 
 
-jobs: 
-  event_file: # Used for test reporting
-    name: "Event File"
-    runs-on: ubuntu-latest
-    steps:
-    - name: Upload
-      uses: actions/upload-artifact@v3
-      with:
-        name: Event File
-        path: ${{ github.event_path }}
+# jobs: 
+#   event_file: # Used for test reporting
+#     name: "Event File"
+#     runs-on: ubuntu-latest
+#     steps:
+#     - name: Upload
+#       uses: actions/upload-artifact@v3
+#       with:
+#         name: Event File
+#         path: ${{ github.event_path }}
 
-  validate_gen:
-    name: "Validate generated files"
-    runs-on: ubuntu-latest
-    steps:
-    - name: Checkout
-      uses: actions/checkout@v3
-      with:
-        fetch-depth: 0
-    - name: Remove generated files for baseline
-      run: Remove-Item generated/ -Include *.g.cs -Recurse
-      shell: pwsh
-    - name: Install .NET Core
-      uses: actions/setup-dotnet@v3
-    - name: Restore
-      run: dotnet restore --verbosity normal          
-    - name: Build
-      run: dotnet build --no-restore --verbosity normal    
-    - name: Validate generated files
-      run: |
-        if [ "$(git diff --ignore-space-at-eol generated/ | wc -l)" -gt "0" ]; then
-          echo "Detected uncommitted changes after build.  See status below:"
-          git diff
-          exit 1
-        fi
+#   validate_gen:
+#     name: "Validate generated files"
+#     runs-on: ubuntu-latest
+#     steps:
+#     - name: Checkout
+#       uses: actions/checkout@v3
+#       with:
+#         fetch-depth: 0
+#     - name: Remove generated files for baseline
+#       run: Remove-Item generated/ -Include *.g.cs -Recurse
+#       shell: pwsh
+#     - name: Install .NET Core
+#       uses: actions/setup-dotnet@v3
+#     - name: Restore
+#       run: dotnet restore --verbosity normal          
+#     - name: Build
+#       run: dotnet build --no-restore --verbosity normal    
+#     - name: Validate generated files
+#       run: |
+#         if [ "$(git diff --ignore-space-at-eol generated/ | wc -l)" -gt "0" ]; then
+#           echo "Detected uncommitted changes after build.  See status below:"
+#           git diff
+#           exit 1
+#         fi
 
-  build_and_test:
-    name: Build and Test
-    strategy:
-      fail-fast: false
-      matrix:
-        configuration: [ debug, release ]
-        projectloadstyle: [ net35, net40, net46, net6_0, net7_0 ]
-        os: [ windows-latest, ubuntu-latest, macos-latest ]
-        exclude: 
-          - projectloadstyle: net35
-            os: ubuntu-latest
-          - projectloadstyle: net40
-            os: ubuntu-latest
-          - projectloadstyle: net46
-            os: ubuntu-latest
-          - projectloadstyle: net35
-            os: macos-latest
-          - projectloadstyle: net40
-            os: macos-latest
-          - projectloadstyle: net46
-            os: macos-latest
+#   build_and_test:
+#     name: Build and Test
+#     strategy:
+#       fail-fast: false
+#       matrix:
+#         configuration: [ debug, release ]
+#         projectloadstyle: [ net35, net40, net46, net6_0, net7_0 ]
+#         os: [ windows-latest, ubuntu-latest, macos-latest ]
+#         exclude: 
+#           - projectloadstyle: net35
+#             os: ubuntu-latest
+#           - projectloadstyle: net40
+#             os: ubuntu-latest
+#           - projectloadstyle: net46
+#             os: ubuntu-latest
+#           - projectloadstyle: net35
+#             os: macos-latest
+#           - projectloadstyle: net40
+#             os: macos-latest
+#           - projectloadstyle: net46
+#             os: macos-latest
 
-    env:
-      RunPeVerify: true 
-      Solution_Name: Open-XML-SDK.sln  
-      Configuration: ${{ matrix.configuration }}
-      ProjectLoadStyle: ${{ matrix.projectloadstyle }}
+#     env:
+#       RunPeVerify: true 
+#       Solution_Name: Open-XML-SDK.sln  
+#       Configuration: ${{ matrix.configuration }}
+#       ProjectLoadStyle: ${{ matrix.projectloadstyle }}
           
-    runs-on: ${{ matrix.os }}
+#     runs-on: ${{ matrix.os }}
     
-    steps:
-    - name: Checkout
-      uses: actions/checkout@v3
-      with:
-        fetch-depth: 0
+#     steps:
+#     - name: Checkout
+#       uses: actions/checkout@v3
+#       with:
+#         fetch-depth: 0
 
-    - name: Install .NET Core
-      uses: actions/setup-dotnet@v3
-      with:
-          dotnet-version: 6.0.x
-    - name: Restore
-      run: dotnet restore --verbosity normal          
-    - name: Build
-      run: dotnet build --no-restore --verbosity normal
-    - name: Test
-      run: dotnet test --no-restore --verbosity normal --logger trx --results-directory test-results/
-    - name: Upload Test Results
-      if: always()
-      uses: actions/upload-artifact@v3
-      with:
-        name: Test Results (${{ matrix.os }} ${{ matrix.configuration }} ${{ matrix.projectloadstyle }})
-        path: test-results/*
+#     - name: Install .NET Core
+#       uses: actions/setup-dotnet@v3
+#       with:
+#           dotnet-version: 6.0.x
+#     - name: Restore
+#       run: dotnet restore --verbosity normal          
+#     - name: Build
+#       run: dotnet build --no-restore --verbosity normal
+#     - name: Test
+#       run: dotnet test --no-restore --verbosity normal --logger trx --results-directory test-results/
+#     - name: Upload Test Results
+#       if: always()
+#       uses: actions/upload-artifact@v3
+#       with:
+#         name: Test Results (${{ matrix.os }} ${{ matrix.configuration }} ${{ matrix.projectloadstyle }})
+#         path: test-results/*

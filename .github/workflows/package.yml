@@ -3,10 +3,10 @@ name: Package
 on:
   release: 
     types: [published]
-  workflow_run:
-    workflows: ["Build"]
-    types:
-      - completed
+  # workflow_run:
+  #   workflows: ["Build"]
+  #   types:
+  #     - completed
 
 jobs: 
   pack:
@@ -28,94 +28,95 @@ jobs:
         run: |
           dotnet tool install --global GitVersion.Tool --version 5.12.0
           dotnet gitversion /output buildserver /nofetch
+          cat $env:GITHUB_ENV
       - name: Restore
         run: dotnet restore --verbosity normal
       - name: Build
         run: dotnet build --no-restore --verbosity normal
       - name: Pack
-        run: dotnet pack --no-build -p:PackageVersion=3.0.0-beta0003
+        run: dotnet pack --no-build 
       - name: Upload
         uses: actions/upload-artifact@v3
         with:
           name: Unsigned
           path: "bin/${{ env.Configuration }}/packages/shipping/*"
 
-  sign:
-    name: "Sign Package"
-    if: github.event_name == 'release'
-    needs: [pack] 
-    runs-on: windows-latest
-    steps: 
-         - name: Install .NET Core
-           uses: actions/setup-dotnet@v3
-           with:
-              dotnet-version: 6.0.x
+  # sign:
+  #   name: "Sign Package"
+  #   if: github.event_name == 'release'
+  #   needs: [pack] 
+  #   runs-on: windows-latest
+  #   steps: 
+  #        - name: Install .NET Core
+  #          uses: actions/setup-dotnet@v3
+  #          with:
+  #             dotnet-version: 6.0.x
 
-         - name: Install SignTool tool
-           run: dotnet tool install --tool-path . sign --version 0.9.0-beta.23127.3
+  #        - name: Install SignTool tool
+  #          run: dotnet tool install --tool-path . sign --version 0.9.0-beta.23127.3
 
-         - name: Install Nuget Sign Tool
-           run: dotnet tool install --global NuGetKeyVaultSignTool
+  #        - name: Install Nuget Sign Tool
+  #          run: dotnet tool install --global NuGetKeyVaultSignTool
 
-         - name: Download Unsigned Packages
-           uses: actions/download-artifact@v3
-           with: 
-                name: Unsigned
-                path: '${{ github.workspace }}/unsigned' 
+  #        - name: Download Unsigned Packages
+  #          uses: actions/download-artifact@v3
+  #          with: 
+  #               name: Unsigned
+  #               path: '${{ github.workspace }}/unsigned' 
 
-         - name: Expand Packages For Signing
-           shell: pwsh 
-           run: |
-              cd ${{ github.workspace }}/unsigned
-              mkdir raw
-              cd raw
-              gci ..\*.nupkg | % { Expand-Archive $_ }
-              cd ..\..
-              gci -r
+  #        - name: Expand Packages For Signing
+  #          shell: pwsh 
+  #          run: |
+  #             cd ${{ github.workspace }}/unsigned
+  #             mkdir raw
+  #             cd raw
+  #             gci ..\*.nupkg | % { Expand-Archive $_ }
+  #             cd ..\..
+  #             gci -r
 
-         - name: Sign the DLLs
-           shell: pwsh
-           run: >
-                ./sign code azure-key-vault **/DocumentFormat.OpenXml*.dll --base-directory  "${{ github.workspace }}/unsigned/raw" --publisher-name "Microsoft" --description "DocumentFormat.OpenXml DLL Signing" --description-url https://github.com/dotnet/sign --azure-key-vault-tenant-id "${{ secrets.SignTenantId }}" --azure-key-vault-client-id "${{ secrets.SignClientId }}"  --azure-key-vault-client-secret "${{ secrets.SignClientSecret }}" --azure-key-vault-certificate "${{ secrets.SignKeyVaultCertificate }}"  --azure-key-vault-url "${{ secrets.SignKeyVaultUrl }}"
+  #        - name: Sign the DLLs
+  #          shell: pwsh
+  #          run: >
+  #               ./sign code azure-key-vault **/DocumentFormat.OpenXml*.dll --base-directory  "${{ github.workspace }}/unsigned/raw" --publisher-name "Microsoft" --description "DocumentFormat.OpenXml DLL Signing" --description-url https://github.com/dotnet/sign --azure-key-vault-tenant-id "${{ secrets.SignTenantId }}" --azure-key-vault-client-id "${{ secrets.SignClientId }}"  --azure-key-vault-client-secret "${{ secrets.SignClientSecret }}" --azure-key-vault-certificate "${{ secrets.SignKeyVaultCertificate }}"  --azure-key-vault-url "${{ secrets.SignKeyVaultUrl }}"
 
-         - name: Create Signed NUPKG
-           shell: pwsh 
-           run: | 
-               cd ${{ github.workspace }}/unsigned/raw
-               gci -r CodeSignSummary | rm
-               gci -Directory | % { [IO.Compression.ZipFile]::CreateFromDirectory($_, "$_.nupkg") }
-               gci 
+  #        - name: Create Signed NUPKG
+  #          shell: pwsh 
+  #          run: | 
+  #              cd ${{ github.workspace }}/unsigned/raw
+  #              gci -r CodeSignSummary | rm
+  #              gci -Directory | % { [IO.Compression.ZipFile]::CreateFromDirectory($_, "$_.nupkg") }
+  #              gci 
 
-         - name: Sign the NUPKGs
-           shell: pwsh
-           run: >
-              ./sign code azure-key-vault 
-              *.nupkg 
-              --base-directory  "${{ github.workspace }}/unsigned/raw" 
-              --publisher-name "Microsoft" 
-              --description "DocumentFormat.OpenXml DLL Signing" 
-              --description-url "https://github.com/dotnet/sign" 
-              --azure-key-vault-tenant-id "${{ secrets.SignTenantId }}" 
-              --azure-key-vault-client-id "${{ secrets.SignClientId }}" 
-              --azure-key-vault-client-secret "${{ secrets.SignClientSecret }}"
-              --azure-key-vault-certificate "${{ secrets.SignKeyVaultCertificate }}" 
-              --azure-key-vault-url "${{ secrets.SignKeyVaultUrl }}"
+  #        - name: Sign the NUPKGs
+  #          shell: pwsh
+  #          run: >
+  #             ./sign code azure-key-vault 
+  #             *.nupkg 
+  #             --base-directory  "${{ github.workspace }}/unsigned/raw" 
+  #             --publisher-name "Microsoft" 
+  #             --description "DocumentFormat.OpenXml DLL Signing" 
+  #             --description-url "https://github.com/dotnet/sign" 
+  #             --azure-key-vault-tenant-id "${{ secrets.SignTenantId }}" 
+  #             --azure-key-vault-client-id "${{ secrets.SignClientId }}" 
+  #             --azure-key-vault-client-secret "${{ secrets.SignClientSecret }}"
+  #             --azure-key-vault-certificate "${{ secrets.SignKeyVaultCertificate }}" 
+  #             --azure-key-vault-url "${{ secrets.SignKeyVaultUrl }}"
              
-         - uses: actions/upload-artifact@v3
-           with:
-             name: Signed
-             path: |
-               ${{ github.workspace }}\unsigned\*.snupkg
-               ${{ github.workspace }}\unsigned\raw\*.nupkg 
-  releaseInfo:
-    name: Release Info
-    runs-on: windows-latest
-    steps:
-      - name: Get Release Info
-        run: >
-          echo ${{ github.event_name == 'release' }} >> release-info.txt
-      - name: Upload Release Info
-        uses: actions/upload-artifact@v3
-        with:
-          name: release-info
-          path: release-info.txt
+  #        - uses: actions/upload-artifact@v3
+  #          with:
+  #            name: Signed
+  #            path: |
+  #              ${{ github.workspace }}\unsigned\*.snupkg
+  #              ${{ github.workspace }}\unsigned\raw\*.nupkg 
+  # releaseInfo:
+  #   name: Release Info
+  #   runs-on: windows-latest
+  #   steps:
+  #     - name: Get Release Info
+  #       run: >
+  #         echo ${{ github.event_name == 'release' }} >> release-info.txt
+  #     - name: Upload Release Info
+  #       uses: actions/upload-artifact@v3
+  #       with:
+  #         name: release-info
+  #         path: release-info.txt
