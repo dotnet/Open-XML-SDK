@@ -2,16 +2,34 @@
   "TargetNamespace": "http://schemas.microsoft.com/office/spreadsheetml/2022/pivotRichData",
   "Types": [
     {
-      "Name": "xprd:CT_PivotCacheGuid/xprd:richInfo",
-      "ClassName": "RichDataPivotCacheGuid",
-      "Summary": "Defines the RichDataPivotCacheGuid Class.",
+      "Name": "xprd:CT_PivotCacheRichInfo/xprd:richInfo",
+      "ClassName": "RichInfoPivotCacheRichInfo",
+      "Summary": "Defines the RichInfoPivotCacheRichInfo Class.",
+      "BaseClass": "OpenXmlPivotCacheRichInfoElement",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Microsoft365"
+    },
+    {
+      "Name": "xprd:CT_PivotCacheRichInfo/xprd:pivotCacheHasRichValue",
+      "ClassName": "PivotCacheHasRichValuePivotCacheRichInfo",
+      "Summary": "Defines the PivotCacheHasRichValuePivotCacheRichInfo Class.",
+      "BaseClass": "OpenXmlPivotCacheRichInfoElement",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Microsoft365"
+    },
+    {
+      "Name": "xprd:CT_PivotCacheRichInfo/",
+      "ClassName": "OpenXmlPivotCacheRichInfoElement",
+      "Summary": "Defines the OpenXmlPivotCacheRichInfoElement Class.",
       "BaseClass": "OpenXmlLeafElement",
+      "IsAbstract": true,
       "IsLeafElement": true,
       "Version": "Microsoft365",
       "Attributes": [
         {
           "QName": ":pivotCacheGuid",
-          "PropertyName": "PivotCacheGuid",
           "Type": "StringValue",
           "Version": "Microsoft365",
           "PropertyComments": "pivotCacheGuid",
@@ -36,6 +54,12 @@
               "IsInitialVersion": true
             }
           ]
+        },
+        {
+          "QName": ":pivotIgnoreInvalidCache",
+          "Type": "BooleanValue",
+          "Version": "Microsoft365",
+          "PropertyComments": "pivotIgnoreInvalidCache"
         }
       ]
     }

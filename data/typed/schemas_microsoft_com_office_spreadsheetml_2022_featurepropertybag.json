@@ -1,0 +1,74 @@
+[
+  {
+    "Name": "xfpb:CT_ArrayFeatureProperty/xfpb:a",
+    "ClassName": "ArrayFeatureProperty"
+  },
+  {
+    "Name": "xsd:boolean/xfpb:b",
+    "ClassName": "Xsdboolean"
+  },
+  {
+    "Name": "xfpb:CT_BoolFeatureProperty/xfpb:b",
+    "ClassName": "BoolFeatureProperty"
+  },
+  {
+    "Name": "xfpb:CT_FeaturePropertyBag/xfpb:bag",
+    "ClassName": "FeaturePropertyBag"
+  },
+  {
+    "Name": "xfpb:CT_BagExtensions/xfpb:bagExt",
+    "ClassName": "BagExtensions"
+  },
+  {
+    "Name": "xfpb:CT_BagFeatureProperty/xfpb:bagId",
+    "ClassName": "BagFeatureProperty"
+  },
+  {
+    "Name": "xsd:unsignedInt/xfpb:bagId",
+    "ClassName": "XsdunsignedInt"
+  },
+  {
+    "Name": "xfpb:CT_DecimalFeatureProperty/xfpb:d",
+    "ClassName": "DecimalFeatureProperty"
+  },
+  {
+    "Name": "xsd:double/xfpb:d",
+    "ClassName": "Xsddouble"
+  },
+  {
+    "Name": "x:CT_ExtensionList/xfpb:extLst",
+    "ClassName": "ExtensionList"
+  },
+  {
+    "Name": "xfpb:CT_FeaturePropertyBags/xfpb:FeaturePropertyBags",
+    "ClassName": "FeaturePropertyBags"
+  },
+  {
+    "Name": "xfpb:CT_IntFeatureProperty/xfpb:i",
+    "ClassName": "IntFeatureProperty"
+  },
+  {
+    "Name": "xsd:integer/xfpb:i",
+    "ClassName": "Xsdinteger"
+  },
+  {
+    "Name": "xfpb:CT_RelFeatureProperty/xfpb:rel",
+    "ClassName": "RelFeatureProperty"
+  },
+  {
+    "Name": "xsd:string/xfpb:rel",
+    "ClassName": "RelXsdstring"
+  },
+  {
+    "Name": "xfpb:CT_StringFeatureProperty/xfpb:s",
+    "ClassName": "StringFeatureProperty"
+  },
+  {
+    "Name": "xsd:string/xfpb:s",
+    "ClassName": "SXsdstring"
+  },
+  {
+    "Name": "xfpb:CT_XfComplement/xfpb:xfComplement",
+    "ClassName": "XfComplement"
+  }
+]

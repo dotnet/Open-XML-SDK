@@ -17,16 +17,66 @@ using System.IO.Packaging;
 namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotRichData
 {
     /// <summary>
-    /// <para>Defines the RichDataPivotCacheGuid Class.</para>
+    /// <para>Defines the RichInfoPivotCacheRichInfo Class.</para>
     /// <para>This class is available in Microsoft365 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xprd:richInfo.</para>
     /// </summary>
-    public partial class RichDataPivotCacheGuid : OpenXmlLeafElement
+    public partial class RichInfoPivotCacheRichInfo : OpenXmlPivotCacheRichInfoElement
     {
         /// <summary>
-        /// Initializes a new instance of the RichDataPivotCacheGuid class.
+        /// Initializes a new instance of the RichInfoPivotCacheRichInfo class.
         /// </summary>
-        public RichDataPivotCacheGuid() : base()
+        public RichInfoPivotCacheRichInfo() : base()
+        {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema("xprd:richInfo");
+            builder.Availability = FileFormatVersions.Microsoft365;
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<RichInfoPivotCacheRichInfo>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the PivotCacheHasRichValuePivotCacheRichInfo Class.</para>
+    /// <para>This class is available in Microsoft365 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is xprd:pivotCacheHasRichValue.</para>
+    /// </summary>
+    public partial class PivotCacheHasRichValuePivotCacheRichInfo : OpenXmlPivotCacheRichInfoElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the PivotCacheHasRichValuePivotCacheRichInfo class.
+        /// </summary>
+        public PivotCacheHasRichValuePivotCacheRichInfo() : base()
+        {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema("xprd:pivotCacheHasRichValue");
+            builder.Availability = FileFormatVersions.Microsoft365;
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<PivotCacheHasRichValuePivotCacheRichInfo>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the OpenXmlPivotCacheRichInfoElement Class.</para>
+    /// <para>This class is available in Microsoft365 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
+    /// </summary>
+    public abstract partial class OpenXmlPivotCacheRichInfoElement : OpenXmlLeafElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the OpenXmlPivotCacheRichInfoElement class.
+        /// </summary>
+        protected OpenXmlPivotCacheRichInfoElement() : base()
         {
         }
 
@@ -40,20 +90,26 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotRichData
             set => SetAttribute(value);
         }
 
+        /// <summary>
+        /// <para>pivotIgnoreInvalidCache, this property is only available in Microsoft365 and later.</para>
+        /// <para>Represents the following attribute in the schema: pivotIgnoreInvalidCache</para>
+        /// </summary>
+        public BooleanValue? PivotIgnoreInvalidCache
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("xprd:richInfo");
-            builder.Availability = FileFormatVersions.Microsoft365;
-            builder.AddElement<RichDataPivotCacheGuid>()
+            builder.AddElement<OpenXmlPivotCacheRichInfoElement>()
                 .AddAttribute("pivotCacheGuid", a => a.PivotCacheGuid, aBuilder =>
                 {
                     aBuilder.AddValidator(RequiredValidator.Instance);
                     aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-                });
+                })
+                .AddAttribute("pivotIgnoreInvalidCache", a => a.PivotIgnoreInvalidCache);
         }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<RichDataPivotCacheGuid>(deep);
     }
 }

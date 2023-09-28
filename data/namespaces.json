@@ -350,8 +350,18 @@
     "Version": "Microsoft365"
   },
   {
+    "Prefix": "p223",
+    "Uri": "http://schemas.microsoft.com/office/powerpoint/2022/03/main",
+    "Version": "Microsoft365"
+  },
+  {
     "Prefix": "p228",
     "Uri": "http://schemas.microsoft.com/office/powerpoint/2022/08/main",
+    "Version": "Microsoft365"
+  },
+  {
+    "Prefix": "p232",
+    "Uri": "http://schemas.microsoft.com/office/powerpoint/2023/02/main",
     "Version": "Microsoft365"
   },
   {
@@ -597,6 +607,11 @@
     "Version": "Office2010"
   },
   {
+    "Prefix": "xfpb",
+    "Uri": "http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag",
+    "Version": "Microsoft365"
+  },
+  {
     "Prefix": "xlPr",
     "Uri": "http://schemas.microsoft.com/office/spreadsheetml/2016/01/main",
     "Version": "Office2019"
@@ -620,6 +635,11 @@
     "Prefix": "xlrvr",
     "Uri": "http://schemas.microsoft.com/office/spreadsheetml/2020/richvaluerefresh",
     "Version": "Office2021"
+  },
+  {
+    "Prefix": "xlrvrel",
+    "Uri": "http://schemas.microsoft.com/office/spreadsheetml/2022/richvaluerel",
+    "Version": "Microsoft365"
   },
   {
     "Prefix": "xltc",

@@ -1,0 +1,167 @@
+{
+  "TargetNamespace": "http://schemas.microsoft.com/office/powerpoint/2022/03/main",
+  "Types": [
+    {
+      "Name": "p223:CT_Reactions/p223:reactions",
+      "ClassName": "Reactions",
+      "Summary": "Defines the Reactions Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Microsoft365",
+      "Children": [
+        {
+          "Name": "p223:CT_Reaction/p223:rxn"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "p223:CT_Reaction/p223:rxn",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Microsoft365"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "p:CT_ExtensionList/p223:extLst",
+      "ClassName": "ExtensionList",
+      "Summary": "Defines the ExtensionList Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Microsoft365",
+      "Children": [
+        {
+          "Name": "p:CT_Extension/p:ext"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Group",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "Items": [
+              {
+                "Kind": "Sequence",
+                "Items": [
+                  {
+                    "Name": "p:CT_Extension/p:ext",
+                    "Occurs": [
+                      {}
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "p223:CT_ReactionInstance/p223:instance",
+      "ClassName": "ReactionInstance",
+      "Summary": "Defines the ReactionInstance Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Microsoft365",
+      "Attributes": [
+        {
+          "QName": ":time",
+          "Type": "DateTimeValue",
+          "Version": "Microsoft365",
+          "PropertyComments": "time",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":authorId",
+          "Type": "StringValue",
+          "Version": "Office2021",
+          "PropertyComments": "authorId",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "p:CT_ExtensionList/p223:extLst",
+          "PropertyName": "ExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "p:CT_ExtensionList/p223:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Microsoft365"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "p223:CT_Reaction/p223:rxn",
+      "ClassName": "Reaction",
+      "Summary": "Defines the Reaction Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Microsoft365",
+      "Attributes": [
+        {
+          "QName": ":type",
+          "Type": "StringValue",
+          "Version": "Microsoft365",
+          "PropertyComments": "type",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "p223:CT_ReactionInstance/p223:instance"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "p223:CT_ReactionInstance/p223:instance",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Microsoft365"
+          }
+        ]
+      }
+    }
+  ]
+}

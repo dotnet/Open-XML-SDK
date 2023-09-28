@@ -11643,6 +11643,9 @@
         "p188:CT_CommentList/p188:cmLst",
         "p188:CT_CommentRelationship/p188:commentRel",
         "p1912:CT_TaskHistoryDetails/p1912:taskHistoryDetails",
+        "p223:CT_Reactions/p223:reactions",
+        "p228:CT_TaskDetails/p228:taskDetails",
+        "p232:CT_PlaceholderTypeExtension/p232:phTypeExt",
         "pc:CT_AnimationEffectMonikerList/pc:animEffectMkLst",
         "pc:CT_AnimationEffectMonikerList/pc:animEffectParentMkLst",
         "pc:CT_CommentAuthorMonikerList/pc:cmAuthorMkLst",
@@ -12193,6 +12196,9 @@
           "Name": "p:CT_ContentPart/p:contentPart"
         },
         {
+          "Name": "p232:CT_PlaceholderTypeExtension/p232:phTypeExt"
+        },
+        {
           "Name": "p188:CT_AuthorList/p188:authorLst"
         },
         {
@@ -12200,6 +12206,12 @@
         },
         {
           "Name": "p188:CT_CommentRelationship/p188:commentRel"
+        },
+        {
+          "Name": "p223:CT_Reactions/p223:reactions"
+        },
+        {
+          "Name": "p228:CT_TaskDetails/p228:taskDetails"
         },
         {
           "Name": "p1912:CT_TaskHistoryDetails/p1912:taskHistoryDetails"
