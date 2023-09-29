@@ -152,10 +152,6 @@
     "Namespace": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021"
   },
   {
-    "Prefix": "xprd",
-    "Namespace": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotRichData"
-  },
-  {
     "Prefix": "xxpvi",
     "Namespace": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo"
   },

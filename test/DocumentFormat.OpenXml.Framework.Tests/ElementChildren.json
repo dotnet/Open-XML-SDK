@@ -22610,14 +22610,6 @@
     "Children": []
   },
   {
-    "Element": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotRichData.PivotCacheHasRichValuePivotCacheRichInfo",
-    "Children": []
-  },
-  {
-    "Element": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotRichData.RichInfoPivotCacheRichInfo",
-    "Children": []
-  },
-  {
     "Element": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo.CacheVersionInfo",
     "Children": [
       {
