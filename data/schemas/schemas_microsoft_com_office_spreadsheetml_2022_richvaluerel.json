@@ -1,0 +1,100 @@
+{
+  "TargetNamespace": "http://schemas.microsoft.com/office/spreadsheetml/2022/richvaluerel",
+  "Types": [
+    {
+      "Name": "xlrvrel:CT_RichValueRels/xlrvrel:richValueRels",
+      "ClassName": "RichValueRels",
+      "Summary": "Defines the RichValueRels Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Microsoft365",
+      "Children": [
+        {
+          "Name": "xlrvrel:CT_RichValueRelRelationship/xlrvrel:rel"
+        },
+        {
+          "Name": "x:CT_ExtensionList/xlrvrel:extLst"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "xlrvrel:CT_RichValueRelRelationship/xlrvrel:rel",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Microsoft365"
+          },
+          {
+            "Name": "x:CT_ExtensionList/xlrvrel:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Microsoft365"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "xlrvrel:CT_RichValueRelRelationship/xlrvrel:rel",
+      "ClassName": "RichValueRelRelationship",
+      "Summary": "Defines the RichValueRelRelationship Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Microsoft365",
+      "Attributes": [
+        {
+          "QName": "r:id",
+          "Type": "StringValue",
+          "Version": "Microsoft365",
+          "PropertyComments": "id",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "x:CT_ExtensionList/xlrvrel:extLst",
+      "ClassName": "ExtensionList",
+      "Summary": "Defines the ExtensionList Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Microsoft365",
+      "Children": [
+        {
+          "Name": "x:CT_Extension/x:ext"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Group",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "Items": [
+              {
+                "Kind": "Sequence",
+                "Items": [
+                  {
+                    "Name": "x:CT_Extension/x:ext",
+                    "Occurs": [
+                      {}
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

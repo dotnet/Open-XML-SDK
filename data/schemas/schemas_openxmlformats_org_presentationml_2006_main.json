@@ -11358,7 +11358,7 @@
           "QName": ":type",
           "PropertyName": "Type",
           "Type": "EnumValue\u003CDocumentFormat.OpenXml.Presentation.PlaceholderValues\u003E",
-          "PropertyComments": "Placeholder Type",
+          "PropertyComments": "type",
           "Validators": [
             {
               "Arguments": [
@@ -11377,7 +11377,7 @@
           "QName": ":orient",
           "PropertyName": "Orientation",
           "Type": "EnumValue\u003CDocumentFormat.OpenXml.Presentation.DirectionValues\u003E",
-          "PropertyComments": "Placeholder Orientation",
+          "PropertyComments": "orient",
           "Validators": [
             {
               "Arguments": [
@@ -11396,7 +11396,7 @@
           "QName": ":sz",
           "PropertyName": "Size",
           "Type": "EnumValue\u003CDocumentFormat.OpenXml.Presentation.PlaceholderSizeValues\u003E",
-          "PropertyComments": "Placeholder Size",
+          "PropertyComments": "sz",
           "Validators": [
             {
               "Arguments": [
@@ -11415,13 +11415,13 @@
           "QName": ":idx",
           "PropertyName": "Index",
           "Type": "UInt32Value",
-          "PropertyComments": "Placeholder Index"
+          "PropertyComments": "idx"
         },
         {
           "QName": ":hasCustomPrompt",
           "PropertyName": "HasCustomPrompt",
           "Type": "BooleanValue",
-          "PropertyComments": "Placeholder has custom prompt"
+          "PropertyComments": "hasCustomPrompt"
         }
       ],
       "Children": [
@@ -13925,6 +13925,34 @@
           },
           {
             "Name": "p:CT_Empty/p:endSnd"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "p:CT_PlaceholderExtension/p:ext",
+      "ClassName": "PlaceholderExtension",
+      "Summary": "Defines the PlaceholderExtension Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Microsoft365",
+      "Children": [
+        {
+          "Name": "p232:CT_PlaceholderTypeExtension/p232:phTypeExt",
+          "PropertyName": "PlaceholderTypeExtension"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "p232:CT_PlaceholderTypeExtension/p232:phTypeExt",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Microsoft365"
           }
         ]
       }

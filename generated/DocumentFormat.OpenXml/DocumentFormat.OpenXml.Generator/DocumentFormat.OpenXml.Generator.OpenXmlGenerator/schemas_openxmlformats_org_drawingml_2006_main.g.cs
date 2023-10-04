@@ -15543,6 +15543,9 @@ namespace DocumentFormat.OpenXml.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.CommentList" /> <c>&lt;p188:cmLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.CommentRelationship" /> <c>&lt;p188:commentRel></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskHistoryDetails" /> <c>&lt;p1912:taskHistoryDetails></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main.Reactions" /> <c>&lt;p223:reactions></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskDetails" /> <c>&lt;p228:taskDetails></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint.Y2023.M02.Main.PlaceholderTypeExtension" /> <c>&lt;p232:phTypeExt></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Presentation.Command.AnimEffectMkLstAnimationEffectMonikerList" /> <c>&lt;pc:animEffectMkLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Presentation.Command.AnimEffectParentMkLstAnimationEffectMonikerList" /> <c>&lt;pc:animEffectParentMkLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Presentation.Command.CommentAuthorMonikerList" /> <c>&lt;pc:cmAuthorMkLst></c></description></item>
@@ -15928,6 +15931,9 @@ namespace DocumentFormat.OpenXml.Drawing
             builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.CommentList>();
             builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.CommentRelationship>();
             builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskHistoryDetails>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main.Reactions>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskDetails>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2023.M02.Main.PlaceholderTypeExtension>();
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Presentation.Command.AnimEffectMkLstAnimationEffectMonikerList>();
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Presentation.Command.AnimEffectParentMkLstAnimationEffectMonikerList>();
             builder.AddChild<DocumentFormat.OpenXml.Office2016.Presentation.Command.CommentAuthorMonikerList>();

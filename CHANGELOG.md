@@ -4,6 +4,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [3.0.0]
+
+## Added
+
+- `DocumentFormat.OpenXml.Office.PowerPoint.Y2023.M02.Main` namespace
+- `DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main` namespace
+- `DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021` namespace
+
+### Breaking Changes
+
+- `Model3D` now represents the modified xml element tag name `am3d.model3d` (Previously `am3d.model3D`)
+- Removed `DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotRichData.PivotCacheHasRichValuePivotCacheRichInfo`
+- Removed `DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotRichData.RichDataPivotCacheGuid`
+
 ## [3.0.0 Beta 3]
 
 ### Added
@@ -12,7 +26,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - `IFeatureCollection` can now be enumerated and has a helpful debug view to see what features are registered (#1452)
 - Add mime types to part creation (#1488)
 
-### Breaking changes
+### Breaking Changes
 
 - Reduced unnecessary target frameworks for packages besides DocumentFormat.OpenXml.Framework (#1471)
 - Changed some spelling issues for property names (#1463, #1444)
