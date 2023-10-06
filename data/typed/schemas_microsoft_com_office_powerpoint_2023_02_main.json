@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "p:CT_Empty/p232:cameo",
+    "ClassName": "CameoEmpty"
+  },
+  {
+    "Name": "p232:CT_PlaceholderTypeExtension/p232:phTypeExt",
+    "ClassName": "PlaceholderTypeExtension"
+  },
+  {
+    "Name": "p232:CT_PlaceholderTypeACB/p232:type",
+    "ClassName": "PlaceholderTypeACB"
+  },
+  {
+    "Name": "p:CT_Empty/p232:unknown",
+    "ClassName": "UnknownEmpty"
+  }
+]

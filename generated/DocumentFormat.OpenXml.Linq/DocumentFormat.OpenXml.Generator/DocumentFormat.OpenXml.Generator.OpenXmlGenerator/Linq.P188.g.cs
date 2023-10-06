@@ -83,14 +83,27 @@ namespace DocumentFormat.OpenXml.Linq
         public static readonly XName commentRel = p188 + "commentRel";
 
         /// <summary>
-        /// Represents the p188:extLst XML element.
+        /// Represents the p188:ext XML element.
+        /// </summary>
+        /// <remarks>
+        /// <para>As an XML element, it:</para>
+        /// <list type="bullet">
+        /// <item><description>has the following parent XML elements: <see cref="extLst" />.</description></item>
+        /// <item><description>has the following child XML elements: <see cref="P223.reactions" />, <see cref="P228.taskDetails" />.</description></item>
+        /// <item><description>corresponds to the following strongly-typed classes: CommentPropertiesExtension.</description></item>
+        /// </list>
+        /// </remarks>
+        public static readonly XName ext = p188 + "ext";
+
+        /// <summary>
+        /// Represents the p188:extLst XML elements.
         /// </summary>
         /// <remarks>
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="author" />, <see cref="cm" />, <see cref="reply" />.</description></item>
-        /// <item><description>has the following child XML elements: <see cref="P.ext" />.</description></item>
-        /// <item><description>corresponds to the following strongly-typed classes: ExtensionList.</description></item>
+        /// <item><description>has the following child XML elements: <see cref="P.ext" />, <see cref="ext" />.</description></item>
+        /// <item><description>corresponds to the following strongly-typed classes: CommentPropertiesExtensionList, ExtensionList.</description></item>
         /// </list>
         /// </remarks>
         public static readonly XName extLst = p188 + "extLst";

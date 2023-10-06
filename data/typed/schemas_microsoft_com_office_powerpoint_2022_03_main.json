@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "p:CT_ExtensionList/p223:extLst",
+    "ClassName": "ExtensionList"
+  },
+  {
+    "Name": "p223:CT_ReactionInstance/p223:instance",
+    "ClassName": "ReactionInstance"
+  },
+  {
+    "Name": "p223:CT_Reactions/p223:reactions",
+    "ClassName": "Reactions"
+  },
+  {
+    "Name": "p223:CT_Reaction/p223:rxn",
+    "ClassName": "Reaction"
+  }
+]
