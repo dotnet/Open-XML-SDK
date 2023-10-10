@@ -114,6 +114,12 @@ internal static class SimpleTypeExtensions
         { "w:ST_UnsignedDecimalNumber", UInt32Value },
         { "w:ST_UnsignedDecimalNumberMin1", Int32Value },
         { "xne:ST_Ref", StringValue },
+        { "xfpb:CT_BagFeatureProperty", UInt32Value },
+        { "xfpb:CT_IntFeatureProperty", Int32Value },
+        { "xfpb:CT_StringFeatureProperty", StringValue },
+        { "xfpb:CT_BoolFeatureProperty", BooleanValue },
+        { "xfpb:CT_DecimalFeatureProperty", DoubleValue },
+        { "xfpb:CT_RelFeatureProperty", StringValue },
     };
 
     public static string GetSimpleType(this OpenXmlGeneratorServices context, QName qname, bool isList)

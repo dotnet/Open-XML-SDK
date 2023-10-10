@@ -9,6 +9,7 @@ using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
+using DocumentFormat.OpenXml.Office.PowerPoint.Y2023.M02.Main;
 using DocumentFormat.OpenXml.Office2010.Drawing;
 using DocumentFormat.OpenXml.Office2010.PowerPoint;
 using DocumentFormat.OpenXml.Office2013.PowerPoint;
@@ -18578,7 +18579,7 @@ namespace DocumentFormat.OpenXml.Presentation
         }
 
         /// <summary>
-        /// <para>Placeholder Type</para>
+        /// <para>type</para>
         /// <para>Represents the following attribute in the schema: type</para>
         /// </summary>
         public EnumValue<DocumentFormat.OpenXml.Presentation.PlaceholderValues>? Type
@@ -18588,7 +18589,7 @@ namespace DocumentFormat.OpenXml.Presentation
         }
 
         /// <summary>
-        /// <para>Placeholder Orientation</para>
+        /// <para>orient</para>
         /// <para>Represents the following attribute in the schema: orient</para>
         /// </summary>
         public EnumValue<DocumentFormat.OpenXml.Presentation.DirectionValues>? Orientation
@@ -18598,7 +18599,7 @@ namespace DocumentFormat.OpenXml.Presentation
         }
 
         /// <summary>
-        /// <para>Placeholder Size</para>
+        /// <para>sz</para>
         /// <para>Represents the following attribute in the schema: sz</para>
         /// </summary>
         public EnumValue<DocumentFormat.OpenXml.Presentation.PlaceholderSizeValues>? Size
@@ -18608,7 +18609,7 @@ namespace DocumentFormat.OpenXml.Presentation
         }
 
         /// <summary>
-        /// <para>Placeholder Index</para>
+        /// <para>idx</para>
         /// <para>Represents the following attribute in the schema: idx</para>
         /// </summary>
         public UInt32Value? Index
@@ -18618,7 +18619,7 @@ namespace DocumentFormat.OpenXml.Presentation
         }
 
         /// <summary>
-        /// <para>Placeholder has custom prompt</para>
+        /// <para>hasCustomPrompt</para>
         /// <para>Represents the following attribute in the schema: hasCustomPrompt</para>
         /// </summary>
         public BooleanValue? HasCustomPrompt
@@ -22703,6 +22704,79 @@ namespace DocumentFormat.OpenXml.Presentation
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SoundAction>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the PlaceholderExtension Class.</para>
+    /// <para>This class is available in Microsoft365 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is p:ext.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint.Y2023.M02.Main.PlaceholderTypeExtension" /> <c>&lt;p232:phTypeExt></c></description></item>
+    /// </list>
+    /// </remark>
+    public partial class PlaceholderExtension : OpenXmlCompositeElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the PlaceholderExtension class.
+        /// </summary>
+        public PlaceholderExtension() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the PlaceholderExtension class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public PlaceholderExtension(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the PlaceholderExtension class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public PlaceholderExtension(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the PlaceholderExtension class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public PlaceholderExtension(string outerXml) : base(outerXml)
+        {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema("p:ext");
+            builder.Availability = FileFormatVersions.Microsoft365;
+            builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2023.M02.Main.PlaceholderTypeExtension>();
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint.Y2023.M02.Main.PlaceholderTypeExtension), 0, 1, version: FileFormatVersions.Microsoft365)
+            };
+        }
+
+        /// <summary>
+        /// <para>PlaceholderTypeExtension.</para>
+        /// <para>Represents the following element tag in the schema: p232:phTypeExt.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:p232 = http://schemas.microsoft.com/office/powerpoint/2023/02/main
+        /// </remark>
+        public DocumentFormat.OpenXml.Office.PowerPoint.Y2023.M02.Main.PlaceholderTypeExtension? PlaceholderTypeExtension
+        {
+            get => GetElement<DocumentFormat.OpenXml.Office.PowerPoint.Y2023.M02.Main.PlaceholderTypeExtension>();
+            set => SetElement(value);
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<PlaceholderExtension>(deep);
     }
 
     /// <summary>

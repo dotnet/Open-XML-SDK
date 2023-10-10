@@ -1,0 +1,519 @@
+{
+  "TargetNamespace": "http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag",
+  "Types": [
+    {
+      "Name": "xfpb:CT_FeaturePropertyBags/xfpb:FeaturePropertyBags",
+      "ClassName": "FeaturePropertyBags",
+      "Summary": "Defines the FeaturePropertyBags Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Microsoft365",
+      "Attributes": [
+        {
+          "QName": ":count",
+          "Type": "UInt32Value",
+          "Version": "Microsoft365",
+          "PropertyComments": "count"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "xfpb:CT_BagExtensions/xfpb:bagExt"
+        },
+        {
+          "Name": "xfpb:CT_FeaturePropertyBag/xfpb:bag"
+        },
+        {
+          "Name": "x:CT_ExtensionList/xfpb:extLst"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "xfpb:CT_BagExtensions/xfpb:bagExt",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Microsoft365"
+          },
+          {
+            "Name": "xfpb:CT_FeaturePropertyBag/xfpb:bag",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Microsoft365"
+          },
+          {
+            "Name": "x:CT_ExtensionList/xfpb:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Microsoft365"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "xfpb:CT_XfComplement/xfpb:xfComplement",
+      "ClassName": "XfComplement",
+      "Summary": "Defines the XfComplement Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Microsoft365",
+      "Attributes": [
+        {
+          "QName": ":i",
+          "Type": "UInt32Value",
+          "Version": "Microsoft365",
+          "PropertyComments": "i",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "xfpb:CT_BagExtensions/xfpb:bagExt",
+      "ClassName": "BagExtensions",
+      "Summary": "Defines the BagExtensions Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Microsoft365",
+      "Children": [
+        {
+          "Name": "x:CT_ExtensionList/xfpb:extLst",
+          "PropertyName": "ExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x:CT_ExtensionList/xfpb:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Microsoft365"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "xfpb:CT_FeaturePropertyBag/xfpb:bag",
+      "ClassName": "FeaturePropertyBag",
+      "Summary": "Defines the FeaturePropertyBag Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Microsoft365",
+      "Attributes": [
+        {
+          "QName": ":type",
+          "Type": "StringValue",
+          "Version": "Microsoft365",
+          "PropertyComments": "type",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":extRef",
+          "Type": "StringValue",
+          "Version": "Microsoft365",
+          "PropertyComments": "extRef"
+        },
+        {
+          "QName": ":bagExtId",
+          "Type": "UInt32Value",
+          "Version": "Microsoft365",
+          "PropertyComments": "bagExtId"
+        },
+        {
+          "QName": ":att",
+          "Type": "StringValue",
+          "Version": "Microsoft365",
+          "PropertyComments": "att"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "xfpb:CT_ArrayFeatureProperty/xfpb:a"
+        },
+        {
+          "Name": "xfpb:CT_BagFeatureProperty/xfpb:bagId"
+        },
+        {
+          "Name": "xfpb:CT_IntFeatureProperty/xfpb:i"
+        },
+        {
+          "Name": "xfpb:CT_StringFeatureProperty/xfpb:s"
+        },
+        {
+          "Name": "xfpb:CT_BoolFeatureProperty/xfpb:b"
+        },
+        {
+          "Name": "xfpb:CT_DecimalFeatureProperty/xfpb:d"
+        },
+        {
+          "Name": "xfpb:CT_RelFeatureProperty/xfpb:rel"
+        }
+      ],
+      "Particle": {
+        "Kind": "Choice",
+        "Occurs": [
+          {}
+        ],
+        "Items": [
+          {
+            "Name": "xfpb:CT_ArrayFeatureProperty/xfpb:a",
+            "InitialVersion": "Microsoft365"
+          },
+          {
+            "Name": "xfpb:CT_BagFeatureProperty/xfpb:bagId",
+            "InitialVersion": "Microsoft365"
+          },
+          {
+            "Name": "xfpb:CT_IntFeatureProperty/xfpb:i",
+            "InitialVersion": "Microsoft365"
+          },
+          {
+            "Name": "xfpb:CT_StringFeatureProperty/xfpb:s",
+            "InitialVersion": "Microsoft365"
+          },
+          {
+            "Name": "xfpb:CT_BoolFeatureProperty/xfpb:b",
+            "InitialVersion": "Microsoft365"
+          },
+          {
+            "Name": "xfpb:CT_DecimalFeatureProperty/xfpb:d",
+            "InitialVersion": "Microsoft365"
+          },
+          {
+            "Name": "xfpb:CT_RelFeatureProperty/xfpb:rel",
+            "InitialVersion": "Microsoft365"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x:CT_ExtensionList/xfpb:extLst",
+      "ClassName": "ExtensionList",
+      "Summary": "Defines the ExtensionList Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Microsoft365",
+      "Children": [
+        {
+          "Name": "x:CT_Extension/x:ext"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Group",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "Items": [
+              {
+                "Kind": "Sequence",
+                "Items": [
+                  {
+                    "Name": "x:CT_Extension/x:ext",
+                    "Occurs": [
+                      {}
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "xfpb:CT_ArrayFeatureProperty/xfpb:a",
+      "ClassName": "ArrayFeatureProperty",
+      "Summary": "Defines the ArrayFeatureProperty Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Microsoft365",
+      "Attributes": [
+        {
+          "QName": ":k",
+          "Type": "StringValue",
+          "Version": "Microsoft365",
+          "PropertyComments": "Name of the key for the key value pair.",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "xsd:unsignedInt/xfpb:bagId"
+        },
+        {
+          "Name": "xsd:integer/xfpb:i"
+        },
+        {
+          "Name": "xsd:string/xfpb:s"
+        },
+        {
+          "Name": "xsd:boolean/xfpb:b"
+        },
+        {
+          "Name": "xsd:double/xfpb:d"
+        },
+        {
+          "Name": "xsd:string/xfpb:rel"
+        }
+      ],
+      "Particle": {
+        "Kind": "Choice",
+        "Occurs": [
+          {}
+        ],
+        "Items": [
+          {
+            "Name": "xsd:unsignedInt/xfpb:bagId",
+            "InitialVersion": "Microsoft365"
+          },
+          {
+            "Name": "xsd:integer/xfpb:i",
+            "InitialVersion": "Microsoft365"
+          },
+          {
+            "Name": "xsd:string/xfpb:s",
+            "InitialVersion": "Microsoft365"
+          },
+          {
+            "Name": "xsd:boolean/xfpb:b",
+            "InitialVersion": "Microsoft365"
+          },
+          {
+            "Name": "xsd:double/xfpb:d",
+            "InitialVersion": "Microsoft365"
+          },
+          {
+            "Name": "xsd:string/xfpb:rel",
+            "InitialVersion": "Microsoft365"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "xfpb:CT_BagFeatureProperty/xfpb:bagId",
+      "ClassName": "BagFeatureProperty",
+      "Summary": "Defines the BagFeatureProperty Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsLeafText": true,
+      "Version": "Microsoft365",
+      "Attributes": [
+        {
+          "QName": ":k",
+          "Type": "StringValue",
+          "Version": "Microsoft365",
+          "PropertyComments": "k",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "xfpb:CT_IntFeatureProperty/xfpb:i",
+      "ClassName": "IntFeatureProperty",
+      "Summary": "Defines the IntFeatureProperty Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsLeafText": true,
+      "Version": "Microsoft365",
+      "Attributes": [
+        {
+          "QName": ":k",
+          "Type": "StringValue",
+          "Version": "Microsoft365",
+          "PropertyComments": "k",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "xfpb:CT_StringFeatureProperty/xfpb:s",
+      "ClassName": "StringFeatureProperty",
+      "Summary": "Defines the StringFeatureProperty Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsLeafText": true,
+      "Version": "Microsoft365",
+      "Attributes": [
+        {
+          "QName": ":k",
+          "Type": "StringValue",
+          "Version": "Microsoft365",
+          "PropertyComments": "k",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "xfpb:CT_BoolFeatureProperty/xfpb:b",
+      "ClassName": "BoolFeatureProperty",
+      "Summary": "Defines the BoolFeatureProperty Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsLeafText": true,
+      "Version": "Microsoft365",
+      "Attributes": [
+        {
+          "QName": ":k",
+          "Type": "StringValue",
+          "Version": "Microsoft365",
+          "PropertyComments": "k",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "xfpb:CT_DecimalFeatureProperty/xfpb:d",
+      "ClassName": "DecimalFeatureProperty",
+      "Summary": "Defines the DecimalFeatureProperty Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsLeafText": true,
+      "Version": "Microsoft365",
+      "Attributes": [
+        {
+          "QName": ":k",
+          "Type": "StringValue",
+          "Version": "Microsoft365",
+          "PropertyComments": "k",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "xfpb:CT_RelFeatureProperty/xfpb:rel",
+      "ClassName": "RelFeatureProperty",
+      "Summary": "Defines the RelFeatureProperty Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsLeafText": true,
+      "Version": "Microsoft365",
+      "Attributes": [
+        {
+          "QName": ":k",
+          "Type": "StringValue",
+          "Version": "Microsoft365",
+          "PropertyComments": "Name of the key for the key value pair.",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "xsd:unsignedInt/xfpb:bagId",
+      "ClassName": "XsdunsignedInt",
+      "Summary": "Defines the XsdunsignedInt Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsLeafText": true,
+      "Version": "Microsoft365",
+      "Validators": [
+        {
+          "Name": "NumberValidator",
+          "Type": "xsd:unsignedInt",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xsd:integer/xfpb:i",
+      "ClassName": "Xsdinteger",
+      "Summary": "Defines the Xsdinteger Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsLeafText": true,
+      "Version": "Microsoft365",
+      "Validators": [
+        {
+          "Name": "NumberValidator",
+          "Type": "xsd:integer",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xsd:string/xfpb:s",
+      "ClassName": "SXsdstring",
+      "Summary": "Defines the SXsdstring Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Version": "Microsoft365"
+    },
+    {
+      "Name": "xsd:string/xfpb:rel",
+      "ClassName": "RelXsdstring",
+      "Summary": "Defines the RelXsdstring Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Version": "Microsoft365"
+    },
+    {
+      "Name": "xsd:boolean/xfpb:b",
+      "ClassName": "Xsdboolean",
+      "Summary": "Defines the Xsdboolean Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsLeafText": true,
+      "Version": "Microsoft365",
+      "Validators": [
+        {
+          "Name": "NumberValidator",
+          "Type": "xsd:boolean",
+          "IsInitialVersion": true
+        }
+      ]
+    },
+    {
+      "Name": "xsd:double/xfpb:d",
+      "ClassName": "Xsddouble",
+      "Summary": "Defines the Xsddouble Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsLeafText": true,
+      "Version": "Microsoft365",
+      "Validators": [
+        {
+          "Name": "NumberValidator",
+          "Type": "xsd:double",
+          "IsInitialVersion": true
+        }
+      ]
+    }
+  ]
+}

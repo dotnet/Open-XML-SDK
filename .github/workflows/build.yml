@@ -5,13 +5,18 @@ on:
     branches: 
       - 'main'
       - 'release/*'
+    paths-ignore:
+      - 'docs/**'
+      - '**.md'
   pull_request:
     branches: 
       - 'main'
       - 'release/*'
-      - '!/docs/'
-      - '!/*.md'
-  
+    paths-ignore:
+      - 'docs/**'
+      - '**.md'
+  workflow_dispatch: 
+
 jobs: 
   event_file: # Used for test reporting
     name: "Event File"
@@ -22,36 +27,7 @@ jobs:
       with:
         name: Event File
         path: ${{ github.event_path }}
-  pack:
-    name: "Pack"
-    runs-on: ubuntu-latest
-    env:
-      Configuration: Release
-      ProjectLoadStyle: All
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-      - name: Install .NET Core
-        uses: actions/setup-dotnet@v3
-        with:
-          dotnet-version: '6.x'
-      - name: GitVersion
-        run: |
-          dotnet tool install --global GitVersion.Tool --version 5.12.0
-          dotnet gitversion /output buildserver /nofetch
-      - name: Restore
-        run: dotnet restore --verbosity normal
-      - name: Build
-        run: dotnet build --no-restore --verbosity normal
-      - name: Pack
-        run: dotnet pack --no-build
-      - name: Upload
-        uses: actions/upload-artifact@v3
-        with:
-          name: Unsigned
-          path: "bin/${{ env.Configuration }}/packages/shipping/*"
+
   validate_gen:
     name: "Validate generated files"
     runs-on: ubuntu-latest
@@ -76,6 +52,7 @@ jobs:
           git diff
           exit 1
         fi
+
   build_and_test:
     name: Build and Test
     strategy:

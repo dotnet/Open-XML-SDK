@@ -317,7 +317,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="ArgumentOutOfRangeException">When the part is fixed content type and the passed in contentType does not match the defined content type.</exception>
         /// <exception cref="ArgumentNullException">Thrown when "contentType" is null reference.</exception>
         /// <remarks>Mainly used for adding not-fixed content type part - ImagePart, etc.</remarks>
-        public override T AddNewPart<T>(string contentType, string id)
+        public override T AddNewPart<T>(string contentType, string? id)
         {
             if (contentType is null)
             {

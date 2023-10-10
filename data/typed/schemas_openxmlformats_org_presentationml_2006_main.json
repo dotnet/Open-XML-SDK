@@ -406,6 +406,10 @@
     "ClassName": "NotesMasterExtension"
   },
   {
+    "Name": "p:CT_PlaceholderExtension/p:ext",
+    "ClassName": "PlaceholderExtension"
+  },
+  {
     "Name": "p:CT_PresentationExtension/p:ext",
     "ClassName": "PresentationExtension"
   },

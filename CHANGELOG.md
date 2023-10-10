@@ -6,27 +6,60 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [3.0.0]
 
+## Added
+
+- `DocumentFormat.OpenXml.Office.PowerPoint.Y2023.M02.Main` namespace
+- `DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main` namespace
+- `DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021` namespace
+
+### Breaking Changes
+
+- `Model3D` now represents the modified xml element tag name `am3d.model3d` (Previously `am3d.model3D`)
+- Removed `DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotRichData.PivotCacheHasRichValuePivotCacheRichInfo`
+- Removed `DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotRichData.RichDataPivotCacheGuid`
+
+## [3.0.0 Beta 3]
+
+### Added
+
+- Introduce equality comparers for `OpenXmlElement` (#1476)
+- `IFeatureCollection` can now be enumerated and has a helpful debug view to see what features are registered (#1452)
+- Add mime types to part creation (#1488)
+
+### Breaking Changes
+
+- Reduced unnecessary target frameworks for packages besides DocumentFormat.OpenXml.Framework (#1471)
+- Changed some spelling issues for property names (#1463, #1444)
+
+## [3.0.0 Beta 2]
+
+### Breaking Changes
+
+- `OpenXmlElementList` is now a struct that implements `IEnumerable<OpenXmlElement>` and `IReadOnlyList<OpenXmlElement>` where available (#1429)
+- Individual implementations of `OpenXmlPartReader` are available now for each package type (i.e. `WordprocessingDocumentPartReader`, `SpreadsheetDocumentPartReader`, `PresentationDocumentPartReader`), and the previous `TypedOpenXmlPartReader` has been removed. (#1403)
+
+## [3.0.0 Beta 1]
+
 ### Added
 - Packages can now be saved on .NET Core and .NET 5+ if constructed with a path or stream (#1307).
 - Packages can now support malformed URIs (such as relationships with a URI such as `mailto:person@`)
-- `IFeatureCollection` can now be enumerated and has a helpful debug view to see what features are registered (#1452)
 
 ### Changed
 - When validation finds incorrect part, it will now include the relationship type rather than a class name
 
 ### Removed
 - .NET Standard 1.3 is no longer a supported platform. .NET Standard 2.0 is the lowest .NET Standard supported.
-- Removed unused `SchemaAttrAttribute`
-- Removed unused `ChildElementInfoAttribute`
-- Removed `OpenXmlSimpleType.TextValue`. This property was never meant to be used externally
-- Removed obsolete validation logic from v1 of the SDK
-- Removed obsoleted methods from 2.x
-- Removed mutable properties on OpenXmlAttribute and marked as `readonly`
+- Removed unused `SchemaAttrAttribute` (#1316)
+- Removed unused `ChildElementInfoAttribute` (#1316)
+- Removed `OpenXmlSimpleType.TextValue`. This property was never meant to be used externally (#1316)
+- Removed obsolete validation logic from v1 of the SDK (#1316)
+- Removed obsoleted methods from 2.x (#1316)
+- Removed mutable properties on OpenXmlAttribute and marked as `readonly` (#1282)
 - Removed `OpenXmlPackage.Close` in favor of Dispose (#1373)
 - Removed `OpenXmlPackage.SaveAs` in favor of Clone (#1376)
 - Removed `OpenXmlPackage.Package` property. A `OpenXmlPackage` is now backed by an internal (for now) type `IPackage` instead of `System.IO.Packaging.Package`
 
-### Breaking change
+### Breaking changes
 - Core infrastructure is now contained in a new package DocumentFormat.OpenXml.Framework. Typed classes are still in DocumentFormat.OpenXml. This means that you may reference DocumentFormat.OpenXml and still compile the same types, but if you want a smaller package, you may rely on just the framework package.
 - `EnumValue<T>` now is used to box a struct rather than a `System.Enum`. This allows us to enable behavior on it without resorting to reflection
 - Methods on parts to add child parts (i.e. `AddImagePart`) are now implemented as extension methods off of a new marker interface `ISupportedRelationship<T>`
@@ -35,11 +68,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Removed `OpenXmlSettings.RelationshipErrorHandlerFactory` and associated types and replaced with a built-in mechanism to enable this
 - `IdPartPair` is now a readonly struct rather than a class
 - `IDisposableFeature` is now a part of the framework package and is available by default on a package or part.
-- Renamed PartExtensionProvider to IPartExtensionFeature and reduced its surface area to only two methods (instead of a full Dictionary<,>). The property to access this off of OpenXmlPackage has been removed, but may be accessed via `Features.Get<IPartExtensionFeature>()` if needed.
+- Renamed `PartExtensionProvider` to `IPartExtensionFeature` and reduced its surface area to only two methods (instead of a full `Dictionary<,>`). The property to access this off of `OpenXmlPackage` has been removed, but may be accessed via `Features.Get<IPartExtensionFeature>()` if needed.
 - `OpenXmlPart`/`OpenXmlContainer`/`OpenXmlPackage` and derived types now have internal constructors (these had internal abstract methods so most likely weren't subclassed externally)
-- `OpenXmlElementList` is now a struct that implements `IEnumerable<OpenXmlElement>` and `IReadOnlyList<OpenXmlElement>` (where available)
-- Individual implementations of `OpenXmlPartReader` are available now for each package type (i.e. `WordprocessingDocumentPartReader`, `SpreadsheetDocumentPartReader`, `PresentationDocumentPartReader`), and the previous `TypedOpenXmlPartReader` has been removed.
-- Changed DocumentFormat.OpenXml.PresetTextWrap to DocumentFormat.OpenXml.PresetTextWarp
 
 ## [2.20.0]
 
