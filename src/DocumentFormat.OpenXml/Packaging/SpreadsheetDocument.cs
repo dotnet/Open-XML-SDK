@@ -156,7 +156,7 @@ namespace DocumentFormat.OpenXml.Packaging
             }
 
             return CreateDefaultBuilder()
-                .ConfigureTemplate(path, SpreadsheetDocumentType.Workbook)
+                .UseTemplate(path, SpreadsheetDocumentType.Workbook)
                 .Open(new MemoryStream(), PackageOpenMode.Create);
         }
 

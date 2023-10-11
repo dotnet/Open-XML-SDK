@@ -180,7 +180,7 @@ namespace DocumentFormat.OpenXml.Packaging
             }
 
             return CreateDefaultBuilder()
-                .ConfigureTemplate(path, WordprocessingDocumentType.Document)
+                .UseTemplate(path, WordprocessingDocumentType.Document)
                 .Use((package, next) =>
                 {
                     next(package);
