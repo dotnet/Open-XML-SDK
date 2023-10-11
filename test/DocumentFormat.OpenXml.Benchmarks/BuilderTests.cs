@@ -78,9 +78,9 @@ namespace DocumentFormat.OpenXml.Benchmarks
             {
             }
 
-            internal override MyPackage Create() => new();
+            public override MyPackage Create() => new();
 
-            internal override OpenXmlPackageBuilder<MyPackage> New() => new TestBuilder(this);
+            public override IPackageBuilder<MyPackage> New() => new TestBuilder(this);
 
             public OpenXmlPackage Open()
             {

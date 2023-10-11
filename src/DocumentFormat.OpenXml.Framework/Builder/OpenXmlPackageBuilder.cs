@@ -6,7 +6,6 @@ using DocumentFormat.OpenXml.Packaging;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
-using System.IO;
 
 #if NET6_0_OR_GREATER
 using System.Collections.Immutable;
@@ -34,7 +33,7 @@ internal abstract class OpenXmlPackageBuilder<TPackage> : IPackageBuilder<TPacka
         }
     }
 
-    public OpenXmlPackageBuilder<TPackage> Use(Func<Action<TPackage>, Action<TPackage>> configure)
+    public IPackageBuilder<TPackage> Use(Func<Action<TPackage>, Action<TPackage>> configure)
     {
         if (_isLocked)
         {
@@ -47,15 +46,9 @@ internal abstract class OpenXmlPackageBuilder<TPackage> : IPackageBuilder<TPacka
         return this;
     }
 
-    IPackageBuilder<TPackage> IPackageBuilder<TPackage>.Use(Func<Action<TPackage>, Action<TPackage>> configure) => Use(configure);
+    public abstract IPackageBuilder<TPackage> New();
 
-    IPackageBuilder<TPackage> IPackageBuilder<TPackage>.New() => New();
-
-    internal abstract OpenXmlPackageBuilder<TPackage> New();
-
-    TPackage IPackageBuilder<TPackage>.Create() => Create();
-
-    internal abstract TPackage Create();
+    public abstract TPackage Create();
 
     public Action<TPackage> Build()
     {
@@ -89,14 +82,14 @@ internal abstract class OpenXmlPackageBuilder<TPackage> : IPackageBuilder<TPacka
 
     private sealed class PackageFactory : IPackageFactoryFeature<TPackage>
     {
-        private readonly OpenXmlPackageBuilder<TPackage> _other;
+        private readonly IPackageBuilder<TPackage> _other;
 
-        public PackageFactory(OpenXmlPackageBuilder<TPackage> other)
+        public PackageFactory(IPackageBuilder<TPackage> other)
         {
             _other = other;
         }
 
-        public OpenXmlPackageBuilder<TPackage> Create()
+        public IPackageBuilder<TPackage> Create()
             => _other.New();
 
         public void Process(TPackage package)

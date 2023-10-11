@@ -34,9 +34,9 @@ namespace DocumentFormat.OpenXml.Packaging
             {
             }
 
-            internal override OpenXmlPackageBuilder<PresentationDocument> New() => new Builder(this);
+            public override IPackageBuilder<PresentationDocument> New() => new Builder(this);
 
-            internal override PresentationDocument Create() => new();
+            public override PresentationDocument Create() => new();
         }
 
         /// <summary>

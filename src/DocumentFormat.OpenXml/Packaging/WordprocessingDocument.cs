@@ -35,9 +35,9 @@ namespace DocumentFormat.OpenXml.Packaging
             {
             }
 
-            internal override WordprocessingDocument Create() => new();
+            public override WordprocessingDocument Create() => new();
 
-            internal override OpenXmlPackageBuilder<WordprocessingDocument> New() => new Builder(this);
+            public override IPackageBuilder<WordprocessingDocument> New() => new Builder(this);
         }
 
         /// <summary>

@@ -254,9 +254,9 @@ public class BuilderTests
         {
         }
 
-        internal override OpenXmlPackageBuilder<TestPackage> New() => new Builder(this);
+        public override IPackageBuilder<TestPackage> New() => new Builder(this);
 
-        internal override TestPackage Create() => new();
+        public override TestPackage Create() => new();
     }
 
     private sealed class TestPackage : OpenXmlPackage

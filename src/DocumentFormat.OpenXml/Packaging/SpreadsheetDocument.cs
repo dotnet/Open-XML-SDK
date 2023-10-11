@@ -34,9 +34,9 @@ namespace DocumentFormat.OpenXml.Packaging
             {
             }
 
-            internal override OpenXmlPackageBuilder<SpreadsheetDocument> New() => new Builder(this);
+            public override IPackageBuilder<SpreadsheetDocument> New() => new Builder(this);
 
-            internal override SpreadsheetDocument Create() => new();
+            public override SpreadsheetDocument Create() => new();
         }
 
         /// <summary>

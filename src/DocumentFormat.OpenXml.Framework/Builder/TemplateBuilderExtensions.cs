@@ -49,21 +49,14 @@ internal static class TemplateBuilderExtensions
             _onLoad = onLoad;
         }
 
-        internal override TPackage Create() => _other.Create();
-
-        internal override OpenXmlPackageBuilder<TPackage> New() => (OpenXmlPackageBuilder<TPackage>)_other.New();
-
-        private sealed class WrappedRegistration : IPackageInitializer
+        public override TPackage Create()
         {
-            private readonly Action<OpenXmlPackage> _wrapped;
-
-            public WrappedRegistration(Action<OpenXmlPackage> wrapped)
-            {
-                _wrapped = wrapped;
-            }
-
-            public void Initialize(OpenXmlPackage package) => _wrapped(package);
+            var package = _other.Create();
+            LoadTemplate(package);
+            return package;
         }
+
+        public override IPackageBuilder<TPackage> New() => _other.New();
 
         private void LoadTemplate(TPackage package)
         {

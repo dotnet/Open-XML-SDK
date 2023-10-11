@@ -9,5 +9,5 @@ namespace DocumentFormat.OpenXml.Features;
 internal interface IPackageFactoryFeature<TPackage>
     where TPackage : OpenXmlPackage
 {
-    OpenXmlPackageBuilder<TPackage> Create();
+    IPackageBuilder<TPackage> Create();
 }
