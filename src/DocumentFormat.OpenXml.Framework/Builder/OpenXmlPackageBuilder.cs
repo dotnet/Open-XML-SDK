@@ -17,8 +17,11 @@ internal abstract class OpenXmlPackageBuilder<TPackage> : IPackageBuilder<TPacka
     where TPackage : OpenXmlPackage
 {
     private List<Func<Action<TPackage>, Action<TPackage>>>? _middleware;
-    private Action<TPackage>? _pipeline;
+    private Dictionary<string, object?>? _properties;
     private bool _isLocked;
+    private Action<TPackage>? _pipeline;
+
+    public IDictionary<string, object?> Properties => _properties ??= new();
 
     internal OpenXmlPackageBuilder(OpenXmlPackageBuilder<TPackage>? parent)
     {
@@ -29,6 +32,11 @@ internal abstract class OpenXmlPackageBuilder<TPackage> : IPackageBuilder<TPacka
             if (parent._middleware is not null)
             {
                 _middleware = new(parent._middleware);
+            }
+
+            if (parent._properties is not null)
+            {
+                _properties = new(parent._properties);
             }
         }
     }

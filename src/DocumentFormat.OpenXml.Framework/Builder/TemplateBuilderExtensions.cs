@@ -29,7 +29,7 @@ internal static class TemplateBuilderExtensions
         where TPackage : OpenXmlPackage
         => new TemplateBuilder<TPackage>(builder, templateFactory, onLoad);
 
-    private sealed class TemplateBuilder<TPackage> : OpenXmlPackageBuilder<TPackage>
+    private sealed class TemplateBuilder<TPackage> : IPackageBuilder<TPackage>
       where TPackage : OpenXmlPackage
     {
         private readonly IPackageBuilder<TPackage> _other;
@@ -41,22 +41,28 @@ internal static class TemplateBuilderExtensions
             IPackageBuilder<TPackage> other,
             Func<IPackageBuilder<TPackage>, TPackage> templateFactory,
             Action<TPackage>? onLoad)
-            : base((OpenXmlPackageBuilder<TPackage>)other)
         {
-            _other = other;
-            _templateBuilder = other.New();
+            _other = other.New();
+            _templateBuilder = _other.New();
             _templateFactory = templateFactory;
             _onLoad = onLoad;
         }
 
-        public override TPackage Create()
+        public IDictionary<string, object?> Properties => _other.Properties;
+
+        public Action<TPackage> Build() => _other.Build();
+
+        public TPackage Create()
         {
             var package = _other.Create();
             LoadTemplate(package);
             return package;
         }
 
-        public override IPackageBuilder<TPackage> New() => _other.New();
+        public IPackageBuilder<TPackage> New() => new TemplateBuilder<TPackage>(_other.New(), _templateFactory, _onLoad);
+
+        public IPackageBuilder<TPackage> Use(Func<Action<TPackage>, Action<TPackage>> configure)
+            => _other.Use(configure);
 
         private void LoadTemplate(TPackage package)
         {
