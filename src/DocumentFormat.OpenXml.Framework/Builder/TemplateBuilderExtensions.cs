@@ -25,7 +25,7 @@ internal static class TemplateBuilderExtensions
                 }
             });
 
-    private static IPackageBuilder<TPackage> CreateTemplateBuilder<TPackage>(this IPackageBuilder<TPackage> builder, Func<IPackageBuilder<TPackage>, TPackage> templateFactory, Action<TPackage>? onLoad = null)
+    internal static IPackageBuilder<TPackage> CreateTemplateBuilder<TPackage>(this IPackageBuilder<TPackage> builder, Func<IPackageBuilder<TPackage>, TPackage> templateFactory, Action<TPackage>? onLoad = null)
         where TPackage : OpenXmlPackage
         => new TemplateBuilder<TPackage>(builder, templateFactory, onLoad);
 

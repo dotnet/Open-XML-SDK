@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Builder;
 using System.IO;
 using System.IO.Packaging;
 using System.Xml.Linq;
@@ -19,7 +20,9 @@ public partial class PresentationDocument
     /// <param name="document">The document in Flat OPC format.</param>
     /// <returns>A new instance of PresentationDocument.</returns>
     public static PresentationDocument FromFlatOpcDocument(XDocument document)
-        => FromFlatOpcDocument(document, new MemoryStream(), true);
+        => CreateDefaultBuilder()
+            .UseFlatOpcTemplate(document)
+            .Open();
 
     /// <summary>
     /// Creates a new instance of PresentationDocument from a presentation
@@ -30,7 +33,9 @@ public partial class PresentationDocument
     /// <param name="isEditable">In ReadWrite mode. False for Read only mode.</param>
     /// <returns>A new instance of PresentationDocument.</returns>
     public static PresentationDocument FromFlatOpcDocument(XDocument document, Stream stream, bool isEditable)
-        => new PresentationDocument().LoadFlatOpcInternal(document, stream, isEditable);
+        => CreateDefaultBuilder()
+            .UseFlatOpcTemplate(document)
+            .Open(stream, isEditable);
 
     /// <summary>
     /// Creates a new instance of PresentationDocument from a presentation
@@ -41,7 +46,9 @@ public partial class PresentationDocument
     /// <param name="isEditable">In ReadWrite mode. False for Read only mode.</param>
     /// <returns>A new instance of PresentationDocument.</returns>
     public static PresentationDocument FromFlatOpcDocument(XDocument document, string path, bool isEditable)
-        => new PresentationDocument().LoadFlatOpcInternal(document, path, isEditable);
+        => CreateDefaultBuilder()
+            .UseFlatOpcTemplate(document)
+            .Open(path, isEditable);
 
     /// <summary>
     /// Creates a new instance of PresentationDocument from a presentation
@@ -51,7 +58,9 @@ public partial class PresentationDocument
     /// <param name="package">The specified instance of Package.</param>
     /// <returns>A new instance of PresentationDocument.</returns>
     public static PresentationDocument FromFlatOpcDocument(XDocument document, Package package)
-        => new PresentationDocument().LoadFlatOpcInternal(document, package);
+        => CreateDefaultBuilder()
+            .UseFlatOpcTemplate(document)
+            .Open(package);
 
     /// <summary>
     /// Creates a new instance of PresentationDocument from a string
@@ -61,7 +70,9 @@ public partial class PresentationDocument
     /// <param name="text">The string in Flat OPC format.</param>
     /// <returns>A new instance of PresentationDocument.</returns>
     public static PresentationDocument FromFlatOpcString(string text)
-        => new PresentationDocument().LoadFlatOpcStringInternal(text);
+        => CreateDefaultBuilder()
+            .UseFlatOpcTemplate(text)
+            .Open();
 
     /// <summary>
     /// Creates a new instance of PresentationDocument from a string
@@ -72,7 +83,9 @@ public partial class PresentationDocument
     /// <param name="isEditable">In ReadWrite mode. False for Read only mode.</param>
     /// <returns>A new instance of PresentationDocument.</returns>
     public static PresentationDocument FromFlatOpcString(string text, Stream stream, bool isEditable)
-        => new PresentationDocument().LoadFlatOpcStringInternal(text, stream, isEditable);
+        => CreateDefaultBuilder()
+            .UseFlatOpcTemplate(text)
+            .Open(stream, isEditable);
 
     /// <summary>
     /// Creates a new instance of PresentationDocument from a string
@@ -83,7 +96,9 @@ public partial class PresentationDocument
     /// <param name="isEditable">In ReadWrite mode. False for Read only mode.</param>
     /// <returns>A new instance of PresentationDocument.</returns>
     public static PresentationDocument FromFlatOpcString(string text, string path, bool isEditable)
-        => new PresentationDocument().LoadFlatOpcStringInternal(text, path, isEditable);
+        => CreateDefaultBuilder()
+            .UseFlatOpcTemplate(text)
+            .Open(path, isEditable);
 
     /// <summary>
     /// Creates a new instance of PresentationDocument from a string
@@ -93,5 +108,7 @@ public partial class PresentationDocument
     /// <param name="package">The <see cref="Package"/> of the target PresentationDocument.</param>
     /// <returns>A new instance of PresentationDocument.</returns>
     public static PresentationDocument FromFlatOpcString(string text, Package package)
-        => new PresentationDocument().LoadFlatOpcStringInternal(text, package);
+        => CreateDefaultBuilder()
+            .UseFlatOpcTemplate(text)
+            .Open(package);
 }

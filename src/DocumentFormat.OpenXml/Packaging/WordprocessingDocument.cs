@@ -22,11 +22,11 @@ namespace DocumentFormat.OpenXml.Packaging
         {
         }
 
-        private static readonly IPackageBuilder<WordprocessingDocument> _defaultBuilder = new Builder().UseDefaultBehavior();
+        private static readonly IPackageBuilder<WordprocessingDocument> DefaultBuilder = new Builder().UseDefaultBehaviorAndLockBuilder();
 
         internal static IPackageBuilder<WordprocessingDocument> CreateBuilder() => new Builder();
 
-        internal static IPackageBuilder<WordprocessingDocument> CreateDefaultBuilder() => _defaultBuilder.New();
+        internal static IPackageBuilder<WordprocessingDocument> CreateDefaultBuilder() => DefaultBuilder.New();
 
         private sealed class Builder : OpenXmlPackageBuilder<WordprocessingDocument>
         {

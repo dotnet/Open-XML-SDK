@@ -29,6 +29,11 @@ internal static class OpenXmlPackageBuilderExtensions
         where TPackage : OpenXmlPackage
         => builder.Open(stream, isEditing ? PackageOpenMode.ReadWrite : PackageOpenMode.Read);
 
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Reliability", "CA2000:Dispose objects before losing scope", Justification = "Disposable is registered with package")]
+    public static TPackage Open<TPackage>(this IPackageBuilder<TPackage> builder)
+        where TPackage : OpenXmlPackage
+        => builder.Open(new StreamPackageFeature(new MemoryStream(), PackageOpenMode.ReadWrite));
+
     public static TPackage Open<TPackage>(this IPackageBuilder<TPackage> builder, System.IO.Packaging.Package package)
         where TPackage : OpenXmlPackage
         => builder.Open(new PackageFeature(package));
@@ -61,9 +66,10 @@ internal static class OpenXmlPackageBuilderExtensions
        where TPackage : OpenXmlPackage
        => builder.Use(package => package.OpenSettings = settings);
 
-    internal static IPackageBuilder<TPackage> UseDefaultBehavior<TPackage>(this IPackageBuilder<TPackage> builder)
+    internal static IPackageBuilder<TPackage> UseDefaultBehaviorAndLockBuilder<TPackage>(this IPackageBuilder<TPackage> builder)
         where TPackage : OpenXmlPackage
-        => builder.Use((package, next) =>
+    {
+        builder.Use((package, next) =>
         {
             package.UseTransitionalRelationshipNamespaces();
             package.IgnoreRelationship("http://schemas.microsoft.com/office/2006/relationships/recovered");
@@ -87,27 +93,10 @@ internal static class OpenXmlPackageBuilderExtensions
             }
         });
 
-    internal static TPackage UseDefaultBehavior<TPackage>(this TPackage package)
-        where TPackage : OpenXmlPackage
-    {
-        var compatLevel = package.OpenSettings.CompatibilityLevel;
+        // Eagerly build
+        _ = builder.Build();
 
-        package.UseTransitionalRelationshipNamespaces();
-        package.IgnoreRelationship("http://schemas.microsoft.com/office/2006/relationships/recovered");
-
-        if (compatLevel >= CompatibilityLevel.Version_3_0)
-        {
-            package.EnableSavePackage();
-            package.EnableUriHandling();
-        }
-
-        if (compatLevel == CompatibilityLevel.Version_2_20)
-        {
-            // Before v3.0, all parts were eagerly loaded
-            package.LoadAllParts();
-        }
-
-        return package;
+        return builder;
     }
 
     private static void ValidateSettings(OpenXmlPackage package)

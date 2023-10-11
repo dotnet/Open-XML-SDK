@@ -21,11 +21,11 @@ namespace DocumentFormat.OpenXml.Packaging
         {
         }
 
-        private static readonly IPackageBuilder<SpreadsheetDocument> _defaultBuilder = new Builder().UseDefaultBehavior();
+        private static readonly IPackageBuilder<SpreadsheetDocument> DefaultBuilder = new Builder().UseDefaultBehaviorAndLockBuilder();
 
         internal static IPackageBuilder<SpreadsheetDocument> CreateBuilder() => new Builder();
 
-        internal static IPackageBuilder<SpreadsheetDocument> CreateDefaultBuilder() => _defaultBuilder.New();
+        internal static IPackageBuilder<SpreadsheetDocument> CreateDefaultBuilder() => DefaultBuilder.New();
 
         private sealed class Builder : OpenXmlPackageBuilder<SpreadsheetDocument>
         {
