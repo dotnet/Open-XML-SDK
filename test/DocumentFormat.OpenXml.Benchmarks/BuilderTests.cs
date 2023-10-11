@@ -3,7 +3,6 @@
 
 using BenchmarkDotNet.Attributes;
 using DocumentFormat.OpenXml.Builder;
-using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Packaging;
 
 namespace DocumentFormat.OpenXml.Benchmarks
@@ -72,7 +71,7 @@ namespace DocumentFormat.OpenXml.Benchmarks
             return _builder.Open();
         }
 
-        private class TestBuilder : OpenXmlPackageBuilder<MyPackage>, IPackageInitializer
+        private class TestBuilder : OpenXmlPackageBuilder<MyPackage>
         {
             public TestBuilder(TestBuilder builder = null)
                 : base(builder)
@@ -83,11 +82,12 @@ namespace DocumentFormat.OpenXml.Benchmarks
 
             internal override OpenXmlPackageBuilder<MyPackage> New() => new TestBuilder(this);
 
-            void IPackageInitializer.Initialize(OpenXmlPackage package)
+            public OpenXmlPackage Open()
             {
+                var package = Create();
+                Build()(package);
+                return package;
             }
-
-            public OpenXmlPackage Open() => Open(this);
         }
 
         private sealed class MyPackage : OpenXmlPackage

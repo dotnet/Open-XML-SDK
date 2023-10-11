@@ -33,6 +33,18 @@ internal static class OpenXmlPackageBuilderExtensions
         where TPackage : OpenXmlPackage
         => builder.Open(new PackageFeature(package));
 
+    private static TPackage Open<TPackage>(this IPackageBuilder<TPackage> builder, IPackageInitializer initializer)
+        where TPackage : OpenXmlPackage
+    {
+        var pipeline = builder.Build();
+        var package = builder.Create();
+
+        initializer.Initialize(package);
+        pipeline(package);
+
+        return package;
+    }
+
     public static IPackageBuilder<TPackage> Use<TPackage>(this IPackageBuilder<TPackage> builder, Action<TPackage> action)
         where TPackage : OpenXmlPackage
         => builder.Use((package, next) =>

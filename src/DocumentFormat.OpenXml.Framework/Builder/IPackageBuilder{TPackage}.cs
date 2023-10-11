@@ -16,5 +16,5 @@ internal interface IPackageBuilder<TPackage>
 
     IPackageBuilder<TPackage> New();
 
-    TPackage Open(IPackageInitializer initializer);
+    Action<TPackage> Build();
 }

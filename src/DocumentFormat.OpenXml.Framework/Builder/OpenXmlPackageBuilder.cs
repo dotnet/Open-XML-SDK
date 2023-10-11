@@ -18,7 +18,6 @@ internal abstract class OpenXmlPackageBuilder<TPackage> : IPackageBuilder<TPacka
     where TPackage : OpenXmlPackage
 {
     private List<Func<Action<TPackage>, Action<TPackage>>>? _middleware;
-    private CopyOnWrite? _startups;
     private Action<TPackage>? _pipeline;
     private bool _isLocked;
 
@@ -33,11 +32,6 @@ internal abstract class OpenXmlPackageBuilder<TPackage> : IPackageBuilder<TPacka
                 _middleware = new(parent._middleware);
             }
         }
-    }
-
-    public void AddStartup(IPackageInitializer startup)
-    {
-        (_startups ??= new()).Add(startup);
     }
 
     public OpenXmlPackageBuilder<TPackage> Use(Func<Action<TPackage>, Action<TPackage>> configure)
@@ -63,25 +57,10 @@ internal abstract class OpenXmlPackageBuilder<TPackage> : IPackageBuilder<TPacka
 
     internal abstract TPackage Create();
 
-    public virtual TPackage Open(IPackageInitializer register)
+    public Action<TPackage> Build()
     {
         BuildPipeline();
-
-        var package = Create();
-
-        register.Initialize(package);
-
-        _pipeline(package);
-
-        if (_startups is { } startups)
-        {
-            foreach (var startup in startups)
-            {
-                startup.Initialize(package);
-            }
-        }
-
-        return package;
+        return _pipeline;
     }
 
     [MemberNotNull(nameof(_pipeline))]

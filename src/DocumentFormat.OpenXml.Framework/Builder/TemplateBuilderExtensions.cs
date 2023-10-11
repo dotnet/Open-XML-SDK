@@ -53,17 +53,6 @@ internal static class TemplateBuilderExtensions
 
         internal override OpenXmlPackageBuilder<TPackage> New() => (OpenXmlPackageBuilder<TPackage>)_other.New();
 
-        public override TPackage Open(IPackageInitializer register)
-        {
-            void Combined(OpenXmlPackage package)
-            {
-                register.Initialize(package);
-                LoadTemplate((TPackage)package);
-            }
-
-            return base.Open(new WrappedRegistration(Combined));
-        }
-
         private sealed class WrappedRegistration : IPackageInitializer
         {
             private readonly Action<OpenXmlPackage> _wrapped;

@@ -9,6 +9,8 @@ using System.Diagnostics.CodeAnalysis;
 
 #if NET6_0_OR_GREATER
 using System.Collections.Immutable;
+
+using DebugInfo = DocumentFormat.OpenXml.Builder.DebugPackageBuilderExtensions.ImmutableDebugInfo;
 #else
 using System.Linq;
 #endif
@@ -41,7 +43,7 @@ internal static class DebugPackageBuilderExtensions
     }
 
 #if NET6_0_OR_GREATER
-    private sealed class DebugInfo : IDebugPackageInformation
+    internal sealed class ImmutableDebugInfo : IDebugPackageInformation
     {
         private ImmutableHashSet<OpenXmlQualifiedName> _rootElements = ImmutableHashSet.Create<OpenXmlQualifiedName>();
         private ImmutableHashSet<string> _relationships = ImmutableHashSet.Create<string>();
