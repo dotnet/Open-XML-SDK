@@ -138,7 +138,7 @@ public class BuilderTests
             });
 
         // Act
-        var package = builder.Open(new MemoryStream(), PackageOpenMode.Create);
+        var package = builder.Open();
         var cloned = package.Clone();
 
         // Arrange

@@ -157,7 +157,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             return CreateDefaultBuilder()
                 .UseTemplate(path, SpreadsheetDocumentType.Workbook)
-                .Open(new MemoryStream(), PackageOpenMode.Create);
+                .Open();
         }
 
         /// <summary>

@@ -32,7 +32,7 @@ internal static class OpenXmlPackageBuilderExtensions
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Reliability", "CA2000:Dispose objects before losing scope", Justification = "Disposable is registered with package")]
     public static TPackage Open<TPackage>(this IPackageBuilder<TPackage> builder)
         where TPackage : OpenXmlPackage
-        => builder.Open(new StreamPackageFeature(new MemoryStream(), PackageOpenMode.ReadWrite));
+        => builder.Open(new StreamPackageFeature(new MemoryStream(), PackageOpenMode.Create));
 
     public static TPackage Open<TPackage>(this IPackageBuilder<TPackage> builder, System.IO.Packaging.Package package)
         where TPackage : OpenXmlPackage

@@ -157,7 +157,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             return CreateDefaultBuilder()
                 .UseTemplate(path, PresentationDocumentType.Presentation)
-                .Open(new MemoryStream(), PackageOpenMode.Create);
+                .Open();
         }
 
         /// <summary>
