@@ -167,13 +167,7 @@ public class OpenXmlPackageBuilderTests
                 Add(package, 4);
             });
 
-        var builder2 = builder1.Clone()
-            .Use((package, next) =>
-            {
-                Add(package, 5);
-                next(package);
-                Add(package, 6);
-            });
+        var builder2 = builder1.Clone();
 
         builder1
             .Use((package, next) =>
@@ -181,6 +175,14 @@ public class OpenXmlPackageBuilderTests
                 Add(package, 7);
                 next(package);
                 Add(package, 8);
+            });
+
+        builder2
+            .Use((package, next) =>
+            {
+                Add(package, 5);
+                next(package);
+                Add(package, 6);
             });
 
         // Arrange

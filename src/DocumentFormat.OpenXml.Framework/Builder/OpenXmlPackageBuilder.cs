@@ -5,7 +5,6 @@ using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Packaging;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics.CodeAnalysis;
 
 #if NET6_0_OR_GREATER
 using System.Collections.Immutable;
@@ -16,9 +15,13 @@ namespace DocumentFormat.OpenXml.Builder;
 internal abstract class OpenXmlPackageBuilder<TPackage> : IPackageBuilder<TPackage>
     where TPackage : OpenXmlPackage
 {
-    private CopyOnWrite<Func<Action<TPackage>, Action<TPackage>>>? _middleware;
     private Dictionary<string, object?>? _properties;
     private Action<TPackage>? _pipeline;
+#if NET6_0_OR_GREATER
+    private CopyOnWriteList<Func<Action<TPackage>, Action<TPackage>>>? _middleware;
+#else
+    private List<Func<Action<TPackage>, Action<TPackage>>>? _middleware;
+#endif
 
     public IDictionary<string, object?> Properties => _properties ??= new();
 
@@ -91,13 +94,13 @@ internal abstract class OpenXmlPackageBuilder<TPackage> : IPackageBuilder<TPacka
         }
     }
 
-    private sealed class CopyOnWrite<T>
+#if NET6_0_OR_GREATER
+    private sealed class CopyOnWriteList<T>
         where T : class
     {
-#if NET6_0_OR_GREATER
         private ImmutableList<T> _list;
 
-        public CopyOnWrite(CopyOnWrite<T>? other = null)
+        public CopyOnWriteList(CopyOnWriteList<T>? other = null)
         {
             _list = other is not null ? other._list : ImmutableList<T>.Empty;
         }
@@ -107,40 +110,6 @@ internal abstract class OpenXmlPackageBuilder<TPackage> : IPackageBuilder<TPacka
         public T this[int index] => _list[index];
 
         public void Add(T item) => _list = _list.Add(item);
-#else
-        private List<T>? _list;
-        private bool _owned;
-
-        public CopyOnWrite(CopyOnWrite<T>? other = null)
-        {
-            _list = other?._list;
-        }
-
-        public void Add(T item)
-        {
-            EnsureOwnership();
-            _list.Add(item);
-        }
-
-        public int Count => _list?.Count ?? 0;
-
-        public T this[int index] => _list?[index] ?? throw new ArgumentOutOfRangeException(nameof(index));
-
-        [MemberNotNull(nameof(_list))]
-        private void EnsureOwnership()
-        {
-            if (!_owned)
-            {
-                if (_list is not null)
-                {
-                    _list = new(_list);
-                }
-
-                _owned = true;
-            }
-
-            _list ??= new();
-        }
-#endif
     }
+#endif
 }
