@@ -12,7 +12,7 @@ using Xunit;
 
 namespace DocumentFormat.OpenXml.Framework.Tests.Builder;
 
-public class BuilderTests
+public class OpenXmlPackageBuilderTests
 {
     [Fact]
     public void NoConfigureCalls()
