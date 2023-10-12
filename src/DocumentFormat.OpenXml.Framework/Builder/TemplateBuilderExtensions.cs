@@ -37,7 +37,7 @@ internal static class TemplateBuilderExtensions
         private readonly Func<IPackageBuilder<TPackage>, TPackage> _templateFactory;
         private readonly Action<TPackage>? _onLoad;
 
-        private Action<TPackage>? _pipeline;
+        private PackageInitializerDelegate<TPackage>? _pipeline;
 
         public TemplateBuilder(
             IPackageBuilder<TPackage> other,
@@ -52,7 +52,7 @@ internal static class TemplateBuilderExtensions
 
         public IDictionary<string, object?> Properties => _otherBuilder.Properties;
 
-        public Action<TPackage> Build()
+        public PackageInitializerDelegate<TPackage> Build()
         {
             if (_pipeline is null)
             {
@@ -72,7 +72,7 @@ internal static class TemplateBuilderExtensions
 
         public IPackageBuilder<TPackage> Clone() => new TemplateBuilder<TPackage>(_otherBuilder.Clone(), _templateFactory, _onLoad);
 
-        public IPackageBuilder<TPackage> Use(Func<Action<TPackage>, Action<TPackage>> configure)
+        public IPackageBuilder<TPackage> Use(Func<PackageInitializerDelegate<TPackage>, PackageInitializerDelegate<TPackage>> configure)
         {
             _pipeline = null;
             _otherBuilder.Use(configure);

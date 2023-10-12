@@ -16,11 +16,11 @@ internal abstract class OpenXmlPackageBuilder<TPackage> : IPackageBuilder<TPacka
     where TPackage : OpenXmlPackage
 {
     private Dictionary<string, object?>? _properties;
-    private Action<TPackage>? _pipeline;
+    private PackageInitializerDelegate<TPackage>? _pipeline;
 #if NET6_0_OR_GREATER
-    private CopyOnWriteList<Func<Action<TPackage>, Action<TPackage>>>? _middleware;
+    private CopyOnWriteList<Func<PackageInitializerDelegate<TPackage>, PackageInitializerDelegate<TPackage>>>? _middleware;
 #else
-    private List<Func<Action<TPackage>, Action<TPackage>>>? _middleware;
+    private List<Func<PackageInitializerDelegate<TPackage>, PackageInitializerDelegate<TPackage>>>? _middleware;
 #endif
 
     public IDictionary<string, object?> Properties => _properties ??= new();
@@ -43,7 +43,7 @@ internal abstract class OpenXmlPackageBuilder<TPackage> : IPackageBuilder<TPacka
         }
     }
 
-    public IPackageBuilder<TPackage> Use(Func<Action<TPackage>, Action<TPackage>> configure)
+    public IPackageBuilder<TPackage> Use(Func<PackageInitializerDelegate<TPackage>, PackageInitializerDelegate<TPackage>> configure)
     {
         if (_pipeline is not null)
         {
@@ -59,7 +59,7 @@ internal abstract class OpenXmlPackageBuilder<TPackage> : IPackageBuilder<TPacka
 
     public abstract TPackage Create();
 
-    public Action<TPackage> Build()
+    public PackageInitializerDelegate<TPackage> Build()
     {
         if (_pipeline is { })
         {
@@ -67,7 +67,7 @@ internal abstract class OpenXmlPackageBuilder<TPackage> : IPackageBuilder<TPacka
         }
 
         var factory = new Factory(Clone());
-        var pipeline = factory.PipelineTerminator;
+        var pipeline = new PackageInitializerDelegate<TPackage>(factory.PipelineTerminator);
 
         if (_middleware is not null)
         {

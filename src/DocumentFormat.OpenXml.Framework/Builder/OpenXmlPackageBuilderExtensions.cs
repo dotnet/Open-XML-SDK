@@ -50,7 +50,7 @@ internal static class OpenXmlPackageBuilderExtensions
         return package;
     }
 
-    internal static IPackageBuilder<TPackage> Use<TPackage>(this IPackageBuilder<TPackage> builder, Action<TPackage> action)
+    internal static IPackageBuilder<TPackage> Use<TPackage>(this IPackageBuilder<TPackage> builder, PackageInitializerDelegate<TPackage> action)
         where TPackage : OpenXmlPackage
         => builder.Use((package, next) =>
         {
@@ -58,7 +58,7 @@ internal static class OpenXmlPackageBuilderExtensions
             next(package);
         });
 
-    public static IPackageBuilder<TPackage> Use<TPackage>(this IPackageBuilder<TPackage> builder, Action<TPackage, Action<TPackage>> middleware)
+    public static IPackageBuilder<TPackage> Use<TPackage>(this IPackageBuilder<TPackage> builder, Action<TPackage, PackageInitializerDelegate<TPackage>> middleware)
         where TPackage : OpenXmlPackage
         => builder.Use(next => package => middleware(package, next));
 

@@ -7,6 +7,8 @@ using System.Collections.Generic;
 
 namespace DocumentFormat.OpenXml.Builder;
 
+internal delegate void PackageInitializerDelegate<TPackage>(TPackage package);
+
 internal interface IPackageBuilder<TPackage>
     where TPackage : OpenXmlPackage
 {
@@ -26,7 +28,7 @@ internal interface IPackageBuilder<TPackage>
     /// </summary>
     /// <param name="configure">The middleware to add.</param>
     /// <returns>The <see cref="IPackageBuilder{TPackage}"/>.</returns>
-    IPackageBuilder<TPackage> Use(Func<Action<TPackage>, Action<TPackage>> configure);
+    IPackageBuilder<TPackage> Use(Func<PackageInitializerDelegate<TPackage>, PackageInitializerDelegate<TPackage>> configure);
 
     /// <summary>
     /// Create a new <see cref="IPackageBuilder{TPackage}"/>. This will create a copy of the
@@ -40,5 +42,5 @@ internal interface IPackageBuilder<TPackage>
     /// more middleware has been added.
     /// </summary>
     /// <returns>The pipeline to initialize a package.</returns>
-    Action<TPackage> Build();
+    PackageInitializerDelegate<TPackage> Build();
 }
