@@ -13,7 +13,7 @@ using System.Collections.Immutable;
 
 namespace DocumentFormat.OpenXml.Builder;
 
-internal abstract class OpenXmlPackageBuilder<TPackage> : IPackageBuilder<TPackage>
+internal abstract class OpenXmlPackageBuilder<TPackage> : IPackageBuilder<TPackage>, IPackageFactoryFeature<TPackage>
     where TPackage : OpenXmlPackage
 {
     private List<Func<Action<TPackage>, Action<TPackage>>>? _middleware;
@@ -74,8 +74,11 @@ internal abstract class OpenXmlPackageBuilder<TPackage> : IPackageBuilder<TPacka
 
         _isLocked = true;
 
-        var packageFactoryFeature = new PackageFactory(New());
-        var pipeline = packageFactoryFeature.Process;
+        var builder = (OpenXmlPackageBuilder<TPackage>)New();
+        var pipeline = (TPackage package) =>
+        {
+            package.Features.Set<IPackageFactoryFeature<TPackage>>(builder);
+        };
 
         if (_middleware is not null)
         {
@@ -88,23 +91,7 @@ internal abstract class OpenXmlPackageBuilder<TPackage> : IPackageBuilder<TPacka
         _pipeline = pipeline;
     }
 
-    private sealed class PackageFactory : IPackageFactoryFeature<TPackage>
-    {
-        private readonly IPackageBuilder<TPackage> _other;
-
-        public PackageFactory(IPackageBuilder<TPackage> other)
-        {
-            _other = other;
-        }
-
-        public IPackageBuilder<TPackage> Create()
-            => _other.New();
-
-        public void Process(TPackage package)
-        {
-            package.Features.Set<IPackageFactoryFeature<TPackage>>(this);
-        }
-    }
+    IPackageBuilder<TPackage> IPackageFactoryFeature<TPackage>.Create() => New();
 
     private sealed class CopyOnWrite
     {

@@ -7,7 +7,7 @@ using DocumentFormat.OpenXml.Packaging;
 
 namespace DocumentFormat.OpenXml.Benchmarks
 {
-    public class BuilderTests
+    public class BuilderBenchmarks
     {
         private TestBuilder _builder;
 
@@ -49,7 +49,7 @@ namespace DocumentFormat.OpenXml.Benchmarks
         {
             var builder = (TestBuilder)_builder.New();
 
-            return builder.Open();
+            return builder.OpenEmpty();
         }
 
         [Benchmark]
@@ -62,13 +62,13 @@ namespace DocumentFormat.OpenXml.Benchmarks
                 next(package);
             });
 
-            return builder.Open();
+            return builder.OpenEmpty();
         }
 
         [Benchmark]
         public object SubsequentCall()
         {
-            return _builder.Open();
+            return _builder.OpenEmpty();
         }
 
         private class TestBuilder : OpenXmlPackageBuilder<MyPackage>
@@ -82,7 +82,7 @@ namespace DocumentFormat.OpenXml.Benchmarks
 
             public override IPackageBuilder<MyPackage> New() => new TestBuilder(this);
 
-            public OpenXmlPackage Open()
+            public OpenXmlPackage OpenEmpty()
             {
                 var package = Create();
                 Build()(package);
