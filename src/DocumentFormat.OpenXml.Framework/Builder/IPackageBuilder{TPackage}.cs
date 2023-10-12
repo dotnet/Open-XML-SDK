@@ -31,8 +31,7 @@ internal interface IPackageBuilder<TPackage>
     IPackageBuilder<TPackage> Use(Func<PackageInitializerDelegate<TPackage>, PackageInitializerDelegate<TPackage>> configure);
 
     /// <summary>
-    /// Create a new <see cref="IPackageBuilder{TPackage}"/>. This will create a copy of the
-    /// builder that will be independent of the original.
+    /// Create a copy of the builder that will be independent of the original, but retains the existing middleware and properties.
     /// </summary>
     /// <returns>A new <see cref="IPackageBuilder{TPackage}"/>.</returns>
     IPackageBuilder<TPackage> Clone();

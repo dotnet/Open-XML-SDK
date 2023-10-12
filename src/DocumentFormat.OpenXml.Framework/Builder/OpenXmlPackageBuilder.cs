@@ -17,6 +17,7 @@ internal abstract class OpenXmlPackageBuilder<TPackage> : IPackageBuilder<TPacka
 {
     private Dictionary<string, object?>? _properties;
     private PackageInitializerDelegate<TPackage>? _pipeline;
+    private bool _isLocked;
 #if NET6_0_OR_GREATER
     private CopyOnWriteList<Func<PackageInitializerDelegate<TPackage>, PackageInitializerDelegate<TPackage>>>? _middleware;
 #else
@@ -45,11 +46,12 @@ internal abstract class OpenXmlPackageBuilder<TPackage> : IPackageBuilder<TPacka
 
     public IPackageBuilder<TPackage> Use(Func<PackageInitializerDelegate<TPackage>, PackageInitializerDelegate<TPackage>> configure)
     {
-        if (_pipeline is not null)
+        if (_isLocked)
         {
             throw new InvalidOperationException("Middleware cannot be added after pipeline has been built. Call `.New()` to create a copy that can be added to.");
         }
 
+        _pipeline = null;
         (_middleware ??= new()).Add(configure);
 
         return this;
@@ -61,6 +63,8 @@ internal abstract class OpenXmlPackageBuilder<TPackage> : IPackageBuilder<TPacka
 
     public PackageInitializerDelegate<TPackage> Build()
     {
+        _isLocked = true;
+
         if (_pipeline is { })
         {
             return _pipeline;
