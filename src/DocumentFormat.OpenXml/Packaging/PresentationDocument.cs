@@ -25,7 +25,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
         internal static IPackageBuilder<PresentationDocument> CreateBuilder() => new Builder();
 
-        internal static IPackageBuilder<PresentationDocument> CreateDefaultBuilder() => DefaultBuilder.New();
+        internal static IPackageBuilder<PresentationDocument> CreateDefaultBuilder() => DefaultBuilder.Clone();
 
         private sealed class Builder : OpenXmlPackageBuilder<PresentationDocument>
         {
@@ -34,7 +34,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
             }
 
-            public override IPackageBuilder<PresentationDocument> New() => new Builder(this);
+            public override IPackageBuilder<PresentationDocument> Clone() => new Builder(this);
 
             public override PresentationDocument Create() => new();
         }

@@ -45,7 +45,7 @@ internal static class TemplateBuilderExtensions
             Action<TPackage>? onLoad)
         {
             _otherBuilder = other;
-            _templateBuilder = other.New();
+            _templateBuilder = other.Clone();
             _templateFactory = templateFactory;
             _onLoad = onLoad;
         }
@@ -70,7 +70,7 @@ internal static class TemplateBuilderExtensions
 
         public TPackage Create() => _otherBuilder.Create();
 
-        public IPackageBuilder<TPackage> New() => new TemplateBuilder<TPackage>(_otherBuilder.New(), _templateFactory, _onLoad);
+        public IPackageBuilder<TPackage> Clone() => new TemplateBuilder<TPackage>(_otherBuilder.Clone(), _templateFactory, _onLoad);
 
         public IPackageBuilder<TPackage> Use(Func<Action<TPackage>, Action<TPackage>> configure)
         {

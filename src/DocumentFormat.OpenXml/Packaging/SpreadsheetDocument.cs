@@ -25,7 +25,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
         internal static IPackageBuilder<SpreadsheetDocument> CreateBuilder() => new Builder();
 
-        internal static IPackageBuilder<SpreadsheetDocument> CreateDefaultBuilder() => DefaultBuilder.New();
+        internal static IPackageBuilder<SpreadsheetDocument> CreateDefaultBuilder() => DefaultBuilder.Clone();
 
         private sealed class Builder : OpenXmlPackageBuilder<SpreadsheetDocument>
         {
@@ -34,7 +34,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
             }
 
-            public override IPackageBuilder<SpreadsheetDocument> New() => new Builder(this);
+            public override IPackageBuilder<SpreadsheetDocument> Clone() => new Builder(this);
 
             public override SpreadsheetDocument Create() => new();
         }

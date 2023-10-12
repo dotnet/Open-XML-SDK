@@ -26,7 +26,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
         internal static IPackageBuilder<WordprocessingDocument> CreateBuilder() => new Builder();
 
-        internal static IPackageBuilder<WordprocessingDocument> CreateDefaultBuilder() => DefaultBuilder.New();
+        internal static IPackageBuilder<WordprocessingDocument> CreateDefaultBuilder() => DefaultBuilder.Clone();
 
         private sealed class Builder : OpenXmlPackageBuilder<WordprocessingDocument>
         {
@@ -37,7 +37,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             public override WordprocessingDocument Create() => new();
 
-            public override IPackageBuilder<WordprocessingDocument> New() => new Builder(this);
+            public override IPackageBuilder<WordprocessingDocument> Clone() => new Builder(this);
         }
 
         /// <summary>

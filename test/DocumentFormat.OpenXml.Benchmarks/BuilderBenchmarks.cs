@@ -47,7 +47,7 @@ namespace DocumentFormat.OpenXml.Benchmarks
         [Benchmark]
         public object NewBuilder()
         {
-            var builder = (TestBuilder)_builder.New();
+            var builder = (TestBuilder)_builder.Clone();
 
             return builder.OpenEmpty();
         }
@@ -55,7 +55,7 @@ namespace DocumentFormat.OpenXml.Benchmarks
         [Benchmark]
         public object NewBuilderWithPipeline()
         {
-            var builder = (TestBuilder)_builder.New();
+            var builder = (TestBuilder)_builder.Clone();
 
             builder.Use((package, next) =>
             {
@@ -80,7 +80,7 @@ namespace DocumentFormat.OpenXml.Benchmarks
 
             public override MyPackage Create() => new();
 
-            public override IPackageBuilder<MyPackage> New() => new TestBuilder(this);
+            public override IPackageBuilder<MyPackage> Clone() => new TestBuilder(this);
 
             public OpenXmlPackage OpenEmpty()
             {

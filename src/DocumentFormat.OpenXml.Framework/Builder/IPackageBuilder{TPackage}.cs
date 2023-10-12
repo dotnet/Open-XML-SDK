@@ -33,7 +33,7 @@ internal interface IPackageBuilder<TPackage>
     /// builder that will be independent of the original.
     /// </summary>
     /// <returns>A new <see cref="IPackageBuilder{TPackage}"/>.</returns>
-    IPackageBuilder<TPackage> New();
+    IPackageBuilder<TPackage> Clone();
 
     /// <summary>
     /// Builds the pipeline to initialize the package. Additional calls to this will return the cached pipeline unless

@@ -54,7 +54,7 @@ internal abstract class OpenXmlPackageBuilder<TPackage> : IPackageBuilder<TPacka
         return this;
     }
 
-    public abstract IPackageBuilder<TPackage> New();
+    public abstract IPackageBuilder<TPackage> Clone();
 
     public abstract TPackage Create();
 
@@ -74,7 +74,7 @@ internal abstract class OpenXmlPackageBuilder<TPackage> : IPackageBuilder<TPacka
 
         _isLocked = true;
 
-        var builder = (OpenXmlPackageBuilder<TPackage>)New();
+        var builder = (OpenXmlPackageBuilder<TPackage>)Clone();
         var pipeline = (TPackage package) =>
         {
             package.Features.Set<IPackageFactoryFeature<TPackage>>(builder);
@@ -91,7 +91,7 @@ internal abstract class OpenXmlPackageBuilder<TPackage> : IPackageBuilder<TPacka
         _pipeline = pipeline;
     }
 
-    IPackageBuilder<TPackage> IPackageFactoryFeature<TPackage>.Create() => New();
+    IPackageBuilder<TPackage> IPackageFactoryFeature<TPackage>.Create() => Clone();
 
     private sealed class CopyOnWrite
     {

@@ -105,7 +105,7 @@ public class OpenXmlPackageBuilderTests
                 Add(package, 4);
             });
 
-        var builder2 = builder1.New()
+        var builder2 = builder1.Clone()
             .Use((package, next) =>
             {
                 Add(package, 5);
@@ -167,7 +167,7 @@ public class OpenXmlPackageBuilderTests
                 Add(package, 4);
             });
 
-        var builder2 = builder1.New()
+        var builder2 = builder1.Clone()
             .Use((package, next) =>
             {
                 Add(package, 5);
@@ -210,7 +210,7 @@ public class OpenXmlPackageBuilderTests
                 Add(package, 4);
             });
 
-        var builder2 = builder1.New()
+        var builder2 = builder1.Clone()
             .Use((package, next) =>
             {
                 Add(package, 5);
@@ -218,7 +218,7 @@ public class OpenXmlPackageBuilderTests
                 Add(package, 6);
             });
 
-        var builder3 = builder1.New()
+        var builder3 = builder1.Clone()
             .Use((package, next) =>
             {
                 Add(package, 7);
@@ -254,7 +254,7 @@ public class OpenXmlPackageBuilderTests
         {
         }
 
-        public override IPackageBuilder<TestPackage> New() => new Builder(this);
+        public override IPackageBuilder<TestPackage> Clone() => new Builder(this);
 
         public override TestPackage Create() => new();
     }
