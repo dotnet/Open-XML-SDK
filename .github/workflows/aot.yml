@@ -20,8 +20,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-dotnet@v1
+      - uses: actions/checkout@v3
+      - uses: actions/setup-dotnet@v3
       - name: SunburstChartExample
         run: dotnet publish samples/SunburstChartExample/ -f net7.0 /p:SummaryOutDir=$GITHUB_WORKSPACE/summary
       - name: LinqSvgExample
