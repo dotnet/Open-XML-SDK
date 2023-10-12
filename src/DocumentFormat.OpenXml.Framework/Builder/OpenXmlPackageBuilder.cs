@@ -16,9 +16,8 @@ namespace DocumentFormat.OpenXml.Builder;
 internal abstract class OpenXmlPackageBuilder<TPackage> : IPackageBuilder<TPackage>
     where TPackage : OpenXmlPackage
 {
-    private List<Func<Action<TPackage>, Action<TPackage>>>? _middleware;
+    private CopyOnWrite<Func<Action<TPackage>, Action<TPackage>>>? _middleware;
     private Dictionary<string, object?>? _properties;
-    private bool _isLocked;
     private Action<TPackage>? _pipeline;
 
     public IDictionary<string, object?> Properties => _properties ??= new();
@@ -43,12 +42,11 @@ internal abstract class OpenXmlPackageBuilder<TPackage> : IPackageBuilder<TPacka
 
     public IPackageBuilder<TPackage> Use(Func<Action<TPackage>, Action<TPackage>> configure)
     {
-        if (_isLocked)
+        if (_pipeline is not null)
         {
             throw new InvalidOperationException("Middleware cannot be added after pipeline has been built. Call `.New()` to create a copy that can be added to.");
         }
 
-        _pipeline = null;
         (_middleware ??= new()).Add(configure);
 
         return this;
@@ -60,19 +58,10 @@ internal abstract class OpenXmlPackageBuilder<TPackage> : IPackageBuilder<TPacka
 
     public Action<TPackage> Build()
     {
-        BuildPipeline();
-        return _pipeline;
-    }
-
-    [MemberNotNull(nameof(_pipeline))]
-    internal void BuildPipeline()
-    {
         if (_pipeline is { })
         {
-            return;
+            return _pipeline;
         }
-
-        _isLocked = true;
 
         var factory = new Factory(Clone());
         var pipeline = factory.PipelineTerminator;
@@ -85,7 +74,7 @@ internal abstract class OpenXmlPackageBuilder<TPackage> : IPackageBuilder<TPacka
             }
         }
 
-        _pipeline = pipeline;
+        return _pipeline = pipeline;
     }
 
     private sealed class Factory : IPackageFactoryFeature<TPackage>
@@ -102,64 +91,56 @@ internal abstract class OpenXmlPackageBuilder<TPackage> : IPackageBuilder<TPacka
         }
     }
 
-    private sealed class CopyOnWrite
+    private sealed class CopyOnWrite<T>
+        where T : class
     {
 #if NET6_0_OR_GREATER
-        private ImmutableList<IPackageInitializer> _list;
+        private ImmutableList<T> _list;
 
-        public CopyOnWrite(CopyOnWrite? other = null)
+        public CopyOnWrite(CopyOnWrite<T>? other = null)
         {
-            if (other is not null)
-            {
-                _list = other._list;
-            }
-            else
-            {
-                _list = ImmutableList<IPackageInitializer>.Empty;
-            }
+            _list = other is not null ? other._list : ImmutableList<T>.Empty;
         }
 
-        public void Add(IPackageInitializer package)
-        {
-            _list = _list.Add(package);
-        }
+        public int Count => _list.Count;
 
-        public ImmutableList<IPackageInitializer>.Enumerator GetEnumerator() => _list.GetEnumerator();
+        public T this[int index] => _list[index];
+
+        public void Add(T item) => _list = _list.Add(item);
 #else
-        private List<IPackageInitializer>? _list;
+        private List<T>? _list;
         private bool _owned;
 
-        public CopyOnWrite(CopyOnWrite? other = null)
+        public CopyOnWrite(CopyOnWrite<T>? other = null)
         {
             _list = other?._list;
         }
 
-        public void Add(IPackageInitializer package)
+        public void Add(T item)
         {
             EnsureOwnership();
-            _list.Add(package);
+            _list.Add(item);
         }
+
+        public int Count => _list?.Count ?? 0;
+
+        public T this[int index] => _list?[index] ?? throw new ArgumentOutOfRangeException(nameof(index));
 
         [MemberNotNull(nameof(_list))]
         private void EnsureOwnership()
         {
             if (!_owned)
             {
-                _owned = true;
-
                 if (_list is not null)
                 {
                     _list = new(_list);
                 }
+
+                _owned = true;
             }
 
-            if (_list is null)
-            {
-                _list = new();
-            }
+            _list ??= new();
         }
-
-        public List<IPackageInitializer>.Enumerator GetEnumerator() => _list?.GetEnumerator() ?? default;
 #endif
     }
 }
