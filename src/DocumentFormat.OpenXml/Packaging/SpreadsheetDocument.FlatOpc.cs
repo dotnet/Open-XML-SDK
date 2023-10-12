@@ -2,6 +2,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Builder;
+using DocumentFormat.OpenXml.Features;
 using System.IO;
 using System.IO.Packaging;
 using System.Xml.Linq;
@@ -31,8 +32,8 @@ public partial class SpreadsheetDocument
     /// <returns>A new instance of SpreadsheetDocument.</returns>
     public static SpreadsheetDocument FromFlatOpcDocument(XDocument document, Stream stream, bool isEditable)
         => CreateDefaultBuilder()
-            .UseFlatOpcTemplate(document)
-            .Open(stream, isEditable);
+            .UseFlatOpcTemplate(document, isEditable)
+            .Open(stream, PackageOpenMode.Create);
 
     /// <summary>
     /// Creates a new instance of SpreadsheetDocument from a workbook
@@ -44,8 +45,8 @@ public partial class SpreadsheetDocument
     /// <returns>A new instance of SpreadsheetDocument.</returns>
     public static SpreadsheetDocument FromFlatOpcDocument(XDocument document, string path, bool isEditable)
         => CreateDefaultBuilder()
-            .UseFlatOpcTemplate(document)
-            .Open(path, isEditable);
+            .UseFlatOpcTemplate(document, isEditable)
+            .Open(path, PackageOpenMode.Create);
 
     /// <summary>
     /// Creates a new instance of SpreadsheetDocument from a workbook
@@ -81,8 +82,8 @@ public partial class SpreadsheetDocument
     /// <returns>A new instance of SpreadsheetDocument.</returns>
     public static SpreadsheetDocument FromFlatOpcString(string text, Stream stream, bool isEditable)
         => CreateDefaultBuilder()
-            .UseFlatOpcTemplate(text)
-            .Open(stream, isEditable);
+            .UseFlatOpcTemplate(text, isEditable)
+            .Open(stream, PackageOpenMode.Create);
 
     /// <summary>
     /// Creates a new instance of SpreadsheetDocument from a string
@@ -94,8 +95,8 @@ public partial class SpreadsheetDocument
     /// <returns>A new instance of SpreadsheetDocument.</returns>
     public static SpreadsheetDocument FromFlatOpcString(string text, string path, bool isEditable)
         => CreateDefaultBuilder()
-            .UseFlatOpcTemplate(text)
-            .Open(path, isEditable);
+            .UseFlatOpcTemplate(text, isEditable)
+            .Open(path, PackageOpenMode.Create);
 
     /// <summary>
     /// Creates a new instance of SpreadsheetDocument from a string
