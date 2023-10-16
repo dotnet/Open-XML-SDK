@@ -6,10 +6,6 @@ using DocumentFormat.OpenXml.Packaging;
 using System;
 using System.Collections.Generic;
 
-#if NET6_0_OR_GREATER
-using System.Collections.Immutable;
-#endif
-
 namespace DocumentFormat.OpenXml.Builder;
 
 internal abstract class OpenXmlPackageBuilder<TPackage> : IPackageBuilder<TPackage>
@@ -18,11 +14,7 @@ internal abstract class OpenXmlPackageBuilder<TPackage> : IPackageBuilder<TPacka
     private Dictionary<string, object?>? _properties;
     private PackageInitializerDelegate<TPackage>? _pipeline;
     private bool _isLocked;
-#if NET6_0_OR_GREATER
-    private CopyOnWriteList<Func<PackageInitializerDelegate<TPackage>, PackageInitializerDelegate<TPackage>>>? _middleware;
-#else
     private List<Func<PackageInitializerDelegate<TPackage>, PackageInitializerDelegate<TPackage>>>? _middleware;
-#endif
 
     public IDictionary<string, object?> Properties => _properties ??= new();
 
@@ -97,23 +89,4 @@ internal abstract class OpenXmlPackageBuilder<TPackage> : IPackageBuilder<TPacka
             package.Features.Set<IPackageFactoryFeature<TPackage>>(this);
         }
     }
-
-#if NET6_0_OR_GREATER
-    private sealed class CopyOnWriteList<T>
-        where T : class
-    {
-        private ImmutableList<T> _list;
-
-        public CopyOnWriteList(CopyOnWriteList<T>? other = null)
-        {
-            _list = other is not null ? other._list : ImmutableList<T>.Empty;
-        }
-
-        public int Count => _list.Count;
-
-        public T this[int index] => _list[index];
-
-        public void Add(T item) => _list = _list.Add(item);
-    }
-#endif
 }
