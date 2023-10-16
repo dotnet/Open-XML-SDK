@@ -43,6 +43,7 @@ internal abstract class OpenXmlPackageBuilder<TPackage> : IPackageBuilder<TPacka
             throw new InvalidOperationException("Middleware cannot be added after pipeline has been built. Call `.New()` to create a copy that can be added to.");
         }
 
+        // Any potentially stored pipeline from previous builders are no longer valid as we have added a new middleware
         _pipeline = null;
         (_middleware ??= new()).Add(configure);
 
