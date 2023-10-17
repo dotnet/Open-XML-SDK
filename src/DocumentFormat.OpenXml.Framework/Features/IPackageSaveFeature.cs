@@ -3,7 +3,7 @@
 
 namespace DocumentFormat.OpenXml.Features;
 
-internal interface ILockFeature
+internal interface IPackageSaveFeature
 {
-    object SyncLock { get; }
+    void Save();
 }

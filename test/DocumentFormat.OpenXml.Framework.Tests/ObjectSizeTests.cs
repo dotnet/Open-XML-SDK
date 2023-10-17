@@ -25,7 +25,7 @@ public class ObjectSizeTests
     [InlineData(typeof(TestOpenXmlElement), 64, 80, 0, 6)]
     [InlineData(typeof(TestOpenXmlElement.FeatureCollection), 24, 40, 0, 3)]
     [InlineData(typeof(TestOpenXmlPackage), 24, 40, 3, 5)]
-    [InlineData(typeof(TestOpenXmlPackage.FeatureCollection), 96, 112, 0, 11)]
+    [InlineData(typeof(TestOpenXmlPackage.FeatureCollection), 88, 104, 0, 10)]
     [InlineData(typeof(TestOpenXmlPart), 32, 48, 7, 5)]
     [InlineData(typeof(TestOpenXmlPart.FeatureCollection), 48, 64, 0, 5)]
     [InlineData(typeof(TestOpenXmlPartContainer), 8, 24, 0, 1)]

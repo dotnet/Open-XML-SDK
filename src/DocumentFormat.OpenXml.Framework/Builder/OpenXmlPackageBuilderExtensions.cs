@@ -71,6 +71,8 @@ internal static class OpenXmlPackageBuilderExtensions
     {
         builder.Use((package, next) =>
         {
+            package.UseCloning();
+            package.Features.Set<IPackageSaveFeature>(new DefaultSaveFeature(package));
             package.UseTransitionalRelationshipNamespaces();
             package.IgnoreRelationship("http://schemas.microsoft.com/office/2006/relationships/recovered");
 
@@ -91,6 +93,8 @@ internal static class OpenXmlPackageBuilderExtensions
                 // Before v3.0, all parts were eagerly loaded
                 package.LoadAllParts();
             }
+
+            package.UseLocking();
         });
 
         // Eagerly build
@@ -106,6 +110,22 @@ internal static class OpenXmlPackageBuilderExtensions
              !settings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions.Any())
         {
             throw new ArgumentException(ExceptionMessages.InvalidMCMode);
+        }
+    }
+
+    private sealed class DefaultSaveFeature : IPackageSaveFeature
+    {
+        private readonly OpenXmlPackage _package;
+
+        public DefaultSaveFeature(OpenXmlPackage package)
+        {
+            _package = package;
+        }
+
+        public void Save()
+        {
+            _package.SavePartContents(true);
+            _package.Features.GetRequired<IPackageFeature>().Package.Save();
         }
     }
 }

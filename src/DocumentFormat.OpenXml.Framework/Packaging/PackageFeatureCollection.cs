@@ -18,8 +18,7 @@ internal partial class PackageFeatureCollection :
     IContainerDisposableFeature,
     ISaveFeature,
     IDataPartsFeature,
-    IPartsFeature,
-    ILockFeature
+    IPartsFeature
 {
     private Action<OpenXmlPartContainer>? _save;
     private Action? _disposable;
@@ -101,8 +100,6 @@ internal partial class PackageFeatureCollection :
     IEnumerable<DataPart> IDataPartsFeature.Parts => _dataParts ?? Enumerable.Empty<DataPart>();
 
     int IDataPartsFeature.Count => _dataParts?.Count ?? 0;
-
-    object ILockFeature.SyncLock { get; } = new();
 
     void IDataPartsFeature.Add(DataPart dataPart)
         => (_dataParts ??= new()).AddLast(dataPart);

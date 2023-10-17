@@ -328,7 +328,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         public bool AutoSave => OpenSettings.AutoSave;
 
-        private void SavePartContents(bool save)
+        internal void SavePartContents(bool save)
         {
             if (Features.Get<IPackageFeature>() is { Package: { } package })
             {
@@ -602,11 +602,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             if (Features.Get<IPackageFeature>() is { Package: { FileOpenAccess: FileAccess.ReadWrite } package })
             {
-                lock (Features.GetRequired<ILockFeature>().SyncLock)
-                {
-                    SavePartContents(true);
-                    package.Save();
-                }
+                Features.GetRequired<IPackageSaveFeature>().Save();
             }
         }
 
