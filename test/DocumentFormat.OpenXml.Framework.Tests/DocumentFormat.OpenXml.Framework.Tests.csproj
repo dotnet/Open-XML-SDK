@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>$(TestTargetFrameworks)</TargetFrameworks>
+    <TargetFrameworks>net452;net462;net6.0;net7.0</TargetFrameworks>
     <IsTestProject>true</IsTestProject>
     <IsPackable>false</IsPackable>
   </PropertyGroup>
@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Condition=" '$(SupportsNetStandard)' == 'true' " Include="ObjectLayoutInspector" />
+    <PackageReference Condition=" '$(TargetFramework)' != 'net452' " Include="ObjectLayoutInspector" />
   </ItemGroup>
 
   <ItemGroup>

@@ -3,7 +3,7 @@
   <PropertyGroup>
     <IsShipped>true</IsShipped>
     <IncludeFrameworkShims>true</IncludeFrameworkShims>
-    <TargetFrameworks>$(ProductTargetFrameworks)</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0;net35;net40</TargetFrameworks>
   </PropertyGroup>
 
   <PropertyGroup>

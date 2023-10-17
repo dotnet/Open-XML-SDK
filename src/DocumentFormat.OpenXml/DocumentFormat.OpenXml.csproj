@@ -6,7 +6,7 @@
 
     <!-- For now, we have internal access to the framework assembly. That should be removed, and then we'll need to turn this on. -->
     <IncludeFrameworkShims>false</IncludeFrameworkShims>
-    <TargetFrameworks>$(ProductTargetFrameworks)</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0;net35;net40</TargetFrameworks>
   </PropertyGroup>
 
   <PropertyGroup>

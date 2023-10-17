@@ -25,6 +25,4 @@ This repository can be built on Windows, Linux, and OSX.
 
 Building, testing, and packing this repository can be done by using the standard dotnet CLI commands (e.g. `dotnet build`, `dotnet test`, `dotnet pack`, etc.).
 
-Since there are a number of targets for the project, and loading all at once may cause slow performance in Visual Studio, the target framework can be controlled by an environment variable. This is controlled in [Directory.Build.props](./Directory.Build.props) via the environment variable `ProjectLoadStyle`. This changes over time, but that file will contain what the available load configurations are. By default, this will try to default to the current LTS version of .NET Core, but allows development against previous targets if needed. This is helpful, for instance, if you don't have the latest .NET installed.  The continuous integration system sets `ProjectLoadStyle=All` to build for all targets.
-
 [VisualStudio]: https://docs.microsoft.com/dotnet/core/install/sdk?pivots=os-windows#install-with-visual-studio

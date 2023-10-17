@@ -2,7 +2,6 @@
 
 	<PropertyGroup>
 		<OutputType>Exe</OutputType>
-		<TargetFrameworks>$(SamplesFrameworks)</TargetFrameworks>
 	</PropertyGroup>
 
 	<ItemGroup>
