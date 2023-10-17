@@ -16,11 +16,9 @@ internal partial class PackageFeatureCollection :
     IApplicationTypeFeature,
     IDisposableFeature,
     IContainerDisposableFeature,
-    ISaveFeature,
     IDataPartsFeature,
     IPartsFeature
 {
-    private Action<OpenXmlPartContainer>? _save;
     private Action? _disposable;
     private LinkedList<DataPart>? _dataParts;
     private Dictionary<Uri, OpenXmlPart>? _parts;
@@ -72,12 +70,6 @@ internal partial class PackageFeatureCollection :
         _disposable?.Invoke();
         _disposable = null;
     }
-
-    void ISaveFeature.Save(OpenXmlPartContainer container)
-        => _save?.Invoke(container);
-
-    void ISaveFeature.Register(Action<OpenXmlPartContainer> container)
-        => _save += container;
 
     bool IDataPartsFeature.TryGetDataPart(Uri uri, [MaybeNullWhen(false)] out DataPart dataPart)
     {

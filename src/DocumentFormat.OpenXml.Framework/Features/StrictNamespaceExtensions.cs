@@ -15,10 +15,11 @@ internal static class StrictNamespaceExtensions
     {
         var resolver = package.Features.GetNamespaceResolver();
 
-        var foundFeature = new StrictNamespaceFeature(package);
+        var foundFeature = new StrictNamespaceFeature(package, package.Features.GetRequired<IPackageSaveFeature>());
         var alteredRelationships = new Dictionary<Uri, List<PackageRelationshipBuilder>>();
 
         package.Features.Set<IStrictNamespaceFeature>(foundFeature);
+        package.Features.Set<IPackageSaveFeature>(foundFeature);
 
         var relationshipFeature = package.Features.GetRequired<IRelationshipFilterFeature>();
         relationshipFeature.AddFilter(r =>
@@ -42,50 +43,68 @@ internal static class StrictNamespaceExtensions
 
         if (save)
         {
-            package.Features.GetRequired<ISaveFeature>().Register(container =>
-            {
-                if (alteredRelationships.Count == 0)
-                {
-                    return;
-                }
-
-                if (container is OpenXmlPackage package)
-                {
-                    if (alteredRelationships.TryGetValue(OpenXmlPackage.Uri, out var list))
-                    {
-                        foreach (var toReplace in list)
-                        {
-                            package.Relationships.Remove(toReplace.Id);
-                            package.Relationships.Create(toReplace.TargetUri, toReplace.TargetMode, toReplace.RelationshipType, toReplace.Id);
-                        }
-
-                        alteredRelationships.Remove(OpenXmlPackage.Uri);
-                    }
-                }
-                else if (container is OpenXmlPart part)
-                {
-                    if (alteredRelationships.TryGetValue(part.Uri, out var list))
-                    {
-                        foreach (var toReplace in list)
-                        {
-                            part.Relationships.Remove(toReplace.Id);
-                            part.Relationships.Create(toReplace.TargetUri, toReplace.TargetMode, toReplace.RelationshipType, toReplace.Id);
-                        }
-
-                        alteredRelationships.Remove(part.Uri);
-                    }
-                }
-            });
+            package.Features.Set<IPackageSaveFeature>(new UpdateStrictNamespaceFeature(package, foundFeature, alteredRelationships));
         }
     }
 
-    private sealed class StrictNamespaceFeature : IStrictNamespaceFeature
+    private sealed class UpdateStrictNamespaceFeature : IPackageSaveFeature
     {
-        private OpenXmlPackage? _package;
+        private readonly OpenXmlPackage _package;
+        private readonly IPackageSaveFeature _other;
+        private readonly Dictionary<Uri, List<PackageRelationshipBuilder>> alteredRelationships;
 
-        public StrictNamespaceFeature(OpenXmlPackage package)
+        public UpdateStrictNamespaceFeature(OpenXmlPackage package, IPackageSaveFeature other, Dictionary<Uri, List<PackageRelationshipBuilder>> relationships)
         {
             _package = package;
+            _other = other;
+            alteredRelationships = relationships;
+        }
+
+        public bool ShouldSave => _other.ShouldSave;
+
+        public void Save()
+        {
+            if (alteredRelationships.TryGetValue(OpenXmlPackage.Uri, out var list))
+            {
+                foreach (var toReplace in list)
+                {
+                    _package.Relationships.Remove(toReplace.Id);
+                    _package.Relationships.Create(toReplace.TargetUri, toReplace.TargetMode, toReplace.RelationshipType, toReplace.Id);
+                }
+
+                alteredRelationships.Remove(OpenXmlPackage.Uri);
+            }
+
+            _other.Save();
+        }
+
+        public void Save(OpenXmlPart part)
+        {
+            if (alteredRelationships.TryGetValue(part.Uri, out var list))
+            {
+                foreach (var toReplace in list)
+                {
+                    part.Relationships.Remove(toReplace.Id);
+                    part.Relationships.Create(toReplace.TargetUri, toReplace.TargetMode, toReplace.RelationshipType, toReplace.Id);
+                }
+
+                alteredRelationships.Remove(part.Uri);
+            }
+
+            _other.Save(part);
+        }
+    }
+
+    private sealed class StrictNamespaceFeature : IStrictNamespaceFeature, IPackageSaveFeature
+    {
+        private readonly IPackageSaveFeature _otherSave;
+
+        private OpenXmlPackage? _package;
+
+        public StrictNamespaceFeature(OpenXmlPackage package, IPackageSaveFeature otherSave)
+        {
+            _package = package;
+            _otherSave = otherSave;
         }
 
         bool IStrictNamespaceFeature.Found
@@ -103,5 +122,33 @@ internal static class StrictNamespaceExtensions
         }
 
         public bool Found { get; set; }
+
+        bool IPackageSaveFeature.ShouldSave => _otherSave.ShouldSave;
+
+        void IPackageSaveFeature.Save()
+        {
+            if (!Found)
+            {
+                return;
+            }
+
+            _otherSave.Save();
+        }
+
+        void IPackageSaveFeature.Save(OpenXmlPart part)
+        {
+            if (Found)
+            {
+                // For ISO Strict documents, we read and save the part anyway to translate the contents. The contents are translated when PartRootElement is being loaded.
+                if (part.PartRootElement is not null)
+                {
+                    part.PartRootElement.Save();
+                }
+            }
+            else
+            {
+                _otherSave.Save(part);
+            }
+        }
     }
 }

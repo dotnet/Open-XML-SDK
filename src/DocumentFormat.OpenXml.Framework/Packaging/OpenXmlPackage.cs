@@ -278,8 +278,6 @@ namespace DocumentFormat.OpenXml.Packaging
 
                 closing?.OnChange(this, EventType.Closing);
 
-                // Try to save contents of every part in the package
-                SavePartContents(AutoSave);
                 DeleteUnusedDataPartOnClose();
 
                 Features.Get<IContainerDisposableFeature>()?.Dispose();
@@ -327,73 +325,6 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets a value indicating whether the parts should be saved when disposed.
         /// </summary>
         public bool AutoSave => OpenSettings.AutoSave;
-
-        internal void SavePartContents(bool save)
-        {
-            if (Features.Get<IPackageFeature>() is { Package: { } package })
-            {
-                if (package.FileOpenAccess == FileAccess.Read)
-                {
-                    return; // do nothing if the package is open in read-only mode.
-                }
-
-                // When this.StrictRelationshipFound is true, we ignore the save argument to do the translation if isAnyPartChanged is true. That's the way to keep consistency.
-                if (!save && !StrictRelationshipFound)
-                {
-                    return; // do nothing if saving is false.
-                }
-
-                var saveFeature = Features.Get<ISaveFeature>();
-
-                saveFeature?.Save(this);
-
-                foreach (var part in this.GetAllParts())
-                {
-                    saveFeature?.Save(part);
-
-                    TrySavePartContent(part);
-                }
-            }
-        }
-
-        // Check if the part content changed and save it if yes.
-        private static void TrySavePartContent(OpenXmlPart part)
-        {
-            // If StrictRelationshipFound is true, we need to update the part anyway.
-            if (part.OpenXmlPackage.StrictRelationshipFound)
-            {
-                // For ISO Strict documents, we read and save the part anyway to translate the contents. The contents are translated when PartRootElement is being loaded.
-                if (part.PartRootElement is not null)
-                {
-                    part.PartRootElement.Save();
-                }
-            }
-            else
-            {
-                // For Transitional documents, we only save the 'changed' part.
-                if (IsPartContentChanged(part) && part.PartRootElement is not null)
-                {
-                    part.PartRootElement.Save();
-                }
-            }
-        }
-
-        // Check if the content of a part is changed.
-        private static bool IsPartContentChanged(OpenXmlPart part)
-        {
-            // If the root element of the part is loaded,
-            // consider the part changed and should be saved.
-            if (!part.IsRootElementLoaded &&
-                part.OpenXmlPackage.MarkupCompatibilityProcessSettings.ProcessMode == MarkupCompatibilityProcessMode.ProcessAllParts)
-            {
-                if (part.PartRootElement is not null)
-                {
-                    return true;
-                }
-            }
-
-            return part.IsRootElementLoaded;
-        }
 
         #endregion
 
@@ -600,10 +531,24 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             ThrowIfObjectDisposed();
 
-            if (Features.Get<IPackageFeature>() is { Package: { FileOpenAccess: FileAccess.ReadWrite } package })
+            if (Features.Get<IPackageFeature>() is { Package.FileOpenAccess: FileAccess.Read })
             {
-                Features.GetRequired<IPackageSaveFeature>().Save();
+                return;
             }
+
+            var saveFeature = Features.GetRequired<IPackageSaveFeature>();
+
+            if (!saveFeature.ShouldSave)
+            {
+                return;
+            }
+
+            foreach (var part in this.GetAllParts())
+            {
+                saveFeature.Save(part);
+            }
+
+            saveFeature.Save();
         }
 
         /// <inheritdoc/>

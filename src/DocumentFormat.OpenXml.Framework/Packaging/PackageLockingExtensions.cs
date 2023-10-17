@@ -54,11 +54,21 @@ internal static class PackageLockingExtensions
             }
         }
 
+        bool IPackageSaveFeature.ShouldSave => _save.ShouldSave;
+
         void IPackageSaveFeature.Save()
         {
             lock (_syncLock)
             {
                 _save.Save();
+            }
+        }
+
+        void IPackageSaveFeature.Save(OpenXmlPart part)
+        {
+            lock (_syncLock)
+            {
+                _save.Save(part);
             }
         }
     }
