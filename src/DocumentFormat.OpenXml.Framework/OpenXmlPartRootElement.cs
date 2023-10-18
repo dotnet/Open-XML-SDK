@@ -19,6 +19,7 @@ namespace DocumentFormat.OpenXml
     {
         private OpenXmlElementContext? _context;
         private bool? _standaloneDeclaration;
+        private OpenXmlPart? _openXmlPart;
 
         /// <summary>
         /// Initializes a new instance of the OpenXmlPartRootElement class.
@@ -238,7 +239,7 @@ namespace DocumentFormat.OpenXml
         /// Gets or sets the part that is associated with the DOM tree.
         /// It returns null when the DOM tree is not associated with a part.
         /// </summary>
-        internal OpenXmlPart? OpenXmlPart { get; set; }
+        public OpenXmlPart? OpenXmlPart { get; internal set; }
 
         /// <summary>
         /// Saves the data in the DOM tree back to the part. This method can
