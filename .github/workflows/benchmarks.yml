@@ -1,0 +1,36 @@
+name: Benchmarks
+
+on:
+  push:
+    branches: [ main, release/* ]
+  pull_request:
+    # The branches below must be a subset of the branches above
+    branches: [ main ]
+
+permissions:
+  contents: write
+  deployments: write
+
+jobs:
+  benchmark:
+    name: Run
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-dotnet@v3
+      - name: Build benchmarks
+        run: cd test/DocumentFormat.OpenXml.Benchmarks; dotnet build -c RELEASE
+        shell: pwsh
+      - name: Run benchmarks
+        run: cd test/DocumentFormat.OpenXml.Benchmarks; dotnet run -c RELEASE -f net7.0
+        shell: pwsh
+      - name: Write summary
+        shell: pwsh
+        run: |
+          $files = gci test/DocumentFormat.OpenXml.Benchmarks/BenchmarkDotNet.Artifacts/results/*-report-github.md
+
+          foreach ($file in $files){
+            $name = $file.Name.Replace("-report-github.md", "").Replace("DocumentFormat.OpenXml.Benchmarks.", "")
+            "## $name" >> $env:GITHUB_STEP_SUMMARY
+            gc $file >> $env:GITHUB_STEP_SUMMARY
+          }
