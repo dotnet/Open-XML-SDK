@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Builder;
 using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Framework;
 using System;
@@ -161,109 +162,42 @@ public static class FlatOpcExtensions
                 sb => sb.ToString());
     }
 
-    /// <summary>
-    /// Loads a FlatOpc document into a package
-    /// </summary>
-    /// <param name="package">Package to load into.</param>
-    /// <param name="document">Document to load.</param>
-    /// <exception cref="InvalidOperationException">Exception thrown if package is not empty.</exception>
-    private static TPackage LoadFlatOpc<TPackage>(this TPackage package, XDocument document)
+    internal static IPackageBuilder<TPackage> UseFlatOpcTemplate<TPackage>(this IPackageBuilder<TPackage> builder, string text, bool? isEditable = default)
         where TPackage : OpenXmlPackage
-    {
-        var p = package.Features.GetRequired<IPackageFeature>().Package;
+        => builder.UseFlatOpcTemplate(XDocument.Parse(text), isEditable);
 
-        if (p.GetParts().Any())
+    internal static IPackageBuilder<TPackage> UseFlatOpcTemplate<TPackage>(this IPackageBuilder<TPackage> builder, XDocument document, bool? isEditable = default)
+        where TPackage : OpenXmlPackage
+        => builder.Use((package, next) =>
         {
-            throw new InvalidOperationException("FlatOpc must be loaded into an empty package");
-        }
+            var p = package.Features.GetRequired<IPackageFeature>().Package;
 
-        if (document.Root is not null)
-        {
-            // Add package parts and relationships.
-            AddPackageParts(document.Root, p);
-            AddPackageRelationships(document.Root, p);
-        }
+            if (p.GetParts().Any())
+            {
+                throw new InvalidOperationException("FlatOpc must be loaded into an empty package");
+            }
+
+            if (document.Root is not null)
+            {
+                // Add package parts and relationships.
+                AddPackageParts(document.Root, p);
+                AddPackageRelationships(document.Root, p);
+            }
 
 #if NETFRAMEWORK
-        if (package.CanSave)
-        {
-            package.Save();
-        }
+            if (package.CanSave)
+            {
+                package.Save();
+            }
 #endif
 
-        return package;
-    }
+            if (isEditable.HasValue)
+            {
+                package.Reload(isEditable);
+            }
 
-    internal static TPackage LoadFlatOpcInternal<TPackage>(this TPackage package, XDocument document, Stream stream, bool isEditable)
-        where TPackage : OpenXmlPackage
-    {
-        if (document is null)
-        {
-            throw new ArgumentNullException(nameof(document));
-        }
-
-        if (stream is null)
-        {
-            throw new ArgumentNullException(nameof(stream));
-        }
-
-        return package
-            .WithStorage(stream, PackageOpenMode.Create)
-            .LoadFlatOpc(document)
-            .Reload(isEditable)
-            .UseDefaultBehavior();
-    }
-
-    internal static TPackage LoadFlatOpcStringInternal<TPackage>(this TPackage package, string text, Stream? stream = null, bool isEditable = true)
-        where TPackage : OpenXmlPackage
-            => package.LoadFlatOpcInternal(XDocument.Parse(text), stream ?? new MemoryStream(), isEditable);
-
-    internal static TPackage LoadFlatOpcStringInternal<TPackage>(this TPackage package, string text, string path, bool isEditable = true)
-        where TPackage : OpenXmlPackage
-        => package.LoadFlatOpcInternal(XDocument.Parse(text), path, isEditable);
-
-    internal static TPackage LoadFlatOpcStringInternal<TPackage>(this TPackage package, string text, Package p)
-        where TPackage : OpenXmlPackage
-        => package.LoadFlatOpcInternal(XDocument.Parse(text), p);
-
-    internal static TPackage LoadFlatOpcInternal<TPackage>(this TPackage package, XDocument document, string path, bool isEditable)
-        where TPackage : OpenXmlPackage
-    {
-        if (document is null)
-        {
-            throw new ArgumentNullException(nameof(document));
-        }
-
-        if (path is null)
-        {
-            throw new ArgumentNullException(nameof(path));
-        }
-
-        return package
-            .WithStorage(path, PackageOpenMode.Create)
-            .LoadFlatOpc(document)
-            .Reload(isEditable)
-            .UseDefaultBehavior();
-    }
-
-    internal static TPackage LoadFlatOpcInternal<TPackage>(this TPackage package, XDocument document, Package p)
-        where TPackage : OpenXmlPackage
-    {
-        if (document is null)
-        {
-            throw new ArgumentNullException(nameof(document));
-        }
-
-        if (p is null)
-        {
-            throw new ArgumentNullException(nameof(p));
-        }
-
-        return package
-            .WithStorage(p)
-            .LoadFlatOpc(document)
-            .UseDefaultBehavior();
-    }
+            next(package);
+        });
 
     private static void AddPackageParts(XElement flatOpcPackage, IPackage package)
     {
