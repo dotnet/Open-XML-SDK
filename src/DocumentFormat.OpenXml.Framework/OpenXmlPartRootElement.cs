@@ -235,10 +235,10 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Gets or sets the part that is associated with the DOM tree.
+        /// Gets the part that is associated with the DOM tree.
         /// It returns null when the DOM tree is not associated with a part.
         /// </summary>
-        internal OpenXmlPart? OpenXmlPart { get; set; }
+        public OpenXmlPart? OpenXmlPart { get; internal set; }
 
         /// <summary>
         /// Saves the data in the DOM tree back to the part. This method can
