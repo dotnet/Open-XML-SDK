@@ -14,7 +14,12 @@ namespace DocumentFormat.OpenXml.Packaging
     /// Defines SpreadsheetDocument - an OpenXmlPackage represents a Spreadsheet document.
     /// </summary>
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Reliability", "CA2000:Dispose objects before losing scope", Justification = "Disposable is returned")]
-    public partial class SpreadsheetDocument : OpenXmlPackage
+    public partial class SpreadsheetDocument :
+#if NET7_0_OR_GREATER
+        OpenXmlPackage, IPackageDocumentBuilder<SpreadsheetDocument>
+#else
+        OpenXmlPackage
+#endif
     {
         internal SpreadsheetDocument()
             : base()
@@ -23,9 +28,17 @@ namespace DocumentFormat.OpenXml.Packaging
 
         private static readonly IPackageBuilder<SpreadsheetDocument> DefaultBuilder = new Builder().UseDefaultBehaviorAndLockBuilder();
 
-        internal static IPackageBuilder<SpreadsheetDocument> CreateBuilder() => new Builder();
+        /// <summary>
+        /// Creates a default builder for <see cref="SpreadsheetDocument"/>
+        /// </summary>
+        /// <returns>The default builder.</returns>
+        public static IPackageBuilder<SpreadsheetDocument> CreateBuilder() => new Builder();
 
-        internal static IPackageBuilder<SpreadsheetDocument> CreateDefaultBuilder() => DefaultBuilder.Clone();
+        /// <summary>
+        /// Creates a builder that has minimal initialization for <see cref="SpreadsheetDocument"/>.
+        /// </summary>
+        /// <returns>A minimal builder.</returns>
+        public static IPackageBuilder<SpreadsheetDocument> CreateDefaultBuilder() => DefaultBuilder.Clone();
 
         private sealed class Builder : OpenXmlPackageBuilder<SpreadsheetDocument>
         {
