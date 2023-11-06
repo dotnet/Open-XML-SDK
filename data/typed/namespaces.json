@@ -136,16 +136,20 @@
     "Namespace": "DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main"
   },
   {
+    "Prefix": "p223",
+    "Namespace": "DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main"
+  },
+  {
     "Prefix": "p228",
     "Namespace": "DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main"
   },
   {
-    "Prefix": "xxl21",
-    "Namespace": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021"
+    "Prefix": "p232",
+    "Namespace": "DocumentFormat.OpenXml.Office.PowerPoint.Y2023.M02.Main"
   },
   {
-    "Prefix": "xprd",
-    "Namespace": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotRichData"
+    "Prefix": "xxl21",
+    "Namespace": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021"
   },
   {
     "Prefix": "xxpvi",
@@ -162,6 +166,14 @@
   {
     "Prefix": "w16du",
     "Namespace": "DocumentFormat.OpenXml.Office.Word.Y2023.WordML.Word16DU"
+  },
+  {
+    "Prefix": "xfpb",
+    "Namespace": "DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag"
+  },
+  {
+    "Prefix": "xlrvrel",
+    "Namespace": "DocumentFormat.OpenXml.Office.Y2022.RichValueRel"
   },
   {
     "Prefix": "mso14",

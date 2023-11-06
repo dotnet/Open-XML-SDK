@@ -1,10 +1,5 @@
 mode: ContinuousDeployment
-next-version: 3.0.0
-branches:
-  release:
-    regex: ^release?[/-]
-    tag: beta
-    increment: None
-    is-release-branch: true
+next-version: 3.1.0
+branches: {}
 ignore:
   sha: []

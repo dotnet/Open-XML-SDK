@@ -599,12 +599,13 @@ namespace DocumentFormat.OpenXml.Packaging
         public void Save()
         {
             ThrowIfObjectDisposed();
-            if (FileOpenAccess == FileAccess.ReadWrite)
+
+            if (Features.Get<IPackageFeature>() is { Package: { FileOpenAccess: FileAccess.ReadWrite } package })
             {
                 lock (Features.GetRequired<ILockFeature>().SyncLock)
                 {
                     SavePartContents(true);
-                    Features.GetRequired<IPackageFeature>().Package.Save();
+                    package.Save();
                 }
             }
         }

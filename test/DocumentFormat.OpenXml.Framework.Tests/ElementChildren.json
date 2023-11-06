@@ -10298,6 +10298,18 @@
         "Namespace": "http://schemas.microsoft.com/office/powerpoint/2019/12/main"
       },
       {
+        "Name": "reactions",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2022/03/main"
+      },
+      {
+        "Name": "taskDetails",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2022/08/main"
+      },
+      {
+        "Name": "phTypeExt",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2023/02/main"
+      },
+      {
         "Name": "themeFamily",
         "Namespace": "http://schemas.microsoft.com/office/thememl/2012/main"
       },
@@ -22378,6 +22390,42 @@
     "Children": []
   },
   {
+    "Element": "DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main.ExtensionList",
+    "Children": [
+      {
+        "Name": "ext",
+        "Namespace": "http://schemas.openxmlformats.org/presentationml/2006/main"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main.Reaction",
+    "Children": [
+      {
+        "Name": "instance",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2022/03/main"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main.ReactionInstance",
+    "Children": [
+      {
+        "Name": "extLst",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2022/03/main"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main.Reactions",
+    "Children": [
+      {
+        "Name": "rxn",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2022/03/main"
+      }
+    ]
+  },
+  {
     "Element": "DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.AddEmpty",
     "Children": []
   },
@@ -22511,6 +22559,36 @@
     "Children": []
   },
   {
+    "Element": "DocumentFormat.OpenXml.Office.PowerPoint.Y2023.M02.Main.CameoEmpty",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.PowerPoint.Y2023.M02.Main.PlaceholderTypeACB",
+    "Children": [
+      {
+        "Name": "cameo",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2023/02/main"
+      },
+      {
+        "Name": "unknown",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2023/02/main"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.PowerPoint.Y2023.M02.Main.PlaceholderTypeExtension",
+    "Children": [
+      {
+        "Name": "type",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2023/02/main"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.PowerPoint.Y2023.M02.Main.UnknownEmpty",
+    "Children": []
+  },
+  {
     "Element": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021.AbsoluteUrlAlternateUrl",
     "Children": []
   },
@@ -22529,10 +22607,6 @@
   },
   {
     "Element": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021.RelativeUrlAlternateUrl",
-    "Children": []
-  },
-  {
-    "Element": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotRichData.RichDataPivotCacheGuid",
     "Children": []
   },
   {
@@ -22868,6 +22942,181 @@
   {
     "Element": "DocumentFormat.OpenXml.Office.Word.Y2020.OEmbed.OEmbed",
     "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.ArrayFeatureProperty",
+    "Children": [
+      {
+        "Name": "b",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag"
+      },
+      {
+        "Name": "bagId",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag"
+      },
+      {
+        "Name": "d",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag"
+      },
+      {
+        "Name": "i",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag"
+      },
+      {
+        "Name": "rel",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag"
+      },
+      {
+        "Name": "s",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.BagExtensions",
+    "Children": [
+      {
+        "Name": "extLst",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.BagFeatureProperty",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.BoolFeatureProperty",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.DecimalFeatureProperty",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.ExtensionList",
+    "Children": [
+      {
+        "Name": "ext",
+        "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FeaturePropertyBag",
+    "Children": [
+      {
+        "Name": "a",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag"
+      },
+      {
+        "Name": "b",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag"
+      },
+      {
+        "Name": "bagId",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag"
+      },
+      {
+        "Name": "d",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag"
+      },
+      {
+        "Name": "i",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag"
+      },
+      {
+        "Name": "rel",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag"
+      },
+      {
+        "Name": "s",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FeaturePropertyBags",
+    "Children": [
+      {
+        "Name": "bag",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag"
+      },
+      {
+        "Name": "bagExt",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag"
+      },
+      {
+        "Name": "extLst",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.IntFeatureProperty",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.RelFeatureProperty",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.RelXsdstring",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.SXsdstring",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.StringFeatureProperty",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.XfComplement",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.Xsdboolean",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.Xsddouble",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.Xsdinteger",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.XsdunsignedInt",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.Y2022.RichValueRel.ExtensionList",
+    "Children": [
+      {
+        "Name": "ext",
+        "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.Y2022.RichValueRel.RichValueRelRelationship",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.Y2022.RichValueRel.RichValueRels",
+    "Children": [
+      {
+        "Name": "extLst",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2022/richvaluerel"
+      },
+      {
+        "Name": "rel",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2022/richvaluerel"
+      }
+    ]
   },
   {
     "Element": "DocumentFormat.OpenXml.Office2010.CustomUI.Backstage",
@@ -37845,6 +38094,28 @@
     ]
   },
   {
+    "Element": "DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.CommentPropertiesExtension",
+    "Children": [
+      {
+        "Name": "reactions",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2022/03/main"
+      },
+      {
+        "Name": "taskDetails",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2022/08/main"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.CommentPropertiesExtensionList",
+    "Children": [
+      {
+        "Name": "ext",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2018/8/main"
+      }
+    ]
+  },
+  {
     "Element": "DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.CommentRelationship",
     "Children": []
   },
@@ -40101,6 +40372,15 @@
       {
         "Name": "style",
         "Namespace": "http://schemas.openxmlformats.org/presentationml/2006/main"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Presentation.PlaceholderExtension",
+    "Children": [
+      {
+        "Name": "phTypeExt",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2023/02/main"
       }
     ]
   },
@@ -44440,10 +44720,6 @@
       {
         "Name": "cacheVersionInfo",
         "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2022/pivotVersionInfo"
-      },
-      {
-        "Name": "richInfo",
-        "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
       }
     ]
   },
@@ -45084,10 +45360,6 @@
   },
   {
     "Element": "DocumentFormat.OpenXml.Spreadsheet.RgbColor",
-    "Children": []
-  },
-  {
-    "Element": "DocumentFormat.OpenXml.Spreadsheet.RichDataPivotCacheGuid",
     "Children": []
   },
   {

@@ -935,6 +935,98 @@ namespace DocumentFormat.OpenXml.Tests
             }
         }
 
+        [Fact]
+        public void W0056_AddImageToDocxWithMimeType()
+        {
+            using (var stream = GetStream(TestFiles.CommentsDocx, true))
+            using (var doc = WordprocessingDocument.Open(stream, true))
+            {
+                var mainPart = doc.MainDocumentPart;
+                var imagePart = mainPart.AddImagePart("image/jpeg", null);
+
+                using (var image = GetStream(TestFiles.Image))
+                {
+                    imagePart.FeedData(image);
+                }
+
+                AddImageToBody(doc, mainPart.GetIdOfPart(imagePart));
+
+                var v = new OpenXmlValidator(FileFormatVersions.Office2013);
+                var errs = v.Validate(doc);
+
+                Assert.Single(errs);
+            }
+        }
+
+        [Fact]
+        public void W0057_AddImageToDocxWithMimeType()
+        {
+            using (var stream = GetStream(TestFiles.CommentsDocx, true))
+            using (var doc = WordprocessingDocument.Open(stream, true))
+            {
+                var mainPart = doc.MainDocumentPart;
+                var imagePart = mainPart.AddNewPart<ImagePart>("image/jpeg", null);
+
+                using (var image = GetStream(TestFiles.Image))
+                {
+                    imagePart.FeedData(image);
+                }
+
+                AddImageToBody(doc, mainPart.GetIdOfPart(imagePart));
+
+                var v = new OpenXmlValidator(FileFormatVersions.Office2013);
+                var errs = v.Validate(doc);
+
+                Assert.Single(errs);
+            }
+        }
+
+        [Fact]
+        public void W0058_AddImageToDocxWithMimeType()
+        {
+            using (var stream = GetStream(TestFiles.CommentsDocx, true))
+            using (var doc = WordprocessingDocument.Open(stream, true))
+            {
+                var mainPart = doc.MainDocumentPart;
+                var imagePart = mainPart.AddNewPart<ImagePart>("image/jpeg");
+
+                using (var image = GetStream(TestFiles.Image))
+                {
+                    imagePart.FeedData(image);
+                }
+
+                AddImageToBody(doc, mainPart.GetIdOfPart(imagePart));
+
+                var v = new OpenXmlValidator(FileFormatVersions.Office2013);
+                var errs = v.Validate(doc);
+
+                Assert.Single(errs);
+            }
+        }
+
+        [Fact]
+        public void W0059_AddImageToDocxWithMimeType()
+        {
+            using (var stream = GetStream(TestFiles.CommentsDocx, true))
+            using (var doc = WordprocessingDocument.Open(stream, true))
+            {
+                var mainPart = doc.MainDocumentPart;
+                var imagePart = mainPart.AddImagePart("image/jpeg");
+
+                using (var image = GetStream(TestFiles.Image))
+                {
+                    imagePart.FeedData(image);
+                }
+
+                AddImageToBody(doc, mainPart.GetIdOfPart(imagePart));
+
+                var v = new OpenXmlValidator(FileFormatVersions.Office2013);
+                var errs = v.Validate(doc);
+
+                Assert.Single(errs);
+            }
+        }
+
         private void AddImageToBody(WordprocessingDocument wordDoc, string relationshipId)
         {
             // Define the reference of the image.

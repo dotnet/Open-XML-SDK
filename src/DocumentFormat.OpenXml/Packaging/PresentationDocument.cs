@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using DocumentFormat.OpenXml.Builder;
 using DocumentFormat.OpenXml.Features;
 using System;
 using System.IO;
@@ -18,6 +19,24 @@ namespace DocumentFormat.OpenXml.Packaging
         internal PresentationDocument()
             : base()
         {
+        }
+
+        private static readonly IPackageBuilder<PresentationDocument> DefaultBuilder = new Builder().UseDefaultBehaviorAndLockBuilder();
+
+        internal static IPackageBuilder<PresentationDocument> CreateBuilder() => new Builder();
+
+        internal static IPackageBuilder<PresentationDocument> CreateDefaultBuilder() => DefaultBuilder.Clone();
+
+        private sealed class Builder : OpenXmlPackageBuilder<PresentationDocument>
+        {
+            public Builder(Builder? builder = null)
+                : base(builder)
+            {
+            }
+
+            public override IPackageBuilder<PresentationDocument> Clone() => new Builder(this);
+
+            public override PresentationDocument Create() => new();
         }
 
         /// <summary>
@@ -79,11 +98,13 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <returns>A new instance of PresentationDocument.</returns>
         /// <exception cref="ArgumentNullException">Thrown when "path" is null reference.</exception>
         public static PresentationDocument Create(string path, PresentationDocumentType type, bool autoSave)
-            => new PresentationDocument()
-                .WithAutosave(autoSave)
-                .WithStorage(path, PackageOpenMode.Create)
-                .AddAction(p => p.DocumentType = type)
-                .UseDefaultBehavior();
+            => CreateDefaultBuilder()
+                .Use(package =>
+                {
+                    package.DocumentType = type;
+                    package.OpenSettings.AutoSave = autoSave;
+                })
+                .Open(path, PackageOpenMode.Create);
 
         /// <summary>
         /// Creates a new instance of the PresentationDocument class from the IO stream.
@@ -95,11 +116,13 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="ArgumentNullException">Thrown when "stream" is null reference.</exception>
         /// <exception cref="IOException">Thrown when "stream" is not opened with Write access.</exception>
         public static PresentationDocument Create(Stream stream, PresentationDocumentType type, bool autoSave)
-            => new PresentationDocument()
-                .WithAutosave(autoSave)
-                .WithStorage(stream, PackageOpenMode.Create)
-                .AddAction(p => p.DocumentType = type)
-                .UseDefaultBehavior();
+            => CreateDefaultBuilder()
+                .Use(package =>
+                {
+                    package.DocumentType = type;
+                    package.OpenSettings.AutoSave = autoSave;
+                })
+                .Open(stream, PackageOpenMode.Create);
 
         /// <summary>
         /// Creates a new instance of the PresentationDocument class from the specified package.
@@ -111,11 +134,13 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="ArgumentNullException">Thrown when "package" is null reference.</exception>
         /// <exception cref="IOException">Thrown when "package" is not opened with Write access.</exception>
         public static PresentationDocument Create(Package package, PresentationDocumentType type, bool autoSave)
-            => new PresentationDocument()
-                .WithAutosave(autoSave)
-                .WithStorage(package)
-                .AddAction(p => p.DocumentType = type)
-                .UseDefaultBehavior();
+            => CreateDefaultBuilder()
+                .Use(package =>
+                {
+                    package.DocumentType = type;
+                    package.OpenSettings.AutoSave = autoSave;
+                })
+                .Open(package);
 
         /// <summary>
         /// Creates an editable PresentationDocument from a template, opened on
@@ -130,33 +155,9 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentNullException(nameof(path));
             }
 
-            // Check extensions as the template must have a valid Word Open XML extension.
-            string extension = Path.GetExtension(path);
-            if (extension != ".pptx" && extension != ".pptm" && extension != ".potx" && extension != ".potm")
-            {
-                throw new ArgumentException("Illegal template file: " + path, nameof(path));
-            }
-
-            using (PresentationDocument template = PresentationDocument.Open(path, false))
-            {
-                // We've opened the template in read-only mode to let multiple processes or
-                // threads open it without running into problems.
-                PresentationDocument document = template.Clone();
-
-                // If the template is a document rather than a template, we are done.
-                if (extension == ".pptx" || extension == ".pptm")
-                {
-                    return document;
-                }
-
-                // Otherwise, we'll have to do some more work.
-                document.ChangeDocumentType(PresentationDocumentType.Presentation);
-
-                // We are done, so save and return.
-                // TODO: Check whether it would be safe to return without saving.
-                document.Save();
-                return document;
-            }
+            return CreateDefaultBuilder()
+                .UseTemplate(path, PresentationDocumentType.Presentation)
+                .Open();
         }
 
         /// <summary>
@@ -204,10 +205,9 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="OpenXmlPackageException">Thrown when the package is not valid Open XML PresentationDocument.</exception>
         /// <exception cref="ArgumentException">Thrown when specified to process the markup compatibility but the given target FileFormatVersion is incorrect.</exception>
         public static PresentationDocument Open(string path, bool isEditable, OpenSettings openSettings)
-            => new PresentationDocument()
-                .WithSettings(openSettings)
-                .WithStorage(path, isEditable ? PackageOpenMode.ReadWrite : PackageOpenMode.Read)
-                .UseDefaultBehavior();
+            => CreateDefaultBuilder()
+                .UseSettings(openSettings)
+                .Open(path, isEditable);
 
         /// <summary>
         /// Creates a new instance of the PresentationDocument class from the IO stream.
@@ -221,10 +221,9 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="OpenXmlPackageException">Thrown when the package is not valid Open XML PresentationDocument.</exception>
         /// <exception cref="ArgumentException">Thrown when specified to process the markup compatibility but the given target FileFormatVersion is incorrect.</exception>
         public static PresentationDocument Open(Stream stream, bool isEditable, OpenSettings openSettings)
-            => new PresentationDocument()
-                .WithSettings(openSettings)
-                .WithStorage(stream, isEditable ? PackageOpenMode.ReadWrite : PackageOpenMode.Read)
-                .UseDefaultBehavior();
+            => CreateDefaultBuilder()
+                .UseSettings(openSettings)
+                .Open(stream, isEditable);
 
         /// <summary>
         /// Creates a new instance of the PresentationDocument class from the specified package.
@@ -237,10 +236,9 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="OpenXmlPackageException">Thrown when the package is not a valid Open XML document.</exception>
         /// <exception cref="ArgumentException">Thrown when specified to process the markup compatibility but the given target FileFormatVersion is incorrect.</exception>
         public static PresentationDocument Open(Package package, OpenSettings openSettings)
-            => new PresentationDocument()
-                .WithSettings(openSettings)
-                .WithStorage(package)
-                .UseDefaultBehavior();
+            => CreateDefaultBuilder()
+                .UseSettings(openSettings)
+                .Open(package);
 
         /// <summary>
         /// Changes the document type.
@@ -319,7 +317,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <exception cref="ArgumentOutOfRangeException">When the part is fixed content type and the passed in contentType does not match the defined content type.</exception>
         /// <exception cref="ArgumentNullException">Thrown when "contentType" is null reference.</exception>
         /// <remarks>Mainly used for adding not-fixed content type part - ImagePart, etc.</remarks>
-        public override T AddNewPart<T>(string contentType, string id)
+        public override T AddNewPart<T>(string contentType, string? id)
         {
             if (contentType is null)
             {
@@ -481,8 +479,7 @@ namespace DocumentFormat.OpenXml.Packaging
         private partial class PresentationDocumentFeatures : TypedPackageFeatureCollection<PresentationDocumentType, PresentationPart>,
             IApplicationTypeFeature,
             IMainPartFeature,
-            IProgrammaticIdentifierFeature,
-            IPackageFactoryFeature<PresentationDocument>
+            IProgrammaticIdentifierFeature
         {
             public PresentationDocumentFeatures(OpenXmlPackage package)
                 : base(package)
@@ -520,8 +517,6 @@ namespace DocumentFormat.OpenXml.Packaging
                 "application/vnd.ms-powerpoint.addin.macroEnabled.main+xml" => PresentationDocumentType.AddIn,
                 _ => default,
             };
-
-            PresentationDocument IPackageFactoryFeature<PresentationDocument>.Create() => new();
         }
     }
 }

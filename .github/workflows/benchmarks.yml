@@ -16,8 +16,8 @@ jobs:
     name: Run
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-dotnet@v1
+      - uses: actions/checkout@v3
+      - uses: actions/setup-dotnet@v3
       - name: Build benchmarks
         run: cd test/DocumentFormat.OpenXml.Benchmarks; dotnet build -c RELEASE
         shell: pwsh
@@ -34,56 +34,3 @@ jobs:
             "## $name" >> $env:GITHUB_STEP_SUMMARY
             gc $file >> $env:GITHUB_STEP_SUMMARY
           }
-      - name: Store Validation
-        uses: benchmark-action/github-action-benchmark@v1
-        with:
-          name: Validation
-          tool: 'benchmarkdotnet'
-          output-file-path: test/DocumentFormat.OpenXml.Benchmarks/BenchmarkDotNet.Artifacts/results/DocumentFormat.OpenXml.Benchmarks.ValidationTests-report-full-compressed.json
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          auto-push: true
-          # Show alert with commit comment on detecting possible performance regression
-          alert-threshold: '200%'
-          comment-on-alert: true
-          fail-on-alert: false
-      - name: Store CompiledParticle
-        uses: benchmark-action/github-action-benchmark@v1
-        with:
-          name: CompiledParticle
-          tool: 'benchmarkdotnet'
-          output-file-path: test/DocumentFormat.OpenXml.Benchmarks/BenchmarkDotNet.Artifacts/results/DocumentFormat.OpenXml.Benchmarks.CompiledParticle-report-full-compressed.json
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          auto-push: true
-          # Show alert with commit comment on detecting possible performance regression
-          alert-threshold: '200%'
-          comment-on-alert: true
-          fail-on-alert: false
-      - name: Store Documents
-        uses: benchmark-action/github-action-benchmark@v1
-        with:
-          name: Documents
-          tool: 'benchmarkdotnet'
-          output-file-path: test/DocumentFormat.OpenXml.Benchmarks/BenchmarkDotNet.Artifacts/results/DocumentFormat.OpenXml.Benchmarks.Documents-report-full-compressed.json
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          auto-push: true
-          # Show alert with commit comment on detecting possible performance regression
-          alert-threshold: '200%'
-          comment-on-alert: true
-          fail-on-alert: false
-      - name: Store ElementMetadataTests
-        uses: benchmark-action/github-action-benchmark@v1
-        with:
-          name: ElementMetadataTests
-          tool: 'benchmarkdotnet'
-          output-file-path: test/DocumentFormat.OpenXml.Benchmarks/BenchmarkDotNet.Artifacts/results/DocumentFormat.OpenXml.Benchmarks.ElementMetadataTests-report-full-compressed.json
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          auto-push: false
-          # Show alert with commit comment on detecting possible performance regression
-          alert-threshold: '200%'
-          comment-on-alert: true
-          comment-always: true
-          fail-on-alert: false
-      # Push gh-pages branch by yourself ONLY on PRs
-      - name: Push benchmark result
-        run: git push 'https://twsouthwick:${{ secrets.GITHUB_TOKEN }}@github.com/dotnet/Open-XML-SDK.git' gh-pages:gh-pages
-        if: github.event_name != 'pull_request'

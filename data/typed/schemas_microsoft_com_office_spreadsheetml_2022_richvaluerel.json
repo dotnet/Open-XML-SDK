@@ -1,0 +1,14 @@
+[
+  {
+    "Name": "x:CT_ExtensionList/xlrvrel:extLst",
+    "ClassName": "ExtensionList"
+  },
+  {
+    "Name": "xlrvrel:CT_RichValueRelRelationship/xlrvrel:rel",
+    "ClassName": "RichValueRelRelationship"
+  },
+  {
+    "Name": "xlrvrel:CT_RichValueRels/xlrvrel:richValueRels",
+    "ClassName": "RichValueRels"
+  }
+]

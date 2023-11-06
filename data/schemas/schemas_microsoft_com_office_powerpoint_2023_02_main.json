@@ -1,0 +1,90 @@
+{
+  "TargetNamespace": "http://schemas.microsoft.com/office/powerpoint/2023/02/main",
+  "Types": [
+    {
+      "Name": "p232:CT_PlaceholderTypeExtension/p232:phTypeExt",
+      "ClassName": "PlaceholderTypeExtension",
+      "Summary": "Defines the PlaceholderTypeExtension Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Microsoft365",
+      "Children": [
+        {
+          "Name": "p232:CT_PlaceholderTypeACB/p232:type",
+          "PropertyName": "PlaceholderTypeACB"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "p232:CT_PlaceholderTypeACB/p232:type",
+            "InitialVersion": "Microsoft365"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "p:CT_Empty/p232:cameo",
+      "ClassName": "CameoEmpty",
+      "Summary": "Defines the CameoEmpty Class.",
+      "BaseClass": "EmptyType",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Microsoft365"
+    },
+    {
+      "Name": "p:CT_Empty/p232:unknown",
+      "ClassName": "UnknownEmpty",
+      "Summary": "Defines the UnknownEmpty Class.",
+      "BaseClass": "EmptyType",
+      "IsDerived": true,
+      "IsLeafElement": true,
+      "Version": "Microsoft365"
+    },
+    {
+      "Name": "p:CT_Empty/",
+      "ClassName": "EmptyType",
+      "Summary": "Defines the EmptyType Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsAbstract": true,
+      "IsLeafElement": true
+    },
+    {
+      "Name": "p232:CT_PlaceholderTypeACB/p232:type",
+      "ClassName": "PlaceholderTypeACB",
+      "Summary": "Defines the PlaceholderTypeACB Class.",
+      "CompositeType": "OneChoice",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Microsoft365",
+      "Children": [
+        {
+          "Name": "p:CT_Empty/p232:cameo",
+          "PropertyName": "CameoEmpty"
+        },
+        {
+          "Name": "p:CT_Empty/p232:unknown",
+          "PropertyName": "UnknownEmpty"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Choice",
+            "Items": [
+              {
+                "Name": "p:CT_Empty/p232:cameo",
+                "InitialVersion": "Microsoft365"
+              },
+              {
+                "Name": "p:CT_Empty/p232:unknown",
+                "InitialVersion": "Microsoft365"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
