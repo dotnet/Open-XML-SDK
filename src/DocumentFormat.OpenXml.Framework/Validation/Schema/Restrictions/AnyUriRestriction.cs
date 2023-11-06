@@ -26,7 +26,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
             {
                 uriString = uriString.Trim(_whitespaceChars);
 
-                if ((uriString.Length == 0) || (uriString.IndexOf("##", StringComparison.Ordinal) != -1))
+                if ((uriString.Length == 0) || uriString.Contains("##", StringComparison.Ordinal))
                 {
                     return false;
                 }

@@ -1,0 +1,24 @@
+﻿// Copyright (c) Microsoft. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
+using System;
+using System.Collections.Generic;
+
+namespace DocumentFormat.OpenXml
+{
+    internal static class DictionaryExtensions
+    {
+#if !NET5_0_OR_GREATER
+        public static bool TryAdd<TKey, TValue>(this Dictionary<TKey, TValue> dict, TKey key, TValue value)
+        {
+            if (dict.ContainsKey(key))
+            {
+                return false;
+            }
+
+            dict.Add(key, value);
+            return true;
+        }
+#endif
+    }
+}
