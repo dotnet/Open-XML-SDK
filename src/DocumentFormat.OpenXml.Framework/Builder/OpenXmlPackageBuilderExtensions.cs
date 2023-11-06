@@ -9,34 +9,67 @@ using System.IO;
 
 namespace DocumentFormat.OpenXml.Builder;
 
-internal static class OpenXmlPackageBuilderExtensions
+/// <summary>
+/// A collection of extension methods for opening packages
+/// </summary>
+public static class OpenXmlPackageBuilderExtensions
 {
+    /// <summary>
+    /// Opens the <paramref name="stream"/> with the given <paramref name="mode"/>.
+    /// </summary>
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Reliability", "CA2000:Dispose objects before losing scope", Justification = "Disposable is registered with package")]
     public static TPackage Open<TPackage>(this IPackageBuilder<TPackage> builder, Stream stream, PackageOpenMode mode)
         where TPackage : OpenXmlPackage
-       => builder.Open(new StreamPackageFeature(stream, mode));
+    {
+        if (builder is null)
+        {
+            throw new ArgumentNullException(nameof(builder));
+        }
 
+        return builder.Open(new StreamPackageFeature(stream, mode));
+    }
+
+    /// <summary>
+    /// Opens the <paramref name="file"/> with the given <paramref name="mode"/>.
+    /// </summary>
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Reliability", "CA2000:Dispose objects before losing scope", Justification = "Disposable is registered with package")]
     public static TPackage Open<TPackage>(this IPackageBuilder<TPackage> builder, string file, PackageOpenMode mode)
         where TPackage : OpenXmlPackage
-        => builder.Open(new FilePackageFeature(file, mode));
+    {
+        if (builder is null)
+        {
+            throw new ArgumentNullException(nameof(builder));
+        }
 
-    public static TPackage Open<TPackage>(this IPackageBuilder<TPackage> builder, string file, bool isEditing)
+        return builder.Open(new FilePackageFeature(file, mode));
+    }
+
+    /// <summary>
+    /// Opens the <paramref name="package"/>.
+    /// </summary>
+    public static TPackage Open<TPackage>(this IPackageBuilder<TPackage> builder, System.IO.Packaging.Package package)
+        where TPackage : OpenXmlPackage
+    {
+        if (builder is null)
+        {
+            throw new ArgumentNullException(nameof(builder));
+        }
+
+        return builder.Open(new PackageFeature(package));
+    }
+
+    internal static TPackage Open<TPackage>(this IPackageBuilder<TPackage> builder, string file, bool isEditing)
         where TPackage : OpenXmlPackage
         => builder.Open(file, isEditing ? PackageOpenMode.ReadWrite : PackageOpenMode.Read);
 
-    public static TPackage Open<TPackage>(this IPackageBuilder<TPackage> builder, Stream stream, bool isEditing)
+    internal static TPackage Open<TPackage>(this IPackageBuilder<TPackage> builder, Stream stream, bool isEditing)
         where TPackage : OpenXmlPackage
         => builder.Open(stream, isEditing ? PackageOpenMode.ReadWrite : PackageOpenMode.Read);
 
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Reliability", "CA2000:Dispose objects before losing scope", Justification = "Disposable is registered with package")]
-    public static TPackage Open<TPackage>(this IPackageBuilder<TPackage> builder)
+    internal static TPackage Open<TPackage>(this IPackageBuilder<TPackage> builder)
         where TPackage : OpenXmlPackage
         => builder.Open(new StreamPackageFeature(new MemoryStream(), PackageOpenMode.Create));
-
-    public static TPackage Open<TPackage>(this IPackageBuilder<TPackage> builder, System.IO.Packaging.Package package)
-        where TPackage : OpenXmlPackage
-        => builder.Open(new PackageFeature(package));
 
     private static TPackage Open<TPackage>(this IPackageBuilder<TPackage> builder, IPackageInitializer initializer)
         where TPackage : OpenXmlPackage
@@ -58,9 +91,24 @@ internal static class OpenXmlPackageBuilderExtensions
             next(package);
         });
 
+    /// <summary>
+    /// Adds the <paramref name="middleware"/> to the builder for initializing a package.
+    /// </summary>
     public static IPackageBuilder<TPackage> Use<TPackage>(this IPackageBuilder<TPackage> builder, Action<TPackage, PackageInitializerDelegate<TPackage>> middleware)
         where TPackage : OpenXmlPackage
-        => builder.Use(next => package => middleware(package, next));
+    {
+        if (builder is null)
+        {
+            throw new ArgumentNullException(nameof(builder));
+        }
+
+        if (middleware is null)
+        {
+            throw new ArgumentNullException(nameof(middleware));
+        }
+
+        return builder.Use(next => package => middleware(package, next));
+    }
 
     internal static IPackageBuilder<TPackage> UseSettings<TPackage>(this IPackageBuilder<TPackage> builder, OpenSettings settings)
        where TPackage : OpenXmlPackage
