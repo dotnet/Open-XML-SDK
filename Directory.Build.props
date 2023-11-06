@@ -99,21 +99,21 @@
     </When>
     <When Condition=" '$(ProjectLoadStyle)' == 'All' ">
       <PropertyGroup>
-        <ProductTargetFrameworks>netstandard2.0;net35;net40;net7.0</ProductTargetFrameworks>
-        <FrameworkTargetFrameworks>netstandard2.0;net6.0;net7.0;net35;net40;net46</FrameworkTargetFrameworks>
+        <ProductTargetFrameworks>netstandard2.0;net35;net40;net8.0</ProductTargetFrameworks>
+        <FrameworkTargetFrameworks>netstandard2.0;net6.0;net8.0;net35;net40;net46</FrameworkTargetFrameworks>
         <AssetsTargetFrameworks>net452;netstandard2.0</AssetsTargetFrameworks>
-        <TestTargetFrameworks>net452;net462;net6.0;net7.0</TestTargetFrameworks>
-        <LatestTargetFramework>net7.0</LatestTargetFramework>
-        <SamplesFrameworks>net472;net7.0</SamplesFrameworks>
+        <TestTargetFrameworks>net452;net462;net6.0;net7.0;net8.0</TestTargetFrameworks>
+        <LatestTargetFramework>net8.0</LatestTargetFramework>
+        <SamplesFrameworks>net472;net8.0</SamplesFrameworks>
       </PropertyGroup>
     </When>
     <Otherwise>
       <PropertyGroup>
         <ProductTargetFrameworks>netstandard2.0</ProductTargetFrameworks>
-        <TestTargetFrameworks>net7.0</TestTargetFrameworks>
+        <TestTargetFrameworks>net8.0</TestTargetFrameworks>
         <AssetsTargetFrameworks>netstandard2.0</AssetsTargetFrameworks>
-        <LatestTargetFramework>net7.0</LatestTargetFramework>
-        <SamplesFrameworks>net7.0</SamplesFrameworks>
+        <LatestTargetFramework>net8.0</LatestTargetFramework>
+        <SamplesFrameworks>net8.0</SamplesFrameworks>
         <__InvalidProjectLoadStyle>true</__InvalidProjectLoadStyle>
       </PropertyGroup>
     </Otherwise>
