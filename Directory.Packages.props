@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project>
   <ItemGroup>
     <PackageVersion Include="BenchmarkDotNet" Version="0.13.2" />
@@ -16,7 +16,7 @@
     <PackageVersion Include="NuGet.Common" Version="6.6.1" />
     <PackageVersion Include="NuGet.Packaging" Version="6.6.1" />
     <PackageVersion Include="NuGet.Packaging.Core" Version="6.6.1" />
-    <PackageVersion Include="NuGet.Protocol" Version="6.6.1" />
+    <PackageVersion Include="NuGet.Protocol" Version="6.7.0" />
     <PackageVersion Include="NuGet.Resolver" Version="6.6.1" />
     <PackageVersion Include="ObjectLayoutInspector" Version="0.1.4" />
     <PackageVersion Include="StyleCop.Analyzers" Version="1.2.0-beta.507" />
