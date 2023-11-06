@@ -15,7 +15,12 @@ namespace DocumentFormat.OpenXml.Packaging
     /// Defines WordprocessingDocument - an OpenXmlPackage represents a Word document.
     /// </summary>
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Reliability", "CA2000:Dispose objects before losing scope", Justification = "Disposable is returned")]
-    public partial class WordprocessingDocument : OpenXmlPackage
+    public partial class WordprocessingDocument :
+#if NET6_0_OR_GREATER
+        OpenXmlPackage, IPackageDocumentBuilder<WordprocessingDocument>
+#else
+        OpenXmlPackage
+#endif
     {
         internal WordprocessingDocument()
             : base()
@@ -24,9 +29,17 @@ namespace DocumentFormat.OpenXml.Packaging
 
         private static readonly IPackageBuilder<WordprocessingDocument> DefaultBuilder = new Builder().UseDefaultBehaviorAndLockBuilder();
 
-        internal static IPackageBuilder<WordprocessingDocument> CreateBuilder() => new Builder();
+        /// <summary>
+        /// Creates a default builder for <see cref="WordprocessingDocument"/>
+        /// </summary>
+        /// <returns>The default builder.</returns>
+        public static IPackageBuilder<WordprocessingDocument> CreateBuilder() => new Builder();
 
-        internal static IPackageBuilder<WordprocessingDocument> CreateDefaultBuilder() => DefaultBuilder.Clone();
+        /// <summary>
+        /// Creates a builder that has minimal initialization for <see cref="WordprocessingDocument"/>.
+        /// </summary>
+        /// <returns>A minimal builder.</returns>
+        public static IPackageBuilder<WordprocessingDocument> CreateDefaultBuilder() => DefaultBuilder.Clone();
 
         private sealed class Builder : OpenXmlPackageBuilder<WordprocessingDocument>
         {

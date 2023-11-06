@@ -14,7 +14,12 @@ namespace DocumentFormat.OpenXml.Packaging
     /// Defines PresentationDocument - an OpenXmlPackage represents a Presentation document
     /// </summary>
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Reliability", "CA2000:Dispose objects before losing scope", Justification = "Disposable is returned")]
-    public partial class PresentationDocument : OpenXmlPackage
+    public partial class PresentationDocument :
+#if NET6_0_OR_GREATER
+        OpenXmlPackage, IPackageDocumentBuilder<PresentationDocument>
+#else
+        OpenXmlPackage
+#endif
     {
         internal PresentationDocument()
             : base()
@@ -23,9 +28,17 @@ namespace DocumentFormat.OpenXml.Packaging
 
         private static readonly IPackageBuilder<PresentationDocument> DefaultBuilder = new Builder().UseDefaultBehaviorAndLockBuilder();
 
-        internal static IPackageBuilder<PresentationDocument> CreateBuilder() => new Builder();
+        /// <summary>
+        /// Creates a default builder for <see cref="PresentationDocument"/>
+        /// </summary>
+        /// <returns>The default builder.</returns>
+        public static IPackageBuilder<PresentationDocument> CreateBuilder() => new Builder();
 
-        internal static IPackageBuilder<PresentationDocument> CreateDefaultBuilder() => DefaultBuilder.Clone();
+        /// <summary>
+        /// Creates a builder that has minimal initialization for <see cref="PresentationDocument"/>.
+        /// </summary>
+        /// <returns>A minimal builder.</returns>
+        public static IPackageBuilder<PresentationDocument> CreateDefaultBuilder() => DefaultBuilder.Clone();
 
         private sealed class Builder : OpenXmlPackageBuilder<PresentationDocument>
         {

@@ -88,7 +88,7 @@
     </When>
     <When Condition=" '$(ProjectLoadStyle)' == 'All' ">
       <PropertyGroup>
-        <ProductTargetFrameworks>netstandard2.0;net35;net40</ProductTargetFrameworks>
+        <ProductTargetFrameworks>netstandard2.0;net35;net40;net6.0</ProductTargetFrameworks>
         <FrameworkTargetFrameworks>netstandard2.0;net6.0;net35;net40;net46</FrameworkTargetFrameworks>
         <AssetsTargetFrameworks>net452;netstandard2.0</AssetsTargetFrameworks>
         <TestTargetFrameworks>net452;net462;net6.0;net7.0</TestTargetFrameworks>

@@ -7,9 +7,16 @@ using System.Collections.Generic;
 
 namespace DocumentFormat.OpenXml.Builder;
 
-internal delegate void PackageInitializerDelegate<TPackage>(TPackage package);
+/// <summary>
+/// A delegate for initializing a package.
+/// </summary>
+public delegate void PackageInitializerDelegate<TPackage>(TPackage package);
 
-internal interface IPackageBuilder<TPackage>
+/// <summary>
+/// Defines a builder to create an initialization pipeline for a <typeparamref name="TPackage"/>.
+/// </summary>
+/// <typeparam name="TPackage">Type of the <see cref="OpenXmlPackage"/>.</typeparam>
+public interface IPackageBuilder<TPackage>
     where TPackage : OpenXmlPackage
 {
     /// <summary>
