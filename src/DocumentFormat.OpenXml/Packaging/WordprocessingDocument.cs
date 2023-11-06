@@ -16,7 +16,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// </summary>
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Reliability", "CA2000:Dispose objects before losing scope", Justification = "Disposable is returned")]
     public partial class WordprocessingDocument :
-#if NET6_0_OR_GREATER
+#if NET7_0_OR_GREATER
         OpenXmlPackage, IPackageDocumentBuilder<WordprocessingDocument>
 #else
         OpenXmlPackage
