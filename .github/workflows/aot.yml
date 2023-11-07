@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: actions/setup-dotnet@v3
       - name: SunburstChartExample
         run: dotnet publish samples/SunburstChartExample/ -f net8.0 /p:SummaryOutDir=$GITHUB_WORKSPACE/summary
