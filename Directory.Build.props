@@ -43,7 +43,7 @@
         <FrameworkTargetFrameworks>net35</FrameworkTargetFrameworks>
         <TestTargetFrameworks>net452</TestTargetFrameworks>
         <AssetsTargetFrameworks>net452</AssetsTargetFrameworks>
-        <LatestTargetFramework>net461</LatestTargetFramework>
+        <LatestTargetFramework>net462</LatestTargetFramework>
         <SamplesFrameworks>net472</SamplesFrameworks>
       </PropertyGroup>
     </When>
@@ -53,7 +53,7 @@
         <FrameworkTargetFrameworks>net40</FrameworkTargetFrameworks>
         <TestTargetFrameworks>net452</TestTargetFrameworks>
         <AssetsTargetFrameworks>net452</AssetsTargetFrameworks>
-        <LatestTargetFramework>net461</LatestTargetFramework>
+        <LatestTargetFramework>net462</LatestTargetFramework>
         <SamplesFrameworks>net472</SamplesFrameworks>
       </PropertyGroup>
     </When>
@@ -63,7 +63,7 @@
         <FrameworkTargetFrameworks>net46</FrameworkTargetFrameworks>
         <TestTargetFrameworks>net46</TestTargetFrameworks>
         <AssetsTargetFrameworks>net452</AssetsTargetFrameworks>
-        <LatestTargetFramework>net461</LatestTargetFramework>
+        <LatestTargetFramework>net462</LatestTargetFramework>
         <SamplesFrameworks>net472</SamplesFrameworks>
       </PropertyGroup>
     </When>
