@@ -22,7 +22,7 @@
     <PackageVersion Include="StyleCop.Analyzers" Version="1.2.0-beta.507" />
     <PackageVersion Include="Svg" Version="3.4.5" />
     <PackageVersion Include="System.CodeDom" Version="7.0.0" />
-    <PackageVersion Include="System.Collections.Immutable" Version="5.0.0" />
+    <PackageVersion Include="System.Collections.Immutable" Version="7.0.0" />
     <PackageVersion Include="System.IO.Packaging" Version="7.0.0" />
     <PackageVersion Include="System.Net.Http" Version="4.3.4" />
     <PackageVersion Include="System.Security.Cryptography.Algorithms" Version="4.3.1" />
