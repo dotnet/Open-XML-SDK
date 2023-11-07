@@ -16,7 +16,7 @@ jobs:
     name: Run
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: actions/setup-dotnet@v3
       - name: Build benchmarks
         run: cd test/DocumentFormat.OpenXml.Benchmarks; dotnet build -c RELEASE
