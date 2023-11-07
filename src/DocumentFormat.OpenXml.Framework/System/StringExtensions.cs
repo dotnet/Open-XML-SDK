@@ -3,7 +3,6 @@
 
 #if !NET5_0_OR_GREATER
 using System;
-using System.Collections.Generic;
 
 namespace DocumentFormat.OpenXml;
 
@@ -14,6 +13,12 @@ internal static class StringExtensions
 
     public static bool Index(this string str, char c)
         => str.IndexOf(c.ToString()) != -1;
+
+    public static bool StartsWith(this string str, char c)
+        => str.StartsWith(c.ToString(), StringComparison.Ordinal);
+
+    public static bool EndsWith(this string str, char c)
+        => str.EndsWith(c.ToString(), StringComparison.Ordinal);
 }
 
 #endif
