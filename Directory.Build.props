@@ -20,7 +20,7 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <!-- We want to use experimental APIs internall -->
+    <!-- We want to use experimental APIs internally -->
     <NoWarn>$(NoWarn);CS0436;OOXML0001</NoWarn>
   </PropertyGroup>
 
