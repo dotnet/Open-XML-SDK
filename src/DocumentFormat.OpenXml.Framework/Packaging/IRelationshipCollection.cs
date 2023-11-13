@@ -3,6 +3,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.IO.Packaging;
 
 namespace DocumentFormat.OpenXml.Packaging;
@@ -10,7 +11,7 @@ namespace DocumentFormat.OpenXml.Packaging;
 /// <summary>
 /// A collection of relationships for a <see cref="IPackage"/> of <see cref="IPackagePart"/>.
 /// </summary>
-[Obsolete(ExperimentalApis.PackageApis.Message, DiagnosticId = ExperimentalApis.PackageApis.DiagnosticId, UrlFormat = ExperimentalApis.UrlFormat)]
+[Experimental(ExperimentalApis.PackageApis.DiagnosticId, UrlFormat = ExperimentalApis.UrlFormat)]
 public interface IRelationshipCollection : IEnumerable<IPackageRelationship>
 {
     /// <summary>
