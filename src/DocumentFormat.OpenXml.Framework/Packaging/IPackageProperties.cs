@@ -2,13 +2,14 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using System;
+using System.Diagnostics.CodeAnalysis;
 
 namespace DocumentFormat.OpenXml.Packaging;
 
 /// <summary>
 /// An abstraction of package properties, similar to <see cref="System.IO.Packaging.PackageProperties"/>.
 /// </summary>
-[Obsolete(ExperimentalApis.PackageApis.Message, DiagnosticId = ExperimentalApis.PackageApis.DiagnosticId, UrlFormat = ExperimentalApis.UrlFormat)]
+[Experimental(ExperimentalApis.PackageApis.DiagnosticId, UrlFormat = ExperimentalApis.UrlFormat)]
 public interface IPackageProperties
 {
     /// <summary>

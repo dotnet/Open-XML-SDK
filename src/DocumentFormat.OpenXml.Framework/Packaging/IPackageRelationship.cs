@@ -2,6 +2,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using System;
+using System.Diagnostics.CodeAnalysis;
 using System.IO.Packaging;
 
 namespace DocumentFormat.OpenXml.Packaging;
@@ -9,7 +10,7 @@ namespace DocumentFormat.OpenXml.Packaging;
 /// <summary>
 /// An interface that defines the relationship between a source and a target part. Similar to <see cref="PackageRelationship"/> but allows full overriding.
 /// </summary>
-[Obsolete(ExperimentalApis.PackageApis.Message, DiagnosticId = ExperimentalApis.PackageApis.DiagnosticId, UrlFormat = ExperimentalApis.UrlFormat)]
+[Experimental(ExperimentalApis.PackageApis.DiagnosticId, UrlFormat = ExperimentalApis.UrlFormat)]
 public interface IPackageRelationship
 {
     /// <summary>
