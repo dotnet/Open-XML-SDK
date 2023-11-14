@@ -4,7 +4,7 @@ Open XML SDK
 
 > NOTICE: 
 > 
-> [v3.0.0 beta 3](https://www.nuget.org/packages/DocumentFormat.OpenXml/3.0.0-beta0003) refactors and addresses some technical debt, with the goal to retain (as much as possible) source compatibility. We hope to maintain things such that you can update your package and recompile with limited changes. However, binary compatibility is not a goal and will break that for some changes which we plan on keeping documented. PRs that introduce such changes are marked with a `breaking-change` label and are added to a list to help migrating to v3.0.0.
+> [v3.0.0](https://www.nuget.org/packages/DocumentFormat.OpenXml/3.0.0) refactors and addresses some technical debt while retaining source compatibility as much as possible. You should be able to update your package and recompile with limited changes. However, binary compatibility was not a goal and will break that for some changes which are documented. PRs that introduced such changes are marked with a `breaking-change` label and were added to a list to help migrating to v3.0.0.
 >
 > Please see the [v3.0.0 milestone](https://github.com/OfficeDev/Open-XML-SDK/milestone/1) for issues and PRs that are included. For discussions, please join us at [this issue](https://github.com/OfficeDev/Open-XML-SDK/issues/1270).
 
@@ -72,8 +72,7 @@ For details on platform support, including other runtimes such as Mono and Unity
 
 # Known Issues
 
-- On .NET Core and .NET 5, zip packages do not have a way to stream data. Thus, the working set can explode in certain situations. This is a [known issue](https://github.com/dotnet/runtime/issues/1544).
-- On .NET Core, targeting .NET Framework 4.5+, and .NET 5, `System.Uri` will not parse invalid links. This causes an exception. A workaround in v2.12.0+ of OpenXml SDK is to use `OpenSettings.RelationshipErrorRewriter` to rewrite them to something that can be parsed. A discussion is available [here](https://github.com/dotnet/runtime/issues/26084) to enable something more robust in `System.IO.Packaging`.
+- On .NET Core and .NET 5 and following, ZIP packages do not have a way to stream data. Thus, the working set can explode in certain situations. This is a [known issue](https://github.com/dotnet/runtime/issues/1544).
 - On .NET Framework, an `IsolatedStorageException` may be thrown under certain circumstances. This generally occurs when manipulating a large document in an environment with an AppDomain that does not have enough evidence. A sample with a workaround is available [here](/samples/IsolatedStorageExceptionWorkaround).
 
 # Documentation
