@@ -13,14 +13,15 @@
          - net46:              .NET Framework 4.6
          - net6_0:             .NET 6.0
          - net7_0:             .NET 7.0
+         - net8_0:             .NET 8.0
          - All:                Will build for all platforms
          -->
-    <ProjectLoadStyle Condition=" '$(ProjectLoadStyle)' == '' ">net7_0</ProjectLoadStyle>
+    <ProjectLoadStyle Condition=" '$(ProjectLoadStyle)' == '' ">net8_0</ProjectLoadStyle>
     <__InvalidProjectLoadStyle>false</__InvalidProjectLoadStyle>
   </PropertyGroup>
 
   <PropertyGroup>
-    <!-- Experimental APIs currently use obsolete messages -->
+    <!-- We want to use experimental APIs internally -->
     <NoWarn>$(NoWarn);CS0436;OOXML0001</NoWarn>
   </PropertyGroup>
 
@@ -42,7 +43,7 @@
         <FrameworkTargetFrameworks>net35</FrameworkTargetFrameworks>
         <TestTargetFrameworks>net452</TestTargetFrameworks>
         <AssetsTargetFrameworks>net452</AssetsTargetFrameworks>
-        <LatestTargetFramework>net461</LatestTargetFramework>
+        <LatestTargetFramework>net462</LatestTargetFramework>
         <SamplesFrameworks>net472</SamplesFrameworks>
       </PropertyGroup>
     </When>
@@ -52,7 +53,7 @@
         <FrameworkTargetFrameworks>net40</FrameworkTargetFrameworks>
         <TestTargetFrameworks>net452</TestTargetFrameworks>
         <AssetsTargetFrameworks>net452</AssetsTargetFrameworks>
-        <LatestTargetFramework>net461</LatestTargetFramework>
+        <LatestTargetFramework>net462</LatestTargetFramework>
         <SamplesFrameworks>net472</SamplesFrameworks>
       </PropertyGroup>
     </When>
@@ -62,7 +63,7 @@
         <FrameworkTargetFrameworks>net46</FrameworkTargetFrameworks>
         <TestTargetFrameworks>net46</TestTargetFrameworks>
         <AssetsTargetFrameworks>net452</AssetsTargetFrameworks>
-        <LatestTargetFramework>net461</LatestTargetFramework>
+        <LatestTargetFramework>net462</LatestTargetFramework>
         <SamplesFrameworks>net472</SamplesFrameworks>
       </PropertyGroup>
     </When>
@@ -86,23 +87,33 @@
         <SamplesFrameworks>net7.0</SamplesFrameworks>
       </PropertyGroup>
     </When>
+    <When Condition=" '$(ProjectLoadStyle)' == 'net8_0' ">
+      <PropertyGroup>
+        <ProductTargetFrameworks>net8.0</ProductTargetFrameworks>
+        <FrameworkTargetFrameworks>net8.0</FrameworkTargetFrameworks>
+        <TestTargetFrameworks>net8.0</TestTargetFrameworks>
+        <AssetsTargetFrameworks>netstandard2.0</AssetsTargetFrameworks>
+        <LatestTargetFramework>net8.0</LatestTargetFramework>
+        <SamplesFrameworks>net8.0</SamplesFrameworks>
+      </PropertyGroup>
+    </When>
     <When Condition=" '$(ProjectLoadStyle)' == 'All' ">
       <PropertyGroup>
-        <ProductTargetFrameworks>netstandard2.0;net35;net40;net7.0</ProductTargetFrameworks>
-        <FrameworkTargetFrameworks>netstandard2.0;net6.0;net7.0;net35;net40;net46</FrameworkTargetFrameworks>
+        <ProductTargetFrameworks>netstandard2.0;net35;net40;net8.0</ProductTargetFrameworks>
+        <FrameworkTargetFrameworks>netstandard2.0;net6.0;net8.0;net35;net40;net46</FrameworkTargetFrameworks>
         <AssetsTargetFrameworks>net452;netstandard2.0</AssetsTargetFrameworks>
-        <TestTargetFrameworks>net452;net462;net6.0;net7.0</TestTargetFrameworks>
-        <LatestTargetFramework>net7.0</LatestTargetFramework>
-        <SamplesFrameworks>net472;net7.0</SamplesFrameworks>
+        <TestTargetFrameworks>net452;net462;net6.0;net7.0;net8.0</TestTargetFrameworks>
+        <LatestTargetFramework>net8.0</LatestTargetFramework>
+        <SamplesFrameworks>net472;net8.0</SamplesFrameworks>
       </PropertyGroup>
     </When>
     <Otherwise>
       <PropertyGroup>
         <ProductTargetFrameworks>netstandard2.0</ProductTargetFrameworks>
-        <TestTargetFrameworks>net7.0</TestTargetFrameworks>
+        <TestTargetFrameworks>net8.0</TestTargetFrameworks>
         <AssetsTargetFrameworks>netstandard2.0</AssetsTargetFrameworks>
-        <LatestTargetFramework>net7.0</LatestTargetFramework>
-        <SamplesFrameworks>net7.0</SamplesFrameworks>
+        <LatestTargetFramework>net8.0</LatestTargetFramework>
+        <SamplesFrameworks>net8.0</SamplesFrameworks>
         <__InvalidProjectLoadStyle>true</__InvalidProjectLoadStyle>
       </PropertyGroup>
     </Otherwise>
