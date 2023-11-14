@@ -52,10 +52,10 @@
     </When>
     <Otherwise>
       <PropertyGroup>
-        <ProductTargetFrameworks>netstandard2.0;net35;net40;net8.0</ProductTargetFrameworks>
+        <ProductTargetFrameworks>netstandard2.0;net8.0;net35;net40;net46</ProductTargetFrameworks>
         <FrameworkTargetFrameworks>netstandard2.0;net6.0;net8.0;net35;net40;net46</FrameworkTargetFrameworks>
-        <AssetsTargetFrameworks>net462;netstandard2.0</AssetsTargetFrameworks>
-        <TestTargetFrameworks>net6.0;net8.0</TestTargetFrameworks>
+        <AssetsTargetFrameworks>netstandard2.0;net462</AssetsTargetFrameworks>
+        <TestTargetFrameworks>net8.0</TestTargetFrameworks>
         <TestTargetFrameworks Condition=" '$(OS)' == 'Windows_NT' ">$(TestTargetFrameworks);net462</TestTargetFrameworks>
         <LatestTargetFramework>net8.0</LatestTargetFramework>
         <SamplesFrameworks>net8.0</SamplesFrameworks>
