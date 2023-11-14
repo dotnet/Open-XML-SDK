@@ -5,19 +5,6 @@
     <IsShipped>false</IsShipped>
     <NoWarn>$(NoWarn);SA0001</NoWarn>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-
-    <!-- Because of the size of the project, to facilitate  quick development, by default only single
-         frameworks will be built. This is customizable with the following possible values:
-         - net35:              .NET Framework 3.5
-         - net40:              .NET Framework 4.0
-         - net46:              .NET Framework 4.6
-         - net6_0:             .NET 6.0
-         - net7_0:             .NET 7.0
-         - net8_0:             .NET 8.0
-         - All:                Will build for all platforms
-         -->
-    <ProjectLoadStyle Condition=" '$(ProjectLoadStyle)' == '' ">net8_0</ProjectLoadStyle>
-    <__InvalidProjectLoadStyle>false</__InvalidProjectLoadStyle>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -36,6 +23,8 @@
     <Version>$(GitVersion_NuGetVersionV2)</Version>
   </PropertyGroup>
 
+    <!-- Due to the need to test .NET 3.5 and .NET 4.0 builds, we have separate configurations that
+         allow us to build and test them. These are mostly done in CI, but may be useful at dev time. -->
   <Choose>
     <When Condition=" '$(ProjectLoadStyle)' == 'net35' ">
       <PropertyGroup>
@@ -61,64 +50,16 @@
         <SamplesFrameworks>net472</SamplesFrameworks>
       </PropertyGroup>
     </When>
-    <When Condition=" '$(ProjectLoadStyle)' == 'net46' ">
-      <PropertyGroup>
-        <ProductTargetFrameworks>net46</ProductTargetFrameworks>
-        <FrameworkTargetFrameworks>net46</FrameworkTargetFrameworks>
-        <TestTargetFrameworks>net462</TestTargetFrameworks>
-        <AssetsTargetFrameworks>net462</AssetsTargetFrameworks>
-        <LatestTargetFramework>net462</LatestTargetFramework>
-        <SamplesFrameworks>net472</SamplesFrameworks>
-      </PropertyGroup>
-    </When>
-    <When Condition=" '$(ProjectLoadStyle)' == 'net6_0' ">
-      <PropertyGroup>
-        <ProductTargetFrameworks>net6.0</ProductTargetFrameworks>
-        <FrameworkTargetFrameworks>net6.0</FrameworkTargetFrameworks>
-        <TestTargetFrameworks>net6.0</TestTargetFrameworks>
-        <AssetsTargetFrameworks>netstandard2.0</AssetsTargetFrameworks>
-        <LatestTargetFramework>net6.0</LatestTargetFramework>
-        <SamplesFrameworks>net6.0</SamplesFrameworks>
-      </PropertyGroup>
-    </When>
-    <When Condition=" '$(ProjectLoadStyle)' == 'net7_0' ">
-      <PropertyGroup>
-        <ProductTargetFrameworks>net7.0</ProductTargetFrameworks>
-        <FrameworkTargetFrameworks>net7.0</FrameworkTargetFrameworks>
-        <TestTargetFrameworks>net7.0</TestTargetFrameworks>
-        <AssetsTargetFrameworks>netstandard2.0</AssetsTargetFrameworks>
-        <LatestTargetFramework>net7.0</LatestTargetFramework>
-        <SamplesFrameworks>net7.0</SamplesFrameworks>
-      </PropertyGroup>
-    </When>
-    <When Condition=" '$(ProjectLoadStyle)' == 'net8_0' ">
-      <PropertyGroup>
-        <ProductTargetFrameworks>net8.0</ProductTargetFrameworks>
-        <FrameworkTargetFrameworks>net8.0</FrameworkTargetFrameworks>
-        <TestTargetFrameworks>net8.0</TestTargetFrameworks>
-        <AssetsTargetFrameworks>netstandard2.0</AssetsTargetFrameworks>
-        <LatestTargetFramework>net8.0</LatestTargetFramework>
-        <SamplesFrameworks>net8.0</SamplesFrameworks>
-      </PropertyGroup>
-    </When>
-    <When Condition=" '$(ProjectLoadStyle)' == 'All' ">
+    <Otherwise>
       <PropertyGroup>
         <ProductTargetFrameworks>netstandard2.0;net35;net40;net8.0</ProductTargetFrameworks>
         <FrameworkTargetFrameworks>netstandard2.0;net6.0;net8.0;net35;net40;net46</FrameworkTargetFrameworks>
         <AssetsTargetFrameworks>net462;netstandard2.0</AssetsTargetFrameworks>
-        <TestTargetFrameworks>net462;net6.0;net7.0;net8.0</TestTargetFrameworks>
-        <LatestTargetFramework>net8.0</LatestTargetFramework>
-        <SamplesFrameworks>net472;net8.0</SamplesFrameworks>
-      </PropertyGroup>
-    </When>
-    <Otherwise>
-      <PropertyGroup>
-        <ProductTargetFrameworks>netstandard2.0</ProductTargetFrameworks>
-        <TestTargetFrameworks>net8.0</TestTargetFrameworks>
-        <AssetsTargetFrameworks>netstandard2.0</AssetsTargetFrameworks>
+        <TestTargetFrameworks>net6.0;net8.0</TestTargetFrameworks>
+        <TestTargetFrameworks Condition=" '$(OS)' == 'Windows_NT' ">$(TestTargetFrameworks);net462</TestTargetFrameworks>
         <LatestTargetFramework>net8.0</LatestTargetFramework>
         <SamplesFrameworks>net8.0</SamplesFrameworks>
-        <__InvalidProjectLoadStyle>true</__InvalidProjectLoadStyle>
+        <SamplesFrameworks Condition=" '$(OS)' == 'Windows_NT' ">$(TestTargetFrameworks);net472</SamplesFrameworks>
       </PropertyGroup>
     </Otherwise>
   </Choose>
@@ -129,10 +70,6 @@
     <IsFramework>false</IsFramework>
     <IsFramework Condition=" '$(TargetFramework)' == 'net35' OR $(TargetFramework.StartsWith('net4')) ">true</IsFramework>
   </PropertyGroup>
-
-  <Target Name="UnknownProjectLoadStyle" BeforeTargets="Build" Condition="$(__InvalidProjectLoadStyle)">
-    <Warning Text="Unknown ProjectLoadStyle '$(ProjectLoadStyle)' set. Please verify settings in Directory.Build.props and environment variables to a known value. For now, default values will be used." />
-  </Target>
 
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
