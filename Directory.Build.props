@@ -39,6 +39,8 @@
   <Choose>
     <When Condition=" '$(ProjectLoadStyle)' == 'net35' ">
       <PropertyGroup>
+        <!-- We have some internal types that conflict -->
+        <NoWarn>$(NoWarn);CS1685</NoWarn>
         <ProductTargetFrameworks>net35</ProductTargetFrameworks>
         <FrameworkTargetFrameworks>net35</FrameworkTargetFrameworks>
         <TestTargetFrameworks>net462</TestTargetFrameworks>
@@ -49,6 +51,8 @@
     </When>
     <When Condition=" '$(ProjectLoadStyle)' == 'net40' ">
       <PropertyGroup>
+        <!-- We have some internal types that conflict -->
+        <NoWarn>$(NoWarn);CS1685</NoWarn>
         <ProductTargetFrameworks>net40</ProductTargetFrameworks>
         <FrameworkTargetFrameworks>net40</FrameworkTargetFrameworks>
         <TestTargetFrameworks>net462</TestTargetFrameworks>
