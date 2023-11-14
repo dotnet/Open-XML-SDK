@@ -215,9 +215,7 @@ namespace DocumentFormat.OpenXml.Tests
                 // Change Id of Part } with Non-SubPart.
                 Assert.Throws<ArgumentOutOfRangeException>(() => container.ChangeIdOfPart(container, "newId"));
 
-                // TODO: Should throw ArgumentException and not ArgumentNullException
-                // Assert.Throws<ArgumentException>(() => container.ChangeIdOfPart(part, string.Empty));
-                Assert.Throws<ArgumentNullException>(() => container.ChangeIdOfPart(part, string.Empty));
+                Assert.Throws<ArgumentException>(() => container.ChangeIdOfPart(part, string.Empty));
 
                 var oldId1 = container.GetIdOfPart(part);
                 Assert.NotNull(oldId1);

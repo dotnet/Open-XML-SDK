@@ -33,7 +33,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
                 return true;
             }
 
-            if (token[0] == ' ' || token[token.Length - 1] == ' ' || token.IndexOfAny(_crt) != -1 || token.IndexOf("  ", StringComparison.Ordinal) != -1)
+            if (token[0] == ' ' || token[token.Length - 1] == ' ' || token.IndexOfAny(_crt) != -1 || token.Contains("  ", StringComparison.Ordinal))
             {
                 return false;
             }
