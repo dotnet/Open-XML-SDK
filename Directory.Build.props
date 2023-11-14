@@ -61,7 +61,7 @@
       <PropertyGroup>
         <ProductTargetFrameworks>net46</ProductTargetFrameworks>
         <FrameworkTargetFrameworks>net46</FrameworkTargetFrameworks>
-        <TestTargetFrameworks>net46</TestTargetFrameworks>
+        <TestTargetFrameworks>net462</TestTargetFrameworks>
         <AssetsTargetFrameworks>net462</AssetsTargetFrameworks>
         <LatestTargetFramework>net462</LatestTargetFramework>
         <SamplesFrameworks>net472</SamplesFrameworks>
