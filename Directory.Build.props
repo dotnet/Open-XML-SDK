@@ -39,20 +39,24 @@
   <Choose>
     <When Condition=" '$(ProjectLoadStyle)' == 'net35' ">
       <PropertyGroup>
+        <!-- We have some internal types that conflict -->
+        <NoWarn>$(NoWarn);CS1685</NoWarn>
         <ProductTargetFrameworks>net35</ProductTargetFrameworks>
         <FrameworkTargetFrameworks>net35</FrameworkTargetFrameworks>
-        <TestTargetFrameworks>net452</TestTargetFrameworks>
-        <AssetsTargetFrameworks>net452</AssetsTargetFrameworks>
+        <TestTargetFrameworks>net462</TestTargetFrameworks>
+        <AssetsTargetFrameworks>net462</AssetsTargetFrameworks>
         <LatestTargetFramework>net462</LatestTargetFramework>
         <SamplesFrameworks>net472</SamplesFrameworks>
       </PropertyGroup>
     </When>
     <When Condition=" '$(ProjectLoadStyle)' == 'net40' ">
       <PropertyGroup>
+        <!-- We have some internal types that conflict -->
+        <NoWarn>$(NoWarn);CS1685</NoWarn>
         <ProductTargetFrameworks>net40</ProductTargetFrameworks>
         <FrameworkTargetFrameworks>net40</FrameworkTargetFrameworks>
-        <TestTargetFrameworks>net452</TestTargetFrameworks>
-        <AssetsTargetFrameworks>net452</AssetsTargetFrameworks>
+        <TestTargetFrameworks>net462</TestTargetFrameworks>
+        <AssetsTargetFrameworks>net462</AssetsTargetFrameworks>
         <LatestTargetFramework>net462</LatestTargetFramework>
         <SamplesFrameworks>net472</SamplesFrameworks>
       </PropertyGroup>
@@ -61,8 +65,8 @@
       <PropertyGroup>
         <ProductTargetFrameworks>net46</ProductTargetFrameworks>
         <FrameworkTargetFrameworks>net46</FrameworkTargetFrameworks>
-        <TestTargetFrameworks>net46</TestTargetFrameworks>
-        <AssetsTargetFrameworks>net452</AssetsTargetFrameworks>
+        <TestTargetFrameworks>net462</TestTargetFrameworks>
+        <AssetsTargetFrameworks>net462</AssetsTargetFrameworks>
         <LatestTargetFramework>net462</LatestTargetFramework>
         <SamplesFrameworks>net472</SamplesFrameworks>
       </PropertyGroup>
@@ -101,8 +105,8 @@
       <PropertyGroup>
         <ProductTargetFrameworks>netstandard2.0;net35;net40;net8.0</ProductTargetFrameworks>
         <FrameworkTargetFrameworks>netstandard2.0;net6.0;net8.0;net35;net40;net46</FrameworkTargetFrameworks>
-        <AssetsTargetFrameworks>net452;netstandard2.0</AssetsTargetFrameworks>
-        <TestTargetFrameworks>net452;net462;net6.0;net7.0;net8.0</TestTargetFrameworks>
+        <AssetsTargetFrameworks>net462;netstandard2.0</AssetsTargetFrameworks>
+        <TestTargetFrameworks>net462;net6.0;net7.0;net8.0</TestTargetFrameworks>
         <LatestTargetFramework>net8.0</LatestTargetFramework>
         <SamplesFrameworks>net472;net8.0</SamplesFrameworks>
       </PropertyGroup>
@@ -120,8 +124,8 @@
   </Choose>
 
   <PropertyGroup>
-    <SupportsNetStandard>true</SupportsNetStandard>
-    <SupportsNetStandard Condition=" '$(TargetFramework)' == 'net35' OR '$(TargetFramework)' == 'net40' OR '$(TargetFramework)' == 'net452'  OR '$(TargetFramework)' == 'net46' ">false</SupportsNetStandard>
+    <SupportsNetStandard>false</SupportsNetStandard>
+    <SupportsNetStandard Condition="$([MSBuild]::IsTargetFrameworkCompatible('$(TargetFramework)', 'netstandard2.0'))">true</SupportsNetStandard>
     <IsFramework>false</IsFramework>
     <IsFramework Condition=" '$(TargetFramework)' == 'net35' OR $(TargetFramework.StartsWith('net4')) ">true</IsFramework>
   </PropertyGroup>
