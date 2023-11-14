@@ -21,7 +21,7 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <!-- Experimental APIs currently use obsolete messages -->
+    <!-- We want to use experimental APIs internally -->
     <NoWarn>$(NoWarn);CS0436;OOXML0001</NoWarn>
   </PropertyGroup>
 

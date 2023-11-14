@@ -4,13 +4,14 @@
 using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Packaging;
 using System;
+using System.Diagnostics.CodeAnalysis;
 
 namespace DocumentFormat.OpenXml.Experimental;
 
 /// <summary>
 /// Extensions to retrieve package details.
 /// </summary>
-[Obsolete(ExperimentalApis.PackageApis.Message, DiagnosticId = ExperimentalApis.PackageApis.DiagnosticId, UrlFormat = ExperimentalApis.UrlFormat)]
+[Experimental(ExperimentalApis.PackageApis.DiagnosticId, UrlFormat = ExperimentalApis.UrlFormat)]
 public static class PackageExtensions
 {
     /// <summary>
