@@ -39,7 +39,7 @@ namespace DocumentFormat.OpenXml.Validation
         /// <param name="container">The Open XML container to validate</param>
         /// <param name="version">Version to validate against</param>
         /// <param name="processedParts">Parts already processed.</param>
-        private IEnumerable<OpenXmlPackageValidationResult> ValidateInternal(OpenXmlPartContainer container, FileFormatVersions version, Dictionary<OpenXmlPart, bool> processedParts)
+        private static IEnumerable<OpenXmlPackageValidationResult> ValidateInternal(OpenXmlPartContainer container, FileFormatVersions version, Dictionary<OpenXmlPart, bool> processedParts)
         {
             var containerConstraints = container.Features.GetRequired<IPartConstraintFeature>();
 
@@ -122,7 +122,7 @@ namespace DocumentFormat.OpenXml.Validation
 
             foreach (var part in container.ChildrenRelationshipParts.Parts)
             {
-                if (!processedParts.ContainsKey(part))
+                if (!processedParts.TryAdd(part, true))
                 {
                     if (part is not ExtendedPart)
                     {
@@ -165,7 +165,6 @@ namespace DocumentFormat.OpenXml.Validation
                         }
                     }
 #endif
-                    processedParts.Add(part, true);
 
                     foreach (var result in ValidateInternal(part, version, processedParts))
                     {

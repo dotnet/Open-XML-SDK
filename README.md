@@ -78,9 +78,7 @@ For details on platform support, including other runtimes such as Mono and Unity
 
 # Documentation
 
-The functionality of the specific classes in this version of the Open XML SDK is similar to version 2.5, therefore the [Open XML SDK 2.5 for Office](https://learn.microsoft.com/en-us/office/open-xml/open-xml-sdk) documentation available on Microsoft Learn still applies.
-
-In addition to open sourcing of the SDK, Microsoft has opened up the conceptual documentation for public review / contributions.  A copy of the documentation is  available for you to edit and review [in GitHub](https://github.com/OfficeDev/office-content).
+Please see [Open XML SDK](https://learn.microsoft.com/en-us/office/open-xml/open-xml-sdk) for the official documentation.
 
 # Related tools
 

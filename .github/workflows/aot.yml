@@ -23,11 +23,11 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-dotnet@v3
       - name: SunburstChartExample
-        run: dotnet publish samples/SunburstChartExample/ -f net7.0 /p:SummaryOutDir=$GITHUB_WORKSPACE/summary
+        run: dotnet publish samples/SunburstChartExample/ -f net8.0 /p:SummaryOutDir=$GITHUB_WORKSPACE/summary
       - name: LinqSvgExample
-        run: dotnet publish samples/Linq/SvgExample -f net7.0 /p:SummaryOutDir=$GITHUB_WORKSPACE/summary
+        run: dotnet publish samples/Linq/SvgExample -f net8.0 /p:SummaryOutDir=$GITHUB_WORKSPACE/summary
       - name: ThreadedCommentExample
-        run: dotnet publish samples/ThreadedCommentExample/ -f net7.0 /p:SummaryOutDir=$GITHUB_WORKSPACE/summary
+        run: dotnet publish samples/ThreadedCommentExample/ -f net8.0 /p:SummaryOutDir=$GITHUB_WORKSPACE/summary
       - name: Write summary
         run: |
           cd $GITHUB_WORKSPACE/summary

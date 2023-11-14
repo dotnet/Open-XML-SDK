@@ -2,6 +2,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using System;
+using System.Diagnostics.CodeAnalysis;
 using System.IO;
 
 namespace DocumentFormat.OpenXml.Packaging;
@@ -9,7 +10,7 @@ namespace DocumentFormat.OpenXml.Packaging;
 /// <summary>
 /// An abstraction for <see cref="System.IO.Packaging.PackagePart"/> that is easier to override.
 /// </summary>
-[Obsolete(ExperimentalApis.PackageApis.Message, DiagnosticId = ExperimentalApis.PackageApis.DiagnosticId, UrlFormat = ExperimentalApis.UrlFormat)]
+[Experimental(ExperimentalApis.PackageApis.DiagnosticId, UrlFormat = ExperimentalApis.UrlFormat)]
 public interface IPackagePart
 {
     /// <summary>

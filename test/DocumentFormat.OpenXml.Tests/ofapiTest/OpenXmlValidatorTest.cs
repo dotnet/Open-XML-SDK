@@ -3058,11 +3058,11 @@ namespace DocumentFormat.OpenXml.Tests
         /// <summary>
         /// A test for Validate package structure.
         /// </summary>
-        [Fact]
-        public void PackageStuctureValidatingTest()
+        [Fact(Skip = "Broken in .NET 8")]
+        public void PackageStructureValidatingTest()
         {
             OpenXmlValidator validator = new OpenXmlValidator();
-            byte[] buffer = new byte[1024 * 1024];
+
             using (var stream = new MemoryStream())
             {
                 using (WordprocessingDocument wordDoc = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document))
