@@ -66,6 +66,18 @@ dotnet_diagnostic.CA2225.severity = suggestion
 # CA1065: Do not raise exceptions in unexpected locations
 dotnet_diagnostic.CA1065.severity = suggestion
 
+# CA1510: Use 'ArgumentNullException.ThrowIfNull' instead of explicitly throwing a new exception instance
+dotnet_diagnostic.CA1510.severity = suggestion
+
+# CA1512: Use 'ArgumentOutOfRangeException.ThrowIfNegative' instead of explicitly throwing a new exception instance
+dotnet_diagnostic.CA1512.severity = suggestion
+
+# CA1513: Use 'ObjectDisposedException.ThrowIf' instead of explicitly throwing a new exception instance
+dotnet_diagnostic.CA1513.severity = suggestion
+
+# SYSLIB0051: 'Exception.Exception(SerializationInfo, StreamingContext)' is obsolete
+dotnet_diagnostic.SYSLIB0051.severity = suggestion
+
 # CA1054: URI-like parameters should not be strings
 dotnet_diagnostic.CA1054.severity = suggestion
 csharp_using_directive_placement = outside_namespace:silent

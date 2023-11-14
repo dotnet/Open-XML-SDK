@@ -9,6 +9,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
 {
     public partial class CellType : IValidator
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Performance", "CA1863:Use 'CompositeFormat'", Justification = "Optimization not needed")]
         void IValidator.Validate(ValidationContext context)
         {
             if (DataType is null || !DataType.HasValue)

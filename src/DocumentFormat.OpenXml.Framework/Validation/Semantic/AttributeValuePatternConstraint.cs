@@ -23,7 +23,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
             _attribute = attribute;
 
-            if (!pattern.StartsWith("^", StringComparison.Ordinal) || !pattern.EndsWith("$", StringComparison.Ordinal))
+            if (!pattern.StartsWith('^') || !pattern.EndsWith('$'))
             {
                 pattern = string.Concat("^", pattern, "$");
             }

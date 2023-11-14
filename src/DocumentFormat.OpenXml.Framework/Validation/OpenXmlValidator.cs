@@ -11,6 +11,7 @@ namespace DocumentFormat.OpenXml.Validation
     /// <summary>
     /// Defines the OpenXmlValidator.
     /// </summary>
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Performance", "CA1859:Use concrete types when possible for improved performance", Justification = "There are some target frameworks where visibility changes")]
     public class OpenXmlValidator
     {
         private readonly ValidationSettings _settings;

@@ -564,6 +564,11 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentNullException(nameof(newRelationshipId));
             }
 
+            if (newRelationshipId.Length == 0)
+            {
+                throw new ArgumentException("Relationship must have a value", nameof(newRelationshipId));
+            }
+
             var oldId = default(string);
 
             foreach (var idPartPair in ChildrenRelationshipParts)
