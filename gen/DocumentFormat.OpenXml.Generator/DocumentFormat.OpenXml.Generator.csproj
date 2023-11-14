@@ -6,6 +6,7 @@
     <IncludeFrameworkShims>true</IncludeFrameworkShims>
     <IncludeInitShim>true</IncludeInitShim>
     <IsRoslynComponent>true</IsRoslynComponent>
+    <EnforceExtendedAnalyzerRules>true</EnforceExtendedAnalyzerRules>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.CodeAnalysis.CSharp" PrivateAssets="all" />
