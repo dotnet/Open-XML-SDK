@@ -5,10 +5,11 @@ permissions:
 
 on:
   push:
-    branches: [ main, release/* ]
+    # Disabled because AOT is currently borken
+    #branches: [ main, release/* ]
   pull_request:
     # The branches below must be a subset of the branches above
-    branches: [ main ]
+    #branches: [ main ]
 
 env:
   PublishAot: true
