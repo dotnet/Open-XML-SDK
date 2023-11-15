@@ -5,7 +5,7 @@ namespace DocumentFormat.OpenXml;
 
 internal static class ExperimentalApis
 {
-    internal const string UrlFormat = "https://github.com/dotnet/open-xml-sdk/blobl/main/docs/Diagnostics.md#{0}";
+    internal const string UrlFormat = "https://aka.ms/openxmlsdk-diagnostics#{0}";
 
     internal static class PackageApis
     {
