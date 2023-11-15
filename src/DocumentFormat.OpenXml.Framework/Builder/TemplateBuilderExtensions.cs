@@ -95,8 +95,8 @@ public static class TemplateBuilderExtensions
 
                 public void Initialize(OpenXmlPackage package)
                 {
-                    _template.LoadTemplate((TPackage)package);
                     _other.Initialize(package);
+                    _template.LoadTemplate((TPackage)package);
                 }
             }
         }
