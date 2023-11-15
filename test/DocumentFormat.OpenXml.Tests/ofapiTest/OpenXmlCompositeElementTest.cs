@@ -221,7 +221,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             var clone = customProperties.CloneNode(true);
 
-            Assert.Equal(0, clone.GetAttributes().Count);
+            Assert.Empty(clone.GetAttributes());
             Assert.Equal(propertiesXml, clone.OuterXml);
         }
 

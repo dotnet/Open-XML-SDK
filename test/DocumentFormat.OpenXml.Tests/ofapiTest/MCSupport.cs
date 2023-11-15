@@ -305,7 +305,7 @@ namespace DocumentFormat.OpenXml.Tests
                     target = testDocument.MainDocumentPart.StyleDefinitionsPart;
                     root = target.RootElement;
                     var rprDefault = root.FirstChild.FirstChild;
-                    Assert.Equal(1, rprDefault.GetAttributes().Count);
+                    Assert.Single(rprDefault.GetAttributes());
                 }
             }
         }
