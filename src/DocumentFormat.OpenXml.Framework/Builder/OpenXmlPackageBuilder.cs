@@ -5,6 +5,7 @@ using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Packaging;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 
 namespace DocumentFormat.OpenXml.Builder;
 
@@ -54,7 +55,10 @@ internal abstract class OpenXmlPackageBuilder<TPackage> : IPackageBuilder<TPacka
 
     public abstract TPackage Create();
 
-    public PackageInitializerDelegate<TPackage> Build()
+    public IPackageFactory<TPackage> Build() => new Factory(Create, BuildPipeline());
+
+    [MemberNotNull(nameof(_pipeline))]
+    private PackageInitializerDelegate<TPackage> BuildPipeline()
     {
         _isLocked = true;
 
@@ -63,7 +67,7 @@ internal abstract class OpenXmlPackageBuilder<TPackage> : IPackageBuilder<TPacka
             return _pipeline;
         }
 
-        var factory = new Factory(Clone());
+        var factory = new PackageFactoryFeature(Clone());
         var pipeline = new PackageInitializerDelegate<TPackage>(factory.PipelineTerminator);
 
         if (_middleware is not null)
@@ -77,11 +81,34 @@ internal abstract class OpenXmlPackageBuilder<TPackage> : IPackageBuilder<TPacka
         return _pipeline = pipeline;
     }
 
-    private sealed class Factory : IPackageFactoryFeature<TPackage>
+    private sealed class Factory : IPackageFactory<TPackage>
+    {
+        private readonly Func<TPackage> _package;
+        private readonly PackageInitializerDelegate<TPackage> _initializer;
+
+        public Factory(Func<TPackage> package, PackageInitializerDelegate<TPackage> initializer)
+        {
+            _package = package;
+            _initializer = initializer;
+        }
+
+        public IFeatureCollection Features { get; } = new FeatureCollection();
+
+        public TPackage Create(IPackageInitializer initializer)
+        {
+            var package = _package();
+
+            _initializer(package);
+
+            return package;
+        }
+    }
+
+    private sealed class PackageFactoryFeature : IPackageFactoryFeature<TPackage>
     {
         private readonly IPackageBuilder<TPackage> _builder;
 
-        public Factory(IPackageBuilder<TPackage> builder) => _builder = builder;
+        public PackageFactoryFeature(IPackageBuilder<TPackage> builder) => _builder = builder;
 
         public IPackageBuilder<TPackage> Create() => _builder.Clone();
 

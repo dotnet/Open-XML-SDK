@@ -18,10 +18,11 @@ public class OpenXmlPackageBuilderTests
     public void NoConfigureCalls()
     {
         // Arrange
-        var builder = new Builder();
+        var factory = new Builder()
+            .Build();
 
         // Act
-        var result = builder.Open();
+        var result = factory.Open();
 
         // Arrange
         Assert.NotNull(result);
@@ -36,6 +37,7 @@ public class OpenXmlPackageBuilderTests
         // Act
         var result = builder
             .Use(package => Add(package, 1))
+            .Build()
             .Open();
 
         // Arrange
@@ -52,6 +54,7 @@ public class OpenXmlPackageBuilderTests
         var result = builder
             .Use(package => Add(package, 1))
             .Use(package => Add(package, 2))
+            .Build()
             .Open();
 
         // Arrange
@@ -78,6 +81,7 @@ public class OpenXmlPackageBuilderTests
                 next(package);
                 Add(package, 3);
             })
+            .Build()
             .Open();
 
         // Arrange
@@ -114,9 +118,9 @@ public class OpenXmlPackageBuilderTests
             });
 
         // Arrange
-        Assert.Equal(GetList(builder2.Open()), new[] { 1, 3, 5, 6, 4, 2 });
-        Assert.Equal(GetList(builder1.Open()), new[] { 1, 3, 4, 2 });
-        Assert.Equal(GetList(builder2.Open()), new[] { 1, 3, 5, 6, 4, 2 });
+        Assert.Equal(GetList(builder2.Build().Open()), new[] { 1, 3, 5, 6, 4, 2 });
+        Assert.Equal(GetList(builder1.Build().Open()), new[] { 1, 3, 4, 2 });
+        Assert.Equal(GetList(builder2.Build().Open()), new[] { 1, 3, 5, 6, 4, 2 });
     }
 
     [Fact]
@@ -138,7 +142,7 @@ public class OpenXmlPackageBuilderTests
             });
 
         // Act
-        var package = builder.Open();
+        var package = builder.Build().Open();
         var cloned = package.Clone();
 
         // Arrange
@@ -185,10 +189,13 @@ public class OpenXmlPackageBuilderTests
                 Add(package, 6);
             });
 
+        var factory1 = builder1.Build();
+        var factory2 = builder2.Build();
+
         // Arrange
-        Assert.Equal(GetList(builder2.Open()), new[] { 1, 3, 5, 6, 4, 2 });
-        Assert.Equal(GetList(builder1.Open()), new[] { 1, 3, 7, 8, 4, 2 });
-        Assert.Equal(GetList(builder2.Open()), new[] { 1, 3, 5, 6, 4, 2 });
+        Assert.Equal(GetList(factory2.Open()), new[] { 1, 3, 5, 6, 4, 2 });
+        Assert.Equal(GetList(factory1.Open()), new[] { 1, 3, 7, 8, 4, 2 });
+        Assert.Equal(GetList(factory2.Open()), new[] { 1, 3, 5, 6, 4, 2 });
     }
 
     [Fact]
@@ -229,9 +236,9 @@ public class OpenXmlPackageBuilderTests
             });
 
         // Arrange
-        Assert.Equal(GetList(builder1.Open()), new[] { 1, 3, 4, 2 });
-        Assert.Equal(GetList(builder2.Open()), new[] { 1, 3, 5, 6, 4, 2 });
-        Assert.Equal(GetList(builder3.Open()), new[] { 1, 3, 7, 8, 4, 2 });
+        Assert.Equal(GetList(builder1.Build().Open()), new[] { 1, 3, 4, 2 });
+        Assert.Equal(GetList(builder2.Build().Open()), new[] { 1, 3, 5, 6, 4, 2 });
+        Assert.Equal(GetList(builder3.Build().Open()), new[] { 1, 3, 7, 8, 4, 2 });
     }
 
     private static IEnumerable<int> GetList(OpenXmlPackage package)

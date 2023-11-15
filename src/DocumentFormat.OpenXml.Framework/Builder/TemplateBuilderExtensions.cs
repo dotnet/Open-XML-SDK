@@ -33,7 +33,7 @@ public static class TemplateBuilderExtensions
                 }
             });
 
-    internal static IPackageBuilder<TPackage> CreateTemplateBuilder<TPackage>(this IPackageBuilder<TPackage> builder, Func<IPackageBuilder<TPackage>, TPackage> templateFactory, Action<TPackage>? onLoad = null)
+    internal static IPackageBuilder<TPackage> CreateTemplateBuilder<TPackage>(this IPackageBuilder<TPackage> builder, Func<IPackageFactory<TPackage>, TPackage> templateFactory, Action<TPackage>? onLoad = null)
         where TPackage : OpenXmlPackage
         => new TemplateBuilder<TPackage>(builder, templateFactory, onLoad);
 
@@ -42,14 +42,12 @@ public static class TemplateBuilderExtensions
     {
         private readonly IPackageBuilder<TPackage> _otherBuilder;
         private readonly IPackageBuilder<TPackage> _templateBuilder;
-        private readonly Func<IPackageBuilder<TPackage>, TPackage> _templateFactory;
+        private readonly Func<IPackageFactory<TPackage>, TPackage> _templateFactory;
         private readonly Action<TPackage>? _onLoad;
-
-        private PackageInitializerDelegate<TPackage>? _pipeline;
 
         public TemplateBuilder(
             IPackageBuilder<TPackage> other,
-            Func<IPackageBuilder<TPackage>, TPackage> templateFactory,
+            Func<IPackageFactory<TPackage>, TPackage> templateFactory,
             Action<TPackage>? onLoad)
         {
             _otherBuilder = other;
@@ -60,36 +58,54 @@ public static class TemplateBuilderExtensions
 
         public IDictionary<string, object?> Properties => _otherBuilder.Properties;
 
-        public PackageInitializerDelegate<TPackage> Build()
-        {
-            if (_pipeline is null)
-            {
-                var built = _otherBuilder.Build();
-
-                _pipeline = package =>
-                {
-                    LoadTemplate(package);
-                    built(package);
-                };
-            }
-
-            return _pipeline;
-        }
-
-        public TPackage Create() => _otherBuilder.Create();
-
         public IPackageBuilder<TPackage> Clone() => new TemplateBuilder<TPackage>(_otherBuilder.Clone(), _templateFactory, _onLoad);
 
         public IPackageBuilder<TPackage> Use(Func<PackageInitializerDelegate<TPackage>, PackageInitializerDelegate<TPackage>> configure)
         {
-            _pipeline = null;
             _otherBuilder.Use(configure);
             return this;
         }
 
+        public IPackageFactory<TPackage> Build() => new TemplateFactory(_otherBuilder.Build(), this);
+
+        private sealed class TemplateFactory : IPackageFactory<TPackage>
+        {
+            private readonly IPackageFactory<TPackage> _factory;
+            private readonly TemplateBuilder<TPackage> _template;
+
+            public TemplateFactory(IPackageFactory<TPackage> factory, TemplateBuilder<TPackage> template)
+            {
+                _factory = factory;
+                _template = template;
+            }
+
+            public IFeatureCollection Features => _factory.Features;
+
+            public TPackage Create(IPackageInitializer initializer)
+                => _factory.Create(new Initializer(initializer, _template));
+
+            private sealed class Initializer : IPackageInitializer
+            {
+                private readonly IPackageInitializer _other;
+                private readonly TemplateBuilder<TPackage> _template;
+
+                public Initializer(IPackageInitializer other, TemplateBuilder<TPackage> template)
+                {
+                    _other = other;
+                    _template = template;
+                }
+
+                public void Initialize(OpenXmlPackage package)
+                {
+                    _template.LoadTemplate((TPackage)package);
+                    _other.Initialize(package);
+                }
+            }
+        }
+
         private void LoadTemplate(TPackage package)
         {
-            using var template = _templateFactory(_templateBuilder);
+            using var template = _templateFactory(_templateBuilder.Build());
 
             template.Clone(package);
 

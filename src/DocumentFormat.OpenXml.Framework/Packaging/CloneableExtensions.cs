@@ -97,6 +97,7 @@ public static class CloneableExtensions
         return openXmlPackage.Features.GetRequired<IPackageFactoryFeature<TPackage>>()
             .Create()
             .UseSettings(openSettings)
+            .Build()
             .Open(stream, PackageOpenMode.Create)
             .CopyFrom(openXmlPackage)
             .Reload(isEditable);
@@ -182,6 +183,7 @@ public static class CloneableExtensions
         return openXmlPackage.Features.GetRequired<IPackageFactoryFeature<TPackage>>()
               .Create()
               .UseSettings(openSettings ?? new())
+              .Build()
               .Open(path, PackageOpenMode.Create)
               .CopyFrom(openXmlPackage)
               .Reload(isEditable);
@@ -235,6 +237,7 @@ public static class CloneableExtensions
         return openXmlPackage.Features.GetRequired<IPackageFactoryFeature<TPackage>>()
               .Create()
               .UseSettings(openSettings ?? new())
+              .Build()
               .Open(package)
               .CopyFrom(openXmlPackage);
     }
