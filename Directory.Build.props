@@ -8,12 +8,18 @@
   </PropertyGroup>
 
   <PropertyGroup>
+    <NoWarn>$(NoWarn);CS0436</NoWarn>
+
     <!-- We want to use experimental APIs internally -->
-    <NoWarn>$(NoWarn);CS0436;OOXML0001</NoWarn>
+    <NoWarn>$(NoWarn);OOXML0001;OOXML0002;OOXML0003</NoWarn>
   </PropertyGroup>
 
   <PropertyGroup>
     <IncludeSourceGenerator>false</IncludeSourceGenerator>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <AccelerateBuildsInVisualStudio>true</AccelerateBuildsInVisualStudio>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -23,8 +29,8 @@
     <Version>$(GitVersion_NuGetVersionV2)</Version>
   </PropertyGroup>
 
-    <!-- Due to the need to test .NET 3.5 and .NET 4.0 builds, we have separate configurations that
-         allow us to build and test them. These are mostly done in CI, but may be useful at dev time. -->
+  <!-- Due to the need to test .NET 3.5 and .NET 4.0 builds, we have separate configurations that
+       allow us to build and test them. These are mostly done in CI, but may be useful at dev time. -->
   <Choose>
     <When Condition=" '$(ProjectLoadStyle)' == 'net35' ">
       <PropertyGroup>

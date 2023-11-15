@@ -4,6 +4,7 @@
 using DocumentFormat.OpenXml.Packaging;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 
 namespace DocumentFormat.OpenXml.Builder;
 
@@ -16,6 +17,7 @@ public delegate void PackageInitializerDelegate<TPackage>(TPackage package);
 /// Defines a builder to create an initialization pipeline for a <typeparamref name="TPackage"/>.
 /// </summary>
 /// <typeparam name="TPackage">Type of the <see cref="OpenXmlPackage"/>.</typeparam>
+[Experimental(ExperimentalApis.PackageBuilder, UrlFormat = ExperimentalApis.UrlFormat)]
 public interface IPackageBuilder<TPackage>
     where TPackage : OpenXmlPackage
 {

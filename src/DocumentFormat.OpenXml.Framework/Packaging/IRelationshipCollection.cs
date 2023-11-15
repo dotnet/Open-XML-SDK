@@ -11,7 +11,7 @@ namespace DocumentFormat.OpenXml.Packaging;
 /// <summary>
 /// A collection of relationships for a <see cref="IPackage"/> of <see cref="IPackagePart"/>.
 /// </summary>
-[Experimental(ExperimentalApis.PackageApis.DiagnosticId, UrlFormat = ExperimentalApis.UrlFormat)]
+[Experimental(ExperimentalApis.IPackage, UrlFormat = ExperimentalApis.UrlFormat)]
 public interface IRelationshipCollection : IEnumerable<IPackageRelationship>
 {
     /// <summary>

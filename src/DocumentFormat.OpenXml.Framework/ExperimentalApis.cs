@@ -7,9 +7,7 @@ internal static class ExperimentalApis
 {
     internal const string UrlFormat = "https://aka.ms/openxmlsdk-diagnostics#{0}";
 
-    internal static class PackageApis
-    {
-        public const string DiagnosticId = "OOXML0001";
-        public const string Message = "IPackage related APIs are currently experimental. Future versions may (or may not) change their shape before stabilizing.";
-    }
+    public const string IPackage = "OOXML0001";
+    public const string PackageBuilder = "OOXML0002";
+    public const string AOT = "OOXML0003";
 }
