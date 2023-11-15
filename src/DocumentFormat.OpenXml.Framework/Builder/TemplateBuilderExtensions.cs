@@ -79,8 +79,6 @@ public static class TemplateBuilderExtensions
                 _template = template;
             }
 
-            public IFeatureCollection Features => _factory.Features;
-
             public TPackage Create(IPackageInitializer initializer)
                 => _factory.Create(new Initializer(initializer, _template));
 
