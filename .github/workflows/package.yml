@@ -5,10 +5,16 @@ on:
     branches: 
       - 'main'
       - 'release/*'
+    paths-ignore:
+      - 'docs/**'
+      - '**.md'
   pull_request:
     branches:
       - 'main'
       - 'release/*'
+    paths-ignore:
+      - 'docs/**'
+      - '**.md'
   release:
     types: [published]
 
