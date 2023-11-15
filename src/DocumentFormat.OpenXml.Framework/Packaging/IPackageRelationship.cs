@@ -10,7 +10,7 @@ namespace DocumentFormat.OpenXml.Packaging;
 /// <summary>
 /// An interface that defines the relationship between a source and a target part. Similar to <see cref="PackageRelationship"/> but allows full overriding.
 /// </summary>
-[Experimental(ExperimentalApis.PackageApis.DiagnosticId, UrlFormat = ExperimentalApis.UrlFormat)]
+[Experimental(ExperimentalApis.IPackage, UrlFormat = ExperimentalApis.UrlFormat)]
 public interface IPackageRelationship
 {
     /// <summary>

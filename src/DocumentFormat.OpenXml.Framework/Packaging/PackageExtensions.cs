@@ -11,11 +11,11 @@ namespace DocumentFormat.OpenXml.Experimental;
 /// <summary>
 /// Extensions to retrieve package details.
 /// </summary>
-[Experimental(ExperimentalApis.PackageApis.DiagnosticId, UrlFormat = ExperimentalApis.UrlFormat)]
+[Experimental(ExperimentalApis.IPackage, UrlFormat = ExperimentalApis.UrlFormat)]
 public static class PackageExtensions
 {
     /// <summary>
-    /// [EXPERIMENTAL] Gets the current <see cref="IPackage"/> for the <paramref name="package"/>.
+    /// Gets the current <see cref="IPackage"/> for the <paramref name="package"/>.
     /// </summary>
     /// <param name="package">Current package.</param>
     /// <returns>The underlying <see cref="IPackage"/>.</returns>

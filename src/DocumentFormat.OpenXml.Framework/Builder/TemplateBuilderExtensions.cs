@@ -5,11 +5,19 @@ using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Packaging;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 
 namespace DocumentFormat.OpenXml.Builder;
 
-internal static class TemplateBuilderExtensions
+/// <summary>
+/// A collection of extensions to add a template as part of the <see cref="IPackageBuilder{TPackage}"/>.
+/// </summary>
+[Experimental(ExperimentalApis.PackageBuilder, UrlFormat = ExperimentalApis.UrlFormat)]
+public static class TemplateBuilderExtensions
 {
+    /// <summary>
+    /// Adds a template to the current <paramref name="builder"/>.
+    /// </summary>
     public static IPackageBuilder<TPackage> UseTemplate<TPackage, TType>(this IPackageBuilder<TPackage> builder, string path, TType type)
         where TPackage : OpenXmlPackage
         where TType : struct

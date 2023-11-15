@@ -5,6 +5,7 @@ using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Packaging.Builder;
 using System;
+using System.Diagnostics.CodeAnalysis;
 using System.IO;
 
 namespace DocumentFormat.OpenXml.Builder;
@@ -12,6 +13,7 @@ namespace DocumentFormat.OpenXml.Builder;
 /// <summary>
 /// A collection of extension methods for opening packages
 /// </summary>
+[Experimental(ExperimentalApis.PackageBuilder, UrlFormat = ExperimentalApis.UrlFormat)]
 public static class OpenXmlPackageBuilderExtensions
 {
     /// <summary>
