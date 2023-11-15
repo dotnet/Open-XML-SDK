@@ -84,21 +84,20 @@ internal abstract class OpenXmlPackageBuilder<TPackage> : IPackageBuilder<TPacka
     private sealed class Factory : IPackageFactory<TPackage>
     {
         private readonly Func<TPackage> _package;
-        private readonly PackageInitializerDelegate<TPackage> _initializer;
+        private readonly PackageInitializerDelegate<TPackage> _pipeline;
 
-        public Factory(Func<TPackage> package, PackageInitializerDelegate<TPackage> initializer)
+        public Factory(Func<TPackage> package, PackageInitializerDelegate<TPackage> pipeline)
         {
             _package = package;
-            _initializer = initializer;
+            _pipeline = pipeline;
         }
-
-        public IFeatureCollection Features { get; } = new FeatureCollection();
 
         public TPackage Create(IPackageInitializer initializer)
         {
             var package = _package();
 
-            _initializer(package);
+            initializer.Initialize(package);
+            _pipeline(package);
 
             return package;
         }

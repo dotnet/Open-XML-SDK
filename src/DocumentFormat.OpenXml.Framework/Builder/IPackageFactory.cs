@@ -15,11 +15,6 @@ namespace DocumentFormat.OpenXml.Builder;
 public interface IPackageFactory<TPackage>
 {
     /// <summary>
-    /// Gets a factory level feature collection.
-    /// </summary>
-    IFeatureCollection Features { get; }
-
-    /// <summary>
     /// Create an instance of <typeparamref name="TPackage"/>.
     /// </summary>
     /// <param name="initializer">Initializer for the package.</param>
