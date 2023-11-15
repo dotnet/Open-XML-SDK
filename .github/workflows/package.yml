@@ -151,7 +151,30 @@ jobs:
              name: Signed
              path: |
                ${{ github.workspace }}\unsigned\*.snupkg
-               ${{ github.workspace }}\unsigned\raw\*.nupkg 
+               ${{ github.workspace }}\unsigned\raw\*.nupkg
+  CI:
+    name: "Push to CI feed"
+    needs: [pack]
+    runs-on: ubuntu-latest
+    steps:
+         - name: Install .NET Core
+           uses: actions/setup-dotnet@v3
+         - name: Download Packages
+           uses: actions/download-artifact@v3
+           with: 
+                name: Unsigned
+                path: '${{ github.workspace }}/packages'
+         - name: Push to CI feed
+           env:
+              SLEET_FEED_TYPE: azure
+              SLEET_FEED_CONTAINER: feed
+              SLEET_FEED_CONNECTIONSTRING: ${{secrets.SLEET_CONNECTIONSTRING}}
+           run: |
+            cd $GITHUB_WORKSPACE/packages
+            dotnet tool install -g sleet
+            sleet push . --skip-existing
+
+
   releaseInfo:
     name: Release Info
     runs-on: windows-latest
