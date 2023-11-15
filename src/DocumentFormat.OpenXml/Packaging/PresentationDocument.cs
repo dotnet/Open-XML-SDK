@@ -43,6 +43,12 @@ namespace DocumentFormat.OpenXml.Packaging
         [Experimental(ExperimentalApis.PackageBuilder, UrlFormat = ExperimentalApis.UrlFormat)]
         public static IPackageBuilder<PresentationDocument> CreateDefaultBuilder() => DefaultBuilder.Clone();
 
+        /// <summary>
+        /// Gets the default factory for <see cref="PresentationDocument"/>.
+        /// </summary>
+        [Experimental(ExperimentalApis.PackageBuilder, UrlFormat = ExperimentalApis.UrlFormat)]
+        public static IPackageFactory<PresentationDocument> DefaultFactory { get; } = DefaultBuilder.Build();
+
         private sealed class Builder : OpenXmlPackageBuilder<PresentationDocument>
         {
             public Builder(Builder? builder = null)
@@ -120,6 +126,7 @@ namespace DocumentFormat.OpenXml.Packaging
                     package.DocumentType = type;
                     package.OpenSettings.AutoSave = autoSave;
                 })
+                .Build()
                 .Open(path, PackageOpenMode.Create);
 
         /// <summary>
@@ -138,6 +145,7 @@ namespace DocumentFormat.OpenXml.Packaging
                     package.DocumentType = type;
                     package.OpenSettings.AutoSave = autoSave;
                 })
+                .Build()
                 .Open(stream, PackageOpenMode.Create);
 
         /// <summary>
@@ -156,6 +164,7 @@ namespace DocumentFormat.OpenXml.Packaging
                     package.DocumentType = type;
                     package.OpenSettings.AutoSave = autoSave;
                 })
+                .Build()
                 .Open(package);
 
         /// <summary>
@@ -173,6 +182,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
             return CreateDefaultBuilder()
                 .UseTemplate(path, PresentationDocumentType.Presentation)
+                .Build()
                 .Open();
         }
 
@@ -223,6 +233,7 @@ namespace DocumentFormat.OpenXml.Packaging
         public static PresentationDocument Open(string path, bool isEditable, OpenSettings openSettings)
             => CreateDefaultBuilder()
                 .UseSettings(openSettings)
+                .Build()
                 .Open(path, isEditable);
 
         /// <summary>
@@ -239,6 +250,7 @@ namespace DocumentFormat.OpenXml.Packaging
         public static PresentationDocument Open(Stream stream, bool isEditable, OpenSettings openSettings)
             => CreateDefaultBuilder()
                 .UseSettings(openSettings)
+                .Build()
                 .Open(stream, isEditable);
 
         /// <summary>
@@ -254,6 +266,7 @@ namespace DocumentFormat.OpenXml.Packaging
         public static PresentationDocument Open(Package package, OpenSettings openSettings)
             => CreateDefaultBuilder()
                 .UseSettings(openSettings)
+                .Build()
                 .Open(package);
 
         /// <summary>

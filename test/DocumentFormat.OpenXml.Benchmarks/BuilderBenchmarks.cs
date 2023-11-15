@@ -3,6 +3,7 @@
 
 using BenchmarkDotNet.Attributes;
 using DocumentFormat.OpenXml.Builder;
+using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Packaging;
 
 namespace DocumentFormat.OpenXml.Benchmarks
@@ -85,14 +86,18 @@ namespace DocumentFormat.OpenXml.Benchmarks
             public OpenXmlPackage OpenEmpty()
             {
                 var package = Create();
-                Build()(package);
+                Build().Create(package);
                 return package;
             }
         }
 
-        private sealed class MyPackage : OpenXmlPackage
+        private sealed class MyPackage : OpenXmlPackage, IPackageInitializer
         {
             public int Count { get; set; }
+
+            public void Initialize(OpenXmlPackage package)
+            {
+            }
         }
     }
 }

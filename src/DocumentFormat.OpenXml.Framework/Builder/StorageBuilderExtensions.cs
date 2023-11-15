@@ -33,14 +33,6 @@ internal static class StorageBuilderExtensions
         return package;
     }
 
-    internal static TPackage Open<TPackage>(this OpenXmlPackageBuilder<TPackage> builder, string path, bool isEditable)
-        where TPackage : OpenXmlPackage
-        => builder.Open(path, isEditable ? PackageOpenMode.ReadWrite : PackageOpenMode.Read);
-
-    public static TPackage Open<TPackage>(this OpenXmlPackageBuilder<TPackage> builder, Stream stream, bool isEditable)
-        where TPackage : OpenXmlPackage
-        => builder.Open(stream, isEditable ? PackageOpenMode.ReadWrite : PackageOpenMode.Read);
-
     private static void SetPackageFeatures(this OpenXmlPackage package, PackageFeatureBase packageFeature)
     {
         var features = package.Features;

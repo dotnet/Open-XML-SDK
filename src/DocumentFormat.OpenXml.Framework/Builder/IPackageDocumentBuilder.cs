@@ -26,6 +26,11 @@ public interface IPackageDocumentBuilder<TPackage> where TPackage : OpenXmlPacka
     /// </summary>
     /// <returns>A minimal builder.</returns>
     static abstract IPackageBuilder<TPackage> CreateBuilder();
+
+    /// <summary>
+    /// Gets the default package factory for <typeparamref name="TPackage"/>.
+    /// </summary>
+    static abstract IPackageFactory<TPackage> DefaultFactory { get; }
 }
 
 #endif
