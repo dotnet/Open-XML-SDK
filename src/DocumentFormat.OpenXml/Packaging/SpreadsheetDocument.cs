@@ -4,6 +4,7 @@
 using DocumentFormat.OpenXml.Builder;
 using DocumentFormat.OpenXml.Features;
 using System;
+using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.IO.Packaging;
 using System.Reflection;
@@ -32,12 +33,14 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Creates a default builder for <see cref="SpreadsheetDocument"/>
         /// </summary>
         /// <returns>The default builder.</returns>
+        [Experimental(ExperimentalApis.PackageBuilder, UrlFormat = ExperimentalApis.UrlFormat)]
         public static IPackageBuilder<SpreadsheetDocument> CreateBuilder() => new Builder();
 
         /// <summary>
         /// Creates a builder that has minimal initialization for <see cref="SpreadsheetDocument"/>.
         /// </summary>
         /// <returns>A minimal builder.</returns>
+        [Experimental(ExperimentalApis.PackageBuilder, UrlFormat = ExperimentalApis.UrlFormat)]
         public static IPackageBuilder<SpreadsheetDocument> CreateDefaultBuilder() => DefaultBuilder.Clone();
 
         private sealed class Builder : OpenXmlPackageBuilder<SpreadsheetDocument>

@@ -5,6 +5,7 @@ using DocumentFormat.OpenXml.Builder;
 using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Wordprocessing;
 using System;
+using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.IO.Packaging;
 using System.Reflection;
@@ -33,12 +34,14 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Creates a default builder for <see cref="WordprocessingDocument"/>
         /// </summary>
         /// <returns>The default builder.</returns>
+        [Experimental(ExperimentalApis.PackageBuilder, UrlFormat = ExperimentalApis.UrlFormat)]
         public static IPackageBuilder<WordprocessingDocument> CreateBuilder() => new Builder();
 
         /// <summary>
         /// Creates a builder that has minimal initialization for <see cref="WordprocessingDocument"/>.
         /// </summary>
         /// <returns>A minimal builder.</returns>
+        [Experimental(ExperimentalApis.PackageBuilder, UrlFormat = ExperimentalApis.UrlFormat)]
         public static IPackageBuilder<WordprocessingDocument> CreateDefaultBuilder() => DefaultBuilder.Clone();
 
         private sealed class Builder : OpenXmlPackageBuilder<WordprocessingDocument>

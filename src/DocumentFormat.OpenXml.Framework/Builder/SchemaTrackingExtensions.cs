@@ -48,6 +48,8 @@ public static class SchemaTrackingExtensions
 
             package.Features.Set<IRootElementFeature>(debugFeatures);
             package.Features.Set<IPartFactoryFeature>(debugFeatures);
+
+            next(package);
         });
 
         return builder;
