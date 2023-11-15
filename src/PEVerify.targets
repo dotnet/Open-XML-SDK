@@ -10,7 +10,7 @@
     <Features>$(Features);peverify-compat</Features>
   </PropertyGroup>
 
-  <Target Name="Run PEVerify" AfterTargets="Build" Condition="$(IsFramework) AND $(RunPeVerify)">
+  <Target Name="Run PEVerify" AfterTargets="Build" Condition="$(IsFramework) AND $(RunPeVerify) AND '$(OS)' == 'Windows_NT' ">
     <ItemGroup>
         <_OutputFileToVerify Include="@(FileWrites)" Condition="'%(Extension)' == '.dll' AND $([System.Text.RegularExpressions.Regex]::IsMatch('%(FullPath)', '.+\\bin\\.+'))" />
     </ItemGroup>
