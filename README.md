@@ -36,11 +36,12 @@ The Open XML SDK provides tools for working with Office Word, Excel, and PowerPo
 
 The official release NuGet packages for Open XML SDK are on NuGet.org:
 
-| Package | Download |
-|---------|----------|
-| DocumentFormat.OpenXml | [![NuGet](https://img.shields.io/nuget/v/DocumentFormat.OpenXml.svg)](https://www.nuget.org/packages/DocumentFormat.OpenXml) |
-| DocumentFormat.OpenXml.Linq | [![NuGet](https://img.shields.io/nuget/v/DocumentFormat.OpenXml.Linq.svg)](https://www.nuget.org/packages/DocumentFormat.OpenXml.Linq) |
-| DocumentFormat.OpenXml.Features | [![NuGet](https://img.shields.io/nuget/v/DocumentFormat.OpenXml.Features.svg)](https://www.nuget.org/packages/DocumentFormat.OpenXml.Features) |
+| Package | Download | Prerelease |
+|---------|----------|------------|
+| DocumentFormat.OpenXml.Framework | [![NuGet](https://img.shields.io/nuget/v/DocumentFormat.OpenXml.Framework.svg)](https://www.nuget.org/packages/DocumentFormat.OpenXml.Framework) | [![NuGet](https://img.shields.io/nuget/vpre/DocumentFormat.OpenXml.Framework.svg)](https://www.nuget.org/packages/DocumentFormat.OpenXml.Framework) |
+| DocumentFormat.OpenXml | [![NuGet](https://img.shields.io/nuget/v/DocumentFormat.OpenXml.svg)](https://www.nuget.org/packages/DocumentFormat.OpenXml) | [![NuGet](https://img.shields.io/nuget/vpre/DocumentFormat.OpenXml.svg)](https://www.nuget.org/packages/DocumentFormat.OpenXml)  |
+| DocumentFormat.OpenXml.Linq | [![NuGet](https://img.shields.io/nuget/v/DocumentFormat.OpenXml.Linq.svg)](https://www.nuget.org/packages/DocumentFormat.OpenXml.Linq) | [![NuGet](https://img.shields.io/nuget/vpre/DocumentFormat.OpenXml.Linq.svg)](https://www.nuget.org/packages/DocumentFormat.OpenXml.Linq) |
+| DocumentFormat.OpenXml.Features | [![NuGet](https://img.shields.io/nuget/v/DocumentFormat.OpenXml.Features.svg)](https://www.nuget.org/packages/DocumentFormat.OpenXml.Features) | [![NuGet](https://img.shields.io/nuget/vpre/DocumentFormat.OpenXml.Features.svg)](https://www.nuget.org/packages/DocumentFormat.OpenXml.Features)  |
 
 ## Daily Builds
 
