@@ -5,7 +5,7 @@
     <NoWarn>$(NoWarn);3003;CS0436</NoWarn>
 
     <!-- For now, we have internal access to the framework assembly. That should be removed, and then we'll need to turn this on. -->
-    <IncludeFrameworkShims>true</IncludeFrameworkShims>
+    <IncludeFrameworkShims>false</IncludeFrameworkShims>
     <TargetFrameworks>$(ProductTargetFrameworks)</TargetFrameworks>
   </PropertyGroup>
 
@@ -30,6 +30,10 @@
 - Document modification, such as removing tracked revisions or removing unacceptable content from documents.]]>
     </Description>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\common\System\ObsoleteAttribute.cs" Link="ObsoleteAttribute.cs" />
+  </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="../DocumentFormat.OpenXml.Framework/DocumentFormat.OpenXml.Framework.csproj" />
