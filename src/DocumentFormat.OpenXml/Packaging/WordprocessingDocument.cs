@@ -35,7 +35,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         /// <returns>The default builder.</returns>
         [Experimental(ExperimentalApis.PackageBuilder, UrlFormat = ExperimentalApis.UrlFormat)]
-        [Obsolete(ExperimentalApis.Message, error: true, DiagnosticId = ExperimentalApis.PackageBuilder, UrlFormat = ExperimentalApis.UrlFormat)]
+        [Obsolete(ExperimentalApis.Message, DiagnosticId = ExperimentalApis.PackageBuilder, UrlFormat = ExperimentalApis.UrlFormat)]
         public static IPackageBuilder<WordprocessingDocument> CreateBuilder() => new Builder();
 
         /// <summary>
@@ -43,14 +43,14 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         /// <returns>A minimal builder.</returns>
         [Experimental(ExperimentalApis.PackageBuilder, UrlFormat = ExperimentalApis.UrlFormat)]
-        [Obsolete(ExperimentalApis.Message, error: true, DiagnosticId = ExperimentalApis.PackageBuilder, UrlFormat = ExperimentalApis.UrlFormat)]
+        [Obsolete(ExperimentalApis.Message, DiagnosticId = ExperimentalApis.PackageBuilder, UrlFormat = ExperimentalApis.UrlFormat)]
         public static IPackageBuilder<WordprocessingDocument> CreateDefaultBuilder() => DefaultBuilder.Clone();
 
         /// <summary>
         /// Gets the default factory for <see cref="WordprocessingDocument"/>.
         /// </summary>
         [Experimental(ExperimentalApis.PackageBuilder, UrlFormat = ExperimentalApis.UrlFormat)]
-        [Obsolete(ExperimentalApis.Message, error: true, DiagnosticId = ExperimentalApis.PackageBuilder, UrlFormat = ExperimentalApis.UrlFormat)]
+        [Obsolete(ExperimentalApis.Message, DiagnosticId = ExperimentalApis.PackageBuilder, UrlFormat = ExperimentalApis.UrlFormat)]
         public static IPackageFactory<WordprocessingDocument> DefaultFactory { get; } = DefaultBuilder.Build();
 
         private sealed class Builder : OpenXmlPackageBuilder<WordprocessingDocument>

@@ -10,7 +10,7 @@ namespace DocumentFormat.OpenXml.Builder;
 /// An enum that describes how a package is going to be opened
 /// </summary>
 [Experimental(ExperimentalApis.PackageBuilder, UrlFormat = ExperimentalApis.UrlFormat)]
-[Obsolete(ExperimentalApis.Message, error: true, DiagnosticId = ExperimentalApis.PackageBuilder, UrlFormat = ExperimentalApis.UrlFormat)]
+[Obsolete(ExperimentalApis.Message, DiagnosticId = ExperimentalApis.PackageBuilder, UrlFormat = ExperimentalApis.UrlFormat)]
 public enum PackageOpenMode
 {
     /// <summary>
