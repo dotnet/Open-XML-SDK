@@ -13,6 +13,7 @@ namespace DocumentFormat.OpenXml.Packaging;
 /// An abstraction similar to <see cref="System.IO.Packaging.Package"/> that allows for pass through implementations
 /// </summary>
 [Experimental(ExperimentalApis.IPackage, UrlFormat = ExperimentalApis.UrlFormat)]
+[Obsolete(ExperimentalApis.Message, DiagnosticId = ExperimentalApis.IPackage, UrlFormat = ExperimentalApis.UrlFormat)]
 public interface IPackage
 {
     /// <summary>

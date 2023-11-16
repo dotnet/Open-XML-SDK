@@ -3,6 +3,7 @@
 
 using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Packaging;
+using System;
 using System.Diagnostics.CodeAnalysis;
 
 namespace DocumentFormat.OpenXml.Builder;
@@ -12,6 +13,7 @@ namespace DocumentFormat.OpenXml.Builder;
 /// </summary>
 /// <typeparam name="TPackage">Type of the <see cref="OpenXmlPackage"/>.</typeparam>
 [Experimental(ExperimentalApis.PackageBuilder, UrlFormat = ExperimentalApis.UrlFormat)]
+[Obsolete(ExperimentalApis.Message, DiagnosticId = ExperimentalApis.PackageBuilder, UrlFormat = ExperimentalApis.UrlFormat)]
 public interface IPackageFactory<TPackage>
 {
     /// <summary>

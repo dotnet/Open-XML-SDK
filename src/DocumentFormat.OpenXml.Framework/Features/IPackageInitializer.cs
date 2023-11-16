@@ -2,6 +2,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Packaging;
+using System;
 using System.Diagnostics.CodeAnalysis;
 
 namespace DocumentFormat.OpenXml.Features;
@@ -9,7 +10,8 @@ namespace DocumentFormat.OpenXml.Features;
 /// <summary>
 /// An initializer for a package.
 /// </summary>
-[Experimental(ExperimentalApis.PackageBuilder)]
+[Experimental(ExperimentalApis.PackageBuilder, UrlFormat = ExperimentalApis.UrlFormat)]
+[Obsolete(ExperimentalApis.Message, DiagnosticId = ExperimentalApis.PackageBuilder, UrlFormat = ExperimentalApis.UrlFormat)]
 public interface IPackageInitializer
 {
     /// <summary>

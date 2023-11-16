@@ -2,6 +2,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Framework;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 
@@ -11,6 +12,7 @@ namespace DocumentFormat.OpenXml.Features;
 /// Feature to describe the schema elements that have been used.
 /// </summary>
 [Experimental(ExperimentalApis.AOT, UrlFormat = ExperimentalApis.UrlFormat)]
+[Obsolete(ExperimentalApis.Message, DiagnosticId = ExperimentalApis.AOT, UrlFormat = ExperimentalApis.UrlFormat)]
 public interface ISchemaTrackingFeature
 {
     /// <summary>

@@ -18,6 +18,7 @@ public delegate void PackageInitializerDelegate<TPackage>(TPackage package);
 /// </summary>
 /// <typeparam name="TPackage">Type of the <see cref="OpenXmlPackage"/>.</typeparam>
 [Experimental(ExperimentalApis.PackageBuilder, UrlFormat = ExperimentalApis.UrlFormat)]
+[Obsolete(ExperimentalApis.Message, DiagnosticId = ExperimentalApis.PackageBuilder, UrlFormat = ExperimentalApis.UrlFormat)]
 public interface IPackageBuilder<TPackage>
     where TPackage : OpenXmlPackage
 {

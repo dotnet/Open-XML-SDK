@@ -11,7 +11,7 @@
     <NoWarn>$(NoWarn);CS0436</NoWarn>
 
     <!-- We want to use experimental APIs internally -->
-    <NoWarn>$(NoWarn);OOXML0001;OOXML0002;OOXML0003</NoWarn>
+    <NoWarn>$(NoWarn);OOXML0001;OOXML0002;OOXML0003;OOXML0004</NoWarn>
   </PropertyGroup>
 
   <PropertyGroup>
