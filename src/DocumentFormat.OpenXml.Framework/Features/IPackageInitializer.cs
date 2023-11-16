@@ -10,7 +10,8 @@ namespace DocumentFormat.OpenXml.Features;
 /// <summary>
 /// An initializer for a package.
 /// </summary>
-[Obsolete(ExperimentalApis.Message, DiagnosticId = ExperimentalApis.PackageBuilder, UrlFormat = ExperimentalApis.UrlFormat)]
+[Experimental(ExperimentalApis.PackageBuilder, UrlFormat = ExperimentalApis.UrlFormat)]
+[Obsolete(ExperimentalApis.Message, error: true, DiagnosticId = ExperimentalApis.PackageBuilder, UrlFormat = ExperimentalApis.UrlFormat)]
 public interface IPackageInitializer
 {
     /// <summary>

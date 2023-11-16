@@ -9,7 +9,8 @@ namespace DocumentFormat.OpenXml.Packaging;
 /// <summary>
 /// An abstraction of package properties, similar to <see cref="System.IO.Packaging.PackageProperties"/>.
 /// </summary>
-[Obsolete(ExperimentalApis.Message, DiagnosticId = ExperimentalApis.IPackage, UrlFormat = ExperimentalApis.UrlFormat)]
+[Experimental(ExperimentalApis.IPackage, UrlFormat = ExperimentalApis.UrlFormat)]
+[Obsolete(ExperimentalApis.Message, error: true, DiagnosticId = ExperimentalApis.IPackage, UrlFormat = ExperimentalApis.UrlFormat)]
 public interface IPackageProperties
 {
     /// <summary>

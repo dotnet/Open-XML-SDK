@@ -33,20 +33,23 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Creates a default builder for <see cref="SpreadsheetDocument"/>
         /// </summary>
         /// <returns>The default builder.</returns>
-        [Obsolete(ExperimentalApis.Message, DiagnosticId = ExperimentalApis.PackageBuilder, UrlFormat = ExperimentalApis.UrlFormat)]
+        [Experimental(ExperimentalApis.PackageBuilder, UrlFormat = ExperimentalApis.UrlFormat)]
+        [Obsolete(ExperimentalApis.Message, error: true, DiagnosticId = ExperimentalApis.PackageBuilder, UrlFormat = ExperimentalApis.UrlFormat)]
         public static IPackageBuilder<SpreadsheetDocument> CreateBuilder() => new Builder();
 
         /// <summary>
         /// Creates a builder that has minimal initialization for <see cref="SpreadsheetDocument"/>.
         /// </summary>
         /// <returns>A minimal builder.</returns>
-        [Obsolete(ExperimentalApis.Message, DiagnosticId = ExperimentalApis.PackageBuilder, UrlFormat = ExperimentalApis.UrlFormat)]
+        [Experimental(ExperimentalApis.PackageBuilder, UrlFormat = ExperimentalApis.UrlFormat)]
+        [Obsolete(ExperimentalApis.Message, error: true, DiagnosticId = ExperimentalApis.PackageBuilder, UrlFormat = ExperimentalApis.UrlFormat)]
         public static IPackageBuilder<SpreadsheetDocument> CreateDefaultBuilder() => DefaultBuilder.Clone();
 
         /// <summary>
         /// Gets the default factory for <see cref="SpreadsheetDocument"/>.
         /// </summary>
-        [Obsolete(ExperimentalApis.Message, DiagnosticId = ExperimentalApis.PackageBuilder, UrlFormat = ExperimentalApis.UrlFormat)]
+        [Experimental(ExperimentalApis.PackageBuilder, UrlFormat = ExperimentalApis.UrlFormat)]
+        [Obsolete(ExperimentalApis.Message, error: true, DiagnosticId = ExperimentalApis.PackageBuilder, UrlFormat = ExperimentalApis.UrlFormat)]
         public static IPackageFactory<SpreadsheetDocument> DefaultFactory { get; } = DefaultBuilder.Build();
 
         private sealed class Builder : OpenXmlPackageBuilder<SpreadsheetDocument>

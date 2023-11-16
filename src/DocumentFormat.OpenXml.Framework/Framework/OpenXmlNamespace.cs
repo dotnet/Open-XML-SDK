@@ -9,7 +9,8 @@ namespace DocumentFormat.OpenXml.Framework;
 /// <summary>
 /// A structure that defines a namespace.
 /// </summary>
-[Obsolete(ExperimentalApis.Message, DiagnosticId = ExperimentalApis.Framework, UrlFormat = ExperimentalApis.UrlFormat)]
+[Experimental(ExperimentalApis.Framework, UrlFormat = ExperimentalApis.UrlFormat)]
+[Obsolete(ExperimentalApis.Message, error: true, DiagnosticId = ExperimentalApis.Framework, UrlFormat = ExperimentalApis.UrlFormat)]
 public readonly partial struct OpenXmlNamespace : IComparable<OpenXmlNamespace>, IEquatable<OpenXmlNamespace>
 {
     private readonly string? _uri;

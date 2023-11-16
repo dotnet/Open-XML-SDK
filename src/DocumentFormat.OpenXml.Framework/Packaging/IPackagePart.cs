@@ -10,7 +10,8 @@ namespace DocumentFormat.OpenXml.Packaging;
 /// <summary>
 /// An abstraction for <see cref="System.IO.Packaging.PackagePart"/> that is easier to override.
 /// </summary>
-[Obsolete(ExperimentalApis.Message, DiagnosticId = ExperimentalApis.IPackage, UrlFormat = ExperimentalApis.UrlFormat)]
+[Experimental(ExperimentalApis.IPackage, UrlFormat = ExperimentalApis.UrlFormat)]
+[Obsolete(ExperimentalApis.Message, error: true, DiagnosticId = ExperimentalApis.IPackage, UrlFormat = ExperimentalApis.UrlFormat)]
 public interface IPackagePart
 {
     /// <summary>

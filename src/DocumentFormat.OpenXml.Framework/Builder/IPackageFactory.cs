@@ -12,7 +12,8 @@ namespace DocumentFormat.OpenXml.Builder;
 /// Defines a factory to create a <typeparamref name="TPackage"/>.
 /// </summary>
 /// <typeparam name="TPackage">Type of the <see cref="OpenXmlPackage"/>.</typeparam>
-[Obsolete(ExperimentalApis.Message, DiagnosticId = ExperimentalApis.PackageBuilder, UrlFormat = ExperimentalApis.UrlFormat)]
+[Experimental(ExperimentalApis.PackageBuilder, UrlFormat = ExperimentalApis.UrlFormat)]
+[Obsolete(ExperimentalApis.Message, error: true, DiagnosticId = ExperimentalApis.PackageBuilder, UrlFormat = ExperimentalApis.UrlFormat)]
 public interface IPackageFactory<TPackage>
 {
     /// <summary>

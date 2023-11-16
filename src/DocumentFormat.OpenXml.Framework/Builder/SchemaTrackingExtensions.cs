@@ -20,7 +20,8 @@ namespace DocumentFormat.OpenXml.Builder;
 /// <summary>
 /// A collection of extension methods to track schema usage
 /// </summary>
-[Obsolete(ExperimentalApis.Message, DiagnosticId = ExperimentalApis.AOT, UrlFormat = ExperimentalApis.UrlFormat)]
+[Experimental(ExperimentalApis.AOT, UrlFormat = ExperimentalApis.UrlFormat)]
+[Obsolete(ExperimentalApis.Message, error: true, DiagnosticId = ExperimentalApis.AOT, UrlFormat = ExperimentalApis.UrlFormat)]
 public static class SchemaTrackingExtensions
 {
     private const string Key = "__SchemaTracker";
