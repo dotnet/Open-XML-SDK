@@ -12,8 +12,7 @@ namespace DocumentFormat.OpenXml.Builder;
 /// <summary>
 /// A collection of extensions to add a template as part of the <see cref="IPackageBuilder{TPackage}"/>.
 /// </summary>
-[Experimental(ExperimentalApis.PackageBuilder, UrlFormat = ExperimentalApis.UrlFormat)]
-[Obsolete(ExperimentalApis.Message, error: true, DiagnosticId = ExperimentalApis.PackageBuilder, UrlFormat = ExperimentalApis.UrlFormat)]
+[Obsolete(ExperimentalApis.Message, DiagnosticId = ExperimentalApis.PackageBuilder, UrlFormat = ExperimentalApis.UrlFormat)]
 public static class TemplateBuilderExtensions
 {
     /// <summary>

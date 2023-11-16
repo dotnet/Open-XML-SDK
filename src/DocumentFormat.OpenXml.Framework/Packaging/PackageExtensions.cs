@@ -11,8 +11,7 @@ namespace DocumentFormat.OpenXml.Experimental;
 /// <summary>
 /// Extensions to retrieve package details.
 /// </summary>
-[Experimental(ExperimentalApis.IPackage, UrlFormat = ExperimentalApis.UrlFormat)]
-[Obsolete(ExperimentalApis.Message, error: true, DiagnosticId = ExperimentalApis.IPackage, UrlFormat = ExperimentalApis.UrlFormat)]
+[Obsolete(ExperimentalApis.Message, DiagnosticId = ExperimentalApis.IPackage, UrlFormat = ExperimentalApis.UrlFormat)]
 public static class PackageExtensions
 {
     /// <summary>
