@@ -18,48 +18,25 @@ namespace DocumentFormat.OpenXml.Builder;
 public static class OpenXmlPackageBuilderExtensions
 {
     /// <summary>
-    /// Creates a package with the default part.
+    /// Creates a new <typeparamref name="TPackage"/> in memory.
     /// </summary>
     public static TPackage Create<TPackage>(this IPackageFactory<TPackage> builder)
         where TPackage : OpenXmlPackage
-    {
-        var package = builder.Open(new MemoryStream(), PackageOpenMode.Create);
-        package.Features.GetRequired<IMainPartFeature>().AddDefaultMainPart();
-        return package;
-    }
+        => builder.Open(new MemoryStream(), PackageOpenMode.Create);
 
     /// <summary>
-    /// Creates a package with the default part.
+    /// Creates a new <typeparamref name="TPackage"/> with the given <paramref name="stream"/>.
     /// </summary>
     public static TPackage Create<TPackage>(this IPackageFactory<TPackage> builder, Stream stream)
         where TPackage : OpenXmlPackage
-    {
-        var package = builder.Open(stream, PackageOpenMode.Create);
-        package.Features.GetRequired<IMainPartFeature>().AddDefaultMainPart();
-        return package;
-    }
+        => builder.Open(stream, PackageOpenMode.Create);
 
     /// <summary>
-    /// Creates a package with the default part.
+    /// Creates a new <typeparamref name="TPackage"/> with the given <paramref name="file"/>.
     /// </summary>
     public static TPackage Create<TPackage>(this IPackageFactory<TPackage> builder, string file)
         where TPackage : OpenXmlPackage
-    {
-        var package = builder.Open(file, PackageOpenMode.Create);
-        package.Features.GetRequired<IMainPartFeature>().AddDefaultMainPart();
-        return package;
-    }
-
-    /// <summary>
-    /// Creates a package with the default part.
-    /// </summary>
-    public static TPackage Create<TPackage>(this IPackageFactory<TPackage> builder, Package package)
-        where TPackage : OpenXmlPackage
-    {
-        var opackage = builder.Open(package);
-        opackage.Features.GetRequired<IMainPartFeature>().AddDefaultMainPart();
-        return opackage;
-    }
+        => builder.Open(file, PackageOpenMode.Create);
 
     /// <summary>
     /// Opens the <paramref name="stream"/> with the given <paramref name="mode"/>.
@@ -174,6 +151,11 @@ public static class OpenXmlPackageBuilderExtensions
             {
                 package.EnableSavePackage();
                 package.EnableUriHandling();
+            }
+
+            if (compatLevel >= CompatibilityLevel.Version_3_1 && package.Features.Get<IPackageCreatingFeature>() is { Mode: PackageOpenMode.Create })
+            {
+                package.Features.GetRequired<IMainPartFeature>().AddDefaultMainPartIfNotPresent();
             }
 
             if (compatLevel == CompatibilityLevel.Version_2_20)

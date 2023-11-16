@@ -111,7 +111,7 @@ internal abstract partial class TypedPackageFeatureCollection<TDocumentType, TMa
         }
     }
 
-    void IMainPartFeature.AddDefaultMainPart()
+    void IMainPartFeature.AddDefaultMainPartIfNotPresent()
     {
         if (MainPart is null)
         {

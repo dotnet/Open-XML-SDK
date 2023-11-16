@@ -13,5 +13,5 @@ internal interface IMainPartFeature
 
     OpenXmlPart? Part { get; }
 
-    void AddDefaultMainPart();
+    void AddDefaultMainPartIfNotPresent();
 }

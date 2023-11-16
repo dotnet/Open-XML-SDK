@@ -11,8 +11,10 @@ using System.IO.Packaging;
 
 namespace DocumentFormat.OpenXml.Features;
 
-internal class StreamPackageFeature : PackageFeatureBase, IDisposable, IPackageStreamFeature
+internal class StreamPackageFeature : PackageFeatureBase, IDisposable, IPackageStreamFeature, IPackageCreatingFeature
 {
+    private readonly PackageOpenMode _openMode;
+
     private Package _package;
     private Stream _stream;
     private bool _disposedValue;
@@ -47,6 +49,7 @@ internal class StreamPackageFeature : PackageFeatureBase, IDisposable, IPackageS
         };
 
         // Only the initial should create, after that, it should be open
+        _openMode = openMode;
         Mode = initialMode == FileMode.Create ? Mode = FileMode.Open : initialMode;
         Access = openMode == PackageOpenMode.Read ? FileAccess.Read : FileAccess.ReadWrite;
 
@@ -57,6 +60,8 @@ internal class StreamPackageFeature : PackageFeatureBase, IDisposable, IPackageS
     protected FileAccess Access { get; }
 
     protected FileMode Mode { get; }
+
+    PackageOpenMode IPackageCreatingFeature.Mode => _openMode;
 
     public Stream Stream
     {
@@ -152,6 +157,7 @@ internal class StreamPackageFeature : PackageFeatureBase, IDisposable, IPackageS
     {
         base.Register(features);
 
+        features.Set<IPackageCreatingFeature>(this);
         features.Set<IPackageStreamFeature>(this);
         features.GetRequired<IDisposableFeature>().Register(this);
     }

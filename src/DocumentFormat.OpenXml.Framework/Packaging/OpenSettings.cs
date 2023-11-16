@@ -45,7 +45,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         public CompatibilityLevel CompatibilityLevel
         {
-            get => _compatibilityLevel == CompatibilityLevel.Default ? CompatibilityLevel.Version_3_0 : _compatibilityLevel;
+            get => _compatibilityLevel == CompatibilityLevel.Default ? CompatibilityLevel.Version_3_1 : _compatibilityLevel;
             set => _compatibilityLevel = value;
         }
 

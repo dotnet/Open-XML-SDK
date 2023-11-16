@@ -24,4 +24,9 @@ public enum CompatibilityLevel
     /// Maintain compatibility with v3.0 if possible
     /// </summary>
     Version_3_0,
+
+    /// <summary>
+    /// Maintain compatibility with v3.1 if possible
+    /// </summary>
+    Version_3_1,
 }
