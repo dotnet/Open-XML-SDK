@@ -3,6 +3,7 @@
 
 using DocumentFormat.OpenXml.Features;
 using DocumentFormat.OpenXml.Packaging;
+using System.ComponentModel;
 using System.Diagnostics.CodeAnalysis;
 
 namespace DocumentFormat.OpenXml.Builder;
@@ -19,5 +20,6 @@ public interface IPackageFactory<TPackage>
     /// </summary>
     /// <param name="initializer">Initializer for the package.</param>
     /// <returns>The created package.</returns>
+    [EditorBrowsable(EditorBrowsableState.Never)]
     TPackage Create(IPackageInitializer initializer);
 }

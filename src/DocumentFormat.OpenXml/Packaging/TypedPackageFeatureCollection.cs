@@ -111,6 +111,14 @@ internal abstract partial class TypedPackageFeatureCollection<TDocumentType, TMa
         }
     }
 
+    void IMainPartFeature.AddDefaultMainPart()
+    {
+        if (MainPart is null)
+        {
+            Package.InitPart(CreateMainPart(), GetContentType(default) ?? throw new InvalidOperationException("No available content type for default document type"));
+        }
+    }
+
     protected abstract string RelationshipType { get; }
 
     public abstract string? GetContentType(TDocumentType type);

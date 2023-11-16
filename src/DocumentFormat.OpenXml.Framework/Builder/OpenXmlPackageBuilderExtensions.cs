@@ -7,6 +7,7 @@ using DocumentFormat.OpenXml.Packaging.Builder;
 using System;
 using System.Diagnostics.CodeAnalysis;
 using System.IO;
+using System.IO.Packaging;
 
 namespace DocumentFormat.OpenXml.Builder;
 
@@ -17,9 +18,53 @@ namespace DocumentFormat.OpenXml.Builder;
 public static class OpenXmlPackageBuilderExtensions
 {
     /// <summary>
+    /// Creates a package with the default part.
+    /// </summary>
+    public static TPackage Create<TPackage>(this IPackageFactory<TPackage> builder)
+        where TPackage : OpenXmlPackage
+    {
+        var package = builder.Open(new MemoryStream(), PackageOpenMode.Create);
+        package.Features.GetRequired<IMainPartFeature>().AddDefaultMainPart();
+        return package;
+    }
+
+    /// <summary>
+    /// Creates a package with the default part.
+    /// </summary>
+    public static TPackage Create<TPackage>(this IPackageFactory<TPackage> builder, Stream stream)
+        where TPackage : OpenXmlPackage
+    {
+        var package = builder.Open(stream, PackageOpenMode.Create);
+        package.Features.GetRequired<IMainPartFeature>().AddDefaultMainPart();
+        return package;
+    }
+
+    /// <summary>
+    /// Creates a package with the default part.
+    /// </summary>
+    public static TPackage Create<TPackage>(this IPackageFactory<TPackage> builder, string file)
+        where TPackage : OpenXmlPackage
+    {
+        var package = builder.Open(file, PackageOpenMode.Create);
+        package.Features.GetRequired<IMainPartFeature>().AddDefaultMainPart();
+        return package;
+    }
+
+    /// <summary>
+    /// Creates a package with the default part.
+    /// </summary>
+    public static TPackage Create<TPackage>(this IPackageFactory<TPackage> builder, Package package)
+        where TPackage : OpenXmlPackage
+    {
+        var opackage = builder.Open(package);
+        opackage.Features.GetRequired<IMainPartFeature>().AddDefaultMainPart();
+        return opackage;
+    }
+
+    /// <summary>
     /// Opens the <paramref name="stream"/> with the given <paramref name="mode"/>.
     /// </summary>
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Reliability", "CA2000:Dispose objects before losing scope", Justification = "Disposable is registered with package")]
+    [SuppressMessage("Reliability", "CA2000:Dispose objects before losing scope", Justification = "Disposable is registered with package")]
     public static TPackage Open<TPackage>(this IPackageFactory<TPackage> builder, Stream stream, PackageOpenMode mode)
         where TPackage : OpenXmlPackage
     {
@@ -34,7 +79,7 @@ public static class OpenXmlPackageBuilderExtensions
     /// <summary>
     /// Opens the <paramref name="file"/> with the given <paramref name="mode"/>.
     /// </summary>
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Reliability", "CA2000:Dispose objects before losing scope", Justification = "Disposable is registered with package")]
+    [SuppressMessage("Reliability", "CA2000:Dispose objects before losing scope", Justification = "Disposable is registered with package")]
     public static TPackage Open<TPackage>(this IPackageFactory<TPackage> builder, string file, PackageOpenMode mode)
         where TPackage : OpenXmlPackage
     {
@@ -49,7 +94,7 @@ public static class OpenXmlPackageBuilderExtensions
     /// <summary>
     /// Opens the <paramref name="package"/>.
     /// </summary>
-    public static TPackage Open<TPackage>(this IPackageFactory<TPackage> builder, System.IO.Packaging.Package package)
+    public static TPackage Open<TPackage>(this IPackageFactory<TPackage> builder, Package package)
         where TPackage : OpenXmlPackage
     {
         if (builder is null)
@@ -68,7 +113,7 @@ public static class OpenXmlPackageBuilderExtensions
         where TPackage : OpenXmlPackage
         => builder.Open(stream, isEditing ? PackageOpenMode.ReadWrite : PackageOpenMode.Read);
 
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Reliability", "CA2000:Dispose objects before losing scope", Justification = "Disposable is registered with package")]
+    [SuppressMessage("Reliability", "CA2000:Dispose objects before losing scope", Justification = "Disposable is registered with package")]
     internal static TPackage Open<TPackage>(this IPackageFactory<TPackage> builder)
         where TPackage : OpenXmlPackage
         => builder.Create(new StreamPackageFeature(new MemoryStream(), PackageOpenMode.Create));

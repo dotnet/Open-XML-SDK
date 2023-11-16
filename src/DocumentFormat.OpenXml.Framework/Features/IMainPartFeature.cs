@@ -12,4 +12,6 @@ internal interface IMainPartFeature
     string ContentType { get; }
 
     OpenXmlPart? Part { get; }
+
+    void AddDefaultMainPart();
 }
