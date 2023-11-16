@@ -5,7 +5,7 @@ namespace DocumentFormat.OpenXml;
 
 internal static class ExperimentalApis
 {
-    internal const string Message = "Experimental APIs";
+    internal const string Message = "This is an experimental APIs and is subject to change";
     internal const string UrlFormat = "https://aka.ms/openxmlsdk-diagnostics#{0}";
 
     public const string IPackage = "OOXML0001";

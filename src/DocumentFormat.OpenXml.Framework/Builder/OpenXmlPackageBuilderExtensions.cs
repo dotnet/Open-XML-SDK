@@ -14,7 +14,7 @@ namespace DocumentFormat.OpenXml.Builder;
 /// A collection of extension methods for opening packages
 /// </summary>
 [Experimental(ExperimentalApis.PackageBuilder, UrlFormat = ExperimentalApis.UrlFormat)]
-[Obsolete(ExperimentalApis.Message, DiagnosticId = ExperimentalApis.PackageBuilder, UrlFormat = ExperimentalApis.UrlFormat)]
+[Obsolete(ExperimentalApis.Message, error: true, DiagnosticId = ExperimentalApis.PackageBuilder, UrlFormat = ExperimentalApis.UrlFormat)]
 public static class OpenXmlPackageBuilderExtensions
 {
     /// <summary>
