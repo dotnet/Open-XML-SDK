@@ -14,10 +14,10 @@
     <PackageVersion Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageVersion Include="NSubstitute" Version="5.1.0" />
     <PackageVersion Include="NuGet.Common" Version="6.8.0" />
-    <PackageVersion Include="NuGet.Packaging" Version="6.7.0" />
-    <PackageVersion Include="NuGet.Packaging.Core" Version="6.7.0" />
-    <PackageVersion Include="NuGet.Protocol" Version="6.7.0" />
-    <PackageVersion Include="NuGet.Resolver" Version="6.7.0" />
+    <PackageVersion Include="NuGet.Packaging" Version="6.8.0" />
+    <PackageVersion Include="NuGet.Packaging.Core" Version="6.8.0" />
+    <PackageVersion Include="NuGet.Protocol" Version="6.8.0" />
+    <PackageVersion Include="NuGet.Resolver" Version="6.8.0" />
     <PackageVersion Include="ObjectLayoutInspector" Version="0.1.4" />
     <PackageVersion Include="StyleCop.Analyzers" Version="1.2.0-beta.507" />
     <PackageVersion Include="Svg" Version="3.4.6" />
