@@ -20,7 +20,7 @@ public static class OpenXmlPackageBuilderExtensions
     /// Opens the <paramref name="stream"/> with the given <paramref name="mode"/>.
     /// </summary>
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Reliability", "CA2000:Dispose objects before losing scope", Justification = "Disposable is registered with package")]
-    public static TPackage Open<TPackage>(this IPackageBuilder<TPackage> builder, Stream stream, PackageOpenMode mode)
+    public static TPackage Open<TPackage>(this IPackageFactory<TPackage> builder, Stream stream, PackageOpenMode mode)
         where TPackage : OpenXmlPackage
     {
         if (builder is null)
@@ -28,14 +28,14 @@ public static class OpenXmlPackageBuilderExtensions
             throw new ArgumentNullException(nameof(builder));
         }
 
-        return builder.Open(new StreamPackageFeature(stream, mode));
+        return builder.Create(new StreamPackageFeature(stream, mode));
     }
 
     /// <summary>
     /// Opens the <paramref name="file"/> with the given <paramref name="mode"/>.
     /// </summary>
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Reliability", "CA2000:Dispose objects before losing scope", Justification = "Disposable is registered with package")]
-    public static TPackage Open<TPackage>(this IPackageBuilder<TPackage> builder, string file, PackageOpenMode mode)
+    public static TPackage Open<TPackage>(this IPackageFactory<TPackage> builder, string file, PackageOpenMode mode)
         where TPackage : OpenXmlPackage
     {
         if (builder is null)
@@ -43,13 +43,13 @@ public static class OpenXmlPackageBuilderExtensions
             throw new ArgumentNullException(nameof(builder));
         }
 
-        return builder.Open(new FilePackageFeature(file, mode));
+        return builder.Create(new FilePackageFeature(file, mode));
     }
 
     /// <summary>
     /// Opens the <paramref name="package"/>.
     /// </summary>
-    public static TPackage Open<TPackage>(this IPackageBuilder<TPackage> builder, System.IO.Packaging.Package package)
+    public static TPackage Open<TPackage>(this IPackageFactory<TPackage> builder, System.IO.Packaging.Package package)
         where TPackage : OpenXmlPackage
     {
         if (builder is null)
@@ -57,31 +57,26 @@ public static class OpenXmlPackageBuilderExtensions
             throw new ArgumentNullException(nameof(builder));
         }
 
-        return builder.Open(new PackageFeature(package));
+        return builder.Create(new PackageFeature(package));
     }
 
-    internal static TPackage Open<TPackage>(this IPackageBuilder<TPackage> builder, string file, bool isEditing)
+    internal static TPackage Open<TPackage>(this IPackageFactory<TPackage> builder, string file, bool isEditing)
         where TPackage : OpenXmlPackage
         => builder.Open(file, isEditing ? PackageOpenMode.ReadWrite : PackageOpenMode.Read);
 
-    internal static TPackage Open<TPackage>(this IPackageBuilder<TPackage> builder, Stream stream, bool isEditing)
+    internal static TPackage Open<TPackage>(this IPackageFactory<TPackage> builder, Stream stream, bool isEditing)
         where TPackage : OpenXmlPackage
         => builder.Open(stream, isEditing ? PackageOpenMode.ReadWrite : PackageOpenMode.Read);
 
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Reliability", "CA2000:Dispose objects before losing scope", Justification = "Disposable is registered with package")]
-    internal static TPackage Open<TPackage>(this IPackageBuilder<TPackage> builder)
+    internal static TPackage Open<TPackage>(this IPackageFactory<TPackage> builder)
         where TPackage : OpenXmlPackage
-        => builder.Open(new StreamPackageFeature(new MemoryStream(), PackageOpenMode.Create));
+        => builder.Create(new StreamPackageFeature(new MemoryStream(), PackageOpenMode.Create));
 
-    private static TPackage Open<TPackage>(this IPackageBuilder<TPackage> builder, IPackageInitializer initializer)
+    internal static TPackage Use<TPackage>(this TPackage package, PackageInitializerDelegate<TPackage> action)
         where TPackage : OpenXmlPackage
     {
-        var pipeline = builder.Build();
-        var package = builder.Create();
-
-        initializer.Initialize(package);
-        pipeline(package);
-
+        action(package);
         return package;
     }
 

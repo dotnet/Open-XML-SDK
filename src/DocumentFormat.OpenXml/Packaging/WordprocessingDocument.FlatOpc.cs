@@ -22,6 +22,7 @@ public partial class WordprocessingDocument
     public static WordprocessingDocument FromFlatOpcDocument(XDocument document)
         => CreateDefaultBuilder()
             .UseFlatOpcTemplate(document)
+            .Build()
             .Open();
 
     /// <summary>
@@ -35,6 +36,7 @@ public partial class WordprocessingDocument
     public static WordprocessingDocument FromFlatOpcDocument(XDocument document, Stream stream, bool isEditable)
         => CreateDefaultBuilder()
             .UseFlatOpcTemplate(document, isEditable)
+            .Build()
             .Open(stream, PackageOpenMode.Create);
 
     /// <summary>
@@ -48,6 +50,7 @@ public partial class WordprocessingDocument
     public static WordprocessingDocument FromFlatOpcDocument(XDocument document, string path, bool isEditable)
         => CreateDefaultBuilder()
             .UseFlatOpcTemplate(document, isEditable)
+            .Build()
             .Open(path, PackageOpenMode.Create);
 
     /// <summary>
@@ -60,6 +63,7 @@ public partial class WordprocessingDocument
     public static WordprocessingDocument FromFlatOpcDocument(XDocument document, Package package)
         => CreateDefaultBuilder()
             .UseFlatOpcTemplate(document)
+            .Build()
             .Open(package);
 
     /// <summary>
@@ -72,6 +76,7 @@ public partial class WordprocessingDocument
     public static WordprocessingDocument FromFlatOpcString(string text)
         => CreateDefaultBuilder()
             .UseFlatOpcTemplate(text)
+            .Build()
             .Open();
 
     /// <summary>
@@ -85,6 +90,7 @@ public partial class WordprocessingDocument
     public static WordprocessingDocument FromFlatOpcString(string text, Stream stream, bool isEditable)
         => CreateDefaultBuilder()
             .UseFlatOpcTemplate(text, isEditable)
+            .Build()
             .Open(stream, PackageOpenMode.Create);
 
     /// <summary>
@@ -98,6 +104,7 @@ public partial class WordprocessingDocument
     public static WordprocessingDocument FromFlatOpcString(string text, string path, bool isEditable)
         => CreateDefaultBuilder()
             .UseFlatOpcTemplate(text, isEditable)
+            .Build()
             .Open(path, PackageOpenMode.Create);
 
     /// <summary>
@@ -110,5 +117,6 @@ public partial class WordprocessingDocument
     public static WordprocessingDocument FromFlatOpcString(string text, Package package)
         => CreateDefaultBuilder()
             .UseFlatOpcTemplate(text)
+            .Build()
             .Open(package);
 }

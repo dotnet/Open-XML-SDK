@@ -20,7 +20,7 @@
     <PackageVersion Include="NuGet.Resolver" Version="6.7.0" />
     <PackageVersion Include="ObjectLayoutInspector" Version="0.1.4" />
     <PackageVersion Include="StyleCop.Analyzers" Version="1.2.0-beta.507" />
-    <PackageVersion Include="Svg" Version="3.4.5" />
+    <PackageVersion Include="Svg" Version="3.4.6" />
     <PackageVersion Include="System.CodeDom" Version="8.0.0" />
     <PackageVersion Include="System.IO.Packaging" Version="8.0.0" />
     <PackageVersion Include="System.Collections.Immutable" Version="7.0.0" />
