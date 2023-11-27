@@ -33,7 +33,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Creates a default builder for <see cref="PresentationDocument"/>
         /// </summary>
         /// <returns>The default builder.</returns>
-        [Experimental(ExperimentalApis.PackageBuilder, UrlFormat = ExperimentalApis.UrlFormat)] 
+        [Experimental(ExperimentalApis.PackageBuilder, UrlFormat = ExperimentalApis.UrlFormat)]
         [Obsolete(ExperimentalApis.Message, DiagnosticId = ExperimentalApis.PackageBuilder, UrlFormat = ExperimentalApis.UrlFormat)]
         public static IPackageBuilder<PresentationDocument> CreateBuilder() => new Builder();
 
