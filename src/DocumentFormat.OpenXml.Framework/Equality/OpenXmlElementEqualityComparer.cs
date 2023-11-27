@@ -117,7 +117,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Handles checking of all options that changes the behaviour of equality based on options in <see cref="OpenXmlElementEqualityOptions"/>.
+        /// Handles checking of all options that changes the behavior of equality based on options in <see cref="OpenXmlElementEqualityOptions"/>.
         /// </summary>
         private bool CheckAndEquateSpecialOptions(OpenXmlElement x, OpenXmlElement y)
         {
