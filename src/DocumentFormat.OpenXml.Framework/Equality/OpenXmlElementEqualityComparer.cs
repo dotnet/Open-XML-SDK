@@ -206,7 +206,7 @@ namespace DocumentFormat.OpenXml
             {
                 foreach (OpenXmlElement child in obj.ChildElements)
                 {
-                    hc.Add(child);
+                    hc.Add(child, this);
                 }
             }
 
