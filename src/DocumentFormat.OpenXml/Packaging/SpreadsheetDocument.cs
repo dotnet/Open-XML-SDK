@@ -34,6 +34,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         /// <returns>The default builder.</returns>
         [Experimental(ExperimentalApis.PackageBuilder, UrlFormat = ExperimentalApis.UrlFormat)]
+        [Obsolete(ExperimentalApis.Message, DiagnosticId = ExperimentalApis.PackageBuilder, UrlFormat = ExperimentalApis.UrlFormat)]
         public static IPackageBuilder<SpreadsheetDocument> CreateBuilder() => new Builder();
 
         /// <summary>
@@ -41,12 +42,14 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         /// <returns>A minimal builder.</returns>
         [Experimental(ExperimentalApis.PackageBuilder, UrlFormat = ExperimentalApis.UrlFormat)]
+        [Obsolete(ExperimentalApis.Message, DiagnosticId = ExperimentalApis.PackageBuilder, UrlFormat = ExperimentalApis.UrlFormat)]
         public static IPackageBuilder<SpreadsheetDocument> CreateDefaultBuilder() => DefaultBuilder.Clone();
 
         /// <summary>
         /// Gets the default factory for <see cref="SpreadsheetDocument"/>.
         /// </summary>
         [Experimental(ExperimentalApis.PackageBuilder, UrlFormat = ExperimentalApis.UrlFormat)]
+        [Obsolete(ExperimentalApis.Message, DiagnosticId = ExperimentalApis.PackageBuilder, UrlFormat = ExperimentalApis.UrlFormat)]
         public static IPackageFactory<SpreadsheetDocument> DefaultFactory { get; } = DefaultBuilder.Build();
 
         private sealed class Builder : OpenXmlPackageBuilder<SpreadsheetDocument>

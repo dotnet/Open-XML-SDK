@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using System;
 using System.Diagnostics.CodeAnalysis;
 
 namespace DocumentFormat.OpenXml.Builder;
@@ -9,6 +10,7 @@ namespace DocumentFormat.OpenXml.Builder;
 /// An enum that describes how a package is going to be opened
 /// </summary>
 [Experimental(ExperimentalApis.PackageBuilder, UrlFormat = ExperimentalApis.UrlFormat)]
+[Obsolete(ExperimentalApis.Message, DiagnosticId = ExperimentalApis.PackageBuilder, UrlFormat = ExperimentalApis.UrlFormat)]
 public enum PackageOpenMode
 {
     /// <summary>

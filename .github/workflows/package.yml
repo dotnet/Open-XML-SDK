@@ -93,7 +93,6 @@ jobs:
 
   sign:
     name: "Sign Package"
-    if: github.event_name != 'pull_request'
     needs: [pack]
     runs-on: windows-latest
     steps: 

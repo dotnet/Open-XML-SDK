@@ -32,6 +32,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="..\common\System\ObsoleteAttribute.cs" Link="ObsoleteAttribute.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="../DocumentFormat.OpenXml.Framework/DocumentFormat.OpenXml.Framework.csproj" />
   </ItemGroup>
 
