@@ -495,7 +495,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                 if (!hostPart.IsReflectable() || !srcHostPart.IsReflectable())
                 {
-                    Assert.True(false, "Either hostPart or srcHostPart is NOT reflectable.");
+                    Assert.Fail("Either hostPart or srcHostPart is NOT reflectable.");
                 }
 
                 PendTestBody(hostPart, getHostElement, srcHostPart, getSourceHost, pendType);

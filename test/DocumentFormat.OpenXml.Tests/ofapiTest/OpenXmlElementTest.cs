@@ -70,7 +70,7 @@ namespace DocumentFormat.OpenXml.Tests
             var target = new FooterReference();
 
             Assert.False(target.HasAttributes);
-            Assert.Equal(0, target.GetAttributes().Count);
+            Assert.Empty(target.GetAttributes());
             Assert.Empty(target.ExtendedAttributes);
 
             Assert.Null(target.Type);
@@ -114,7 +114,7 @@ namespace DocumentFormat.OpenXml.Tests
             openXmlAttribute = target.GetAttributes()[1];
             target.RemoveAttribute(openXmlAttribute.LocalName, openXmlAttribute.NamespaceUri);
             Assert.True(target.HasAttributes);
-            Assert.Equal(1, target.GetAttributes().Count);
+            Assert.Single(target.GetAttributes());
             Assert.Empty(target.ExtendedAttributes);
 
             Assert.NotNull(target.Type);
@@ -128,7 +128,7 @@ namespace DocumentFormat.OpenXml.Tests
             openXmlAttribute = target.GetAttributes()[0];
             target.RemoveAttribute(openXmlAttribute.LocalName, openXmlAttribute.NamespaceUri);
             Assert.False(target.HasAttributes);
-            Assert.Equal(0, target.GetAttributes().Count);
+            Assert.Empty(target.GetAttributes());
             Assert.Empty(target.ExtendedAttributes);
 
             Assert.Null(target.Type);

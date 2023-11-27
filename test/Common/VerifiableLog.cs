@@ -46,27 +46,22 @@ namespace LogUtil
             _output.WriteLine($"EndGroup: {groupName}");
         }
 
-        /// <summary>
-        /// Logs explicit Fail in "script" category
-        /// </summary>
-        /// <param name="message">Message containing zero or more format specifications</param>
-        /// <param name="arguments">List of objects to be formatted</param>
+        // TODO: Remove Fail method and replace directly with Assert
         public void Fail(string message, params object[] arguments)
         {
             var formatted = string.Format(message, arguments);
 
             _output.WriteLine($"Error: {formatted}");
 
-            // TODO: Remove Fail method and replace directly with Assert
-            Assert.True(false, formatted);
+            Assert.Fail(formatted);
         }
 
+        // TODO: Remove Fail method and replace directly with Assert
         public void Fail(string message)
         {
             _output.WriteLine(message);
 
-            // TODO: Remove Fail method and replace directly with Assert
-            Assert.True(false, message);
+            Assert.Fail(message);
         }
 
         /// <summary>
@@ -208,7 +203,7 @@ namespace LogUtil
 
             _output.WriteLine($"VerifyShouldNotReachHere: {m}");
 
-            Assert.True(false, m);
+            Assert.Fail(m);
         }
 
         /// <summary>

@@ -4,7 +4,7 @@
 namespace DocumentFormat.OpenXml
 {
     /// <summary>
-    /// Options defining the behaviour of equality for <see cref="OpenXmlElement"/>.
+    /// Options defining the behavior of equality for <see cref="OpenXmlElement"/>.
     /// </summary>
     public sealed class OpenXmlElementEqualityOptions
     {
@@ -19,7 +19,7 @@ namespace DocumentFormat.OpenXml
         public bool IncludeMCAttributes { get; set; } = true;
 
         /// <summary>
-        /// Gets or sets a value indicating whether namespace should alone be used when comparing idenity of elements, skipping prefix lookup to improve performance.
+        /// Gets or sets a value indicating whether namespace should alone be used when comparing identity of elements, skipping prefix lookup to improve performance.
         /// </summary>
         public bool SkipPrefixComparison { get; set; }
 
