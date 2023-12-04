@@ -37,7 +37,7 @@ jobs:
       with:
         fetch-depth: 0
     - name: Install .NET
-      uses: actions/setup-dotnet@v3
+      uses: actions/setup-dotnet@v4
     - name: Remove generated files for baseline
       run: Remove-Item generated/ -Include *.g.cs -Recurse
       shell: pwsh
@@ -86,11 +86,11 @@ jobs:
         fetch-depth: 0
 
     - name: Install .NET Core
-      uses: actions/setup-dotnet@v3
+      uses: actions/setup-dotnet@v4
       with:
           dotnet-version: 6.0.x
     - name: Install global.json .NET
-      uses: actions/setup-dotnet@v3
+      uses: actions/setup-dotnet@v4
     - name: Restore
       run: dotnet restore --verbosity normal          
     - name: Build
