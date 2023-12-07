@@ -29,7 +29,7 @@ The Open XML SDK provides tools for working with Office Word, Excel, and PowerPo
   - [Framework Support](#framework-support)
 - [Known Issues](#known-issues)
 - [Documentation](#documentation)
-- [If You Have Problems](#if-you-have-how-to-questions)
+- [If You Have How-To Questions](#if-you-have-how-to-questions)
 - [Related tools](#related-tools)
 
 # Packages
