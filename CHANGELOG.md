@@ -4,7 +4,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [3.0.0]
+## [3.1.0]
+
+### Fixed
+- Fixed issue where document type would not be correct unless content type was checked first (#1625)
+
+## [3.0.0] - 2023-11-15
 
 ## Added
 
