@@ -30,11 +30,11 @@ jobs:
         with:
           fetch-depth: 0
       - name: Install .NET Core
-        uses: actions/setup-dotnet@v3
+        uses: actions/setup-dotnet@v4
         with:
           dotnet-version: 6.x
       - name: Install .NET Core from global.json
-        uses: actions/setup-dotnet@v3
+        uses: actions/setup-dotnet@v4
       - name: Install GitVersion
         uses: gittools/actions/gitversion/setup@v0.9.15
         with:
@@ -97,7 +97,7 @@ jobs:
     runs-on: windows-latest
     steps: 
          - name: Install .NET Core
-           uses: actions/setup-dotnet@v3
+           uses: actions/setup-dotnet@v4
            with:
               dotnet-version: 6.0.x
 
@@ -163,7 +163,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
          - name: Install .NET Core
-           uses: actions/setup-dotnet@v3
+           uses: actions/setup-dotnet@v4
          - name: Download Packages
            uses: actions/download-artifact@v3
            with: 
