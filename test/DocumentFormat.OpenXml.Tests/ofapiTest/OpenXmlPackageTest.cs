@@ -543,6 +543,33 @@ namespace DocumentFormat.OpenXml.Tests
             }
         }
 
+        [Fact]
+        public void WordDocumentTypeIsRetrievedIfAvailable()
+        {
+            using var stream = GetStream(TestFiles.Templates.Document);
+            using var doc = WordprocessingDocument.Open(stream, isEditable: false);
+
+            Assert.Equal(WordprocessingDocumentType.Template, doc.DocumentType);
+        }
+
+        [Fact]
+        public void SpreadhseetDocumentTypeIsRetrievedIfAvailable()
+        {
+            using var stream = GetStream(TestFiles.Templates.Spreadsheet);
+            using var doc = SpreadsheetDocument.Open(stream, isEditable: false);
+
+            Assert.Equal(SpreadsheetDocumentType.Template, doc.DocumentType);
+        }
+
+        [Fact]
+        public void PresentationDocumentTypeIsRetrievedIfAvailable()
+        {
+            using var stream = GetStream(TestFiles.Templates.Presentation);
+            using var doc = PresentationDocument.Open(stream, isEditable: false);
+
+            Assert.Equal(PresentationDocumentType.Template, doc.DocumentType);
+        }
+
         /// <summary>
         /// ChangeDocumentTypeInternalTest.
         /// </summary>
