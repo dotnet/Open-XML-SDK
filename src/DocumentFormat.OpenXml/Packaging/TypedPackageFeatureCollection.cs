@@ -3,6 +3,7 @@
 
 using DocumentFormat.OpenXml.Features;
 using System;
+using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.IO.Packaging;
 
@@ -28,46 +29,48 @@ internal abstract partial class TypedPackageFeatureCollection<TDocumentType, TMa
 
     string IMainPartFeature.RelationshipType => RelationshipType;
 
-    string IMainPartFeature.ContentType
+    string IMainPartFeature.ContentType => GetContentType(EnsureDocumentType())!;
+
+    [MemberNotNull(nameof(_documentType))]
+    private TDocumentType EnsureDocumentType()
     {
-        get
+        if (_documentType is { } existing)
         {
-            if (_documentType is null)
-            {
-                var hasRelationships = false;
-                var package = this.GetRequired<IPackageFeature>().Package;
-
-                foreach (var relationship in package.Relationships)
-                {
-                    hasRelationships = true;
-                    if (relationship.RelationshipType == RelationshipType)
-                    {
-                        var uriTarget = PackUriHelper.ResolvePartUri(OpenXmlPackage.Uri, relationship.TargetUri);
-                        var metroPart = package.GetPart(uriTarget);
-
-                        _documentType = GetDocumentType(metroPart.ContentType);
-                        break;
-                    }
-                }
-
-                if (!hasRelationships)
-                {
-                    _documentType = default;
-                }
-
-                if (_documentType is null)
-                {
-                    throw new OpenXmlPackageException(ExceptionMessages.NoMainPart);
-                }
-            }
-
-            return GetContentType(_documentType.Value)!;
+            return existing;
         }
+
+        var hasRelationships = false;
+        var package = this.GetRequired<IPackageFeature>().Package;
+
+        foreach (var relationship in package.Relationships)
+        {
+            hasRelationships = true;
+            if (relationship.RelationshipType == RelationshipType)
+            {
+                var uriTarget = PackUriHelper.ResolvePartUri(OpenXmlPackage.Uri, relationship.TargetUri);
+                var metroPart = package.GetPart(uriTarget);
+
+                _documentType = GetDocumentType(metroPart.ContentType);
+                break;
+            }
+        }
+
+        if (!hasRelationships)
+        {
+            _documentType = default;
+        }
+
+        if (_documentType is null)
+        {
+            throw new OpenXmlPackageException(ExceptionMessages.NoMainPart);
+        }
+
+        return _documentType.Value;
     }
 
     TDocumentType IDocumentTypeFeature<TDocumentType>.Current
     {
-        get => _documentType ?? default;
+        get => EnsureDocumentType();
         set => _documentType = value;
     }
 
