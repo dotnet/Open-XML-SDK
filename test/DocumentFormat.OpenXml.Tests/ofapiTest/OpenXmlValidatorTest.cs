@@ -3058,7 +3058,7 @@ namespace DocumentFormat.OpenXml.Tests
         /// <summary>
         /// A test for Validate package structure.
         /// </summary>
-        [Fact(Skip = "Broken in .NET 8")]
+        [Fact]
         public void PackageStructureValidatingTest()
         {
             OpenXmlValidator validator = new OpenXmlValidator();
