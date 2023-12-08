@@ -122,7 +122,7 @@ namespace DocumentFormat.OpenXml.Validation
 
             foreach (var part in container.ChildrenRelationshipParts.Parts)
             {
-                if (!processedParts.TryAdd(part, true))
+                if (!processedParts.ContainsKey(part))
                 {
                     if (part is not ExtendedPart)
                     {
@@ -165,6 +165,8 @@ namespace DocumentFormat.OpenXml.Validation
                         }
                     }
 #endif
+
+                    processedParts.Add(part, true);
 
                     foreach (var result in ValidateInternal(part, version, processedParts))
                     {
