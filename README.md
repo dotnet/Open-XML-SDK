@@ -79,9 +79,8 @@ Please see [Open XML SDK](https://learn.microsoft.com/en-us/office/open-xml/open
 
 # If you have how-to questions
 
-- For version 2.5 and earlier use [Microsoft Q&A Forums](https://docs.microsoft.com/en-us/answers/topics/office-addins-dev.html) (tag: **Office Development**)
-- For all other versions use [Stack Overflow](http://stackoverflow.com) (tags: **openxml** or **openxml-sdk**)
-- For how-to samples:
+- [Stack Overflow](http://stackoverflow.com) (tags: **openxml** or **openxml-sdk**)
+- How-to samples:
   - [Spreadsheet Samples](https://learn.microsoft.com/en-us/office/open-xml/spreadsheet/overview)
   - [Presentation Samples](https://learn.microsoft.com/en-us/office/open-xml/presentation/overview)
   - [Wordprocessing Samples](https://learn.microsoft.com/en-us/office/open-xml/word/overview)
