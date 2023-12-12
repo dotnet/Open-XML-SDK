@@ -27,9 +27,9 @@ The Open XML SDK provides tools for working with Office Word, Excel, and PowerPo
 - [Packages](#packages)
   - [Daily Builds](#daily-builds)
   - [Framework Support](#framework-support)
-- [If You Have Problems](#if-you-have-problems)
 - [Known Issues](#known-issues)
 - [Documentation](#documentation)
+- [If You Have How-To Questions](#if-you-have-how-to-questions)
 - [Related tools](#related-tools)
 
 # Packages
@@ -68,9 +68,6 @@ The package currently supports the following targets:
 
 For details on platform support, including other runtimes such as Mono and Unity, please see the docs at https://docs.microsoft.com/en-us/dotnet/standard/net-standard.
 
-- [Microsoft Q&A Forums](https://docs.microsoft.com/en-us/answers/topics/office-addins-dev.html) (tag: **office-addins-dev**)
-- [Stack Overflow](http://stackoverflow.com) (tags: **openxml** or **openxml-sdk**)
-
 # Known Issues
 
 - On .NET Core and .NET 5 and following, ZIP packages do not have a way to stream data. Thus, the working set can explode in certain situations. This is a [known issue](https://github.com/dotnet/runtime/issues/1544).
@@ -80,6 +77,14 @@ For details on platform support, including other runtimes such as Mono and Unity
 
 Please see [Open XML SDK](https://learn.microsoft.com/en-us/office/open-xml/open-xml-sdk) for the official documentation.
 
+# If you have how-to questions
+
+- [Stack Overflow](http://stackoverflow.com) (tags: **openxml** or **openxml-sdk**)
+- How-to samples:
+  - [Spreadsheet Samples](https://learn.microsoft.com/en-us/office/open-xml/spreadsheet/overview)
+  - [Presentation Samples](https://learn.microsoft.com/en-us/office/open-xml/presentation/overview)
+  - [Wordprocessing Samples](https://learn.microsoft.com/en-us/office/open-xml/word/overview)
+  
 # Related tools
 
 - **[Open XML SDK 2.5 Productivity Tool](https://github.com/OfficeDev/Open-XML-SDK/releases/tag/v2.5)**: The Productivity Tool provides viewing and code generation compatible with the Open XML SDK 2.5.
