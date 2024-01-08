@@ -13,7 +13,7 @@ namespace DocumentFormat.OpenXml.Features;
 /// </summary>
 [Experimental(ExperimentalApis.AOT, UrlFormat = ExperimentalApis.UrlFormat)]
 [Obsolete(ExperimentalApis.Message, DiagnosticId = ExperimentalApis.AOT, UrlFormat = ExperimentalApis.UrlFormat)]
-public interface ISchemaTrackingFeature
+internal interface ISchemaTrackingFeature
 {
     /// <summary>
     /// Gets a collection of root elements that have been requested.

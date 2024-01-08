@@ -11,7 +11,7 @@ namespace DocumentFormat.OpenXml.Builder;
 /// <summary>
 /// A delegate for initializing a package.
 /// </summary>
-public delegate void PackageInitializerDelegate<TPackage>(TPackage package);
+internal delegate void PackageInitializerDelegate<TPackage>(TPackage package);
 
 /// <summary>
 /// Defines a builder to create an initialization pipeline for a <typeparamref name="TPackage"/>.
@@ -19,7 +19,7 @@ public delegate void PackageInitializerDelegate<TPackage>(TPackage package);
 /// <typeparam name="TPackage">Type of the <see cref="OpenXmlPackage"/>.</typeparam>
 [Experimental(ExperimentalApis.PackageBuilder, UrlFormat = ExperimentalApis.UrlFormat)]
 [Obsolete(ExperimentalApis.Message, DiagnosticId = ExperimentalApis.PackageBuilder, UrlFormat = ExperimentalApis.UrlFormat)]
-public interface IPackageBuilder<TPackage>
+internal interface IPackageBuilder<TPackage>
     where TPackage : OpenXmlPackage
 {
     /// <summary>

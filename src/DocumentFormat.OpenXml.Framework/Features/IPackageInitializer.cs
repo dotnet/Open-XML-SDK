@@ -12,7 +12,7 @@ namespace DocumentFormat.OpenXml.Features;
 /// </summary>
 [Experimental(ExperimentalApis.PackageBuilder, UrlFormat = ExperimentalApis.UrlFormat)]
 [Obsolete(ExperimentalApis.Message, DiagnosticId = ExperimentalApis.PackageBuilder, UrlFormat = ExperimentalApis.UrlFormat)]
-public interface IPackageInitializer
+internal interface IPackageInitializer
 {
     /// <summary>
     /// Initializes a package.

@@ -14,7 +14,7 @@ namespace DocumentFormat.OpenXml.Builder;
 /// <typeparam name="TPackage">Type of the <see cref="OpenXmlPackage"/>.</typeparam>
 [Experimental(ExperimentalApis.PackageBuilder, UrlFormat = ExperimentalApis.UrlFormat)]
 [Obsolete(ExperimentalApis.Message, DiagnosticId = ExperimentalApis.PackageBuilder, UrlFormat = ExperimentalApis.UrlFormat)]
-public interface IPackageFactory<TPackage>
+internal interface IPackageFactory<TPackage>
 {
     /// <summary>
     /// Create an instance of <typeparamref name="TPackage"/>.

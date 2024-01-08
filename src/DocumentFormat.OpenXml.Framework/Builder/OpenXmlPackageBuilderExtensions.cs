@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml.Builder;
 /// </summary>
 [Experimental(ExperimentalApis.PackageBuilder, UrlFormat = ExperimentalApis.UrlFormat)]
 [Obsolete(ExperimentalApis.Message, DiagnosticId = ExperimentalApis.PackageBuilder, UrlFormat = ExperimentalApis.UrlFormat)]
-public static class OpenXmlPackageBuilderExtensions
+internal static class OpenXmlPackageBuilderExtensions
 {
     /// <summary>
     /// Opens the <paramref name="stream"/> with the given <paramref name="mode"/>.

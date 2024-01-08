@@ -15,12 +15,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// Defines PresentationDocument - an OpenXmlPackage represents a Presentation document
     /// </summary>
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Reliability", "CA2000:Dispose objects before losing scope", Justification = "Disposable is returned")]
-    public partial class PresentationDocument :
-#if NET7_0_OR_GREATER
-        OpenXmlPackage, IPackageDocumentBuilder<PresentationDocument>
-#else
-        OpenXmlPackage
-#endif
+    public partial class PresentationDocument : OpenXmlPackage
     {
         internal PresentationDocument()
             : base()
@@ -35,7 +30,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <returns>The default builder.</returns>
         [Experimental(ExperimentalApis.PackageBuilder, UrlFormat = ExperimentalApis.UrlFormat)]
         [Obsolete(ExperimentalApis.Message, DiagnosticId = ExperimentalApis.PackageBuilder, UrlFormat = ExperimentalApis.UrlFormat)]
-        public static IPackageBuilder<PresentationDocument> CreateBuilder() => new Builder();
+        internal static IPackageBuilder<PresentationDocument> CreateBuilder() => new Builder();
 
         /// <summary>
         /// Creates a builder that has minimal initialization for <see cref="PresentationDocument"/>.
@@ -43,14 +38,14 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <returns>A minimal builder.</returns>
         [Experimental(ExperimentalApis.PackageBuilder, UrlFormat = ExperimentalApis.UrlFormat)]
         [Obsolete(ExperimentalApis.Message, DiagnosticId = ExperimentalApis.PackageBuilder, UrlFormat = ExperimentalApis.UrlFormat)]
-        public static IPackageBuilder<PresentationDocument> CreateDefaultBuilder() => DefaultBuilder.Clone();
+        internal static IPackageBuilder<PresentationDocument> CreateDefaultBuilder() => DefaultBuilder.Clone();
 
         /// <summary>
         /// Gets the default factory for <see cref="PresentationDocument"/>.
         /// </summary>
         [Experimental(ExperimentalApis.PackageBuilder, UrlFormat = ExperimentalApis.UrlFormat)]
         [Obsolete(ExperimentalApis.Message, DiagnosticId = ExperimentalApis.PackageBuilder, UrlFormat = ExperimentalApis.UrlFormat)]
-        public static IPackageFactory<PresentationDocument> DefaultFactory { get; } = DefaultBuilder.Build();
+        internal static IPackageFactory<PresentationDocument> DefaultFactory { get; } = DefaultBuilder.Build();
 
         private sealed class Builder : OpenXmlPackageBuilder<PresentationDocument>
         {

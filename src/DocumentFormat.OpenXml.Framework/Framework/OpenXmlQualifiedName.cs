@@ -11,7 +11,7 @@ namespace DocumentFormat.OpenXml.Framework;
 /// </summary>
 [Experimental(ExperimentalApis.Framework, UrlFormat = ExperimentalApis.UrlFormat)]
 [Obsolete(ExperimentalApis.Message, DiagnosticId = ExperimentalApis.Framework, UrlFormat = ExperimentalApis.UrlFormat)]
-public readonly struct OpenXmlQualifiedName : IComparable<OpenXmlQualifiedName>, IEquatable<OpenXmlQualifiedName>
+internal readonly struct OpenXmlQualifiedName : IComparable<OpenXmlQualifiedName>, IEquatable<OpenXmlQualifiedName>
 {
     internal OpenXmlQualifiedName(in OpenXmlNamespace ns, string name)
     {
