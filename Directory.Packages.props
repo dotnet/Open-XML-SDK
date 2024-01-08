@@ -2,7 +2,7 @@
 <Project>
   <ItemGroup>
     <PackageVersion Include="BenchmarkDotNet" Version="0.13.11" />
-    <PackageVersion Include="BenchmarkDotNet.Diagnostics.Windows" Version="0.13.10" />    
+    <PackageVersion Include="BenchmarkDotNet.Diagnostics.Windows" Version="0.13.11" />    
     <PackageVersion Include="coverlet.collector" Version="6.0.0" />
     <PackageVersion Include="Microsoft.CodeAnalysis" Version="4.8.0" />
     <PackageVersion Include="Microsoft.CodeAnalysis.CSharp" Version="4.8.0" />
