@@ -86,7 +86,7 @@ jobs:
       - name: Pack
         run: dotnet pack --no-build
       - name: Upload
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: Unsigned
           path: "bin/${{ env.Configuration }}/packages/shipping/*"
@@ -152,7 +152,7 @@ jobs:
               --azure-key-vault-certificate "${{ secrets.SignKeyVaultCertificate }}" 
               --azure-key-vault-url "${{ secrets.SignKeyVaultUrl }}"
              
-         - uses: actions/upload-artifact@v3
+         - uses: actions/upload-artifact@v4
            with:
              name: Signed
              path: |
@@ -188,7 +188,7 @@ jobs:
         run: >
           echo ${{ github.event_name == 'release' }} >> release-info.txt
       - name: Upload Release Info
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: release-info
           path: release-info.txt
