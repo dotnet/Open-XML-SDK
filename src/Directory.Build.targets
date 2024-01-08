@@ -11,6 +11,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
 
+  <ItemGroup>
+    <AdditionalFiles Include="$(MSBuildProjectDirectory)/$(TargetFramework)/PublicAPI.Shipped.txt" Condition="Exists('$(MSBuildProjectDirectory)/$(TargetFramework)/PublicAPI.Shipped.txt')" />
+    <AdditionalFiles Include="$(MSBuildProjectDirectory)/$(TargetFramework)/PublicAPI.Unshipped.txt" Condition="Exists('$(MSBuildProjectDirectory)/$(TargetFramework)/PublicAPI.Unshipped.txt')" />
+  </ItemGroup>
+
   <Import Project="$(MSBuildThisFileDirectory)\PEVerify.targets" />
 
   <Import Project="..\Directory.Build.targets" />

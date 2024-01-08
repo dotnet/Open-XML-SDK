@@ -1,0 +1,7 @@
+﻿#nullable enable
+DocumentFormat.OpenXml.Validation.OpenXmlValidator.Validate(DocumentFormat.OpenXml.OpenXmlElement! openXmlElement, System.Threading.CancellationToken token = default(System.Threading.CancellationToken)) -> System.Collections.Generic.IEnumerable<DocumentFormat.OpenXml.Validation.ValidationErrorInfo!>!
+DocumentFormat.OpenXml.Validation.OpenXmlValidator.Validate(DocumentFormat.OpenXml.Packaging.OpenXmlPackage! openXmlPackage, System.Threading.CancellationToken token = default(System.Threading.CancellationToken)) -> System.Collections.Generic.IEnumerable<DocumentFormat.OpenXml.Validation.ValidationErrorInfo!>!
+DocumentFormat.OpenXml.Validation.OpenXmlValidator.Validate(DocumentFormat.OpenXml.Packaging.OpenXmlPart! openXmlPart, System.Threading.CancellationToken token = default(System.Threading.CancellationToken)) -> System.Collections.Generic.IEnumerable<DocumentFormat.OpenXml.Validation.ValidationErrorInfo!>!
+
+DocumentFormat.OpenXml.HexBinaryValue.TryWriteBytes(System.Span<byte> bytes) -> bool
+static DocumentFormat.OpenXml.HexBinaryValue.Create(System.ReadOnlySpan<byte> bytes) -> DocumentFormat.OpenXml.HexBinaryValue!
