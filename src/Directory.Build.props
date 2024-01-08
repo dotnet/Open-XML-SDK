@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project>
   <Import Project="..\Directory.Build.props" />
+
   <PropertyGroup>
     <EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
     <CompilerGeneratedFilesOutputPath>$(MSBuildThisFileDirectory)/../generated/$(MSBuildProjectName)</CompilerGeneratedFilesOutputPath>
   </PropertyGroup>
+
   <PropertyGroup>
     <AnalysisLevel>latest-All</AnalysisLevel>
     <EnableNETAnalyzers>true</EnableNETAnalyzers>
@@ -12,6 +14,7 @@
     <Nullable>enable</Nullable>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
+
   <PropertyGroup>
     <Authors>Microsoft</Authors>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
@@ -25,6 +28,7 @@
     <!-- For backwards compatibility. See https://aka.ms/deprecateIconUrl -->
     <PackageIconUrl>https://raw.githubusercontent.com/dotnet/Open-XML-SDK/master/icon.png</PackageIconUrl>
   </PropertyGroup>
+
   <PropertyGroup>
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
@@ -32,13 +36,22 @@
     <IncludeSymbols>true</IncludeSymbols>
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
   </PropertyGroup>
+
   <PropertyGroup Condition="'$(TF_BUILD)' == 'true'">
     <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
   </PropertyGroup>
+
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)..\icon.png" Pack="true" PackagePath="\" />
   </ItemGroup>
+
   <ItemGroup>
     <PackageReference Include="Microsoft.SourceLink.GitHub" PrivateAssets="All" />
   </ItemGroup>
+
+  <ItemGroup>
+    <AdditionalFiles Include="$(MSBuildProjectDirectory)/PublicAPI/PublicAPI.*.txt" />
+    <AdditionalFiles Include="$(MSBuildProjectDirectory)/PublicAPI/$(TargetFramework)/PublicAPI.*.txt" />
+  </ItemGroup>
+
 </Project>
