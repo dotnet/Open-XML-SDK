@@ -35,7 +35,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <returns>The default builder.</returns>
         [Experimental(ExperimentalApis.PackageBuilder, UrlFormat = ExperimentalApis.UrlFormat)]
         [Obsolete(ExperimentalApis.Message, DiagnosticId = ExperimentalApis.PackageBuilder, UrlFormat = ExperimentalApis.UrlFormat)]
-        public static IPackageBuilder<PresentationDocument> CreateBuilder() => new Builder();
+        internal static IPackageBuilder<PresentationDocument> CreateBuilder() => new Builder();
 
         /// <summary>
         /// Creates a builder that has minimal initialization for <see cref="PresentationDocument"/>.
@@ -43,14 +43,14 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <returns>A minimal builder.</returns>
         [Experimental(ExperimentalApis.PackageBuilder, UrlFormat = ExperimentalApis.UrlFormat)]
         [Obsolete(ExperimentalApis.Message, DiagnosticId = ExperimentalApis.PackageBuilder, UrlFormat = ExperimentalApis.UrlFormat)]
-        public static IPackageBuilder<PresentationDocument> CreateDefaultBuilder() => DefaultBuilder.Clone();
+        internal static IPackageBuilder<PresentationDocument> CreateDefaultBuilder() => DefaultBuilder.Clone();
 
         /// <summary>
         /// Gets the default factory for <see cref="PresentationDocument"/>.
         /// </summary>
         [Experimental(ExperimentalApis.PackageBuilder, UrlFormat = ExperimentalApis.UrlFormat)]
         [Obsolete(ExperimentalApis.Message, DiagnosticId = ExperimentalApis.PackageBuilder, UrlFormat = ExperimentalApis.UrlFormat)]
-        public static IPackageFactory<PresentationDocument> DefaultFactory { get; } = DefaultBuilder.Build();
+        internal static IPackageFactory<PresentationDocument> DefaultFactory { get; } = DefaultBuilder.Build();
 
         private sealed class Builder : OpenXmlPackageBuilder<PresentationDocument>
         {
