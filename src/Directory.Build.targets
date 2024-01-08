@@ -2,8 +2,7 @@
 
   <PropertyGroup>
     <EnablePackageValidation>true</EnablePackageValidation>
-    <!--Update once v3.0 ships-->
-    <!--<PackageValidationBaselineVersion>2.18.0</PackageValidationBaselineVersion>-->
+    <PackageValidationBaselineVersion>3.0.0</PackageValidationBaselineVersion>
   </PropertyGroup>
 
   <ItemGroup Condition="$(IsFramework)">
