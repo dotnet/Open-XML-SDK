@@ -15,12 +15,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// Defines PresentationDocument - an OpenXmlPackage represents a Presentation document
     /// </summary>
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Reliability", "CA2000:Dispose objects before losing scope", Justification = "Disposable is returned")]
-    public partial class PresentationDocument :
-#if NET7_0_OR_GREATER
-        OpenXmlPackage, IPackageDocumentBuilder<PresentationDocument>
-#else
-        OpenXmlPackage
-#endif
+    public partial class PresentationDocument : OpenXmlPackage
     {
         internal PresentationDocument()
             : base()
