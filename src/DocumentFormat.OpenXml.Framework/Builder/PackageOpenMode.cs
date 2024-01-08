@@ -11,7 +11,7 @@ namespace DocumentFormat.OpenXml.Builder;
 /// </summary>
 [Experimental(ExperimentalApis.PackageBuilder, UrlFormat = ExperimentalApis.UrlFormat)]
 [Obsolete(ExperimentalApis.Message, DiagnosticId = ExperimentalApis.PackageBuilder, UrlFormat = ExperimentalApis.UrlFormat)]
-public enum PackageOpenMode
+internal enum PackageOpenMode
 {
     /// <summary>
     /// Indicates that a new package will be created.

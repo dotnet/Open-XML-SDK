@@ -22,7 +22,7 @@ namespace DocumentFormat.OpenXml.Builder;
 /// </summary>
 [Experimental(ExperimentalApis.AOT, UrlFormat = ExperimentalApis.UrlFormat)]
 [Obsolete(ExperimentalApis.Message, DiagnosticId = ExperimentalApis.AOT, UrlFormat = ExperimentalApis.UrlFormat)]
-public static class SchemaTrackingExtensions
+internal static class SchemaTrackingExtensions
 {
     private const string Key = "__SchemaTracker";
 

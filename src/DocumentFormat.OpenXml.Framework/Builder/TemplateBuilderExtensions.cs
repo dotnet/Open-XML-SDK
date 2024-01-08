@@ -14,7 +14,7 @@ namespace DocumentFormat.OpenXml.Builder;
 /// </summary>
 [Experimental(ExperimentalApis.PackageBuilder, UrlFormat = ExperimentalApis.UrlFormat)]
 [Obsolete(ExperimentalApis.Message, DiagnosticId = ExperimentalApis.PackageBuilder, UrlFormat = ExperimentalApis.UrlFormat)]
-public static class TemplateBuilderExtensions
+internal static class TemplateBuilderExtensions
 {
     /// <summary>
     /// Adds a template to the current <paramref name="builder"/>.
