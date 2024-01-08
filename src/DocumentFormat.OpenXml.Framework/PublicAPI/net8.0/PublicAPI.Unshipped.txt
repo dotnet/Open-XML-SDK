@@ -1,0 +1,5 @@
+﻿#nullable enable
+DocumentFormat.OpenXml.Builder.IPackageDocumentBuilder<TPackage>
+DocumentFormat.OpenXml.Builder.IPackageDocumentBuilder<TPackage>.CreateBuilder() -> DocumentFormat.OpenXml.Builder.IPackageBuilder<TPackage!>!
+DocumentFormat.OpenXml.Builder.IPackageDocumentBuilder<TPackage>.CreateDefaultBuilder() -> DocumentFormat.OpenXml.Builder.IPackageBuilder<TPackage!>!
+DocumentFormat.OpenXml.Builder.IPackageDocumentBuilder<TPackage>.DefaultFactory.get -> DocumentFormat.OpenXml.Builder.IPackageFactory<TPackage!>!
