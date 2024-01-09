@@ -16,6 +16,10 @@ namespace DocumentFormat.OpenXml.Tests
 
         public string Path { get; }
 
+        public bool IsEditable => true;
+
+        public FileAccess Access => FileAccess.ReadWrite;
+
         public Stream Open() => File.Open(Path, FileMode.OpenOrCreate, FileAccess.ReadWrite);
 
         public void Dispose()

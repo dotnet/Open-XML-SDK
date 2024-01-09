@@ -408,4 +408,10 @@
   <data name="NamespaceIdNotAvailable" xml:space="preserve">
     <value>Namespace ids are only available for namespaces for Office 2021 and before. Please use prefixes or URLs instead.</value>
   </data>
+  <data name="MalformedUri" xml:space="preserve">
+    <value>The package contains malformed URI relationships. Please ensure the package is opened with a stream (that is seekable) or a file path to have the SDK automatically handle these scenarios.</value>
+  </data>
+  <data name="FailedToOpenPackage" xml:space="preserve">
+    <value>Package could not be opened for stream. See inner exception for details and be aware that there are behavior differences in stream support between .NET Framework and Core.</value>
+  </data>
 </root>

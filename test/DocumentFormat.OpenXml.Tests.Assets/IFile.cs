@@ -11,5 +11,9 @@ namespace DocumentFormat.OpenXml.Tests
         string Path { get; }
 
         Stream Open();
+
+        bool IsEditable { get; }
+
+        FileAccess Access { get; }
     }
 }

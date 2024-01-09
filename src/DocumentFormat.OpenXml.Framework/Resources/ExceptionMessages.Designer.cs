@@ -295,6 +295,15 @@ namespace DocumentFormat.OpenXml {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Package could not be opened for stream. See inner exception for details and be aware that there are behavior differences in stream support between .NET Framework and Core..
+        /// </summary>
+        internal static string FailedToOpenPackage {
+            get {
+                return ResourceManager.GetString("FailedToOpenPackage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Feature {0} is not available in this collection..
         /// </summary>
         internal static string FeatureNotRegistered {
@@ -501,6 +510,15 @@ namespace DocumentFormat.OpenXml {
         internal static string MainPartIsDifferent {
             get {
                 return ResourceManager.GetString("MainPartIsDifferent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The package contains malformed URI relationships. Please ensure the package is opened with a stream (that is seekable) or a file path to have the SDK automatically handle these scenarios..
+        /// </summary>
+        internal static string MalformedUri {
+            get {
+                return ResourceManager.GetString("MalformedUri", resourceCulture);
             }
         }
         

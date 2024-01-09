@@ -243,7 +243,16 @@ internal abstract class PackageFeatureBase : IPackage, IPackageFeature, IRelatio
             => Feature.Package.GetPart(Uri).DeleteRelationship(id);
 
         protected override IEnumerable<PackageRelationship> GetRelationships()
-            => Feature.Package.GetPart(Uri).GetRelationships();
+        {
+            try
+            {
+                return Feature.Package.GetPart(Uri).GetRelationships();
+            }
+            catch (UriFormatException ex)
+            {
+                throw new OpenXmlPackageException(ExceptionMessages.MalformedUri, ex);
+            }
+        }
     }
 
     private abstract class RelationshipCollection : IRelationshipCollection
