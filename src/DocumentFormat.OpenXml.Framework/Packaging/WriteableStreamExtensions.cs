@@ -15,7 +15,7 @@ internal static class WriteableStreamExtensions
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Reliability", "CA2000:Dispose objects before losing scope", Justification = "Disposable is registered with package")]
     public static bool EnableWriteableStream(this IFeatureCollection features)
     {
-        if (features.Get<IPackageStreamFeature>() is { Stream.CanWrite: false } feature &&
+        if (features.Get<IPackageStreamFeature>() is { Stream: { CanWrite: false, CanSeek: true } } feature &&
             features.Get<IPackageFeature>() is { } packageFeature &&
             packageFeature.Capabilities.HasFlagFast(PackageCapabilities.Reload))
         {

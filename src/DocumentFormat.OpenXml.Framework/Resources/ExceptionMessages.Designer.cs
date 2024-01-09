@@ -505,6 +505,15 @@ namespace DocumentFormat.OpenXml {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The package contains malformed URI relationships. Please ensure the package is opened with a stream (that is seekable) or a file path to have the SDK automatically handle these scenarios..
+        /// </summary>
+        internal static string MalformedUri {
+            get {
+                return ResourceManager.GetString("MalformedUri", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to An Audio / Video part shall not have implicit or explicit relationships to other parts defined by Open XML Standard..
         /// </summary>
         internal static string MediaDataPartShouldNotReferenceOtherParts {

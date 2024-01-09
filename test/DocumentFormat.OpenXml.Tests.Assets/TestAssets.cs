@@ -98,6 +98,10 @@ namespace DocumentFormat.OpenXml.Tests
 
             public string Path { get; }
 
+            public bool IsEditable => _stream.CanWrite;
+
+            public FileAccess Access => _stream.CanWrite ? FileAccess.ReadWrite : FileAccess.Read;
+
             public Stream Open() => _stream;
 
             public void Dispose()
@@ -108,23 +112,22 @@ namespace DocumentFormat.OpenXml.Tests
 
         private class CopiedFile : IFile
         {
-            private readonly FileAccess _access;
-
             public CopiedFile(Stream stream, string extension, FileAccess access)
             {
                 Path = System.IO.Path.Combine(System.IO.Path.GetTempPath(), $"{Guid.NewGuid()}{extension}");
+                Access = access;
 
-                _access = access;
-
-                using (var fs = File.OpenWrite(Path))
-                {
-                    stream.CopyTo(fs);
-                }
+                using var fs = File.OpenWrite(Path);
+                stream.CopyTo(fs);
             }
 
             public string Path { get; }
 
-            public Stream Open() => File.Open(Path, FileMode.Open, _access);
+            public bool IsEditable => Access == FileAccess.ReadWrite;
+
+            public FileAccess Access { get; }
+
+            public Stream Open() => File.Open(Path, FileMode.Open, Access);
 
             public void Dispose()
             {
