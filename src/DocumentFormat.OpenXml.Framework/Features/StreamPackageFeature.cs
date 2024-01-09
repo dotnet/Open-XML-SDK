@@ -111,7 +111,14 @@ internal class StreamPackageFeature : PackageFeatureBase, IDisposable, IPackageS
             SetStream(GetStream(mode.Value, access.Value));
         }
 
-        _package = Package.Open(_stream, mode.Value, access.Value);
+        try
+        {
+            _package = Package.Open(_stream, mode.Value, access.Value);
+        }
+        catch (ArgumentException ex)
+        {
+            throw new OpenXmlPackageException(ExceptionMessages.FailedToOpenPackage, ex);
+        }
     }
 
     protected override Package Package => _package;

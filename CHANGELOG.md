@@ -1,17 +1,21 @@
 # Changelog
+
 All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [3.1.0]
+## [3.0.1]
 
 ### Fixed
+
 - Fixed issue where document type would not be correct unless content type was checked first (#1625)
+- Added check to only seek on packages where it is supported (#1644)
+- If a malformed URI is encountered, the exception is now the same as v2.x (`OpenXmlPackageException` with an inner `UriFormatException`) (#1644)
 
 ## [3.0.0] - 2023-11-15
 
-## Added
+### Added
 
 - `DocumentFormat.OpenXml.Office.PowerPoint.Y2023.M02.Main` namespace
 - `DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main` namespace
