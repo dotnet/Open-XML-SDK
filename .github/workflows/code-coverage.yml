@@ -47,7 +47,7 @@ jobs:
       run: dotnet test --no-restore --verbosity normal --collect:"XPlat Code Coverage" --results-directory coverage
 
     - name: ReportGenerator
-      uses: danielpalme/ReportGenerator-GitHub-Action@5.2.0
+      uses: danielpalme/ReportGenerator-GitHub-Action@5.2.1
       with:
         reports: coverage/**/coverage.cobertura.xml
         targetdir: coveragereport
