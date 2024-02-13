@@ -14,7 +14,7 @@
     <PackageVersion Include="Microsoft.SourceLink.GitHub" Version="8.0.0" />
     <PackageVersion Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageVersion Include="NSubstitute" Version="5.1.0" />
-    <PackageVersion Include="NuGet.Common" Version="6.8.0" />
+    <PackageVersion Include="NuGet.Common" Version="6.9.1" />
     <PackageVersion Include="NuGet.Packaging" Version="6.8.0" />
     <PackageVersion Include="NuGet.Packaging.Core" Version="6.8.0" />
     <PackageVersion Include="NuGet.Protocol" Version="6.8.0" />
