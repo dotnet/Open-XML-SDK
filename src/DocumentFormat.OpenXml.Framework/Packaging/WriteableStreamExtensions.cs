@@ -35,12 +35,14 @@ internal static class WriteableStreamExtensions
 
     private sealed class TemporaryFile : IDisposable
     {
+        private const int DefaultBufferSize = 4096;
+
         private readonly string _path;
 
         public TemporaryFile()
         {
             _path = Path.GetTempFileName();
-            Stream = File.Create(_path);
+            Stream = new FileStream(_path, FileMode.Create, FileAccess.ReadWrite, FileShare.None, DefaultBufferSize, FileOptions.DeleteOnClose);
         }
 
         public Stream Stream { get; }
@@ -48,7 +50,6 @@ internal static class WriteableStreamExtensions
         public void Dispose()
         {
             Stream.Dispose();
-            File.Delete(_path);
         }
     }
 }
