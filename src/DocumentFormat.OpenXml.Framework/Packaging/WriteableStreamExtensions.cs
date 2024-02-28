@@ -4,7 +4,6 @@
 using DocumentFormat.OpenXml.Features;
 using System;
 using System.IO;
-using System.Threading;
 
 namespace DocumentFormat.OpenXml.Packaging;
 
