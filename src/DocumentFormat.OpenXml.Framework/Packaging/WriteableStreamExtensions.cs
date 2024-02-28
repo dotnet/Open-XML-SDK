@@ -4,6 +4,7 @@
 using DocumentFormat.OpenXml.Features;
 using System;
 using System.IO;
+using System.Threading;
 
 namespace DocumentFormat.OpenXml.Packaging;
 
@@ -27,6 +28,8 @@ internal static class WriteableStreamExtensions
             tempStream.Stream.Position = 0;
             feature.Stream = tempStream.Stream;
 
+            features.GetRequired<IDisposableFeature>().Register(tempStream);
+
             return true;
         }
 
@@ -37,19 +40,31 @@ internal static class WriteableStreamExtensions
     {
         private const int DefaultBufferSize = 4096;
 
-        private readonly string _path;
+        private Stream? _stream;
 
         public TemporaryFile()
         {
-            _path = Path.GetTempFileName();
-            Stream = new FileStream(_path, FileMode.Create, FileAccess.ReadWrite, FileShare.None, DefaultBufferSize, FileOptions.DeleteOnClose);
+            var path = Path.GetTempFileName();
+            _stream = new FileStream(path, FileMode.Create, FileAccess.ReadWrite, FileShare.None, DefaultBufferSize, FileOptions.DeleteOnClose);
         }
 
-        public Stream Stream { get; }
+        ~TemporaryFile()
+        {
+            InnerDispose();
+        }
+
+        public Stream Stream => _stream ?? throw new ObjectDisposedException("Package has been disposed");
 
         public void Dispose()
         {
-            Stream.Dispose();
+            InnerDispose();
+            GC.SuppressFinalize(this);
+        }
+
+        private void InnerDispose()
+        {
+            var stream = Interlocked.CompareExchange(ref _stream, null, _stream);
+            stream?.Dispose();
         }
     }
 }
