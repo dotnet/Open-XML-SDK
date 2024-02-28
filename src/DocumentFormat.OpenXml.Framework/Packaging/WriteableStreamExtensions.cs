@@ -40,31 +40,16 @@ internal static class WriteableStreamExtensions
     {
         private const int DefaultBufferSize = 4096;
 
-        private Stream? _stream;
-
         public TemporaryFile()
         {
-            var path = Path.GetTempFileName();
-            _stream = new FileStream(path, FileMode.Create, FileAccess.ReadWrite, FileShare.None, DefaultBufferSize, FileOptions.DeleteOnClose);
+            Stream = new FileStream(Path.GetTempFileName(), FileMode.Create, FileAccess.ReadWrite, FileShare.None, DefaultBufferSize, FileOptions.DeleteOnClose);
         }
 
-        ~TemporaryFile()
-        {
-            InnerDispose();
-        }
-
-        public Stream Stream => _stream ?? throw new ObjectDisposedException("Package has been disposed");
+        public Stream Stream { get; }
 
         public void Dispose()
         {
-            InnerDispose();
-            GC.SuppressFinalize(this);
-        }
-
-        private void InnerDispose()
-        {
-            var stream = Interlocked.CompareExchange(ref _stream, null, _stream);
-            stream?.Dispose();
+            Stream.Dispose();
         }
     }
 }
