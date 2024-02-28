@@ -26,7 +26,8 @@ internal static class WriteableStreamExtensions
 
             tempStream.Position = 0;
 
-            // IPackageStreamFeature will take ownership of the stream it is supplied.
+            // IPackageStreamFeature will take ownership of the stream it is supplied. Since it has DeleteOnClose, it will be deleted
+            // when the package is closed.
             feature.Stream = tempStream;
 
             return true;
