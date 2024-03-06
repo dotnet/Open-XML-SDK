@@ -263,7 +263,7 @@ namespace DocumentFormat.OpenXml.Generator.Schematron
                 return "int.MaxValue";
             }
 
-            return i.ToString();
+            return i.ToString(System.Globalization.CultureInfo.InvariantCulture);
         }
 
         private static string Literal(double d)
@@ -277,7 +277,7 @@ namespace DocumentFormat.OpenXml.Generator.Schematron
                 return "double.NegativeInfinity";
             }
 
-            return d.ToString();
+            return d.ToString(System.Globalization.CultureInfo.InvariantCulture);
         }
     }
 }
