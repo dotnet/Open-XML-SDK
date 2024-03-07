@@ -5,6 +5,7 @@ using DocumentFormat.OpenXml.Generator.Editor;
 using DocumentFormat.OpenXml.Generator.Models;
 using DocumentFormat.OpenXml.Generator.Schematron.KnownSchematrons;
 using System.CodeDom.Compiler;
+using System.Globalization;
 using System.Text;
 
 namespace DocumentFormat.OpenXml.Generator.Schematron
@@ -263,7 +264,7 @@ namespace DocumentFormat.OpenXml.Generator.Schematron
                 return "int.MaxValue";
             }
 
-            return i.ToString(System.Globalization.CultureInfo.InvariantCulture);
+            return i.ToString(CultureInfo.InvariantCulture);
         }
 
         private static string Literal(double d)
@@ -277,7 +278,7 @@ namespace DocumentFormat.OpenXml.Generator.Schematron
                 return "double.NegativeInfinity";
             }
 
-            return d.ToString(System.Globalization.CultureInfo.InvariantCulture);
+            return d.ToString(CultureInfo.InvariantCulture);
         }
     }
 }
