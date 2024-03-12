@@ -136,6 +136,46 @@ namespace DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag
     }
 
     /// <summary>
+    /// <para>Defines the DXFComplement Class.</para>
+    /// <para>This class is available in Microsoft365 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is xfpb:DXFComplement.</para>
+    /// </summary>
+    public partial class DXFComplement : OpenXmlLeafElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the DXFComplement class.
+        /// </summary>
+        public DXFComplement() : base()
+        {
+        }
+
+        /// <summary>
+        /// <para>i, this property is only available in Microsoft365 and later.</para>
+        /// <para>Represents the following attribute in the schema: i</para>
+        /// </summary>
+        public UInt32Value? I
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema("xfpb:DXFComplement");
+            builder.Availability = FileFormatVersions.Microsoft365;
+            builder.AddElement<DXFComplement>()
+                .AddAttribute("i", a => a.I, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<DXFComplement>(deep);
+    }
+
+    /// <summary>
     /// <para>Defines the BagExtensions Class.</para>
     /// <para>This class is available in Microsoft365 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xfpb:bagExt.</para>

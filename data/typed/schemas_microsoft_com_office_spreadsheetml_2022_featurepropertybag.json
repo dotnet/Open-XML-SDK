@@ -36,6 +36,10 @@
     "ClassName": "Xsddouble"
   },
   {
+    "Name": "xfpb:CT_DXFComplement/xfpb:DXFComplement",
+    "ClassName": "DXFComplement"
+  },
+  {
     "Name": "x:CT_ExtensionList/xfpb:extLst",
     "ClassName": "ExtensionList"
   },

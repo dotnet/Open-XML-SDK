@@ -77,6 +77,27 @@
       ]
     },
     {
+      "Name": "xfpb:CT_DXFComplement/xfpb:DXFComplement",
+      "ClassName": "DXFComplement",
+      "Summary": "Defines the DXFComplement Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Microsoft365",
+      "Attributes": [
+        {
+          "QName": ":i",
+          "Type": "UInt32Value",
+          "Version": "Microsoft365",
+          "PropertyComments": "i",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "Name": "xfpb:CT_BagExtensions/xfpb:bagExt",
       "ClassName": "BagExtensions",
       "Summary": "Defines the BagExtensions Class.",

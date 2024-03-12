@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "xsd:string/xxdsv:lastEditFeature",
+    "ClassName": "LastEditFeatureXsdstring"
+  },
+  {
+    "Name": "xsd:string/xxdsv:lastRefreshFeature",
+    "ClassName": "LastRefreshFeatureXsdstring"
+  },
+  {
+    "Name": "xsd:string/xxdsv:requiredFeature",
+    "ClassName": "RequiredFeatureXsdstring"
+  },
+  {
+    "Name": "xxdsv:CT_VersionInfo/xxdsv:versionInfo",
+    "ClassName": "VersionInfo"
+  }
+]
