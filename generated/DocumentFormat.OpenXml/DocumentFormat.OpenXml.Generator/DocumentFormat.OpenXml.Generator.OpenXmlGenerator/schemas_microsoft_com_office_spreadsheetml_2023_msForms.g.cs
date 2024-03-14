@@ -15,7 +15,7 @@ using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.Office.SpreadsheetML.Y2023.MsForms
+namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms
 {
     /// <summary>
     /// <para>Defines the Question Class.</para>
@@ -25,7 +25,7 @@ namespace DocumentFormat.OpenXml.Office.SpreadsheetML.Y2023.MsForms
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadsheetML.Y2023.MsForms.ExtensionList" /> <c>&lt;xlmsforms:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms.ExtensionList" /> <c>&lt;xlmsforms:extLst></c></description></item>
     /// </list>
     /// </remark>
     public partial class Question : OpenXmlCompositeElement
@@ -76,7 +76,7 @@ namespace DocumentFormat.OpenXml.Office.SpreadsheetML.Y2023.MsForms
             base.ConfigureMetadata(builder);
             builder.SetSchema("xlmsforms:question");
             builder.Availability = FileFormatVersions.Microsoft365;
-            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadsheetML.Y2023.MsForms.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms.ExtensionList>();
             builder.AddElement<Question>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
                 {
@@ -84,7 +84,7 @@ namespace DocumentFormat.OpenXml.Office.SpreadsheetML.Y2023.MsForms
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadsheetML.Y2023.MsForms.ExtensionList), 0, 1, version: FileFormatVersions.Microsoft365)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms.ExtensionList), 0, 1, version: FileFormatVersions.Microsoft365)
             };
         }
 
@@ -95,9 +95,9 @@ namespace DocumentFormat.OpenXml.Office.SpreadsheetML.Y2023.MsForms
         /// <remark>
         /// xmlns:xlmsforms = http://schemas.microsoft.com/office/spreadsheetml/2023/msForms
         /// </remark>
-        public DocumentFormat.OpenXml.Office.SpreadsheetML.Y2023.MsForms.ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms.ExtensionList? ExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Office.SpreadsheetML.Y2023.MsForms.ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms.ExtensionList>();
             set => SetElement(value);
         }
 
@@ -113,8 +113,8 @@ namespace DocumentFormat.OpenXml.Office.SpreadsheetML.Y2023.MsForms
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadsheetML.Y2023.MsForms.ExtensionList" /> <c>&lt;xlmsforms:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadsheetML.Y2023.MsForms.Xstring" /> <c>&lt;xlmsforms:syncedQuestionId></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms.ExtensionList" /> <c>&lt;xlmsforms:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms.Xstring" /> <c>&lt;xlmsforms:syncedQuestionId></c></description></item>
     /// </list>
     /// </remark>
     public partial class MsForm : OpenXmlCompositeElement
@@ -195,8 +195,8 @@ namespace DocumentFormat.OpenXml.Office.SpreadsheetML.Y2023.MsForms
             base.ConfigureMetadata(builder);
             builder.SetSchema("xlmsforms:msForm");
             builder.Availability = FileFormatVersions.Microsoft365;
-            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadsheetML.Y2023.MsForms.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadsheetML.Y2023.MsForms.Xstring>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms.Xstring>();
             builder.AddElement<MsForm>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
                 {
@@ -207,8 +207,8 @@ namespace DocumentFormat.OpenXml.Office.SpreadsheetML.Y2023.MsForms
                 .AddAttribute("latestEventMarker", a => a.LatestEventMarker);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadsheetML.Y2023.MsForms.Xstring), 0, 0, version: FileFormatVersions.Microsoft365),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadsheetML.Y2023.MsForms.ExtensionList), 0, 1, version: FileFormatVersions.Microsoft365)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms.Xstring), 0, 0, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms.ExtensionList), 0, 1, version: FileFormatVersions.Microsoft365)
             };
         }
 

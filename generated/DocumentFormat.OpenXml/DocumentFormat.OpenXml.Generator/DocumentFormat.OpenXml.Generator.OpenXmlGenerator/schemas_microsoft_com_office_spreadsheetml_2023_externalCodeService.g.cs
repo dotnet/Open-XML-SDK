@@ -14,7 +14,7 @@ using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.Office.SpreadsheetML.Y2023.ExternalCodeService
+namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.ExternalCodeService
 {
     /// <summary>
     /// <para>Defines the ExternalCodeService Class.</para>

@@ -14,7 +14,7 @@ using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.Office.SpreadsheetML.Y2023.DataSourceVersioning
+namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.DataSourceVersioning
 {
     /// <summary>
     /// <para>Defines the VersionInfo Class.</para>
@@ -24,9 +24,9 @@ namespace DocumentFormat.OpenXml.Office.SpreadsheetML.Y2023.DataSourceVersioning
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadsheetML.Y2023.DataSourceVersioning.RequiredFeatureXsdstring" /> <c>&lt;xxdsv:requiredFeature></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadsheetML.Y2023.DataSourceVersioning.LastRefreshFeatureXsdstring" /> <c>&lt;xxdsv:lastRefreshFeature></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadsheetML.Y2023.DataSourceVersioning.LastEditFeatureXsdstring" /> <c>&lt;xxdsv:lastEditFeature></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.DataSourceVersioning.RequiredFeatureXsdstring" /> <c>&lt;xxdsv:requiredFeature></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.DataSourceVersioning.LastRefreshFeatureXsdstring" /> <c>&lt;xxdsv:lastRefreshFeature></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.DataSourceVersioning.LastEditFeatureXsdstring" /> <c>&lt;xxdsv:lastEditFeature></c></description></item>
     /// </list>
     /// </remark>
     public partial class VersionInfo : OpenXmlCompositeElement
@@ -67,14 +67,14 @@ namespace DocumentFormat.OpenXml.Office.SpreadsheetML.Y2023.DataSourceVersioning
             base.ConfigureMetadata(builder);
             builder.SetSchema("xxdsv:versionInfo");
             builder.Availability = FileFormatVersions.Microsoft365;
-            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadsheetML.Y2023.DataSourceVersioning.RequiredFeatureXsdstring>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadsheetML.Y2023.DataSourceVersioning.LastRefreshFeatureXsdstring>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadsheetML.Y2023.DataSourceVersioning.LastEditFeatureXsdstring>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.DataSourceVersioning.RequiredFeatureXsdstring>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.DataSourceVersioning.LastRefreshFeatureXsdstring>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.DataSourceVersioning.LastEditFeatureXsdstring>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadsheetML.Y2023.DataSourceVersioning.RequiredFeatureXsdstring), 0, 0, version: FileFormatVersions.Microsoft365),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadsheetML.Y2023.DataSourceVersioning.LastRefreshFeatureXsdstring), 0, 0, version: FileFormatVersions.Microsoft365),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadsheetML.Y2023.DataSourceVersioning.LastEditFeatureXsdstring), 0, 0, version: FileFormatVersions.Microsoft365)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.DataSourceVersioning.RequiredFeatureXsdstring), 0, 0, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.DataSourceVersioning.LastRefreshFeatureXsdstring), 0, 0, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.DataSourceVersioning.LastEditFeatureXsdstring), 0, 0, version: FileFormatVersions.Microsoft365)
             };
         }
 

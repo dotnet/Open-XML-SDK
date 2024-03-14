@@ -14,7 +14,7 @@ using System;
 using System.Collections.Generic;
 using System.IO.Packaging;
 
-namespace DocumentFormat.OpenXml.Office.SpreadsheetML.Y2023.Pivot2023Calculation
+namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.Pivot2023Calculation
 {
     /// <summary>
     /// <para>Defines the AggregationInfo Class.</para>
@@ -34,9 +34,9 @@ namespace DocumentFormat.OpenXml.Office.SpreadsheetML.Y2023.Pivot2023Calculation
         /// <para>aggregationType, this property is only available in Microsoft365 and later.</para>
         /// <para>Represents the following attribute in the schema: aggregationType</para>
         /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Office.SpreadsheetML.Y2023.Pivot2023Calculation.AggregationType>? AggregationType
+        public EnumValue<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.Pivot2023Calculation.AggregationType>? AggregationType
         {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.SpreadsheetML.Y2023.Pivot2023Calculation.AggregationType>>();
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.Pivot2023Calculation.AggregationType>>();
             set => SetAttribute(value);
         }
 

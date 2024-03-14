@@ -157,19 +157,19 @@
   },
   {
     "Prefix": "xxdsv",
-    "Namespace": "DocumentFormat.OpenXml.Office.SpreadsheetML.Y2023.DataSourceVersioning"
+    "Namespace": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.DataSourceVersioning"
   },
   {
     "Prefix": "xlecs",
-    "Namespace": "DocumentFormat.OpenXml.Office.SpreadsheetML.Y2023.ExternalCodeService"
+    "Namespace": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.ExternalCodeService"
   },
   {
     "Prefix": "xlmsforms",
-    "Namespace": "DocumentFormat.OpenXml.Office.SpreadsheetML.Y2023.MsForms"
+    "Namespace": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms"
   },
   {
     "Prefix": "xlpcalc",
-    "Namespace": "DocumentFormat.OpenXml.Office.SpreadsheetML.Y2023.Pivot2023Calculation"
+    "Namespace": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.Pivot2023Calculation"
   },
   {
     "Prefix": "wne",

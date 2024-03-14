@@ -12,8 +12,8 @@ using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021;
 using DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo;
-using DocumentFormat.OpenXml.Office.SpreadsheetML.Y2023.ExternalCodeService;
-using DocumentFormat.OpenXml.Office.SpreadsheetML.Y2023.MsForms;
+using DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.ExternalCodeService;
+using DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms;
 using DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag;
 using DocumentFormat.OpenXml.Office2010.Excel;
 using DocumentFormat.OpenXml.Office2013.Excel;
@@ -42637,7 +42637,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadsheetML.Y2023.MsForms.Question" /> <c>&lt;xlmsforms:question></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms.Question" /> <c>&lt;xlmsforms:question></c></description></item>
     /// </list>
     /// </remark>
     public partial class TableColumnExtension : OpenXmlCompositeElement
@@ -42687,7 +42687,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:ext");
-            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadsheetML.Y2023.MsForms.Question>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms.Question>();
             builder.AddElement<TableColumnExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -42696,7 +42696,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadsheetML.Y2023.MsForms.Question), 1, 1, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms.Question), 1, 1, version: FileFormatVersions.Microsoft365),
                 new AnyParticle(0, 1)
             };
         }
@@ -45801,7 +45801,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.Table" /> <c>&lt;x14:table></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadsheetML.Y2023.MsForms.MsForm" /> <c>&lt;xlmsforms:msForm></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms.MsForm" /> <c>&lt;xlmsforms:msForm></c></description></item>
     /// </list>
     /// </remark>
     public partial class TableExtension : OpenXmlCompositeElement
@@ -45852,7 +45852,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:ext");
             builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.Table>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadsheetML.Y2023.MsForms.MsForm>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms.MsForm>();
             builder.AddElement<TableExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -45862,7 +45862,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.Table), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadsheetML.Y2023.MsForms.MsForm), 1, 1, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms.MsForm), 1, 1, version: FileFormatVersions.Microsoft365),
                 new AnyParticle(0, 1)
             };
         }
@@ -47450,7 +47450,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.PivotTableReferences" /> <c>&lt;x15:pivotTableReferences></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.TimelineCacheReferences" /> <c>&lt;x15:timelineCacheRefs></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.WorkbookProperties" /> <c>&lt;x15:workbookPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadsheetML.Y2023.ExternalCodeService.ExternalCodeService" /> <c>&lt;xlecs:externalCodeService></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.ExternalCodeService.ExternalCodeService" /> <c>&lt;xlecs:externalCodeService></c></description></item>
     /// </list>
     /// </remark>
     public partial class WorkbookExtension : OpenXmlCompositeElement
@@ -47511,7 +47511,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.PivotTableReferences>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.TimelineCacheReferences>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.WorkbookProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadsheetML.Y2023.ExternalCodeService.ExternalCodeService>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.ExternalCodeService.ExternalCodeService>();
             builder.AddElement<WorkbookExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
@@ -47531,7 +47531,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.TimelineCacheReferences), 1, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.WorkbookProperties), 1, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.DataModel), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadsheetML.Y2023.ExternalCodeService.ExternalCodeService), 1, 1, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.ExternalCodeService.ExternalCodeService), 1, 1, version: FileFormatVersions.Microsoft365),
                 new AnyParticle(0, 1)
             };
         }
