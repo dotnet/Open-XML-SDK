@@ -212,5 +212,4 @@
     <Right>lib/netstandard2.0/DocumentFormat.OpenXml.dll</Right>
     <IsBaselineSuppression>true</IsBaselineSuppression>
   </Suppression>
-  <Suppression>
-  </Suppressions>
+</Suppressions>
