@@ -62,7 +62,7 @@ namespace DocumentFormat.OpenXml.Generator.Schematron.KnownSchematrons
         {
             if (input.StartsWith("0x".AsSpan(), StringComparison.Ordinal))
             {
-                return uint.Parse(input.Slice(2).ToString(), NumberStyles.HexNumber);
+                return uint.Parse(input.Slice(2).ToString(), NumberStyles.HexNumber, CultureInfo.InvariantCulture);
             }
 
             if (input.EndsWith("f".AsSpan(), StringComparison.Ordinal))
@@ -70,7 +70,7 @@ namespace DocumentFormat.OpenXml.Generator.Schematron.KnownSchematrons
                 input = input.Slice(0, input.Length - 1);
             }
 
-            return double.Parse(input.ToString());
+            return double.Parse(input.ToString(), CultureInfo.InvariantCulture);
         }
     }
 }
