@@ -12,6 +12,9 @@ using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021;
 using DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo;
+using DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.ExternalCodeService;
+using DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms;
+using DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag;
 using DocumentFormat.OpenXml.Office2010.Excel;
 using DocumentFormat.OpenXml.Office2013.Excel;
 using DocumentFormat.OpenXml.Office2013.ExcelAc;
@@ -20022,7 +20025,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Border" /> <c>&lt;x:border></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Alignment" /> <c>&lt;x:alignment></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Protection" /> <c>&lt;x:protection></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DxfExtensionList" /> <c>&lt;x:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Fill" /> <c>&lt;x:fill></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Font" /> <c>&lt;x:font></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.NumberingFormat" /> <c>&lt;x:numFmt></c></description></item>
@@ -20073,7 +20076,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Alignment), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Border), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Protection), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DxfExtensionList), 0, 1)
             };
         }
 
@@ -20092,7 +20095,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Border" /> <c>&lt;x:border></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Alignment" /> <c>&lt;x:alignment></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Protection" /> <c>&lt;x:protection></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DxfExtensionList" /> <c>&lt;x:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Fill" /> <c>&lt;x:fill></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Font" /> <c>&lt;x:font></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.NumberingFormat" /> <c>&lt;x:numFmt></c></description></item>
@@ -20143,7 +20146,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Alignment), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Border), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Protection), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DxfExtensionList), 0, 1)
             };
         }
 
@@ -20162,7 +20165,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Border" /> <c>&lt;x:border></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Alignment" /> <c>&lt;x:alignment></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Protection" /> <c>&lt;x:protection></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DxfExtensionList" /> <c>&lt;x:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Fill" /> <c>&lt;x:fill></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Font" /> <c>&lt;x:font></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.NumberingFormat" /> <c>&lt;x:numFmt></c></description></item>
@@ -20213,7 +20216,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Alignment), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Border), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Protection), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DxfExtensionList), 0, 1)
             };
         }
 
@@ -20232,7 +20235,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Border" /> <c>&lt;x:border></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Alignment" /> <c>&lt;x:alignment></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Protection" /> <c>&lt;x:protection></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DxfExtensionList" /> <c>&lt;x:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Fill" /> <c>&lt;x:fill></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Font" /> <c>&lt;x:font></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.NumberingFormat" /> <c>&lt;x:numFmt></c></description></item>
@@ -20277,14 +20280,14 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Border>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Alignment>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Protection>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DxfExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Fill>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Font>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.NumberingFormat>();
         }
 
         /// <summary>
-        /// <para>Font Properties.</para>
+        /// <para> Contains font properties associated with this dxf. .</para>
         /// <para>Represents the following element tag in the schema: x:font.</para>
         /// </summary>
         /// <remark>
@@ -20297,7 +20300,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         }
 
         /// <summary>
-        /// <para>Number Format.</para>
+        /// <para> Contains number format properties associated with this dxf. .</para>
         /// <para>Represents the following element tag in the schema: x:numFmt.</para>
         /// </summary>
         /// <remark>
@@ -20310,7 +20313,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         }
 
         /// <summary>
-        /// <para>Fill.</para>
+        /// <para> Contains fill properties associated with this dxf. .</para>
         /// <para>Represents the following element tag in the schema: x:fill.</para>
         /// </summary>
         /// <remark>
@@ -20323,7 +20326,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         }
 
         /// <summary>
-        /// <para>Alignment.</para>
+        /// <para> Contains alignment properties associated with this dxf. .</para>
         /// <para>Represents the following element tag in the schema: x:alignment.</para>
         /// </summary>
         /// <remark>
@@ -20336,7 +20339,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         }
 
         /// <summary>
-        /// <para>Border Properties.</para>
+        /// <para> Contains border properties associated with this dxf. .</para>
         /// <para>Represents the following element tag in the schema: x:border.</para>
         /// </summary>
         /// <remark>
@@ -20349,7 +20352,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         }
 
         /// <summary>
-        /// <para>Protection Properties.</para>
+        /// <para> Contains protection properties associated with this dxf. .</para>
         /// <para>Represents the following element tag in the schema: x:protection.</para>
         /// </summary>
         /// <remark>
@@ -20362,15 +20365,15 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         }
 
         /// <summary>
-        /// <para>Future Feature Data Storage Area.</para>
+        /// <para>Future Extensibility.</para>
         /// <para>Represents the following element tag in the schema: x:extLst.</para>
         /// </summary>
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Spreadsheet.DxfExtensionList? DxfExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.DxfExtensionList>();
             set => SetElement(value);
         }
     }
@@ -28156,391 +28159,233 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     }
 
     /// <summary>
-    /// <para>Font Properties.</para>
+    /// <para>Color Indexes.</para>
     /// <para>This class is available in Office 2007 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is x:font.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is x:indexedColors.</para>
     /// </summary>
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Bold" /> <c>&lt;x:b></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Italic" /> <c>&lt;x:i></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Strike" /> <c>&lt;x:strike></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Condense" /> <c>&lt;x:condense></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Extend" /> <c>&lt;x:extend></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Outline" /> <c>&lt;x:outline></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Shadow" /> <c>&lt;x:shadow></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.FontCharSet" /> <c>&lt;x:charset></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Color" /> <c>&lt;x:color></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.FontFamilyNumbering" /> <c>&lt;x:family></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.FontName" /> <c>&lt;x:name></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.FontScheme" /> <c>&lt;x:scheme></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.FontSize" /> <c>&lt;x:sz></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Underline" /> <c>&lt;x:u></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.VerticalTextAlignment" /> <c>&lt;x:vertAlign></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.RgbColor" /> <c>&lt;x:rgbColor></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Font : OpenXmlCompositeElement
+    public partial class IndexedColors : OpenXmlCompositeElement
     {
         /// <summary>
-        /// Initializes a new instance of the Font class.
+        /// Initializes a new instance of the IndexedColors class.
         /// </summary>
-        public Font() : base()
+        public IndexedColors() : base()
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the Font class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public Font(IEnumerable<OpenXmlElement> childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the Font class with the specified child elements.
+        /// Initializes a new instance of the IndexedColors class with the specified child elements.
         /// </summary>
         /// <param name="childElements">Specifies the child elements.</param>
-        public Font(params OpenXmlElement[] childElements) : base(childElements)
+        public IndexedColors(IEnumerable<OpenXmlElement> childElements) : base(childElements)
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the Font class from outer XML.
+        /// Initializes a new instance of the IndexedColors class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public IndexedColors(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the IndexedColors class from outer XML.
         /// </summary>
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
-        public Font(string outerXml) : base(outerXml)
+        public IndexedColors(string outerXml) : base(outerXml)
         {
         }
 
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("x:font");
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Bold>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Italic>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Strike>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Condense>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Extend>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Outline>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Shadow>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.FontCharSet>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Color>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.FontFamilyNumbering>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.FontName>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.FontScheme>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.FontSize>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Underline>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.VerticalTextAlignment>();
+            builder.SetSchema("x:indexedColors");
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RgbColor>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Bold), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Italic), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Strike), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Condense), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Extend), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Outline), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Shadow), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Underline), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.VerticalTextAlignment), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.FontSize), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Color), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.FontName), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.FontFamilyNumbering), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.FontCharSet), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.FontScheme), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RgbColor), 1, 64)
             };
         }
 
-        /// <summary>
-        /// <para>Bold.</para>
-        /// <para>Represents the following element tag in the schema: x:b.</para>
-        /// </summary>
-        /// <remark>
-        /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.Bold? Bold
-        {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Bold>();
-            set => SetElement(value);
-        }
-
-        /// <summary>
-        /// <para>Italic.</para>
-        /// <para>Represents the following element tag in the schema: x:i.</para>
-        /// </summary>
-        /// <remark>
-        /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.Italic? Italic
-        {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Italic>();
-            set => SetElement(value);
-        }
-
-        /// <summary>
-        /// <para>Strike Through.</para>
-        /// <para>Represents the following element tag in the schema: x:strike.</para>
-        /// </summary>
-        /// <remark>
-        /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.Strike? Strike
-        {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Strike>();
-            set => SetElement(value);
-        }
-
-        /// <summary>
-        /// <para>Condense.</para>
-        /// <para>Represents the following element tag in the schema: x:condense.</para>
-        /// </summary>
-        /// <remark>
-        /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.Condense? Condense
-        {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Condense>();
-            set => SetElement(value);
-        }
-
-        /// <summary>
-        /// <para>Extend.</para>
-        /// <para>Represents the following element tag in the schema: x:extend.</para>
-        /// </summary>
-        /// <remark>
-        /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.Extend? Extend
-        {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Extend>();
-            set => SetElement(value);
-        }
-
-        /// <summary>
-        /// <para>Outline.</para>
-        /// <para>Represents the following element tag in the schema: x:outline.</para>
-        /// </summary>
-        /// <remark>
-        /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.Outline? Outline
-        {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Outline>();
-            set => SetElement(value);
-        }
-
-        /// <summary>
-        /// <para>Shadow.</para>
-        /// <para>Represents the following element tag in the schema: x:shadow.</para>
-        /// </summary>
-        /// <remark>
-        /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.Shadow? Shadow
-        {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Shadow>();
-            set => SetElement(value);
-        }
-
-        /// <summary>
-        /// <para>Underline.</para>
-        /// <para>Represents the following element tag in the schema: x:u.</para>
-        /// </summary>
-        /// <remark>
-        /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.Underline? Underline
-        {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Underline>();
-            set => SetElement(value);
-        }
-
-        /// <summary>
-        /// <para>Text Vertical Alignment.</para>
-        /// <para>Represents the following element tag in the schema: x:vertAlign.</para>
-        /// </summary>
-        /// <remark>
-        /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.VerticalTextAlignment? VerticalTextAlignment
-        {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.VerticalTextAlignment>();
-            set => SetElement(value);
-        }
-
-        /// <summary>
-        /// <para>Font Size.</para>
-        /// <para>Represents the following element tag in the schema: x:sz.</para>
-        /// </summary>
-        /// <remark>
-        /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.FontSize? FontSize
-        {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.FontSize>();
-            set => SetElement(value);
-        }
-
-        /// <summary>
-        /// <para>Text Color.</para>
-        /// <para>Represents the following element tag in the schema: x:color.</para>
-        /// </summary>
-        /// <remark>
-        /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.Color? Color
-        {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Color>();
-            set => SetElement(value);
-        }
-
-        /// <summary>
-        /// <para>Font Name.</para>
-        /// <para>Represents the following element tag in the schema: x:name.</para>
-        /// </summary>
-        /// <remark>
-        /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.FontName? FontName
-        {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.FontName>();
-            set => SetElement(value);
-        }
-
-        /// <summary>
-        /// <para>Font Family.</para>
-        /// <para>Represents the following element tag in the schema: x:family.</para>
-        /// </summary>
-        /// <remark>
-        /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.FontFamilyNumbering? FontFamilyNumbering
-        {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.FontFamilyNumbering>();
-            set => SetElement(value);
-        }
-
-        /// <summary>
-        /// <para>Character Set.</para>
-        /// <para>Represents the following element tag in the schema: x:charset.</para>
-        /// </summary>
-        /// <remark>
-        /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.FontCharSet? FontCharSet
-        {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.FontCharSet>();
-            set => SetElement(value);
-        }
-
-        /// <summary>
-        /// <para>Scheme.</para>
-        /// <para>Represents the following element tag in the schema: x:scheme.</para>
-        /// </summary>
-        /// <remark>
-        /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.FontScheme? FontScheme
-        {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.FontScheme>();
-            set => SetElement(value);
-        }
-
         /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<Font>(deep);
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<IndexedColors>(deep);
     }
 
     /// <summary>
-    /// <para>Fill.</para>
+    /// <para>MRU Colors.</para>
     /// <para>This class is available in Office 2007 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is x:fill.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is x:mruColors.</para>
     /// </summary>
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.GradientFill" /> <c>&lt;x:gradientFill></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PatternFill" /> <c>&lt;x:patternFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Color" /> <c>&lt;x:color></c></description></item>
     /// </list>
     /// </remark>
-    public partial class Fill : OpenXmlCompositeElement
+    public partial class MruColors : OpenXmlCompositeElement
     {
         /// <summary>
-        /// Initializes a new instance of the Fill class.
+        /// Initializes a new instance of the MruColors class.
         /// </summary>
-        public Fill() : base()
+        public MruColors() : base()
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the Fill class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public Fill(IEnumerable<OpenXmlElement> childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the Fill class with the specified child elements.
+        /// Initializes a new instance of the MruColors class with the specified child elements.
         /// </summary>
         /// <param name="childElements">Specifies the child elements.</param>
-        public Fill(params OpenXmlElement[] childElements) : base(childElements)
+        public MruColors(IEnumerable<OpenXmlElement> childElements) : base(childElements)
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the Fill class from outer XML.
+        /// Initializes a new instance of the MruColors class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public MruColors(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the MruColors class from outer XML.
         /// </summary>
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
-        public Fill(string outerXml) : base(outerXml)
+        public MruColors(string outerXml) : base(outerXml)
         {
         }
 
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
             base.ConfigureMetadata(builder);
-            builder.SetSchema("x:fill");
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.GradientFill>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PatternFill>();
-            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
+            builder.SetSchema("x:mruColors");
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Color>();
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PatternFill), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.GradientFill), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Color), 1, 10)
             };
         }
 
-        /// <summary>
-        /// <para>Pattern.</para>
-        /// <para>Represents the following element tag in the schema: x:patternFill.</para>
-        /// </summary>
-        /// <remark>
-        /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.PatternFill? PatternFill
-        {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PatternFill>();
-            set => SetElement(value);
-        }
-
-        /// <summary>
-        /// <para>Gradient.</para>
-        /// <para>Represents the following element tag in the schema: x:gradientFill.</para>
-        /// </summary>
-        /// <remark>
-        /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.GradientFill? GradientFill
-        {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.GradientFill>();
-            set => SetElement(value);
-        }
-
         /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<Fill>(deep);
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<MruColors>(deep);
     }
 
     /// <summary>
-    /// <para>Border Properties.</para>
+    /// <para>Table Style.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is x:tableStyle.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.TableStyleElement" /> <c>&lt;x:tableStyleElement></c></description></item>
+    /// </list>
+    /// </remark>
+    public partial class TableStyle : OpenXmlCompositeElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the TableStyle class.
+        /// </summary>
+        public TableStyle() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the TableStyle class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public TableStyle(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the TableStyle class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public TableStyle(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the TableStyle class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public TableStyle(string outerXml) : base(outerXml)
+        {
+        }
+
+        /// <summary>
+        /// <para>Table Style Name</para>
+        /// <para>Represents the following attribute in the schema: name</para>
+        /// </summary>
+        public StringValue? Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>Pivot Style</para>
+        /// <para>Represents the following attribute in the schema: pivot</para>
+        /// </summary>
+        public BooleanValue? Pivot
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>Table</para>
+        /// <para>Represents the following attribute in the schema: table</para>
+        /// </summary>
+        public BooleanValue? Table
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>Table Style Count</para>
+        /// <para>Represents the following attribute in the schema: count</para>
+        /// </summary>
+        public UInt32Value? Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema("x:tableStyle");
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.TableStyleElement>();
+            builder.AddElement<TableStyle>()
+                .AddAttribute("name", a => a.Name, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("pivot", a => a.Pivot)
+                .AddAttribute("table", a => a.Table)
+                .AddAttribute("count", a => a.Count);
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.TableStyleElement), 0, 28)
+            };
+            builder.AddConstraint(new AttributeValueLengthConstraint(builder.CreateQName("x:name"), 1, 255) { Application = ApplicationType.Excel });
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<TableStyle>(deep);
+    }
+
+    /// <summary>
+    /// <para>Border.</para>
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:border.</para>
     /// </summary>
@@ -28774,232 +28619,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     }
 
     /// <summary>
-    /// <para>Color Indexes.</para>
-    /// <para>This class is available in Office 2007 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is x:indexedColors.</para>
-    /// </summary>
-    /// <remark>
-    /// <para>The following table lists the possible child types:</para>
-    /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.RgbColor" /> <c>&lt;x:rgbColor></c></description></item>
-    /// </list>
-    /// </remark>
-    public partial class IndexedColors : OpenXmlCompositeElement
-    {
-        /// <summary>
-        /// Initializes a new instance of the IndexedColors class.
-        /// </summary>
-        public IndexedColors() : base()
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the IndexedColors class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public IndexedColors(IEnumerable<OpenXmlElement> childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the IndexedColors class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public IndexedColors(params OpenXmlElement[] childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the IndexedColors class from outer XML.
-        /// </summary>
-        /// <param name="outerXml">Specifies the outer XML of the element.</param>
-        public IndexedColors(string outerXml) : base(outerXml)
-        {
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.SetSchema("x:indexedColors");
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.RgbColor>();
-            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
-            {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.RgbColor), 1, 64)
-            };
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<IndexedColors>(deep);
-    }
-
-    /// <summary>
-    /// <para>MRU Colors.</para>
-    /// <para>This class is available in Office 2007 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is x:mruColors.</para>
-    /// </summary>
-    /// <remark>
-    /// <para>The following table lists the possible child types:</para>
-    /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Color" /> <c>&lt;x:color></c></description></item>
-    /// </list>
-    /// </remark>
-    public partial class MruColors : OpenXmlCompositeElement
-    {
-        /// <summary>
-        /// Initializes a new instance of the MruColors class.
-        /// </summary>
-        public MruColors() : base()
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the MruColors class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public MruColors(IEnumerable<OpenXmlElement> childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the MruColors class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public MruColors(params OpenXmlElement[] childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the MruColors class from outer XML.
-        /// </summary>
-        /// <param name="outerXml">Specifies the outer XML of the element.</param>
-        public MruColors(string outerXml) : base(outerXml)
-        {
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.SetSchema("x:mruColors");
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Color>();
-            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
-            {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Color), 1, 10)
-            };
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<MruColors>(deep);
-    }
-
-    /// <summary>
-    /// <para>Table Style.</para>
-    /// <para>This class is available in Office 2007 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is x:tableStyle.</para>
-    /// </summary>
-    /// <remark>
-    /// <para>The following table lists the possible child types:</para>
-    /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.TableStyleElement" /> <c>&lt;x:tableStyleElement></c></description></item>
-    /// </list>
-    /// </remark>
-    public partial class TableStyle : OpenXmlCompositeElement
-    {
-        /// <summary>
-        /// Initializes a new instance of the TableStyle class.
-        /// </summary>
-        public TableStyle() : base()
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the TableStyle class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public TableStyle(IEnumerable<OpenXmlElement> childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the TableStyle class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public TableStyle(params OpenXmlElement[] childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the TableStyle class from outer XML.
-        /// </summary>
-        /// <param name="outerXml">Specifies the outer XML of the element.</param>
-        public TableStyle(string outerXml) : base(outerXml)
-        {
-        }
-
-        /// <summary>
-        /// <para>Table Style Name</para>
-        /// <para>Represents the following attribute in the schema: name</para>
-        /// </summary>
-        public StringValue? Name
-        {
-            get => GetAttribute<StringValue>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>Pivot Style</para>
-        /// <para>Represents the following attribute in the schema: pivot</para>
-        /// </summary>
-        public BooleanValue? Pivot
-        {
-            get => GetAttribute<BooleanValue>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>Table</para>
-        /// <para>Represents the following attribute in the schema: table</para>
-        /// </summary>
-        public BooleanValue? Table
-        {
-            get => GetAttribute<BooleanValue>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>Table Style Count</para>
-        /// <para>Represents the following attribute in the schema: count</para>
-        /// </summary>
-        public UInt32Value? Count
-        {
-            get => GetAttribute<UInt32Value>();
-            set => SetAttribute(value);
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.SetSchema("x:tableStyle");
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.TableStyleElement>();
-            builder.AddElement<TableStyle>()
-                .AddAttribute("name", a => a.Name, aBuilder =>
-                {
-                    aBuilder.AddValidator(RequiredValidator.Instance);
-                })
-                .AddAttribute("pivot", a => a.Pivot)
-                .AddAttribute("table", a => a.Table)
-                .AddAttribute("count", a => a.Count);
-            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
-            {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.TableStyleElement), 0, 28)
-            };
-            builder.AddConstraint(new AttributeValueLengthConstraint(builder.CreateQName("x:name"), 1, 255) { Application = ApplicationType.Excel });
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<TableStyle>(deep);
-    }
-
-    /// <summary>
     /// <para>RGB Color.</para>
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:rgbColor.</para>
@@ -29036,6 +28655,94 @@ namespace DocumentFormat.OpenXml.Spreadsheet
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RgbColor>(deep);
+    }
+
+    /// <summary>
+    /// <para>Fill.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is x:fill.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.GradientFill" /> <c>&lt;x:gradientFill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PatternFill" /> <c>&lt;x:patternFill></c></description></item>
+    /// </list>
+    /// </remark>
+    public partial class Fill : OpenXmlCompositeElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the Fill class.
+        /// </summary>
+        public Fill() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the Fill class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public Fill(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the Fill class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public Fill(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the Fill class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public Fill(string outerXml) : base(outerXml)
+        {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema("x:fill");
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.GradientFill>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PatternFill>();
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PatternFill), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.GradientFill), 0, 1)
+            };
+        }
+
+        /// <summary>
+        /// <para>Pattern.</para>
+        /// <para>Represents the following element tag in the schema: x:patternFill.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
+        /// </remark>
+        public DocumentFormat.OpenXml.Spreadsheet.PatternFill? PatternFill
+        {
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PatternFill>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>Gradient.</para>
+        /// <para>Represents the following element tag in the schema: x:gradientFill.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
+        /// </remark>
+        public DocumentFormat.OpenXml.Spreadsheet.GradientFill? GradientFill
+        {
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.GradientFill>();
+            set => SetElement(value);
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<Fill>(deep);
     }
 
     /// <summary>
@@ -30800,7 +30507,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.TableColumnExtensionList" /> <c>&lt;x:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CalculatedColumnFormula" /> <c>&lt;x:calculatedColumnFormula></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.TotalsRowFormula" /> <c>&lt;x:totalsRowFormula></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.XmlColumnProperties" /> <c>&lt;x:xmlColumnPr></c></description></item>
@@ -30840,7 +30547,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         }
 
         /// <summary>
-        /// <para>Table Field Id</para>
+        /// <para>The unique identifier of the table field</para>
         /// <para>Represents the following attribute in the schema: id</para>
         /// </summary>
         public UInt32Value? Id
@@ -30850,7 +30557,20 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         }
 
         /// <summary>
-        /// <para>Unique Name</para>
+        /// <para>Unique ID (GUID form) of the table field, this property is only available in Office 2019 and later.</para>
+        /// <para>Represents the following attribute in the schema: xr3:uid</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:xr3=http://schemas.microsoft.com/office/spreadsheetml/2016/revision3
+        /// </remark>
+        public StringValue? Uid
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>The unique name of the table field</para>
         /// <para>Represents the following attribute in the schema: uniqueName</para>
         /// </summary>
         public StringValue? UniqueName
@@ -30860,7 +30580,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         }
 
         /// <summary>
-        /// <para>Column name</para>
+        /// <para>The unique caption of the table field</para>
         /// <para>Represents the following attribute in the schema: name</para>
         /// </summary>
         public StringValue? Name
@@ -30870,7 +30590,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         }
 
         /// <summary>
-        /// <para>Totals Row Function</para>
+        /// <para>Aggregation to show in the Totals Row cell</para>
         /// <para>Represents the following attribute in the schema: totalsRowFunction</para>
         /// </summary>
         public EnumValue<DocumentFormat.OpenXml.Spreadsheet.TotalsRowFunctionValues>? TotalsRowFunction
@@ -30880,7 +30600,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         }
 
         /// <summary>
-        /// <para>Totals Row Label</para>
+        /// <para>String to show in the Totals Row cell. Requires totalsRowFunction="none"</para>
         /// <para>Represents the following attribute in the schema: totalsRowLabel</para>
         /// </summary>
         public StringValue? TotalsRowLabel
@@ -30890,7 +30610,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         }
 
         /// <summary>
-        /// <para>Query Table Field Id</para>
+        /// <para> The query Table field ID corresponding to this Table column</para>
         /// <para>Represents the following attribute in the schema: queryTableFieldId</para>
         /// </summary>
         public UInt32Value? QueryTableFieldId
@@ -30900,7 +30620,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         }
 
         /// <summary>
-        /// <para>Header Row Cell Format Id</para>
+        /// <para>Header row cell format tag</para>
         /// <para>Represents the following attribute in the schema: headerRowDxfId</para>
         /// </summary>
         public UInt32Value? HeaderRowDifferentialFormattingId
@@ -30910,7 +30630,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         }
 
         /// <summary>
-        /// <para>Data and Insert Row Format Id</para>
+        /// <para>Data and insert row cell format tag</para>
         /// <para>Represents the following attribute in the schema: dataDxfId</para>
         /// </summary>
         public UInt32Value? DataFormatId
@@ -30920,7 +30640,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         }
 
         /// <summary>
-        /// <para>Totals Row Format Id</para>
+        /// <para>Totals row cell format tag</para>
         /// <para>Represents the following attribute in the schema: totalsRowDxfId</para>
         /// </summary>
         public UInt32Value? TotalsRowDifferentialFormattingId
@@ -30930,7 +30650,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         }
 
         /// <summary>
-        /// <para>Header Row Cell Style</para>
+        /// <para>Header cell cached style name</para>
         /// <para>Represents the following attribute in the schema: headerRowCellStyle</para>
         /// </summary>
         public StringValue? HeaderRowCellStyle
@@ -30940,7 +30660,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         }
 
         /// <summary>
-        /// <para>Data Area Style Name</para>
+        /// <para>Data cell style name</para>
         /// <para>Represents the following attribute in the schema: dataCellStyle</para>
         /// </summary>
         public StringValue? DataCellStyle
@@ -30950,7 +30670,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         }
 
         /// <summary>
-        /// <para>Totals Row Style Name</para>
+        /// <para>Totals row cell style name</para>
         /// <para>Represents the following attribute in the schema: totalsRowCellStyle</para>
         /// </summary>
         public StringValue? TotalsRowCellStyle
@@ -30963,7 +30683,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:tableColumn");
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.TableColumnExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CalculatedColumnFormula>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.TotalsRowFormula>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.XmlColumnProperties>();
@@ -30971,6 +30691,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 .AddAttribute("id", a => a.Id, aBuilder =>
                 {
                     aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("xr3:uid", a => a.Uid, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2019));
+                    aBuilder.AddValidator(new StringValidator() { Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
                 })
                 .AddAttribute("uniqueName", a => a.UniqueName)
                 .AddAttribute("name", a => a.Name, aBuilder =>
@@ -30991,7 +30716,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CalculatedColumnFormula), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.TotalsRowFormula), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.XmlColumnProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.TableColumnExtensionList), 0, 1)
             };
             builder.AddConstraint(new AttributeValueLengthConstraint(builder.CreateQName("x:name"), 0, 255));
             builder.AddConstraint(new AttributeAbsentConditionToValue(builder.CreateQName("x:totalsRowLabel"), builder.CreateQName("x:totalsRowFunction"), "custom"));
@@ -31010,7 +30735,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         }
 
         /// <summary>
-        /// <para>Calculated Column Formula.</para>
+        /// <para>The calculated column formula.</para>
         /// <para>Represents the following element tag in the schema: x:calculatedColumnFormula.</para>
         /// </summary>
         /// <remark>
@@ -31023,7 +30748,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         }
 
         /// <summary>
-        /// <para>Totals Row Formula.</para>
+        /// <para>Custom totals row formula. Requires totalsRowFunction="custom".</para>
         /// <para>Represents the following element tag in the schema: x:totalsRowFormula.</para>
         /// </summary>
         /// <remark>
@@ -31036,7 +30761,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         }
 
         /// <summary>
-        /// <para>XML Column Properties.</para>
+        /// <para>Column properties for XML tables.</para>
         /// <para>Represents the following element tag in the schema: x:xmlColumnPr.</para>
         /// </summary>
         /// <remark>
@@ -31049,282 +30774,20 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         }
 
         /// <summary>
-        /// <para>Future Feature Data Storage Area.</para>
+        /// <para>Future Extensibility.</para>
         /// <para>Represents the following element tag in the schema: x:extLst.</para>
         /// </summary>
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Spreadsheet.TableColumnExtensionList? TableColumnExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.TableColumnExtensionList>();
             set => SetElement(value);
         }
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<TableColumn>(deep);
-    }
-
-    /// <summary>
-    /// <para>Calculated Column Formula.</para>
-    /// <para>This class is available in Office 2007 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is x:calculatedColumnFormula.</para>
-    /// </summary>
-    public partial class CalculatedColumnFormula : TableFormulaType
-    {
-        /// <summary>
-        /// Initializes a new instance of the CalculatedColumnFormula class.
-        /// </summary>
-        public CalculatedColumnFormula() : base()
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the CalculatedColumnFormula class with the specified text content.
-        /// </summary>
-        /// <param name="text">Specifies the text content of the element.</param>
-        public CalculatedColumnFormula(string text) : base(text)
-        {
-        }
-
-        internal override OpenXmlSimpleType InnerTextToValue(string text)
-        {
-            return new StringValue { InnerText = text };
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.SetSchema("x:calculatedColumnFormula");
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<CalculatedColumnFormula>(deep);
-    }
-
-    /// <summary>
-    /// <para>Totals Row Formula.</para>
-    /// <para>This class is available in Office 2007 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is x:totalsRowFormula.</para>
-    /// </summary>
-    public partial class TotalsRowFormula : TableFormulaType
-    {
-        /// <summary>
-        /// Initializes a new instance of the TotalsRowFormula class.
-        /// </summary>
-        public TotalsRowFormula() : base()
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the TotalsRowFormula class with the specified text content.
-        /// </summary>
-        /// <param name="text">Specifies the text content of the element.</param>
-        public TotalsRowFormula(string text) : base(text)
-        {
-        }
-
-        internal override OpenXmlSimpleType InnerTextToValue(string text)
-        {
-            return new StringValue { InnerText = text };
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.SetSchema("x:totalsRowFormula");
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<TotalsRowFormula>(deep);
-    }
-
-    /// <summary>
-    /// <para>Defines the TableFormulaType Class.</para>
-    /// <para>This class is available in Office 2007 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
-    /// </summary>
-    public abstract partial class TableFormulaType : OpenXmlLeafTextElement
-    {
-        /// <summary>
-        /// Initializes a new instance of the TableFormulaType class.
-        /// </summary>
-        protected TableFormulaType() : base()
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the TableFormulaType class with the specified text content.
-        /// </summary>
-        /// <param name="text">Specifies the text content of the element.</param>
-        protected TableFormulaType(string text) : base(text)
-        {
-        }
-
-        internal override OpenXmlSimpleType InnerTextToValue(string text)
-        {
-            return new StringValue { InnerText = text };
-        }
-
-        /// <summary>
-        /// <para>Array</para>
-        /// <para>Represents the following attribute in the schema: array</para>
-        /// </summary>
-        public BooleanValue? Array
-        {
-            get => GetAttribute<BooleanValue>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>space</para>
-        /// <para>Represents the following attribute in the schema: xml:space</para>
-        /// </summary>
-        /// <remark>
-        /// xmlns:xml=http://www.w3.org/XML/1998/namespace
-        /// </remark>
-        public EnumValue<DocumentFormat.OpenXml.SpaceProcessingModeValues>? Space
-        {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.SpaceProcessingModeValues>>();
-            set => SetAttribute(value);
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.AddElement<TableFormulaType>()
-                .AddAttribute("array", a => a.Array)
-                .AddAttribute("xml:space", a => a.Space);
-        }
-    }
-
-    /// <summary>
-    /// <para>XML Column Properties.</para>
-    /// <para>This class is available in Office 2007 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is x:xmlColumnPr.</para>
-    /// </summary>
-    /// <remark>
-    /// <para>The following table lists the possible child types:</para>
-    /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
-    /// </list>
-    /// </remark>
-    public partial class XmlColumnProperties : OpenXmlCompositeElement
-    {
-        /// <summary>
-        /// Initializes a new instance of the XmlColumnProperties class.
-        /// </summary>
-        public XmlColumnProperties() : base()
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the XmlColumnProperties class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public XmlColumnProperties(IEnumerable<OpenXmlElement> childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the XmlColumnProperties class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public XmlColumnProperties(params OpenXmlElement[] childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the XmlColumnProperties class from outer XML.
-        /// </summary>
-        /// <param name="outerXml">Specifies the outer XML of the element.</param>
-        public XmlColumnProperties(string outerXml) : base(outerXml)
-        {
-        }
-
-        /// <summary>
-        /// <para>XML Map Id</para>
-        /// <para>Represents the following attribute in the schema: mapId</para>
-        /// </summary>
-        public UInt32Value? MapId
-        {
-            get => GetAttribute<UInt32Value>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>XPath</para>
-        /// <para>Represents the following attribute in the schema: xpath</para>
-        /// </summary>
-        public StringValue? XPath
-        {
-            get => GetAttribute<StringValue>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>Denormalized</para>
-        /// <para>Represents the following attribute in the schema: denormalized</para>
-        /// </summary>
-        public BooleanValue? Denormalized
-        {
-            get => GetAttribute<BooleanValue>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>XML Data Type</para>
-        /// <para>Represents the following attribute in the schema: xmlDataType</para>
-        /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.XmlDataValues>? XmlDataType
-        {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.XmlDataValues>>();
-            set => SetAttribute(value);
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.SetSchema("x:xmlColumnPr");
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
-            builder.AddElement<XmlColumnProperties>()
-                .AddAttribute("mapId", a => a.MapId, aBuilder =>
-                {
-                    aBuilder.AddValidator(RequiredValidator.Instance);
-                })
-                .AddAttribute("xpath", a => a.XPath, aBuilder =>
-                {
-                    aBuilder.AddValidator(RequiredValidator.Instance);
-                })
-                .AddAttribute("denormalized", a => a.Denormalized)
-                .AddAttribute("xmlDataType", a => a.XmlDataType, aBuilder =>
-                {
-                    aBuilder.AddValidator(RequiredValidator.Instance);
-                });
-            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
-            {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
-            };
-            builder.AddConstraint(new AttributeValueLengthConstraint(builder.CreateQName("x:xpath"), 0, 32000));
-            builder.AddConstraint(new ReferenceExistConstraint(builder.CreateQName("x:mapId"), "CustomXmlMappingsPart", builder.CreateQName("x:Map"), "x:Map", builder.CreateQName("x:ID")));
-            builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("x:mapId"), true, 1, true, 21474836477, true) { Application = ApplicationType.Excel });
-        }
-
-        /// <summary>
-        /// <para>Future Feature Data Storage Area.</para>
-        /// <para>Represents the following element tag in the schema: x:extLst.</para>
-        /// </summary>
-        /// <remark>
-        /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
-        {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
-            set => SetElement(value);
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<XmlColumnProperties>(deep);
     }
 
     /// <summary>
@@ -32736,82 +32199,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     }
 
     /// <summary>
-    /// <para>Defines the TableExtension Class.</para>
-    /// <para>This class is available in Office 2007 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is x:ext.</para>
-    /// </summary>
-    /// <remark>
-    /// <para>The following table lists the possible child types:</para>
-    /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.Table" /> <c>&lt;x14:table></c></description></item>
-    /// </list>
-    /// </remark>
-    public partial class TableExtension : OpenXmlCompositeElement
-    {
-        /// <summary>
-        /// Initializes a new instance of the TableExtension class.
-        /// </summary>
-        public TableExtension() : base()
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the TableExtension class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public TableExtension(IEnumerable<OpenXmlElement> childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the TableExtension class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public TableExtension(params OpenXmlElement[] childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the TableExtension class from outer XML.
-        /// </summary>
-        /// <param name="outerXml">Specifies the outer XML of the element.</param>
-        public TableExtension(string outerXml) : base(outerXml)
-        {
-        }
-
-        /// <summary>
-        /// <para>URI</para>
-        /// <para>Represents the following attribute in the schema: uri</para>
-        /// </summary>
-        public StringValue? Uri
-        {
-            get => GetAttribute<StringValue>();
-            set => SetAttribute(value);
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.SetSchema("x:ext");
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.Table>();
-            builder.AddElement<TableExtension>()
-                .AddAttribute("uri", a => a.Uri, aBuilder =>
-                {
-                    aBuilder.AddValidator(RequiredValidator.Instance);
-                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-                });
-            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
-            {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.Table), 1, 1, version: FileFormatVersions.Office2010),
-                new AnyParticle(0, 1)
-            };
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<TableExtension>(deep);
-    }
-
-    /// <summary>
     /// <para>Defines the ObjectAnchor Class.</para>
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:anchor.</para>
@@ -33478,217 +32865,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     }
 
     /// <summary>
-    /// <para>Table Columns.</para>
-    /// <para>This class is available in Office 2007 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is x:tableColumns.</para>
-    /// </summary>
-    /// <remark>
-    /// <para>The following table lists the possible child types:</para>
-    /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.TableColumn" /> <c>&lt;x:tableColumn></c></description></item>
-    /// </list>
-    /// </remark>
-    public partial class TableColumns : OpenXmlCompositeElement
-    {
-        /// <summary>
-        /// Initializes a new instance of the TableColumns class.
-        /// </summary>
-        public TableColumns() : base()
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the TableColumns class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public TableColumns(IEnumerable<OpenXmlElement> childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the TableColumns class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public TableColumns(params OpenXmlElement[] childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the TableColumns class from outer XML.
-        /// </summary>
-        /// <param name="outerXml">Specifies the outer XML of the element.</param>
-        public TableColumns(string outerXml) : base(outerXml)
-        {
-        }
-
-        /// <summary>
-        /// <para>Column Count</para>
-        /// <para>Represents the following attribute in the schema: count</para>
-        /// </summary>
-        public UInt32Value? Count
-        {
-            get => GetAttribute<UInt32Value>();
-            set => SetAttribute(value);
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.SetSchema("x:tableColumns");
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.TableColumn>();
-            builder.AddElement<TableColumns>()
-                .AddAttribute("count", a => a.Count);
-            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
-            {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.TableColumn), 1, 0)
-            };
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<TableColumns>(deep);
-    }
-
-    /// <summary>
-    /// <para>Table Style.</para>
-    /// <para>This class is available in Office 2007 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is x:tableStyleInfo.</para>
-    /// </summary>
-    public partial class TableStyleInfo : OpenXmlLeafElement
-    {
-        /// <summary>
-        /// Initializes a new instance of the TableStyleInfo class.
-        /// </summary>
-        public TableStyleInfo() : base()
-        {
-        }
-
-        /// <summary>
-        /// <para>Style Name</para>
-        /// <para>Represents the following attribute in the schema: name</para>
-        /// </summary>
-        public StringValue? Name
-        {
-            get => GetAttribute<StringValue>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>Show First Column</para>
-        /// <para>Represents the following attribute in the schema: showFirstColumn</para>
-        /// </summary>
-        public BooleanValue? ShowFirstColumn
-        {
-            get => GetAttribute<BooleanValue>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>Show Last Column</para>
-        /// <para>Represents the following attribute in the schema: showLastColumn</para>
-        /// </summary>
-        public BooleanValue? ShowLastColumn
-        {
-            get => GetAttribute<BooleanValue>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>Show Row Stripes</para>
-        /// <para>Represents the following attribute in the schema: showRowStripes</para>
-        /// </summary>
-        public BooleanValue? ShowRowStripes
-        {
-            get => GetAttribute<BooleanValue>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>Show Column Stripes</para>
-        /// <para>Represents the following attribute in the schema: showColumnStripes</para>
-        /// </summary>
-        public BooleanValue? ShowColumnStripes
-        {
-            get => GetAttribute<BooleanValue>();
-            set => SetAttribute(value);
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.SetSchema("x:tableStyleInfo");
-            builder.AddElement<TableStyleInfo>()
-                .AddAttribute("name", a => a.Name)
-                .AddAttribute("showFirstColumn", a => a.ShowFirstColumn)
-                .AddAttribute("showLastColumn", a => a.ShowLastColumn)
-                .AddAttribute("showRowStripes", a => a.ShowRowStripes)
-                .AddAttribute("showColumnStripes", a => a.ShowColumnStripes);
-            builder.AddConstraint(new AttributeValueLengthConstraint(builder.CreateQName("x:name"), 1, 255) { Application = ApplicationType.Excel });
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<TableStyleInfo>(deep);
-    }
-
-    /// <summary>
-    /// <para>Future Feature Data Storage Area.</para>
-    /// <para>This class is available in Office 2007 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is x:extLst.</para>
-    /// </summary>
-    /// <remark>
-    /// <para>The following table lists the possible child types:</para>
-    /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.TableExtension" /> <c>&lt;x:ext></c></description></item>
-    /// </list>
-    /// </remark>
-    public partial class TableExtensionList : OpenXmlCompositeElement
-    {
-        /// <summary>
-        /// Initializes a new instance of the TableExtensionList class.
-        /// </summary>
-        public TableExtensionList() : base()
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the TableExtensionList class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public TableExtensionList(IEnumerable<OpenXmlElement> childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the TableExtensionList class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public TableExtensionList(params OpenXmlElement[] childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the TableExtensionList class from outer XML.
-        /// </summary>
-        /// <param name="outerXml">Specifies the outer XML of the element.</param>
-        public TableExtensionList(string outerXml) : base(outerXml)
-        {
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.SetSchema("x:extLst");
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.TableExtension>();
-            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
-            {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.TableExtension), 0, 0)
-            };
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<TableExtensionList>(deep);
-    }
-
-    /// <summary>
     /// <para>OLE Link Item.</para>
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:oleItem.</para>
@@ -33760,6 +32936,302 @@ namespace DocumentFormat.OpenXml.Spreadsheet
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<OleItem>(deep);
+    }
+
+    /// <summary>
+    /// <para>Font.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is x:font.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Bold" /> <c>&lt;x:b></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Italic" /> <c>&lt;x:i></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Strike" /> <c>&lt;x:strike></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Condense" /> <c>&lt;x:condense></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Extend" /> <c>&lt;x:extend></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Outline" /> <c>&lt;x:outline></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Shadow" /> <c>&lt;x:shadow></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.FontCharSet" /> <c>&lt;x:charset></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Color" /> <c>&lt;x:color></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.FontFamilyNumbering" /> <c>&lt;x:family></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.FontName" /> <c>&lt;x:name></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.FontScheme" /> <c>&lt;x:scheme></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.FontSize" /> <c>&lt;x:sz></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Underline" /> <c>&lt;x:u></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.VerticalTextAlignment" /> <c>&lt;x:vertAlign></c></description></item>
+    /// </list>
+    /// </remark>
+    public partial class Font : OpenXmlCompositeElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the Font class.
+        /// </summary>
+        public Font() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the Font class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public Font(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the Font class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public Font(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the Font class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public Font(string outerXml) : base(outerXml)
+        {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema("x:font");
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Bold>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Italic>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Strike>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Condense>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Extend>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Outline>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Shadow>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.FontCharSet>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Color>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.FontFamilyNumbering>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.FontName>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.FontScheme>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.FontSize>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Underline>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.VerticalTextAlignment>();
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Bold), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Italic), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Strike), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Condense), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Extend), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Outline), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Shadow), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Underline), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.VerticalTextAlignment), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.FontSize), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Color), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.FontName), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.FontFamilyNumbering), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.FontCharSet), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.FontScheme), 0, 1)
+            };
+        }
+
+        /// <summary>
+        /// <para>Bold.</para>
+        /// <para>Represents the following element tag in the schema: x:b.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
+        /// </remark>
+        public DocumentFormat.OpenXml.Spreadsheet.Bold? Bold
+        {
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Bold>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>Italic.</para>
+        /// <para>Represents the following element tag in the schema: x:i.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
+        /// </remark>
+        public DocumentFormat.OpenXml.Spreadsheet.Italic? Italic
+        {
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Italic>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>Strike Through.</para>
+        /// <para>Represents the following element tag in the schema: x:strike.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
+        /// </remark>
+        public DocumentFormat.OpenXml.Spreadsheet.Strike? Strike
+        {
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Strike>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>Condense.</para>
+        /// <para>Represents the following element tag in the schema: x:condense.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
+        /// </remark>
+        public DocumentFormat.OpenXml.Spreadsheet.Condense? Condense
+        {
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Condense>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>Extend.</para>
+        /// <para>Represents the following element tag in the schema: x:extend.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
+        /// </remark>
+        public DocumentFormat.OpenXml.Spreadsheet.Extend? Extend
+        {
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Extend>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>Outline.</para>
+        /// <para>Represents the following element tag in the schema: x:outline.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
+        /// </remark>
+        public DocumentFormat.OpenXml.Spreadsheet.Outline? Outline
+        {
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Outline>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>Shadow.</para>
+        /// <para>Represents the following element tag in the schema: x:shadow.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
+        /// </remark>
+        public DocumentFormat.OpenXml.Spreadsheet.Shadow? Shadow
+        {
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Shadow>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>Underline.</para>
+        /// <para>Represents the following element tag in the schema: x:u.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
+        /// </remark>
+        public DocumentFormat.OpenXml.Spreadsheet.Underline? Underline
+        {
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Underline>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>Text Vertical Alignment.</para>
+        /// <para>Represents the following element tag in the schema: x:vertAlign.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
+        /// </remark>
+        public DocumentFormat.OpenXml.Spreadsheet.VerticalTextAlignment? VerticalTextAlignment
+        {
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.VerticalTextAlignment>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>Font Size.</para>
+        /// <para>Represents the following element tag in the schema: x:sz.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
+        /// </remark>
+        public DocumentFormat.OpenXml.Spreadsheet.FontSize? FontSize
+        {
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.FontSize>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>Text Color.</para>
+        /// <para>Represents the following element tag in the schema: x:color.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
+        /// </remark>
+        public DocumentFormat.OpenXml.Spreadsheet.Color? Color
+        {
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Color>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>Font Name.</para>
+        /// <para>Represents the following element tag in the schema: x:name.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
+        /// </remark>
+        public DocumentFormat.OpenXml.Spreadsheet.FontName? FontName
+        {
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.FontName>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>Font Family.</para>
+        /// <para>Represents the following element tag in the schema: x:family.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
+        /// </remark>
+        public DocumentFormat.OpenXml.Spreadsheet.FontFamilyNumbering? FontFamilyNumbering
+        {
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.FontFamilyNumbering>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>Character Set.</para>
+        /// <para>Represents the following element tag in the schema: x:charset.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
+        /// </remark>
+        public DocumentFormat.OpenXml.Spreadsheet.FontCharSet? FontCharSet
+        {
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.FontCharSet>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>Scheme.</para>
+        /// <para>Represents the following element tag in the schema: x:scheme.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
+        /// </remark>
+        public DocumentFormat.OpenXml.Spreadsheet.FontScheme? FontScheme
+        {
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.FontScheme>();
+            set => SetElement(value);
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<Font>(deep);
     }
 
     /// <summary>
@@ -43082,1616 +42554,46 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     }
 
     /// <summary>
-    /// <para>Defines the FileVersion Class.</para>
-    /// <para>This class is available in Office 2007 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is x:fileVersion.</para>
-    /// </summary>
-    public partial class FileVersion : OpenXmlLeafElement
-    {
-        /// <summary>
-        /// Initializes a new instance of the FileVersion class.
-        /// </summary>
-        public FileVersion() : base()
-        {
-        }
-
-        /// <summary>
-        /// <para>Application Name</para>
-        /// <para>Represents the following attribute in the schema: appName</para>
-        /// </summary>
-        public StringValue? ApplicationName
-        {
-            get => GetAttribute<StringValue>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>Last Edited Version</para>
-        /// <para>Represents the following attribute in the schema: lastEdited</para>
-        /// </summary>
-        public StringValue? LastEdited
-        {
-            get => GetAttribute<StringValue>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>Lowest Edited Version</para>
-        /// <para>Represents the following attribute in the schema: lowestEdited</para>
-        /// </summary>
-        public StringValue? LowestEdited
-        {
-            get => GetAttribute<StringValue>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>Build Version</para>
-        /// <para>Represents the following attribute in the schema: rupBuild</para>
-        /// </summary>
-        public StringValue? BuildVersion
-        {
-            get => GetAttribute<StringValue>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>Code Name</para>
-        /// <para>Represents the following attribute in the schema: codeName</para>
-        /// </summary>
-        public StringValue? CodeName
-        {
-            get => GetAttribute<StringValue>();
-            set => SetAttribute(value);
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.SetSchema("x:fileVersion");
-            builder.AddElement<FileVersion>()
-                .AddAttribute("appName", a => a.ApplicationName)
-                .AddAttribute("lastEdited", a => a.LastEdited)
-                .AddAttribute("lowestEdited", a => a.LowestEdited)
-                .AddAttribute("rupBuild", a => a.BuildVersion)
-                .AddAttribute("codeName", a => a.CodeName, aBuilder =>
-                {
-                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
-                });
-            builder.AddConstraint(new AttributeValueLengthConstraint(builder.CreateQName("x:appName"), 0, 65535));
-            builder.AddConstraint(new AttributeValueLengthConstraint(builder.CreateQName("x:lastEdited"), 0, 65535));
-            builder.AddConstraint(new AttributeValueLengthConstraint(builder.CreateQName("x:lowestEdited"), 0, 65535));
-            builder.AddConstraint(new AttributeValueLengthConstraint(builder.CreateQName("x:rupBuild"), 0, 65535));
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<FileVersion>(deep);
-    }
-
-    /// <summary>
-    /// <para>Defines the FileSharing Class.</para>
-    /// <para>This class is available in Office 2007 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is x:fileSharing.</para>
-    /// </summary>
-    public partial class FileSharing : OpenXmlLeafElement
-    {
-        /// <summary>
-        /// Initializes a new instance of the FileSharing class.
-        /// </summary>
-        public FileSharing() : base()
-        {
-        }
-
-        /// <summary>
-        /// <para>Read Only Recommended</para>
-        /// <para>Represents the following attribute in the schema: readOnlyRecommended</para>
-        /// </summary>
-        public BooleanValue? ReadOnlyRecommended
-        {
-            get => GetAttribute<BooleanValue>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>User Name</para>
-        /// <para>Represents the following attribute in the schema: userName</para>
-        /// </summary>
-        public StringValue? UserName
-        {
-            get => GetAttribute<StringValue>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>Write Reservation Password</para>
-        /// <para>Represents the following attribute in the schema: reservationPassword</para>
-        /// </summary>
-        public HexBinaryValue? ReservationPassword
-        {
-            get => GetAttribute<HexBinaryValue>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>Password hash algorithm</para>
-        /// <para>Represents the following attribute in the schema: algorithmName</para>
-        /// </summary>
-        public StringValue? AlgorithmName
-        {
-            get => GetAttribute<StringValue>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>Password hash</para>
-        /// <para>Represents the following attribute in the schema: hashValue</para>
-        /// </summary>
-        public Base64BinaryValue? HashValue
-        {
-            get => GetAttribute<Base64BinaryValue>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>Salt for password hash</para>
-        /// <para>Represents the following attribute in the schema: saltValue</para>
-        /// </summary>
-        public Base64BinaryValue? SaltValue
-        {
-            get => GetAttribute<Base64BinaryValue>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>Spin count for password hash</para>
-        /// <para>Represents the following attribute in the schema: spinCount</para>
-        /// </summary>
-        public UInt32Value? SpinCount
-        {
-            get => GetAttribute<UInt32Value>();
-            set => SetAttribute(value);
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.SetSchema("x:fileSharing");
-            builder.AddElement<FileSharing>()
-                .AddAttribute("readOnlyRecommended", a => a.ReadOnlyRecommended)
-                .AddAttribute("userName", a => a.UserName)
-                .AddAttribute("reservationPassword", a => a.ReservationPassword, aBuilder =>
-                {
-                    aBuilder.AddValidator(new StringValidator() { Length = (2L) });
-                })
-                .AddAttribute("algorithmName", a => a.AlgorithmName)
-                .AddAttribute("hashValue", a => a.HashValue)
-                .AddAttribute("saltValue", a => a.SaltValue)
-                .AddAttribute("spinCount", a => a.SpinCount);
-            builder.AddConstraint(new AttributeValueLengthConstraint(builder.CreateQName("x:userName"), 1, 54));
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<FileSharing>(deep);
-    }
-
-    /// <summary>
-    /// <para>Defines the WorkbookProperties Class.</para>
-    /// <para>This class is available in Office 2007 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is x:workbookPr.</para>
-    /// </summary>
-    public partial class WorkbookProperties : OpenXmlLeafElement
-    {
-        /// <summary>
-        /// Initializes a new instance of the WorkbookProperties class.
-        /// </summary>
-        public WorkbookProperties() : base()
-        {
-        }
-
-        /// <summary>
-        /// <para>Date 1904</para>
-        /// <para>Represents the following attribute in the schema: date1904</para>
-        /// </summary>
-        public BooleanValue? Date1904
-        {
-            get => GetAttribute<BooleanValue>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>dateCompatibility, this property is only available in Office 2010 and later.</para>
-        /// <para>Represents the following attribute in the schema: dateCompatibility</para>
-        /// </summary>
-        public BooleanValue? DateCompatibility
-        {
-            get => GetAttribute<BooleanValue>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>Show Objects</para>
-        /// <para>Represents the following attribute in the schema: showObjects</para>
-        /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.ObjectDisplayValues>? ShowObjects
-        {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.ObjectDisplayValues>>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>Show Border Unselected Table</para>
-        /// <para>Represents the following attribute in the schema: showBorderUnselectedTables</para>
-        /// </summary>
-        public BooleanValue? ShowBorderUnselectedTables
-        {
-            get => GetAttribute<BooleanValue>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>Filter Privacy</para>
-        /// <para>Represents the following attribute in the schema: filterPrivacy</para>
-        /// </summary>
-        public BooleanValue? FilterPrivacy
-        {
-            get => GetAttribute<BooleanValue>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>Prompted Solutions</para>
-        /// <para>Represents the following attribute in the schema: promptedSolutions</para>
-        /// </summary>
-        public BooleanValue? PromptedSolutions
-        {
-            get => GetAttribute<BooleanValue>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>Show Ink Annotations</para>
-        /// <para>Represents the following attribute in the schema: showInkAnnotation</para>
-        /// </summary>
-        public BooleanValue? ShowInkAnnotation
-        {
-            get => GetAttribute<BooleanValue>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>Create Backup File</para>
-        /// <para>Represents the following attribute in the schema: backupFile</para>
-        /// </summary>
-        public BooleanValue? BackupFile
-        {
-            get => GetAttribute<BooleanValue>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>Save External Link Values</para>
-        /// <para>Represents the following attribute in the schema: saveExternalLinkValues</para>
-        /// </summary>
-        public BooleanValue? SaveExternalLinkValues
-        {
-            get => GetAttribute<BooleanValue>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>Update Links Behavior</para>
-        /// <para>Represents the following attribute in the schema: updateLinks</para>
-        /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.UpdateLinksBehaviorValues>? UpdateLinks
-        {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.UpdateLinksBehaviorValues>>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>Code Name</para>
-        /// <para>Represents the following attribute in the schema: codeName</para>
-        /// </summary>
-        public StringValue? CodeName
-        {
-            get => GetAttribute<StringValue>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>Hide Pivot Field List</para>
-        /// <para>Represents the following attribute in the schema: hidePivotFieldList</para>
-        /// </summary>
-        public BooleanValue? HidePivotFieldList
-        {
-            get => GetAttribute<BooleanValue>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>Show Pivot Chart Filter</para>
-        /// <para>Represents the following attribute in the schema: showPivotChartFilter</para>
-        /// </summary>
-        public BooleanValue? ShowPivotChartFilter
-        {
-            get => GetAttribute<BooleanValue>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>Allow Refresh Query</para>
-        /// <para>Represents the following attribute in the schema: allowRefreshQuery</para>
-        /// </summary>
-        public BooleanValue? AllowRefreshQuery
-        {
-            get => GetAttribute<BooleanValue>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>Publish Items</para>
-        /// <para>Represents the following attribute in the schema: publishItems</para>
-        /// </summary>
-        public BooleanValue? PublishItems
-        {
-            get => GetAttribute<BooleanValue>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>Check Compatibility On Save</para>
-        /// <para>Represents the following attribute in the schema: checkCompatibility</para>
-        /// </summary>
-        public BooleanValue? CheckCompatibility
-        {
-            get => GetAttribute<BooleanValue>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>Auto Compress Pictures</para>
-        /// <para>Represents the following attribute in the schema: autoCompressPictures</para>
-        /// </summary>
-        public BooleanValue? AutoCompressPictures
-        {
-            get => GetAttribute<BooleanValue>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>Refresh all Connections on Open</para>
-        /// <para>Represents the following attribute in the schema: refreshAllConnections</para>
-        /// </summary>
-        public BooleanValue? RefreshAllConnections
-        {
-            get => GetAttribute<BooleanValue>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>Default Theme Version</para>
-        /// <para>Represents the following attribute in the schema: defaultThemeVersion</para>
-        /// </summary>
-        public UInt32Value? DefaultThemeVersion
-        {
-            get => GetAttribute<UInt32Value>();
-            set => SetAttribute(value);
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.SetSchema("x:workbookPr");
-            builder.AddElement<WorkbookProperties>()
-                .AddAttribute("date1904", a => a.Date1904)
-                .AddAttribute("dateCompatibility", a => a.DateCompatibility, aBuilder =>
-                {
-                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
-                })
-                .AddAttribute("showObjects", a => a.ShowObjects)
-                .AddAttribute("showBorderUnselectedTables", a => a.ShowBorderUnselectedTables)
-                .AddAttribute("filterPrivacy", a => a.FilterPrivacy)
-                .AddAttribute("promptedSolutions", a => a.PromptedSolutions)
-                .AddAttribute("showInkAnnotation", a => a.ShowInkAnnotation)
-                .AddAttribute("backupFile", a => a.BackupFile)
-                .AddAttribute("saveExternalLinkValues", a => a.SaveExternalLinkValues)
-                .AddAttribute("updateLinks", a => a.UpdateLinks)
-                .AddAttribute("codeName", a => a.CodeName)
-                .AddAttribute("hidePivotFieldList", a => a.HidePivotFieldList)
-                .AddAttribute("showPivotChartFilter", a => a.ShowPivotChartFilter)
-                .AddAttribute("allowRefreshQuery", a => a.AllowRefreshQuery)
-                .AddAttribute("publishItems", a => a.PublishItems)
-                .AddAttribute("checkCompatibility", a => a.CheckCompatibility)
-                .AddAttribute("autoCompressPictures", a => a.AutoCompressPictures)
-                .AddAttribute("refreshAllConnections", a => a.RefreshAllConnections)
-                .AddAttribute("defaultThemeVersion", a => a.DefaultThemeVersion);
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<WorkbookProperties>(deep);
-    }
-
-    /// <summary>
-    /// <para>Defines the WorkbookProtection Class.</para>
-    /// <para>This class is available in Office 2007 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is x:workbookProtection.</para>
-    /// </summary>
-    public partial class WorkbookProtection : OpenXmlLeafElement
-    {
-        /// <summary>
-        /// Initializes a new instance of the WorkbookProtection class.
-        /// </summary>
-        public WorkbookProtection() : base()
-        {
-        }
-
-        /// <summary>
-        /// <para>Workbook Password</para>
-        /// <para>Represents the following attribute in the schema: workbookPassword</para>
-        /// </summary>
-        public HexBinaryValue? WorkbookPassword
-        {
-            get => GetAttribute<HexBinaryValue>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>Revisions Password</para>
-        /// <para>Represents the following attribute in the schema: revisionsPassword</para>
-        /// </summary>
-        public HexBinaryValue? RevisionsPassword
-        {
-            get => GetAttribute<HexBinaryValue>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>Lock Structure</para>
-        /// <para>Represents the following attribute in the schema: lockStructure</para>
-        /// </summary>
-        public BooleanValue? LockStructure
-        {
-            get => GetAttribute<BooleanValue>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>Lock Windows</para>
-        /// <para>Represents the following attribute in the schema: lockWindows</para>
-        /// </summary>
-        public BooleanValue? LockWindows
-        {
-            get => GetAttribute<BooleanValue>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>Lock Revisions</para>
-        /// <para>Represents the following attribute in the schema: lockRevision</para>
-        /// </summary>
-        public BooleanValue? LockRevision
-        {
-            get => GetAttribute<BooleanValue>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>Cryptographic Algorithm Name</para>
-        /// <para>Represents the following attribute in the schema: revisionsAlgorithmName</para>
-        /// </summary>
-        public StringValue? RevisionsAlgorithmName
-        {
-            get => GetAttribute<StringValue>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>Password Hash Value</para>
-        /// <para>Represents the following attribute in the schema: revisionsHashValue</para>
-        /// </summary>
-        public Base64BinaryValue? RevisionsHashValue
-        {
-            get => GetAttribute<Base64BinaryValue>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>Salt Value for Password Verifier</para>
-        /// <para>Represents the following attribute in the schema: revisionsSaltValue</para>
-        /// </summary>
-        public Base64BinaryValue? RevisionsSaltValue
-        {
-            get => GetAttribute<Base64BinaryValue>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>Iterations to Run Hashing Algorithm</para>
-        /// <para>Represents the following attribute in the schema: revisionsSpinCount</para>
-        /// </summary>
-        public UInt32Value? RevisionsSpinCount
-        {
-            get => GetAttribute<UInt32Value>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>Cryptographic Algorithm Name</para>
-        /// <para>Represents the following attribute in the schema: workbookAlgorithmName</para>
-        /// </summary>
-        public StringValue? WorkbookAlgorithmName
-        {
-            get => GetAttribute<StringValue>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>Password Hash Value</para>
-        /// <para>Represents the following attribute in the schema: workbookHashValue</para>
-        /// </summary>
-        public Base64BinaryValue? WorkbookHashValue
-        {
-            get => GetAttribute<Base64BinaryValue>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>Salt Value for Password Verifier</para>
-        /// <para>Represents the following attribute in the schema: workbookSaltValue</para>
-        /// </summary>
-        public Base64BinaryValue? WorkbookSaltValue
-        {
-            get => GetAttribute<Base64BinaryValue>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>Iterations to Run Hashing Algorithm</para>
-        /// <para>Represents the following attribute in the schema: workbookSpinCount</para>
-        /// </summary>
-        public UInt32Value? WorkbookSpinCount
-        {
-            get => GetAttribute<UInt32Value>();
-            set => SetAttribute(value);
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.SetSchema("x:workbookProtection");
-            builder.AddElement<WorkbookProtection>()
-                .AddAttribute("workbookPassword", a => a.WorkbookPassword, aBuilder =>
-                {
-                    aBuilder.AddValidator(new StringValidator() { Length = (2L) });
-                })
-                .AddAttribute("revisionsPassword", a => a.RevisionsPassword, aBuilder =>
-                {
-                    aBuilder.AddValidator(new StringValidator() { Length = (2L) });
-                })
-                .AddAttribute("lockStructure", a => a.LockStructure)
-                .AddAttribute("lockWindows", a => a.LockWindows)
-                .AddAttribute("lockRevision", a => a.LockRevision)
-                .AddAttribute("revisionsAlgorithmName", a => a.RevisionsAlgorithmName)
-                .AddAttribute("revisionsHashValue", a => a.RevisionsHashValue)
-                .AddAttribute("revisionsSaltValue", a => a.RevisionsSaltValue)
-                .AddAttribute("revisionsSpinCount", a => a.RevisionsSpinCount)
-                .AddAttribute("workbookAlgorithmName", a => a.WorkbookAlgorithmName)
-                .AddAttribute("workbookHashValue", a => a.WorkbookHashValue)
-                .AddAttribute("workbookSaltValue", a => a.WorkbookSaltValue)
-                .AddAttribute("workbookSpinCount", a => a.WorkbookSpinCount);
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<WorkbookProtection>(deep);
-    }
-
-    /// <summary>
-    /// <para>Defines the BookViews Class.</para>
-    /// <para>This class is available in Office 2007 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is x:bookViews.</para>
-    /// </summary>
-    /// <remark>
-    /// <para>The following table lists the possible child types:</para>
-    /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.WorkbookView" /> <c>&lt;x:workbookView></c></description></item>
-    /// </list>
-    /// </remark>
-    public partial class BookViews : OpenXmlCompositeElement
-    {
-        /// <summary>
-        /// Initializes a new instance of the BookViews class.
-        /// </summary>
-        public BookViews() : base()
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the BookViews class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public BookViews(IEnumerable<OpenXmlElement> childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the BookViews class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public BookViews(params OpenXmlElement[] childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the BookViews class from outer XML.
-        /// </summary>
-        /// <param name="outerXml">Specifies the outer XML of the element.</param>
-        public BookViews(string outerXml) : base(outerXml)
-        {
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.SetSchema("x:bookViews");
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.WorkbookView>();
-            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
-            {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.WorkbookView), 1, 0)
-            };
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<BookViews>(deep);
-    }
-
-    /// <summary>
-    /// <para>Defines the Sheets Class.</para>
-    /// <para>This class is available in Office 2007 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is x:sheets.</para>
-    /// </summary>
-    /// <remark>
-    /// <para>The following table lists the possible child types:</para>
-    /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Sheet" /> <c>&lt;x:sheet></c></description></item>
-    /// </list>
-    /// </remark>
-    public partial class Sheets : OpenXmlCompositeElement
-    {
-        /// <summary>
-        /// Initializes a new instance of the Sheets class.
-        /// </summary>
-        public Sheets() : base()
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the Sheets class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public Sheets(IEnumerable<OpenXmlElement> childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the Sheets class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public Sheets(params OpenXmlElement[] childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the Sheets class from outer XML.
-        /// </summary>
-        /// <param name="outerXml">Specifies the outer XML of the element.</param>
-        public Sheets(string outerXml) : base(outerXml)
-        {
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.SetSchema("x:sheets");
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Sheet>();
-            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
-            {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Sheet), 1, 32767)
-            };
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<Sheets>(deep);
-    }
-
-    /// <summary>
-    /// <para>Defines the FunctionGroups Class.</para>
-    /// <para>This class is available in Office 2007 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is x:functionGroups.</para>
-    /// </summary>
-    /// <remark>
-    /// <para>The following table lists the possible child types:</para>
-    /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.FunctionGroup" /> <c>&lt;x:functionGroup></c></description></item>
-    /// </list>
-    /// </remark>
-    public partial class FunctionGroups : OpenXmlCompositeElement
-    {
-        /// <summary>
-        /// Initializes a new instance of the FunctionGroups class.
-        /// </summary>
-        public FunctionGroups() : base()
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the FunctionGroups class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public FunctionGroups(IEnumerable<OpenXmlElement> childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the FunctionGroups class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public FunctionGroups(params OpenXmlElement[] childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the FunctionGroups class from outer XML.
-        /// </summary>
-        /// <param name="outerXml">Specifies the outer XML of the element.</param>
-        public FunctionGroups(string outerXml) : base(outerXml)
-        {
-        }
-
-        /// <summary>
-        /// <para>Built-in Function Group Count</para>
-        /// <para>Represents the following attribute in the schema: builtInGroupCount</para>
-        /// </summary>
-        public UInt32Value? BuiltInGroupCount
-        {
-            get => GetAttribute<UInt32Value>();
-            set => SetAttribute(value);
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.SetSchema("x:functionGroups");
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.FunctionGroup>();
-            builder.AddElement<FunctionGroups>()
-                .AddAttribute("builtInGroupCount", a => a.BuiltInGroupCount);
-            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 0)
-            {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.FunctionGroup), 0, 255)
-            };
-            builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("x:builtInGroupCount"), true, double.NegativeInfinity, true, 255, true));
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<FunctionGroups>(deep);
-    }
-
-    /// <summary>
-    /// <para>Defines the ExternalReferences Class.</para>
-    /// <para>This class is available in Office 2007 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is x:externalReferences.</para>
-    /// </summary>
-    /// <remark>
-    /// <para>The following table lists the possible child types:</para>
-    /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExternalReference" /> <c>&lt;x:externalReference></c></description></item>
-    /// </list>
-    /// </remark>
-    public partial class ExternalReferences : OpenXmlCompositeElement
-    {
-        /// <summary>
-        /// Initializes a new instance of the ExternalReferences class.
-        /// </summary>
-        public ExternalReferences() : base()
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the ExternalReferences class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public ExternalReferences(IEnumerable<OpenXmlElement> childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the ExternalReferences class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public ExternalReferences(params OpenXmlElement[] childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the ExternalReferences class from outer XML.
-        /// </summary>
-        /// <param name="outerXml">Specifies the outer XML of the element.</param>
-        public ExternalReferences(string outerXml) : base(outerXml)
-        {
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.SetSchema("x:externalReferences");
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExternalReference>();
-            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
-            {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExternalReference), 1, 65534)
-            };
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<ExternalReferences>(deep);
-    }
-
-    /// <summary>
-    /// <para>Defines the DefinedNames Class.</para>
-    /// <para>This class is available in Office 2007 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is x:definedNames.</para>
-    /// </summary>
-    /// <remark>
-    /// <para>The following table lists the possible child types:</para>
-    /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DefinedName" /> <c>&lt;x:definedName></c></description></item>
-    /// </list>
-    /// </remark>
-    public partial class DefinedNames : OpenXmlCompositeElement
-    {
-        /// <summary>
-        /// Initializes a new instance of the DefinedNames class.
-        /// </summary>
-        public DefinedNames() : base()
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the DefinedNames class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public DefinedNames(IEnumerable<OpenXmlElement> childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the DefinedNames class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public DefinedNames(params OpenXmlElement[] childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the DefinedNames class from outer XML.
-        /// </summary>
-        /// <param name="outerXml">Specifies the outer XML of the element.</param>
-        public DefinedNames(string outerXml) : base(outerXml)
-        {
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.SetSchema("x:definedNames");
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DefinedName>();
-            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
-            {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DefinedName), 0, 0)
-            };
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<DefinedNames>(deep);
-    }
-
-    /// <summary>
-    /// <para>Defines the CalculationProperties Class.</para>
-    /// <para>This class is available in Office 2007 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is x:calcPr.</para>
-    /// </summary>
-    public partial class CalculationProperties : OpenXmlLeafElement
-    {
-        /// <summary>
-        /// Initializes a new instance of the CalculationProperties class.
-        /// </summary>
-        public CalculationProperties() : base()
-        {
-        }
-
-        /// <summary>
-        /// <para>Calculation Id</para>
-        /// <para>Represents the following attribute in the schema: calcId</para>
-        /// </summary>
-        public UInt32Value? CalculationId
-        {
-            get => GetAttribute<UInt32Value>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>Calculation Mode</para>
-        /// <para>Represents the following attribute in the schema: calcMode</para>
-        /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.CalculateModeValues>? CalculationMode
-        {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.CalculateModeValues>>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>Full Calculation On Load</para>
-        /// <para>Represents the following attribute in the schema: fullCalcOnLoad</para>
-        /// </summary>
-        public BooleanValue? FullCalculationOnLoad
-        {
-            get => GetAttribute<BooleanValue>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>Reference Mode</para>
-        /// <para>Represents the following attribute in the schema: refMode</para>
-        /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.ReferenceModeValues>? ReferenceMode
-        {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.ReferenceModeValues>>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>Calculation Iteration</para>
-        /// <para>Represents the following attribute in the schema: iterate</para>
-        /// </summary>
-        public BooleanValue? Iterate
-        {
-            get => GetAttribute<BooleanValue>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>Iteration Count</para>
-        /// <para>Represents the following attribute in the schema: iterateCount</para>
-        /// </summary>
-        public UInt32Value? IterateCount
-        {
-            get => GetAttribute<UInt32Value>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>Iterative Calculation Delta</para>
-        /// <para>Represents the following attribute in the schema: iterateDelta</para>
-        /// </summary>
-        public DoubleValue? IterateDelta
-        {
-            get => GetAttribute<DoubleValue>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>Full Precision Calculation</para>
-        /// <para>Represents the following attribute in the schema: fullPrecision</para>
-        /// </summary>
-        public BooleanValue? FullPrecision
-        {
-            get => GetAttribute<BooleanValue>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>Calc Completed</para>
-        /// <para>Represents the following attribute in the schema: calcCompleted</para>
-        /// </summary>
-        public BooleanValue? CalculationCompleted
-        {
-            get => GetAttribute<BooleanValue>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>Calculate On Save</para>
-        /// <para>Represents the following attribute in the schema: calcOnSave</para>
-        /// </summary>
-        public BooleanValue? CalculationOnSave
-        {
-            get => GetAttribute<BooleanValue>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>Concurrent Calculations</para>
-        /// <para>Represents the following attribute in the schema: concurrentCalc</para>
-        /// </summary>
-        public BooleanValue? ConcurrentCalculation
-        {
-            get => GetAttribute<BooleanValue>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>Concurrent Thread Manual Count</para>
-        /// <para>Represents the following attribute in the schema: concurrentManualCount</para>
-        /// </summary>
-        public UInt32Value? ConcurrentManualCount
-        {
-            get => GetAttribute<UInt32Value>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>Force Full Calculation</para>
-        /// <para>Represents the following attribute in the schema: forceFullCalc</para>
-        /// </summary>
-        public BooleanValue? ForceFullCalculation
-        {
-            get => GetAttribute<BooleanValue>();
-            set => SetAttribute(value);
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.SetSchema("x:calcPr");
-            builder.AddElement<CalculationProperties>()
-                .AddAttribute("calcId", a => a.CalculationId)
-                .AddAttribute("calcMode", a => a.CalculationMode)
-                .AddAttribute("fullCalcOnLoad", a => a.FullCalculationOnLoad)
-                .AddAttribute("refMode", a => a.ReferenceMode)
-                .AddAttribute("iterate", a => a.Iterate)
-                .AddAttribute("iterateCount", a => a.IterateCount)
-                .AddAttribute("iterateDelta", a => a.IterateDelta)
-                .AddAttribute("fullPrecision", a => a.FullPrecision)
-                .AddAttribute("calcCompleted", a => a.CalculationCompleted)
-                .AddAttribute("calcOnSave", a => a.CalculationOnSave)
-                .AddAttribute("concurrentCalc", a => a.ConcurrentCalculation)
-                .AddAttribute("concurrentManualCount", a => a.ConcurrentManualCount)
-                .AddAttribute("forceFullCalc", a => a.ForceFullCalculation);
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<CalculationProperties>(deep);
-    }
-
-    /// <summary>
-    /// <para>Defines the OleSize Class.</para>
-    /// <para>This class is available in Office 2007 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is x:oleSize.</para>
-    /// </summary>
-    public partial class OleSize : OpenXmlLeafElement
-    {
-        /// <summary>
-        /// Initializes a new instance of the OleSize class.
-        /// </summary>
-        public OleSize() : base()
-        {
-        }
-
-        /// <summary>
-        /// <para>Reference</para>
-        /// <para>Represents the following attribute in the schema: ref</para>
-        /// </summary>
-        public StringValue? Reference
-        {
-            get => GetAttribute<StringValue>();
-            set => SetAttribute(value);
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.SetSchema("x:oleSize");
-            builder.AddElement<OleSize>()
-                .AddAttribute("ref", a => a.Reference, aBuilder =>
-                {
-                    aBuilder.AddValidator(RequiredValidator.Instance);
-                });
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<OleSize>(deep);
-    }
-
-    /// <summary>
-    /// <para>Defines the CustomWorkbookViews Class.</para>
-    /// <para>This class is available in Office 2007 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is x:customWorkbookViews.</para>
-    /// </summary>
-    /// <remark>
-    /// <para>The following table lists the possible child types:</para>
-    /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CustomWorkbookView" /> <c>&lt;x:customWorkbookView></c></description></item>
-    /// </list>
-    /// </remark>
-    public partial class CustomWorkbookViews : OpenXmlCompositeElement
-    {
-        /// <summary>
-        /// Initializes a new instance of the CustomWorkbookViews class.
-        /// </summary>
-        public CustomWorkbookViews() : base()
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the CustomWorkbookViews class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public CustomWorkbookViews(IEnumerable<OpenXmlElement> childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the CustomWorkbookViews class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public CustomWorkbookViews(params OpenXmlElement[] childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the CustomWorkbookViews class from outer XML.
-        /// </summary>
-        /// <param name="outerXml">Specifies the outer XML of the element.</param>
-        public CustomWorkbookViews(string outerXml) : base(outerXml)
-        {
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.SetSchema("x:customWorkbookViews");
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CustomWorkbookView>();
-            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
-            {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CustomWorkbookView), 1, 0)
-            };
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<CustomWorkbookViews>(deep);
-    }
-
-    /// <summary>
-    /// <para>Defines the PivotCaches Class.</para>
-    /// <para>This class is available in Office 2007 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is x:pivotCaches.</para>
-    /// </summary>
-    /// <remark>
-    /// <para>The following table lists the possible child types:</para>
-    /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotCache" /> <c>&lt;x:pivotCache></c></description></item>
-    /// </list>
-    /// </remark>
-    public partial class PivotCaches : OpenXmlCompositeElement
-    {
-        /// <summary>
-        /// Initializes a new instance of the PivotCaches class.
-        /// </summary>
-        public PivotCaches() : base()
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the PivotCaches class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public PivotCaches(IEnumerable<OpenXmlElement> childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the PivotCaches class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public PivotCaches(params OpenXmlElement[] childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the PivotCaches class from outer XML.
-        /// </summary>
-        /// <param name="outerXml">Specifies the outer XML of the element.</param>
-        public PivotCaches(string outerXml) : base(outerXml)
-        {
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.SetSchema("x:pivotCaches");
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotCache>();
-            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
-            {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotCache), 1, 0)
-            };
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<PivotCaches>(deep);
-    }
-
-    /// <summary>
-    /// <para>Defines the WebPublishing Class.</para>
-    /// <para>This class is available in Office 2007 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is x:webPublishing.</para>
-    /// </summary>
-    public partial class WebPublishing : OpenXmlLeafElement
-    {
-        /// <summary>
-        /// Initializes a new instance of the WebPublishing class.
-        /// </summary>
-        public WebPublishing() : base()
-        {
-        }
-
-        /// <summary>
-        /// <para>css</para>
-        /// <para>Represents the following attribute in the schema: css</para>
-        /// </summary>
-        public BooleanValue? UseCss
-        {
-            get => GetAttribute<BooleanValue>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>thicket</para>
-        /// <para>Represents the following attribute in the schema: thicket</para>
-        /// </summary>
-        public BooleanValue? Thicket
-        {
-            get => GetAttribute<BooleanValue>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>longFileNames</para>
-        /// <para>Represents the following attribute in the schema: longFileNames</para>
-        /// </summary>
-        public BooleanValue? LongFileNames
-        {
-            get => GetAttribute<BooleanValue>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>vml</para>
-        /// <para>Represents the following attribute in the schema: vml</para>
-        /// </summary>
-        public BooleanValue? UseVml
-        {
-            get => GetAttribute<BooleanValue>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>allowPng</para>
-        /// <para>Represents the following attribute in the schema: allowPng</para>
-        /// </summary>
-        public BooleanValue? AllowPng
-        {
-            get => GetAttribute<BooleanValue>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>targetScreenSize</para>
-        /// <para>Represents the following attribute in the schema: targetScreenSize</para>
-        /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.TargetScreenSizeValues>? TargetScreenSize
-        {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.TargetScreenSizeValues>>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>dpi</para>
-        /// <para>Represents the following attribute in the schema: dpi</para>
-        /// </summary>
-        public UInt32Value? Dpi
-        {
-            get => GetAttribute<UInt32Value>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>codePage</para>
-        /// <para>Represents the following attribute in the schema: codePage</para>
-        /// </summary>
-        public UInt32Value? CodePage
-        {
-            get => GetAttribute<UInt32Value>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>characterSet</para>
-        /// <para>Represents the following attribute in the schema: characterSet</para>
-        /// </summary>
-        public StringValue? CharacterSet
-        {
-            get => GetAttribute<StringValue>();
-            set => SetAttribute(value);
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.SetSchema("x:webPublishing");
-            builder.AddElement<WebPublishing>()
-                .AddAttribute("css", a => a.UseCss)
-                .AddAttribute("thicket", a => a.Thicket)
-                .AddAttribute("longFileNames", a => a.LongFileNames)
-                .AddAttribute("vml", a => a.UseVml)
-                .AddAttribute("allowPng", a => a.AllowPng)
-                .AddAttribute("targetScreenSize", a => a.TargetScreenSize)
-                .AddAttribute("dpi", a => a.Dpi)
-                .AddAttribute("codePage", a => a.CodePage)
-                .AddAttribute("characterSet", a => a.CharacterSet);
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<WebPublishing>(deep);
-    }
-
-    /// <summary>
-    /// <para>Defines the FileRecoveryProperties Class.</para>
-    /// <para>This class is available in Office 2007 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is x:fileRecoveryPr.</para>
-    /// </summary>
-    public partial class FileRecoveryProperties : OpenXmlLeafElement
-    {
-        /// <summary>
-        /// Initializes a new instance of the FileRecoveryProperties class.
-        /// </summary>
-        public FileRecoveryProperties() : base()
-        {
-        }
-
-        /// <summary>
-        /// <para>Auto Recover</para>
-        /// <para>Represents the following attribute in the schema: autoRecover</para>
-        /// </summary>
-        public BooleanValue? AutoRecover
-        {
-            get => GetAttribute<BooleanValue>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>Crash Save</para>
-        /// <para>Represents the following attribute in the schema: crashSave</para>
-        /// </summary>
-        public BooleanValue? CrashSave
-        {
-            get => GetAttribute<BooleanValue>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>Data Extract Load</para>
-        /// <para>Represents the following attribute in the schema: dataExtractLoad</para>
-        /// </summary>
-        public BooleanValue? DataExtractLoad
-        {
-            get => GetAttribute<BooleanValue>();
-            set => SetAttribute(value);
-        }
-
-        /// <summary>
-        /// <para>Repair Load</para>
-        /// <para>Represents the following attribute in the schema: repairLoad</para>
-        /// </summary>
-        public BooleanValue? RepairLoad
-        {
-            get => GetAttribute<BooleanValue>();
-            set => SetAttribute(value);
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.SetSchema("x:fileRecoveryPr");
-            builder.AddElement<FileRecoveryProperties>()
-                .AddAttribute("autoRecover", a => a.AutoRecover)
-                .AddAttribute("crashSave", a => a.CrashSave)
-                .AddAttribute("dataExtractLoad", a => a.DataExtractLoad)
-                .AddAttribute("repairLoad", a => a.RepairLoad);
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<FileRecoveryProperties>(deep);
-    }
-
-    /// <summary>
-    /// <para>Defines the WebPublishObjects Class.</para>
-    /// <para>This class is available in Office 2007 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is x:webPublishObjects.</para>
-    /// </summary>
-    /// <remark>
-    /// <para>The following table lists the possible child types:</para>
-    /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.WebPublishObject" /> <c>&lt;x:webPublishObject></c></description></item>
-    /// </list>
-    /// </remark>
-    public partial class WebPublishObjects : OpenXmlCompositeElement
-    {
-        /// <summary>
-        /// Initializes a new instance of the WebPublishObjects class.
-        /// </summary>
-        public WebPublishObjects() : base()
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the WebPublishObjects class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public WebPublishObjects(IEnumerable<OpenXmlElement> childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the WebPublishObjects class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public WebPublishObjects(params OpenXmlElement[] childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the WebPublishObjects class from outer XML.
-        /// </summary>
-        /// <param name="outerXml">Specifies the outer XML of the element.</param>
-        public WebPublishObjects(string outerXml) : base(outerXml)
-        {
-        }
-
-        /// <summary>
-        /// <para>Count</para>
-        /// <para>Represents the following attribute in the schema: count</para>
-        /// </summary>
-        public UInt32Value? Count
-        {
-            get => GetAttribute<UInt32Value>();
-            set => SetAttribute(value);
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.SetSchema("x:webPublishObjects");
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.WebPublishObject>();
-            builder.AddElement<WebPublishObjects>()
-                .AddAttribute("count", a => a.Count);
-            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
-            {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.WebPublishObject), 1, 0)
-            };
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<WebPublishObjects>(deep);
-    }
-
-    /// <summary>
-    /// <para>Defines the WorkbookExtensionList Class.</para>
-    /// <para>This class is available in Office 2007 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is x:extLst.</para>
-    /// </summary>
-    /// <remark>
-    /// <para>The following table lists the possible child types:</para>
-    /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.WorkbookExtension" /> <c>&lt;x:ext></c></description></item>
-    /// </list>
-    /// </remark>
-    public partial class WorkbookExtensionList : OpenXmlCompositeElement
-    {
-        /// <summary>
-        /// Initializes a new instance of the WorkbookExtensionList class.
-        /// </summary>
-        public WorkbookExtensionList() : base()
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the WorkbookExtensionList class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public WorkbookExtensionList(IEnumerable<OpenXmlElement> childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the WorkbookExtensionList class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public WorkbookExtensionList(params OpenXmlElement[] childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the WorkbookExtensionList class from outer XML.
-        /// </summary>
-        /// <param name="outerXml">Specifies the outer XML of the element.</param>
-        public WorkbookExtensionList(string outerXml) : base(outerXml)
-        {
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.SetSchema("x:extLst");
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.WorkbookExtension>();
-            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
-            {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.WorkbookExtension), 0, 0)
-            };
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<WorkbookExtensionList>(deep);
-    }
-
-    /// <summary>
-    /// <para>Defines the WorkbookExtension Class.</para>
+    /// <para>Defines the DxfExtension Class.</para>
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:ext.</para>
     /// </summary>
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.PivotCaches" /> <c>&lt;x14:pivotCaches></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.PivotCaches" /> <c>&lt;x15:pivotCaches></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.TimelineCachePivotCaches" /> <c>&lt;x15:timelineCachePivotCaches></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.DefinedNames" /> <c>&lt;x14:definedNames></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.SlicerCaches" /> <c>&lt;x14:slicerCaches></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.SlicerCaches" /> <c>&lt;x15:slicerCaches></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.WorkbookProperties" /> <c>&lt;x14:workbookPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.DataModel" /> <c>&lt;x15:dataModel></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.PivotTableReferences" /> <c>&lt;x15:pivotTableReferences></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.TimelineCacheReferences" /> <c>&lt;x15:timelineCacheRefs></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.WorkbookProperties" /> <c>&lt;x15:workbookPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.DXFComplement" /> <c>&lt;xfpb:DXFComplement></c></description></item>
     /// </list>
     /// </remark>
-    public partial class WorkbookExtension : OpenXmlCompositeElement
+    public partial class DxfExtension : OpenXmlCompositeElement
     {
         /// <summary>
-        /// Initializes a new instance of the WorkbookExtension class.
+        /// Initializes a new instance of the DxfExtension class.
         /// </summary>
-        public WorkbookExtension() : base()
+        public DxfExtension() : base()
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the WorkbookExtension class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public WorkbookExtension(IEnumerable<OpenXmlElement> childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the WorkbookExtension class with the specified child elements.
+        /// Initializes a new instance of the DxfExtension class with the specified child elements.
         /// </summary>
         /// <param name="childElements">Specifies the child elements.</param>
-        public WorkbookExtension(params OpenXmlElement[] childElements) : base(childElements)
+        public DxfExtension(IEnumerable<OpenXmlElement> childElements) : base(childElements)
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the WorkbookExtension class from outer XML.
+        /// Initializes a new instance of the DxfExtension class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public DxfExtension(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the DxfExtension class from outer XML.
         /// </summary>
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
-        public WorkbookExtension(string outerXml) : base(outerXml)
+        public DxfExtension(string outerXml) : base(outerXml)
         {
         }
 
@@ -44709,18 +42611,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:ext");
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.PivotCaches>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.PivotCaches>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.TimelineCachePivotCaches>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.DefinedNames>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.SlicerCaches>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.SlicerCaches>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.WorkbookProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.DataModel>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.PivotTableReferences>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.TimelineCacheReferences>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.WorkbookProperties>();
-            builder.AddElement<WorkbookExtension>()
+            builder.AddChild<DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.DXFComplement>();
+            builder.AddElement<DxfExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
                     aBuilder.AddValidator(RequiredValidator.Instance);
@@ -44728,23 +42620,89 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.DefinedNames), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.PivotCaches), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.SlicerCaches), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.SlicerCaches), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.WorkbookProperties), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.PivotCaches), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.PivotTableReferences), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.TimelineCachePivotCaches), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.TimelineCacheReferences), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.WorkbookProperties), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.DataModel), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.DXFComplement), 1, 1, version: FileFormatVersions.Microsoft365),
                 new AnyParticle(0, 1)
             };
         }
 
         /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<WorkbookExtension>(deep);
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<DxfExtension>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the TableColumnExtension Class.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is x:ext.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms.Question" /> <c>&lt;xlmsforms:question></c></description></item>
+    /// </list>
+    /// </remark>
+    public partial class TableColumnExtension : OpenXmlCompositeElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the TableColumnExtension class.
+        /// </summary>
+        public TableColumnExtension() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the TableColumnExtension class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public TableColumnExtension(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the TableColumnExtension class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public TableColumnExtension(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the TableColumnExtension class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public TableColumnExtension(string outerXml) : base(outerXml)
+        {
+        }
+
+        /// <summary>
+        /// <para>URI</para>
+        /// <para>Represents the following attribute in the schema: uri</para>
+        /// </summary>
+        public StringValue? Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema("x:ext");
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms.Question>();
+            builder.AddElement<TableColumnExtension>()
+                .AddAttribute("uri", a => a.Uri, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms.Question), 1, 1, version: FileFormatVersions.Microsoft365),
+                new AnyParticle(0, 1)
+            };
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<TableColumnExtension>(deep);
     }
 
     /// <summary>
@@ -47241,6 +45199,2345 @@ namespace DocumentFormat.OpenXml.Spreadsheet
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SheetDataSet>(deep);
+    }
+
+    /// <summary>
+    /// <para>Future Extensibility.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is x:extLst.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DxfExtension" /> <c>&lt;x:ext></c></description></item>
+    /// </list>
+    /// </remark>
+    public partial class DxfExtensionList : OpenXmlCompositeElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the DxfExtensionList class.
+        /// </summary>
+        public DxfExtensionList() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the DxfExtensionList class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public DxfExtensionList(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the DxfExtensionList class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public DxfExtensionList(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the DxfExtensionList class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public DxfExtensionList(string outerXml) : base(outerXml)
+        {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema("x:extLst");
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DxfExtension>();
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DxfExtension), 0, 0)
+            };
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<DxfExtensionList>(deep);
+    }
+
+    /// <summary>
+    /// <para>The calculated column formula.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is x:calculatedColumnFormula.</para>
+    /// </summary>
+    public partial class CalculatedColumnFormula : TableFormulaType
+    {
+        /// <summary>
+        /// Initializes a new instance of the CalculatedColumnFormula class.
+        /// </summary>
+        public CalculatedColumnFormula() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the CalculatedColumnFormula class with the specified text content.
+        /// </summary>
+        /// <param name="text">Specifies the text content of the element.</param>
+        public CalculatedColumnFormula(string text) : base(text)
+        {
+        }
+
+        internal override OpenXmlSimpleType InnerTextToValue(string text)
+        {
+            return new StringValue { InnerText = text };
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema("x:calculatedColumnFormula");
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<CalculatedColumnFormula>(deep);
+    }
+
+    /// <summary>
+    /// <para>Custom totals row formula. Requires totalsRowFunction="custom".</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is x:totalsRowFormula.</para>
+    /// </summary>
+    public partial class TotalsRowFormula : TableFormulaType
+    {
+        /// <summary>
+        /// Initializes a new instance of the TotalsRowFormula class.
+        /// </summary>
+        public TotalsRowFormula() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the TotalsRowFormula class with the specified text content.
+        /// </summary>
+        /// <param name="text">Specifies the text content of the element.</param>
+        public TotalsRowFormula(string text) : base(text)
+        {
+        }
+
+        internal override OpenXmlSimpleType InnerTextToValue(string text)
+        {
+            return new StringValue { InnerText = text };
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema("x:totalsRowFormula");
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<TotalsRowFormula>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the TableFormulaType Class.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
+    /// </summary>
+    public abstract partial class TableFormulaType : OpenXmlLeafTextElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the TableFormulaType class.
+        /// </summary>
+        protected TableFormulaType() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the TableFormulaType class with the specified text content.
+        /// </summary>
+        /// <param name="text">Specifies the text content of the element.</param>
+        protected TableFormulaType(string text) : base(text)
+        {
+        }
+
+        internal override OpenXmlSimpleType InnerTextToValue(string text)
+        {
+            return new StringValue { InnerText = text };
+        }
+
+        /// <summary>
+        /// <para>Array</para>
+        /// <para>Represents the following attribute in the schema: array</para>
+        /// </summary>
+        public BooleanValue? Array
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>space</para>
+        /// <para>Represents the following attribute in the schema: xml:space</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:xml=http://www.w3.org/XML/1998/namespace
+        /// </remark>
+        public EnumValue<DocumentFormat.OpenXml.SpaceProcessingModeValues>? Space
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.SpaceProcessingModeValues>>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddElement<TableFormulaType>()
+                .AddAttribute("array", a => a.Array)
+                .AddAttribute("xml:space", a => a.Space);
+        }
+    }
+
+    /// <summary>
+    /// <para>Column properties for XML tables.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is x:xmlColumnPr.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
+    /// </list>
+    /// </remark>
+    public partial class XmlColumnProperties : OpenXmlCompositeElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the XmlColumnProperties class.
+        /// </summary>
+        public XmlColumnProperties() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the XmlColumnProperties class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public XmlColumnProperties(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the XmlColumnProperties class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public XmlColumnProperties(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the XmlColumnProperties class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public XmlColumnProperties(string outerXml) : base(outerXml)
+        {
+        }
+
+        /// <summary>
+        /// <para>XML Map Id</para>
+        /// <para>Represents the following attribute in the schema: mapId</para>
+        /// </summary>
+        public UInt32Value? MapId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>XPath</para>
+        /// <para>Represents the following attribute in the schema: xpath</para>
+        /// </summary>
+        public StringValue? XPath
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>Denormalized</para>
+        /// <para>Represents the following attribute in the schema: denormalized</para>
+        /// </summary>
+        public BooleanValue? Denormalized
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>XML Data Type</para>
+        /// <para>Represents the following attribute in the schema: xmlDataType</para>
+        /// </summary>
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.XmlDataValues>? XmlDataType
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.XmlDataValues>>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema("x:xmlColumnPr");
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+            builder.AddElement<XmlColumnProperties>()
+                .AddAttribute("mapId", a => a.MapId, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("xpath", a => a.XPath, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                })
+                .AddAttribute("denormalized", a => a.Denormalized)
+                .AddAttribute("xmlDataType", a => a.XmlDataType, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
+            };
+            builder.AddConstraint(new AttributeValueLengthConstraint(builder.CreateQName("x:xpath"), 0, 32000));
+            builder.AddConstraint(new ReferenceExistConstraint(builder.CreateQName("x:mapId"), "CustomXmlMappingsPart", builder.CreateQName("x:Map"), "x:Map", builder.CreateQName("x:ID")));
+            builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("x:mapId"), true, 1, true, 21474836477, true) { Application = ApplicationType.Excel });
+        }
+
+        /// <summary>
+        /// <para>Future Feature Data Storage Area.</para>
+        /// <para>Represents the following element tag in the schema: x:extLst.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
+        /// </remark>
+        public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
+        {
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+            set => SetElement(value);
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<XmlColumnProperties>(deep);
+    }
+
+    /// <summary>
+    /// <para>Future Extensibility.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is x:extLst.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.TableColumnExtension" /> <c>&lt;x:ext></c></description></item>
+    /// </list>
+    /// </remark>
+    public partial class TableColumnExtensionList : OpenXmlCompositeElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the TableColumnExtensionList class.
+        /// </summary>
+        public TableColumnExtensionList() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the TableColumnExtensionList class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public TableColumnExtensionList(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the TableColumnExtensionList class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public TableColumnExtensionList(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the TableColumnExtensionList class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public TableColumnExtensionList(string outerXml) : base(outerXml)
+        {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema("x:extLst");
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.TableColumnExtension>();
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.TableColumnExtension), 0, 0)
+            };
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<TableColumnExtensionList>(deep);
+    }
+
+    /// <summary>
+    /// <para>Table Columns.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is x:tableColumns.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.TableColumn" /> <c>&lt;x:tableColumn></c></description></item>
+    /// </list>
+    /// </remark>
+    public partial class TableColumns : OpenXmlCompositeElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the TableColumns class.
+        /// </summary>
+        public TableColumns() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the TableColumns class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public TableColumns(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the TableColumns class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public TableColumns(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the TableColumns class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public TableColumns(string outerXml) : base(outerXml)
+        {
+        }
+
+        /// <summary>
+        /// <para>Column Count</para>
+        /// <para>Represents the following attribute in the schema: count</para>
+        /// </summary>
+        public UInt32Value? Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema("x:tableColumns");
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.TableColumn>();
+            builder.AddElement<TableColumns>()
+                .AddAttribute("count", a => a.Count);
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.TableColumn), 1, 0)
+            };
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<TableColumns>(deep);
+    }
+
+    /// <summary>
+    /// <para>Table Style.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is x:tableStyleInfo.</para>
+    /// </summary>
+    public partial class TableStyleInfo : OpenXmlLeafElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the TableStyleInfo class.
+        /// </summary>
+        public TableStyleInfo() : base()
+        {
+        }
+
+        /// <summary>
+        /// <para>Style Name</para>
+        /// <para>Represents the following attribute in the schema: name</para>
+        /// </summary>
+        public StringValue? Name
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>Show First Column</para>
+        /// <para>Represents the following attribute in the schema: showFirstColumn</para>
+        /// </summary>
+        public BooleanValue? ShowFirstColumn
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>Show Last Column</para>
+        /// <para>Represents the following attribute in the schema: showLastColumn</para>
+        /// </summary>
+        public BooleanValue? ShowLastColumn
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>Show Row Stripes</para>
+        /// <para>Represents the following attribute in the schema: showRowStripes</para>
+        /// </summary>
+        public BooleanValue? ShowRowStripes
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>Show Column Stripes</para>
+        /// <para>Represents the following attribute in the schema: showColumnStripes</para>
+        /// </summary>
+        public BooleanValue? ShowColumnStripes
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema("x:tableStyleInfo");
+            builder.AddElement<TableStyleInfo>()
+                .AddAttribute("name", a => a.Name)
+                .AddAttribute("showFirstColumn", a => a.ShowFirstColumn)
+                .AddAttribute("showLastColumn", a => a.ShowLastColumn)
+                .AddAttribute("showRowStripes", a => a.ShowRowStripes)
+                .AddAttribute("showColumnStripes", a => a.ShowColumnStripes);
+            builder.AddConstraint(new AttributeValueLengthConstraint(builder.CreateQName("x:name"), 1, 255) { Application = ApplicationType.Excel });
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<TableStyleInfo>(deep);
+    }
+
+    /// <summary>
+    /// <para>Future Feature Data Storage Area.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is x:extLst.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.TableExtension" /> <c>&lt;x:ext></c></description></item>
+    /// </list>
+    /// </remark>
+    public partial class TableExtensionList : OpenXmlCompositeElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the TableExtensionList class.
+        /// </summary>
+        public TableExtensionList() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the TableExtensionList class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public TableExtensionList(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the TableExtensionList class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public TableExtensionList(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the TableExtensionList class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public TableExtensionList(string outerXml) : base(outerXml)
+        {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema("x:extLst");
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.TableExtension>();
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.TableExtension), 0, 0)
+            };
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<TableExtensionList>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the TableExtension Class.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is x:ext.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.Table" /> <c>&lt;x14:table></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms.MsForm" /> <c>&lt;xlmsforms:msForm></c></description></item>
+    /// </list>
+    /// </remark>
+    public partial class TableExtension : OpenXmlCompositeElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the TableExtension class.
+        /// </summary>
+        public TableExtension() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the TableExtension class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public TableExtension(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the TableExtension class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public TableExtension(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the TableExtension class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public TableExtension(string outerXml) : base(outerXml)
+        {
+        }
+
+        /// <summary>
+        /// <para>URI</para>
+        /// <para>Represents the following attribute in the schema: uri</para>
+        /// </summary>
+        public StringValue? Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema("x:ext");
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.Table>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms.MsForm>();
+            builder.AddElement<TableExtension>()
+                .AddAttribute("uri", a => a.Uri, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.Table), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms.MsForm), 1, 1, version: FileFormatVersions.Microsoft365),
+                new AnyParticle(0, 1)
+            };
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<TableExtension>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the FileVersion Class.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is x:fileVersion.</para>
+    /// </summary>
+    public partial class FileVersion : OpenXmlLeafElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the FileVersion class.
+        /// </summary>
+        public FileVersion() : base()
+        {
+        }
+
+        /// <summary>
+        /// <para>Application Name</para>
+        /// <para>Represents the following attribute in the schema: appName</para>
+        /// </summary>
+        public StringValue? ApplicationName
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>Last Edited Version</para>
+        /// <para>Represents the following attribute in the schema: lastEdited</para>
+        /// </summary>
+        public StringValue? LastEdited
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>Lowest Edited Version</para>
+        /// <para>Represents the following attribute in the schema: lowestEdited</para>
+        /// </summary>
+        public StringValue? LowestEdited
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>Build Version</para>
+        /// <para>Represents the following attribute in the schema: rupBuild</para>
+        /// </summary>
+        public StringValue? BuildVersion
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>Code Name</para>
+        /// <para>Represents the following attribute in the schema: codeName</para>
+        /// </summary>
+        public StringValue? CodeName
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema("x:fileVersion");
+            builder.AddElement<FileVersion>()
+                .AddAttribute("appName", a => a.ApplicationName)
+                .AddAttribute("lastEdited", a => a.LastEdited)
+                .AddAttribute("lowestEdited", a => a.LowestEdited)
+                .AddAttribute("rupBuild", a => a.BuildVersion)
+                .AddAttribute("codeName", a => a.CodeName, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true), Pattern = ("\\{[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\\}") });
+                });
+            builder.AddConstraint(new AttributeValueLengthConstraint(builder.CreateQName("x:appName"), 0, 65535));
+            builder.AddConstraint(new AttributeValueLengthConstraint(builder.CreateQName("x:lastEdited"), 0, 65535));
+            builder.AddConstraint(new AttributeValueLengthConstraint(builder.CreateQName("x:lowestEdited"), 0, 65535));
+            builder.AddConstraint(new AttributeValueLengthConstraint(builder.CreateQName("x:rupBuild"), 0, 65535));
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<FileVersion>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the FileSharing Class.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is x:fileSharing.</para>
+    /// </summary>
+    public partial class FileSharing : OpenXmlLeafElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the FileSharing class.
+        /// </summary>
+        public FileSharing() : base()
+        {
+        }
+
+        /// <summary>
+        /// <para>Read Only Recommended</para>
+        /// <para>Represents the following attribute in the schema: readOnlyRecommended</para>
+        /// </summary>
+        public BooleanValue? ReadOnlyRecommended
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>User Name</para>
+        /// <para>Represents the following attribute in the schema: userName</para>
+        /// </summary>
+        public StringValue? UserName
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>Write Reservation Password</para>
+        /// <para>Represents the following attribute in the schema: reservationPassword</para>
+        /// </summary>
+        public HexBinaryValue? ReservationPassword
+        {
+            get => GetAttribute<HexBinaryValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>Password hash algorithm</para>
+        /// <para>Represents the following attribute in the schema: algorithmName</para>
+        /// </summary>
+        public StringValue? AlgorithmName
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>Password hash</para>
+        /// <para>Represents the following attribute in the schema: hashValue</para>
+        /// </summary>
+        public Base64BinaryValue? HashValue
+        {
+            get => GetAttribute<Base64BinaryValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>Salt for password hash</para>
+        /// <para>Represents the following attribute in the schema: saltValue</para>
+        /// </summary>
+        public Base64BinaryValue? SaltValue
+        {
+            get => GetAttribute<Base64BinaryValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>Spin count for password hash</para>
+        /// <para>Represents the following attribute in the schema: spinCount</para>
+        /// </summary>
+        public UInt32Value? SpinCount
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema("x:fileSharing");
+            builder.AddElement<FileSharing>()
+                .AddAttribute("readOnlyRecommended", a => a.ReadOnlyRecommended)
+                .AddAttribute("userName", a => a.UserName)
+                .AddAttribute("reservationPassword", a => a.ReservationPassword, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { Length = (2L) });
+                })
+                .AddAttribute("algorithmName", a => a.AlgorithmName)
+                .AddAttribute("hashValue", a => a.HashValue)
+                .AddAttribute("saltValue", a => a.SaltValue)
+                .AddAttribute("spinCount", a => a.SpinCount);
+            builder.AddConstraint(new AttributeValueLengthConstraint(builder.CreateQName("x:userName"), 1, 54));
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<FileSharing>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the WorkbookProperties Class.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is x:workbookPr.</para>
+    /// </summary>
+    public partial class WorkbookProperties : OpenXmlLeafElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the WorkbookProperties class.
+        /// </summary>
+        public WorkbookProperties() : base()
+        {
+        }
+
+        /// <summary>
+        /// <para>Date 1904</para>
+        /// <para>Represents the following attribute in the schema: date1904</para>
+        /// </summary>
+        public BooleanValue? Date1904
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>dateCompatibility, this property is only available in Office 2010 and later.</para>
+        /// <para>Represents the following attribute in the schema: dateCompatibility</para>
+        /// </summary>
+        public BooleanValue? DateCompatibility
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>Show Objects</para>
+        /// <para>Represents the following attribute in the schema: showObjects</para>
+        /// </summary>
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.ObjectDisplayValues>? ShowObjects
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.ObjectDisplayValues>>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>Show Border Unselected Table</para>
+        /// <para>Represents the following attribute in the schema: showBorderUnselectedTables</para>
+        /// </summary>
+        public BooleanValue? ShowBorderUnselectedTables
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>Filter Privacy</para>
+        /// <para>Represents the following attribute in the schema: filterPrivacy</para>
+        /// </summary>
+        public BooleanValue? FilterPrivacy
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>Prompted Solutions</para>
+        /// <para>Represents the following attribute in the schema: promptedSolutions</para>
+        /// </summary>
+        public BooleanValue? PromptedSolutions
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>Show Ink Annotations</para>
+        /// <para>Represents the following attribute in the schema: showInkAnnotation</para>
+        /// </summary>
+        public BooleanValue? ShowInkAnnotation
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>Create Backup File</para>
+        /// <para>Represents the following attribute in the schema: backupFile</para>
+        /// </summary>
+        public BooleanValue? BackupFile
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>Save External Link Values</para>
+        /// <para>Represents the following attribute in the schema: saveExternalLinkValues</para>
+        /// </summary>
+        public BooleanValue? SaveExternalLinkValues
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>Update Links Behavior</para>
+        /// <para>Represents the following attribute in the schema: updateLinks</para>
+        /// </summary>
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.UpdateLinksBehaviorValues>? UpdateLinks
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.UpdateLinksBehaviorValues>>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>Code Name</para>
+        /// <para>Represents the following attribute in the schema: codeName</para>
+        /// </summary>
+        public StringValue? CodeName
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>Hide Pivot Field List</para>
+        /// <para>Represents the following attribute in the schema: hidePivotFieldList</para>
+        /// </summary>
+        public BooleanValue? HidePivotFieldList
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>Show Pivot Chart Filter</para>
+        /// <para>Represents the following attribute in the schema: showPivotChartFilter</para>
+        /// </summary>
+        public BooleanValue? ShowPivotChartFilter
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>Allow Refresh Query</para>
+        /// <para>Represents the following attribute in the schema: allowRefreshQuery</para>
+        /// </summary>
+        public BooleanValue? AllowRefreshQuery
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>Publish Items</para>
+        /// <para>Represents the following attribute in the schema: publishItems</para>
+        /// </summary>
+        public BooleanValue? PublishItems
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>Check Compatibility On Save</para>
+        /// <para>Represents the following attribute in the schema: checkCompatibility</para>
+        /// </summary>
+        public BooleanValue? CheckCompatibility
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>Auto Compress Pictures</para>
+        /// <para>Represents the following attribute in the schema: autoCompressPictures</para>
+        /// </summary>
+        public BooleanValue? AutoCompressPictures
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>Refresh all Connections on Open</para>
+        /// <para>Represents the following attribute in the schema: refreshAllConnections</para>
+        /// </summary>
+        public BooleanValue? RefreshAllConnections
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>Default Theme Version</para>
+        /// <para>Represents the following attribute in the schema: defaultThemeVersion</para>
+        /// </summary>
+        public UInt32Value? DefaultThemeVersion
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema("x:workbookPr");
+            builder.AddElement<WorkbookProperties>()
+                .AddAttribute("date1904", a => a.Date1904)
+                .AddAttribute("dateCompatibility", a => a.DateCompatibility, aBuilder =>
+                {
+                    aBuilder.AddValidator(new OfficeVersionValidator(FileFormatVersions.Office2010));
+                })
+                .AddAttribute("showObjects", a => a.ShowObjects)
+                .AddAttribute("showBorderUnselectedTables", a => a.ShowBorderUnselectedTables)
+                .AddAttribute("filterPrivacy", a => a.FilterPrivacy)
+                .AddAttribute("promptedSolutions", a => a.PromptedSolutions)
+                .AddAttribute("showInkAnnotation", a => a.ShowInkAnnotation)
+                .AddAttribute("backupFile", a => a.BackupFile)
+                .AddAttribute("saveExternalLinkValues", a => a.SaveExternalLinkValues)
+                .AddAttribute("updateLinks", a => a.UpdateLinks)
+                .AddAttribute("codeName", a => a.CodeName)
+                .AddAttribute("hidePivotFieldList", a => a.HidePivotFieldList)
+                .AddAttribute("showPivotChartFilter", a => a.ShowPivotChartFilter)
+                .AddAttribute("allowRefreshQuery", a => a.AllowRefreshQuery)
+                .AddAttribute("publishItems", a => a.PublishItems)
+                .AddAttribute("checkCompatibility", a => a.CheckCompatibility)
+                .AddAttribute("autoCompressPictures", a => a.AutoCompressPictures)
+                .AddAttribute("refreshAllConnections", a => a.RefreshAllConnections)
+                .AddAttribute("defaultThemeVersion", a => a.DefaultThemeVersion);
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<WorkbookProperties>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the WorkbookProtection Class.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is x:workbookProtection.</para>
+    /// </summary>
+    public partial class WorkbookProtection : OpenXmlLeafElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the WorkbookProtection class.
+        /// </summary>
+        public WorkbookProtection() : base()
+        {
+        }
+
+        /// <summary>
+        /// <para>Workbook Password</para>
+        /// <para>Represents the following attribute in the schema: workbookPassword</para>
+        /// </summary>
+        public HexBinaryValue? WorkbookPassword
+        {
+            get => GetAttribute<HexBinaryValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>Revisions Password</para>
+        /// <para>Represents the following attribute in the schema: revisionsPassword</para>
+        /// </summary>
+        public HexBinaryValue? RevisionsPassword
+        {
+            get => GetAttribute<HexBinaryValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>Lock Structure</para>
+        /// <para>Represents the following attribute in the schema: lockStructure</para>
+        /// </summary>
+        public BooleanValue? LockStructure
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>Lock Windows</para>
+        /// <para>Represents the following attribute in the schema: lockWindows</para>
+        /// </summary>
+        public BooleanValue? LockWindows
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>Lock Revisions</para>
+        /// <para>Represents the following attribute in the schema: lockRevision</para>
+        /// </summary>
+        public BooleanValue? LockRevision
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>Cryptographic Algorithm Name</para>
+        /// <para>Represents the following attribute in the schema: revisionsAlgorithmName</para>
+        /// </summary>
+        public StringValue? RevisionsAlgorithmName
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>Password Hash Value</para>
+        /// <para>Represents the following attribute in the schema: revisionsHashValue</para>
+        /// </summary>
+        public Base64BinaryValue? RevisionsHashValue
+        {
+            get => GetAttribute<Base64BinaryValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>Salt Value for Password Verifier</para>
+        /// <para>Represents the following attribute in the schema: revisionsSaltValue</para>
+        /// </summary>
+        public Base64BinaryValue? RevisionsSaltValue
+        {
+            get => GetAttribute<Base64BinaryValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>Iterations to Run Hashing Algorithm</para>
+        /// <para>Represents the following attribute in the schema: revisionsSpinCount</para>
+        /// </summary>
+        public UInt32Value? RevisionsSpinCount
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>Cryptographic Algorithm Name</para>
+        /// <para>Represents the following attribute in the schema: workbookAlgorithmName</para>
+        /// </summary>
+        public StringValue? WorkbookAlgorithmName
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>Password Hash Value</para>
+        /// <para>Represents the following attribute in the schema: workbookHashValue</para>
+        /// </summary>
+        public Base64BinaryValue? WorkbookHashValue
+        {
+            get => GetAttribute<Base64BinaryValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>Salt Value for Password Verifier</para>
+        /// <para>Represents the following attribute in the schema: workbookSaltValue</para>
+        /// </summary>
+        public Base64BinaryValue? WorkbookSaltValue
+        {
+            get => GetAttribute<Base64BinaryValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>Iterations to Run Hashing Algorithm</para>
+        /// <para>Represents the following attribute in the schema: workbookSpinCount</para>
+        /// </summary>
+        public UInt32Value? WorkbookSpinCount
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema("x:workbookProtection");
+            builder.AddElement<WorkbookProtection>()
+                .AddAttribute("workbookPassword", a => a.WorkbookPassword, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { Length = (2L) });
+                })
+                .AddAttribute("revisionsPassword", a => a.RevisionsPassword, aBuilder =>
+                {
+                    aBuilder.AddValidator(new StringValidator() { Length = (2L) });
+                })
+                .AddAttribute("lockStructure", a => a.LockStructure)
+                .AddAttribute("lockWindows", a => a.LockWindows)
+                .AddAttribute("lockRevision", a => a.LockRevision)
+                .AddAttribute("revisionsAlgorithmName", a => a.RevisionsAlgorithmName)
+                .AddAttribute("revisionsHashValue", a => a.RevisionsHashValue)
+                .AddAttribute("revisionsSaltValue", a => a.RevisionsSaltValue)
+                .AddAttribute("revisionsSpinCount", a => a.RevisionsSpinCount)
+                .AddAttribute("workbookAlgorithmName", a => a.WorkbookAlgorithmName)
+                .AddAttribute("workbookHashValue", a => a.WorkbookHashValue)
+                .AddAttribute("workbookSaltValue", a => a.WorkbookSaltValue)
+                .AddAttribute("workbookSpinCount", a => a.WorkbookSpinCount);
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<WorkbookProtection>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the BookViews Class.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is x:bookViews.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.WorkbookView" /> <c>&lt;x:workbookView></c></description></item>
+    /// </list>
+    /// </remark>
+    public partial class BookViews : OpenXmlCompositeElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the BookViews class.
+        /// </summary>
+        public BookViews() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the BookViews class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public BookViews(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the BookViews class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public BookViews(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the BookViews class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public BookViews(string outerXml) : base(outerXml)
+        {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema("x:bookViews");
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.WorkbookView>();
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.WorkbookView), 1, 0)
+            };
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<BookViews>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the Sheets Class.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is x:sheets.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Sheet" /> <c>&lt;x:sheet></c></description></item>
+    /// </list>
+    /// </remark>
+    public partial class Sheets : OpenXmlCompositeElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the Sheets class.
+        /// </summary>
+        public Sheets() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the Sheets class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public Sheets(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the Sheets class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public Sheets(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the Sheets class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public Sheets(string outerXml) : base(outerXml)
+        {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema("x:sheets");
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Sheet>();
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Sheet), 1, 32767)
+            };
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<Sheets>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the FunctionGroups Class.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is x:functionGroups.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.FunctionGroup" /> <c>&lt;x:functionGroup></c></description></item>
+    /// </list>
+    /// </remark>
+    public partial class FunctionGroups : OpenXmlCompositeElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the FunctionGroups class.
+        /// </summary>
+        public FunctionGroups() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the FunctionGroups class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public FunctionGroups(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the FunctionGroups class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public FunctionGroups(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the FunctionGroups class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public FunctionGroups(string outerXml) : base(outerXml)
+        {
+        }
+
+        /// <summary>
+        /// <para>Built-in Function Group Count</para>
+        /// <para>Represents the following attribute in the schema: builtInGroupCount</para>
+        /// </summary>
+        public UInt32Value? BuiltInGroupCount
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema("x:functionGroups");
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.FunctionGroup>();
+            builder.AddElement<FunctionGroups>()
+                .AddAttribute("builtInGroupCount", a => a.BuiltInGroupCount);
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 0)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.FunctionGroup), 0, 255)
+            };
+            builder.AddConstraint(new AttributeValueRangeConstraint(builder.CreateQName("x:builtInGroupCount"), true, double.NegativeInfinity, true, 255, true));
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<FunctionGroups>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the ExternalReferences Class.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is x:externalReferences.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExternalReference" /> <c>&lt;x:externalReference></c></description></item>
+    /// </list>
+    /// </remark>
+    public partial class ExternalReferences : OpenXmlCompositeElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the ExternalReferences class.
+        /// </summary>
+        public ExternalReferences() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the ExternalReferences class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public ExternalReferences(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the ExternalReferences class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public ExternalReferences(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the ExternalReferences class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public ExternalReferences(string outerXml) : base(outerXml)
+        {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema("x:externalReferences");
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExternalReference>();
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExternalReference), 1, 65534)
+            };
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<ExternalReferences>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the DefinedNames Class.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is x:definedNames.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DefinedName" /> <c>&lt;x:definedName></c></description></item>
+    /// </list>
+    /// </remark>
+    public partial class DefinedNames : OpenXmlCompositeElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the DefinedNames class.
+        /// </summary>
+        public DefinedNames() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the DefinedNames class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public DefinedNames(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the DefinedNames class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public DefinedNames(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the DefinedNames class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public DefinedNames(string outerXml) : base(outerXml)
+        {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema("x:definedNames");
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DefinedName>();
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DefinedName), 0, 0)
+            };
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<DefinedNames>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the CalculationProperties Class.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is x:calcPr.</para>
+    /// </summary>
+    public partial class CalculationProperties : OpenXmlLeafElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the CalculationProperties class.
+        /// </summary>
+        public CalculationProperties() : base()
+        {
+        }
+
+        /// <summary>
+        /// <para>Calculation Id</para>
+        /// <para>Represents the following attribute in the schema: calcId</para>
+        /// </summary>
+        public UInt32Value? CalculationId
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>Calculation Mode</para>
+        /// <para>Represents the following attribute in the schema: calcMode</para>
+        /// </summary>
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.CalculateModeValues>? CalculationMode
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.CalculateModeValues>>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>Full Calculation On Load</para>
+        /// <para>Represents the following attribute in the schema: fullCalcOnLoad</para>
+        /// </summary>
+        public BooleanValue? FullCalculationOnLoad
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>Reference Mode</para>
+        /// <para>Represents the following attribute in the schema: refMode</para>
+        /// </summary>
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.ReferenceModeValues>? ReferenceMode
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.ReferenceModeValues>>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>Calculation Iteration</para>
+        /// <para>Represents the following attribute in the schema: iterate</para>
+        /// </summary>
+        public BooleanValue? Iterate
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>Iteration Count</para>
+        /// <para>Represents the following attribute in the schema: iterateCount</para>
+        /// </summary>
+        public UInt32Value? IterateCount
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>Iterative Calculation Delta</para>
+        /// <para>Represents the following attribute in the schema: iterateDelta</para>
+        /// </summary>
+        public DoubleValue? IterateDelta
+        {
+            get => GetAttribute<DoubleValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>Full Precision Calculation</para>
+        /// <para>Represents the following attribute in the schema: fullPrecision</para>
+        /// </summary>
+        public BooleanValue? FullPrecision
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>Calc Completed</para>
+        /// <para>Represents the following attribute in the schema: calcCompleted</para>
+        /// </summary>
+        public BooleanValue? CalculationCompleted
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>Calculate On Save</para>
+        /// <para>Represents the following attribute in the schema: calcOnSave</para>
+        /// </summary>
+        public BooleanValue? CalculationOnSave
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>Concurrent Calculations</para>
+        /// <para>Represents the following attribute in the schema: concurrentCalc</para>
+        /// </summary>
+        public BooleanValue? ConcurrentCalculation
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>Concurrent Thread Manual Count</para>
+        /// <para>Represents the following attribute in the schema: concurrentManualCount</para>
+        /// </summary>
+        public UInt32Value? ConcurrentManualCount
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>Force Full Calculation</para>
+        /// <para>Represents the following attribute in the schema: forceFullCalc</para>
+        /// </summary>
+        public BooleanValue? ForceFullCalculation
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema("x:calcPr");
+            builder.AddElement<CalculationProperties>()
+                .AddAttribute("calcId", a => a.CalculationId)
+                .AddAttribute("calcMode", a => a.CalculationMode)
+                .AddAttribute("fullCalcOnLoad", a => a.FullCalculationOnLoad)
+                .AddAttribute("refMode", a => a.ReferenceMode)
+                .AddAttribute("iterate", a => a.Iterate)
+                .AddAttribute("iterateCount", a => a.IterateCount)
+                .AddAttribute("iterateDelta", a => a.IterateDelta)
+                .AddAttribute("fullPrecision", a => a.FullPrecision)
+                .AddAttribute("calcCompleted", a => a.CalculationCompleted)
+                .AddAttribute("calcOnSave", a => a.CalculationOnSave)
+                .AddAttribute("concurrentCalc", a => a.ConcurrentCalculation)
+                .AddAttribute("concurrentManualCount", a => a.ConcurrentManualCount)
+                .AddAttribute("forceFullCalc", a => a.ForceFullCalculation);
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<CalculationProperties>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the OleSize Class.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is x:oleSize.</para>
+    /// </summary>
+    public partial class OleSize : OpenXmlLeafElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the OleSize class.
+        /// </summary>
+        public OleSize() : base()
+        {
+        }
+
+        /// <summary>
+        /// <para>Reference</para>
+        /// <para>Represents the following attribute in the schema: ref</para>
+        /// </summary>
+        public StringValue? Reference
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema("x:oleSize");
+            builder.AddElement<OleSize>()
+                .AddAttribute("ref", a => a.Reference, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                });
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<OleSize>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the CustomWorkbookViews Class.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is x:customWorkbookViews.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CustomWorkbookView" /> <c>&lt;x:customWorkbookView></c></description></item>
+    /// </list>
+    /// </remark>
+    public partial class CustomWorkbookViews : OpenXmlCompositeElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the CustomWorkbookViews class.
+        /// </summary>
+        public CustomWorkbookViews() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the CustomWorkbookViews class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public CustomWorkbookViews(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the CustomWorkbookViews class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public CustomWorkbookViews(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the CustomWorkbookViews class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public CustomWorkbookViews(string outerXml) : base(outerXml)
+        {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema("x:customWorkbookViews");
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.CustomWorkbookView>();
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.CustomWorkbookView), 1, 0)
+            };
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<CustomWorkbookViews>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the PivotCaches Class.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is x:pivotCaches.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotCache" /> <c>&lt;x:pivotCache></c></description></item>
+    /// </list>
+    /// </remark>
+    public partial class PivotCaches : OpenXmlCompositeElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the PivotCaches class.
+        /// </summary>
+        public PivotCaches() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the PivotCaches class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public PivotCaches(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the PivotCaches class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public PivotCaches(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the PivotCaches class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public PivotCaches(string outerXml) : base(outerXml)
+        {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema("x:pivotCaches");
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.PivotCache>();
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.PivotCache), 1, 0)
+            };
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<PivotCaches>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the WebPublishing Class.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is x:webPublishing.</para>
+    /// </summary>
+    public partial class WebPublishing : OpenXmlLeafElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the WebPublishing class.
+        /// </summary>
+        public WebPublishing() : base()
+        {
+        }
+
+        /// <summary>
+        /// <para>css</para>
+        /// <para>Represents the following attribute in the schema: css</para>
+        /// </summary>
+        public BooleanValue? UseCss
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>thicket</para>
+        /// <para>Represents the following attribute in the schema: thicket</para>
+        /// </summary>
+        public BooleanValue? Thicket
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>longFileNames</para>
+        /// <para>Represents the following attribute in the schema: longFileNames</para>
+        /// </summary>
+        public BooleanValue? LongFileNames
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>vml</para>
+        /// <para>Represents the following attribute in the schema: vml</para>
+        /// </summary>
+        public BooleanValue? UseVml
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>allowPng</para>
+        /// <para>Represents the following attribute in the schema: allowPng</para>
+        /// </summary>
+        public BooleanValue? AllowPng
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>targetScreenSize</para>
+        /// <para>Represents the following attribute in the schema: targetScreenSize</para>
+        /// </summary>
+        public EnumValue<DocumentFormat.OpenXml.Spreadsheet.TargetScreenSizeValues>? TargetScreenSize
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Spreadsheet.TargetScreenSizeValues>>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>dpi</para>
+        /// <para>Represents the following attribute in the schema: dpi</para>
+        /// </summary>
+        public UInt32Value? Dpi
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>codePage</para>
+        /// <para>Represents the following attribute in the schema: codePage</para>
+        /// </summary>
+        public UInt32Value? CodePage
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>characterSet</para>
+        /// <para>Represents the following attribute in the schema: characterSet</para>
+        /// </summary>
+        public StringValue? CharacterSet
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema("x:webPublishing");
+            builder.AddElement<WebPublishing>()
+                .AddAttribute("css", a => a.UseCss)
+                .AddAttribute("thicket", a => a.Thicket)
+                .AddAttribute("longFileNames", a => a.LongFileNames)
+                .AddAttribute("vml", a => a.UseVml)
+                .AddAttribute("allowPng", a => a.AllowPng)
+                .AddAttribute("targetScreenSize", a => a.TargetScreenSize)
+                .AddAttribute("dpi", a => a.Dpi)
+                .AddAttribute("codePage", a => a.CodePage)
+                .AddAttribute("characterSet", a => a.CharacterSet);
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<WebPublishing>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the FileRecoveryProperties Class.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is x:fileRecoveryPr.</para>
+    /// </summary>
+    public partial class FileRecoveryProperties : OpenXmlLeafElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the FileRecoveryProperties class.
+        /// </summary>
+        public FileRecoveryProperties() : base()
+        {
+        }
+
+        /// <summary>
+        /// <para>Auto Recover</para>
+        /// <para>Represents the following attribute in the schema: autoRecover</para>
+        /// </summary>
+        public BooleanValue? AutoRecover
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>Crash Save</para>
+        /// <para>Represents the following attribute in the schema: crashSave</para>
+        /// </summary>
+        public BooleanValue? CrashSave
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>Data Extract Load</para>
+        /// <para>Represents the following attribute in the schema: dataExtractLoad</para>
+        /// </summary>
+        public BooleanValue? DataExtractLoad
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        /// <summary>
+        /// <para>Repair Load</para>
+        /// <para>Represents the following attribute in the schema: repairLoad</para>
+        /// </summary>
+        public BooleanValue? RepairLoad
+        {
+            get => GetAttribute<BooleanValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema("x:fileRecoveryPr");
+            builder.AddElement<FileRecoveryProperties>()
+                .AddAttribute("autoRecover", a => a.AutoRecover)
+                .AddAttribute("crashSave", a => a.CrashSave)
+                .AddAttribute("dataExtractLoad", a => a.DataExtractLoad)
+                .AddAttribute("repairLoad", a => a.RepairLoad);
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<FileRecoveryProperties>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the WebPublishObjects Class.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is x:webPublishObjects.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.WebPublishObject" /> <c>&lt;x:webPublishObject></c></description></item>
+    /// </list>
+    /// </remark>
+    public partial class WebPublishObjects : OpenXmlCompositeElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the WebPublishObjects class.
+        /// </summary>
+        public WebPublishObjects() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the WebPublishObjects class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public WebPublishObjects(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the WebPublishObjects class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public WebPublishObjects(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the WebPublishObjects class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public WebPublishObjects(string outerXml) : base(outerXml)
+        {
+        }
+
+        /// <summary>
+        /// <para>Count</para>
+        /// <para>Represents the following attribute in the schema: count</para>
+        /// </summary>
+        public UInt32Value? Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema("x:webPublishObjects");
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.WebPublishObject>();
+            builder.AddElement<WebPublishObjects>()
+                .AddAttribute("count", a => a.Count);
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.WebPublishObject), 1, 0)
+            };
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<WebPublishObjects>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the WorkbookExtensionList Class.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is x:extLst.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.WorkbookExtension" /> <c>&lt;x:ext></c></description></item>
+    /// </list>
+    /// </remark>
+    public partial class WorkbookExtensionList : OpenXmlCompositeElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the WorkbookExtensionList class.
+        /// </summary>
+        public WorkbookExtensionList() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the WorkbookExtensionList class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public WorkbookExtensionList(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the WorkbookExtensionList class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public WorkbookExtensionList(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the WorkbookExtensionList class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public WorkbookExtensionList(string outerXml) : base(outerXml)
+        {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema("x:extLst");
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.WorkbookExtension>();
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.WorkbookExtension), 0, 0)
+            };
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<WorkbookExtensionList>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the WorkbookExtension Class.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is x:ext.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.PivotCaches" /> <c>&lt;x14:pivotCaches></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.PivotCaches" /> <c>&lt;x15:pivotCaches></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.TimelineCachePivotCaches" /> <c>&lt;x15:timelineCachePivotCaches></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.DefinedNames" /> <c>&lt;x14:definedNames></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.SlicerCaches" /> <c>&lt;x14:slicerCaches></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.SlicerCaches" /> <c>&lt;x15:slicerCaches></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.WorkbookProperties" /> <c>&lt;x14:workbookPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.DataModel" /> <c>&lt;x15:dataModel></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.PivotTableReferences" /> <c>&lt;x15:pivotTableReferences></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.TimelineCacheReferences" /> <c>&lt;x15:timelineCacheRefs></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.WorkbookProperties" /> <c>&lt;x15:workbookPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.ExternalCodeService.ExternalCodeService" /> <c>&lt;xlecs:externalCodeService></c></description></item>
+    /// </list>
+    /// </remark>
+    public partial class WorkbookExtension : OpenXmlCompositeElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the WorkbookExtension class.
+        /// </summary>
+        public WorkbookExtension() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the WorkbookExtension class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public WorkbookExtension(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the WorkbookExtension class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public WorkbookExtension(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the WorkbookExtension class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public WorkbookExtension(string outerXml) : base(outerXml)
+        {
+        }
+
+        /// <summary>
+        /// <para>URI</para>
+        /// <para>Represents the following attribute in the schema: uri</para>
+        /// </summary>
+        public StringValue? Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema("x:ext");
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.PivotCaches>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.PivotCaches>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.TimelineCachePivotCaches>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.DefinedNames>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.SlicerCaches>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.SlicerCaches>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.WorkbookProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.DataModel>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.PivotTableReferences>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.TimelineCacheReferences>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.WorkbookProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.ExternalCodeService.ExternalCodeService>();
+            builder.AddElement<WorkbookExtension>()
+                .AddAttribute("uri", a => a.Uri, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.DefinedNames), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.PivotCaches), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.SlicerCaches), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.SlicerCaches), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.WorkbookProperties), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.PivotCaches), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.PivotTableReferences), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.TimelineCachePivotCaches), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.TimelineCacheReferences), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.WorkbookProperties), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.DataModel), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.ExternalCodeService.ExternalCodeService), 1, 1, version: FileFormatVersions.Microsoft365),
+                new AnyParticle(0, 1)
+            };
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<WorkbookExtension>(deep);
     }
 
     /// <summary>

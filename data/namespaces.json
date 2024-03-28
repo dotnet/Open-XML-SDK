@@ -612,6 +612,21 @@
     "Version": "Microsoft365"
   },
   {
+    "Prefix": "xlecs",
+    "Uri": "http://schemas.microsoft.com/office/spreadsheetml/2023/externalCodeService",
+    "Version": "Microsoft365"
+  },
+  {
+    "Prefix": "xlmsforms",
+    "Uri": "http://schemas.microsoft.com/office/spreadsheetml/2023/msForms",
+    "Version": "Microsoft365"
+  },
+  {
+    "Prefix": "xlpcalc",
+    "Uri": "http://schemas.microsoft.com/office/spreadsheetml/2023/pivot2023Calculation",
+    "Version": "Microsoft365"
+  },
+  {
     "Prefix": "xlPr",
     "Uri": "http://schemas.microsoft.com/office/spreadsheetml/2016/01/main",
     "Version": "Office2019"
@@ -716,6 +731,11 @@
   {
     "Prefix": "xvml",
     "Uri": "urn:schemas-microsoft-com:office:excel"
+  },
+  {
+    "Prefix": "xxdsv",
+    "Uri": "http://schemas.microsoft.com/office/spreadsheetml/2023/dataSourceVersioning",
+    "Version": "Microsoft365"
   },
   {
     "Prefix": "xxl21",
