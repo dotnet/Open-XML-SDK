@@ -391,37 +391,37 @@
         {
           "Name": "x:CT_Font/x:font",
           "PropertyName": "Font",
-          "PropertyComments": "Font Properties"
+          "PropertyComments": " Contains font properties associated with this dxf. "
         },
         {
           "Name": "x:CT_NumFmt/x:numFmt",
           "PropertyName": "NumberingFormat",
-          "PropertyComments": "Number Format"
+          "PropertyComments": " Contains number format properties associated with this dxf. "
         },
         {
           "Name": "x:CT_Fill/x:fill",
           "PropertyName": "Fill",
-          "PropertyComments": "Fill"
+          "PropertyComments": " Contains fill properties associated with this dxf. "
         },
         {
           "Name": "x:CT_CellAlignment/x:alignment",
           "PropertyName": "Alignment",
-          "PropertyComments": "Alignment"
+          "PropertyComments": " Contains alignment properties associated with this dxf. "
         },
         {
           "Name": "x:CT_Border/x:border",
           "PropertyName": "Border",
-          "PropertyComments": "Border Properties"
+          "PropertyComments": " Contains border properties associated with this dxf. "
         },
         {
           "Name": "x:CT_CellProtection/x:protection",
           "PropertyName": "Protection",
-          "PropertyComments": "Protection Properties"
+          "PropertyComments": " Contains protection properties associated with this dxf. "
         },
         {
-          "Name": "x:CT_ExtensionList/x:extLst",
-          "PropertyName": "ExtensionList",
-          "PropertyComments": "Future Feature Data Storage Area"
+          "Name": "x:CT_DxfExtensionList/x:extLst",
+          "PropertyName": "DxfExtensionList",
+          "PropertyComments": "Future Extensibility"
         }
       ],
       "Particle": {
@@ -476,7 +476,7 @@
             ]
           },
           {
-            "Name": "x:CT_ExtensionList/x:extLst",
+            "Name": "x:CT_DxfExtensionList/x:extLst",
             "Occurs": [
               {
                 "Max": 1

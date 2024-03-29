@@ -6013,7 +6013,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Border" /> <c>&lt;x:border></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Alignment" /> <c>&lt;x:alignment></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Protection" /> <c>&lt;x:protection></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DxfExtensionList" /> <c>&lt;x:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Fill" /> <c>&lt;x:fill></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Font" /> <c>&lt;x:font></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.NumberingFormat" /> <c>&lt;x:numFmt></c></description></item>
@@ -6060,7 +6060,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Border>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Alignment>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Protection>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DxfExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Fill>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Font>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.NumberingFormat>();
@@ -6072,12 +6072,12 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Alignment), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Border), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Protection), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DxfExtensionList), 0, 1)
             };
         }
 
         /// <summary>
-        /// <para>Font Properties.</para>
+        /// <para> Contains font properties associated with this dxf. .</para>
         /// <para>Represents the following element tag in the schema: x:font.</para>
         /// </summary>
         /// <remark>
@@ -6090,7 +6090,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         }
 
         /// <summary>
-        /// <para>Number Format.</para>
+        /// <para> Contains number format properties associated with this dxf. .</para>
         /// <para>Represents the following element tag in the schema: x:numFmt.</para>
         /// </summary>
         /// <remark>
@@ -6103,7 +6103,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         }
 
         /// <summary>
-        /// <para>Fill.</para>
+        /// <para> Contains fill properties associated with this dxf. .</para>
         /// <para>Represents the following element tag in the schema: x:fill.</para>
         /// </summary>
         /// <remark>
@@ -6116,7 +6116,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         }
 
         /// <summary>
-        /// <para>Alignment.</para>
+        /// <para> Contains alignment properties associated with this dxf. .</para>
         /// <para>Represents the following element tag in the schema: x:alignment.</para>
         /// </summary>
         /// <remark>
@@ -6129,7 +6129,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         }
 
         /// <summary>
-        /// <para>Border Properties.</para>
+        /// <para> Contains border properties associated with this dxf. .</para>
         /// <para>Represents the following element tag in the schema: x:border.</para>
         /// </summary>
         /// <remark>
@@ -6142,7 +6142,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         }
 
         /// <summary>
-        /// <para>Protection Properties.</para>
+        /// <para> Contains protection properties associated with this dxf. .</para>
         /// <para>Represents the following element tag in the schema: x:protection.</para>
         /// </summary>
         /// <remark>
@@ -6155,15 +6155,15 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         }
 
         /// <summary>
-        /// <para>Future Feature Data Storage Area.</para>
+        /// <para>Future Extensibility.</para>
         /// <para>Represents the following element tag in the schema: x:extLst.</para>
         /// </summary>
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
+        public DocumentFormat.OpenXml.Spreadsheet.DxfExtensionList? DxfExtensionList
         {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.DxfExtensionList>();
             set => SetElement(value);
         }
 

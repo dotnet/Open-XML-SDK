@@ -1,0 +1,27 @@
+{
+  "TargetNamespace": "http://schemas.microsoft.com/office/spreadsheetml/2023/externalCodeService",
+  "Types": [
+    {
+      "Name": "xlecs:CT_ExternalCodeService/xlecs:externalCodeService",
+      "ClassName": "ExternalCodeService",
+      "Summary": "Defines the ExternalCodeService Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Microsoft365",
+      "Attributes": [
+        {
+          "QName": ":autoShow",
+          "Type": "UInt32Value",
+          "Version": "Microsoft365",
+          "PropertyComments": "autoShow"
+        },
+        {
+          "QName": ":timeout",
+          "Type": "UInt32Value",
+          "Version": "Microsoft365",
+          "PropertyComments": "timeout"
+        }
+      ]
+    }
+  ]
+}

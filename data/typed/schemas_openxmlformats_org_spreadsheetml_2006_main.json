@@ -557,6 +557,10 @@
     "ClassName": "DataFieldExtension"
   },
   {
+    "Name": "x:CT_DxfExtension/x:ext",
+    "ClassName": "DxfExtension"
+  },
+  {
     "Name": "x:CT_Extension/x:ext",
     "ClassName": "Extension"
   },
@@ -591,6 +595,10 @@
   {
     "Name": "x:CT_StylesheetExtension/x:ext",
     "ClassName": "StylesheetExtension"
+  },
+  {
+    "Name": "x:CT_TableColumnExtension/x:ext",
+    "ClassName": "TableColumnExtension"
   },
   {
     "Name": "x:CT_TableExtension/x:ext",
@@ -654,6 +662,10 @@
     "ClassName": "DataFieldExtensionList"
   },
   {
+    "Name": "x:CT_DxfExtensionList/x:extLst",
+    "ClassName": "DxfExtensionList"
+  },
+  {
     "Name": "x:CT_ExtensionList/x:extLst",
     "ClassName": "ExtensionList"
   },
@@ -684,6 +696,10 @@
   {
     "Name": "x:CT_StylesheetExtensionList/x:extLst",
     "ClassName": "StylesheetExtensionList"
+  },
+  {
+    "Name": "x:CT_TableColumnExtensionList/x:extLst",
+    "ClassName": "TableColumnExtensionList"
   },
   {
     "Name": "x:CT_TableExtensionList/x:extLst",
