@@ -16938,11 +16938,6 @@
           "Name": "x:CT_XmlColumnPr/x:xmlColumnPr",
           "PropertyName": "XmlColumnProperties",
           "PropertyComments": "Column properties for XML tables"
-        },
-        {
-          "Name": "x:CT_TableColumnExtensionList/x:extLst",
-          "PropertyName": "TableColumnExtensionList",
-          "PropertyComments": "Future Extensibility"
         }
       ],
       "Particle": {
@@ -16966,14 +16961,6 @@
           },
           {
             "Name": "x:CT_XmlColumnPr/x:xmlColumnPr",
-            "Occurs": [
-              {
-                "Max": 1
-              }
-            ]
-          },
-          {
-            "Name": "x:CT_TableColumnExtensionList/x:extLst",
             "Occurs": [
               {
                 "Max": 1
@@ -23129,58 +23116,6 @@
       }
     },
     {
-      "Name": "x:CT_TableColumnExtension/x:ext",
-      "ClassName": "TableColumnExtension",
-      "Summary": "Defines the TableColumnExtension Class.",
-      "BaseClass": "OpenXmlCompositeElement",
-      "Attributes": [
-        {
-          "QName": ":uri",
-          "Type": "StringValue",
-          "PropertyComments": "URI",
-          "Validators": [
-            {
-              "Name": "RequiredValidator"
-            },
-            {
-              "Arguments": [
-                {
-                  "Type": "Boolean",
-                  "Name": "IsToken",
-                  "Value": "True"
-                }
-              ],
-              "Name": "StringValidator",
-              "IsInitialVersion": true
-            }
-          ]
-        }
-      ],
-      "Children": [
-        {
-          "Name": "xlmsforms:CT_Question/xlmsforms:question",
-          "PropertyName": "Question"
-        }
-      ],
-      "Particle": {
-        "Kind": "Choice",
-        "Items": [
-          {
-            "Name": "xlmsforms:CT_Question/xlmsforms:question",
-            "InitialVersion": "Microsoft365"
-          },
-          {
-            "Kind": "Any",
-            "Occurs": [
-              {
-                "Max": 1
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
       "Name": "x:CT_Location/x:location",
       "ClassName": "Location",
       "Summary": "Defines the Location Class.",
@@ -24534,28 +24469,6 @@
               {
                 "Max": 1
               }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "Name": "x:CT_TableColumnExtensionList/x:extLst",
-      "ClassName": "TableColumnExtensionList",
-      "Summary": "Future Extensibility.",
-      "BaseClass": "OpenXmlCompositeElement",
-      "Children": [
-        {
-          "Name": "x:CT_TableColumnExtension/x:ext"
-        }
-      ],
-      "Particle": {
-        "Kind": "Sequence",
-        "Items": [
-          {
-            "Name": "x:CT_TableColumnExtension/x:ext",
-            "Occurs": [
-              {}
             ]
           }
         ]

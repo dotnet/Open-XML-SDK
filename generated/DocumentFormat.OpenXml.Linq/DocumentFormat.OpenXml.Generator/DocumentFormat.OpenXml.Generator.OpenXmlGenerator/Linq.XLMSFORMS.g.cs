@@ -21,7 +21,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
-        /// <item><description>has the following parent XML elements: <see cref="msForm" />, <see cref="question" />.</description></item>
+        /// <item><description>has the following parent XML elements: <see cref="msForm" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="X.ext" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: ExtensionList.</description></item>
         /// </list>
@@ -41,20 +41,6 @@ namespace DocumentFormat.OpenXml.Linq
         /// </list>
         /// </remarks>
         public static readonly XName msForm = xlmsforms + "msForm";
-
-        /// <summary>
-        /// Represents the xlmsforms:question XML element.
-        /// </summary>
-        /// <remarks>
-        /// <para>As an XML element, it:</para>
-        /// <list type="bullet">
-        /// <item><description>has the following parent XML elements: <see cref="X.ext" />.</description></item>
-        /// <item><description>has the following child XML elements: <see cref="extLst" />.</description></item>
-        /// <item><description>has the following XML attributes: <see cref="NoNamespace.id" />.</description></item>
-        /// <item><description>corresponds to the following strongly-typed classes: Question.</description></item>
-        /// </list>
-        /// </remarks>
-        public static readonly XName question = xlmsforms + "question";
 
         /// <summary>
         /// Represents the xlmsforms:syncedQuestionId XML element.

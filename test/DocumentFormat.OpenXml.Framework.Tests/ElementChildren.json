@@ -41929,6 +41929,10 @@
     "Children": []
   },
   {
+    "Element": "DocumentFormat.OpenXml.Schema.Spreadsheet.TableColumn",
+    "Children": []
+  },
+  {
     "Element": "DocumentFormat.OpenXml.Spreadsheet.Alignment",
     "Children": []
   },
@@ -46096,6 +46100,10 @@
   {
     "Element": "DocumentFormat.OpenXml.Spreadsheet.TableColumnExtensionList",
     "Children": [
+      {
+        "Name": "ext",
+        "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
+      },
       {
         "Name": "ext",
         "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"

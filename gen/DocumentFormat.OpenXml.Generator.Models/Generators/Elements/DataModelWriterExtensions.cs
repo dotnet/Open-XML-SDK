@@ -209,6 +209,11 @@ public static class DataModelWriterExtensions
                 }
             }
 
+            if (containingType.Name.ToString() == "x:CT_TableColumn/x:tableColumn")
+            {
+                writer.WriteLine("builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.TableColumnExtensionList>();");
+            }
+
             if (attributes.Any())
             {
                 var className = services.FindClassName(containingType.Name, fullyQualified: false);
@@ -291,6 +296,12 @@ public static class DataModelWriterExtensions
             {
                 writer.Write("builder.Particle = ");
                 writer.WriteParticle(services, containingType, containingType.Particle);
+
+                //if (containingType.Name.ToString() == "x:CT_TableColumn/x:tableColumn")
+                //{
+                //    writer.WriteLine("new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.TableColumnExtensionList), 0, 1)");
+                //}
+
                 writer.WriteLine(";");
             }
 

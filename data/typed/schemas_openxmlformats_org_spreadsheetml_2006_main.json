@@ -597,10 +597,6 @@
     "ClassName": "StylesheetExtension"
   },
   {
-    "Name": "x:CT_TableColumnExtension/x:ext",
-    "ClassName": "TableColumnExtension"
-  },
-  {
     "Name": "x:CT_TableExtension/x:ext",
     "ClassName": "TableExtension"
   },
@@ -696,10 +692,6 @@
   {
     "Name": "x:CT_StylesheetExtensionList/x:extLst",
     "ClassName": "StylesheetExtensionList"
-  },
-  {
-    "Name": "x:CT_TableColumnExtensionList/x:extLst",
-    "ClassName": "TableColumnExtensionList"
   },
   {
     "Name": "x:CT_TableExtensionList/x:extLst",

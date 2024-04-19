@@ -58,11 +58,17 @@ internal static class ParticleWriterExtensions
             {
                 var list = writer.TrackDelimiter(newLineCount: 1);
 
+                if (containingType.Name.ToString() == "x:CT_TableColumn/x:tableColumn")
+                {
+                    writer.WriteLine("new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.TableColumnExtensionList), 0, 1),");
+                }
+
                 foreach (var item in p.Items)
                 {
                     list.AddDelimiter();
                     writer.WriteItemNode(services, containingType, item);
                 }
+
 
                 writer.WriteLine();
             }
