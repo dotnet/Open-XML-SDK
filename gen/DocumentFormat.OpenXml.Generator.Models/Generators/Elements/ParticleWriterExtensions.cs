@@ -69,7 +69,6 @@ internal static class ParticleWriterExtensions
                     writer.WriteItemNode(services, containingType, item);
                 }
 
-
                 writer.WriteLine();
             }
         });
