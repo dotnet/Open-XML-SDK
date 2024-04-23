@@ -1,6 +1,8 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+// Ignore Spelling: xlsx
+
 #pragma warning disable SA1310 // Field names should not contain underscore
 
 namespace DocumentFormat.OpenXml.Tests
@@ -123,6 +125,7 @@ namespace DocumentFormat.OpenXml.Tests
             public const string Of16_09_unknownelement_docx = "TestFiles.Of16-09-UnknownElement.docx";
 
             public const string Of16_10_symex_docx = "TestFiles.Of16-10-SymEx.docx";
+            public const string Test_question_element_xlsx = "TestFiles.testquestionelement.xlsx";
         }
     }
 }

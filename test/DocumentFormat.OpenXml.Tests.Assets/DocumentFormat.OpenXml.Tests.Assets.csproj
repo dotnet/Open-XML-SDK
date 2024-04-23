@@ -9,6 +9,9 @@
     <EmbeddedResource Include="assets\**\*" />
   </ItemGroup>
   <ItemGroup>
+    <None Remove="assets\TestFiles\testquestionelement.xlsx" />
+  </ItemGroup>
+  <ItemGroup>
     <PackageReference Include="xunit" />
   </ItemGroup>
 </Project>
