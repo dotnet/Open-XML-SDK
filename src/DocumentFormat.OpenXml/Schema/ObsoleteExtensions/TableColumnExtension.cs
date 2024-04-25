@@ -21,7 +21,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms.Question" /> <c>&lt;xlmsforms:question></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TableColumnExtension : OpenXmlCompositeElement
+    public partial class TableColumnExtension : Extension
     {
         /// <summary>
         /// Initializes a new instance of the TableColumnExtension class.
