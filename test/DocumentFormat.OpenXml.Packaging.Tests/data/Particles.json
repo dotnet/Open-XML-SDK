@@ -66708,6 +66708,10 @@
     "Value": {
      "ChildrenParticles": [
       {
+       "ElementType": "DocumentFormat.OpenXml.Spreadsheet.TableColumnExtensionList",
+       "MinOccurs": 0
+      },
+      {
        "ElementType": "DocumentFormat.OpenXml.Spreadsheet.CalculatedColumnFormula",
        "MinOccurs": 0
       },
@@ -66717,10 +66721,6 @@
       },
       {
        "ElementType": "DocumentFormat.OpenXml.Spreadsheet.XmlColumnProperties",
-       "MinOccurs": 0
-      },
-      {
-       "ElementType": "DocumentFormat.OpenXml.Spreadsheet.TableColumnExtensionList",
        "MinOccurs": 0
       }
      ],

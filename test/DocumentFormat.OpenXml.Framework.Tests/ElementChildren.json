@@ -41929,10 +41929,6 @@
     "Children": []
   },
   {
-    "Element": "DocumentFormat.OpenXml.Schema.Spreadsheet.TableColumn",
-    "Children": []
-  },
-  {
     "Element": "DocumentFormat.OpenXml.Spreadsheet.Alignment",
     "Children": []
   },

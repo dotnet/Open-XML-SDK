@@ -62,7 +62,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <para>Gets or sets URI</para>
         /// <para>Represents the following attribute in the schema: uri</para>
         /// </summary>
-        public StringValue? Uri
+        public new StringValue? Uri
         {
             get => GetAttribute<StringValue>();
             set => SetAttribute(value);

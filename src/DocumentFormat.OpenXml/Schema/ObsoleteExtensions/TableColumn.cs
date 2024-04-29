@@ -30,7 +30,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         public ExtensionList? ExtensionList
         {
             get => TableColumnExtensionList;
-            set => TableColumnExtensionList = (TableColumnExtensionList?)value;
+            set
+            {
+                string outerXml = value is null ? throw new ArgumentNullException(nameof(value)) : value.OuterXml;
+                TableColumnExtensionList = new TableColumnExtensionList(outerXml);
+            }
         }
 
         /// <summary>Gets or sets the table column extension list.</summary>
@@ -42,9 +46,9 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         }
 
         /// <summary>
-        /// Adds the specified element to the element if it is a known child. This adds the element in the correct location according to the schema.
+        /// Adds an ExtensionList child element to this element. This adds the element in the correct location according to the schema.
         /// </summary>
-        /// <param name="newChild">The OpenXmlElement element to append.</param>
+        /// <param name="newChild">The ExtensionList element to append.</param>
         /// <param name="throwOnError">A flag to indicate if the method should throw if the child could not be added.</param>
         /// <returns>Success if the element was added, otherwise <c>false</c>.</returns>
         public bool AddChild(ExtensionList newChild, bool throwOnError = true)
@@ -61,7 +65,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
 
             TableColumnExtensionList tce = new TableColumnExtensionList(newChild);
             var wasAdded = Metadata.Particle.Set(this, tce, tce.GetType());
-
 
             if (throwOnError && !wasAdded)
             {

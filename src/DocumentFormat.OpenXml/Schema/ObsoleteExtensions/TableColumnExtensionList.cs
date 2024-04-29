@@ -1,14 +1,10 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Validation.Schema;
-using DocumentFormat.OpenXml.Validation.Semantic;
-using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
-using System.Text.Json;
 
 namespace DocumentFormat.OpenXml.Spreadsheet
 {
@@ -52,11 +48,11 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         }
 
         /// <summary>
-        /// Initializes a new instance of the TableColumnExtensionList class with the specified child ExtensionList.
+        /// Initializes a new instance of the TableColumnExtensionList class from the specified ExtensionList object.
         /// </summary>
-        /// <param name="childElement">Specifies the child elements.</param>
-        public TableColumnExtensionList(ExtensionList childElement)
-            : base(childElement is null ? throw new ArgumentNullException(paramName: nameof(childElement)) : childElement.OuterXml)
+        /// <param name="sourceExtensionList">Specifies the source ExtensionList object</param>
+        public TableColumnExtensionList(ExtensionList sourceExtensionList)
+            : base(sourceExtensionList is null ? throw new ArgumentNullException(paramName: nameof(sourceExtensionList)) : sourceExtensionList.OuterXml)
         {
         }
 
@@ -69,22 +65,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
         }
 
-        public static explicit operator TableColumnExtensionList(ExtensionList el)
-        {
-            var json = JsonConvert.SerializeObject(el);
-            var res = JsonConvert.DeserializeObject<TableColumnExtensionList>(json);
-
-            if (json is null || res is null)
-            {
-                throw new ArgumentException("ExtensionList parameter can't be serialized.", paramName: nameof(el));
-            }
-
-            return new TableColumnExtensionList(res);
-        }
-
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
         {
-            // base.ConfigureMetadata(builder);
             builder.SetSchema("x:extLst");
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.TableColumnExtension>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Extension>();
