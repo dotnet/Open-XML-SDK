@@ -2,12 +2,15 @@
 Open XML SDK
 ============
 
-> NOTICE: 
-> 
+> [!NOTE]
+>  
 > [v3.0.0](https://www.nuget.org/packages/DocumentFormat.OpenXml/3.0.0) refactors and addresses some technical debt while retaining source compatibility as much as possible. You should be able to update your package and recompile with limited changes. However, binary compatibility was not a goal and will break that for some changes which are documented. PRs that introduced such changes are marked with a `breaking-change` label and were added to a list to help migrating to v3.0.0.
 >
 > Please see the [v3.0.0 milestone](https://github.com/OfficeDev/Open-XML-SDK/milestone/1) for issues and PRs that are included. For discussions, please join us at [this issue](https://github.com/OfficeDev/Open-XML-SDK/issues/1270).
 
+
+> [!IMPORTANT]
+> The CI feed URL has changed as of 2 April, 2024. Please update to the new URL if using CI builds.
 
 [![Downloads](https://img.shields.io/nuget/dt/DocumentFormat.OpenXml.svg)](https://www.nuget.org/packages/DocumentFormat.OpenXml)
 [![Build Status](https://office.visualstudio.com/OC/_apis/build/status/OpenXmlSdk/OfficeDev.Open-XML-SDK?branchName=main)](https://office.visualstudio.com/OC/_build/latest?definitionId=7420&branchName=main)
@@ -51,7 +54,7 @@ The NuGet package for the latest builds of the Open XML SDK is available as a cu
 <?xml version="1.0" encoding="utf-8"?>
 <configuration>
   <packageSources>
-    <add key="OpenXmlCI" value="https://openxmlsdk.blob.core.windows.net/feed/index.json" />
+    <add key="OpenXmlCI" value="https://ooxml.blob.core.windows.net/feed/index.json" />
   </packageSources>
 </configuration>
 ```
