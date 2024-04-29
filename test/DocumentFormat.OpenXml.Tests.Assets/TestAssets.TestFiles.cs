@@ -126,6 +126,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             public const string Of16_10_symex_docx = "TestFiles.Of16-10-SymEx.docx";
             public const string Test_question_element_xlsx = "TestFiles.testquestionelement.xlsx";
+            public const string Test_question_element_set_xlsx = "TestFiles.testquestionelement_set.xlsx";
         }
     }
 }

@@ -5,8 +5,10 @@ using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Validation.Schema;
 using DocumentFormat.OpenXml.Validation.Semantic;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Text.Json;
 
 namespace DocumentFormat.OpenXml.Spreadsheet
 {
@@ -50,12 +52,34 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         }
 
         /// <summary>
+        /// Initializes a new instance of the TableColumnExtensionList class with the specified child ExtensionList.
+        /// </summary>
+        /// <param name="childElement">Specifies the child elements.</param>
+        public TableColumnExtensionList(ExtensionList childElement)
+            : base(childElement is null ? throw new ArgumentNullException(paramName: nameof(childElement)) : childElement.OuterXml)
+        {
+        }
+
+        /// <summary>
         /// Initializes a new instance of the TableColumnExtensionList class from outer XML.
         /// </summary>
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
         public TableColumnExtensionList(string outerXml)
             : base(outerXml)
         {
+        }
+
+        public static explicit operator TableColumnExtensionList(ExtensionList el)
+        {
+            var json = JsonConvert.SerializeObject(el);
+            var res = JsonConvert.DeserializeObject<TableColumnExtensionList>(json);
+
+            if (json is null || res is null)
+            {
+                throw new ArgumentException("ExtensionList parameter can't be serialized.", paramName: nameof(el));
+            }
+
+            return new TableColumnExtensionList(res);
         }
 
         internal override void ConfigureMetadata(ElementMetadata.Builder builder)
