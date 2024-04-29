@@ -53,7 +53,7 @@ jobs:
           with:
               secret: ${{ github.TOKEN }}
               approvers: twsouthwick,tomjebo,mikeebowen
-              minimum-approvals: 1
+              minimum-approvals: 2
               issue-title: "Approval for publishing to Nuget.org"
               issue-body: "Please approve or deny the deployment to Nuget.org"
               exclude-workflow-initiator-as-approver: false
