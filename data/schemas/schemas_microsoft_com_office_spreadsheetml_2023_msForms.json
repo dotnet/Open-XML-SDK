@@ -111,8 +111,8 @@
     },
     {
       "Name": "x:ST_Xstring/xlmsforms:syncedQuestionId",
-      "ClassName": "Xstring",
-      "Summary": "Defines the Xstring Class.",
+      "ClassName": "SyncedQuestionId",
+      "Summary": "Defines the SyncedQuestionId Class.",
       "BaseClass": "OpenXmlLeafTextElement",
       "IsLeafText": true,
       "Version": "Microsoft365"

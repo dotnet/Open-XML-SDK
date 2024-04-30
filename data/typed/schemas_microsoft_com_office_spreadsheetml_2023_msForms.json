@@ -13,6 +13,6 @@
   },
   {
     "Name": "x:ST_Xstring/xlmsforms:syncedQuestionId",
-    "ClassName": "Xstring"
+    "ClassName": "SyncedQuestionId"
   }
 ]

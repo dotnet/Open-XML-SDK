@@ -2,7 +2,6 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 // Ignore Spelling: xlsx
-
 #pragma warning disable SA1310 // Field names should not contain underscore
 
 namespace DocumentFormat.OpenXml.Tests

@@ -34,7 +34,6 @@ namespace DocumentFormat.OpenXml.Framework.Tests.Particles
                 TableColumn tc = tblprt.Table.TableColumns.GetFirstChild<TableColumn>();
                 Assert.NotNull(tc);
 
-                // Question q1 = tc.ExtensionList.GetChildExtension<Question>();
 #pragma warning disable CS0618 // Type or member is obsolete
                 Extension e = tc.ExtensionList.GetFirstChild<Extension>();
 
@@ -158,7 +157,6 @@ namespace DocumentFormat.OpenXml.Framework.Tests.Particles
                         new Question() { Id = "r8a22544ad01d478e898ac5748745f765" })
                     { Uri = "{FCC71383-01E1-4257-9335-427F07BE8D7F}" });
 
-                // TODO when xsd is updated: Add a TableStyleInfo, ExtensionList, Extension and xlmsforms:syncedQuestionId with the r8a22544ad01d478e898ac5748745f765 id value.
                 tc.AddChild(teList);
 
 #pragma warning disable CS0618 // Type or member is obsolete
@@ -206,7 +204,6 @@ namespace DocumentFormat.OpenXml.Framework.Tests.Particles
                         new Question() { Id = "r8a22544ad01d478e898ac5748745f765" })
                     { Uri = "{FCC71383-01E1-4257-9335-427F07BE8D7F}" });
 
-                // TODO when xsd is updated: Add a TableStyleInfo, ExtensionList, Extension and xlmsforms:syncedQuestionId with the r8a22544ad01d478e898ac5748745f765 id value.
                 tc.TableColumnExtensionList = teList;
 
 #pragma warning disable CS0618 // Type or member is obsolete

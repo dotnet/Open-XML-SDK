@@ -114,7 +114,7 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms.ExtensionList" /> <c>&lt;xlmsforms:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms.Xstring" /> <c>&lt;xlmsforms:syncedQuestionId></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms.SyncedQuestionId" /> <c>&lt;xlmsforms:syncedQuestionId></c></description></item>
     /// </list>
     /// </remark>
     public partial class MsForm : OpenXmlCompositeElement
@@ -196,7 +196,7 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms
             builder.SetSchema("xlmsforms:msForm");
             builder.Availability = FileFormatVersions.Microsoft365;
             builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms.Xstring>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms.SyncedQuestionId>();
             builder.AddElement<MsForm>()
                 .AddAttribute("id", a => a.Id, aBuilder =>
                 {
@@ -207,7 +207,7 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms
                 .AddAttribute("latestEventMarker", a => a.LatestEventMarker);
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms.Xstring), 0, 0, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms.SyncedQuestionId), 0, 0, version: FileFormatVersions.Microsoft365),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms.ExtensionList), 0, 1, version: FileFormatVersions.Microsoft365)
             };
         }
@@ -217,24 +217,24 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms
     }
 
     /// <summary>
-    /// <para>Defines the Xstring Class.</para>
+    /// <para>Defines the SyncedQuestionId Class.</para>
     /// <para>This class is available in Microsoft365 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlmsforms:syncedQuestionId.</para>
     /// </summary>
-    public partial class Xstring : OpenXmlLeafTextElement
+    public partial class SyncedQuestionId : OpenXmlLeafTextElement
     {
         /// <summary>
-        /// Initializes a new instance of the Xstring class.
+        /// Initializes a new instance of the SyncedQuestionId class.
         /// </summary>
-        public Xstring() : base()
+        public SyncedQuestionId() : base()
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the Xstring class with the specified text content.
+        /// Initializes a new instance of the SyncedQuestionId class with the specified text content.
         /// </summary>
         /// <param name="text">Specifies the text content of the element.</param>
-        public Xstring(string text) : base(text)
+        public SyncedQuestionId(string text) : base(text)
         {
         }
 
@@ -251,7 +251,7 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms
         }
 
         /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<Xstring>(deep);
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<SyncedQuestionId>(deep);
     }
 
     /// <summary>
