@@ -14,7 +14,6 @@ using DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021;
 using DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo;
 using DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.ExternalCodeService;
 using DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms;
-using DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag;
 using DocumentFormat.OpenXml.Office2010.Excel;
 using DocumentFormat.OpenXml.Office2013.Excel;
 using DocumentFormat.OpenXml.Office2013.ExcelAc;
@@ -20025,7 +20024,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Border" /> <c>&lt;x:border></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Alignment" /> <c>&lt;x:alignment></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Protection" /> <c>&lt;x:protection></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DxfExtensionList" /> <c>&lt;x:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Fill" /> <c>&lt;x:fill></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Font" /> <c>&lt;x:font></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.NumberingFormat" /> <c>&lt;x:numFmt></c></description></item>
@@ -20075,8 +20073,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Fill), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Alignment), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Border), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Protection), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DxfExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Protection), 0, 1)
             };
         }
 
@@ -20095,7 +20092,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Border" /> <c>&lt;x:border></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Alignment" /> <c>&lt;x:alignment></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Protection" /> <c>&lt;x:protection></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DxfExtensionList" /> <c>&lt;x:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Fill" /> <c>&lt;x:fill></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Font" /> <c>&lt;x:font></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.NumberingFormat" /> <c>&lt;x:numFmt></c></description></item>
@@ -20145,8 +20141,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Fill), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Alignment), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Border), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Protection), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DxfExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Protection), 0, 1)
             };
         }
 
@@ -20165,7 +20160,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Border" /> <c>&lt;x:border></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Alignment" /> <c>&lt;x:alignment></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Protection" /> <c>&lt;x:protection></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DxfExtensionList" /> <c>&lt;x:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Fill" /> <c>&lt;x:fill></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Font" /> <c>&lt;x:font></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.NumberingFormat" /> <c>&lt;x:numFmt></c></description></item>
@@ -20208,15 +20202,16 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:dxf");
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DxfExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DxfExtensionList), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Font), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.NumberingFormat), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Fill), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Alignment), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Border), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Protection), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DxfExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Protection), 0, 1)
             };
         }
 
@@ -20235,7 +20230,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Border" /> <c>&lt;x:border></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Alignment" /> <c>&lt;x:alignment></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Protection" /> <c>&lt;x:protection></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DxfExtensionList" /> <c>&lt;x:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Fill" /> <c>&lt;x:fill></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Font" /> <c>&lt;x:font></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.NumberingFormat" /> <c>&lt;x:numFmt></c></description></item>
@@ -20280,7 +20274,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Border>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Alignment>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Protection>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DxfExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Fill>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Font>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.NumberingFormat>();
@@ -20361,19 +20354,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         public DocumentFormat.OpenXml.Spreadsheet.Protection? Protection
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Protection>();
-            set => SetElement(value);
-        }
-
-        /// <summary>
-        /// <para>Future Extensibility.</para>
-        /// <para>Represents the following element tag in the schema: x:extLst.</para>
-        /// </summary>
-        /// <remark>
-        /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.DxfExtensionList? DxfExtensionList
-        {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.DxfExtensionList>();
             set => SetElement(value);
         }
     }
@@ -42540,82 +42520,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     }
 
     /// <summary>
-    /// <para>Defines the DxfExtension Class.</para>
-    /// <para>This class is available in Office 2007 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is x:ext.</para>
-    /// </summary>
-    /// <remark>
-    /// <para>The following table lists the possible child types:</para>
-    /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.DXFComplement" /> <c>&lt;xfpb:DXFComplement></c></description></item>
-    /// </list>
-    /// </remark>
-    public partial class DxfExtension : OpenXmlCompositeElement
-    {
-        /// <summary>
-        /// Initializes a new instance of the DxfExtension class.
-        /// </summary>
-        public DxfExtension() : base()
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the DxfExtension class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public DxfExtension(IEnumerable<OpenXmlElement> childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the DxfExtension class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public DxfExtension(params OpenXmlElement[] childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the DxfExtension class from outer XML.
-        /// </summary>
-        /// <param name="outerXml">Specifies the outer XML of the element.</param>
-        public DxfExtension(string outerXml) : base(outerXml)
-        {
-        }
-
-        /// <summary>
-        /// <para>URI</para>
-        /// <para>Represents the following attribute in the schema: uri</para>
-        /// </summary>
-        public StringValue? Uri
-        {
-            get => GetAttribute<StringValue>();
-            set => SetAttribute(value);
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.SetSchema("x:ext");
-            builder.AddChild<DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.DXFComplement>();
-            builder.AddElement<DxfExtension>()
-                .AddAttribute("uri", a => a.Uri, aBuilder =>
-                {
-                    aBuilder.AddValidator(RequiredValidator.Instance);
-                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-                });
-            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
-            {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.DXFComplement), 1, 1, version: FileFormatVersions.Microsoft365),
-                new AnyParticle(0, 1)
-            };
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<DxfExtension>(deep);
-    }
-
-    /// <summary>
     /// <para>Defines the Location Class.</para>
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:location.</para>
@@ -45109,65 +45013,6 @@ namespace DocumentFormat.OpenXml.Spreadsheet
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<SheetDataSet>(deep);
-    }
-
-    /// <summary>
-    /// <para>Future Extensibility.</para>
-    /// <para>This class is available in Office 2007 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is x:extLst.</para>
-    /// </summary>
-    /// <remark>
-    /// <para>The following table lists the possible child types:</para>
-    /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DxfExtension" /> <c>&lt;x:ext></c></description></item>
-    /// </list>
-    /// </remark>
-    public partial class DxfExtensionList : OpenXmlCompositeElement
-    {
-        /// <summary>
-        /// Initializes a new instance of the DxfExtensionList class.
-        /// </summary>
-        public DxfExtensionList() : base()
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the DxfExtensionList class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public DxfExtensionList(IEnumerable<OpenXmlElement> childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the DxfExtensionList class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public DxfExtensionList(params OpenXmlElement[] childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the DxfExtensionList class from outer XML.
-        /// </summary>
-        /// <param name="outerXml">Specifies the outer XML of the element.</param>
-        public DxfExtensionList(string outerXml) : base(outerXml)
-        {
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.SetSchema("x:extLst");
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DxfExtension>();
-            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
-            {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DxfExtension), 0, 0)
-            };
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<DxfExtensionList>(deep);
     }
 
     /// <summary>

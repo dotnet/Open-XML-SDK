@@ -3232,11 +3232,6 @@
           "Name": "x:CT_CellProtection/x:protection",
           "PropertyName": "Protection",
           "PropertyComments": " Contains protection properties associated with this dxf. "
-        },
-        {
-          "Name": "x:CT_DxfExtensionList/x:extLst",
-          "PropertyName": "DxfExtensionList",
-          "PropertyComments": "Future Extensibility"
         }
       ],
       "Particle": {
@@ -3284,14 +3279,6 @@
           },
           {
             "Name": "x:CT_CellProtection/x:protection",
-            "Occurs": [
-              {
-                "Max": 1
-              }
-            ]
-          },
-          {
-            "Name": "x:CT_DxfExtensionList/x:extLst",
             "Occurs": [
               {
                 "Max": 1

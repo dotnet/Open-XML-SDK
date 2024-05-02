@@ -58,9 +58,31 @@ internal static class ParticleWriterExtensions
             {
                 var list = writer.TrackDelimiter(newLineCount: 1);
 
-                if (containingType.Name.ToString() == "x:CT_TableColumn/x:tableColumn")
+                // ExtensionList mechanism shims
+                switch (containingType.Name.ToString())
                 {
-                    writer.WriteLine("new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.TableColumnExtensionList), 0, 1),");
+                    case "x:CT_TableColumn/x:tableColumn":
+                        writer.WriteLine("new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.TableColumnExtensionList), 0, 1),");
+                        break;
+
+                    case "x:CT_Dxf/x:dxf":
+                        writer.WriteLine("new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DxfExtensionList), 0, 1),");
+                        break;
+
+                    case "x:CT_Dxf/x14:dxf":
+                        writer.WriteLine("new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.DxfExtensionList), 0, 1),");
+                        break;
+
+                    case "x:CT_Dxf/xr:dxf":
+                        writer.WriteLine("new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Excel.DxfExtensionList), 0, 1),");
+                        break;
+
+                    case "x:CT_Dxf/xnsv:dxf":
+                        writer.WriteLine("new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.DxfExtensionList), 0, 1),");
+                        break;
+
+                    default:
+                        break;
                 }
 
                 foreach (var item in p.Items)

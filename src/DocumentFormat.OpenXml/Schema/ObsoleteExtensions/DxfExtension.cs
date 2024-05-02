@@ -9,7 +9,7 @@ using System.Collections.Generic;
 namespace DocumentFormat.OpenXml.Spreadsheet
 {
     /// <summary>
-    /// <para>Defines the TableColumnExtension Class.</para>
+    /// <para>Defines the DxfExtension Class.</para>
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x:ext.</para>
     /// </summary>
@@ -19,39 +19,39 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms.Question" /> <c>&lt;xlmsforms:question></c></description></item>
     /// </list>
     /// </remark>
-    public partial class TableColumnExtension : Extension
+    public partial class DxfExtension : Extension
     {
         /// <summary>
-        /// Initializes a new instance of the TableColumnExtension class.
+        /// Initializes a new instance of the DxfExtension class.
         /// </summary>
-        public TableColumnExtension()
+        public DxfExtension()
             : base()
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the TableColumnExtension class with the specified child elements.
+        /// Initializes a new instance of the DxfExtension class with the specified child elements.
         /// </summary>
         /// <param name="childElements">Specifies the child elements.</param>
-        public TableColumnExtension(IEnumerable<OpenXmlElement> childElements)
+        public DxfExtension(IEnumerable<OpenXmlElement> childElements)
             : base(childElements)
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the TableColumnExtension class with the specified child elements.
+        /// Initializes a new instance of the DxfExtension class with the specified child elements.
         /// </summary>
         /// <param name="childElements">Specifies the child elements.</param>
-        public TableColumnExtension(params OpenXmlElement[] childElements)
+        public DxfExtension(params OpenXmlElement[] childElements)
             : base(childElements)
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the TableColumnExtension class from outer XML.
+        /// Initializes a new instance of the DxfExtension class from outer XML.
         /// </summary>
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
-        public TableColumnExtension(string outerXml)
+        public DxfExtension(string outerXml)
             : base(outerXml)
         {
         }
@@ -70,8 +70,8 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         {
             base.ConfigureMetadata(builder);
             builder.SetSchema("x:ext");
-            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms.Question>();
-            builder.AddElement<TableColumnExtension>()
+            builder.AddChild<DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.DXFComplement>();
+            builder.AddElement<DxfExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
                 {
                     aBuilder.AddValidator(RequiredValidator.Instance);
@@ -79,12 +79,12 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 });
             builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms.Question), 1, 1, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.DXFComplement), 1, 1, version: FileFormatVersions.Microsoft365),
                 new AnyParticle(0, 1),
             };
         }
 
         /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<TableColumnExtension>(deep);
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<DxfExtension>(deep);
     }
 }

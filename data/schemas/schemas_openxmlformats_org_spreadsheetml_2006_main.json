@@ -11145,11 +11145,6 @@
           "Name": "x:CT_CellProtection/x:protection",
           "PropertyName": "Protection",
           "PropertyComments": " Contains protection properties associated with this dxf. "
-        },
-        {
-          "Name": "x:CT_DxfExtensionList/x:extLst",
-          "PropertyName": "DxfExtensionList",
-          "PropertyComments": "Future Extensibility"
         }
       ],
       "Particle": {
@@ -11197,14 +11192,6 @@
           },
           {
             "Name": "x:CT_CellProtection/x:protection",
-            "Occurs": [
-              {
-                "Max": 1
-              }
-            ]
-          },
-          {
-            "Name": "x:CT_DxfExtensionList/x:extLst",
             "Occurs": [
               {
                 "Max": 1
@@ -11251,11 +11238,6 @@
           "Name": "x:CT_CellProtection/x:protection",
           "PropertyName": "Protection",
           "PropertyComments": " Contains protection properties associated with this dxf. "
-        },
-        {
-          "Name": "x:CT_DxfExtensionList/x:extLst",
-          "PropertyName": "DxfExtensionList",
-          "PropertyComments": "Future Extensibility"
         }
       ],
       "Particle": {
@@ -11303,14 +11285,6 @@
           },
           {
             "Name": "x:CT_CellProtection/x:protection",
-            "Occurs": [
-              {
-                "Max": 1
-              }
-            ]
-          },
-          {
-            "Name": "x:CT_DxfExtensionList/x:extLst",
             "Occurs": [
               {
                 "Max": 1
@@ -11357,11 +11331,6 @@
           "Name": "x:CT_CellProtection/x:protection",
           "PropertyName": "Protection",
           "PropertyComments": " Contains protection properties associated with this dxf. "
-        },
-        {
-          "Name": "x:CT_DxfExtensionList/x:extLst",
-          "PropertyName": "DxfExtensionList",
-          "PropertyComments": "Future Extensibility"
         }
       ],
       "Particle": {
@@ -11414,14 +11383,6 @@
                 "Max": 1
               }
             ]
-          },
-          {
-            "Name": "x:CT_DxfExtensionList/x:extLst",
-            "Occurs": [
-              {
-                "Max": 1
-              }
-            ]
           }
         ]
       }
@@ -11437,7 +11398,6 @@
         "x:CT_Border/x:border",
         "x:CT_CellAlignment/x:alignment",
         "x:CT_CellProtection/x:protection",
-        "x:CT_DxfExtensionList/x:extLst",
         "x:CT_Fill/x:fill",
         "x:CT_Font/x:font",
         "x:CT_NumFmt/x:numFmt"
@@ -11472,11 +11432,6 @@
           "Name": "x:CT_CellProtection/x:protection",
           "PropertyName": "Protection",
           "PropertyComments": " Contains protection properties associated with this dxf. "
-        },
-        {
-          "Name": "x:CT_DxfExtensionList/x:extLst",
-          "PropertyName": "DxfExtensionList",
-          "PropertyComments": "Future Extensibility"
         }
       ]
     },
@@ -23064,58 +23019,6 @@
       }
     },
     {
-      "Name": "x:CT_DxfExtension/x:ext",
-      "ClassName": "DxfExtension",
-      "Summary": "Defines the DxfExtension Class.",
-      "BaseClass": "OpenXmlCompositeElement",
-      "Attributes": [
-        {
-          "QName": ":uri",
-          "Type": "StringValue",
-          "PropertyComments": "URI",
-          "Validators": [
-            {
-              "Name": "RequiredValidator"
-            },
-            {
-              "Arguments": [
-                {
-                  "Type": "Boolean",
-                  "Name": "IsToken",
-                  "Value": "True"
-                }
-              ],
-              "Name": "StringValidator",
-              "IsInitialVersion": true
-            }
-          ]
-        }
-      ],
-      "Children": [
-        {
-          "Name": "xfpb:CT_DXFComplement/xfpb:DXFComplement",
-          "PropertyName": "DXFComplement"
-        }
-      ],
-      "Particle": {
-        "Kind": "Choice",
-        "Items": [
-          {
-            "Name": "xfpb:CT_DXFComplement/xfpb:DXFComplement",
-            "InitialVersion": "Microsoft365"
-          },
-          {
-            "Kind": "Any",
-            "Occurs": [
-              {
-                "Max": 1
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
       "Name": "x:CT_Location/x:location",
       "ClassName": "Location",
       "Summary": "Defines the Location Class.",
@@ -24341,28 +24244,6 @@
               {
                 "Min": 1
               }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "Name": "x:CT_DxfExtensionList/x:extLst",
-      "ClassName": "DxfExtensionList",
-      "Summary": "Future Extensibility.",
-      "BaseClass": "OpenXmlCompositeElement",
-      "Children": [
-        {
-          "Name": "x:CT_DxfExtension/x:ext"
-        }
-      ],
-      "Particle": {
-        "Kind": "Sequence",
-        "Items": [
-          {
-            "Name": "x:CT_DxfExtension/x:ext",
-            "Occurs": [
-              {}
             ]
           }
         ]

@@ -557,10 +557,6 @@
     "ClassName": "DataFieldExtension"
   },
   {
-    "Name": "x:CT_DxfExtension/x:ext",
-    "ClassName": "DxfExtension"
-  },
-  {
     "Name": "x:CT_Extension/x:ext",
     "ClassName": "Extension"
   },
@@ -656,10 +652,6 @@
   {
     "Name": "x:CT_DataFieldExtensionList/x:extLst",
     "ClassName": "DataFieldExtensionList"
-  },
-  {
-    "Name": "x:CT_DxfExtensionList/x:extLst",
-    "ClassName": "DxfExtensionList"
   },
   {
     "Name": "x:CT_ExtensionList/x:extLst",

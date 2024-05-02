@@ -209,9 +209,31 @@ public static class DataModelWriterExtensions
                 }
             }
 
-            if (containingType.Name.ToString() == "x:CT_TableColumn/x:tableColumn")
+            // ExtensionList mechanism shims
+            switch (containingType.Name.ToString())
             {
-                writer.WriteLine("builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.TableColumnExtensionList>();");
+                case "x:CT_TableColumn/x:tableColumn":
+                    writer.WriteLine("builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.TableColumnExtensionList>();");
+                    break;
+
+                case "x:CT_Dxf/x:dxf":
+                    writer.WriteLine("builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DxfExtensionList>();");
+                    break;
+
+                case "x:CT_Dxf/x14:dxf":
+                    writer.WriteLine("builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.DxfExtensionList>();");
+                    break;
+
+                case "x:CT_Dxf/xr:dxf":
+                    writer.WriteLine("builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.DxfExtensionList>();");
+                    break;
+                    
+                case "x:CT_Dxf/xnsv:dxf":
+                    writer.WriteLine("builder.AddChild<DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.DxfExtensionList>();");
+                    break;
+
+                default:
+                    break;
             }
 
             if (attributes.Any())

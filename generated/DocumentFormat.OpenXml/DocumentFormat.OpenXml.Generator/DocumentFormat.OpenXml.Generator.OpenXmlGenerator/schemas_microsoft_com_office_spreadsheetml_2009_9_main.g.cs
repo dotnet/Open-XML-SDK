@@ -6013,7 +6013,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Border" /> <c>&lt;x:border></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Alignment" /> <c>&lt;x:alignment></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Protection" /> <c>&lt;x:protection></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DxfExtensionList" /> <c>&lt;x:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Fill" /> <c>&lt;x:fill></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Font" /> <c>&lt;x:font></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.NumberingFormat" /> <c>&lt;x:numFmt></c></description></item>
@@ -6060,19 +6059,19 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Border>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Alignment>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Protection>();
-            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.DxfExtensionList>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Fill>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Font>();
             builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.NumberingFormat>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Excel.DxfExtensionList>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Excel.DxfExtensionList), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Font), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.NumberingFormat), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Fill), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Alignment), 0, 1),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Border), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Protection), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.DxfExtensionList), 0, 1)
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Protection), 0, 1)
             };
         }
 
@@ -6151,19 +6150,6 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         public DocumentFormat.OpenXml.Spreadsheet.Protection? Protection
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Protection>();
-            set => SetElement(value);
-        }
-
-        /// <summary>
-        /// <para>Future Extensibility.</para>
-        /// <para>Represents the following element tag in the schema: x:extLst.</para>
-        /// </summary>
-        /// <remark>
-        /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
-        public DocumentFormat.OpenXml.Spreadsheet.DxfExtensionList? DxfExtensionList
-        {
-            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.DxfExtensionList>();
             set => SetElement(value);
         }
 

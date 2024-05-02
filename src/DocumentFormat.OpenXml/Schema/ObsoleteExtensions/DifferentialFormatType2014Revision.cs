@@ -2,17 +2,12 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Framework;
+using DocumentFormat.OpenXml.Spreadsheet;
 using System;
 
-namespace DocumentFormat.OpenXml.Spreadsheet
+namespace DocumentFormat.OpenXml.Office2016.Excel
 {
-    /// <remark>
-    /// <para>The following table lists the possible child types:</para>
-    /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.TableColumnExtensionList" /> <c>&lt;x:extLst></c></description></item>
-    /// </list>
-    /// </remark>
-    public partial class TableColumn : OpenXmlCompositeElement
+    public partial class DifferentialFormatType : OpenXmlCompositeElement
     {
         /// <summary>
         /// <para>Gets or sets the legacy ExtensionList property.</para>
@@ -22,23 +17,23 @@ namespace DocumentFormat.OpenXml.Spreadsheet
         /// <remark>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
-        [ObsoleteAttribute("This property is obsolete and will be removed in a future version. Use the TableColumnExtension property instead.", false)]
+        [ObsoleteAttribute("This property is obsolete and will be removed in a future version. Use the DxfExtensionList property instead.", false)]
         public ExtensionList? ExtensionList
         {
-            get => TableColumnExtensionList;
+            get => DxfExtensionList;
             set
             {
                 string outerXml = value is null ? throw new ArgumentNullException(nameof(value)) : value.OuterXml;
-                TableColumnExtensionList = new TableColumnExtensionList(outerXml);
+                DxfExtensionList = new DxfExtensionList(outerXml);
             }
         }
 
         /// <summary>Gets or sets the table column extension list.</summary>
         /// <value>The table column extension list.</value>
-        public TableColumnExtensionList? TableColumnExtensionList
+        public DxfExtensionList? DxfExtensionList
         {
-            get => GetElement<TableColumnExtensionList>();
-            set => SetElement((TableColumnExtensionList?)value);
+            get => GetElement<DxfExtensionList>();
+            set => SetElement((DxfExtensionList?)value);
         }
 
         /// <summary>
@@ -59,7 +54,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 return false;
             }
 
-            TableColumnExtensionList tce = new TableColumnExtensionList(newChild);
+            DxfExtensionList tce = new DxfExtensionList(newChild);
             var wasAdded = Metadata.Particle.Set(this, tce, tce.GetType());
 
             if (throwOnError && !wasAdded)
