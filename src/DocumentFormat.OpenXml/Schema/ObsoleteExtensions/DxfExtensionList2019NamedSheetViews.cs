@@ -19,7 +19,7 @@ namespace DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DxfExtension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
     /// </remark>
-    public partial class DxfExtensionList : ExtensionList
+    public partial class DxfExtensionList : Spreadsheet.ExtensionList
     {
         /// <summary>
         /// Initializes a new instance of the DxfExtensionList class.

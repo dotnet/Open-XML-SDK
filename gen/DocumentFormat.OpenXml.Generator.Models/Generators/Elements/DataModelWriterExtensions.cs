@@ -227,7 +227,7 @@ public static class DataModelWriterExtensions
                 case "x:CT_Dxf/xr:dxf":
                     writer.WriteLine("builder.AddChild<DocumentFormat.OpenXml.Office2016.Excel.DxfExtensionList>();");
                     break;
-                    
+
                 case "x:CT_Dxf/xnsv:dxf":
                     writer.WriteLine("builder.AddChild<DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.DxfExtensionList>();");
                     break;

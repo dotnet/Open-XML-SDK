@@ -2,7 +2,6 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Framework;
-using DocumentFormat.OpenXml.Spreadsheet;
 using System;
 
 namespace DocumentFormat.OpenXml.Office2016.Excel
@@ -18,7 +17,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
         [ObsoleteAttribute("This property is obsolete and will be removed in a future version. Use the DxfExtensionList property instead.", false)]
-        public ExtensionList? ExtensionList
+        public Spreadsheet.ExtensionList? ExtensionList
         {
             get => DxfExtensionList;
             set

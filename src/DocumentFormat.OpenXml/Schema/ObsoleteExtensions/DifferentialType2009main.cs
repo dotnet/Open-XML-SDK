@@ -18,7 +18,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
         /// </remark>
         [ObsoleteAttribute("This property is obsolete and will be removed in a future version. Use the DxfExtensionList property instead.", false)]
-        public ExtensionList? ExtensionList
+        public Spreadsheet.ExtensionList? ExtensionList
         {
             get => DxfExtensionList;
             set

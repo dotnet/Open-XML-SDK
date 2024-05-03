@@ -9,6 +9,7 @@
     <EmbeddedResource Include="assets\**\*" />
   </ItemGroup>
   <ItemGroup>
+    <None Remove="assets\TestFiles\tableWithCheckboxesNew.xlsx" />
     <None Remove="assets\TestFiles\testquestionelement.xlsx" />
     <None Remove="assets\TestFiles\testquestionelement_set.xlsx" />
   </ItemGroup>
