@@ -25476,15 +25476,15 @@
     "Element": "DocumentFormat.OpenXml.Office2010.Excel.DifferentialType",
     "Children": [
       {
+        "Name": "extLst",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2009/9/main"
+      },
+      {
         "Name": "alignment",
         "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
       },
       {
         "Name": "border",
-        "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
-      },
-      {
-        "Name": "extLst",
         "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
       },
       {
@@ -25592,6 +25592,19 @@
       {
         "Name": "off",
         "Namespace": "http://schemas.openxmlformats.org/drawingml/2006/main"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2010.Excel.DxfExtensionList",
+    "Children": [
+      {
+        "Name": "ext",
+        "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
+      },
+      {
+        "Name": "ext",
+        "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
       }
     ]
   },
@@ -35366,15 +35379,15 @@
     "Element": "DocumentFormat.OpenXml.Office2016.Excel.DifferentialFormatType",
     "Children": [
       {
+        "Name": "extLst",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2014/revision"
+      },
+      {
         "Name": "alignment",
         "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
       },
       {
         "Name": "border",
-        "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
-      },
-      {
-        "Name": "extLst",
         "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
       },
       {
@@ -35391,6 +35404,19 @@
       },
       {
         "Name": "protection",
+        "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2016.Excel.DxfExtensionList",
+    "Children": [
+      {
+        "Name": "ext",
+        "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
+      },
+      {
+        "Name": "ext",
         "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
       }
     ]
@@ -37793,15 +37819,15 @@
     "Element": "DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.DifferentialFormatType",
     "Children": [
       {
+        "Name": "extLst",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2019/namedsheetviews"
+      },
+      {
         "Name": "alignment",
         "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
       },
       {
         "Name": "border",
-        "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
-      },
-      {
-        "Name": "extLst",
         "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
       },
       {
@@ -37818,6 +37844,19 @@
       },
       {
         "Name": "protection",
+        "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office2021.Excel.NamedSheetViews.DxfExtensionList",
+    "Children": [
+      {
+        "Name": "ext",
+        "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
+      },
+      {
+        "Name": "ext",
         "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
       }
     ]
@@ -43314,6 +43353,10 @@
       {
         "Name": "ext",
         "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
+      },
+      {
+        "Name": "ext",
+        "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
       }
     ]
   },
@@ -44410,10 +44453,6 @@
         "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
       },
       {
-        "Name": "extLst",
-        "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
-      },
-      {
         "Name": "fill",
         "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
       },
@@ -44512,10 +44551,6 @@
       },
       {
         "Name": "border",
-        "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
-      },
-      {
-        "Name": "extLst",
         "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
       },
       {
