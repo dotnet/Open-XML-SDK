@@ -8,7 +8,7 @@ assignees: ''
 ---
 
 **Describe the API or scenario**
-A clear and concise description of what the scenario you'd like documented.
+A clear and concise description of the scenario you'd like documented
 
 **Attempts**
 Please include any attempts you have made to figure this out.
