@@ -156,6 +156,22 @@
     "Namespace": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo"
   },
   {
+    "Prefix": "xxdsv",
+    "Namespace": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.DataSourceVersioning"
+  },
+  {
+    "Prefix": "xlecs",
+    "Namespace": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.ExternalCodeService"
+  },
+  {
+    "Prefix": "xlmsforms",
+    "Namespace": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms"
+  },
+  {
+    "Prefix": "xlpcalc",
+    "Namespace": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.Pivot2023Calculation"
+  },
+  {
     "Prefix": "wne",
     "Namespace": "DocumentFormat.OpenXml.Office.Word"
   },

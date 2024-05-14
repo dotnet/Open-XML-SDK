@@ -1,0 +1,75 @@
+{
+  "TargetNamespace": "http://schemas.microsoft.com/office/spreadsheetml/2023/pivot2023Calculation",
+  "Types": [
+    {
+      "Name": "xlpcalc:CT_AggregationInfo/xlpcalc:aggregationInfo",
+      "ClassName": "AggregationInfo",
+      "Summary": "Defines the AggregationInfo Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Microsoft365",
+      "Attributes": [
+        {
+          "QName": ":aggregationType",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.Pivot2023Calculation.AggregationType\u003E",
+          "Version": "Microsoft365",
+          "PropertyComments": "aggregationType",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":sourceField",
+          "Type": "UInt32Value",
+          "Version": "Microsoft365",
+          "PropertyComments": "sourceField",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "xlpcalc:CT_FeatureSupport/xlpcalc:featureSupportInfo",
+      "ClassName": "FeatureSupport",
+      "Summary": "Defines the FeatureSupport Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Version": "Microsoft365",
+      "Attributes": [
+        {
+          "QName": ":featureName",
+          "Type": "StringValue",
+          "Version": "Microsoft365",
+          "PropertyComments": "featureName",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "Enums": [
+    {
+      "Type": "xlpcalc:ST_AggregationType",
+      "Name": "AggregationType",
+      "Facets": [
+        {
+          "Version": "Microsoft365",
+          "Value": "distinctCount"
+        },
+        {
+          "Version": "Microsoft365",
+          "Value": "median"
+        }
+      ],
+      "Version": "Microsoft365"
+    }
+  ]
+}

@@ -1560,13 +1560,13 @@ namespace DocumentFormat.OpenXml.Linq
         public static readonly XName autoScale = "autoScale";
 
         /// <summary>
-        /// Represents the autoShow XML attribute.
+        /// Represents the autoShow XML attributes.
         /// </summary>
         /// <remarks>
         /// <para>As an XML attribute, it:</para>
         /// <list type="bullet">
-        /// <item><description>is contained in the following XML elements: <see cref="X.pivotField" />.</description></item>
-        /// <item><description>corresponds to the following strongly-typed properties: PivotField.AutoShow.</description></item>
+        /// <item><description>is contained in the following XML elements: <see cref="X.pivotField" />, <see cref="XLECS.externalCodeService" />.</description></item>
+        /// <item><description>corresponds to the following strongly-typed properties: ExternalCodeService.AutoShow, PivotField.AutoShow.</description></item>
         /// </list>
         /// </remarks>
         public static readonly XName autoShow = "autoShow";
@@ -9653,8 +9653,8 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML attribute, it:</para>
         /// <list type="bullet">
-        /// <item><description>is contained in the following XML elements: <see cref="A.cNvPr" />, <see cref="A.dgm" />, <see cref="A.fld" />, <see cref="A14.cNvPr" />, <see cref="A15.signatureLine" />, <see cref="A16.creationId" />, <see cref="CDR.cNvPr" />, <see cref="CDR14.cNvPr" />, <see cref="CLBL.label" />, <see cref="CS.chartStyle" />, <see cref="CS.colorStyle" />, <see cref="CX.axis" />, <see cref="CX.data" />, <see cref="DGM14.cNvPr" />, <see cref="DSP.cNvPr" />, <see cref="EMMA.endpoint" />, <see cref="EMMA.endpoint_info" />, <see cref="EMMA.grammar" />, <see cref="EMMA.group" />, <see cref="EMMA.info" />, <see cref="EMMA.interpretation" />, <see cref="EMMA.model" />, <see cref="EMMA.one_of" />, <see cref="EMMA.sequence" />, <see cref="MSINK.context" />, <see cref="MSO.box" />, <see cref="MSO.button" />, <see cref="MSO.buttonGroup" />, <see cref="MSO.checkBox" />, <see cref="MSO.comboBox" />, <see cref="MSO.control" />, <see cref="MSO.dropDown" />, <see cref="MSO.dynamicMenu" />, <see cref="MSO.editBox" />, <see cref="MSO.gallery" />, <see cref="MSO.group" />, <see cref="MSO.item" />, <see cref="MSO.labelControl" />, <see cref="MSO.menu" />, <see cref="MSO.menuSeparator" />, <see cref="MSO.separator" />, <see cref="MSO.splitButton" />, <see cref="MSO.tab" />, <see cref="MSO.toggleButton" />, <see cref="MSO14.box" />, <see cref="MSO14.button" />, <see cref="MSO14.buttonGroup" />, <see cref="MSO14.category" />, <see cref="MSO14.checkBox" />, <see cref="MSO14.comboBox" />, <see cref="MSO14.control" />, <see cref="MSO14.dropDown" />, <see cref="MSO14.dynamicMenu" />, <see cref="MSO14.editBox" />, <see cref="MSO14.gallery" />, <see cref="MSO14.group" />, <see cref="MSO14.groupBox" />, <see cref="MSO14.hyperlink" />, <see cref="MSO14.imageControl" />, <see cref="MSO14.item" />, <see cref="MSO14.labelControl" />, <see cref="MSO14.layoutContainer" />, <see cref="MSO14.menu" />, <see cref="MSO14.menuGroup" />, <see cref="MSO14.menuSeparator" />, <see cref="MSO14.radioGroup" />, <see cref="MSO14.separator" />, <see cref="MSO14.splitButton" />, <see cref="MSO14.tab" />, <see cref="MSO14.task" />, <see cref="MSO14.taskFormGroup" />, <see cref="MSO14.taskGroup" />, <see cref="MSO14.toggleButton" />, <see cref="O.r" />, <see cref="O.signatureline" />, <see cref="O.skew" />, <see cref="OAC.cNvPr" />, <see cref="OAC.cxnSpMk" />, <see cref="OAC.graphicFrameMk" />, <see cref="OAC.grpSpMk" />, <see cref="OAC.inkMk" />, <see cref="OAC.picMk" />, <see cref="OAC.spMk" />, <see cref="P.cmAuthor" />, <see cref="P.cNvPr" />, <see cref="P.cTn" />, <see cref="P.custShow" />, <see cref="P.sldId" />, <see cref="P.sldLayoutId" />, <see cref="P.sldMasterId" />, <see cref="P14.cNvPr" />, <see cref="P14.section" />, <see cref="P14.sldId" />, <see cref="P15.guide" />, <see cref="P188.author" />, <see cref="P188.cm" />, <see cref="P188.reply" />, <see cref="P1912.comment" />, <see cref="P1912.@event" />, <see cref="P1912.taskHistoryDetails" />, <see cref="P1912.undo" />, <see cref="P228.comment" />, <see cref="P228.@event" />, <see cref="P228.undo" />, <see cref="PIC.cNvPr" />, <see cref="PVML.textdata" />, <see cref="T.Comment" />, <see cref="T.Event" />, <see cref="T.Task" />, <see cref="T.Undo" />, <see cref="THM15.themeFamily" />, <see cref="V.arc" />, <see cref="V.background" />, <see cref="V.curve" />, <see cref="V.fill" />, <see cref="V.group" />, <see cref="V.image" />, <see cref="V.imagedata" />, <see cref="V.line" />, <see cref="V.oval" />, <see cref="V.path" />, <see cref="V.polyline" />, <see cref="V.rect" />, <see cref="V.roundrect" />, <see cref="V.shadow" />, <see cref="V.shape" />, <see cref="V.shapetype" />, <see cref="V.stroke" />, <see cref="V.textbox" />, <see cref="V.textpath" />, <see cref="W14.cNvPr" />, <see cref="WE.binding" />, <see cref="WE.reference" />, <see cref="WE.webextension" />, <see cref="WP.docPr" />, <see cref="WPG.cNvPr" />, <see cref="WPS.cNvPr" />, <see cref="WPS.linkedTxbx" />, <see cref="WPS.txbx" />, <see cref="X.brk" />, <see cref="X.connection" />, <see cref="X.filter" />, <see cref="X.group" />, <see cref="X.queryTableField" />, <see cref="X.singleXmlCell" />, <see cref="X.table" />, <see cref="X.tableColumn" />, <see cref="X.userInfo" />, <see cref="X.webPublishItem" />, <see cref="X.webPublishObject" />, <see cref="X.xmlCellPr" />, <see cref="X14.cfRule" />, <see cref="X14.conditionalFormat" />, <see cref="X14.datastoreItem" />, <see cref="X15.connection" />, <see cref="X15.modelTable" />, <see cref="XDR.cNvPr" />, <see cref="XDR14.cNvPr" />, <see cref="XLTC.person" />, <see cref="XLTC.threadedComment" />, <see cref="XNSV.columnFilter" />, <see cref="XNSV.namedSheetView" />, <see cref="XNSV.sortRule" />.</description></item>
-        /// <item><description>corresponds to the following strongly-typed properties: Arc.Id, Author.Id, Axis.Id, Background.Id, BackstageCheckBox.Id, BackstageComboBox.Id, BackstageDropDown.Id, BackstageEditBox.Id, BackstageFastCommandButton.Id, BackstageGroup.Id, BackstageGroupButton.Id, BackstageLabelControl.Id, BackstageMenuButton.Id, BackstageMenuCheckBox.Id, BackstageMenuGroup.Id, BackstageMenuToggleButton.Id, BackstagePrimaryMenu.Id, BackstageRegularButton.Id, BackstageSubMenu.Id, BackstageTab.Id, Box.Id, Break.Id, Button.Id, ButtonGroup.Id, ButtonRegular.Id, ChartStyle.Id, CheckBox.Id, ClassificationLabel.Id, ColorStyle.Id, ColumnFilter.Id, ComboBox.Id, Comment.Id, CommentAnchor.Id, CommentAuthor.Id, CommentReply.Id, CommonTimeNode.Id, ConditionalFormat.Id, ConditionalFormattingRule.Id, Connection.Id, ConnectorMoniker.Id, ContextNode.Id, ControlCloneQat.Id, CreationId.Id, Curve.Id, CustomShow.Id, CustomShowReference.Id, Data.Id, DatastoreItem.Id, Diagram.Id, DocProperties.Id, DropDown.Id, DropDownRegular.Id, DynamicMenu.Id, DynamicMenuRegular.Id, EditBox.Id, EndPoint.Id, EndPointInfo.Id, ExtendedGuide.Id, Field.Id, Fill.Id, Gallery.Id, GalleryRegular.Id, Grammar.Id, GraphicFrameMoniker.Id, Group.Id, GroupBox.Id, GroupShapeMoniker.Id, Hyperlink.Id, ImageControl.Id, ImageData.Id, ImageFile.Id, Info.Id, InkMoniker.Id, Interpretation.Id, Item.Id, LabelControl.Id, LayoutContainer.Id, Line.Id, LinkedTextBox.Id, Menu.Id, MenuRegular.Id, MenuSeparator.Id, MenuSeparatorNoTitle.Id, MenuWithTitle.Id, Model.Id, ModelTable.Id, NamedSheetView.Id, NonVisualDrawingProperties.Id, NonVisualDrawingProps.Id, OneOf.Id, Oval.Id, Path.Id, Person.Id, PictureMoniker.Id, PivotFilter.Id, PolyLine.Id, QueryTableField.Id, QuickAccessToolbarControlClone.Id, RadioGroup.Id, Rectangle.Id, RoundRectangle.Id, Rule.Id, Section.Id, SectionOld.Id, SectionSlideIdListEntry.Id, Separator.Id, Sequence.Id, Shadow.Id, Shape.Id, ShapeMoniker.Id, Shapetype.Id, SignatureLine.Id, SingleXmlCell.Id, Skew.Id, SlideId.Id, SlideLayoutId.Id, SlideMasterId.Id, SortRule.Id, SplitButton.Id, SplitButtonRegular.Id, SplitButtonWithTitle.Id, Stroke.Id, Tab.Id, Table.Id, TableColumn.Id, Task.Id, TaskFormGroup.Id, TaskFormGroupCategory.Id, TaskFormGroupTask.Id, TaskGroup.Id, TaskGroupCategory.Id, TaskGroupTask.Id, TaskHistoryDetails.Id, TaskHistoryEvent.Id, TaskUndo.Id, TextBox.Id, TextBoxInfo2.Id, TextData.Id, TextLabel.Id, TextPath.Id, ThemeFamily.Id, ThreadedComment.Id, ToggleButton.Id, ToggleButtonRegular.Id, UnsizedButton.Id, UnsizedDynamicMenu.Id, UnsizedGallery.Id, UnsizedMenu.Id, UnsizedSplitButton.Id, UnsizedToggleButton.Id, UserInfo.Id, VerticalSeparator.Id, VisibleButton.Id, VisibleToggleButton.Id, WebExtension.Id, WebExtensionBinding.Id, WebExtensionStoreReference.Id, WebPublishItem.Id, WebPublishObject.Id, XmlCellProperties.Id.</description></item>
+        /// <item><description>is contained in the following XML elements: <see cref="A.cNvPr" />, <see cref="A.dgm" />, <see cref="A.fld" />, <see cref="A14.cNvPr" />, <see cref="A15.signatureLine" />, <see cref="A16.creationId" />, <see cref="CDR.cNvPr" />, <see cref="CDR14.cNvPr" />, <see cref="CLBL.label" />, <see cref="CS.chartStyle" />, <see cref="CS.colorStyle" />, <see cref="CX.axis" />, <see cref="CX.data" />, <see cref="DGM14.cNvPr" />, <see cref="DSP.cNvPr" />, <see cref="EMMA.endpoint" />, <see cref="EMMA.endpoint_info" />, <see cref="EMMA.grammar" />, <see cref="EMMA.group" />, <see cref="EMMA.info" />, <see cref="EMMA.interpretation" />, <see cref="EMMA.model" />, <see cref="EMMA.one_of" />, <see cref="EMMA.sequence" />, <see cref="MSINK.context" />, <see cref="MSO.box" />, <see cref="MSO.button" />, <see cref="MSO.buttonGroup" />, <see cref="MSO.checkBox" />, <see cref="MSO.comboBox" />, <see cref="MSO.control" />, <see cref="MSO.dropDown" />, <see cref="MSO.dynamicMenu" />, <see cref="MSO.editBox" />, <see cref="MSO.gallery" />, <see cref="MSO.group" />, <see cref="MSO.item" />, <see cref="MSO.labelControl" />, <see cref="MSO.menu" />, <see cref="MSO.menuSeparator" />, <see cref="MSO.separator" />, <see cref="MSO.splitButton" />, <see cref="MSO.tab" />, <see cref="MSO.toggleButton" />, <see cref="MSO14.box" />, <see cref="MSO14.button" />, <see cref="MSO14.buttonGroup" />, <see cref="MSO14.category" />, <see cref="MSO14.checkBox" />, <see cref="MSO14.comboBox" />, <see cref="MSO14.control" />, <see cref="MSO14.dropDown" />, <see cref="MSO14.dynamicMenu" />, <see cref="MSO14.editBox" />, <see cref="MSO14.gallery" />, <see cref="MSO14.group" />, <see cref="MSO14.groupBox" />, <see cref="MSO14.hyperlink" />, <see cref="MSO14.imageControl" />, <see cref="MSO14.item" />, <see cref="MSO14.labelControl" />, <see cref="MSO14.layoutContainer" />, <see cref="MSO14.menu" />, <see cref="MSO14.menuGroup" />, <see cref="MSO14.menuSeparator" />, <see cref="MSO14.radioGroup" />, <see cref="MSO14.separator" />, <see cref="MSO14.splitButton" />, <see cref="MSO14.tab" />, <see cref="MSO14.task" />, <see cref="MSO14.taskFormGroup" />, <see cref="MSO14.taskGroup" />, <see cref="MSO14.toggleButton" />, <see cref="O.r" />, <see cref="O.signatureline" />, <see cref="O.skew" />, <see cref="OAC.cNvPr" />, <see cref="OAC.cxnSpMk" />, <see cref="OAC.graphicFrameMk" />, <see cref="OAC.grpSpMk" />, <see cref="OAC.inkMk" />, <see cref="OAC.picMk" />, <see cref="OAC.spMk" />, <see cref="P.cmAuthor" />, <see cref="P.cNvPr" />, <see cref="P.cTn" />, <see cref="P.custShow" />, <see cref="P.sldId" />, <see cref="P.sldLayoutId" />, <see cref="P.sldMasterId" />, <see cref="P14.cNvPr" />, <see cref="P14.section" />, <see cref="P14.sldId" />, <see cref="P15.guide" />, <see cref="P188.author" />, <see cref="P188.cm" />, <see cref="P188.reply" />, <see cref="P1912.comment" />, <see cref="P1912.@event" />, <see cref="P1912.taskHistoryDetails" />, <see cref="P1912.undo" />, <see cref="P228.comment" />, <see cref="P228.@event" />, <see cref="P228.undo" />, <see cref="PIC.cNvPr" />, <see cref="PVML.textdata" />, <see cref="T.Comment" />, <see cref="T.Event" />, <see cref="T.Task" />, <see cref="T.Undo" />, <see cref="THM15.themeFamily" />, <see cref="V.arc" />, <see cref="V.background" />, <see cref="V.curve" />, <see cref="V.fill" />, <see cref="V.group" />, <see cref="V.image" />, <see cref="V.imagedata" />, <see cref="V.line" />, <see cref="V.oval" />, <see cref="V.path" />, <see cref="V.polyline" />, <see cref="V.rect" />, <see cref="V.roundrect" />, <see cref="V.shadow" />, <see cref="V.shape" />, <see cref="V.shapetype" />, <see cref="V.stroke" />, <see cref="V.textbox" />, <see cref="V.textpath" />, <see cref="W14.cNvPr" />, <see cref="WE.binding" />, <see cref="WE.reference" />, <see cref="WE.webextension" />, <see cref="WP.docPr" />, <see cref="WPG.cNvPr" />, <see cref="WPS.cNvPr" />, <see cref="WPS.linkedTxbx" />, <see cref="WPS.txbx" />, <see cref="X.brk" />, <see cref="X.connection" />, <see cref="X.filter" />, <see cref="X.group" />, <see cref="X.queryTableField" />, <see cref="X.singleXmlCell" />, <see cref="X.table" />, <see cref="X.tableColumn" />, <see cref="X.userInfo" />, <see cref="X.webPublishItem" />, <see cref="X.webPublishObject" />, <see cref="X.xmlCellPr" />, <see cref="X14.cfRule" />, <see cref="X14.conditionalFormat" />, <see cref="X14.datastoreItem" />, <see cref="X15.connection" />, <see cref="X15.modelTable" />, <see cref="XDR.cNvPr" />, <see cref="XDR14.cNvPr" />, <see cref="XLMSFORMS.msForm" />, <see cref="XLTC.person" />, <see cref="XLTC.threadedComment" />, <see cref="XNSV.columnFilter" />, <see cref="XNSV.namedSheetView" />, <see cref="XNSV.sortRule" />.</description></item>
+        /// <item><description>corresponds to the following strongly-typed properties: Arc.Id, Author.Id, Axis.Id, Background.Id, BackstageCheckBox.Id, BackstageComboBox.Id, BackstageDropDown.Id, BackstageEditBox.Id, BackstageFastCommandButton.Id, BackstageGroup.Id, BackstageGroupButton.Id, BackstageLabelControl.Id, BackstageMenuButton.Id, BackstageMenuCheckBox.Id, BackstageMenuGroup.Id, BackstageMenuToggleButton.Id, BackstagePrimaryMenu.Id, BackstageRegularButton.Id, BackstageSubMenu.Id, BackstageTab.Id, Box.Id, Break.Id, Button.Id, ButtonGroup.Id, ButtonRegular.Id, ChartStyle.Id, CheckBox.Id, ClassificationLabel.Id, ColorStyle.Id, ColumnFilter.Id, ComboBox.Id, Comment.Id, CommentAnchor.Id, CommentAuthor.Id, CommentReply.Id, CommonTimeNode.Id, ConditionalFormat.Id, ConditionalFormattingRule.Id, Connection.Id, ConnectorMoniker.Id, ContextNode.Id, ControlCloneQat.Id, CreationId.Id, Curve.Id, CustomShow.Id, CustomShowReference.Id, Data.Id, DatastoreItem.Id, Diagram.Id, DocProperties.Id, DropDown.Id, DropDownRegular.Id, DynamicMenu.Id, DynamicMenuRegular.Id, EditBox.Id, EndPoint.Id, EndPointInfo.Id, ExtendedGuide.Id, Field.Id, Fill.Id, Gallery.Id, GalleryRegular.Id, Grammar.Id, GraphicFrameMoniker.Id, Group.Id, GroupBox.Id, GroupShapeMoniker.Id, Hyperlink.Id, ImageControl.Id, ImageData.Id, ImageFile.Id, Info.Id, InkMoniker.Id, Interpretation.Id, Item.Id, LabelControl.Id, LayoutContainer.Id, Line.Id, LinkedTextBox.Id, Menu.Id, MenuRegular.Id, MenuSeparator.Id, MenuSeparatorNoTitle.Id, MenuWithTitle.Id, Model.Id, ModelTable.Id, MsForm.Id, NamedSheetView.Id, NonVisualDrawingProperties.Id, NonVisualDrawingProps.Id, OneOf.Id, Oval.Id, Path.Id, Person.Id, PictureMoniker.Id, PivotFilter.Id, PolyLine.Id, QueryTableField.Id, QuickAccessToolbarControlClone.Id, RadioGroup.Id, Rectangle.Id, RoundRectangle.Id, Rule.Id, Section.Id, SectionOld.Id, SectionSlideIdListEntry.Id, Separator.Id, Sequence.Id, Shadow.Id, Shape.Id, ShapeMoniker.Id, Shapetype.Id, SignatureLine.Id, SingleXmlCell.Id, Skew.Id, SlideId.Id, SlideLayoutId.Id, SlideMasterId.Id, SortRule.Id, SplitButton.Id, SplitButtonRegular.Id, SplitButtonWithTitle.Id, Stroke.Id, Tab.Id, Table.Id, TableColumn.Id, Task.Id, TaskFormGroup.Id, TaskFormGroupCategory.Id, TaskFormGroupTask.Id, TaskGroup.Id, TaskGroupCategory.Id, TaskGroupTask.Id, TaskHistoryDetails.Id, TaskHistoryEvent.Id, TaskUndo.Id, TextBox.Id, TextBoxInfo2.Id, TextData.Id, TextLabel.Id, TextPath.Id, ThemeFamily.Id, ThreadedComment.Id, ToggleButton.Id, ToggleButtonRegular.Id, UnsizedButton.Id, UnsizedDynamicMenu.Id, UnsizedGallery.Id, UnsizedMenu.Id, UnsizedSplitButton.Id, UnsizedToggleButton.Id, UserInfo.Id, VerticalSeparator.Id, VisibleButton.Id, VisibleToggleButton.Id, WebExtension.Id, WebExtensionBinding.Id, WebExtensionStoreReference.Id, WebPublishItem.Id, WebPublishObject.Id, XmlCellProperties.Id.</description></item>
         /// </list>
         /// </remarks>
         public static readonly XName id = "id";
@@ -10464,6 +10464,18 @@ namespace DocumentFormat.OpenXml.Linq
         public static readonly XName isDefinitive = "isDefinitive";
 
         /// <summary>
+        /// Represents the isFormConnected XML attribute.
+        /// </summary>
+        /// <remarks>
+        /// <para>As an XML attribute, it:</para>
+        /// <list type="bullet">
+        /// <item><description>is contained in the following XML elements: <see cref="XLMSFORMS.msForm" />.</description></item>
+        /// <item><description>corresponds to the following strongly-typed properties: MsForm.IsFormConnected.</description></item>
+        /// </list>
+        /// </remarks>
+        public static readonly XName isFormConnected = "isFormConnected";
+
+        /// <summary>
         /// Represents the isInverted XML attribute.
         /// </summary>
         /// <remarks>
@@ -10966,6 +10978,18 @@ namespace DocumentFormat.OpenXml.Linq
         /// </list>
         /// </remarks>
         public static readonly XName lat = "lat";
+
+        /// <summary>
+        /// Represents the latestEventMarker XML attribute.
+        /// </summary>
+        /// <remarks>
+        /// <para>As an XML attribute, it:</para>
+        /// <list type="bullet">
+        /// <item><description>is contained in the following XML elements: <see cref="XLMSFORMS.msForm" />.</description></item>
+        /// <item><description>corresponds to the following strongly-typed properties: MsForm.LatestEventMarker.</description></item>
+        /// </list>
+        /// </remarks>
+        public static readonly XName latestEventMarker = "latestEventMarker";
 
         /// <summary>
         /// Represents the latitude XML attributes.
@@ -12094,6 +12118,18 @@ namespace DocumentFormat.OpenXml.Linq
         /// </list>
         /// </remarks>
         public static readonly XName maxRank = "maxRank";
+
+        /// <summary>
+        /// Represents the maxResponseId XML attribute.
+        /// </summary>
+        /// <remarks>
+        /// <para>As an XML attribute, it:</para>
+        /// <list type="bullet">
+        /// <item><description>is contained in the following XML elements: <see cref="XLMSFORMS.msForm" />.</description></item>
+        /// <item><description>corresponds to the following strongly-typed properties: MsForm.MaxResponseId.</description></item>
+        /// </list>
+        /// </remarks>
+        public static readonly XName maxResponseId = "maxResponseId";
 
         /// <summary>
         /// Represents the maxRId XML attribute.
@@ -20854,6 +20890,18 @@ namespace DocumentFormat.OpenXml.Linq
         /// </list>
         /// </remarks>
         public static readonly XName timeOffset = "timeOffset";
+
+        /// <summary>
+        /// Represents the timeout XML attribute.
+        /// </summary>
+        /// <remarks>
+        /// <para>As an XML attribute, it:</para>
+        /// <list type="bullet">
+        /// <item><description>is contained in the following XML elements: <see cref="XLECS.externalCodeService" />.</description></item>
+        /// <item><description>corresponds to the following strongly-typed properties: ExternalCodeService.Timeout.</description></item>
+        /// </list>
+        /// </remarks>
+        public static readonly XName timeout = "timeout";
 
         /// <summary>
         /// Represents the timePeriod XML attribute.

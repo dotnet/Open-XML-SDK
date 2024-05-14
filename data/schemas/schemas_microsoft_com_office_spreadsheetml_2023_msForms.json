@@ -1,0 +1,159 @@
+{
+  "TargetNamespace": "http://schemas.microsoft.com/office/spreadsheetml/2023/msForms",
+  "Types": [
+    {
+      "Name": "xlmsforms:CT_Question/xlmsforms:question",
+      "ClassName": "Question",
+      "Summary": "Defines the Question Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Microsoft365",
+      "Attributes": [
+        {
+          "QName": ":id",
+          "Type": "StringValue",
+          "Version": "Microsoft365",
+          "PropertyComments": "id",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "x:CT_ExtensionList/xlmsforms:extLst",
+          "PropertyName": "ExtensionList"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x:CT_ExtensionList/xlmsforms:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Microsoft365"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "xlmsforms:CT_MsForm/xlmsforms:msForm",
+      "ClassName": "MsForm",
+      "Summary": "Defines the MsForm Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Microsoft365",
+      "Attributes": [
+        {
+          "QName": ":id",
+          "Type": "StringValue",
+          "Version": "Microsoft365",
+          "PropertyComments": "id",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            }
+          ]
+        },
+        {
+          "QName": ":isFormConnected",
+          "Type": "BooleanValue",
+          "Version": "Microsoft365",
+          "PropertyComments": "isFormConnected"
+        },
+        {
+          "QName": ":maxResponseId",
+          "Type": "Int32Value",
+          "Version": "Microsoft365",
+          "PropertyComments": "maxResponseId"
+        },
+        {
+          "QName": ":latestEventMarker",
+          "Type": "StringValue",
+          "Version": "Microsoft365",
+          "PropertyComments": "latestEventMarker"
+        }
+      ],
+      "Children": [
+        {
+          "Name": "x:ST_Xstring/xlmsforms:syncedQuestionId"
+        },
+        {
+          "Name": "x:CT_ExtensionList/xlmsforms:extLst"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x:ST_Xstring/xlmsforms:syncedQuestionId",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Microsoft365"
+          },
+          {
+            "Name": "x:CT_ExtensionList/xlmsforms:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Microsoft365"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "x:ST_Xstring/xlmsforms:syncedQuestionId",
+      "ClassName": "SyncedQuestionId",
+      "Summary": "Defines the SyncedQuestionId Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsLeafText": true,
+      "Version": "Microsoft365"
+    },
+    {
+      "Name": "x:CT_ExtensionList/xlmsforms:extLst",
+      "ClassName": "ExtensionList",
+      "Summary": "Defines the ExtensionList Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Microsoft365",
+      "Children": [
+        {
+          "Name": "x:CT_Extension/x:ext"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Group",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "Items": [
+              {
+                "Kind": "Sequence",
+                "Items": [
+                  {
+                    "Name": "x:CT_Extension/x:ext",
+                    "Occurs": [
+                      {}
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
