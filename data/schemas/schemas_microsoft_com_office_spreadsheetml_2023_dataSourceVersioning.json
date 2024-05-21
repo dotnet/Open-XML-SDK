@@ -1,0 +1,76 @@
+{
+  "TargetNamespace": "http://schemas.microsoft.com/office/spreadsheetml/2023/dataSourceVersioning",
+  "Types": [
+    {
+      "Name": "xxdsv:CT_VersionInfo/xxdsv:versionInfo",
+      "ClassName": "VersionInfo",
+      "Summary": "Defines the VersionInfo Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Microsoft365",
+      "Children": [
+        {
+          "Name": "xsd:string/xxdsv:requiredFeature"
+        },
+        {
+          "Name": "xsd:string/xxdsv:lastRefreshFeature"
+        },
+        {
+          "Name": "xsd:string/xxdsv:lastEditFeature"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "xsd:string/xxdsv:requiredFeature",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Microsoft365"
+          },
+          {
+            "Name": "xsd:string/xxdsv:lastRefreshFeature",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Microsoft365"
+          },
+          {
+            "Name": "xsd:string/xxdsv:lastEditFeature",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Microsoft365"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "xsd:string/xxdsv:requiredFeature",
+      "ClassName": "RequiredFeatureXsdstring",
+      "Summary": "Defines the RequiredFeatureXsdstring Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Version": "Microsoft365"
+    },
+    {
+      "Name": "xsd:string/xxdsv:lastRefreshFeature",
+      "ClassName": "LastRefreshFeatureXsdstring",
+      "Summary": "Defines the LastRefreshFeatureXsdstring Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Version": "Microsoft365"
+    },
+    {
+      "Name": "xsd:string/xxdsv:lastEditFeature",
+      "ClassName": "LastEditFeatureXsdstring",
+      "Summary": "Defines the LastEditFeatureXsdstring Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsDerived": true,
+      "IsLeafText": true,
+      "Version": "Microsoft365"
+    }
+  ]
+}

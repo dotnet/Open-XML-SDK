@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "x:CT_ExtensionList/xlmsforms:extLst",
+    "ClassName": "ExtensionList"
+  },
+  {
+    "Name": "xlmsforms:CT_MsForm/xlmsforms:msForm",
+    "ClassName": "MsForm"
+  },
+  {
+    "Name": "xlmsforms:CT_Question/xlmsforms:question",
+    "ClassName": "Question"
+  },
+  {
+    "Name": "x:ST_Xstring/xlmsforms:syncedQuestionId",
+    "ClassName": "SyncedQuestionId"
+  }
+]

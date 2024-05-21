@@ -33880,6 +33880,102 @@
   ]
  },
  {
+  "Key": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.DataSourceVersioning.VersionInfo",
+  "Value": [
+   {
+    "Key": "Microsoft365",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.DataSourceVersioning.RequiredFeatureXsdstring",
+       "MaxOccurs": 0,
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.DataSourceVersioning.LastRefreshFeatureXsdstring",
+       "MaxOccurs": 0,
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.DataSourceVersioning.LastEditFeatureXsdstring",
+       "MaxOccurs": 0,
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms.ExtensionList",
+  "Value": [
+   {
+    "Key": "Microsoft365",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ChildrenParticles": [
+        {
+         "ChildrenParticles": [
+          {
+           "ElementType": "DocumentFormat.OpenXml.Spreadsheet.Extension",
+           "MaxOccurs": 0,
+           "MinOccurs": 0
+          }
+         ],
+         "ParticleType": "Sequence"
+        }
+       ],
+       "MinOccurs": 0,
+       "ParticleType": "Group"
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms.MsForm",
+  "Value": [
+   {
+    "Key": "Microsoft365",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms.SyncedQuestionId",
+       "MaxOccurs": 0,
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms.ExtensionList",
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms.Question",
+  "Value": [
+   {
+    "Key": "Microsoft365",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms.ExtensionList",
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
   "Key": "DocumentFormat.OpenXml.Office.Word.AllocatedCommandManifest",
   "Value": [
    {
@@ -66604,7 +66700,7 @@
   "Key": "DocumentFormat.OpenXml.Spreadsheet.TableExtension",
   "Value": [
    {
-    "Key": "Office2010, Office2013, Office2016, Office2019, Office2021, Microsoft365",
+    "Key": "Office2010, Office2013, Office2016, Office2019, Office2021",
     "Value": {
      "ChildrenParticles": [
       {
@@ -66622,6 +66718,24 @@
     "Key": "Office2007",
     "Value": {
      "ChildrenParticles": [
+      {
+       "MinOccurs": 0,
+       "ParticleType": "Any"
+      }
+     ],
+     "ParticleType": "Choice"
+    }
+   },
+   {
+    "Key": "Microsoft365",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2010.Excel.Table"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms.MsForm"
+      },
       {
        "MinOccurs": 0,
        "ParticleType": "Any"
@@ -67256,7 +67370,7 @@
   "Key": "DocumentFormat.OpenXml.Spreadsheet.WorkbookExtension",
   "Value": [
    {
-    "Key": "Office2013, Office2016, Office2019, Office2021, Microsoft365",
+    "Key": "Office2013, Office2016, Office2019, Office2021",
     "Value": {
      "ChildrenParticles": [
       {
@@ -67327,6 +67441,54 @@
       },
       {
        "ElementType": "DocumentFormat.OpenXml.Office2010.Excel.WorkbookProperties"
+      },
+      {
+       "MinOccurs": 0,
+       "ParticleType": "Any"
+      }
+     ],
+     "ParticleType": "Choice"
+    }
+   },
+   {
+    "Key": "Microsoft365",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2010.Excel.DefinedNames"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2010.Excel.PivotCaches"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2010.Excel.SlicerCaches"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2013.Excel.SlicerCaches"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2010.Excel.WorkbookProperties"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2013.Excel.PivotCaches"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2013.Excel.PivotTableReferences"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2013.Excel.TimelineCachePivotCaches"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2013.Excel.TimelineCacheReferences"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2013.Excel.WorkbookProperties"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2013.Excel.DataModel"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.ExternalCodeService.ExternalCodeService"
       },
       {
        "MinOccurs": 0,

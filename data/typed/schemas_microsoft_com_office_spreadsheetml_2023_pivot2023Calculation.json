@@ -1,0 +1,10 @@
+[
+  {
+    "Name": "xlpcalc:CT_AggregationInfo/xlpcalc:aggregationInfo",
+    "ClassName": "AggregationInfo"
+  },
+  {
+    "Name": "xlpcalc:CT_FeatureSupport/xlpcalc:featureSupportInfo",
+    "ClassName": "FeatureSupport"
+  }
+]

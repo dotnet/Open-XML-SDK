@@ -22648,6 +22648,82 @@
     "Children": []
   },
   {
+    "Element": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.DataSourceVersioning.LastEditFeatureXsdstring",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.DataSourceVersioning.LastRefreshFeatureXsdstring",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.DataSourceVersioning.RequiredFeatureXsdstring",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.DataSourceVersioning.VersionInfo",
+    "Children": [
+      {
+        "Name": "lastEditFeature",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2023/dataSourceVersioning"
+      },
+      {
+        "Name": "lastRefreshFeature",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2023/dataSourceVersioning"
+      },
+      {
+        "Name": "requiredFeature",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2023/dataSourceVersioning"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.ExternalCodeService.ExternalCodeService",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms.ExtensionList",
+    "Children": [
+      {
+        "Name": "ext",
+        "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms.MsForm",
+    "Children": [
+      {
+        "Name": "extLst",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2023/msForms"
+      },
+      {
+        "Name": "syncedQuestionId",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2023/msForms"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms.Question",
+    "Children": [
+      {
+        "Name": "extLst",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2023/msForms"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms.SyncedQuestionId",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.Pivot2023Calculation.AggregationInfo",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.Pivot2023Calculation.FeatureSupport",
+    "Children": []
+  },
+  {
     "Element": "DocumentFormat.OpenXml.Office.Word.AllocatedCommand",
     "Children": []
   },
@@ -22987,6 +23063,10 @@
   },
   {
     "Element": "DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.BoolFeatureProperty",
+    "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.DXFComplement",
     "Children": []
   },
   {
@@ -46001,6 +46081,10 @@
       {
         "Name": "table",
         "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2009/9/main"
+      },
+      {
+        "Name": "msForm",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2023/msForms"
       }
     ]
   },
@@ -46455,6 +46539,10 @@
       {
         "Name": "workbookPr",
         "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2010/11/main"
+      },
+      {
+        "Name": "externalCodeService",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2023/externalCodeService"
       }
     ]
   },
