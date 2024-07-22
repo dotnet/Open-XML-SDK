@@ -54,7 +54,7 @@ namespace DocumentFormat.OpenXml.Framework.Tests
                 .Where(t => !t.IsAbstract && typeof(OpenXmlPartRootElement).IsAssignableFrom(t))
                 .ToList();
 
-            Assert.Equal(102, allTypedParts.Count);
+            Assert.Equal(103, allTypedParts.Count);
 
             // Act/Assert
             foreach (var rootType in allTypedParts)

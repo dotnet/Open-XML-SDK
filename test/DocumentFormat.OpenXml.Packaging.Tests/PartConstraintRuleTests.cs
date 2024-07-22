@@ -68,6 +68,8 @@ namespace DocumentFormat.OpenXml.Tests
         public void ValidatePart(Type partType)
         {
             var part = InitializePart(partType);
+
+            // If there are added parts, PartConstraintData.json needs to be updated with the new part's data and relationship.
             var expectedConstraints = GetConstraintData(part);
             var constraints = part.Features.GetRequired<IPartConstraintFeature>();
 
@@ -85,7 +87,8 @@ namespace DocumentFormat.OpenXml.Tests
             }
 
 #if DEBUG
-            _output.WriteObjectToTempFile("part constraints", constraints.Rules);
+            _output.WriteObjectToTempFile("expected constraints", expectedConstraints.Parts.OrderBy(p => p.RelationshipType));
+            _output.WriteObjectToTempFile("actual constraints", constraints.Rules.OrderBy(p => p.RelationshipType).Select(p => new PartConstraintRule2(p)));
 #endif
 
             Assert.Equal(
@@ -147,6 +150,7 @@ namespace DocumentFormat.OpenXml.Tests
         {
             var names = typeof(PartConstraintRuleTests).GetTypeInfo().Assembly.GetManifestResourceNames();
 
+            // If there are added parts, PartConstraintData.json needs to be updated with the new part's data and relationship.
             using (var stream = typeof(PartConstraintRuleTests).GetTypeInfo().Assembly.GetManifestResourceStream("DocumentFormat.OpenXml.Packaging.Tests.data.PartConstraintData.json"))
             using (var reader = new StreamReader(stream))
             {

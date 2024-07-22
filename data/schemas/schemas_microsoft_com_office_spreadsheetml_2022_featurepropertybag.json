@@ -5,6 +5,7 @@
       "Name": "xfpb:CT_FeaturePropertyBags/xfpb:FeaturePropertyBags",
       "ClassName": "FeaturePropertyBags",
       "Summary": "Defines the FeaturePropertyBags Class.",
+      "Part": "FeaturePropertyBagsPart",
       "BaseClass": "OpenXmlCompositeElement",
       "Version": "Microsoft365",
       "Attributes": [
@@ -56,6 +57,85 @@
       }
     },
     {
+      "Name": "xfpb:CT_FeaturePropertyBags/xfpb:fpbs",
+      "ClassName": "FpbsFeaturePropertyBags",
+      "Summary": "Defines the FpbsFeaturePropertyBags Class.",
+      "BaseClass": "OpenXmlFeaturePropertyBagsElement",
+      "IsDerived": true,
+      "Version": "Microsoft365",
+      "Children": [
+        {
+          "Name": "xfpb:CT_BagExtensions/xfpb:bagExt"
+        },
+        {
+          "Name": "xfpb:CT_FeaturePropertyBag/xfpb:bag"
+        },
+        {
+          "Name": "x:CT_ExtensionList/xfpb:extLst"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "xfpb:CT_BagExtensions/xfpb:bagExt",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Microsoft365"
+          },
+          {
+            "Name": "xfpb:CT_FeaturePropertyBag/xfpb:bag",
+            "Occurs": [
+              {}
+            ],
+            "InitialVersion": "Microsoft365"
+          },
+          {
+            "Name": "x:CT_ExtensionList/xfpb:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Microsoft365"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "xfpb:CT_FeaturePropertyBags/",
+      "ClassName": "OpenXmlFeaturePropertyBagsElement",
+      "Summary": "Defines the OpenXmlFeaturePropertyBagsElement Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "IsAbstract": true,
+      "Version": "Microsoft365",
+      "Attributes": [
+        {
+          "QName": ":count",
+          "Type": "UInt32Value",
+          "Version": "Microsoft365",
+          "PropertyComments": "count"
+        }
+      ],
+      "AdditionalElements": [
+        "x:CT_ExtensionList/xfpb:extLst",
+        "xfpb:CT_BagExtensions/xfpb:bagExt",
+        "xfpb:CT_FeaturePropertyBag/xfpb:bag"
+      ],
+      "Children": [
+        {
+          "Name": "xfpb:CT_BagExtensions/xfpb:bagExt"
+        },
+        {
+          "Name": "xfpb:CT_FeaturePropertyBag/xfpb:bag"
+        },
+        {
+          "Name": "x:CT_ExtensionList/xfpb:extLst"
+        }
+      ]
+    },
+    {
       "Name": "xfpb:CT_XfComplement/xfpb:xfComplement",
       "ClassName": "XfComplement",
       "Summary": "Defines the XfComplement Class.",
@@ -94,6 +174,398 @@
               "Name": "RequiredValidator"
             }
           ]
+        }
+      ]
+    },
+    {
+      "Name": "xfpb:CT_RevDxf/xfpb:revdxf",
+      "ClassName": "RevDxf",
+      "Summary": "Defines the RevDxf Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Microsoft365",
+      "Children": [
+        {
+          "Name": "xfpb:CT_FeaturePropertyBags/xfpb:fpbs",
+          "PropertyName": "FpbsFeaturePropertyBags"
+        },
+        {
+          "Name": "x:CT_Dxf/xfpb:dxf",
+          "PropertyName": "DifferentialFormatType"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "xfpb:CT_FeaturePropertyBags/xfpb:fpbs",
+            "InitialVersion": "Microsoft365"
+          },
+          {
+            "Name": "x:CT_Dxf/xfpb:dxf",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Microsoft365"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "xfpb:CT_TableRevDxf/xfpb:headerRowRevDxf",
+      "ClassName": "HeaderRowRevDxfTableRevDxf",
+      "Summary": "Defines the HeaderRowRevDxfTableRevDxf Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlTableRevDxfElement",
+      "IsDerived": true,
+      "Version": "Microsoft365",
+      "Children": [
+        {
+          "Name": "xfpb:CT_FeaturePropertyBags/xfpb:fpbs",
+          "PropertyName": "FpbsFeaturePropertyBags"
+        },
+        {
+          "Name": "x:CT_Dxf/xfpb:dxf",
+          "PropertyName": "DifferentialFormatType"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "xfpb:CT_FeaturePropertyBags/xfpb:fpbs",
+            "InitialVersion": "Microsoft365"
+          },
+          {
+            "Name": "x:CT_Dxf/xfpb:dxf",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Microsoft365"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "xfpb:CT_TableRevDxf/xfpb:dataRevDxf",
+      "ClassName": "DataRevDxfTableRevDxf",
+      "Summary": "Defines the DataRevDxfTableRevDxf Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlTableRevDxfElement",
+      "IsDerived": true,
+      "Version": "Microsoft365",
+      "Children": [
+        {
+          "Name": "xfpb:CT_FeaturePropertyBags/xfpb:fpbs",
+          "PropertyName": "FpbsFeaturePropertyBags"
+        },
+        {
+          "Name": "x:CT_Dxf/xfpb:dxf",
+          "PropertyName": "DifferentialFormatType"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "xfpb:CT_FeaturePropertyBags/xfpb:fpbs",
+            "InitialVersion": "Microsoft365"
+          },
+          {
+            "Name": "x:CT_Dxf/xfpb:dxf",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Microsoft365"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "xfpb:CT_TableRevDxf/xfpb:totalsRowRevDxf",
+      "ClassName": "TotalsRowRevDxfTableRevDxf",
+      "Summary": "Defines the TotalsRowRevDxfTableRevDxf Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlTableRevDxfElement",
+      "IsDerived": true,
+      "Version": "Microsoft365",
+      "Children": [
+        {
+          "Name": "xfpb:CT_FeaturePropertyBags/xfpb:fpbs",
+          "PropertyName": "FpbsFeaturePropertyBags"
+        },
+        {
+          "Name": "x:CT_Dxf/xfpb:dxf",
+          "PropertyName": "DifferentialFormatType"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "xfpb:CT_FeaturePropertyBags/xfpb:fpbs",
+            "InitialVersion": "Microsoft365"
+          },
+          {
+            "Name": "x:CT_Dxf/xfpb:dxf",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Microsoft365"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "xfpb:CT_TableRevDxf/xfpb:headerRowBorderRevDxf",
+      "ClassName": "HeaderRowBorderRevDxfTableRevDxf",
+      "Summary": "Defines the HeaderRowBorderRevDxfTableRevDxf Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlTableRevDxfElement",
+      "IsDerived": true,
+      "Version": "Microsoft365",
+      "Children": [
+        {
+          "Name": "xfpb:CT_FeaturePropertyBags/xfpb:fpbs",
+          "PropertyName": "FpbsFeaturePropertyBags"
+        },
+        {
+          "Name": "x:CT_Dxf/xfpb:dxf",
+          "PropertyName": "DifferentialFormatType"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "xfpb:CT_FeaturePropertyBags/xfpb:fpbs",
+            "InitialVersion": "Microsoft365"
+          },
+          {
+            "Name": "x:CT_Dxf/xfpb:dxf",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Microsoft365"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "xfpb:CT_TableRevDxf/xfpb:tableBorderRevDxf",
+      "ClassName": "TableBorderRevDxfTableRevDxf",
+      "Summary": "Defines the TableBorderRevDxfTableRevDxf Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlTableRevDxfElement",
+      "IsDerived": true,
+      "Version": "Microsoft365",
+      "Children": [
+        {
+          "Name": "xfpb:CT_FeaturePropertyBags/xfpb:fpbs",
+          "PropertyName": "FpbsFeaturePropertyBags"
+        },
+        {
+          "Name": "x:CT_Dxf/xfpb:dxf",
+          "PropertyName": "DifferentialFormatType"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "xfpb:CT_FeaturePropertyBags/xfpb:fpbs",
+            "InitialVersion": "Microsoft365"
+          },
+          {
+            "Name": "x:CT_Dxf/xfpb:dxf",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Microsoft365"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "xfpb:CT_TableRevDxf/xfpb:totalsRowBorderRevDxf",
+      "ClassName": "TotalsRowBorderRevDxfTableRevDxf",
+      "Summary": "Defines the TotalsRowBorderRevDxfTableRevDxf Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlTableRevDxfElement",
+      "IsDerived": true,
+      "Version": "Microsoft365",
+      "Children": [
+        {
+          "Name": "xfpb:CT_FeaturePropertyBags/xfpb:fpbs",
+          "PropertyName": "FpbsFeaturePropertyBags"
+        },
+        {
+          "Name": "x:CT_Dxf/xfpb:dxf",
+          "PropertyName": "DifferentialFormatType"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "xfpb:CT_FeaturePropertyBags/xfpb:fpbs",
+            "InitialVersion": "Microsoft365"
+          },
+          {
+            "Name": "x:CT_Dxf/xfpb:dxf",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Microsoft365"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "xfpb:CT_TableRevDxf/xfpb:columnHeaderRevDxf",
+      "ClassName": "ColumnHeaderRevDxfTableRevDxf",
+      "Summary": "Defines the ColumnHeaderRevDxfTableRevDxf Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlTableRevDxfElement",
+      "IsDerived": true,
+      "Version": "Microsoft365",
+      "Children": [
+        {
+          "Name": "xfpb:CT_FeaturePropertyBags/xfpb:fpbs",
+          "PropertyName": "FpbsFeaturePropertyBags"
+        },
+        {
+          "Name": "x:CT_Dxf/xfpb:dxf",
+          "PropertyName": "DifferentialFormatType"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "xfpb:CT_FeaturePropertyBags/xfpb:fpbs",
+            "InitialVersion": "Microsoft365"
+          },
+          {
+            "Name": "x:CT_Dxf/xfpb:dxf",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Microsoft365"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "xfpb:CT_TableRevDxf/xfpb:columnBodyRevDxf",
+      "ClassName": "ColumnBodyRevDxfTableRevDxf",
+      "Summary": "Defines the ColumnBodyRevDxfTableRevDxf Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlTableRevDxfElement",
+      "IsDerived": true,
+      "Version": "Microsoft365",
+      "Children": [
+        {
+          "Name": "xfpb:CT_FeaturePropertyBags/xfpb:fpbs",
+          "PropertyName": "FpbsFeaturePropertyBags"
+        },
+        {
+          "Name": "x:CT_Dxf/xfpb:dxf",
+          "PropertyName": "DifferentialFormatType"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "xfpb:CT_FeaturePropertyBags/xfpb:fpbs",
+            "InitialVersion": "Microsoft365"
+          },
+          {
+            "Name": "x:CT_Dxf/xfpb:dxf",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Microsoft365"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "xfpb:CT_TableRevDxf/xfpb:columnTotalsRevDxf",
+      "ClassName": "ColumnTotalsRevDxfTableRevDxf",
+      "Summary": "Defines the ColumnTotalsRevDxfTableRevDxf Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlTableRevDxfElement",
+      "IsDerived": true,
+      "Version": "Microsoft365",
+      "Children": [
+        {
+          "Name": "xfpb:CT_FeaturePropertyBags/xfpb:fpbs",
+          "PropertyName": "FpbsFeaturePropertyBags"
+        },
+        {
+          "Name": "x:CT_Dxf/xfpb:dxf",
+          "PropertyName": "DifferentialFormatType"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "xfpb:CT_FeaturePropertyBags/xfpb:fpbs",
+            "InitialVersion": "Microsoft365"
+          },
+          {
+            "Name": "x:CT_Dxf/xfpb:dxf",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Microsoft365"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "xfpb:CT_TableRevDxf/",
+      "ClassName": "OpenXmlTableRevDxfElement",
+      "Summary": "Defines the OpenXmlTableRevDxfElement Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "IsAbstract": true,
+      "Version": "Microsoft365",
+      "AdditionalElements": [
+        "x:CT_Dxf/xfpb:dxf",
+        "xfpb:CT_FeaturePropertyBags/xfpb:fpbs"
+      ],
+      "Children": [
+        {
+          "Name": "xfpb:CT_FeaturePropertyBags/xfpb:fpbs",
+          "PropertyName": "FpbsFeaturePropertyBags"
+        },
+        {
+          "Name": "x:CT_Dxf/xfpb:dxf",
+          "PropertyName": "DifferentialFormatType"
         }
       ]
     },
@@ -457,6 +929,112 @@
           ]
         }
       ]
+    },
+    {
+      "Name": "x:CT_Dxf/xfpb:dxf",
+      "ClassName": "DifferentialFormatType",
+      "Summary": "Defines the DifferentialFormatType Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Microsoft365",
+      "Children": [
+        {
+          "Name": "x:CT_Font/x:font",
+          "PropertyName": "Font",
+          "PropertyComments": "Font Properties"
+        },
+        {
+          "Name": "x:CT_NumFmt/x:numFmt",
+          "PropertyName": "NumberingFormat",
+          "PropertyComments": "Number Format"
+        },
+        {
+          "Name": "x:CT_Fill/x:fill",
+          "PropertyName": "Fill",
+          "PropertyComments": "Fill"
+        },
+        {
+          "Name": "x:CT_CellAlignment/x:alignment",
+          "PropertyName": "Alignment",
+          "PropertyComments": "Alignment"
+        },
+        {
+          "Name": "x:CT_Border/x:border",
+          "PropertyName": "Border",
+          "PropertyComments": "Border Properties"
+        },
+        {
+          "Name": "x:CT_CellProtection/x:protection",
+          "PropertyName": "Protection",
+          "PropertyComments": "Protection Properties"
+        },
+        {
+          "Name": "x:CT_ExtensionList/x:extLst",
+          "PropertyName": "ExtensionList",
+          "PropertyComments": "Future Feature Data Storage Area"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "x:CT_Font/x:font",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "x:CT_NumFmt/x:numFmt",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "x:CT_Fill/x:fill",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "x:CT_CellAlignment/x:alignment",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "x:CT_Border/x:border",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "x:CT_CellProtection/x:protection",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "x:CT_ExtensionList/x:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "Name": "xsd:unsignedInt/xfpb:bagId",

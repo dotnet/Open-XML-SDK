@@ -622,8 +622,18 @@
     "Version": "Microsoft365"
   },
   {
+    "Prefix": "xlpar",
+    "Uri": "http://schemas.microsoft.com/office/spreadsheetml/2024/pivotAutoRefresh",
+    "Version": "Microsoft365"
+  },
+  {
     "Prefix": "xlpcalc",
     "Uri": "http://schemas.microsoft.com/office/spreadsheetml/2023/pivot2023Calculation",
+    "Version": "Microsoft365"
+  },
+  {
+    "Prefix": "xlpda",
+    "Uri": "http://schemas.microsoft.com/office/spreadsheetml/2024/pivotDynamicArrays",
     "Version": "Microsoft365"
   },
   {

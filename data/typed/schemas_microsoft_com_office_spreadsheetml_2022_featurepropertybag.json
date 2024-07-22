@@ -1,5 +1,13 @@
 [
   {
+    "Name": "xfpb:CT_FeaturePropertyBags/",
+    "ClassName": "OpenXmlFeaturePropertyBagsElement"
+  },
+  {
+    "Name": "xfpb:CT_TableRevDxf/",
+    "ClassName": "OpenXmlTableRevDxfElement"
+  },
+  {
     "Name": "xfpb:CT_ArrayFeatureProperty/xfpb:a",
     "ClassName": "ArrayFeatureProperty"
   },
@@ -28,12 +36,32 @@
     "ClassName": "XsdunsignedInt"
   },
   {
+    "Name": "xfpb:CT_TableRevDxf/xfpb:columnBodyRevDxf",
+    "ClassName": "ColumnBodyRevDxfTableRevDxf"
+  },
+  {
+    "Name": "xfpb:CT_TableRevDxf/xfpb:columnHeaderRevDxf",
+    "ClassName": "ColumnHeaderRevDxfTableRevDxf"
+  },
+  {
+    "Name": "xfpb:CT_TableRevDxf/xfpb:columnTotalsRevDxf",
+    "ClassName": "ColumnTotalsRevDxfTableRevDxf"
+  },
+  {
     "Name": "xfpb:CT_DecimalFeatureProperty/xfpb:d",
     "ClassName": "DecimalFeatureProperty"
   },
   {
     "Name": "xsd:double/xfpb:d",
     "ClassName": "Xsddouble"
+  },
+  {
+    "Name": "xfpb:CT_TableRevDxf/xfpb:dataRevDxf",
+    "ClassName": "DataRevDxfTableRevDxf"
+  },
+  {
+    "Name": "x:CT_Dxf/xfpb:dxf",
+    "ClassName": "DifferentialFormatType"
   },
   {
     "Name": "xfpb:CT_DXFComplement/xfpb:DXFComplement",
@@ -45,7 +73,20 @@
   },
   {
     "Name": "xfpb:CT_FeaturePropertyBags/xfpb:FeaturePropertyBags",
-    "ClassName": "FeaturePropertyBags"
+    "ClassName": "FeaturePropertyBags",
+    "PartClassName": "FeaturePropertyBagsPart"
+  },
+  {
+    "Name": "xfpb:CT_FeaturePropertyBags/xfpb:fpbs",
+    "ClassName": "FpbsFeaturePropertyBags"
+  },
+  {
+    "Name": "xfpb:CT_TableRevDxf/xfpb:headerRowBorderRevDxf",
+    "ClassName": "HeaderRowBorderRevDxfTableRevDxf"
+  },
+  {
+    "Name": "xfpb:CT_TableRevDxf/xfpb:headerRowRevDxf",
+    "ClassName": "HeaderRowRevDxfTableRevDxf"
   },
   {
     "Name": "xfpb:CT_IntFeatureProperty/xfpb:i",
@@ -64,12 +105,28 @@
     "ClassName": "RelXsdstring"
   },
   {
+    "Name": "xfpb:CT_RevDxf/xfpb:revdxf",
+    "ClassName": "RevDxf"
+  },
+  {
     "Name": "xfpb:CT_StringFeatureProperty/xfpb:s",
     "ClassName": "StringFeatureProperty"
   },
   {
     "Name": "xsd:string/xfpb:s",
     "ClassName": "SXsdstring"
+  },
+  {
+    "Name": "xfpb:CT_TableRevDxf/xfpb:tableBorderRevDxf",
+    "ClassName": "TableBorderRevDxfTableRevDxf"
+  },
+  {
+    "Name": "xfpb:CT_TableRevDxf/xfpb:totalsRowBorderRevDxf",
+    "ClassName": "TotalsRowBorderRevDxfTableRevDxf"
+  },
+  {
+    "Name": "xfpb:CT_TableRevDxf/xfpb:totalsRowRevDxf",
+    "ClassName": "TotalsRowRevDxfTableRevDxf"
   },
   {
     "Name": "xfpb:CT_XfComplement/xfpb:xfComplement",

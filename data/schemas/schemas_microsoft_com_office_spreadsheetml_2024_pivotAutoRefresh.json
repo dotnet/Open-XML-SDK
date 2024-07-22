@@ -1,0 +1,20 @@
+{
+  "TargetNamespace": "http://schemas.microsoft.com/office/spreadsheetml/2024/pivotAutoRefresh",
+  "Types": [
+    {
+      "Name": "xsd:boolean/xlpar:autoRefresh",
+      "ClassName": "Xsdboolean",
+      "Summary": "Defines the Xsdboolean Class.",
+      "BaseClass": "OpenXmlLeafTextElement",
+      "IsLeafText": true,
+      "Version": "Microsoft365",
+      "Validators": [
+        {
+          "Name": "NumberValidator",
+          "Type": "xsd:boolean",
+          "IsInitialVersion": true
+        }
+      ]
+    }
+  ]
+}

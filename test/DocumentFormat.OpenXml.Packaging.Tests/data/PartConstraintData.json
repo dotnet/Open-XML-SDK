@@ -3970,6 +3970,13 @@
         "MinOccursIsNonZero": false,
         "MaxOccursGreatThanOne": false,
         "FileFormat": "Office2021"
+      },
+      {
+        "RelationshipType": "http://schemas.microsoft.com/office/2022/11/relationships/FeaturePropertyBag",
+        "ContentType": "application/vnd.ms-excel.featurepropertybag+xml",
+        "MinOccursIsNonZero": false,
+        "MaxOccursGreatThanOne": true,
+        "FileFormat": "Microsoft365"
       }
     ]
   },
@@ -4227,6 +4234,16 @@
     "TargetFileExtension": ".xml",
     "TargetName": "sig",
     "TargetPath": "_xmlsignatures",
+    "Parts": []
+  },
+  {
+    "Name": "DocumentFormat.OpenXml.Packaging.FeaturePropertyBagsPart",
+    "ContentType": "application/vnd.ms-excel.featurepropertybag+xml",
+    "IsContentTypeFixed": true,
+    "RelationshipType": "http://schemas.microsoft.com/office/2022/11/relationships/FeaturePropertyBag",
+    "TargetFileExtension": ".xml",
+    "TargetName": "featurePropertyBag",
+    "TargetPath": "featurePropertyBag",
     "Parts": []
   }
 ]

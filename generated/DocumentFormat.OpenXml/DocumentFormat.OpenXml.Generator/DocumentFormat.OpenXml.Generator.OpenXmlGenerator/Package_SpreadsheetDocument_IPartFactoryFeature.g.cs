@@ -53,6 +53,7 @@ partial class SpreadsheetDocument
             ExtendedChartPart.RelationshipTypeConstant => new ExtendedChartPart(),
             ExtendedFilePropertiesPart.RelationshipTypeConstant => new ExtendedFilePropertiesPart(),
             ExternalWorkbookPart.RelationshipTypeConstant => new ExternalWorkbookPart(),
+            FeaturePropertyBagsPart.RelationshipTypeConstant => new FeaturePropertyBagsPart(),
             ImagePart.RelationshipTypeConstant => new ImagePart(),
             InternationalMacroSheetPart.RelationshipTypeConstant => new InternationalMacroSheetPart(),
             LabelInfoPart.RelationshipTypeConstant => new LabelInfoPart(),

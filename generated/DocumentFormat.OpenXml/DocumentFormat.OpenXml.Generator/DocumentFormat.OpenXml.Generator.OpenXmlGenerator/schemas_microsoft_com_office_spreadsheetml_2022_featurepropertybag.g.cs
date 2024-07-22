@@ -30,7 +30,7 @@ namespace DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FeaturePropertyBag" /> <c>&lt;xfpb:bag></c></description></item>
     /// </list>
     /// </remark>
-    public partial class FeaturePropertyBags : OpenXmlCompositeElement
+    public partial class FeaturePropertyBags : OpenXmlPartRootElement
     {
         /// <summary>
         /// Initializes a new instance of the FeaturePropertyBags class.
@@ -93,6 +93,167 @@ namespace DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<FeaturePropertyBags>(deep);
+
+        internal FeaturePropertyBags(FeaturePropertyBagsPart ownerPart) : base(ownerPart)
+        {
+        }
+
+        /// <summary>
+        /// Loads the DOM from the FeaturePropertyBagsPart
+        /// </summary>
+        /// <param name="openXmlPart">Specifies the part to be loaded.</param>
+        public void Load(FeaturePropertyBagsPart openXmlPart)
+        {
+            LoadFromPart(openXmlPart);
+        }
+
+        /// <summary>
+        /// Saves the DOM into the FeaturePropertyBagsPart.
+        /// </summary>
+        /// <param name="openXmlPart">Specifies the part to save to.</param>
+        public void Save(FeaturePropertyBagsPart openXmlPart)
+        {
+            base.SaveToPart(openXmlPart);
+        }
+
+        /// <summary>
+        /// Gets the FeaturePropertyBagsPart associated with this element.
+        /// </summary>
+        public FeaturePropertyBagsPart? FeaturePropertyBagsPart
+        {
+            get => OpenXmlPart as FeaturePropertyBagsPart;
+            internal set => OpenXmlPart = value;
+        }
+    }
+
+    /// <summary>
+    /// <para>Defines the FpbsFeaturePropertyBags Class.</para>
+    /// <para>This class is available in Microsoft365 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is xfpb:fpbs.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.ExtensionList" /> <c>&lt;xfpb:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.BagExtensions" /> <c>&lt;xfpb:bagExt></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FeaturePropertyBag" /> <c>&lt;xfpb:bag></c></description></item>
+    /// </list>
+    /// </remark>
+    public partial class FpbsFeaturePropertyBags : OpenXmlFeaturePropertyBagsElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the FpbsFeaturePropertyBags class.
+        /// </summary>
+        public FpbsFeaturePropertyBags() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the FpbsFeaturePropertyBags class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public FpbsFeaturePropertyBags(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the FpbsFeaturePropertyBags class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public FpbsFeaturePropertyBags(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the FpbsFeaturePropertyBags class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public FpbsFeaturePropertyBags(string outerXml) : base(outerXml)
+        {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema("xfpb:fpbs");
+            builder.Availability = FileFormatVersions.Microsoft365;
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.BagExtensions), 0, 0, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FeaturePropertyBag), 0, 0, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.ExtensionList), 0, 1, version: FileFormatVersions.Microsoft365)
+            };
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<FpbsFeaturePropertyBags>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the OpenXmlFeaturePropertyBagsElement Class.</para>
+    /// <para>This class is available in Microsoft365 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.ExtensionList" /> <c>&lt;xfpb:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.BagExtensions" /> <c>&lt;xfpb:bagExt></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FeaturePropertyBag" /> <c>&lt;xfpb:bag></c></description></item>
+    /// </list>
+    /// </remark>
+    public abstract partial class OpenXmlFeaturePropertyBagsElement : OpenXmlCompositeElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the OpenXmlFeaturePropertyBagsElement class.
+        /// </summary>
+        protected OpenXmlFeaturePropertyBagsElement() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the OpenXmlFeaturePropertyBagsElement class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        protected OpenXmlFeaturePropertyBagsElement(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the OpenXmlFeaturePropertyBagsElement class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        protected OpenXmlFeaturePropertyBagsElement(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the OpenXmlFeaturePropertyBagsElement class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        protected OpenXmlFeaturePropertyBagsElement(string outerXml) : base(outerXml)
+        {
+        }
+
+        /// <summary>
+        /// <para>count, this property is only available in Microsoft365 and later.</para>
+        /// <para>Represents the following attribute in the schema: count</para>
+        /// </summary>
+        public UInt32Value? Count
+        {
+            get => GetAttribute<UInt32Value>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddChild<DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.BagExtensions>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FeaturePropertyBag>();
+            builder.AddElement<OpenXmlFeaturePropertyBagsElement>()
+                .AddAttribute("count", a => a.Count);
+        }
     }
 
     /// <summary>
@@ -173,6 +334,723 @@ namespace DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DXFComplement>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the RevDxf Class.</para>
+    /// <para>This class is available in Microsoft365 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is xfpb:revdxf.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.DifferentialFormatType" /> <c>&lt;xfpb:dxf></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FpbsFeaturePropertyBags" /> <c>&lt;xfpb:fpbs></c></description></item>
+    /// </list>
+    /// </remark>
+    public partial class RevDxf : OpenXmlCompositeElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the RevDxf class.
+        /// </summary>
+        public RevDxf() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the RevDxf class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public RevDxf(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the RevDxf class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public RevDxf(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the RevDxf class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public RevDxf(string outerXml) : base(outerXml)
+        {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema("xfpb:revdxf");
+            builder.Availability = FileFormatVersions.Microsoft365;
+            builder.AddChild<DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.DifferentialFormatType>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FpbsFeaturePropertyBags>();
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FpbsFeaturePropertyBags), 1, 1, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.DifferentialFormatType), 0, 1, version: FileFormatVersions.Microsoft365)
+            };
+        }
+
+        /// <summary>
+        /// <para>FpbsFeaturePropertyBags.</para>
+        /// <para>Represents the following element tag in the schema: xfpb:fpbs.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:xfpb = http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag
+        /// </remark>
+        public DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FpbsFeaturePropertyBags? FpbsFeaturePropertyBags
+        {
+            get => GetElement<DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FpbsFeaturePropertyBags>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>DifferentialFormatType.</para>
+        /// <para>Represents the following element tag in the schema: xfpb:dxf.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:xfpb = http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag
+        /// </remark>
+        public DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.DifferentialFormatType? DifferentialFormatType
+        {
+            get => GetElement<DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.DifferentialFormatType>();
+            set => SetElement(value);
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<RevDxf>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the HeaderRowRevDxfTableRevDxf Class.</para>
+    /// <para>This class is available in Microsoft365 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is xfpb:headerRowRevDxf.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.DifferentialFormatType" /> <c>&lt;xfpb:dxf></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FpbsFeaturePropertyBags" /> <c>&lt;xfpb:fpbs></c></description></item>
+    /// </list>
+    /// </remark>
+    public partial class HeaderRowRevDxfTableRevDxf : OpenXmlTableRevDxfElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the HeaderRowRevDxfTableRevDxf class.
+        /// </summary>
+        public HeaderRowRevDxfTableRevDxf() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the HeaderRowRevDxfTableRevDxf class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public HeaderRowRevDxfTableRevDxf(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the HeaderRowRevDxfTableRevDxf class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public HeaderRowRevDxfTableRevDxf(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the HeaderRowRevDxfTableRevDxf class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public HeaderRowRevDxfTableRevDxf(string outerXml) : base(outerXml)
+        {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema("xfpb:headerRowRevDxf");
+            builder.Availability = FileFormatVersions.Microsoft365;
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FpbsFeaturePropertyBags), 1, 1, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.DifferentialFormatType), 0, 1, version: FileFormatVersions.Microsoft365)
+            };
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<HeaderRowRevDxfTableRevDxf>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the DataRevDxfTableRevDxf Class.</para>
+    /// <para>This class is available in Microsoft365 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is xfpb:dataRevDxf.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.DifferentialFormatType" /> <c>&lt;xfpb:dxf></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FpbsFeaturePropertyBags" /> <c>&lt;xfpb:fpbs></c></description></item>
+    /// </list>
+    /// </remark>
+    public partial class DataRevDxfTableRevDxf : OpenXmlTableRevDxfElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the DataRevDxfTableRevDxf class.
+        /// </summary>
+        public DataRevDxfTableRevDxf() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the DataRevDxfTableRevDxf class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public DataRevDxfTableRevDxf(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the DataRevDxfTableRevDxf class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public DataRevDxfTableRevDxf(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the DataRevDxfTableRevDxf class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public DataRevDxfTableRevDxf(string outerXml) : base(outerXml)
+        {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema("xfpb:dataRevDxf");
+            builder.Availability = FileFormatVersions.Microsoft365;
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FpbsFeaturePropertyBags), 1, 1, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.DifferentialFormatType), 0, 1, version: FileFormatVersions.Microsoft365)
+            };
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<DataRevDxfTableRevDxf>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the TotalsRowRevDxfTableRevDxf Class.</para>
+    /// <para>This class is available in Microsoft365 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is xfpb:totalsRowRevDxf.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.DifferentialFormatType" /> <c>&lt;xfpb:dxf></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FpbsFeaturePropertyBags" /> <c>&lt;xfpb:fpbs></c></description></item>
+    /// </list>
+    /// </remark>
+    public partial class TotalsRowRevDxfTableRevDxf : OpenXmlTableRevDxfElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the TotalsRowRevDxfTableRevDxf class.
+        /// </summary>
+        public TotalsRowRevDxfTableRevDxf() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the TotalsRowRevDxfTableRevDxf class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public TotalsRowRevDxfTableRevDxf(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the TotalsRowRevDxfTableRevDxf class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public TotalsRowRevDxfTableRevDxf(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the TotalsRowRevDxfTableRevDxf class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public TotalsRowRevDxfTableRevDxf(string outerXml) : base(outerXml)
+        {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema("xfpb:totalsRowRevDxf");
+            builder.Availability = FileFormatVersions.Microsoft365;
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FpbsFeaturePropertyBags), 1, 1, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.DifferentialFormatType), 0, 1, version: FileFormatVersions.Microsoft365)
+            };
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<TotalsRowRevDxfTableRevDxf>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the HeaderRowBorderRevDxfTableRevDxf Class.</para>
+    /// <para>This class is available in Microsoft365 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is xfpb:headerRowBorderRevDxf.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.DifferentialFormatType" /> <c>&lt;xfpb:dxf></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FpbsFeaturePropertyBags" /> <c>&lt;xfpb:fpbs></c></description></item>
+    /// </list>
+    /// </remark>
+    public partial class HeaderRowBorderRevDxfTableRevDxf : OpenXmlTableRevDxfElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the HeaderRowBorderRevDxfTableRevDxf class.
+        /// </summary>
+        public HeaderRowBorderRevDxfTableRevDxf() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the HeaderRowBorderRevDxfTableRevDxf class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public HeaderRowBorderRevDxfTableRevDxf(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the HeaderRowBorderRevDxfTableRevDxf class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public HeaderRowBorderRevDxfTableRevDxf(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the HeaderRowBorderRevDxfTableRevDxf class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public HeaderRowBorderRevDxfTableRevDxf(string outerXml) : base(outerXml)
+        {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema("xfpb:headerRowBorderRevDxf");
+            builder.Availability = FileFormatVersions.Microsoft365;
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FpbsFeaturePropertyBags), 1, 1, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.DifferentialFormatType), 0, 1, version: FileFormatVersions.Microsoft365)
+            };
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<HeaderRowBorderRevDxfTableRevDxf>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the TableBorderRevDxfTableRevDxf Class.</para>
+    /// <para>This class is available in Microsoft365 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is xfpb:tableBorderRevDxf.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.DifferentialFormatType" /> <c>&lt;xfpb:dxf></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FpbsFeaturePropertyBags" /> <c>&lt;xfpb:fpbs></c></description></item>
+    /// </list>
+    /// </remark>
+    public partial class TableBorderRevDxfTableRevDxf : OpenXmlTableRevDxfElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the TableBorderRevDxfTableRevDxf class.
+        /// </summary>
+        public TableBorderRevDxfTableRevDxf() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the TableBorderRevDxfTableRevDxf class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public TableBorderRevDxfTableRevDxf(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the TableBorderRevDxfTableRevDxf class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public TableBorderRevDxfTableRevDxf(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the TableBorderRevDxfTableRevDxf class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public TableBorderRevDxfTableRevDxf(string outerXml) : base(outerXml)
+        {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema("xfpb:tableBorderRevDxf");
+            builder.Availability = FileFormatVersions.Microsoft365;
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FpbsFeaturePropertyBags), 1, 1, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.DifferentialFormatType), 0, 1, version: FileFormatVersions.Microsoft365)
+            };
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<TableBorderRevDxfTableRevDxf>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the TotalsRowBorderRevDxfTableRevDxf Class.</para>
+    /// <para>This class is available in Microsoft365 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is xfpb:totalsRowBorderRevDxf.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.DifferentialFormatType" /> <c>&lt;xfpb:dxf></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FpbsFeaturePropertyBags" /> <c>&lt;xfpb:fpbs></c></description></item>
+    /// </list>
+    /// </remark>
+    public partial class TotalsRowBorderRevDxfTableRevDxf : OpenXmlTableRevDxfElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the TotalsRowBorderRevDxfTableRevDxf class.
+        /// </summary>
+        public TotalsRowBorderRevDxfTableRevDxf() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the TotalsRowBorderRevDxfTableRevDxf class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public TotalsRowBorderRevDxfTableRevDxf(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the TotalsRowBorderRevDxfTableRevDxf class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public TotalsRowBorderRevDxfTableRevDxf(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the TotalsRowBorderRevDxfTableRevDxf class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public TotalsRowBorderRevDxfTableRevDxf(string outerXml) : base(outerXml)
+        {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema("xfpb:totalsRowBorderRevDxf");
+            builder.Availability = FileFormatVersions.Microsoft365;
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FpbsFeaturePropertyBags), 1, 1, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.DifferentialFormatType), 0, 1, version: FileFormatVersions.Microsoft365)
+            };
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<TotalsRowBorderRevDxfTableRevDxf>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the ColumnHeaderRevDxfTableRevDxf Class.</para>
+    /// <para>This class is available in Microsoft365 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is xfpb:columnHeaderRevDxf.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.DifferentialFormatType" /> <c>&lt;xfpb:dxf></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FpbsFeaturePropertyBags" /> <c>&lt;xfpb:fpbs></c></description></item>
+    /// </list>
+    /// </remark>
+    public partial class ColumnHeaderRevDxfTableRevDxf : OpenXmlTableRevDxfElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the ColumnHeaderRevDxfTableRevDxf class.
+        /// </summary>
+        public ColumnHeaderRevDxfTableRevDxf() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the ColumnHeaderRevDxfTableRevDxf class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public ColumnHeaderRevDxfTableRevDxf(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the ColumnHeaderRevDxfTableRevDxf class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public ColumnHeaderRevDxfTableRevDxf(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the ColumnHeaderRevDxfTableRevDxf class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public ColumnHeaderRevDxfTableRevDxf(string outerXml) : base(outerXml)
+        {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema("xfpb:columnHeaderRevDxf");
+            builder.Availability = FileFormatVersions.Microsoft365;
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FpbsFeaturePropertyBags), 1, 1, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.DifferentialFormatType), 0, 1, version: FileFormatVersions.Microsoft365)
+            };
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColumnHeaderRevDxfTableRevDxf>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the ColumnBodyRevDxfTableRevDxf Class.</para>
+    /// <para>This class is available in Microsoft365 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is xfpb:columnBodyRevDxf.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.DifferentialFormatType" /> <c>&lt;xfpb:dxf></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FpbsFeaturePropertyBags" /> <c>&lt;xfpb:fpbs></c></description></item>
+    /// </list>
+    /// </remark>
+    public partial class ColumnBodyRevDxfTableRevDxf : OpenXmlTableRevDxfElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the ColumnBodyRevDxfTableRevDxf class.
+        /// </summary>
+        public ColumnBodyRevDxfTableRevDxf() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the ColumnBodyRevDxfTableRevDxf class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public ColumnBodyRevDxfTableRevDxf(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the ColumnBodyRevDxfTableRevDxf class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public ColumnBodyRevDxfTableRevDxf(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the ColumnBodyRevDxfTableRevDxf class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public ColumnBodyRevDxfTableRevDxf(string outerXml) : base(outerXml)
+        {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema("xfpb:columnBodyRevDxf");
+            builder.Availability = FileFormatVersions.Microsoft365;
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FpbsFeaturePropertyBags), 1, 1, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.DifferentialFormatType), 0, 1, version: FileFormatVersions.Microsoft365)
+            };
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColumnBodyRevDxfTableRevDxf>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the ColumnTotalsRevDxfTableRevDxf Class.</para>
+    /// <para>This class is available in Microsoft365 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is xfpb:columnTotalsRevDxf.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.DifferentialFormatType" /> <c>&lt;xfpb:dxf></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FpbsFeaturePropertyBags" /> <c>&lt;xfpb:fpbs></c></description></item>
+    /// </list>
+    /// </remark>
+    public partial class ColumnTotalsRevDxfTableRevDxf : OpenXmlTableRevDxfElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the ColumnTotalsRevDxfTableRevDxf class.
+        /// </summary>
+        public ColumnTotalsRevDxfTableRevDxf() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the ColumnTotalsRevDxfTableRevDxf class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public ColumnTotalsRevDxfTableRevDxf(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the ColumnTotalsRevDxfTableRevDxf class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public ColumnTotalsRevDxfTableRevDxf(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the ColumnTotalsRevDxfTableRevDxf class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public ColumnTotalsRevDxfTableRevDxf(string outerXml) : base(outerXml)
+        {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema("xfpb:columnTotalsRevDxf");
+            builder.Availability = FileFormatVersions.Microsoft365;
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FpbsFeaturePropertyBags), 1, 1, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.DifferentialFormatType), 0, 1, version: FileFormatVersions.Microsoft365)
+            };
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColumnTotalsRevDxfTableRevDxf>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the OpenXmlTableRevDxfElement Class.</para>
+    /// <para>This class is available in Microsoft365 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.DifferentialFormatType" /> <c>&lt;xfpb:dxf></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FpbsFeaturePropertyBags" /> <c>&lt;xfpb:fpbs></c></description></item>
+    /// </list>
+    /// </remark>
+    public abstract partial class OpenXmlTableRevDxfElement : OpenXmlCompositeElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the OpenXmlTableRevDxfElement class.
+        /// </summary>
+        protected OpenXmlTableRevDxfElement() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the OpenXmlTableRevDxfElement class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        protected OpenXmlTableRevDxfElement(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the OpenXmlTableRevDxfElement class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        protected OpenXmlTableRevDxfElement(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the OpenXmlTableRevDxfElement class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        protected OpenXmlTableRevDxfElement(string outerXml) : base(outerXml)
+        {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddChild<DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.DifferentialFormatType>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FpbsFeaturePropertyBags>();
+        }
+
+        /// <summary>
+        /// <para>FpbsFeaturePropertyBags.</para>
+        /// <para>Represents the following element tag in the schema: xfpb:fpbs.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:xfpb = http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag
+        /// </remark>
+        public DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FpbsFeaturePropertyBags? FpbsFeaturePropertyBags
+        {
+            get => GetElement<DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FpbsFeaturePropertyBags>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>DifferentialFormatType.</para>
+        /// <para>Represents the following element tag in the schema: xfpb:dxf.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:xfpb = http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag
+        /// </remark>
+        public DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.DifferentialFormatType? DifferentialFormatType
+        {
+            get => GetElement<DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.DifferentialFormatType>();
+            set => SetElement(value);
+        }
     }
 
     /// <summary>
@@ -846,6 +1724,175 @@ namespace DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<RelFeatureProperty>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the DifferentialFormatType Class.</para>
+    /// <para>This class is available in Microsoft365 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is xfpb:dxf.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Border" /> <c>&lt;x:border></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Alignment" /> <c>&lt;x:alignment></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Protection" /> <c>&lt;x:protection></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Fill" /> <c>&lt;x:fill></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Font" /> <c>&lt;x:font></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.NumberingFormat" /> <c>&lt;x:numFmt></c></description></item>
+    /// </list>
+    /// </remark>
+    public partial class DifferentialFormatType : OpenXmlCompositeElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the DifferentialFormatType class.
+        /// </summary>
+        public DifferentialFormatType() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the DifferentialFormatType class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public DifferentialFormatType(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the DifferentialFormatType class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public DifferentialFormatType(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the DifferentialFormatType class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public DifferentialFormatType(string outerXml) : base(outerXml)
+        {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema("xfpb:dxf");
+            builder.Availability = FileFormatVersions.Microsoft365;
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Border>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Alignment>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Protection>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Fill>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.Font>();
+            builder.AddChild<DocumentFormat.OpenXml.Spreadsheet.NumberingFormat>();
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Font), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.NumberingFormat), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Fill), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Alignment), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Border), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.Protection), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList), 0, 1)
+            };
+        }
+
+        /// <summary>
+        /// <para>Font Properties.</para>
+        /// <para>Represents the following element tag in the schema: x:font.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
+        /// </remark>
+        public DocumentFormat.OpenXml.Spreadsheet.Font? Font
+        {
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Font>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>Number Format.</para>
+        /// <para>Represents the following element tag in the schema: x:numFmt.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
+        /// </remark>
+        public DocumentFormat.OpenXml.Spreadsheet.NumberingFormat? NumberingFormat
+        {
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.NumberingFormat>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>Fill.</para>
+        /// <para>Represents the following element tag in the schema: x:fill.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
+        /// </remark>
+        public DocumentFormat.OpenXml.Spreadsheet.Fill? Fill
+        {
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Fill>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>Alignment.</para>
+        /// <para>Represents the following element tag in the schema: x:alignment.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
+        /// </remark>
+        public DocumentFormat.OpenXml.Spreadsheet.Alignment? Alignment
+        {
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Alignment>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>Border Properties.</para>
+        /// <para>Represents the following element tag in the schema: x:border.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
+        /// </remark>
+        public DocumentFormat.OpenXml.Spreadsheet.Border? Border
+        {
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Border>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>Protection Properties.</para>
+        /// <para>Represents the following element tag in the schema: x:protection.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
+        /// </remark>
+        public DocumentFormat.OpenXml.Spreadsheet.Protection? Protection
+        {
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Protection>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>Future Feature Data Storage Area.</para>
+        /// <para>Represents the following element tag in the schema: x:extLst.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
+        /// </remark>
+        public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
+        {
+            get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
+            set => SetElement(value);
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<DifferentialFormatType>(deep);
     }
 
     /// <summary>
