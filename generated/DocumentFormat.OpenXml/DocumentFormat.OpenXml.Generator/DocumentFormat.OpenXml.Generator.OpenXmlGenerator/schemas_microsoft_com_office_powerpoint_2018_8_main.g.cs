@@ -9,8 +9,6 @@ using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Drawing;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
-using DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main;
-using DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main;
 using DocumentFormat.OpenXml.Office2016.Drawing.Command;
 using DocumentFormat.OpenXml.Office2016.Presentation.Command;
 using DocumentFormat.OpenXml.Packaging;
@@ -147,7 +145,7 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
     /// <remark>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.CommentPropertiesExtension" /> <c>&lt;p188:ext></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CommentPropertiesExtension" /> <c>&lt;p:ext></c></description></item>
     /// </list>
     /// </remark>
     public partial class CommentPropertiesExtensionList : OpenXmlCompositeElement
@@ -188,10 +186,16 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
             base.ConfigureMetadata(builder);
             builder.SetSchema("p188:extLst");
             builder.Availability = FileFormatVersions.Office2021;
-            builder.AddChild<DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.CommentPropertiesExtension>();
+            builder.AddChild<DocumentFormat.OpenXml.Presentation.CommentPropertiesExtension>();
             builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
             {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.CommentPropertiesExtension), 0, 0, version: FileFormatVersions.Microsoft365)
+                new CompositeParticle.Builder(ParticleType.Group, 0, 1)
+                {
+                    new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
+                    {
+                        new ElementParticle(typeof(DocumentFormat.OpenXml.Presentation.CommentPropertiesExtension), 0, 0, version: FileFormatVersions.Office2021)
+                    }
+                }
             };
         }
 
@@ -1186,95 +1190,6 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<Comment>(deep);
-    }
-
-    /// <summary>
-    /// <para>Defines the CommentPropertiesExtension Class.</para>
-    /// <para>This class is available in Microsoft365 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is p188:ext.</para>
-    /// </summary>
-    /// <remark>
-    /// <para>The following table lists the possible child types:</para>
-    /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main.Reactions" /> <c>&lt;p223:reactions></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskDetails" /> <c>&lt;p228:taskDetails></c></description></item>
-    /// </list>
-    /// </remark>
-    public partial class CommentPropertiesExtension : OpenXmlCompositeElement
-    {
-        /// <summary>
-        /// Initializes a new instance of the CommentPropertiesExtension class.
-        /// </summary>
-        public CommentPropertiesExtension() : base()
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the CommentPropertiesExtension class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public CommentPropertiesExtension(IEnumerable<OpenXmlElement> childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the CommentPropertiesExtension class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public CommentPropertiesExtension(params OpenXmlElement[] childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the CommentPropertiesExtension class from outer XML.
-        /// </summary>
-        /// <param name="outerXml">Specifies the outer XML of the element.</param>
-        public CommentPropertiesExtension(string outerXml) : base(outerXml)
-        {
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.SetSchema("p188:ext");
-            builder.Availability = FileFormatVersions.Microsoft365;
-            builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main.Reactions>();
-            builder.AddChild<DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskDetails>();
-            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
-            {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskDetails), 0, 1, version: FileFormatVersions.Microsoft365),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main.Reactions), 0, 1, version: FileFormatVersions.Microsoft365)
-            };
-        }
-
-        /// <summary>
-        /// <para>TaskDetails.</para>
-        /// <para>Represents the following element tag in the schema: p228:taskDetails.</para>
-        /// </summary>
-        /// <remark>
-        /// xmlns:p228 = http://schemas.microsoft.com/office/powerpoint/2022/08/main
-        /// </remark>
-        public DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskDetails? TaskDetails
-        {
-            get => GetElement<DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskDetails>();
-            set => SetElement(value);
-        }
-
-        /// <summary>
-        /// <para>Reactions.</para>
-        /// <para>Represents the following element tag in the schema: p223:reactions.</para>
-        /// </summary>
-        /// <remark>
-        /// xmlns:p223 = http://schemas.microsoft.com/office/powerpoint/2022/03/main
-        /// </remark>
-        public DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main.Reactions? Reactions
-        {
-            get => GetElement<DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main.Reactions>();
-            set => SetElement(value);
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<CommentPropertiesExtension>(deep);
     }
 
     /// <summary>
