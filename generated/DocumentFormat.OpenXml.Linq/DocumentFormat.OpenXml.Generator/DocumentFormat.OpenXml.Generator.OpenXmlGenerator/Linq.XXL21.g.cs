@@ -8,7 +8,7 @@ namespace DocumentFormat.OpenXml.Linq
     /// <summary>
     /// Declares XNamespace and XName fields for the xmlns:xxl21="http://schemas.microsoft.com/office/spreadsheetml/2021/extlinks2021" namespace.
     /// </summary>
-    public static class XXL21
+    public static partial class XXL21
     {
         /// <summary>
         /// Defines the XML namespace associated with the xxl21 prefix.

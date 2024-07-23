@@ -8,7 +8,7 @@ namespace DocumentFormat.OpenXml.Linq
     /// <summary>
     /// Declares XNamespace and XName fields for the xmlns:pvml="urn:schemas-microsoft-com:office:powerpoint" namespace.
     /// </summary>
-    public static class PVML
+    public static partial class PVML
     {
         /// <summary>
         /// Defines the XML namespace associated with the pvml prefix.

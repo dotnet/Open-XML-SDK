@@ -8,7 +8,7 @@ namespace DocumentFormat.OpenXml.Linq
     /// <summary>
     /// Declares XNamespace and XName fields for the xmlns:w10="urn:schemas-microsoft-com:office:word" namespace.
     /// </summary>
-    public static class W10
+    public static partial class W10
     {
         /// <summary>
         /// Defines the XML namespace associated with the w10 prefix.

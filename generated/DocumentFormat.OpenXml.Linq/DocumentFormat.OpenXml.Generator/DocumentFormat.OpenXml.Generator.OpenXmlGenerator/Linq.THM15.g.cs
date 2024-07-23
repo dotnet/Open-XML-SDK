@@ -8,7 +8,7 @@ namespace DocumentFormat.OpenXml.Linq
     /// <summary>
     /// Declares XNamespace and XName fields for the xmlns:thm15="http://schemas.microsoft.com/office/thememl/2012/main" namespace.
     /// </summary>
-    public static class THM15
+    public static partial class THM15
     {
         /// <summary>
         /// Defines the XML namespace associated with the thm15 prefix.

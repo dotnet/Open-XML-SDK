@@ -8,7 +8,7 @@ namespace DocumentFormat.OpenXml.Linq
     /// <summary>
     /// Declares XNamespace and XName fields for the xmlns:w16cid="http://schemas.microsoft.com/office/word/2016/wordml/cid" namespace.
     /// </summary>
-    public static class W16CID
+    public static partial class W16CID
     {
         /// <summary>
         /// Defines the XML namespace associated with the w16cid prefix.

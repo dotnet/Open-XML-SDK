@@ -8,7 +8,7 @@ namespace DocumentFormat.OpenXml.Linq
     /// <summary>
     /// Declares XNamespace and XName fields for the xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" namespace.
     /// </summary>
-    public static class W
+    public static partial class W
     {
         /// <summary>
         /// Defines the XML namespace associated with the w prefix.

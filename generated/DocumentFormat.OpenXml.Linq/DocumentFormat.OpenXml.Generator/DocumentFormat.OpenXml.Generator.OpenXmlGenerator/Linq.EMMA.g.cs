@@ -8,7 +8,7 @@ namespace DocumentFormat.OpenXml.Linq
     /// <summary>
     /// Declares XNamespace and XName fields for the xmlns:emma="http://www.w3.org/2003/04/emma" namespace.
     /// </summary>
-    public static class EMMA
+    public static partial class EMMA
     {
         /// <summary>
         /// Defines the XML namespace associated with the emma prefix.

@@ -8,7 +8,7 @@ namespace DocumentFormat.OpenXml.Linq
     /// <summary>
     /// Declares XNamespace and XName fields for the xmlns:wpg="http://schemas.microsoft.com/office/word/2010/wordprocessingGroup" namespace.
     /// </summary>
-    public static class WPG
+    public static partial class WPG
     {
         /// <summary>
         /// Defines the XML namespace associated with the wpg prefix.

@@ -8,7 +8,7 @@ namespace DocumentFormat.OpenXml.Linq
     /// <summary>
     /// Declares XNamespace and XName fields for the xmlns:cs="http://schemas.microsoft.com/office/drawing/2012/chartStyle" namespace.
     /// </summary>
-    public static class CS
+    public static partial class CS
     {
         /// <summary>
         /// Defines the XML namespace associated with the cs prefix.

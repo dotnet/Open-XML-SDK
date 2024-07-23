@@ -8,7 +8,7 @@ namespace DocumentFormat.OpenXml.Linq
     /// <summary>
     /// Declares XNamespace and XName fields for the xmlns:c16r3="http://schemas.microsoft.com/office/drawing/2017/03/chart" namespace.
     /// </summary>
-    public static class C16R3
+    public static partial class C16R3
     {
         /// <summary>
         /// Defines the XML namespace associated with the c16r3 prefix.

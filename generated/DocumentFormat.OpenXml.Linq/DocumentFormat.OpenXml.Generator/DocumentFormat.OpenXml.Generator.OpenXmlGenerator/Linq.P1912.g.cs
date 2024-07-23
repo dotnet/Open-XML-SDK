@@ -8,7 +8,7 @@ namespace DocumentFormat.OpenXml.Linq
     /// <summary>
     /// Declares XNamespace and XName fields for the xmlns:p1912="http://schemas.microsoft.com/office/powerpoint/2019/12/main" namespace.
     /// </summary>
-    public static class P1912
+    public static partial class P1912
     {
         /// <summary>
         /// Defines the XML namespace associated with the p1912 prefix.

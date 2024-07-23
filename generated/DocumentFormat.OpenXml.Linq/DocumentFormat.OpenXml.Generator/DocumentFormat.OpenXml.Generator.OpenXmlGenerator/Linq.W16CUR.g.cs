@@ -8,7 +8,7 @@ namespace DocumentFormat.OpenXml.Linq
     /// <summary>
     /// Declares XNamespace and XName fields for the xmlns:w16cur="http://schemas.microsoft.com/office/word/2018/wordml" namespace.
     /// </summary>
-    public static class W16CUR
+    public static partial class W16CUR
     {
         /// <summary>
         /// Defines the XML namespace associated with the w16cur prefix.

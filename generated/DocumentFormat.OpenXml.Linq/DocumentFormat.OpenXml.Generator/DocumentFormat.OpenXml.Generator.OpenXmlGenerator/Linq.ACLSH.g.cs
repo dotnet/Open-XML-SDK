@@ -8,7 +8,7 @@ namespace DocumentFormat.OpenXml.Linq
     /// <summary>
     /// Declares XNamespace and XName fields for the xmlns:aclsh="http://schemas.microsoft.com/office/drawing/2020/classificationShape" namespace.
     /// </summary>
-    public static class ACLSH
+    public static partial class ACLSH
     {
         /// <summary>
         /// Defines the XML namespace associated with the aclsh prefix.
