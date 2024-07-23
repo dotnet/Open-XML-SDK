@@ -12,10 +12,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ApiCompatSuppressionFile Include="..\..\CompatibilitySuppressions.xml" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Compile Include="..\DocumentFormat.OpenXml.Framework\SimpleTypes\HexStringFactory.cs" Link="HexStringFactory.cs" />
   </ItemGroup>
 
