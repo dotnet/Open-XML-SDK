@@ -25,7 +25,8 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
         /// <summary>
         /// Initializes a new instance of the CommentPropertiesExtension class.
         /// </summary>
-        public CommentPropertiesExtension() : base()
+        public CommentPropertiesExtension()
+            : base()
         {
         }
 
@@ -33,7 +34,8 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
         /// Initializes a new instance of the CommentPropertiesExtension class with the specified child elements.
         /// </summary>
         /// <param name="childElements">Specifies the child elements.</param>
-        public CommentPropertiesExtension(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        public CommentPropertiesExtension(IEnumerable<OpenXmlElement> childElements)
+            : base(childElements)
         {
         }
 
@@ -41,7 +43,8 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
         /// Initializes a new instance of the CommentPropertiesExtension class with the specified child elements.
         /// </summary>
         /// <param name="childElements">Specifies the child elements.</param>
-        public CommentPropertiesExtension(params OpenXmlElement[] childElements) : base(childElements)
+        public CommentPropertiesExtension(params OpenXmlElement[] childElements) 
+            : base(childElements)
         {
         }
 
@@ -49,7 +52,8 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
         /// Initializes a new instance of the CommentPropertiesExtension class from outer XML.
         /// </summary>
         /// <param name="outerXml">Specifies the outer XML of the element.</param>
-        public CommentPropertiesExtension(string outerXml) : base(outerXml)
+        public CommentPropertiesExtension(string outerXml) 
+            : base(outerXml)
         {
         }
 
