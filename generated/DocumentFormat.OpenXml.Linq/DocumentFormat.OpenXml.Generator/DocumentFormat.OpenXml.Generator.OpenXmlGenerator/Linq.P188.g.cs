@@ -8,7 +8,7 @@ namespace DocumentFormat.OpenXml.Linq
     /// <summary>
     /// Declares XNamespace and XName fields for the xmlns:p188="http://schemas.microsoft.com/office/powerpoint/2018/8/main" namespace.
     /// </summary>
-    public static class P188
+    public static partial class P188
     {
         /// <summary>
         /// Defines the XML namespace associated with the p188 prefix.

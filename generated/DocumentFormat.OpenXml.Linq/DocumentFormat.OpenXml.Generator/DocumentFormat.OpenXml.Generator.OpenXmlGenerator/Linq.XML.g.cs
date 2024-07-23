@@ -8,7 +8,7 @@ namespace DocumentFormat.OpenXml.Linq
     /// <summary>
     /// Declares XNamespace and XName fields for the xmlns:xml="http://www.w3.org/XML/1998/namespace" namespace.
     /// </summary>
-    public static class XML
+    public static partial class XML
     {
         /// <summary>
         /// Defines the XML namespace associated with the xml prefix.

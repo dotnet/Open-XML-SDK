@@ -8,7 +8,7 @@ namespace DocumentFormat.OpenXml.Linq
     /// <summary>
     /// Declares XNamespace and XName fields for the xmlns:x15ac="http://schemas.microsoft.com/office/spreadsheetml/2010/11/ac" namespace.
     /// </summary>
-    public static class X15AC
+    public static partial class X15AC
     {
         /// <summary>
         /// Defines the XML namespace associated with the x15ac prefix.

@@ -8,7 +8,7 @@ namespace DocumentFormat.OpenXml.Linq
     /// <summary>
     /// Declares XNamespace and XName fields for the xmlns:a15="http://schemas.microsoft.com/office/drawing/2012/main" namespace.
     /// </summary>
-    public static class A15
+    public static partial class A15
     {
         /// <summary>
         /// Defines the XML namespace associated with the a15 prefix.

@@ -8,7 +8,7 @@ namespace DocumentFormat.OpenXml.Linq
     /// <summary>
     /// Declares XNamespace and XName fields for the xmlns:v="urn:schemas-microsoft-com:vml" namespace.
     /// </summary>
-    public static class V
+    public static partial class V
     {
         /// <summary>
         /// Defines the XML namespace associated with the v prefix.

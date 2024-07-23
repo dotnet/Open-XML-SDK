@@ -8,7 +8,7 @@ namespace DocumentFormat.OpenXml.Linq
     /// <summary>
     /// Declares XNamespace and XName fields for the xmlns:vt="http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes" namespace.
     /// </summary>
-    public static class VT
+    public static partial class VT
     {
         /// <summary>
         /// Defines the XML namespace associated with the vt prefix.

@@ -8,7 +8,7 @@ namespace DocumentFormat.OpenXml.Linq
     /// <summary>
     /// Declares XNamespace and XName fields for the xmlns:alf="http://schemas.microsoft.com/office/drawing/2021/livefeed" namespace.
     /// </summary>
-    public static class ALF
+    public static partial class ALF
     {
         /// <summary>
         /// Defines the XML namespace associated with the alf prefix.

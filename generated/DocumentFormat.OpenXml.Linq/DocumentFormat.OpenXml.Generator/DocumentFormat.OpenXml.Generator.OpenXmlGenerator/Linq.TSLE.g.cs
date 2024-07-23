@@ -8,7 +8,7 @@ namespace DocumentFormat.OpenXml.Linq
     /// <summary>
     /// Declares XNamespace and XName fields for the xmlns:tsle="http://schemas.microsoft.com/office/drawing/2012/timeslicer" namespace.
     /// </summary>
-    public static class TSLE
+    public static partial class TSLE
     {
         /// <summary>
         /// Defines the XML namespace associated with the tsle prefix.

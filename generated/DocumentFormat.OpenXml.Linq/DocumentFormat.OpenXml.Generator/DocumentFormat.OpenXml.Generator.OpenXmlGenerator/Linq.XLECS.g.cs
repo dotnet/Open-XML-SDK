@@ -8,7 +8,7 @@ namespace DocumentFormat.OpenXml.Linq
     /// <summary>
     /// Declares XNamespace and XName fields for the xmlns:xlecs="http://schemas.microsoft.com/office/spreadsheetml/2023/externalCodeService" namespace.
     /// </summary>
-    public static class XLECS
+    public static partial class XLECS
     {
         /// <summary>
         /// Defines the XML namespace associated with the xlecs prefix.

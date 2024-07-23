@@ -8,7 +8,7 @@ namespace DocumentFormat.OpenXml.Linq
     /// <summary>
     /// Declares XNamespace and XName fields for the xmlns:cdr14="http://schemas.microsoft.com/office/drawing/2010/chartDrawing" namespace.
     /// </summary>
-    public static class CDR14
+    public static partial class CDR14
     {
         /// <summary>
         /// Defines the XML namespace associated with the cdr14 prefix.

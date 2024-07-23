@@ -8,7 +8,7 @@ namespace DocumentFormat.OpenXml.Linq
     /// <summary>
     /// Declares XNamespace and XName fields for the xmlns:dgm14="http://schemas.microsoft.com/office/drawing/2010/diagram" namespace.
     /// </summary>
-    public static class DGM14
+    public static partial class DGM14
     {
         /// <summary>
         /// Defines the XML namespace associated with the dgm14 prefix.

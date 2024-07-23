@@ -8,7 +8,7 @@ namespace DocumentFormat.OpenXml.Linq
     /// <summary>
     /// Declares XNamespace and XName fields for the xmlns:p223="http://schemas.microsoft.com/office/powerpoint/2022/03/main" namespace.
     /// </summary>
-    public static class P223
+    public static partial class P223
     {
         /// <summary>
         /// Defines the XML namespace associated with the p223 prefix.

@@ -8,7 +8,7 @@ namespace DocumentFormat.OpenXml.Linq
     /// <summary>
     /// Declares XNamespace and XName fields for the xmlns:wetp="http://schemas.microsoft.com/office/webextensions/taskpanes/2010/11" namespace.
     /// </summary>
-    public static class WETP
+    public static partial class WETP
     {
         /// <summary>
         /// Defines the XML namespace associated with the wetp prefix.

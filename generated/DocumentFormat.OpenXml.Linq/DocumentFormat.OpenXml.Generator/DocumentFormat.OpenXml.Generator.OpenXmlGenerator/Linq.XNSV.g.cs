@@ -8,7 +8,7 @@ namespace DocumentFormat.OpenXml.Linq
     /// <summary>
     /// Declares XNamespace and XName fields for the xmlns:xnsv="http://schemas.microsoft.com/office/spreadsheetml/2019/namedsheetviews" namespace.
     /// </summary>
-    public static class XNSV
+    public static partial class XNSV
     {
         /// <summary>
         /// Defines the XML namespace associated with the xnsv prefix.

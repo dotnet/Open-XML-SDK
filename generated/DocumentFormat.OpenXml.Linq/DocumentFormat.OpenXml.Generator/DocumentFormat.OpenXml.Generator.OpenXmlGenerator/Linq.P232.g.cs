@@ -8,7 +8,7 @@ namespace DocumentFormat.OpenXml.Linq
     /// <summary>
     /// Declares XNamespace and XName fields for the xmlns:p232="http://schemas.microsoft.com/office/powerpoint/2023/02/main" namespace.
     /// </summary>
-    public static class P232
+    public static partial class P232
     {
         /// <summary>
         /// Defines the XML namespace associated with the p232 prefix.

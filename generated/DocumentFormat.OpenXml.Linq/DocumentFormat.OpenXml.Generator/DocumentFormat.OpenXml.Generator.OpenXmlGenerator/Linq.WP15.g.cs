@@ -8,7 +8,7 @@ namespace DocumentFormat.OpenXml.Linq
     /// <summary>
     /// Declares XNamespace and XName fields for the xmlns:wp15="http://schemas.microsoft.com/office/word/2012/wordprocessingDrawing" namespace.
     /// </summary>
-    public static class WP15
+    public static partial class WP15
     {
         /// <summary>
         /// Defines the XML namespace associated with the wp15 prefix.

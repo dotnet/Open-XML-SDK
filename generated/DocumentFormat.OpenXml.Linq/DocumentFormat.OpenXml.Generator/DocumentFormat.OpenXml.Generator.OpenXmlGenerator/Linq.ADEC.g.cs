@@ -8,7 +8,7 @@ namespace DocumentFormat.OpenXml.Linq
     /// <summary>
     /// Declares XNamespace and XName fields for the xmlns:adec="http://schemas.microsoft.com/office/drawing/2017/decorative" namespace.
     /// </summary>
-    public static class ADEC
+    public static partial class ADEC
     {
         /// <summary>
         /// Defines the XML namespace associated with the adec prefix.

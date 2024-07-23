@@ -8,7 +8,7 @@ namespace DocumentFormat.OpenXml.Linq
     /// <summary>
     /// Declares XNamespace and XName fields for the xmlns:wpc="http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas" namespace.
     /// </summary>
-    public static class WPC
+    public static partial class WPC
     {
         /// <summary>
         /// Defines the XML namespace associated with the wpc prefix.

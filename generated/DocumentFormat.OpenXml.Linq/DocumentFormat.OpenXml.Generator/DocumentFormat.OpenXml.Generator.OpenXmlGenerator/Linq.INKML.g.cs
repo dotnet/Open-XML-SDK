@@ -8,7 +8,7 @@ namespace DocumentFormat.OpenXml.Linq
     /// <summary>
     /// Declares XNamespace and XName fields for the xmlns:inkml="http://www.w3.org/2003/InkML" namespace.
     /// </summary>
-    public static class INKML
+    public static partial class INKML
     {
         /// <summary>
         /// Defines the XML namespace associated with the inkml prefix.

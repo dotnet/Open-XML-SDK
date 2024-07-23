@@ -8,7 +8,7 @@ namespace DocumentFormat.OpenXml.Linq
     /// <summary>
     /// Declares XNamespace and XName fields for the xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" namespace.
     /// </summary>
-    public static class A
+    public static partial class A
     {
         /// <summary>
         /// Defines the XML namespace associated with the a prefix.
