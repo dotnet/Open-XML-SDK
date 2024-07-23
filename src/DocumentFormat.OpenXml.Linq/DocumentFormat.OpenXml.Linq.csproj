@@ -15,6 +15,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ApiCompatSuppressionFile Include="..\..\CompatibilitySuppressions.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\DocumentFormat.OpenXml.Framework\DocumentFormat.OpenXml.Framework.csproj" />
   </ItemGroup>
 

@@ -32,6 +32,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ApiCompatSuppressionFile Include="..\..\CompatibilitySuppressions.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Include="..\common\System\ObsoleteAttribute.cs" Link="ObsoleteAttribute.cs" />
   </ItemGroup>
 
