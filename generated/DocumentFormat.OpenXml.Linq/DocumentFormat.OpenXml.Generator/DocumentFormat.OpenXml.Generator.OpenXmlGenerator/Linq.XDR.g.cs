@@ -8,7 +8,7 @@ namespace DocumentFormat.OpenXml.Linq
     /// <summary>
     /// Declares XNamespace and XName fields for the xmlns:xdr="http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing" namespace.
     /// </summary>
-    public static class XDR
+    public static partial class XDR
     {
         /// <summary>
         /// Defines the XML namespace associated with the xdr prefix.

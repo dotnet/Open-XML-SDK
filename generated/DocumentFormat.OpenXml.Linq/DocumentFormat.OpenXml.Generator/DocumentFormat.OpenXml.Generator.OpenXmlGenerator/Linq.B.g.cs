@@ -8,7 +8,7 @@ namespace DocumentFormat.OpenXml.Linq
     /// <summary>
     /// Declares XNamespace and XName fields for the xmlns:b="http://schemas.openxmlformats.org/officeDocument/2006/bibliography" namespace.
     /// </summary>
-    public static class B
+    public static partial class B
     {
         /// <summary>
         /// Defines the XML namespace associated with the b prefix.

@@ -8,7 +8,7 @@ namespace DocumentFormat.OpenXml.Linq
     /// <summary>
     /// Declares XNamespace and XName fields for the xmlns:w16cex="http://schemas.microsoft.com/office/word/2018/wordml/cex" namespace.
     /// </summary>
-    public static class W16CEX
+    public static partial class W16CEX
     {
         /// <summary>
         /// Defines the XML namespace associated with the w16cex prefix.

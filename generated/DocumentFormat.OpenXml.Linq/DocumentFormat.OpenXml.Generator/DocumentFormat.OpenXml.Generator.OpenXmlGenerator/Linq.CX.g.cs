@@ -8,7 +8,7 @@ namespace DocumentFormat.OpenXml.Linq
     /// <summary>
     /// Declares XNamespace and XName fields for the xmlns:cx="http://schemas.microsoft.com/office/drawing/2014/chartex" namespace.
     /// </summary>
-    public static class CX
+    public static partial class CX
     {
         /// <summary>
         /// Defines the XML namespace associated with the cx prefix.

@@ -8,7 +8,7 @@ namespace DocumentFormat.OpenXml.Linq
     /// <summary>
     /// Declares XNamespace and XName fields for the xmlns:c="http://schemas.openxmlformats.org/drawingml/2006/chart" namespace.
     /// </summary>
-    public static class C
+    public static partial class C
     {
         /// <summary>
         /// Defines the XML namespace associated with the c prefix.

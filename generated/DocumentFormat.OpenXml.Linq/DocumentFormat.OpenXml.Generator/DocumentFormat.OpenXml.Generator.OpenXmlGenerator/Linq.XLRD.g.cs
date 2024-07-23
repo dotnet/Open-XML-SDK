@@ -8,7 +8,7 @@ namespace DocumentFormat.OpenXml.Linq
     /// <summary>
     /// Declares XNamespace and XName fields for the xmlns:xlrd="http://schemas.microsoft.com/office/spreadsheetml/2017/richdata" namespace.
     /// </summary>
-    public static class XLRD
+    public static partial class XLRD
     {
         /// <summary>
         /// Defines the XML namespace associated with the xlrd prefix.

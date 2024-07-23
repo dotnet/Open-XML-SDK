@@ -8,7 +8,7 @@ namespace DocumentFormat.OpenXml.Linq
     /// <summary>
     /// Declares XNamespace and XName fields for the xmlns:xlmsforms="http://schemas.microsoft.com/office/spreadsheetml/2023/msForms" namespace.
     /// </summary>
-    public static class XLMSFORMS
+    public static partial class XLMSFORMS
     {
         /// <summary>
         /// Defines the XML namespace associated with the xlmsforms prefix.

@@ -8,7 +8,7 @@ namespace DocumentFormat.OpenXml.Linq
     /// <summary>
     /// Declares XNamespace and XName fields for the xmlns:xltc="http://schemas.microsoft.com/office/spreadsheetml/2018/threadedcomments" namespace.
     /// </summary>
-    public static class XLTC
+    public static partial class XLTC
     {
         /// <summary>
         /// Defines the XML namespace associated with the xltc prefix.

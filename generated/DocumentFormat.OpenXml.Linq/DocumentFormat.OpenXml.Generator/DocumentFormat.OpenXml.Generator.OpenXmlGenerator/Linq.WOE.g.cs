@@ -8,7 +8,7 @@ namespace DocumentFormat.OpenXml.Linq
     /// <summary>
     /// Declares XNamespace and XName fields for the xmlns:woe="http://schemas.microsoft.com/office/word/2020/oembed" namespace.
     /// </summary>
-    public static class WOE
+    public static partial class WOE
     {
         /// <summary>
         /// Defines the XML namespace associated with the woe prefix.

@@ -8,7 +8,7 @@ namespace DocumentFormat.OpenXml.Linq
     /// <summary>
     /// Declares XNamespace and XName fields for the xmlns:oac="http://schemas.microsoft.com/office/drawing/2013/main/command" namespace.
     /// </summary>
-    public static class OAC
+    public static partial class OAC
     {
         /// <summary>
         /// Defines the XML namespace associated with the oac prefix.

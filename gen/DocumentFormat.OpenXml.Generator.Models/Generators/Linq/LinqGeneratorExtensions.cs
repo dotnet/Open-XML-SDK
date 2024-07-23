@@ -124,7 +124,7 @@ public static class LinqGeneratorExtensions
         output.WriteLine(@"    /// </summary>");
 
         // Begin the class declaration.
-        output.WriteLine($"    public static class {className}");
+        output.WriteLine($"    public static partial class {className}");
         output.WriteLine(@"    {");
 
         // Emit the XNamespace field and determine the RHS prefix of the field declaration.

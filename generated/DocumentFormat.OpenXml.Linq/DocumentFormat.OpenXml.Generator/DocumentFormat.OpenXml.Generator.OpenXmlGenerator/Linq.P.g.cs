@@ -8,7 +8,7 @@ namespace DocumentFormat.OpenXml.Linq
     /// <summary>
     /// Declares XNamespace and XName fields for the xmlns:p="http://schemas.openxmlformats.org/presentationml/2006/main" namespace.
     /// </summary>
-    public static class P
+    public static partial class P
     {
         /// <summary>
         /// Defines the XML namespace associated with the p prefix.

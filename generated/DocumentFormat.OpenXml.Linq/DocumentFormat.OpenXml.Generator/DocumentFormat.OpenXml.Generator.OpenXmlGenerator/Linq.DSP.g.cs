@@ -8,7 +8,7 @@ namespace DocumentFormat.OpenXml.Linq
     /// <summary>
     /// Declares XNamespace and XName fields for the xmlns:dsp="http://schemas.microsoft.com/office/drawing/2008/diagram" namespace.
     /// </summary>
-    public static class DSP
+    public static partial class DSP
     {
         /// <summary>
         /// Defines the XML namespace associated with the dsp prefix.

@@ -8,7 +8,7 @@ namespace DocumentFormat.OpenXml.Linq
     /// <summary>
     /// Declares XNamespace and XName fields for the xmlns:ac="http://schemas.openxmlformats.org/officeDocument/2006/characteristics" namespace.
     /// </summary>
-    public static class AC
+    public static partial class AC
     {
         /// <summary>
         /// Defines the XML namespace associated with the ac prefix.

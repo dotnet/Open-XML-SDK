@@ -8,7 +8,7 @@ namespace DocumentFormat.OpenXml.Linq
     /// <summary>
     /// Declares XNamespace and XName fields for the xmlns:msink="http://schemas.microsoft.com/ink/2010/main" namespace.
     /// </summary>
-    public static class MSINK
+    public static partial class MSINK
     {
         /// <summary>
         /// Defines the XML namespace associated with the msink prefix.

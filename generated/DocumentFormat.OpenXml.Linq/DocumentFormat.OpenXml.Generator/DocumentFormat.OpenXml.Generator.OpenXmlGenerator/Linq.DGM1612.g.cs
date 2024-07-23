@@ -8,7 +8,7 @@ namespace DocumentFormat.OpenXml.Linq
     /// <summary>
     /// Declares XNamespace and XName fields for the xmlns:dgm1612="http://schemas.microsoft.com/office/drawing/2016/12/diagram" namespace.
     /// </summary>
-    public static class DGM1612
+    public static partial class DGM1612
     {
         /// <summary>
         /// Defines the XML namespace associated with the dgm1612 prefix.
