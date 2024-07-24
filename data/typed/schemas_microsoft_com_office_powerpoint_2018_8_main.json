@@ -22,10 +22,6 @@
     "ClassName": "CommentRelationship"
   },
   {
-    "Name": "p188:CT_CommentPropertiesExtension/p188:ext",
-    "ClassName": "CommentPropertiesExtension"
-  },
-  {
     "Name": "p188:CT_CommentPropertiesExtensionList/p188:extLst",
     "ClassName": "CommentPropertiesExtensionList"
   },

@@ -390,6 +390,10 @@
     "ClassName": "CommentExtension"
   },
   {
+    "Name": "p188:CT_CommentPropertiesExtension/p:ext",
+    "ClassName": "CommentPropertiesExtension"
+  },
+  {
     "Name": "p:CT_CommonSlideDataExtension/p:ext",
     "ClassName": "CommonSlideDataExtension"
   },
