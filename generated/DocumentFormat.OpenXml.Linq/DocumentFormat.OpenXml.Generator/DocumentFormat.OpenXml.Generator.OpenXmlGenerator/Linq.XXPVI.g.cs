@@ -8,7 +8,7 @@ namespace DocumentFormat.OpenXml.Linq
     /// <summary>
     /// Declares XNamespace and XName fields for the xmlns:xxpvi="http://schemas.microsoft.com/office/spreadsheetml/2022/pivotVersionInfo" namespace.
     /// </summary>
-    public static class XXPVI
+    public static partial class XXPVI
     {
         /// <summary>
         /// Defines the XML namespace associated with the xxpvi prefix.

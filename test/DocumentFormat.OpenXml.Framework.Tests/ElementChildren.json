@@ -38375,7 +38375,7 @@
     "Children": [
       {
         "Name": "ext",
-        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2018/8/main"
+        "Namespace": "http://schemas.openxmlformats.org/presentationml/2006/main"
       }
     ]
   },
@@ -39350,6 +39350,19 @@
       {
         "Name": "cm",
         "Namespace": "http://schemas.openxmlformats.org/presentationml/2006/main"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Presentation.CommentPropertiesExtension",
+    "Children": [
+      {
+        "Name": "reactions",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2022/03/main"
+      },
+      {
+        "Name": "taskDetails",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2022/08/main"
       }
     ]
   },

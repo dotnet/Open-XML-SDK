@@ -8,7 +8,7 @@ namespace DocumentFormat.OpenXml.Linq
     /// <summary>
     /// Declares XNamespace and XName fields for the xmlns:w15="http://schemas.microsoft.com/office/word/2012/wordml" namespace.
     /// </summary>
-    public static class W15
+    public static partial class W15
     {
         /// <summary>
         /// Defines the XML namespace associated with the w15 prefix.

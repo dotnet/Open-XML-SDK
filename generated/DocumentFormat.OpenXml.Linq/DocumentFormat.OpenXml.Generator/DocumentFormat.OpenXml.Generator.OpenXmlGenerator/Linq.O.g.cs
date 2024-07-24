@@ -8,7 +8,7 @@ namespace DocumentFormat.OpenXml.Linq
     /// <summary>
     /// Declares XNamespace and XName fields for the xmlns:o="urn:schemas-microsoft-com:office:office" namespace.
     /// </summary>
-    public static class O
+    public static partial class O
     {
         /// <summary>
         /// Defines the XML namespace associated with the o prefix.

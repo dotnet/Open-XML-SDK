@@ -8,7 +8,7 @@ namespace DocumentFormat.OpenXml.Linq
     /// <summary>
     /// Declares XNamespace and XName fields for the xmlns:w14="http://schemas.microsoft.com/office/word/2010/wordml" namespace.
     /// </summary>
-    public static class W14
+    public static partial class W14
     {
         /// <summary>
         /// Defines the XML namespace associated with the w14 prefix.

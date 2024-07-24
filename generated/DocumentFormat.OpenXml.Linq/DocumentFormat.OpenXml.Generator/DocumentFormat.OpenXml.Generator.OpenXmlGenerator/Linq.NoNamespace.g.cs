@@ -8,7 +8,7 @@ namespace DocumentFormat.OpenXml.Linq
     /// <summary>
     /// Declares XName fields for the empty namespace.
     /// </summary>
-    public static class NoNamespace
+    public static partial class NoNamespace
     {
 
         /// <summary>

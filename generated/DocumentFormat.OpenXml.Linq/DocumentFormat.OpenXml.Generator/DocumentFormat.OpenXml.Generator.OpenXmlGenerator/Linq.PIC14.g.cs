@@ -8,7 +8,7 @@ namespace DocumentFormat.OpenXml.Linq
     /// <summary>
     /// Declares XNamespace and XName fields for the xmlns:pic14="http://schemas.microsoft.com/office/drawing/2010/picture" namespace.
     /// </summary>
-    public static class PIC14
+    public static partial class PIC14
     {
         /// <summary>
         /// Defines the XML namespace associated with the pic14 prefix.

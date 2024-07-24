@@ -8,7 +8,7 @@ namespace DocumentFormat.OpenXml.Linq
     /// <summary>
     /// Declares XNamespace and XName fields for the xmlns:pc="http://schemas.microsoft.com/office/powerpoint/2013/main/command" namespace.
     /// </summary>
-    public static class PC
+    public static partial class PC
     {
         /// <summary>
         /// Defines the XML namespace associated with the pc prefix.

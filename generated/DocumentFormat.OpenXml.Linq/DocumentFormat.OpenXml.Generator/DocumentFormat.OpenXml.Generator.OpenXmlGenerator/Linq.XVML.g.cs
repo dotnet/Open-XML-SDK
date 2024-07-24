@@ -8,7 +8,7 @@ namespace DocumentFormat.OpenXml.Linq
     /// <summary>
     /// Declares XNamespace and XName fields for the xmlns:xvml="urn:schemas-microsoft-com:office:excel" namespace.
     /// </summary>
-    public static class XVML
+    public static partial class XVML
     {
         /// <summary>
         /// Defines the XML namespace associated with the xvml prefix.

@@ -8,7 +8,7 @@ namespace DocumentFormat.OpenXml.Linq
     /// <summary>
     /// Declares XNamespace and XName fields for the xmlns:aif="http://schemas.microsoft.com/office/drawing/2022/imageformula" namespace.
     /// </summary>
-    public static class AIF
+    public static partial class AIF
     {
         /// <summary>
         /// Defines the XML namespace associated with the aif prefix.

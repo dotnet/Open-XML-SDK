@@ -8,7 +8,7 @@ namespace DocumentFormat.OpenXml.Linq
     /// <summary>
     /// Declares XNamespace and XName fields for the xmlns:mso="http://schemas.microsoft.com/office/2006/01/customui" namespace.
     /// </summary>
-    public static class MSO
+    public static partial class MSO
     {
         /// <summary>
         /// Defines the XML namespace associated with the mso prefix.

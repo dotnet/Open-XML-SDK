@@ -774,6 +774,47 @@
       }
     },
     {
+      "Name": "p188:CT_CommentPropertiesExtension/p:ext",
+      "ClassName": "CommentPropertiesExtension",
+      "Summary": "Data for the Windows platform..",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Version": "Office2021",
+      "Children": [
+        {
+          "Name": "p228:CT_TaskDetails/p228:taskDetails",
+          "PropertyName": "TaskDetails"
+        },
+        {
+          "Name": "p223:CT_Reactions/p223:reactions",
+          "PropertyName": "Reactions"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "p228:CT_TaskDetails/p228:taskDetails",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Microsoft365"
+          },
+          {
+            "Name": "p223:CT_Reactions/p223:reactions",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ],
+            "InitialVersion": "Microsoft365"
+          }
+        ]
+      }
+    },
+    {
       "Name": "p:CT_CommentAuthorList/p:cmAuthorLst",
       "ClassName": "CommentAuthorList",
       "Summary": "List of Comment Authors.",

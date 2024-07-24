@@ -8,7 +8,7 @@ namespace DocumentFormat.OpenXml.Linq
     /// <summary>
     /// Declares XNamespace and XName fields for the xmlns:xxpim="http://schemas.microsoft.com/office/spreadsheetml/2020/pivotNov2020" namespace.
     /// </summary>
-    public static class XXPIM
+    public static partial class XXPIM
     {
         /// <summary>
         /// Defines the XML namespace associated with the xxpim prefix.

@@ -8,7 +8,7 @@ namespace DocumentFormat.OpenXml.Linq
     /// <summary>
     /// Declares XNamespace and XName fields for the xmlns:p223="http://schemas.microsoft.com/office/powerpoint/2022/03/main" namespace.
     /// </summary>
-    public static class P223
+    public static partial class P223
     {
         /// <summary>
         /// Defines the XML namespace associated with the p223 prefix.
@@ -48,7 +48,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
-        /// <item><description>has the following parent XML elements: <see cref="A.graphicData" />, <see cref="P188.ext" />.</description></item>
+        /// <item><description>has the following parent XML elements: <see cref="A.graphicData" />, <see cref="P.ext" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="rxn" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: Reactions.</description></item>
         /// </list>

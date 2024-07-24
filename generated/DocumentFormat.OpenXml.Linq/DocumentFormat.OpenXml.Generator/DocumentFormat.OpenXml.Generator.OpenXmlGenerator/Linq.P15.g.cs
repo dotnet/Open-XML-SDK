@@ -8,7 +8,7 @@ namespace DocumentFormat.OpenXml.Linq
     /// <summary>
     /// Declares XNamespace and XName fields for the xmlns:p15="http://schemas.microsoft.com/office/powerpoint/2012/main" namespace.
     /// </summary>
-    public static class P15
+    public static partial class P15
     {
         /// <summary>
         /// Defines the XML namespace associated with the p15 prefix.

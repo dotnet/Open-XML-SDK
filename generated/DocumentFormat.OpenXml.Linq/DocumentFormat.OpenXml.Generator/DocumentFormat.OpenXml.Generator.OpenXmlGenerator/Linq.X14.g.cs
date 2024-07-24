@@ -8,7 +8,7 @@ namespace DocumentFormat.OpenXml.Linq
     /// <summary>
     /// Declares XNamespace and XName fields for the xmlns:x14="http://schemas.microsoft.com/office/spreadsheetml/2009/9/main" namespace.
     /// </summary>
-    public static class X14
+    public static partial class X14
     {
         /// <summary>
         /// Defines the XML namespace associated with the x14 prefix.

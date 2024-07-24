@@ -8,7 +8,7 @@ namespace DocumentFormat.OpenXml.Linq
     /// <summary>
     /// Declares XNamespace and XName fields for the xmlns:asvg="http://schemas.microsoft.com/office/drawing/2016/SVG/main" namespace.
     /// </summary>
-    public static class ASVG
+    public static partial class ASVG
     {
         /// <summary>
         /// Defines the XML namespace associated with the asvg prefix.

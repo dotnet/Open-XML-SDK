@@ -8,7 +8,7 @@ namespace DocumentFormat.OpenXml.Linq
     /// <summary>
     /// Declares XNamespace and XName fields for the xmlns:xdr14="http://schemas.microsoft.com/office/excel/2010/spreadsheetDrawing" namespace.
     /// </summary>
-    public static class XDR14
+    public static partial class XDR14
     {
         /// <summary>
         /// Defines the XML namespace associated with the xdr14 prefix.

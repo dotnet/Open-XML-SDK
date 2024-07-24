@@ -8,7 +8,7 @@ namespace DocumentFormat.OpenXml.Linq
     /// <summary>
     /// Declares XNamespace and XName fields for the xmlns:clbl="http://schemas.microsoft.com/office/2020/mipLabelMetadata" namespace.
     /// </summary>
-    public static class CLBL
+    public static partial class CLBL
     {
         /// <summary>
         /// Defines the XML namespace associated with the clbl prefix.

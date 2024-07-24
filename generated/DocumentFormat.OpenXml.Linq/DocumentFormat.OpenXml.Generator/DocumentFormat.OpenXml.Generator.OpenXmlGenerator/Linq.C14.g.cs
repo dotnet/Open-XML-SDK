@@ -8,7 +8,7 @@ namespace DocumentFormat.OpenXml.Linq
     /// <summary>
     /// Declares XNamespace and XName fields for the xmlns:c14="http://schemas.microsoft.com/office/drawing/2007/8/2/chart" namespace.
     /// </summary>
-    public static class C14
+    public static partial class C14
     {
         /// <summary>
         /// Defines the XML namespace associated with the c14 prefix.

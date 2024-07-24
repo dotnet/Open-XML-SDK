@@ -8,7 +8,7 @@ namespace DocumentFormat.OpenXml.Linq
     /// <summary>
     /// Declares XNamespace and XName fields for the xmlns:ds="http://schemas.openxmlformats.org/officeDocument/2006/customXml" namespace.
     /// </summary>
-    public static class DS
+    public static partial class DS
     {
         /// <summary>
         /// Defines the XML namespace associated with the ds prefix.

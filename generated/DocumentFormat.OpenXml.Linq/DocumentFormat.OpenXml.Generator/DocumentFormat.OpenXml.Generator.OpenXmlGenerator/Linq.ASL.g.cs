@@ -8,7 +8,7 @@ namespace DocumentFormat.OpenXml.Linq
     /// <summary>
     /// Declares XNamespace and XName fields for the xmlns:asl="http://schemas.microsoft.com/office/drawing/2021/scriptlink" namespace.
     /// </summary>
-    public static class ASL
+    public static partial class ASL
     {
         /// <summary>
         /// Defines the XML namespace associated with the asl prefix.
