@@ -192,8 +192,7 @@
       "HasFixedContent": true
     },
     {
-      "MaxOccursGreatThanOne": true,
-      "ApiName": "FeaturePropertyBagsParts",
+      "ApiName": "FeaturePropertyBagsPart",
       "Name": "FeaturePropertyBagsPart",
       "HasFixedContent": true
     }

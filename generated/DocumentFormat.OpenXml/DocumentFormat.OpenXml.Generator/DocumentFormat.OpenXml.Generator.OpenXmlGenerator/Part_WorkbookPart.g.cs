@@ -85,9 +85,9 @@ namespace DocumentFormat.OpenXml.Packaging
         public IEnumerable<ExternalWorkbookPart> ExternalWorkbookParts => GetPartsOfType<ExternalWorkbookPart>();
 
         /// <summary>
-        /// Gets the FeaturePropertyBagsParts of the WorkbookPart
+        /// Gets the FeaturePropertyBagsPart of the WorkbookPart
         /// </summary>
-        public IEnumerable<FeaturePropertyBagsPart> FeaturePropertyBagsParts => GetPartsOfType<FeaturePropertyBagsPart>();
+        public FeaturePropertyBagsPart? FeaturePropertyBagsPart => GetSubPartOfType<FeaturePropertyBagsPart>();
 
         private protected override OpenXmlPartRootElement? InternalRootElement
         {
@@ -286,7 +286,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 { "http://schemas.microsoft.com/office/2017/06/relationships/rdSupportingPropertyBagStructure", "application/vnd.ms-excel.rdsupportingpropertybagstructure+xml", false, true, FileFormatVersions.Office2019 },
                 { "http://schemas.microsoft.com/office/2017/06/relationships/rdRichValueTypes", "application/vnd.ms-excel.rdrichvaluetypes+xml", false, true, FileFormatVersions.Office2019 },
                 { "http://schemas.microsoft.com/office/2020/07/relationships/rdrichvaluewebimage", "application/vnd.ms-excel.rdrichvaluewebimage+xml", false, false, FileFormatVersions.Office2021 },
-                { "http://schemas.microsoft.com/office/2022/11/relationships/FeaturePropertyBag", "application/vnd.ms-excel.featurepropertybag+xml", false, true, FileFormatVersions.Microsoft365 },
+                { "http://schemas.microsoft.com/office/2022/11/relationships/FeaturePropertyBag", "application/vnd.ms-excel.featurepropertybag+xml", false, false, FileFormatVersions.Microsoft365 },
             };
             bool IPartConstraintFeature.TryGetRule(string relationshipId, out PartConstraintRule rule) => _partConstraints.TryGetRule(relationshipId, out rule);
             IEnumerable<PartConstraintRule> IPartConstraintFeature.Rules => _partConstraints.Rules;
