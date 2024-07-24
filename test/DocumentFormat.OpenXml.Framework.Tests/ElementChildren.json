@@ -38174,6 +38174,19 @@
     ]
   },
   {
+    "Element": "DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.CommentPropertiesExtension",
+    "Children": [
+      {
+        "Name": "reactions",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2022/03/main"
+      },
+      {
+        "Name": "taskDetails",
+        "Namespace": "http://schemas.microsoft.com/office/powerpoint/2022/08/main"
+      }
+    ]
+  },
+  {
     "Element": "DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.CommentPropertiesExtensionList",
     "Children": [
       {

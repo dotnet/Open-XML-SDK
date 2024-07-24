@@ -54574,6 +54574,33 @@
   ]
  },
  {
+  "Key": "DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.CommentPropertiesExtension",
+  "Value": [
+   {
+    "Key": "Office2021",
+    "Value": {
+     "ParticleType": "Sequence"
+    }
+   },
+   {
+    "Key": "Microsoft365",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskDetails",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main.Reactions",
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
   "Key": "DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.CommentPropertiesExtensionList",
   "Value": [
    {
