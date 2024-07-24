@@ -20,6 +20,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// </list>
         /// </remarks>
         [Obsolete("Unused property, prefer DocumentFormat.OpenXml.Linq.P.ext", true)]
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
 #pragma warning disable SA1307 // Accessible fields should begin with upper-case letter
 #pragma warning disable SA1311 // Static readonly fields should begin with upper-case letter
         public static readonly XName ext = p188 + "ext";

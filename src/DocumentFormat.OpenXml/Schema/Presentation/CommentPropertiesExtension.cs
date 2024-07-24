@@ -19,6 +19,7 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
     /// </list>
     /// </remark>
     [Obsolete("Unused type, prefer DocumentFormat.OpenXml.Presentation.CommentPropertiesExtension", true)]
+    [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
     public partial class CommentPropertiesExtension : DocumentFormat.OpenXml.Presentation.CommentPropertiesExtension
     {
         /// <summary>
