@@ -8,7 +8,7 @@ namespace DocumentFormat.OpenXml.Linq
     /// <summary>
     /// Declares XNamespace and XName fields for the xmlns:xfpb="http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag" namespace.
     /// </summary>
-    public static class XFPB
+    public static partial class XFPB
     {
         /// <summary>
         /// Defines the XML namespace associated with the xfpb prefix.
