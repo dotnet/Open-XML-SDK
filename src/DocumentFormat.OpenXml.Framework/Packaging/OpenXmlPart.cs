@@ -2,12 +2,13 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Features;
+using DocumentFormat.OpenXml.Framework;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
 using System.IO;
-using System.IO.Packaging;
+using System.Threading;
 
 namespace DocumentFormat.OpenXml.Packaging
 {
@@ -236,9 +237,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <returns>The content stream of the part. </returns>
         public Stream GetStream(FileMode mode)
         {
-            ThrowIfObjectDisposed();
-
-            return PackagePart.GetStream(mode, Features.GetRequired<IPackageFeature>().Package.FileOpenAccess);
+            return GetStream(mode, Features.GetRequired<IPackageFeature>().Package.FileOpenAccess);
         }
 
         /// <summary>
@@ -251,7 +250,20 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             ThrowIfObjectDisposed();
 
-            return PackagePart.GetStream(mode, access);
+            var stream = PackagePart.GetStream(mode, access);
+
+            if (mode is FileMode.Create || stream.Length == 0)
+            {
+                UnloadRootElement();
+                return new UnloadingRootElementStream(this, stream);
+            }
+
+            if (stream.CanWrite)
+            {
+                return new UnloadingRootElementStream(this, stream);
+            }
+
+            return stream;
         }
 
         /// <summary>
@@ -605,5 +617,76 @@ namespace DocumentFormat.OpenXml.Packaging
         internal MarkupCompatibilityProcessSettings? MCSettings { get; set; }
 
         #endregion
+
+        /// <summary>
+        /// A <see cref="Stream"/> used by <see cref="GetStream(FileMode, FileAccess)" /> to unload the root if updated.
+        /// </summary>
+        private sealed class UnloadingRootElementStream : DelegatingStream
+        {
+            private readonly OpenXmlPart _part;
+
+            private bool _hasWritten;
+
+            public UnloadingRootElementStream(OpenXmlPart part, Stream innerStream)
+                : base(innerStream)
+            {
+                _part = part;
+            }
+
+            protected override void Dispose(bool disposing)
+            {
+                if (disposing && _hasWritten)
+                {
+                    _part.UnloadRootElement();
+                }
+
+                base.Dispose(disposing);
+            }
+
+            public override void Write(byte[] buffer, int offset, int count)
+            {
+                NotifyOfWrite();
+                base.Write(buffer, offset, count);
+            }
+
+#if NET46_OR_GREATER || NET || NETSTANDARD
+            public override System.Threading.Tasks.Task WriteAsync(byte[] buffer, int offset, int count, CancellationToken cancellationToken)
+            {
+                NotifyOfWrite();
+                return base.WriteAsync(buffer, offset, count, cancellationToken);
+            }
+#endif
+
+#if NET6_0_OR_GREATER
+            public override void Write(ReadOnlySpan<byte> buffer)
+            {
+                NotifyOfWrite();
+                base.Write(buffer);
+            }
+
+            public override System.Threading.Tasks.ValueTask WriteAsync(ReadOnlyMemory<byte> buffer, CancellationToken cancellationToken = default)
+            {
+                NotifyOfWrite();
+                return base.WriteAsync(buffer, cancellationToken);
+            }
+#endif
+
+            public override void WriteByte(byte value)
+            {
+                NotifyOfWrite();
+                base.WriteByte(value);
+            }
+
+            public override IAsyncResult BeginWrite(byte[] buffer, int offset, int count, AsyncCallback? callback, object? state)
+            {
+                NotifyOfWrite();
+                return base.BeginWrite(buffer, offset, count, callback, state);
+            }
+
+            private void NotifyOfWrite()
+            {
+                _hasWritten = true;
+            }
+        }
     }
 }
