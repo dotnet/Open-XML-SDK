@@ -34323,6 +34323,127 @@
   ]
  },
  {
+  "Key": "DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.ColumnBodyRevDxfTableRevDxf",
+  "Value": [
+   {
+    "Key": "Microsoft365",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FpbsFeaturePropertyBags"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.DifferentialFormatType",
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.ColumnHeaderRevDxfTableRevDxf",
+  "Value": [
+   {
+    "Key": "Microsoft365",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FpbsFeaturePropertyBags"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.DifferentialFormatType",
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.ColumnTotalsRevDxfTableRevDxf",
+  "Value": [
+   {
+    "Key": "Microsoft365",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FpbsFeaturePropertyBags"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.DifferentialFormatType",
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.DataRevDxfTableRevDxf",
+  "Value": [
+   {
+    "Key": "Microsoft365",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FpbsFeaturePropertyBags"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.DifferentialFormatType",
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.DifferentialFormatType",
+  "Value": [
+   {
+    "Key": "Microsoft365",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Spreadsheet.Font",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Spreadsheet.NumberingFormat",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Spreadsheet.Fill",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Spreadsheet.Alignment",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Spreadsheet.Border",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Spreadsheet.Protection",
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Spreadsheet.ExtensionList",
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
   "Key": "DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.ExtensionList",
   "Value": [
    {
@@ -34406,6 +34527,153 @@
       },
       {
        "ElementType": "DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.ExtensionList",
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FpbsFeaturePropertyBags",
+  "Value": [
+   {
+    "Key": "Microsoft365",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.BagExtensions",
+       "MaxOccurs": 0,
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FeaturePropertyBag",
+       "MaxOccurs": 0,
+       "MinOccurs": 0
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.ExtensionList",
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.HeaderRowBorderRevDxfTableRevDxf",
+  "Value": [
+   {
+    "Key": "Microsoft365",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FpbsFeaturePropertyBags"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.DifferentialFormatType",
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.HeaderRowRevDxfTableRevDxf",
+  "Value": [
+   {
+    "Key": "Microsoft365",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FpbsFeaturePropertyBags"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.DifferentialFormatType",
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.RevDxf",
+  "Value": [
+   {
+    "Key": "Microsoft365",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FpbsFeaturePropertyBags"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.DifferentialFormatType",
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.TableBorderRevDxfTableRevDxf",
+  "Value": [
+   {
+    "Key": "Microsoft365",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FpbsFeaturePropertyBags"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.DifferentialFormatType",
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.TotalsRowBorderRevDxfTableRevDxf",
+  "Value": [
+   {
+    "Key": "Microsoft365",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FpbsFeaturePropertyBags"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.DifferentialFormatType",
+       "MinOccurs": 0
+      }
+     ],
+     "ParticleType": "Sequence"
+    }
+   }
+  ]
+ },
+ {
+  "Key": "DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.TotalsRowRevDxfTableRevDxf",
+  "Value": [
+   {
+    "Key": "Microsoft365",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FpbsFeaturePropertyBags"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.DifferentialFormatType",
        "MinOccurs": 0
       }
      ],

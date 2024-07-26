@@ -22724,6 +22724,10 @@
     "Children": []
   },
   {
+    "Element": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2024.PivotAutoRefresh.Xsdboolean",
+    "Children": []
+  },
+  {
     "Element": "DocumentFormat.OpenXml.Office.Word.AllocatedCommand",
     "Children": []
   },
@@ -23066,12 +23070,97 @@
     "Children": []
   },
   {
+    "Element": "DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.ColumnBodyRevDxfTableRevDxf",
+    "Children": [
+      {
+        "Name": "dxf",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag"
+      },
+      {
+        "Name": "fpbs",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.ColumnHeaderRevDxfTableRevDxf",
+    "Children": [
+      {
+        "Name": "dxf",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag"
+      },
+      {
+        "Name": "fpbs",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.ColumnTotalsRevDxfTableRevDxf",
+    "Children": [
+      {
+        "Name": "dxf",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag"
+      },
+      {
+        "Name": "fpbs",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag"
+      }
+    ]
+  },
+  {
     "Element": "DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.DXFComplement",
     "Children": []
   },
   {
+    "Element": "DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.DataRevDxfTableRevDxf",
+    "Children": [
+      {
+        "Name": "dxf",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag"
+      },
+      {
+        "Name": "fpbs",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag"
+      }
+    ]
+  },
+  {
     "Element": "DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.DecimalFeatureProperty",
     "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.DifferentialFormatType",
+    "Children": [
+      {
+        "Name": "alignment",
+        "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
+      },
+      {
+        "Name": "border",
+        "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
+      },
+      {
+        "Name": "extLst",
+        "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
+      },
+      {
+        "Name": "fill",
+        "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
+      },
+      {
+        "Name": "font",
+        "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
+      },
+      {
+        "Name": "numFmt",
+        "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
+      },
+      {
+        "Name": "protection",
+        "Namespace": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
+      }
+    ]
   },
   {
     "Element": "DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.ExtensionList",
@@ -23133,6 +23222,49 @@
     ]
   },
   {
+    "Element": "DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FpbsFeaturePropertyBags",
+    "Children": [
+      {
+        "Name": "bag",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag"
+      },
+      {
+        "Name": "bagExt",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag"
+      },
+      {
+        "Name": "extLst",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.HeaderRowBorderRevDxfTableRevDxf",
+    "Children": [
+      {
+        "Name": "dxf",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag"
+      },
+      {
+        "Name": "fpbs",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.HeaderRowRevDxfTableRevDxf",
+    "Children": [
+      {
+        "Name": "dxf",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag"
+      },
+      {
+        "Name": "fpbs",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag"
+      }
+    ]
+  },
+  {
     "Element": "DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.IntFeatureProperty",
     "Children": []
   },
@@ -23145,12 +23277,64 @@
     "Children": []
   },
   {
+    "Element": "DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.RevDxf",
+    "Children": [
+      {
+        "Name": "dxf",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag"
+      },
+      {
+        "Name": "fpbs",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag"
+      }
+    ]
+  },
+  {
     "Element": "DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.SXsdstring",
     "Children": []
   },
   {
     "Element": "DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.StringFeatureProperty",
     "Children": []
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.TableBorderRevDxfTableRevDxf",
+    "Children": [
+      {
+        "Name": "dxf",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag"
+      },
+      {
+        "Name": "fpbs",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.TotalsRowBorderRevDxfTableRevDxf",
+    "Children": [
+      {
+        "Name": "dxf",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag"
+      },
+      {
+        "Name": "fpbs",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag"
+      }
+    ]
+  },
+  {
+    "Element": "DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.TotalsRowRevDxfTableRevDxf",
+    "Children": [
+      {
+        "Name": "dxf",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag"
+      },
+      {
+        "Name": "fpbs",
+        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag"
+      }
+    ]
   },
   {
     "Element": "DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.XfComplement",

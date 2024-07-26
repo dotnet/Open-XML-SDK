@@ -190,6 +190,11 @@
       "ApiName": "RdRichValueWebImagePart",
       "Name": "RdRichValueWebImagePart",
       "HasFixedContent": true
+    },
+    {
+      "ApiName": "FeaturePropertyBagsPart",
+      "Name": "FeaturePropertyBagsPart",
+      "HasFixedContent": true
     }
   ]
 }
