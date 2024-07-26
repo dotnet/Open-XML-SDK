@@ -3975,7 +3975,7 @@
         "RelationshipType": "http://schemas.microsoft.com/office/2022/11/relationships/FeaturePropertyBag",
         "ContentType": "application/vnd.ms-excel.featurepropertybag+xml",
         "MinOccursIsNonZero": false,
-        "MaxOccursGreatThanOne": true,
+        "MaxOccursGreatThanOne": false,
         "FileFormat": "Microsoft365"
       }
     ]
