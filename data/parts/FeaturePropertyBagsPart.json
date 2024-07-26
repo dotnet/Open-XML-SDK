@@ -1,0 +1,13 @@
+{
+  "Root": "xfpb:CT_FeaturePropertyBags",
+  "Name": "FeaturePropertyBagsPart",
+  "Base": "OpenXmlPart",
+  "ContentType": "application/vnd.ms-excel.featurepropertybag\u002Bxml",
+  "RelationshipType": "http://schemas.microsoft.com/office/2022/11/relationships/FeaturePropertyBag",
+  "Target": "featurePropertyBag",
+  "RootElement": "FeaturePropertyBags",
+  "Paths": {
+    "General": "featurePropertyBag"
+  },
+  "Version": "Microsoft365"
+}

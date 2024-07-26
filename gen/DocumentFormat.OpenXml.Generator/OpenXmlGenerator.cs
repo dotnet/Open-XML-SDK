@@ -88,7 +88,9 @@ public class OpenXmlGenerator : IIncrementalGenerator
 
                 using (writer.AddBlock(new() { IncludeSemiColon = true }))
                 {
-                    foreach (var type in GetRootElements().OrderBy(t => t.Part).ThenBy(t => t.Name))
+                    var roots = GetRootElements();
+
+                    foreach (var type in roots.OrderBy(t => t.Part).ThenBy(t => t.Name))
                     {
                         // TODO: Do we want to include elements that don't have a registered type?
                         if (string.IsNullOrEmpty(type.Part) || parts.Contains(type.Part))

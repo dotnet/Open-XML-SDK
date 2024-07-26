@@ -172,6 +172,10 @@
     "Namespace": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.Pivot2023Calculation"
   },
   {
+    "Prefix": "xlpar",
+    "Namespace": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2024.PivotAutoRefresh"
+  },
+  {
     "Prefix": "wne",
     "Namespace": "DocumentFormat.OpenXml.Office.Word"
   },

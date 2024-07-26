@@ -73,6 +73,8 @@ partial class SpreadsheetDocument
             { new OpenXmlQualifiedName("http://schemas.openxmlformats.org/officeDocument/2006/extended-properties", "Properties"), () => new DocumentFormat.OpenXml.ExtendedProperties.Properties() },
             // ExternalWorkbookPart
             { new OpenXmlQualifiedName("http://schemas.openxmlformats.org/spreadsheetml/2006/main", "externalLink"), () => new DocumentFormat.OpenXml.Spreadsheet.ExternalLink() },
+            // FeaturePropertyBagsPart
+            { new OpenXmlQualifiedName("http://schemas.microsoft.com/office/spreadsheetml/2022/featurepropertybag", "FeaturePropertyBags"), () => new DocumentFormat.OpenXml.Office.Y2022.FeaturePropertyBag.FeaturePropertyBags() },
             // LabelInfoPart
             { new OpenXmlQualifiedName("http://schemas.microsoft.com/office/2020/mipLabelMetadata", "labelList"), () => new DocumentFormat.OpenXml.Office2021.MipLabelMetaData.ClassificationLabelList() },
             // MacroSheetPart

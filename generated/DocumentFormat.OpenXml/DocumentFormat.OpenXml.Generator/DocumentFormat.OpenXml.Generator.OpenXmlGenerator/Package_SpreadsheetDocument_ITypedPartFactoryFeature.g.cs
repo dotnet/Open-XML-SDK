@@ -185,6 +185,11 @@ partial class SpreadsheetDocument
                 return (T)(object)new ExternalWorkbookPart();
             }
             
+            if (typeof(T) == typeof(FeaturePropertyBagsPart))
+            {
+                return (T)(object)new FeaturePropertyBagsPart();
+            }
+            
             if (typeof(T) == typeof(ImagePart))
             {
                 return (T)(object)new ImagePart();
