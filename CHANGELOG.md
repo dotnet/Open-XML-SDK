@@ -10,6 +10,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 - Added `DocumentFormat.OpenXml.Office.SpreadSheetML.Y2024.PivotAutoRefresh` namespace
 - Added `DocumentFormat.OpenXml.Office.SpreadSheetML.Y2024.PivotDynamicArrays` namespace
+- Added `DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.DataSourceVersioning` namespace
+- Added `DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.ExternalCodeService` namespace
+- Added `DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms` namespace
+- Added `DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.Pivot2023Calculation` namespace
 
 ### Fixed
 
