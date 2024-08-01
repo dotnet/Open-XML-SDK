@@ -2536,6 +2536,18 @@
       {
         "Name": "filteredSeriesTitle",
         "Namespace": "http://schemas.microsoft.com/office/drawing/2012/chart"
+      },
+      {
+        "Name": "categoryFilterExceptions",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chart"
+      },
+      {
+        "Name": "datapointuniqueidmap",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chart"
+      },
+      {
+        "Name": "uniqueId",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chart"
       }
     ]
   },
@@ -2832,6 +2844,18 @@
       {
         "Name": "filteredSeriesTitle",
         "Namespace": "http://schemas.microsoft.com/office/drawing/2012/chart"
+      },
+      {
+        "Name": "categoryFilterExceptions",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chart"
+      },
+      {
+        "Name": "datapointuniqueidmap",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chart"
+      },
+      {
+        "Name": "uniqueId",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chart"
       }
     ]
   },
@@ -2998,6 +3022,18 @@
       {
         "Name": "filteredCategoryTitle",
         "Namespace": "http://schemas.microsoft.com/office/drawing/2012/chart"
+      },
+      {
+        "Name": "categoryFilterExceptions",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chart"
+      },
+      {
+        "Name": "datapointuniqueidmap",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chart"
+      },
+      {
+        "Name": "uniqueId",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chart"
       }
     ]
   },
@@ -3470,6 +3506,10 @@
       {
         "Name": "xForSave",
         "Namespace": "http://schemas.microsoft.com/office/drawing/2012/chart"
+      },
+      {
+        "Name": "uniqueId",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chart"
       }
     ]
   },
@@ -4521,6 +4561,18 @@
       {
         "Name": "filteredSeriesTitle",
         "Namespace": "http://schemas.microsoft.com/office/drawing/2012/chart"
+      },
+      {
+        "Name": "categoryFilterExceptions",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chart"
+      },
+      {
+        "Name": "datapointuniqueidmap",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chart"
+      },
+      {
+        "Name": "uniqueId",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chart"
       }
     ]
   },
@@ -5111,6 +5163,18 @@
       {
         "Name": "filteredSeriesTitle",
         "Namespace": "http://schemas.microsoft.com/office/drawing/2012/chart"
+      },
+      {
+        "Name": "categoryFilterExceptions",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chart"
+      },
+      {
+        "Name": "datapointuniqueidmap",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chart"
+      },
+      {
+        "Name": "uniqueId",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chart"
       }
     ]
   },
@@ -5464,6 +5528,18 @@
       {
         "Name": "filteredSeriesTitle",
         "Namespace": "http://schemas.microsoft.com/office/drawing/2012/chart"
+      },
+      {
+        "Name": "categoryFilterExceptions",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chart"
+      },
+      {
+        "Name": "datapointuniqueidmap",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chart"
+      },
+      {
+        "Name": "uniqueId",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chart"
       }
     ]
   },
@@ -5660,6 +5736,18 @@
       {
         "Name": "filteredSeriesTitle",
         "Namespace": "http://schemas.microsoft.com/office/drawing/2012/chart"
+      },
+      {
+        "Name": "categoryFilterExceptions",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chart"
+      },
+      {
+        "Name": "datapointuniqueidmap",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chart"
+      },
+      {
+        "Name": "uniqueId",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chart"
       }
     ]
   },
@@ -6283,6 +6371,18 @@
       {
         "Name": "filteredSeriesTitle",
         "Namespace": "http://schemas.microsoft.com/office/drawing/2012/chart"
+      },
+      {
+        "Name": "categoryFilterExceptions",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chart"
+      },
+      {
+        "Name": "datapointuniqueidmap",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chart"
+      },
+      {
+        "Name": "uniqueId",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chart"
       }
     ]
   },
@@ -9948,6 +10048,46 @@
       {
         "Name": "viewSelLst",
         "Namespace": "http://schemas.microsoft.com/office/drawing/2013/main/command"
+      },
+      {
+        "Name": "bubble3D",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chart"
+      },
+      {
+        "Name": "categoryFilterExceptions",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chart"
+      },
+      {
+        "Name": "dLbl",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chart"
+      },
+      {
+        "Name": "datapointuniqueidmap",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chart"
+      },
+      {
+        "Name": "explosion",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chart"
+      },
+      {
+        "Name": "invertIfNegative",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chart"
+      },
+      {
+        "Name": "marker",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chart"
+      },
+      {
+        "Name": "pivotOptions16",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chart"
+      },
+      {
+        "Name": "spPr",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chart"
+      },
+      {
+        "Name": "uniqueId",
+        "Namespace": "http://schemas.microsoft.com/office/drawing/2014/chart"
       },
       {
         "Name": "colId",

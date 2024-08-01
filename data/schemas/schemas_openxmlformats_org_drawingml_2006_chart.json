@@ -596,17 +596,17 @@
       "IsLeafElement": true
     },
     {
-      "Name": "c:CT_Boolean/c:smooth",
-      "ClassName": "Smooth",
-      "Summary": "Defines the Smooth Class.",
+      "Name": "c:CT_Boolean/c:marker",
+      "ClassName": "ShowMarker",
+      "Summary": "Defines the ShowMarker Class.",
       "BaseClass": "BooleanType",
       "IsDerived": true,
       "IsLeafElement": true
     },
     {
-      "Name": "c:CT_Boolean/c:marker",
-      "ClassName": "ShowMarker",
-      "Summary": "Defines the ShowMarker Class.",
+      "Name": "c:CT_Boolean/c:smooth",
+      "ClassName": "Smooth",
+      "Summary": "Defines the Smooth Class.",
       "BaseClass": "BooleanType",
       "IsDerived": true,
       "IsLeafElement": true
@@ -8969,90 +8969,6 @@
       }
     },
     {
-      "Name": "c:CT_DLblExtension/c:ext",
-      "ClassName": "DLblExtension",
-      "Summary": "Defines the DLblExtension Class.",
-      "BaseClass": "OpenXmlCompositeElement",
-      "Attributes": [
-        {
-          "QName": ":uri",
-          "Type": "StringValue",
-          "PropertyComments": "URI",
-          "Validators": [
-            {
-              "Name": "RequiredValidator"
-            },
-            {
-              "Arguments": [
-                {
-                  "Type": "Boolean",
-                  "Name": "IsToken",
-                  "Value": "True"
-                }
-              ],
-              "Name": "StringValidator",
-              "IsInitialVersion": true
-            }
-          ]
-        }
-      ],
-      "Children": [
-        {
-          "Name": "c15:CT_DataLabelFieldTable/c15:dlblFieldTable",
-          "PropertyName": "DataLabelFieldTable"
-        },
-        {
-          "Name": "c:CT_Boolean/c15:xForSave",
-          "PropertyName": "ExceptionForSave"
-        },
-        {
-          "Name": "c:CT_Boolean/c15:showDataLabelsRange",
-          "PropertyName": "ShowDataLabelsRange"
-        },
-        {
-          "Name": "a:CT_ShapeProperties/c15:spPr",
-          "PropertyName": "ShapeProperties"
-        },
-        {
-          "Name": "c:CT_Layout/c15:layout",
-          "PropertyName": "Layout"
-        }
-      ],
-      "Particle": {
-        "Kind": "Choice",
-        "Items": [
-          {
-            "Name": "c15:CT_DataLabelFieldTable/c15:dlblFieldTable",
-            "InitialVersion": "Office2013"
-          },
-          {
-            "Name": "c:CT_Boolean/c15:xForSave",
-            "InitialVersion": "Office2013"
-          },
-          {
-            "Name": "c:CT_Boolean/c15:showDataLabelsRange",
-            "InitialVersion": "Office2013"
-          },
-          {
-            "Name": "a:CT_ShapeProperties/c15:spPr",
-            "InitialVersion": "Office2013"
-          },
-          {
-            "Name": "c:CT_Layout/c15:layout",
-            "InitialVersion": "Office2013"
-          },
-          {
-            "Kind": "Any",
-            "Occurs": [
-              {
-                "Max": 1
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
       "Name": "c:CT_DLblsExtension/c:ext",
       "ClassName": "DLblsExtension",
       "Summary": "Defines the DLblsExtension Class.",
@@ -9139,454 +9055,6 @@
           },
           {
             "Name": "c:CT_ChartLines/c15:leaderLines",
-            "InitialVersion": "Office2013"
-          },
-          {
-            "Kind": "Any",
-            "Occurs": [
-              {
-                "Max": 1
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "Name": "c:CT_LineSerExtension/c:ext",
-      "ClassName": "LineSerExtension",
-      "Summary": "Defines the LineSerExtension Class.",
-      "BaseClass": "OpenXmlCompositeElement",
-      "Attributes": [
-        {
-          "QName": ":uri",
-          "Type": "StringValue",
-          "PropertyComments": "URI",
-          "Validators": [
-            {
-              "Name": "RequiredValidator"
-            },
-            {
-              "Arguments": [
-                {
-                  "Type": "Boolean",
-                  "Name": "IsToken",
-                  "Value": "True"
-                }
-              ],
-              "Name": "StringValidator",
-              "IsInitialVersion": true
-            }
-          ]
-        }
-      ],
-      "Children": [
-        {
-          "Name": "c15:CT_FilteredSeriesTitle/c15:filteredSeriesTitle",
-          "PropertyName": "FilteredSeriesTitle"
-        },
-        {
-          "Name": "c15:CT_FilteredCategoryTitle/c15:filteredCategoryTitle",
-          "PropertyName": "FilteredCategoryTitle"
-        },
-        {
-          "Name": "c15:CT_SeriesDataLabelsRange/c15:datalabelsRange",
-          "PropertyName": "DataLabelsRange"
-        },
-        {
-          "Name": "c15:CT_CategoryFilterExceptions/c15:categoryFilterExceptions",
-          "PropertyName": "CategoryFilterExceptions"
-        }
-      ],
-      "Particle": {
-        "Kind": "Choice",
-        "Items": [
-          {
-            "Name": "c15:CT_FilteredSeriesTitle/c15:filteredSeriesTitle",
-            "InitialVersion": "Office2013"
-          },
-          {
-            "Name": "c15:CT_FilteredCategoryTitle/c15:filteredCategoryTitle",
-            "InitialVersion": "Office2013"
-          },
-          {
-            "Name": "c15:CT_SeriesDataLabelsRange/c15:datalabelsRange",
-            "InitialVersion": "Office2013"
-          },
-          {
-            "Name": "c15:CT_CategoryFilterExceptions/c15:categoryFilterExceptions",
-            "InitialVersion": "Office2013"
-          },
-          {
-            "Kind": "Any",
-            "Occurs": [
-              {
-                "Max": 1
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "Name": "c:CT_ScatterSerExtension/c:ext",
-      "ClassName": "ScatterSerExtension",
-      "Summary": "Defines the ScatterSerExtension Class.",
-      "BaseClass": "OpenXmlCompositeElement",
-      "Attributes": [
-        {
-          "QName": ":uri",
-          "Type": "StringValue",
-          "PropertyComments": "URI",
-          "Validators": [
-            {
-              "Name": "RequiredValidator"
-            },
-            {
-              "Arguments": [
-                {
-                  "Type": "Boolean",
-                  "Name": "IsToken",
-                  "Value": "True"
-                }
-              ],
-              "Name": "StringValidator",
-              "IsInitialVersion": true
-            }
-          ]
-        }
-      ],
-      "Children": [
-        {
-          "Name": "c15:CT_FilteredSeriesTitle/c15:filteredSeriesTitle",
-          "PropertyName": "FilteredSeriesTitle"
-        },
-        {
-          "Name": "c15:CT_FilteredCategoryTitle/c15:filteredCategoryTitle",
-          "PropertyName": "FilteredCategoryTitle"
-        },
-        {
-          "Name": "c15:CT_SeriesDataLabelsRange/c15:datalabelsRange",
-          "PropertyName": "DataLabelsRange"
-        },
-        {
-          "Name": "c15:CT_CategoryFilterExceptions/c15:categoryFilterExceptions",
-          "PropertyName": "CategoryFilterExceptions"
-        }
-      ],
-      "Particle": {
-        "Kind": "Choice",
-        "Items": [
-          {
-            "Name": "c15:CT_FilteredSeriesTitle/c15:filteredSeriesTitle",
-            "InitialVersion": "Office2013"
-          },
-          {
-            "Name": "c15:CT_FilteredCategoryTitle/c15:filteredCategoryTitle",
-            "InitialVersion": "Office2013"
-          },
-          {
-            "Name": "c15:CT_SeriesDataLabelsRange/c15:datalabelsRange",
-            "InitialVersion": "Office2013"
-          },
-          {
-            "Name": "c15:CT_CategoryFilterExceptions/c15:categoryFilterExceptions",
-            "InitialVersion": "Office2013"
-          },
-          {
-            "Kind": "Any",
-            "Occurs": [
-              {
-                "Max": 1
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "Name": "c:CT_RadarSerExtension/c:ext",
-      "ClassName": "RadarSerExtension",
-      "Summary": "Defines the RadarSerExtension Class.",
-      "BaseClass": "OpenXmlCompositeElement",
-      "Attributes": [
-        {
-          "QName": ":uri",
-          "Type": "StringValue",
-          "PropertyComments": "URI",
-          "Validators": [
-            {
-              "Name": "RequiredValidator"
-            },
-            {
-              "Arguments": [
-                {
-                  "Type": "Boolean",
-                  "Name": "IsToken",
-                  "Value": "True"
-                }
-              ],
-              "Name": "StringValidator",
-              "IsInitialVersion": true
-            }
-          ]
-        }
-      ],
-      "Children": [
-        {
-          "Name": "c15:CT_FilteredSeriesTitle/c15:filteredSeriesTitle",
-          "PropertyName": "FilteredSeriesTitle"
-        },
-        {
-          "Name": "c15:CT_FilteredCategoryTitle/c15:filteredCategoryTitle",
-          "PropertyName": "FilteredCategoryTitle"
-        },
-        {
-          "Name": "c15:CT_SeriesDataLabelsRange/c15:datalabelsRange",
-          "PropertyName": "DataLabelsRange"
-        },
-        {
-          "Name": "c15:CT_CategoryFilterExceptions/c15:categoryFilterExceptions",
-          "PropertyName": "CategoryFilterExceptions"
-        }
-      ],
-      "Particle": {
-        "Kind": "Choice",
-        "Items": [
-          {
-            "Name": "c15:CT_FilteredSeriesTitle/c15:filteredSeriesTitle",
-            "InitialVersion": "Office2013"
-          },
-          {
-            "Name": "c15:CT_FilteredCategoryTitle/c15:filteredCategoryTitle",
-            "InitialVersion": "Office2013"
-          },
-          {
-            "Name": "c15:CT_SeriesDataLabelsRange/c15:datalabelsRange",
-            "InitialVersion": "Office2013"
-          },
-          {
-            "Name": "c15:CT_CategoryFilterExceptions/c15:categoryFilterExceptions",
-            "InitialVersion": "Office2013"
-          },
-          {
-            "Kind": "Any",
-            "Occurs": [
-              {
-                "Max": 1
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "Name": "c:CT_AreaSerExtension/c:ext",
-      "ClassName": "AreaSerExtension",
-      "Summary": "Defines the AreaSerExtension Class.",
-      "BaseClass": "OpenXmlCompositeElement",
-      "Attributes": [
-        {
-          "QName": ":uri",
-          "Type": "StringValue",
-          "PropertyComments": "URI",
-          "Validators": [
-            {
-              "Name": "RequiredValidator"
-            },
-            {
-              "Arguments": [
-                {
-                  "Type": "Boolean",
-                  "Name": "IsToken",
-                  "Value": "True"
-                }
-              ],
-              "Name": "StringValidator",
-              "IsInitialVersion": true
-            }
-          ]
-        }
-      ],
-      "Children": [
-        {
-          "Name": "c15:CT_FilteredSeriesTitle/c15:filteredSeriesTitle",
-          "PropertyName": "FilteredSeriesTitle"
-        },
-        {
-          "Name": "c15:CT_FilteredCategoryTitle/c15:filteredCategoryTitle",
-          "PropertyName": "FilteredCategoryTitle"
-        },
-        {
-          "Name": "c15:CT_SeriesDataLabelsRange/c15:datalabelsRange",
-          "PropertyName": "DataLabelsRange"
-        },
-        {
-          "Name": "c15:CT_CategoryFilterExceptions/c15:categoryFilterExceptions",
-          "PropertyName": "CategoryFilterExceptions"
-        }
-      ],
-      "Particle": {
-        "Kind": "Choice",
-        "Items": [
-          {
-            "Name": "c15:CT_FilteredSeriesTitle/c15:filteredSeriesTitle",
-            "InitialVersion": "Office2013"
-          },
-          {
-            "Name": "c15:CT_FilteredCategoryTitle/c15:filteredCategoryTitle",
-            "InitialVersion": "Office2013"
-          },
-          {
-            "Name": "c15:CT_SeriesDataLabelsRange/c15:datalabelsRange",
-            "InitialVersion": "Office2013"
-          },
-          {
-            "Name": "c15:CT_CategoryFilterExceptions/c15:categoryFilterExceptions",
-            "InitialVersion": "Office2013"
-          },
-          {
-            "Kind": "Any",
-            "Occurs": [
-              {
-                "Max": 1
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "Name": "c:CT_PieSerExtension/c:ext",
-      "ClassName": "PieSerExtension",
-      "Summary": "Defines the PieSerExtension Class.",
-      "BaseClass": "OpenXmlCompositeElement",
-      "Attributes": [
-        {
-          "QName": ":uri",
-          "Type": "StringValue",
-          "PropertyComments": "URI",
-          "Validators": [
-            {
-              "Name": "RequiredValidator"
-            },
-            {
-              "Arguments": [
-                {
-                  "Type": "Boolean",
-                  "Name": "IsToken",
-                  "Value": "True"
-                }
-              ],
-              "Name": "StringValidator",
-              "IsInitialVersion": true
-            }
-          ]
-        }
-      ],
-      "Children": [
-        {
-          "Name": "c15:CT_FilteredSeriesTitle/c15:filteredSeriesTitle",
-          "PropertyName": "FilteredSeriesTitle"
-        },
-        {
-          "Name": "c15:CT_FilteredCategoryTitle/c15:filteredCategoryTitle",
-          "PropertyName": "FilteredCategoryTitle"
-        },
-        {
-          "Name": "c15:CT_SeriesDataLabelsRange/c15:datalabelsRange",
-          "PropertyName": "DataLabelsRange"
-        },
-        {
-          "Name": "c15:CT_CategoryFilterExceptions/c15:categoryFilterExceptions",
-          "PropertyName": "CategoryFilterExceptions"
-        }
-      ],
-      "Particle": {
-        "Kind": "Choice",
-        "Items": [
-          {
-            "Name": "c15:CT_FilteredSeriesTitle/c15:filteredSeriesTitle",
-            "InitialVersion": "Office2013"
-          },
-          {
-            "Name": "c15:CT_FilteredCategoryTitle/c15:filteredCategoryTitle",
-            "InitialVersion": "Office2013"
-          },
-          {
-            "Name": "c15:CT_SeriesDataLabelsRange/c15:datalabelsRange",
-            "InitialVersion": "Office2013"
-          },
-          {
-            "Name": "c15:CT_CategoryFilterExceptions/c15:categoryFilterExceptions",
-            "InitialVersion": "Office2013"
-          },
-          {
-            "Kind": "Any",
-            "Occurs": [
-              {
-                "Max": 1
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "Name": "c:CT_SurfaceSerExtension/c:ext",
-      "ClassName": "SurfaceSerExtension",
-      "Summary": "Defines the SurfaceSerExtension Class.",
-      "BaseClass": "OpenXmlCompositeElement",
-      "Attributes": [
-        {
-          "QName": ":uri",
-          "Type": "StringValue",
-          "PropertyComments": "URI",
-          "Validators": [
-            {
-              "Name": "RequiredValidator"
-            },
-            {
-              "Arguments": [
-                {
-                  "Type": "Boolean",
-                  "Name": "IsToken",
-                  "Value": "True"
-                }
-              ],
-              "Name": "StringValidator",
-              "IsInitialVersion": true
-            }
-          ]
-        }
-      ],
-      "Children": [
-        {
-          "Name": "c15:CT_FilteredSeriesTitle/c15:filteredSeriesTitle",
-          "PropertyName": "FilteredSeriesTitle"
-        },
-        {
-          "Name": "c15:CT_FilteredCategoryTitle/c15:filteredCategoryTitle",
-          "PropertyName": "FilteredCategoryTitle"
-        },
-        {
-          "Name": "c15:CT_CategoryFilterExceptions/c15:categoryFilterExceptions",
-          "PropertyName": "CategoryFilterExceptions"
-        }
-      ],
-      "Particle": {
-        "Kind": "Choice",
-        "Items": [
-          {
-            "Name": "c15:CT_FilteredSeriesTitle/c15:filteredSeriesTitle",
-            "InitialVersion": "Office2013"
-          },
-          {
-            "Name": "c15:CT_FilteredCategoryTitle/c15:filteredCategoryTitle",
-            "InitialVersion": "Office2013"
-          },
-          {
-            "Name": "c15:CT_CategoryFilterExceptions/c15:categoryFilterExceptions",
             "InitialVersion": "Office2013"
           },
           {
@@ -10647,28 +10115,6 @@
       }
     },
     {
-      "Name": "c:CT_DLblExtensionList/c:extLst",
-      "ClassName": "DLblExtensionList",
-      "Summary": "Defines the DLblExtensionList Class.",
-      "BaseClass": "OpenXmlCompositeElement",
-      "Children": [
-        {
-          "Name": "c:CT_DLblExtension/c:ext"
-        }
-      ],
-      "Particle": {
-        "Kind": "Sequence",
-        "Items": [
-          {
-            "Name": "c:CT_DLblExtension/c:ext",
-            "Occurs": [
-              {}
-            ]
-          }
-        ]
-      }
-    },
-    {
       "Name": "c:CT_DLblsExtensionList/c:extLst",
       "ClassName": "DLblsExtensionList",
       "Summary": "Defines the DLblsExtensionList Class.",
@@ -10683,911 +10129,6 @@
         "Items": [
           {
             "Name": "c:CT_DLblsExtension/c:ext",
-            "Occurs": [
-              {}
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "Name": "c:CT_DPt/c:dPt",
-      "ClassName": "DataPoint",
-      "Summary": "Defines the DataPoint Class.",
-      "CompositeType": "OneSequence",
-      "BaseClass": "OpenXmlCompositeElement",
-      "Children": [
-        {
-          "Name": "c:CT_UnsignedInt/c:idx",
-          "PropertyName": "Index",
-          "PropertyComments": "Index"
-        },
-        {
-          "Name": "c:CT_Boolean/c:invertIfNegative",
-          "PropertyName": "InvertIfNegative",
-          "PropertyComments": "Invert if Negative"
-        },
-        {
-          "Name": "c:CT_Marker/c:marker",
-          "PropertyName": "Marker",
-          "PropertyComments": "Marker"
-        },
-        {
-          "Name": "c:CT_Boolean/c:bubble3D",
-          "PropertyName": "Bubble3D",
-          "PropertyComments": "3D Bubble"
-        },
-        {
-          "Name": "c:CT_UnsignedInt/c:explosion",
-          "PropertyName": "Explosion",
-          "PropertyComments": "Explosion"
-        },
-        {
-          "Name": "a:CT_ChartShapeProperties/c:spPr",
-          "PropertyName": "ChartShapeProperties"
-        },
-        {
-          "Name": "c:CT_PictureOptions/c:pictureOptions",
-          "PropertyName": "PictureOptions"
-        },
-        {
-          "Name": "c:CT_ExtensionList/c:extLst",
-          "PropertyName": "ExtensionList",
-          "PropertyComments": "Chart Extensibility"
-        }
-      ],
-      "Particle": {
-        "Kind": "Sequence",
-        "Items": [
-          {
-            "Name": "c:CT_UnsignedInt/c:idx"
-          },
-          {
-            "Name": "c:CT_Boolean/c:invertIfNegative",
-            "Occurs": [
-              {
-                "Max": 1
-              }
-            ]
-          },
-          {
-            "Name": "c:CT_Marker/c:marker",
-            "Occurs": [
-              {
-                "Max": 1
-              }
-            ]
-          },
-          {
-            "Name": "c:CT_Boolean/c:bubble3D",
-            "Occurs": [
-              {
-                "Max": 1
-              }
-            ]
-          },
-          {
-            "Name": "c:CT_UnsignedInt/c:explosion",
-            "Occurs": [
-              {
-                "Max": 1
-              }
-            ]
-          },
-          {
-            "Name": "a:CT_ChartShapeProperties/c:spPr",
-            "Occurs": [
-              {
-                "Max": 1
-              }
-            ]
-          },
-          {
-            "Name": "c:CT_PictureOptions/c:pictureOptions",
-            "Occurs": [
-              {
-                "Max": 1
-              }
-            ]
-          },
-          {
-            "Name": "c:CT_ExtensionList/c:extLst",
-            "Occurs": [
-              {
-                "Max": 1
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "Name": "c:CT_Trendline/c:trendline",
-      "ClassName": "Trendline",
-      "Summary": "Defines the Trendline Class.",
-      "CompositeType": "OneSequence",
-      "BaseClass": "OpenXmlCompositeElement",
-      "Children": [
-        {
-          "Name": "xsd:string/c:name",
-          "PropertyName": "TrendlineName",
-          "PropertyComments": "Trendline Name"
-        },
-        {
-          "Name": "a:CT_ChartShapeProperties/c:spPr",
-          "PropertyName": "ChartShapeProperties"
-        },
-        {
-          "Name": "c:CT_TrendlineType/c:trendlineType",
-          "PropertyName": "TrendlineType",
-          "PropertyComments": "Trendline Type"
-        },
-        {
-          "Name": "c:CT_Order/c:order",
-          "PropertyName": "PolynomialOrder",
-          "PropertyComments": "Polynomial Trendline Order"
-        },
-        {
-          "Name": "c:CT_Period/c:period",
-          "PropertyName": "Period",
-          "PropertyComments": "Period"
-        },
-        {
-          "Name": "c:CT_Double/c:forward",
-          "PropertyName": "Forward",
-          "PropertyComments": "Forward"
-        },
-        {
-          "Name": "c:CT_Double/c:backward",
-          "PropertyName": "Backward",
-          "PropertyComments": "Backward"
-        },
-        {
-          "Name": "c:CT_Double/c:intercept",
-          "PropertyName": "Intercept",
-          "PropertyComments": "Intercept"
-        },
-        {
-          "Name": "c:CT_Boolean/c:dispRSqr",
-          "PropertyName": "DisplayRSquaredValue",
-          "PropertyComments": "Display R Squared Value"
-        },
-        {
-          "Name": "c:CT_Boolean/c:dispEq",
-          "PropertyName": "DisplayEquation",
-          "PropertyComments": "Display Equation"
-        },
-        {
-          "Name": "c:CT_TrendlineLbl/c:trendlineLbl",
-          "PropertyName": "TrendlineLabel",
-          "PropertyComments": "Trendline Label"
-        },
-        {
-          "Name": "c:CT_ExtensionList/c:extLst",
-          "PropertyName": "ExtensionList",
-          "PropertyComments": "Chart Extensibility"
-        }
-      ],
-      "Particle": {
-        "Kind": "Sequence",
-        "Items": [
-          {
-            "Name": "xsd:string/c:name",
-            "Occurs": [
-              {
-                "Max": 1
-              }
-            ]
-          },
-          {
-            "Name": "a:CT_ChartShapeProperties/c:spPr",
-            "Occurs": [
-              {
-                "Max": 1
-              }
-            ]
-          },
-          {
-            "Name": "c:CT_TrendlineType/c:trendlineType"
-          },
-          {
-            "Name": "c:CT_Order/c:order",
-            "Occurs": [
-              {
-                "Max": 1
-              }
-            ]
-          },
-          {
-            "Name": "c:CT_Period/c:period",
-            "Occurs": [
-              {
-                "Max": 1
-              }
-            ]
-          },
-          {
-            "Name": "c:CT_Double/c:forward",
-            "Occurs": [
-              {
-                "Max": 1
-              }
-            ]
-          },
-          {
-            "Name": "c:CT_Double/c:backward",
-            "Occurs": [
-              {
-                "Max": 1
-              }
-            ]
-          },
-          {
-            "Name": "c:CT_Double/c:intercept",
-            "Occurs": [
-              {
-                "Max": 1
-              }
-            ]
-          },
-          {
-            "Name": "c:CT_Boolean/c:dispRSqr",
-            "Occurs": [
-              {
-                "Max": 1
-              }
-            ]
-          },
-          {
-            "Name": "c:CT_Boolean/c:dispEq",
-            "Occurs": [
-              {
-                "Max": 1
-              }
-            ]
-          },
-          {
-            "Name": "c:CT_TrendlineLbl/c:trendlineLbl",
-            "Occurs": [
-              {
-                "Max": 1
-              }
-            ]
-          },
-          {
-            "Name": "c:CT_ExtensionList/c:extLst",
-            "Occurs": [
-              {
-                "Max": 1
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "Name": "c:CT_ErrBars/c:errBars",
-      "ClassName": "ErrorBars",
-      "Summary": "Defines the ErrorBars Class.",
-      "CompositeType": "OneSequence",
-      "BaseClass": "OpenXmlCompositeElement",
-      "Children": [
-        {
-          "Name": "c:CT_ErrDir/c:errDir",
-          "PropertyName": "ErrorDirection",
-          "PropertyComments": "Error Bar Direction"
-        },
-        {
-          "Name": "c:CT_ErrBarType/c:errBarType",
-          "PropertyName": "ErrorBarType",
-          "PropertyComments": "Error Bar Type"
-        },
-        {
-          "Name": "c:CT_ErrValType/c:errValType",
-          "PropertyName": "ErrorBarValueType",
-          "PropertyComments": "Error Bar Value Type"
-        },
-        {
-          "Name": "c:CT_Boolean/c:noEndCap",
-          "PropertyName": "NoEndCap",
-          "PropertyComments": "No End Cap"
-        },
-        {
-          "Name": "c:CT_NumDataSource/c:plus",
-          "PropertyName": "Plus",
-          "PropertyComments": "Plus"
-        },
-        {
-          "Name": "c:CT_NumDataSource/c:minus",
-          "PropertyName": "Minus",
-          "PropertyComments": "Minus"
-        },
-        {
-          "Name": "c:CT_Double/c:val",
-          "PropertyName": "ErrorBarValue",
-          "PropertyComments": "Error Bar Value"
-        },
-        {
-          "Name": "a:CT_ChartShapeProperties/c:spPr",
-          "PropertyName": "ChartShapeProperties"
-        },
-        {
-          "Name": "c:CT_ExtensionList/c:extLst",
-          "PropertyName": "ExtensionList",
-          "PropertyComments": "Chart Extensibility"
-        }
-      ],
-      "Particle": {
-        "Kind": "Sequence",
-        "Items": [
-          {
-            "Name": "c:CT_ErrDir/c:errDir",
-            "Occurs": [
-              {
-                "Max": 1
-              }
-            ]
-          },
-          {
-            "Name": "c:CT_ErrBarType/c:errBarType"
-          },
-          {
-            "Name": "c:CT_ErrValType/c:errValType"
-          },
-          {
-            "Name": "c:CT_Boolean/c:noEndCap",
-            "Occurs": [
-              {
-                "Max": 1
-              }
-            ]
-          },
-          {
-            "Name": "c:CT_NumDataSource/c:plus",
-            "Occurs": [
-              {
-                "Max": 1
-              }
-            ]
-          },
-          {
-            "Name": "c:CT_NumDataSource/c:minus",
-            "Occurs": [
-              {
-                "Max": 1
-              }
-            ]
-          },
-          {
-            "Name": "c:CT_Double/c:val",
-            "Occurs": [
-              {
-                "Max": 1
-              }
-            ]
-          },
-          {
-            "Name": "a:CT_ChartShapeProperties/c:spPr",
-            "Occurs": [
-              {
-                "Max": 1
-              }
-            ]
-          },
-          {
-            "Name": "c:CT_ExtensionList/c:extLst",
-            "Occurs": [
-              {
-                "Max": 1
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "Name": "c:CT_AxDataSource/c:cat",
-      "ClassName": "CategoryAxisData",
-      "Summary": "Defines the CategoryAxisData Class.",
-      "CompositeType": "OneChoice",
-      "BaseClass": "AxisDataSourceType",
-      "IsDerived": true,
-      "Children": [
-        {
-          "Name": "c:CT_MultiLvlStrRef/c:multiLvlStrRef",
-          "PropertyName": "MultiLevelStringReference",
-          "PropertyComments": "Multi Level String Reference"
-        },
-        {
-          "Name": "c:CT_NumRef/c:numRef",
-          "PropertyName": "NumberReference",
-          "PropertyComments": "Number Reference"
-        },
-        {
-          "Name": "c:CT_NumData/c:numLit",
-          "PropertyName": "NumberLiteral",
-          "PropertyComments": "Number Literal"
-        },
-        {
-          "Name": "c:CT_StrRef/c:strRef",
-          "PropertyName": "StringReference"
-        },
-        {
-          "Name": "c:CT_StrData/c:strLit",
-          "PropertyName": "StringLiteral",
-          "PropertyComments": "String Literal"
-        }
-      ],
-      "Particle": {
-        "Kind": "Sequence",
-        "Items": [
-          {
-            "Kind": "Choice",
-            "Items": [
-              {
-                "Name": "c:CT_MultiLvlStrRef/c:multiLvlStrRef"
-              },
-              {
-                "Name": "c:CT_NumRef/c:numRef"
-              },
-              {
-                "Name": "c:CT_NumData/c:numLit"
-              },
-              {
-                "Name": "c:CT_StrRef/c:strRef"
-              },
-              {
-                "Name": "c:CT_StrData/c:strLit"
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "Name": "c:CT_AxDataSource/c:xVal",
-      "ClassName": "XValues",
-      "Summary": "Defines the XValues Class.",
-      "CompositeType": "OneChoice",
-      "BaseClass": "AxisDataSourceType",
-      "IsDerived": true,
-      "Children": [
-        {
-          "Name": "c:CT_MultiLvlStrRef/c:multiLvlStrRef",
-          "PropertyName": "MultiLevelStringReference",
-          "PropertyComments": "Multi Level String Reference"
-        },
-        {
-          "Name": "c:CT_NumRef/c:numRef",
-          "PropertyName": "NumberReference",
-          "PropertyComments": "Number Reference"
-        },
-        {
-          "Name": "c:CT_NumData/c:numLit",
-          "PropertyName": "NumberLiteral",
-          "PropertyComments": "Number Literal"
-        },
-        {
-          "Name": "c:CT_StrRef/c:strRef",
-          "PropertyName": "StringReference"
-        },
-        {
-          "Name": "c:CT_StrData/c:strLit",
-          "PropertyName": "StringLiteral",
-          "PropertyComments": "String Literal"
-        }
-      ],
-      "Particle": {
-        "Kind": "Sequence",
-        "Items": [
-          {
-            "Kind": "Choice",
-            "Items": [
-              {
-                "Name": "c:CT_MultiLvlStrRef/c:multiLvlStrRef"
-              },
-              {
-                "Name": "c:CT_NumRef/c:numRef"
-              },
-              {
-                "Name": "c:CT_NumData/c:numLit"
-              },
-              {
-                "Name": "c:CT_StrRef/c:strRef"
-              },
-              {
-                "Name": "c:CT_StrData/c:strLit"
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "Name": "c:CT_AxDataSource/",
-      "ClassName": "AxisDataSourceType",
-      "Summary": "Defines the AxisDataSourceType Class.",
-      "CompositeType": "OneChoice",
-      "BaseClass": "OpenXmlCompositeElement",
-      "IsAbstract": true,
-      "AdditionalElements": [
-        "c:CT_MultiLvlStrRef/c:multiLvlStrRef",
-        "c:CT_NumData/c:numLit",
-        "c:CT_NumRef/c:numRef",
-        "c:CT_StrData/c:strLit",
-        "c:CT_StrRef/c:strRef"
-      ],
-      "Children": [
-        {
-          "Name": "c:CT_MultiLvlStrRef/c:multiLvlStrRef",
-          "PropertyName": "MultiLevelStringReference",
-          "PropertyComments": "Multi Level String Reference"
-        },
-        {
-          "Name": "c:CT_NumRef/c:numRef",
-          "PropertyName": "NumberReference",
-          "PropertyComments": "Number Reference"
-        },
-        {
-          "Name": "c:CT_NumData/c:numLit",
-          "PropertyName": "NumberLiteral",
-          "PropertyComments": "Number Literal"
-        },
-        {
-          "Name": "c:CT_StrRef/c:strRef",
-          "PropertyName": "StringReference"
-        },
-        {
-          "Name": "c:CT_StrData/c:strLit",
-          "PropertyName": "StringLiteral",
-          "PropertyComments": "String Literal"
-        }
-      ]
-    },
-    {
-      "Name": "c:CT_LineSerExtensionList/c:extLst",
-      "ClassName": "LineSerExtensionList",
-      "Summary": "Defines the LineSerExtensionList Class.",
-      "BaseClass": "OpenXmlCompositeElement",
-      "Children": [
-        {
-          "Name": "c:CT_LineSerExtension/c:ext"
-        }
-      ],
-      "Particle": {
-        "Kind": "Sequence",
-        "Items": [
-          {
-            "Name": "c:CT_LineSerExtension/c:ext",
-            "Occurs": [
-              {}
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "Name": "c:CT_ScatterSerExtensionList/c:extLst",
-      "ClassName": "ScatterSerExtensionList",
-      "Summary": "Defines the ScatterSerExtensionList Class.",
-      "BaseClass": "OpenXmlCompositeElement",
-      "Children": [
-        {
-          "Name": "c:CT_ScatterSerExtension/c:ext"
-        }
-      ],
-      "Particle": {
-        "Kind": "Sequence",
-        "Items": [
-          {
-            "Name": "c:CT_ScatterSerExtension/c:ext",
-            "Occurs": [
-              {}
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "Name": "c:CT_RadarSerExtensionList/c:extLst",
-      "ClassName": "RadarSerExtensionList",
-      "Summary": "Defines the RadarSerExtensionList Class.",
-      "BaseClass": "OpenXmlCompositeElement",
-      "Children": [
-        {
-          "Name": "c:CT_RadarSerExtension/c:ext"
-        }
-      ],
-      "Particle": {
-        "Kind": "Sequence",
-        "Items": [
-          {
-            "Name": "c:CT_RadarSerExtension/c:ext",
-            "Occurs": [
-              {}
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "Name": "c:CT_Shape/c:shape",
-      "ClassName": "Shape",
-      "Summary": "Defines the Shape Class.",
-      "BaseClass": "OpenXmlLeafElement",
-      "IsLeafElement": true,
-      "Attributes": [
-        {
-          "QName": ":val",
-          "PropertyName": "Val",
-          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.Charts.ShapeValues\u003E",
-          "PropertyComments": "Shape Value"
-        }
-      ]
-    },
-    {
-      "Name": "c:CT_BarSerExtensionList/c:extLst",
-      "ClassName": "BarSerExtensionList",
-      "Summary": "Defines the BarSerExtensionList Class.",
-      "BaseClass": "OpenXmlCompositeElement",
-      "Children": [
-        {
-          "Name": "c:CT_BarSerExtension/c:ext"
-        }
-      ],
-      "Particle": {
-        "Kind": "Sequence",
-        "Items": [
-          {
-            "Name": "c:CT_BarSerExtension/c:ext",
-            "Occurs": [
-              {}
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "Name": "c:CT_BarSerExtension/c:ext",
-      "ClassName": "BarSerExtension",
-      "Summary": "Defines the BarSerExtension Class.",
-      "BaseClass": "OpenXmlCompositeElement",
-      "Attributes": [
-        {
-          "QName": ":uri",
-          "Type": "StringValue",
-          "PropertyComments": "URI",
-          "Validators": [
-            {
-              "Name": "RequiredValidator"
-            },
-            {
-              "Arguments": [
-                {
-                  "Type": "Boolean",
-                  "Name": "IsToken",
-                  "Value": "True"
-                }
-              ],
-              "Name": "StringValidator",
-              "IsInitialVersion": true
-            }
-          ]
-        }
-      ],
-      "Children": [
-        {
-          "Name": "c14:CT_InvertSolidFillFmt/c14:invertSolidFillFmt",
-          "PropertyName": "InvertSolidFillFormat"
-        },
-        {
-          "Name": "c15:CT_FilteredSeriesTitle/c15:filteredSeriesTitle",
-          "PropertyName": "FilteredSeriesTitle"
-        },
-        {
-          "Name": "c15:CT_FilteredCategoryTitle/c15:filteredCategoryTitle",
-          "PropertyName": "FilteredCategoryTitle"
-        },
-        {
-          "Name": "c15:CT_SeriesDataLabelsRange/c15:datalabelsRange",
-          "PropertyName": "DataLabelsRange"
-        },
-        {
-          "Name": "c15:CT_CategoryFilterExceptions/c15:categoryFilterExceptions",
-          "PropertyName": "CategoryFilterExceptions"
-        }
-      ],
-      "Particle": {
-        "Kind": "Choice",
-        "Items": [
-          {
-            "Name": "c14:CT_InvertSolidFillFmt/c14:invertSolidFillFmt",
-            "InitialVersion": "Office2010"
-          },
-          {
-            "Name": "c15:CT_FilteredSeriesTitle/c15:filteredSeriesTitle",
-            "InitialVersion": "Office2013"
-          },
-          {
-            "Name": "c15:CT_FilteredCategoryTitle/c15:filteredCategoryTitle",
-            "InitialVersion": "Office2013"
-          },
-          {
-            "Name": "c15:CT_SeriesDataLabelsRange/c15:datalabelsRange",
-            "InitialVersion": "Office2013"
-          },
-          {
-            "Name": "c15:CT_CategoryFilterExceptions/c15:categoryFilterExceptions",
-            "InitialVersion": "Office2013"
-          },
-          {
-            "Kind": "Any",
-            "Occurs": [
-              {
-                "Max": 1
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "Name": "c:CT_AreaSerExtensionList/c:extLst",
-      "ClassName": "AreaSerExtensionList",
-      "Summary": "Defines the AreaSerExtensionList Class.",
-      "BaseClass": "OpenXmlCompositeElement",
-      "Children": [
-        {
-          "Name": "c:CT_AreaSerExtension/c:ext"
-        }
-      ],
-      "Particle": {
-        "Kind": "Sequence",
-        "Items": [
-          {
-            "Name": "c:CT_AreaSerExtension/c:ext",
-            "Occurs": [
-              {}
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "Name": "c:CT_PieSerExtensionList/c:extLst",
-      "ClassName": "PieSerExtensionList",
-      "Summary": "Defines the PieSerExtensionList Class.",
-      "BaseClass": "OpenXmlCompositeElement",
-      "Children": [
-        {
-          "Name": "c:CT_PieSerExtension/c:ext"
-        }
-      ],
-      "Particle": {
-        "Kind": "Sequence",
-        "Items": [
-          {
-            "Name": "c:CT_PieSerExtension/c:ext",
-            "Occurs": [
-              {}
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "Name": "c:CT_BubbleSerExtensionList/c:extLst",
-      "ClassName": "BubbleSerExtensionList",
-      "Summary": "Defines the BubbleSerExtensionList Class.",
-      "BaseClass": "OpenXmlCompositeElement",
-      "Children": [
-        {
-          "Name": "c:CT_BubbleSerExtension/c:ext"
-        }
-      ],
-      "Particle": {
-        "Kind": "Sequence",
-        "Items": [
-          {
-            "Name": "c:CT_BubbleSerExtension/c:ext",
-            "Occurs": [
-              {}
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "Name": "c:CT_BubbleSerExtension/c:ext",
-      "ClassName": "BubbleSerExtension",
-      "Summary": "Defines the BubbleSerExtension Class.",
-      "BaseClass": "OpenXmlCompositeElement",
-      "Attributes": [
-        {
-          "QName": ":uri",
-          "Type": "StringValue",
-          "PropertyComments": "URI",
-          "Validators": [
-            {
-              "Name": "RequiredValidator"
-            },
-            {
-              "Arguments": [
-                {
-                  "Type": "Boolean",
-                  "Name": "IsToken",
-                  "Value": "True"
-                }
-              ],
-              "Name": "StringValidator",
-              "IsInitialVersion": true
-            }
-          ]
-        }
-      ],
-      "Children": [
-        {
-          "Name": "c14:CT_InvertSolidFillFmt/c14:invertSolidFillFmt",
-          "PropertyName": "InvertSolidFillFormat"
-        },
-        {
-          "Name": "c15:CT_FilteredCategoryTitle/c15:filteredCategoryTitle",
-          "PropertyName": "FilteredCategoryTitle"
-        },
-        {
-          "Name": "c15:CT_SeriesDataLabelsRange/c15:datalabelsRange",
-          "PropertyName": "DataLabelsRange"
-        },
-        {
-          "Name": "c15:CT_CategoryFilterExceptions/c15:categoryFilterExceptions",
-          "PropertyName": "CategoryFilterExceptions"
-        }
-      ],
-      "Particle": {
-        "Kind": "Choice",
-        "Items": [
-          {
-            "Name": "c14:CT_InvertSolidFillFmt/c14:invertSolidFillFmt",
-            "InitialVersion": "Office2010"
-          },
-          {
-            "Name": "c15:CT_FilteredCategoryTitle/c15:filteredCategoryTitle",
-            "InitialVersion": "Office2013"
-          },
-          {
-            "Name": "c15:CT_SeriesDataLabelsRange/c15:datalabelsRange",
-            "InitialVersion": "Office2013"
-          },
-          {
-            "Name": "c15:CT_CategoryFilterExceptions/c15:categoryFilterExceptions",
-            "InitialVersion": "Office2013"
-          },
-          {
-            "Kind": "Any",
-            "Occurs": [
-              {
-                "Max": 1
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "Name": "c:CT_SurfaceSerExtensionList/c:extLst",
-      "ClassName": "SurfaceSerExtensionList",
-      "Summary": "Defines the SurfaceSerExtensionList Class.",
-      "BaseClass": "OpenXmlCompositeElement",
-      "Children": [
-        {
-          "Name": "c:CT_SurfaceSerExtension/c:ext"
-        }
-      ],
-      "Particle": {
-        "Kind": "Sequence",
-        "Items": [
-          {
-            "Name": "c:CT_SurfaceSerExtension/c:ext",
             "Occurs": [
               {}
             ]
@@ -12075,6 +10616,21 @@
           }
         ]
       }
+    },
+    {
+      "Name": "c:CT_Shape/c:shape",
+      "ClassName": "Shape",
+      "Summary": "Defines the Shape Class.",
+      "BaseClass": "OpenXmlLeafElement",
+      "IsLeafElement": true,
+      "Attributes": [
+        {
+          "QName": ":val",
+          "PropertyName": "Val",
+          "Type": "EnumValue\u003CDocumentFormat.OpenXml.Drawing.Charts.ShapeValues\u003E",
+          "PropertyComments": "Shape Value"
+        }
+      ]
     },
     {
       "Name": "c:CT_Bar3DChartExtensionList/c:extLst",
@@ -13618,6 +12174,1650 @@
           {
             "Name": "c:CT_PivotSource/c15:pivotSource",
             "InitialVersion": "Office2013"
+          },
+          {
+            "Kind": "Any",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "c:CT_DLblExtensionList/c:extLst",
+      "ClassName": "DLblExtensionList",
+      "Summary": "Defines the DLblExtensionList Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Children": [
+        {
+          "Name": "c:CT_DLblExtension/c:ext"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "c:CT_DLblExtension/c:ext",
+            "Occurs": [
+              {}
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "c:CT_DLblExtension/c:ext",
+      "ClassName": "DLblExtension",
+      "Summary": "Defines the DLblExtension Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": ":uri",
+          "Type": "StringValue",
+          "PropertyComments": "URI",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "c15:CT_DataLabelFieldTable/c15:dlblFieldTable",
+          "PropertyName": "DataLabelFieldTable"
+        },
+        {
+          "Name": "c:CT_Boolean/c15:xForSave",
+          "PropertyName": "ExceptionForSave"
+        },
+        {
+          "Name": "c:CT_Boolean/c15:showDataLabelsRange",
+          "PropertyName": "ShowDataLabelsRange"
+        },
+        {
+          "Name": "a:CT_ShapeProperties/c15:spPr",
+          "PropertyName": "ShapeProperties"
+        },
+        {
+          "Name": "c:CT_Layout/c15:layout",
+          "PropertyName": "Layout"
+        },
+        {
+          "Name": "c16:CT_ChartUniqueID/c16:uniqueId",
+          "PropertyName": "UniqueIdChartUniqueID"
+        }
+      ],
+      "Particle": {
+        "Kind": "Choice",
+        "Items": [
+          {
+            "Name": "c15:CT_DataLabelFieldTable/c15:dlblFieldTable",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "c:CT_Boolean/c15:xForSave",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "c:CT_Boolean/c15:showDataLabelsRange",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "a:CT_ShapeProperties/c15:spPr",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "c:CT_Layout/c15:layout",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "c16:CT_ChartUniqueID/c16:uniqueId",
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Kind": "Any",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "c:CT_DPt/c:dPt",
+      "ClassName": "DataPoint",
+      "Summary": "Defines the DataPoint Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Children": [
+        {
+          "Name": "c:CT_UnsignedInt/c:idx",
+          "PropertyName": "Index",
+          "PropertyComments": "Index"
+        },
+        {
+          "Name": "c:CT_Boolean/c:invertIfNegative",
+          "PropertyName": "InvertIfNegative",
+          "PropertyComments": "Invert if Negative"
+        },
+        {
+          "Name": "c:CT_Marker/c:marker",
+          "PropertyName": "Marker",
+          "PropertyComments": "Marker"
+        },
+        {
+          "Name": "c:CT_Boolean/c:bubble3D",
+          "PropertyName": "Bubble3D",
+          "PropertyComments": "3D Bubble"
+        },
+        {
+          "Name": "c:CT_UnsignedInt/c:explosion",
+          "PropertyName": "Explosion",
+          "PropertyComments": "Explosion"
+        },
+        {
+          "Name": "a:CT_ChartShapeProperties/c:spPr",
+          "PropertyName": "ChartShapeProperties"
+        },
+        {
+          "Name": "c:CT_PictureOptions/c:pictureOptions",
+          "PropertyName": "PictureOptions"
+        },
+        {
+          "Name": "c:CT_ExtensionList/c:extLst",
+          "PropertyName": "ExtensionList",
+          "PropertyComments": "Chart Extensibility"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "c:CT_UnsignedInt/c:idx"
+          },
+          {
+            "Name": "c:CT_Boolean/c:invertIfNegative",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "c:CT_Marker/c:marker",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "c:CT_Boolean/c:bubble3D",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "c:CT_UnsignedInt/c:explosion",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_ChartShapeProperties/c:spPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "c:CT_PictureOptions/c:pictureOptions",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "c:CT_ExtensionList/c:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "c:CT_Trendline/c:trendline",
+      "ClassName": "Trendline",
+      "Summary": "Defines the Trendline Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Children": [
+        {
+          "Name": "xsd:string/c:name",
+          "PropertyName": "TrendlineName",
+          "PropertyComments": "Trendline Name"
+        },
+        {
+          "Name": "a:CT_ChartShapeProperties/c:spPr",
+          "PropertyName": "ChartShapeProperties"
+        },
+        {
+          "Name": "c:CT_TrendlineType/c:trendlineType",
+          "PropertyName": "TrendlineType",
+          "PropertyComments": "Trendline Type"
+        },
+        {
+          "Name": "c:CT_Order/c:order",
+          "PropertyName": "PolynomialOrder",
+          "PropertyComments": "Polynomial Trendline Order"
+        },
+        {
+          "Name": "c:CT_Period/c:period",
+          "PropertyName": "Period",
+          "PropertyComments": "Period"
+        },
+        {
+          "Name": "c:CT_Double/c:forward",
+          "PropertyName": "Forward",
+          "PropertyComments": "Forward"
+        },
+        {
+          "Name": "c:CT_Double/c:backward",
+          "PropertyName": "Backward",
+          "PropertyComments": "Backward"
+        },
+        {
+          "Name": "c:CT_Double/c:intercept",
+          "PropertyName": "Intercept",
+          "PropertyComments": "Intercept"
+        },
+        {
+          "Name": "c:CT_Boolean/c:dispRSqr",
+          "PropertyName": "DisplayRSquaredValue",
+          "PropertyComments": "Display R Squared Value"
+        },
+        {
+          "Name": "c:CT_Boolean/c:dispEq",
+          "PropertyName": "DisplayEquation",
+          "PropertyComments": "Display Equation"
+        },
+        {
+          "Name": "c:CT_TrendlineLbl/c:trendlineLbl",
+          "PropertyName": "TrendlineLabel",
+          "PropertyComments": "Trendline Label"
+        },
+        {
+          "Name": "c:CT_ExtensionList/c:extLst",
+          "PropertyName": "ExtensionList",
+          "PropertyComments": "Chart Extensibility"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "xsd:string/c:name",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_ChartShapeProperties/c:spPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "c:CT_TrendlineType/c:trendlineType"
+          },
+          {
+            "Name": "c:CT_Order/c:order",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "c:CT_Period/c:period",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "c:CT_Double/c:forward",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "c:CT_Double/c:backward",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "c:CT_Double/c:intercept",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "c:CT_Boolean/c:dispRSqr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "c:CT_Boolean/c:dispEq",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "c:CT_TrendlineLbl/c:trendlineLbl",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "c:CT_ExtensionList/c:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "c:CT_ErrBars/c:errBars",
+      "ClassName": "ErrorBars",
+      "Summary": "Defines the ErrorBars Class.",
+      "CompositeType": "OneSequence",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Children": [
+        {
+          "Name": "c:CT_ErrDir/c:errDir",
+          "PropertyName": "ErrorDirection",
+          "PropertyComments": "Error Bar Direction"
+        },
+        {
+          "Name": "c:CT_ErrBarType/c:errBarType",
+          "PropertyName": "ErrorBarType",
+          "PropertyComments": "Error Bar Type"
+        },
+        {
+          "Name": "c:CT_ErrValType/c:errValType",
+          "PropertyName": "ErrorBarValueType",
+          "PropertyComments": "Error Bar Value Type"
+        },
+        {
+          "Name": "c:CT_Boolean/c:noEndCap",
+          "PropertyName": "NoEndCap",
+          "PropertyComments": "No End Cap"
+        },
+        {
+          "Name": "c:CT_NumDataSource/c:plus",
+          "PropertyName": "Plus",
+          "PropertyComments": "Plus"
+        },
+        {
+          "Name": "c:CT_NumDataSource/c:minus",
+          "PropertyName": "Minus",
+          "PropertyComments": "Minus"
+        },
+        {
+          "Name": "c:CT_Double/c:val",
+          "PropertyName": "ErrorBarValue",
+          "PropertyComments": "Error Bar Value"
+        },
+        {
+          "Name": "a:CT_ChartShapeProperties/c:spPr",
+          "PropertyName": "ChartShapeProperties"
+        },
+        {
+          "Name": "c:CT_ExtensionList/c:extLst",
+          "PropertyName": "ExtensionList",
+          "PropertyComments": "Chart Extensibility"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "c:CT_ErrDir/c:errDir",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "c:CT_ErrBarType/c:errBarType"
+          },
+          {
+            "Name": "c:CT_ErrValType/c:errValType"
+          },
+          {
+            "Name": "c:CT_Boolean/c:noEndCap",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "c:CT_NumDataSource/c:plus",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "c:CT_NumDataSource/c:minus",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "c:CT_Double/c:val",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "a:CT_ChartShapeProperties/c:spPr",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          },
+          {
+            "Name": "c:CT_ExtensionList/c:extLst",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "c:CT_AxDataSource/c:cat",
+      "ClassName": "CategoryAxisData",
+      "Summary": "Defines the CategoryAxisData Class.",
+      "CompositeType": "OneChoice",
+      "BaseClass": "AxisDataSourceType",
+      "IsDerived": true,
+      "Children": [
+        {
+          "Name": "c:CT_MultiLvlStrRef/c:multiLvlStrRef",
+          "PropertyName": "MultiLevelStringReference",
+          "PropertyComments": "Multi Level String Reference"
+        },
+        {
+          "Name": "c:CT_NumRef/c:numRef",
+          "PropertyName": "NumberReference",
+          "PropertyComments": "Number Reference"
+        },
+        {
+          "Name": "c:CT_NumData/c:numLit",
+          "PropertyName": "NumberLiteral",
+          "PropertyComments": "Number Literal"
+        },
+        {
+          "Name": "c:CT_StrRef/c:strRef",
+          "PropertyName": "StringReference"
+        },
+        {
+          "Name": "c:CT_StrData/c:strLit",
+          "PropertyName": "StringLiteral",
+          "PropertyComments": "String Literal"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Choice",
+            "Items": [
+              {
+                "Name": "c:CT_MultiLvlStrRef/c:multiLvlStrRef"
+              },
+              {
+                "Name": "c:CT_NumRef/c:numRef"
+              },
+              {
+                "Name": "c:CT_NumData/c:numLit"
+              },
+              {
+                "Name": "c:CT_StrRef/c:strRef"
+              },
+              {
+                "Name": "c:CT_StrData/c:strLit"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "c:CT_AxDataSource/c:xVal",
+      "ClassName": "XValues",
+      "Summary": "Defines the XValues Class.",
+      "CompositeType": "OneChoice",
+      "BaseClass": "AxisDataSourceType",
+      "IsDerived": true,
+      "Children": [
+        {
+          "Name": "c:CT_MultiLvlStrRef/c:multiLvlStrRef",
+          "PropertyName": "MultiLevelStringReference",
+          "PropertyComments": "Multi Level String Reference"
+        },
+        {
+          "Name": "c:CT_NumRef/c:numRef",
+          "PropertyName": "NumberReference",
+          "PropertyComments": "Number Reference"
+        },
+        {
+          "Name": "c:CT_NumData/c:numLit",
+          "PropertyName": "NumberLiteral",
+          "PropertyComments": "Number Literal"
+        },
+        {
+          "Name": "c:CT_StrRef/c:strRef",
+          "PropertyName": "StringReference"
+        },
+        {
+          "Name": "c:CT_StrData/c:strLit",
+          "PropertyName": "StringLiteral",
+          "PropertyComments": "String Literal"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Kind": "Choice",
+            "Items": [
+              {
+                "Name": "c:CT_MultiLvlStrRef/c:multiLvlStrRef"
+              },
+              {
+                "Name": "c:CT_NumRef/c:numRef"
+              },
+              {
+                "Name": "c:CT_NumData/c:numLit"
+              },
+              {
+                "Name": "c:CT_StrRef/c:strRef"
+              },
+              {
+                "Name": "c:CT_StrData/c:strLit"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "c:CT_AxDataSource/",
+      "ClassName": "AxisDataSourceType",
+      "Summary": "Defines the AxisDataSourceType Class.",
+      "CompositeType": "OneChoice",
+      "BaseClass": "OpenXmlCompositeElement",
+      "IsAbstract": true,
+      "AdditionalElements": [
+        "c:CT_MultiLvlStrRef/c:multiLvlStrRef",
+        "c:CT_NumData/c:numLit",
+        "c:CT_NumRef/c:numRef",
+        "c:CT_StrData/c:strLit",
+        "c:CT_StrRef/c:strRef"
+      ],
+      "Children": [
+        {
+          "Name": "c:CT_MultiLvlStrRef/c:multiLvlStrRef",
+          "PropertyName": "MultiLevelStringReference",
+          "PropertyComments": "Multi Level String Reference"
+        },
+        {
+          "Name": "c:CT_NumRef/c:numRef",
+          "PropertyName": "NumberReference",
+          "PropertyComments": "Number Reference"
+        },
+        {
+          "Name": "c:CT_NumData/c:numLit",
+          "PropertyName": "NumberLiteral",
+          "PropertyComments": "Number Literal"
+        },
+        {
+          "Name": "c:CT_StrRef/c:strRef",
+          "PropertyName": "StringReference"
+        },
+        {
+          "Name": "c:CT_StrData/c:strLit",
+          "PropertyName": "StringLiteral",
+          "PropertyComments": "String Literal"
+        }
+      ]
+    },
+    {
+      "Name": "c:CT_LineSerExtensionList/c:extLst",
+      "ClassName": "LineSerExtensionList",
+      "Summary": "Defines the LineSerExtensionList Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Children": [
+        {
+          "Name": "c:CT_LineSerExtension/c:ext"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "c:CT_LineSerExtension/c:ext",
+            "Occurs": [
+              {}
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "c:CT_LineSerExtension/c:ext",
+      "ClassName": "LineSerExtension",
+      "Summary": "Defines the LineSerExtension Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": ":uri",
+          "Type": "StringValue",
+          "PropertyComments": "URI",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "c15:CT_FilteredSeriesTitle/c15:filteredSeriesTitle",
+          "PropertyName": "FilteredSeriesTitle"
+        },
+        {
+          "Name": "c15:CT_FilteredCategoryTitle/c15:filteredCategoryTitle",
+          "PropertyName": "FilteredCategoryTitle"
+        },
+        {
+          "Name": "c15:CT_SeriesDataLabelsRange/c15:datalabelsRange",
+          "PropertyName": "DataLabelsRange"
+        },
+        {
+          "Name": "c15:CT_CategoryFilterExceptions/c15:categoryFilterExceptions",
+          "PropertyName": "CategoryFilterExceptions"
+        },
+        {
+          "Name": "c16:CT_CategoryFilterExceptions/c16:categoryFilterExceptions",
+          "PropertyName": "CategoryFilterExceptions"
+        },
+        {
+          "Name": "c16:CT_ChartDataPointUniqueIDMap/c16:datapointuniqueidmap",
+          "PropertyName": "ChartDataPointUniqueIDMap"
+        },
+        {
+          "Name": "c16:CT_ChartUniqueID/c16:uniqueId",
+          "PropertyName": "UniqueIdChartUniqueID"
+        }
+      ],
+      "Particle": {
+        "Kind": "Choice",
+        "Items": [
+          {
+            "Name": "c15:CT_FilteredSeriesTitle/c15:filteredSeriesTitle",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "c15:CT_FilteredCategoryTitle/c15:filteredCategoryTitle",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "c15:CT_SeriesDataLabelsRange/c15:datalabelsRange",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "c15:CT_CategoryFilterExceptions/c15:categoryFilterExceptions",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "c16:CT_CategoryFilterExceptions/c16:categoryFilterExceptions",
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "c16:CT_ChartDataPointUniqueIDMap/c16:datapointuniqueidmap",
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "c16:CT_ChartUniqueID/c16:uniqueId",
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Kind": "Any",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "c:CT_ScatterSerExtensionList/c:extLst",
+      "ClassName": "ScatterSerExtensionList",
+      "Summary": "Defines the ScatterSerExtensionList Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Children": [
+        {
+          "Name": "c:CT_ScatterSerExtension/c:ext"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "c:CT_ScatterSerExtension/c:ext",
+            "Occurs": [
+              {}
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "c:CT_ScatterSerExtension/c:ext",
+      "ClassName": "ScatterSerExtension",
+      "Summary": "Defines the ScatterSerExtension Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": ":uri",
+          "Type": "StringValue",
+          "PropertyComments": "URI",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "c15:CT_FilteredSeriesTitle/c15:filteredSeriesTitle",
+          "PropertyName": "FilteredSeriesTitle"
+        },
+        {
+          "Name": "c15:CT_FilteredCategoryTitle/c15:filteredCategoryTitle",
+          "PropertyName": "FilteredCategoryTitle"
+        },
+        {
+          "Name": "c15:CT_SeriesDataLabelsRange/c15:datalabelsRange",
+          "PropertyName": "DataLabelsRange"
+        },
+        {
+          "Name": "c15:CT_CategoryFilterExceptions/c15:categoryFilterExceptions",
+          "PropertyName": "CategoryFilterExceptions"
+        },
+        {
+          "Name": "c16:CT_CategoryFilterExceptions/c16:categoryFilterExceptions",
+          "PropertyName": "CategoryFilterExceptions"
+        },
+        {
+          "Name": "c16:CT_ChartDataPointUniqueIDMap/c16:datapointuniqueidmap",
+          "PropertyName": "ChartDataPointUniqueIDMap"
+        },
+        {
+          "Name": "c16:CT_ChartUniqueID/c16:uniqueId",
+          "PropertyName": "UniqueIdChartUniqueID"
+        }
+      ],
+      "Particle": {
+        "Kind": "Choice",
+        "Items": [
+          {
+            "Name": "c15:CT_FilteredSeriesTitle/c15:filteredSeriesTitle",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "c15:CT_FilteredCategoryTitle/c15:filteredCategoryTitle",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "c15:CT_SeriesDataLabelsRange/c15:datalabelsRange",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "c15:CT_CategoryFilterExceptions/c15:categoryFilterExceptions",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "c16:CT_CategoryFilterExceptions/c16:categoryFilterExceptions",
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "c16:CT_ChartDataPointUniqueIDMap/c16:datapointuniqueidmap",
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "c16:CT_ChartUniqueID/c16:uniqueId",
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Kind": "Any",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "c:CT_RadarSerExtensionList/c:extLst",
+      "ClassName": "RadarSerExtensionList",
+      "Summary": "Defines the RadarSerExtensionList Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Children": [
+        {
+          "Name": "c:CT_RadarSerExtension/c:ext"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "c:CT_RadarSerExtension/c:ext",
+            "Occurs": [
+              {}
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "c:CT_RadarSerExtension/c:ext",
+      "ClassName": "RadarSerExtension",
+      "Summary": "Defines the RadarSerExtension Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": ":uri",
+          "Type": "StringValue",
+          "PropertyComments": "URI",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "c15:CT_FilteredSeriesTitle/c15:filteredSeriesTitle",
+          "PropertyName": "FilteredSeriesTitle"
+        },
+        {
+          "Name": "c15:CT_FilteredCategoryTitle/c15:filteredCategoryTitle",
+          "PropertyName": "FilteredCategoryTitle"
+        },
+        {
+          "Name": "c15:CT_SeriesDataLabelsRange/c15:datalabelsRange",
+          "PropertyName": "DataLabelsRange"
+        },
+        {
+          "Name": "c15:CT_CategoryFilterExceptions/c15:categoryFilterExceptions",
+          "PropertyName": "CategoryFilterExceptions"
+        },
+        {
+          "Name": "c16:CT_CategoryFilterExceptions/c16:categoryFilterExceptions",
+          "PropertyName": "CategoryFilterExceptions"
+        },
+        {
+          "Name": "c16:CT_ChartDataPointUniqueIDMap/c16:datapointuniqueidmap",
+          "PropertyName": "ChartDataPointUniqueIDMap"
+        },
+        {
+          "Name": "c16:CT_ChartUniqueID/c16:uniqueId",
+          "PropertyName": "UniqueIdChartUniqueID"
+        }
+      ],
+      "Particle": {
+        "Kind": "Choice",
+        "Items": [
+          {
+            "Name": "c15:CT_FilteredSeriesTitle/c15:filteredSeriesTitle",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "c15:CT_FilteredCategoryTitle/c15:filteredCategoryTitle",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "c15:CT_SeriesDataLabelsRange/c15:datalabelsRange",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "c15:CT_CategoryFilterExceptions/c15:categoryFilterExceptions",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "c16:CT_CategoryFilterExceptions/c16:categoryFilterExceptions",
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "c16:CT_ChartDataPointUniqueIDMap/c16:datapointuniqueidmap",
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "c16:CT_ChartUniqueID/c16:uniqueId",
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Kind": "Any",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "c:CT_BarSerExtensionList/c:extLst",
+      "ClassName": "BarSerExtensionList",
+      "Summary": "Defines the BarSerExtensionList Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Children": [
+        {
+          "Name": "c:CT_BarSerExtension/c:ext"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "c:CT_BarSerExtension/c:ext",
+            "Occurs": [
+              {}
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "c:CT_BarSerExtension/c:ext",
+      "ClassName": "BarSerExtension",
+      "Summary": "Defines the BarSerExtension Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": ":uri",
+          "Type": "StringValue",
+          "PropertyComments": "URI",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "c14:CT_InvertSolidFillFmt/c14:invertSolidFillFmt",
+          "PropertyName": "InvertSolidFillFormat"
+        },
+        {
+          "Name": "c15:CT_FilteredSeriesTitle/c15:filteredSeriesTitle",
+          "PropertyName": "FilteredSeriesTitle"
+        },
+        {
+          "Name": "c15:CT_FilteredCategoryTitle/c15:filteredCategoryTitle",
+          "PropertyName": "FilteredCategoryTitle"
+        },
+        {
+          "Name": "c15:CT_SeriesDataLabelsRange/c15:datalabelsRange",
+          "PropertyName": "DataLabelsRange"
+        },
+        {
+          "Name": "c15:CT_CategoryFilterExceptions/c15:categoryFilterExceptions",
+          "PropertyName": "CategoryFilterExceptions"
+        },
+        {
+          "Name": "c16:CT_CategoryFilterExceptions/c16:categoryFilterExceptions",
+          "PropertyName": "CategoryFilterExceptions"
+        },
+        {
+          "Name": "c16:CT_ChartDataPointUniqueIDMap/c16:datapointuniqueidmap",
+          "PropertyName": "ChartDataPointUniqueIDMap"
+        },
+        {
+          "Name": "c16:CT_ChartUniqueID/c16:uniqueId",
+          "PropertyName": "UniqueIdChartUniqueID"
+        }
+      ],
+      "Particle": {
+        "Kind": "Choice",
+        "Items": [
+          {
+            "Name": "c14:CT_InvertSolidFillFmt/c14:invertSolidFillFmt",
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "c15:CT_FilteredSeriesTitle/c15:filteredSeriesTitle",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "c15:CT_FilteredCategoryTitle/c15:filteredCategoryTitle",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "c15:CT_SeriesDataLabelsRange/c15:datalabelsRange",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "c15:CT_CategoryFilterExceptions/c15:categoryFilterExceptions",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "c16:CT_CategoryFilterExceptions/c16:categoryFilterExceptions",
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "c16:CT_ChartDataPointUniqueIDMap/c16:datapointuniqueidmap",
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "c16:CT_ChartUniqueID/c16:uniqueId",
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Kind": "Any",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "c:CT_AreaSerExtensionList/c:extLst",
+      "ClassName": "AreaSerExtensionList",
+      "Summary": "Defines the AreaSerExtensionList Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Children": [
+        {
+          "Name": "c:CT_AreaSerExtension/c:ext"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "c:CT_AreaSerExtension/c:ext",
+            "Occurs": [
+              {}
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "c:CT_AreaSerExtension/c:ext",
+      "ClassName": "AreaSerExtension",
+      "Summary": "Defines the AreaSerExtension Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": ":uri",
+          "Type": "StringValue",
+          "PropertyComments": "URI",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "c15:CT_FilteredSeriesTitle/c15:filteredSeriesTitle",
+          "PropertyName": "FilteredSeriesTitle"
+        },
+        {
+          "Name": "c15:CT_FilteredCategoryTitle/c15:filteredCategoryTitle",
+          "PropertyName": "FilteredCategoryTitle"
+        },
+        {
+          "Name": "c15:CT_SeriesDataLabelsRange/c15:datalabelsRange",
+          "PropertyName": "DataLabelsRange"
+        },
+        {
+          "Name": "c15:CT_CategoryFilterExceptions/c15:categoryFilterExceptions",
+          "PropertyName": "CategoryFilterExceptions"
+        },
+        {
+          "Name": "c16:CT_CategoryFilterExceptions/c16:categoryFilterExceptions",
+          "PropertyName": "CategoryFilterExceptions"
+        },
+        {
+          "Name": "c16:CT_ChartDataPointUniqueIDMap/c16:datapointuniqueidmap",
+          "PropertyName": "ChartDataPointUniqueIDMap"
+        },
+        {
+          "Name": "c16:CT_ChartUniqueID/c16:uniqueId",
+          "PropertyName": "UniqueIdChartUniqueID"
+        }
+      ],
+      "Particle": {
+        "Kind": "Choice",
+        "Items": [
+          {
+            "Name": "c15:CT_FilteredSeriesTitle/c15:filteredSeriesTitle",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "c15:CT_FilteredCategoryTitle/c15:filteredCategoryTitle",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "c15:CT_SeriesDataLabelsRange/c15:datalabelsRange",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "c15:CT_CategoryFilterExceptions/c15:categoryFilterExceptions",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "c16:CT_CategoryFilterExceptions/c16:categoryFilterExceptions",
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "c16:CT_ChartDataPointUniqueIDMap/c16:datapointuniqueidmap",
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "c16:CT_ChartUniqueID/c16:uniqueId",
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Kind": "Any",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "c:CT_PieSerExtensionList/c:extLst",
+      "ClassName": "PieSerExtensionList",
+      "Summary": "Defines the PieSerExtensionList Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Children": [
+        {
+          "Name": "c:CT_PieSerExtension/c:ext"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "c:CT_PieSerExtension/c:ext",
+            "Occurs": [
+              {}
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "c:CT_PieSerExtension/c:ext",
+      "ClassName": "PieSerExtension",
+      "Summary": "Defines the PieSerExtension Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": ":uri",
+          "Type": "StringValue",
+          "PropertyComments": "URI",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "c15:CT_FilteredSeriesTitle/c15:filteredSeriesTitle",
+          "PropertyName": "FilteredSeriesTitle"
+        },
+        {
+          "Name": "c15:CT_FilteredCategoryTitle/c15:filteredCategoryTitle",
+          "PropertyName": "FilteredCategoryTitle"
+        },
+        {
+          "Name": "c15:CT_SeriesDataLabelsRange/c15:datalabelsRange",
+          "PropertyName": "DataLabelsRange"
+        },
+        {
+          "Name": "c15:CT_CategoryFilterExceptions/c15:categoryFilterExceptions",
+          "PropertyName": "CategoryFilterExceptions"
+        },
+        {
+          "Name": "c16:CT_CategoryFilterExceptions/c16:categoryFilterExceptions",
+          "PropertyName": "CategoryFilterExceptions"
+        },
+        {
+          "Name": "c16:CT_ChartDataPointUniqueIDMap/c16:datapointuniqueidmap",
+          "PropertyName": "ChartDataPointUniqueIDMap"
+        },
+        {
+          "Name": "c16:CT_ChartUniqueID/c16:uniqueId",
+          "PropertyName": "UniqueIdChartUniqueID"
+        }
+      ],
+      "Particle": {
+        "Kind": "Choice",
+        "Items": [
+          {
+            "Name": "c15:CT_FilteredSeriesTitle/c15:filteredSeriesTitle",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "c15:CT_FilteredCategoryTitle/c15:filteredCategoryTitle",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "c15:CT_SeriesDataLabelsRange/c15:datalabelsRange",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "c15:CT_CategoryFilterExceptions/c15:categoryFilterExceptions",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "c16:CT_CategoryFilterExceptions/c16:categoryFilterExceptions",
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "c16:CT_ChartDataPointUniqueIDMap/c16:datapointuniqueidmap",
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "c16:CT_ChartUniqueID/c16:uniqueId",
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Kind": "Any",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "c:CT_BubbleSerExtensionList/c:extLst",
+      "ClassName": "BubbleSerExtensionList",
+      "Summary": "Defines the BubbleSerExtensionList Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Children": [
+        {
+          "Name": "c:CT_BubbleSerExtension/c:ext"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "c:CT_BubbleSerExtension/c:ext",
+            "Occurs": [
+              {}
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "c:CT_BubbleSerExtension/c:ext",
+      "ClassName": "BubbleSerExtension",
+      "Summary": "Defines the BubbleSerExtension Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": ":uri",
+          "Type": "StringValue",
+          "PropertyComments": "URI",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "c14:CT_InvertSolidFillFmt/c14:invertSolidFillFmt",
+          "PropertyName": "InvertSolidFillFormat"
+        },
+        {
+          "Name": "c15:CT_FilteredCategoryTitle/c15:filteredCategoryTitle",
+          "PropertyName": "FilteredCategoryTitle"
+        },
+        {
+          "Name": "c15:CT_SeriesDataLabelsRange/c15:datalabelsRange",
+          "PropertyName": "DataLabelsRange"
+        },
+        {
+          "Name": "c15:CT_CategoryFilterExceptions/c15:categoryFilterExceptions",
+          "PropertyName": "CategoryFilterExceptions"
+        },
+        {
+          "Name": "c16:CT_CategoryFilterExceptions/c16:categoryFilterExceptions",
+          "PropertyName": "CategoryFilterExceptions"
+        },
+        {
+          "Name": "c16:CT_ChartDataPointUniqueIDMap/c16:datapointuniqueidmap",
+          "PropertyName": "ChartDataPointUniqueIDMap"
+        },
+        {
+          "Name": "c16:CT_ChartUniqueID/c16:uniqueId",
+          "PropertyName": "UniqueIdChartUniqueID"
+        }
+      ],
+      "Particle": {
+        "Kind": "Choice",
+        "Items": [
+          {
+            "Name": "c14:CT_InvertSolidFillFmt/c14:invertSolidFillFmt",
+            "InitialVersion": "Office2010"
+          },
+          {
+            "Name": "c15:CT_FilteredCategoryTitle/c15:filteredCategoryTitle",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "c15:CT_SeriesDataLabelsRange/c15:datalabelsRange",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "c15:CT_CategoryFilterExceptions/c15:categoryFilterExceptions",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "c16:CT_CategoryFilterExceptions/c16:categoryFilterExceptions",
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "c16:CT_ChartDataPointUniqueIDMap/c16:datapointuniqueidmap",
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "c16:CT_ChartUniqueID/c16:uniqueId",
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Kind": "Any",
+            "Occurs": [
+              {
+                "Max": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "c:CT_SurfaceSerExtensionList/c:extLst",
+      "ClassName": "SurfaceSerExtensionList",
+      "Summary": "Defines the SurfaceSerExtensionList Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Children": [
+        {
+          "Name": "c:CT_SurfaceSerExtension/c:ext"
+        }
+      ],
+      "Particle": {
+        "Kind": "Sequence",
+        "Items": [
+          {
+            "Name": "c:CT_SurfaceSerExtension/c:ext",
+            "Occurs": [
+              {}
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Name": "c:CT_SurfaceSerExtension/c:ext",
+      "ClassName": "SurfaceSerExtension",
+      "Summary": "Defines the SurfaceSerExtension Class.",
+      "BaseClass": "OpenXmlCompositeElement",
+      "Attributes": [
+        {
+          "QName": ":uri",
+          "Type": "StringValue",
+          "PropertyComments": "URI",
+          "Validators": [
+            {
+              "Name": "RequiredValidator"
+            },
+            {
+              "Arguments": [
+                {
+                  "Type": "Boolean",
+                  "Name": "IsToken",
+                  "Value": "True"
+                }
+              ],
+              "Name": "StringValidator",
+              "IsInitialVersion": true
+            }
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Name": "c15:CT_FilteredSeriesTitle/c15:filteredSeriesTitle",
+          "PropertyName": "FilteredSeriesTitle"
+        },
+        {
+          "Name": "c15:CT_FilteredCategoryTitle/c15:filteredCategoryTitle",
+          "PropertyName": "FilteredCategoryTitle"
+        },
+        {
+          "Name": "c15:CT_CategoryFilterExceptions/c15:categoryFilterExceptions",
+          "PropertyName": "CategoryFilterExceptions"
+        },
+        {
+          "Name": "c16:CT_CategoryFilterExceptions/c16:categoryFilterExceptions",
+          "PropertyName": "CategoryFilterExceptions"
+        },
+        {
+          "Name": "c16:CT_ChartDataPointUniqueIDMap/c16:datapointuniqueidmap",
+          "PropertyName": "ChartDataPointUniqueIDMap"
+        },
+        {
+          "Name": "c16:CT_ChartUniqueID/c16:uniqueId",
+          "PropertyName": "UniqueIdChartUniqueID"
+        }
+      ],
+      "Particle": {
+        "Kind": "Choice",
+        "Items": [
+          {
+            "Name": "c15:CT_FilteredSeriesTitle/c15:filteredSeriesTitle",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "c15:CT_FilteredCategoryTitle/c15:filteredCategoryTitle",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "c15:CT_CategoryFilterExceptions/c15:categoryFilterExceptions",
+            "InitialVersion": "Office2013"
+          },
+          {
+            "Name": "c16:CT_CategoryFilterExceptions/c16:categoryFilterExceptions",
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "c16:CT_ChartDataPointUniqueIDMap/c16:datapointuniqueidmap",
+            "InitialVersion": "Office2016"
+          },
+          {
+            "Name": "c16:CT_ChartUniqueID/c16:uniqueId",
+            "InitialVersion": "Office2016"
           },
           {
             "Kind": "Any",

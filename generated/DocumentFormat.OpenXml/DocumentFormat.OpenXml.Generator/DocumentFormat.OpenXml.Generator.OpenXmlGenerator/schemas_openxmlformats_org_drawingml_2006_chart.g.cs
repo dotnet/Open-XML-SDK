@@ -12,6 +12,7 @@ using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Office2010.Drawing.Charts;
 using DocumentFormat.OpenXml.Office2013.Drawing.Chart;
+using DocumentFormat.OpenXml.Office2016.Drawing.Charts;
 using DocumentFormat.OpenXml.Office2019.Drawing.Chart;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Validation.Schema;
@@ -1178,30 +1179,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     }
 
     /// <summary>
-    /// <para>Defines the Smooth Class.</para>
-    /// <para>This class is available in Office 2007 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is c:smooth.</para>
-    /// </summary>
-    public partial class Smooth : BooleanType
-    {
-        /// <summary>
-        /// Initializes a new instance of the Smooth class.
-        /// </summary>
-        public Smooth() : base()
-        {
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.SetSchema("c:smooth");
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<Smooth>(deep);
-    }
-
-    /// <summary>
     /// <para>Defines the ShowMarker Class.</para>
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:marker.</para>
@@ -1223,6 +1200,30 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShowMarker>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the Smooth Class.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is c:smooth.</para>
+    /// </summary>
+    public partial class Smooth : BooleanType
+    {
+        /// <summary>
+        /// Initializes a new instance of the Smooth class.
+        /// </summary>
+        public Smooth() : base()
+        {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema("c:smooth");
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<Smooth>(deep);
     }
 
     /// <summary>
@@ -13580,94 +13581,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     }
 
     /// <summary>
-    /// <para>Defines the DLblExtension Class.</para>
-    /// <para>This class is available in Office 2007 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is c:ext.</para>
-    /// </summary>
-    /// <remark>
-    /// <para>The following table lists the possible child types:</para>
-    /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShapeProperties" /> <c>&lt;c15:spPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.ExceptionForSave" /> <c>&lt;c15:xForSave></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShowDataLabelsRange" /> <c>&lt;c15:showDataLabelsRange></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.Layout" /> <c>&lt;c15:layout></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelFieldTable" /> <c>&lt;c15:dlblFieldTable></c></description></item>
-    /// </list>
-    /// </remark>
-    public partial class DLblExtension : OpenXmlCompositeElement
-    {
-        /// <summary>
-        /// Initializes a new instance of the DLblExtension class.
-        /// </summary>
-        public DLblExtension() : base()
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the DLblExtension class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public DLblExtension(IEnumerable<OpenXmlElement> childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the DLblExtension class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public DLblExtension(params OpenXmlElement[] childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the DLblExtension class from outer XML.
-        /// </summary>
-        /// <param name="outerXml">Specifies the outer XML of the element.</param>
-        public DLblExtension(string outerXml) : base(outerXml)
-        {
-        }
-
-        /// <summary>
-        /// <para>URI</para>
-        /// <para>Represents the following attribute in the schema: uri</para>
-        /// </summary>
-        public StringValue? Uri
-        {
-            get => GetAttribute<StringValue>();
-            set => SetAttribute(value);
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.SetSchema("c:ext");
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShapeProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.ExceptionForSave>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShowDataLabelsRange>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.Layout>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelFieldTable>();
-            builder.AddElement<DLblExtension>()
-                .AddAttribute("uri", a => a.Uri, aBuilder =>
-                {
-                    aBuilder.AddValidator(RequiredValidator.Instance);
-                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-                });
-            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
-            {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelFieldTable), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.ExceptionForSave), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShowDataLabelsRange), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShapeProperties), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.Layout), 1, 1, version: FileFormatVersions.Office2013),
-                new AnyParticle(0, 1)
-            };
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<DLblExtension>(deep);
-    }
-
-    /// <summary>
     /// <para>Defines the DLblsExtension Class.</para>
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:ext.</para>
@@ -13759,513 +13672,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DLblsExtension>(deep);
-    }
-
-    /// <summary>
-    /// <para>Defines the LineSerExtension Class.</para>
-    /// <para>This class is available in Office 2007 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is c:ext.</para>
-    /// </summary>
-    /// <remark>
-    /// <para>The following table lists the possible child types:</para>
-    /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions" /> <c>&lt;c15:categoryFilterExceptions></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle" /> <c>&lt;c15:filteredCategoryTitle></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle" /> <c>&lt;c15:filteredSeriesTitle></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange" /> <c>&lt;c15:datalabelsRange></c></description></item>
-    /// </list>
-    /// </remark>
-    public partial class LineSerExtension : OpenXmlCompositeElement
-    {
-        /// <summary>
-        /// Initializes a new instance of the LineSerExtension class.
-        /// </summary>
-        public LineSerExtension() : base()
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the LineSerExtension class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public LineSerExtension(IEnumerable<OpenXmlElement> childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the LineSerExtension class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public LineSerExtension(params OpenXmlElement[] childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the LineSerExtension class from outer XML.
-        /// </summary>
-        /// <param name="outerXml">Specifies the outer XML of the element.</param>
-        public LineSerExtension(string outerXml) : base(outerXml)
-        {
-        }
-
-        /// <summary>
-        /// <para>URI</para>
-        /// <para>Represents the following attribute in the schema: uri</para>
-        /// </summary>
-        public StringValue? Uri
-        {
-            get => GetAttribute<StringValue>();
-            set => SetAttribute(value);
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.SetSchema("c:ext");
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange>();
-            builder.AddElement<LineSerExtension>()
-                .AddAttribute("uri", a => a.Uri, aBuilder =>
-                {
-                    aBuilder.AddValidator(RequiredValidator.Instance);
-                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-                });
-            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
-            {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions), 1, 1, version: FileFormatVersions.Office2013),
-                new AnyParticle(0, 1)
-            };
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<LineSerExtension>(deep);
-    }
-
-    /// <summary>
-    /// <para>Defines the ScatterSerExtension Class.</para>
-    /// <para>This class is available in Office 2007 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is c:ext.</para>
-    /// </summary>
-    /// <remark>
-    /// <para>The following table lists the possible child types:</para>
-    /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions" /> <c>&lt;c15:categoryFilterExceptions></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle" /> <c>&lt;c15:filteredCategoryTitle></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle" /> <c>&lt;c15:filteredSeriesTitle></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange" /> <c>&lt;c15:datalabelsRange></c></description></item>
-    /// </list>
-    /// </remark>
-    public partial class ScatterSerExtension : OpenXmlCompositeElement
-    {
-        /// <summary>
-        /// Initializes a new instance of the ScatterSerExtension class.
-        /// </summary>
-        public ScatterSerExtension() : base()
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the ScatterSerExtension class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public ScatterSerExtension(IEnumerable<OpenXmlElement> childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the ScatterSerExtension class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public ScatterSerExtension(params OpenXmlElement[] childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the ScatterSerExtension class from outer XML.
-        /// </summary>
-        /// <param name="outerXml">Specifies the outer XML of the element.</param>
-        public ScatterSerExtension(string outerXml) : base(outerXml)
-        {
-        }
-
-        /// <summary>
-        /// <para>URI</para>
-        /// <para>Represents the following attribute in the schema: uri</para>
-        /// </summary>
-        public StringValue? Uri
-        {
-            get => GetAttribute<StringValue>();
-            set => SetAttribute(value);
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.SetSchema("c:ext");
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange>();
-            builder.AddElement<ScatterSerExtension>()
-                .AddAttribute("uri", a => a.Uri, aBuilder =>
-                {
-                    aBuilder.AddValidator(RequiredValidator.Instance);
-                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-                });
-            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
-            {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions), 1, 1, version: FileFormatVersions.Office2013),
-                new AnyParticle(0, 1)
-            };
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<ScatterSerExtension>(deep);
-    }
-
-    /// <summary>
-    /// <para>Defines the RadarSerExtension Class.</para>
-    /// <para>This class is available in Office 2007 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is c:ext.</para>
-    /// </summary>
-    /// <remark>
-    /// <para>The following table lists the possible child types:</para>
-    /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions" /> <c>&lt;c15:categoryFilterExceptions></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle" /> <c>&lt;c15:filteredCategoryTitle></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle" /> <c>&lt;c15:filteredSeriesTitle></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange" /> <c>&lt;c15:datalabelsRange></c></description></item>
-    /// </list>
-    /// </remark>
-    public partial class RadarSerExtension : OpenXmlCompositeElement
-    {
-        /// <summary>
-        /// Initializes a new instance of the RadarSerExtension class.
-        /// </summary>
-        public RadarSerExtension() : base()
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the RadarSerExtension class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public RadarSerExtension(IEnumerable<OpenXmlElement> childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the RadarSerExtension class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public RadarSerExtension(params OpenXmlElement[] childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the RadarSerExtension class from outer XML.
-        /// </summary>
-        /// <param name="outerXml">Specifies the outer XML of the element.</param>
-        public RadarSerExtension(string outerXml) : base(outerXml)
-        {
-        }
-
-        /// <summary>
-        /// <para>URI</para>
-        /// <para>Represents the following attribute in the schema: uri</para>
-        /// </summary>
-        public StringValue? Uri
-        {
-            get => GetAttribute<StringValue>();
-            set => SetAttribute(value);
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.SetSchema("c:ext");
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange>();
-            builder.AddElement<RadarSerExtension>()
-                .AddAttribute("uri", a => a.Uri, aBuilder =>
-                {
-                    aBuilder.AddValidator(RequiredValidator.Instance);
-                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-                });
-            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
-            {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions), 1, 1, version: FileFormatVersions.Office2013),
-                new AnyParticle(0, 1)
-            };
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<RadarSerExtension>(deep);
-    }
-
-    /// <summary>
-    /// <para>Defines the AreaSerExtension Class.</para>
-    /// <para>This class is available in Office 2007 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is c:ext.</para>
-    /// </summary>
-    /// <remark>
-    /// <para>The following table lists the possible child types:</para>
-    /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions" /> <c>&lt;c15:categoryFilterExceptions></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle" /> <c>&lt;c15:filteredCategoryTitle></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle" /> <c>&lt;c15:filteredSeriesTitle></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange" /> <c>&lt;c15:datalabelsRange></c></description></item>
-    /// </list>
-    /// </remark>
-    public partial class AreaSerExtension : OpenXmlCompositeElement
-    {
-        /// <summary>
-        /// Initializes a new instance of the AreaSerExtension class.
-        /// </summary>
-        public AreaSerExtension() : base()
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the AreaSerExtension class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public AreaSerExtension(IEnumerable<OpenXmlElement> childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the AreaSerExtension class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public AreaSerExtension(params OpenXmlElement[] childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the AreaSerExtension class from outer XML.
-        /// </summary>
-        /// <param name="outerXml">Specifies the outer XML of the element.</param>
-        public AreaSerExtension(string outerXml) : base(outerXml)
-        {
-        }
-
-        /// <summary>
-        /// <para>URI</para>
-        /// <para>Represents the following attribute in the schema: uri</para>
-        /// </summary>
-        public StringValue? Uri
-        {
-            get => GetAttribute<StringValue>();
-            set => SetAttribute(value);
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.SetSchema("c:ext");
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange>();
-            builder.AddElement<AreaSerExtension>()
-                .AddAttribute("uri", a => a.Uri, aBuilder =>
-                {
-                    aBuilder.AddValidator(RequiredValidator.Instance);
-                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-                });
-            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
-            {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions), 1, 1, version: FileFormatVersions.Office2013),
-                new AnyParticle(0, 1)
-            };
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<AreaSerExtension>(deep);
-    }
-
-    /// <summary>
-    /// <para>Defines the PieSerExtension Class.</para>
-    /// <para>This class is available in Office 2007 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is c:ext.</para>
-    /// </summary>
-    /// <remark>
-    /// <para>The following table lists the possible child types:</para>
-    /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions" /> <c>&lt;c15:categoryFilterExceptions></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle" /> <c>&lt;c15:filteredCategoryTitle></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle" /> <c>&lt;c15:filteredSeriesTitle></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange" /> <c>&lt;c15:datalabelsRange></c></description></item>
-    /// </list>
-    /// </remark>
-    public partial class PieSerExtension : OpenXmlCompositeElement
-    {
-        /// <summary>
-        /// Initializes a new instance of the PieSerExtension class.
-        /// </summary>
-        public PieSerExtension() : base()
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the PieSerExtension class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public PieSerExtension(IEnumerable<OpenXmlElement> childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the PieSerExtension class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public PieSerExtension(params OpenXmlElement[] childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the PieSerExtension class from outer XML.
-        /// </summary>
-        /// <param name="outerXml">Specifies the outer XML of the element.</param>
-        public PieSerExtension(string outerXml) : base(outerXml)
-        {
-        }
-
-        /// <summary>
-        /// <para>URI</para>
-        /// <para>Represents the following attribute in the schema: uri</para>
-        /// </summary>
-        public StringValue? Uri
-        {
-            get => GetAttribute<StringValue>();
-            set => SetAttribute(value);
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.SetSchema("c:ext");
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange>();
-            builder.AddElement<PieSerExtension>()
-                .AddAttribute("uri", a => a.Uri, aBuilder =>
-                {
-                    aBuilder.AddValidator(RequiredValidator.Instance);
-                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-                });
-            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
-            {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions), 1, 1, version: FileFormatVersions.Office2013),
-                new AnyParticle(0, 1)
-            };
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<PieSerExtension>(deep);
-    }
-
-    /// <summary>
-    /// <para>Defines the SurfaceSerExtension Class.</para>
-    /// <para>This class is available in Office 2007 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is c:ext.</para>
-    /// </summary>
-    /// <remark>
-    /// <para>The following table lists the possible child types:</para>
-    /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions" /> <c>&lt;c15:categoryFilterExceptions></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle" /> <c>&lt;c15:filteredCategoryTitle></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle" /> <c>&lt;c15:filteredSeriesTitle></c></description></item>
-    /// </list>
-    /// </remark>
-    public partial class SurfaceSerExtension : OpenXmlCompositeElement
-    {
-        /// <summary>
-        /// Initializes a new instance of the SurfaceSerExtension class.
-        /// </summary>
-        public SurfaceSerExtension() : base()
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the SurfaceSerExtension class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public SurfaceSerExtension(IEnumerable<OpenXmlElement> childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the SurfaceSerExtension class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public SurfaceSerExtension(params OpenXmlElement[] childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the SurfaceSerExtension class from outer XML.
-        /// </summary>
-        /// <param name="outerXml">Specifies the outer XML of the element.</param>
-        public SurfaceSerExtension(string outerXml) : base(outerXml)
-        {
-        }
-
-        /// <summary>
-        /// <para>URI</para>
-        /// <para>Represents the following attribute in the schema: uri</para>
-        /// </summary>
-        public StringValue? Uri
-        {
-            get => GetAttribute<StringValue>();
-            set => SetAttribute(value);
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.SetSchema("c:ext");
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle>();
-            builder.AddElement<SurfaceSerExtension>()
-                .AddAttribute("uri", a => a.Uri, aBuilder =>
-                {
-                    aBuilder.AddValidator(RequiredValidator.Instance);
-                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-                });
-            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
-            {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions), 1, 1, version: FileFormatVersions.Office2013),
-                new AnyParticle(0, 1)
-            };
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<SurfaceSerExtension>(deep);
     }
 
     /// <summary>
@@ -16020,65 +15426,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     }
 
     /// <summary>
-    /// <para>Defines the DLblExtensionList Class.</para>
-    /// <para>This class is available in Office 2007 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is c:extLst.</para>
-    /// </summary>
-    /// <remark>
-    /// <para>The following table lists the possible child types:</para>
-    /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.DLblExtension" /> <c>&lt;c:ext></c></description></item>
-    /// </list>
-    /// </remark>
-    public partial class DLblExtensionList : OpenXmlCompositeElement
-    {
-        /// <summary>
-        /// Initializes a new instance of the DLblExtensionList class.
-        /// </summary>
-        public DLblExtensionList() : base()
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the DLblExtensionList class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public DLblExtensionList(IEnumerable<OpenXmlElement> childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the DLblExtensionList class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public DLblExtensionList(params OpenXmlElement[] childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the DLblExtensionList class from outer XML.
-        /// </summary>
-        /// <param name="outerXml">Specifies the outer XML of the element.</param>
-        public DLblExtensionList(string outerXml) : base(outerXml)
-        {
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.SetSchema("c:extLst");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DLblExtension>();
-            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
-            {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DLblExtension), 0, 0)
-            };
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<DLblExtensionList>(deep);
-    }
-
-    /// <summary>
     /// <para>Defines the DLblsExtensionList Class.</para>
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:extLst.</para>
@@ -16135,1581 +15482,6 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<DLblsExtensionList>(deep);
-    }
-
-    /// <summary>
-    /// <para>Defines the DataPoint Class.</para>
-    /// <para>This class is available in Office 2007 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is c:dPt.</para>
-    /// </summary>
-    /// <remark>
-    /// <para>The following table lists the possible child types:</para>
-    /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.InvertIfNegative" /> <c>&lt;c:invertIfNegative></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Bubble3D" /> <c>&lt;c:bubble3D></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ExtensionList" /> <c>&lt;c:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Marker" /> <c>&lt;c:marker></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PictureOptions" /> <c>&lt;c:pictureOptions></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Index" /> <c>&lt;c:idx></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Explosion" /> <c>&lt;c:explosion></c></description></item>
-    /// </list>
-    /// </remark>
-    public partial class DataPoint : OpenXmlCompositeElement
-    {
-        /// <summary>
-        /// Initializes a new instance of the DataPoint class.
-        /// </summary>
-        public DataPoint() : base()
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the DataPoint class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public DataPoint(IEnumerable<OpenXmlElement> childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the DataPoint class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public DataPoint(params OpenXmlElement[] childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the DataPoint class from outer XML.
-        /// </summary>
-        /// <param name="outerXml">Specifies the outer XML of the element.</param>
-        public DataPoint(string outerXml) : base(outerXml)
-        {
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.SetSchema("c:dPt");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.InvertIfNegative>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Bubble3D>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Marker>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PictureOptions>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Index>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Explosion>();
-            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
-            {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Index), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.InvertIfNegative), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Marker), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Bubble3D), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Explosion), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PictureOptions), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList), 0, 1)
-            };
-        }
-
-        /// <summary>
-        /// <para>Index.</para>
-        /// <para>Represents the following element tag in the schema: c:idx.</para>
-        /// </summary>
-        /// <remark>
-        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.Index? Index
-        {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Index>();
-            set => SetElement(value);
-        }
-
-        /// <summary>
-        /// <para>Invert if Negative.</para>
-        /// <para>Represents the following element tag in the schema: c:invertIfNegative.</para>
-        /// </summary>
-        /// <remark>
-        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.InvertIfNegative? InvertIfNegative
-        {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.InvertIfNegative>();
-            set => SetElement(value);
-        }
-
-        /// <summary>
-        /// <para>Marker.</para>
-        /// <para>Represents the following element tag in the schema: c:marker.</para>
-        /// </summary>
-        /// <remark>
-        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.Marker? Marker
-        {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Marker>();
-            set => SetElement(value);
-        }
-
-        /// <summary>
-        /// <para>3D Bubble.</para>
-        /// <para>Represents the following element tag in the schema: c:bubble3D.</para>
-        /// </summary>
-        /// <remark>
-        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.Bubble3D? Bubble3D
-        {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Bubble3D>();
-            set => SetElement(value);
-        }
-
-        /// <summary>
-        /// <para>Explosion.</para>
-        /// <para>Represents the following element tag in the schema: c:explosion.</para>
-        /// </summary>
-        /// <remark>
-        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.Explosion? Explosion
-        {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Explosion>();
-            set => SetElement(value);
-        }
-
-        /// <summary>
-        /// <para>ChartShapeProperties.</para>
-        /// <para>Represents the following element tag in the schema: c:spPr.</para>
-        /// </summary>
-        /// <remark>
-        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
-        {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
-            set => SetElement(value);
-        }
-
-        /// <summary>
-        /// <para>PictureOptions.</para>
-        /// <para>Represents the following element tag in the schema: c:pictureOptions.</para>
-        /// </summary>
-        /// <remark>
-        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.PictureOptions? PictureOptions
-        {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PictureOptions>();
-            set => SetElement(value);
-        }
-
-        /// <summary>
-        /// <para>Chart Extensibility.</para>
-        /// <para>Represents the following element tag in the schema: c:extLst.</para>
-        /// </summary>
-        /// <remark>
-        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.ExtensionList? ExtensionList
-        {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
-            set => SetElement(value);
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<DataPoint>(deep);
-    }
-
-    /// <summary>
-    /// <para>Defines the Trendline Class.</para>
-    /// <para>This class is available in Office 2007 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is c:trendline.</para>
-    /// </summary>
-    /// <remark>
-    /// <para>The following table lists the possible child types:</para>
-    /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.DisplayRSquaredValue" /> <c>&lt;c:dispRSqr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.DisplayEquation" /> <c>&lt;c:dispEq></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Forward" /> <c>&lt;c:forward></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Backward" /> <c>&lt;c:backward></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Intercept" /> <c>&lt;c:intercept></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ExtensionList" /> <c>&lt;c:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PolynomialOrder" /> <c>&lt;c:order></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Period" /> <c>&lt;c:period></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.TrendlineLabel" /> <c>&lt;c:trendlineLbl></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.TrendlineType" /> <c>&lt;c:trendlineType></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.TrendlineName" /> <c>&lt;c:name></c></description></item>
-    /// </list>
-    /// </remark>
-    public partial class Trendline : OpenXmlCompositeElement
-    {
-        /// <summary>
-        /// Initializes a new instance of the Trendline class.
-        /// </summary>
-        public Trendline() : base()
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the Trendline class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public Trendline(IEnumerable<OpenXmlElement> childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the Trendline class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public Trendline(params OpenXmlElement[] childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the Trendline class from outer XML.
-        /// </summary>
-        /// <param name="outerXml">Specifies the outer XML of the element.</param>
-        public Trendline(string outerXml) : base(outerXml)
-        {
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.SetSchema("c:trendline");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DisplayRSquaredValue>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DisplayEquation>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Forward>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Backward>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Intercept>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PolynomialOrder>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Period>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.TrendlineLabel>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.TrendlineType>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.TrendlineName>();
-            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
-            {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.TrendlineName), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.TrendlineType), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PolynomialOrder), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Period), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Forward), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Backward), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Intercept), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DisplayRSquaredValue), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DisplayEquation), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.TrendlineLabel), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList), 0, 1)
-            };
-        }
-
-        /// <summary>
-        /// <para>Trendline Name.</para>
-        /// <para>Represents the following element tag in the schema: c:name.</para>
-        /// </summary>
-        /// <remark>
-        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.TrendlineName? TrendlineName
-        {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.TrendlineName>();
-            set => SetElement(value);
-        }
-
-        /// <summary>
-        /// <para>ChartShapeProperties.</para>
-        /// <para>Represents the following element tag in the schema: c:spPr.</para>
-        /// </summary>
-        /// <remark>
-        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
-        {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
-            set => SetElement(value);
-        }
-
-        /// <summary>
-        /// <para>Trendline Type.</para>
-        /// <para>Represents the following element tag in the schema: c:trendlineType.</para>
-        /// </summary>
-        /// <remark>
-        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.TrendlineType? TrendlineType
-        {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.TrendlineType>();
-            set => SetElement(value);
-        }
-
-        /// <summary>
-        /// <para>Polynomial Trendline Order.</para>
-        /// <para>Represents the following element tag in the schema: c:order.</para>
-        /// </summary>
-        /// <remark>
-        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.PolynomialOrder? PolynomialOrder
-        {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PolynomialOrder>();
-            set => SetElement(value);
-        }
-
-        /// <summary>
-        /// <para>Period.</para>
-        /// <para>Represents the following element tag in the schema: c:period.</para>
-        /// </summary>
-        /// <remark>
-        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.Period? Period
-        {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Period>();
-            set => SetElement(value);
-        }
-
-        /// <summary>
-        /// <para>Forward.</para>
-        /// <para>Represents the following element tag in the schema: c:forward.</para>
-        /// </summary>
-        /// <remark>
-        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.Forward? Forward
-        {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Forward>();
-            set => SetElement(value);
-        }
-
-        /// <summary>
-        /// <para>Backward.</para>
-        /// <para>Represents the following element tag in the schema: c:backward.</para>
-        /// </summary>
-        /// <remark>
-        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.Backward? Backward
-        {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Backward>();
-            set => SetElement(value);
-        }
-
-        /// <summary>
-        /// <para>Intercept.</para>
-        /// <para>Represents the following element tag in the schema: c:intercept.</para>
-        /// </summary>
-        /// <remark>
-        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.Intercept? Intercept
-        {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Intercept>();
-            set => SetElement(value);
-        }
-
-        /// <summary>
-        /// <para>Display R Squared Value.</para>
-        /// <para>Represents the following element tag in the schema: c:dispRSqr.</para>
-        /// </summary>
-        /// <remark>
-        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.DisplayRSquaredValue? DisplayRSquaredValue
-        {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.DisplayRSquaredValue>();
-            set => SetElement(value);
-        }
-
-        /// <summary>
-        /// <para>Display Equation.</para>
-        /// <para>Represents the following element tag in the schema: c:dispEq.</para>
-        /// </summary>
-        /// <remark>
-        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.DisplayEquation? DisplayEquation
-        {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.DisplayEquation>();
-            set => SetElement(value);
-        }
-
-        /// <summary>
-        /// <para>Trendline Label.</para>
-        /// <para>Represents the following element tag in the schema: c:trendlineLbl.</para>
-        /// </summary>
-        /// <remark>
-        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.TrendlineLabel? TrendlineLabel
-        {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.TrendlineLabel>();
-            set => SetElement(value);
-        }
-
-        /// <summary>
-        /// <para>Chart Extensibility.</para>
-        /// <para>Represents the following element tag in the schema: c:extLst.</para>
-        /// </summary>
-        /// <remark>
-        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.ExtensionList? ExtensionList
-        {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
-            set => SetElement(value);
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<Trendline>(deep);
-    }
-
-    /// <summary>
-    /// <para>Defines the ErrorBars Class.</para>
-    /// <para>This class is available in Office 2007 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is c:errBars.</para>
-    /// </summary>
-    /// <remark>
-    /// <para>The following table lists the possible child types:</para>
-    /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.NoEndCap" /> <c>&lt;c:noEndCap></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ErrorBarValue" /> <c>&lt;c:val></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ErrorBarType" /> <c>&lt;c:errBarType></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ErrorDirection" /> <c>&lt;c:errDir></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ErrorBarValueType" /> <c>&lt;c:errValType></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ExtensionList" /> <c>&lt;c:extLst></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Plus" /> <c>&lt;c:plus></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Minus" /> <c>&lt;c:minus></c></description></item>
-    /// </list>
-    /// </remark>
-    public partial class ErrorBars : OpenXmlCompositeElement
-    {
-        /// <summary>
-        /// Initializes a new instance of the ErrorBars class.
-        /// </summary>
-        public ErrorBars() : base()
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the ErrorBars class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public ErrorBars(IEnumerable<OpenXmlElement> childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the ErrorBars class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public ErrorBars(params OpenXmlElement[] childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the ErrorBars class from outer XML.
-        /// </summary>
-        /// <param name="outerXml">Specifies the outer XML of the element.</param>
-        public ErrorBars(string outerXml) : base(outerXml)
-        {
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.SetSchema("c:errBars");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.NoEndCap>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ErrorBarValue>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ErrorBarType>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ErrorDirection>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ErrorBarValueType>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Plus>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Minus>();
-            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
-            {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ErrorDirection), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ErrorBarType), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ErrorBarValueType), 1, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NoEndCap), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Plus), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Minus), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ErrorBarValue), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList), 0, 1)
-            };
-        }
-
-        /// <summary>
-        /// <para>Error Bar Direction.</para>
-        /// <para>Represents the following element tag in the schema: c:errDir.</para>
-        /// </summary>
-        /// <remark>
-        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.ErrorDirection? ErrorDirection
-        {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ErrorDirection>();
-            set => SetElement(value);
-        }
-
-        /// <summary>
-        /// <para>Error Bar Type.</para>
-        /// <para>Represents the following element tag in the schema: c:errBarType.</para>
-        /// </summary>
-        /// <remark>
-        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.ErrorBarType? ErrorBarType
-        {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ErrorBarType>();
-            set => SetElement(value);
-        }
-
-        /// <summary>
-        /// <para>Error Bar Value Type.</para>
-        /// <para>Represents the following element tag in the schema: c:errValType.</para>
-        /// </summary>
-        /// <remark>
-        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.ErrorBarValueType? ErrorBarValueType
-        {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ErrorBarValueType>();
-            set => SetElement(value);
-        }
-
-        /// <summary>
-        /// <para>No End Cap.</para>
-        /// <para>Represents the following element tag in the schema: c:noEndCap.</para>
-        /// </summary>
-        /// <remark>
-        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.NoEndCap? NoEndCap
-        {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.NoEndCap>();
-            set => SetElement(value);
-        }
-
-        /// <summary>
-        /// <para>Plus.</para>
-        /// <para>Represents the following element tag in the schema: c:plus.</para>
-        /// </summary>
-        /// <remark>
-        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.Plus? Plus
-        {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Plus>();
-            set => SetElement(value);
-        }
-
-        /// <summary>
-        /// <para>Minus.</para>
-        /// <para>Represents the following element tag in the schema: c:minus.</para>
-        /// </summary>
-        /// <remark>
-        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.Minus? Minus
-        {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Minus>();
-            set => SetElement(value);
-        }
-
-        /// <summary>
-        /// <para>Error Bar Value.</para>
-        /// <para>Represents the following element tag in the schema: c:val.</para>
-        /// </summary>
-        /// <remark>
-        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.ErrorBarValue? ErrorBarValue
-        {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ErrorBarValue>();
-            set => SetElement(value);
-        }
-
-        /// <summary>
-        /// <para>ChartShapeProperties.</para>
-        /// <para>Represents the following element tag in the schema: c:spPr.</para>
-        /// </summary>
-        /// <remark>
-        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
-        {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
-            set => SetElement(value);
-        }
-
-        /// <summary>
-        /// <para>Chart Extensibility.</para>
-        /// <para>Represents the following element tag in the schema: c:extLst.</para>
-        /// </summary>
-        /// <remark>
-        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.ExtensionList? ExtensionList
-        {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
-            set => SetElement(value);
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<ErrorBars>(deep);
-    }
-
-    /// <summary>
-    /// <para>Defines the CategoryAxisData Class.</para>
-    /// <para>This class is available in Office 2007 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is c:cat.</para>
-    /// </summary>
-    /// <remark>
-    /// <para>The following table lists the possible child types:</para>
-    /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.MultiLevelStringReference" /> <c>&lt;c:multiLvlStrRef></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral" /> <c>&lt;c:numLit></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.NumberReference" /> <c>&lt;c:numRef></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.StringLiteral" /> <c>&lt;c:strLit></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.StringReference" /> <c>&lt;c:strRef></c></description></item>
-    /// </list>
-    /// </remark>
-    public partial class CategoryAxisData : AxisDataSourceType
-    {
-        /// <summary>
-        /// Initializes a new instance of the CategoryAxisData class.
-        /// </summary>
-        public CategoryAxisData() : base()
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the CategoryAxisData class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public CategoryAxisData(IEnumerable<OpenXmlElement> childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the CategoryAxisData class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public CategoryAxisData(params OpenXmlElement[] childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the CategoryAxisData class from outer XML.
-        /// </summary>
-        /// <param name="outerXml">Specifies the outer XML of the element.</param>
-        public CategoryAxisData(string outerXml) : base(outerXml)
-        {
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.SetSchema("c:cat");
-            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
-            {
-                new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
-                {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.MultiLevelStringReference), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumberReference), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.StringReference), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.StringLiteral), 1, 1)
-                }
-            };
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<CategoryAxisData>(deep);
-    }
-
-    /// <summary>
-    /// <para>Defines the XValues Class.</para>
-    /// <para>This class is available in Office 2007 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is c:xVal.</para>
-    /// </summary>
-    /// <remark>
-    /// <para>The following table lists the possible child types:</para>
-    /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.MultiLevelStringReference" /> <c>&lt;c:multiLvlStrRef></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral" /> <c>&lt;c:numLit></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.NumberReference" /> <c>&lt;c:numRef></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.StringLiteral" /> <c>&lt;c:strLit></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.StringReference" /> <c>&lt;c:strRef></c></description></item>
-    /// </list>
-    /// </remark>
-    public partial class XValues : AxisDataSourceType
-    {
-        /// <summary>
-        /// Initializes a new instance of the XValues class.
-        /// </summary>
-        public XValues() : base()
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the XValues class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public XValues(IEnumerable<OpenXmlElement> childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the XValues class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public XValues(params OpenXmlElement[] childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the XValues class from outer XML.
-        /// </summary>
-        /// <param name="outerXml">Specifies the outer XML of the element.</param>
-        public XValues(string outerXml) : base(outerXml)
-        {
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.SetSchema("c:xVal");
-            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
-            {
-                new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
-                {
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.MultiLevelStringReference), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumberReference), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.StringReference), 1, 1),
-                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.StringLiteral), 1, 1)
-                }
-            };
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<XValues>(deep);
-    }
-
-    /// <summary>
-    /// <para>Defines the AxisDataSourceType Class.</para>
-    /// <para>This class is available in Office 2007 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
-    /// </summary>
-    /// <remark>
-    /// <para>The following table lists the possible child types:</para>
-    /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.MultiLevelStringReference" /> <c>&lt;c:multiLvlStrRef></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral" /> <c>&lt;c:numLit></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.NumberReference" /> <c>&lt;c:numRef></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.StringLiteral" /> <c>&lt;c:strLit></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.StringReference" /> <c>&lt;c:strRef></c></description></item>
-    /// </list>
-    /// </remark>
-    public abstract partial class AxisDataSourceType : OpenXmlCompositeElement
-    {
-        /// <summary>
-        /// Initializes a new instance of the AxisDataSourceType class.
-        /// </summary>
-        protected AxisDataSourceType() : base()
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the AxisDataSourceType class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        protected AxisDataSourceType(IEnumerable<OpenXmlElement> childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the AxisDataSourceType class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        protected AxisDataSourceType(params OpenXmlElement[] childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the AxisDataSourceType class from outer XML.
-        /// </summary>
-        /// <param name="outerXml">Specifies the outer XML of the element.</param>
-        protected AxisDataSourceType(string outerXml) : base(outerXml)
-        {
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.MultiLevelStringReference>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.NumberReference>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.StringLiteral>();
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.StringReference>();
-        }
-
-        /// <summary>
-        /// <para>Multi Level String Reference.</para>
-        /// <para>Represents the following element tag in the schema: c:multiLvlStrRef.</para>
-        /// </summary>
-        /// <remark>
-        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.MultiLevelStringReference? MultiLevelStringReference
-        {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.MultiLevelStringReference>();
-            set => SetElement(value);
-        }
-
-        /// <summary>
-        /// <para>Number Reference.</para>
-        /// <para>Represents the following element tag in the schema: c:numRef.</para>
-        /// </summary>
-        /// <remark>
-        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.NumberReference? NumberReference
-        {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.NumberReference>();
-            set => SetElement(value);
-        }
-
-        /// <summary>
-        /// <para>Number Literal.</para>
-        /// <para>Represents the following element tag in the schema: c:numLit.</para>
-        /// </summary>
-        /// <remark>
-        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral? NumberLiteral
-        {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral>();
-            set => SetElement(value);
-        }
-
-        /// <summary>
-        /// <para>StringReference.</para>
-        /// <para>Represents the following element tag in the schema: c:strRef.</para>
-        /// </summary>
-        /// <remark>
-        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.StringReference? StringReference
-        {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.StringReference>();
-            set => SetElement(value);
-        }
-
-        /// <summary>
-        /// <para>String Literal.</para>
-        /// <para>Represents the following element tag in the schema: c:strLit.</para>
-        /// </summary>
-        /// <remark>
-        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
-        public DocumentFormat.OpenXml.Drawing.Charts.StringLiteral? StringLiteral
-        {
-            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.StringLiteral>();
-            set => SetElement(value);
-        }
-    }
-
-    /// <summary>
-    /// <para>Defines the LineSerExtensionList Class.</para>
-    /// <para>This class is available in Office 2007 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is c:extLst.</para>
-    /// </summary>
-    /// <remark>
-    /// <para>The following table lists the possible child types:</para>
-    /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.LineSerExtension" /> <c>&lt;c:ext></c></description></item>
-    /// </list>
-    /// </remark>
-    public partial class LineSerExtensionList : OpenXmlCompositeElement
-    {
-        /// <summary>
-        /// Initializes a new instance of the LineSerExtensionList class.
-        /// </summary>
-        public LineSerExtensionList() : base()
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the LineSerExtensionList class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public LineSerExtensionList(IEnumerable<OpenXmlElement> childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the LineSerExtensionList class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public LineSerExtensionList(params OpenXmlElement[] childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the LineSerExtensionList class from outer XML.
-        /// </summary>
-        /// <param name="outerXml">Specifies the outer XML of the element.</param>
-        public LineSerExtensionList(string outerXml) : base(outerXml)
-        {
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.SetSchema("c:extLst");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.LineSerExtension>();
-            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
-            {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.LineSerExtension), 0, 0)
-            };
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<LineSerExtensionList>(deep);
-    }
-
-    /// <summary>
-    /// <para>Defines the ScatterSerExtensionList Class.</para>
-    /// <para>This class is available in Office 2007 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is c:extLst.</para>
-    /// </summary>
-    /// <remark>
-    /// <para>The following table lists the possible child types:</para>
-    /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ScatterSerExtension" /> <c>&lt;c:ext></c></description></item>
-    /// </list>
-    /// </remark>
-    public partial class ScatterSerExtensionList : OpenXmlCompositeElement
-    {
-        /// <summary>
-        /// Initializes a new instance of the ScatterSerExtensionList class.
-        /// </summary>
-        public ScatterSerExtensionList() : base()
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the ScatterSerExtensionList class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public ScatterSerExtensionList(IEnumerable<OpenXmlElement> childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the ScatterSerExtensionList class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public ScatterSerExtensionList(params OpenXmlElement[] childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the ScatterSerExtensionList class from outer XML.
-        /// </summary>
-        /// <param name="outerXml">Specifies the outer XML of the element.</param>
-        public ScatterSerExtensionList(string outerXml) : base(outerXml)
-        {
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.SetSchema("c:extLst");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ScatterSerExtension>();
-            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
-            {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ScatterSerExtension), 0, 0)
-            };
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<ScatterSerExtensionList>(deep);
-    }
-
-    /// <summary>
-    /// <para>Defines the RadarSerExtensionList Class.</para>
-    /// <para>This class is available in Office 2007 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is c:extLst.</para>
-    /// </summary>
-    /// <remark>
-    /// <para>The following table lists the possible child types:</para>
-    /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.RadarSerExtension" /> <c>&lt;c:ext></c></description></item>
-    /// </list>
-    /// </remark>
-    public partial class RadarSerExtensionList : OpenXmlCompositeElement
-    {
-        /// <summary>
-        /// Initializes a new instance of the RadarSerExtensionList class.
-        /// </summary>
-        public RadarSerExtensionList() : base()
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the RadarSerExtensionList class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public RadarSerExtensionList(IEnumerable<OpenXmlElement> childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the RadarSerExtensionList class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public RadarSerExtensionList(params OpenXmlElement[] childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the RadarSerExtensionList class from outer XML.
-        /// </summary>
-        /// <param name="outerXml">Specifies the outer XML of the element.</param>
-        public RadarSerExtensionList(string outerXml) : base(outerXml)
-        {
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.SetSchema("c:extLst");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.RadarSerExtension>();
-            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
-            {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.RadarSerExtension), 0, 0)
-            };
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<RadarSerExtensionList>(deep);
-    }
-
-    /// <summary>
-    /// <para>Defines the Shape Class.</para>
-    /// <para>This class is available in Office 2007 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is c:shape.</para>
-    /// </summary>
-    public partial class Shape : OpenXmlLeafElement
-    {
-        /// <summary>
-        /// Initializes a new instance of the Shape class.
-        /// </summary>
-        public Shape() : base()
-        {
-        }
-
-        /// <summary>
-        /// <para>Shape Value</para>
-        /// <para>Represents the following attribute in the schema: val</para>
-        /// </summary>
-        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.ShapeValues>? Val
-        {
-            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.ShapeValues>>();
-            set => SetAttribute(value);
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.SetSchema("c:shape");
-            builder.AddElement<Shape>()
-                .AddAttribute("val", a => a.Val);
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<Shape>(deep);
-    }
-
-    /// <summary>
-    /// <para>Defines the BarSerExtensionList Class.</para>
-    /// <para>This class is available in Office 2007 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is c:extLst.</para>
-    /// </summary>
-    /// <remark>
-    /// <para>The following table lists the possible child types:</para>
-    /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.BarSerExtension" /> <c>&lt;c:ext></c></description></item>
-    /// </list>
-    /// </remark>
-    public partial class BarSerExtensionList : OpenXmlCompositeElement
-    {
-        /// <summary>
-        /// Initializes a new instance of the BarSerExtensionList class.
-        /// </summary>
-        public BarSerExtensionList() : base()
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the BarSerExtensionList class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public BarSerExtensionList(IEnumerable<OpenXmlElement> childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the BarSerExtensionList class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public BarSerExtensionList(params OpenXmlElement[] childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the BarSerExtensionList class from outer XML.
-        /// </summary>
-        /// <param name="outerXml">Specifies the outer XML of the element.</param>
-        public BarSerExtensionList(string outerXml) : base(outerXml)
-        {
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.SetSchema("c:extLst");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.BarSerExtension>();
-            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
-            {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.BarSerExtension), 0, 0)
-            };
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<BarSerExtensionList>(deep);
-    }
-
-    /// <summary>
-    /// <para>Defines the BarSerExtension Class.</para>
-    /// <para>This class is available in Office 2007 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is c:ext.</para>
-    /// </summary>
-    /// <remark>
-    /// <para>The following table lists the possible child types:</para>
-    /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.Charts.InvertSolidFillFormat" /> <c>&lt;c14:invertSolidFillFmt></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions" /> <c>&lt;c15:categoryFilterExceptions></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle" /> <c>&lt;c15:filteredCategoryTitle></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle" /> <c>&lt;c15:filteredSeriesTitle></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange" /> <c>&lt;c15:datalabelsRange></c></description></item>
-    /// </list>
-    /// </remark>
-    public partial class BarSerExtension : OpenXmlCompositeElement
-    {
-        /// <summary>
-        /// Initializes a new instance of the BarSerExtension class.
-        /// </summary>
-        public BarSerExtension() : base()
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the BarSerExtension class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public BarSerExtension(IEnumerable<OpenXmlElement> childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the BarSerExtension class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public BarSerExtension(params OpenXmlElement[] childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the BarSerExtension class from outer XML.
-        /// </summary>
-        /// <param name="outerXml">Specifies the outer XML of the element.</param>
-        public BarSerExtension(string outerXml) : base(outerXml)
-        {
-        }
-
-        /// <summary>
-        /// <para>URI</para>
-        /// <para>Represents the following attribute in the schema: uri</para>
-        /// </summary>
-        public StringValue? Uri
-        {
-            get => GetAttribute<StringValue>();
-            set => SetAttribute(value);
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.SetSchema("c:ext");
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.Charts.InvertSolidFillFormat>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange>();
-            builder.AddElement<BarSerExtension>()
-                .AddAttribute("uri", a => a.Uri, aBuilder =>
-                {
-                    aBuilder.AddValidator(RequiredValidator.Instance);
-                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-                });
-            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
-            {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.Charts.InvertSolidFillFormat), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions), 1, 1, version: FileFormatVersions.Office2013),
-                new AnyParticle(0, 1)
-            };
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<BarSerExtension>(deep);
-    }
-
-    /// <summary>
-    /// <para>Defines the AreaSerExtensionList Class.</para>
-    /// <para>This class is available in Office 2007 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is c:extLst.</para>
-    /// </summary>
-    /// <remark>
-    /// <para>The following table lists the possible child types:</para>
-    /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.AreaSerExtension" /> <c>&lt;c:ext></c></description></item>
-    /// </list>
-    /// </remark>
-    public partial class AreaSerExtensionList : OpenXmlCompositeElement
-    {
-        /// <summary>
-        /// Initializes a new instance of the AreaSerExtensionList class.
-        /// </summary>
-        public AreaSerExtensionList() : base()
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the AreaSerExtensionList class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public AreaSerExtensionList(IEnumerable<OpenXmlElement> childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the AreaSerExtensionList class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public AreaSerExtensionList(params OpenXmlElement[] childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the AreaSerExtensionList class from outer XML.
-        /// </summary>
-        /// <param name="outerXml">Specifies the outer XML of the element.</param>
-        public AreaSerExtensionList(string outerXml) : base(outerXml)
-        {
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.SetSchema("c:extLst");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.AreaSerExtension>();
-            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
-            {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.AreaSerExtension), 0, 0)
-            };
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<AreaSerExtensionList>(deep);
-    }
-
-    /// <summary>
-    /// <para>Defines the PieSerExtensionList Class.</para>
-    /// <para>This class is available in Office 2007 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is c:extLst.</para>
-    /// </summary>
-    /// <remark>
-    /// <para>The following table lists the possible child types:</para>
-    /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PieSerExtension" /> <c>&lt;c:ext></c></description></item>
-    /// </list>
-    /// </remark>
-    public partial class PieSerExtensionList : OpenXmlCompositeElement
-    {
-        /// <summary>
-        /// Initializes a new instance of the PieSerExtensionList class.
-        /// </summary>
-        public PieSerExtensionList() : base()
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the PieSerExtensionList class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public PieSerExtensionList(IEnumerable<OpenXmlElement> childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the PieSerExtensionList class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public PieSerExtensionList(params OpenXmlElement[] childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the PieSerExtensionList class from outer XML.
-        /// </summary>
-        /// <param name="outerXml">Specifies the outer XML of the element.</param>
-        public PieSerExtensionList(string outerXml) : base(outerXml)
-        {
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.SetSchema("c:extLst");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PieSerExtension>();
-            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
-            {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PieSerExtension), 0, 0)
-            };
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<PieSerExtensionList>(deep);
-    }
-
-    /// <summary>
-    /// <para>Defines the BubbleSerExtensionList Class.</para>
-    /// <para>This class is available in Office 2007 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is c:extLst.</para>
-    /// </summary>
-    /// <remark>
-    /// <para>The following table lists the possible child types:</para>
-    /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.BubbleSerExtension" /> <c>&lt;c:ext></c></description></item>
-    /// </list>
-    /// </remark>
-    public partial class BubbleSerExtensionList : OpenXmlCompositeElement
-    {
-        /// <summary>
-        /// Initializes a new instance of the BubbleSerExtensionList class.
-        /// </summary>
-        public BubbleSerExtensionList() : base()
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the BubbleSerExtensionList class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public BubbleSerExtensionList(IEnumerable<OpenXmlElement> childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the BubbleSerExtensionList class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public BubbleSerExtensionList(params OpenXmlElement[] childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the BubbleSerExtensionList class from outer XML.
-        /// </summary>
-        /// <param name="outerXml">Specifies the outer XML of the element.</param>
-        public BubbleSerExtensionList(string outerXml) : base(outerXml)
-        {
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.SetSchema("c:extLst");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.BubbleSerExtension>();
-            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
-            {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.BubbleSerExtension), 0, 0)
-            };
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<BubbleSerExtensionList>(deep);
-    }
-
-    /// <summary>
-    /// <para>Defines the BubbleSerExtension Class.</para>
-    /// <para>This class is available in Office 2007 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is c:ext.</para>
-    /// </summary>
-    /// <remark>
-    /// <para>The following table lists the possible child types:</para>
-    /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.Charts.InvertSolidFillFormat" /> <c>&lt;c14:invertSolidFillFmt></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions" /> <c>&lt;c15:categoryFilterExceptions></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle" /> <c>&lt;c15:filteredCategoryTitle></c></description></item>
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange" /> <c>&lt;c15:datalabelsRange></c></description></item>
-    /// </list>
-    /// </remark>
-    public partial class BubbleSerExtension : OpenXmlCompositeElement
-    {
-        /// <summary>
-        /// Initializes a new instance of the BubbleSerExtension class.
-        /// </summary>
-        public BubbleSerExtension() : base()
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the BubbleSerExtension class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public BubbleSerExtension(IEnumerable<OpenXmlElement> childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the BubbleSerExtension class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public BubbleSerExtension(params OpenXmlElement[] childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the BubbleSerExtension class from outer XML.
-        /// </summary>
-        /// <param name="outerXml">Specifies the outer XML of the element.</param>
-        public BubbleSerExtension(string outerXml) : base(outerXml)
-        {
-        }
-
-        /// <summary>
-        /// <para>URI</para>
-        /// <para>Represents the following attribute in the schema: uri</para>
-        /// </summary>
-        public StringValue? Uri
-        {
-            get => GetAttribute<StringValue>();
-            set => SetAttribute(value);
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.SetSchema("c:ext");
-            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.Charts.InvertSolidFillFormat>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle>();
-            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange>();
-            builder.AddElement<BubbleSerExtension>()
-                .AddAttribute("uri", a => a.Uri, aBuilder =>
-                {
-                    aBuilder.AddValidator(RequiredValidator.Instance);
-                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
-                });
-            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
-            {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.Charts.InvertSolidFillFormat), 1, 1, version: FileFormatVersions.Office2010),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange), 1, 1, version: FileFormatVersions.Office2013),
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions), 1, 1, version: FileFormatVersions.Office2013),
-                new AnyParticle(0, 1)
-            };
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<BubbleSerExtension>(deep);
-    }
-
-    /// <summary>
-    /// <para>Defines the SurfaceSerExtensionList Class.</para>
-    /// <para>This class is available in Office 2007 and above.</para>
-    /// <para>When the object is serialized out as xml, it's qualified name is c:extLst.</para>
-    /// </summary>
-    /// <remark>
-    /// <para>The following table lists the possible child types:</para>
-    /// <list type="bullet">
-    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.SurfaceSerExtension" /> <c>&lt;c:ext></c></description></item>
-    /// </list>
-    /// </remark>
-    public partial class SurfaceSerExtensionList : OpenXmlCompositeElement
-    {
-        /// <summary>
-        /// Initializes a new instance of the SurfaceSerExtensionList class.
-        /// </summary>
-        public SurfaceSerExtensionList() : base()
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the SurfaceSerExtensionList class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public SurfaceSerExtensionList(IEnumerable<OpenXmlElement> childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the SurfaceSerExtensionList class with the specified child elements.
-        /// </summary>
-        /// <param name="childElements">Specifies the child elements.</param>
-        public SurfaceSerExtensionList(params OpenXmlElement[] childElements) : base(childElements)
-        {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the SurfaceSerExtensionList class from outer XML.
-        /// </summary>
-        /// <param name="outerXml">Specifies the outer XML of the element.</param>
-        public SurfaceSerExtensionList(string outerXml) : base(outerXml)
-        {
-        }
-
-        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
-        {
-            base.ConfigureMetadata(builder);
-            builder.SetSchema("c:extLst");
-            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.SurfaceSerExtension>();
-            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
-            {
-                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.SurfaceSerExtension), 0, 0)
-            };
-        }
-
-        /// <inheritdoc/>
-        public override OpenXmlElement CloneNode(bool deep) => CloneImp<SurfaceSerExtensionList>(deep);
     }
 
     /// <summary>
@@ -18458,6 +16230,42 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<BarChartExtensionList>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the Shape Class.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is c:shape.</para>
+    /// </summary>
+    public partial class Shape : OpenXmlLeafElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the Shape class.
+        /// </summary>
+        public Shape() : base()
+        {
+        }
+
+        /// <summary>
+        /// <para>Shape Value</para>
+        /// <para>Represents the following attribute in the schema: val</para>
+        /// </summary>
+        public EnumValue<DocumentFormat.OpenXml.Drawing.Charts.ShapeValues>? Val
+        {
+            get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.Charts.ShapeValues>>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema("c:shape");
+            builder.AddElement<Shape>()
+                .AddAttribute("val", a => a.Val);
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<Shape>(deep);
     }
 
     /// <summary>
@@ -20956,6 +18764,2274 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
 
         /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep) => CloneImp<ChartSpaceExtension>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the DLblExtensionList Class.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is c:extLst.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.DLblExtension" /> <c>&lt;c:ext></c></description></item>
+    /// </list>
+    /// </remark>
+    public partial class DLblExtensionList : OpenXmlCompositeElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the DLblExtensionList class.
+        /// </summary>
+        public DLblExtensionList() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the DLblExtensionList class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public DLblExtensionList(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the DLblExtensionList class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public DLblExtensionList(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the DLblExtensionList class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public DLblExtensionList(string outerXml) : base(outerXml)
+        {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema("c:extLst");
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DLblExtension>();
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DLblExtension), 0, 0)
+            };
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<DLblExtensionList>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the DLblExtension Class.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is c:ext.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShapeProperties" /> <c>&lt;c15:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.ExceptionForSave" /> <c>&lt;c15:xForSave></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShowDataLabelsRange" /> <c>&lt;c15:showDataLabelsRange></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.Layout" /> <c>&lt;c15:layout></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelFieldTable" /> <c>&lt;c15:dlblFieldTable></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID" /> <c>&lt;c16:uniqueId></c></description></item>
+    /// </list>
+    /// </remark>
+    public partial class DLblExtension : OpenXmlCompositeElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the DLblExtension class.
+        /// </summary>
+        public DLblExtension() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the DLblExtension class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public DLblExtension(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the DLblExtension class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public DLblExtension(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the DLblExtension class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public DLblExtension(string outerXml) : base(outerXml)
+        {
+        }
+
+        /// <summary>
+        /// <para>URI</para>
+        /// <para>Represents the following attribute in the schema: uri</para>
+        /// </summary>
+        public StringValue? Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema("c:ext");
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.ExceptionForSave>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShowDataLabelsRange>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.Layout>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelFieldTable>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID>();
+            builder.AddElement<DLblExtension>()
+                .AddAttribute("uri", a => a.Uri, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelFieldTable), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.ExceptionForSave), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShowDataLabelsRange), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShapeProperties), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.Layout), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID), 1, 1, version: FileFormatVersions.Office2016),
+                new AnyParticle(0, 1)
+            };
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<DLblExtension>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the DataPoint Class.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is c:dPt.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.InvertIfNegative" /> <c>&lt;c:invertIfNegative></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Bubble3D" /> <c>&lt;c:bubble3D></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ExtensionList" /> <c>&lt;c:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Marker" /> <c>&lt;c:marker></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PictureOptions" /> <c>&lt;c:pictureOptions></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Index" /> <c>&lt;c:idx></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Explosion" /> <c>&lt;c:explosion></c></description></item>
+    /// </list>
+    /// </remark>
+    public partial class DataPoint : OpenXmlCompositeElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the DataPoint class.
+        /// </summary>
+        public DataPoint() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the DataPoint class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public DataPoint(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the DataPoint class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public DataPoint(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the DataPoint class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public DataPoint(string outerXml) : base(outerXml)
+        {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema("c:dPt");
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.InvertIfNegative>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Bubble3D>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Marker>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PictureOptions>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Index>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Explosion>();
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Index), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.InvertIfNegative), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Marker), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Bubble3D), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Explosion), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PictureOptions), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList), 0, 1)
+            };
+        }
+
+        /// <summary>
+        /// <para>Index.</para>
+        /// <para>Represents the following element tag in the schema: c:idx.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
+        /// </remark>
+        public DocumentFormat.OpenXml.Drawing.Charts.Index? Index
+        {
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Index>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>Invert if Negative.</para>
+        /// <para>Represents the following element tag in the schema: c:invertIfNegative.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
+        /// </remark>
+        public DocumentFormat.OpenXml.Drawing.Charts.InvertIfNegative? InvertIfNegative
+        {
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.InvertIfNegative>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>Marker.</para>
+        /// <para>Represents the following element tag in the schema: c:marker.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
+        /// </remark>
+        public DocumentFormat.OpenXml.Drawing.Charts.Marker? Marker
+        {
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Marker>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>3D Bubble.</para>
+        /// <para>Represents the following element tag in the schema: c:bubble3D.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
+        /// </remark>
+        public DocumentFormat.OpenXml.Drawing.Charts.Bubble3D? Bubble3D
+        {
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Bubble3D>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>Explosion.</para>
+        /// <para>Represents the following element tag in the schema: c:explosion.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
+        /// </remark>
+        public DocumentFormat.OpenXml.Drawing.Charts.Explosion? Explosion
+        {
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Explosion>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>ChartShapeProperties.</para>
+        /// <para>Represents the following element tag in the schema: c:spPr.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
+        /// </remark>
+        public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
+        {
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>PictureOptions.</para>
+        /// <para>Represents the following element tag in the schema: c:pictureOptions.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
+        /// </remark>
+        public DocumentFormat.OpenXml.Drawing.Charts.PictureOptions? PictureOptions
+        {
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PictureOptions>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>Chart Extensibility.</para>
+        /// <para>Represents the following element tag in the schema: c:extLst.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
+        /// </remark>
+        public DocumentFormat.OpenXml.Drawing.Charts.ExtensionList? ExtensionList
+        {
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
+            set => SetElement(value);
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<DataPoint>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the Trendline Class.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is c:trendline.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.DisplayRSquaredValue" /> <c>&lt;c:dispRSqr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.DisplayEquation" /> <c>&lt;c:dispEq></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Forward" /> <c>&lt;c:forward></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Backward" /> <c>&lt;c:backward></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Intercept" /> <c>&lt;c:intercept></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ExtensionList" /> <c>&lt;c:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PolynomialOrder" /> <c>&lt;c:order></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Period" /> <c>&lt;c:period></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.TrendlineLabel" /> <c>&lt;c:trendlineLbl></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.TrendlineType" /> <c>&lt;c:trendlineType></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.TrendlineName" /> <c>&lt;c:name></c></description></item>
+    /// </list>
+    /// </remark>
+    public partial class Trendline : OpenXmlCompositeElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the Trendline class.
+        /// </summary>
+        public Trendline() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the Trendline class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public Trendline(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the Trendline class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public Trendline(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the Trendline class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public Trendline(string outerXml) : base(outerXml)
+        {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema("c:trendline");
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DisplayRSquaredValue>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.DisplayEquation>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Forward>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Backward>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Intercept>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PolynomialOrder>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Period>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.TrendlineLabel>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.TrendlineType>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.TrendlineName>();
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.TrendlineName), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.TrendlineType), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PolynomialOrder), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Period), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Forward), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Backward), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Intercept), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DisplayRSquaredValue), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.DisplayEquation), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.TrendlineLabel), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList), 0, 1)
+            };
+        }
+
+        /// <summary>
+        /// <para>Trendline Name.</para>
+        /// <para>Represents the following element tag in the schema: c:name.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
+        /// </remark>
+        public DocumentFormat.OpenXml.Drawing.Charts.TrendlineName? TrendlineName
+        {
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.TrendlineName>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>ChartShapeProperties.</para>
+        /// <para>Represents the following element tag in the schema: c:spPr.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
+        /// </remark>
+        public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
+        {
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>Trendline Type.</para>
+        /// <para>Represents the following element tag in the schema: c:trendlineType.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
+        /// </remark>
+        public DocumentFormat.OpenXml.Drawing.Charts.TrendlineType? TrendlineType
+        {
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.TrendlineType>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>Polynomial Trendline Order.</para>
+        /// <para>Represents the following element tag in the schema: c:order.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
+        /// </remark>
+        public DocumentFormat.OpenXml.Drawing.Charts.PolynomialOrder? PolynomialOrder
+        {
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PolynomialOrder>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>Period.</para>
+        /// <para>Represents the following element tag in the schema: c:period.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
+        /// </remark>
+        public DocumentFormat.OpenXml.Drawing.Charts.Period? Period
+        {
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Period>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>Forward.</para>
+        /// <para>Represents the following element tag in the schema: c:forward.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
+        /// </remark>
+        public DocumentFormat.OpenXml.Drawing.Charts.Forward? Forward
+        {
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Forward>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>Backward.</para>
+        /// <para>Represents the following element tag in the schema: c:backward.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
+        /// </remark>
+        public DocumentFormat.OpenXml.Drawing.Charts.Backward? Backward
+        {
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Backward>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>Intercept.</para>
+        /// <para>Represents the following element tag in the schema: c:intercept.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
+        /// </remark>
+        public DocumentFormat.OpenXml.Drawing.Charts.Intercept? Intercept
+        {
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Intercept>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>Display R Squared Value.</para>
+        /// <para>Represents the following element tag in the schema: c:dispRSqr.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
+        /// </remark>
+        public DocumentFormat.OpenXml.Drawing.Charts.DisplayRSquaredValue? DisplayRSquaredValue
+        {
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.DisplayRSquaredValue>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>Display Equation.</para>
+        /// <para>Represents the following element tag in the schema: c:dispEq.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
+        /// </remark>
+        public DocumentFormat.OpenXml.Drawing.Charts.DisplayEquation? DisplayEquation
+        {
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.DisplayEquation>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>Trendline Label.</para>
+        /// <para>Represents the following element tag in the schema: c:trendlineLbl.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
+        /// </remark>
+        public DocumentFormat.OpenXml.Drawing.Charts.TrendlineLabel? TrendlineLabel
+        {
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.TrendlineLabel>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>Chart Extensibility.</para>
+        /// <para>Represents the following element tag in the schema: c:extLst.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
+        /// </remark>
+        public DocumentFormat.OpenXml.Drawing.Charts.ExtensionList? ExtensionList
+        {
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
+            set => SetElement(value);
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<Trendline>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the ErrorBars Class.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is c:errBars.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.NoEndCap" /> <c>&lt;c:noEndCap></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ErrorBarValue" /> <c>&lt;c:val></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ErrorBarType" /> <c>&lt;c:errBarType></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ErrorDirection" /> <c>&lt;c:errDir></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ErrorBarValueType" /> <c>&lt;c:errValType></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ExtensionList" /> <c>&lt;c:extLst></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Plus" /> <c>&lt;c:plus></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Minus" /> <c>&lt;c:minus></c></description></item>
+    /// </list>
+    /// </remark>
+    public partial class ErrorBars : OpenXmlCompositeElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the ErrorBars class.
+        /// </summary>
+        public ErrorBars() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the ErrorBars class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public ErrorBars(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the ErrorBars class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public ErrorBars(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the ErrorBars class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public ErrorBars(string outerXml) : base(outerXml)
+        {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema("c:errBars");
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.NoEndCap>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ErrorBarValue>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ErrorBarType>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ErrorDirection>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ErrorBarValueType>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Plus>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.Minus>();
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ErrorDirection), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ErrorBarType), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ErrorBarValueType), 1, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NoEndCap), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Plus), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.Minus), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ErrorBarValue), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties), 0, 1),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ExtensionList), 0, 1)
+            };
+        }
+
+        /// <summary>
+        /// <para>Error Bar Direction.</para>
+        /// <para>Represents the following element tag in the schema: c:errDir.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
+        /// </remark>
+        public DocumentFormat.OpenXml.Drawing.Charts.ErrorDirection? ErrorDirection
+        {
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ErrorDirection>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>Error Bar Type.</para>
+        /// <para>Represents the following element tag in the schema: c:errBarType.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
+        /// </remark>
+        public DocumentFormat.OpenXml.Drawing.Charts.ErrorBarType? ErrorBarType
+        {
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ErrorBarType>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>Error Bar Value Type.</para>
+        /// <para>Represents the following element tag in the schema: c:errValType.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
+        /// </remark>
+        public DocumentFormat.OpenXml.Drawing.Charts.ErrorBarValueType? ErrorBarValueType
+        {
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ErrorBarValueType>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>No End Cap.</para>
+        /// <para>Represents the following element tag in the schema: c:noEndCap.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
+        /// </remark>
+        public DocumentFormat.OpenXml.Drawing.Charts.NoEndCap? NoEndCap
+        {
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.NoEndCap>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>Plus.</para>
+        /// <para>Represents the following element tag in the schema: c:plus.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
+        /// </remark>
+        public DocumentFormat.OpenXml.Drawing.Charts.Plus? Plus
+        {
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Plus>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>Minus.</para>
+        /// <para>Represents the following element tag in the schema: c:minus.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
+        /// </remark>
+        public DocumentFormat.OpenXml.Drawing.Charts.Minus? Minus
+        {
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Minus>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>Error Bar Value.</para>
+        /// <para>Represents the following element tag in the schema: c:val.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
+        /// </remark>
+        public DocumentFormat.OpenXml.Drawing.Charts.ErrorBarValue? ErrorBarValue
+        {
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ErrorBarValue>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>ChartShapeProperties.</para>
+        /// <para>Represents the following element tag in the schema: c:spPr.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
+        /// </remark>
+        public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
+        {
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>Chart Extensibility.</para>
+        /// <para>Represents the following element tag in the schema: c:extLst.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
+        /// </remark>
+        public DocumentFormat.OpenXml.Drawing.Charts.ExtensionList? ExtensionList
+        {
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
+            set => SetElement(value);
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<ErrorBars>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the CategoryAxisData Class.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is c:cat.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.MultiLevelStringReference" /> <c>&lt;c:multiLvlStrRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral" /> <c>&lt;c:numLit></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.NumberReference" /> <c>&lt;c:numRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.StringLiteral" /> <c>&lt;c:strLit></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.StringReference" /> <c>&lt;c:strRef></c></description></item>
+    /// </list>
+    /// </remark>
+    public partial class CategoryAxisData : AxisDataSourceType
+    {
+        /// <summary>
+        /// Initializes a new instance of the CategoryAxisData class.
+        /// </summary>
+        public CategoryAxisData() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the CategoryAxisData class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public CategoryAxisData(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the CategoryAxisData class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public CategoryAxisData(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the CategoryAxisData class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public CategoryAxisData(string outerXml) : base(outerXml)
+        {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema("c:cat");
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
+            {
+                new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
+                {
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.MultiLevelStringReference), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumberReference), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.StringReference), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.StringLiteral), 1, 1)
+                }
+            };
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<CategoryAxisData>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the XValues Class.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is c:xVal.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.MultiLevelStringReference" /> <c>&lt;c:multiLvlStrRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral" /> <c>&lt;c:numLit></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.NumberReference" /> <c>&lt;c:numRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.StringLiteral" /> <c>&lt;c:strLit></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.StringReference" /> <c>&lt;c:strRef></c></description></item>
+    /// </list>
+    /// </remark>
+    public partial class XValues : AxisDataSourceType
+    {
+        /// <summary>
+        /// Initializes a new instance of the XValues class.
+        /// </summary>
+        public XValues() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the XValues class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public XValues(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the XValues class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public XValues(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the XValues class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public XValues(string outerXml) : base(outerXml)
+        {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema("c:xVal");
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
+            {
+                new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
+                {
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.MultiLevelStringReference), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumberReference), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.StringReference), 1, 1),
+                    new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.StringLiteral), 1, 1)
+                }
+            };
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<XValues>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the AxisDataSourceType Class.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.MultiLevelStringReference" /> <c>&lt;c:multiLvlStrRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral" /> <c>&lt;c:numLit></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.NumberReference" /> <c>&lt;c:numRef></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.StringLiteral" /> <c>&lt;c:strLit></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.StringReference" /> <c>&lt;c:strRef></c></description></item>
+    /// </list>
+    /// </remark>
+    public abstract partial class AxisDataSourceType : OpenXmlCompositeElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the AxisDataSourceType class.
+        /// </summary>
+        protected AxisDataSourceType() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the AxisDataSourceType class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        protected AxisDataSourceType(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the AxisDataSourceType class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        protected AxisDataSourceType(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the AxisDataSourceType class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        protected AxisDataSourceType(string outerXml) : base(outerXml)
+        {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.MultiLevelStringReference>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.NumberReference>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.StringLiteral>();
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.StringReference>();
+        }
+
+        /// <summary>
+        /// <para>Multi Level String Reference.</para>
+        /// <para>Represents the following element tag in the schema: c:multiLvlStrRef.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
+        /// </remark>
+        public DocumentFormat.OpenXml.Drawing.Charts.MultiLevelStringReference? MultiLevelStringReference
+        {
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.MultiLevelStringReference>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>Number Reference.</para>
+        /// <para>Represents the following element tag in the schema: c:numRef.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
+        /// </remark>
+        public DocumentFormat.OpenXml.Drawing.Charts.NumberReference? NumberReference
+        {
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.NumberReference>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>Number Literal.</para>
+        /// <para>Represents the following element tag in the schema: c:numLit.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
+        /// </remark>
+        public DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral? NumberLiteral
+        {
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>StringReference.</para>
+        /// <para>Represents the following element tag in the schema: c:strRef.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
+        /// </remark>
+        public DocumentFormat.OpenXml.Drawing.Charts.StringReference? StringReference
+        {
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.StringReference>();
+            set => SetElement(value);
+        }
+
+        /// <summary>
+        /// <para>String Literal.</para>
+        /// <para>Represents the following element tag in the schema: c:strLit.</para>
+        /// </summary>
+        /// <remark>
+        /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
+        /// </remark>
+        public DocumentFormat.OpenXml.Drawing.Charts.StringLiteral? StringLiteral
+        {
+            get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.StringLiteral>();
+            set => SetElement(value);
+        }
+    }
+
+    /// <summary>
+    /// <para>Defines the LineSerExtensionList Class.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is c:extLst.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.LineSerExtension" /> <c>&lt;c:ext></c></description></item>
+    /// </list>
+    /// </remark>
+    public partial class LineSerExtensionList : OpenXmlCompositeElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the LineSerExtensionList class.
+        /// </summary>
+        public LineSerExtensionList() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the LineSerExtensionList class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public LineSerExtensionList(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the LineSerExtensionList class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public LineSerExtensionList(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the LineSerExtensionList class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public LineSerExtensionList(string outerXml) : base(outerXml)
+        {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema("c:extLst");
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.LineSerExtension>();
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.LineSerExtension), 0, 0)
+            };
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<LineSerExtensionList>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the LineSerExtension Class.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is c:ext.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions" /> <c>&lt;c15:categoryFilterExceptions></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle" /> <c>&lt;c15:filteredCategoryTitle></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle" /> <c>&lt;c15:filteredSeriesTitle></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange" /> <c>&lt;c15:datalabelsRange></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Charts.CategoryFilterExceptions" /> <c>&lt;c16:categoryFilterExceptions></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Charts.ChartDataPointUniqueIDMap" /> <c>&lt;c16:datapointuniqueidmap></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID" /> <c>&lt;c16:uniqueId></c></description></item>
+    /// </list>
+    /// </remark>
+    public partial class LineSerExtension : OpenXmlCompositeElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the LineSerExtension class.
+        /// </summary>
+        public LineSerExtension() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the LineSerExtension class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public LineSerExtension(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the LineSerExtension class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public LineSerExtension(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the LineSerExtension class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public LineSerExtension(string outerXml) : base(outerXml)
+        {
+        }
+
+        /// <summary>
+        /// <para>URI</para>
+        /// <para>Represents the following attribute in the schema: uri</para>
+        /// </summary>
+        public StringValue? Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema("c:ext");
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Charts.CategoryFilterExceptions>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Charts.ChartDataPointUniqueIDMap>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID>();
+            builder.AddElement<LineSerExtension>()
+                .AddAttribute("uri", a => a.Uri, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.CategoryFilterExceptions), 1, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.ChartDataPointUniqueIDMap), 1, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID), 1, 1, version: FileFormatVersions.Office2016),
+                new AnyParticle(0, 1)
+            };
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<LineSerExtension>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the ScatterSerExtensionList Class.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is c:extLst.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ScatterSerExtension" /> <c>&lt;c:ext></c></description></item>
+    /// </list>
+    /// </remark>
+    public partial class ScatterSerExtensionList : OpenXmlCompositeElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the ScatterSerExtensionList class.
+        /// </summary>
+        public ScatterSerExtensionList() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the ScatterSerExtensionList class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public ScatterSerExtensionList(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the ScatterSerExtensionList class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public ScatterSerExtensionList(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the ScatterSerExtensionList class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public ScatterSerExtensionList(string outerXml) : base(outerXml)
+        {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema("c:extLst");
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.ScatterSerExtension>();
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.ScatterSerExtension), 0, 0)
+            };
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<ScatterSerExtensionList>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the ScatterSerExtension Class.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is c:ext.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions" /> <c>&lt;c15:categoryFilterExceptions></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle" /> <c>&lt;c15:filteredCategoryTitle></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle" /> <c>&lt;c15:filteredSeriesTitle></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange" /> <c>&lt;c15:datalabelsRange></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Charts.CategoryFilterExceptions" /> <c>&lt;c16:categoryFilterExceptions></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Charts.ChartDataPointUniqueIDMap" /> <c>&lt;c16:datapointuniqueidmap></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID" /> <c>&lt;c16:uniqueId></c></description></item>
+    /// </list>
+    /// </remark>
+    public partial class ScatterSerExtension : OpenXmlCompositeElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the ScatterSerExtension class.
+        /// </summary>
+        public ScatterSerExtension() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the ScatterSerExtension class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public ScatterSerExtension(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the ScatterSerExtension class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public ScatterSerExtension(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the ScatterSerExtension class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public ScatterSerExtension(string outerXml) : base(outerXml)
+        {
+        }
+
+        /// <summary>
+        /// <para>URI</para>
+        /// <para>Represents the following attribute in the schema: uri</para>
+        /// </summary>
+        public StringValue? Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema("c:ext");
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Charts.CategoryFilterExceptions>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Charts.ChartDataPointUniqueIDMap>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID>();
+            builder.AddElement<ScatterSerExtension>()
+                .AddAttribute("uri", a => a.Uri, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.CategoryFilterExceptions), 1, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.ChartDataPointUniqueIDMap), 1, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID), 1, 1, version: FileFormatVersions.Office2016),
+                new AnyParticle(0, 1)
+            };
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<ScatterSerExtension>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the RadarSerExtensionList Class.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is c:extLst.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.RadarSerExtension" /> <c>&lt;c:ext></c></description></item>
+    /// </list>
+    /// </remark>
+    public partial class RadarSerExtensionList : OpenXmlCompositeElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the RadarSerExtensionList class.
+        /// </summary>
+        public RadarSerExtensionList() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the RadarSerExtensionList class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public RadarSerExtensionList(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the RadarSerExtensionList class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public RadarSerExtensionList(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the RadarSerExtensionList class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public RadarSerExtensionList(string outerXml) : base(outerXml)
+        {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema("c:extLst");
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.RadarSerExtension>();
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.RadarSerExtension), 0, 0)
+            };
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<RadarSerExtensionList>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the RadarSerExtension Class.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is c:ext.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions" /> <c>&lt;c15:categoryFilterExceptions></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle" /> <c>&lt;c15:filteredCategoryTitle></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle" /> <c>&lt;c15:filteredSeriesTitle></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange" /> <c>&lt;c15:datalabelsRange></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Charts.CategoryFilterExceptions" /> <c>&lt;c16:categoryFilterExceptions></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Charts.ChartDataPointUniqueIDMap" /> <c>&lt;c16:datapointuniqueidmap></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID" /> <c>&lt;c16:uniqueId></c></description></item>
+    /// </list>
+    /// </remark>
+    public partial class RadarSerExtension : OpenXmlCompositeElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the RadarSerExtension class.
+        /// </summary>
+        public RadarSerExtension() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the RadarSerExtension class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public RadarSerExtension(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the RadarSerExtension class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public RadarSerExtension(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the RadarSerExtension class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public RadarSerExtension(string outerXml) : base(outerXml)
+        {
+        }
+
+        /// <summary>
+        /// <para>URI</para>
+        /// <para>Represents the following attribute in the schema: uri</para>
+        /// </summary>
+        public StringValue? Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema("c:ext");
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Charts.CategoryFilterExceptions>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Charts.ChartDataPointUniqueIDMap>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID>();
+            builder.AddElement<RadarSerExtension>()
+                .AddAttribute("uri", a => a.Uri, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.CategoryFilterExceptions), 1, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.ChartDataPointUniqueIDMap), 1, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID), 1, 1, version: FileFormatVersions.Office2016),
+                new AnyParticle(0, 1)
+            };
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<RadarSerExtension>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the BarSerExtensionList Class.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is c:extLst.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.BarSerExtension" /> <c>&lt;c:ext></c></description></item>
+    /// </list>
+    /// </remark>
+    public partial class BarSerExtensionList : OpenXmlCompositeElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the BarSerExtensionList class.
+        /// </summary>
+        public BarSerExtensionList() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the BarSerExtensionList class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public BarSerExtensionList(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the BarSerExtensionList class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public BarSerExtensionList(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the BarSerExtensionList class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public BarSerExtensionList(string outerXml) : base(outerXml)
+        {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema("c:extLst");
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.BarSerExtension>();
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.BarSerExtension), 0, 0)
+            };
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<BarSerExtensionList>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the BarSerExtension Class.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is c:ext.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.Charts.InvertSolidFillFormat" /> <c>&lt;c14:invertSolidFillFmt></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions" /> <c>&lt;c15:categoryFilterExceptions></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle" /> <c>&lt;c15:filteredCategoryTitle></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle" /> <c>&lt;c15:filteredSeriesTitle></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange" /> <c>&lt;c15:datalabelsRange></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Charts.CategoryFilterExceptions" /> <c>&lt;c16:categoryFilterExceptions></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Charts.ChartDataPointUniqueIDMap" /> <c>&lt;c16:datapointuniqueidmap></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID" /> <c>&lt;c16:uniqueId></c></description></item>
+    /// </list>
+    /// </remark>
+    public partial class BarSerExtension : OpenXmlCompositeElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the BarSerExtension class.
+        /// </summary>
+        public BarSerExtension() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the BarSerExtension class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public BarSerExtension(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the BarSerExtension class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public BarSerExtension(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the BarSerExtension class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public BarSerExtension(string outerXml) : base(outerXml)
+        {
+        }
+
+        /// <summary>
+        /// <para>URI</para>
+        /// <para>Represents the following attribute in the schema: uri</para>
+        /// </summary>
+        public StringValue? Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema("c:ext");
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.Charts.InvertSolidFillFormat>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Charts.CategoryFilterExceptions>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Charts.ChartDataPointUniqueIDMap>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID>();
+            builder.AddElement<BarSerExtension>()
+                .AddAttribute("uri", a => a.Uri, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.Charts.InvertSolidFillFormat), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.CategoryFilterExceptions), 1, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.ChartDataPointUniqueIDMap), 1, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID), 1, 1, version: FileFormatVersions.Office2016),
+                new AnyParticle(0, 1)
+            };
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<BarSerExtension>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the AreaSerExtensionList Class.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is c:extLst.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.AreaSerExtension" /> <c>&lt;c:ext></c></description></item>
+    /// </list>
+    /// </remark>
+    public partial class AreaSerExtensionList : OpenXmlCompositeElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the AreaSerExtensionList class.
+        /// </summary>
+        public AreaSerExtensionList() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the AreaSerExtensionList class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public AreaSerExtensionList(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the AreaSerExtensionList class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public AreaSerExtensionList(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the AreaSerExtensionList class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public AreaSerExtensionList(string outerXml) : base(outerXml)
+        {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema("c:extLst");
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.AreaSerExtension>();
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.AreaSerExtension), 0, 0)
+            };
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<AreaSerExtensionList>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the AreaSerExtension Class.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is c:ext.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions" /> <c>&lt;c15:categoryFilterExceptions></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle" /> <c>&lt;c15:filteredCategoryTitle></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle" /> <c>&lt;c15:filteredSeriesTitle></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange" /> <c>&lt;c15:datalabelsRange></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Charts.CategoryFilterExceptions" /> <c>&lt;c16:categoryFilterExceptions></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Charts.ChartDataPointUniqueIDMap" /> <c>&lt;c16:datapointuniqueidmap></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID" /> <c>&lt;c16:uniqueId></c></description></item>
+    /// </list>
+    /// </remark>
+    public partial class AreaSerExtension : OpenXmlCompositeElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the AreaSerExtension class.
+        /// </summary>
+        public AreaSerExtension() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the AreaSerExtension class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public AreaSerExtension(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the AreaSerExtension class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public AreaSerExtension(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the AreaSerExtension class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public AreaSerExtension(string outerXml) : base(outerXml)
+        {
+        }
+
+        /// <summary>
+        /// <para>URI</para>
+        /// <para>Represents the following attribute in the schema: uri</para>
+        /// </summary>
+        public StringValue? Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema("c:ext");
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Charts.CategoryFilterExceptions>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Charts.ChartDataPointUniqueIDMap>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID>();
+            builder.AddElement<AreaSerExtension>()
+                .AddAttribute("uri", a => a.Uri, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.CategoryFilterExceptions), 1, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.ChartDataPointUniqueIDMap), 1, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID), 1, 1, version: FileFormatVersions.Office2016),
+                new AnyParticle(0, 1)
+            };
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<AreaSerExtension>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the PieSerExtensionList Class.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is c:extLst.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PieSerExtension" /> <c>&lt;c:ext></c></description></item>
+    /// </list>
+    /// </remark>
+    public partial class PieSerExtensionList : OpenXmlCompositeElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the PieSerExtensionList class.
+        /// </summary>
+        public PieSerExtensionList() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the PieSerExtensionList class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public PieSerExtensionList(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the PieSerExtensionList class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public PieSerExtensionList(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the PieSerExtensionList class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public PieSerExtensionList(string outerXml) : base(outerXml)
+        {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema("c:extLst");
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.PieSerExtension>();
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.PieSerExtension), 0, 0)
+            };
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<PieSerExtensionList>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the PieSerExtension Class.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is c:ext.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions" /> <c>&lt;c15:categoryFilterExceptions></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle" /> <c>&lt;c15:filteredCategoryTitle></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle" /> <c>&lt;c15:filteredSeriesTitle></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange" /> <c>&lt;c15:datalabelsRange></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Charts.CategoryFilterExceptions" /> <c>&lt;c16:categoryFilterExceptions></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Charts.ChartDataPointUniqueIDMap" /> <c>&lt;c16:datapointuniqueidmap></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID" /> <c>&lt;c16:uniqueId></c></description></item>
+    /// </list>
+    /// </remark>
+    public partial class PieSerExtension : OpenXmlCompositeElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the PieSerExtension class.
+        /// </summary>
+        public PieSerExtension() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the PieSerExtension class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public PieSerExtension(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the PieSerExtension class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public PieSerExtension(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the PieSerExtension class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public PieSerExtension(string outerXml) : base(outerXml)
+        {
+        }
+
+        /// <summary>
+        /// <para>URI</para>
+        /// <para>Represents the following attribute in the schema: uri</para>
+        /// </summary>
+        public StringValue? Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema("c:ext");
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Charts.CategoryFilterExceptions>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Charts.ChartDataPointUniqueIDMap>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID>();
+            builder.AddElement<PieSerExtension>()
+                .AddAttribute("uri", a => a.Uri, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.CategoryFilterExceptions), 1, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.ChartDataPointUniqueIDMap), 1, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID), 1, 1, version: FileFormatVersions.Office2016),
+                new AnyParticle(0, 1)
+            };
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<PieSerExtension>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the BubbleSerExtensionList Class.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is c:extLst.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.BubbleSerExtension" /> <c>&lt;c:ext></c></description></item>
+    /// </list>
+    /// </remark>
+    public partial class BubbleSerExtensionList : OpenXmlCompositeElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the BubbleSerExtensionList class.
+        /// </summary>
+        public BubbleSerExtensionList() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the BubbleSerExtensionList class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public BubbleSerExtensionList(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the BubbleSerExtensionList class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public BubbleSerExtensionList(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the BubbleSerExtensionList class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public BubbleSerExtensionList(string outerXml) : base(outerXml)
+        {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema("c:extLst");
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.BubbleSerExtension>();
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.BubbleSerExtension), 0, 0)
+            };
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<BubbleSerExtensionList>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the BubbleSerExtension Class.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is c:ext.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.Charts.InvertSolidFillFormat" /> <c>&lt;c14:invertSolidFillFmt></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions" /> <c>&lt;c15:categoryFilterExceptions></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle" /> <c>&lt;c15:filteredCategoryTitle></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange" /> <c>&lt;c15:datalabelsRange></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Charts.CategoryFilterExceptions" /> <c>&lt;c16:categoryFilterExceptions></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Charts.ChartDataPointUniqueIDMap" /> <c>&lt;c16:datapointuniqueidmap></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID" /> <c>&lt;c16:uniqueId></c></description></item>
+    /// </list>
+    /// </remark>
+    public partial class BubbleSerExtension : OpenXmlCompositeElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the BubbleSerExtension class.
+        /// </summary>
+        public BubbleSerExtension() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the BubbleSerExtension class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public BubbleSerExtension(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the BubbleSerExtension class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public BubbleSerExtension(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the BubbleSerExtension class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public BubbleSerExtension(string outerXml) : base(outerXml)
+        {
+        }
+
+        /// <summary>
+        /// <para>URI</para>
+        /// <para>Represents the following attribute in the schema: uri</para>
+        /// </summary>
+        public StringValue? Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema("c:ext");
+            builder.AddChild<DocumentFormat.OpenXml.Office2010.Drawing.Charts.InvertSolidFillFormat>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Charts.CategoryFilterExceptions>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Charts.ChartDataPointUniqueIDMap>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID>();
+            builder.AddElement<BubbleSerExtension>()
+                .AddAttribute("uri", a => a.Uri, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2010.Drawing.Charts.InvertSolidFillFormat), 1, 1, version: FileFormatVersions.Office2010),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.CategoryFilterExceptions), 1, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.ChartDataPointUniqueIDMap), 1, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID), 1, 1, version: FileFormatVersions.Office2016),
+                new AnyParticle(0, 1)
+            };
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<BubbleSerExtension>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the SurfaceSerExtensionList Class.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is c:extLst.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.SurfaceSerExtension" /> <c>&lt;c:ext></c></description></item>
+    /// </list>
+    /// </remark>
+    public partial class SurfaceSerExtensionList : OpenXmlCompositeElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the SurfaceSerExtensionList class.
+        /// </summary>
+        public SurfaceSerExtensionList() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the SurfaceSerExtensionList class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public SurfaceSerExtensionList(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the SurfaceSerExtensionList class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public SurfaceSerExtensionList(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the SurfaceSerExtensionList class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public SurfaceSerExtensionList(string outerXml) : base(outerXml)
+        {
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema("c:extLst");
+            builder.AddChild<DocumentFormat.OpenXml.Drawing.Charts.SurfaceSerExtension>();
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Sequence, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Drawing.Charts.SurfaceSerExtension), 0, 0)
+            };
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<SurfaceSerExtensionList>(deep);
+    }
+
+    /// <summary>
+    /// <para>Defines the SurfaceSerExtension Class.</para>
+    /// <para>This class is available in Office 2007 and above.</para>
+    /// <para>When the object is serialized out as xml, it's qualified name is c:ext.</para>
+    /// </summary>
+    /// <remark>
+    /// <para>The following table lists the possible child types:</para>
+    /// <list type="bullet">
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions" /> <c>&lt;c15:categoryFilterExceptions></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle" /> <c>&lt;c15:filteredCategoryTitle></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle" /> <c>&lt;c15:filteredSeriesTitle></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Charts.CategoryFilterExceptions" /> <c>&lt;c16:categoryFilterExceptions></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Charts.ChartDataPointUniqueIDMap" /> <c>&lt;c16:datapointuniqueidmap></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID" /> <c>&lt;c16:uniqueId></c></description></item>
+    /// </list>
+    /// </remark>
+    public partial class SurfaceSerExtension : OpenXmlCompositeElement
+    {
+        /// <summary>
+        /// Initializes a new instance of the SurfaceSerExtension class.
+        /// </summary>
+        public SurfaceSerExtension() : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the SurfaceSerExtension class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public SurfaceSerExtension(IEnumerable<OpenXmlElement> childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the SurfaceSerExtension class with the specified child elements.
+        /// </summary>
+        /// <param name="childElements">Specifies the child elements.</param>
+        public SurfaceSerExtension(params OpenXmlElement[] childElements) : base(childElements)
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the SurfaceSerExtension class from outer XML.
+        /// </summary>
+        /// <param name="outerXml">Specifies the outer XML of the element.</param>
+        public SurfaceSerExtension(string outerXml) : base(outerXml)
+        {
+        }
+
+        /// <summary>
+        /// <para>URI</para>
+        /// <para>Represents the following attribute in the schema: uri</para>
+        /// </summary>
+        public StringValue? Uri
+        {
+            get => GetAttribute<StringValue>();
+            set => SetAttribute(value);
+        }
+
+        internal override void ConfigureMetadata(ElementMetadata.Builder builder)
+        {
+            base.ConfigureMetadata(builder);
+            builder.SetSchema("c:ext");
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Charts.CategoryFilterExceptions>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Charts.ChartDataPointUniqueIDMap>();
+            builder.AddChild<DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID>();
+            builder.AddElement<SurfaceSerExtension>()
+                .AddAttribute("uri", a => a.Uri, aBuilder =>
+                {
+                    aBuilder.AddValidator(RequiredValidator.Instance);
+                    aBuilder.AddValidator(new StringValidator() { IsToken = (true) });
+                });
+            builder.Particle = new CompositeParticle.Builder(ParticleType.Choice, 1, 1)
+            {
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions), 1, 1, version: FileFormatVersions.Office2013),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.CategoryFilterExceptions), 1, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.ChartDataPointUniqueIDMap), 1, 1, version: FileFormatVersions.Office2016),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID), 1, 1, version: FileFormatVersions.Office2016),
+                new AnyParticle(0, 1)
+            };
+        }
+
+        /// <inheritdoc/>
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<SurfaceSerExtension>(deep);
     }
 
     /// <summary>

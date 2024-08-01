@@ -11431,6 +11431,7 @@
         "a:CT_Scene3D/a14:hiddenScene3d",
         "a:CT_Shape3D/a14:hiddenSp3d",
         "a:CT_ShapeProperties/dgm1612:spPr",
+        "a:CT_ShapeProperties/c16:spPr",
         "a:CT_ShapeProperties/c15:spPr",
         "a:CT_ShapeStyle/pic14:style",
         "a:CT_Table/a:tbl",
@@ -11466,17 +11467,22 @@
         "ask:CT_LineSketchStyleProperties/ask:lineSketchStyleProps",
         "asl:CT_ScriptLink/asl:scriptLink",
         "asvg:CT_SVGBlip/asvg:svgBlip",
+        "c:CT_Boolean/c16:invertIfNegative",
+        "c:CT_Boolean/c16:bubble3D",
         "c:CT_Boolean/c15:xForSave",
         "c:CT_Boolean/c15:showDataLabelsRange",
         "c:CT_Boolean/c15:showLeaderLines",
         "c:CT_Boolean/c15:autoCat",
         "c:CT_ChartLines/c15:leaderLines",
         "c:CT_ChartSpace/c:chartSpace",
+        "c:CT_DLbl/c16:dLbl",
         "c:CT_Layout/c15:layout",
+        "c:CT_Marker/c16:marker",
         "c:CT_NumFmt/c15:numFmt",
         "c:CT_PivotSource/c15:pivotSource",
         "c:CT_RelId/c:chart",
         "c:CT_Tx/c15:tx",
+        "c:CT_UnsignedInt/c16:explosion",
         "c14:CT_InvertSolidFillFmt/c14:invertSolidFillFmt",
         "c14:CT_PivotOptions/c14:pivotOptions",
         "c14:CT_SketchOptions/c14:sketchOptions",
@@ -11497,6 +11503,10 @@
         "c15:CT_FullRef/c15:fullRef",
         "c15:CT_LevelRef/c15:levelRef",
         "c15:CT_SeriesDataLabelsRange/c15:datalabelsRange",
+        "c16:CT_CategoryFilterExceptions/c16:categoryFilterExceptions",
+        "c16:CT_ChartDataPointUniqueIDMap/c16:datapointuniqueidmap",
+        "c16:CT_ChartUniqueID/c16:uniqueId",
+        "c16:CT_PivotOptions16/c16:pivotOptions16",
         "c16r3:CT_DataDisplayOptions16/c16r3:dataDisplayOptions16",
         "cdr:CT_Drawing/c:userShapes",
         "cdr14:CT_ContentPart/cdr14:contentPart",
@@ -11948,6 +11958,36 @@
         },
         {
           "Name": "c16r3:CT_DataDisplayOptions16/c16r3:dataDisplayOptions16"
+        },
+        {
+          "Name": "a:CT_ShapeProperties/c16:spPr"
+        },
+        {
+          "Name": "c:CT_UnsignedInt/c16:explosion"
+        },
+        {
+          "Name": "c:CT_Boolean/c16:invertIfNegative"
+        },
+        {
+          "Name": "c:CT_Boolean/c16:bubble3D"
+        },
+        {
+          "Name": "c:CT_Marker/c16:marker"
+        },
+        {
+          "Name": "c:CT_DLbl/c16:dLbl"
+        },
+        {
+          "Name": "c16:CT_CategoryFilterExceptions/c16:categoryFilterExceptions"
+        },
+        {
+          "Name": "c16:CT_PivotOptions16/c16:pivotOptions16"
+        },
+        {
+          "Name": "c16:CT_ChartDataPointUniqueIDMap/c16:datapointuniqueidmap"
+        },
+        {
+          "Name": "c16:CT_ChartUniqueID/c16:uniqueId"
         },
         {
           "Name": "c:CT_PivotSource/c15:pivotSource"
