@@ -500,7 +500,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
-        /// <item><description>has the following parent XML elements: <see cref="catAx" />, <see cref="dateAx" />, <see cref="dLbl" />, <see cref="dLbls" />, <see cref="legendEntry" />, <see cref="serAx" />, <see cref="valAx" />, <see cref="C15.dLbl" />.</description></item>
+        /// <item><description>has the following parent XML elements: <see cref="catAx" />, <see cref="dateAx" />, <see cref="dLbl" />, <see cref="dLbls" />, <see cref="legendEntry" />, <see cref="serAx" />, <see cref="valAx" />, <see cref="C15.dLbl" />, <see cref="C16.dLbl" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: Delete.</description></item>
         /// </list>
         /// </remarks>
@@ -601,7 +601,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
-        /// <item><description>has the following parent XML elements: <see cref="dLbl" />, <see cref="dLbls" />, <see cref="C15.dLbl" />.</description></item>
+        /// <item><description>has the following parent XML elements: <see cref="dLbl" />, <see cref="dLbls" />, <see cref="C15.dLbl" />, <see cref="C16.dLbl" />.</description></item>
         /// <item><description>has the following XML attributes: <see cref="NoNamespace.val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: DataLabelPosition.</description></item>
         /// </list>
@@ -781,7 +781,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="extLst" />.</description></item>
-        /// <item><description>has the following child XML elements: <see cref="C14.invertSolidFillFmt" />, <see cref="C14.pivotOptions" />, <see cref="C14.sketchOptions" />, <see cref="C15.autoCat" />, <see cref="C15.categoryFilterExceptions" />, <see cref="C15.datalabelsRange" />, <see cref="C15.dlblFieldTable" />, <see cref="C15.filteredAreaSeries" />, <see cref="C15.filteredBarSeries" />, <see cref="C15.filteredBubbleSeries" />, <see cref="C15.filteredCategoryTitle" />, <see cref="C15.filteredLineSeries" />, <see cref="C15.filteredPieSeries" />, <see cref="C15.filteredRadarSeries" />, <see cref="C15.filteredScatterSeries" />, <see cref="C15.filteredSeriesTitle" />, <see cref="C15.filteredSurfaceSeries" />, <see cref="C15.formulaRef" />, <see cref="C15.fullRef" />, <see cref="C15.layout" />, <see cref="C15.leaderLines" />, <see cref="C15.levelRef" />, <see cref="C15.numFmt" />, <see cref="C15.pivotSource" />, <see cref="C15.showDataLabelsRange" />, <see cref="C15.showLeaderLines" />, <see cref="C15.spPr" />, <see cref="C15.tx" />, <see cref="C15.xForSave" />, <see cref="C16R3.dispNaAsBlank" />.</description></item>
+        /// <item><description>has the following child XML elements: <see cref="C14.invertSolidFillFmt" />, <see cref="C14.pivotOptions" />, <see cref="C14.sketchOptions" />, <see cref="C15.autoCat" />, <see cref="C15.categoryFilterExceptions" />, <see cref="C15.datalabelsRange" />, <see cref="C15.dlblFieldTable" />, <see cref="C15.filteredAreaSeries" />, <see cref="C15.filteredBarSeries" />, <see cref="C15.filteredBubbleSeries" />, <see cref="C15.filteredCategoryTitle" />, <see cref="C15.filteredLineSeries" />, <see cref="C15.filteredPieSeries" />, <see cref="C15.filteredRadarSeries" />, <see cref="C15.filteredScatterSeries" />, <see cref="C15.filteredSeriesTitle" />, <see cref="C15.filteredSurfaceSeries" />, <see cref="C15.formulaRef" />, <see cref="C15.fullRef" />, <see cref="C15.layout" />, <see cref="C15.leaderLines" />, <see cref="C15.levelRef" />, <see cref="C15.numFmt" />, <see cref="C15.pivotSource" />, <see cref="C15.showDataLabelsRange" />, <see cref="C15.showLeaderLines" />, <see cref="C15.spPr" />, <see cref="C15.tx" />, <see cref="C15.xForSave" />, <see cref="C16.categoryFilterExceptions" />, <see cref="C16.datapointuniqueidmap" />, <see cref="C16.uniqueId" />, <see cref="C16R3.dispNaAsBlank" />.</description></item>
         /// <item><description>has the following XML attributes: <see cref="NoNamespace.uri" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: Area3DChartExtension, AreaChartExtension, AreaSerExtension, Bar3DChartExtension, BarChartExtension, BarSerExtension, BubbleChartExtension, BubbleSerExtension, CatAxExtension, ChartSpaceExtension, DataDisplayOptions16, DateAxExtension, DLblExtension, DLblsExtension, Extension, Line3DChartExtension, LineChartExtension, LineSerExtension, MultiLvlStrRefExtension, NumRefExtension, Pie3DChartExtension, PieChartExtension, PieSerExtension, RadarChartExtension, RadarSerExtension, ScatterChartExtension, ScatterSerExtension, SerAxExtension, StockChartExtension, StrDataExtension, StrRefExtension, Surface3DChartExtension, SurfaceChartExtension, SurfaceSerExtension, ValAxExtension.</description></item>
         /// </list>
@@ -808,7 +808,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
-        /// <item><description>has the following parent XML elements: <see cref="area3DChart" />, <see cref="areaChart" />, <see cref="backWall" />, <see cref="bar3DChart" />, <see cref="barChart" />, <see cref="bubbleChart" />, <see cref="catAx" />, <see cref="chart" />, <see cref="chartSpace" />, <see cref="dateAx" />, <see cref="dispUnits" />, <see cref="dLbl" />, <see cref="dLbls" />, <see cref="doughnutChart" />, <see cref="dPt" />, <see cref="dTable" />, <see cref="errBars" />, <see cref="floor" />, <see cref="layout" />, <see cref="legend" />, <see cref="legendEntry" />, <see cref="line3DChart" />, <see cref="lineChart" />, <see cref="manualLayout" />, <see cref="marker" />, <see cref="multiLvlStrCache" />, <see cref="multiLvlStrRef" />, <see cref="numCache" />, <see cref="numLit" />, <see cref="numRef" />, <see cref="ofPieChart" />, <see cref="pie3DChart" />, <see cref="pieChart" />, <see cref="pivotFmt" />, <see cref="pivotSource" />, <see cref="plotArea" />, <see cref="radarChart" />, <see cref="scaling" />, <see cref="scatterChart" />, <see cref="ser" />, <see cref="serAx" />, <see cref="sideWall" />, <see cref="stockChart" />, <see cref="strCache" />, <see cref="strLit" />, <see cref="strRef" />, <see cref="surface3DChart" />, <see cref="surfaceChart" />, <see cref="title" />, <see cref="trendline" />, <see cref="trendlineLbl" />, <see cref="upDownBars" />, <see cref="valAx" />, <see cref="view3D" />, <see cref="C15.dLbl" />, <see cref="C15.dlblFieldTableCache" />, <see cref="C15.dlblRangeCache" />, <see cref="C15.layout" />, <see cref="C15.marker" />, <see cref="C15.pivotSource" />, <see cref="C15.ser" />.</description></item>
+        /// <item><description>has the following parent XML elements: <see cref="area3DChart" />, <see cref="areaChart" />, <see cref="backWall" />, <see cref="bar3DChart" />, <see cref="barChart" />, <see cref="bubbleChart" />, <see cref="catAx" />, <see cref="chart" />, <see cref="chartSpace" />, <see cref="dateAx" />, <see cref="dispUnits" />, <see cref="dLbl" />, <see cref="dLbls" />, <see cref="doughnutChart" />, <see cref="dPt" />, <see cref="dTable" />, <see cref="errBars" />, <see cref="floor" />, <see cref="layout" />, <see cref="legend" />, <see cref="legendEntry" />, <see cref="line3DChart" />, <see cref="lineChart" />, <see cref="manualLayout" />, <see cref="marker" />, <see cref="multiLvlStrCache" />, <see cref="multiLvlStrRef" />, <see cref="numCache" />, <see cref="numLit" />, <see cref="numRef" />, <see cref="ofPieChart" />, <see cref="pie3DChart" />, <see cref="pieChart" />, <see cref="pivotFmt" />, <see cref="pivotSource" />, <see cref="plotArea" />, <see cref="radarChart" />, <see cref="scaling" />, <see cref="scatterChart" />, <see cref="ser" />, <see cref="serAx" />, <see cref="sideWall" />, <see cref="stockChart" />, <see cref="strCache" />, <see cref="strLit" />, <see cref="strRef" />, <see cref="surface3DChart" />, <see cref="surfaceChart" />, <see cref="title" />, <see cref="trendline" />, <see cref="trendlineLbl" />, <see cref="upDownBars" />, <see cref="valAx" />, <see cref="view3D" />, <see cref="C15.dLbl" />, <see cref="C15.dlblFieldTableCache" />, <see cref="C15.dlblRangeCache" />, <see cref="C15.layout" />, <see cref="C15.marker" />, <see cref="C15.pivotSource" />, <see cref="C15.ser" />, <see cref="C16.dLbl" />, <see cref="C16.marker" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="ext" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: Area3DChartExtensionList, AreaChartExtensionList, AreaSerExtensionList, Bar3DChartExtensionList, BarChartExtensionList, BarSerExtensionList, BubbleChartExtensionList, BubbleSerExtensionList, CatAxExtensionList, ChartExtensionList, ChartSpaceExtensionList, DateAxExtensionList, DLblExtensionList, DLblsExtensionList, ExtensionList, Line3DChartExtensionList, LineChartExtensionList, LineSerExtensionList, MultiLvlStrRefExtensionList, NumRefExtensionList, Pie3DChartExtensionList, PieChartExtensionList, PieSerExtensionList, RadarChartExtensionList, RadarSerExtensionList, ScatterChartExtensionList, ScatterSerExtensionList, SerAxExtensionList, StockChartExtensionList, StrDataExtensionList, StrRefExtensionList, Surface3DChartExtensionList, SurfaceChartExtensionList, SurfaceSerExtensionList, ValAxExtensionList.</description></item>
         /// </list>
@@ -1045,7 +1045,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
-        /// <item><description>has the following parent XML elements: <see cref="bandFmt" />, <see cref="dLbl" />, <see cref="dPt" />, <see cref="legendEntry" />, <see cref="pivotFmt" />, <see cref="ser" />, <see cref="C15.dLbl" />, <see cref="C15.ser" />.</description></item>
+        /// <item><description>has the following parent XML elements: <see cref="bandFmt" />, <see cref="dLbl" />, <see cref="dPt" />, <see cref="legendEntry" />, <see cref="pivotFmt" />, <see cref="ser" />, <see cref="C15.dLbl" />, <see cref="C15.ser" />, <see cref="C16.dLbl" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: Index.</description></item>
         /// </list>
         /// </remarks>
@@ -1094,7 +1094,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
-        /// <item><description>has the following parent XML elements: <see cref="dispUnitsLbl" />, <see cref="dLbl" />, <see cref="legend" />, <see cref="plotArea" />, <see cref="title" />, <see cref="trendlineLbl" />, <see cref="C15.dLbl" />.</description></item>
+        /// <item><description>has the following parent XML elements: <see cref="dispUnitsLbl" />, <see cref="dLbl" />, <see cref="legend" />, <see cref="plotArea" />, <see cref="title" />, <see cref="trendlineLbl" />, <see cref="C15.dLbl" />, <see cref="C16.dLbl" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="extLst" />, <see cref="manualLayout" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: Layout.</description></item>
         /// </list>
@@ -1498,7 +1498,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
-        /// <item><description>has the following parent XML elements: <see cref="catAx" />, <see cref="dateAx" />, <see cref="dLbl" />, <see cref="dLbls" />, <see cref="serAx" />, <see cref="trendlineLbl" />, <see cref="valAx" />, <see cref="C15.dLbl" />.</description></item>
+        /// <item><description>has the following parent XML elements: <see cref="catAx" />, <see cref="dateAx" />, <see cref="dLbl" />, <see cref="dLbls" />, <see cref="serAx" />, <see cref="trendlineLbl" />, <see cref="valAx" />, <see cref="C15.dLbl" />, <see cref="C16.dLbl" />.</description></item>
         /// <item><description>has the following XML attributes: <see cref="NoNamespace.formatCode" />, <see cref="NoNamespace.sourceLinked" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: NumberingFormat.</description></item>
         /// </list>
@@ -2049,7 +2049,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
-        /// <item><description>has the following parent XML elements: <see cref="dLbl" />, <see cref="dLbls" />, <see cref="C15.dLbl" />.</description></item>
+        /// <item><description>has the following parent XML elements: <see cref="dLbl" />, <see cref="dLbls" />, <see cref="C15.dLbl" />, <see cref="C16.dLbl" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: Separator.</description></item>
         /// </list>
         /// </remarks>
@@ -2113,7 +2113,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
-        /// <item><description>has the following parent XML elements: <see cref="dLbl" />, <see cref="dLbls" />, <see cref="C15.dLbl" />.</description></item>
+        /// <item><description>has the following parent XML elements: <see cref="dLbl" />, <see cref="dLbls" />, <see cref="C15.dLbl" />, <see cref="C16.dLbl" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: ShowBubbleSize.</description></item>
         /// </list>
         /// </remarks>
@@ -2125,7 +2125,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
-        /// <item><description>has the following parent XML elements: <see cref="dLbl" />, <see cref="dLbls" />, <see cref="C15.dLbl" />.</description></item>
+        /// <item><description>has the following parent XML elements: <see cref="dLbl" />, <see cref="dLbls" />, <see cref="C15.dLbl" />, <see cref="C16.dLbl" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: ShowCategoryName.</description></item>
         /// </list>
         /// </remarks>
@@ -2185,7 +2185,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
-        /// <item><description>has the following parent XML elements: <see cref="dLbl" />, <see cref="dLbls" />, <see cref="C15.dLbl" />.</description></item>
+        /// <item><description>has the following parent XML elements: <see cref="dLbl" />, <see cref="dLbls" />, <see cref="C15.dLbl" />, <see cref="C16.dLbl" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: ShowLegendKey.</description></item>
         /// </list>
         /// </remarks>
@@ -2221,7 +2221,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
-        /// <item><description>has the following parent XML elements: <see cref="dLbl" />, <see cref="dLbls" />, <see cref="C15.dLbl" />.</description></item>
+        /// <item><description>has the following parent XML elements: <see cref="dLbl" />, <see cref="dLbls" />, <see cref="C15.dLbl" />, <see cref="C16.dLbl" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: ShowPercent.</description></item>
         /// </list>
         /// </remarks>
@@ -2233,7 +2233,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
-        /// <item><description>has the following parent XML elements: <see cref="dLbl" />, <see cref="dLbls" />, <see cref="C15.dLbl" />.</description></item>
+        /// <item><description>has the following parent XML elements: <see cref="dLbl" />, <see cref="dLbls" />, <see cref="C15.dLbl" />, <see cref="C16.dLbl" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: ShowSeriesName.</description></item>
         /// </list>
         /// </remarks>
@@ -2245,7 +2245,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
-        /// <item><description>has the following parent XML elements: <see cref="dLbl" />, <see cref="dLbls" />, <see cref="C15.dLbl" />.</description></item>
+        /// <item><description>has the following parent XML elements: <see cref="dLbl" />, <see cref="dLbls" />, <see cref="C15.dLbl" />, <see cref="C16.dLbl" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: ShowValue.</description></item>
         /// </list>
         /// </remarks>
@@ -2282,7 +2282,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
-        /// <item><description>has the following parent XML elements: <see cref="marker" />, <see cref="C15.marker" />.</description></item>
+        /// <item><description>has the following parent XML elements: <see cref="marker" />, <see cref="C15.marker" />, <see cref="C16.marker" />.</description></item>
         /// <item><description>has the following XML attributes: <see cref="NoNamespace.val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: Size.</description></item>
         /// </list>
@@ -2345,7 +2345,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
-        /// <item><description>has the following parent XML elements: <see cref="backWall" />, <see cref="bandFmt" />, <see cref="catAx" />, <see cref="chartSpace" />, <see cref="dateAx" />, <see cref="dispUnitsLbl" />, <see cref="dLbl" />, <see cref="dLbls" />, <see cref="downBars" />, <see cref="dPt" />, <see cref="dropLines" />, <see cref="dTable" />, <see cref="errBars" />, <see cref="floor" />, <see cref="hiLowLines" />, <see cref="leaderLines" />, <see cref="legend" />, <see cref="majorGridlines" />, <see cref="marker" />, <see cref="minorGridlines" />, <see cref="pivotFmt" />, <see cref="plotArea" />, <see cref="ser" />, <see cref="serAx" />, <see cref="serLines" />, <see cref="sideWall" />, <see cref="title" />, <see cref="trendline" />, <see cref="trendlineLbl" />, <see cref="upBars" />, <see cref="valAx" />, <see cref="C15.dLbl" />, <see cref="C15.leaderLines" />, <see cref="C15.marker" />, <see cref="C15.ser" />.</description></item>
+        /// <item><description>has the following parent XML elements: <see cref="backWall" />, <see cref="bandFmt" />, <see cref="catAx" />, <see cref="chartSpace" />, <see cref="dateAx" />, <see cref="dispUnitsLbl" />, <see cref="dLbl" />, <see cref="dLbls" />, <see cref="downBars" />, <see cref="dPt" />, <see cref="dropLines" />, <see cref="dTable" />, <see cref="errBars" />, <see cref="floor" />, <see cref="hiLowLines" />, <see cref="leaderLines" />, <see cref="legend" />, <see cref="majorGridlines" />, <see cref="marker" />, <see cref="minorGridlines" />, <see cref="pivotFmt" />, <see cref="plotArea" />, <see cref="ser" />, <see cref="serAx" />, <see cref="serLines" />, <see cref="sideWall" />, <see cref="title" />, <see cref="trendline" />, <see cref="trendlineLbl" />, <see cref="upBars" />, <see cref="valAx" />, <see cref="C15.dLbl" />, <see cref="C15.leaderLines" />, <see cref="C15.marker" />, <see cref="C15.ser" />, <see cref="C16.dLbl" />, <see cref="C16.marker" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="A.blipFill" />, <see cref="A.custGeom" />, <see cref="A.effectDag" />, <see cref="A.effectLst" />, <see cref="A.extLst" />, <see cref="A.gradFill" />, <see cref="A.grpFill" />, <see cref="A.ln" />, <see cref="A.noFill" />, <see cref="A.pattFill" />, <see cref="A.prstGeom" />, <see cref="A.scene3d" />, <see cref="A.solidFill" />, <see cref="A.sp3d" />, <see cref="A.xfrm" />.</description></item>
         /// <item><description>has the following XML attributes: <see cref="NoNamespace.bwMode" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: ChartShapeProperties, ShapeProperties.</description></item>
@@ -2450,7 +2450,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
-        /// <item><description>has the following parent XML elements: <see cref="marker" />, <see cref="C15.marker" />.</description></item>
+        /// <item><description>has the following parent XML elements: <see cref="marker" />, <see cref="C15.marker" />, <see cref="C16.marker" />.</description></item>
         /// <item><description>has the following XML attributes: <see cref="NoNamespace.val" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: Symbol.</description></item>
         /// </list>
@@ -2565,7 +2565,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
-        /// <item><description>has the following parent XML elements: <see cref="dispUnitsLbl" />, <see cref="dLbl" />, <see cref="ser" />, <see cref="title" />, <see cref="trendlineLbl" />, <see cref="C15.dLbl" />, <see cref="C15.ser" />.</description></item>
+        /// <item><description>has the following parent XML elements: <see cref="dispUnitsLbl" />, <see cref="dLbl" />, <see cref="ser" />, <see cref="title" />, <see cref="trendlineLbl" />, <see cref="C15.dLbl" />, <see cref="C15.ser" />, <see cref="C16.dLbl" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="rich" />, <see cref="strLit" />, <see cref="strRef" />, <see cref="v" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: ChartText, SeriesText.</description></item>
         /// </list>
@@ -2578,7 +2578,7 @@ namespace DocumentFormat.OpenXml.Linq
         /// <remarks>
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
-        /// <item><description>has the following parent XML elements: <see cref="catAx" />, <see cref="chartSpace" />, <see cref="dateAx" />, <see cref="dispUnitsLbl" />, <see cref="dLbl" />, <see cref="dLbls" />, <see cref="dTable" />, <see cref="legend" />, <see cref="legendEntry" />, <see cref="serAx" />, <see cref="title" />, <see cref="trendlineLbl" />, <see cref="valAx" />, <see cref="C15.dLbl" />.</description></item>
+        /// <item><description>has the following parent XML elements: <see cref="catAx" />, <see cref="chartSpace" />, <see cref="dateAx" />, <see cref="dispUnitsLbl" />, <see cref="dLbl" />, <see cref="dLbls" />, <see cref="dTable" />, <see cref="legend" />, <see cref="legendEntry" />, <see cref="serAx" />, <see cref="title" />, <see cref="trendlineLbl" />, <see cref="valAx" />, <see cref="C15.dLbl" />, <see cref="C16.dLbl" />.</description></item>
         /// <item><description>has the following child XML elements: <see cref="A.bodyPr" />, <see cref="A.lstStyle" />, <see cref="A.p" />.</description></item>
         /// <item><description>corresponds to the following strongly-typed classes: TextProperties.</description></item>
         /// </list>

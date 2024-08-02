@@ -3136,7 +3136,7 @@
   "Key": "DocumentFormat.OpenXml.Drawing.Charts.AreaSerExtension",
   "Value": [
    {
-    "Key": "Office2013, Office2016, Office2019, Office2021, Microsoft365",
+    "Key": "Office2016, Office2019, Office2021, Microsoft365",
     "Value": {
      "ChildrenParticles": [
       {
@@ -3152,6 +3152,15 @@
        "ElementType": "DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions"
       },
       {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.Charts.CategoryFilterExceptions"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.Charts.ChartDataPointUniqueIDMap"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID"
+      },
+      {
        "MinOccurs": 0,
        "ParticleType": "Any"
       }
@@ -3163,6 +3172,30 @@
     "Key": "Office2007, Office2010",
     "Value": {
      "ChildrenParticles": [
+      {
+       "MinOccurs": 0,
+       "ParticleType": "Any"
+      }
+     ],
+     "ParticleType": "Choice"
+    }
+   },
+   {
+    "Key": "Office2013",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions"
+      },
       {
        "MinOccurs": 0,
        "ParticleType": "Any"
@@ -3570,7 +3603,7 @@
   "Key": "DocumentFormat.OpenXml.Drawing.Charts.BarSerExtension",
   "Value": [
    {
-    "Key": "Office2013, Office2016, Office2019, Office2021, Microsoft365",
+    "Key": "Office2016, Office2019, Office2021, Microsoft365",
     "Value": {
      "ChildrenParticles": [
       {
@@ -3587,6 +3620,15 @@
       },
       {
        "ElementType": "DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.Charts.CategoryFilterExceptions"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.Charts.ChartDataPointUniqueIDMap"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID"
       },
       {
        "MinOccurs": 0,
@@ -3614,6 +3656,33 @@
      "ChildrenParticles": [
       {
        "ElementType": "DocumentFormat.OpenXml.Office2010.Drawing.Charts.InvertSolidFillFormat"
+      },
+      {
+       "MinOccurs": 0,
+       "ParticleType": "Any"
+      }
+     ],
+     "ParticleType": "Choice"
+    }
+   },
+   {
+    "Key": "Office2013",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2010.Drawing.Charts.InvertSolidFillFormat"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions"
       },
       {
        "MinOccurs": 0,
@@ -3832,7 +3901,7 @@
   "Key": "DocumentFormat.OpenXml.Drawing.Charts.BubbleSerExtension",
   "Value": [
    {
-    "Key": "Office2013, Office2016, Office2019, Office2021, Microsoft365",
+    "Key": "Office2016, Office2019, Office2021, Microsoft365",
     "Value": {
      "ChildrenParticles": [
       {
@@ -3846,6 +3915,15 @@
       },
       {
        "ElementType": "DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.Charts.CategoryFilterExceptions"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.Charts.ChartDataPointUniqueIDMap"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID"
       },
       {
        "MinOccurs": 0,
@@ -3873,6 +3951,30 @@
      "ChildrenParticles": [
       {
        "ElementType": "DocumentFormat.OpenXml.Office2010.Drawing.Charts.InvertSolidFillFormat"
+      },
+      {
+       "MinOccurs": 0,
+       "ParticleType": "Any"
+      }
+     ],
+     "ParticleType": "Choice"
+    }
+   },
+   {
+    "Key": "Office2013",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2010.Drawing.Charts.InvertSolidFillFormat"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions"
       },
       {
        "MinOccurs": 0,
@@ -4584,7 +4686,7 @@
   "Key": "DocumentFormat.OpenXml.Drawing.Charts.DLblExtension",
   "Value": [
    {
-    "Key": "Office2013, Office2016, Office2019, Office2021, Microsoft365",
+    "Key": "Office2016, Office2019, Office2021, Microsoft365",
     "Value": {
      "ChildrenParticles": [
       {
@@ -4603,6 +4705,9 @@
        "ElementType": "DocumentFormat.OpenXml.Office2013.Drawing.Chart.Layout"
       },
       {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID"
+      },
+      {
        "MinOccurs": 0,
        "ParticleType": "Any"
       }
@@ -4614,6 +4719,33 @@
     "Key": "Office2007, Office2010",
     "Value": {
      "ChildrenParticles": [
+      {
+       "MinOccurs": 0,
+       "ParticleType": "Any"
+      }
+     ],
+     "ParticleType": "Choice"
+    }
+   },
+   {
+    "Key": "Office2013",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelFieldTable"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2013.Drawing.Chart.ExceptionForSave"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShowDataLabelsRange"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShapeProperties"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2013.Drawing.Chart.Layout"
+      },
       {
        "MinOccurs": 0,
        "ParticleType": "Any"
@@ -5953,7 +6085,7 @@
   "Key": "DocumentFormat.OpenXml.Drawing.Charts.LineSerExtension",
   "Value": [
    {
-    "Key": "Office2013, Office2016, Office2019, Office2021, Microsoft365",
+    "Key": "Office2016, Office2019, Office2021, Microsoft365",
     "Value": {
      "ChildrenParticles": [
       {
@@ -5969,6 +6101,15 @@
        "ElementType": "DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions"
       },
       {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.Charts.CategoryFilterExceptions"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.Charts.ChartDataPointUniqueIDMap"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID"
+      },
+      {
        "MinOccurs": 0,
        "ParticleType": "Any"
       }
@@ -5980,6 +6121,30 @@
     "Key": "Office2007, Office2010",
     "Value": {
      "ChildrenParticles": [
+      {
+       "MinOccurs": 0,
+       "ParticleType": "Any"
+      }
+     ],
+     "ParticleType": "Choice"
+    }
+   },
+   {
+    "Key": "Office2013",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions"
+      },
       {
        "MinOccurs": 0,
        "ParticleType": "Any"
@@ -6765,7 +6930,7 @@
   "Key": "DocumentFormat.OpenXml.Drawing.Charts.PieSerExtension",
   "Value": [
    {
-    "Key": "Office2013, Office2016, Office2019, Office2021, Microsoft365",
+    "Key": "Office2016, Office2019, Office2021, Microsoft365",
     "Value": {
      "ChildrenParticles": [
       {
@@ -6781,6 +6946,15 @@
        "ElementType": "DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions"
       },
       {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.Charts.CategoryFilterExceptions"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.Charts.ChartDataPointUniqueIDMap"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID"
+      },
+      {
        "MinOccurs": 0,
        "ParticleType": "Any"
       }
@@ -6792,6 +6966,30 @@
     "Key": "Office2007, Office2010",
     "Value": {
      "ChildrenParticles": [
+      {
+       "MinOccurs": 0,
+       "ParticleType": "Any"
+      }
+     ],
+     "ParticleType": "Choice"
+    }
+   },
+   {
+    "Key": "Office2013",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions"
+      },
       {
        "MinOccurs": 0,
        "ParticleType": "Any"
@@ -7239,7 +7437,7 @@
   "Key": "DocumentFormat.OpenXml.Drawing.Charts.RadarSerExtension",
   "Value": [
    {
-    "Key": "Office2013, Office2016, Office2019, Office2021, Microsoft365",
+    "Key": "Office2016, Office2019, Office2021, Microsoft365",
     "Value": {
      "ChildrenParticles": [
       {
@@ -7255,6 +7453,15 @@
        "ElementType": "DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions"
       },
       {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.Charts.CategoryFilterExceptions"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.Charts.ChartDataPointUniqueIDMap"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID"
+      },
+      {
        "MinOccurs": 0,
        "ParticleType": "Any"
       }
@@ -7266,6 +7473,30 @@
     "Key": "Office2007, Office2010",
     "Value": {
      "ChildrenParticles": [
+      {
+       "MinOccurs": 0,
+       "ParticleType": "Any"
+      }
+     ],
+     "ParticleType": "Choice"
+    }
+   },
+   {
+    "Key": "Office2013",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions"
+      },
       {
        "MinOccurs": 0,
        "ParticleType": "Any"
@@ -7519,7 +7750,7 @@
   "Key": "DocumentFormat.OpenXml.Drawing.Charts.ScatterSerExtension",
   "Value": [
    {
-    "Key": "Office2013, Office2016, Office2019, Office2021, Microsoft365",
+    "Key": "Office2016, Office2019, Office2021, Microsoft365",
     "Value": {
      "ChildrenParticles": [
       {
@@ -7535,6 +7766,15 @@
        "ElementType": "DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions"
       },
       {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.Charts.CategoryFilterExceptions"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.Charts.ChartDataPointUniqueIDMap"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID"
+      },
+      {
        "MinOccurs": 0,
        "ParticleType": "Any"
       }
@@ -7546,6 +7786,30 @@
     "Key": "Office2007, Office2010",
     "Value": {
      "ChildrenParticles": [
+      {
+       "MinOccurs": 0,
+       "ParticleType": "Any"
+      }
+     ],
+     "ParticleType": "Choice"
+    }
+   },
+   {
+    "Key": "Office2013",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelsRange"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions"
+      },
       {
        "MinOccurs": 0,
        "ParticleType": "Any"
@@ -8425,7 +8689,7 @@
   "Key": "DocumentFormat.OpenXml.Drawing.Charts.SurfaceSerExtension",
   "Value": [
    {
-    "Key": "Office2013, Office2016, Office2019, Office2021, Microsoft365",
+    "Key": "Office2016, Office2019, Office2021, Microsoft365",
     "Value": {
      "ChildrenParticles": [
       {
@@ -8436,6 +8700,15 @@
       },
       {
        "ElementType": "DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.Charts.CategoryFilterExceptions"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.Charts.ChartDataPointUniqueIDMap"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID"
       },
       {
        "MinOccurs": 0,
@@ -8449,6 +8722,27 @@
     "Key": "Office2007, Office2010",
     "Value": {
      "ChildrenParticles": [
+      {
+       "MinOccurs": 0,
+       "ParticleType": "Any"
+      }
+     ],
+     "ParticleType": "Choice"
+    }
+   },
+   {
+    "Key": "Office2013",
+    "Value": {
+     "ChildrenParticles": [
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSeriesTitle"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredCategoryTitle"
+      },
+      {
+       "ElementType": "DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions"
+      },
       {
        "MinOccurs": 0,
        "ParticleType": "Any"
