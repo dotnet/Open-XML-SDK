@@ -5,6 +5,21 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [3.1.0] - 2024-07-30
+
+### Added
+- Added `DocumentFormat.OpenXml.Office.SpreadSheetML.Y2024.PivotAutoRefresh` namespace
+- Added `DocumentFormat.OpenXml.Office.SpreadSheetML.Y2024.PivotDynamicArrays` namespace
+- Added `DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.DataSourceVersioning` namespace
+- Added `DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.ExternalCodeService` namespace
+- Added `DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms` namespace
+- Added `DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.Pivot2023Calculation` namespace
+
+### Fixed
+
+- Fixed issue where `OpenXmlUnknownElement` is returned instead of `CommentPropertiesExtension` (#1751)
+- Fixed issue where `OpenXmlWriter` is unable to write `SharedStringTablePart` (#1755)
+
 ## [3.0.2] - 2024-03-14
 
 ### Fixed
