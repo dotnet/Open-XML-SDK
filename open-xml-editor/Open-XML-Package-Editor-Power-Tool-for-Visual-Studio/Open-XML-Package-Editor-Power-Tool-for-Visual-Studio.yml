@@ -1,0 +1,11 @@
+### YamlMime:Sample
+page_type: sample 
+products: 
+- office-365 
+languages:
+- csharp
+extensions: 
+ contentType: tools
+ createdDate: 3/5/2014 5:34:16 AM
+title: Open XML Package Editor Power Tool for Visual Studio
+description: This Power Tool is a Visual Studio add-in that provides an easy way to parse and edit Open Packaging Conventions files, including Word, Excel and PowerPoint documents.
