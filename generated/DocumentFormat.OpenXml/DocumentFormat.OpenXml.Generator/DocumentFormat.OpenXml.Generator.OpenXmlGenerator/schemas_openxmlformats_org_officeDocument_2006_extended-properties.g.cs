@@ -22,7 +22,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:Properties.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.ExtendedProperties.DigitalSignature" /> <c>&lt;ap:DigSig></c></description></item>
@@ -53,7 +53,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     ///   <item><description><see cref="DocumentFormat.OpenXml.ExtendedProperties.Application" /> <c>&lt;ap:Application></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.ExtendedProperties.ApplicationVersion" /> <c>&lt;ap:AppVersion></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Properties : OpenXmlPartRootElement
     {
         /// <summary>
@@ -154,9 +154,9 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// <para>Name of Document Template.</para>
         /// <para>Represents the following element tag in the schema: ap:Template.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.ExtendedProperties.Template? Template
         {
             get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.Template>();
@@ -167,9 +167,9 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// <para>Name of Manager.</para>
         /// <para>Represents the following element tag in the schema: ap:Manager.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.ExtendedProperties.Manager? Manager
         {
             get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.Manager>();
@@ -180,9 +180,9 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// <para>Name of Company.</para>
         /// <para>Represents the following element tag in the schema: ap:Company.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.ExtendedProperties.Company? Company
         {
             get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.Company>();
@@ -193,9 +193,9 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// <para>Total Number of Pages.</para>
         /// <para>Represents the following element tag in the schema: ap:Pages.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.ExtendedProperties.Pages? Pages
         {
             get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.Pages>();
@@ -206,9 +206,9 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// <para>Word Count.</para>
         /// <para>Represents the following element tag in the schema: ap:Words.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.ExtendedProperties.Words? Words
         {
             get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.Words>();
@@ -219,9 +219,9 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// <para>Total Number of Characters.</para>
         /// <para>Represents the following element tag in the schema: ap:Characters.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.ExtendedProperties.Characters? Characters
         {
             get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.Characters>();
@@ -232,9 +232,9 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// <para>Intended Format of Presentation.</para>
         /// <para>Represents the following element tag in the schema: ap:PresentationFormat.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.ExtendedProperties.PresentationFormat? PresentationFormat
         {
             get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.PresentationFormat>();
@@ -245,9 +245,9 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// <para>Number of Lines.</para>
         /// <para>Represents the following element tag in the schema: ap:Lines.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.ExtendedProperties.Lines? Lines
         {
             get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.Lines>();
@@ -258,9 +258,9 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// <para>Total Number of Paragraphs.</para>
         /// <para>Represents the following element tag in the schema: ap:Paragraphs.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.ExtendedProperties.Paragraphs? Paragraphs
         {
             get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.Paragraphs>();
@@ -271,9 +271,9 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// <para>Slides Metadata Element.</para>
         /// <para>Represents the following element tag in the schema: ap:Slides.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.ExtendedProperties.Slides? Slides
         {
             get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.Slides>();
@@ -284,9 +284,9 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// <para>Number of Slides Containing Notes.</para>
         /// <para>Represents the following element tag in the schema: ap:Notes.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.ExtendedProperties.Notes? Notes
         {
             get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.Notes>();
@@ -297,9 +297,9 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// <para>Total Edit Time Metadata Element.</para>
         /// <para>Represents the following element tag in the schema: ap:TotalTime.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.ExtendedProperties.TotalTime? TotalTime
         {
             get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.TotalTime>();
@@ -310,9 +310,9 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// <para>Number of Hidden Slides.</para>
         /// <para>Represents the following element tag in the schema: ap:HiddenSlides.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.ExtendedProperties.HiddenSlides? HiddenSlides
         {
             get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.HiddenSlides>();
@@ -323,9 +323,9 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// <para>Total Number of Multimedia Clips.</para>
         /// <para>Represents the following element tag in the schema: ap:MMClips.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.ExtendedProperties.MultimediaClips? MultimediaClips
         {
             get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.MultimediaClips>();
@@ -336,9 +336,9 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// <para>Thumbnail Display Mode.</para>
         /// <para>Represents the following element tag in the schema: ap:ScaleCrop.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.ExtendedProperties.ScaleCrop? ScaleCrop
         {
             get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.ScaleCrop>();
@@ -349,9 +349,9 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// <para>Heading Pairs.</para>
         /// <para>Represents the following element tag in the schema: ap:HeadingPairs.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.ExtendedProperties.HeadingPairs? HeadingPairs
         {
             get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.HeadingPairs>();
@@ -362,9 +362,9 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// <para>Part Titles.</para>
         /// <para>Represents the following element tag in the schema: ap:TitlesOfParts.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.ExtendedProperties.TitlesOfParts? TitlesOfParts
         {
             get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.TitlesOfParts>();
@@ -375,9 +375,9 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// <para>Links Up-to-Date.</para>
         /// <para>Represents the following element tag in the schema: ap:LinksUpToDate.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.ExtendedProperties.LinksUpToDate? LinksUpToDate
         {
             get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.LinksUpToDate>();
@@ -388,9 +388,9 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// <para>Number of Characters (With Spaces).</para>
         /// <para>Represents the following element tag in the schema: ap:CharactersWithSpaces.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.ExtendedProperties.CharactersWithSpaces? CharactersWithSpaces
         {
             get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.CharactersWithSpaces>();
@@ -401,9 +401,9 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// <para>Shared Document.</para>
         /// <para>Represents the following element tag in the schema: ap:SharedDoc.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.ExtendedProperties.SharedDocument? SharedDocument
         {
             get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.SharedDocument>();
@@ -414,9 +414,9 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// <para>Relative Hyperlink Base.</para>
         /// <para>Represents the following element tag in the schema: ap:HyperlinkBase.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.ExtendedProperties.HyperlinkBase? HyperlinkBase
         {
             get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.HyperlinkBase>();
@@ -427,9 +427,9 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// <para>Hyperlink List.</para>
         /// <para>Represents the following element tag in the schema: ap:HLinks.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.ExtendedProperties.HyperlinkList? HyperlinkList
         {
             get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.HyperlinkList>();
@@ -440,9 +440,9 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// <para>Hyperlinks Changed.</para>
         /// <para>Represents the following element tag in the schema: ap:HyperlinksChanged.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.ExtendedProperties.HyperlinksChanged? HyperlinksChanged
         {
             get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.HyperlinksChanged>();
@@ -453,9 +453,9 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// <para>Digital Signature.</para>
         /// <para>Represents the following element tag in the schema: ap:DigSig.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.ExtendedProperties.DigitalSignature? DigitalSignature
         {
             get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.DigitalSignature>();
@@ -466,9 +466,9 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// <para>Application Name.</para>
         /// <para>Represents the following element tag in the schema: ap:Application.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.ExtendedProperties.Application? Application
         {
             get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.Application>();
@@ -479,9 +479,9 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// <para>Application Version.</para>
         /// <para>Represents the following element tag in the schema: ap:AppVersion.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.ExtendedProperties.ApplicationVersion? ApplicationVersion
         {
             get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.ApplicationVersion>();
@@ -492,9 +492,9 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// <para>Document Security.</para>
         /// <para>Represents the following element tag in the schema: ap:DocSecurity.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:ap = http://schemas.openxmlformats.org/officeDocument/2006/extended-properties
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.ExtendedProperties.DocumentSecurity? DocumentSecurity
         {
             get => GetElement<DocumentFormat.OpenXml.ExtendedProperties.DocumentSecurity>();
@@ -1408,12 +1408,12 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:HeadingPairs.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTVector" /> <c>&lt;vt:vector></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class HeadingPairs : VectorVariantType
     {
         /// <summary>
@@ -1466,12 +1466,12 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:HLinks.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTVector" /> <c>&lt;vt:vector></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class HyperlinkList : VectorVariantType
     {
         /// <summary>
@@ -1524,12 +1524,12 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTVector" /> <c>&lt;vt:vector></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public abstract partial class VectorVariantType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1573,9 +1573,9 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// <para>Vector.</para>
         /// <para>Represents the following element tag in the schema: vt:vector.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.VariantTypes.VTVector? VTVector
         {
             get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTVector>();
@@ -1588,12 +1588,12 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:TitlesOfParts.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTVector" /> <c>&lt;vt:vector></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TitlesOfParts : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1642,9 +1642,9 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// <para>Vector.</para>
         /// <para>Represents the following element tag in the schema: vt:vector.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.VariantTypes.VTVector? VTVector
         {
             get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTVector>();
@@ -1660,12 +1660,12 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ap:DigSig.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.VariantTypes.VTBlob" /> <c>&lt;vt:blob></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DigitalSignature : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1714,9 +1714,9 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
         /// <para>Binary Blob.</para>
         /// <para>Represents the following element tag in the schema: vt:blob.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:vt = http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.VariantTypes.VTBlob? VTBlob
         {
             get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTBlob>();

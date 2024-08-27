@@ -21,7 +21,7 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ntns:customXsn.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CustomXsn.XsnLocation" /> <c>&lt;ntns:xsnLocation></c></description></item>
@@ -29,7 +29,7 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CustomXsn.OpenByDefault" /> <c>&lt;ntns:openByDefault></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CustomXsn.Scope" /> <c>&lt;ntns:xsnScope></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class CustomXsn : OpenXmlCompositeElement
     {
         /// <summary>
@@ -84,9 +84,9 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
         /// <para>XsnLocation.</para>
         /// <para>Represents the following element tag in the schema: ntns:xsnLocation.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:ntns = http://schemas.microsoft.com/office/2006/metadata/customXsn
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office.CustomXsn.XsnLocation? XsnLocation
         {
             get => GetElement<DocumentFormat.OpenXml.Office.CustomXsn.XsnLocation>();
@@ -97,9 +97,9 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
         /// <para>CachedView.</para>
         /// <para>Represents the following element tag in the schema: ntns:cached.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:ntns = http://schemas.microsoft.com/office/2006/metadata/customXsn
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office.CustomXsn.CachedView? CachedView
         {
             get => GetElement<DocumentFormat.OpenXml.Office.CustomXsn.CachedView>();
@@ -110,9 +110,9 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
         /// <para>OpenByDefault.</para>
         /// <para>Represents the following element tag in the schema: ntns:openByDefault.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:ntns = http://schemas.microsoft.com/office/2006/metadata/customXsn
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office.CustomXsn.OpenByDefault? OpenByDefault
         {
             get => GetElement<DocumentFormat.OpenXml.Office.CustomXsn.OpenByDefault>();
@@ -123,9 +123,9 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
         /// <para>Scope.</para>
         /// <para>Represents the following element tag in the schema: ntns:xsnScope.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:ntns = http://schemas.microsoft.com/office/2006/metadata/customXsn
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office.CustomXsn.Scope? Scope
         {
             get => GetElement<DocumentFormat.OpenXml.Office.CustomXsn.Scope>();

@@ -22,7 +22,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xvml:ClientData.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.CommentRowTarget" /> <c>&lt;xvml:Row></c></description></item>
@@ -93,7 +93,7 @@ namespace DocumentFormat.OpenXml.Vml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.DdeObject" /> <c>&lt;xvml:DDE></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Spreadsheet.UIObject" /> <c>&lt;xvml:UIObj></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ClientData : OpenXmlCompositeElement
     {
         /// <summary>

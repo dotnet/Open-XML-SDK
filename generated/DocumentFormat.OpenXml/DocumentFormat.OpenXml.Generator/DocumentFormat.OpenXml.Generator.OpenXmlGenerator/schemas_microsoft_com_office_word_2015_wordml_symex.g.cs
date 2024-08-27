@@ -34,9 +34,9 @@ namespace DocumentFormat.OpenXml.Office2016.Word.Symex
         /// <para>font, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: w16se:font</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w16se=http://schemas.microsoft.com/office/word/2015/wordml/symex
-        /// </remark>
+        /// </remarks>
         public StringValue? Font
         {
             get => GetAttribute<StringValue>();
@@ -47,9 +47,9 @@ namespace DocumentFormat.OpenXml.Office2016.Word.Symex
         /// <para>char, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: w16se:char</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w16se=http://schemas.microsoft.com/office/word/2015/wordml/symex
-        /// </remark>
+        /// </remarks>
         public HexBinaryValue? Char
         {
             get => GetAttribute<HexBinaryValue>();

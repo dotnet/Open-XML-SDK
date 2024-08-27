@@ -23,7 +23,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c16:spPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.BlipFill" /> <c>&lt;a:blipFill></c></description></item>
@@ -42,7 +42,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SolidFill" /> <c>&lt;a:solidFill></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Transform2D" /> <c>&lt;a:xfrm></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -153,9 +153,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         /// <para>2D Transform for Individual Objects.</para>
         /// <para>Represents the following element tag in the schema: a:xfrm.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Transform2D? Transform2D
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Transform2D>();
@@ -293,7 +293,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c16:marker.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
@@ -301,7 +301,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Size" /> <c>&lt;c:size></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Symbol" /> <c>&lt;c:symbol></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Marker : OpenXmlCompositeElement
     {
         /// <summary>
@@ -357,9 +357,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         /// <para>Symbol.</para>
         /// <para>Represents the following element tag in the schema: c:symbol.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Symbol? Symbol
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Symbol>();
@@ -370,9 +370,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         /// <para>Size.</para>
         /// <para>Represents the following element tag in the schema: c:size.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Size? Size
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Size>();
@@ -383,9 +383,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         /// <para>ChartShapeProperties.</para>
         /// <para>Represents the following element tag in the schema: c:spPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
@@ -396,9 +396,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         /// <para>Chart Extensibility.</para>
         /// <para>Represents the following element tag in the schema: c:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
@@ -414,7 +414,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c16:dLbl.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
@@ -434,7 +434,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Index" /> <c>&lt;c:idx></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Separator" /> <c>&lt;c:separator></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DLbl : OpenXmlCompositeElement
     {
         /// <summary>
@@ -529,9 +529,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         /// <para>Index.</para>
         /// <para>Represents the following element tag in the schema: c:idx.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Index? Index
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Index>();
@@ -547,12 +547,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c16:categoryFilterExceptions.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Charts.CategoryFilterException" /> <c>&lt;c16:categoryFilterException></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class CategoryFilterExceptions : OpenXmlCompositeElement
     {
         /// <summary>
@@ -607,12 +607,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c16:pivotOptions16.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Charts.BooleanFalse" /> <c>&lt;c16:showExpandCollapseFieldButtons></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PivotOptions16 : OpenXmlCompositeElement
     {
         /// <summary>
@@ -662,9 +662,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         /// <para>BooleanFalse.</para>
         /// <para>Represents the following element tag in the schema: c16:showExpandCollapseFieldButtons.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c16 = http://schemas.microsoft.com/office/drawing/2014/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Charts.BooleanFalse? BooleanFalse
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Charts.BooleanFalse>();
@@ -680,12 +680,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c16:datapointuniqueidmap.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Charts.ChartDataPointUniqueIDMapEntry" /> <c>&lt;c16:ptentry></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ChartDataPointUniqueIDMap : OpenXmlCompositeElement
     {
         /// <summary>
@@ -825,7 +825,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c16:categoryFilterException.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Charts.ShapeProperties" /> <c>&lt;c16:spPr></c></description></item>
@@ -836,7 +836,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Charts.UnsignedIntegerType" /> <c>&lt;c16:explosion></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID" /> <c>&lt;c16:uniqueId></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class CategoryFilterException : OpenXmlCompositeElement
     {
         /// <summary>
@@ -898,9 +898,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         /// <para>UniqueIdChartUniqueID.</para>
         /// <para>Represents the following element tag in the schema: c16:uniqueId.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c16 = http://schemas.microsoft.com/office/drawing/2014/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID? UniqueIdChartUniqueID
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID>();
@@ -911,9 +911,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         /// <para>ShapeProperties.</para>
         /// <para>Represents the following element tag in the schema: c16:spPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c16 = http://schemas.microsoft.com/office/drawing/2014/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Charts.ShapeProperties? ShapeProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Charts.ShapeProperties>();
@@ -924,9 +924,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         /// <para>UnsignedIntegerType.</para>
         /// <para>Represents the following element tag in the schema: c16:explosion.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c16 = http://schemas.microsoft.com/office/drawing/2014/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Charts.UnsignedIntegerType? UnsignedIntegerType
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Charts.UnsignedIntegerType>();
@@ -937,9 +937,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         /// <para>InvertIfNegativeBoolean.</para>
         /// <para>Represents the following element tag in the schema: c16:invertIfNegative.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c16 = http://schemas.microsoft.com/office/drawing/2014/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Charts.InvertIfNegativeBoolean? InvertIfNegativeBoolean
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Charts.InvertIfNegativeBoolean>();
@@ -950,9 +950,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         /// <para>Bubble3DBoolean.</para>
         /// <para>Represents the following element tag in the schema: c16:bubble3D.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c16 = http://schemas.microsoft.com/office/drawing/2014/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Charts.Bubble3DBoolean? Bubble3DBoolean
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Charts.Bubble3DBoolean>();
@@ -963,9 +963,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         /// <para>Marker.</para>
         /// <para>Represents the following element tag in the schema: c16:marker.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c16 = http://schemas.microsoft.com/office/drawing/2014/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Charts.Marker? Marker
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Charts.Marker>();
@@ -976,9 +976,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         /// <para>DLbl.</para>
         /// <para>Represents the following element tag in the schema: c16:dLbl.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c16 = http://schemas.microsoft.com/office/drawing/2014/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Charts.DLbl? DLbl
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Charts.DLbl>();
@@ -994,7 +994,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c16:numCache.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ExtensionList" /> <c>&lt;c:extLst></c></description></item>
@@ -1002,7 +1002,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PointCount" /> <c>&lt;c:ptCount></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.FormatCode" /> <c>&lt;c:formatCode></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class NumberDataType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1058,9 +1058,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         /// <para>Format Code.</para>
         /// <para>Represents the following element tag in the schema: c:formatCode.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.FormatCode? FormatCode
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.FormatCode>();
@@ -1071,9 +1071,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         /// <para>Point Count.</para>
         /// <para>Represents the following element tag in the schema: c:ptCount.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.PointCount? PointCount
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PointCount>();
@@ -1089,12 +1089,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c16:filteredLitCache.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Charts.NumberDataType" /> <c>&lt;c16:numCache></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class NumFilteredLiteralCache : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1144,9 +1144,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         /// <para>NumberDataType.</para>
         /// <para>Represents the following element tag in the schema: c16:numCache.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c16 = http://schemas.microsoft.com/office/drawing/2014/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Charts.NumberDataType? NumberDataType
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Charts.NumberDataType>();
@@ -1162,14 +1162,14 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c16:strCache.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.StrDataExtensionList" /> <c>&lt;c:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.StringPoint" /> <c>&lt;c:pt></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PointCount" /> <c>&lt;c:ptCount></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class StringDataType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1223,9 +1223,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         /// <para>PointCount.</para>
         /// <para>Represents the following element tag in the schema: c:ptCount.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.PointCount? PointCount
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PointCount>();
@@ -1241,12 +1241,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c16:filteredLitCache.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Charts.StringDataType" /> <c>&lt;c16:strCache></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class StrFilteredLiteralCache : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1296,9 +1296,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         /// <para>StringDataType.</para>
         /// <para>Represents the following element tag in the schema: c16:strCache.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c16 = http://schemas.microsoft.com/office/drawing/2014/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Charts.StringDataType? StringDataType
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Charts.StringDataType>();
@@ -1314,14 +1314,14 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c16:multiLvlStrCache.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ExtensionList" /> <c>&lt;c:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Level" /> <c>&lt;c:lvl></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PointCount" /> <c>&lt;c:ptCount></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class MultiLvlStrData : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1375,9 +1375,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         /// <para>PointCount.</para>
         /// <para>Represents the following element tag in the schema: c:ptCount.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.PointCount? PointCount
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PointCount>();
@@ -1393,12 +1393,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c16:filteredLitCache.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Charts.MultiLvlStrData" /> <c>&lt;c16:multiLvlStrCache></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class MultiLvlStrFilteredLiteralCache : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1448,9 +1448,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         /// <para>MultiLvlStrData.</para>
         /// <para>Represents the following element tag in the schema: c16:multiLvlStrCache.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c16 = http://schemas.microsoft.com/office/drawing/2014/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Charts.MultiLvlStrData? MultiLvlStrData
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Charts.MultiLvlStrData>();
@@ -1582,13 +1582,13 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c16:ptentry.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueID" /> <c>&lt;c16:uniqueID></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Charts.XsdunsignedInt" /> <c>&lt;c16:ptidx></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ChartDataPointUniqueIDMapEntry : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1640,9 +1640,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         /// <para>XsdunsignedInt.</para>
         /// <para>Represents the following element tag in the schema: c16:ptidx.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c16 = http://schemas.microsoft.com/office/drawing/2014/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Charts.XsdunsignedInt? XsdunsignedInt
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Charts.XsdunsignedInt>();
@@ -1653,9 +1653,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Charts
         /// <para>UniqueID.</para>
         /// <para>Represents the following element tag in the schema: c16:uniqueID.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c16 = http://schemas.microsoft.com/office/drawing/2014/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueID? UniqueID
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueID>();

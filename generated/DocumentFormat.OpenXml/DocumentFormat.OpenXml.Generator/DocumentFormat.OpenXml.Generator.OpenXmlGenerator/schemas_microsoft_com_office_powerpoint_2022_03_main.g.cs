@@ -22,12 +22,12 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main
     /// <para>This class is available in Microsoft365 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p223:reactions.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main.Reaction" /> <c>&lt;p223:rxn></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Reactions : OpenXmlCompositeElement
     {
         /// <summary>
@@ -82,12 +82,12 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main
     /// <para>This class is available in Microsoft365 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p223:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Extension" /> <c>&lt;p:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -148,12 +148,12 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main
     /// <para>This class is available in Microsoft365 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p223:instance.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main.ExtensionList" /> <c>&lt;p223:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ReactionInstance : OpenXmlCompositeElement
     {
         /// <summary>
@@ -233,9 +233,9 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: p223:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p223 = http://schemas.microsoft.com/office/powerpoint/2022/03/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main.ExtensionList>();
@@ -251,12 +251,12 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main
     /// <para>This class is available in Microsoft365 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p223:rxn.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main.ReactionInstance" /> <c>&lt;p223:instance></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Reaction : OpenXmlCompositeElement
     {
         /// <summary>

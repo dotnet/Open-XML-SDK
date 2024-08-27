@@ -22,13 +22,13 @@ namespace DocumentFormat.OpenXml.Office2021.Word.CommentsExt
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w16cex:commentsExtensible.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Word.CommentsExt.CommentExtensible" /> <c>&lt;w16cex:commentExtensible></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Word.CommentsExt.ExtensionList" /> <c>&lt;w16cex:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class CommentsExtensible : OpenXmlPartRootElement
     {
         /// <summary>
@@ -116,12 +116,12 @@ namespace DocumentFormat.OpenXml.Office2021.Word.CommentsExt
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w16cex:commentExtensible.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Word.CommentsExt.ExtensionList" /> <c>&lt;w16cex:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class CommentExtensible : OpenXmlCompositeElement
     {
         /// <summary>
@@ -159,9 +159,9 @@ namespace DocumentFormat.OpenXml.Office2021.Word.CommentsExt
         /// <para>durableId, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: w16cex:durableId</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w16cex=http://schemas.microsoft.com/office/word/2018/wordml/cex
-        /// </remark>
+        /// </remarks>
         public HexBinaryValue? DurableId
         {
             get => GetAttribute<HexBinaryValue>();
@@ -172,9 +172,9 @@ namespace DocumentFormat.OpenXml.Office2021.Word.CommentsExt
         /// <para>dateUtc, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: w16cex:dateUtc</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w16cex=http://schemas.microsoft.com/office/word/2018/wordml/cex
-        /// </remark>
+        /// </remarks>
         public DateTimeValue? DateUtc
         {
             get => GetAttribute<DateTimeValue>();
@@ -185,9 +185,9 @@ namespace DocumentFormat.OpenXml.Office2021.Word.CommentsExt
         /// <para>intelligentPlaceholder, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: w16cex:intelligentPlaceholder</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w16cex=http://schemas.microsoft.com/office/word/2018/wordml/cex
-        /// </remark>
+        /// </remarks>
         public OnOffValue? IntelligentPlaceholder
         {
             get => GetAttribute<OnOffValue>();
@@ -225,9 +225,9 @@ namespace DocumentFormat.OpenXml.Office2021.Word.CommentsExt
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: w16cex:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w16cex = http://schemas.microsoft.com/office/word/2018/wordml/cex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2021.Word.CommentsExt.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Office2021.Word.CommentsExt.ExtensionList>();
@@ -243,12 +243,12 @@ namespace DocumentFormat.OpenXml.Office2021.Word.CommentsExt
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w16cex:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Word.ExtensionList.Extension" /> <c>&lt;w16cur:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ExtensionList : OpenXmlCompositeElement
     {
         /// <summary>

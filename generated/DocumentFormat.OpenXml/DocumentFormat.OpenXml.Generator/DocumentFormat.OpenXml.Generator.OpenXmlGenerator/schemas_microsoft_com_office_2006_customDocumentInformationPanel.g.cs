@@ -21,14 +21,14 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cdip:customPropertyEditors.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.CustomPropertyEditor" /> <c>&lt;cdip:customPropertyEditor></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.DefaultPropertyEditorNamespace" /> <c>&lt;cdip:defaultPropertyEditorNamespace></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.ShowOnOpen" /> <c>&lt;cdip:showOnOpen></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class CustomPropertyEditors : OpenXmlCompositeElement
     {
         /// <summary>
@@ -81,9 +81,9 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
         /// <para>ShowOnOpen.</para>
         /// <para>Represents the following element tag in the schema: cdip:showOnOpen.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cdip = http://schemas.microsoft.com/office/2006/customDocumentInformationPanel
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.ShowOnOpen? ShowOnOpen
         {
             get => GetElement<DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.ShowOnOpen>();
@@ -94,9 +94,9 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
         /// <para>DefaultPropertyEditorNamespace.</para>
         /// <para>Represents the following element tag in the schema: cdip:defaultPropertyEditorNamespace.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cdip = http://schemas.microsoft.com/office/2006/customDocumentInformationPanel
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.DefaultPropertyEditorNamespace? DefaultPropertyEditorNamespace
         {
             get => GetElement<DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.DefaultPropertyEditorNamespace>();
@@ -263,13 +263,13 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cdip:customPropertyEditor.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.PropertyEditorNamespace" /> <c>&lt;cdip:XMLNamespace></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.XsnFileLocation" /> <c>&lt;cdip:XSNLocation></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class CustomPropertyEditor : OpenXmlCompositeElement
     {
         /// <summary>
@@ -320,9 +320,9 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
         /// <para>PropertyEditorNamespace.</para>
         /// <para>Represents the following element tag in the schema: cdip:XMLNamespace.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cdip = http://schemas.microsoft.com/office/2006/customDocumentInformationPanel
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.PropertyEditorNamespace? PropertyEditorNamespace
         {
             get => GetElement<DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.PropertyEditorNamespace>();
@@ -333,9 +333,9 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
         /// <para>XsnFileLocation.</para>
         /// <para>Represents the following element tag in the schema: cdip:XSNLocation.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cdip = http://schemas.microsoft.com/office/2006/customDocumentInformationPanel
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.XsnFileLocation? XsnFileLocation
         {
             get => GetElement<DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel.XsnFileLocation>();

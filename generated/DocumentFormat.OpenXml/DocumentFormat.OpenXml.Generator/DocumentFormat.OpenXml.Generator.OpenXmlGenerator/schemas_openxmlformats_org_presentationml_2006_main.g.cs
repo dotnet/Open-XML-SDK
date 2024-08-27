@@ -664,12 +664,12 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:clrMap.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ColorMap : OpenXmlCompositeElement
     {
         /// <summary>
@@ -899,9 +899,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: a:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>();
@@ -917,13 +917,13 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:clrMapOvr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.OverrideColorMapping" /> <c>&lt;a:overrideClrMapping></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.MasterColorMapping" /> <c>&lt;a:masterClrMapping></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ColorMapOverride : OpenXmlCompositeElement
     {
         /// <summary>
@@ -977,9 +977,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Master Color Mapping.</para>
         /// <para>Represents the following element tag in the schema: a:masterClrMapping.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.MasterColorMapping? MasterColorMapping
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.MasterColorMapping>();
@@ -990,9 +990,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Override Color Mapping.</para>
         /// <para>Represents the following element tag in the schema: a:overrideClrMapping.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.OverrideColorMapping? OverrideColorMapping
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.OverrideColorMapping>();
@@ -1008,7 +1008,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:bgPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.BlipFill" /> <c>&lt;a:blipFill></c></description></item>
@@ -1020,7 +1020,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SolidFill" /> <c>&lt;a:solidFill></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ExtensionList" /> <c>&lt;p:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class BackgroundProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1112,7 +1112,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:bgRef.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HslColor" /> <c>&lt;a:hslClr></c></description></item>
@@ -1122,7 +1122,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.RgbColorModelHex" /> <c>&lt;a:srgbClr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SystemColor" /> <c>&lt;a:sysClr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class BackgroundStyleReference : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1202,9 +1202,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>RGB Color Model - Percentage Variant.</para>
         /// <para>Represents the following element tag in the schema: a:scrgbClr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage? RgbColorModelPercentage
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage>();
@@ -1215,9 +1215,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>RGB Color Model - Hex Variant.</para>
         /// <para>Represents the following element tag in the schema: a:srgbClr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.RgbColorModelHex? RgbColorModelHex
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelHex>();
@@ -1228,9 +1228,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Hue, Saturation, Luminance Color Model.</para>
         /// <para>Represents the following element tag in the schema: a:hslClr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.HslColor? HslColor
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.HslColor>();
@@ -1241,9 +1241,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>System Color.</para>
         /// <para>Represents the following element tag in the schema: a:sysClr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.SystemColor? SystemColor
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.SystemColor>();
@@ -1254,9 +1254,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Scheme Color.</para>
         /// <para>Represents the following element tag in the schema: a:schemeClr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.SchemeColor? SchemeColor
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.SchemeColor>();
@@ -1267,9 +1267,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Preset Color.</para>
         /// <para>Represents the following element tag in the schema: a:prstClr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.PresetColor? PresetColor
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.PresetColor>();
@@ -1285,13 +1285,13 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:ext.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main.Reactions" /> <c>&lt;p223:reactions></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskDetails" /> <c>&lt;p228:taskDetails></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class CommentPropertiesExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1343,9 +1343,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>TaskDetails, this property is only available in Microsoft365 and later..</para>
         /// <para>Represents the following element tag in the schema: p228:taskDetails.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p228 = http://schemas.microsoft.com/office/powerpoint/2022/08/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskDetails? TaskDetails
         {
             get => GetElement<DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskDetails>();
@@ -1356,9 +1356,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Reactions, this property is only available in Microsoft365 and later..</para>
         /// <para>Represents the following element tag in the schema: p223:reactions.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p223 = http://schemas.microsoft.com/office/powerpoint/2022/03/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main.Reactions? Reactions
         {
             get => GetElement<DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M03.Main.Reactions>();
@@ -1374,12 +1374,12 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:cmAuthorLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CommentAuthor" /> <c>&lt;p:cmAuthor></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class CommentAuthorList : OpenXmlPartRootElement
     {
         /// <summary>
@@ -1464,12 +1464,12 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:cmLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Comment" /> <c>&lt;p:cm></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class CommentList : OpenXmlPartRootElement
     {
         /// <summary>
@@ -1554,14 +1554,14 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:oleObj.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.OleObjectEmbed" /> <c>&lt;p:embed></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.OleObjectLink" /> <c>&lt;p:link></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Picture" /> <c>&lt;p:pic></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class OleObject : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1629,9 +1629,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: r:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -1713,7 +1713,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:presentation.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.NotesSize" /> <c>&lt;p:notesSz></c></description></item>
@@ -1731,7 +1731,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.SlideMasterIdList" /> <c>&lt;p:sldMasterIdLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.SlideSize" /> <c>&lt;p:sldSz></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Presentation : OpenXmlPartRootElement
     {
         /// <summary>
@@ -1943,9 +1943,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>SlideMasterIdList.</para>
         /// <para>Represents the following element tag in the schema: p:sldMasterIdLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.SlideMasterIdList? SlideMasterIdList
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.SlideMasterIdList>();
@@ -1956,9 +1956,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>NotesMasterIdList.</para>
         /// <para>Represents the following element tag in the schema: p:notesMasterIdLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.NotesMasterIdList? NotesMasterIdList
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.NotesMasterIdList>();
@@ -1969,9 +1969,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>HandoutMasterIdList.</para>
         /// <para>Represents the following element tag in the schema: p:handoutMasterIdLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.HandoutMasterIdList? HandoutMasterIdList
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.HandoutMasterIdList>();
@@ -1982,9 +1982,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>SlideIdList.</para>
         /// <para>Represents the following element tag in the schema: p:sldIdLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.SlideIdList? SlideIdList
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.SlideIdList>();
@@ -1995,9 +1995,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>SlideSize.</para>
         /// <para>Represents the following element tag in the schema: p:sldSz.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.SlideSize? SlideSize
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.SlideSize>();
@@ -2008,9 +2008,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>NotesSize.</para>
         /// <para>Represents the following element tag in the schema: p:notesSz.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.NotesSize? NotesSize
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.NotesSize>();
@@ -2021,9 +2021,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>EmbeddedFontList.</para>
         /// <para>Represents the following element tag in the schema: p:embeddedFontLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.EmbeddedFontList? EmbeddedFontList
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.EmbeddedFontList>();
@@ -2034,9 +2034,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>CustomShowList.</para>
         /// <para>Represents the following element tag in the schema: p:custShowLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.CustomShowList? CustomShowList
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.CustomShowList>();
@@ -2047,9 +2047,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>PhotoAlbum.</para>
         /// <para>Represents the following element tag in the schema: p:photoAlbum.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.PhotoAlbum? PhotoAlbum
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.PhotoAlbum>();
@@ -2060,9 +2060,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>CustomerDataList.</para>
         /// <para>Represents the following element tag in the schema: p:custDataLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.CustomerDataList? CustomerDataList
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.CustomerDataList>();
@@ -2073,9 +2073,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Kinsoku.</para>
         /// <para>Represents the following element tag in the schema: p:kinsoku.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.Kinsoku? Kinsoku
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.Kinsoku>();
@@ -2086,9 +2086,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>DefaultTextStyle.</para>
         /// <para>Represents the following element tag in the schema: p:defaultTextStyle.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.DefaultTextStyle? DefaultTextStyle
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.DefaultTextStyle>();
@@ -2099,9 +2099,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>ModificationVerifier.</para>
         /// <para>Represents the following element tag in the schema: p:modifyVerifier.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ModificationVerifier? ModificationVerifier
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.ModificationVerifier>();
@@ -2112,9 +2112,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>PresentationExtensionList.</para>
         /// <para>Represents the following element tag in the schema: p:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.PresentationExtensionList? PresentationExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.PresentationExtensionList>();
@@ -2161,7 +2161,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:presentationPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ColorMostRecentlyUsed" /> <c>&lt;p:clrMru></c></description></item>
@@ -2171,7 +2171,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ShowProperties" /> <c>&lt;p:showPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.WebProperties" /> <c>&lt;p:webPr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PresentationProperties : OpenXmlPartRootElement
     {
         /// <summary>
@@ -2230,9 +2230,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>HTML Publishing Properties.</para>
         /// <para>Represents the following element tag in the schema: p:htmlPubPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.HtmlPublishProperties? HtmlPublishProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.HtmlPublishProperties>();
@@ -2243,9 +2243,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Web Properties.</para>
         /// <para>Represents the following element tag in the schema: p:webPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.WebProperties? WebProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.WebProperties>();
@@ -2256,9 +2256,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>PrintingProperties.</para>
         /// <para>Represents the following element tag in the schema: p:prnPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.PrintingProperties? PrintingProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.PrintingProperties>();
@@ -2269,9 +2269,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>ShowProperties.</para>
         /// <para>Represents the following element tag in the schema: p:showPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ShowProperties? ShowProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.ShowProperties>();
@@ -2282,9 +2282,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>ColorMostRecentlyUsed.</para>
         /// <para>Represents the following element tag in the schema: p:clrMru.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ColorMostRecentlyUsed? ColorMostRecentlyUsed
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.ColorMostRecentlyUsed>();
@@ -2295,9 +2295,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>PresentationPropertiesExtensionList.</para>
         /// <para>Represents the following element tag in the schema: p:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.PresentationPropertiesExtensionList? PresentationPropertiesExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.PresentationPropertiesExtensionList>();
@@ -2344,7 +2344,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:sld.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ColorMapOverride" /> <c>&lt;p:clrMapOvr></c></description></item>
@@ -2353,7 +2353,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Timing" /> <c>&lt;p:timing></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Transition" /> <c>&lt;p:transition></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Slide : OpenXmlPartRootElement
     {
         /// <summary>
@@ -2451,9 +2451,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Common slide data for slides.</para>
         /// <para>Represents the following element tag in the schema: p:cSld.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.CommonSlideData? CommonSlideData
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.CommonSlideData>();
@@ -2464,9 +2464,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Color Scheme Map Override.</para>
         /// <para>Represents the following element tag in the schema: p:clrMapOvr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ColorMapOverride? ColorMapOverride
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.ColorMapOverride>();
@@ -2477,9 +2477,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Slide Transition.</para>
         /// <para>Represents the following element tag in the schema: p:transition.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.Transition? Transition
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.Transition>();
@@ -2490,9 +2490,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Slide Timing Information for a Slide.</para>
         /// <para>Represents the following element tag in the schema: p:timing.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.Timing? Timing
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.Timing>();
@@ -2503,9 +2503,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>SlideExtensionList.</para>
         /// <para>Represents the following element tag in the schema: p:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.SlideExtensionList? SlideExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.SlideExtensionList>();
@@ -2552,7 +2552,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:sldLayout.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ColorMapOverride" /> <c>&lt;p:clrMapOvr></c></description></item>
@@ -2562,7 +2562,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Timing" /> <c>&lt;p:timing></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Transition" /> <c>&lt;p:transition></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SlideLayout : OpenXmlPartRootElement
     {
         /// <summary>
@@ -2697,9 +2697,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>CommonSlideData.</para>
         /// <para>Represents the following element tag in the schema: p:cSld.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.CommonSlideData? CommonSlideData
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.CommonSlideData>();
@@ -2710,9 +2710,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Color Scheme Map Override.</para>
         /// <para>Represents the following element tag in the schema: p:clrMapOvr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ColorMapOverride? ColorMapOverride
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.ColorMapOverride>();
@@ -2723,9 +2723,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Transition.</para>
         /// <para>Represents the following element tag in the schema: p:transition.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.Transition? Transition
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.Transition>();
@@ -2736,9 +2736,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Timing.</para>
         /// <para>Represents the following element tag in the schema: p:timing.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.Timing? Timing
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.Timing>();
@@ -2749,9 +2749,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>HeaderFooter.</para>
         /// <para>Represents the following element tag in the schema: p:hf.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.HeaderFooter? HeaderFooter
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.HeaderFooter>();
@@ -2762,9 +2762,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>SlideLayoutExtensionList.</para>
         /// <para>Represents the following element tag in the schema: p:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.SlideLayoutExtensionList? SlideLayoutExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.SlideLayoutExtensionList>();
@@ -2811,7 +2811,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:sldMaster.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ColorMap" /> <c>&lt;p:clrMap></c></description></item>
@@ -2823,7 +2823,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Timing" /> <c>&lt;p:timing></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Transition" /> <c>&lt;p:transition></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SlideMaster : OpenXmlPartRootElement
     {
         /// <summary>
@@ -2904,9 +2904,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>CommonSlideData.</para>
         /// <para>Represents the following element tag in the schema: p:cSld.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.CommonSlideData? CommonSlideData
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.CommonSlideData>();
@@ -2917,9 +2917,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Color Scheme Map.</para>
         /// <para>Represents the following element tag in the schema: p:clrMap.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ColorMap? ColorMap
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.ColorMap>();
@@ -2930,9 +2930,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>SlideLayoutIdList.</para>
         /// <para>Represents the following element tag in the schema: p:sldLayoutIdLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.SlideLayoutIdList? SlideLayoutIdList
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.SlideLayoutIdList>();
@@ -2943,9 +2943,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Transition.</para>
         /// <para>Represents the following element tag in the schema: p:transition.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.Transition? Transition
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.Transition>();
@@ -2956,9 +2956,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Timing.</para>
         /// <para>Represents the following element tag in the schema: p:timing.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.Timing? Timing
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.Timing>();
@@ -2969,9 +2969,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>HeaderFooter.</para>
         /// <para>Represents the following element tag in the schema: p:hf.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.HeaderFooter? HeaderFooter
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.HeaderFooter>();
@@ -2982,9 +2982,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>TextStyles.</para>
         /// <para>Represents the following element tag in the schema: p:txStyles.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.TextStyles? TextStyles
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.TextStyles>();
@@ -2995,9 +2995,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>SlideMasterExtensionList.</para>
         /// <para>Represents the following element tag in the schema: p:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.SlideMasterExtensionList? SlideMasterExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.SlideMasterExtensionList>();
@@ -3044,7 +3044,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:handoutMaster.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ColorMap" /> <c>&lt;p:clrMap></c></description></item>
@@ -3052,7 +3052,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.HandoutMasterExtensionList" /> <c>&lt;p:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.HeaderFooter" /> <c>&lt;p:hf></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class HandoutMaster : OpenXmlPartRootElement
     {
         /// <summary>
@@ -3113,9 +3113,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>CommonSlideData.</para>
         /// <para>Represents the following element tag in the schema: p:cSld.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.CommonSlideData? CommonSlideData
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.CommonSlideData>();
@@ -3126,9 +3126,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Color Scheme Map.</para>
         /// <para>Represents the following element tag in the schema: p:clrMap.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ColorMap? ColorMap
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.ColorMap>();
@@ -3139,9 +3139,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>HeaderFooter.</para>
         /// <para>Represents the following element tag in the schema: p:hf.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.HeaderFooter? HeaderFooter
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.HeaderFooter>();
@@ -3152,9 +3152,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>HandoutMasterExtensionList.</para>
         /// <para>Represents the following element tag in the schema: p:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.HandoutMasterExtensionList? HandoutMasterExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.HandoutMasterExtensionList>();
@@ -3201,7 +3201,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:notesMaster.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ColorMap" /> <c>&lt;p:clrMap></c></description></item>
@@ -3210,7 +3210,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.HeaderFooter" /> <c>&lt;p:hf></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.NotesMasterExtensionList" /> <c>&lt;p:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class NotesMaster : OpenXmlPartRootElement
     {
         /// <summary>
@@ -3273,9 +3273,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>CommonSlideData.</para>
         /// <para>Represents the following element tag in the schema: p:cSld.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.CommonSlideData? CommonSlideData
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.CommonSlideData>();
@@ -3286,9 +3286,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Color Scheme Map.</para>
         /// <para>Represents the following element tag in the schema: p:clrMap.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ColorMap? ColorMap
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.ColorMap>();
@@ -3299,9 +3299,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>HeaderFooter.</para>
         /// <para>Represents the following element tag in the schema: p:hf.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.HeaderFooter? HeaderFooter
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.HeaderFooter>();
@@ -3312,9 +3312,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>NotesStyle.</para>
         /// <para>Represents the following element tag in the schema: p:notesStyle.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.NotesStyle? NotesStyle
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.NotesStyle>();
@@ -3325,9 +3325,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>NotesMasterExtensionList.</para>
         /// <para>Represents the following element tag in the schema: p:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.NotesMasterExtensionList? NotesMasterExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.NotesMasterExtensionList>();
@@ -3374,14 +3374,14 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:notes.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ColorMapOverride" /> <c>&lt;p:clrMapOvr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CommonSlideData" /> <c>&lt;p:cSld></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ExtensionListWithModification" /> <c>&lt;p:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class NotesSlide : OpenXmlPartRootElement
     {
         /// <summary>
@@ -3463,9 +3463,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Common slide data for notes slides.</para>
         /// <para>Represents the following element tag in the schema: p:cSld.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.CommonSlideData? CommonSlideData
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.CommonSlideData>();
@@ -3476,9 +3476,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Color Scheme Map Override.</para>
         /// <para>Represents the following element tag in the schema: p:clrMapOvr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ColorMapOverride? ColorMapOverride
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.ColorMapOverride>();
@@ -3489,9 +3489,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>ExtensionListWithModification.</para>
         /// <para>Represents the following element tag in the schema: p:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ExtensionListWithModification? ExtensionListWithModification
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionListWithModification>();
@@ -3538,12 +3538,12 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:sldSyncPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ExtensionList" /> <c>&lt;p:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SlideSyncProperties : OpenXmlPartRootElement
     {
         /// <summary>
@@ -3635,9 +3635,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: p:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionList>();
@@ -3684,12 +3684,12 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:tagLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Tag" /> <c>&lt;p:tag></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TagList : OpenXmlPartRootElement
     {
         /// <summary>
@@ -3774,7 +3774,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:viewPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.GridSpacing" /> <c>&lt;p:gridSpacing></c></description></item>
@@ -3786,7 +3786,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.SorterViewProperties" /> <c>&lt;p:sorterViewPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.SlideViewProperties" /> <c>&lt;p:slideViewPr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ViewProperties : OpenXmlPartRootElement
     {
         /// <summary>
@@ -3875,9 +3875,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Normal View Properties.</para>
         /// <para>Represents the following element tag in the schema: p:normalViewPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.NormalViewProperties? NormalViewProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.NormalViewProperties>();
@@ -3888,9 +3888,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Slide View Properties.</para>
         /// <para>Represents the following element tag in the schema: p:slideViewPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.SlideViewProperties? SlideViewProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.SlideViewProperties>();
@@ -3901,9 +3901,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Outline View Properties.</para>
         /// <para>Represents the following element tag in the schema: p:outlineViewPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.OutlineViewProperties? OutlineViewProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.OutlineViewProperties>();
@@ -3914,9 +3914,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Notes Text View Properties.</para>
         /// <para>Represents the following element tag in the schema: p:notesTextViewPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.NotesTextViewProperties? NotesTextViewProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.NotesTextViewProperties>();
@@ -3927,9 +3927,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Slide Sorter View Properties.</para>
         /// <para>Represents the following element tag in the schema: p:sorterViewPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.SorterViewProperties? SorterViewProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.SorterViewProperties>();
@@ -3940,9 +3940,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Notes View Properties.</para>
         /// <para>Represents the following element tag in the schema: p:notesViewPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.NotesViewProperties? NotesViewProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.NotesViewProperties>();
@@ -3953,9 +3953,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Grid Spacing.</para>
         /// <para>Represents the following element tag in the schema: p:gridSpacing.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.GridSpacing? GridSpacing
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.GridSpacing>();
@@ -3966,9 +3966,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: p:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionList>();
@@ -4015,14 +4015,14 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:contentPart.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.Transform2D" /> <c>&lt;p14:xfrm></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.ExtensionListModify" /> <c>&lt;p14:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.NonVisualContentPartProperties" /> <c>&lt;p14:nvContentPartPr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ContentPart : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4060,9 +4060,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>bwMode, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: p14:bwMode</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p14=http://schemas.microsoft.com/office/powerpoint/2010/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>? BwMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>();
@@ -4073,9 +4073,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: r:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -4112,9 +4112,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>NonVisualContentPartProperties.</para>
         /// <para>Represents the following element tag in the schema: p14:nvContentPartPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.PowerPoint.NonVisualContentPartProperties? NonVisualContentPartProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.NonVisualContentPartProperties>();
@@ -4125,9 +4125,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Transform2D.</para>
         /// <para>Represents the following element tag in the schema: p14:xfrm.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.PowerPoint.Transform2D? Transform2D
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.Transform2D>();
@@ -4138,9 +4138,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>ExtensionListModify.</para>
         /// <para>Represents the following element tag in the schema: p14:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.PowerPoint.ExtensionListModify? ExtensionListModify
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.ExtensionListModify>();
@@ -4217,9 +4217,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Embedded Audio File Relationship ID</para>
         /// <para>Represents the following attribute in the schema: r:embed</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-        /// </remark>
+        /// </remarks>
         public StringValue? Embed
         {
             get => GetAttribute<StringValue>();
@@ -4264,12 +4264,12 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:stSnd.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Sound" /> <c>&lt;p:snd></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class StartSoundAction : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4330,9 +4330,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Sound.</para>
         /// <para>Represents the following element tag in the schema: p:snd.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.Sound? Sound
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.Sound>();
@@ -4438,7 +4438,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:tgtEl.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.SoundTarget" /> <c>&lt;p:sndTgt></c></description></item>
@@ -4447,7 +4447,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.InkTarget" /> <c>&lt;p:inkTgt></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.BookmarkTarget" /> <c>&lt;p14:bmkTgt></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TargetElement : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4504,9 +4504,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Slide Target.</para>
         /// <para>Represents the following element tag in the schema: p:sldTgt.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.SlideTarget? SlideTarget
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.SlideTarget>();
@@ -4517,9 +4517,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Sound Target.</para>
         /// <para>Represents the following element tag in the schema: p:sndTgt.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.SoundTarget? SoundTarget
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.SoundTarget>();
@@ -4530,9 +4530,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Shape Target.</para>
         /// <para>Represents the following element tag in the schema: p:spTgt.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ShapeTarget? ShapeTarget
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.ShapeTarget>();
@@ -4543,9 +4543,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Ink Target.</para>
         /// <para>Represents the following element tag in the schema: p:inkTgt.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.InkTarget? InkTarget
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.InkTarget>();
@@ -4556,9 +4556,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>BookmarkTarget, this property is only available in Office 2010 and later..</para>
         /// <para>Represents the following element tag in the schema: p14:bmkTgt.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p14 = http://schemas.microsoft.com/office/powerpoint/2010/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.PowerPoint.BookmarkTarget? BookmarkTarget
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.PowerPoint.BookmarkTarget>();
@@ -4653,14 +4653,14 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:cond.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.TargetElement" /> <c>&lt;p:tgtEl></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.RuntimeNodeTrigger" /> <c>&lt;p:rtn></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.TimeNode" /> <c>&lt;p:tn></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Condition : TimeListConditionalType
     {
         /// <summary>
@@ -4715,14 +4715,14 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:endSync.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.TargetElement" /> <c>&lt;p:tgtEl></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.RuntimeNodeTrigger" /> <c>&lt;p:rtn></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.TimeNode" /> <c>&lt;p:tn></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class EndSync : TimeListConditionalType
     {
         /// <summary>
@@ -4777,14 +4777,14 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.TargetElement" /> <c>&lt;p:tgtEl></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.RuntimeNodeTrigger" /> <c>&lt;p:rtn></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.TimeNode" /> <c>&lt;p:tn></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public abstract partial class TimeListConditionalType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4868,9 +4868,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Target Element Trigger Choice.</para>
         /// <para>Represents the following element tag in the schema: p:tgtEl.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.TargetElement? TargetElement
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.TargetElement>();
@@ -4881,9 +4881,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Time Node.</para>
         /// <para>Represents the following element tag in the schema: p:tn.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.TimeNode? TimeNode
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.TimeNode>();
@@ -4894,9 +4894,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Runtime Node Trigger Choice.</para>
         /// <para>Represents the following element tag in the schema: p:rtn.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.RuntimeNodeTrigger? RuntimeNodeTrigger
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.RuntimeNodeTrigger>();
@@ -4909,12 +4909,12 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:par.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CommonTimeNode" /> <c>&lt;p:cTn></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ParallelTimeNode : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4963,9 +4963,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Parallel TimeNode.</para>
         /// <para>Represents the following element tag in the schema: p:cTn.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.CommonTimeNode? CommonTimeNode
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.CommonTimeNode>();
@@ -4981,14 +4981,14 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:seq.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CommonTimeNode" /> <c>&lt;p:cTn></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.PreviousConditionList" /> <c>&lt;p:prevCondLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.NextConditionList" /> <c>&lt;p:nextCondLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SequenceTimeNode : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5081,9 +5081,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Common TimeNode Properties.</para>
         /// <para>Represents the following element tag in the schema: p:cTn.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.CommonTimeNode? CommonTimeNode
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.CommonTimeNode>();
@@ -5094,9 +5094,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Previous Conditions List.</para>
         /// <para>Represents the following element tag in the schema: p:prevCondLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.PreviousConditionList? PreviousConditionList
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.PreviousConditionList>();
@@ -5107,9 +5107,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Next Conditions List.</para>
         /// <para>Represents the following element tag in the schema: p:nextCondLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.NextConditionList? NextConditionList
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.NextConditionList>();
@@ -5125,12 +5125,12 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:excl.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CommonTimeNode" /> <c>&lt;p:cTn></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ExclusiveTimeNode : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5179,9 +5179,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Common TimeNode Properties.</para>
         /// <para>Represents the following element tag in the schema: p:cTn.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.CommonTimeNode? CommonTimeNode
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.CommonTimeNode>();
@@ -5197,13 +5197,13 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:anim.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CommonBehavior" /> <c>&lt;p:cBhvr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.TimeAnimateValueList" /> <c>&lt;p:tavLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Animate : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5291,9 +5291,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>bounceEnd, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: p14:bounceEnd</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p14=http://schemas.microsoft.com/office/powerpoint/2010/main
-        /// </remark>
+        /// </remarks>
         public Int32Value? BounceEnd
         {
             get => GetAttribute<Int32Value>();
@@ -5334,9 +5334,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>CommonBehavior.</para>
         /// <para>Represents the following element tag in the schema: p:cBhvr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.CommonBehavior? CommonBehavior
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.CommonBehavior>();
@@ -5347,9 +5347,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>TimeAnimateValueList.</para>
         /// <para>Represents the following element tag in the schema: p:tavLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.TimeAnimateValueList? TimeAnimateValueList
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.TimeAnimateValueList>();
@@ -5365,7 +5365,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:animClr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.FromColor" /> <c>&lt;p:from></c></description></item>
@@ -5373,7 +5373,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ByColor" /> <c>&lt;p:by></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CommonBehavior" /> <c>&lt;p:cBhvr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class AnimateColor : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5457,9 +5457,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>CommonBehavior.</para>
         /// <para>Represents the following element tag in the schema: p:cBhvr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.CommonBehavior? CommonBehavior
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.CommonBehavior>();
@@ -5470,9 +5470,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>By.</para>
         /// <para>Represents the following element tag in the schema: p:by.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ByColor? ByColor
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.ByColor>();
@@ -5483,9 +5483,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>From.</para>
         /// <para>Represents the following element tag in the schema: p:from.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.FromColor? FromColor
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.FromColor>();
@@ -5496,9 +5496,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>To.</para>
         /// <para>Represents the following element tag in the schema: p:to.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ToColor? ToColor
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.ToColor>();
@@ -5514,13 +5514,13 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:animEffect.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Progress" /> <c>&lt;p:progress></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CommonBehavior" /> <c>&lt;p:cBhvr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class AnimateEffect : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5608,9 +5608,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>CommonBehavior.</para>
         /// <para>Represents the following element tag in the schema: p:cBhvr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.CommonBehavior? CommonBehavior
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.CommonBehavior>();
@@ -5621,9 +5621,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Progress.</para>
         /// <para>Represents the following element tag in the schema: p:progress.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.Progress? Progress
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.Progress>();
@@ -5639,7 +5639,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:animMotion.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CommonBehavior" /> <c>&lt;p:cBhvr></c></description></item>
@@ -5648,7 +5648,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ToPosition" /> <c>&lt;p:to></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.RotationCenter" /> <c>&lt;p:rCtr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class AnimateMotion : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5736,9 +5736,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>bounceEnd, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: p14:bounceEnd</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p14=http://schemas.microsoft.com/office/powerpoint/2010/main
-        /// </remark>
+        /// </remarks>
         public Int32Value? BounceEnd
         {
             get => GetAttribute<Int32Value>();
@@ -5786,9 +5786,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>CommonBehavior.</para>
         /// <para>Represents the following element tag in the schema: p:cBhvr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.CommonBehavior? CommonBehavior
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.CommonBehavior>();
@@ -5799,9 +5799,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>ByPosition.</para>
         /// <para>Represents the following element tag in the schema: p:by.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ByPosition? ByPosition
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.ByPosition>();
@@ -5812,9 +5812,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>FromPosition.</para>
         /// <para>Represents the following element tag in the schema: p:from.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.FromPosition? FromPosition
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.FromPosition>();
@@ -5825,9 +5825,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>ToPosition.</para>
         /// <para>Represents the following element tag in the schema: p:to.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ToPosition? ToPosition
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.ToPosition>();
@@ -5838,9 +5838,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>RotationCenter.</para>
         /// <para>Represents the following element tag in the schema: p:rCtr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.RotationCenter? RotationCenter
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.RotationCenter>();
@@ -5856,12 +5856,12 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:animRot.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CommonBehavior" /> <c>&lt;p:cBhvr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class AnimateRotation : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5929,9 +5929,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>bounceEnd, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: p14:bounceEnd</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p14=http://schemas.microsoft.com/office/powerpoint/2010/main
-        /// </remark>
+        /// </remarks>
         public Int32Value? BounceEnd
         {
             get => GetAttribute<Int32Value>();
@@ -5965,9 +5965,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>CommonBehavior.</para>
         /// <para>Represents the following element tag in the schema: p:cBhvr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.CommonBehavior? CommonBehavior
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.CommonBehavior>();
@@ -5983,7 +5983,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:animScale.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CommonBehavior" /> <c>&lt;p:cBhvr></c></description></item>
@@ -5991,7 +5991,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.FromPosition" /> <c>&lt;p:from></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ToPosition" /> <c>&lt;p:to></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class AnimateScale : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6039,9 +6039,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>bounceEnd, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: p14:bounceEnd</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p14=http://schemas.microsoft.com/office/powerpoint/2010/main
-        /// </remark>
+        /// </remarks>
         public Int32Value? BounceEnd
         {
             get => GetAttribute<Int32Value>();
@@ -6076,9 +6076,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>CommonBehavior.</para>
         /// <para>Represents the following element tag in the schema: p:cBhvr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.CommonBehavior? CommonBehavior
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.CommonBehavior>();
@@ -6089,9 +6089,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>ByPosition.</para>
         /// <para>Represents the following element tag in the schema: p:by.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ByPosition? ByPosition
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.ByPosition>();
@@ -6102,9 +6102,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>FromPosition.</para>
         /// <para>Represents the following element tag in the schema: p:from.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.FromPosition? FromPosition
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.FromPosition>();
@@ -6115,9 +6115,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>ToPosition.</para>
         /// <para>Represents the following element tag in the schema: p:to.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ToPosition? ToPosition
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.ToPosition>();
@@ -6133,12 +6133,12 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:cmd.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CommonBehavior" /> <c>&lt;p:cBhvr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Command : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6213,9 +6213,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>CommonBehavior.</para>
         /// <para>Represents the following element tag in the schema: p:cBhvr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.CommonBehavior? CommonBehavior
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.CommonBehavior>();
@@ -6231,13 +6231,13 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:set.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ToVariantValue" /> <c>&lt;p:to></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CommonBehavior" /> <c>&lt;p:cBhvr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SetBehavior : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6288,9 +6288,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Common Behavior.</para>
         /// <para>Represents the following element tag in the schema: p:cBhvr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.CommonBehavior? CommonBehavior
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.CommonBehavior>();
@@ -6301,9 +6301,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>To.</para>
         /// <para>Represents the following element tag in the schema: p:to.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ToVariantValue? ToVariantValue
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.ToVariantValue>();
@@ -6319,12 +6319,12 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:audio.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CommonMediaNode" /> <c>&lt;p:cMediaNode></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Audio : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6385,9 +6385,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Common Media Node Properties.</para>
         /// <para>Represents the following element tag in the schema: p:cMediaNode.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.CommonMediaNode? CommonMediaNode
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.CommonMediaNode>();
@@ -6403,12 +6403,12 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:video.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CommonMediaNode" /> <c>&lt;p:cMediaNode></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Video : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6469,9 +6469,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Common Media Node Properties.</para>
         /// <para>Represents the following element tag in the schema: p:cMediaNode.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.CommonMediaNode? CommonMediaNode
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.CommonMediaNode>();
@@ -6487,7 +6487,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:cTn.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ChildTimeNodeList" /> <c>&lt;p:childTnLst></c></description></item>
@@ -6497,7 +6497,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.StartConditionList" /> <c>&lt;p:stCondLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.EndConditionList" /> <c>&lt;p:endCondLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class CommonTimeNode : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6765,9 +6765,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>presetBounceEnd, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: p14:presetBounceEnd</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p14=http://schemas.microsoft.com/office/powerpoint/2010/main
-        /// </remark>
+        /// </remarks>
         public Int32Value? PresetBounceEnd
         {
             get => GetAttribute<Int32Value>();
@@ -6853,9 +6853,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>StartConditionList.</para>
         /// <para>Represents the following element tag in the schema: p:stCondLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.StartConditionList? StartConditionList
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.StartConditionList>();
@@ -6866,9 +6866,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>EndConditionList.</para>
         /// <para>Represents the following element tag in the schema: p:endCondLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.EndConditionList? EndConditionList
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.EndConditionList>();
@@ -6879,9 +6879,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>EndSync.</para>
         /// <para>Represents the following element tag in the schema: p:endSync.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.EndSync? EndSync
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.EndSync>();
@@ -6892,9 +6892,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Iterate.</para>
         /// <para>Represents the following element tag in the schema: p:iterate.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.Iterate? Iterate
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.Iterate>();
@@ -6905,9 +6905,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>ChildTimeNodeList.</para>
         /// <para>Represents the following element tag in the schema: p:childTnLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ChildTimeNodeList? ChildTimeNodeList
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.ChildTimeNodeList>();
@@ -6918,9 +6918,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>SubTimeNodeList.</para>
         /// <para>Represents the following element tag in the schema: p:subTnLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.SubTimeNodeList? SubTimeNodeList
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.SubTimeNodeList>();
@@ -6936,12 +6936,12 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:prevCondLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Condition" /> <c>&lt;p:cond></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PreviousConditionList : TimeListTimeConditionalListType
     {
         /// <summary>
@@ -6994,12 +6994,12 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:nextCondLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Condition" /> <c>&lt;p:cond></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class NextConditionList : TimeListTimeConditionalListType
     {
         /// <summary>
@@ -7052,12 +7052,12 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:stCondLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Condition" /> <c>&lt;p:cond></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class StartConditionList : TimeListTimeConditionalListType
     {
         /// <summary>
@@ -7110,12 +7110,12 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:endCondLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Condition" /> <c>&lt;p:cond></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class EndConditionList : TimeListTimeConditionalListType
     {
         /// <summary>
@@ -7168,12 +7168,12 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Condition" /> <c>&lt;p:cond></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public abstract partial class TimeListTimeConditionalListType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7293,12 +7293,12 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:attrNameLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.AttributeName" /> <c>&lt;p:attrName></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class AttributeNameList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7508,7 +7508,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:clrVal.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HslColor" /> <c>&lt;a:hslClr></c></description></item>
@@ -7518,7 +7518,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.RgbColorModelHex" /> <c>&lt;a:srgbClr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SystemColor" /> <c>&lt;a:sysClr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ColorValue : ColorType
     {
         /// <summary>
@@ -7582,7 +7582,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:penClr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HslColor" /> <c>&lt;a:hslClr></c></description></item>
@@ -7592,7 +7592,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.RgbColorModelHex" /> <c>&lt;a:srgbClr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SystemColor" /> <c>&lt;a:sysClr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PenColor : ColorType
     {
         /// <summary>
@@ -7656,7 +7656,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HslColor" /> <c>&lt;a:hslClr></c></description></item>
@@ -7666,7 +7666,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.RgbColorModelHex" /> <c>&lt;a:srgbClr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SystemColor" /> <c>&lt;a:sysClr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public abstract partial class ColorType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7715,9 +7715,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>RGB Color Model - Percentage Variant.</para>
         /// <para>Represents the following element tag in the schema: a:scrgbClr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage? RgbColorModelPercentage
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage>();
@@ -7728,9 +7728,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>RGB Color Model - Hex Variant.</para>
         /// <para>Represents the following element tag in the schema: a:srgbClr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.RgbColorModelHex? RgbColorModelHex
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelHex>();
@@ -7741,9 +7741,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Hue, Saturation, Luminance Color Model.</para>
         /// <para>Represents the following element tag in the schema: a:hslClr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.HslColor? HslColor
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.HslColor>();
@@ -7754,9 +7754,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>System Color.</para>
         /// <para>Represents the following element tag in the schema: a:sysClr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.SystemColor? SystemColor
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.SystemColor>();
@@ -7767,9 +7767,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Scheme Color.</para>
         /// <para>Represents the following element tag in the schema: a:schemeClr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.SchemeColor? SchemeColor
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.SchemeColor>();
@@ -7780,9 +7780,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Preset Color.</para>
         /// <para>Represents the following element tag in the schema: a:prstClr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.PresetColor? PresetColor
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.PresetColor>();
@@ -7795,12 +7795,12 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:tav.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.VariantValue" /> <c>&lt;p:val></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TimeAnimateValue : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7879,9 +7879,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Value.</para>
         /// <para>Represents the following element tag in the schema: p:val.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.VariantValue? VariantValue
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.VariantValue>();
@@ -8036,14 +8036,14 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:cBhvr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.AttributeNameList" /> <c>&lt;p:attrNameLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CommonTimeNode" /> <c>&lt;p:cTn></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.TargetElement" /> <c>&lt;p:tgtEl></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class CommonBehavior : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8197,9 +8197,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>CommonTimeNode.</para>
         /// <para>Represents the following element tag in the schema: p:cTn.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.CommonTimeNode? CommonTimeNode
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.CommonTimeNode>();
@@ -8210,9 +8210,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Target Element.</para>
         /// <para>Represents the following element tag in the schema: p:tgtEl.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.TargetElement? TargetElement
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.TargetElement>();
@@ -8223,9 +8223,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Attribute Name List.</para>
         /// <para>Represents the following element tag in the schema: p:attrNameLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.AttributeNameList? AttributeNameList
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.AttributeNameList>();
@@ -8241,12 +8241,12 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:progress.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.FloatVariantValue" /> <c>&lt;p:fltVal></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Progress : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8295,9 +8295,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Float Value.</para>
         /// <para>Represents the following element tag in the schema: p:fltVal.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.FloatVariantValue? FloatVariantValue
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.FloatVariantValue>();
@@ -8313,7 +8313,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:to.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ColorValue" /> <c>&lt;p:clrVal></c></description></item>
@@ -8322,7 +8322,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.IntegerVariantValue" /> <c>&lt;p:intVal></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.StringVariantValue" /> <c>&lt;p:strVal></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ToVariantValue : TimeListAnimationVariantType
     {
         /// <summary>
@@ -8379,7 +8379,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:val.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ColorValue" /> <c>&lt;p:clrVal></c></description></item>
@@ -8388,7 +8388,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.IntegerVariantValue" /> <c>&lt;p:intVal></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.StringVariantValue" /> <c>&lt;p:strVal></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class VariantValue : TimeListAnimationVariantType
     {
         /// <summary>
@@ -8445,7 +8445,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ColorValue" /> <c>&lt;p:clrVal></c></description></item>
@@ -8454,7 +8454,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.IntegerVariantValue" /> <c>&lt;p:intVal></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.StringVariantValue" /> <c>&lt;p:strVal></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public abstract partial class TimeListAnimationVariantType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8502,9 +8502,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Boolean Variant.</para>
         /// <para>Represents the following element tag in the schema: p:boolVal.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.BooleanVariantValue? BooleanVariantValue
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.BooleanVariantValue>();
@@ -8515,9 +8515,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Integer.</para>
         /// <para>Represents the following element tag in the schema: p:intVal.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.IntegerVariantValue? IntegerVariantValue
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.IntegerVariantValue>();
@@ -8528,9 +8528,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Float Value.</para>
         /// <para>Represents the following element tag in the schema: p:fltVal.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.FloatVariantValue? FloatVariantValue
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.FloatVariantValue>();
@@ -8541,9 +8541,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>String Value.</para>
         /// <para>Represents the following element tag in the schema: p:strVal.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.StringVariantValue? StringVariantValue
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.StringVariantValue>();
@@ -8554,9 +8554,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Color Value.</para>
         /// <para>Represents the following element tag in the schema: p:clrVal.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ColorValue? ColorValue
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.ColorValue>();
@@ -8569,13 +8569,13 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:cMediaNode.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CommonTimeNode" /> <c>&lt;p:cTn></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.TargetElement" /> <c>&lt;p:tgtEl></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class CommonMediaNode : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8674,9 +8674,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Common Time Node Properties.</para>
         /// <para>Represents the following element tag in the schema: p:cTn.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.CommonTimeNode? CommonTimeNode
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.CommonTimeNode>();
@@ -8687,9 +8687,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>TargetElement.</para>
         /// <para>Represents the following element tag in the schema: p:tgtEl.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.TargetElement? TargetElement
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.TargetElement>();
@@ -8705,12 +8705,12 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:tnLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ParallelTimeNode" /> <c>&lt;p:par></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TimeNodeList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8759,9 +8759,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>ParallelTimeNode.</para>
         /// <para>Represents the following element tag in the schema: p:par.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ParallelTimeNode? ParallelTimeNode
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.ParallelTimeNode>();
@@ -8777,12 +8777,12 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:tmpl.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.TimeNodeList" /> <c>&lt;p:tnLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Template : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8845,9 +8845,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Time Node List.</para>
         /// <para>Represents the following element tag in the schema: p:tnLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.TimeNodeList? TimeNodeList
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.TimeNodeList>();
@@ -8863,12 +8863,12 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:tmplLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Template" /> <c>&lt;p:tmpl></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TemplateList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8922,13 +8922,13 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:bldSub.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.BuildChart" /> <c>&lt;a:bldChart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.BuildDiagram" /> <c>&lt;a:bldDgm></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class BuildSubElement : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8979,9 +8979,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Build Diagram.</para>
         /// <para>Represents the following element tag in the schema: a:bldDgm.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.BuildDiagram? BuildDiagram
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.BuildDiagram>();
@@ -8992,9 +8992,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Build Chart.</para>
         /// <para>Represents the following element tag in the schema: a:bldChart.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.BuildChart? BuildChart
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.BuildChart>();
@@ -9010,12 +9010,12 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:bldP.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.TemplateList" /> <c>&lt;p:tmplLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class BuildParagraph : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9189,9 +9189,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Template effects.</para>
         /// <para>Represents the following element tag in the schema: p:tmplLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.TemplateList? TemplateList
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.TemplateList>();
@@ -9384,13 +9384,13 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:bldGraphic.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.BuildSubElement" /> <c>&lt;p:bldSub></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.BuildAsOne" /> <c>&lt;p:bldAsOne></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class BuildGraphics : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9486,9 +9486,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Build As One.</para>
         /// <para>Represents the following element tag in the schema: p:bldAsOne.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.BuildAsOne? BuildAsOne
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.BuildAsOne>();
@@ -9499,9 +9499,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Build Sub Elements.</para>
         /// <para>Represents the following element tag in the schema: p:bldSub.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.BuildSubElement? BuildSubElement
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.BuildSubElement>();
@@ -9517,7 +9517,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:bldLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.BuildDiagram" /> <c>&lt;p:bldDgm></c></description></item>
@@ -9525,7 +9525,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.BuildGraphics" /> <c>&lt;p:bldGraphic></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.BuildOleChart" /> <c>&lt;p:bldOleChart></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class BuildList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9585,12 +9585,12 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Extension" /> <c>&lt;p:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ExtensionListWithModification : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9662,13 +9662,13 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:by.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.HslColor" /> <c>&lt;p:hsl></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.RgbColor" /> <c>&lt;p:rgb></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ByColor : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9719,9 +9719,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>RGB.</para>
         /// <para>Represents the following element tag in the schema: p:rgb.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.RgbColor? RgbColor
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.RgbColor>();
@@ -9732,9 +9732,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>HSL.</para>
         /// <para>Represents the following element tag in the schema: p:hsl.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.HslColor? HslColor
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.HslColor>();
@@ -9750,7 +9750,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:from.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HslColor" /> <c>&lt;a:hslClr></c></description></item>
@@ -9760,7 +9760,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.RgbColorModelHex" /> <c>&lt;a:srgbClr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SystemColor" /> <c>&lt;a:sysClr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class FromColor : Color3Type
     {
         /// <summary>
@@ -9818,7 +9818,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:to.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HslColor" /> <c>&lt;a:hslClr></c></description></item>
@@ -9828,7 +9828,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.RgbColorModelHex" /> <c>&lt;a:srgbClr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SystemColor" /> <c>&lt;a:sysClr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ToColor : Color3Type
     {
         /// <summary>
@@ -9886,7 +9886,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HslColor" /> <c>&lt;a:hslClr></c></description></item>
@@ -9896,7 +9896,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.RgbColorModelHex" /> <c>&lt;a:srgbClr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SystemColor" /> <c>&lt;a:sysClr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public abstract partial class Color3Type : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9945,9 +9945,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>RGB Color Model - Percentage Variant.</para>
         /// <para>Represents the following element tag in the schema: a:scrgbClr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage? RgbColorModelPercentage
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage>();
@@ -9958,9 +9958,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>RGB Color Model - Hex Variant.</para>
         /// <para>Represents the following element tag in the schema: a:srgbClr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.RgbColorModelHex? RgbColorModelHex
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelHex>();
@@ -9971,9 +9971,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Hue, Saturation, Luminance Color Model.</para>
         /// <para>Represents the following element tag in the schema: a:hslClr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.HslColor? HslColor
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.HslColor>();
@@ -9984,9 +9984,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>System Color.</para>
         /// <para>Represents the following element tag in the schema: a:sysClr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.SystemColor? SystemColor
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.SystemColor>();
@@ -9997,9 +9997,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Scheme Color.</para>
         /// <para>Represents the following element tag in the schema: a:schemeClr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.SchemeColor? SchemeColor
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.SchemeColor>();
@@ -10010,9 +10010,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Preset Color.</para>
         /// <para>Represents the following element tag in the schema: a:prstClr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.PresetColor? PresetColor
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.PresetColor>();
@@ -10038,9 +10038,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Relationship ID</para>
         /// <para>Represents the following attribute in the schema: r:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -10081,9 +10081,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Relationship ID</para>
         /// <para>Represents the following attribute in the schema: r:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -10123,9 +10123,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Relationship ID</para>
         /// <para>Represents the following attribute in the schema: r:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -10152,12 +10152,12 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:cmAuthor.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CommentAuthorExtensionList" /> <c>&lt;p:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class CommentAuthor : OpenXmlCompositeElement
     {
         /// <summary>
@@ -10280,9 +10280,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>CommentAuthorExtensionList.</para>
         /// <para>Represents the following element tag in the schema: p:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.CommentAuthorExtensionList? CommentAuthorExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.CommentAuthorExtensionList>();
@@ -10298,14 +10298,14 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:cm.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Position" /> <c>&lt;p:pos></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CommentExtensionList" /> <c>&lt;p:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Text" /> <c>&lt;p:text></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Comment : OpenXmlCompositeElement
     {
         /// <summary>
@@ -10398,9 +10398,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Position.</para>
         /// <para>Represents the following element tag in the schema: p:pos.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.Position? Position
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.Position>();
@@ -10411,9 +10411,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Text.</para>
         /// <para>Represents the following element tag in the schema: p:text.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.Text? Text
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.Text>();
@@ -10424,9 +10424,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>CommentExtensionList.</para>
         /// <para>Represents the following element tag in the schema: p:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.CommentExtensionList? CommentExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.CommentExtensionList>();
@@ -10442,12 +10442,12 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Extension" /> <c>&lt;p:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -10507,13 +10507,13 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:control.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ExtensionList" /> <c>&lt;p:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Picture" /> <c>&lt;p:pic></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Control : OpenXmlCompositeElement
     {
         /// <summary>
@@ -10581,9 +10581,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: r:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -10643,9 +10643,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: p:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionList>();
@@ -10656,9 +10656,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Picture.</para>
         /// <para>Represents the following element tag in the schema: p:pic.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.Picture? Picture
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.Picture>();
@@ -10674,12 +10674,12 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:sldId.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ExtensionList" /> <c>&lt;p:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SlideId : OpenXmlCompositeElement
     {
         /// <summary>
@@ -10727,9 +10727,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Relationship Identifier</para>
         /// <para>Represents the following attribute in the schema: r:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-        /// </remark>
+        /// </remarks>
         public StringValue? RelationshipId
         {
             get => GetAttribute<StringValue>();
@@ -10763,9 +10763,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: p:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionList>();
@@ -10781,12 +10781,12 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:sldMasterId.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ExtensionList" /> <c>&lt;p:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SlideMasterId : OpenXmlCompositeElement
     {
         /// <summary>
@@ -10834,9 +10834,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Relationship Identifier</para>
         /// <para>Represents the following attribute in the schema: r:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-        /// </remark>
+        /// </remarks>
         public StringValue? RelationshipId
         {
             get => GetAttribute<StringValue>();
@@ -10869,9 +10869,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: p:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionList>();
@@ -10887,12 +10887,12 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:notesMasterId.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ExtensionList" /> <c>&lt;p:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class NotesMasterId : OpenXmlCompositeElement
     {
         /// <summary>
@@ -10930,9 +10930,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Relationship Identifier</para>
         /// <para>Represents the following attribute in the schema: r:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -10960,9 +10960,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: p:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionList>();
@@ -10978,12 +10978,12 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:handoutMasterId.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ExtensionList" /> <c>&lt;p:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class HandoutMasterId : OpenXmlCompositeElement
     {
         /// <summary>
@@ -11021,9 +11021,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Relationship Identifier</para>
         /// <para>Represents the following attribute in the schema: r:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -11051,9 +11051,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: p:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionList>();
@@ -11250,9 +11250,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Relationship Identifier</para>
         /// <para>Represents the following attribute in the schema: r:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -11275,7 +11275,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:embeddedFont.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Font" /> <c>&lt;p:font></c></description></item>
@@ -11284,7 +11284,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ItalicFont" /> <c>&lt;p:italic></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.BoldItalicFont" /> <c>&lt;p:boldItalic></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class EmbeddedFont : OpenXmlCompositeElement
     {
         /// <summary>
@@ -11341,9 +11341,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Embedded Font Name.</para>
         /// <para>Represents the following element tag in the schema: p:font.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.Font? Font
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.Font>();
@@ -11354,9 +11354,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Regular Embedded Font.</para>
         /// <para>Represents the following element tag in the schema: p:regular.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.RegularFont? RegularFont
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.RegularFont>();
@@ -11367,9 +11367,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Bold Embedded Font.</para>
         /// <para>Represents the following element tag in the schema: p:bold.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.BoldFont? BoldFont
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.BoldFont>();
@@ -11380,9 +11380,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Italic Embedded Font.</para>
         /// <para>Represents the following element tag in the schema: p:italic.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ItalicFont? ItalicFont
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.ItalicFont>();
@@ -11393,9 +11393,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Bold Italic Embedded Font.</para>
         /// <para>Represents the following element tag in the schema: p:boldItalic.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.BoldItalicFont? BoldItalicFont
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.BoldItalicFont>();
@@ -11411,12 +11411,12 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:sldLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.SlideListEntry" /> <c>&lt;p:sld></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SlideList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -11470,13 +11470,13 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:custShow.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ExtensionList" /> <c>&lt;p:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.SlideList" /> <c>&lt;p:sldLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class CustomShow : OpenXmlCompositeElement
     {
         /// <summary>
@@ -11557,9 +11557,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>List of Presentation Slides.</para>
         /// <para>Represents the following element tag in the schema: p:sldLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.SlideList? SlideList
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.SlideList>();
@@ -11570,9 +11570,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: p:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionList>();
@@ -11588,14 +11588,14 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:cNvPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HyperlinkOnClick" /> <c>&lt;a:hlinkClick></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HyperlinkOnHover" /> <c>&lt;a:hlinkHover></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -11710,9 +11710,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Hyperlink associated with clicking or selecting the element..</para>
         /// <para>Represents the following element tag in the schema: a:hlinkClick.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.HyperlinkOnClick? HyperlinkOnClick
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>();
@@ -11723,9 +11723,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Hyperlink associated with hovering over the element..</para>
         /// <para>Represents the following element tag in the schema: a:hlinkHover.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.HyperlinkOnHover? HyperlinkOnHover
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>();
@@ -11736,9 +11736,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Future extension.</para>
         /// <para>Represents the following element tag in the schema: a:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList? NonVisualDrawingPropertiesExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>();
@@ -11754,13 +11754,13 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:cNvSpPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ShapeLocks" /> <c>&lt;a:spLocks></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class NonVisualShapeDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -11823,9 +11823,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Shape Locks.</para>
         /// <para>Represents the following element tag in the schema: a:spLocks.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.ShapeLocks? ShapeLocks
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.ShapeLocks>();
@@ -11836,9 +11836,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: a:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>();
@@ -11854,7 +11854,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:nvPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.AudioFromCD" /> <c>&lt;a:audioCd></c></description></item>
@@ -11866,7 +11866,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CustomerDataList" /> <c>&lt;p:custDataLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.PlaceholderShape" /> <c>&lt;p:ph></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ApplicationNonVisualDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -11958,9 +11958,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Placeholder Shape.</para>
         /// <para>Represents the following element tag in the schema: p:ph.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.PlaceholderShape? PlaceholderShape
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.PlaceholderShape>();
@@ -11976,14 +11976,14 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:nvSpPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties" /> <c>&lt;p:cNvPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.NonVisualShapeDrawingProperties" /> <c>&lt;p:cNvSpPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingProperties" /> <c>&lt;p:nvPr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class NonVisualShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -12036,9 +12036,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Non-Visual Drawing Properties.</para>
         /// <para>Represents the following element tag in the schema: p:cNvPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties? NonVisualDrawingProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties>();
@@ -12049,9 +12049,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Non-Visual Drawing Properties for a Shape.</para>
         /// <para>Represents the following element tag in the schema: p:cNvSpPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.NonVisualShapeDrawingProperties? NonVisualShapeDrawingProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.NonVisualShapeDrawingProperties>();
@@ -12062,9 +12062,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Application Non-Visual Drawing Properties.</para>
         /// <para>Represents the following element tag in the schema: p:nvPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingProperties? ApplicationNonVisualDrawingProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingProperties>();
@@ -12080,7 +12080,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:spPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.BlipFill" /> <c>&lt;a:blipFill></c></description></item>
@@ -12099,7 +12099,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SolidFill" /> <c>&lt;a:solidFill></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Transform2D" /> <c>&lt;a:xfrm></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -12209,9 +12209,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>2D Transform for Individual Objects.</para>
         /// <para>Represents the following element tag in the schema: a:xfrm.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Transform2D? Transform2D
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Transform2D>();
@@ -12227,7 +12227,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:style.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.FontReference" /> <c>&lt;a:fontRef></c></description></item>
@@ -12235,7 +12235,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.FillReference" /> <c>&lt;a:fillRef></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.EffectReference" /> <c>&lt;a:effectRef></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ShapeStyle : OpenXmlCompositeElement
     {
         /// <summary>
@@ -12290,9 +12290,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>LineReference.</para>
         /// <para>Represents the following element tag in the schema: a:lnRef.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.LineReference? LineReference
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.LineReference>();
@@ -12303,9 +12303,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>FillReference.</para>
         /// <para>Represents the following element tag in the schema: a:fillRef.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.FillReference? FillReference
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.FillReference>();
@@ -12316,9 +12316,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>EffectReference.</para>
         /// <para>Represents the following element tag in the schema: a:effectRef.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.EffectReference? EffectReference
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.EffectReference>();
@@ -12329,9 +12329,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Font Reference.</para>
         /// <para>Represents the following element tag in the schema: a:fontRef.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.FontReference? FontReference
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.FontReference>();
@@ -12347,14 +12347,14 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:txBody.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.BodyProperties" /> <c>&lt;a:bodyPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ListStyle" /> <c>&lt;a:lstStyle></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Paragraph" /> <c>&lt;a:p></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TextBody : OpenXmlCompositeElement
     {
         /// <summary>
@@ -12407,9 +12407,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Body Properties.</para>
         /// <para>Represents the following element tag in the schema: a:bodyPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.BodyProperties? BodyProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.BodyProperties>();
@@ -12420,9 +12420,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Text List Styles.</para>
         /// <para>Represents the following element tag in the schema: a:lstStyle.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.ListStyle? ListStyle
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.ListStyle>();
@@ -12438,7 +12438,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:cNvCxnSpPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.StartConnection" /> <c>&lt;a:stCxn></c></description></item>
@@ -12446,7 +12446,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ConnectionShapeLocks" /> <c>&lt;a:cxnSpLocks></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class NonVisualConnectorShapeDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -12501,9 +12501,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Connection Shape Locks.</para>
         /// <para>Represents the following element tag in the schema: a:cxnSpLocks.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.ConnectionShapeLocks? ConnectionShapeLocks
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.ConnectionShapeLocks>();
@@ -12514,9 +12514,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Connection Start.</para>
         /// <para>Represents the following element tag in the schema: a:stCxn.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.StartConnection? StartConnection
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.StartConnection>();
@@ -12527,9 +12527,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Connection End.</para>
         /// <para>Represents the following element tag in the schema: a:endCxn.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.EndConnection? EndConnection
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.EndConnection>();
@@ -12540,9 +12540,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: a:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>();
@@ -12558,14 +12558,14 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:nvCxnSpPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.NonVisualConnectorShapeDrawingProperties" /> <c>&lt;p:cNvCxnSpPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties" /> <c>&lt;p:cNvPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingProperties" /> <c>&lt;p:nvPr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class NonVisualConnectionShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -12618,9 +12618,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Non-Visual Drawing Properties.</para>
         /// <para>Represents the following element tag in the schema: p:cNvPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties? NonVisualDrawingProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties>();
@@ -12631,9 +12631,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Non-Visual Connector Shape Drawing Properties.</para>
         /// <para>Represents the following element tag in the schema: p:cNvCxnSpPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.NonVisualConnectorShapeDrawingProperties? NonVisualConnectorShapeDrawingProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.NonVisualConnectorShapeDrawingProperties>();
@@ -12644,9 +12644,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Application Non-Visual Drawing Properties.</para>
         /// <para>Represents the following element tag in the schema: p:nvPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingProperties? ApplicationNonVisualDrawingProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingProperties>();
@@ -12662,13 +12662,13 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:cNvPicPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NonVisualPicturePropertiesExtensionList" /> <c>&lt;a:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PictureLocks" /> <c>&lt;a:picLocks></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class NonVisualPictureDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -12731,9 +12731,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>PictureLocks.</para>
         /// <para>Represents the following element tag in the schema: a:picLocks.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.PictureLocks? PictureLocks
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.PictureLocks>();
@@ -12744,9 +12744,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>NonVisualPicturePropertiesExtensionList.</para>
         /// <para>Represents the following element tag in the schema: a:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.NonVisualPicturePropertiesExtensionList? NonVisualPicturePropertiesExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualPicturePropertiesExtensionList>();
@@ -12762,14 +12762,14 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:nvPicPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties" /> <c>&lt;p:cNvPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.NonVisualPictureDrawingProperties" /> <c>&lt;p:cNvPicPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingProperties" /> <c>&lt;p:nvPr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class NonVisualPictureProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -12822,9 +12822,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>NonVisualDrawingProperties.</para>
         /// <para>Represents the following element tag in the schema: p:cNvPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties? NonVisualDrawingProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties>();
@@ -12835,9 +12835,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Non-Visual Picture Drawing Properties.</para>
         /// <para>Represents the following element tag in the schema: p:cNvPicPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.NonVisualPictureDrawingProperties? NonVisualPictureDrawingProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.NonVisualPictureDrawingProperties>();
@@ -12848,9 +12848,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>ApplicationNonVisualDrawingProperties.</para>
         /// <para>Represents the following element tag in the schema: p:nvPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingProperties? ApplicationNonVisualDrawingProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingProperties>();
@@ -12866,7 +12866,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:blipFill.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Blip" /> <c>&lt;a:blip></c></description></item>
@@ -12874,7 +12874,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Stretch" /> <c>&lt;a:stretch></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Tile" /> <c>&lt;a:tile></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class BlipFill : OpenXmlCompositeElement
     {
         /// <summary>
@@ -12958,9 +12958,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Blip.</para>
         /// <para>Represents the following element tag in the schema: a:blip.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Blip? Blip
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Blip>();
@@ -12971,9 +12971,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Source Rectangle.</para>
         /// <para>Represents the following element tag in the schema: a:srcRect.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.SourceRectangle? SourceRectangle
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.SourceRectangle>();
@@ -12989,13 +12989,13 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:cNvGraphicFramePr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.GraphicFrameLocks" /> <c>&lt;a:graphicFrameLocks></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class NonVisualGraphicFrameDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -13046,9 +13046,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Graphic Frame Locks.</para>
         /// <para>Represents the following element tag in the schema: a:graphicFrameLocks.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.GraphicFrameLocks? GraphicFrameLocks
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.GraphicFrameLocks>();
@@ -13059,9 +13059,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: a:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>();
@@ -13077,14 +13077,14 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:nvGraphicFramePr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties" /> <c>&lt;p:cNvPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.NonVisualGraphicFrameDrawingProperties" /> <c>&lt;p:cNvGraphicFramePr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingProperties" /> <c>&lt;p:nvPr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class NonVisualGraphicFrameProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -13137,9 +13137,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Non-Visual Drawing Properties.</para>
         /// <para>Represents the following element tag in the schema: p:cNvPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties? NonVisualDrawingProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties>();
@@ -13150,9 +13150,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Non-Visual Graphic Frame Drawing Properties.</para>
         /// <para>Represents the following element tag in the schema: p:cNvGraphicFramePr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.NonVisualGraphicFrameDrawingProperties? NonVisualGraphicFrameDrawingProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.NonVisualGraphicFrameDrawingProperties>();
@@ -13163,9 +13163,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Application Non-Visual Drawing Properties.</para>
         /// <para>Represents the following element tag in the schema: p:nvPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingProperties? ApplicationNonVisualDrawingProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingProperties>();
@@ -13181,13 +13181,13 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:xfrm.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Offset" /> <c>&lt;a:off></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extents" /> <c>&lt;a:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Transform : OpenXmlCompositeElement
     {
         /// <summary>
@@ -13272,9 +13272,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Offset.</para>
         /// <para>Represents the following element tag in the schema: a:off.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Offset? Offset
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Offset>();
@@ -13285,9 +13285,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Extents.</para>
         /// <para>Represents the following element tag in the schema: a:ext.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Extents? Extents
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Extents>();
@@ -13303,13 +13303,13 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:cNvGrpSpPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.GroupShapeLocks" /> <c>&lt;a:grpSpLocks></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class NonVisualGroupShapeDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -13360,9 +13360,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>GroupShapeLocks.</para>
         /// <para>Represents the following element tag in the schema: a:grpSpLocks.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.GroupShapeLocks? GroupShapeLocks
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.GroupShapeLocks>();
@@ -13373,9 +13373,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>NonVisualGroupDrawingShapePropsExtensionList.</para>
         /// <para>Represents the following element tag in the schema: a:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList? NonVisualGroupDrawingShapePropsExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList>();
@@ -13391,7 +13391,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:titleStyle.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
@@ -13406,7 +13406,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Level8ParagraphProperties" /> <c>&lt;a:lvl8pPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Level9ParagraphProperties" /> <c>&lt;a:lvl9pPr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TitleStyle : TextListStyleType
     {
         /// <summary>
@@ -13469,7 +13469,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:bodyStyle.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
@@ -13484,7 +13484,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Level8ParagraphProperties" /> <c>&lt;a:lvl8pPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Level9ParagraphProperties" /> <c>&lt;a:lvl9pPr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class BodyStyle : TextListStyleType
     {
         /// <summary>
@@ -13547,7 +13547,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:otherStyle.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
@@ -13562,7 +13562,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Level8ParagraphProperties" /> <c>&lt;a:lvl8pPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Level9ParagraphProperties" /> <c>&lt;a:lvl9pPr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class OtherStyle : TextListStyleType
     {
         /// <summary>
@@ -13625,7 +13625,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:defaultTextStyle.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
@@ -13640,7 +13640,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Level8ParagraphProperties" /> <c>&lt;a:lvl8pPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Level9ParagraphProperties" /> <c>&lt;a:lvl9pPr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DefaultTextStyle : TextListStyleType
     {
         /// <summary>
@@ -13703,7 +13703,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:notesStyle.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
@@ -13718,7 +13718,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Level8ParagraphProperties" /> <c>&lt;a:lvl8pPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Level9ParagraphProperties" /> <c>&lt;a:lvl9pPr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class NotesStyle : TextListStyleType
     {
         /// <summary>
@@ -13781,7 +13781,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
@@ -13796,7 +13796,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Level8ParagraphProperties" /> <c>&lt;a:lvl8pPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Level9ParagraphProperties" /> <c>&lt;a:lvl9pPr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public abstract partial class TextListStyleType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -13850,9 +13850,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Default Paragraph Style.</para>
         /// <para>Represents the following element tag in the schema: a:defPPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.DefaultParagraphProperties? DefaultParagraphProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.DefaultParagraphProperties>();
@@ -13863,9 +13863,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>List Level 1 Text Style.</para>
         /// <para>Represents the following element tag in the schema: a:lvl1pPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Level1ParagraphProperties? Level1ParagraphProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Level1ParagraphProperties>();
@@ -13876,9 +13876,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>List Level 2 Text Style.</para>
         /// <para>Represents the following element tag in the schema: a:lvl2pPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Level2ParagraphProperties? Level2ParagraphProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Level2ParagraphProperties>();
@@ -13889,9 +13889,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>List Level 3 Text Style.</para>
         /// <para>Represents the following element tag in the schema: a:lvl3pPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Level3ParagraphProperties? Level3ParagraphProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Level3ParagraphProperties>();
@@ -13902,9 +13902,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>List Level 4 Text Style.</para>
         /// <para>Represents the following element tag in the schema: a:lvl4pPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Level4ParagraphProperties? Level4ParagraphProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Level4ParagraphProperties>();
@@ -13915,9 +13915,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>List Level 5 Text Style.</para>
         /// <para>Represents the following element tag in the schema: a:lvl5pPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Level5ParagraphProperties? Level5ParagraphProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Level5ParagraphProperties>();
@@ -13928,9 +13928,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>List Level 6 Text Style.</para>
         /// <para>Represents the following element tag in the schema: a:lvl6pPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Level6ParagraphProperties? Level6ParagraphProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Level6ParagraphProperties>();
@@ -13941,9 +13941,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>List Level 7 Text Style.</para>
         /// <para>Represents the following element tag in the schema: a:lvl7pPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Level7ParagraphProperties? Level7ParagraphProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Level7ParagraphProperties>();
@@ -13954,9 +13954,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>List Level 8 Text Style.</para>
         /// <para>Represents the following element tag in the schema: a:lvl8pPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Level8ParagraphProperties? Level8ParagraphProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Level8ParagraphProperties>();
@@ -13967,9 +13967,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>List Level 9 Text Style.</para>
         /// <para>Represents the following element tag in the schema: a:lvl9pPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Level9ParagraphProperties? Level9ParagraphProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Level9ParagraphProperties>();
@@ -13980,9 +13980,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: a:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>();
@@ -13995,12 +13995,12 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:sldLayoutId.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ExtensionList" /> <c>&lt;p:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SlideLayoutId : OpenXmlCompositeElement
     {
         /// <summary>
@@ -14048,9 +14048,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>ID Tag</para>
         /// <para>Represents the following attribute in the schema: r:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-        /// </remark>
+        /// </remarks>
         public StringValue? RelationshipId
         {
             get => GetAttribute<StringValue>();
@@ -14083,9 +14083,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: p:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionList>();
@@ -14101,7 +14101,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:cSld.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Background" /> <c>&lt;p:bg></c></description></item>
@@ -14110,7 +14110,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CustomerDataList" /> <c>&lt;p:custDataLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ShapeTree" /> <c>&lt;p:spTree></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class CommonSlideData : OpenXmlCompositeElement
     {
         /// <summary>
@@ -14179,9 +14179,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Slide Background.</para>
         /// <para>Represents the following element tag in the schema: p:bg.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.Background? Background
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.Background>();
@@ -14192,9 +14192,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Shape Tree.</para>
         /// <para>Represents the following element tag in the schema: p:spTree.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ShapeTree? ShapeTree
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.ShapeTree>();
@@ -14205,9 +14205,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Customer Data List.</para>
         /// <para>Represents the following element tag in the schema: p:custDataLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.CustomerDataList? CustomerDataList
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.CustomerDataList>();
@@ -14218,9 +14218,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>List of controls.</para>
         /// <para>Represents the following element tag in the schema: p:controls.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ControlList? ControlList
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.ControlList>();
@@ -14231,9 +14231,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>CommonSlideDataExtensionList.</para>
         /// <para>Represents the following element tag in the schema: p:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.CommonSlideDataExtensionList? CommonSlideDataExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.CommonSlideDataExtensionList>();
@@ -14398,13 +14398,13 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:scale.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ScaleX" /> <c>&lt;a:sx></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ScaleY" /> <c>&lt;a:sy></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ScaleFactor : OpenXmlCompositeElement
     {
         /// <summary>
@@ -14455,9 +14455,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Horizontal Ratio.</para>
         /// <para>Represents the following element tag in the schema: a:sx.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.ScaleX? ScaleX
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.ScaleX>();
@@ -14468,9 +14468,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Vertical Ratio.</para>
         /// <para>Represents the following element tag in the schema: a:sy.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.ScaleY? ScaleY
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.ScaleY>();
@@ -14585,13 +14585,13 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:cViewPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Origin" /> <c>&lt;p:origin></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ScaleFactor" /> <c>&lt;p:scale></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class CommonViewProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -14654,9 +14654,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>View Scale.</para>
         /// <para>Represents the following element tag in the schema: p:scale.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ScaleFactor? ScaleFactor
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.ScaleFactor>();
@@ -14667,9 +14667,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>View Origin.</para>
         /// <para>Represents the following element tag in the schema: p:origin.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.Origin? Origin
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.Origin>();
@@ -14698,9 +14698,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Relationship Identifier</para>
         /// <para>Represents the following attribute in the schema: r:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -14739,12 +14739,12 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:sldLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.OutlineViewSlideListEntry" /> <c>&lt;p:sld></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class OutlineViewSlideList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -14848,12 +14848,12 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:guideLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Guide" /> <c>&lt;p:guide></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class GuideList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -14907,13 +14907,13 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:cSldViewPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CommonViewProperties" /> <c>&lt;p:cViewPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.GuideList" /> <c>&lt;p:guideLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class CommonSlideViewProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -14998,9 +14998,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Base properties for Slide View.</para>
         /// <para>Represents the following element tag in the schema: p:cViewPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.CommonViewProperties? CommonViewProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.CommonViewProperties>();
@@ -15011,9 +15011,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>List of Guides.</para>
         /// <para>Represents the following element tag in the schema: p:guideLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.GuideList? GuideList
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.GuideList>();
@@ -15029,14 +15029,14 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:normalViewPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ExtensionList" /> <c>&lt;p:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.RestoredLeft" /> <c>&lt;p:restoredLeft></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.RestoredTop" /> <c>&lt;p:restoredTop></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class NormalViewProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -15151,9 +15151,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Normal View Restored Left Properties.</para>
         /// <para>Represents the following element tag in the schema: p:restoredLeft.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.RestoredLeft? RestoredLeft
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.RestoredLeft>();
@@ -15164,9 +15164,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Normal View Restored Top Properties.</para>
         /// <para>Represents the following element tag in the schema: p:restoredTop.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.RestoredTop? RestoredTop
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.RestoredTop>();
@@ -15177,9 +15177,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: p:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionList>();
@@ -15195,13 +15195,13 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:slideViewPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CommonSlideViewProperties" /> <c>&lt;p:cSldViewPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ExtensionList" /> <c>&lt;p:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SlideViewProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -15252,9 +15252,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>CommonSlideViewProperties.</para>
         /// <para>Represents the following element tag in the schema: p:cSldViewPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.CommonSlideViewProperties? CommonSlideViewProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.CommonSlideViewProperties>();
@@ -15265,9 +15265,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: p:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionList>();
@@ -15283,14 +15283,14 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:outlineViewPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CommonViewProperties" /> <c>&lt;p:cViewPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ExtensionList" /> <c>&lt;p:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.OutlineViewSlideList" /> <c>&lt;p:sldLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class OutlineViewProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -15343,9 +15343,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Common View Properties.</para>
         /// <para>Represents the following element tag in the schema: p:cViewPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.CommonViewProperties? CommonViewProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.CommonViewProperties>();
@@ -15356,9 +15356,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>List of Presentation Slides.</para>
         /// <para>Represents the following element tag in the schema: p:sldLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.OutlineViewSlideList? OutlineViewSlideList
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.OutlineViewSlideList>();
@@ -15369,9 +15369,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: p:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionList>();
@@ -15387,13 +15387,13 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:notesTextViewPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CommonViewProperties" /> <c>&lt;p:cViewPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ExtensionList" /> <c>&lt;p:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class NotesTextViewProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -15444,9 +15444,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Base properties for Notes View.</para>
         /// <para>Represents the following element tag in the schema: p:cViewPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.CommonViewProperties? CommonViewProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.CommonViewProperties>();
@@ -15457,9 +15457,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: p:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionList>();
@@ -15475,13 +15475,13 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:sorterViewPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CommonViewProperties" /> <c>&lt;p:cViewPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ExtensionList" /> <c>&lt;p:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SorterViewProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -15544,9 +15544,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Base properties for Slide Sorter View.</para>
         /// <para>Represents the following element tag in the schema: p:cViewPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.CommonViewProperties? CommonViewProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.CommonViewProperties>();
@@ -15557,9 +15557,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: p:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionList>();
@@ -15575,13 +15575,13 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:notesViewPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CommonSlideViewProperties" /> <c>&lt;p:cSldViewPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ExtensionList" /> <c>&lt;p:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class NotesViewProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -15632,9 +15632,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Common Slide View Properties.</para>
         /// <para>Represents the following element tag in the schema: p:cSldViewPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.CommonSlideViewProperties? CommonSlideViewProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.CommonSlideViewProperties>();
@@ -15645,9 +15645,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: p:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionList>();
@@ -15762,14 +15762,14 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:ext.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.LaserTraceList" /> <c>&lt;p14:laserTraceLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.ShowEventRecordList" /> <c>&lt;p14:showEvtLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.CommentRelationship" /> <c>&lt;p188:commentRel></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SlideExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -15844,12 +15844,12 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:ext.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.CreationId" /> <c>&lt;p14:creationId></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class CommonSlideDataExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -15920,14 +15920,14 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:ext.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.LaserColor" /> <c>&lt;p14:laserClr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.BrowseMode" /> <c>&lt;p14:browseMode></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.ShowMediaControls" /> <c>&lt;p14:showMediaCtrls></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ShowPropertiesExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -16002,7 +16002,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:pic.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.BlipFill" /> <c>&lt;p:blipFill></c></description></item>
@@ -16011,7 +16011,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ExtensionListWithModification" /> <c>&lt;p:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.NonVisualPictureProperties" /> <c>&lt;p:nvPicPr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Picture : OpenXmlCompositeElement
     {
         /// <summary>
@@ -16068,9 +16068,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Non-Visual Properties for a Picture.</para>
         /// <para>Represents the following element tag in the schema: p:nvPicPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.NonVisualPictureProperties? NonVisualPictureProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.NonVisualPictureProperties>();
@@ -16081,9 +16081,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Picture Fill.</para>
         /// <para>Represents the following element tag in the schema: p:blipFill.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.BlipFill? BlipFill
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.BlipFill>();
@@ -16094,9 +16094,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>ShapeProperties.</para>
         /// <para>Represents the following element tag in the schema: p:spPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ShapeProperties? ShapeProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.ShapeProperties>();
@@ -16107,9 +16107,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>ShapeStyle.</para>
         /// <para>Represents the following element tag in the schema: p:style.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ShapeStyle? ShapeStyle
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.ShapeStyle>();
@@ -16120,9 +16120,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>ExtensionListWithModification.</para>
         /// <para>Represents the following element tag in the schema: p:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ExtensionListWithModification? ExtensionListWithModification
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionListWithModification>();
@@ -16138,12 +16138,12 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:embed.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ExtensionList" /> <c>&lt;p:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class OleObjectEmbed : OpenXmlCompositeElement
     {
         /// <summary>
@@ -16207,9 +16207,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: p:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionList>();
@@ -16225,12 +16225,12 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:link.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ExtensionList" /> <c>&lt;p:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class OleObjectLink : OpenXmlCompositeElement
     {
         /// <summary>
@@ -16291,9 +16291,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: p:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionList>();
@@ -16309,7 +16309,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:transition.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.StripsTransition" /> <c>&lt;p:strips></c></description></item>
@@ -16356,7 +16356,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.ShredTransition" /> <c>&lt;p14:shred></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.PowerPoint.PresetTransition" /> <c>&lt;p15:prstTrans></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Transition : OpenXmlCompositeElement
     {
         /// <summary>
@@ -16404,9 +16404,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>dur, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: p14:dur</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p14=http://schemas.microsoft.com/office/powerpoint/2010/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Duration
         {
             get => GetAttribute<StringValue>();
@@ -16557,14 +16557,14 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:timing.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.BuildList" /> <c>&lt;p:bldLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ExtensionListWithModification" /> <c>&lt;p:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.TimeNodeList" /> <c>&lt;p:tnLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Timing : OpenXmlCompositeElement
     {
         /// <summary>
@@ -16617,9 +16617,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>TimeNodeList.</para>
         /// <para>Represents the following element tag in the schema: p:tnLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.TimeNodeList? TimeNodeList
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.TimeNodeList>();
@@ -16630,9 +16630,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Build List.</para>
         /// <para>Represents the following element tag in the schema: p:bldLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.BuildList? BuildList
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.BuildList>();
@@ -16643,9 +16643,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>ExtensionListWithModification.</para>
         /// <para>Represents the following element tag in the schema: p:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ExtensionListWithModification? ExtensionListWithModification
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionListWithModification>();
@@ -16661,12 +16661,12 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.SlideExtension" /> <c>&lt;p:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SlideExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -16720,13 +16720,13 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:bg.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.BackgroundStyleReference" /> <c>&lt;p:bgRef></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.BackgroundProperties" /> <c>&lt;p:bgPr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Background : OpenXmlCompositeElement
     {
         /// <summary>
@@ -16798,9 +16798,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Background Properties.</para>
         /// <para>Represents the following element tag in the schema: p:bgPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.BackgroundProperties? BackgroundProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.BackgroundProperties>();
@@ -16811,9 +16811,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Background Style Reference.</para>
         /// <para>Represents the following element tag in the schema: p:bgRef.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.BackgroundStyleReference? BackgroundStyleReference
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.BackgroundStyleReference>();
@@ -16829,7 +16829,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:spTree.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.GroupShapeProperties" /> <c>&lt;p:grpSpPr></c></description></item>
@@ -16842,7 +16842,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Picture" /> <c>&lt;p:pic></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Shape" /> <c>&lt;p:sp></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ShapeTree : GroupShapeType
     {
         /// <summary>
@@ -16906,7 +16906,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:grpSp.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.GroupShapeProperties" /> <c>&lt;p:grpSpPr></c></description></item>
@@ -16919,7 +16919,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Picture" /> <c>&lt;p:pic></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Shape" /> <c>&lt;p:sp></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class GroupShape : GroupShapeType
     {
         /// <summary>
@@ -16983,7 +16983,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.GroupShapeProperties" /> <c>&lt;p:grpSpPr></c></description></item>
@@ -16996,7 +16996,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Picture" /> <c>&lt;p:pic></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Shape" /> <c>&lt;p:sp></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public abstract partial class GroupShapeType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -17048,9 +17048,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Non-Visual Properties for a Group Shape.</para>
         /// <para>Represents the following element tag in the schema: p:nvGrpSpPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.NonVisualGroupShapeProperties? NonVisualGroupShapeProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.NonVisualGroupShapeProperties>();
@@ -17061,9 +17061,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Group Shape Properties.</para>
         /// <para>Represents the following element tag in the schema: p:grpSpPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.GroupShapeProperties? GroupShapeProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.GroupShapeProperties>();
@@ -17076,13 +17076,13 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:custDataLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CustomerData" /> <c>&lt;p:custData></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CustomerDataTags" /> <c>&lt;p:tags></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class CustomerDataList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -17138,12 +17138,12 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:controls.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Control" /> <c>&lt;p:control></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ControlList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -17197,12 +17197,12 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CommonSlideDataExtension" /> <c>&lt;p:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class CommonSlideDataExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -17256,14 +17256,14 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:nvGrpSpPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties" /> <c>&lt;p:cNvPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.NonVisualGroupShapeDrawingProperties" /> <c>&lt;p:cNvGrpSpPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingProperties" /> <c>&lt;p:nvPr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class NonVisualGroupShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -17316,9 +17316,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Non-visual Drawing Properties.</para>
         /// <para>Represents the following element tag in the schema: p:cNvPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties? NonVisualDrawingProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.NonVisualDrawingProperties>();
@@ -17329,9 +17329,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Non-Visual Group Shape Drawing Properties.</para>
         /// <para>Represents the following element tag in the schema: p:cNvGrpSpPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.NonVisualGroupShapeDrawingProperties? NonVisualGroupShapeDrawingProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.NonVisualGroupShapeDrawingProperties>();
@@ -17342,9 +17342,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Non-Visual Properties.</para>
         /// <para>Represents the following element tag in the schema: p:nvPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingProperties? ApplicationNonVisualDrawingProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingProperties>();
@@ -17360,7 +17360,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:grpSpPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.BlipFill" /> <c>&lt;a:blipFill></c></description></item>
@@ -17375,7 +17375,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Scene3DType" /> <c>&lt;a:scene3d></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SolidFill" /> <c>&lt;a:solidFill></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class GroupShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -17471,9 +17471,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>2D Transform for Grouped Objects.</para>
         /// <para>Represents the following element tag in the schema: a:xfrm.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.TransformGroup? TransformGroup
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.TransformGroup>();
@@ -17489,7 +17489,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:sp.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ShapeProperties" /> <c>&lt;p:spPr></c></description></item>
@@ -17498,7 +17498,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ExtensionListWithModification" /> <c>&lt;p:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.NonVisualShapeProperties" /> <c>&lt;p:nvSpPr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Shape : OpenXmlCompositeElement
     {
         /// <summary>
@@ -17567,9 +17567,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Non-Visual Properties for a Shape.</para>
         /// <para>Represents the following element tag in the schema: p:nvSpPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.NonVisualShapeProperties? NonVisualShapeProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.NonVisualShapeProperties>();
@@ -17580,9 +17580,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>ShapeProperties.</para>
         /// <para>Represents the following element tag in the schema: p:spPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ShapeProperties? ShapeProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.ShapeProperties>();
@@ -17593,9 +17593,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Shape Style.</para>
         /// <para>Represents the following element tag in the schema: p:style.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ShapeStyle? ShapeStyle
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.ShapeStyle>();
@@ -17606,9 +17606,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Shape Text Body.</para>
         /// <para>Represents the following element tag in the schema: p:txBody.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.TextBody? TextBody
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.TextBody>();
@@ -17619,9 +17619,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>ExtensionListWithModification.</para>
         /// <para>Represents the following element tag in the schema: p:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ExtensionListWithModification? ExtensionListWithModification
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionListWithModification>();
@@ -17637,7 +17637,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:graphicFrame.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Graphic" /> <c>&lt;a:graphic></c></description></item>
@@ -17645,7 +17645,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ExtensionListWithModification" /> <c>&lt;p:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.NonVisualGraphicFrameProperties" /> <c>&lt;p:nvGraphicFramePr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class GraphicFrame : OpenXmlCompositeElement
     {
         /// <summary>
@@ -17700,9 +17700,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Non-Visual Properties for a Graphic Frame.</para>
         /// <para>Represents the following element tag in the schema: p:nvGraphicFramePr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.NonVisualGraphicFrameProperties? NonVisualGraphicFrameProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.NonVisualGraphicFrameProperties>();
@@ -17713,9 +17713,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>2D Transform for Graphic Frame.</para>
         /// <para>Represents the following element tag in the schema: p:xfrm.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.Transform? Transform
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.Transform>();
@@ -17726,9 +17726,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Graphic.</para>
         /// <para>Represents the following element tag in the schema: a:graphic.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Graphic? Graphic
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Graphic>();
@@ -17739,9 +17739,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Extension List with Modification Flag.</para>
         /// <para>Represents the following element tag in the schema: p:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ExtensionListWithModification? ExtensionListWithModification
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionListWithModification>();
@@ -17757,7 +17757,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:cxnSp.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ShapeProperties" /> <c>&lt;p:spPr></c></description></item>
@@ -17765,7 +17765,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.NonVisualConnectionShapeProperties" /> <c>&lt;p:nvCxnSpPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ExtensionListWithModification" /> <c>&lt;p:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ConnectionShape : OpenXmlCompositeElement
     {
         /// <summary>
@@ -17820,9 +17820,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Non-Visual Properties for a Connection Shape.</para>
         /// <para>Represents the following element tag in the schema: p:nvCxnSpPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.NonVisualConnectionShapeProperties? NonVisualConnectionShapeProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.NonVisualConnectionShapeProperties>();
@@ -17833,9 +17833,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Shape Properties.</para>
         /// <para>Represents the following element tag in the schema: p:spPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ShapeProperties? ShapeProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.ShapeProperties>();
@@ -17846,9 +17846,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Connector Shape Style.</para>
         /// <para>Represents the following element tag in the schema: p:style.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ShapeStyle? ShapeStyle
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.ShapeStyle>();
@@ -17859,9 +17859,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>ExtensionListWithModification.</para>
         /// <para>Represents the following element tag in the schema: p:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ExtensionListWithModification? ExtensionListWithModification
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionListWithModification>();
@@ -17877,12 +17877,12 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ShowPropertiesExtension" /> <c>&lt;p:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ShowPropertiesExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -17936,7 +17936,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:spTgt.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.GraphicElement" /> <c>&lt;p:graphicEl></c></description></item>
@@ -17945,7 +17945,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.SubShape" /> <c>&lt;p:subSp></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.TextElement" /> <c>&lt;p:txEl></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ShapeTarget : OpenXmlCompositeElement
     {
         /// <summary>
@@ -18020,9 +18020,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Background.</para>
         /// <para>Represents the following element tag in the schema: p:bg.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.BackgroundAnimation? BackgroundAnimation
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.BackgroundAnimation>();
@@ -18033,9 +18033,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Subshape.</para>
         /// <para>Represents the following element tag in the schema: p:subSp.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.SubShape? SubShape
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.SubShape>();
@@ -18046,9 +18046,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>OLE Chart Element.</para>
         /// <para>Represents the following element tag in the schema: p:oleChartEl.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.OleChartElement? OleChartElement
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.OleChartElement>();
@@ -18059,9 +18059,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Text Element.</para>
         /// <para>Represents the following element tag in the schema: p:txEl.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.TextElement? TextElement
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.TextElement>();
@@ -18072,9 +18072,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Graphic Element.</para>
         /// <para>Represents the following element tag in the schema: p:graphicEl.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.GraphicElement? GraphicElement
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.GraphicElement>();
@@ -18174,12 +18174,12 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:ext.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.PowerPoint.PresenceInfo" /> <c>&lt;p15:presenceInfo></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class CommentAuthorExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -18250,12 +18250,12 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:ext.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.PowerPoint.ThreadingInfo" /> <c>&lt;p15:threadingInfo></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class CommentExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -18326,12 +18326,12 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:ext.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.PowerPoint.SlideGuideList" /> <c>&lt;p15:sldGuideLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SlideLayoutExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -18402,12 +18402,12 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:ext.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.PowerPoint.SlideGuideList" /> <c>&lt;p15:sldGuideLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SlideMasterExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -18478,12 +18478,12 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:ext.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.PowerPoint.SlideGuideList" /> <c>&lt;p15:sldGuideLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class HandoutMasterExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -18554,12 +18554,12 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:ext.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.PowerPoint.SlideGuideList" /> <c>&lt;p15:sldGuideLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class NotesMasterExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -18630,12 +18630,12 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:ph.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ExtensionListWithModification" /> <c>&lt;p:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PlaceholderShape : OpenXmlCompositeElement
     {
         /// <summary>
@@ -18749,9 +18749,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>ExtensionListWithModification.</para>
         /// <para>Represents the following element tag in the schema: p:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ExtensionListWithModification? ExtensionListWithModification
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionListWithModification>();
@@ -18767,12 +18767,12 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingPropertiesExtension" /> <c>&lt;p:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ApplicationNonVisualDrawingPropertiesExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -18826,13 +18826,13 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:ext.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.Media" /> <c>&lt;p14:media></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.ModificationId" /> <c>&lt;p14:modId></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ApplicationNonVisualDrawingPropertiesExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -18905,13 +18905,13 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:iterate.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.TimePercentage" /> <c>&lt;p:tmPct></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.TimeAbsolute" /> <c>&lt;p:tmAbs></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Iterate : OpenXmlCompositeElement
     {
         /// <summary>
@@ -18988,9 +18988,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Time Absolute.</para>
         /// <para>Represents the following element tag in the schema: p:tmAbs.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.TimeAbsolute? TimeAbsolute
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.TimeAbsolute>();
@@ -19001,9 +19001,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Time Percentage.</para>
         /// <para>Represents the following element tag in the schema: p:tmPct.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.TimePercentage? TimePercentage
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.TimePercentage>();
@@ -19019,7 +19019,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:childTnLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Animate" /> <c>&lt;p:anim></c></description></item>
@@ -19036,7 +19036,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ParallelTimeNode" /> <c>&lt;p:par></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.SequenceTimeNode" /> <c>&lt;p:seq></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ChildTimeNodeList : TimeTypeListType
     {
         /// <summary>
@@ -19101,7 +19101,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:subTnLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Animate" /> <c>&lt;p:anim></c></description></item>
@@ -19118,7 +19118,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ParallelTimeNode" /> <c>&lt;p:par></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.SequenceTimeNode" /> <c>&lt;p:seq></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SubTimeNodeList : TimeTypeListType
     {
         /// <summary>
@@ -19183,7 +19183,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Animate" /> <c>&lt;p:anim></c></description></item>
@@ -19200,7 +19200,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ParallelTimeNode" /> <c>&lt;p:par></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.SequenceTimeNode" /> <c>&lt;p:seq></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public abstract partial class TimeTypeListType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -19258,12 +19258,12 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:tavLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.TimeAnimateValue" /> <c>&lt;p:tav></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TimeAnimateValueList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -19462,12 +19462,12 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CommentAuthorExtension" /> <c>&lt;p:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class CommentAuthorExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -19521,12 +19521,12 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CommentExtension" /> <c>&lt;p:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class CommentExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -19580,12 +19580,12 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:sldMasterIdLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.SlideMasterId" /> <c>&lt;p:sldMasterId></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SlideMasterIdList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -19639,12 +19639,12 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:notesMasterIdLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.NotesMasterId" /> <c>&lt;p:notesMasterId></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class NotesMasterIdList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -19693,9 +19693,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Notes Master ID.</para>
         /// <para>Represents the following element tag in the schema: p:notesMasterId.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.NotesMasterId? NotesMasterId
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.NotesMasterId>();
@@ -19711,12 +19711,12 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:handoutMasterIdLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.HandoutMasterId" /> <c>&lt;p:handoutMasterId></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class HandoutMasterIdList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -19765,9 +19765,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Handout Master ID.</para>
         /// <para>Represents the following element tag in the schema: p:handoutMasterId.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.HandoutMasterId? HandoutMasterId
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.HandoutMasterId>();
@@ -19783,12 +19783,12 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:sldIdLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.SlideId" /> <c>&lt;p:sldId></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SlideIdList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -19911,12 +19911,12 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:embeddedFontLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.EmbeddedFont" /> <c>&lt;p:embeddedFont></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class EmbeddedFontList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -19970,12 +19970,12 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:custShowLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CustomShow" /> <c>&lt;p:custShow></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class CustomShowList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -20029,12 +20029,12 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:photoAlbum.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ExtensionList" /> <c>&lt;p:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PhotoAlbum : OpenXmlCompositeElement
     {
         /// <summary>
@@ -20134,9 +20134,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: p:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionList>();
@@ -20461,12 +20461,12 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.PresentationExtension" /> <c>&lt;p:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PresentationExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -20520,7 +20520,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:ext.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.SectionList" /> <c>&lt;p14:sectionLst></c></description></item>
@@ -20528,7 +20528,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.PowerPoint.SlideGuideList" /> <c>&lt;p15:sldGuideLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.PowerPoint.NotesGuideList" /> <c>&lt;p15:notesGuideLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PresentationExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -20605,7 +20605,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:htmlPubPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CustomShowReference" /> <c>&lt;p:custShow></c></description></item>
@@ -20613,7 +20613,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ExtensionList" /> <c>&lt;p:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.SlideRange" /> <c>&lt;p:sldRg></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class HtmlPublishProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -20671,9 +20671,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Publish Path</para>
         /// <para>Represents the following attribute in the schema: r:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -20722,12 +20722,12 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:webPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ExtensionList" /> <c>&lt;p:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class WebProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -20882,9 +20882,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: p:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionList>();
@@ -20900,12 +20900,12 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:prnPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ExtensionList" /> <c>&lt;p:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PrintingProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -21016,9 +21016,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: p:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionList>();
@@ -21034,7 +21034,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:showPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.PenColor" /> <c>&lt;p:penClr></c></description></item>
@@ -21046,7 +21046,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.KioskSlideMode" /> <c>&lt;p:kiosk></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ShowPropertiesExtensionList" /> <c>&lt;p:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ShowProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -21171,7 +21171,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:clrMru.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HslColor" /> <c>&lt;a:hslClr></c></description></item>
@@ -21181,7 +21181,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.RgbColorModelHex" /> <c>&lt;a:srgbClr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SystemColor" /> <c>&lt;a:sysClr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ColorMostRecentlyUsed : OpenXmlCompositeElement
     {
         /// <summary>
@@ -21263,12 +21263,12 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.PresentationPropertiesExtension" /> <c>&lt;p:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PresentationPropertiesExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -21322,7 +21322,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:ext.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.TextMath" /> <c>&lt;a14:m></c></description></item>
@@ -21330,7 +21330,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.PowerPoint.DiscardImageEditData" /> <c>&lt;p14:discardImageEditData></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.PowerPoint.ChartTrackingReferenceBased" /> <c>&lt;p15:chartTrackingRefBased></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PresentationPropertiesExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -21407,12 +21407,12 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:hf.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ExtensionListWithModification" /> <c>&lt;p:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class HeaderFooter : OpenXmlCompositeElement
     {
         /// <summary>
@@ -21506,9 +21506,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>ExtensionListWithModification.</para>
         /// <para>Represents the following element tag in the schema: p:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ExtensionListWithModification? ExtensionListWithModification
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionListWithModification>();
@@ -21524,12 +21524,12 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.SlideLayoutExtension" /> <c>&lt;p:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SlideLayoutExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -21583,12 +21583,12 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:sldLayoutIdLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.SlideLayoutId" /> <c>&lt;p:sldLayoutId></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SlideLayoutIdList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -21642,7 +21642,7 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:txStyles.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.TitleStyle" /> <c>&lt;p:titleStyle></c></description></item>
@@ -21650,7 +21650,7 @@ namespace DocumentFormat.OpenXml.Presentation
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.OtherStyle" /> <c>&lt;p:otherStyle></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ExtensionList" /> <c>&lt;p:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TextStyles : OpenXmlCompositeElement
     {
         /// <summary>
@@ -21705,9 +21705,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Slide Master Title Text Style.</para>
         /// <para>Represents the following element tag in the schema: p:titleStyle.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.TitleStyle? TitleStyle
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.TitleStyle>();
@@ -21718,9 +21718,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Slide Master Body Text Style.</para>
         /// <para>Represents the following element tag in the schema: p:bodyStyle.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.BodyStyle? BodyStyle
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.BodyStyle>();
@@ -21731,9 +21731,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Slide Master Other Text Style.</para>
         /// <para>Represents the following element tag in the schema: p:otherStyle.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.OtherStyle? OtherStyle
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.OtherStyle>();
@@ -21744,9 +21744,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: p:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.ExtensionList>();
@@ -21762,12 +21762,12 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.SlideMasterExtension" /> <c>&lt;p:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SlideMasterExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -21821,12 +21821,12 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.HandoutMasterExtension" /> <c>&lt;p:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class HandoutMasterExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -21880,12 +21880,12 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.NotesMasterExtension" /> <c>&lt;p:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class NotesMasterExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -21990,13 +21990,13 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:txEl.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CharRange" /> <c>&lt;p:charRg></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.ParagraphIndexRange" /> <c>&lt;p:pRg></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TextElement : OpenXmlCompositeElement
     {
         /// <summary>
@@ -22047,9 +22047,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Character Range.</para>
         /// <para>Represents the following element tag in the schema: p:charRg.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.CharRange? CharRange
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.CharRange>();
@@ -22060,9 +22060,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Paragraph Text Range.</para>
         /// <para>Represents the following element tag in the schema: p:pRg.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.ParagraphIndexRange? ParagraphIndexRange
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.ParagraphIndexRange>();
@@ -22078,13 +22078,13 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:graphicEl.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Chart" /> <c>&lt;a:chart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagram" /> <c>&lt;a:dgm></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class GraphicElement : OpenXmlCompositeElement
     {
         /// <summary>
@@ -22135,9 +22135,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Diagram to Animate.</para>
         /// <para>Represents the following element tag in the schema: a:dgm.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Diagram? Diagram
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Diagram>();
@@ -22148,9 +22148,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Chart to Animate.</para>
         /// <para>Represents the following element tag in the schema: a:chart.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Chart? Chart
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Chart>();
@@ -22714,13 +22714,13 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:sndAc.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.EndSoundAction" /> <c>&lt;p:endSnd></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.StartSoundAction" /> <c>&lt;p:stSnd></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SoundAction : OpenXmlCompositeElement
     {
         /// <summary>
@@ -22771,9 +22771,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Start Sound Action.</para>
         /// <para>Represents the following element tag in the schema: p:stSnd.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.StartSoundAction? StartSoundAction
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.StartSoundAction>();
@@ -22784,9 +22784,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>Stop Sound Action.</para>
         /// <para>Represents the following element tag in the schema: p:endSnd.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p = http://schemas.openxmlformats.org/presentationml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Presentation.EndSoundAction? EndSoundAction
         {
             get => GetElement<DocumentFormat.OpenXml.Presentation.EndSoundAction>();
@@ -22802,12 +22802,12 @@ namespace DocumentFormat.OpenXml.Presentation
     /// <para>This class is available in Microsoft365 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p:ext.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint.Y2023.M02.Main.PlaceholderTypeExtension" /> <c>&lt;p232:phTypeExt></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PlaceholderExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -22857,9 +22857,9 @@ namespace DocumentFormat.OpenXml.Presentation
         /// <para>PlaceholderTypeExtension.</para>
         /// <para>Represents the following element tag in the schema: p232:phTypeExt.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p232 = http://schemas.microsoft.com/office/powerpoint/2023/02/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office.PowerPoint.Y2023.M02.Main.PlaceholderTypeExtension? PlaceholderTypeExtension
         {
             get => GetElement<DocumentFormat.OpenXml.Office.PowerPoint.Y2023.M02.Main.PlaceholderTypeExtension>();

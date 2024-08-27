@@ -21,12 +21,12 @@ namespace DocumentFormat.OpenXml.CustomXmlDataProperties
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ds:datastoreItem.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.CustomXmlDataProperties.SchemaReferences" /> <c>&lt;ds:schemaRefs></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DataStoreItem : OpenXmlPartRootElement
     {
         /// <summary>
@@ -64,9 +64,9 @@ namespace DocumentFormat.OpenXml.CustomXmlDataProperties
         /// <para>Custom XML Data ID</para>
         /// <para>Represents the following attribute in the schema: ds:itemID</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:ds=http://schemas.openxmlformats.org/officeDocument/2006/customXml
-        /// </remark>
+        /// </remarks>
         public StringValue? ItemId
         {
             get => GetAttribute<StringValue>();
@@ -94,9 +94,9 @@ namespace DocumentFormat.OpenXml.CustomXmlDataProperties
         /// <para>Set of Associated XML Schemas.</para>
         /// <para>Represents the following element tag in the schema: ds:schemaRefs.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:ds = http://schemas.openxmlformats.org/officeDocument/2006/customXml
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.CustomXmlDataProperties.SchemaReferences? SchemaReferences
         {
             get => GetElement<DocumentFormat.OpenXml.CustomXmlDataProperties.SchemaReferences>();
@@ -156,9 +156,9 @@ namespace DocumentFormat.OpenXml.CustomXmlDataProperties
         /// <para>Target Namespace of Associated XML Schema</para>
         /// <para>Represents the following attribute in the schema: ds:uri</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:ds=http://schemas.openxmlformats.org/officeDocument/2006/customXml
-        /// </remark>
+        /// </remarks>
         public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
@@ -185,12 +185,12 @@ namespace DocumentFormat.OpenXml.CustomXmlDataProperties
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ds:schemaRefs.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.CustomXmlDataProperties.SchemaReference" /> <c>&lt;ds:schemaRef></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SchemaReferences : OpenXmlCompositeElement
     {
         /// <summary>

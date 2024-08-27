@@ -22,12 +22,12 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.Livefeed
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is alf:Normal.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList" /> <c>&lt;alf:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class BackgroundNormalProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -77,9 +77,9 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.Livefeed
         /// <para>OfficeArtExtensionList.</para>
         /// <para>Represents the following element tag in the schema: alf:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:alf = http://schemas.microsoft.com/office/drawing/2021/livefeed
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList? OfficeArtExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList>();
@@ -95,12 +95,12 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.Livefeed
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is alf:Removed.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList" /> <c>&lt;alf:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class BackgroundRemovedProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -150,9 +150,9 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.Livefeed
         /// <para>OfficeArtExtensionList.</para>
         /// <para>Represents the following element tag in the schema: alf:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:alf = http://schemas.microsoft.com/office/drawing/2021/livefeed
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList? OfficeArtExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList>();
@@ -168,12 +168,12 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.Livefeed
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is alf:Blur.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList" /> <c>&lt;alf:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class BackgroundBlurProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -223,9 +223,9 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.Livefeed
         /// <para>OfficeArtExtensionList.</para>
         /// <para>Represents the following element tag in the schema: alf:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:alf = http://schemas.microsoft.com/office/drawing/2021/livefeed
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList? OfficeArtExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList>();
@@ -241,12 +241,12 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.Livefeed
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is alf:Custom.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList" /> <c>&lt;alf:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class BackgroundCustomProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -296,9 +296,9 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.Livefeed
         /// <para>OfficeArtExtensionList.</para>
         /// <para>Represents the following element tag in the schema: alf:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:alf = http://schemas.microsoft.com/office/drawing/2021/livefeed
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList? OfficeArtExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList>();
@@ -314,13 +314,13 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.Livefeed
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is alf:liveFeedProps.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList" /> <c>&lt;alf:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.LiveFeedBackgroundProperties" /> <c>&lt;alf:backgroundProps></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class LiveFeedProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -372,9 +372,9 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.Livefeed
         /// <para>LiveFeedBackgroundProperties.</para>
         /// <para>Represents the following element tag in the schema: alf:backgroundProps.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:alf = http://schemas.microsoft.com/office/drawing/2021/livefeed
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.LiveFeedBackgroundProperties? LiveFeedBackgroundProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.LiveFeedBackgroundProperties>();
@@ -385,9 +385,9 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.Livefeed
         /// <para>OfficeArtExtensionList.</para>
         /// <para>Represents the following element tag in the schema: alf:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:alf = http://schemas.microsoft.com/office/drawing/2021/livefeed
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList? OfficeArtExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList>();
@@ -403,12 +403,12 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.Livefeed
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is alf:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extension" /> <c>&lt;a:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -469,7 +469,7 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.Livefeed
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is alf:backgroundProps.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.OfficeArtExtensionList" /> <c>&lt;alf:extLst></c></description></item>
@@ -478,7 +478,7 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.Livefeed
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.BackgroundNormalProperties" /> <c>&lt;alf:Normal></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Drawing.Livefeed.BackgroundRemovedProperties" /> <c>&lt;alf:Removed></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class LiveFeedBackgroundProperties : OpenXmlCompositeElement
     {
         /// <summary>

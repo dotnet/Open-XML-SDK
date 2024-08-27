@@ -142,7 +142,7 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ask:lineSketchStyleProps.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.CustomGeometry" /> <c>&lt;a:custGeom></c></description></item>
@@ -151,7 +151,7 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchTypeProperties" /> <c>&lt;ask:type></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchSeed" /> <c>&lt;ask:seed></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class LineSketchStyleProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -232,7 +232,7 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ask:type.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchNoneEmpty" /> <c>&lt;ask:lineSketchNone></c></description></item>
@@ -240,7 +240,7 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchFreehandEmpty" /> <c>&lt;ask:lineSketchFreehand></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchScribbleEmpty" /> <c>&lt;ask:lineSketchScribble></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class LineSketchTypeProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -302,9 +302,9 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
         /// <para>LineSketchNoneEmpty.</para>
         /// <para>Represents the following element tag in the schema: ask:lineSketchNone.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:ask = http://schemas.microsoft.com/office/drawing/2018/sketchyshapes
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchNoneEmpty? LineSketchNoneEmpty
         {
             get => GetElement<DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchNoneEmpty>();
@@ -315,9 +315,9 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
         /// <para>LineSketchCurvedEmpty.</para>
         /// <para>Represents the following element tag in the schema: ask:lineSketchCurved.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:ask = http://schemas.microsoft.com/office/drawing/2018/sketchyshapes
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchCurvedEmpty? LineSketchCurvedEmpty
         {
             get => GetElement<DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchCurvedEmpty>();
@@ -328,9 +328,9 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
         /// <para>LineSketchFreehandEmpty.</para>
         /// <para>Represents the following element tag in the schema: ask:lineSketchFreehand.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:ask = http://schemas.microsoft.com/office/drawing/2018/sketchyshapes
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchFreehandEmpty? LineSketchFreehandEmpty
         {
             get => GetElement<DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchFreehandEmpty>();
@@ -341,9 +341,9 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
         /// <para>LineSketchScribbleEmpty.</para>
         /// <para>Represents the following element tag in the schema: ask:lineSketchScribble.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:ask = http://schemas.microsoft.com/office/drawing/2018/sketchyshapes
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchScribbleEmpty? LineSketchScribbleEmpty
         {
             get => GetElement<DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes.LineSketchScribbleEmpty>();
@@ -398,12 +398,12 @@ namespace DocumentFormat.OpenXml.Office2021.Drawing.SketchyShapes
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is ask:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extension" /> <c>&lt;a:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     {
         /// <summary>

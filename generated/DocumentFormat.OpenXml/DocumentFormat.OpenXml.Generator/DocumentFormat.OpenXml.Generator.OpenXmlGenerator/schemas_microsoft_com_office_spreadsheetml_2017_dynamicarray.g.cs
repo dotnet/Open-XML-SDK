@@ -22,12 +22,12 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.DynamicArray
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xda:dynamicArrayProperties.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.DynamicArray.ExtensionList" /> <c>&lt;xda:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DynamicArrayProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -100,9 +100,9 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.DynamicArray
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: xda:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xda = http://schemas.microsoft.com/office/spreadsheetml/2017/dynamicarray
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2019.Excel.DynamicArray.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Office2019.Excel.DynamicArray.ExtensionList>();
@@ -118,12 +118,12 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.DynamicArray
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xda:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Extension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ExtensionList : OpenXmlCompositeElement
     {
         /// <summary>

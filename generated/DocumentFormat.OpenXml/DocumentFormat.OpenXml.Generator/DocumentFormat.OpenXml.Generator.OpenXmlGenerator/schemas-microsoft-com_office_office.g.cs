@@ -23,7 +23,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:shapedefaults.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.Callout" /> <c>&lt;o:callout></c></description></item>
@@ -38,7 +38,7 @@ namespace DocumentFormat.OpenXml.Vml.Office
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Stroke" /> <c>&lt;v:stroke></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.TextBox" /> <c>&lt;v:textbox></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ShapeDefaults : OpenXmlCompositeElement
     {
         /// <summary>
@@ -76,9 +76,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>VML Extension Handling Behavior</para>
         /// <para>Represents the following attribute in the schema: v:ext</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:v=urn:schemas-microsoft-com:vml
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>? Extension
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>>();
@@ -149,9 +149,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Allow in Table Cell</para>
         /// <para>Represents the following attribute in the schema: o:allowincell</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
-        /// </remark>
+        /// </remarks>
         public TrueFalseValue? AllowInCell
         {
             get => GetAttribute<TrueFalseValue>();
@@ -162,9 +162,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>allowoverlap</para>
         /// <para>Represents the following attribute in the schema: o:allowoverlap</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
-        /// </remark>
+        /// </remarks>
         public TrueFalseValue? AllowOverlap
         {
             get => GetAttribute<TrueFalseValue>();
@@ -175,9 +175,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>insetmode</para>
         /// <para>Represents the following attribute in the schema: o:insetmode</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>? InsetMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>>();
@@ -230,9 +230,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Fill.</para>
         /// <para>Represents the following element tag in the schema: v:fill.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:v = urn:schemas-microsoft-com:vml
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Vml.Fill? Fill
         {
             get => GetElement<DocumentFormat.OpenXml.Vml.Fill>();
@@ -243,9 +243,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>ImageData.</para>
         /// <para>Represents the following element tag in the schema: v:imagedata.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:v = urn:schemas-microsoft-com:vml
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Vml.ImageData? ImageData
         {
             get => GetElement<DocumentFormat.OpenXml.Vml.ImageData>();
@@ -256,9 +256,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Stroke.</para>
         /// <para>Represents the following element tag in the schema: v:stroke.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:v = urn:schemas-microsoft-com:vml
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Vml.Stroke? Stroke
         {
             get => GetElement<DocumentFormat.OpenXml.Vml.Stroke>();
@@ -269,9 +269,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>TextBox.</para>
         /// <para>Represents the following element tag in the schema: v:textbox.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:v = urn:schemas-microsoft-com:vml
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Vml.TextBox? TextBox
         {
             get => GetElement<DocumentFormat.OpenXml.Vml.TextBox>();
@@ -282,9 +282,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Shadow.</para>
         /// <para>Represents the following element tag in the schema: v:shadow.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:v = urn:schemas-microsoft-com:vml
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Vml.Shadow? Shadow
         {
             get => GetElement<DocumentFormat.OpenXml.Vml.Shadow>();
@@ -295,9 +295,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Skew.</para>
         /// <para>Represents the following element tag in the schema: o:skew.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:o = urn:schemas-microsoft-com:office:office
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Vml.Office.Skew? Skew
         {
             get => GetElement<DocumentFormat.OpenXml.Vml.Office.Skew>();
@@ -308,9 +308,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Extrusion.</para>
         /// <para>Represents the following element tag in the schema: o:extrusion.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:o = urn:schemas-microsoft-com:office:office
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Vml.Office.Extrusion? Extrusion
         {
             get => GetElement<DocumentFormat.OpenXml.Vml.Office.Extrusion>();
@@ -321,9 +321,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Callout.</para>
         /// <para>Represents the following element tag in the schema: o:callout.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:o = urn:schemas-microsoft-com:office:office
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Vml.Office.Callout? Callout
         {
             get => GetElement<DocumentFormat.OpenXml.Vml.Office.Callout>();
@@ -334,9 +334,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Shape Protections.</para>
         /// <para>Represents the following element tag in the schema: o:lock.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:o = urn:schemas-microsoft-com:office:office
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Vml.Office.Lock? Lock
         {
             get => GetElement<DocumentFormat.OpenXml.Vml.Office.Lock>();
@@ -347,9 +347,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Most Recently Used Colors.</para>
         /// <para>Represents the following element tag in the schema: o:colormru.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:o = urn:schemas-microsoft-com:office:office
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Vml.Office.ColorMostRecentlyUsed? ColorMostRecentlyUsed
         {
             get => GetElement<DocumentFormat.OpenXml.Vml.Office.ColorMostRecentlyUsed>();
@@ -360,9 +360,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>UI Default Colors.</para>
         /// <para>Represents the following element tag in the schema: o:colormenu.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:o = urn:schemas-microsoft-com:office:office
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Vml.Office.ColorMenu? ColorMenu
         {
             get => GetElement<DocumentFormat.OpenXml.Vml.Office.ColorMenu>();
@@ -378,14 +378,14 @@ namespace DocumentFormat.OpenXml.Vml.Office
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:shapelayout.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.ShapeIdMap" /> <c>&lt;o:idmap></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.RegroupTable" /> <c>&lt;o:regrouptable></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.Rules" /> <c>&lt;o:rules></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ShapeLayout : OpenXmlCompositeElement
     {
         /// <summary>
@@ -423,9 +423,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>VML Extension Handling Behavior</para>
         /// <para>Represents the following attribute in the schema: v:ext</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:v=urn:schemas-microsoft-com:vml
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>? Extension
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>>();
@@ -453,9 +453,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Shape ID Map.</para>
         /// <para>Represents the following element tag in the schema: o:idmap.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:o = urn:schemas-microsoft-com:office:office
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Vml.Office.ShapeIdMap? ShapeIdMap
         {
             get => GetElement<DocumentFormat.OpenXml.Vml.Office.ShapeIdMap>();
@@ -466,9 +466,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Shape Grouping History.</para>
         /// <para>Represents the following element tag in the schema: o:regrouptable.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:o = urn:schemas-microsoft-com:office:office
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Vml.Office.RegroupTable? RegroupTable
         {
             get => GetElement<DocumentFormat.OpenXml.Vml.Office.RegroupTable>();
@@ -479,9 +479,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Rule Set.</para>
         /// <para>Represents the following element tag in the schema: o:rules.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:o = urn:schemas-microsoft-com:office:office
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Vml.Office.Rules? Rules
         {
             get => GetElement<DocumentFormat.OpenXml.Vml.Office.Rules>();
@@ -510,9 +510,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>VML Extension Handling Behavior</para>
         /// <para>Represents the following attribute in the schema: v:ext</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:v=urn:schemas-microsoft-com:vml
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>? Extension
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>>();
@@ -583,9 +583,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Suggested Signer Line 1</para>
         /// <para>Represents the following attribute in the schema: o:suggestedsigner</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
-        /// </remark>
+        /// </remarks>
         public StringValue? SuggestedSigner
         {
             get => GetAttribute<StringValue>();
@@ -596,9 +596,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Suggested Signer Line 2</para>
         /// <para>Represents the following attribute in the schema: o:suggestedsigner2</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
-        /// </remark>
+        /// </remarks>
         public StringValue? SuggestedSigner2
         {
             get => GetAttribute<StringValue>();
@@ -609,9 +609,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Suggested Signer E-mail Address</para>
         /// <para>Represents the following attribute in the schema: o:suggestedsigneremail</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
-        /// </remark>
+        /// </remarks>
         public StringValue? SuggestedSignerEmail
         {
             get => GetAttribute<StringValue>();
@@ -731,12 +731,12 @@ namespace DocumentFormat.OpenXml.Vml.Office
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:diagram.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.RelationTable" /> <c>&lt;o:relationtable></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Diagram : OpenXmlCompositeElement
     {
         /// <summary>
@@ -774,9 +774,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>VML Extension Handling Behavior</para>
         /// <para>Represents the following attribute in the schema: v:ext</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:v=urn:schemas-microsoft-com:vml
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>? Extension
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>>();
@@ -899,9 +899,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Diagram Relationship Table.</para>
         /// <para>Represents the following element tag in the schema: o:relationtable.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:o = urn:schemas-microsoft-com:office:office
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Vml.Office.RelationTable? RelationTable
         {
             get => GetElement<DocumentFormat.OpenXml.Vml.Office.RelationTable>();
@@ -930,9 +930,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>VML Extension Handling Behavior</para>
         /// <para>Represents the following attribute in the schema: v:ext</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:v=urn:schemas-microsoft-com:vml
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>? Extension
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>>();
@@ -1024,9 +1024,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>VML Extension Handling Behavior</para>
         /// <para>Represents the following attribute in the schema: v:ext</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:v=urn:schemas-microsoft-com:vml
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>? Extension
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>>();
@@ -1397,9 +1397,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>VML Extension Handling Behavior</para>
         /// <para>Represents the following attribute in the schema: v:ext</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:v=urn:schemas-microsoft-com:vml
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>? Extension
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>>();
@@ -1580,9 +1580,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>VML Extension Handling Behavior</para>
         /// <para>Represents the following attribute in the schema: v:ext</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:v=urn:schemas-microsoft-com:vml
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>? Extension
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>>();
@@ -1727,14 +1727,14 @@ namespace DocumentFormat.OpenXml.Vml.Office
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:OLEObject.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.LinkType" /> <c>&lt;o:LinkType></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.LockedField" /> <c>&lt;o:LockedField></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.FieldCodes" /> <c>&lt;o:FieldCodes></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class OleObject : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1822,9 +1822,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Relationship</para>
         /// <para>Represents the following attribute in the schema: r:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -1870,9 +1870,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Embedded Object Alternate Image Request.</para>
         /// <para>Represents the following element tag in the schema: o:LinkType.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:o = urn:schemas-microsoft-com:office:office
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Vml.Office.LinkType? LinkType
         {
             get => GetElement<DocumentFormat.OpenXml.Vml.Office.LinkType>();
@@ -1883,9 +1883,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Embedded Object Cannot Be Refreshed.</para>
         /// <para>Represents the following element tag in the schema: o:LockedField.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:o = urn:schemas-microsoft-com:office:office
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Vml.Office.LockedField? LockedField
         {
             get => GetElement<DocumentFormat.OpenXml.Vml.Office.LockedField>();
@@ -1896,9 +1896,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>WordprocessingML Field Switches.</para>
         /// <para>Represents the following element tag in the schema: o:FieldCodes.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:o = urn:schemas-microsoft-com:office:office
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Vml.Office.FieldCodes? FieldCodes
         {
             get => GetElement<DocumentFormat.OpenXml.Vml.Office.FieldCodes>();
@@ -1927,9 +1927,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>VML Extension Handling Behavior</para>
         /// <para>Represents the following attribute in the schema: v:ext</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:v=urn:schemas-microsoft-com:vml
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>? Extension
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>>();
@@ -2089,9 +2089,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>VML Extension Handling Behavior</para>
         /// <para>Represents the following attribute in the schema: v:ext</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:v=urn:schemas-microsoft-com:vml
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>? Extension
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>>();
@@ -2322,9 +2322,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Original Image Reference</para>
         /// <para>Represents the following attribute in the schema: o:href</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
-        /// </remark>
+        /// </remarks>
         public StringValue? Href
         {
             get => GetAttribute<StringValue>();
@@ -2335,9 +2335,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Alternate Image Reference</para>
         /// <para>Represents the following attribute in the schema: o:althref</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
-        /// </remark>
+        /// </remarks>
         public StringValue? AlternateImageReference
         {
             get => GetAttribute<StringValue>();
@@ -2348,9 +2348,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Stroke Title</para>
         /// <para>Represents the following attribute in the schema: o:title</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
-        /// </remark>
+        /// </remarks>
         public StringValue? Title
         {
             get => GetAttribute<StringValue>();
@@ -2361,9 +2361,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Force Dashed Outline</para>
         /// <para>Represents the following attribute in the schema: o:forcedash</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
-        /// </remark>
+        /// </remarks>
         public TrueFalseValue? ForceDash
         {
             get => GetAttribute<TrueFalseValue>();
@@ -2422,9 +2422,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>Path Definition</para>
         /// <para>Represents the following attribute in the schema: o:v</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:o=urn:schemas-microsoft-com:office:office
-        /// </remark>
+        /// </remarks>
         public StringValue? Value
         {
             get => GetAttribute<StringValue>();
@@ -2464,9 +2464,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>VML Extension Handling Behavior</para>
         /// <para>Represents the following attribute in the schema: v:ext</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:v=urn:schemas-microsoft-com:vml
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>? Extension
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>>();
@@ -2514,9 +2514,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>VML Extension Handling Behavior</para>
         /// <para>Represents the following attribute in the schema: v:ext</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:v=urn:schemas-microsoft-com:vml
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>? Extension
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>>();
@@ -2551,12 +2551,12 @@ namespace DocumentFormat.OpenXml.Vml.Office
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:regrouptable.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.Entry" /> <c>&lt;o:entry></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class RegroupTable : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2594,9 +2594,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>VML Extension Handling Behavior</para>
         /// <para>Represents the following attribute in the schema: v:ext</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:v=urn:schemas-microsoft-com:vml
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>? Extension
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>>();
@@ -2625,12 +2625,12 @@ namespace DocumentFormat.OpenXml.Vml.Office
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:rules.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.Rule" /> <c>&lt;o:r></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Rules : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2668,9 +2668,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>VML Extension Handling Behavior</para>
         /// <para>Represents the following attribute in the schema: v:ext</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:v=urn:schemas-microsoft-com:vml
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>? Extension
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>>();
@@ -2746,12 +2746,12 @@ namespace DocumentFormat.OpenXml.Vml.Office
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:r.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.Proxy" /> <c>&lt;o:proxy></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Rule : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2856,12 +2856,12 @@ namespace DocumentFormat.OpenXml.Vml.Office
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is o:relationtable.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.Relation" /> <c>&lt;o:rel></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class RelationTable : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2899,9 +2899,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>VML Extension Handling Behavior</para>
         /// <para>Represents the following attribute in the schema: v:ext</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:v=urn:schemas-microsoft-com:vml
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>? Extension
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>>();
@@ -2943,9 +2943,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>VML Extension Handling Behavior</para>
         /// <para>Represents the following attribute in the schema: v:ext</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:v=urn:schemas-microsoft-com:vml
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>? Extension
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>>();
@@ -3213,9 +3213,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>VML Extension Handling Behavior</para>
         /// <para>Represents the following attribute in the schema: v:ext</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:v=urn:schemas-microsoft-com:vml
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>? Extension
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>>();
@@ -3263,9 +3263,9 @@ namespace DocumentFormat.OpenXml.Vml.Office
         /// <para>VML Extension Handling Behavior</para>
         /// <para>Represents the following attribute in the schema: v:ext</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:v=urn:schemas-microsoft-com:vml
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>? Extension
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Vml.ExtensionHandlingBehaviorValues>>();

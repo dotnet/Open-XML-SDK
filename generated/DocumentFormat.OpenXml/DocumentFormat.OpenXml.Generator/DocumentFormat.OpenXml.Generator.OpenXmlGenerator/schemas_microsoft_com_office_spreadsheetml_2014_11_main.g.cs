@@ -21,12 +21,12 @@ namespace DocumentFormat.OpenXml.Office2016.ExcelAc
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x16:modelTimeGroupings.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.ExcelAc.ModelTimeGrouping" /> <c>&lt;x16:modelTimeGrouping></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ModelTimeGroupings : OpenXmlCompositeElement
     {
         /// <summary>
@@ -81,12 +81,12 @@ namespace DocumentFormat.OpenXml.Office2016.ExcelAc
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x16:modelTimeGrouping.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.ExcelAc.CalculatedTimeColumn" /> <c>&lt;x16:calculatedTimeColumn></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ModelTimeGrouping : OpenXmlCompositeElement
     {
         /// <summary>

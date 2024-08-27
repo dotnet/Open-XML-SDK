@@ -100,12 +100,12 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp14:sizeRelH.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentageWidth" /> <c>&lt;wp14:pctWidth></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class RelativeWidth : OpenXmlCompositeElement
     {
         /// <summary>
@@ -171,9 +171,9 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
         /// <para>PercentageWidth.</para>
         /// <para>Represents the following element tag in the schema: wp14:pctWidth.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:wp14 = http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentageWidth? PercentageWidth
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentageWidth>();
@@ -189,12 +189,12 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is wp14:sizeRelV.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentageHeight" /> <c>&lt;wp14:pctHeight></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class RelativeHeight : OpenXmlCompositeElement
     {
         /// <summary>
@@ -260,9 +260,9 @@ namespace DocumentFormat.OpenXml.Office2010.Word.Drawing
         /// <para>PercentageHeight.</para>
         /// <para>Represents the following element tag in the schema: wp14:pctHeight.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:wp14 = http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentageHeight? PercentageHeight
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentageHeight>();

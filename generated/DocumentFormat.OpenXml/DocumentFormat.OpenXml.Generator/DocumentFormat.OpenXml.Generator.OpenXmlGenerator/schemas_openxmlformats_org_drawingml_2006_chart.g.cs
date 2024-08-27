@@ -78,7 +78,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:spPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.BlipFill" /> <c>&lt;a:blipFill></c></description></item>
@@ -96,7 +96,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SolidFill" /> <c>&lt;a:solidFill></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Transform2D" /> <c>&lt;a:xfrm></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ChartShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -201,9 +201,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>2D Transform for Individual Objects.</para>
         /// <para>Represents the following element tag in the schema: a:xfrm.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Transform2D? Transform2D
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Transform2D>();
@@ -219,14 +219,14 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:txPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.BodyProperties" /> <c>&lt;a:bodyPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ListStyle" /> <c>&lt;a:lstStyle></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Paragraph" /> <c>&lt;a:p></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TextProperties : TextBodyType
     {
         /// <summary>
@@ -281,14 +281,14 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:rich.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.BodyProperties" /> <c>&lt;a:bodyPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ListStyle" /> <c>&lt;a:lstStyle></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Paragraph" /> <c>&lt;a:p></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class RichText : TextBodyType
     {
         /// <summary>
@@ -343,14 +343,14 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.BodyProperties" /> <c>&lt;a:bodyPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ListStyle" /> <c>&lt;a:lstStyle></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Paragraph" /> <c>&lt;a:p></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public abstract partial class TextBodyType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -396,9 +396,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Body Properties.</para>
         /// <para>Represents the following element tag in the schema: a:bodyPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.BodyProperties? BodyProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.BodyProperties>();
@@ -409,9 +409,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Text List Styles.</para>
         /// <para>Represents the following element tag in the schema: a:lstStyle.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.ListStyle? ListStyle
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.ListStyle>();
@@ -1566,13 +1566,13 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:layout.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ExtensionList" /> <c>&lt;c:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ManualLayout" /> <c>&lt;c:manualLayout></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Layout : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1623,9 +1623,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Manual Layout.</para>
         /// <para>Represents the following element tag in the schema: c:manualLayout.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ManualLayout? ManualLayout
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ManualLayout>();
@@ -1636,9 +1636,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Chart Extensibility.</para>
         /// <para>Represents the following element tag in the schema: c:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
@@ -1654,14 +1654,14 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:tx.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.RichText" /> <c>&lt;c:rich></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.StringLiteral" /> <c>&lt;c:strLit></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.StringReference" /> <c>&lt;c:strRef></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ChartText : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1717,9 +1717,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>String Reference.</para>
         /// <para>Represents the following element tag in the schema: c:strRef.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.StringReference? StringReference
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.StringReference>();
@@ -1730,9 +1730,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Rich Text.</para>
         /// <para>Represents the following element tag in the schema: c:rich.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.RichText? RichText
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.RichText>();
@@ -1743,9 +1743,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>String Literal.</para>
         /// <para>Represents the following element tag in the schema: c:strLit.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.StringLiteral? StringLiteral
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.StringLiteral>();
@@ -1761,12 +1761,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:leaderLines.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class LeaderLines : ChartLinesType
     {
         /// <summary>
@@ -1819,12 +1819,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:dropLines.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DropLines : ChartLinesType
     {
         /// <summary>
@@ -1877,12 +1877,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:majorGridlines.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class MajorGridlines : ChartLinesType
     {
         /// <summary>
@@ -1935,12 +1935,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:minorGridlines.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class MinorGridlines : ChartLinesType
     {
         /// <summary>
@@ -1993,12 +1993,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:serLines.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SeriesLines : ChartLinesType
     {
         /// <summary>
@@ -2051,12 +2051,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:hiLowLines.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class HighLowLines : ChartLinesType
     {
         /// <summary>
@@ -2109,12 +2109,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public abstract partial class ChartLinesType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2158,9 +2158,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>ChartShapeProperties.</para>
         /// <para>Represents the following element tag in the schema: c:spPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
@@ -2408,13 +2408,13 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:tx.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.StringReference" /> <c>&lt;c:strRef></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.NumericValue" /> <c>&lt;c:v></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SeriesText : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2468,9 +2468,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>StringReference.</para>
         /// <para>Represents the following element tag in the schema: c:strRef.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.StringReference? StringReference
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.StringReference>();
@@ -2481,9 +2481,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>NumericValue.</para>
         /// <para>Represents the following element tag in the schema: c:v.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.NumericValue? NumericValue
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.NumericValue>();
@@ -2535,7 +2535,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:ser.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
@@ -2553,7 +2553,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Index" /> <c>&lt;c:idx></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Order" /> <c>&lt;c:order></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class LineChartSeries : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2634,9 +2634,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Index.</para>
         /// <para>Represents the following element tag in the schema: c:idx.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Index? Index
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Index>();
@@ -2647,9 +2647,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Order.</para>
         /// <para>Represents the following element tag in the schema: c:order.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Order? Order
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Order>();
@@ -2660,9 +2660,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Series Text.</para>
         /// <para>Represents the following element tag in the schema: c:tx.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.SeriesText? SeriesText
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.SeriesText>();
@@ -2673,9 +2673,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>ChartShapeProperties.</para>
         /// <para>Represents the following element tag in the schema: c:spPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
@@ -2686,9 +2686,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Marker.</para>
         /// <para>Represents the following element tag in the schema: c:marker.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Marker? Marker
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Marker>();
@@ -2699,9 +2699,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>PictureOptions.</para>
         /// <para>Represents the following element tag in the schema: c:pictureOptions.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.PictureOptions? PictureOptions
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PictureOptions>();
@@ -2717,7 +2717,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:dLbls.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
@@ -2737,7 +2737,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat" /> <c>&lt;c:numFmt></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Separator" /> <c>&lt;c:separator></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DataLabels : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2911,7 +2911,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:ser.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
@@ -2929,7 +2929,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Index" /> <c>&lt;c:idx></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Order" /> <c>&lt;c:order></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class BarChartSeries : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3010,9 +3010,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Index.</para>
         /// <para>Represents the following element tag in the schema: c:idx.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Index? Index
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Index>();
@@ -3023,9 +3023,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Order.</para>
         /// <para>Represents the following element tag in the schema: c:order.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Order? Order
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Order>();
@@ -3036,9 +3036,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Series Text.</para>
         /// <para>Represents the following element tag in the schema: c:tx.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.SeriesText? SeriesText
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.SeriesText>();
@@ -3049,9 +3049,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>ChartShapeProperties.</para>
         /// <para>Represents the following element tag in the schema: c:spPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
@@ -3062,9 +3062,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>InvertIfNegative.</para>
         /// <para>Represents the following element tag in the schema: c:invertIfNegative.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.InvertIfNegative? InvertIfNegative
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.InvertIfNegative>();
@@ -3075,9 +3075,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>PictureOptions.</para>
         /// <para>Represents the following element tag in the schema: c:pictureOptions.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.PictureOptions? PictureOptions
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PictureOptions>();
@@ -3093,7 +3093,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:ser.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
@@ -3109,7 +3109,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Index" /> <c>&lt;c:idx></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Order" /> <c>&lt;c:order></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class AreaChartSeries : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3186,9 +3186,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Index.</para>
         /// <para>Represents the following element tag in the schema: c:idx.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Index? Index
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Index>();
@@ -3199,9 +3199,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Order.</para>
         /// <para>Represents the following element tag in the schema: c:order.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Order? Order
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Order>();
@@ -3212,9 +3212,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Series Text.</para>
         /// <para>Represents the following element tag in the schema: c:tx.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.SeriesText? SeriesText
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.SeriesText>();
@@ -3225,9 +3225,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>ChartShapeProperties.</para>
         /// <para>Represents the following element tag in the schema: c:spPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
@@ -3238,9 +3238,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>PictureOptions.</para>
         /// <para>Represents the following element tag in the schema: c:pictureOptions.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.PictureOptions? PictureOptions
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PictureOptions>();
@@ -3256,7 +3256,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:ser.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
@@ -3271,7 +3271,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Order" /> <c>&lt;c:order></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Explosion" /> <c>&lt;c:explosion></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PieChartSeries : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3346,9 +3346,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Index.</para>
         /// <para>Represents the following element tag in the schema: c:idx.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Index? Index
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Index>();
@@ -3359,9 +3359,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Order.</para>
         /// <para>Represents the following element tag in the schema: c:order.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Order? Order
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Order>();
@@ -3372,9 +3372,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Series Text.</para>
         /// <para>Represents the following element tag in the schema: c:tx.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.SeriesText? SeriesText
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.SeriesText>();
@@ -3385,9 +3385,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>ChartShapeProperties.</para>
         /// <para>Represents the following element tag in the schema: c:spPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
@@ -3398,9 +3398,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>PictureOptions.</para>
         /// <para>Represents the following element tag in the schema: c:pictureOptions.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.PictureOptions? PictureOptions
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PictureOptions>();
@@ -3411,9 +3411,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Explosion.</para>
         /// <para>Represents the following element tag in the schema: c:explosion.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Explosion? Explosion
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Explosion>();
@@ -3429,7 +3429,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:ser.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
@@ -3442,7 +3442,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Index" /> <c>&lt;c:idx></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Order" /> <c>&lt;c:order></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SurfaceChartSeries : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3513,9 +3513,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Index.</para>
         /// <para>Represents the following element tag in the schema: c:idx.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Index? Index
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Index>();
@@ -3526,9 +3526,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Order.</para>
         /// <para>Represents the following element tag in the schema: c:order.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Order? Order
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Order>();
@@ -3539,9 +3539,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Series Text.</para>
         /// <para>Represents the following element tag in the schema: c:tx.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.SeriesText? SeriesText
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.SeriesText>();
@@ -3552,9 +3552,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>ChartShapeProperties.</para>
         /// <para>Represents the following element tag in the schema: c:spPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
@@ -3565,9 +3565,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>PictureOptions.</para>
         /// <para>Represents the following element tag in the schema: c:pictureOptions.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.PictureOptions? PictureOptions
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PictureOptions>();
@@ -3578,9 +3578,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>CategoryAxisData.</para>
         /// <para>Represents the following element tag in the schema: c:cat.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData? CategoryAxisData
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.CategoryAxisData>();
@@ -3591,9 +3591,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Values.</para>
         /// <para>Represents the following element tag in the schema: c:val.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Values? Values
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Values>();
@@ -3604,9 +3604,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Bubble3D.</para>
         /// <para>Represents the following element tag in the schema: c:bubble3D.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Bubble3D? Bubble3D
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Bubble3D>();
@@ -3617,9 +3617,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>SurfaceSerExtensionList.</para>
         /// <para>Represents the following element tag in the schema: c:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.SurfaceSerExtensionList? SurfaceSerExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.SurfaceSerExtensionList>();
@@ -3635,12 +3635,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:bandFmts.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.BandFormat" /> <c>&lt;c:bandFmt></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class BandFormats : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3694,7 +3694,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:scaling.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.MaxAxisValue" /> <c>&lt;c:max></c></description></item>
@@ -3703,7 +3703,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.LogBase" /> <c>&lt;c:logBase></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Orientation" /> <c>&lt;c:orientation></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Scaling : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3760,9 +3760,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Logarithmic Base.</para>
         /// <para>Represents the following element tag in the schema: c:logBase.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.LogBase? LogBase
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.LogBase>();
@@ -3773,9 +3773,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Axis Orientation.</para>
         /// <para>Represents the following element tag in the schema: c:orientation.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Orientation? Orientation
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Orientation>();
@@ -3786,9 +3786,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Maximum.</para>
         /// <para>Represents the following element tag in the schema: c:max.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.MaxAxisValue? MaxAxisValue
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.MaxAxisValue>();
@@ -3799,9 +3799,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Minimum.</para>
         /// <para>Represents the following element tag in the schema: c:min.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.MinAxisValue? MinAxisValue
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.MinAxisValue>();
@@ -3812,9 +3812,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Chart Extensibility.</para>
         /// <para>Represents the following element tag in the schema: c:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
@@ -3869,7 +3869,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:title.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
@@ -3879,7 +3879,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Layout" /> <c>&lt;c:layout></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartText" /> <c>&lt;c:tx></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Title : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3938,9 +3938,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Chart Text.</para>
         /// <para>Represents the following element tag in the schema: c:tx.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ChartText? ChartText
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartText>();
@@ -3951,9 +3951,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Layout.</para>
         /// <para>Represents the following element tag in the schema: c:layout.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Layout? Layout
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Layout>();
@@ -3964,9 +3964,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Overlay.</para>
         /// <para>Represents the following element tag in the schema: c:overlay.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Overlay? Overlay
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Overlay>();
@@ -3977,9 +3977,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>ChartShapeProperties.</para>
         /// <para>Represents the following element tag in the schema: c:spPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
@@ -3990,9 +3990,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>TextProperties.</para>
         /// <para>Represents the following element tag in the schema: c:txPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.TextProperties? TextProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.TextProperties>();
@@ -4003,9 +4003,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Chart Extensibility.</para>
         /// <para>Represents the following element tag in the schema: c:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
@@ -4529,7 +4529,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:chartSpace.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ColorMapOverride" /> <c>&lt;c:clrMapOvr></c></description></item>
@@ -4548,7 +4548,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.EditingLanguage" /> <c>&lt;c:lang></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.Charts.Style" /> <c>&lt;c14:style></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ChartSpace : OpenXmlPartRootElement
     {
         /// <summary>
@@ -4628,9 +4628,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Date1904.</para>
         /// <para>Represents the following element tag in the schema: c:date1904.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Date1904? Date1904
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Date1904>();
@@ -4641,9 +4641,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>EditingLanguage.</para>
         /// <para>Represents the following element tag in the schema: c:lang.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.EditingLanguage? EditingLanguage
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.EditingLanguage>();
@@ -4654,9 +4654,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>RoundedCorners.</para>
         /// <para>Represents the following element tag in the schema: c:roundedCorners.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.RoundedCorners? RoundedCorners
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.RoundedCorners>();
@@ -4703,13 +4703,13 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:userShapes.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ChartDrawing.AbsoluteAnchorSize" /> <c>&lt;cdr:absSizeAnchor></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ChartDrawing.RelativeAnchorSize" /> <c>&lt;cdr:relSizeAnchor></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class UserShapes : OpenXmlPartRootElement
     {
         /// <summary>
@@ -4888,9 +4888,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Relationship Reference</para>
         /// <para>Represents the following attribute in the schema: r:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -5313,12 +5313,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:pt.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.NumericValue" /> <c>&lt;c:v></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class NumericPoint : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5395,9 +5395,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Numeric Value.</para>
         /// <para>Represents the following element tag in the schema: c:v.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.NumericValue? NumericValue
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.NumericValue>();
@@ -5413,12 +5413,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Extension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5472,14 +5472,14 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:numRef.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.NumberingCache" /> <c>&lt;c:numCache></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.NumRefExtensionList" /> <c>&lt;c:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Formula" /> <c>&lt;c:f></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class NumberReference : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5532,9 +5532,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Formula.</para>
         /// <para>Represents the following element tag in the schema: c:f.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Formula? Formula
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Formula>();
@@ -5545,9 +5545,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>NumberingCache.</para>
         /// <para>Represents the following element tag in the schema: c:numCache.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.NumberingCache? NumberingCache
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.NumberingCache>();
@@ -5558,9 +5558,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>NumRefExtensionList.</para>
         /// <para>Represents the following element tag in the schema: c:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.NumRefExtensionList? NumRefExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.NumRefExtensionList>();
@@ -5576,7 +5576,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:numLit.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ExtensionList" /> <c>&lt;c:extLst></c></description></item>
@@ -5584,7 +5584,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PointCount" /> <c>&lt;c:ptCount></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.FormatCode" /> <c>&lt;c:formatCode></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class NumberLiteral : NumberDataType
     {
         /// <summary>
@@ -5640,7 +5640,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:numCache.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ExtensionList" /> <c>&lt;c:extLst></c></description></item>
@@ -5648,7 +5648,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PointCount" /> <c>&lt;c:ptCount></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.FormatCode" /> <c>&lt;c:formatCode></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class NumberingCache : NumberDataType
     {
         /// <summary>
@@ -5704,7 +5704,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ExtensionList" /> <c>&lt;c:extLst></c></description></item>
@@ -5712,7 +5712,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PointCount" /> <c>&lt;c:ptCount></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.FormatCode" /> <c>&lt;c:formatCode></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public abstract partial class NumberDataType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5759,9 +5759,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Format Code.</para>
         /// <para>Represents the following element tag in the schema: c:formatCode.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.FormatCode? FormatCode
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.FormatCode>();
@@ -5772,9 +5772,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Point Count.</para>
         /// <para>Represents the following element tag in the schema: c:ptCount.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.PointCount? PointCount
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PointCount>();
@@ -5787,12 +5787,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:lvl.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.StringPoint" /> <c>&lt;c:pt></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Level : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5846,14 +5846,14 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:multiLvlStrRef.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.MultiLevelStringCache" /> <c>&lt;c:multiLvlStrCache></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.MultiLvlStrRefExtensionList" /> <c>&lt;c:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Formula" /> <c>&lt;c:f></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class MultiLevelStringReference : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5906,9 +5906,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Formula.</para>
         /// <para>Represents the following element tag in the schema: c:f.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Formula? Formula
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Formula>();
@@ -5919,9 +5919,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>MultiLevelStringCache.</para>
         /// <para>Represents the following element tag in the schema: c:multiLvlStrCache.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.MultiLevelStringCache? MultiLevelStringCache
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.MultiLevelStringCache>();
@@ -5932,9 +5932,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>MultiLvlStrRefExtensionList.</para>
         /// <para>Represents the following element tag in the schema: c:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.MultiLvlStrRefExtensionList? MultiLvlStrRefExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.MultiLvlStrRefExtensionList>();
@@ -5950,14 +5950,14 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:strRef.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.StringCache" /> <c>&lt;c:strCache></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.StrRefExtensionList" /> <c>&lt;c:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Formula" /> <c>&lt;c:f></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class StringReference : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6010,9 +6010,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Formula.</para>
         /// <para>Represents the following element tag in the schema: c:f.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Formula? Formula
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Formula>();
@@ -6023,9 +6023,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>StringCache.</para>
         /// <para>Represents the following element tag in the schema: c:strCache.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.StringCache? StringCache
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.StringCache>();
@@ -6036,9 +6036,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>StrRefExtensionList.</para>
         /// <para>Represents the following element tag in the schema: c:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.StrRefExtensionList? StrRefExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.StrRefExtensionList>();
@@ -6054,14 +6054,14 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:strLit.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.StrDataExtensionList" /> <c>&lt;c:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.StringPoint" /> <c>&lt;c:pt></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PointCount" /> <c>&lt;c:ptCount></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class StringLiteral : StringDataType
     {
         /// <summary>
@@ -6116,14 +6116,14 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:strCache.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.StrDataExtensionList" /> <c>&lt;c:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.StringPoint" /> <c>&lt;c:pt></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PointCount" /> <c>&lt;c:ptCount></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class StringCache : StringDataType
     {
         /// <summary>
@@ -6178,14 +6178,14 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.StrDataExtensionList" /> <c>&lt;c:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.StringPoint" /> <c>&lt;c:pt></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PointCount" /> <c>&lt;c:ptCount></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public abstract partial class StringDataType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6231,9 +6231,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>PointCount.</para>
         /// <para>Represents the following element tag in the schema: c:ptCount.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.PointCount? PointCount
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PointCount>();
@@ -6410,7 +6410,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:manualLayout.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Left" /> <c>&lt;c:x></c></description></item>
@@ -6424,7 +6424,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.HeightMode" /> <c>&lt;c:hMode></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.LayoutTarget" /> <c>&lt;c:layoutTarget></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ManualLayout : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6491,9 +6491,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Layout Target.</para>
         /// <para>Represents the following element tag in the schema: c:layoutTarget.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.LayoutTarget? LayoutTarget
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.LayoutTarget>();
@@ -6504,9 +6504,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Left Mode.</para>
         /// <para>Represents the following element tag in the schema: c:xMode.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.LeftMode? LeftMode
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.LeftMode>();
@@ -6517,9 +6517,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Top Mode.</para>
         /// <para>Represents the following element tag in the schema: c:yMode.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.TopMode? TopMode
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.TopMode>();
@@ -6530,9 +6530,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Width Mode.</para>
         /// <para>Represents the following element tag in the schema: c:wMode.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.WidthMode? WidthMode
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.WidthMode>();
@@ -6543,9 +6543,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Height Mode.</para>
         /// <para>Represents the following element tag in the schema: c:hMode.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.HeightMode? HeightMode
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.HeightMode>();
@@ -6556,9 +6556,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Left.</para>
         /// <para>Represents the following element tag in the schema: c:x.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Left? Left
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Left>();
@@ -6569,9 +6569,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Top.</para>
         /// <para>Represents the following element tag in the schema: c:y.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Top? Top
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Top>();
@@ -6582,9 +6582,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Width.</para>
         /// <para>Represents the following element tag in the schema: c:w.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Width? Width
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Width>();
@@ -6595,9 +6595,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Height.</para>
         /// <para>Represents the following element tag in the schema: c:h.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Height? Height
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Height>();
@@ -6608,9 +6608,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Chart Extensibility.</para>
         /// <para>Represents the following element tag in the schema: c:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
@@ -6899,7 +6899,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:marker.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
@@ -6907,7 +6907,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Size" /> <c>&lt;c:size></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Symbol" /> <c>&lt;c:symbol></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Marker : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6962,9 +6962,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Symbol.</para>
         /// <para>Represents the following element tag in the schema: c:symbol.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Symbol? Symbol
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Symbol>();
@@ -6975,9 +6975,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Size.</para>
         /// <para>Represents the following element tag in the schema: c:size.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Size? Size
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Size>();
@@ -6988,9 +6988,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>ChartShapeProperties.</para>
         /// <para>Represents the following element tag in the schema: c:spPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
@@ -7001,9 +7001,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Chart Extensibility.</para>
         /// <para>Represents the following element tag in the schema: c:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
@@ -7019,7 +7019,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:pictureOptions.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ApplyToFront" /> <c>&lt;c:applyToFront></c></description></item>
@@ -7028,7 +7028,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PictureFormat" /> <c>&lt;c:pictureFormat></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PictureStackUnit" /> <c>&lt;c:pictureStackUnit></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PictureOptions : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7085,9 +7085,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Apply To Front.</para>
         /// <para>Represents the following element tag in the schema: c:applyToFront.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ApplyToFront? ApplyToFront
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ApplyToFront>();
@@ -7098,9 +7098,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Apply To Sides.</para>
         /// <para>Represents the following element tag in the schema: c:applyToSides.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ApplyToSides? ApplyToSides
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ApplyToSides>();
@@ -7111,9 +7111,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Apply to End.</para>
         /// <para>Represents the following element tag in the schema: c:applyToEnd.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ApplyToEnd? ApplyToEnd
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ApplyToEnd>();
@@ -7124,9 +7124,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Picture Format.</para>
         /// <para>Represents the following element tag in the schema: c:pictureFormat.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.PictureFormat? PictureFormat
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PictureFormat>();
@@ -7137,9 +7137,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Picture Stack Unit.</para>
         /// <para>Represents the following element tag in the schema: c:pictureStackUnit.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.PictureStackUnit? PictureStackUnit
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PictureStackUnit>();
@@ -7272,7 +7272,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:trendlineLbl.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
@@ -7282,7 +7282,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat" /> <c>&lt;c:numFmt></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartText" /> <c>&lt;c:tx></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TrendlineLabel : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7341,9 +7341,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Layout.</para>
         /// <para>Represents the following element tag in the schema: c:layout.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Layout? Layout
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Layout>();
@@ -7354,9 +7354,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>ChartText.</para>
         /// <para>Represents the following element tag in the schema: c:tx.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ChartText? ChartText
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartText>();
@@ -7367,9 +7367,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Number Format.</para>
         /// <para>Represents the following element tag in the schema: c:numFmt.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat? NumberingFormat
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat>();
@@ -7380,9 +7380,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>ChartShapeProperties.</para>
         /// <para>Represents the following element tag in the schema: c:spPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
@@ -7393,9 +7393,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>TextProperties.</para>
         /// <para>Represents the following element tag in the schema: c:txPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.TextProperties? TextProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.TextProperties>();
@@ -7406,9 +7406,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Chart Extensibility.</para>
         /// <para>Represents the following element tag in the schema: c:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
@@ -7541,13 +7541,13 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:plus.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral" /> <c>&lt;c:numLit></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.NumberReference" /> <c>&lt;c:numRef></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Plus : NumberDataSourceType
     {
         /// <summary>
@@ -7604,13 +7604,13 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:minus.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral" /> <c>&lt;c:numLit></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.NumberReference" /> <c>&lt;c:numRef></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Minus : NumberDataSourceType
     {
         /// <summary>
@@ -7667,13 +7667,13 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:val.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral" /> <c>&lt;c:numLit></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.NumberReference" /> <c>&lt;c:numRef></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Values : NumberDataSourceType
     {
         /// <summary>
@@ -7730,13 +7730,13 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:yVal.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral" /> <c>&lt;c:numLit></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.NumberReference" /> <c>&lt;c:numRef></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class YValues : NumberDataSourceType
     {
         /// <summary>
@@ -7793,13 +7793,13 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:bubbleSize.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral" /> <c>&lt;c:numLit></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.NumberReference" /> <c>&lt;c:numRef></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class BubbleSize : NumberDataSourceType
     {
         /// <summary>
@@ -7856,13 +7856,13 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral" /> <c>&lt;c:numLit></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.NumberReference" /> <c>&lt;c:numRef></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public abstract partial class NumberDataSourceType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7907,9 +7907,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Number Reference.</para>
         /// <para>Represents the following element tag in the schema: c:numRef.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.NumberReference? NumberReference
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.NumberReference>();
@@ -7920,9 +7920,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Number Literal.</para>
         /// <para>Represents the following element tag in the schema: c:numLit.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral? NumberLiteral
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral>();
@@ -8018,12 +8018,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:upBars.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class UpBars : UpDownBarType
     {
         /// <summary>
@@ -8076,12 +8076,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:downBars.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DownBars : UpDownBarType
     {
         /// <summary>
@@ -8134,12 +8134,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public abstract partial class UpDownBarType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8183,9 +8183,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>ChartShapeProperties.</para>
         /// <para>Represents the following element tag in the schema: c:spPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
@@ -8276,12 +8276,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:custSplit.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.SecondPiePoint" /> <c>&lt;c:secondPiePt></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class CustomSplit : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8374,13 +8374,13 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:bandFmt.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Index" /> <c>&lt;c:idx></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class BandFormat : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8431,9 +8431,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Index.</para>
         /// <para>Represents the following element tag in the schema: c:idx.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Index? Index
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Index>();
@@ -8444,9 +8444,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>ChartShapeProperties.</para>
         /// <para>Represents the following element tag in the schema: c:spPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
@@ -8577,7 +8577,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:dispUnitsLbl.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
@@ -8585,7 +8585,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Layout" /> <c>&lt;c:layout></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartText" /> <c>&lt;c:tx></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DisplayUnitsLabel : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8640,9 +8640,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Layout.</para>
         /// <para>Represents the following element tag in the schema: c:layout.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Layout? Layout
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Layout>();
@@ -8653,9 +8653,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>ChartText.</para>
         /// <para>Represents the following element tag in the schema: c:tx.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ChartText? ChartText
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartText>();
@@ -8666,9 +8666,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>ChartShapeProperties.</para>
         /// <para>Represents the following element tag in the schema: c:spPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
@@ -8679,9 +8679,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>TextProperties.</para>
         /// <para>Represents the following element tag in the schema: c:txPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.TextProperties? TextProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.TextProperties>();
@@ -8773,7 +8773,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:pivotFmt.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ShapeProperties" /> <c>&lt;c:spPr></c></description></item>
@@ -8782,7 +8782,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Marker" /> <c>&lt;c:marker></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Index" /> <c>&lt;c:idx></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PivotFormat : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8839,9 +8839,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Index.</para>
         /// <para>Represents the following element tag in the schema: c:idx.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Index? Index
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Index>();
@@ -8852,9 +8852,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>ShapeProperties.</para>
         /// <para>Represents the following element tag in the schema: c:spPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ShapeProperties? ShapeProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ShapeProperties>();
@@ -8865,9 +8865,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Marker.</para>
         /// <para>Represents the following element tag in the schema: c:marker.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Marker? Marker
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Marker>();
@@ -8878,9 +8878,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Data Label.</para>
         /// <para>Represents the following element tag in the schema: c:dLbl.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.DataLabel? DataLabel
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.DataLabel>();
@@ -8891,9 +8891,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Chart Extensibility.</para>
         /// <para>Represents the following element tag in the schema: c:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
@@ -8945,7 +8945,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:legendEntry.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.TextProperties" /> <c>&lt;c:txPr></c></description></item>
@@ -8953,7 +8953,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ExtensionList" /> <c>&lt;c:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Index" /> <c>&lt;c:idx></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class LegendEntry : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9017,9 +9017,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Index.</para>
         /// <para>Represents the following element tag in the schema: c:idx.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Index? Index
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Index>();
@@ -9035,7 +9035,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:headerFooter.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.OddHeader" /> <c>&lt;c:oddHeader></c></description></item>
@@ -9045,7 +9045,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.FirstHeader" /> <c>&lt;c:firstHeader></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.FirstFooter" /> <c>&lt;c:firstFooter></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class HeaderFooter : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9138,9 +9138,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Odd Header.</para>
         /// <para>Represents the following element tag in the schema: c:oddHeader.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.OddHeader? OddHeader
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.OddHeader>();
@@ -9151,9 +9151,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Odd Footer.</para>
         /// <para>Represents the following element tag in the schema: c:oddFooter.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.OddFooter? OddFooter
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.OddFooter>();
@@ -9164,9 +9164,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Even Header.</para>
         /// <para>Represents the following element tag in the schema: c:evenHeader.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.EvenHeader? EvenHeader
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.EvenHeader>();
@@ -9177,9 +9177,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Even Footer.</para>
         /// <para>Represents the following element tag in the schema: c:evenFooter.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.EvenFooter? EvenFooter
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.EvenFooter>();
@@ -9190,9 +9190,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>First Header.</para>
         /// <para>Represents the following element tag in the schema: c:firstHeader.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.FirstHeader? FirstHeader
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.FirstHeader>();
@@ -9203,9 +9203,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>First Footer.</para>
         /// <para>Represents the following element tag in the schema: c:firstFooter.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.FirstFooter? FirstFooter
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.FirstFooter>();
@@ -9462,7 +9462,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:spPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.BlipFill" /> <c>&lt;a:blipFill></c></description></item>
@@ -9481,7 +9481,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SolidFill" /> <c>&lt;a:solidFill></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Transform2D" /> <c>&lt;a:xfrm></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9591,9 +9591,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>2D Transform for Individual Objects.</para>
         /// <para>Represents the following element tag in the schema: a:xfrm.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Transform2D? Transform2D
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Transform2D>();
@@ -9609,7 +9609,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:dLbl.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
@@ -9629,7 +9629,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Index" /> <c>&lt;c:idx></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Separator" /> <c>&lt;c:separator></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DataLabel : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9723,9 +9723,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Index.</para>
         /// <para>Represents the following element tag in the schema: c:idx.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Index? Index
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Index>();
@@ -9741,7 +9741,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:areaChart.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.AreaChartExtensionList" /> <c>&lt;c:extLst></c></description></item>
@@ -9752,7 +9752,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Grouping" /> <c>&lt;c:grouping></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.AxisId" /> <c>&lt;c:axId></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class AreaChart : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9819,9 +9819,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Grouping.</para>
         /// <para>Represents the following element tag in the schema: c:grouping.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Grouping? Grouping
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Grouping>();
@@ -9832,9 +9832,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>VaryColors.</para>
         /// <para>Represents the following element tag in the schema: c:varyColors.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.VaryColors? VaryColors
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
@@ -9850,7 +9850,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:area3DChart.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Area3DChartExtensionList" /> <c>&lt;c:extLst></c></description></item>
@@ -9862,7 +9862,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Grouping" /> <c>&lt;c:grouping></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.AxisId" /> <c>&lt;c:axId></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Area3DChart : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9931,9 +9931,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Grouping.</para>
         /// <para>Represents the following element tag in the schema: c:grouping.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Grouping? Grouping
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Grouping>();
@@ -9944,9 +9944,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>VaryColors.</para>
         /// <para>Represents the following element tag in the schema: c:varyColors.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.VaryColors? VaryColors
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
@@ -9962,7 +9962,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:lineChart.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.VaryColors" /> <c>&lt;c:varyColors></c></description></item>
@@ -9977,7 +9977,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.AxisId" /> <c>&lt;c:axId></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.UpDownBars" /> <c>&lt;c:upDownBars></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class LineChart : OpenXmlCompositeElement
     {
         /// <summary>
@@ -10052,9 +10052,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Grouping.</para>
         /// <para>Represents the following element tag in the schema: c:grouping.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Grouping? Grouping
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Grouping>();
@@ -10065,9 +10065,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>VaryColors.</para>
         /// <para>Represents the following element tag in the schema: c:varyColors.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.VaryColors? VaryColors
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
@@ -10083,7 +10083,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:line3DChart.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.VaryColors" /> <c>&lt;c:varyColors></c></description></item>
@@ -10095,7 +10095,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.LineChartSeries" /> <c>&lt;c:ser></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.AxisId" /> <c>&lt;c:axId></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Line3DChart : OpenXmlCompositeElement
     {
         /// <summary>
@@ -10164,9 +10164,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Grouping.</para>
         /// <para>Represents the following element tag in the schema: c:grouping.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Grouping? Grouping
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Grouping>();
@@ -10177,9 +10177,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>VaryColors.</para>
         /// <para>Represents the following element tag in the schema: c:varyColors.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.VaryColors? VaryColors
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
@@ -10195,7 +10195,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:stockChart.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.DropLines" /> <c>&lt;c:dropLines></c></description></item>
@@ -10206,7 +10206,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.AxisId" /> <c>&lt;c:axId></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.UpDownBars" /> <c>&lt;c:upDownBars></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class StockChart : OpenXmlCompositeElement
     {
         /// <summary>
@@ -10272,7 +10272,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:radarChart.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.VaryColors" /> <c>&lt;c:varyColors></c></description></item>
@@ -10282,7 +10282,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.RadarStyle" /> <c>&lt;c:radarStyle></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.AxisId" /> <c>&lt;c:axId></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class RadarChart : OpenXmlCompositeElement
     {
         /// <summary>
@@ -10341,9 +10341,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>RadarStyle.</para>
         /// <para>Represents the following element tag in the schema: c:radarStyle.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.RadarStyle? RadarStyle
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.RadarStyle>();
@@ -10354,9 +10354,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>VaryColors.</para>
         /// <para>Represents the following element tag in the schema: c:varyColors.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.VaryColors? VaryColors
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
@@ -10372,7 +10372,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:scatterChart.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.VaryColors" /> <c>&lt;c:varyColors></c></description></item>
@@ -10382,7 +10382,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ScatterStyle" /> <c>&lt;c:scatterStyle></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.AxisId" /> <c>&lt;c:axId></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ScatterChart : OpenXmlCompositeElement
     {
         /// <summary>
@@ -10441,9 +10441,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>ScatterStyle.</para>
         /// <para>Represents the following element tag in the schema: c:scatterStyle.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ScatterStyle? ScatterStyle
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ScatterStyle>();
@@ -10454,9 +10454,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>VaryColors.</para>
         /// <para>Represents the following element tag in the schema: c:varyColors.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.VaryColors? VaryColors
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
@@ -10472,7 +10472,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:pieChart.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.VaryColors" /> <c>&lt;c:varyColors></c></description></item>
@@ -10481,7 +10481,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PieChartExtensionList" /> <c>&lt;c:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PieChartSeries" /> <c>&lt;c:ser></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PieChart : OpenXmlCompositeElement
     {
         /// <summary>
@@ -10544,9 +10544,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>VaryColors.</para>
         /// <para>Represents the following element tag in the schema: c:varyColors.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.VaryColors? VaryColors
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
@@ -10562,7 +10562,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:pie3DChart.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.VaryColors" /> <c>&lt;c:varyColors></c></description></item>
@@ -10570,7 +10570,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Pie3DChartExtensionList" /> <c>&lt;c:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PieChartSeries" /> <c>&lt;c:ser></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Pie3DChart : OpenXmlCompositeElement
     {
         /// <summary>
@@ -10631,9 +10631,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>VaryColors.</para>
         /// <para>Represents the following element tag in the schema: c:varyColors.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.VaryColors? VaryColors
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
@@ -10649,7 +10649,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:doughnutChart.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.VaryColors" /> <c>&lt;c:varyColors></c></description></item>
@@ -10659,7 +10659,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.HoleSize" /> <c>&lt;c:holeSize></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PieChartSeries" /> <c>&lt;c:ser></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DoughnutChart : OpenXmlCompositeElement
     {
         /// <summary>
@@ -10724,9 +10724,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>VaryColors.</para>
         /// <para>Represents the following element tag in the schema: c:varyColors.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.VaryColors? VaryColors
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
@@ -10742,7 +10742,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:barChart.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.BarChartExtensionList" /> <c>&lt;c:extLst></c></description></item>
@@ -10756,7 +10756,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Overlap" /> <c>&lt;c:overlap></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.AxisId" /> <c>&lt;c:axId></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class BarChart : OpenXmlCompositeElement
     {
         /// <summary>
@@ -10829,9 +10829,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Bar Direction.</para>
         /// <para>Represents the following element tag in the schema: c:barDir.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.BarDirection? BarDirection
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.BarDirection>();
@@ -10842,9 +10842,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Bar Grouping.</para>
         /// <para>Represents the following element tag in the schema: c:grouping.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.BarGrouping? BarGrouping
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.BarGrouping>();
@@ -10855,9 +10855,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>VaryColors.</para>
         /// <para>Represents the following element tag in the schema: c:varyColors.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.VaryColors? VaryColors
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
@@ -10873,7 +10873,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:bar3DChart.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Bar3DChartExtensionList" /> <c>&lt;c:extLst></c></description></item>
@@ -10887,7 +10887,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Shape" /> <c>&lt;c:shape></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.AxisId" /> <c>&lt;c:axId></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Bar3DChart : OpenXmlCompositeElement
     {
         /// <summary>
@@ -10960,9 +10960,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Bar Direction.</para>
         /// <para>Represents the following element tag in the schema: c:barDir.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.BarDirection? BarDirection
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.BarDirection>();
@@ -10973,9 +10973,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Bar Grouping.</para>
         /// <para>Represents the following element tag in the schema: c:grouping.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.BarGrouping? BarGrouping
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.BarGrouping>();
@@ -10986,9 +10986,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>VaryColors.</para>
         /// <para>Represents the following element tag in the schema: c:varyColors.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.VaryColors? VaryColors
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
@@ -11004,7 +11004,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:ofPieChart.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.VaryColors" /> <c>&lt;c:varyColors></c></description></item>
@@ -11019,7 +11019,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.SecondPieSize" /> <c>&lt;c:secondPieSize></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.SplitType" /> <c>&lt;c:splitType></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class OfPieChart : OpenXmlCompositeElement
     {
         /// <summary>
@@ -11094,9 +11094,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Pie of Pie or Bar of Pie Type.</para>
         /// <para>Represents the following element tag in the schema: c:ofPieType.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.OfPieType? OfPieType
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.OfPieType>();
@@ -11107,9 +11107,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>VaryColors.</para>
         /// <para>Represents the following element tag in the schema: c:varyColors.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.VaryColors? VaryColors
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
@@ -11125,7 +11125,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:surfaceChart.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.BandFormats" /> <c>&lt;c:bandFmts></c></description></item>
@@ -11134,7 +11134,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.SurfaceChartSeries" /> <c>&lt;c:ser></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.AxisId" /> <c>&lt;c:axId></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SurfaceChart : OpenXmlCompositeElement
     {
         /// <summary>
@@ -11197,9 +11197,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Wireframe.</para>
         /// <para>Represents the following element tag in the schema: c:wireframe.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Wireframe? Wireframe
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Wireframe>();
@@ -11215,7 +11215,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:surface3DChart.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.BandFormats" /> <c>&lt;c:bandFmts></c></description></item>
@@ -11225,7 +11225,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.SurfaceChartSeries" /> <c>&lt;c:ser></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.AxisId" /> <c>&lt;c:axId></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Surface3DChart : OpenXmlCompositeElement
     {
         /// <summary>
@@ -11284,9 +11284,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Wireframe.</para>
         /// <para>Represents the following element tag in the schema: c:wireframe.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Wireframe? Wireframe
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Wireframe>();
@@ -11297,9 +11297,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>VaryColors.</para>
         /// <para>Represents the following element tag in the schema: c:varyColors.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.VaryColors? VaryColors
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
@@ -11315,7 +11315,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:bubbleChart.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.VaryColors" /> <c>&lt;c:varyColors></c></description></item>
@@ -11328,7 +11328,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.SizeRepresents" /> <c>&lt;c:sizeRepresents></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.AxisId" /> <c>&lt;c:axId></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class BubbleChart : OpenXmlCompositeElement
     {
         /// <summary>
@@ -11393,9 +11393,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>VaryColors.</para>
         /// <para>Represents the following element tag in the schema: c:varyColors.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.VaryColors? VaryColors
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.VaryColors>();
@@ -11411,7 +11411,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:valAx.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
@@ -11436,7 +11436,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.CrossingAxis" /> <c>&lt;c:crossAx></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ValAxExtensionList" /> <c>&lt;c:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ValueAxis : OpenXmlCompositeElement
     {
         /// <summary>
@@ -11534,9 +11534,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Axis ID.</para>
         /// <para>Represents the following element tag in the schema: c:axId.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.AxisId? AxisId
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.AxisId>();
@@ -11547,9 +11547,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Scaling.</para>
         /// <para>Represents the following element tag in the schema: c:scaling.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Scaling? Scaling
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Scaling>();
@@ -11560,9 +11560,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Delete.</para>
         /// <para>Represents the following element tag in the schema: c:delete.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Delete? Delete
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Delete>();
@@ -11573,9 +11573,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Axis Position.</para>
         /// <para>Represents the following element tag in the schema: c:axPos.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.AxisPosition? AxisPosition
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.AxisPosition>();
@@ -11586,9 +11586,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Major Gridlines.</para>
         /// <para>Represents the following element tag in the schema: c:majorGridlines.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.MajorGridlines? MajorGridlines
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.MajorGridlines>();
@@ -11599,9 +11599,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Minor Gridlines.</para>
         /// <para>Represents the following element tag in the schema: c:minorGridlines.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.MinorGridlines? MinorGridlines
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.MinorGridlines>();
@@ -11612,9 +11612,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Title.</para>
         /// <para>Represents the following element tag in the schema: c:title.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Title? Title
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Title>();
@@ -11625,9 +11625,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Number Format.</para>
         /// <para>Represents the following element tag in the schema: c:numFmt.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat? NumberingFormat
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat>();
@@ -11638,9 +11638,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Major Tick Mark.</para>
         /// <para>Represents the following element tag in the schema: c:majorTickMark.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.MajorTickMark? MajorTickMark
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.MajorTickMark>();
@@ -11651,9 +11651,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Minor Tick Mark.</para>
         /// <para>Represents the following element tag in the schema: c:minorTickMark.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.MinorTickMark? MinorTickMark
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.MinorTickMark>();
@@ -11664,9 +11664,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Tick Label Position.</para>
         /// <para>Represents the following element tag in the schema: c:tickLblPos.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.TickLabelPosition? TickLabelPosition
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.TickLabelPosition>();
@@ -11677,9 +11677,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>ChartShapeProperties.</para>
         /// <para>Represents the following element tag in the schema: c:spPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
@@ -11690,9 +11690,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>TextProperties.</para>
         /// <para>Represents the following element tag in the schema: c:txPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.TextProperties? TextProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.TextProperties>();
@@ -11703,9 +11703,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Crossing Axis ID.</para>
         /// <para>Represents the following element tag in the schema: c:crossAx.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.CrossingAxis? CrossingAxis
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.CrossingAxis>();
@@ -11721,7 +11721,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:catAx.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
@@ -11748,7 +11748,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.AxisId" /> <c>&lt;c:axId></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.CrossingAxis" /> <c>&lt;c:crossAx></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class CategoryAxis : OpenXmlCompositeElement
     {
         /// <summary>
@@ -11850,9 +11850,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Axis ID.</para>
         /// <para>Represents the following element tag in the schema: c:axId.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.AxisId? AxisId
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.AxisId>();
@@ -11863,9 +11863,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Scaling.</para>
         /// <para>Represents the following element tag in the schema: c:scaling.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Scaling? Scaling
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Scaling>();
@@ -11876,9 +11876,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Delete.</para>
         /// <para>Represents the following element tag in the schema: c:delete.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Delete? Delete
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Delete>();
@@ -11889,9 +11889,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Axis Position.</para>
         /// <para>Represents the following element tag in the schema: c:axPos.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.AxisPosition? AxisPosition
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.AxisPosition>();
@@ -11902,9 +11902,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Major Gridlines.</para>
         /// <para>Represents the following element tag in the schema: c:majorGridlines.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.MajorGridlines? MajorGridlines
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.MajorGridlines>();
@@ -11915,9 +11915,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Minor Gridlines.</para>
         /// <para>Represents the following element tag in the schema: c:minorGridlines.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.MinorGridlines? MinorGridlines
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.MinorGridlines>();
@@ -11928,9 +11928,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Title.</para>
         /// <para>Represents the following element tag in the schema: c:title.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Title? Title
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Title>();
@@ -11941,9 +11941,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Number Format.</para>
         /// <para>Represents the following element tag in the schema: c:numFmt.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat? NumberingFormat
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat>();
@@ -11954,9 +11954,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Major Tick Mark.</para>
         /// <para>Represents the following element tag in the schema: c:majorTickMark.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.MajorTickMark? MajorTickMark
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.MajorTickMark>();
@@ -11967,9 +11967,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Minor Tick Mark.</para>
         /// <para>Represents the following element tag in the schema: c:minorTickMark.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.MinorTickMark? MinorTickMark
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.MinorTickMark>();
@@ -11980,9 +11980,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Tick Label Position.</para>
         /// <para>Represents the following element tag in the schema: c:tickLblPos.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.TickLabelPosition? TickLabelPosition
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.TickLabelPosition>();
@@ -11993,9 +11993,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>ChartShapeProperties.</para>
         /// <para>Represents the following element tag in the schema: c:spPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
@@ -12006,9 +12006,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>TextProperties.</para>
         /// <para>Represents the following element tag in the schema: c:txPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.TextProperties? TextProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.TextProperties>();
@@ -12019,9 +12019,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Crossing Axis ID.</para>
         /// <para>Represents the following element tag in the schema: c:crossAx.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.CrossingAxis? CrossingAxis
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.CrossingAxis>();
@@ -12037,7 +12037,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:dateAx.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
@@ -12065,7 +12065,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.AxisId" /> <c>&lt;c:axId></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.CrossingAxis" /> <c>&lt;c:crossAx></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DateAxis : OpenXmlCompositeElement
     {
         /// <summary>
@@ -12169,9 +12169,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Axis ID.</para>
         /// <para>Represents the following element tag in the schema: c:axId.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.AxisId? AxisId
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.AxisId>();
@@ -12182,9 +12182,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Scaling.</para>
         /// <para>Represents the following element tag in the schema: c:scaling.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Scaling? Scaling
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Scaling>();
@@ -12195,9 +12195,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Delete.</para>
         /// <para>Represents the following element tag in the schema: c:delete.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Delete? Delete
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Delete>();
@@ -12208,9 +12208,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Axis Position.</para>
         /// <para>Represents the following element tag in the schema: c:axPos.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.AxisPosition? AxisPosition
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.AxisPosition>();
@@ -12221,9 +12221,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Major Gridlines.</para>
         /// <para>Represents the following element tag in the schema: c:majorGridlines.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.MajorGridlines? MajorGridlines
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.MajorGridlines>();
@@ -12234,9 +12234,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Minor Gridlines.</para>
         /// <para>Represents the following element tag in the schema: c:minorGridlines.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.MinorGridlines? MinorGridlines
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.MinorGridlines>();
@@ -12247,9 +12247,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Title.</para>
         /// <para>Represents the following element tag in the schema: c:title.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Title? Title
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Title>();
@@ -12260,9 +12260,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Number Format.</para>
         /// <para>Represents the following element tag in the schema: c:numFmt.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat? NumberingFormat
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat>();
@@ -12273,9 +12273,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Major Tick Mark.</para>
         /// <para>Represents the following element tag in the schema: c:majorTickMark.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.MajorTickMark? MajorTickMark
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.MajorTickMark>();
@@ -12286,9 +12286,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Minor Tick Mark.</para>
         /// <para>Represents the following element tag in the schema: c:minorTickMark.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.MinorTickMark? MinorTickMark
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.MinorTickMark>();
@@ -12299,9 +12299,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Tick Label Position.</para>
         /// <para>Represents the following element tag in the schema: c:tickLblPos.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.TickLabelPosition? TickLabelPosition
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.TickLabelPosition>();
@@ -12312,9 +12312,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>ChartShapeProperties.</para>
         /// <para>Represents the following element tag in the schema: c:spPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
@@ -12325,9 +12325,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>TextProperties.</para>
         /// <para>Represents the following element tag in the schema: c:txPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.TextProperties? TextProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.TextProperties>();
@@ -12338,9 +12338,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Crossing Axis ID.</para>
         /// <para>Represents the following element tag in the schema: c:crossAx.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.CrossingAxis? CrossingAxis
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.CrossingAxis>();
@@ -12356,7 +12356,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:serAx.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
@@ -12379,7 +12379,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.AxisId" /> <c>&lt;c:axId></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.CrossingAxis" /> <c>&lt;c:crossAx></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SeriesAxis : OpenXmlCompositeElement
     {
         /// <summary>
@@ -12473,9 +12473,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Axis ID.</para>
         /// <para>Represents the following element tag in the schema: c:axId.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.AxisId? AxisId
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.AxisId>();
@@ -12486,9 +12486,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Scaling.</para>
         /// <para>Represents the following element tag in the schema: c:scaling.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Scaling? Scaling
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Scaling>();
@@ -12499,9 +12499,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Delete.</para>
         /// <para>Represents the following element tag in the schema: c:delete.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Delete? Delete
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Delete>();
@@ -12512,9 +12512,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Axis Position.</para>
         /// <para>Represents the following element tag in the schema: c:axPos.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.AxisPosition? AxisPosition
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.AxisPosition>();
@@ -12525,9 +12525,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Major Gridlines.</para>
         /// <para>Represents the following element tag in the schema: c:majorGridlines.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.MajorGridlines? MajorGridlines
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.MajorGridlines>();
@@ -12538,9 +12538,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Minor Gridlines.</para>
         /// <para>Represents the following element tag in the schema: c:minorGridlines.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.MinorGridlines? MinorGridlines
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.MinorGridlines>();
@@ -12551,9 +12551,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Title.</para>
         /// <para>Represents the following element tag in the schema: c:title.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Title? Title
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Title>();
@@ -12564,9 +12564,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Number Format.</para>
         /// <para>Represents the following element tag in the schema: c:numFmt.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat? NumberingFormat
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.NumberingFormat>();
@@ -12577,9 +12577,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Major Tick Mark.</para>
         /// <para>Represents the following element tag in the schema: c:majorTickMark.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.MajorTickMark? MajorTickMark
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.MajorTickMark>();
@@ -12590,9 +12590,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Minor Tick Mark.</para>
         /// <para>Represents the following element tag in the schema: c:minorTickMark.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.MinorTickMark? MinorTickMark
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.MinorTickMark>();
@@ -12603,9 +12603,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Tick Label Position.</para>
         /// <para>Represents the following element tag in the schema: c:tickLblPos.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.TickLabelPosition? TickLabelPosition
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.TickLabelPosition>();
@@ -12616,9 +12616,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>ChartShapeProperties.</para>
         /// <para>Represents the following element tag in the schema: c:spPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
@@ -12629,9 +12629,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>TextProperties.</para>
         /// <para>Represents the following element tag in the schema: c:txPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.TextProperties? TextProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.TextProperties>();
@@ -12642,9 +12642,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Crossing Axis ID.</para>
         /// <para>Represents the following element tag in the schema: c:crossAx.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.CrossingAxis? CrossingAxis
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.CrossingAxis>();
@@ -12660,7 +12660,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:dTable.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
@@ -12671,7 +12671,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ShowKeys" /> <c>&lt;c:showKeys></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ExtensionList" /> <c>&lt;c:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DataTable : OpenXmlCompositeElement
     {
         /// <summary>
@@ -12732,9 +12732,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Show Horizontal Border.</para>
         /// <para>Represents the following element tag in the schema: c:showHorzBorder.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ShowHorizontalBorder? ShowHorizontalBorder
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ShowHorizontalBorder>();
@@ -12745,9 +12745,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Show Vertical Border.</para>
         /// <para>Represents the following element tag in the schema: c:showVertBorder.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ShowVerticalBorder? ShowVerticalBorder
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ShowVerticalBorder>();
@@ -12758,9 +12758,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Show Outline Border.</para>
         /// <para>Represents the following element tag in the schema: c:showOutline.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ShowOutlineBorder? ShowOutlineBorder
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ShowOutlineBorder>();
@@ -12771,9 +12771,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Show Legend Keys.</para>
         /// <para>Represents the following element tag in the schema: c:showKeys.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ShowKeys? ShowKeys
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ShowKeys>();
@@ -12784,9 +12784,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>ChartShapeProperties.</para>
         /// <para>Represents the following element tag in the schema: c:spPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
@@ -12797,9 +12797,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Text Properties.</para>
         /// <para>Represents the following element tag in the schema: c:txPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.TextProperties? TextProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.TextProperties>();
@@ -12810,9 +12810,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Chart Extensibility.</para>
         /// <para>Represents the following element tag in the schema: c:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
@@ -12907,12 +12907,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:pt.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.NumericValue" /> <c>&lt;c:v></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class StringPoint : OpenXmlCompositeElement
     {
         /// <summary>
@@ -12978,9 +12978,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Text Value.</para>
         /// <para>Represents the following element tag in the schema: c:v.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.NumericValue? NumericValue
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.NumericValue>();
@@ -13035,12 +13035,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:ext.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredLineSeriesExtension" /> <c>&lt;c15:filteredLineSeries></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class StockChartExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -13111,12 +13111,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:ext.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredPieSeries" /> <c>&lt;c15:filteredPieSeries></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PieChartExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -13187,12 +13187,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:ext.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredPieSeries" /> <c>&lt;c15:filteredPieSeries></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Pie3DChartExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -13263,14 +13263,14 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:ext.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FormulaReference" /> <c>&lt;c15:formulaRef></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FullReference" /> <c>&lt;c15:fullRef></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.LevelReference" /> <c>&lt;c15:levelRef></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class NumRefExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -13345,12 +13345,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:ext.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.AutoGeneneratedCategories" /> <c>&lt;c15:autoCat></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class StrDataExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -13421,14 +13421,14 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:ext.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FormulaReference" /> <c>&lt;c15:formulaRef></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FullReference" /> <c>&lt;c15:fullRef></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.LevelReference" /> <c>&lt;c15:levelRef></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class StrRefExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -13503,14 +13503,14 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:ext.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FormulaReference" /> <c>&lt;c15:formulaRef></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FullReference" /> <c>&lt;c15:fullRef></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.LevelReference" /> <c>&lt;c15:levelRef></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class MultiLvlStrRefExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -13585,7 +13585,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:ext.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShapeProperties" /> <c>&lt;c15:spPr></c></description></item>
@@ -13596,7 +13596,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.ChartText" /> <c>&lt;c15:tx></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelFieldTable" /> <c>&lt;c15:dlblFieldTable></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DLblsExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -13679,12 +13679,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:ext.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredLineSeriesExtension" /> <c>&lt;c15:filteredLineSeries></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class LineChartExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -13755,12 +13755,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:ext.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredLineSeriesExtension" /> <c>&lt;c15:filteredLineSeries></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Line3DChartExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -13831,12 +13831,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:ext.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredScatterSeries" /> <c>&lt;c15:filteredScatterSeries></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ScatterChartExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -13907,12 +13907,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:ext.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredRadarSeries" /> <c>&lt;c15:filteredRadarSeries></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class RadarChartExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -13983,12 +13983,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:ext.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredBarSeries" /> <c>&lt;c15:filteredBarSeries></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class BarChartExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -14059,12 +14059,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:ext.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredBarSeries" /> <c>&lt;c15:filteredBarSeries></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Bar3DChartExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -14135,12 +14135,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:ext.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredAreaSeries" /> <c>&lt;c15:filteredAreaSeries></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class AreaChartExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -14211,12 +14211,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:ext.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredAreaSeries" /> <c>&lt;c15:filteredAreaSeries></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Area3DChartExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -14287,12 +14287,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:ext.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredBubbleSeries" /> <c>&lt;c15:filteredBubbleSeries></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class BubbleChartExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -14363,12 +14363,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:ext.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSurfaceSeries" /> <c>&lt;c15:filteredSurfaceSeries></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SurfaceChartExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -14439,12 +14439,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:ext.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.FilteredSurfaceSeries" /> <c>&lt;c15:filteredSurfaceSeries></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Surface3DChartExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -14515,12 +14515,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:ext.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.NumberingFormat" /> <c>&lt;c15:numFmt></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class CatAxExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -14591,12 +14591,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:ext.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.NumberingFormat" /> <c>&lt;c15:numFmt></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DateAxExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -14667,12 +14667,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:ext.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.NumberingFormat" /> <c>&lt;c15:numFmt></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SerAxExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -14743,12 +14743,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:ext.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.NumberingFormat" /> <c>&lt;c15:numFmt></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ValAxExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -14819,7 +14819,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:upDownBars.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ExtensionList" /> <c>&lt;c:extLst></c></description></item>
@@ -14827,7 +14827,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.UpBars" /> <c>&lt;c:upBars></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.DownBars" /> <c>&lt;c:downBars></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class UpDownBars : OpenXmlCompositeElement
     {
         /// <summary>
@@ -14882,9 +14882,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Gap Width.</para>
         /// <para>Represents the following element tag in the schema: c:gapWidth.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.GapWidth? GapWidth
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.GapWidth>();
@@ -14895,9 +14895,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Up Bars.</para>
         /// <para>Represents the following element tag in the schema: c:upBars.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.UpBars? UpBars
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.UpBars>();
@@ -14908,9 +14908,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Down Bars.</para>
         /// <para>Represents the following element tag in the schema: c:downBars.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.DownBars? DownBars
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.DownBars>();
@@ -14921,9 +14921,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Chart Extensibility.</para>
         /// <para>Represents the following element tag in the schema: c:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
@@ -14939,12 +14939,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.StockChartExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class StockChartExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -14998,12 +14998,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PieChartExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PieChartExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -15057,12 +15057,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Pie3DChartExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Pie3DChartExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -15116,12 +15116,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.NumRefExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class NumRefExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -15175,12 +15175,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.StrDataExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class StrDataExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -15234,12 +15234,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.StrRefExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class StrRefExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -15293,14 +15293,14 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:multiLvlStrCache.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ExtensionList" /> <c>&lt;c:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Level" /> <c>&lt;c:lvl></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PointCount" /> <c>&lt;c:ptCount></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class MultiLevelStringCache : OpenXmlCompositeElement
     {
         /// <summary>
@@ -15353,9 +15353,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>PointCount.</para>
         /// <para>Represents the following element tag in the schema: c:ptCount.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.PointCount? PointCount
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PointCount>();
@@ -15371,12 +15371,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.MultiLvlStrRefExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class MultiLvlStrRefExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -15430,12 +15430,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.DLblsExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DLblsExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -15489,12 +15489,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.LineChartExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class LineChartExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -15548,12 +15548,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Line3DChartExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Line3DChartExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -15643,7 +15643,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:ser.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
@@ -15660,7 +15660,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Index" /> <c>&lt;c:idx></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Order" /> <c>&lt;c:order></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ScatterChartSeries : OpenXmlCompositeElement
     {
         /// <summary>
@@ -15739,9 +15739,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Index.</para>
         /// <para>Represents the following element tag in the schema: c:idx.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Index? Index
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Index>();
@@ -15752,9 +15752,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Order.</para>
         /// <para>Represents the following element tag in the schema: c:order.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Order? Order
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Order>();
@@ -15765,9 +15765,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Series Text.</para>
         /// <para>Represents the following element tag in the schema: c:tx.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.SeriesText? SeriesText
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.SeriesText>();
@@ -15778,9 +15778,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>ChartShapeProperties.</para>
         /// <para>Represents the following element tag in the schema: c:spPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
@@ -15791,9 +15791,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Marker.</para>
         /// <para>Represents the following element tag in the schema: c:marker.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Marker? Marker
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Marker>();
@@ -15809,12 +15809,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ScatterChartExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ScatterChartExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -15907,7 +15907,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:ser.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
@@ -15922,7 +15922,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Index" /> <c>&lt;c:idx></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Order" /> <c>&lt;c:order></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class RadarChartSeries : OpenXmlCompositeElement
     {
         /// <summary>
@@ -15997,9 +15997,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Index.</para>
         /// <para>Represents the following element tag in the schema: c:idx.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Index? Index
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Index>();
@@ -16010,9 +16010,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Order.</para>
         /// <para>Represents the following element tag in the schema: c:order.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Order? Order
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Order>();
@@ -16023,9 +16023,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Series Text.</para>
         /// <para>Represents the following element tag in the schema: c:tx.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.SeriesText? SeriesText
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.SeriesText>();
@@ -16036,9 +16036,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>ChartShapeProperties.</para>
         /// <para>Represents the following element tag in the schema: c:spPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
@@ -16049,9 +16049,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>PictureOptions.</para>
         /// <para>Represents the following element tag in the schema: c:pictureOptions.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.PictureOptions? PictureOptions
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PictureOptions>();
@@ -16062,9 +16062,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Marker.</para>
         /// <para>Represents the following element tag in the schema: c:marker.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Marker? Marker
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Marker>();
@@ -16080,12 +16080,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.RadarChartExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class RadarChartExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -16178,12 +16178,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.BarChartExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class BarChartExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -16273,12 +16273,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Bar3DChartExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Bar3DChartExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -16332,12 +16332,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.AreaChartExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class AreaChartExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -16391,12 +16391,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Area3DChartExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Area3DChartExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -16450,7 +16450,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:ser.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
@@ -16469,7 +16469,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Index" /> <c>&lt;c:idx></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Order" /> <c>&lt;c:order></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class BubbleChartSeries : OpenXmlCompositeElement
     {
         /// <summary>
@@ -16552,9 +16552,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Index.</para>
         /// <para>Represents the following element tag in the schema: c:idx.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Index? Index
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Index>();
@@ -16565,9 +16565,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Order.</para>
         /// <para>Represents the following element tag in the schema: c:order.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Order? Order
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Order>();
@@ -16578,9 +16578,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Series Text.</para>
         /// <para>Represents the following element tag in the schema: c:tx.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.SeriesText? SeriesText
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.SeriesText>();
@@ -16591,9 +16591,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>ChartShapeProperties.</para>
         /// <para>Represents the following element tag in the schema: c:spPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
@@ -16604,9 +16604,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>PictureOptions.</para>
         /// <para>Represents the following element tag in the schema: c:pictureOptions.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.PictureOptions? PictureOptions
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PictureOptions>();
@@ -16617,9 +16617,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>InvertIfNegative.</para>
         /// <para>Represents the following element tag in the schema: c:invertIfNegative.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.InvertIfNegative? InvertIfNegative
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.InvertIfNegative>();
@@ -16710,12 +16710,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.BubbleChartExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class BubbleChartExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -16769,12 +16769,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.SurfaceChartExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SurfaceChartExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -16828,12 +16828,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Surface3DChartExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Surface3DChartExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -17049,12 +17049,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.CatAxExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class CatAxExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -17296,12 +17296,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.DateAxExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DateAxExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -17355,12 +17355,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.SerAxExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SerAxExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -17453,7 +17453,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:dispUnits.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.BuiltInUnit" /> <c>&lt;c:builtInUnit></c></description></item>
@@ -17461,7 +17461,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.CustomDisplayUnit" /> <c>&lt;c:custUnit></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ExtensionList" /> <c>&lt;c:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DisplayUnits : OpenXmlCompositeElement
     {
         /// <summary>
@@ -17524,12 +17524,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ValAxExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ValAxExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -17661,12 +17661,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:clrMapOvr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ColorMapOverride : OpenXmlCompositeElement
     {
         /// <summary>
@@ -17896,9 +17896,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: a:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>();
@@ -17914,14 +17914,14 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:pivotSource.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ExtensionList" /> <c>&lt;c:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.FormatId" /> <c>&lt;c:fmtId></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PivotTableName" /> <c>&lt;c:name></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PivotSource : OpenXmlCompositeElement
     {
         /// <summary>
@@ -17974,9 +17974,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Pivot Name.</para>
         /// <para>Represents the following element tag in the schema: c:name.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.PivotTableName? PivotTableName
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PivotTableName>();
@@ -17987,9 +17987,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Format ID.</para>
         /// <para>Represents the following element tag in the schema: c:fmtId.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.FormatId? FormatId
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.FormatId>();
@@ -18000,9 +18000,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Chart Extensibility.</para>
         /// <para>Represents the following element tag in the schema: c:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
@@ -18018,7 +18018,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:protection.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartObject" /> <c>&lt;c:chartObject></c></description></item>
@@ -18027,7 +18027,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Selection" /> <c>&lt;c:selection></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.UserInterface" /> <c>&lt;c:userInterface></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Protection : OpenXmlCompositeElement
     {
         /// <summary>
@@ -18084,9 +18084,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Chart Object.</para>
         /// <para>Represents the following element tag in the schema: c:chartObject.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ChartObject? ChartObject
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartObject>();
@@ -18097,9 +18097,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Data Cannot Be Changed.</para>
         /// <para>Represents the following element tag in the schema: c:data.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Data? Data
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Data>();
@@ -18110,9 +18110,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Formatting.</para>
         /// <para>Represents the following element tag in the schema: c:formatting.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Formatting? Formatting
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Formatting>();
@@ -18123,9 +18123,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Selection.</para>
         /// <para>Represents the following element tag in the schema: c:selection.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Selection? Selection
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Selection>();
@@ -18136,9 +18136,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>User Interface.</para>
         /// <para>Represents the following element tag in the schema: c:userInterface.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.UserInterface? UserInterface
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.UserInterface>();
@@ -18154,7 +18154,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:chart.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.AutoTitleDeleted" /> <c>&lt;c:autoTitleDeleted></c></description></item>
@@ -18171,7 +18171,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Title" /> <c>&lt;c:title></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.View3D" /> <c>&lt;c:view3D></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Chart : OpenXmlCompositeElement
     {
         /// <summary>
@@ -18245,9 +18245,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Title data and formatting.</para>
         /// <para>Represents the following element tag in the schema: c:title.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Title? Title
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Title>();
@@ -18258,9 +18258,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>True if the chart automatic title has been deleted..</para>
         /// <para>Represents the following element tag in the schema: c:autoTitleDeleted.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.AutoTitleDeleted? AutoTitleDeleted
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.AutoTitleDeleted>();
@@ -18271,9 +18271,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>pivot chart format persistence data.</para>
         /// <para>Represents the following element tag in the schema: c:pivotFmts.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.PivotFormats? PivotFormats
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PivotFormats>();
@@ -18284,9 +18284,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>3D view settings.</para>
         /// <para>Represents the following element tag in the schema: c:view3D.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.View3D? View3D
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.View3D>();
@@ -18297,9 +18297,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>3D floor formatting.</para>
         /// <para>Represents the following element tag in the schema: c:floor.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Floor? Floor
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Floor>();
@@ -18310,9 +18310,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>3D side wall formatting.</para>
         /// <para>Represents the following element tag in the schema: c:sideWall.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.SideWall? SideWall
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.SideWall>();
@@ -18323,9 +18323,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>3D back wall formatting.</para>
         /// <para>Represents the following element tag in the schema: c:backWall.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.BackWall? BackWall
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.BackWall>();
@@ -18336,9 +18336,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Plot data and formatting.</para>
         /// <para>Represents the following element tag in the schema: c:plotArea.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.PlotArea? PlotArea
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PlotArea>();
@@ -18349,9 +18349,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Legend data and formatting.</para>
         /// <para>Represents the following element tag in the schema: c:legend.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Legend? Legend
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Legend>();
@@ -18362,9 +18362,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>True if only visible cells are plotted..</para>
         /// <para>Represents the following element tag in the schema: c:plotVisOnly.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.PlotVisibleOnly? PlotVisibleOnly
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PlotVisibleOnly>();
@@ -18375,9 +18375,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>The way that blank cells are plotted on a chart..</para>
         /// <para>Represents the following element tag in the schema: c:dispBlanksAs.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.DisplayBlanksAs? DisplayBlanksAs
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.DisplayBlanksAs>();
@@ -18388,9 +18388,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>True if we should render datalabels over the maximum scale.</para>
         /// <para>Represents the following element tag in the schema: c:showDLblsOverMax.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ShowDataLabelsOverMaximum? ShowDataLabelsOverMaximum
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ShowDataLabelsOverMaximum>();
@@ -18401,9 +18401,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Extensibility container.</para>
         /// <para>Represents the following element tag in the schema: c:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ChartExtensionList? ChartExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartExtensionList>();
@@ -18419,12 +18419,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:externalData.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.AutoUpdate" /> <c>&lt;c:autoUpdate></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ExternalData : OpenXmlCompositeElement
     {
         /// <summary>
@@ -18462,9 +18462,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Relationship Reference</para>
         /// <para>Represents the following attribute in the schema: r:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -18492,9 +18492,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Update Automatically.</para>
         /// <para>Represents the following element tag in the schema: c:autoUpdate.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.AutoUpdate? AutoUpdate
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.AutoUpdate>();
@@ -18510,7 +18510,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:printSettings.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.HeaderFooter" /> <c>&lt;c:headerFooter></c></description></item>
@@ -18518,7 +18518,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PageSetup" /> <c>&lt;c:pageSetup></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.LegacyDrawingHeaderFooter" /> <c>&lt;c:legacyDrawingHF></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PrintSettings : OpenXmlCompositeElement
     {
         /// <summary>
@@ -18573,9 +18573,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Header and Footer.</para>
         /// <para>Represents the following element tag in the schema: c:headerFooter.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.HeaderFooter? HeaderFooter
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.HeaderFooter>();
@@ -18586,9 +18586,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Page Margins.</para>
         /// <para>Represents the following element tag in the schema: c:pageMargins.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.PageMargins? PageMargins
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PageMargins>();
@@ -18599,9 +18599,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Page Setup.</para>
         /// <para>Represents the following element tag in the schema: c:pageSetup.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.PageSetup? PageSetup
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PageSetup>();
@@ -18612,9 +18612,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Legacy Drawing for Headers and Footers.</para>
         /// <para>Represents the following element tag in the schema: c:legacyDrawingHF.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.LegacyDrawingHeaderFooter? LegacyDrawingHeaderFooter
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.LegacyDrawingHeaderFooter>();
@@ -18630,12 +18630,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartSpaceExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ChartSpaceExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -18689,14 +18689,14 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:ext.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.PivotSource" /> <c>&lt;c15:pivotSource></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.Charts.PivotOptions" /> <c>&lt;c14:pivotOptions></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.Charts.SketchOptions" /> <c>&lt;c14:sketchOptions></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ChartSpaceExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -18771,12 +18771,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.DLblExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DLblExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -18830,7 +18830,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:ext.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.ShapeProperties" /> <c>&lt;c15:spPr></c></description></item>
@@ -18840,7 +18840,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.DataLabelFieldTable" /> <c>&lt;c15:dlblFieldTable></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID" /> <c>&lt;c16:uniqueId></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DLblExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -18921,7 +18921,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:dPt.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
@@ -18933,7 +18933,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Index" /> <c>&lt;c:idx></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Explosion" /> <c>&lt;c:explosion></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DataPoint : OpenXmlCompositeElement
     {
         /// <summary>
@@ -18996,9 +18996,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Index.</para>
         /// <para>Represents the following element tag in the schema: c:idx.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Index? Index
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Index>();
@@ -19009,9 +19009,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Invert if Negative.</para>
         /// <para>Represents the following element tag in the schema: c:invertIfNegative.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.InvertIfNegative? InvertIfNegative
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.InvertIfNegative>();
@@ -19022,9 +19022,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Marker.</para>
         /// <para>Represents the following element tag in the schema: c:marker.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Marker? Marker
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Marker>();
@@ -19035,9 +19035,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>3D Bubble.</para>
         /// <para>Represents the following element tag in the schema: c:bubble3D.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Bubble3D? Bubble3D
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Bubble3D>();
@@ -19048,9 +19048,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Explosion.</para>
         /// <para>Represents the following element tag in the schema: c:explosion.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Explosion? Explosion
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Explosion>();
@@ -19061,9 +19061,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>ChartShapeProperties.</para>
         /// <para>Represents the following element tag in the schema: c:spPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
@@ -19074,9 +19074,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>PictureOptions.</para>
         /// <para>Represents the following element tag in the schema: c:pictureOptions.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.PictureOptions? PictureOptions
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PictureOptions>();
@@ -19087,9 +19087,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Chart Extensibility.</para>
         /// <para>Represents the following element tag in the schema: c:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
@@ -19105,7 +19105,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:trendline.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
@@ -19121,7 +19121,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.TrendlineType" /> <c>&lt;c:trendlineType></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.TrendlineName" /> <c>&lt;c:name></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Trendline : OpenXmlCompositeElement
     {
         /// <summary>
@@ -19192,9 +19192,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Trendline Name.</para>
         /// <para>Represents the following element tag in the schema: c:name.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.TrendlineName? TrendlineName
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.TrendlineName>();
@@ -19205,9 +19205,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>ChartShapeProperties.</para>
         /// <para>Represents the following element tag in the schema: c:spPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
@@ -19218,9 +19218,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Trendline Type.</para>
         /// <para>Represents the following element tag in the schema: c:trendlineType.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.TrendlineType? TrendlineType
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.TrendlineType>();
@@ -19231,9 +19231,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Polynomial Trendline Order.</para>
         /// <para>Represents the following element tag in the schema: c:order.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.PolynomialOrder? PolynomialOrder
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PolynomialOrder>();
@@ -19244,9 +19244,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Period.</para>
         /// <para>Represents the following element tag in the schema: c:period.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Period? Period
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Period>();
@@ -19257,9 +19257,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Forward.</para>
         /// <para>Represents the following element tag in the schema: c:forward.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Forward? Forward
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Forward>();
@@ -19270,9 +19270,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Backward.</para>
         /// <para>Represents the following element tag in the schema: c:backward.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Backward? Backward
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Backward>();
@@ -19283,9 +19283,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Intercept.</para>
         /// <para>Represents the following element tag in the schema: c:intercept.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Intercept? Intercept
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Intercept>();
@@ -19296,9 +19296,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Display R Squared Value.</para>
         /// <para>Represents the following element tag in the schema: c:dispRSqr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.DisplayRSquaredValue? DisplayRSquaredValue
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.DisplayRSquaredValue>();
@@ -19309,9 +19309,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Display Equation.</para>
         /// <para>Represents the following element tag in the schema: c:dispEq.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.DisplayEquation? DisplayEquation
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.DisplayEquation>();
@@ -19322,9 +19322,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Trendline Label.</para>
         /// <para>Represents the following element tag in the schema: c:trendlineLbl.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.TrendlineLabel? TrendlineLabel
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.TrendlineLabel>();
@@ -19335,9 +19335,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Chart Extensibility.</para>
         /// <para>Represents the following element tag in the schema: c:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
@@ -19353,7 +19353,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:errBars.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
@@ -19366,7 +19366,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Plus" /> <c>&lt;c:plus></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Minus" /> <c>&lt;c:minus></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ErrorBars : OpenXmlCompositeElement
     {
         /// <summary>
@@ -19431,9 +19431,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Error Bar Direction.</para>
         /// <para>Represents the following element tag in the schema: c:errDir.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ErrorDirection? ErrorDirection
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ErrorDirection>();
@@ -19444,9 +19444,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Error Bar Type.</para>
         /// <para>Represents the following element tag in the schema: c:errBarType.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ErrorBarType? ErrorBarType
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ErrorBarType>();
@@ -19457,9 +19457,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Error Bar Value Type.</para>
         /// <para>Represents the following element tag in the schema: c:errValType.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ErrorBarValueType? ErrorBarValueType
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ErrorBarValueType>();
@@ -19470,9 +19470,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>No End Cap.</para>
         /// <para>Represents the following element tag in the schema: c:noEndCap.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.NoEndCap? NoEndCap
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.NoEndCap>();
@@ -19483,9 +19483,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Plus.</para>
         /// <para>Represents the following element tag in the schema: c:plus.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Plus? Plus
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Plus>();
@@ -19496,9 +19496,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Minus.</para>
         /// <para>Represents the following element tag in the schema: c:minus.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Minus? Minus
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Minus>();
@@ -19509,9 +19509,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Error Bar Value.</para>
         /// <para>Represents the following element tag in the schema: c:val.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ErrorBarValue? ErrorBarValue
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ErrorBarValue>();
@@ -19522,9 +19522,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>ChartShapeProperties.</para>
         /// <para>Represents the following element tag in the schema: c:spPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties? ChartShapeProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties>();
@@ -19535,9 +19535,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Chart Extensibility.</para>
         /// <para>Represents the following element tag in the schema: c:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
@@ -19553,7 +19553,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:cat.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.MultiLevelStringReference" /> <c>&lt;c:multiLvlStrRef></c></description></item>
@@ -19562,7 +19562,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.StringLiteral" /> <c>&lt;c:strLit></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.StringReference" /> <c>&lt;c:strRef></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class CategoryAxisData : AxisDataSourceType
     {
         /// <summary>
@@ -19622,7 +19622,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:xVal.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.MultiLevelStringReference" /> <c>&lt;c:multiLvlStrRef></c></description></item>
@@ -19631,7 +19631,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.StringLiteral" /> <c>&lt;c:strLit></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.StringReference" /> <c>&lt;c:strRef></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class XValues : AxisDataSourceType
     {
         /// <summary>
@@ -19691,7 +19691,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.MultiLevelStringReference" /> <c>&lt;c:multiLvlStrRef></c></description></item>
@@ -19700,7 +19700,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.StringLiteral" /> <c>&lt;c:strLit></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.StringReference" /> <c>&lt;c:strRef></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public abstract partial class AxisDataSourceType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -19748,9 +19748,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Multi Level String Reference.</para>
         /// <para>Represents the following element tag in the schema: c:multiLvlStrRef.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.MultiLevelStringReference? MultiLevelStringReference
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.MultiLevelStringReference>();
@@ -19761,9 +19761,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Number Reference.</para>
         /// <para>Represents the following element tag in the schema: c:numRef.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.NumberReference? NumberReference
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.NumberReference>();
@@ -19774,9 +19774,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Number Literal.</para>
         /// <para>Represents the following element tag in the schema: c:numLit.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral? NumberLiteral
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.NumberLiteral>();
@@ -19787,9 +19787,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>StringReference.</para>
         /// <para>Represents the following element tag in the schema: c:strRef.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.StringReference? StringReference
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.StringReference>();
@@ -19800,9 +19800,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>String Literal.</para>
         /// <para>Represents the following element tag in the schema: c:strLit.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.StringLiteral? StringLiteral
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.StringLiteral>();
@@ -19815,12 +19815,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.LineSerExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class LineSerExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -19874,7 +19874,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:ext.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions" /> <c>&lt;c15:categoryFilterExceptions></c></description></item>
@@ -19885,7 +19885,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Charts.ChartDataPointUniqueIDMap" /> <c>&lt;c16:datapointuniqueidmap></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID" /> <c>&lt;c16:uniqueId></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class LineSerExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -19968,12 +19968,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ScatterSerExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ScatterSerExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -20027,7 +20027,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:ext.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions" /> <c>&lt;c15:categoryFilterExceptions></c></description></item>
@@ -20038,7 +20038,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Charts.ChartDataPointUniqueIDMap" /> <c>&lt;c16:datapointuniqueidmap></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID" /> <c>&lt;c16:uniqueId></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ScatterSerExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -20121,12 +20121,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.RadarSerExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class RadarSerExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -20180,7 +20180,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:ext.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions" /> <c>&lt;c15:categoryFilterExceptions></c></description></item>
@@ -20191,7 +20191,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Charts.ChartDataPointUniqueIDMap" /> <c>&lt;c16:datapointuniqueidmap></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID" /> <c>&lt;c16:uniqueId></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class RadarSerExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -20274,12 +20274,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.BarSerExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class BarSerExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -20333,7 +20333,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:ext.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.Charts.InvertSolidFillFormat" /> <c>&lt;c14:invertSolidFillFmt></c></description></item>
@@ -20345,7 +20345,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Charts.ChartDataPointUniqueIDMap" /> <c>&lt;c16:datapointuniqueidmap></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID" /> <c>&lt;c16:uniqueId></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class BarSerExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -20430,12 +20430,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.AreaSerExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class AreaSerExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -20489,7 +20489,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:ext.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions" /> <c>&lt;c15:categoryFilterExceptions></c></description></item>
@@ -20500,7 +20500,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Charts.ChartDataPointUniqueIDMap" /> <c>&lt;c16:datapointuniqueidmap></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID" /> <c>&lt;c16:uniqueId></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class AreaSerExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -20583,12 +20583,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PieSerExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PieSerExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -20642,7 +20642,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:ext.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions" /> <c>&lt;c15:categoryFilterExceptions></c></description></item>
@@ -20653,7 +20653,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Charts.ChartDataPointUniqueIDMap" /> <c>&lt;c16:datapointuniqueidmap></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID" /> <c>&lt;c16:uniqueId></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PieSerExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -20736,12 +20736,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.BubbleSerExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class BubbleSerExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -20795,7 +20795,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:ext.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Drawing.Charts.InvertSolidFillFormat" /> <c>&lt;c14:invertSolidFillFmt></c></description></item>
@@ -20806,7 +20806,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Charts.ChartDataPointUniqueIDMap" /> <c>&lt;c16:datapointuniqueidmap></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID" /> <c>&lt;c16:uniqueId></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class BubbleSerExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -20889,12 +20889,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.SurfaceSerExtension" /> <c>&lt;c:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SurfaceSerExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -20948,7 +20948,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:ext.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Drawing.Chart.CategoryFilterExceptions" /> <c>&lt;c15:categoryFilterExceptions></c></description></item>
@@ -20958,7 +20958,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Charts.ChartDataPointUniqueIDMap" /> <c>&lt;c16:datapointuniqueidmap></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Charts.UniqueIdChartUniqueID" /> <c>&lt;c16:uniqueId></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SurfaceSerExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -21039,12 +21039,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:ext.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Chart.BooleanFalse" /> <c>&lt;c16r3:dispNaAsBlank></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DataDisplayOptions16 : OpenXmlCompositeElement
     {
         /// <summary>
@@ -21094,9 +21094,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>BooleanFalse.</para>
         /// <para>Represents the following element tag in the schema: c16r3:dispNaAsBlank.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c16r3 = http://schemas.microsoft.com/office/drawing/2017/03/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2019.Drawing.Chart.BooleanFalse? BooleanFalse
         {
             get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Chart.BooleanFalse>();
@@ -21112,12 +21112,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:pivotFmts.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PivotFormat" /> <c>&lt;c:pivotFmt></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PivotFormats : OpenXmlCompositeElement
     {
         /// <summary>
@@ -21171,7 +21171,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:view3D.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.RightAngleAxes" /> <c>&lt;c:rAngAx></c></description></item>
@@ -21182,7 +21182,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.RotateX" /> <c>&lt;c:rotX></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.RotateY" /> <c>&lt;c:rotY></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class View3D : OpenXmlCompositeElement
     {
         /// <summary>
@@ -21243,9 +21243,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>X Rotation.</para>
         /// <para>Represents the following element tag in the schema: c:rotX.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.RotateX? RotateX
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.RotateX>();
@@ -21256,9 +21256,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Height Percent.</para>
         /// <para>Represents the following element tag in the schema: c:hPercent.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.HeightPercent? HeightPercent
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.HeightPercent>();
@@ -21269,9 +21269,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Y Rotation.</para>
         /// <para>Represents the following element tag in the schema: c:rotY.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.RotateY? RotateY
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.RotateY>();
@@ -21282,9 +21282,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Depth Percent.</para>
         /// <para>Represents the following element tag in the schema: c:depthPercent.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.DepthPercent? DepthPercent
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.DepthPercent>();
@@ -21295,9 +21295,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Right Angle Axes.</para>
         /// <para>Represents the following element tag in the schema: c:rAngAx.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.RightAngleAxes? RightAngleAxes
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.RightAngleAxes>();
@@ -21308,9 +21308,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Perspective.</para>
         /// <para>Represents the following element tag in the schema: c:perspective.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Perspective? Perspective
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Perspective>();
@@ -21321,9 +21321,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Chart Extensibility.</para>
         /// <para>Represents the following element tag in the schema: c:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
@@ -21339,7 +21339,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:floor.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ShapeProperties" /> <c>&lt;c:spPr></c></description></item>
@@ -21347,7 +21347,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PictureOptions" /> <c>&lt;c:pictureOptions></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Thickness" /> <c>&lt;c:thickness></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Floor : SurfaceType
     {
         /// <summary>
@@ -21403,7 +21403,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:sideWall.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ShapeProperties" /> <c>&lt;c:spPr></c></description></item>
@@ -21411,7 +21411,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PictureOptions" /> <c>&lt;c:pictureOptions></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Thickness" /> <c>&lt;c:thickness></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SideWall : SurfaceType
     {
         /// <summary>
@@ -21467,7 +21467,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:backWall.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ShapeProperties" /> <c>&lt;c:spPr></c></description></item>
@@ -21475,7 +21475,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PictureOptions" /> <c>&lt;c:pictureOptions></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Thickness" /> <c>&lt;c:thickness></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class BackWall : SurfaceType
     {
         /// <summary>
@@ -21531,7 +21531,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ShapeProperties" /> <c>&lt;c:spPr></c></description></item>
@@ -21539,7 +21539,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.PictureOptions" /> <c>&lt;c:pictureOptions></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.Thickness" /> <c>&lt;c:thickness></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public abstract partial class SurfaceType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -21586,9 +21586,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Thickness.</para>
         /// <para>Represents the following element tag in the schema: c:thickness.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Thickness? Thickness
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Thickness>();
@@ -21599,9 +21599,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>ShapeProperties.</para>
         /// <para>Represents the following element tag in the schema: c:spPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ShapeProperties? ShapeProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ShapeProperties>();
@@ -21612,9 +21612,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Picture Options.</para>
         /// <para>Represents the following element tag in the schema: c:pictureOptions.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.PictureOptions? PictureOptions
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.PictureOptions>();
@@ -21625,9 +21625,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Chart Extensibility.</para>
         /// <para>Represents the following element tag in the schema: c:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.ExtensionList>();
@@ -21640,7 +21640,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:plotArea.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ShapeProperties" /> <c>&lt;c:spPr></c></description></item>
@@ -21668,7 +21668,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.SurfaceChart" /> <c>&lt;c:surfaceChart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ValueAxis" /> <c>&lt;c:valAx></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PlotArea : OpenXmlCompositeElement
     {
         /// <summary>
@@ -21769,9 +21769,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Layout.</para>
         /// <para>Represents the following element tag in the schema: c:layout.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.Layout? Layout
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.Layout>();
@@ -21787,7 +21787,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:legend.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.ChartShapeProperties" /> <c>&lt;c:spPr></c></description></item>
@@ -21798,7 +21798,7 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.LegendEntry" /> <c>&lt;c:legendEntry></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.LegendPosition" /> <c>&lt;c:legendPos></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Legend : OpenXmlCompositeElement
     {
         /// <summary>
@@ -21859,9 +21859,9 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
         /// <para>Legend Position.</para>
         /// <para>Represents the following element tag in the schema: c:legendPos.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c = http://schemas.openxmlformats.org/drawingml/2006/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Charts.LegendPosition? LegendPosition
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Charts.LegendPosition>();
@@ -21913,12 +21913,12 @@ namespace DocumentFormat.OpenXml.Drawing.Charts
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Charts.DataDisplayOptions16" /> <c>&lt;c:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ChartExtensionList : OpenXmlCompositeElement
     {
         /// <summary>

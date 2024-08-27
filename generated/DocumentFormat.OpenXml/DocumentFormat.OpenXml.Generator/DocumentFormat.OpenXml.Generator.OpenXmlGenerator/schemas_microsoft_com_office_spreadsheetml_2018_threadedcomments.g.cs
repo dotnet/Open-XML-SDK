@@ -22,13 +22,13 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xltc:personList.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ExtensionList" /> <c>&lt;xltc:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.Person" /> <c>&lt;xltc:person></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PersonList : OpenXmlPartRootElement
     {
         /// <summary>
@@ -116,13 +116,13 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xltc:ThreadedComments.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ExtensionList" /> <c>&lt;xltc:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ThreadedComment" /> <c>&lt;xltc:threadedComment></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ThreadedComments : OpenXmlPartRootElement
     {
         /// <summary>
@@ -210,12 +210,12 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xltc:person.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ExtensionList" /> <c>&lt;xltc:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Person : OpenXmlCompositeElement
     {
         /// <summary>
@@ -317,9 +317,9 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: xltc:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xltc = http://schemas.microsoft.com/office/spreadsheetml/2018/threadedcomments
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ExtensionList>();
@@ -335,12 +335,12 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xltc:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Extension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -401,14 +401,14 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xltc:threadedComment.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ExtensionList" /> <c>&lt;xltc:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ThreadedCommentText" /> <c>&lt;xltc:text></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ThreadedCommentMentions" /> <c>&lt;xltc:mentions></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ThreadedComment : OpenXmlCompositeElement
     {
         /// <summary>
@@ -540,9 +540,9 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
         /// <para>ThreadedCommentText.</para>
         /// <para>Represents the following element tag in the schema: xltc:text.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xltc = http://schemas.microsoft.com/office/spreadsheetml/2018/threadedcomments
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ThreadedCommentText? ThreadedCommentText
         {
             get => GetElement<DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ThreadedCommentText>();
@@ -553,9 +553,9 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
         /// <para>ThreadedCommentMentions.</para>
         /// <para>Represents the following element tag in the schema: xltc:mentions.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xltc = http://schemas.microsoft.com/office/spreadsheetml/2018/threadedcomments
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ThreadedCommentMentions? ThreadedCommentMentions
         {
             get => GetElement<DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ThreadedCommentMentions>();
@@ -566,9 +566,9 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: xltc:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xltc = http://schemas.microsoft.com/office/spreadsheetml/2018/threadedcomments
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.ExtensionList>();
@@ -622,12 +622,12 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xltc:mentions.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.ThreadedComments.Mention" /> <c>&lt;xltc:mention></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ThreadedCommentMentions : OpenXmlCompositeElement
     {
         /// <summary>

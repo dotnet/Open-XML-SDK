@@ -21,12 +21,12 @@ namespace DocumentFormat.OpenXml.Office2019.Presentation
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p173:tracksInfo.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Presentation.TrackList" /> <c>&lt;p173:trackLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TracksInfo : OpenXmlCompositeElement
     {
         /// <summary>
@@ -91,9 +91,9 @@ namespace DocumentFormat.OpenXml.Office2019.Presentation
         /// <para>TrackList.</para>
         /// <para>Represents the following element tag in the schema: p173:trackLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p173 = http://schemas.microsoft.com/office/powerpoint/2017/3/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2019.Presentation.TrackList? TrackList
         {
             get => GetElement<DocumentFormat.OpenXml.Office2019.Presentation.TrackList>();
@@ -152,9 +152,9 @@ namespace DocumentFormat.OpenXml.Office2019.Presentation
         /// <para>Embedded Picture Reference</para>
         /// <para>Represents the following attribute in the schema: r:embed</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-        /// </remark>
+        /// </remarks>
         public StringValue? Embed
         {
             get => GetAttribute<StringValue>();
@@ -165,9 +165,9 @@ namespace DocumentFormat.OpenXml.Office2019.Presentation
         /// <para>Linked Picture Reference</para>
         /// <para>Represents the following attribute in the schema: r:link</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-        /// </remark>
+        /// </remarks>
         public StringValue? Link
         {
             get => GetAttribute<StringValue>();
@@ -203,12 +203,12 @@ namespace DocumentFormat.OpenXml.Office2019.Presentation
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p173:trackLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Presentation.Track" /> <c>&lt;p173:track></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TrackList : OpenXmlCompositeElement
     {
         /// <summary>

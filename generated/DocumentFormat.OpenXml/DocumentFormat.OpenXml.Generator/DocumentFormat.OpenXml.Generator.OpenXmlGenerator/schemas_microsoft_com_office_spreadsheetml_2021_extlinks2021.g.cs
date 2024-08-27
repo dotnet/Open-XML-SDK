@@ -21,13 +21,13 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021
     /// <para>This class is available in Microsoft365 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xxl21:alternateUrls.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021.AbsoluteUrlAlternateUrl" /> <c>&lt;xxl21:absoluteUrl></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021.RelativeUrlAlternateUrl" /> <c>&lt;xxl21:relativeUrl></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ExternalBookAlternateUrls : OpenXmlCompositeElement
     {
         /// <summary>
@@ -102,9 +102,9 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021
         /// <para>AbsoluteUrlAlternateUrl.</para>
         /// <para>Represents the following element tag in the schema: xxl21:absoluteUrl.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xxl21 = http://schemas.microsoft.com/office/spreadsheetml/2021/extlinks2021
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021.AbsoluteUrlAlternateUrl? AbsoluteUrlAlternateUrl
         {
             get => GetElement<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021.AbsoluteUrlAlternateUrl>();
@@ -115,9 +115,9 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021
         /// <para>RelativeUrlAlternateUrl.</para>
         /// <para>Represents the following element tag in the schema: xxl21:relativeUrl.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xxl21 = http://schemas.microsoft.com/office/spreadsheetml/2021/extlinks2021
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021.RelativeUrlAlternateUrl? RelativeUrlAlternateUrl
         {
             get => GetElement<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021.RelativeUrlAlternateUrl>();
@@ -196,9 +196,9 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021
         /// <para>id, this property is only available in Microsoft365 and later.</para>
         /// <para>Represents the following attribute in the schema: r:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();

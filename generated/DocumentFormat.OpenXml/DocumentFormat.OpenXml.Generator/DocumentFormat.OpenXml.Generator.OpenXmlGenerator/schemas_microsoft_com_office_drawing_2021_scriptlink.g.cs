@@ -22,12 +22,12 @@ namespace DocumentFormat.OpenXml.Office.Drawing.Y2021.ScriptLink
     /// <para>This class is available in Microsoft365 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is asl:scriptLink.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Y2021.ScriptLink.OfficeArtExtensionList" /> <c>&lt;asl:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ScriptLink : OpenXmlCompositeElement
     {
         /// <summary>
@@ -89,9 +89,9 @@ namespace DocumentFormat.OpenXml.Office.Drawing.Y2021.ScriptLink
         /// <para>OfficeArtExtensionList.</para>
         /// <para>Represents the following element tag in the schema: asl:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:asl = http://schemas.microsoft.com/office/drawing/2021/scriptlink
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office.Drawing.Y2021.ScriptLink.OfficeArtExtensionList? OfficeArtExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Y2021.ScriptLink.OfficeArtExtensionList>();
@@ -107,12 +107,12 @@ namespace DocumentFormat.OpenXml.Office.Drawing.Y2021.ScriptLink
     /// <para>This class is available in Microsoft365 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is asl:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extension" /> <c>&lt;a:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     {
         /// <summary>

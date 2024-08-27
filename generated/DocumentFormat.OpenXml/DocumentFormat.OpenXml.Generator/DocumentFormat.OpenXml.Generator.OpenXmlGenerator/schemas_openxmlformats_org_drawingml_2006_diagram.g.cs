@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:colorsDef.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList" /> <c>&lt;dgm:extLst></c></description></item>
@@ -33,7 +33,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.ColorDefinitionTitle" /> <c>&lt;dgm:title></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.ColorTransformStyleLabel" /> <c>&lt;dgm:styleLbl></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ColorsDefinition : OpenXmlPartRootElement
     {
         /// <summary>
@@ -150,7 +150,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:colorsDefHdr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList" /> <c>&lt;dgm:extLst></c></description></item>
@@ -158,7 +158,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.ColorTransformDescription" /> <c>&lt;dgm:desc></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.ColorDefinitionTitle" /> <c>&lt;dgm:title></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ColorsDefinitionHeader : OpenXmlCompositeElement
     {
         /// <summary>
@@ -255,12 +255,12 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:colorsDefHdrLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.ColorsDefinitionHeader" /> <c>&lt;dgm:colorsDefHdr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ColorsDefinitionHeaderList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -314,7 +314,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:dataModel.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.Background" /> <c>&lt;dgm:bg></c></description></item>
@@ -323,7 +323,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.ConnectionList" /> <c>&lt;dgm:cxnLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.PointList" /> <c>&lt;dgm:ptLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DataModelRoot : OpenXmlPartRootElement
     {
         /// <summary>
@@ -380,9 +380,9 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Point List.</para>
         /// <para>Represents the following element tag in the schema: dgm:ptLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Diagrams.PointList? PointList
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Diagrams.PointList>();
@@ -393,9 +393,9 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Connection List.</para>
         /// <para>Represents the following element tag in the schema: dgm:cxnLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Diagrams.ConnectionList? ConnectionList
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Diagrams.ConnectionList>();
@@ -406,9 +406,9 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Background Formatting.</para>
         /// <para>Represents the following element tag in the schema: dgm:bg.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Diagrams.Background? Background
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Diagrams.Background>();
@@ -419,9 +419,9 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Whole E2O Formatting.</para>
         /// <para>Represents the following element tag in the schema: dgm:whole.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Diagrams.Whole? Whole
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Diagrams.Whole>();
@@ -432,9 +432,9 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>DataModelExtensionList.</para>
         /// <para>Represents the following element tag in the schema: dgm:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Diagrams.DataModelExtensionList? DataModelExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Diagrams.DataModelExtensionList>();
@@ -481,7 +481,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:layoutDef.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.CategoryList" /> <c>&lt;dgm:catLst></c></description></item>
@@ -493,7 +493,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.StyleData" /> <c>&lt;dgm:styleData></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.ColorData" /> <c>&lt;dgm:clrData></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class LayoutDefinition : OpenXmlPartRootElement
     {
         /// <summary>
@@ -626,7 +626,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:layoutDefHdr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList" /> <c>&lt;dgm:extLst></c></description></item>
@@ -634,7 +634,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.Description" /> <c>&lt;dgm:desc></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.Title" /> <c>&lt;dgm:title></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class LayoutDefinitionHeader : OpenXmlCompositeElement
     {
         /// <summary>
@@ -742,12 +742,12 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:layoutDefHdrLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.LayoutDefinitionHeader" /> <c>&lt;dgm:layoutDefHdr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class LayoutDefinitionHeaderList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -814,9 +814,9 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Explicit Relationship to Diagram Data Part</para>
         /// <para>Represents the following attribute in the schema: r:dm</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-        /// </remark>
+        /// </remarks>
         public StringValue? DataPart
         {
             get => GetAttribute<StringValue>();
@@ -827,9 +827,9 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Explicit Relationship to Diagram Layout Definition Part</para>
         /// <para>Represents the following attribute in the schema: r:lo</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-        /// </remark>
+        /// </remarks>
         public StringValue? LayoutPart
         {
             get => GetAttribute<StringValue>();
@@ -840,9 +840,9 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Explicit Relationship to Style Definition Part</para>
         /// <para>Represents the following attribute in the schema: r:qs</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-        /// </remark>
+        /// </remarks>
         public StringValue? StylePart
         {
             get => GetAttribute<StringValue>();
@@ -853,9 +853,9 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Explicit Relationship to Diagram Colors Part</para>
         /// <para>Represents the following attribute in the schema: r:cs</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-        /// </remark>
+        /// </remarks>
         public StringValue? ColorPart
         {
             get => GetAttribute<StringValue>();
@@ -899,7 +899,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:styleDef.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList" /> <c>&lt;dgm:extLst></c></description></item>
@@ -909,7 +909,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.StyleDefinitionTitle" /> <c>&lt;dgm:title></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.StyleLabel" /> <c>&lt;dgm:styleLbl></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class StyleDefinition : OpenXmlPartRootElement
     {
         /// <summary>
@@ -1027,7 +1027,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:styleDefHdr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList" /> <c>&lt;dgm:extLst></c></description></item>
@@ -1035,7 +1035,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.StyleLabelDescription" /> <c>&lt;dgm:desc></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.StyleDefinitionTitle" /> <c>&lt;dgm:title></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class StyleDefinitionHeader : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1132,12 +1132,12 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:styleDefHdrLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.StyleDefinitionHeader" /> <c>&lt;dgm:styleDefHdr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class StyleDefinitionHeaderList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1245,7 +1245,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:fillClrLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HslColor" /> <c>&lt;a:hslClr></c></description></item>
@@ -1255,7 +1255,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.RgbColorModelHex" /> <c>&lt;a:srgbClr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SystemColor" /> <c>&lt;a:sysClr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class FillColorList : ColorsType
     {
         /// <summary>
@@ -1319,7 +1319,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:linClrLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HslColor" /> <c>&lt;a:hslClr></c></description></item>
@@ -1329,7 +1329,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.RgbColorModelHex" /> <c>&lt;a:srgbClr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SystemColor" /> <c>&lt;a:sysClr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class LineColorList : ColorsType
     {
         /// <summary>
@@ -1393,7 +1393,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:effectClrLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HslColor" /> <c>&lt;a:hslClr></c></description></item>
@@ -1403,7 +1403,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.RgbColorModelHex" /> <c>&lt;a:srgbClr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SystemColor" /> <c>&lt;a:sysClr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class EffectColorList : ColorsType
     {
         /// <summary>
@@ -1467,7 +1467,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:txLinClrLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HslColor" /> <c>&lt;a:hslClr></c></description></item>
@@ -1477,7 +1477,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.RgbColorModelHex" /> <c>&lt;a:srgbClr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SystemColor" /> <c>&lt;a:sysClr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TextLineColorList : ColorsType
     {
         /// <summary>
@@ -1541,7 +1541,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:txFillClrLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HslColor" /> <c>&lt;a:hslClr></c></description></item>
@@ -1551,7 +1551,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.RgbColorModelHex" /> <c>&lt;a:srgbClr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SystemColor" /> <c>&lt;a:sysClr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TextFillColorList : ColorsType
     {
         /// <summary>
@@ -1615,7 +1615,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:txEffectClrLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HslColor" /> <c>&lt;a:hslClr></c></description></item>
@@ -1625,7 +1625,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.RgbColorModelHex" /> <c>&lt;a:srgbClr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SystemColor" /> <c>&lt;a:sysClr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TextEffectColorList : ColorsType
     {
         /// <summary>
@@ -1689,7 +1689,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HslColor" /> <c>&lt;a:hslClr></c></description></item>
@@ -1699,7 +1699,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.RgbColorModelHex" /> <c>&lt;a:srgbClr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SystemColor" /> <c>&lt;a:sysClr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public abstract partial class ColorsType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1779,12 +1779,12 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extension" /> <c>&lt;a:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1944,12 +1944,12 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:catLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.ColorTransformCategory" /> <c>&lt;dgm:cat></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ColorTransformCategories : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2003,7 +2003,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:styleLbl.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList" /> <c>&lt;dgm:extLst></c></description></item>
@@ -2014,7 +2014,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.TextFillColorList" /> <c>&lt;dgm:txFillClrLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.TextEffectColorList" /> <c>&lt;dgm:txEffectClrLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ColorTransformStyleLabel : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2090,9 +2090,9 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Fill Color List.</para>
         /// <para>Represents the following element tag in the schema: dgm:fillClrLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Diagrams.FillColorList? FillColorList
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Diagrams.FillColorList>();
@@ -2103,9 +2103,9 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Line Color List.</para>
         /// <para>Represents the following element tag in the schema: dgm:linClrLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Diagrams.LineColorList? LineColorList
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Diagrams.LineColorList>();
@@ -2116,9 +2116,9 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Effect Color List.</para>
         /// <para>Represents the following element tag in the schema: dgm:effectClrLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Diagrams.EffectColorList? EffectColorList
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Diagrams.EffectColorList>();
@@ -2129,9 +2129,9 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Text Line Color List.</para>
         /// <para>Represents the following element tag in the schema: dgm:txLinClrLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Diagrams.TextLineColorList? TextLineColorList
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Diagrams.TextLineColorList>();
@@ -2142,9 +2142,9 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Text Fill Color List.</para>
         /// <para>Represents the following element tag in the schema: dgm:txFillClrLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Diagrams.TextFillColorList? TextFillColorList
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Diagrams.TextFillColorList>();
@@ -2155,9 +2155,9 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Text Effect Color List.</para>
         /// <para>Represents the following element tag in the schema: dgm:txEffectClrLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Diagrams.TextEffectColorList? TextEffectColorList
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Diagrams.TextEffectColorList>();
@@ -2168,9 +2168,9 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: dgm:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList>();
@@ -2186,7 +2186,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:pt.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.PtExtensionList" /> <c>&lt;dgm:extLst></c></description></item>
@@ -2194,7 +2194,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.TextBody" /> <c>&lt;dgm:t></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.PropertySet" /> <c>&lt;dgm:prSet></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Point : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2301,9 +2301,9 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Property Set.</para>
         /// <para>Represents the following element tag in the schema: dgm:prSet.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Diagrams.PropertySet? PropertySet
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Diagrams.PropertySet>();
@@ -2314,9 +2314,9 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Shape Properties.</para>
         /// <para>Represents the following element tag in the schema: dgm:spPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Diagrams.ShapeProperties? ShapeProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Diagrams.ShapeProperties>();
@@ -2327,9 +2327,9 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Text Body.</para>
         /// <para>Represents the following element tag in the schema: dgm:t.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Diagrams.TextBody? TextBody
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Diagrams.TextBody>();
@@ -2340,9 +2340,9 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>PtExtensionList.</para>
         /// <para>Represents the following element tag in the schema: dgm:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Diagrams.PtExtensionList? PtExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Diagrams.PtExtensionList>();
@@ -2358,12 +2358,12 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:cxn.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList" /> <c>&lt;dgm:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Connection : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2561,9 +2561,9 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: dgm:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList>();
@@ -2579,12 +2579,12 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:constr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList" /> <c>&lt;dgm:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Constraint : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2777,9 +2777,9 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: dgm:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList>();
@@ -2795,12 +2795,12 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:rule.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList" /> <c>&lt;dgm:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Rule : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2937,9 +2937,9 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: dgm:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList>();
@@ -3009,12 +3009,12 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:adjLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.Adjust" /> <c>&lt;dgm:adj></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class AdjustList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3160,13 +3160,13 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:alg.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList" /> <c>&lt;dgm:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.Parameter" /> <c>&lt;dgm:param></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Algorithm : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3249,13 +3249,13 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:shape.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList" /> <c>&lt;dgm:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.AdjustList" /> <c>&lt;dgm:adjLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Shape : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3313,9 +3313,9 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Relationship to Image Part</para>
         /// <para>Represents the following attribute in the schema: r:blip</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-        /// </remark>
+        /// </remarks>
         public StringValue? Blip
         {
             get => GetAttribute<StringValue>();
@@ -3396,9 +3396,9 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Shape Adjust List.</para>
         /// <para>Represents the following element tag in the schema: dgm:adjLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Diagrams.AdjustList? AdjustList
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Diagrams.AdjustList>();
@@ -3409,9 +3409,9 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: dgm:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList>();
@@ -3427,12 +3427,12 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:presOf.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList" /> <c>&lt;dgm:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PresentationOf : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3548,9 +3548,9 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: dgm:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList>();
@@ -3566,12 +3566,12 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:constrLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.Constraint" /> <c>&lt;dgm:constr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Constraints : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3625,12 +3625,12 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:ruleLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.Rule" /> <c>&lt;dgm:rule></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class RuleList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3684,7 +3684,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:varLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.AnimationLevel" /> <c>&lt;dgm:animLvl></c></description></item>
@@ -3697,7 +3697,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.OrganizationChart" /> <c>&lt;dgm:orgChart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.ResizeHandles" /> <c>&lt;dgm:resizeHandles></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class VariableList : LayoutVariablePropertySetType
     {
         /// <summary>
@@ -3758,7 +3758,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:presLayoutVars.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.AnimationLevel" /> <c>&lt;dgm:animLvl></c></description></item>
@@ -3771,7 +3771,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.OrganizationChart" /> <c>&lt;dgm:orgChart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.ResizeHandles" /> <c>&lt;dgm:resizeHandles></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PresentationLayoutVariables : LayoutVariablePropertySetType
     {
         /// <summary>
@@ -3832,7 +3832,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.AnimationLevel" /> <c>&lt;dgm:animLvl></c></description></item>
@@ -3845,7 +3845,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.OrganizationChart" /> <c>&lt;dgm:orgChart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.ResizeHandles" /> <c>&lt;dgm:resizeHandles></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public abstract partial class LayoutVariablePropertySetType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3897,9 +3897,9 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Show Organization Chart User Interface.</para>
         /// <para>Represents the following element tag in the schema: dgm:orgChart.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Diagrams.OrganizationChart? OrganizationChart
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Diagrams.OrganizationChart>();
@@ -3910,9 +3910,9 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Maximum Children.</para>
         /// <para>Represents the following element tag in the schema: dgm:chMax.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Diagrams.MaxNumberOfChildren? MaxNumberOfChildren
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Diagrams.MaxNumberOfChildren>();
@@ -3923,9 +3923,9 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Preferred Number of Children.</para>
         /// <para>Represents the following element tag in the schema: dgm:chPref.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Diagrams.PreferredNumberOfChildren? PreferredNumberOfChildren
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Diagrams.PreferredNumberOfChildren>();
@@ -3936,9 +3936,9 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Show Insert Bullet.</para>
         /// <para>Represents the following element tag in the schema: dgm:bulletEnabled.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Diagrams.BulletEnabled? BulletEnabled
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Diagrams.BulletEnabled>();
@@ -3949,9 +3949,9 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Diagram Direction.</para>
         /// <para>Represents the following element tag in the schema: dgm:dir.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Diagrams.Direction? Direction
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Diagrams.Direction>();
@@ -3962,9 +3962,9 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Organization Chart Branch Style.</para>
         /// <para>Represents the following element tag in the schema: dgm:hierBranch.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Diagrams.HierarchyBranch? HierarchyBranch
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Diagrams.HierarchyBranch>();
@@ -3975,9 +3975,9 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>One by One Animation String.</para>
         /// <para>Represents the following element tag in the schema: dgm:animOne.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Diagrams.AnimateOneByOne? AnimateOneByOne
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Diagrams.AnimateOneByOne>();
@@ -3988,9 +3988,9 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Level Animation.</para>
         /// <para>Represents the following element tag in the schema: dgm:animLvl.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Diagrams.AnimationLevel? AnimationLevel
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Diagrams.AnimationLevel>();
@@ -4001,9 +4001,9 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Shape Resize Style.</para>
         /// <para>Represents the following element tag in the schema: dgm:resizeHandles.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Diagrams.ResizeHandles? ResizeHandles
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Diagrams.ResizeHandles>();
@@ -4016,7 +4016,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:forEach.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList" /> <c>&lt;dgm:extLst></c></description></item>
@@ -4029,7 +4029,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.RuleList" /> <c>&lt;dgm:ruleLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.Shape" /> <c>&lt;dgm:shape></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ForEach : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4189,7 +4189,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:layoutNode.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList" /> <c>&lt;dgm:extLst></c></description></item>
@@ -4203,7 +4203,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.RuleList" /> <c>&lt;dgm:ruleLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.Shape" /> <c>&lt;dgm:shape></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class LayoutNode : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4324,13 +4324,13 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:choose.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.DiagramChooseElse" /> <c>&lt;dgm:else></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.DiagramChooseIf" /> <c>&lt;dgm:if></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Choose : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4399,7 +4399,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:if.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList" /> <c>&lt;dgm:extLst></c></description></item>
@@ -4412,7 +4412,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.RuleList" /> <c>&lt;dgm:ruleLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.Shape" /> <c>&lt;dgm:shape></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DiagramChooseIf : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4632,7 +4632,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:else.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList" /> <c>&lt;dgm:extLst></c></description></item>
@@ -4645,7 +4645,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.RuleList" /> <c>&lt;dgm:ruleLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.Shape" /> <c>&lt;dgm:shape></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DiagramChooseElse : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4728,7 +4728,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:dataModel.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.Background" /> <c>&lt;dgm:bg></c></description></item>
@@ -4737,7 +4737,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.ConnectionList" /> <c>&lt;dgm:cxnLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.PointList" /> <c>&lt;dgm:ptLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DataModel : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4794,9 +4794,9 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Point List.</para>
         /// <para>Represents the following element tag in the schema: dgm:ptLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Diagrams.PointList? PointList
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Diagrams.PointList>();
@@ -4807,9 +4807,9 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Connection List.</para>
         /// <para>Represents the following element tag in the schema: dgm:cxnLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Diagrams.ConnectionList? ConnectionList
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Diagrams.ConnectionList>();
@@ -4820,9 +4820,9 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Background Formatting.</para>
         /// <para>Represents the following element tag in the schema: dgm:bg.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Diagrams.Background? Background
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Diagrams.Background>();
@@ -4833,9 +4833,9 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Whole E2O Formatting.</para>
         /// <para>Represents the following element tag in the schema: dgm:whole.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Diagrams.Whole? Whole
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Diagrams.Whole>();
@@ -4846,9 +4846,9 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>DataModelExtensionList.</para>
         /// <para>Represents the following element tag in the schema: dgm:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Diagrams.DataModelExtensionList? DataModelExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Diagrams.DataModelExtensionList>();
@@ -5018,12 +5018,12 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:catLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.Category" /> <c>&lt;dgm:cat></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class CategoryList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5077,7 +5077,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:style.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.FontReference" /> <c>&lt;a:fontRef></c></description></item>
@@ -5085,7 +5085,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.FillReference" /> <c>&lt;a:fillRef></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.EffectReference" /> <c>&lt;a:effectRef></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Style : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5140,9 +5140,9 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>LineReference.</para>
         /// <para>Represents the following element tag in the schema: a:lnRef.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.LineReference? LineReference
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.LineReference>();
@@ -5153,9 +5153,9 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>FillReference.</para>
         /// <para>Represents the following element tag in the schema: a:fillRef.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.FillReference? FillReference
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.FillReference>();
@@ -5166,9 +5166,9 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>EffectReference.</para>
         /// <para>Represents the following element tag in the schema: a:effectRef.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.EffectReference? EffectReference
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.EffectReference>();
@@ -5179,9 +5179,9 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Font Reference.</para>
         /// <para>Represents the following element tag in the schema: a:fontRef.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.FontReference? FontReference
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.FontReference>();
@@ -5596,7 +5596,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:scene3d.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Backdrop" /> <c>&lt;a:backdrop></c></description></item>
@@ -5604,7 +5604,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.LightRig" /> <c>&lt;a:lightRig></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Scene3D : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5659,9 +5659,9 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Camera.</para>
         /// <para>Represents the following element tag in the schema: a:camera.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Camera? Camera
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Camera>();
@@ -5672,9 +5672,9 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Light Rig.</para>
         /// <para>Represents the following element tag in the schema: a:lightRig.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.LightRig? LightRig
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.LightRig>();
@@ -5685,9 +5685,9 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Backdrop Plane.</para>
         /// <para>Represents the following element tag in the schema: a:backdrop.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Backdrop? Backdrop
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Backdrop>();
@@ -5698,9 +5698,9 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: a:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>();
@@ -5716,7 +5716,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:sp3d.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.BevelTop" /> <c>&lt;a:bevelT></c></description></item>
@@ -5725,7 +5725,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ContourColor" /> <c>&lt;a:contourClr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Shape3D : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5839,9 +5839,9 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Top Bevel.</para>
         /// <para>Represents the following element tag in the schema: a:bevelT.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.BevelTop? BevelTop
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.BevelTop>();
@@ -5852,9 +5852,9 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Bottom Bevel.</para>
         /// <para>Represents the following element tag in the schema: a:bevelB.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.BevelBottom? BevelBottom
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.BevelBottom>();
@@ -5865,9 +5865,9 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Extrusion Color.</para>
         /// <para>Represents the following element tag in the schema: a:extrusionClr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.ExtrusionColor? ExtrusionColor
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.ExtrusionColor>();
@@ -5878,9 +5878,9 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Contour Color.</para>
         /// <para>Represents the following element tag in the schema: a:contourClr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.ContourColor? ContourColor
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.ContourColor>();
@@ -5891,9 +5891,9 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: a:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>();
@@ -5909,13 +5909,13 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:txPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.FlatText" /> <c>&lt;a:flatTx></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Shape3DType" /> <c>&lt;a:sp3d></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TextProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5972,9 +5972,9 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Apply 3D shape properties.</para>
         /// <para>Represents the following element tag in the schema: a:sp3d.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Shape3DType? Shape3DType
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Shape3DType>();
@@ -5985,9 +5985,9 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>No text in 3D scene.</para>
         /// <para>Represents the following element tag in the schema: a:flatTx.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.FlatText? FlatText
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.FlatText>();
@@ -6103,12 +6103,12 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:catLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.StyleDisplayCategory" /> <c>&lt;dgm:cat></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class StyleDisplayCategories : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6162,7 +6162,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:styleLbl.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList" /> <c>&lt;dgm:extLst></c></description></item>
@@ -6171,7 +6171,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.Style" /> <c>&lt;dgm:style></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.TextProperties" /> <c>&lt;dgm:txPr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class StyleLabel : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6243,9 +6243,9 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>3-D Scene.</para>
         /// <para>Represents the following element tag in the schema: dgm:scene3d.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Diagrams.Scene3D? Scene3D
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Diagrams.Scene3D>();
@@ -6256,9 +6256,9 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>3-D Shape Properties.</para>
         /// <para>Represents the following element tag in the schema: dgm:sp3d.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Diagrams.Shape3D? Shape3D
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Diagrams.Shape3D>();
@@ -6269,9 +6269,9 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Text Properties.</para>
         /// <para>Represents the following element tag in the schema: dgm:txPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Diagrams.TextProperties? TextProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Diagrams.TextProperties>();
@@ -6282,9 +6282,9 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Shape Style.</para>
         /// <para>Represents the following element tag in the schema: dgm:style.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Diagrams.Style? Style
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Diagrams.Style>();
@@ -6295,9 +6295,9 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: dgm:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Diagrams.ExtensionList>();
@@ -6313,12 +6313,12 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:ptLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.Point" /> <c>&lt;dgm:pt></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PointList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6372,12 +6372,12 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:cxnLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.Connection" /> <c>&lt;dgm:cxn></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ConnectionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6431,7 +6431,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:bg.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.BlipFill" /> <c>&lt;a:blipFill></c></description></item>
@@ -6443,7 +6443,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PatternFill" /> <c>&lt;a:pattFill></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SolidFill" /> <c>&lt;a:solidFill></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Background : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6523,14 +6523,14 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:whole.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.EffectDag" /> <c>&lt;a:effectDag></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.EffectList" /> <c>&lt;a:effectLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Outline" /> <c>&lt;a:ln></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Whole : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6589,9 +6589,9 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Outline.</para>
         /// <para>Represents the following element tag in the schema: a:ln.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Outline? Outline
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Outline>();
@@ -6607,12 +6607,12 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.DataModelExtension" /> <c>&lt;a:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DataModelExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6666,13 +6666,13 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:prSet.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.Style" /> <c>&lt;dgm:style></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.PresentationLayoutVariables" /> <c>&lt;dgm:presLayoutVars></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PropertySet : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7039,9 +7039,9 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Presentation Layout Variables.</para>
         /// <para>Represents the following element tag in the schema: dgm:presLayoutVars.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Diagrams.PresentationLayoutVariables? PresentationLayoutVariables
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Diagrams.PresentationLayoutVariables>();
@@ -7052,9 +7052,9 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Shape Style.</para>
         /// <para>Represents the following element tag in the schema: dgm:style.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Diagrams.Style? Style
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Diagrams.Style>();
@@ -7070,7 +7070,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:spPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.BlipFill" /> <c>&lt;a:blipFill></c></description></item>
@@ -7089,7 +7089,7 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SolidFill" /> <c>&lt;a:solidFill></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Transform2D" /> <c>&lt;a:xfrm></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7199,9 +7199,9 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>2D Transform for Individual Objects.</para>
         /// <para>Represents the following element tag in the schema: a:xfrm.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Transform2D? Transform2D
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Transform2D>();
@@ -7217,14 +7217,14 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:t.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.BodyProperties" /> <c>&lt;a:bodyPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ListStyle" /> <c>&lt;a:lstStyle></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Paragraph" /> <c>&lt;a:p></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TextBody : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7277,9 +7277,9 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Body Properties.</para>
         /// <para>Represents the following element tag in the schema: a:bodyPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.BodyProperties? BodyProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.BodyProperties>();
@@ -7290,9 +7290,9 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Text List Styles.</para>
         /// <para>Represents the following element tag in the schema: a:lstStyle.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.ListStyle? ListStyle
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.ListStyle>();
@@ -7308,12 +7308,12 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PtExtension" /> <c>&lt;a:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PtExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7367,13 +7367,13 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:ext.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Diagram12.TextListStyleType" /> <c>&lt;dgm1612:lstStyle></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Diagram11.NumberDiagramInfoList" /> <c>&lt;dgm1611:autoBuNodeInfoLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DiagramDefinitionExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7446,12 +7446,12 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:sampData.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.DataModel" /> <c>&lt;dgm:dataModel></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SampleData : SampleDataType
     {
         /// <summary>
@@ -7504,12 +7504,12 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:styleData.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.DataModel" /> <c>&lt;dgm:dataModel></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class StyleData : SampleDataType
     {
         /// <summary>
@@ -7562,12 +7562,12 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:clrData.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.DataModel" /> <c>&lt;dgm:dataModel></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ColorData : SampleDataType
     {
         /// <summary>
@@ -7620,12 +7620,12 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.DataModel" /> <c>&lt;dgm:dataModel></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public abstract partial class SampleDataType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7681,9 +7681,9 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
         /// <para>Data Model.</para>
         /// <para>Represents the following element tag in the schema: dgm:dataModel.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:dgm = http://schemas.openxmlformats.org/drawingml/2006/diagram
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Diagrams.DataModel? DataModel
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Diagrams.DataModel>();
@@ -7696,12 +7696,12 @@ namespace DocumentFormat.OpenXml.Drawing.Diagrams
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dgm:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Diagrams.DiagramDefinitionExtension" /> <c>&lt;dgm:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DiagramDefinitionExtensionList : OpenXmlCompositeElement
     {
         /// <summary>

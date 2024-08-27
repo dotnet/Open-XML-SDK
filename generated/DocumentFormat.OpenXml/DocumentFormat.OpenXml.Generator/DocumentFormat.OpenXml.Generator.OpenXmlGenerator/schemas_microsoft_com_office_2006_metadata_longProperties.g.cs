@@ -21,12 +21,12 @@ namespace DocumentFormat.OpenXml.Office.LongProperties
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is lp:LongProperties.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.LongProperties.LongProperty" /> <c>&lt;lp:LongProp></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class LongProperties : OpenXmlCompositeElement
     {
         /// <summary>

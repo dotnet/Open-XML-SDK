@@ -36,9 +36,9 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         /// <para>Run Content Color</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -49,9 +49,9 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         /// <para>Run Content Theme Color</para>
         /// <para>Represents the following attribute in the schema: w:themeColor</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues>? ThemeColor
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues>>();
@@ -62,9 +62,9 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         /// <para>Run Content Theme Color Tint</para>
         /// <para>Represents the following attribute in the schema: w:themeTint</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? ThemeTint
         {
             get => GetAttribute<StringValue>();
@@ -75,9 +75,9 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         /// <para>Run Content Theme Color Shade</para>
         /// <para>Represents the following attribute in the schema: w:themeShade</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? ThemeShade
         {
             get => GetAttribute<StringValue>();
@@ -132,9 +132,9 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         /// <para>XML Namespace Prefix Mappings</para>
         /// <para>Represents the following attribute in the schema: w:prefixMappings</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? PrefixMappings
         {
             get => GetAttribute<StringValue>();
@@ -145,9 +145,9 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         /// <para>XPath</para>
         /// <para>Represents the following attribute in the schema: w:xpath</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? XPath
         {
             get => GetAttribute<StringValue>();
@@ -158,9 +158,9 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         /// <para>Custom XML Data Storage ID</para>
         /// <para>Represents the following attribute in the schema: w:storeItemID</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? StoreItemId
         {
             get => GetAttribute<StringValue>();
@@ -206,9 +206,9 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         /// <para>val, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: w15:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w15=http://schemas.microsoft.com/office/word/2012/wordml
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Office2013.Word.SdtAppearance>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Office2013.Word.SdtAppearance>>();
@@ -236,12 +236,12 @@ namespace DocumentFormat.OpenXml.Office2013.Word
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w15:commentsEx.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Word.CommentEx" /> <c>&lt;w15:commentEx></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class CommentsEx : OpenXmlPartRootElement
     {
         /// <summary>
@@ -327,12 +327,12 @@ namespace DocumentFormat.OpenXml.Office2013.Word
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w15:people.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Word.Person" /> <c>&lt;w15:person></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class People : OpenXmlPartRootElement
     {
         /// <summary>
@@ -418,13 +418,13 @@ namespace DocumentFormat.OpenXml.Office2013.Word
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w15:repeatingSection.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Word.DoNotAllowInsertDeleteSection" /> <c>&lt;w15:doNotAllowInsertDeleteSection></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Word.SectionTitle" /> <c>&lt;w15:sectionTitle></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SdtRepeatedSection : OpenXmlCompositeElement
     {
         /// <summary>
@@ -476,9 +476,9 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         /// <para>SectionTitle.</para>
         /// <para>Represents the following element tag in the schema: w15:sectionTitle.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w15 = http://schemas.microsoft.com/office/word/2012/wordml
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Word.SectionTitle? SectionTitle
         {
             get => GetElement<DocumentFormat.OpenXml.Office2013.Word.SectionTitle>();
@@ -489,9 +489,9 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         /// <para>DoNotAllowInsertDeleteSection.</para>
         /// <para>Represents the following element tag in the schema: w15:doNotAllowInsertDeleteSection.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w15 = http://schemas.microsoft.com/office/word/2012/wordml
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Word.DoNotAllowInsertDeleteSection? DoNotAllowInsertDeleteSection
         {
             get => GetElement<DocumentFormat.OpenXml.Office2013.Word.DoNotAllowInsertDeleteSection>();
@@ -670,9 +670,9 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         /// <para>On/Off Value</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public OnOffValue? Val
         {
             get => GetAttribute<OnOffValue>();
@@ -705,9 +705,9 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         /// <para>val, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: w15:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w15=http://schemas.microsoft.com/office/word/2012/wordml
-        /// </remark>
+        /// </remarks>
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -749,9 +749,9 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         /// <para>Decimal Number Value</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public Int32Value? Val
         {
             get => GetAttribute<Int32Value>();
@@ -792,9 +792,9 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         /// <para>paraId, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: w15:paraId</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w15=http://schemas.microsoft.com/office/word/2012/wordml
-        /// </remark>
+        /// </remarks>
         public HexBinaryValue? ParaId
         {
             get => GetAttribute<HexBinaryValue>();
@@ -805,9 +805,9 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         /// <para>paraIdParent, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: w15:paraIdParent</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w15=http://schemas.microsoft.com/office/word/2012/wordml
-        /// </remark>
+        /// </remarks>
         public HexBinaryValue? ParaIdParent
         {
             get => GetAttribute<HexBinaryValue>();
@@ -818,9 +818,9 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         /// <para>done, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: w15:done</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w15=http://schemas.microsoft.com/office/word/2012/wordml
-        /// </remark>
+        /// </remarks>
         public OnOffValue? Done
         {
             get => GetAttribute<OnOffValue>();
@@ -861,12 +861,12 @@ namespace DocumentFormat.OpenXml.Office2013.Word
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w15:person.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Word.PresenceInfo" /> <c>&lt;w15:presenceInfo></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Person : OpenXmlCompositeElement
     {
         /// <summary>
@@ -904,9 +904,9 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         /// <para>author, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: w15:author</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w15=http://schemas.microsoft.com/office/word/2012/wordml
-        /// </remark>
+        /// </remarks>
         public StringValue? Author
         {
             get => GetAttribute<StringValue>();
@@ -935,9 +935,9 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         /// <para>PresenceInfo.</para>
         /// <para>Represents the following element tag in the schema: w15:presenceInfo.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w15 = http://schemas.microsoft.com/office/word/2012/wordml
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Word.PresenceInfo? PresenceInfo
         {
             get => GetElement<DocumentFormat.OpenXml.Office2013.Word.PresenceInfo>();
@@ -966,9 +966,9 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         /// <para>providerId, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: w15:providerId</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w15=http://schemas.microsoft.com/office/word/2012/wordml
-        /// </remark>
+        /// </remarks>
         public StringValue? ProviderId
         {
             get => GetAttribute<StringValue>();
@@ -979,9 +979,9 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         /// <para>userId, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: w15:userId</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w15=http://schemas.microsoft.com/office/word/2012/wordml
-        /// </remark>
+        /// </remarks>
         public StringValue? UserId
         {
             get => GetAttribute<StringValue>();
@@ -1030,9 +1030,9 @@ namespace DocumentFormat.OpenXml.Office2013.Word
         /// <para>String Value</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();

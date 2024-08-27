@@ -62,13 +62,13 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd:rvData.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData.ExtensionList" /> <c>&lt;xlrd:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData.RichValue" /> <c>&lt;xlrd:rv></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class RichValueData : OpenXmlPartRootElement
     {
         /// <summary>
@@ -171,13 +171,13 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd:rvStructures.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData.ExtensionList" /> <c>&lt;xlrd:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData.RichValueStructure" /> <c>&lt;xlrd:s></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class RichValueStructures : OpenXmlPartRootElement
     {
         /// <summary>
@@ -280,13 +280,13 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd:rv.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData.RichValueFallback" /> <c>&lt;xlrd:fb></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData.Value" /> <c>&lt;xlrd:v></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class RichValue : OpenXmlCompositeElement
     {
         /// <summary>
@@ -353,9 +353,9 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData
         /// <para>RichValueFallback.</para>
         /// <para>Represents the following element tag in the schema: xlrd:fb.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xlrd = http://schemas.microsoft.com/office/spreadsheetml/2017/richdata
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2019.Excel.RichData.RichValueFallback? RichValueFallback
         {
             get => GetElement<DocumentFormat.OpenXml.Office2019.Excel.RichData.RichValueFallback>();
@@ -371,12 +371,12 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Extension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -525,12 +525,12 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.RichData
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlrd:s.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.RichData.Key" /> <c>&lt;xlrd:k></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class RichValueStructure : OpenXmlCompositeElement
     {
         /// <summary>

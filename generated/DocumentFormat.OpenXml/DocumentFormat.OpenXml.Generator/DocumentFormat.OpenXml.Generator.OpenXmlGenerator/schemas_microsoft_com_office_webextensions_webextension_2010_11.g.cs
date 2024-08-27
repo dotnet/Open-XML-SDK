@@ -23,7 +23,7 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is we:webextension.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.WebExtension.Snapshot" /> <c>&lt;we:snapshot></c></description></item>
@@ -33,7 +33,7 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionStoreReference" /> <c>&lt;we:reference></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionReferenceList" /> <c>&lt;we:alternateReferences></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class WebExtension : OpenXmlPartRootElement
     {
         /// <summary>
@@ -120,9 +120,9 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
         /// <para>WebExtensionStoreReference.</para>
         /// <para>Represents the following element tag in the schema: we:reference.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:we = http://schemas.microsoft.com/office/webextensions/webextension/2010/11
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionStoreReference? WebExtensionStoreReference
         {
             get => GetElement<DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionStoreReference>();
@@ -133,9 +133,9 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
         /// <para>WebExtensionReferenceList.</para>
         /// <para>Represents the following element tag in the schema: we:alternateReferences.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:we = http://schemas.microsoft.com/office/webextensions/webextension/2010/11
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionReferenceList? WebExtensionReferenceList
         {
             get => GetElement<DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionReferenceList>();
@@ -146,9 +146,9 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
         /// <para>WebExtensionPropertyBag.</para>
         /// <para>Represents the following element tag in the schema: we:properties.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:we = http://schemas.microsoft.com/office/webextensions/webextension/2010/11
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionPropertyBag? WebExtensionPropertyBag
         {
             get => GetElement<DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionPropertyBag>();
@@ -159,9 +159,9 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
         /// <para>WebExtensionBindingList.</para>
         /// <para>Represents the following element tag in the schema: we:bindings.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:we = http://schemas.microsoft.com/office/webextensions/webextension/2010/11
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionBindingList? WebExtensionBindingList
         {
             get => GetElement<DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionBindingList>();
@@ -172,9 +172,9 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
         /// <para>Snapshot.</para>
         /// <para>Represents the following element tag in the schema: we:snapshot.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:we = http://schemas.microsoft.com/office/webextensions/webextension/2010/11
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2013.WebExtension.Snapshot? Snapshot
         {
             get => GetElement<DocumentFormat.OpenXml.Office2013.WebExtension.Snapshot>();
@@ -185,9 +185,9 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
         /// <para>OfficeArtExtensionList.</para>
         /// <para>Represents the following element tag in the schema: we:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:we = http://schemas.microsoft.com/office/webextensions/webextension/2010/11
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2013.WebExtension.OfficeArtExtensionList? OfficeArtExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Office2013.WebExtension.OfficeArtExtensionList>();
@@ -247,9 +247,9 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
         /// <para>id, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: r:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -331,12 +331,12 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is we:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extension" /> <c>&lt;a:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -397,12 +397,12 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is we:binding.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.WebExtension.OfficeArtExtensionList" /> <c>&lt;we:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class WebExtensionBinding : OpenXmlCompositeElement
     {
         /// <summary>
@@ -495,9 +495,9 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
         /// <para>OfficeArtExtensionList.</para>
         /// <para>Represents the following element tag in the schema: we:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:we = http://schemas.microsoft.com/office/webextensions/webextension/2010/11
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2013.WebExtension.OfficeArtExtensionList? OfficeArtExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Office2013.WebExtension.OfficeArtExtensionList>();
@@ -513,12 +513,12 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is we:reference.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.WebExtension.OfficeArtExtensionList" /> <c>&lt;we:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class WebExtensionStoreReference : OpenXmlCompositeElement
     {
         /// <summary>
@@ -620,9 +620,9 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
         /// <para>OfficeArtExtensionList.</para>
         /// <para>Represents the following element tag in the schema: we:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:we = http://schemas.microsoft.com/office/webextensions/webextension/2010/11
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2013.WebExtension.OfficeArtExtensionList? OfficeArtExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Office2013.WebExtension.OfficeArtExtensionList>();
@@ -638,12 +638,12 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is we:alternateReferences.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionStoreReference" /> <c>&lt;we:reference></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class WebExtensionReferenceList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -698,12 +698,12 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is we:properties.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionProperty" /> <c>&lt;we:property></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class WebExtensionPropertyBag : OpenXmlCompositeElement
     {
         /// <summary>
@@ -758,12 +758,12 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is we:bindings.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.WebExtension.WebExtensionBinding" /> <c>&lt;we:binding></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class WebExtensionBindingList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -818,7 +818,7 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is we:snapshot.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.AlphaBiLevel" /> <c>&lt;a:alphaBiLevel></c></description></item>
@@ -840,7 +840,7 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.LuminanceEffect" /> <c>&lt;a:lum></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.TintEffect" /> <c>&lt;a:tint></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Snapshot : OpenXmlCompositeElement
     {
         /// <summary>
@@ -878,9 +878,9 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
         /// <para>Embedded Picture Reference</para>
         /// <para>Represents the following attribute in the schema: r:embed</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-        /// </remark>
+        /// </remarks>
         public StringValue? Embed
         {
             get => GetAttribute<StringValue>();
@@ -891,9 +891,9 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
         /// <para>Linked Picture Reference</para>
         /// <para>Represents the following attribute in the schema: r:link</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-        /// </remark>
+        /// </remarks>
         public StringValue? Link
         {
             get => GetAttribute<StringValue>();

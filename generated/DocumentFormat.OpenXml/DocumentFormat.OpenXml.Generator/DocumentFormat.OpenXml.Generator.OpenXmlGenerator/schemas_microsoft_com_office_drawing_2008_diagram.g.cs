@@ -22,12 +22,12 @@ namespace DocumentFormat.OpenXml.Office.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dsp:drawing.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.ShapeTree" /> <c>&lt;dsp:spTree></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Drawing : OpenXmlPartRootElement
     {
         /// <summary>
@@ -77,9 +77,9 @@ namespace DocumentFormat.OpenXml.Office.Drawing
         /// <para>ShapeTree.</para>
         /// <para>Represents the following element tag in the schema: dsp:spTree.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:dsp = http://schemas.microsoft.com/office/drawing/2008/diagram
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office.Drawing.ShapeTree? ShapeTree
         {
             get => GetElement<DocumentFormat.OpenXml.Office.Drawing.ShapeTree>();
@@ -177,14 +177,14 @@ namespace DocumentFormat.OpenXml.Office.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dsp:cNvPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HyperlinkOnClick" /> <c>&lt;a:hlinkClick></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HyperlinkOnHover" /> <c>&lt;a:hlinkHover></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -300,9 +300,9 @@ namespace DocumentFormat.OpenXml.Office.Drawing
         /// <para>Hyperlink associated with clicking or selecting the element..</para>
         /// <para>Represents the following element tag in the schema: a:hlinkClick.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.HyperlinkOnClick? HyperlinkOnClick
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>();
@@ -313,9 +313,9 @@ namespace DocumentFormat.OpenXml.Office.Drawing
         /// <para>Hyperlink associated with hovering over the element..</para>
         /// <para>Represents the following element tag in the schema: a:hlinkHover.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.HyperlinkOnHover? HyperlinkOnHover
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>();
@@ -326,9 +326,9 @@ namespace DocumentFormat.OpenXml.Office.Drawing
         /// <para>Future extension.</para>
         /// <para>Represents the following element tag in the schema: a:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList? NonVisualDrawingPropertiesExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>();
@@ -344,13 +344,13 @@ namespace DocumentFormat.OpenXml.Office.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dsp:cNvSpPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ShapeLocks" /> <c>&lt;a:spLocks></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class NonVisualDrawingShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -414,9 +414,9 @@ namespace DocumentFormat.OpenXml.Office.Drawing
         /// <para>Shape Locks.</para>
         /// <para>Represents the following element tag in the schema: a:spLocks.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.ShapeLocks? ShapeLocks
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.ShapeLocks>();
@@ -427,9 +427,9 @@ namespace DocumentFormat.OpenXml.Office.Drawing
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: a:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>();
@@ -445,13 +445,13 @@ namespace DocumentFormat.OpenXml.Office.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dsp:nvSpPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.NonVisualDrawingProperties" /> <c>&lt;dsp:cNvPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.NonVisualDrawingShapeProperties" /> <c>&lt;dsp:cNvSpPr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ShapeNonVisualProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -503,9 +503,9 @@ namespace DocumentFormat.OpenXml.Office.Drawing
         /// <para>NonVisualDrawingProperties.</para>
         /// <para>Represents the following element tag in the schema: dsp:cNvPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:dsp = http://schemas.microsoft.com/office/drawing/2008/diagram
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office.Drawing.NonVisualDrawingProperties? NonVisualDrawingProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Office.Drawing.NonVisualDrawingProperties>();
@@ -516,9 +516,9 @@ namespace DocumentFormat.OpenXml.Office.Drawing
         /// <para>NonVisualDrawingShapeProperties.</para>
         /// <para>Represents the following element tag in the schema: dsp:cNvSpPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:dsp = http://schemas.microsoft.com/office/drawing/2008/diagram
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office.Drawing.NonVisualDrawingShapeProperties? NonVisualDrawingShapeProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Office.Drawing.NonVisualDrawingShapeProperties>();
@@ -534,7 +534,7 @@ namespace DocumentFormat.OpenXml.Office.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dsp:spPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.BlipFill" /> <c>&lt;a:blipFill></c></description></item>
@@ -553,7 +553,7 @@ namespace DocumentFormat.OpenXml.Office.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SolidFill" /> <c>&lt;a:solidFill></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Transform2D" /> <c>&lt;a:xfrm></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -664,9 +664,9 @@ namespace DocumentFormat.OpenXml.Office.Drawing
         /// <para>2D Transform for Individual Objects.</para>
         /// <para>Represents the following element tag in the schema: a:xfrm.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Transform2D? Transform2D
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Transform2D>();
@@ -682,7 +682,7 @@ namespace DocumentFormat.OpenXml.Office.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dsp:style.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.FontReference" /> <c>&lt;a:fontRef></c></description></item>
@@ -690,7 +690,7 @@ namespace DocumentFormat.OpenXml.Office.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.FillReference" /> <c>&lt;a:fillRef></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.EffectReference" /> <c>&lt;a:effectRef></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ShapeStyle : OpenXmlCompositeElement
     {
         /// <summary>
@@ -746,9 +746,9 @@ namespace DocumentFormat.OpenXml.Office.Drawing
         /// <para>LineReference.</para>
         /// <para>Represents the following element tag in the schema: a:lnRef.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.LineReference? LineReference
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.LineReference>();
@@ -759,9 +759,9 @@ namespace DocumentFormat.OpenXml.Office.Drawing
         /// <para>FillReference.</para>
         /// <para>Represents the following element tag in the schema: a:fillRef.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.FillReference? FillReference
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.FillReference>();
@@ -772,9 +772,9 @@ namespace DocumentFormat.OpenXml.Office.Drawing
         /// <para>EffectReference.</para>
         /// <para>Represents the following element tag in the schema: a:effectRef.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.EffectReference? EffectReference
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.EffectReference>();
@@ -785,9 +785,9 @@ namespace DocumentFormat.OpenXml.Office.Drawing
         /// <para>Font Reference.</para>
         /// <para>Represents the following element tag in the schema: a:fontRef.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.FontReference? FontReference
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.FontReference>();
@@ -803,14 +803,14 @@ namespace DocumentFormat.OpenXml.Office.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dsp:txBody.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.BodyProperties" /> <c>&lt;a:bodyPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ListStyle" /> <c>&lt;a:lstStyle></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Paragraph" /> <c>&lt;a:p></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TextBody : OpenXmlCompositeElement
     {
         /// <summary>
@@ -864,9 +864,9 @@ namespace DocumentFormat.OpenXml.Office.Drawing
         /// <para>Body Properties.</para>
         /// <para>Represents the following element tag in the schema: a:bodyPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.BodyProperties? BodyProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.BodyProperties>();
@@ -877,9 +877,9 @@ namespace DocumentFormat.OpenXml.Office.Drawing
         /// <para>Text List Styles.</para>
         /// <para>Represents the following element tag in the schema: a:lstStyle.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.ListStyle? ListStyle
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.ListStyle>();
@@ -895,13 +895,13 @@ namespace DocumentFormat.OpenXml.Office.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dsp:txXfrm.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Offset" /> <c>&lt;a:off></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extents" /> <c>&lt;a:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Transform2D : OpenXmlCompositeElement
     {
         /// <summary>
@@ -987,9 +987,9 @@ namespace DocumentFormat.OpenXml.Office.Drawing
         /// <para>Offset.</para>
         /// <para>Represents the following element tag in the schema: a:off.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Offset? Offset
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Offset>();
@@ -1000,9 +1000,9 @@ namespace DocumentFormat.OpenXml.Office.Drawing
         /// <para>Extents.</para>
         /// <para>Represents the following element tag in the schema: a:ext.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Extents? Extents
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Extents>();
@@ -1018,12 +1018,12 @@ namespace DocumentFormat.OpenXml.Office.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dsp:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extension" /> <c>&lt;a:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1084,13 +1084,13 @@ namespace DocumentFormat.OpenXml.Office.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dsp:cNvGrpSpPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.GroupShapeLocks" /> <c>&lt;a:grpSpLocks></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class NonVisualGroupDrawingShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1142,9 +1142,9 @@ namespace DocumentFormat.OpenXml.Office.Drawing
         /// <para>GroupShapeLocks.</para>
         /// <para>Represents the following element tag in the schema: a:grpSpLocks.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.GroupShapeLocks? GroupShapeLocks
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.GroupShapeLocks>();
@@ -1155,9 +1155,9 @@ namespace DocumentFormat.OpenXml.Office.Drawing
         /// <para>NonVisualGroupDrawingShapePropsExtensionList.</para>
         /// <para>Represents the following element tag in the schema: a:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList? NonVisualGroupDrawingShapePropsExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList>();
@@ -1173,13 +1173,13 @@ namespace DocumentFormat.OpenXml.Office.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dsp:nvGrpSpPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.NonVisualDrawingProperties" /> <c>&lt;dsp:cNvPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.NonVisualGroupDrawingShapeProperties" /> <c>&lt;dsp:cNvGrpSpPr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class GroupShapeNonVisualProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1231,9 +1231,9 @@ namespace DocumentFormat.OpenXml.Office.Drawing
         /// <para>NonVisualDrawingProperties.</para>
         /// <para>Represents the following element tag in the schema: dsp:cNvPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:dsp = http://schemas.microsoft.com/office/drawing/2008/diagram
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office.Drawing.NonVisualDrawingProperties? NonVisualDrawingProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Office.Drawing.NonVisualDrawingProperties>();
@@ -1244,9 +1244,9 @@ namespace DocumentFormat.OpenXml.Office.Drawing
         /// <para>NonVisualGroupDrawingShapeProperties.</para>
         /// <para>Represents the following element tag in the schema: dsp:cNvGrpSpPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:dsp = http://schemas.microsoft.com/office/drawing/2008/diagram
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office.Drawing.NonVisualGroupDrawingShapeProperties? NonVisualGroupDrawingShapeProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Office.Drawing.NonVisualGroupDrawingShapeProperties>();
@@ -1262,7 +1262,7 @@ namespace DocumentFormat.OpenXml.Office.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dsp:grpSpPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.BlipFill" /> <c>&lt;a:blipFill></c></description></item>
@@ -1277,7 +1277,7 @@ namespace DocumentFormat.OpenXml.Office.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Scene3DType" /> <c>&lt;a:scene3d></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SolidFill" /> <c>&lt;a:solidFill></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class GroupShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1374,9 +1374,9 @@ namespace DocumentFormat.OpenXml.Office.Drawing
         /// <para>2D Transform for Grouped Objects.</para>
         /// <para>Represents the following element tag in the schema: a:xfrm.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.TransformGroup? TransformGroup
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.TransformGroup>();
@@ -1392,7 +1392,7 @@ namespace DocumentFormat.OpenXml.Office.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dsp:sp.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.OfficeArtExtensionList" /> <c>&lt;dsp:extLst></c></description></item>
@@ -1402,7 +1402,7 @@ namespace DocumentFormat.OpenXml.Office.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Transform2D" /> <c>&lt;dsp:txXfrm></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.ShapeNonVisualProperties" /> <c>&lt;dsp:nvSpPr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Shape : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1482,9 +1482,9 @@ namespace DocumentFormat.OpenXml.Office.Drawing
         /// <para>ShapeNonVisualProperties.</para>
         /// <para>Represents the following element tag in the schema: dsp:nvSpPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:dsp = http://schemas.microsoft.com/office/drawing/2008/diagram
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office.Drawing.ShapeNonVisualProperties? ShapeNonVisualProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Office.Drawing.ShapeNonVisualProperties>();
@@ -1495,9 +1495,9 @@ namespace DocumentFormat.OpenXml.Office.Drawing
         /// <para>ShapeProperties.</para>
         /// <para>Represents the following element tag in the schema: dsp:spPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:dsp = http://schemas.microsoft.com/office/drawing/2008/diagram
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office.Drawing.ShapeProperties? ShapeProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Office.Drawing.ShapeProperties>();
@@ -1508,9 +1508,9 @@ namespace DocumentFormat.OpenXml.Office.Drawing
         /// <para>ShapeStyle.</para>
         /// <para>Represents the following element tag in the schema: dsp:style.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:dsp = http://schemas.microsoft.com/office/drawing/2008/diagram
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office.Drawing.ShapeStyle? ShapeStyle
         {
             get => GetElement<DocumentFormat.OpenXml.Office.Drawing.ShapeStyle>();
@@ -1521,9 +1521,9 @@ namespace DocumentFormat.OpenXml.Office.Drawing
         /// <para>TextBody.</para>
         /// <para>Represents the following element tag in the schema: dsp:txBody.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:dsp = http://schemas.microsoft.com/office/drawing/2008/diagram
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office.Drawing.TextBody? TextBody
         {
             get => GetElement<DocumentFormat.OpenXml.Office.Drawing.TextBody>();
@@ -1534,9 +1534,9 @@ namespace DocumentFormat.OpenXml.Office.Drawing
         /// <para>Transform2D.</para>
         /// <para>Represents the following element tag in the schema: dsp:txXfrm.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:dsp = http://schemas.microsoft.com/office/drawing/2008/diagram
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office.Drawing.Transform2D? Transform2D
         {
             get => GetElement<DocumentFormat.OpenXml.Office.Drawing.Transform2D>();
@@ -1547,9 +1547,9 @@ namespace DocumentFormat.OpenXml.Office.Drawing
         /// <para>OfficeArtExtensionList.</para>
         /// <para>Represents the following element tag in the schema: dsp:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:dsp = http://schemas.microsoft.com/office/drawing/2008/diagram
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office.Drawing.OfficeArtExtensionList? OfficeArtExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Office.Drawing.OfficeArtExtensionList>();
@@ -1565,7 +1565,7 @@ namespace DocumentFormat.OpenXml.Office.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dsp:grpSp.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.GroupShapeProperties" /> <c>&lt;dsp:grpSpPr></c></description></item>
@@ -1574,7 +1574,7 @@ namespace DocumentFormat.OpenXml.Office.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.GroupShapeNonVisualProperties" /> <c>&lt;dsp:nvGrpSpPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Shape" /> <c>&lt;dsp:sp></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class GroupShape : GroupShapeType
     {
         /// <summary>
@@ -1635,7 +1635,7 @@ namespace DocumentFormat.OpenXml.Office.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is dsp:spTree.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.GroupShapeProperties" /> <c>&lt;dsp:grpSpPr></c></description></item>
@@ -1644,7 +1644,7 @@ namespace DocumentFormat.OpenXml.Office.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.GroupShapeNonVisualProperties" /> <c>&lt;dsp:nvGrpSpPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Shape" /> <c>&lt;dsp:sp></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ShapeTree : GroupShapeType
     {
         /// <summary>
@@ -1705,7 +1705,7 @@ namespace DocumentFormat.OpenXml.Office.Drawing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.GroupShapeProperties" /> <c>&lt;dsp:grpSpPr></c></description></item>
@@ -1714,7 +1714,7 @@ namespace DocumentFormat.OpenXml.Office.Drawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.GroupShapeNonVisualProperties" /> <c>&lt;dsp:nvGrpSpPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Drawing.Shape" /> <c>&lt;dsp:sp></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public abstract partial class GroupShapeType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1762,9 +1762,9 @@ namespace DocumentFormat.OpenXml.Office.Drawing
         /// <para>GroupShapeNonVisualProperties.</para>
         /// <para>Represents the following element tag in the schema: dsp:nvGrpSpPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:dsp = http://schemas.microsoft.com/office/drawing/2008/diagram
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office.Drawing.GroupShapeNonVisualProperties? GroupShapeNonVisualProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Office.Drawing.GroupShapeNonVisualProperties>();
@@ -1775,9 +1775,9 @@ namespace DocumentFormat.OpenXml.Office.Drawing
         /// <para>GroupShapeProperties.</para>
         /// <para>Represents the following element tag in the schema: dsp:grpSpPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:dsp = http://schemas.microsoft.com/office/drawing/2008/diagram
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office.Drawing.GroupShapeProperties? GroupShapeProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Office.Drawing.GroupShapeProperties>();
