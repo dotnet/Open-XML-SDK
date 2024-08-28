@@ -1,0 +1,14 @@
+[
+  {
+    "Name": "xprd:CT_PivotCacheRichInfo/",
+    "ClassName": "OpenXmlPivotCacheRichInfoElement"
+  },
+  {
+    "Name": "xprd:CT_PivotCacheRichInfo/xprd:pivotCacheHasRichValue",
+    "ClassName": "PivotCacheHasRichValuePivotCacheRichInfo"
+  },
+  {
+    "Name": "xprd:CT_PivotCacheRichInfo/xprd:richInfo",
+    "ClassName": "RichInfoPivotCacheRichInfo"
+  }
+]

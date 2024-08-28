@@ -11,6 +11,7 @@ using DocumentFormat.OpenXml.Drawing.Spreadsheet;
 using DocumentFormat.OpenXml.Framework;
 using DocumentFormat.OpenXml.Framework.Metadata;
 using DocumentFormat.OpenXml.Office.SpreadSheetML.Y2021.ExtLinks2021;
+using DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotRichData;
 using DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo;
 using DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.ExternalCodeService;
 using DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms;
@@ -45036,7 +45037,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.PivotCacheDecoupled" /> <c>&lt;x15:pivotCacheDecoupled></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.PivotCacheIdVersion" /> <c>&lt;x15:pivotCacheIdVersion></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.TimelinePivotCacheDefinition" /> <c>&lt;x15:timelinePivotCacheDefinition></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotRichData.PivotCacheHasRichValuePivotCacheRichInfo" /> <c>&lt;xprd:pivotCacheHasRichValue></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotRichData.RichInfoPivotCacheRichInfo" /> <c>&lt;xprd:richInfo></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.Excel.Pivot.Xsdboolean" /> <c>&lt;xxpim:implicitMeasureSupport></c></description></item>
+    ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2024.PivotAutoRefresh.Xsdboolean" /> <c>&lt;xlpar:autoRefresh></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo.CacheVersionInfo" /> <c>&lt;xxpvi:cacheVersionInfo></c></description></item>
     /// </list>
     /// </remark>
@@ -45091,7 +45095,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.PivotCacheDecoupled>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.PivotCacheIdVersion>();
             builder.AddChild<DocumentFormat.OpenXml.Office2013.Excel.TimelinePivotCacheDefinition>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotRichData.PivotCacheHasRichValuePivotCacheRichInfo>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotRichData.RichInfoPivotCacheRichInfo>();
             builder.AddChild<DocumentFormat.OpenXml.Office2021.Excel.Pivot.Xsdboolean>();
+            builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2024.PivotAutoRefresh.Xsdboolean>();
             builder.AddChild<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo.CacheVersionInfo>();
             builder.AddElement<PivotCacheDefinitionExtension>()
                 .AddAttribute("uri", a => a.Uri, aBuilder =>
@@ -45106,7 +45113,10 @@ namespace DocumentFormat.OpenXml.Spreadsheet
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.TimelinePivotCacheDefinition), 1, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2013.Excel.PivotCacheIdVersion), 1, 1, version: FileFormatVersions.Office2013),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office2021.Excel.Pivot.Xsdboolean), 1, 1, version: FileFormatVersions.Office2021),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotRichData.PivotCacheHasRichValuePivotCacheRichInfo), 1, 1, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotRichData.RichInfoPivotCacheRichInfo), 1, 1, version: FileFormatVersions.Microsoft365),
                 new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotVersionInfo.CacheVersionInfo), 1, 1, version: FileFormatVersions.Microsoft365),
+                new ElementParticle(typeof(DocumentFormat.OpenXml.Office.SpreadSheetML.Y2024.PivotAutoRefresh.Xsdboolean), 1, 1, version: FileFormatVersions.Microsoft365),
                 new AnyParticle(0, 1)
             };
         }

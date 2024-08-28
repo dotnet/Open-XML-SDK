@@ -695,6 +695,11 @@
     "Version": "Office2019"
   },
   {
+    "Prefix": "xprd",
+    "Uri": "http://schemas.microsoft.com/office/spreadsheetml/2022/pivotRichData",
+    "Version": "Microsoft365"
+  },
+  {
     "Prefix": "xr",
     "Uri": "http://schemas.microsoft.com/office/spreadsheetml/2014/revision",
     "Version": "Office2016"
