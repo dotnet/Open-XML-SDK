@@ -22750,11 +22750,7 @@
     "Children": []
   },
   {
-    "Element": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotRichData.PivotCacheHasRichValuePivotCacheRichInfo",
-    "Children": []
-  },
-  {
-    "Element": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotRichData.RichInfoPivotCacheRichInfo",
+    "Element": "DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotRichData.PivotCacheRichInfo",
     "Children": []
   },
   {
@@ -45141,10 +45137,6 @@
       {
         "Name": "implicitMeasureSupport",
         "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2020/pivotNov2020"
-      },
-      {
-        "Name": "pivotCacheHasRichValue",
-        "Namespace": "http://schemas.microsoft.com/office/spreadsheetml/2022/pivotRichData"
       },
       {
         "Name": "richInfo",
