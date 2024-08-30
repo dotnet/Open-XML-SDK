@@ -16,25 +16,14 @@ namespace DocumentFormat.OpenXml.Linq
         public static readonly XNamespace xprd = "http://schemas.microsoft.com/office/spreadsheetml/2022/pivotRichData";
 
         /// <summary>
-        /// Represents the xprd:pivotCacheHasRichValue XML element.
-        /// </summary>
-        /// <remarks>
-        /// <para>As an XML element, it:</para>
-        /// <list type="bullet">
-        /// <item><description>has the following parent XML elements: <see cref="X.ext" />.</description></item>
-        /// <item><description>corresponds to the following strongly-typed classes: PivotCacheHasRichValuePivotCacheRichInfo.</description></item>
-        /// </list>
-        /// </remarks>
-        public static readonly XName pivotCacheHasRichValue = xprd + "pivotCacheHasRichValue";
-
-        /// <summary>
         /// Represents the xprd:richInfo XML element.
         /// </summary>
         /// <remarks>
         /// <para>As an XML element, it:</para>
         /// <list type="bullet">
         /// <item><description>has the following parent XML elements: <see cref="X.ext" />.</description></item>
-        /// <item><description>corresponds to the following strongly-typed classes: RichInfoPivotCacheRichInfo.</description></item>
+        /// <item><description>has the following XML attributes: <see cref="NoNamespace.pivotCacheGuid" />, <see cref="NoNamespace.pivotIgnoreInvalidCache" />, <see cref="R.id" />.</description></item>
+        /// <item><description>corresponds to the following strongly-typed classes: PivotCacheRichInfo.</description></item>
         /// </list>
         /// </remarks>
         public static readonly XName richInfo = xprd + "richInfo";

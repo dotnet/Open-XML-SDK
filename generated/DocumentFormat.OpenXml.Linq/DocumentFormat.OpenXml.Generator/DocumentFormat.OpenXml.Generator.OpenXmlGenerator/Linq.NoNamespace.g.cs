@@ -14904,6 +14904,18 @@ namespace DocumentFormat.OpenXml.Linq
         public static readonly XName pivotButton = "pivotButton";
 
         /// <summary>
+        /// Represents the pivotCacheGuid XML attribute.
+        /// </summary>
+        /// <remarks>
+        /// <para>As an XML attribute, it:</para>
+        /// <list type="bullet">
+        /// <item><description>is contained in the following XML elements: <see cref="XPRD.richInfo" />.</description></item>
+        /// <item><description>corresponds to the following strongly-typed properties: PivotCacheRichInfo.PivotCacheGuid.</description></item>
+        /// </list>
+        /// </remarks>
+        public static readonly XName pivotCacheGuid = "pivotCacheGuid";
+
+        /// <summary>
         /// Represents the pivotCacheId XML attributes.
         /// </summary>
         /// <remarks>
@@ -14914,6 +14926,18 @@ namespace DocumentFormat.OpenXml.Linq
         /// </list>
         /// </remarks>
         public static readonly XName pivotCacheId = "pivotCacheId";
+
+        /// <summary>
+        /// Represents the pivotIgnoreInvalidCache XML attribute.
+        /// </summary>
+        /// <remarks>
+        /// <para>As an XML attribute, it:</para>
+        /// <list type="bullet">
+        /// <item><description>is contained in the following XML elements: <see cref="XPRD.richInfo" />.</description></item>
+        /// <item><description>corresponds to the following strongly-typed properties: PivotCacheRichInfo.PivotIgnoreInvalidCache.</description></item>
+        /// </list>
+        /// </remarks>
+        public static readonly XName pivotIgnoreInvalidCache = "pivotIgnoreInvalidCache";
 
         /// <summary>
         /// Represents the pivotShowAs XML attribute.

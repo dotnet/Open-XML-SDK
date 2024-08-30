@@ -24272,12 +24272,8 @@
           "PropertyName": "Xsdboolean"
         },
         {
-          "Name": "xprd:CT_PivotCacheRichInfo/xprd:pivotCacheHasRichValue",
-          "PropertyName": "PivotCacheHasRichValuePivotCacheRichInfo"
-        },
-        {
           "Name": "xprd:CT_PivotCacheRichInfo/xprd:richInfo",
-          "PropertyName": "RichInfoPivotCacheRichInfo"
+          "PropertyName": "PivotCacheRichInfo"
         },
         {
           "Name": "xxpvi:CT_CacheVersionInfo/xxpvi:cacheVersionInfo",
@@ -24310,10 +24306,6 @@
           {
             "Name": "xsd:boolean/xxpim:implicitMeasureSupport",
             "InitialVersion": "Office2021"
-          },
-          {
-            "Name": "xprd:CT_PivotCacheRichInfo/xprd:pivotCacheHasRichValue",
-            "InitialVersion": "Microsoft365"
           },
           {
             "Name": "xprd:CT_PivotCacheRichInfo/xprd:richInfo",

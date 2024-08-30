@@ -3,28 +3,9 @@
   "Types": [
     {
       "Name": "xprd:CT_PivotCacheRichInfo/xprd:richInfo",
-      "ClassName": "RichInfoPivotCacheRichInfo",
-      "Summary": "Defines the RichInfoPivotCacheRichInfo Class.",
-      "BaseClass": "OpenXmlPivotCacheRichInfoElement",
-      "IsDerived": true,
-      "IsLeafElement": true,
-      "Version": "Microsoft365"
-    },
-    {
-      "Name": "xprd:CT_PivotCacheRichInfo/xprd:pivotCacheHasRichValue",
-      "ClassName": "PivotCacheHasRichValuePivotCacheRichInfo",
-      "Summary": "Defines the PivotCacheHasRichValuePivotCacheRichInfo Class.",
-      "BaseClass": "OpenXmlPivotCacheRichInfoElement",
-      "IsDerived": true,
-      "IsLeafElement": true,
-      "Version": "Microsoft365"
-    },
-    {
-      "Name": "xprd:CT_PivotCacheRichInfo/",
-      "ClassName": "OpenXmlPivotCacheRichInfoElement",
-      "Summary": "Defines the OpenXmlPivotCacheRichInfoElement Class.",
+      "ClassName": "PivotCacheRichInfo",
+      "Summary": "Defines the PivotCacheRichInfo Class.",
       "BaseClass": "OpenXmlLeafElement",
-      "IsAbstract": true,
       "IsLeafElement": true,
       "Version": "Microsoft365",
       "Attributes": [
