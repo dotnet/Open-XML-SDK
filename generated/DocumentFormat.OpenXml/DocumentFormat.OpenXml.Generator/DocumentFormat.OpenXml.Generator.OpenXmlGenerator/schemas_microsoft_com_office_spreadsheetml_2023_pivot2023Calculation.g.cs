@@ -125,6 +125,9 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.Pivot2023Calculation
         {
             "distinctCount" => true,
             "median" => true,
+            "distinctDuplicates" => true,
+            "countValuesDuplicated" => true,
+            "countRepeatValues" => true,
             _ => false
         };
         string IEnumValue.Value => InternalValue;
@@ -140,6 +143,21 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.Pivot2023Calculation
         /// <para>When the item is serialized out as xml, its value is "median".</para>
         /// </summary>
         public static AggregationType Median => new("median");
+        /// <summary>
+        /// distinctDuplicates.
+        /// <para>When the item is serialized out as xml, its value is "distinctDuplicates".</para>
+        /// </summary>
+        public static AggregationType DistinctDuplicates => new("distinctDuplicates");
+        /// <summary>
+        /// countValuesDuplicated.
+        /// <para>When the item is serialized out as xml, its value is "countValuesDuplicated".</para>
+        /// </summary>
+        public static AggregationType CountValuesDuplicated => new("countValuesDuplicated");
+        /// <summary>
+        /// countRepeatValues.
+        /// <para>When the item is serialized out as xml, its value is "countRepeatValues".</para>
+        /// </summary>
+        public static AggregationType CountRepeatValues => new("countRepeatValues");
     
     }
 }

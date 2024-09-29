@@ -24272,8 +24272,16 @@
           "PropertyName": "Xsdboolean"
         },
         {
+          "Name": "xprd:CT_PivotCacheRichInfo/xprd:richInfo",
+          "PropertyName": "PivotCacheRichInfo"
+        },
+        {
           "Name": "xxpvi:CT_CacheVersionInfo/xxpvi:cacheVersionInfo",
           "PropertyName": "CacheVersionInfo"
+        },
+        {
+          "Name": "xsd:boolean/xlpar:autoRefresh",
+          "PropertyName": "Xsdboolean"
         }
       ],
       "Particle": {
@@ -24300,7 +24308,15 @@
             "InitialVersion": "Office2021"
           },
           {
+            "Name": "xprd:CT_PivotCacheRichInfo/xprd:richInfo",
+            "InitialVersion": "Microsoft365"
+          },
+          {
             "Name": "xxpvi:CT_CacheVersionInfo/xxpvi:cacheVersionInfo",
+            "InitialVersion": "Microsoft365"
+          },
+          {
+            "Name": "xsd:boolean/xlpar:autoRefresh",
             "InitialVersion": "Microsoft365"
           },
           {

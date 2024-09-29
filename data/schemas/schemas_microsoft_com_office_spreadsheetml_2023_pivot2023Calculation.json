@@ -67,6 +67,18 @@
         {
           "Version": "Microsoft365",
           "Value": "median"
+        },
+        {
+          "Version": "Microsoft365",
+          "Value": "distinctDuplicates"
+        },
+        {
+          "Version": "Microsoft365",
+          "Value": "countValuesDuplicated"
+        },
+        {
+          "Version": "Microsoft365",
+          "Value": "countRepeatValues"
         }
       ],
       "Version": "Microsoft365"
