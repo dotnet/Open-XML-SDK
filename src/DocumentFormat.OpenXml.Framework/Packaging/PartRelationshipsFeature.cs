@@ -156,7 +156,7 @@ internal sealed class PartRelationshipsFeature :
             {
                 if (relationship.TargetMode == TargetMode.Internal)
                 {
-                    if (!relationship.TargetUri.ToString().Equals("NULL", StringComparison.OrdinalIgnoreCase))
+                    if (!relationship.TargetUri.ToString().EndsWith("NULL", StringComparison.OrdinalIgnoreCase))
                     {
                         // Resolve the Relationship Target Uri
                         //   so the Document Part can be retrieved.
