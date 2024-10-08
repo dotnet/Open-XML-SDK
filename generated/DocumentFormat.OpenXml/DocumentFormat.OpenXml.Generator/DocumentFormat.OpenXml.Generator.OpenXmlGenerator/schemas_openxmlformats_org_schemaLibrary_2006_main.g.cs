@@ -22,12 +22,12 @@ namespace DocumentFormat.OpenXml.CustomXmlSchemaReferences
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is sl:schemaLibrary.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.CustomXmlSchemaReferences.Schema" /> <c>&lt;sl:schema></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SchemaLibrary : OpenXmlCompositeElement
     {
         /// <summary>
@@ -94,9 +94,9 @@ namespace DocumentFormat.OpenXml.CustomXmlSchemaReferences
         /// <para>Custom XML Schema Namespace</para>
         /// <para>Represents the following attribute in the schema: sl:uri</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:sl=http://schemas.openxmlformats.org/schemaLibrary/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
@@ -107,9 +107,9 @@ namespace DocumentFormat.OpenXml.CustomXmlSchemaReferences
         /// <para>Resource File Location</para>
         /// <para>Represents the following attribute in the schema: sl:manifestLocation</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:sl=http://schemas.openxmlformats.org/schemaLibrary/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? ManifestLocation
         {
             get => GetAttribute<StringValue>();
@@ -120,9 +120,9 @@ namespace DocumentFormat.OpenXml.CustomXmlSchemaReferences
         /// <para>Custom XML Schema Location</para>
         /// <para>Represents the following attribute in the schema: sl:schemaLocation</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:sl=http://schemas.openxmlformats.org/schemaLibrary/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? SchemaLocation
         {
             get => GetAttribute<StringValue>();

@@ -23,12 +23,12 @@ namespace DocumentFormat.OpenXml.Office2013.Theme
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is thm15:themeFamily.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Theme.OfficeArtExtensionList" /> <c>&lt;thm15:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ThemeFamily : OpenXmlCompositeElement
     {
         /// <summary>
@@ -124,9 +124,9 @@ namespace DocumentFormat.OpenXml.Office2013.Theme
         /// <para>OfficeArtExtensionList.</para>
         /// <para>Represents the following element tag in the schema: thm15:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:thm15 = http://schemas.microsoft.com/office/thememl/2012/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Theme.OfficeArtExtensionList? OfficeArtExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Office2013.Theme.OfficeArtExtensionList>();
@@ -142,12 +142,12 @@ namespace DocumentFormat.OpenXml.Office2013.Theme
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is thm15:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extension" /> <c>&lt;a:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -208,12 +208,12 @@ namespace DocumentFormat.OpenXml.Office2013.Theme
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is thm15:themeVariant.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Theme.OfficeArtExtensionList" /> <c>&lt;thm15:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ThemeVariant : OpenXmlCompositeElement
     {
         /// <summary>
@@ -291,9 +291,9 @@ namespace DocumentFormat.OpenXml.Office2013.Theme
         /// <para>id, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: r:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -340,9 +340,9 @@ namespace DocumentFormat.OpenXml.Office2013.Theme
         /// <para>OfficeArtExtensionList.</para>
         /// <para>Represents the following element tag in the schema: thm15:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:thm15 = http://schemas.microsoft.com/office/thememl/2012/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Theme.OfficeArtExtensionList? OfficeArtExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Office2013.Theme.OfficeArtExtensionList>();
@@ -358,12 +358,12 @@ namespace DocumentFormat.OpenXml.Office2013.Theme
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is thm15:themeVariantLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Theme.ThemeVariant" /> <c>&lt;thm15:themeVariant></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ThemeVariantList : OpenXmlCompositeElement
     {
         /// <summary>

@@ -21,12 +21,12 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Chart
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is c16r3:dataDisplayOptions16.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Drawing.Chart.BooleanFalse" /> <c>&lt;c16r3:dispNaAsBlank></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DataDisplayOptions16 : OpenXmlCompositeElement
     {
         /// <summary>
@@ -76,9 +76,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Chart
         /// <para>BooleanFalse.</para>
         /// <para>Represents the following element tag in the schema: c16r3:dispNaAsBlank.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c16r3 = http://schemas.microsoft.com/office/drawing/2017/03/chart
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2019.Drawing.Chart.BooleanFalse? BooleanFalse
         {
             get => GetElement<DocumentFormat.OpenXml.Office2019.Drawing.Chart.BooleanFalse>();
@@ -107,9 +107,9 @@ namespace DocumentFormat.OpenXml.Office2019.Drawing.Chart
         /// <para>val, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: c16r3:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:c16r3=http://schemas.microsoft.com/office/drawing/2017/03/chart
-        /// </remark>
+        /// </remarks>
         public BooleanValue? Val
         {
             get => GetAttribute<BooleanValue>();

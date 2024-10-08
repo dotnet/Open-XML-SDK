@@ -22,12 +22,12 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Designer
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p202:designTagLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Designer.DesignerTag" /> <c>&lt;p202:designTag></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DesignerTagList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -82,13 +82,13 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Designer
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p202:designPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Designer.ExtensionList" /> <c>&lt;p202:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Designer.DesignerTagList" /> <c>&lt;p202:designTagLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DesignerDrawingProps : OpenXmlCompositeElement
     {
         /// <summary>
@@ -152,9 +152,9 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Designer
         /// <para>DesignerTagList.</para>
         /// <para>Represents the following element tag in the schema: p202:designTagLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p202 = http://schemas.microsoft.com/office/powerpoint/2020/02/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2021.PowerPoint.Designer.DesignerTagList? DesignerTagList
         {
             get => GetElement<DocumentFormat.OpenXml.Office2021.PowerPoint.Designer.DesignerTagList>();
@@ -165,9 +165,9 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Designer
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: p202:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p202 = http://schemas.microsoft.com/office/powerpoint/2020/02/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2021.PowerPoint.Designer.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Office2021.PowerPoint.Designer.ExtensionList>();
@@ -237,12 +237,12 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Designer
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p202:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Extension" /> <c>&lt;p:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ExtensionList : OpenXmlCompositeElement
     {
         /// <summary>

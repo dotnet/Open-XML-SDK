@@ -22,13 +22,13 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is t:Tasks.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.DocumentTasks.ExtensionList" /> <c>&lt;t:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.DocumentTasks.Task" /> <c>&lt;t:Task></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Tasks : OpenXmlPartRootElement
     {
         /// <summary>
@@ -116,14 +116,14 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is t:Task.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.DocumentTasks.ExtensionList" /> <c>&lt;t:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskAnchor" /> <c>&lt;t:Anchor></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskHistory" /> <c>&lt;t:History></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Task : OpenXmlCompositeElement
     {
         /// <summary>
@@ -193,9 +193,9 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
         /// <para>TaskAnchor.</para>
         /// <para>Represents the following element tag in the schema: t:Anchor.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:t = http://schemas.microsoft.com/office/tasks/2019/documenttasks
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskAnchor? TaskAnchor
         {
             get => GetElement<DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskAnchor>();
@@ -206,9 +206,9 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
         /// <para>TaskHistory.</para>
         /// <para>Represents the following element tag in the schema: t:History.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:t = http://schemas.microsoft.com/office/tasks/2019/documenttasks
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskHistory? TaskHistory
         {
             get => GetElement<DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskHistory>();
@@ -219,9 +219,9 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: t:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:t = http://schemas.microsoft.com/office/tasks/2019/documenttasks
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2021.DocumentTasks.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Office2021.DocumentTasks.ExtensionList>();
@@ -237,12 +237,12 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is t:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.OfficeExtLst.Extension" /> <c>&lt;oel:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -297,13 +297,13 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is t:Anchor.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.DocumentTasks.ExtensionList" /> <c>&lt;t:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.DocumentTasks.CommentAnchor" /> <c>&lt;t:Comment></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TaskAnchor : OpenXmlCompositeElement
     {
         /// <summary>
@@ -355,9 +355,9 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
         /// <para>CommentAnchor.</para>
         /// <para>Represents the following element tag in the schema: t:Comment.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:t = http://schemas.microsoft.com/office/tasks/2019/documenttasks
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2021.DocumentTasks.CommentAnchor? CommentAnchor
         {
             get => GetElement<DocumentFormat.OpenXml.Office2021.DocumentTasks.CommentAnchor>();
@@ -368,9 +368,9 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: t:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:t = http://schemas.microsoft.com/office/tasks/2019/documenttasks
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2021.DocumentTasks.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Office2021.DocumentTasks.ExtensionList>();
@@ -386,12 +386,12 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is t:History.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskHistoryEvent" /> <c>&lt;t:Event></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TaskHistory : OpenXmlCompositeElement
     {
         /// <summary>
@@ -446,7 +446,7 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is t:Event.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.DocumentTasks.ExtensionList" /> <c>&lt;t:extLst></c></description></item>
@@ -464,7 +464,7 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.DocumentTasks.AssignTaskUser" /> <c>&lt;t:Assign></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.DocumentTasks.UnassignTaskUser" /> <c>&lt;t:Unassign></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TaskHistoryEvent : OpenXmlCompositeElement
     {
         /// <summary>
@@ -573,9 +573,9 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
         /// <para>AttributionTaskUser.</para>
         /// <para>Represents the following element tag in the schema: t:Attribution.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:t = http://schemas.microsoft.com/office/tasks/2019/documenttasks
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2021.DocumentTasks.AttributionTaskUser? AttributionTaskUser
         {
             get => GetElement<DocumentFormat.OpenXml.Office2021.DocumentTasks.AttributionTaskUser>();
@@ -586,9 +586,9 @@ namespace DocumentFormat.OpenXml.Office2021.DocumentTasks
         /// <para>TaskAnchor.</para>
         /// <para>Represents the following element tag in the schema: t:Anchor.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:t = http://schemas.microsoft.com/office/tasks/2019/documenttasks
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskAnchor? TaskAnchor
         {
             get => GetElement<DocumentFormat.OpenXml.Office2021.DocumentTasks.TaskAnchor>();

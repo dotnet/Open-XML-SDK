@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xdr:twoCellAnchor.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.ClientData" /> <c>&lt;xdr:clientData></c></description></item>
@@ -37,7 +37,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.Shape" /> <c>&lt;xdr:sp></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.ContentPart" /> <c>&lt;xdr:contentPart></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TwoCellAnchor : OpenXmlCompositeElement
     {
         /// <summary>
@@ -126,9 +126,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>Starting Anchor Point.</para>
         /// <para>Represents the following element tag in the schema: xdr:from.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Spreadsheet.FromMarker? FromMarker
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.FromMarker>();
@@ -139,9 +139,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>Ending Anchor Point.</para>
         /// <para>Represents the following element tag in the schema: xdr:to.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Spreadsheet.ToMarker? ToMarker
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.ToMarker>();
@@ -157,7 +157,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xdr:oneCellAnchor.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.Extent" /> <c>&lt;xdr:ext></c></description></item>
@@ -170,7 +170,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.Shape" /> <c>&lt;xdr:sp></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.ContentPart" /> <c>&lt;xdr:contentPart></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class OneCellAnchor : OpenXmlCompositeElement
     {
         /// <summary>
@@ -244,9 +244,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>FromMarker.</para>
         /// <para>Represents the following element tag in the schema: xdr:from.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Spreadsheet.FromMarker? FromMarker
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.FromMarker>();
@@ -257,9 +257,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>Extent.</para>
         /// <para>Represents the following element tag in the schema: xdr:ext.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Spreadsheet.Extent? Extent
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.Extent>();
@@ -275,7 +275,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xdr:absoluteAnchor.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.Position" /> <c>&lt;xdr:pos></c></description></item>
@@ -288,7 +288,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.Shape" /> <c>&lt;xdr:sp></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.ContentPart" /> <c>&lt;xdr:contentPart></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class AbsoluteAnchor : OpenXmlCompositeElement
     {
         /// <summary>
@@ -362,9 +362,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>Position.</para>
         /// <para>Represents the following element tag in the schema: xdr:pos.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Spreadsheet.Position? Position
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.Position>();
@@ -375,9 +375,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>Shape Extent.</para>
         /// <para>Represents the following element tag in the schema: xdr:ext.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Spreadsheet.Extent? Extent
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.Extent>();
@@ -393,7 +393,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xdr:sp.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeProperties" /> <c>&lt;xdr:spPr></c></description></item>
@@ -401,7 +401,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.TextBody" /> <c>&lt;xdr:txBody></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualShapeProperties" /> <c>&lt;xdr:nvSpPr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Shape : OpenXmlCompositeElement
     {
         /// <summary>
@@ -502,9 +502,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>Non-Visual Properties for a Shape.</para>
         /// <para>Represents the following element tag in the schema: xdr:nvSpPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualShapeProperties? NonVisualShapeProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualShapeProperties>();
@@ -515,9 +515,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>Shape Properties.</para>
         /// <para>Represents the following element tag in the schema: xdr:spPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeProperties? ShapeProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeProperties>();
@@ -528,9 +528,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>ShapeStyle.</para>
         /// <para>Represents the following element tag in the schema: xdr:style.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeStyle? ShapeStyle
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeStyle>();
@@ -541,9 +541,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>Shape Text Body.</para>
         /// <para>Represents the following element tag in the schema: xdr:txBody.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Spreadsheet.TextBody? TextBody
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.TextBody>();
@@ -559,7 +559,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xdr:grpSp.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.GroupShapeProperties" /> <c>&lt;xdr:grpSpPr></c></description></item>
@@ -571,7 +571,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.Shape" /> <c>&lt;xdr:sp></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.Drawing.ContentPart" /> <c>&lt;xdr14:contentPart></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class GroupShape : OpenXmlCompositeElement
     {
         /// <summary>
@@ -637,9 +637,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>Non-Visual Properties for a Group Shape.</para>
         /// <para>Represents the following element tag in the schema: xdr:nvGrpSpPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGroupShapeProperties? NonVisualGroupShapeProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGroupShapeProperties>();
@@ -650,9 +650,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>Group Shape Properties.</para>
         /// <para>Represents the following element tag in the schema: xdr:grpSpPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Spreadsheet.GroupShapeProperties? GroupShapeProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.GroupShapeProperties>();
@@ -668,14 +668,14 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xdr:graphicFrame.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Graphic" /> <c>&lt;a:graphic></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.Transform" /> <c>&lt;xdr:xfrm></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGraphicFrameProperties" /> <c>&lt;xdr:nvGraphicFramePr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class GraphicFrame : OpenXmlCompositeElement
     {
         /// <summary>
@@ -752,9 +752,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>Non-Visual Properties for a Graphic Frame.</para>
         /// <para>Represents the following element tag in the schema: xdr:nvGraphicFramePr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGraphicFrameProperties? NonVisualGraphicFrameProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGraphicFrameProperties>();
@@ -765,9 +765,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>2D Transform for Graphic Frames.</para>
         /// <para>Represents the following element tag in the schema: xdr:xfrm.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Spreadsheet.Transform? Transform
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.Transform>();
@@ -778,9 +778,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>Graphic.</para>
         /// <para>Represents the following element tag in the schema: a:graphic.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Graphic? Graphic
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Graphic>();
@@ -796,14 +796,14 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xdr:cxnSp.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeProperties" /> <c>&lt;xdr:spPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeStyle" /> <c>&lt;xdr:style></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualConnectionShapeProperties" /> <c>&lt;xdr:nvCxnSpPr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ConnectionShape : OpenXmlCompositeElement
     {
         /// <summary>
@@ -880,9 +880,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>Non-Visual Properties for a Connection Shape.</para>
         /// <para>Represents the following element tag in the schema: xdr:nvCxnSpPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualConnectionShapeProperties? NonVisualConnectionShapeProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualConnectionShapeProperties>();
@@ -893,9 +893,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>Connector Shape Properties.</para>
         /// <para>Represents the following element tag in the schema: xdr:spPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeProperties? ShapeProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeProperties>();
@@ -906,9 +906,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>ShapeStyle.</para>
         /// <para>Represents the following element tag in the schema: xdr:style.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeStyle? ShapeStyle
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeStyle>();
@@ -924,7 +924,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xdr:pic.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.BlipFill" /> <c>&lt;xdr:blipFill></c></description></item>
@@ -932,7 +932,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeStyle" /> <c>&lt;xdr:style></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualPictureProperties" /> <c>&lt;xdr:nvPicPr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Picture : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1010,9 +1010,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>Non-Visual Properties for a Picture.</para>
         /// <para>Represents the following element tag in the schema: xdr:nvPicPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualPictureProperties? NonVisualPictureProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualPictureProperties>();
@@ -1023,9 +1023,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>Picture Fill.</para>
         /// <para>Represents the following element tag in the schema: xdr:blipFill.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Spreadsheet.BlipFill? BlipFill
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.BlipFill>();
@@ -1036,9 +1036,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>ShapeProperties.</para>
         /// <para>Represents the following element tag in the schema: xdr:spPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeProperties? ShapeProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeProperties>();
@@ -1049,9 +1049,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>Shape Style.</para>
         /// <para>Represents the following element tag in the schema: xdr:style.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeStyle? ShapeStyle
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.ShapeStyle>();
@@ -1067,7 +1067,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xdr:contentPart.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.Drawing.OfficeArtExtensionList" /> <c>&lt;xdr14:extLst></c></description></item>
@@ -1075,7 +1075,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.Drawing.ApplicationNonVisualDrawingProperties" /> <c>&lt;xdr14:nvPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.Drawing.ExcelNonVisualContentPartShapeProperties" /> <c>&lt;xdr14:nvContentPartPr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ContentPart : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1113,9 +1113,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>id, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: r:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-        /// </remark>
+        /// </remarks>
         public StringValue? RelationshipId
         {
             get => GetAttribute<StringValue>();
@@ -1163,9 +1163,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>ExcelNonVisualContentPartShapeProperties.</para>
         /// <para>Represents the following element tag in the schema: xdr14:nvContentPartPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xdr14 = http://schemas.microsoft.com/office/excel/2010/spreadsheetDrawing
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Excel.Drawing.ExcelNonVisualContentPartShapeProperties? ExcelNonVisualContentPartShapeProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.Drawing.ExcelNonVisualContentPartShapeProperties>();
@@ -1176,9 +1176,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>ApplicationNonVisualDrawingProperties.</para>
         /// <para>Represents the following element tag in the schema: xdr14:nvPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xdr14 = http://schemas.microsoft.com/office/excel/2010/spreadsheetDrawing
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Excel.Drawing.ApplicationNonVisualDrawingProperties? ApplicationNonVisualDrawingProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.Drawing.ApplicationNonVisualDrawingProperties>();
@@ -1189,9 +1189,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>Transform2D.</para>
         /// <para>Represents the following element tag in the schema: xdr14:xfrm.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xdr14 = http://schemas.microsoft.com/office/excel/2010/spreadsheetDrawing
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Excel.Drawing.Transform2D? Transform2D
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.Drawing.Transform2D>();
@@ -1202,9 +1202,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>OfficeArtExtensionList.</para>
         /// <para>Represents the following element tag in the schema: xdr14:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xdr14 = http://schemas.microsoft.com/office/excel/2010/spreadsheetDrawing
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Excel.Drawing.OfficeArtExtensionList? OfficeArtExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.Drawing.OfficeArtExtensionList>();
@@ -1220,14 +1220,14 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xdr:wsDr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.AbsoluteAnchor" /> <c>&lt;xdr:absoluteAnchor></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.OneCellAnchor" /> <c>&lt;xdr:oneCellAnchor></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.TwoCellAnchor" /> <c>&lt;xdr:twoCellAnchor></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class WorksheetDrawing : OpenXmlPartRootElement
     {
         /// <summary>
@@ -1322,13 +1322,13 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xdr:nvSpPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualShapeDrawingProperties" /> <c>&lt;xdr:cNvSpPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties" /> <c>&lt;xdr:cNvPr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class NonVisualShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1379,9 +1379,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>Non-Visual Drawing Properties.</para>
         /// <para>Represents the following element tag in the schema: xdr:cNvPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties? NonVisualDrawingProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties>();
@@ -1392,9 +1392,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>Connection Non-Visual Shape Properties.</para>
         /// <para>Represents the following element tag in the schema: xdr:cNvSpPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualShapeDrawingProperties? NonVisualShapeDrawingProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualShapeDrawingProperties>();
@@ -1410,7 +1410,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xdr:spPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.BlipFill" /> <c>&lt;a:blipFill></c></description></item>
@@ -1429,7 +1429,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SolidFill" /> <c>&lt;a:solidFill></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Transform2D" /> <c>&lt;a:xfrm></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1539,9 +1539,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>2D Transform for Individual Objects.</para>
         /// <para>Represents the following element tag in the schema: a:xfrm.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Transform2D? Transform2D
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Transform2D>();
@@ -1557,7 +1557,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xdr:style.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.FontReference" /> <c>&lt;a:fontRef></c></description></item>
@@ -1565,7 +1565,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.FillReference" /> <c>&lt;a:fillRef></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.EffectReference" /> <c>&lt;a:effectRef></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ShapeStyle : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1620,9 +1620,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>LineReference.</para>
         /// <para>Represents the following element tag in the schema: a:lnRef.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.LineReference? LineReference
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.LineReference>();
@@ -1633,9 +1633,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>FillReference.</para>
         /// <para>Represents the following element tag in the schema: a:fillRef.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.FillReference? FillReference
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.FillReference>();
@@ -1646,9 +1646,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>EffectReference.</para>
         /// <para>Represents the following element tag in the schema: a:effectRef.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.EffectReference? EffectReference
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.EffectReference>();
@@ -1659,9 +1659,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>Font Reference.</para>
         /// <para>Represents the following element tag in the schema: a:fontRef.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.FontReference? FontReference
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.FontReference>();
@@ -1677,14 +1677,14 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xdr:txBody.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.BodyProperties" /> <c>&lt;a:bodyPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ListStyle" /> <c>&lt;a:lstStyle></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Paragraph" /> <c>&lt;a:p></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TextBody : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1737,9 +1737,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>Body Properties.</para>
         /// <para>Represents the following element tag in the schema: a:bodyPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.BodyProperties? BodyProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.BodyProperties>();
@@ -1750,9 +1750,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>Text List Styles.</para>
         /// <para>Represents the following element tag in the schema: a:lstStyle.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.ListStyle? ListStyle
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.ListStyle>();
@@ -1768,13 +1768,13 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xdr:nvCxnSpPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualConnectorShapeDrawingProperties" /> <c>&lt;xdr:cNvCxnSpPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties" /> <c>&lt;xdr:cNvPr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class NonVisualConnectionShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1825,9 +1825,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>Connection Non-Visual Properties.</para>
         /// <para>Represents the following element tag in the schema: xdr:cNvPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties? NonVisualDrawingProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties>();
@@ -1838,9 +1838,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>Non-Visual Connector Shape Drawing Properties.</para>
         /// <para>Represents the following element tag in the schema: xdr:cNvCxnSpPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualConnectorShapeDrawingProperties? NonVisualConnectorShapeDrawingProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualConnectorShapeDrawingProperties>();
@@ -1856,13 +1856,13 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xdr:nvPicPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualPictureDrawingProperties" /> <c>&lt;xdr:cNvPicPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties" /> <c>&lt;xdr:cNvPr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class NonVisualPictureProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1913,9 +1913,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>NonVisualDrawingProperties.</para>
         /// <para>Represents the following element tag in the schema: xdr:cNvPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties? NonVisualDrawingProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties>();
@@ -1926,9 +1926,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>Non-Visual Picture Drawing Properties.</para>
         /// <para>Represents the following element tag in the schema: xdr:cNvPicPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualPictureDrawingProperties? NonVisualPictureDrawingProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualPictureDrawingProperties>();
@@ -1944,7 +1944,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xdr:blipFill.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Blip" /> <c>&lt;a:blip></c></description></item>
@@ -1952,7 +1952,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Stretch" /> <c>&lt;a:stretch></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Tile" /> <c>&lt;a:tile></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class BlipFill : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2025,9 +2025,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>Blip.</para>
         /// <para>Represents the following element tag in the schema: a:blip.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Blip? Blip
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Blip>();
@@ -2038,9 +2038,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>Source Rectangle.</para>
         /// <para>Represents the following element tag in the schema: a:srcRect.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.SourceRectangle? SourceRectangle
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.SourceRectangle>();
@@ -2056,13 +2056,13 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xdr:nvGraphicFramePr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGraphicFrameDrawingProperties" /> <c>&lt;xdr:cNvGraphicFramePr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties" /> <c>&lt;xdr:cNvPr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class NonVisualGraphicFrameProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2113,9 +2113,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>Connection Non-Visual Properties.</para>
         /// <para>Represents the following element tag in the schema: xdr:cNvPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties? NonVisualDrawingProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties>();
@@ -2126,9 +2126,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>Non-Visual Graphic Frame Drawing Properties.</para>
         /// <para>Represents the following element tag in the schema: xdr:cNvGraphicFramePr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGraphicFrameDrawingProperties? NonVisualGraphicFrameDrawingProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGraphicFrameDrawingProperties>();
@@ -2144,13 +2144,13 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xdr:xfrm.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Offset" /> <c>&lt;a:off></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extents" /> <c>&lt;a:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Transform : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2235,9 +2235,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>Offset.</para>
         /// <para>Represents the following element tag in the schema: a:off.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Offset? Offset
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Offset>();
@@ -2248,9 +2248,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>Extents.</para>
         /// <para>Represents the following element tag in the schema: a:ext.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Extents? Extents
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Extents>();
@@ -2418,7 +2418,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xdr:from.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnOffset" /> <c>&lt;xdr:colOff></c></description></item>
@@ -2426,7 +2426,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnId" /> <c>&lt;xdr:col></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.RowId" /> <c>&lt;xdr:row></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class FromMarker : MarkerType
     {
         /// <summary>
@@ -2482,7 +2482,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xdr:to.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnOffset" /> <c>&lt;xdr:colOff></c></description></item>
@@ -2490,7 +2490,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnId" /> <c>&lt;xdr:col></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.RowId" /> <c>&lt;xdr:row></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ToMarker : MarkerType
     {
         /// <summary>
@@ -2546,7 +2546,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnOffset" /> <c>&lt;xdr:colOff></c></description></item>
@@ -2554,7 +2554,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnId" /> <c>&lt;xdr:col></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.RowId" /> <c>&lt;xdr:row></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public abstract partial class MarkerType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2601,9 +2601,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>Column).</para>
         /// <para>Represents the following element tag in the schema: xdr:col.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnId? ColumnId
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnId>();
@@ -2614,9 +2614,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>Column Offset.</para>
         /// <para>Represents the following element tag in the schema: xdr:colOff.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnOffset? ColumnOffset
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnOffset>();
@@ -2627,9 +2627,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>Row.</para>
         /// <para>Represents the following element tag in the schema: xdr:row.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Spreadsheet.RowId? RowId
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.RowId>();
@@ -2640,9 +2640,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>Row Offset.</para>
         /// <para>Represents the following element tag in the schema: xdr:rowOff.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Spreadsheet.RowOffset? RowOffset
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.RowOffset>();
@@ -2812,14 +2812,14 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xdr:cNvPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HyperlinkOnClick" /> <c>&lt;a:hlinkClick></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HyperlinkOnHover" /> <c>&lt;a:hlinkHover></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2935,9 +2935,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>HyperlinkOnClick.</para>
         /// <para>Represents the following element tag in the schema: a:hlinkClick.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.HyperlinkOnClick? HyperlinkOnClick
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>();
@@ -2948,9 +2948,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>HyperlinkOnHover.</para>
         /// <para>Represents the following element tag in the schema: a:hlinkHover.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.HyperlinkOnHover? HyperlinkOnHover
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>();
@@ -2961,9 +2961,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>NonVisualDrawingPropertiesExtensionList.</para>
         /// <para>Represents the following element tag in the schema: a:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList? NonVisualDrawingPropertiesExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>();
@@ -2979,13 +2979,13 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xdr:cNvSpPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ShapeLocks" /> <c>&lt;a:spLocks></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class NonVisualShapeDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3048,9 +3048,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>Shape Locks.</para>
         /// <para>Represents the following element tag in the schema: a:spLocks.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.ShapeLocks? ShapeLocks
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.ShapeLocks>();
@@ -3061,9 +3061,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: a:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>();
@@ -3079,7 +3079,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xdr:cNvCxnSpPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.StartConnection" /> <c>&lt;a:stCxn></c></description></item>
@@ -3087,7 +3087,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ConnectionShapeLocks" /> <c>&lt;a:cxnSpLocks></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class NonVisualConnectorShapeDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3142,9 +3142,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>Connection Shape Locks.</para>
         /// <para>Represents the following element tag in the schema: a:cxnSpLocks.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.ConnectionShapeLocks? ConnectionShapeLocks
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.ConnectionShapeLocks>();
@@ -3155,9 +3155,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>Connection Start.</para>
         /// <para>Represents the following element tag in the schema: a:stCxn.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.StartConnection? StartConnection
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.StartConnection>();
@@ -3168,9 +3168,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>Connection End.</para>
         /// <para>Represents the following element tag in the schema: a:endCxn.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.EndConnection? EndConnection
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.EndConnection>();
@@ -3181,9 +3181,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: a:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>();
@@ -3199,13 +3199,13 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xdr:cNvPicPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NonVisualPicturePropertiesExtensionList" /> <c>&lt;a:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PictureLocks" /> <c>&lt;a:picLocks></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class NonVisualPictureDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3268,9 +3268,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>PictureLocks.</para>
         /// <para>Represents the following element tag in the schema: a:picLocks.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.PictureLocks? PictureLocks
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.PictureLocks>();
@@ -3281,9 +3281,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>NonVisualPicturePropertiesExtensionList.</para>
         /// <para>Represents the following element tag in the schema: a:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.NonVisualPicturePropertiesExtensionList? NonVisualPicturePropertiesExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualPicturePropertiesExtensionList>();
@@ -3299,13 +3299,13 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xdr:cNvGraphicFramePr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.GraphicFrameLocks" /> <c>&lt;a:graphicFrameLocks></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class NonVisualGraphicFrameDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3356,9 +3356,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>Graphic Frame Locks.</para>
         /// <para>Represents the following element tag in the schema: a:graphicFrameLocks.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.GraphicFrameLocks? GraphicFrameLocks
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.GraphicFrameLocks>();
@@ -3369,9 +3369,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: a:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>();
@@ -3387,13 +3387,13 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xdr:cNvGrpSpPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.GroupShapeLocks" /> <c>&lt;a:grpSpLocks></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class NonVisualGroupShapeDrawingProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3444,9 +3444,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>GroupShapeLocks.</para>
         /// <para>Represents the following element tag in the schema: a:grpSpLocks.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.GroupShapeLocks? GroupShapeLocks
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.GroupShapeLocks>();
@@ -3457,9 +3457,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>NonVisualGroupDrawingShapePropsExtensionList.</para>
         /// <para>Represents the following element tag in the schema: a:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList? NonVisualGroupDrawingShapePropsExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList>();
@@ -3475,13 +3475,13 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xdr:nvGrpSpPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGroupShapeDrawingProperties" /> <c>&lt;xdr:cNvGrpSpPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties" /> <c>&lt;xdr:cNvPr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class NonVisualGroupShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3532,9 +3532,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>Connection Non-Visual Properties.</para>
         /// <para>Represents the following element tag in the schema: xdr:cNvPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties? NonVisualDrawingProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualDrawingProperties>();
@@ -3545,9 +3545,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>Non-Visual Group Shape Drawing Properties.</para>
         /// <para>Represents the following element tag in the schema: xdr:cNvGrpSpPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xdr = http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGroupShapeDrawingProperties? NonVisualGroupShapeDrawingProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.NonVisualGroupShapeDrawingProperties>();
@@ -3563,7 +3563,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xdr:grpSpPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.BlipFill" /> <c>&lt;a:blipFill></c></description></item>
@@ -3578,7 +3578,7 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Scene3DType" /> <c>&lt;a:scene3d></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SolidFill" /> <c>&lt;a:solidFill></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class GroupShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3674,9 +3674,9 @@ namespace DocumentFormat.OpenXml.Drawing.Spreadsheet
         /// <para>2D Transform for Grouped Objects.</para>
         /// <para>Represents the following element tag in the schema: a:xfrm.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.TransformGroup? TransformGroup
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.TransformGroup>();

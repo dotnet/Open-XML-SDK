@@ -24,12 +24,12 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:pivotCaches.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotCache" /> <c>&lt;x:pivotCache></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PivotCaches : OpenXmlPivotCachesElement
     {
         /// <summary>
@@ -83,12 +83,12 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:timelineCachePivotCaches.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotCache" /> <c>&lt;x:pivotCache></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TimelineCachePivotCaches : OpenXmlPivotCachesElement
     {
         /// <summary>
@@ -142,12 +142,12 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotCache" /> <c>&lt;x:pivotCache></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public abstract partial class OpenXmlPivotCachesElement : OpenXmlCompositeElement
     {
         /// <summary>
@@ -193,12 +193,12 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:pivotTableReferences.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.PivotTableReference" /> <c>&lt;x15:pivotTableReference></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PivotTableReferences : OpenXmlCompositeElement
     {
         /// <summary>
@@ -312,12 +312,12 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:webExtensions.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.WebExtension" /> <c>&lt;x15:webExtension></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class WebExtensions : OpenXmlCompositeElement
     {
         /// <summary>
@@ -372,12 +372,12 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:timelineCacheRefs.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.TimelineCacheReference" /> <c>&lt;x15:timelineCacheRef></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TimelineCacheReferences : OpenXmlCompositeElement
     {
         /// <summary>
@@ -432,12 +432,12 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:timelineRefs.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.TimelineReference" /> <c>&lt;x15:timelineRef></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TimelineReferences : OpenXmlCompositeElement
     {
         /// <summary>
@@ -529,12 +529,12 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:timelineStyles.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.TimelineStyle" /> <c>&lt;x15:timelineStyle></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TimelineStyles : OpenXmlCompositeElement
     {
         /// <summary>
@@ -604,12 +604,12 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:dxfs.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat" /> <c>&lt;x:dxf></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DifferentialFormats : OpenXmlCompositeElement
     {
         /// <summary>
@@ -676,7 +676,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:connection.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.TextProperties" /> <c>&lt;x15:textPr></c></description></item>
@@ -685,7 +685,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.OleDbPrpoperties" /> <c>&lt;x15:oledbPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.RangeProperties" /> <c>&lt;x15:rangePr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Connection : OpenXmlCompositeElement
     {
         /// <summary>
@@ -802,9 +802,9 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>TextProperties.</para>
         /// <para>Represents the following element tag in the schema: x15:textPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x15 = http://schemas.microsoft.com/office/spreadsheetml/2010/11/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Excel.TextProperties? TextProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.TextProperties>();
@@ -815,9 +815,9 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>ModelTextProperties.</para>
         /// <para>Represents the following element tag in the schema: x15:modelTextPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x15 = http://schemas.microsoft.com/office/spreadsheetml/2010/11/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Excel.ModelTextProperties? ModelTextProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.ModelTextProperties>();
@@ -828,9 +828,9 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>RangeProperties.</para>
         /// <para>Represents the following element tag in the schema: x15:rangePr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x15 = http://schemas.microsoft.com/office/spreadsheetml/2010/11/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Excel.RangeProperties? RangeProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.RangeProperties>();
@@ -841,9 +841,9 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>OleDbPrpoperties.</para>
         /// <para>Represents the following element tag in the schema: x15:oledbPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x15 = http://schemas.microsoft.com/office/spreadsheetml/2010/11/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Excel.OleDbPrpoperties? OleDbPrpoperties
         {
             get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.OleDbPrpoperties>();
@@ -854,9 +854,9 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>DataFeedProperties.</para>
         /// <para>Represents the following element tag in the schema: x15:dataFeedPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x15 = http://schemas.microsoft.com/office/spreadsheetml/2010/11/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Excel.DataFeedProperties? DataFeedProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.DataFeedProperties>();
@@ -931,13 +931,13 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:pivotTableUISettings.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.ExtensionList" /> <c>&lt;x15:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.FieldListActiveTabTopLevelEntity" /> <c>&lt;x15:activeTabTopLevelEntity></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PivotTableUISettings : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1057,12 +1057,12 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:cachedUniqueNames.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.CachedUniqueName" /> <c>&lt;x15:cachedUniqueName></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class CachedUniqueNames : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1248,14 +1248,14 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:dataModel.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.ExtensionList" /> <c>&lt;x15:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.ModelRelationships" /> <c>&lt;x15:modelRelationships></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.ModelTables" /> <c>&lt;x15:modelTables></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DataModel : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1321,9 +1321,9 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>ModelTables.</para>
         /// <para>Represents the following element tag in the schema: x15:modelTables.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x15 = http://schemas.microsoft.com/office/spreadsheetml/2010/11/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Excel.ModelTables? ModelTables
         {
             get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.ModelTables>();
@@ -1334,9 +1334,9 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>ModelRelationships.</para>
         /// <para>Represents the following element tag in the schema: x15:modelRelationships.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x15 = http://schemas.microsoft.com/office/spreadsheetml/2010/11/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Excel.ModelRelationships? ModelRelationships
         {
             get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.ModelRelationships>();
@@ -1347,9 +1347,9 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: x15:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x15 = http://schemas.microsoft.com/office/spreadsheetml/2010/11/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Excel.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.ExtensionList>();
@@ -1365,12 +1365,12 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:pivotTableData.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.PivotRow" /> <c>&lt;x15:pivotRow></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PivotTableData : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1635,12 +1635,12 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:slicerCaches.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.SlicerCache" /> <c>&lt;x14:slicerCache></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SlicerCaches : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1695,12 +1695,12 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:tableSlicerCache.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.ExtensionList" /> <c>&lt;x15:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TableSlicerCache : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1812,9 +1812,9 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: x15:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x15 = http://schemas.microsoft.com/office/spreadsheetml/2010/11/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Excel.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.ExtensionList>();
@@ -1830,12 +1830,12 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:slicerCacheHideItemsWithNoData.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.SlicerCacheOlapLevelName" /> <c>&lt;x15:slicerCacheOlapLevelName></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SlicerCacheHideItemsWithNoData : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1902,12 +1902,12 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:slicerCachePivotTables.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.SlicerCachePivotTable" /> <c>&lt;x14:pivotTable></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SlicerCachePivotTables : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1962,7 +1962,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:survey.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.ExtensionList" /> <c>&lt;x15:extLst></c></description></item>
@@ -1971,7 +1971,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.DescriptionPrSurveyElementPr" /> <c>&lt;x15:descriptionPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.SurveyQuestions" /> <c>&lt;x15:questions></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Survey : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2081,9 +2081,9 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>SurveyPrSurveyElementPr.</para>
         /// <para>Represents the following element tag in the schema: x15:surveyPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x15 = http://schemas.microsoft.com/office/spreadsheetml/2010/11/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Excel.SurveyPrSurveyElementPr? SurveyPrSurveyElementPr
         {
             get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.SurveyPrSurveyElementPr>();
@@ -2094,9 +2094,9 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>TitlePrSurveyElementPr.</para>
         /// <para>Represents the following element tag in the schema: x15:titlePr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x15 = http://schemas.microsoft.com/office/spreadsheetml/2010/11/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Excel.TitlePrSurveyElementPr? TitlePrSurveyElementPr
         {
             get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.TitlePrSurveyElementPr>();
@@ -2107,9 +2107,9 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>DescriptionPrSurveyElementPr.</para>
         /// <para>Represents the following element tag in the schema: x15:descriptionPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x15 = http://schemas.microsoft.com/office/spreadsheetml/2010/11/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Excel.DescriptionPrSurveyElementPr? DescriptionPrSurveyElementPr
         {
             get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.DescriptionPrSurveyElementPr>();
@@ -2120,9 +2120,9 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>SurveyQuestions.</para>
         /// <para>Represents the following element tag in the schema: x15:questions.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x15 = http://schemas.microsoft.com/office/spreadsheetml/2010/11/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Excel.SurveyQuestions? SurveyQuestions
         {
             get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.SurveyQuestions>();
@@ -2133,9 +2133,9 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: x15:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x15 = http://schemas.microsoft.com/office/spreadsheetml/2010/11/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Excel.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.ExtensionList>();
@@ -2151,12 +2151,12 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:timelines.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.Timeline" /> <c>&lt;x15:timeline></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Timelines : OpenXmlPartRootElement
     {
         /// <summary>
@@ -2242,14 +2242,14 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:timelineCacheDefinition.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.ExtensionList" /> <c>&lt;x15:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.TimelineCachePivotTables" /> <c>&lt;x15:pivotTables></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.TimelineState" /> <c>&lt;x15:state></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TimelineCacheDefinition : OpenXmlPartRootElement
     {
         /// <summary>
@@ -2332,9 +2332,9 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>TimelineCachePivotTables.</para>
         /// <para>Represents the following element tag in the schema: x15:pivotTables.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x15 = http://schemas.microsoft.com/office/spreadsheetml/2010/11/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Excel.TimelineCachePivotTables? TimelineCachePivotTables
         {
             get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.TimelineCachePivotTables>();
@@ -2345,9 +2345,9 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>TimelineState.</para>
         /// <para>Represents the following element tag in the schema: x15:state.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x15 = http://schemas.microsoft.com/office/spreadsheetml/2010/11/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Excel.TimelineState? TimelineState
         {
             get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.TimelineState>();
@@ -2358,9 +2358,9 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: x15:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x15 = http://schemas.microsoft.com/office/spreadsheetml/2010/11/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Excel.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.ExtensionList>();
@@ -2420,9 +2420,9 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>id, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: r:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -2450,12 +2450,12 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:webExtension.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.Formula" /> <c>&lt;xne:f></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class WebExtension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2520,9 +2520,9 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>Formula.</para>
         /// <para>Represents the following element tag in the schema: xne:f.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xne = http://schemas.microsoft.com/office/excel/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office.Excel.Formula? Formula
         {
             get => GetElement<DocumentFormat.OpenXml.Office.Excel.Formula>();
@@ -2551,9 +2551,9 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>id, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: r:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -2594,9 +2594,9 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>id, this property is only available in Office 2013 and later.</para>
         /// <para>Represents the following attribute in the schema: r:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -2624,12 +2624,12 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:timelineStyle.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.TimelineStyleElements" /> <c>&lt;x15:timelineStyleElements></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TimelineStyle : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2694,9 +2694,9 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>TimelineStyleElements.</para>
         /// <para>Represents the following element tag in the schema: x15:timelineStyleElements.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x15 = http://schemas.microsoft.com/office/spreadsheetml/2010/11/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Excel.TimelineStyleElements? TimelineStyleElements
         {
             get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.TimelineStyleElements>();
@@ -2763,12 +2763,12 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:timelineStyleElements.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.TimelineStyleElement" /> <c>&lt;x15:timelineStyleElement></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TimelineStyleElements : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2863,12 +2863,12 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:dbTables.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.DbTable" /> <c>&lt;x15:dbTable></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DbTables : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2963,12 +2963,12 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:textPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.TextFields" /> <c>&lt;x:textFields></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TextProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3195,9 +3195,9 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>TextFields.</para>
         /// <para>Represents the following element tag in the schema: x:textFields.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.TextFields? TextFields
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.TextFields>();
@@ -3290,13 +3290,13 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:oledbPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.DbCommand" /> <c>&lt;x15:dbCommand></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.DbTables" /> <c>&lt;x15:dbTables></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class OleDbPrpoperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3360,9 +3360,9 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>DbTables.</para>
         /// <para>Represents the following element tag in the schema: x15:dbTables.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x15 = http://schemas.microsoft.com/office/spreadsheetml/2010/11/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Excel.DbTables? DbTables
         {
             get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.DbTables>();
@@ -3373,9 +3373,9 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>DbCommand.</para>
         /// <para>Represents the following element tag in the schema: x15:dbCommand.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x15 = http://schemas.microsoft.com/office/spreadsheetml/2010/11/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Excel.DbCommand? DbCommand
         {
             get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.DbCommand>();
@@ -3391,12 +3391,12 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:dataFeedPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.DbTables" /> <c>&lt;x15:dbTables></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DataFeedProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3461,9 +3461,9 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>DbTables.</para>
         /// <para>Represents the following element tag in the schema: x15:dbTables.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x15 = http://schemas.microsoft.com/office/spreadsheetml/2010/11/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Excel.DbTables? DbTables
         {
             get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.DbTables>();
@@ -3530,12 +3530,12 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Extension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3800,12 +3800,12 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:modelTables.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.ModelTable" /> <c>&lt;x15:modelTable></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ModelTables : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3860,12 +3860,12 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:modelRelationships.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.ModelRelationship" /> <c>&lt;x15:modelRelationship></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ModelRelationships : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3920,13 +3920,13 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:c.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.Xstring" /> <c>&lt;x15:v></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.PivotValueCellExtra" /> <c>&lt;x15:x></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PivotValueCell : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4001,9 +4001,9 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>Xstring.</para>
         /// <para>Represents the following element tag in the schema: x15:v.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x15 = http://schemas.microsoft.com/office/spreadsheetml/2010/11/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Excel.Xstring? Xstring
         {
             get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.Xstring>();
@@ -4014,9 +4014,9 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>PivotValueCellExtra.</para>
         /// <para>Represents the following element tag in the schema: x15:x.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x15 = http://schemas.microsoft.com/office/spreadsheetml/2010/11/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Excel.PivotValueCellExtra? PivotValueCellExtra
         {
             get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.PivotValueCellExtra>();
@@ -4179,12 +4179,12 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:pivotTableServerFormats.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.ServerFormat" /> <c>&lt;x15:serverFormat></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PivotTableServerFormats : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4356,12 +4356,12 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:surveyPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.ExtensionList" /> <c>&lt;x15:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SurveyPrSurveyElementPr : OpenXmlSurveyElementPrElement
     {
         /// <summary>
@@ -4415,12 +4415,12 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:titlePr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.ExtensionList" /> <c>&lt;x15:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TitlePrSurveyElementPr : OpenXmlSurveyElementPrElement
     {
         /// <summary>
@@ -4474,12 +4474,12 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:descriptionPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.ExtensionList" /> <c>&lt;x15:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DescriptionPrSurveyElementPr : OpenXmlSurveyElementPrElement
     {
         /// <summary>
@@ -4533,12 +4533,12 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:questionsPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.ExtensionList" /> <c>&lt;x15:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class QuestionsPrSurveyElementPr : OpenXmlSurveyElementPrElement
     {
         /// <summary>
@@ -4592,12 +4592,12 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:questionPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.ExtensionList" /> <c>&lt;x15:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class QuestionPrSurveyElementPr : OpenXmlSurveyElementPrElement
     {
         /// <summary>
@@ -4651,12 +4651,12 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.ExtensionList" /> <c>&lt;x15:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public abstract partial class OpenXmlSurveyElementPrElement : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4789,9 +4789,9 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: x15:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x15 = http://schemas.microsoft.com/office/spreadsheetml/2010/11/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Excel.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.ExtensionList>();
@@ -4804,13 +4804,13 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:questions.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.QuestionsPrSurveyElementPr" /> <c>&lt;x15:questionsPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.SurveyQuestion" /> <c>&lt;x15:question></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SurveyQuestions : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4862,9 +4862,9 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>QuestionsPrSurveyElementPr.</para>
         /// <para>Represents the following element tag in the schema: x15:questionsPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x15 = http://schemas.microsoft.com/office/spreadsheetml/2010/11/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Excel.QuestionsPrSurveyElementPr? QuestionsPrSurveyElementPr
         {
             get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.QuestionsPrSurveyElementPr>();
@@ -4880,13 +4880,13 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:question.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.ExtensionList" /> <c>&lt;x15:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.QuestionPrSurveyElementPr" /> <c>&lt;x15:questionPr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SurveyQuestion : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5041,9 +5041,9 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>QuestionPrSurveyElementPr.</para>
         /// <para>Represents the following element tag in the schema: x15:questionPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x15 = http://schemas.microsoft.com/office/spreadsheetml/2010/11/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Excel.QuestionPrSurveyElementPr? QuestionPrSurveyElementPr
         {
             get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.QuestionPrSurveyElementPr>();
@@ -5054,9 +5054,9 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: x15:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x15 = http://schemas.microsoft.com/office/spreadsheetml/2010/11/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Excel.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.ExtensionList>();
@@ -5072,12 +5072,12 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:timeline.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.ExtensionList" /> <c>&lt;x15:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Timeline : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5262,9 +5262,9 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: x15:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x15 = http://schemas.microsoft.com/office/spreadsheetml/2010/11/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Excel.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.ExtensionList>();
@@ -5433,14 +5433,14 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:autoFilter.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.FilterColumn" /> <c>&lt;x:filterColumn></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.SortState" /> <c>&lt;x:sortState></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class AutoFilter : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5511,12 +5511,12 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:pivotTables.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.TimelineCachePivotTable" /> <c>&lt;x15:pivotTable></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TimelineCachePivotTables : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5571,7 +5571,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:state.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.ExtensionList" /> <c>&lt;x15:extLst></c></description></item>
@@ -5579,7 +5579,7 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.SelectionTimelineRange" /> <c>&lt;x15:selection></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.BoundsTimelineRange" /> <c>&lt;x15:bounds></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TimelineState : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5736,9 +5736,9 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>SelectionTimelineRange.</para>
         /// <para>Represents the following element tag in the schema: x15:selection.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x15 = http://schemas.microsoft.com/office/spreadsheetml/2010/11/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Excel.SelectionTimelineRange? SelectionTimelineRange
         {
             get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.SelectionTimelineRange>();
@@ -5749,9 +5749,9 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>BoundsTimelineRange.</para>
         /// <para>Represents the following element tag in the schema: x15:bounds.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x15 = http://schemas.microsoft.com/office/spreadsheetml/2010/11/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Excel.BoundsTimelineRange? BoundsTimelineRange
         {
             get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.BoundsTimelineRange>();
@@ -5762,9 +5762,9 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>MovingPeriodState.</para>
         /// <para>Represents the following element tag in the schema: x15:movingPeriodState.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x15 = http://schemas.microsoft.com/office/spreadsheetml/2010/11/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Excel.MovingPeriodState? MovingPeriodState
         {
             get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.MovingPeriodState>();
@@ -5775,9 +5775,9 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: x15:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x15 = http://schemas.microsoft.com/office/spreadsheetml/2010/11/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Excel.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Office2013.Excel.ExtensionList>();
@@ -5793,12 +5793,12 @@ namespace DocumentFormat.OpenXml.Office2013.Excel
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x15:pivotRow.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Excel.PivotValueCell" /> <c>&lt;x15:c></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PivotRow : OpenXmlCompositeElement
     {
         /// <summary>

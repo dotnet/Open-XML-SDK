@@ -24,12 +24,12 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:conditionalFormattings.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormatting" /> <c>&lt;x14:conditionalFormatting></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ConditionalFormattings : OpenXmlCompositeElement
     {
         /// <summary>
@@ -84,12 +84,12 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:dataValidations.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.DataValidation" /> <c>&lt;x14:dataValidation></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DataValidations : OpenXmlCompositeElement
     {
         /// <summary>
@@ -191,12 +191,12 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:sparklineGroups.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.SparklineGroup" /> <c>&lt;x14:sparklineGroup></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SparklineGroups : OpenXmlCompositeElement
     {
         /// <summary>
@@ -251,12 +251,12 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:slicerList.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.SlicerRef" /> <c>&lt;x14:slicer></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SlicerList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -311,12 +311,12 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:protectedRanges.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.ProtectedRange" /> <c>&lt;x14:protectedRange></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ProtectedRanges : OpenXmlCompositeElement
     {
         /// <summary>
@@ -371,13 +371,13 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:ignoredErrors.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.ExtensionList" /> <c>&lt;x14:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.IgnoredError" /> <c>&lt;x14:ignoredError></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class IgnoredErrors : OpenXmlCompositeElement
     {
         /// <summary>
@@ -434,12 +434,12 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:definedNames.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.DefinedName" /> <c>&lt;x14:definedName></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DefinedNames : OpenXmlCompositeElement
     {
         /// <summary>
@@ -494,12 +494,12 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:pivotCaches.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotCache" /> <c>&lt;x:pivotCache></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PivotCaches : OpenXmlCompositeElement
     {
         /// <summary>
@@ -554,12 +554,12 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:slicerCaches.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.SlicerCache" /> <c>&lt;x14:slicerCache></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SlicerCaches : OpenXmlCompositeElement
     {
         /// <summary>
@@ -674,12 +674,12 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:calculatedMember.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.TupleSet" /> <c>&lt;x14:tupleSet></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class CalculatedMember : OpenXmlCompositeElement
     {
         /// <summary>
@@ -787,9 +787,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>TupleSet.</para>
         /// <para>Represents the following element tag in the schema: x14:tupleSet.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Excel.TupleSet? TupleSet
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.TupleSet>();
@@ -805,12 +805,12 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:cacheHierarchy.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.SetLevels" /> <c>&lt;x14:setLevels></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class CacheHierarchy : OpenXmlCompositeElement
     {
         /// <summary>
@@ -908,9 +908,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>SetLevels.</para>
         /// <para>Represents the following element tag in the schema: x14:setLevels.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Excel.SetLevels? SetLevels
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.SetLevels>();
@@ -1035,14 +1035,14 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:pivotTableDefinition.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormats" /> <c>&lt;x14:conditionalFormats></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.PivotChanges" /> <c>&lt;x14:pivotChanges></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.PivotEdits" /> <c>&lt;x14:pivotEdits></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PivotTableDefinition : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1210,9 +1210,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>PivotEdits.</para>
         /// <para>Represents the following element tag in the schema: x14:pivotEdits.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Excel.PivotEdits? PivotEdits
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.PivotEdits>();
@@ -1223,9 +1223,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>PivotChanges.</para>
         /// <para>Represents the following element tag in the schema: x14:pivotChanges.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Excel.PivotChanges? PivotChanges
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.PivotChanges>();
@@ -1236,9 +1236,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>ConditionalFormats.</para>
         /// <para>Represents the following element tag in the schema: x14:conditionalFormats.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormats? ConditionalFormats
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormats>();
@@ -1335,12 +1335,12 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:connection.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.CalculatedMembers" /> <c>&lt;x14:calculatedMembers></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Connection : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1415,9 +1415,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>CalculatedMembers.</para>
         /// <para>Represents the following element tag in the schema: x14:calculatedMembers.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Excel.CalculatedMembers? CalculatedMembers
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.CalculatedMembers>();
@@ -1483,12 +1483,12 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:slicerStyles.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.SlicerStyle" /> <c>&lt;x14:slicerStyle></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SlicerStyles : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1559,12 +1559,12 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:dxfs.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.DifferentialFormat" /> <c>&lt;x:dxf></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DifferentialFormats : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1631,12 +1631,12 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:oleItem.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.DdeValues" /> <c>&lt;x14:values></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class OleItem : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1734,9 +1734,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>DdeValues.</para>
         /// <para>Represents the following element tag in the schema: x14:values.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Excel.DdeValues? DdeValues
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.DdeValues>();
@@ -1956,12 +1956,12 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:customFilters.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.CustomFilter" /> <c>&lt;x14:customFilter></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class CustomFilters : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2177,12 +2177,12 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:datastoreItem.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.ExtensionList" /> <c>&lt;x14:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DatastoreItem : OpenXmlPartRootElement
     {
         /// <summary>
@@ -2248,9 +2248,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: x14:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Excel.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.ExtensionList>();
@@ -2297,13 +2297,13 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:formControlPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.ExtensionList" /> <c>&lt;x14:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.ListItems" /> <c>&lt;x14:itemLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class FormControlProperties : OpenXmlPartRootElement
     {
         /// <summary>
@@ -2717,9 +2717,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>ListItems.</para>
         /// <para>Represents the following element tag in the schema: x14:itemLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Excel.ListItems? ListItems
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.ListItems>();
@@ -2730,9 +2730,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: x14:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Excel.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.ExtensionList>();
@@ -2779,12 +2779,12 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:slicers.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.Slicer" /> <c>&lt;x14:slicer></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Slicers : OpenXmlPartRootElement
     {
         /// <summary>
@@ -2870,14 +2870,14 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:slicerCacheDefinition.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.SlicerCacheDefinitionExtensionList" /> <c>&lt;x14:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.SlicerCacheData" /> <c>&lt;x14:data></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.SlicerCachePivotTables" /> <c>&lt;x14:pivotTables></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SlicerCacheDefinition : OpenXmlPartRootElement
     {
         /// <summary>
@@ -2960,9 +2960,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>SlicerCachePivotTables.</para>
         /// <para>Represents the following element tag in the schema: x14:pivotTables.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Excel.SlicerCachePivotTables? SlicerCachePivotTables
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.SlicerCachePivotTables>();
@@ -2973,9 +2973,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>SlicerCacheData.</para>
         /// <para>Represents the following element tag in the schema: x14:data.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Excel.SlicerCacheData? SlicerCacheData
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.SlicerCacheData>();
@@ -2986,9 +2986,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>SlicerCacheDefinitionExtensionList.</para>
         /// <para>Represents the following element tag in the schema: x14:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Excel.SlicerCacheDefinitionExtensionList? SlicerCacheDefinitionExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.SlicerCacheDefinitionExtensionList>();
@@ -3035,14 +3035,14 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:conditionalFormatting.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.ExtensionList" /> <c>&lt;x14:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormattingRule" /> <c>&lt;x14:cfRule></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.ReferenceSequence" /> <c>&lt;xne:sqref></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ConditionalFormatting : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3113,7 +3113,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:cfRule.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.DifferentialType" /> <c>&lt;x14:dxf></c></description></item>
@@ -3123,7 +3123,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.DataBar" /> <c>&lt;x14:dataBar></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.IconSet" /> <c>&lt;x14:iconSet></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ConditionalFormattingRule : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3355,12 +3355,12 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Extension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3421,14 +3421,14 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:dataValidation.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.DataValidationForumla1" /> <c>&lt;x14:formula1></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.DataValidationForumla2" /> <c>&lt;x14:formula2></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.ReferenceSequence" /> <c>&lt;xne:sqref></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DataValidation : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3618,9 +3618,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>DataValidationForumla1.</para>
         /// <para>Represents the following element tag in the schema: x14:formula1.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Excel.DataValidationForumla1? DataValidationForumla1
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.DataValidationForumla1>();
@@ -3631,9 +3631,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>DataValidationForumla2.</para>
         /// <para>Represents the following element tag in the schema: x14:formula2.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Excel.DataValidationForumla2? DataValidationForumla2
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.DataValidationForumla2>();
@@ -3644,9 +3644,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>ReferenceSequence.</para>
         /// <para>Represents the following element tag in the schema: xne:sqref.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xne = http://schemas.microsoft.com/office/excel/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office.Excel.ReferenceSequence? ReferenceSequence
         {
             get => GetElement<DocumentFormat.OpenXml.Office.Excel.ReferenceSequence>();
@@ -3662,12 +3662,12 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:formula1.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.Formula" /> <c>&lt;xne:f></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DataValidationForumla1 : DataValidationFormulaType
     {
         /// <summary>
@@ -3721,12 +3721,12 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:formula2.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.Formula" /> <c>&lt;xne:f></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DataValidationForumla2 : DataValidationFormulaType
     {
         /// <summary>
@@ -3780,12 +3780,12 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.Formula" /> <c>&lt;xne:f></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public abstract partial class DataValidationFormulaType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3829,9 +3829,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>Formula.</para>
         /// <para>Represents the following element tag in the schema: xne:f.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xne = http://schemas.microsoft.com/office/excel/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office.Excel.Formula? Formula
         {
             get => GetElement<DocumentFormat.OpenXml.Office.Excel.Formula>();
@@ -3844,7 +3844,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:sparklineGroup.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.SeriesColor" /> <c>&lt;x14:colorSeries></c></description></item>
@@ -3858,7 +3858,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.Formula" /> <c>&lt;xne:f></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.Sparklines" /> <c>&lt;x14:sparklines></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SparklineGroup : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4116,9 +4116,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>SeriesColor.</para>
         /// <para>Represents the following element tag in the schema: x14:colorSeries.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Excel.SeriesColor? SeriesColor
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.SeriesColor>();
@@ -4129,9 +4129,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>NegativeColor.</para>
         /// <para>Represents the following element tag in the schema: x14:colorNegative.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Excel.NegativeColor? NegativeColor
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.NegativeColor>();
@@ -4142,9 +4142,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>AxisColor.</para>
         /// <para>Represents the following element tag in the schema: x14:colorAxis.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Excel.AxisColor? AxisColor
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.AxisColor>();
@@ -4155,9 +4155,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>MarkersColor.</para>
         /// <para>Represents the following element tag in the schema: x14:colorMarkers.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Excel.MarkersColor? MarkersColor
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.MarkersColor>();
@@ -4168,9 +4168,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>FirstMarkerColor.</para>
         /// <para>Represents the following element tag in the schema: x14:colorFirst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Excel.FirstMarkerColor? FirstMarkerColor
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.FirstMarkerColor>();
@@ -4181,9 +4181,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>LastMarkerColor.</para>
         /// <para>Represents the following element tag in the schema: x14:colorLast.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Excel.LastMarkerColor? LastMarkerColor
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.LastMarkerColor>();
@@ -4194,9 +4194,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>HighMarkerColor.</para>
         /// <para>Represents the following element tag in the schema: x14:colorHigh.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Excel.HighMarkerColor? HighMarkerColor
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.HighMarkerColor>();
@@ -4207,9 +4207,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>LowMarkerColor.</para>
         /// <para>Represents the following element tag in the schema: x14:colorLow.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Excel.LowMarkerColor? LowMarkerColor
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.LowMarkerColor>();
@@ -4220,9 +4220,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>Formula.</para>
         /// <para>Represents the following element tag in the schema: xne:f.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xne = http://schemas.microsoft.com/office/excel/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office.Excel.Formula? Formula
         {
             get => GetElement<DocumentFormat.OpenXml.Office.Excel.Formula>();
@@ -4233,9 +4233,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>Sparklines.</para>
         /// <para>Represents the following element tag in the schema: x14:sparklines.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Excel.Sparklines? Sparklines
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.Sparklines>();
@@ -4687,12 +4687,12 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:sparklines.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.Sparkline" /> <c>&lt;x14:sparkline></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Sparklines : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4747,13 +4747,13 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:sparkline.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.Formula" /> <c>&lt;xne:f></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.ReferenceSequence" /> <c>&lt;xne:sqref></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Sparkline : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4805,9 +4805,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>Formula.</para>
         /// <para>Represents the following element tag in the schema: xne:f.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xne = http://schemas.microsoft.com/office/excel/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office.Excel.Formula? Formula
         {
             get => GetElement<DocumentFormat.OpenXml.Office.Excel.Formula>();
@@ -4818,9 +4818,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>ReferenceSequence.</para>
         /// <para>Represents the following element tag in the schema: xne:sqref.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xne = http://schemas.microsoft.com/office/excel/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office.Excel.ReferenceSequence? ReferenceSequence
         {
             get => GetElement<DocumentFormat.OpenXml.Office.Excel.ReferenceSequence>();
@@ -4849,9 +4849,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>id, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: r:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -4897,9 +4897,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>id, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: r:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -4928,12 +4928,12 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:definedName.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.ArgumentDescriptions" /> <c>&lt;x14:argumentDescriptions></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DefinedName : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4999,9 +4999,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>ArgumentDescriptions.</para>
         /// <para>Represents the following element tag in the schema: x14:argumentDescriptions.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Excel.ArgumentDescriptions? ArgumentDescriptions
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.ArgumentDescriptions>();
@@ -5017,12 +5017,12 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:argumentDescriptions.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.ArgumentDescription" /> <c>&lt;x14:argumentDescription></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ArgumentDescriptions : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5143,13 +5143,13 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:tupleSet.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.TupleSetHeaders" /> <c>&lt;x14:headers></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.TupleSetRows" /> <c>&lt;x14:rows></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TupleSet : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5224,9 +5224,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>TupleSetHeaders.</para>
         /// <para>Represents the following element tag in the schema: x14:headers.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Excel.TupleSetHeaders? TupleSetHeaders
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.TupleSetHeaders>();
@@ -5237,9 +5237,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>TupleSetRows.</para>
         /// <para>Represents the following element tag in the schema: x14:rows.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Excel.TupleSetRows? TupleSetRows
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.TupleSetRows>();
@@ -5255,12 +5255,12 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:headers.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.TupleSetHeader" /> <c>&lt;x14:header></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TupleSetHeaders : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5315,12 +5315,12 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:rows.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.TupleSetRow" /> <c>&lt;x14:row></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TupleSetRows : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5425,12 +5425,12 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:row.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.TupleSetRowItem" /> <c>&lt;x14:rowItem></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TupleSetRow : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5576,12 +5576,12 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:setLevels.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.SetLevel" /> <c>&lt;x14:setLevel></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SetLevels : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5648,13 +5648,13 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:colorScale.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.Color" /> <c>&lt;x14:color></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormattingValueObject" /> <c>&lt;x14:cfvo></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ColorScale : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5711,7 +5711,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:dataBar.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.FillColor" /> <c>&lt;x14:fillColor></c></description></item>
@@ -5721,7 +5721,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.BarAxisColor" /> <c>&lt;x14:axisColor></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormattingValueObject" /> <c>&lt;x14:cfvo></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DataBar : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5888,13 +5888,13 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:iconSet.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormattingIcon" /> <c>&lt;x14:cfIcon></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormattingValueObject" /> <c>&lt;x14:cfvo></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class IconSet : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6007,7 +6007,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:dxf.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Border" /> <c>&lt;x:border></c></description></item>
@@ -6018,7 +6018,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Font" /> <c>&lt;x:font></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.NumberingFormat" /> <c>&lt;x:numFmt></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DifferentialType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6080,9 +6080,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>Font Properties.</para>
         /// <para>Represents the following element tag in the schema: x:font.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Font? Font
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Font>();
@@ -6093,9 +6093,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>Number Format.</para>
         /// <para>Represents the following element tag in the schema: x:numFmt.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.NumberingFormat? NumberingFormat
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.NumberingFormat>();
@@ -6106,9 +6106,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>Fill.</para>
         /// <para>Represents the following element tag in the schema: x:fill.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Fill? Fill
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Fill>();
@@ -6119,9 +6119,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>Alignment.</para>
         /// <para>Represents the following element tag in the schema: x:alignment.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Alignment? Alignment
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Alignment>();
@@ -6132,9 +6132,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>Border Properties.</para>
         /// <para>Represents the following element tag in the schema: x:border.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Border? Border
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Border>();
@@ -6145,9 +6145,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>Protection Properties.</para>
         /// <para>Represents the following element tag in the schema: x:protection.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Protection? Protection
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Protection>();
@@ -6158,9 +6158,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>Future Feature Data Storage Area.</para>
         /// <para>Represents the following element tag in the schema: x:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
@@ -6176,13 +6176,13 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:cfvo.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.ExtensionList" /> <c>&lt;x14:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.Formula" /> <c>&lt;xne:f></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ConditionalFormattingValueObject : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6260,9 +6260,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>Formula.</para>
         /// <para>Represents the following element tag in the schema: xne:f.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xne = http://schemas.microsoft.com/office/excel/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office.Excel.Formula? Formula
         {
             get => GetElement<DocumentFormat.OpenXml.Office.Excel.Formula>();
@@ -6273,9 +6273,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: x14:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Excel.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.ExtensionList>();
@@ -6345,12 +6345,12 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:pivotEdits.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.PivotEdit" /> <c>&lt;x14:pivotEdit></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PivotEdits : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6405,12 +6405,12 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:pivotChanges.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.PivotChange" /> <c>&lt;x14:pivotChange></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PivotChanges : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6465,12 +6465,12 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:conditionalFormats.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormat" /> <c>&lt;x14:conditionalFormat></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ConditionalFormats : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6537,12 +6537,12 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:calculatedMembers.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CalculatedMember" /> <c>&lt;x:calculatedMember></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class CalculatedMembers : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6609,7 +6609,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:pivotEdit.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.ExtensionList" /> <c>&lt;x14:extLst></c></description></item>
@@ -6617,7 +6617,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.PivotUserEdit" /> <c>&lt;x14:userEdit></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.TupleItems" /> <c>&lt;x14:tupleItems></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PivotEdit : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6673,9 +6673,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>PivotUserEdit.</para>
         /// <para>Represents the following element tag in the schema: x14:userEdit.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Excel.PivotUserEdit? PivotUserEdit
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.PivotUserEdit>();
@@ -6686,9 +6686,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>TupleItems.</para>
         /// <para>Represents the following element tag in the schema: x14:tupleItems.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Excel.TupleItems? TupleItems
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.TupleItems>();
@@ -6699,9 +6699,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>PivotArea.</para>
         /// <para>Represents the following element tag in the schema: x14:pivotArea.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Excel.PivotArea? PivotArea
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.PivotArea>();
@@ -6712,9 +6712,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: x14:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Excel.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.ExtensionList>();
@@ -6730,13 +6730,13 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:userEdit.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.Formula" /> <c>&lt;xne:f></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.PivotEditValue" /> <c>&lt;x14:editValue></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PivotUserEdit : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6788,9 +6788,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>Formula.</para>
         /// <para>Represents the following element tag in the schema: xne:f.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xne = http://schemas.microsoft.com/office/excel/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office.Excel.Formula? Formula
         {
             get => GetElement<DocumentFormat.OpenXml.Office.Excel.Formula>();
@@ -6801,9 +6801,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>PivotEditValue.</para>
         /// <para>Represents the following element tag in the schema: x14:editValue.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Excel.PivotEditValue? PivotEditValue
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.PivotEditValue>();
@@ -6819,12 +6819,12 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:tupleItems.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.Xstring" /> <c>&lt;x14:tupleItem></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TupleItems : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6879,13 +6879,13 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:pivotArea.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotAreaReferences" /> <c>&lt;x:references></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PivotArea : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7070,9 +7070,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>References.</para>
         /// <para>Represents the following element tag in the schema: x:references.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.PivotAreaReferences? PivotAreaReferences
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotAreaReferences>();
@@ -7083,9 +7083,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>Future Feature Data Storage Area.</para>
         /// <para>Represents the following element tag in the schema: x:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
@@ -7101,14 +7101,14 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:pivotChange.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.ExtensionList" /> <c>&lt;x14:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.PivotEditValue" /> <c>&lt;x14:editValue></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.TupleItems" /> <c>&lt;x14:tupleItems></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PivotChange : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7186,9 +7186,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>PivotEditValue.</para>
         /// <para>Represents the following element tag in the schema: x14:editValue.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Excel.PivotEditValue? PivotEditValue
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.PivotEditValue>();
@@ -7199,9 +7199,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>TupleItems.</para>
         /// <para>Represents the following element tag in the schema: x14:tupleItems.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Excel.TupleItems? TupleItems
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.TupleItems>();
@@ -7212,9 +7212,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: x14:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Excel.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.ExtensionList>();
@@ -7322,12 +7322,12 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:slicerStyleElements.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.SlicerStyleElement" /> <c>&lt;x14:slicerStyleElement></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SlicerStyleElements : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7382,12 +7382,12 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:values.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Value" /> <c>&lt;x:value></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DdeValues : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7465,13 +7465,13 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:conditionalFormat.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.ExtensionList" /> <c>&lt;x14:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.PivotAreas" /> <c>&lt;x14:pivotAreas></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ConditionalFormat : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7575,9 +7575,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>PivotAreas.</para>
         /// <para>Represents the following element tag in the schema: x14:pivotAreas.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Excel.PivotAreas? PivotAreas
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.PivotAreas>();
@@ -7588,9 +7588,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: x14:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Excel.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.ExtensionList>();
@@ -7606,12 +7606,12 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:pivotAreas.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PivotArea" /> <c>&lt;x:pivotArea></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PivotAreas : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7678,12 +7678,12 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:slicerStyle.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.SlicerStyleElements" /> <c>&lt;x14:slicerStyleElements></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SlicerStyle : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7751,9 +7751,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>SlicerStyleElements.</para>
         /// <para>Represents the following element tag in the schema: x14:slicerStyleElements.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Excel.SlicerStyleElements? SlicerStyleElements
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.SlicerStyleElements>();
@@ -7822,12 +7822,12 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:ignoredError.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.ReferenceSequence" /> <c>&lt;xne:sqref></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class IgnoredError : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7977,9 +7977,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>ReferenceSequence.</para>
         /// <para>Represents the following element tag in the schema: xne:sqref.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xne = http://schemas.microsoft.com/office/excel/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office.Excel.ReferenceSequence? ReferenceSequence
         {
             get => GetElement<DocumentFormat.OpenXml.Office.Excel.ReferenceSequence>();
@@ -7995,12 +7995,12 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:protectedRange.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.ReferenceSequence" /> <c>&lt;xne:sqref></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ProtectedRange : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8137,9 +8137,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>ReferenceSequence.</para>
         /// <para>Represents the following element tag in the schema: xne:sqref.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xne = http://schemas.microsoft.com/office/excel/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office.Excel.ReferenceSequence? ReferenceSequence
         {
             get => GetElement<DocumentFormat.OpenXml.Office.Excel.ReferenceSequence>();
@@ -8243,13 +8243,13 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:itemLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.ExtensionList" /> <c>&lt;x14:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.ListItem" /> <c>&lt;x14:item></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ListItems : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8306,12 +8306,12 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:slicer.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.ExtensionList" /> <c>&lt;x14:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Slicer : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8486,9 +8486,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: x14:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Excel.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.ExtensionList>();
@@ -8504,14 +8504,14 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:olap.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.ExtensionList" /> <c>&lt;x14:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheLevelsData" /> <c>&lt;x14:levels></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheSelections" /> <c>&lt;x14:selections></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class OlapSlicerCache : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8580,9 +8580,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>OlapSlicerCacheLevelsData.</para>
         /// <para>Represents the following element tag in the schema: x14:levels.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheLevelsData? OlapSlicerCacheLevelsData
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheLevelsData>();
@@ -8593,9 +8593,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>OlapSlicerCacheSelections.</para>
         /// <para>Represents the following element tag in the schema: x14:selections.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheSelections? OlapSlicerCacheSelections
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheSelections>();
@@ -8606,9 +8606,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: x14:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Excel.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.ExtensionList>();
@@ -8624,13 +8624,13 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:tabular.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.ExtensionList" /> <c>&lt;x14:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.TabularSlicerCacheItems" /> <c>&lt;x14:items></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TabularSlicerCache : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8741,9 +8741,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>TabularSlicerCacheItems.</para>
         /// <para>Represents the following element tag in the schema: x14:items.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Excel.TabularSlicerCacheItems? TabularSlicerCacheItems
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.TabularSlicerCacheItems>();
@@ -8754,9 +8754,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: x14:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Excel.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.ExtensionList>();
@@ -8867,12 +8867,12 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:i.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheItemParent" /> <c>&lt;x14:p></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class OlapSlicerCacheItem : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8965,12 +8965,12 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:range.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheItem" /> <c>&lt;x14:i></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class OlapSlicerCacheRange : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9041,12 +9041,12 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:ranges.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheRange" /> <c>&lt;x14:range></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class OlapSlicerCacheRanges : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9101,12 +9101,12 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:level.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheRanges" /> <c>&lt;x14:ranges></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class OlapSlicerCacheLevelData : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9219,9 +9219,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>OlapSlicerCacheRanges.</para>
         /// <para>Represents the following element tag in the schema: x14:ranges.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheRanges? OlapSlicerCacheRanges
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheRanges>();
@@ -9237,12 +9237,12 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:levels.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheLevelData" /> <c>&lt;x14:level></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class OlapSlicerCacheLevelsData : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9309,12 +9309,12 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:selections.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheSelection" /> <c>&lt;x14:selection></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class OlapSlicerCacheSelections : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9381,12 +9381,12 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:selection.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheItemParent" /> <c>&lt;x14:p></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class OlapSlicerCacheSelection : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9456,12 +9456,12 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:items.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.TabularSlicerCacheItem" /> <c>&lt;x14:i></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TabularSlicerCacheItems : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9591,12 +9591,12 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:pivotTables.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.SlicerCachePivotTable" /> <c>&lt;x14:pivotTable></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SlicerCachePivotTables : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9651,13 +9651,13 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:data.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCache" /> <c>&lt;x14:olap></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.TabularSlicerCache" /> <c>&lt;x14:tabular></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SlicerCacheData : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9709,9 +9709,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>OlapSlicerCache.</para>
         /// <para>Represents the following element tag in the schema: x14:olap.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCache? OlapSlicerCache
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCache>();
@@ -9722,9 +9722,9 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
         /// <para>TabularSlicerCache.</para>
         /// <para>Represents the following element tag in the schema: x14:tabular.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Excel.TabularSlicerCache? TabularSlicerCache
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.TabularSlicerCache>();
@@ -9740,12 +9740,12 @@ namespace DocumentFormat.OpenXml.Office2010.Excel
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is x14:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.SlicerCacheDefinitionExtension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SlicerCacheDefinitionExtensionList : OpenXmlCompositeElement
     {
         /// <summary>

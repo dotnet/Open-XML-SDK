@@ -21,12 +21,12 @@ namespace DocumentFormat.OpenXml.Office2019.Excel.CalcFeatures
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xcalcf:calcFeatures.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Excel.CalcFeatures.CalcFeature" /> <c>&lt;xcalcf:feature></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class CalcFeatures : OpenXmlCompositeElement
     {
         /// <summary>

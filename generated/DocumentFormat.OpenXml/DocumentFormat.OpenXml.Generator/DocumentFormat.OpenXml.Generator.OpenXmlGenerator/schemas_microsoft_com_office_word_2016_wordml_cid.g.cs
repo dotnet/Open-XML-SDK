@@ -21,12 +21,12 @@ namespace DocumentFormat.OpenXml.Office2019.Word.Cid
     /// <para>This class is available in Office 2019 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w16cid:commentsIds.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2019.Word.Cid.CommentId" /> <c>&lt;w16cid:commentId></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class CommentsIds : OpenXmlPartRootElement
     {
         /// <summary>
@@ -125,9 +125,9 @@ namespace DocumentFormat.OpenXml.Office2019.Word.Cid
         /// <para>paraId, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: w16cid:paraId</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w16cid=http://schemas.microsoft.com/office/word/2016/wordml/cid
-        /// </remark>
+        /// </remarks>
         public HexBinaryValue? ParaId
         {
             get => GetAttribute<HexBinaryValue>();
@@ -138,9 +138,9 @@ namespace DocumentFormat.OpenXml.Office2019.Word.Cid
         /// <para>durableId, this property is only available in Office 2019 and later.</para>
         /// <para>Represents the following attribute in the schema: w16cid:durableId</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w16cid=http://schemas.microsoft.com/office/word/2016/wordml/cid
-        /// </remark>
+        /// </remarks>
         public HexBinaryValue? DurableId
         {
             get => GetAttribute<HexBinaryValue>();

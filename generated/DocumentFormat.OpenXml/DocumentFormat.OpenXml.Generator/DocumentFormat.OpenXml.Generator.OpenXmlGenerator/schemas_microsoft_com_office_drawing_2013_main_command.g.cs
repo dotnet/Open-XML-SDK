@@ -399,13 +399,13 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:xfrm.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Offset" /> <c>&lt;a:off></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Extents" /> <c>&lt;a:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Transform2D : OpenXmlCompositeElement
     {
         /// <summary>
@@ -491,9 +491,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>Offset.</para>
         /// <para>Represents the following element tag in the schema: a:off.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Offset? Offset
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Offset>();
@@ -504,9 +504,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>Extents.</para>
         /// <para>Represents the following element tag in the schema: a:ext.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Extents? Extents
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Extents>();
@@ -1082,7 +1082,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:grpCmd.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.GroupShapeProperties" /> <c>&lt;oac:grpSpPr></c></description></item>
@@ -1096,7 +1096,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.PictureMoniker" /> <c>&lt;oac:picMk></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.ShapeMoniker" /> <c>&lt;oac:spMk></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class GroupCommand : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1204,9 +1204,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>DrawingMonikerList.</para>
         /// <para>Represents the following element tag in the schema: oac:dgMkLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Command.DrawingMonikerList? DrawingMonikerList
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.DrawingMonikerList>();
@@ -2480,7 +2480,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:pPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.BulletColor" /> <c>&lt;a:buClr></c></description></item>
@@ -2501,7 +2501,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SpaceAfter" /> <c>&lt;a:spcAft></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.TabStopList" /> <c>&lt;a:tabLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TextParagraphPropertiesType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2747,9 +2747,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>Line Spacing.</para>
         /// <para>Represents the following element tag in the schema: a:lnSpc.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.LineSpacing? LineSpacing
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.LineSpacing>();
@@ -2760,9 +2760,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>Space Before.</para>
         /// <para>Represents the following element tag in the schema: a:spcBef.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.SpaceBefore? SpaceBefore
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.SpaceBefore>();
@@ -2773,9 +2773,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>Space After.</para>
         /// <para>Represents the following element tag in the schema: a:spcAft.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.SpaceAfter? SpaceAfter
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.SpaceAfter>();
@@ -2791,7 +2791,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:bodyPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.FlatText" /> <c>&lt;a:flatTx></c></description></item>
@@ -2803,7 +2803,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NormalAutoFit" /> <c>&lt;a:normAutofit></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ShapeAutoFit" /> <c>&lt;a:spAutoFit></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TextBodyProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3110,9 +3110,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>Preset Text Shape.</para>
         /// <para>Represents the following element tag in the schema: a:prstTxWarp.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.PresetTextWarp? PresetTextWarp
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.PresetTextWarp>();
@@ -3339,7 +3339,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:spPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.BlipFill" /> <c>&lt;a:blipFill></c></description></item>
@@ -3358,7 +3358,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SolidFill" /> <c>&lt;a:solidFill></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Transform2D" /> <c>&lt;a:xfrm></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3469,9 +3469,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>2D Transform for Individual Objects.</para>
         /// <para>Represents the following element tag in the schema: a:xfrm.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Transform2D? Transform2D
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Transform2D>();
@@ -4207,7 +4207,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:spPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.XfrmEmpty" /> <c>&lt;oac:xfrm></c></description></item>
@@ -4220,7 +4220,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.ExtLstEmpty" /> <c>&lt;oac:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.BwModeEmpty" /> <c>&lt;oac:bwMode></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ResetShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4286,9 +4286,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>XfrmEmpty.</para>
         /// <para>Represents the following element tag in the schema: oac:xfrm.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Command.XfrmEmpty? XfrmEmpty
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.XfrmEmpty>();
@@ -4299,9 +4299,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>GeomEmpty.</para>
         /// <para>Represents the following element tag in the schema: oac:geom.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Command.GeomEmpty? GeomEmpty
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.GeomEmpty>();
@@ -4312,9 +4312,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>FillEmpty.</para>
         /// <para>Represents the following element tag in the schema: oac:fill.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Command.FillEmpty? FillEmpty
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.FillEmpty>();
@@ -4325,9 +4325,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>LnEmpty.</para>
         /// <para>Represents the following element tag in the schema: oac:ln.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Command.LnEmpty? LnEmpty
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.LnEmpty>();
@@ -4338,9 +4338,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>EffectEmpty.</para>
         /// <para>Represents the following element tag in the schema: oac:effect.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Command.EffectEmpty? EffectEmpty
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.EffectEmpty>();
@@ -4351,9 +4351,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>Scene3dEmpty.</para>
         /// <para>Represents the following element tag in the schema: oac:scene3d.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Command.Scene3dEmpty? Scene3dEmpty
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.Scene3dEmpty>();
@@ -4364,9 +4364,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>Sp3dEmpty.</para>
         /// <para>Represents the following element tag in the schema: oac:sp3d.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Command.Sp3dEmpty? Sp3dEmpty
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.Sp3dEmpty>();
@@ -4377,9 +4377,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>ExtLstEmpty.</para>
         /// <para>Represents the following element tag in the schema: oac:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Command.ExtLstEmpty? ExtLstEmpty
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.ExtLstEmpty>();
@@ -4390,9 +4390,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>BwModeEmpty.</para>
         /// <para>Represents the following element tag in the schema: oac:bwMode.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Command.BwModeEmpty? BwModeEmpty
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.BwModeEmpty>();
@@ -4408,7 +4408,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:lnRef.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HslColor" /> <c>&lt;a:hslClr></c></description></item>
@@ -4418,7 +4418,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.RgbColorModelHex" /> <c>&lt;a:srgbClr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SystemColor" /> <c>&lt;a:sysClr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class LnRefStyleMatrixReference : StyleMatrixReferenceType
     {
         /// <summary>
@@ -4483,7 +4483,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:fillRef.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HslColor" /> <c>&lt;a:hslClr></c></description></item>
@@ -4493,7 +4493,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.RgbColorModelHex" /> <c>&lt;a:srgbClr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SystemColor" /> <c>&lt;a:sysClr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class FillRefStyleMatrixReference : StyleMatrixReferenceType
     {
         /// <summary>
@@ -4558,7 +4558,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:effectRef.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HslColor" /> <c>&lt;a:hslClr></c></description></item>
@@ -4568,7 +4568,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.RgbColorModelHex" /> <c>&lt;a:srgbClr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SystemColor" /> <c>&lt;a:sysClr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class EffectRefStyleMatrixReference : StyleMatrixReferenceType
     {
         /// <summary>
@@ -4633,7 +4633,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HslColor" /> <c>&lt;a:hslClr></c></description></item>
@@ -4643,7 +4643,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.RgbColorModelHex" /> <c>&lt;a:srgbClr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SystemColor" /> <c>&lt;a:sysClr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public abstract partial class StyleMatrixReferenceType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4707,9 +4707,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>RGB Color Model - Percentage Variant.</para>
         /// <para>Represents the following element tag in the schema: a:scrgbClr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage? RgbColorModelPercentage
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage>();
@@ -4720,9 +4720,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>RGB Color Model - Hex Variant.</para>
         /// <para>Represents the following element tag in the schema: a:srgbClr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.RgbColorModelHex? RgbColorModelHex
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelHex>();
@@ -4733,9 +4733,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>Hue, Saturation, Luminance Color Model.</para>
         /// <para>Represents the following element tag in the schema: a:hslClr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.HslColor? HslColor
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.HslColor>();
@@ -4746,9 +4746,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>System Color.</para>
         /// <para>Represents the following element tag in the schema: a:sysClr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.SystemColor? SystemColor
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.SystemColor>();
@@ -4759,9 +4759,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>Scheme Color.</para>
         /// <para>Represents the following element tag in the schema: a:schemeClr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.SchemeColor? SchemeColor
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.SchemeColor>();
@@ -4772,9 +4772,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>Preset Color.</para>
         /// <para>Represents the following element tag in the schema: a:prstClr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.PresetColor? PresetColor
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.PresetColor>();
@@ -4787,7 +4787,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:fontRef.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HslColor" /> <c>&lt;a:hslClr></c></description></item>
@@ -4797,7 +4797,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.RgbColorModelHex" /> <c>&lt;a:srgbClr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SystemColor" /> <c>&lt;a:sysClr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class FontReference : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4879,9 +4879,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>RGB Color Model - Percentage Variant.</para>
         /// <para>Represents the following element tag in the schema: a:scrgbClr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage? RgbColorModelPercentage
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage>();
@@ -4892,9 +4892,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>RGB Color Model - Hex Variant.</para>
         /// <para>Represents the following element tag in the schema: a:srgbClr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.RgbColorModelHex? RgbColorModelHex
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelHex>();
@@ -4905,9 +4905,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>Hue, Saturation, Luminance Color Model.</para>
         /// <para>Represents the following element tag in the schema: a:hslClr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.HslColor? HslColor
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.HslColor>();
@@ -4918,9 +4918,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>System Color.</para>
         /// <para>Represents the following element tag in the schema: a:sysClr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.SystemColor? SystemColor
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.SystemColor>();
@@ -4931,9 +4931,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>Scheme Color.</para>
         /// <para>Represents the following element tag in the schema: a:schemeClr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.SchemeColor? SchemeColor
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.SchemeColor>();
@@ -4944,9 +4944,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>Preset Color.</para>
         /// <para>Represents the following element tag in the schema: a:prstClr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.PresetColor? PresetColor
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.PresetColor>();
@@ -4962,7 +4962,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:style.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.FontReference" /> <c>&lt;oac:fontRef></c></description></item>
@@ -4970,7 +4970,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.FillRefStyleMatrixReference" /> <c>&lt;oac:fillRef></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.EffectRefStyleMatrixReference" /> <c>&lt;oac:effectRef></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ModifyShapeStyleProps : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5026,9 +5026,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>LnRefStyleMatrixReference.</para>
         /// <para>Represents the following element tag in the schema: oac:lnRef.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Command.LnRefStyleMatrixReference? LnRefStyleMatrixReference
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.LnRefStyleMatrixReference>();
@@ -5039,9 +5039,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>FillRefStyleMatrixReference.</para>
         /// <para>Represents the following element tag in the schema: oac:fillRef.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Command.FillRefStyleMatrixReference? FillRefStyleMatrixReference
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.FillRefStyleMatrixReference>();
@@ -5052,9 +5052,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>EffectRefStyleMatrixReference.</para>
         /// <para>Represents the following element tag in the schema: oac:effectRef.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Command.EffectRefStyleMatrixReference? EffectRefStyleMatrixReference
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.EffectRefStyleMatrixReference>();
@@ -5065,9 +5065,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>FontReference.</para>
         /// <para>Represents the following element tag in the schema: oac:fontRef.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Command.FontReference? FontReference
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.FontReference>();
@@ -5161,7 +5161,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:blipFill.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Blip" /> <c>&lt;a:blip></c></description></item>
@@ -5169,7 +5169,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Stretch" /> <c>&lt;a:stretch></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Tile" /> <c>&lt;a:tile></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class BlipFillProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5254,9 +5254,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>Blip.</para>
         /// <para>Represents the following element tag in the schema: a:blip.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Blip? Blip
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Blip>();
@@ -5267,9 +5267,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>Source Rectangle.</para>
         /// <para>Represents the following element tag in the schema: a:srcRect.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.SourceRectangle? SourceRectangle
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.SourceRectangle>();
@@ -5400,7 +5400,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:blipFill.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.SrcRectEmpty" /> <c>&lt;oac:srcRect></c></description></item>
@@ -5408,7 +5408,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.DpiEmpty" /> <c>&lt;oac:dpi></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.RotWithShapeEmpty" /> <c>&lt;oac:rotWithShape></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ResetBlipFillProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5464,9 +5464,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>SrcRectEmpty.</para>
         /// <para>Represents the following element tag in the schema: oac:srcRect.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Command.SrcRectEmpty? SrcRectEmpty
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.SrcRectEmpty>();
@@ -5477,9 +5477,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>FillModeEmpty.</para>
         /// <para>Represents the following element tag in the schema: oac:fillMode.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Command.FillModeEmpty? FillModeEmpty
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.FillModeEmpty>();
@@ -5490,9 +5490,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>DpiEmpty.</para>
         /// <para>Represents the following element tag in the schema: oac:dpi.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Command.DpiEmpty? DpiEmpty
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.DpiEmpty>();
@@ -5503,9 +5503,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>RotWithShapeEmpty.</para>
         /// <para>Represents the following element tag in the schema: oac:rotWithShape.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Command.RotWithShapeEmpty? RotWithShapeEmpty
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.RotWithShapeEmpty>();
@@ -5624,7 +5624,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:grpSpPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.BlipFill" /> <c>&lt;a:blipFill></c></description></item>
@@ -5639,7 +5639,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Scene3DType" /> <c>&lt;a:scene3d></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SolidFill" /> <c>&lt;a:solidFill></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class GroupShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5736,9 +5736,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>2D Transform for Grouped Objects.</para>
         /// <para>Represents the following element tag in the schema: a:xfrm.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.TransformGroup? TransformGroup
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.TransformGroup>();
@@ -5754,7 +5754,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:grpSpPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.XfrmEmpty" /> <c>&lt;oac:xfrm></c></description></item>
@@ -5764,7 +5764,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.ExtLstEmpty" /> <c>&lt;oac:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.BwModeEmpty" /> <c>&lt;oac:bwMode></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ResetGroupShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5824,9 +5824,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>XfrmEmpty.</para>
         /// <para>Represents the following element tag in the schema: oac:xfrm.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Command.XfrmEmpty? XfrmEmpty
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.XfrmEmpty>();
@@ -5837,9 +5837,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>FillEmpty.</para>
         /// <para>Represents the following element tag in the schema: oac:fill.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Command.FillEmpty? FillEmpty
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.FillEmpty>();
@@ -5850,9 +5850,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>EffectEmpty.</para>
         /// <para>Represents the following element tag in the schema: oac:effect.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Command.EffectEmpty? EffectEmpty
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.EffectEmpty>();
@@ -5863,9 +5863,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>Scene3dEmpty.</para>
         /// <para>Represents the following element tag in the schema: oac:scene3d.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Command.Scene3dEmpty? Scene3dEmpty
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.Scene3dEmpty>();
@@ -5876,9 +5876,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>ExtLstEmpty.</para>
         /// <para>Represents the following element tag in the schema: oac:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Command.ExtLstEmpty? ExtLstEmpty
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.ExtLstEmpty>();
@@ -5889,9 +5889,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>BwModeEmpty.</para>
         /// <para>Represents the following element tag in the schema: oac:bwMode.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Command.BwModeEmpty? BwModeEmpty
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.BwModeEmpty>();
@@ -5907,14 +5907,14 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:cNvPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HyperlinkOnClick" /> <c>&lt;a:hlinkClick></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HyperlinkOnHover" /> <c>&lt;a:hlinkHover></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class NonVisualDrawingProps : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6030,9 +6030,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>Hyperlink associated with clicking or selecting the element..</para>
         /// <para>Represents the following element tag in the schema: a:hlinkClick.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.HyperlinkOnClick? HyperlinkOnClick
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>();
@@ -6043,9 +6043,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>Hyperlink associated with hovering over the element..</para>
         /// <para>Represents the following element tag in the schema: a:hlinkHover.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.HyperlinkOnHover? HyperlinkOnHover
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>();
@@ -6056,9 +6056,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>Future extension.</para>
         /// <para>Represents the following element tag in the schema: a:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList? NonVisualDrawingPropertiesExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>();
@@ -6074,13 +6074,13 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:cNvGrpSpPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.GroupShapeLocks" /> <c>&lt;a:grpSpLocks></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class NonVisualGroupDrawingShapeProps : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6132,9 +6132,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>GroupShapeLocks.</para>
         /// <para>Represents the following element tag in the schema: a:grpSpLocks.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.GroupShapeLocks? GroupShapeLocks
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.GroupShapeLocks>();
@@ -6145,9 +6145,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>NonVisualGroupDrawingShapePropsExtensionList.</para>
         /// <para>Represents the following element tag in the schema: a:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList? NonVisualGroupDrawingShapePropsExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualGroupDrawingShapePropsExtensionList>();
@@ -6354,13 +6354,13 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:cNvCxnSpPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.StCxnConnection" /> <c>&lt;oac:stCxn></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.EndCxnConnection" /> <c>&lt;oac:endCxn></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ModifyNonVisualConnectorProps : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6523,9 +6523,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>StCxnConnection.</para>
         /// <para>Represents the following element tag in the schema: oac:stCxn.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Command.StCxnConnection? StCxnConnection
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.StCxnConnection>();
@@ -6536,9 +6536,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>EndCxnConnection.</para>
         /// <para>Represents the following element tag in the schema: oac:endCxn.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Command.EndCxnConnection? EndCxnConnection
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.EndCxnConnection>();
@@ -6554,7 +6554,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:cNvCxnSpPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.StCxnEmpty" /> <c>&lt;oac:stCxn></c></description></item>
@@ -6570,7 +6570,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.NoChangeArrowheadsEmpty" /> <c>&lt;oac:noChangeArrowheads></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.NoChangeShapeTypeEmpty" /> <c>&lt;oac:noChangeShapeType></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ResetNonVisualConnectorProps : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6642,9 +6642,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>StCxnEmpty.</para>
         /// <para>Represents the following element tag in the schema: oac:stCxn.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Command.StCxnEmpty? StCxnEmpty
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.StCxnEmpty>();
@@ -6655,9 +6655,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>EndCxnEmpty.</para>
         /// <para>Represents the following element tag in the schema: oac:endCxn.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Command.EndCxnEmpty? EndCxnEmpty
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.EndCxnEmpty>();
@@ -6668,9 +6668,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>NoGrpEmpty.</para>
         /// <para>Represents the following element tag in the schema: oac:noGrp.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Command.NoGrpEmpty? NoGrpEmpty
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.NoGrpEmpty>();
@@ -6681,9 +6681,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>NoSelectEmpty.</para>
         /// <para>Represents the following element tag in the schema: oac:noSelect.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Command.NoSelectEmpty? NoSelectEmpty
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.NoSelectEmpty>();
@@ -6694,9 +6694,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>NoRotEmpty.</para>
         /// <para>Represents the following element tag in the schema: oac:noRot.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Command.NoRotEmpty? NoRotEmpty
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.NoRotEmpty>();
@@ -6707,9 +6707,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>NoChangeAspectEmpty.</para>
         /// <para>Represents the following element tag in the schema: oac:noChangeAspect.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Command.NoChangeAspectEmpty? NoChangeAspectEmpty
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.NoChangeAspectEmpty>();
@@ -6720,9 +6720,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>NoMoveEmpty.</para>
         /// <para>Represents the following element tag in the schema: oac:noMove.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Command.NoMoveEmpty? NoMoveEmpty
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.NoMoveEmpty>();
@@ -6733,9 +6733,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>NoResizeEmpty.</para>
         /// <para>Represents the following element tag in the schema: oac:noResize.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Command.NoResizeEmpty? NoResizeEmpty
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.NoResizeEmpty>();
@@ -6746,9 +6746,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>NoEditPointsEmpty.</para>
         /// <para>Represents the following element tag in the schema: oac:noEditPoints.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Command.NoEditPointsEmpty? NoEditPointsEmpty
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.NoEditPointsEmpty>();
@@ -6759,9 +6759,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>NoAdjustHandlesEmpty.</para>
         /// <para>Represents the following element tag in the schema: oac:noAdjustHandles.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Command.NoAdjustHandlesEmpty? NoAdjustHandlesEmpty
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.NoAdjustHandlesEmpty>();
@@ -6772,9 +6772,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>NoChangeArrowheadsEmpty.</para>
         /// <para>Represents the following element tag in the schema: oac:noChangeArrowheads.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Command.NoChangeArrowheadsEmpty? NoChangeArrowheadsEmpty
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.NoChangeArrowheadsEmpty>();
@@ -6785,9 +6785,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>NoChangeShapeTypeEmpty.</para>
         /// <para>Represents the following element tag in the schema: oac:noChangeShapeType.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Command.NoChangeShapeTypeEmpty? NoChangeShapeTypeEmpty
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.NoChangeShapeTypeEmpty>();
@@ -7023,12 +7023,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:cNvPicPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.LfPrEmpty" /> <c>&lt;oac:lfPr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ResetNonVisualPictureProps : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7078,9 +7078,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>LfPrEmpty.</para>
         /// <para>Represents the following element tag in the schema: oac:lfPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Command.LfPrEmpty? LfPrEmpty
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.LfPrEmpty>();
@@ -7235,7 +7235,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:lineProps.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.CustomDash" /> <c>&lt;a:custDash></c></description></item>
@@ -7251,7 +7251,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.PresetDash" /> <c>&lt;a:prstDash></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SolidFill" /> <c>&lt;a:solidFill></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class LinePropertiesType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7550,12 +7550,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:hlinkClick.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.SndDataImgData" /> <c>&lt;oac:sndData></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class HlinkClickHyperlinkProps : OpenXmlHyperlinkPropsElement
     {
         /// <summary>
@@ -7609,12 +7609,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:hlinkHover.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.SndDataImgData" /> <c>&lt;oac:sndData></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class HlinkHoverHyperlinkProps : OpenXmlHyperlinkPropsElement
     {
         /// <summary>
@@ -7668,12 +7668,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.SndDataImgData" /> <c>&lt;oac:sndData></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public abstract partial class OpenXmlHyperlinkPropsElement : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7795,9 +7795,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>SndDataImgData.</para>
         /// <para>Represents the following element tag in the schema: oac:sndData.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Command.SndDataImgData? SndDataImgData
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.SndDataImgData>();
@@ -7810,13 +7810,13 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:hlink.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.HlinkClickHyperlinkProps" /> <c>&lt;oac:hlinkClick></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.HlinkHoverHyperlinkProps" /> <c>&lt;oac:hlinkHover></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ModifyHyperlinkProps : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7868,9 +7868,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>HlinkClickHyperlinkProps.</para>
         /// <para>Represents the following element tag in the schema: oac:hlinkClick.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Command.HlinkClickHyperlinkProps? HlinkClickHyperlinkProps
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.HlinkClickHyperlinkProps>();
@@ -7881,9 +7881,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>HlinkHoverHyperlinkProps.</para>
         /// <para>Represents the following element tag in the schema: oac:hlinkHover.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Command.HlinkHoverHyperlinkProps? HlinkHoverHyperlinkProps
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.HlinkHoverHyperlinkProps>();
@@ -7899,13 +7899,13 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is oac:hlink.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.HlinkClickEmpty" /> <c>&lt;oac:hlinkClick></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.Command.HlinkHoverEmpty" /> <c>&lt;oac:hlinkHover></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ResetHyperlinkProps : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7957,9 +7957,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>HlinkClickEmpty.</para>
         /// <para>Represents the following element tag in the schema: oac:hlinkClick.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Command.HlinkClickEmpty? HlinkClickEmpty
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.HlinkClickEmpty>();
@@ -7970,9 +7970,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.Command
         /// <para>HlinkHoverEmpty.</para>
         /// <para>Represents the following element tag in the schema: oac:hlinkHover.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:oac = http://schemas.microsoft.com/office/drawing/2013/main/command
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.Command.HlinkHoverEmpty? HlinkHoverEmpty
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.Command.HlinkHoverEmpty>();

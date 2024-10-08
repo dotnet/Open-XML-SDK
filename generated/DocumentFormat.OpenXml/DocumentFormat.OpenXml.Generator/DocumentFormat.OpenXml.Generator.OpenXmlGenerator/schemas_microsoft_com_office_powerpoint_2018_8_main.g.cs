@@ -50,14 +50,14 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p188:txBody.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.BodyProperties" /> <c>&lt;a:bodyPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ListStyle" /> <c>&lt;a:lstStyle></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Paragraph" /> <c>&lt;a:p></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TextBodyType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -111,9 +111,9 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
         /// <para>Body Properties.</para>
         /// <para>Represents the following element tag in the schema: a:bodyPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.BodyProperties? BodyProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.BodyProperties>();
@@ -124,9 +124,9 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
         /// <para>Text List Styles.</para>
         /// <para>Represents the following element tag in the schema: a:lstStyle.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.ListStyle? ListStyle
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.ListStyle>();
@@ -142,12 +142,12 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p188:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.CommentPropertiesExtension" /> <c>&lt;p:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class CommentPropertiesExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -208,12 +208,12 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p188:authorLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.Author" /> <c>&lt;p188:author></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class AuthorList : OpenXmlPartRootElement
     {
         /// <summary>
@@ -299,12 +299,12 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p188:cmLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.Comment" /> <c>&lt;p188:cm></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class CommentList : OpenXmlPartRootElement
     {
         /// <summary>
@@ -403,9 +403,9 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
         /// <para>id, this property is only available in Office 2021 and later.</para>
         /// <para>Represents the following attribute in the schema: r:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -433,12 +433,12 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p188:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Extension" /> <c>&lt;p:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -499,12 +499,12 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p188:author.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.ExtensionList" /> <c>&lt;p188:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Author : OpenXmlCompositeElement
     {
         /// <summary>
@@ -623,9 +623,9 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: p188:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p188 = http://schemas.microsoft.com/office/powerpoint/2018/8/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.ExtensionList>();
@@ -641,13 +641,13 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p188:reply.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.TextBodyType" /> <c>&lt;p188:txBody></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.CommentPropertiesExtensionList" /> <c>&lt;p188:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class CommentReply : OpenXmlCompositeElement
     {
         /// <summary>
@@ -786,9 +786,9 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
         /// <para>TextBodyType.</para>
         /// <para>Represents the following element tag in the schema: p188:txBody.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p188 = http://schemas.microsoft.com/office/powerpoint/2018/8/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.TextBodyType? TextBodyType
         {
             get => GetElement<DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.TextBodyType>();
@@ -799,9 +799,9 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
         /// <para>CommentPropertiesExtensionList.</para>
         /// <para>Represents the following element tag in the schema: p188:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p188 = http://schemas.microsoft.com/office/powerpoint/2018/8/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.CommentPropertiesExtensionList? CommentPropertiesExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.CommentPropertiesExtensionList>();
@@ -873,12 +873,12 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p188:replyLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.CommentReply" /> <c>&lt;p188:reply></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class CommentReplyList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -933,7 +933,7 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p188:cm.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Comment.Point2DType" /> <c>&lt;p188:pos></c></description></item>
@@ -951,7 +951,7 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Comment
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Presentation.Command.SlideLayoutMonikerList" /> <c>&lt;pc:sldLayoutMkLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Presentation.Command.SlideMonikerList" /> <c>&lt;pc:sldMkLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Comment : OpenXmlCompositeElement
     {
         /// <summary>

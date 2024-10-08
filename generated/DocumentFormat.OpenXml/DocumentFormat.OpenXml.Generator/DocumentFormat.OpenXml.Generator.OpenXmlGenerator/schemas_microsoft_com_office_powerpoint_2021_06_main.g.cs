@@ -22,13 +22,13 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main
     /// <para>This class is available in Microsoft365 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p216:taskHistoryDetails.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.ExtensionList" /> <c>&lt;p216:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.TaskHistory" /> <c>&lt;p216:history></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TaskHistoryDetails : OpenXmlCompositeElement
     {
         /// <summary>
@@ -96,9 +96,9 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main
         /// <para>TaskHistory.</para>
         /// <para>Represents the following element tag in the schema: p216:history.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p216 = http://schemas.microsoft.com/office/powerpoint/2021/06/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.TaskHistory? TaskHistory
         {
             get => GetElement<DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.TaskHistory>();
@@ -109,9 +109,9 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: p216:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p216 = http://schemas.microsoft.com/office/powerpoint/2021/06/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.ExtensionList>();
@@ -168,12 +168,12 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main
     /// <para>This class is available in Microsoft365 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p216:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Extension" /> <c>&lt;p:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -345,13 +345,13 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main
     /// <para>This class is available in Microsoft365 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p216:anchr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.ExtensionList" /> <c>&lt;p216:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.CommentAnchor" /> <c>&lt;p216:comment></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TaskAnchor : OpenXmlCompositeElement
     {
         /// <summary>
@@ -403,9 +403,9 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main
         /// <para>CommentAnchor.</para>
         /// <para>Represents the following element tag in the schema: p216:comment.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p216 = http://schemas.microsoft.com/office/powerpoint/2021/06/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.CommentAnchor? CommentAnchor
         {
             get => GetElement<DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.CommentAnchor>();
@@ -416,9 +416,9 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: p216:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p216 = http://schemas.microsoft.com/office/powerpoint/2021/06/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.ExtensionList>();
@@ -740,7 +740,7 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main
     /// <para>This class is available in Microsoft365 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p216:event.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.AddEmpty" /> <c>&lt;p216:add></c></description></item>
@@ -757,7 +757,7 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.TaskUndo" /> <c>&lt;p216:undo></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.TaskUnknownRecord" /> <c>&lt;p216:unknown></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TaskHistoryEvent : OpenXmlCompositeElement
     {
         /// <summary>
@@ -864,9 +864,9 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main
         /// <para>AtrbtnTaskAssignUnassignUser.</para>
         /// <para>Represents the following element tag in the schema: p216:atrbtn.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p216 = http://schemas.microsoft.com/office/powerpoint/2021/06/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.AtrbtnTaskAssignUnassignUser? AtrbtnTaskAssignUnassignUser
         {
             get => GetElement<DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.AtrbtnTaskAssignUnassignUser>();
@@ -877,9 +877,9 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main
         /// <para>TaskAnchor.</para>
         /// <para>Represents the following element tag in the schema: p216:anchr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p216 = http://schemas.microsoft.com/office/powerpoint/2021/06/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.TaskAnchor? TaskAnchor
         {
             get => GetElement<DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.TaskAnchor>();
@@ -895,12 +895,12 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main
     /// <para>This class is available in Microsoft365 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p216:history.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint.Y2021.M06.Main.TaskHistoryEvent" /> <c>&lt;p216:event></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TaskHistory : OpenXmlCompositeElement
     {
         /// <summary>

@@ -22,13 +22,13 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main
     /// <para>This class is available in Microsoft365 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p228:taskDetails.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.ExtensionList" /> <c>&lt;p228:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskHistory" /> <c>&lt;p228:history></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TaskDetails : OpenXmlCompositeElement
     {
         /// <summary>
@@ -103,9 +103,9 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main
         /// <para>TaskHistory.</para>
         /// <para>Represents the following element tag in the schema: p228:history.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p228 = http://schemas.microsoft.com/office/powerpoint/2022/08/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskHistory? TaskHistory
         {
             get => GetElement<DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskHistory>();
@@ -116,9 +116,9 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: p228:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p228 = http://schemas.microsoft.com/office/powerpoint/2022/08/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.ExtensionList>();
@@ -175,12 +175,12 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main
     /// <para>This class is available in Microsoft365 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p228:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Extension" /> <c>&lt;p:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -327,13 +327,13 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main
     /// <para>This class is available in Microsoft365 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p228:anchr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.ExtensionList" /> <c>&lt;p228:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.CommentAnchor" /> <c>&lt;p228:comment></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TaskAnchor : OpenXmlCompositeElement
     {
         /// <summary>
@@ -385,9 +385,9 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main
         /// <para>CommentAnchor.</para>
         /// <para>Represents the following element tag in the schema: p228:comment.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p228 = http://schemas.microsoft.com/office/powerpoint/2022/08/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.CommentAnchor? CommentAnchor
         {
             get => GetElement<DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.CommentAnchor>();
@@ -398,9 +398,9 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: p228:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p228 = http://schemas.microsoft.com/office/powerpoint/2022/08/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.ExtensionList>();
@@ -681,7 +681,7 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main
     /// <para>This class is available in Microsoft365 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p228:event.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.AddEmpty" /> <c>&lt;p228:add></c></description></item>
@@ -696,7 +696,7 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskUndo" /> <c>&lt;p228:undo></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskUnknownRecord" /> <c>&lt;p228:unknown></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TaskHistoryEvent : OpenXmlCompositeElement
     {
         /// <summary>
@@ -799,9 +799,9 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main
         /// <para>AtrbtnTaskAssignUnassignUser.</para>
         /// <para>Represents the following element tag in the schema: p228:atrbtn.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p228 = http://schemas.microsoft.com/office/powerpoint/2022/08/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.AtrbtnTaskAssignUnassignUser? AtrbtnTaskAssignUnassignUser
         {
             get => GetElement<DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.AtrbtnTaskAssignUnassignUser>();
@@ -812,9 +812,9 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main
         /// <para>TaskAnchor.</para>
         /// <para>Represents the following element tag in the schema: p228:anchr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p228 = http://schemas.microsoft.com/office/powerpoint/2022/08/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskAnchor? TaskAnchor
         {
             get => GetElement<DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskAnchor>();
@@ -830,12 +830,12 @@ namespace DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main
     /// <para>This class is available in Microsoft365 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p228:history.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.PowerPoint.Y2022.M08.Main.TaskHistoryEvent" /> <c>&lt;p228:event></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TaskHistory : OpenXmlCompositeElement
     {
         /// <summary>

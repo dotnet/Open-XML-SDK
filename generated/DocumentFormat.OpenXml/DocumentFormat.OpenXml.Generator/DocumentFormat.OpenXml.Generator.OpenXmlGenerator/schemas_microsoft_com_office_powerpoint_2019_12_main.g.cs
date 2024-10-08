@@ -22,13 +22,13 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p1912:taskHistoryDetails.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.ExtensionList" /> <c>&lt;p1912:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskHistory" /> <c>&lt;p1912:history></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TaskHistoryDetails : OpenXmlCompositeElement
     {
         /// <summary>
@@ -96,9 +96,9 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks
         /// <para>TaskHistory.</para>
         /// <para>Represents the following element tag in the schema: p1912:history.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p1912 = http://schemas.microsoft.com/office/powerpoint/2019/12/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskHistory? TaskHistory
         {
             get => GetElement<DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskHistory>();
@@ -109,9 +109,9 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: p1912:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p1912 = http://schemas.microsoft.com/office/powerpoint/2019/12/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.ExtensionList>();
@@ -168,12 +168,12 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p1912:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Presentation.Extension" /> <c>&lt;p:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -345,13 +345,13 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p1912:anchr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.ExtensionList" /> <c>&lt;p1912:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.CommentAnchor" /> <c>&lt;p1912:comment></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TaskAnchor : OpenXmlCompositeElement
     {
         /// <summary>
@@ -403,9 +403,9 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks
         /// <para>CommentAnchor.</para>
         /// <para>Represents the following element tag in the schema: p1912:comment.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p1912 = http://schemas.microsoft.com/office/powerpoint/2019/12/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.CommentAnchor? CommentAnchor
         {
             get => GetElement<DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.CommentAnchor>();
@@ -416,9 +416,9 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: p1912:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p1912 = http://schemas.microsoft.com/office/powerpoint/2019/12/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.ExtensionList>();
@@ -740,7 +740,7 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p1912:event.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.AddEmpty" /> <c>&lt;p1912:add></c></description></item>
@@ -757,7 +757,7 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskUndo" /> <c>&lt;p1912:undo></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskUnknownRecord" /> <c>&lt;p1912:unknown></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TaskHistoryEvent : OpenXmlCompositeElement
     {
         /// <summary>
@@ -864,9 +864,9 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks
         /// <para>AtrbtnTaskAssignUnassignUser.</para>
         /// <para>Represents the following element tag in the schema: p1912:atrbtn.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p1912 = http://schemas.microsoft.com/office/powerpoint/2019/12/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.AtrbtnTaskAssignUnassignUser? AtrbtnTaskAssignUnassignUser
         {
             get => GetElement<DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.AtrbtnTaskAssignUnassignUser>();
@@ -877,9 +877,9 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks
         /// <para>TaskAnchor.</para>
         /// <para>Represents the following element tag in the schema: p1912:anchr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:p1912 = http://schemas.microsoft.com/office/powerpoint/2019/12/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskAnchor? TaskAnchor
         {
             get => GetElement<DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskAnchor>();
@@ -895,12 +895,12 @@ namespace DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks
     /// <para>This class is available in Office 2021 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is p1912:history.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2021.PowerPoint.Tasks.TaskHistoryEvent" /> <c>&lt;p1912:event></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TaskHistory : OpenXmlCompositeElement
     {
         /// <summary>

@@ -23,7 +23,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:chartSpace.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ColorMappingType" /> <c>&lt;cx:clrMapOvr></c></description></item>
@@ -35,7 +35,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.FormatOverrides" /> <c>&lt;cx:fmtOvrs></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PrintSettings" /> <c>&lt;cx:printSettings></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ChartSpace : OpenXmlPartRootElement
     {
         /// <summary>
@@ -99,9 +99,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>ChartData.</para>
         /// <para>Represents the following element tag in the schema: cx:chartData.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ChartData? ChartData
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ChartData>();
@@ -112,9 +112,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>Chart.</para>
         /// <para>Represents the following element tag in the schema: cx:chart.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Chart? Chart
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Chart>();
@@ -125,9 +125,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>ShapeProperties.</para>
         /// <para>Represents the following element tag in the schema: cx:spPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties? ShapeProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties>();
@@ -138,9 +138,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>TxPrTextBody.</para>
         /// <para>Represents the following element tag in the schema: cx:txPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody? TxPrTextBody
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody>();
@@ -151,9 +151,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>ColorMappingType.</para>
         /// <para>Represents the following element tag in the schema: cx:clrMapOvr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ColorMappingType? ColorMappingType
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ColorMappingType>();
@@ -164,9 +164,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>FormatOverrides.</para>
         /// <para>Represents the following element tag in the schema: cx:fmtOvrs.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.FormatOverrides? FormatOverrides
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.FormatOverrides>();
@@ -177,9 +177,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>PrintSettings.</para>
         /// <para>Represents the following element tag in the schema: cx:printSettings.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PrintSettings? PrintSettings
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PrintSettings>();
@@ -190,9 +190,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: cx:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList>();
@@ -252,9 +252,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>id, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: r:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -389,7 +389,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:minColor.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HslColor" /> <c>&lt;a:hslClr></c></description></item>
@@ -399,7 +399,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.RgbColorModelHex" /> <c>&lt;a:srgbClr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SystemColor" /> <c>&lt;a:sysClr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class MinColorSolidColorFillProperties : OpenXmlSolidColorFillPropertiesElement
     {
         /// <summary>
@@ -464,7 +464,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:midColor.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HslColor" /> <c>&lt;a:hslClr></c></description></item>
@@ -474,7 +474,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.RgbColorModelHex" /> <c>&lt;a:srgbClr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SystemColor" /> <c>&lt;a:sysClr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class MidColorSolidColorFillProperties : OpenXmlSolidColorFillPropertiesElement
     {
         /// <summary>
@@ -539,7 +539,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:maxColor.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HslColor" /> <c>&lt;a:hslClr></c></description></item>
@@ -549,7 +549,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.RgbColorModelHex" /> <c>&lt;a:srgbClr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SystemColor" /> <c>&lt;a:sysClr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class MaxColorSolidColorFillProperties : OpenXmlSolidColorFillPropertiesElement
     {
         /// <summary>
@@ -614,7 +614,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.HslColor" /> <c>&lt;a:hslClr></c></description></item>
@@ -624,7 +624,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.RgbColorModelHex" /> <c>&lt;a:srgbClr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SystemColor" /> <c>&lt;a:sysClr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public abstract partial class OpenXmlSolidColorFillPropertiesElement : OpenXmlCompositeElement
     {
         /// <summary>
@@ -673,9 +673,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>RGB Color Model - Percentage Variant.</para>
         /// <para>Represents the following element tag in the schema: a:scrgbClr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage? RgbColorModelPercentage
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage>();
@@ -686,9 +686,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>RGB Color Model - Hex Variant.</para>
         /// <para>Represents the following element tag in the schema: a:srgbClr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.RgbColorModelHex? RgbColorModelHex
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelHex>();
@@ -699,9 +699,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>Hue, Saturation, Luminance Color Model.</para>
         /// <para>Represents the following element tag in the schema: a:hslClr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.HslColor? HslColor
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.HslColor>();
@@ -712,9 +712,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>System Color.</para>
         /// <para>Represents the following element tag in the schema: a:sysClr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.SystemColor? SystemColor
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.SystemColor>();
@@ -725,9 +725,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>Scheme Color.</para>
         /// <para>Represents the following element tag in the schema: a:schemeClr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.SchemeColor? SchemeColor
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.SchemeColor>();
@@ -738,9 +738,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>Preset Color.</para>
         /// <para>Represents the following element tag in the schema: a:prstClr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.PresetColor? PresetColor
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.PresetColor>();
@@ -927,12 +927,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:lvl.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ChartStringValue" /> <c>&lt;cx:pt></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class StringLevel : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1066,12 +1066,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:lvl.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NumericValue" /> <c>&lt;cx:pt></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class NumericLevel : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1163,14 +1163,14 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:numDim.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Formula" /> <c>&lt;cx:f></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NfFormula" /> <c>&lt;cx:nf></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NumericLevel" /> <c>&lt;cx:lvl></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class NumericDimension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1248,14 +1248,14 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:strDim.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Formula" /> <c>&lt;cx:f></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NfFormula" /> <c>&lt;cx:nf></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.StringLevel" /> <c>&lt;cx:lvl></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class StringDimension : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1333,12 +1333,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Extension2" /> <c>&lt;cx:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1406,9 +1406,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>RelId of the relationship for the external data, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: r:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -1419,9 +1419,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>True if the external link should automatically update, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: cx:autoUpdate</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx=http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public BooleanValue? AutoUpdate
         {
             get => GetAttribute<BooleanValue>();
@@ -1453,14 +1453,14 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:data.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList" /> <c>&lt;cx:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NumericDimension" /> <c>&lt;cx:numDim></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.StringDimension" /> <c>&lt;cx:strDim></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Data : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1879,13 +1879,13 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:txData.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Formula" /> <c>&lt;cx:f></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.VXsdstring" /> <c>&lt;cx:v></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TextData : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1946,14 +1946,14 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:rich.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.BodyProperties" /> <c>&lt;a:bodyPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ListStyle" /> <c>&lt;a:lstStyle></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Paragraph" /> <c>&lt;a:p></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class RichTextBody : TextBodyType
     {
         /// <summary>
@@ -2009,14 +2009,14 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:txPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.BodyProperties" /> <c>&lt;a:bodyPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ListStyle" /> <c>&lt;a:lstStyle></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Paragraph" /> <c>&lt;a:p></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TxPrTextBody : TextBodyType
     {
         /// <summary>
@@ -2072,14 +2072,14 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.BodyProperties" /> <c>&lt;a:bodyPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ListStyle" /> <c>&lt;a:lstStyle></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Paragraph" /> <c>&lt;a:p></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public abstract partial class TextBodyType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2125,9 +2125,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>Body Properties.</para>
         /// <para>Represents the following element tag in the schema: a:bodyPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.BodyProperties? BodyProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.BodyProperties>();
@@ -2138,9 +2138,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>Text List Styles.</para>
         /// <para>Represents the following element tag in the schema: a:lstStyle.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.ListStyle? ListStyle
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.ListStyle>();
@@ -2153,13 +2153,13 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:tx.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.RichTextBody" /> <c>&lt;cx:rich></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TextData" /> <c>&lt;cx:txData></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Text : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2214,9 +2214,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>TextData.</para>
         /// <para>Represents the following element tag in the schema: cx:txData.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TextData? TextData
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TextData>();
@@ -2227,9 +2227,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>RichTextBody.</para>
         /// <para>Represents the following element tag in the schema: cx:rich.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.RichTextBody? RichTextBody
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.RichTextBody>();
@@ -2245,7 +2245,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:spPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.BlipFill" /> <c>&lt;a:blipFill></c></description></item>
@@ -2264,7 +2264,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.SolidFill" /> <c>&lt;a:solidFill></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Transform2D" /> <c>&lt;a:xfrm></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ShapeProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2375,9 +2375,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>2D Transform for Individual Objects.</para>
         /// <para>Represents the following element tag in the schema: a:xfrm.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Transform2D? Transform2D
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Transform2D>();
@@ -2393,7 +2393,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:unitsLabel.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties" /> <c>&lt;cx:spPr></c></description></item>
@@ -2401,7 +2401,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList" /> <c>&lt;cx:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Text" /> <c>&lt;cx:tx></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class AxisUnitsLabel : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2457,9 +2457,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>Text.</para>
         /// <para>Represents the following element tag in the schema: cx:tx.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Text? Text
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Text>();
@@ -2470,9 +2470,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>ShapeProperties.</para>
         /// <para>Represents the following element tag in the schema: cx:spPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties? ShapeProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties>();
@@ -2483,9 +2483,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>TxPrTextBody.</para>
         /// <para>Represents the following element tag in the schema: cx:txPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody? TxPrTextBody
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody>();
@@ -2496,9 +2496,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: cx:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList>();
@@ -2656,7 +2656,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:title.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties" /> <c>&lt;cx:spPr></c></description></item>
@@ -2664,7 +2664,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList" /> <c>&lt;cx:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Text" /> <c>&lt;cx:tx></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class AxisTitle : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2720,9 +2720,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>Text.</para>
         /// <para>Represents the following element tag in the schema: cx:tx.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Text? Text
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Text>();
@@ -2733,9 +2733,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>ShapeProperties.</para>
         /// <para>Represents the following element tag in the schema: cx:spPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties? ShapeProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties>();
@@ -2746,9 +2746,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>TxPrTextBody.</para>
         /// <para>Represents the following element tag in the schema: cx:txPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody? TxPrTextBody
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody>();
@@ -2759,9 +2759,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: cx:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList>();
@@ -2777,13 +2777,13 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:units.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.AxisUnitsLabel" /> <c>&lt;cx:unitsLabel></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList" /> <c>&lt;cx:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class AxisUnits : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2847,9 +2847,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>AxisUnitsLabel.</para>
         /// <para>Represents the following element tag in the schema: cx:unitsLabel.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.AxisUnitsLabel? AxisUnitsLabel
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.AxisUnitsLabel>();
@@ -2860,9 +2860,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: cx:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList>();
@@ -2878,13 +2878,13 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:majorGridlines.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties" /> <c>&lt;cx:spPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList" /> <c>&lt;cx:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class MajorGridlinesGridlines : OpenXmlGridlinesElement
     {
         /// <summary>
@@ -2939,13 +2939,13 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:minorGridlines.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties" /> <c>&lt;cx:spPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList" /> <c>&lt;cx:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class MinorGridlinesGridlines : OpenXmlGridlinesElement
     {
         /// <summary>
@@ -3000,13 +3000,13 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties" /> <c>&lt;cx:spPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList" /> <c>&lt;cx:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public abstract partial class OpenXmlGridlinesElement : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3051,9 +3051,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>ShapeProperties.</para>
         /// <para>Represents the following element tag in the schema: cx:spPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties? ShapeProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties>();
@@ -3064,9 +3064,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: cx:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList>();
@@ -3079,12 +3079,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:majorTickMarks.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList" /> <c>&lt;cx:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class MajorTickMarksTickMarks : OpenXmlTickMarksElement
     {
         /// <summary>
@@ -3138,12 +3138,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:minorTickMarks.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList" /> <c>&lt;cx:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class MinorTickMarksTickMarks : OpenXmlTickMarksElement
     {
         /// <summary>
@@ -3197,12 +3197,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList" /> <c>&lt;cx:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public abstract partial class OpenXmlTickMarksElement : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3258,9 +3258,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: cx:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList>();
@@ -3273,12 +3273,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:tickLabels.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList" /> <c>&lt;cx:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TickLabels : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3328,9 +3328,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: cx:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList>();
@@ -3539,12 +3539,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:geoLocation.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Address" /> <c>&lt;cx:address></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class GeoLocation : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3645,9 +3645,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>Address.</para>
         /// <para>Represents the following element tag in the schema: cx:address.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Address? Address
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Address>();
@@ -3747,12 +3747,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:geoLocations.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoLocation" /> <c>&lt;cx:geoLocation></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class GeoLocations : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3802,9 +3802,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>GeoLocation.</para>
         /// <para>Represents the following element tag in the schema: cx:geoLocation.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoLocation? GeoLocation
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoLocation>();
@@ -3820,13 +3820,13 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:geoLocationQueryResult.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoLocationQuery" /> <c>&lt;cx:geoLocationQuery></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoLocations" /> <c>&lt;cx:geoLocations></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class GeoLocationQueryResult : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3878,9 +3878,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>GeoLocationQuery.</para>
         /// <para>Represents the following element tag in the schema: cx:geoLocationQuery.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoLocationQuery? GeoLocationQuery
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoLocationQuery>();
@@ -3891,9 +3891,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>GeoLocations.</para>
         /// <para>Represents the following element tag in the schema: cx:geoLocations.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoLocations? GeoLocations
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoLocations>();
@@ -3977,12 +3977,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:geoPolygons.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoPolygon" /> <c>&lt;cx:geoPolygon></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class GeoPolygons : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4037,12 +4037,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:copyrights.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.CopyrightXsdstring" /> <c>&lt;cx:copyright></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Copyrights : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4151,13 +4151,13 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:geoData.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Copyrights" /> <c>&lt;cx:copyrights></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoPolygons" /> <c>&lt;cx:geoPolygons></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class GeoData : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4294,9 +4294,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>GeoPolygons.</para>
         /// <para>Represents the following element tag in the schema: cx:geoPolygons.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoPolygons? GeoPolygons
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoPolygons>();
@@ -4307,9 +4307,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>Copyrights.</para>
         /// <para>Represents the following element tag in the schema: cx:copyrights.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Copyrights? Copyrights
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Copyrights>();
@@ -4325,13 +4325,13 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:geoDataEntityQueryResult.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoData" /> <c>&lt;cx:geoData></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoDataEntityQuery" /> <c>&lt;cx:geoDataEntityQuery></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class GeoDataEntityQueryResult : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4383,9 +4383,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>GeoDataEntityQuery.</para>
         /// <para>Represents the following element tag in the schema: cx:geoDataEntityQuery.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoDataEntityQuery? GeoDataEntityQuery
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoDataEntityQuery>();
@@ -4396,9 +4396,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>GeoData.</para>
         /// <para>Represents the following element tag in the schema: cx:geoData.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoData? GeoData
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoData>();
@@ -4536,13 +4536,13 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:geoDataPointToEntityQueryResult.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoDataPointQuery" /> <c>&lt;cx:geoDataPointQuery></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoDataPointToEntityQuery" /> <c>&lt;cx:geoDataPointToEntityQuery></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class GeoDataPointToEntityQueryResult : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4594,9 +4594,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>GeoDataPointQuery.</para>
         /// <para>Represents the following element tag in the schema: cx:geoDataPointQuery.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoDataPointQuery? GeoDataPointQuery
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoDataPointQuery>();
@@ -4607,9 +4607,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>GeoDataPointToEntityQuery.</para>
         /// <para>Represents the following element tag in the schema: cx:geoDataPointToEntityQuery.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoDataPointToEntityQuery? GeoDataPointToEntityQuery
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoDataPointToEntityQuery>();
@@ -4664,12 +4664,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:geoChildTypes.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.EntityType" /> <c>&lt;cx:entityType></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class GeoChildTypes : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4792,12 +4792,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:geoChildEntitiesQuery.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoChildTypes" /> <c>&lt;cx:geoChildTypes></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class GeoChildEntitiesQuery : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4862,9 +4862,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>GeoChildTypes.</para>
         /// <para>Represents the following element tag in the schema: cx:geoChildTypes.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoChildTypes? GeoChildTypes
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoChildTypes>();
@@ -4880,12 +4880,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:geoChildEntities.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoHierarchyEntity" /> <c>&lt;cx:geoHierarchyEntity></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class GeoChildEntities : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4940,13 +4940,13 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:geoChildEntitiesQueryResult.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoChildEntities" /> <c>&lt;cx:geoChildEntities></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoChildEntitiesQuery" /> <c>&lt;cx:geoChildEntitiesQuery></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class GeoChildEntitiesQueryResult : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4998,9 +4998,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>GeoChildEntitiesQuery.</para>
         /// <para>Represents the following element tag in the schema: cx:geoChildEntitiesQuery.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoChildEntitiesQuery? GeoChildEntitiesQuery
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoChildEntitiesQuery>();
@@ -5011,9 +5011,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>GeoChildEntities.</para>
         /// <para>Represents the following element tag in the schema: cx:geoChildEntities.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoChildEntities? GeoChildEntities
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoChildEntities>();
@@ -5163,14 +5163,14 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:geoParentEntitiesQueryResult.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoEntity" /> <c>&lt;cx:geoEntity></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoParentEntitiesQuery" /> <c>&lt;cx:geoParentEntitiesQuery></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoParentEntity" /> <c>&lt;cx:geoParentEntity></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class GeoParentEntitiesQueryResult : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5224,9 +5224,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>GeoParentEntitiesQuery.</para>
         /// <para>Represents the following element tag in the schema: cx:geoParentEntitiesQuery.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoParentEntitiesQuery? GeoParentEntitiesQuery
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoParentEntitiesQuery>();
@@ -5237,9 +5237,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>GeoEntity.</para>
         /// <para>Represents the following element tag in the schema: cx:geoEntity.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoEntity? GeoEntity
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoEntity>();
@@ -5250,9 +5250,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>GeoParentEntity.</para>
         /// <para>Represents the following element tag in the schema: cx:geoParentEntity.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoParentEntity? GeoParentEntity
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoParentEntity>();
@@ -5268,12 +5268,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:geoLocationQueryResults.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoLocationQueryResult" /> <c>&lt;cx:geoLocationQueryResult></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class GeoLocationQueryResults : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5328,12 +5328,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:geoDataEntityQueryResults.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoDataEntityQueryResult" /> <c>&lt;cx:geoDataEntityQueryResult></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class GeoDataEntityQueryResults : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5388,12 +5388,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:geoDataPointToEntityQueryResults.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoDataPointToEntityQueryResult" /> <c>&lt;cx:geoDataPointToEntityQueryResult></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class GeoDataPointToEntityQueryResults : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5448,12 +5448,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:geoChildEntitiesQueryResults.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoChildEntitiesQueryResult" /> <c>&lt;cx:geoChildEntitiesQueryResult></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class GeoChildEntitiesQueryResults : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5508,12 +5508,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:geoParentEntitiesQueryResults.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoParentEntitiesQueryResult" /> <c>&lt;cx:geoParentEntitiesQueryResult></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class GeoParentEntitiesQueryResults : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5607,7 +5607,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:clear.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoChildEntitiesQueryResults" /> <c>&lt;cx:geoChildEntitiesQueryResults></c></description></item>
@@ -5616,7 +5616,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoLocationQueryResults" /> <c>&lt;cx:geoLocationQueryResults></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoParentEntitiesQueryResults" /> <c>&lt;cx:geoParentEntitiesQueryResults></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Clear : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5674,9 +5674,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>GeoLocationQueryResults.</para>
         /// <para>Represents the following element tag in the schema: cx:geoLocationQueryResults.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoLocationQueryResults? GeoLocationQueryResults
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoLocationQueryResults>();
@@ -5687,9 +5687,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>GeoDataEntityQueryResults.</para>
         /// <para>Represents the following element tag in the schema: cx:geoDataEntityQueryResults.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoDataEntityQueryResults? GeoDataEntityQueryResults
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoDataEntityQueryResults>();
@@ -5700,9 +5700,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>GeoDataPointToEntityQueryResults.</para>
         /// <para>Represents the following element tag in the schema: cx:geoDataPointToEntityQueryResults.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoDataPointToEntityQueryResults? GeoDataPointToEntityQueryResults
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoDataPointToEntityQueryResults>();
@@ -5713,9 +5713,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>GeoChildEntitiesQueryResults.</para>
         /// <para>Represents the following element tag in the schema: cx:geoChildEntitiesQueryResults.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoChildEntitiesQueryResults? GeoChildEntitiesQueryResults
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoChildEntitiesQueryResults>();
@@ -5726,9 +5726,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>GeoParentEntitiesQueryResults.</para>
         /// <para>Represents the following element tag in the schema: cx:geoParentEntitiesQueryResults.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoParentEntitiesQueryResults? GeoParentEntitiesQueryResults
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoParentEntitiesQueryResults>();
@@ -5744,13 +5744,13 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:geoCache.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Clear" /> <c>&lt;cx:clear></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Xsdbase64Binary" /> <c>&lt;cx:binary></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class GeoCache : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6008,13 +6008,13 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:binning.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Xsddouble" /> <c>&lt;cx:binSize></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.BinCountXsdunsignedInt" /> <c>&lt;cx:binCount></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Binning : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6114,9 +6114,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>Xsddouble.</para>
         /// <para>Represents the following element tag in the schema: cx:binSize.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Xsddouble? Xsddouble
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Xsddouble>();
@@ -6127,9 +6127,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>BinCountXsdunsignedInt.</para>
         /// <para>Represents the following element tag in the schema: cx:binCount.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.BinCountXsdunsignedInt? BinCountXsdunsignedInt
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.BinCountXsdunsignedInt>();
@@ -6145,12 +6145,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:geography.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoCache" /> <c>&lt;cx:geoCache></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Geography : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6266,9 +6266,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>GeoCache.</para>
         /// <para>Represents the following element tag in the schema: cx:geoCache.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoCache? GeoCache
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.GeoCache>();
@@ -6321,12 +6321,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:subtotals.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.UnsignedIntegerType" /> <c>&lt;cx:idx></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Subtotals : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6486,14 +6486,14 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:min.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtremeValueColorPosition" /> <c>&lt;cx:extremeValue></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NumberColorPosition" /> <c>&lt;cx:number></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PercentageColorPosition" /> <c>&lt;cx:percent></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class MinValueColorEndPosition : OpenXmlValueColorEndPositionElement
     {
         /// <summary>
@@ -6549,14 +6549,14 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:max.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtremeValueColorPosition" /> <c>&lt;cx:extremeValue></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NumberColorPosition" /> <c>&lt;cx:number></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PercentageColorPosition" /> <c>&lt;cx:percent></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class MaxValueColorEndPosition : OpenXmlValueColorEndPositionElement
     {
         /// <summary>
@@ -6612,14 +6612,14 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtremeValueColorPosition" /> <c>&lt;cx:extremeValue></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NumberColorPosition" /> <c>&lt;cx:number></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PercentageColorPosition" /> <c>&lt;cx:percent></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public abstract partial class OpenXmlValueColorEndPositionElement : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6665,9 +6665,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>ExtremeValueColorPosition.</para>
         /// <para>Represents the following element tag in the schema: cx:extremeValue.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtremeValueColorPosition? ExtremeValueColorPosition
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtremeValueColorPosition>();
@@ -6678,9 +6678,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>NumberColorPosition.</para>
         /// <para>Represents the following element tag in the schema: cx:number.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NumberColorPosition? NumberColorPosition
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NumberColorPosition>();
@@ -6691,9 +6691,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>PercentageColorPosition.</para>
         /// <para>Represents the following element tag in the schema: cx:percent.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PercentageColorPosition? PercentageColorPosition
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PercentageColorPosition>();
@@ -6706,13 +6706,13 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:mid.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NumberColorPosition" /> <c>&lt;cx:number></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PercentageColorPosition" /> <c>&lt;cx:percent></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ValueColorMiddlePosition : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6764,9 +6764,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>NumberColorPosition.</para>
         /// <para>Represents the following element tag in the schema: cx:number.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NumberColorPosition? NumberColorPosition
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NumberColorPosition>();
@@ -6777,9 +6777,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>PercentageColorPosition.</para>
         /// <para>Represents the following element tag in the schema: cx:percent.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PercentageColorPosition? PercentageColorPosition
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PercentageColorPosition>();
@@ -6854,7 +6854,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:dataLabel.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties" /> <c>&lt;cx:spPr></c></description></item>
@@ -6864,7 +6864,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NumberFormat" /> <c>&lt;cx:numFmt></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.SeparatorXsdstring" /> <c>&lt;cx:separator></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DataLabel : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6950,9 +6950,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>NumberFormat.</para>
         /// <para>Represents the following element tag in the schema: cx:numFmt.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NumberFormat? NumberFormat
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NumberFormat>();
@@ -6963,9 +6963,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>ShapeProperties.</para>
         /// <para>Represents the following element tag in the schema: cx:spPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties? ShapeProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties>();
@@ -6976,9 +6976,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>TxPrTextBody.</para>
         /// <para>Represents the following element tag in the schema: cx:txPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody? TxPrTextBody
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody>();
@@ -6989,9 +6989,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>DataLabelVisibilities.</para>
         /// <para>Represents the following element tag in the schema: cx:visibility.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.DataLabelVisibilities? DataLabelVisibilities
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.DataLabelVisibilities>();
@@ -7002,9 +7002,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>SeparatorXsdstring.</para>
         /// <para>Represents the following element tag in the schema: cx:separator.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.SeparatorXsdstring? SeparatorXsdstring
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.SeparatorXsdstring>();
@@ -7015,9 +7015,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: cx:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList>();
@@ -7073,14 +7073,14 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:valueColors.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.MinColorSolidColorFillProperties" /> <c>&lt;cx:minColor></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.MidColorSolidColorFillProperties" /> <c>&lt;cx:midColor></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.MaxColorSolidColorFillProperties" /> <c>&lt;cx:maxColor></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ValueColors : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7134,9 +7134,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>MinColorSolidColorFillProperties.</para>
         /// <para>Represents the following element tag in the schema: cx:minColor.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.MinColorSolidColorFillProperties? MinColorSolidColorFillProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.MinColorSolidColorFillProperties>();
@@ -7147,9 +7147,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>MidColorSolidColorFillProperties.</para>
         /// <para>Represents the following element tag in the schema: cx:midColor.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.MidColorSolidColorFillProperties? MidColorSolidColorFillProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.MidColorSolidColorFillProperties>();
@@ -7160,9 +7160,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>MaxColorSolidColorFillProperties.</para>
         /// <para>Represents the following element tag in the schema: cx:maxColor.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.MaxColorSolidColorFillProperties? MaxColorSolidColorFillProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.MaxColorSolidColorFillProperties>();
@@ -7178,14 +7178,14 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:valueColorPositions.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.MinValueColorEndPosition" /> <c>&lt;cx:min></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.MaxValueColorEndPosition" /> <c>&lt;cx:max></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ValueColorMiddlePosition" /> <c>&lt;cx:mid></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ValueColorPositions : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7254,9 +7254,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>MinValueColorEndPosition.</para>
         /// <para>Represents the following element tag in the schema: cx:min.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.MinValueColorEndPosition? MinValueColorEndPosition
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.MinValueColorEndPosition>();
@@ -7267,9 +7267,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>ValueColorMiddlePosition.</para>
         /// <para>Represents the following element tag in the schema: cx:mid.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ValueColorMiddlePosition? ValueColorMiddlePosition
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ValueColorMiddlePosition>();
@@ -7280,9 +7280,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>MaxValueColorEndPosition.</para>
         /// <para>Represents the following element tag in the schema: cx:max.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.MaxValueColorEndPosition? MaxValueColorEndPosition
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.MaxValueColorEndPosition>();
@@ -7298,13 +7298,13 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:dataPt.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties" /> <c>&lt;cx:spPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList" /> <c>&lt;cx:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DataPoint : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7371,9 +7371,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>ShapeProperties.</para>
         /// <para>Represents the following element tag in the schema: cx:spPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties? ShapeProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties>();
@@ -7384,9 +7384,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: cx:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList>();
@@ -7402,7 +7402,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:dataLabels.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties" /> <c>&lt;cx:spPr></c></description></item>
@@ -7414,7 +7414,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NumberFormat" /> <c>&lt;cx:numFmt></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.SeparatorXsdstring" /> <c>&lt;cx:separator></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DataLabels : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7490,9 +7490,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>NumberFormat.</para>
         /// <para>Represents the following element tag in the schema: cx:numFmt.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NumberFormat? NumberFormat
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.NumberFormat>();
@@ -7503,9 +7503,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>ShapeProperties.</para>
         /// <para>Represents the following element tag in the schema: cx:spPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties? ShapeProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties>();
@@ -7516,9 +7516,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>TxPrTextBody.</para>
         /// <para>Represents the following element tag in the schema: cx:txPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody? TxPrTextBody
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody>();
@@ -7529,9 +7529,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>DataLabelVisibilities.</para>
         /// <para>Represents the following element tag in the schema: cx:visibility.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.DataLabelVisibilities? DataLabelVisibilities
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.DataLabelVisibilities>();
@@ -7542,9 +7542,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>SeparatorXsdstring.</para>
         /// <para>Represents the following element tag in the schema: cx:separator.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.SeparatorXsdstring? SeparatorXsdstring
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.SeparatorXsdstring>();
@@ -7600,7 +7600,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:layoutPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Aggregation" /> <c>&lt;cx:aggregation></c></description></item>
@@ -7613,7 +7613,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Statistics" /> <c>&lt;cx:statistics></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Subtotals" /> <c>&lt;cx:subtotals></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SeriesLayoutProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7682,9 +7682,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>ParentLabelLayout.</para>
         /// <para>Represents the following element tag in the schema: cx:parentLabelLayout.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ParentLabelLayout? ParentLabelLayout
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ParentLabelLayout>();
@@ -7695,9 +7695,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>RegionLabelLayout.</para>
         /// <para>Represents the following element tag in the schema: cx:regionLabelLayout.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.RegionLabelLayout? RegionLabelLayout
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.RegionLabelLayout>();
@@ -7708,9 +7708,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>SeriesElementVisibilities.</para>
         /// <para>Represents the following element tag in the schema: cx:visibility.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.SeriesElementVisibilities? SeriesElementVisibilities
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.SeriesElementVisibilities>();
@@ -7765,13 +7765,13 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:plotSurface.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties" /> <c>&lt;cx:spPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList" /> <c>&lt;cx:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PlotSurface : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7823,9 +7823,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>ShapeProperties.</para>
         /// <para>Represents the following element tag in the schema: cx:spPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties? ShapeProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties>();
@@ -7836,9 +7836,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: cx:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList>();
@@ -7854,7 +7854,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:series.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties" /> <c>&lt;cx:spPr></c></description></item>
@@ -7868,7 +7868,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ValueColors" /> <c>&lt;cx:valueColors></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.AxisId" /> <c>&lt;cx:axisId></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Series : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7995,9 +7995,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>Text.</para>
         /// <para>Represents the following element tag in the schema: cx:tx.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Text? Text
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Text>();
@@ -8008,9 +8008,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>ShapeProperties.</para>
         /// <para>Represents the following element tag in the schema: cx:spPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties? ShapeProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties>();
@@ -8021,9 +8021,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>ValueColors.</para>
         /// <para>Represents the following element tag in the schema: cx:valueColors.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ValueColors? ValueColors
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ValueColors>();
@@ -8034,9 +8034,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>ValueColorPositions.</para>
         /// <para>Represents the following element tag in the schema: cx:valueColorPositions.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ValueColorPositions? ValueColorPositions
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ValueColorPositions>();
@@ -8052,14 +8052,14 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:plotAreaRegion.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList" /> <c>&lt;cx:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PlotSurface" /> <c>&lt;cx:plotSurface></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Series" /> <c>&lt;cx:series></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PlotAreaRegion : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8113,9 +8113,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>PlotSurface.</para>
         /// <para>Represents the following element tag in the schema: cx:plotSurface.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PlotSurface? PlotSurface
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PlotSurface>();
@@ -8131,7 +8131,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:axis.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties" /> <c>&lt;cx:spPr></c></description></item>
@@ -8148,7 +8148,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.MinorTickMarksTickMarks" /> <c>&lt;cx:minorTickMarks></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ValueAxisScaling" /> <c>&lt;cx:valScaling></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Axis : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8256,7 +8256,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:title.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties" /> <c>&lt;cx:spPr></c></description></item>
@@ -8264,7 +8264,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList" /> <c>&lt;cx:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Text" /> <c>&lt;cx:tx></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ChartTitle : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8354,9 +8354,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>Text.</para>
         /// <para>Represents the following element tag in the schema: cx:tx.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Text? Text
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Text>();
@@ -8367,9 +8367,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>ShapeProperties.</para>
         /// <para>Represents the following element tag in the schema: cx:spPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties? ShapeProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties>();
@@ -8380,9 +8380,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>TxPrTextBody.</para>
         /// <para>Represents the following element tag in the schema: cx:txPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody? TxPrTextBody
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody>();
@@ -8393,9 +8393,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: cx:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList>();
@@ -8411,7 +8411,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:plotArea.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties" /> <c>&lt;cx:spPr></c></description></item>
@@ -8419,7 +8419,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList" /> <c>&lt;cx:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PlotAreaRegion" /> <c>&lt;cx:plotAreaRegion></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PlotArea : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8475,9 +8475,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>PlotAreaRegion.</para>
         /// <para>Represents the following element tag in the schema: cx:plotAreaRegion.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PlotAreaRegion? PlotAreaRegion
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PlotAreaRegion>();
@@ -8493,14 +8493,14 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:legend.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties" /> <c>&lt;cx:spPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody" /> <c>&lt;cx:txPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList" /> <c>&lt;cx:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Legend : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8588,9 +8588,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>ShapeProperties.</para>
         /// <para>Represents the following element tag in the schema: cx:spPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties? ShapeProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties>();
@@ -8601,9 +8601,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>TxPrTextBody.</para>
         /// <para>Represents the following element tag in the schema: cx:txPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody? TxPrTextBody
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.TxPrTextBody>();
@@ -8614,9 +8614,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: cx:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList>();
@@ -8632,13 +8632,13 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:fmtOvr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties" /> <c>&lt;cx:spPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList" /> <c>&lt;cx:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class FormatOverride : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8705,9 +8705,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>ShapeProperties.</para>
         /// <para>Represents the following element tag in the schema: cx:spPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties? ShapeProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ShapeProperties>();
@@ -8718,9 +8718,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: cx:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList>();
@@ -8736,7 +8736,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:headerFooter.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.OddHeaderXsdstring" /> <c>&lt;cx:oddHeader></c></description></item>
@@ -8746,7 +8746,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.FirstHeaderXsdstring" /> <c>&lt;cx:firstHeader></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.FirstFooterXsdstring" /> <c>&lt;cx:firstFooter></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class HeaderFooter : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8840,9 +8840,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>OddHeaderXsdstring.</para>
         /// <para>Represents the following element tag in the schema: cx:oddHeader.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.OddHeaderXsdstring? OddHeaderXsdstring
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.OddHeaderXsdstring>();
@@ -8853,9 +8853,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>OddFooterXsdstring.</para>
         /// <para>Represents the following element tag in the schema: cx:oddFooter.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.OddFooterXsdstring? OddFooterXsdstring
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.OddFooterXsdstring>();
@@ -8866,9 +8866,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>EvenHeaderXsdstring.</para>
         /// <para>Represents the following element tag in the schema: cx:evenHeader.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.EvenHeaderXsdstring? EvenHeaderXsdstring
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.EvenHeaderXsdstring>();
@@ -8879,9 +8879,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>EvenFooterXsdstring.</para>
         /// <para>Represents the following element tag in the schema: cx:evenFooter.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.EvenFooterXsdstring? EvenFooterXsdstring
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.EvenFooterXsdstring>();
@@ -8892,9 +8892,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>FirstHeaderXsdstring.</para>
         /// <para>Represents the following element tag in the schema: cx:firstHeader.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.FirstHeaderXsdstring? FirstHeaderXsdstring
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.FirstHeaderXsdstring>();
@@ -8905,9 +8905,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>FirstFooterXsdstring.</para>
         /// <para>Represents the following element tag in the schema: cx:firstFooter.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.FirstFooterXsdstring? FirstFooterXsdstring
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.FirstFooterXsdstring>();
@@ -9158,14 +9158,14 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:chartData.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Data" /> <c>&lt;cx:data></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList" /> <c>&lt;cx:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExternalData" /> <c>&lt;cx:externalData></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ChartData : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9219,9 +9219,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>ExternalData.</para>
         /// <para>Represents the following element tag in the schema: cx:externalData.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExternalData? ExternalData
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExternalData>();
@@ -9237,7 +9237,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:chart.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ChartTitle" /> <c>&lt;cx:title></c></description></item>
@@ -9245,7 +9245,7 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Legend" /> <c>&lt;cx:legend></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PlotArea" /> <c>&lt;cx:plotArea></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Chart : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9301,9 +9301,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>ChartTitle.</para>
         /// <para>Represents the following element tag in the schema: cx:title.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ChartTitle? ChartTitle
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ChartTitle>();
@@ -9314,9 +9314,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>PlotArea.</para>
         /// <para>Represents the following element tag in the schema: cx:plotArea.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PlotArea? PlotArea
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PlotArea>();
@@ -9327,9 +9327,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>Legend.</para>
         /// <para>Represents the following element tag in the schema: cx:legend.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Legend? Legend
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.Legend>();
@@ -9340,9 +9340,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: cx:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.ExtensionList>();
@@ -9358,12 +9358,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:clrMapOvr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.ExtensionList" /> <c>&lt;a:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ColorMappingType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9594,9 +9594,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: a:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:a = http://schemas.openxmlformats.org/drawingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>();
@@ -9612,12 +9612,12 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:fmtOvrs.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.FormatOverride" /> <c>&lt;cx:fmtOvr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class FormatOverrides : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9672,14 +9672,14 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is cx:printSettings.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.HeaderFooter" /> <c>&lt;cx:headerFooter></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PageMargins" /> <c>&lt;cx:pageMargins></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PageSetup" /> <c>&lt;cx:pageSetup></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PrintSettings : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9733,9 +9733,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>HeaderFooter.</para>
         /// <para>Represents the following element tag in the schema: cx:headerFooter.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.HeaderFooter? HeaderFooter
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.HeaderFooter>();
@@ -9746,9 +9746,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>PageMargins.</para>
         /// <para>Represents the following element tag in the schema: cx:pageMargins.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PageMargins? PageMargins
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PageMargins>();
@@ -9759,9 +9759,9 @@ namespace DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing
         /// <para>PageSetup.</para>
         /// <para>Represents the following element tag in the schema: cx:pageSetup.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:cx = http://schemas.microsoft.com/office/drawing/2014/chartex
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PageSetup? PageSetup
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing.PageSetup>();

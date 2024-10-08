@@ -22,7 +22,7 @@ namespace DocumentFormat.OpenXml.Office.Excel
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xne:macrosheet.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.AutoFilter" /> <c>&lt;x:autoFilter></c></description></item>
@@ -53,7 +53,7 @@ namespace DocumentFormat.OpenXml.Office.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.SheetViews" /> <c>&lt;x:sheetViews></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.SortState" /> <c>&lt;x:sortState></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Macrosheet : OpenXmlPartRootElement
     {
         /// <summary>
@@ -154,9 +154,9 @@ namespace DocumentFormat.OpenXml.Office.Excel
         /// <para>Sheet Properties.</para>
         /// <para>Represents the following element tag in the schema: x:sheetPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.SheetProperties? SheetProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetProperties>();
@@ -167,9 +167,9 @@ namespace DocumentFormat.OpenXml.Office.Excel
         /// <para>Macro Sheet Dimensions.</para>
         /// <para>Represents the following element tag in the schema: x:dimension.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.SheetDimension? SheetDimension
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetDimension>();
@@ -180,9 +180,9 @@ namespace DocumentFormat.OpenXml.Office.Excel
         /// <para>Macro Sheet Views.</para>
         /// <para>Represents the following element tag in the schema: x:sheetViews.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.SheetViews? SheetViews
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetViews>();
@@ -193,9 +193,9 @@ namespace DocumentFormat.OpenXml.Office.Excel
         /// <para>Sheet Format Properties.</para>
         /// <para>Represents the following element tag in the schema: x:sheetFormatPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.SheetFormatProperties? SheetFormatProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetFormatProperties>();
@@ -242,13 +242,13 @@ namespace DocumentFormat.OpenXml.Office.Excel
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xne:worksheetSortMap.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.ColumnSortMap" /> <c>&lt;xne:colSortMap></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.RowSortMap" /> <c>&lt;xne:rowSortMap></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class WorksheetSortMap : OpenXmlPartRootElement
     {
         /// <summary>
@@ -299,9 +299,9 @@ namespace DocumentFormat.OpenXml.Office.Excel
         /// <para>Row Sort Map.</para>
         /// <para>Represents the following element tag in the schema: xne:rowSortMap.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xne = http://schemas.microsoft.com/office/excel/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office.Excel.RowSortMap? RowSortMap
         {
             get => GetElement<DocumentFormat.OpenXml.Office.Excel.RowSortMap>();
@@ -312,9 +312,9 @@ namespace DocumentFormat.OpenXml.Office.Excel
         /// <para>Column Sort Map.</para>
         /// <para>Represents the following element tag in the schema: xne:colSortMap.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xne = http://schemas.microsoft.com/office/excel/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office.Excel.ColumnSortMap? ColumnSortMap
         {
             get => GetElement<DocumentFormat.OpenXml.Office.Excel.ColumnSortMap>();
@@ -438,12 +438,12 @@ namespace DocumentFormat.OpenXml.Office.Excel
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xne:rowSortMap.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.RowSortMapItem" /> <c>&lt;xne:row></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class RowSortMap : OpenXmlCompositeElement
     {
         /// <summary>
@@ -526,12 +526,12 @@ namespace DocumentFormat.OpenXml.Office.Excel
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xne:colSortMap.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.ColumnSortMapItem" /> <c>&lt;xne:col></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ColumnSortMap : OpenXmlCompositeElement
     {
         /// <summary>

@@ -23,12 +23,12 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:revHdrs.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.RevExHeader" /> <c>&lt;xr:hdr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class RevExHeaders : OpenXmlCompositeElement
     {
         /// <summary>
@@ -140,7 +140,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:revStream.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.RevExChangeCell" /> <c>&lt;xr:xrrc></c></description></item>
@@ -158,7 +158,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.RevisionList" /> <c>&lt;xr:xrrList></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.RevListAutoExpandRw" /> <c>&lt;xr:xrrListExpR></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class RevExStream : OpenXmlCompositeElement
     {
         /// <summary>
@@ -239,7 +239,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:dxf.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Border" /> <c>&lt;x:border></c></description></item>
@@ -250,7 +250,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Font" /> <c>&lt;x:font></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.NumberingFormat" /> <c>&lt;x:numFmt></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DifferentialFormatType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -312,9 +312,9 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>Font Properties.</para>
         /// <para>Represents the following element tag in the schema: x:font.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Font? Font
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Font>();
@@ -325,9 +325,9 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>Number Format.</para>
         /// <para>Represents the following element tag in the schema: x:numFmt.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.NumberingFormat? NumberingFormat
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.NumberingFormat>();
@@ -338,9 +338,9 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>Fill.</para>
         /// <para>Represents the following element tag in the schema: x:fill.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Fill? Fill
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Fill>();
@@ -351,9 +351,9 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>Alignment.</para>
         /// <para>Represents the following element tag in the schema: x:alignment.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Alignment? Alignment
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Alignment>();
@@ -364,9 +364,9 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>Border Properties.</para>
         /// <para>Represents the following element tag in the schema: x:border.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Border? Border
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Border>();
@@ -377,9 +377,9 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>Protection Properties.</para>
         /// <para>Represents the following element tag in the schema: x:protection.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Protection? Protection
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Protection>();
@@ -390,9 +390,9 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>Future Feature Data Storage Area.</para>
         /// <para>Represents the following element tag in the schema: x:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
@@ -462,7 +462,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:objectState.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.AutoFilter" /> <c>&lt;xr:autoFilter></c></description></item>
@@ -472,7 +472,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.pivotTableDefinition" /> <c>&lt;xr:pivotTableDefinition></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.SparklineGroup" /> <c>&lt;xr:sparklineGroup></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class StateBasedObject : OpenXmlCompositeElement
     {
         /// <summary>
@@ -532,9 +532,9 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>Represents an external link to another workbook..</para>
         /// <para>Represents the following element tag in the schema: xr:dataValidation.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xr = http://schemas.microsoft.com/office/spreadsheetml/2014/revision
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Excel.DataValidation? DataValidation
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.DataValidation>();
@@ -545,9 +545,9 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>Represents a hyperlink within a cell..</para>
         /// <para>Represents the following element tag in the schema: xr:hyperlink.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xr = http://schemas.microsoft.com/office/spreadsheetml/2014/revision
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Excel.Hyperlink? Hyperlink
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.Hyperlink>();
@@ -558,9 +558,9 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>Represents a sparkline group of 1 or more sparklines..</para>
         /// <para>Represents the following element tag in the schema: xr:sparklineGroup.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xr = http://schemas.microsoft.com/office/spreadsheetml/2014/revision
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Excel.SparklineGroup? SparklineGroup
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.SparklineGroup>();
@@ -571,9 +571,9 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>Represents one comment within a cell..</para>
         /// <para>Represents the following element tag in the schema: xr:comments.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xr = http://schemas.microsoft.com/office/spreadsheetml/2014/revision
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Excel.Comments? Comments
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.Comments>();
@@ -584,9 +584,9 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>Represents an autofilter..</para>
         /// <para>Represents the following element tag in the schema: xr:autoFilter.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xr = http://schemas.microsoft.com/office/spreadsheetml/2014/revision
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Excel.AutoFilter? AutoFilter
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.AutoFilter>();
@@ -597,9 +597,9 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>Represents a PivotTable View..</para>
         /// <para>Represents the following element tag in the schema: xr:pivotTableDefinition.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xr = http://schemas.microsoft.com/office/spreadsheetml/2014/revision
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Excel.pivotTableDefinition? pivotTableDefinition
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.pivotTableDefinition>();
@@ -628,9 +628,9 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>id, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: r:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -694,12 +694,12 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:xrrftr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.RevExTest" /> <c>&lt;xr:xrrtest></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class RevExFuture : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1296,13 +1296,13 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:xrrc.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.ChangeCellSubEdit" /> <c>&lt;xr:ccse></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.RevCell" /> <c>&lt;xr:c></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class RevExChangeCell : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1490,13 +1490,13 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:xrrf.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.DifferentialFormatType" /> <c>&lt;xr:dxf></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.ExtensionList" /> <c>&lt;xr:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class RevExFormatting : OpenXmlCompositeElement
     {
         /// <summary>
@@ -1778,9 +1778,9 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>DifferentialFormatType.</para>
         /// <para>Represents the following element tag in the schema: xr:dxf.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xr = http://schemas.microsoft.com/office/spreadsheetml/2014/revision
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Excel.DifferentialFormatType? DifferentialFormatType
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.DifferentialFormatType>();
@@ -1791,9 +1791,9 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: xr:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xr = http://schemas.microsoft.com/office/spreadsheetml/2014/revision
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Excel.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.ExtensionList>();
@@ -1809,13 +1809,13 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:xrrDefName.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.ExtensionList" /> <c>&lt;xr:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.FormulaFormula" /> <c>&lt;xr:formula></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class RevExDefinedName : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2061,9 +2061,9 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>FormulaFormula.</para>
         /// <para>Represents the following element tag in the schema: xr:formula.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xr = http://schemas.microsoft.com/office/spreadsheetml/2014/revision
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Excel.FormulaFormula? FormulaFormula
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.FormulaFormula>();
@@ -2074,9 +2074,9 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: xr:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xr = http://schemas.microsoft.com/office/spreadsheetml/2014/revision
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Excel.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.ExtensionList>();
@@ -2092,12 +2092,12 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:xrrdo.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.StateBasedHeader" /> <c>&lt;xr:hdr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class RevExDelObj : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2217,9 +2217,9 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>StateBasedHeader.</para>
         /// <para>Represents the following element tag in the schema: xr:hdr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xr = http://schemas.microsoft.com/office/spreadsheetml/2014/revision
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Excel.StateBasedHeader? StateBasedHeader
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.StateBasedHeader>();
@@ -2235,14 +2235,14 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:xrrco.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.RevisionState" /> <c>&lt;xr:body></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.RevisionStateLink" /> <c>&lt;xr:link></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.StateBasedHeader" /> <c>&lt;xr:hdr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class RevExChgObj : OpenXmlCompositeElement
     {
         /// <summary>
@@ -2369,9 +2369,9 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>StateBasedHeader.</para>
         /// <para>Represents the following element tag in the schema: xr:hdr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xr = http://schemas.microsoft.com/office/spreadsheetml/2014/revision
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Excel.StateBasedHeader? StateBasedHeader
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.StateBasedHeader>();
@@ -2842,7 +2842,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:xrrg.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.RevExChangeCell" /> <c>&lt;xr:xrrc></c></description></item>
@@ -2859,7 +2859,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.RevisionList" /> <c>&lt;xr:xrrList></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.RevListAutoExpandRw" /> <c>&lt;xr:xrrListExpR></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class RevGroup : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3033,14 +3033,14 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:c.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.RstType" /> <c>&lt;xr:is></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.FFormula" /> <c>&lt;xr:f></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.Xstring" /> <c>&lt;xr:v></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class RevCell : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3139,9 +3139,9 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>FFormula.</para>
         /// <para>Represents the following element tag in the schema: xr:f.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xr = http://schemas.microsoft.com/office/spreadsheetml/2014/revision
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Excel.FFormula? FFormula
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.FFormula>();
@@ -3152,9 +3152,9 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>Xstring.</para>
         /// <para>Represents the following element tag in the schema: xr:v.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xr = http://schemas.microsoft.com/office/spreadsheetml/2014/revision
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Excel.Xstring? Xstring
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.Xstring>();
@@ -3165,9 +3165,9 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>RstType.</para>
         /// <para>Represents the following element tag in the schema: xr:is.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xr = http://schemas.microsoft.com/office/spreadsheetml/2014/revision
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Excel.RstType? RstType
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.RstType>();
@@ -3183,12 +3183,12 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:ccse.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.RevCell" /> <c>&lt;xr:c></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ChangeCellSubEdit : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3291,12 +3291,12 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Extension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ExtensionList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3433,12 +3433,12 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:hdr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.RefMap" /> <c>&lt;xr:refmap></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class StateBasedHeader : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3551,9 +3551,9 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>RefMap.</para>
         /// <para>Represents the following element tag in the schema: xr:refmap.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xr = http://schemas.microsoft.com/office/spreadsheetml/2014/revision
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Excel.RefMap? RefMap
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.RefMap>();
@@ -3582,9 +3582,9 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>id, this property is only available in Office 2016 and later.</para>
         /// <para>Represents the following attribute in the schema: r:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -3612,7 +3612,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:body.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.FreezePanes" /> <c>&lt;xr:freezePanes></c></description></item>
@@ -3621,7 +3621,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.RowColVisualOps" /> <c>&lt;xr:rowColVisualOps></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.ShowGridlinesHeadings" /> <c>&lt;xr:showGridlinesHeadings></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class RevisionState : OpenXmlCompositeElement
     {
         /// <summary>
@@ -3679,9 +3679,9 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>RowColVisualOps.</para>
         /// <para>Represents the following element tag in the schema: xr:rowColVisualOps.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xr = http://schemas.microsoft.com/office/spreadsheetml/2014/revision
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Excel.RowColVisualOps? RowColVisualOps
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.RowColVisualOps>();
@@ -3692,9 +3692,9 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>HideUnhideSheet.</para>
         /// <para>Represents the following element tag in the schema: xr:hideUnhideSheet.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xr = http://schemas.microsoft.com/office/spreadsheetml/2014/revision
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Excel.HideUnhideSheet? HideUnhideSheet
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.HideUnhideSheet>();
@@ -3705,9 +3705,9 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>ShowGridlinesHeadings.</para>
         /// <para>Represents the following element tag in the schema: xr:showGridlinesHeadings.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xr = http://schemas.microsoft.com/office/spreadsheetml/2014/revision
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Excel.ShowGridlinesHeadings? ShowGridlinesHeadings
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.ShowGridlinesHeadings>();
@@ -3718,9 +3718,9 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>FreezePanes.</para>
         /// <para>Represents the following element tag in the schema: xr:freezePanes.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xr = http://schemas.microsoft.com/office/spreadsheetml/2014/revision
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Excel.FreezePanes? FreezePanes
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.FreezePanes>();
@@ -3731,9 +3731,9 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>Outlines.</para>
         /// <para>Represents the following element tag in the schema: xr:outlines.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xr = http://schemas.microsoft.com/office/spreadsheetml/2014/revision
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Excel.Outlines? Outlines
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Excel.Outlines>();
@@ -3749,7 +3749,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:refmap.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.RefCell" /> <c>&lt;xr:ref></c></description></item>
@@ -3758,7 +3758,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.RefTest" /> <c>&lt;xr:test></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.SheetXluid" /> <c>&lt;xr:sheetUid></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class RefMap : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4031,12 +4031,12 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:outlines.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Excel.Outline" /> <c>&lt;xr:outline></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Outlines : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4198,7 +4198,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:is.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.PhoneticProperties" /> <c>&lt;x:phoneticPr></c></description></item>
@@ -4206,7 +4206,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Run" /> <c>&lt;x:r></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Text" /> <c>&lt;x:t></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class RstType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -4262,9 +4262,9 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>Text.</para>
         /// <para>Represents the following element tag in the schema: x:t.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Text? Text
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Text>();
@@ -4803,14 +4803,14 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:dataValidation.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Formula1" /> <c>&lt;x:formula1></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Formula2" /> <c>&lt;x:formula2></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.ExcelAc.List" /> <c>&lt;x12ac:list></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DataValidation : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5011,9 +5011,9 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>List.</para>
         /// <para>Represents the following element tag in the schema: x12ac:list.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x12ac = http://schemas.microsoft.com/office/spreadsheetml/2011/1/ac
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.ExcelAc.List? List
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.ExcelAc.List>();
@@ -5024,9 +5024,9 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>Formula1.</para>
         /// <para>Represents the following element tag in the schema: x:formula1.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Formula1? Formula1
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Formula1>();
@@ -5037,9 +5037,9 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>Formula2.</para>
         /// <para>Represents the following element tag in the schema: x:formula2.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Formula2? Formula2
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Formula2>();
@@ -5078,9 +5078,9 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>Relationship Id</para>
         /// <para>Represents the following attribute in the schema: r:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -5142,7 +5142,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:sparklineGroup.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.SeriesColor" /> <c>&lt;x14:colorSeries></c></description></item>
@@ -5156,7 +5156,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.Excel.Formula" /> <c>&lt;xne:f></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Excel.Sparklines" /> <c>&lt;x14:sparklines></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SparklineGroup : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5412,9 +5412,9 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>SeriesColor.</para>
         /// <para>Represents the following element tag in the schema: x14:colorSeries.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Excel.SeriesColor? SeriesColor
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.SeriesColor>();
@@ -5425,9 +5425,9 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>NegativeColor.</para>
         /// <para>Represents the following element tag in the schema: x14:colorNegative.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Excel.NegativeColor? NegativeColor
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.NegativeColor>();
@@ -5438,9 +5438,9 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>AxisColor.</para>
         /// <para>Represents the following element tag in the schema: x14:colorAxis.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Excel.AxisColor? AxisColor
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.AxisColor>();
@@ -5451,9 +5451,9 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>MarkersColor.</para>
         /// <para>Represents the following element tag in the schema: x14:colorMarkers.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Excel.MarkersColor? MarkersColor
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.MarkersColor>();
@@ -5464,9 +5464,9 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>FirstMarkerColor.</para>
         /// <para>Represents the following element tag in the schema: x14:colorFirst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Excel.FirstMarkerColor? FirstMarkerColor
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.FirstMarkerColor>();
@@ -5477,9 +5477,9 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>LastMarkerColor.</para>
         /// <para>Represents the following element tag in the schema: x14:colorLast.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Excel.LastMarkerColor? LastMarkerColor
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.LastMarkerColor>();
@@ -5490,9 +5490,9 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>HighMarkerColor.</para>
         /// <para>Represents the following element tag in the schema: x14:colorHigh.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Excel.HighMarkerColor? HighMarkerColor
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.HighMarkerColor>();
@@ -5503,9 +5503,9 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>LowMarkerColor.</para>
         /// <para>Represents the following element tag in the schema: x14:colorLow.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Excel.LowMarkerColor? LowMarkerColor
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.LowMarkerColor>();
@@ -5516,9 +5516,9 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>Formula.</para>
         /// <para>Represents the following element tag in the schema: xne:f.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xne = http://schemas.microsoft.com/office/excel/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office.Excel.Formula? Formula
         {
             get => GetElement<DocumentFormat.OpenXml.Office.Excel.Formula>();
@@ -5529,9 +5529,9 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>Sparklines.</para>
         /// <para>Represents the following element tag in the schema: x14:sparklines.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x14 = http://schemas.microsoft.com/office/spreadsheetml/2009/9/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Excel.Sparklines? Sparklines
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.Sparklines>();
@@ -5547,14 +5547,14 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:comments.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Authors" /> <c>&lt;x:authors></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.CommentList" /> <c>&lt;x:commentList></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Comments : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5608,9 +5608,9 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>Authors.</para>
         /// <para>Represents the following element tag in the schema: x:authors.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Authors? Authors
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Authors>();
@@ -5621,9 +5621,9 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>List of Comments.</para>
         /// <para>Represents the following element tag in the schema: x:commentList.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.CommentList? CommentList
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.CommentList>();
@@ -5634,9 +5634,9 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: x:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ExtensionList>();
@@ -5652,14 +5652,14 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:autoFilter.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ExtensionList" /> <c>&lt;x:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.FilterColumn" /> <c>&lt;x:filterColumn></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.SortState" /> <c>&lt;x:sortState></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class AutoFilter : OpenXmlCompositeElement
     {
         /// <summary>
@@ -5730,7 +5730,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xr:pivotTableDefinition.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.ChartFormats" /> <c>&lt;x:chartFormats></c></description></item>
@@ -5751,7 +5751,7 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.RowHierarchiesUsage" /> <c>&lt;x:rowHierarchiesUsage></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.RowItems" /> <c>&lt;x:rowItems></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class pivotTableDefinition : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6591,9 +6591,9 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>Location.</para>
         /// <para>Represents the following element tag in the schema: x:location.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Location? Location
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Location>();
@@ -6604,9 +6604,9 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>PivotFields.</para>
         /// <para>Represents the following element tag in the schema: x:pivotFields.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.PivotFields? PivotFields
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotFields>();
@@ -6617,9 +6617,9 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>RowFields.</para>
         /// <para>Represents the following element tag in the schema: x:rowFields.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.RowFields? RowFields
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.RowFields>();
@@ -6630,9 +6630,9 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>RowItems.</para>
         /// <para>Represents the following element tag in the schema: x:rowItems.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.RowItems? RowItems
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.RowItems>();
@@ -6643,9 +6643,9 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>ColumnFields.</para>
         /// <para>Represents the following element tag in the schema: x:colFields.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ColumnFields? ColumnFields
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ColumnFields>();
@@ -6656,9 +6656,9 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>ColumnItems.</para>
         /// <para>Represents the following element tag in the schema: x:colItems.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ColumnItems? ColumnItems
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ColumnItems>();
@@ -6669,9 +6669,9 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>PageFields.</para>
         /// <para>Represents the following element tag in the schema: x:pageFields.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.PageFields? PageFields
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PageFields>();
@@ -6682,9 +6682,9 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>DataFields.</para>
         /// <para>Represents the following element tag in the schema: x:dataFields.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.DataFields? DataFields
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.DataFields>();
@@ -6695,9 +6695,9 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>Formats.</para>
         /// <para>Represents the following element tag in the schema: x:formats.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.Formats? Formats
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.Formats>();
@@ -6708,9 +6708,9 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>ConditionalFormats.</para>
         /// <para>Represents the following element tag in the schema: x:conditionalFormats.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ConditionalFormats? ConditionalFormats
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ConditionalFormats>();
@@ -6721,9 +6721,9 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>ChartFormats.</para>
         /// <para>Represents the following element tag in the schema: x:chartFormats.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ChartFormats? ChartFormats
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ChartFormats>();
@@ -6734,9 +6734,9 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>PivotHierarchies.</para>
         /// <para>Represents the following element tag in the schema: x:pivotHierarchies.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.PivotHierarchies? PivotHierarchies
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotHierarchies>();
@@ -6747,9 +6747,9 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>PivotTableStyle.</para>
         /// <para>Represents the following element tag in the schema: x:pivotTableStyleInfo.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.PivotTableStyle? PivotTableStyle
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotTableStyle>();
@@ -6760,9 +6760,9 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>PivotFilters.</para>
         /// <para>Represents the following element tag in the schema: x:filters.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.PivotFilters? PivotFilters
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotFilters>();
@@ -6773,9 +6773,9 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>RowHierarchiesUsage.</para>
         /// <para>Represents the following element tag in the schema: x:rowHierarchiesUsage.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.RowHierarchiesUsage? RowHierarchiesUsage
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.RowHierarchiesUsage>();
@@ -6786,9 +6786,9 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>ColumnHierarchiesUsage.</para>
         /// <para>Represents the following element tag in the schema: x:colHierarchiesUsage.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.ColumnHierarchiesUsage? ColumnHierarchiesUsage
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.ColumnHierarchiesUsage>();
@@ -6799,9 +6799,9 @@ namespace DocumentFormat.OpenXml.Office2016.Excel
         /// <para>PivotTableDefinitionExtensionList.</para>
         /// <para>Represents the following element tag in the schema: x:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:x = http://schemas.openxmlformats.org/spreadsheetml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Spreadsheet.PivotTableDefinitionExtensionList? PivotTableDefinitionExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Spreadsheet.PivotTableDefinitionExtensionList>();

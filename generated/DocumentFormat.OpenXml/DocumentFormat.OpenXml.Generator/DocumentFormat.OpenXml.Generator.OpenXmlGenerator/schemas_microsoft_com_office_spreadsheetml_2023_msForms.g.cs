@@ -22,12 +22,12 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms
     /// <para>This class is available in Microsoft365 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlmsforms:question.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms.ExtensionList" /> <c>&lt;xlmsforms:extLst></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Question : OpenXmlCompositeElement
     {
         /// <summary>
@@ -92,9 +92,9 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms
         /// <para>ExtensionList.</para>
         /// <para>Represents the following element tag in the schema: xlmsforms:extLst.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xlmsforms = http://schemas.microsoft.com/office/spreadsheetml/2023/msForms
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms.ExtensionList? ExtensionList
         {
             get => GetElement<DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms.ExtensionList>();
@@ -110,13 +110,13 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms
     /// <para>This class is available in Microsoft365 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlmsforms:msForm.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms.ExtensionList" /> <c>&lt;xlmsforms:extLst></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms.SyncedQuestionId" /> <c>&lt;xlmsforms:syncedQuestionId></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class MsForm : OpenXmlCompositeElement
     {
         /// <summary>
@@ -259,12 +259,12 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2023.MsForms
     /// <para>This class is available in Microsoft365 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is xlmsforms:extLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Spreadsheet.Extension" /> <c>&lt;x:ext></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ExtensionList : OpenXmlCompositeElement
     {
         /// <summary>

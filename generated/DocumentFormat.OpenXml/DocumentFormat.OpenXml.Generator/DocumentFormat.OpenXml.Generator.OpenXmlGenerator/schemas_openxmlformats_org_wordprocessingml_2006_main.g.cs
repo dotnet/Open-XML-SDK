@@ -292,9 +292,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>author</para>
         /// <para>Represents the following attribute in the schema: w:author</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Author
         {
             get => GetAttribute<StringValue>();
@@ -305,9 +305,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>date</para>
         /// <para>Represents the following attribute in the schema: w:date</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DateTimeValue? Date
         {
             get => GetAttribute<DateTimeValue>();
@@ -318,9 +318,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>dateUtc, this property is only available in Microsoft365 and later.</para>
         /// <para>Represents the following attribute in the schema: w16du:dateUtc</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w16du=http://schemas.microsoft.com/office/word/2023/wordml/word16du
-        /// </remark>
+        /// </remarks>
         public DateTimeValue? DateUtc
         {
             get => GetAttribute<DateTimeValue>();
@@ -331,9 +331,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Annotation Identifier</para>
         /// <para>Represents the following attribute in the schema: w:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -384,9 +384,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>vMerge</para>
         /// <para>Represents the following attribute in the schema: w:vMerge</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalMergeRevisionValues>? VerticalMerge
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalMergeRevisionValues>>();
@@ -397,9 +397,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>vMergeOrig</para>
         /// <para>Represents the following attribute in the schema: w:vMergeOrig</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalMergeRevisionValues>? VerticalMergeOriginal
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalMergeRevisionValues>>();
@@ -410,9 +410,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>author</para>
         /// <para>Represents the following attribute in the schema: w:author</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Author
         {
             get => GetAttribute<StringValue>();
@@ -423,9 +423,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>date</para>
         /// <para>Represents the following attribute in the schema: w:date</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DateTimeValue? Date
         {
             get => GetAttribute<DateTimeValue>();
@@ -436,9 +436,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>dateUtc, this property is only available in Microsoft365 and later.</para>
         /// <para>Represents the following attribute in the schema: w16du:dateUtc</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w16du=http://schemas.microsoft.com/office/word/2023/wordml/word16du
-        /// </remark>
+        /// </remarks>
         public DateTimeValue? DateUtc
         {
             get => GetAttribute<DateTimeValue>();
@@ -449,9 +449,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Annotation Identifier</para>
         /// <para>Represents the following attribute in the schema: w:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -509,9 +509,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>name</para>
         /// <para>Represents the following attribute in the schema: w:name</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -522,9 +522,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>colFirst</para>
         /// <para>Represents the following attribute in the schema: w:colFirst</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public Int32Value? ColumnFirst
         {
             get => GetAttribute<Int32Value>();
@@ -535,9 +535,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>colLast</para>
         /// <para>Represents the following attribute in the schema: w:colLast</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public Int32Value? ColumnLast
         {
             get => GetAttribute<Int32Value>();
@@ -548,9 +548,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>displacedByCustomXml</para>
         /// <para>Represents the following attribute in the schema: w:displacedByCustomXml</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DisplacedByCustomXmlValues>? DisplacedByCustomXml
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DisplacedByCustomXmlValues>>();
@@ -561,9 +561,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Annotation Identifier</para>
         /// <para>Represents the following attribute in the schema: w:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -744,9 +744,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>displacedByCustomXml</para>
         /// <para>Represents the following attribute in the schema: w:displacedByCustomXml</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DisplacedByCustomXmlValues>? DisplacedByCustomXml
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DisplacedByCustomXmlValues>>();
@@ -757,9 +757,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Annotation Identifier</para>
         /// <para>Represents the following attribute in the schema: w:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -851,9 +851,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>author</para>
         /// <para>Represents the following attribute in the schema: w:author</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Author
         {
             get => GetAttribute<StringValue>();
@@ -864,9 +864,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>date</para>
         /// <para>Represents the following attribute in the schema: w:date</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DateTimeValue? Date
         {
             get => GetAttribute<DateTimeValue>();
@@ -877,9 +877,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>name</para>
         /// <para>Represents the following attribute in the schema: w:name</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -890,9 +890,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>colFirst</para>
         /// <para>Represents the following attribute in the schema: w:colFirst</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public Int32Value? ColumnFirst
         {
             get => GetAttribute<Int32Value>();
@@ -903,9 +903,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>colLast</para>
         /// <para>Represents the following attribute in the schema: w:colLast</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public Int32Value? ColumnLast
         {
             get => GetAttribute<Int32Value>();
@@ -916,9 +916,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>displacedByCustomXml</para>
         /// <para>Represents the following attribute in the schema: w:displacedByCustomXml</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DisplacedByCustomXmlValues>? DisplacedByCustomXml
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DisplacedByCustomXmlValues>>();
@@ -929,9 +929,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Annotation Identifier</para>
         /// <para>Represents the following attribute in the schema: w:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -1113,9 +1113,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Annotation Identifier</para>
         /// <para>Represents the following attribute in the schema: w:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -1787,9 +1787,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>String Value</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -6289,9 +6289,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>On/Off Value</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public OnOffValue? Val
         {
             get => GetAttribute<OnOffValue>();
@@ -6324,9 +6324,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Drop Cap Frame</para>
         /// <para>Represents the following attribute in the schema: w:dropCap</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DropCapLocationValues>? DropCap
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DropCapLocationValues>>();
@@ -6337,9 +6337,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Drop Cap Vertical Height in Lines</para>
         /// <para>Represents the following attribute in the schema: w:lines</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public Int32Value? Lines
         {
             get => GetAttribute<Int32Value>();
@@ -6350,9 +6350,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Frame Width</para>
         /// <para>Represents the following attribute in the schema: w:w</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Width
         {
             get => GetAttribute<StringValue>();
@@ -6363,9 +6363,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Frame Height</para>
         /// <para>Represents the following attribute in the schema: w:h</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public UInt32Value? Height
         {
             get => GetAttribute<UInt32Value>();
@@ -6376,9 +6376,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Vertical Frame Padding</para>
         /// <para>Represents the following attribute in the schema: w:vSpace</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? VerticalSpace
         {
             get => GetAttribute<StringValue>();
@@ -6389,9 +6389,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Horizontal Frame Padding</para>
         /// <para>Represents the following attribute in the schema: w:hSpace</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? HorizontalSpace
         {
             get => GetAttribute<StringValue>();
@@ -6402,9 +6402,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Text Wrapping Around Frame</para>
         /// <para>Represents the following attribute in the schema: w:wrap</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TextWrappingValues>? Wrap
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TextWrappingValues>>();
@@ -6415,9 +6415,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Frame Horizontal Positioning Base</para>
         /// <para>Represents the following attribute in the schema: w:hAnchor</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.HorizontalAnchorValues>? HorizontalPosition
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.HorizontalAnchorValues>>();
@@ -6428,9 +6428,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Frame Vertical Positioning Base</para>
         /// <para>Represents the following attribute in the schema: w:vAnchor</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalAnchorValues>? VerticalPosition
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalAnchorValues>>();
@@ -6441,9 +6441,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Absolute Horizontal Position</para>
         /// <para>Represents the following attribute in the schema: w:x</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? X
         {
             get => GetAttribute<StringValue>();
@@ -6454,9 +6454,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Relative Horizontal Position</para>
         /// <para>Represents the following attribute in the schema: w:xAlign</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.HorizontalAlignmentValues>? XAlign
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.HorizontalAlignmentValues>>();
@@ -6467,9 +6467,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Absolute Vertical Position</para>
         /// <para>Represents the following attribute in the schema: w:y</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Y
         {
             get => GetAttribute<StringValue>();
@@ -6480,9 +6480,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Relative Vertical Position</para>
         /// <para>Represents the following attribute in the schema: w:yAlign</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalAlignmentValues>? YAlign
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalAlignmentValues>>();
@@ -6493,9 +6493,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Frame Height Type</para>
         /// <para>Represents the following attribute in the schema: w:hRule</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.HeightRuleValues>? HeightType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.HeightRuleValues>>();
@@ -6506,9 +6506,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Lock Frame Anchor to Paragraph</para>
         /// <para>Represents the following attribute in the schema: w:anchorLock</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public OnOffValue? AnchorLock
         {
             get => GetAttribute<OnOffValue>();
@@ -6592,7 +6592,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:numPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.NumberingId" /> <c>&lt;w:numId></c></description></item>
@@ -6600,7 +6600,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Inserted" /> <c>&lt;w:ins></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.NumberingChange" /> <c>&lt;w:numberingChange></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class NumberingProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6655,9 +6655,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Numbering Level Reference.</para>
         /// <para>Represents the following element tag in the schema: w:ilvl.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.NumberingLevelReference? NumberingLevelReference
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.NumberingLevelReference>();
@@ -6668,9 +6668,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Numbering Definition Instance Reference.</para>
         /// <para>Represents the following element tag in the schema: w:numId.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.NumberingId? NumberingId
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.NumberingId>();
@@ -6681,9 +6681,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Previous Paragraph Numbering Properties.</para>
         /// <para>Represents the following element tag in the schema: w:numberingChange.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.NumberingChange? NumberingChange
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.NumberingChange>();
@@ -6694,9 +6694,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Inserted Numbering Properties.</para>
         /// <para>Represents the following element tag in the schema: w:ins.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Inserted? Inserted
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Inserted>();
@@ -6712,7 +6712,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:pBdr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TopBorder" /> <c>&lt;w:top></c></description></item>
@@ -6722,7 +6722,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.BetweenBorder" /> <c>&lt;w:between></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.BarBorder" /> <c>&lt;w:bar></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ParagraphBorders : OpenXmlCompositeElement
     {
         /// <summary>
@@ -6781,9 +6781,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Paragraph Border Above Identical Paragraphs.</para>
         /// <para>Represents the following element tag in the schema: w:top.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TopBorder? TopBorder
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TopBorder>();
@@ -6794,9 +6794,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Left Paragraph Border.</para>
         /// <para>Represents the following element tag in the schema: w:left.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.LeftBorder? LeftBorder
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.LeftBorder>();
@@ -6807,9 +6807,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Paragraph Border Between Identical Paragraphs.</para>
         /// <para>Represents the following element tag in the schema: w:bottom.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.BottomBorder? BottomBorder
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.BottomBorder>();
@@ -6820,9 +6820,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Right Paragraph Border.</para>
         /// <para>Represents the following element tag in the schema: w:right.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.RightBorder? RightBorder
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.RightBorder>();
@@ -6833,9 +6833,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Paragraph Border Between Identical Paragraphs.</para>
         /// <para>Represents the following element tag in the schema: w:between.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.BetweenBorder? BetweenBorder
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.BetweenBorder>();
@@ -6846,9 +6846,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Paragraph Border Between Facing Pages.</para>
         /// <para>Represents the following element tag in the schema: w:bar.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.BarBorder? BarBorder
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.BarBorder>();
@@ -6877,9 +6877,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Shading Pattern</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ShadingPatternValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ShadingPatternValues>>();
@@ -6890,9 +6890,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Shading Pattern Color</para>
         /// <para>Represents the following attribute in the schema: w:color</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Color
         {
             get => GetAttribute<StringValue>();
@@ -6903,9 +6903,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Shading Pattern Theme Color</para>
         /// <para>Represents the following attribute in the schema: w:themeColor</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues>? ThemeColor
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues>>();
@@ -6916,9 +6916,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Shading Pattern Theme Color Tint</para>
         /// <para>Represents the following attribute in the schema: w:themeTint</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? ThemeTint
         {
             get => GetAttribute<StringValue>();
@@ -6929,9 +6929,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Shading Pattern Theme Color Shade</para>
         /// <para>Represents the following attribute in the schema: w:themeShade</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? ThemeShade
         {
             get => GetAttribute<StringValue>();
@@ -6942,9 +6942,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Shading Background Color</para>
         /// <para>Represents the following attribute in the schema: w:fill</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Fill
         {
             get => GetAttribute<StringValue>();
@@ -6955,9 +6955,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Shading Background Theme Color</para>
         /// <para>Represents the following attribute in the schema: w:themeFill</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues>? ThemeFill
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues>>();
@@ -6968,9 +6968,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Shading Background Theme Color Tint</para>
         /// <para>Represents the following attribute in the schema: w:themeFillTint</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? ThemeFillTint
         {
             get => GetAttribute<StringValue>();
@@ -6981,9 +6981,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Shading Background Theme Color Shade</para>
         /// <para>Represents the following attribute in the schema: w:themeFillShade</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? ThemeFillShade
         {
             get => GetAttribute<StringValue>();
@@ -7044,12 +7044,12 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:tabs.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TabStop" /> <c>&lt;w:tab></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Tabs : OpenXmlCompositeElement
     {
         /// <summary>
@@ -7116,9 +7116,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Spacing Above Paragraph</para>
         /// <para>Represents the following attribute in the schema: w:before</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Before
         {
             get => GetAttribute<StringValue>();
@@ -7129,9 +7129,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Spacing Above Paragraph IN Line Units</para>
         /// <para>Represents the following attribute in the schema: w:beforeLines</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public Int32Value? BeforeLines
         {
             get => GetAttribute<Int32Value>();
@@ -7142,9 +7142,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Automatically Determine Spacing Above Paragraph</para>
         /// <para>Represents the following attribute in the schema: w:beforeAutospacing</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public OnOffValue? BeforeAutoSpacing
         {
             get => GetAttribute<OnOffValue>();
@@ -7155,9 +7155,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Spacing Below Paragraph</para>
         /// <para>Represents the following attribute in the schema: w:after</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? After
         {
             get => GetAttribute<StringValue>();
@@ -7168,9 +7168,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Spacing Below Paragraph in Line Units</para>
         /// <para>Represents the following attribute in the schema: w:afterLines</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public Int32Value? AfterLines
         {
             get => GetAttribute<Int32Value>();
@@ -7181,9 +7181,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Automatically Determine Spacing Below Paragraph</para>
         /// <para>Represents the following attribute in the schema: w:afterAutospacing</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public OnOffValue? AfterAutoSpacing
         {
             get => GetAttribute<OnOffValue>();
@@ -7194,9 +7194,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Spacing Between Lines in Paragraph</para>
         /// <para>Represents the following attribute in the schema: w:line</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Line
         {
             get => GetAttribute<StringValue>();
@@ -7207,9 +7207,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Type of Spacing Between Lines</para>
         /// <para>Represents the following attribute in the schema: w:lineRule</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.LineSpacingRuleValues>? LineRule
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.LineSpacingRuleValues>>();
@@ -7277,9 +7277,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Left Indentation</para>
         /// <para>Represents the following attribute in the schema: w:left</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Left
         {
             get => GetAttribute<StringValue>();
@@ -7290,9 +7290,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>start, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w:start</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Start
         {
             get => GetAttribute<StringValue>();
@@ -7303,9 +7303,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Left Indentation in Character Units</para>
         /// <para>Represents the following attribute in the schema: w:leftChars</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public Int32Value? LeftChars
         {
             get => GetAttribute<Int32Value>();
@@ -7316,9 +7316,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>startChars, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w:startChars</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public Int32Value? StartCharacters
         {
             get => GetAttribute<Int32Value>();
@@ -7329,9 +7329,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Right Indentation</para>
         /// <para>Represents the following attribute in the schema: w:right</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Right
         {
             get => GetAttribute<StringValue>();
@@ -7342,9 +7342,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>end, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w:end</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? End
         {
             get => GetAttribute<StringValue>();
@@ -7355,9 +7355,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Right Indentation in Character Units</para>
         /// <para>Represents the following attribute in the schema: w:rightChars</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public Int32Value? RightChars
         {
             get => GetAttribute<Int32Value>();
@@ -7368,9 +7368,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>endChars, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w:endChars</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public Int32Value? EndCharacters
         {
             get => GetAttribute<Int32Value>();
@@ -7381,9 +7381,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Indentation Removed from First Line</para>
         /// <para>Represents the following attribute in the schema: w:hanging</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Hanging
         {
             get => GetAttribute<StringValue>();
@@ -7394,9 +7394,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Indentation Removed From First Line in Character Units</para>
         /// <para>Represents the following attribute in the schema: w:hangingChars</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public Int32Value? HangingChars
         {
             get => GetAttribute<Int32Value>();
@@ -7407,9 +7407,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Additional First Line Indentation</para>
         /// <para>Represents the following attribute in the schema: w:firstLine</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? FirstLine
         {
             get => GetAttribute<StringValue>();
@@ -7420,9 +7420,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Additional First Line Indentation in Character Units</para>
         /// <para>Represents the following attribute in the schema: w:firstLineChars</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public Int32Value? FirstLineChars
         {
             get => GetAttribute<Int32Value>();
@@ -7526,9 +7526,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Alignment Type</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.JustificationValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.JustificationValues>>();
@@ -7568,9 +7568,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Direction of Text Flow</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TextDirectionValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TextDirectionValues>>();
@@ -7610,9 +7610,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Vertical Character Alignment Position</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignmentValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignmentValues>>();
@@ -7652,9 +7652,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Lines to Tight Wrap to Paragraph Extents</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TextBoxTightWrapValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TextBoxTightWrapValues>>();
@@ -8007,9 +8007,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Decimal Number Value</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public Int32Value? Val
         {
             get => GetAttribute<Int32Value>();
@@ -8032,12 +8032,12 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:pPrChange.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.ParagraphPropertiesExtended" /> <c>&lt;w:pPr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ParagraphPropertiesChange : OpenXmlCompositeElement
     {
         /// <summary>
@@ -8075,9 +8075,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>author</para>
         /// <para>Represents the following attribute in the schema: w:author</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Author
         {
             get => GetAttribute<StringValue>();
@@ -8088,9 +8088,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>date</para>
         /// <para>Represents the following attribute in the schema: w:date</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DateTimeValue? Date
         {
             get => GetAttribute<DateTimeValue>();
@@ -8101,9 +8101,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>dateUtc, this property is only available in Microsoft365 and later.</para>
         /// <para>Represents the following attribute in the schema: w16du:dateUtc</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w16du=http://schemas.microsoft.com/office/word/2023/wordml/word16du
-        /// </remark>
+        /// </remarks>
         public DateTimeValue? DateUtc
         {
             get => GetAttribute<DateTimeValue>();
@@ -8114,9 +8114,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Annotation Identifier</para>
         /// <para>Represents the following attribute in the schema: w:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -8162,9 +8162,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Previous Paragraph Properties.</para>
         /// <para>Represents the following element tag in the schema: w:pPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.ParagraphPropertiesExtended? ParagraphPropertiesExtended
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.ParagraphPropertiesExtended>();
@@ -8245,9 +8245,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>type</para>
         /// <para>Represents the following attribute in the schema: w:type</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.HeaderFooterValues>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.HeaderFooterValues>>();
@@ -8258,9 +8258,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Relationship to Part</para>
         /// <para>Represents the following attribute in the schema: r:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -8300,9 +8300,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Break Type</para>
         /// <para>Represents the following attribute in the schema: w:type</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.BreakValues>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.BreakValues>>();
@@ -8313,9 +8313,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Restart Location For Text Wrapping Break</para>
         /// <para>Represents the following attribute in the schema: w:clear</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.BreakTextRestartLocationValues>? Clear
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.BreakTextRestartLocationValues>>();
@@ -8514,9 +8514,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>space</para>
         /// <para>Represents the following attribute in the schema: xml:space</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:xml=http://www.w3.org/XML/1998/namespace
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.SpaceProcessingModeValues>? Space
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.SpaceProcessingModeValues>>();
@@ -9145,9 +9145,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Symbol Character Font</para>
         /// <para>Represents the following attribute in the schema: w:font</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Font
         {
             get => GetAttribute<StringValue>();
@@ -9158,9 +9158,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Symbol Character Code</para>
         /// <para>Represents the following attribute in the schema: w:char</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public HexBinaryValue? Char
         {
             get => GetAttribute<HexBinaryValue>();
@@ -9191,7 +9191,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:object.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.OleObject" /> <c>&lt;o:OLEObject></c></description></item>
@@ -9211,7 +9211,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.ObjectEmbed" /> <c>&lt;w:objectEmbed></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.ObjectLink" /> <c>&lt;w:objectLink></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class EmbeddedObject : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9249,9 +9249,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>dxaOrig</para>
         /// <para>Represents the following attribute in the schema: w:dxaOrig</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? DxaOriginal
         {
             get => GetAttribute<StringValue>();
@@ -9262,9 +9262,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>dyaOrig</para>
         /// <para>Represents the following attribute in the schema: w:dyaOrig</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? DyaOriginal
         {
             get => GetAttribute<StringValue>();
@@ -9275,9 +9275,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>anchorId, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w14:anchorId</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
-        /// </remark>
+        /// </remarks>
         public HexBinaryValue? AnchorId
         {
             get => GetAttribute<HexBinaryValue>();
@@ -9357,7 +9357,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:pict.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.OleObject" /> <c>&lt;o:OLEObject></c></description></item>
@@ -9375,7 +9375,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Control" /> <c>&lt;w:control></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MovieReference" /> <c>&lt;w:movie></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Picture : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9413,9 +9413,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>anchorId, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w14:anchorId</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
-        /// </remark>
+        /// </remarks>
         public HexBinaryValue? AnchorId
         {
             get => GetAttribute<HexBinaryValue>();
@@ -9486,14 +9486,14 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:fldChar.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.FieldData" /> <c>&lt;w:fldData></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.FormFieldData" /> <c>&lt;w:ffData></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.NumberingChange" /> <c>&lt;w:numberingChange></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class FieldChar : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9531,9 +9531,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Field Character Type</para>
         /// <para>Represents the following attribute in the schema: w:fldCharType</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.FieldCharValues>? FieldCharType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.FieldCharValues>>();
@@ -9544,9 +9544,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Field Should Not Be Recalculated</para>
         /// <para>Represents the following attribute in the schema: w:fldLock</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public OnOffValue? FieldLock
         {
             get => GetAttribute<OnOffValue>();
@@ -9557,9 +9557,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Field Result Invalidated</para>
         /// <para>Represents the following attribute in the schema: w:dirty</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public OnOffValue? Dirty
         {
             get => GetAttribute<OnOffValue>();
@@ -9592,9 +9592,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Custom Field Data.</para>
         /// <para>Represents the following element tag in the schema: w:fldData.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.FieldData? FieldData
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.FieldData>();
@@ -9605,9 +9605,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Form Field Properties.</para>
         /// <para>Represents the following element tag in the schema: w:ffData.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.FormFieldData? FormFieldData
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.FormFieldData>();
@@ -9618,9 +9618,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Previous Numbering Field Properties.</para>
         /// <para>Represents the following element tag in the schema: w:numberingChange.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.NumberingChange? NumberingChange
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.NumberingChange>();
@@ -9636,14 +9636,14 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:ruby.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.RubyContent" /> <c>&lt;w:rt></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.RubyBase" /> <c>&lt;w:rubyBase></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.RubyProperties" /> <c>&lt;w:rubyPr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Ruby : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9696,9 +9696,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Phonetic Guide Properties.</para>
         /// <para>Represents the following element tag in the schema: w:rubyPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.RubyProperties? RubyProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.RubyProperties>();
@@ -9709,9 +9709,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Phonetic Guide Text.</para>
         /// <para>Represents the following element tag in the schema: w:rt.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.RubyContent? RubyContent
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.RubyContent>();
@@ -9722,9 +9722,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Phonetic Guide Base Text.</para>
         /// <para>Represents the following element tag in the schema: w:rubyBase.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.RubyBase? RubyBase
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.RubyBase>();
@@ -9802,9 +9802,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Suppress Footnote/Endnote Reference Mark</para>
         /// <para>Represents the following attribute in the schema: w:customMarkFollows</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public OnOffValue? CustomMarkFollows
         {
             get => GetAttribute<OnOffValue>();
@@ -9815,9 +9815,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Footnote/Endnote ID Reference</para>
         /// <para>Represents the following attribute in the schema: w:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public IntegerValue? Id
         {
             get => GetAttribute<IntegerValue>();
@@ -9842,13 +9842,13 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:drawing.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Wordprocessing.Anchor" /> <c>&lt;wp:anchor></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Drawing.Wordprocessing.Inline" /> <c>&lt;wp:inline></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Drawing : OpenXmlCompositeElement
     {
         /// <summary>
@@ -9899,9 +9899,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Drawing Element Anchor.</para>
         /// <para>Represents the following element tag in the schema: wp:anchor.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:wp = http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Wordprocessing.Anchor? Anchor
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Wordprocessing.Anchor>();
@@ -9912,9 +9912,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Inline Drawing Object.</para>
         /// <para>Represents the following element tag in the schema: wp:inline.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:wp = http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Drawing.Wordprocessing.Inline? Inline
         {
             get => GetElement<DocumentFormat.OpenXml.Drawing.Wordprocessing.Inline>();
@@ -9943,9 +9943,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Positional Tab Stop Alignment</para>
         /// <para>Represents the following attribute in the schema: w:alignment</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.AbsolutePositionTabAlignmentValues>? Alignment
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.AbsolutePositionTabAlignmentValues>>();
@@ -9956,9 +9956,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Positional Tab Base</para>
         /// <para>Represents the following attribute in the schema: w:relativeTo</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.AbsolutePositionTabPositioningBaseValues>? RelativeTo
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.AbsolutePositionTabPositioningBaseValues>>();
@@ -9969,9 +9969,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Tab Leader Character</para>
         /// <para>Represents the following attribute in the schema: w:leader</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.AbsolutePositionTabLeaderCharValues>? Leader
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.AbsolutePositionTabLeaderCharValues>>();
@@ -10309,9 +10309,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>val</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -10348,9 +10348,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Font Content Type</para>
         /// <para>Represents the following attribute in the schema: w:hint</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.FontTypeHintValues>? Hint
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.FontTypeHintValues>>();
@@ -10361,9 +10361,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>ASCII Font</para>
         /// <para>Represents the following attribute in the schema: w:ascii</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Ascii
         {
             get => GetAttribute<StringValue>();
@@ -10374,9 +10374,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>High ANSI Font</para>
         /// <para>Represents the following attribute in the schema: w:hAnsi</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? HighAnsi
         {
             get => GetAttribute<StringValue>();
@@ -10387,9 +10387,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>East Asian Font</para>
         /// <para>Represents the following attribute in the schema: w:eastAsia</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? EastAsia
         {
             get => GetAttribute<StringValue>();
@@ -10400,9 +10400,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Complex Script Font</para>
         /// <para>Represents the following attribute in the schema: w:cs</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? ComplexScript
         {
             get => GetAttribute<StringValue>();
@@ -10413,9 +10413,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>ASCII Theme Font</para>
         /// <para>Represents the following attribute in the schema: w:asciiTheme</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeFontValues>? AsciiTheme
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeFontValues>>();
@@ -10426,9 +10426,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>High ANSI Theme Font</para>
         /// <para>Represents the following attribute in the schema: w:hAnsiTheme</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeFontValues>? HighAnsiTheme
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeFontValues>>();
@@ -10439,9 +10439,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>East Asian Theme Font</para>
         /// <para>Represents the following attribute in the schema: w:eastAsiaTheme</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeFontValues>? EastAsiaTheme
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeFontValues>>();
@@ -10452,9 +10452,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Complex Script Theme Font</para>
         /// <para>Represents the following attribute in the schema: w:cstheme</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeFontValues>? ComplexScriptTheme
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeFontValues>>();
@@ -10511,9 +10511,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Run Content Color</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -10524,9 +10524,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Run Content Theme Color</para>
         /// <para>Represents the following attribute in the schema: w:themeColor</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues>? ThemeColor
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues>>();
@@ -10537,9 +10537,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Run Content Theme Color Tint</para>
         /// <para>Represents the following attribute in the schema: w:themeTint</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? ThemeTint
         {
             get => GetAttribute<StringValue>();
@@ -10550,9 +10550,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Run Content Theme Color Shade</para>
         /// <para>Represents the following attribute in the schema: w:themeShade</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? ThemeShade
         {
             get => GetAttribute<StringValue>();
@@ -10606,9 +10606,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>val</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public Int32Value? Val
         {
             get => GetAttribute<Int32Value>();
@@ -10649,9 +10649,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Text Expansion/Compression Value</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public IntegerValue? Val
         {
             get => GetAttribute<IntegerValue>();
@@ -10691,9 +10691,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>val</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public UInt32Value? Val
         {
             get => GetAttribute<UInt32Value>();
@@ -10734,9 +10734,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Signed Half-Point Measurement</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -10902,9 +10902,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Half Point Measurement</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -10946,9 +10946,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Highlighting Color</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.HighlightColorValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.HighlightColorValues>>();
@@ -10988,9 +10988,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Underline Style</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.UnderlineValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.UnderlineValues>>();
@@ -11001,9 +11001,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Underline Color</para>
         /// <para>Represents the following attribute in the schema: w:color</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Color
         {
             get => GetAttribute<StringValue>();
@@ -11014,9 +11014,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Underline Theme Color</para>
         /// <para>Represents the following attribute in the schema: w:themeColor</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues>? ThemeColor
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues>>();
@@ -11027,9 +11027,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Underline Theme Color Tint</para>
         /// <para>Represents the following attribute in the schema: w:themeTint</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? ThemeTint
         {
             get => GetAttribute<StringValue>();
@@ -11040,9 +11040,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Underline Theme Color Shade</para>
         /// <para>Represents the following attribute in the schema: w:themeShade</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? ThemeShade
         {
             get => GetAttribute<StringValue>();
@@ -11096,9 +11096,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Animated Text Effect Type</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TextEffectValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TextEffectValues>>();
@@ -11454,9 +11454,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Border Style</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.BorderValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.BorderValues>>();
@@ -11467,9 +11467,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Border Color</para>
         /// <para>Represents the following attribute in the schema: w:color</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Color
         {
             get => GetAttribute<StringValue>();
@@ -11480,9 +11480,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Border Theme Color</para>
         /// <para>Represents the following attribute in the schema: w:themeColor</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues>? ThemeColor
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues>>();
@@ -11493,9 +11493,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Border Theme Color Tint</para>
         /// <para>Represents the following attribute in the schema: w:themeTint</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? ThemeTint
         {
             get => GetAttribute<StringValue>();
@@ -11506,9 +11506,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Border Theme Color Shade</para>
         /// <para>Represents the following attribute in the schema: w:themeShade</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? ThemeShade
         {
             get => GetAttribute<StringValue>();
@@ -11519,9 +11519,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Border Width</para>
         /// <para>Represents the following attribute in the schema: w:sz</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public UInt32Value? Size
         {
             get => GetAttribute<UInt32Value>();
@@ -11532,9 +11532,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Border Spacing Measurement</para>
         /// <para>Represents the following attribute in the schema: w:space</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public UInt32Value? Space
         {
             get => GetAttribute<UInt32Value>();
@@ -11545,9 +11545,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Border Shadow</para>
         /// <para>Represents the following attribute in the schema: w:shadow</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public OnOffValue? Shadow
         {
             get => GetAttribute<OnOffValue>();
@@ -11558,9 +11558,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Create Frame Effect</para>
         /// <para>Represents the following attribute in the schema: w:frame</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public OnOffValue? Frame
         {
             get => GetAttribute<OnOffValue>();
@@ -11620,9 +11620,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Value</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public UInt32Value? Val
         {
             get => GetAttribute<UInt32Value>();
@@ -11633,9 +11633,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Fit Text Run ID</para>
         /// <para>Represents the following attribute in the schema: w:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public Int32Value? Id
         {
             get => GetAttribute<Int32Value>();
@@ -11677,9 +11677,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Subscript/Superscript Value</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalPositionValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalPositionValues>>();
@@ -11719,9 +11719,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Emphasis Mark Type</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.EmphasisMarkValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.EmphasisMarkValues>>();
@@ -11809,9 +11809,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Latin Language</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -11822,9 +11822,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>East Asian Language</para>
         /// <para>Represents the following attribute in the schema: w:eastAsia</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? EastAsia
         {
             get => GetAttribute<StringValue>();
@@ -11835,9 +11835,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Complex Script Language</para>
         /// <para>Represents the following attribute in the schema: w:bidi</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Bidi
         {
             get => GetAttribute<StringValue>();
@@ -11881,9 +11881,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>East Asian Typography Run ID</para>
         /// <para>Represents the following attribute in the schema: w:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public Int32Value? Id
         {
             get => GetAttribute<Int32Value>();
@@ -11894,9 +11894,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Two Lines in One</para>
         /// <para>Represents the following attribute in the schema: w:combine</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public OnOffValue? Combine
         {
             get => GetAttribute<OnOffValue>();
@@ -11907,9 +11907,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Display Brackets Around Two Lines in One</para>
         /// <para>Represents the following attribute in the schema: w:combineBrackets</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CombineBracketValues>? CombineBrackets
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.CombineBracketValues>>();
@@ -11920,9 +11920,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Horizontal in Vertical (Rotate Text)</para>
         /// <para>Represents the following attribute in the schema: w:vert</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public OnOffValue? Vertical
         {
             get => GetAttribute<OnOffValue>();
@@ -11933,9 +11933,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Compress Rotated Text to Line Height</para>
         /// <para>Represents the following attribute in the schema: w:vertCompress</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public OnOffValue? VerticalCompress
         {
             get => GetAttribute<OnOffValue>();
@@ -11963,12 +11963,12 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:rPrChange.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.PreviousRunProperties" /> <c>&lt;w:rPr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class RunPropertiesChange : OpenXmlCompositeElement
     {
         /// <summary>
@@ -12006,9 +12006,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>author</para>
         /// <para>Represents the following attribute in the schema: w:author</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Author
         {
             get => GetAttribute<StringValue>();
@@ -12019,9 +12019,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>date</para>
         /// <para>Represents the following attribute in the schema: w:date</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DateTimeValue? Date
         {
             get => GetAttribute<DateTimeValue>();
@@ -12032,9 +12032,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>dateUtc, this property is only available in Microsoft365 and later.</para>
         /// <para>Represents the following attribute in the schema: w16du:dateUtc</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w16du=http://schemas.microsoft.com/office/word/2023/wordml/word16du
-        /// </remark>
+        /// </remarks>
         public DateTimeValue? DateUtc
         {
             get => GetAttribute<DateTimeValue>();
@@ -12045,9 +12045,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Annotation Identifier</para>
         /// <para>Represents the following attribute in the schema: w:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -12093,9 +12093,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Previous Run Properties.</para>
         /// <para>Represents the following element tag in the schema: w:rPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.PreviousRunProperties? PreviousRunProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.PreviousRunProperties>();
@@ -12111,7 +12111,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:rPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Border" /> <c>&lt;w:bdr></c></description></item>
@@ -12166,7 +12166,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.StylisticSets" /> <c>&lt;w14:stylisticSets></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.TextOutlineEffect" /> <c>&lt;w14:textOutline></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class RunProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -12381,9 +12381,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>RunStyle.</para>
         /// <para>Represents the following element tag in the schema: w:rStyle.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.RunStyle? RunStyle
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.RunStyle>();
@@ -12394,9 +12394,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>RunFonts.</para>
         /// <para>Represents the following element tag in the schema: w:rFonts.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.RunFonts? RunFonts
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.RunFonts>();
@@ -12407,9 +12407,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Bold.</para>
         /// <para>Represents the following element tag in the schema: w:b.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Bold? Bold
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Bold>();
@@ -12420,9 +12420,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>BoldComplexScript.</para>
         /// <para>Represents the following element tag in the schema: w:bCs.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.BoldComplexScript? BoldComplexScript
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.BoldComplexScript>();
@@ -12433,9 +12433,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Italic.</para>
         /// <para>Represents the following element tag in the schema: w:i.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Italic? Italic
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Italic>();
@@ -12446,9 +12446,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>ItalicComplexScript.</para>
         /// <para>Represents the following element tag in the schema: w:iCs.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.ItalicComplexScript? ItalicComplexScript
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.ItalicComplexScript>();
@@ -12459,9 +12459,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Caps.</para>
         /// <para>Represents the following element tag in the schema: w:caps.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Caps? Caps
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Caps>();
@@ -12472,9 +12472,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>SmallCaps.</para>
         /// <para>Represents the following element tag in the schema: w:smallCaps.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.SmallCaps? SmallCaps
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SmallCaps>();
@@ -12485,9 +12485,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Strike.</para>
         /// <para>Represents the following element tag in the schema: w:strike.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Strike? Strike
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Strike>();
@@ -12498,9 +12498,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>DoubleStrike.</para>
         /// <para>Represents the following element tag in the schema: w:dstrike.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.DoubleStrike? DoubleStrike
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DoubleStrike>();
@@ -12511,9 +12511,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Outline.</para>
         /// <para>Represents the following element tag in the schema: w:outline.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Outline? Outline
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Outline>();
@@ -12524,9 +12524,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Shadow.</para>
         /// <para>Represents the following element tag in the schema: w:shadow.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Shadow? Shadow
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Shadow>();
@@ -12537,9 +12537,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Emboss.</para>
         /// <para>Represents the following element tag in the schema: w:emboss.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Emboss? Emboss
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Emboss>();
@@ -12550,9 +12550,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Imprint.</para>
         /// <para>Represents the following element tag in the schema: w:imprint.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Imprint? Imprint
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Imprint>();
@@ -12563,9 +12563,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>NoProof.</para>
         /// <para>Represents the following element tag in the schema: w:noProof.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.NoProof? NoProof
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.NoProof>();
@@ -12576,9 +12576,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>SnapToGrid.</para>
         /// <para>Represents the following element tag in the schema: w:snapToGrid.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.SnapToGrid? SnapToGrid
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SnapToGrid>();
@@ -12589,9 +12589,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Vanish.</para>
         /// <para>Represents the following element tag in the schema: w:vanish.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Vanish? Vanish
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Vanish>();
@@ -12602,9 +12602,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>WebHidden.</para>
         /// <para>Represents the following element tag in the schema: w:webHidden.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.WebHidden? WebHidden
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.WebHidden>();
@@ -12615,9 +12615,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Color.</para>
         /// <para>Represents the following element tag in the schema: w:color.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Color? Color
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Color>();
@@ -12628,9 +12628,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Spacing.</para>
         /// <para>Represents the following element tag in the schema: w:spacing.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Spacing? Spacing
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Spacing>();
@@ -12641,9 +12641,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>CharacterScale.</para>
         /// <para>Represents the following element tag in the schema: w:w.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.CharacterScale? CharacterScale
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.CharacterScale>();
@@ -12654,9 +12654,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Kern.</para>
         /// <para>Represents the following element tag in the schema: w:kern.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Kern? Kern
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Kern>();
@@ -12667,9 +12667,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Position.</para>
         /// <para>Represents the following element tag in the schema: w:position.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Position? Position
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Position>();
@@ -12680,9 +12680,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>FontSize.</para>
         /// <para>Represents the following element tag in the schema: w:sz.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.FontSize? FontSize
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.FontSize>();
@@ -12693,9 +12693,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>FontSizeComplexScript.</para>
         /// <para>Represents the following element tag in the schema: w:szCs.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.FontSizeComplexScript? FontSizeComplexScript
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.FontSizeComplexScript>();
@@ -12706,9 +12706,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Highlight.</para>
         /// <para>Represents the following element tag in the schema: w:highlight.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Highlight? Highlight
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Highlight>();
@@ -12719,9 +12719,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Underline.</para>
         /// <para>Represents the following element tag in the schema: w:u.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Underline? Underline
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Underline>();
@@ -12732,9 +12732,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>TextEffect.</para>
         /// <para>Represents the following element tag in the schema: w:effect.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TextEffect? TextEffect
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TextEffect>();
@@ -12745,9 +12745,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Border.</para>
         /// <para>Represents the following element tag in the schema: w:bdr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Border? Border
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Border>();
@@ -12758,9 +12758,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Shading.</para>
         /// <para>Represents the following element tag in the schema: w:shd.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Shading? Shading
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Shading>();
@@ -12771,9 +12771,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>FitText.</para>
         /// <para>Represents the following element tag in the schema: w:fitText.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.FitText? FitText
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.FitText>();
@@ -12784,9 +12784,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>VerticalTextAlignment.</para>
         /// <para>Represents the following element tag in the schema: w:vertAlign.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignment? VerticalTextAlignment
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignment>();
@@ -12797,9 +12797,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>RightToLeftText.</para>
         /// <para>Represents the following element tag in the schema: w:rtl.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.RightToLeftText? RightToLeftText
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.RightToLeftText>();
@@ -12810,9 +12810,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>ComplexScript.</para>
         /// <para>Represents the following element tag in the schema: w:cs.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.ComplexScript? ComplexScript
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.ComplexScript>();
@@ -12823,9 +12823,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Emphasis.</para>
         /// <para>Represents the following element tag in the schema: w:em.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Emphasis? Emphasis
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Emphasis>();
@@ -12836,9 +12836,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Languages.</para>
         /// <para>Represents the following element tag in the schema: w:lang.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Languages? Languages
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Languages>();
@@ -12849,9 +12849,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>EastAsianLayout.</para>
         /// <para>Represents the following element tag in the schema: w:eastAsianLayout.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.EastAsianLayout? EastAsianLayout
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.EastAsianLayout>();
@@ -12862,9 +12862,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>SpecVanish.</para>
         /// <para>Represents the following element tag in the schema: w:specVanish.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.SpecVanish? SpecVanish
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SpecVanish>();
@@ -12875,9 +12875,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Glow, this property is only available in Office 2010 and later..</para>
         /// <para>Represents the following element tag in the schema: w14:glow.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Word.Glow? Glow
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Word.Glow>();
@@ -12888,9 +12888,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Shadow14, this property is only available in Office 2010 and later..</para>
         /// <para>Represents the following element tag in the schema: w14:shadow.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Word.Shadow? Shadow14
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Word.Shadow>();
@@ -12901,9 +12901,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Reflection, this property is only available in Office 2010 and later..</para>
         /// <para>Represents the following element tag in the schema: w14:reflection.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Word.Reflection? Reflection
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Word.Reflection>();
@@ -12914,9 +12914,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>TextOutlineEffect, this property is only available in Office 2010 and later..</para>
         /// <para>Represents the following element tag in the schema: w14:textOutline.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Word.TextOutlineEffect? TextOutlineEffect
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Word.TextOutlineEffect>();
@@ -12927,9 +12927,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>FillTextEffect, this property is only available in Office 2010 and later..</para>
         /// <para>Represents the following element tag in the schema: w14:textFill.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Word.FillTextEffect? FillTextEffect
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Word.FillTextEffect>();
@@ -12940,9 +12940,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Scene3D, this property is only available in Office 2010 and later..</para>
         /// <para>Represents the following element tag in the schema: w14:scene3d.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Word.Scene3D? Scene3D
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Word.Scene3D>();
@@ -12953,9 +12953,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Properties3D, this property is only available in Office 2010 and later..</para>
         /// <para>Represents the following element tag in the schema: w14:props3d.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Word.Properties3D? Properties3D
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Word.Properties3D>();
@@ -12966,9 +12966,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Ligatures, this property is only available in Office 2010 and later..</para>
         /// <para>Represents the following element tag in the schema: w14:ligatures.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Word.Ligatures? Ligatures
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Word.Ligatures>();
@@ -12979,9 +12979,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>NumberingFormat, this property is only available in Office 2010 and later..</para>
         /// <para>Represents the following element tag in the schema: w14:numForm.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Word.NumberingFormat? NumberingFormat
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Word.NumberingFormat>();
@@ -12992,9 +12992,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>NumberSpacing, this property is only available in Office 2010 and later..</para>
         /// <para>Represents the following element tag in the schema: w14:numSpacing.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Word.NumberSpacing? NumberSpacing
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Word.NumberSpacing>();
@@ -13005,9 +13005,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>StylisticSets, this property is only available in Office 2010 and later..</para>
         /// <para>Represents the following element tag in the schema: w14:stylisticSets.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Word.StylisticSets? StylisticSets
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Word.StylisticSets>();
@@ -13018,9 +13018,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>ContextualAlternatives, this property is only available in Office 2010 and later..</para>
         /// <para>Represents the following element tag in the schema: w14:cntxtAlts.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w14 = http://schemas.microsoft.com/office/word/2010/wordml
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2010.Word.ContextualAlternatives? ContextualAlternatives
         {
             get => GetElement<DocumentFormat.OpenXml.Office2010.Word.ContextualAlternatives>();
@@ -13031,9 +13031,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>RunPropertiesChange.</para>
         /// <para>Represents the following element tag in the schema: w:rPrChange.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.RunPropertiesChange? RunPropertiesChange
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.RunPropertiesChange>();
@@ -13049,13 +13049,13 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:ins.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DeletedMathControl" /> <c>&lt;w:del></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.RunProperties" /> <c>&lt;w:rPr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class InsertedMathControl : OpenXmlCompositeElement
     {
         /// <summary>
@@ -13093,9 +13093,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>author</para>
         /// <para>Represents the following attribute in the schema: w:author</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Author
         {
             get => GetAttribute<StringValue>();
@@ -13106,9 +13106,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>date</para>
         /// <para>Represents the following attribute in the schema: w:date</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DateTimeValue? Date
         {
             get => GetAttribute<DateTimeValue>();
@@ -13119,9 +13119,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>dateUtc, this property is only available in Microsoft365 and later.</para>
         /// <para>Represents the following attribute in the schema: w16du:dateUtc</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w16du=http://schemas.microsoft.com/office/word/2023/wordml/word16du
-        /// </remark>
+        /// </remarks>
         public DateTimeValue? DateUtc
         {
             get => GetAttribute<DateTimeValue>();
@@ -13132,9 +13132,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Annotation Identifier</para>
         /// <para>Represents the following attribute in the schema: w:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -13199,12 +13199,12 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:del.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.RunProperties" /> <c>&lt;w:rPr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DeletedMathControl : OpenXmlCompositeElement
     {
         /// <summary>
@@ -13242,9 +13242,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>author</para>
         /// <para>Represents the following attribute in the schema: w:author</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Author
         {
             get => GetAttribute<StringValue>();
@@ -13255,9 +13255,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>date</para>
         /// <para>Represents the following attribute in the schema: w:date</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DateTimeValue? Date
         {
             get => GetAttribute<DateTimeValue>();
@@ -13268,9 +13268,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>dateUtc, this property is only available in Microsoft365 and later.</para>
         /// <para>Represents the following attribute in the schema: w16du:dateUtc</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w16du=http://schemas.microsoft.com/office/word/2023/wordml/word16du
-        /// </remark>
+        /// </remarks>
         public DateTimeValue? DateUtc
         {
             get => GetAttribute<DateTimeValue>();
@@ -13281,9 +13281,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Annotation Identifier</para>
         /// <para>Represents the following attribute in the schema: w:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -13340,14 +13340,14 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:moveFrom.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DeletedMathControl" /> <c>&lt;w:del></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.InsertedMathControl" /> <c>&lt;w:ins></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.RunProperties" /> <c>&lt;w:rPr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class MoveFromMathControl : MathControlMoveType
     {
         /// <summary>
@@ -13424,14 +13424,14 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:moveTo.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DeletedMathControl" /> <c>&lt;w:del></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.InsertedMathControl" /> <c>&lt;w:ins></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.RunProperties" /> <c>&lt;w:rPr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class MoveToMathControl : MathControlMoveType
     {
         /// <summary>
@@ -13508,14 +13508,14 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DeletedMathControl" /> <c>&lt;w:del></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.InsertedMathControl" /> <c>&lt;w:ins></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.RunProperties" /> <c>&lt;w:rPr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public abstract partial class MathControlMoveType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -13553,9 +13553,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>author</para>
         /// <para>Represents the following attribute in the schema: w:author</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Author
         {
             get => GetAttribute<StringValue>();
@@ -13566,9 +13566,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>date</para>
         /// <para>Represents the following attribute in the schema: w:date</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DateTimeValue? Date
         {
             get => GetAttribute<DateTimeValue>();
@@ -13579,9 +13579,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>dateUtc, this property is only available in Microsoft365 and later.</para>
         /// <para>Represents the following attribute in the schema: w16du:dateUtc</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w16du=http://schemas.microsoft.com/office/word/2023/wordml/word16du
-        /// </remark>
+        /// </remarks>
         public DateTimeValue? DateUtc
         {
             get => GetAttribute<DateTimeValue>();
@@ -13592,9 +13592,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Annotation Identifier</para>
         /// <para>Represents the following attribute in the schema: w:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -13635,7 +13635,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:customXml.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Accent" /> <c>&lt;m:acc></c></description></item>
@@ -13697,7 +13697,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class CustomXmlRuby : CustomXmlElement
     {
         /// <summary>
@@ -13931,7 +13931,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:fldSimple.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Accent" /> <c>&lt;m:acc></c></description></item>
@@ -13993,7 +13993,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SimpleFieldRuby : OpenXmlCompositeElement
     {
         /// <summary>
@@ -14031,9 +14031,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>instr</para>
         /// <para>Represents the following attribute in the schema: w:instr</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Instruction
         {
             get => GetAttribute<StringValue>();
@@ -14044,9 +14044,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>fldLock</para>
         /// <para>Represents the following attribute in the schema: w:fldLock</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public OnOffValue? FieldLock
         {
             get => GetAttribute<OnOffValue>();
@@ -14057,9 +14057,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>dirty</para>
         /// <para>Represents the following attribute in the schema: w:dirty</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public OnOffValue? Dirty
         {
             get => GetAttribute<OnOffValue>();
@@ -14268,9 +14268,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>FieldData.</para>
         /// <para>Represents the following element tag in the schema: w:fldData.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.FieldData? FieldData
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.FieldData>();
@@ -14286,7 +14286,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:hyperlink.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Accent" /> <c>&lt;m:acc></c></description></item>
@@ -14347,7 +14347,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class HyperlinkRuby : OpenXmlCompositeElement
     {
         /// <summary>
@@ -14385,9 +14385,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>tgtFrame</para>
         /// <para>Represents the following attribute in the schema: w:tgtFrame</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? TargetFrame
         {
             get => GetAttribute<StringValue>();
@@ -14398,9 +14398,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>tooltip</para>
         /// <para>Represents the following attribute in the schema: w:tooltip</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Tooltip
         {
             get => GetAttribute<StringValue>();
@@ -14411,9 +14411,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>docLocation</para>
         /// <para>Represents the following attribute in the schema: w:docLocation</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? DocLocation
         {
             get => GetAttribute<StringValue>();
@@ -14424,9 +14424,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>history</para>
         /// <para>Represents the following attribute in the schema: w:history</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public OnOffValue? History
         {
             get => GetAttribute<OnOffValue>();
@@ -14437,9 +14437,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>anchor</para>
         /// <para>Represents the following attribute in the schema: w:anchor</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Anchor
         {
             get => GetAttribute<StringValue>();
@@ -14450,9 +14450,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: r:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -14674,7 +14674,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:r.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Break" /> <c>&lt;w:br></c></description></item>
@@ -14711,7 +14711,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.FieldCode" /> <c>&lt;w:instrText></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DeletedFieldCode" /> <c>&lt;w:delInstrText></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Run : OpenXmlCompositeElement
     {
         /// <summary>
@@ -14749,9 +14749,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Revision Identifier for Run Properties</para>
         /// <para>Represents the following attribute in the schema: w:rsidRPr</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public HexBinaryValue? RsidRunProperties
         {
             get => GetAttribute<HexBinaryValue>();
@@ -14762,9 +14762,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Revision Identifier for Run Deletion</para>
         /// <para>Represents the following attribute in the schema: w:rsidDel</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public HexBinaryValue? RsidRunDeletion
         {
             get => GetAttribute<HexBinaryValue>();
@@ -14775,9 +14775,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Revision Identifier for Run</para>
         /// <para>Represents the following attribute in the schema: w:rsidR</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public HexBinaryValue? RsidRunAddition
         {
             get => GetAttribute<HexBinaryValue>();
@@ -14888,9 +14888,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Run Properties.</para>
         /// <para>Represents the following element tag in the schema: w:rPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.RunProperties? RunProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.RunProperties>();
@@ -14906,7 +14906,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:sdt.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.BookmarkStart" /> <c>&lt;w:bookmarkStart></c></description></item>
@@ -14933,7 +14933,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SdtRunRuby : SdtElement
     {
         /// <summary>
@@ -15044,9 +15044,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>SdtContentRunRuby.</para>
         /// <para>Represents the following element tag in the schema: w:sdtContent.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.SdtContentRunRuby? SdtContentRunRuby
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SdtContentRunRuby>();
@@ -15075,9 +15075,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Proofing Error Anchor Type</para>
         /// <para>Represents the following attribute in the schema: w:type</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ProofingErrorValues>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ProofingErrorValues>>();
@@ -15117,9 +15117,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>edGrp</para>
         /// <para>Represents the following attribute in the schema: w:edGrp</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.RangePermissionEditingGroupValues>? EditorGroup
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.RangePermissionEditingGroupValues>>();
@@ -15130,9 +15130,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>ed</para>
         /// <para>Represents the following attribute in the schema: w:ed</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Ed
         {
             get => GetAttribute<StringValue>();
@@ -15143,9 +15143,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>colFirst</para>
         /// <para>Represents the following attribute in the schema: w:colFirst</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public Int32Value? ColumnFirst
         {
             get => GetAttribute<Int32Value>();
@@ -15156,9 +15156,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>colLast</para>
         /// <para>Represents the following attribute in the schema: w:colLast</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public Int32Value? ColumnLast
         {
             get => GetAttribute<Int32Value>();
@@ -15169,9 +15169,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Annotation ID</para>
         /// <para>Represents the following attribute in the schema: w:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public Int32Value? Id
         {
             get => GetAttribute<Int32Value>();
@@ -15182,9 +15182,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Annotation Displaced By Custom XML Markup</para>
         /// <para>Represents the following attribute in the schema: w:displacedByCustomXml</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DisplacedByCustomXmlValues>? DisplacedByCustomXml
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DisplacedByCustomXmlValues>>();
@@ -15236,9 +15236,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Annotation ID</para>
         /// <para>Represents the following attribute in the schema: w:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public Int32Value? Id
         {
             get => GetAttribute<Int32Value>();
@@ -15249,9 +15249,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Annotation Displaced By Custom XML Markup</para>
         /// <para>Represents the following attribute in the schema: w:displacedByCustomXml</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DisplacedByCustomXmlValues>? DisplacedByCustomXml
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DisplacedByCustomXmlValues>>();
@@ -15280,7 +15280,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:ins.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Accent" /> <c>&lt;m:acc></c></description></item>
@@ -15340,7 +15340,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class InsertedRun : RunTrackChangeType
     {
         /// <summary>
@@ -15530,7 +15530,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:del.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Accent" /> <c>&lt;m:acc></c></description></item>
@@ -15590,7 +15590,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DeletedRun : RunTrackChangeType
     {
         /// <summary>
@@ -15780,7 +15780,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:moveFrom.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Accent" /> <c>&lt;m:acc></c></description></item>
@@ -15840,7 +15840,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class MoveFromRun : RunTrackChangeType
     {
         /// <summary>
@@ -16030,7 +16030,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:moveTo.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Accent" /> <c>&lt;m:acc></c></description></item>
@@ -16090,7 +16090,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class MoveToRun : RunTrackChangeType
     {
         /// <summary>
@@ -16280,7 +16280,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Accent" /> <c>&lt;m:acc></c></description></item>
@@ -16340,7 +16340,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public abstract partial class RunTrackChangeType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -16378,9 +16378,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>author</para>
         /// <para>Represents the following attribute in the schema: w:author</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Author
         {
             get => GetAttribute<StringValue>();
@@ -16391,9 +16391,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>date</para>
         /// <para>Represents the following attribute in the schema: w:date</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DateTimeValue? Date
         {
             get => GetAttribute<DateTimeValue>();
@@ -16404,9 +16404,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>dateUtc, this property is only available in Microsoft365 and later.</para>
         /// <para>Represents the following attribute in the schema: w16du:dateUtc</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w16du=http://schemas.microsoft.com/office/word/2023/wordml/word16du
-        /// </remark>
+        /// </remarks>
         public DateTimeValue? DateUtc
         {
             get => GetAttribute<DateTimeValue>();
@@ -16417,9 +16417,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Annotation Identifier</para>
         /// <para>Represents the following attribute in the schema: w:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -16526,9 +16526,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: r:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -16556,7 +16556,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:sdt.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.BookmarkStart" /> <c>&lt;w:bookmarkStart></c></description></item>
@@ -16583,7 +16583,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SdtRun : SdtElement
     {
         /// <summary>
@@ -16694,9 +16694,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Inline-Level Structured Document Tag Content.</para>
         /// <para>Represents the following element tag in the schema: w:sdtContent.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.SdtContentRun? SdtContentRun
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SdtContentRun>();
@@ -16712,7 +16712,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:customXml.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.BookmarkStart" /> <c>&lt;w:bookmarkStart></c></description></item>
@@ -16751,7 +16751,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class CustomXmlBlock : CustomXmlElement
     {
         /// <summary>
@@ -16921,7 +16921,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:sdt.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.BookmarkStart" /> <c>&lt;w:bookmarkStart></c></description></item>
@@ -16948,7 +16948,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SdtBlock : SdtElement
     {
         /// <summary>
@@ -17059,9 +17059,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Block-Level Structured Document Tag Content.</para>
         /// <para>Represents the following element tag in the schema: w:sdtContent.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.SdtContentBlock? SdtContentBlock
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SdtContentBlock>();
@@ -17077,7 +17077,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:p.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Accent" /> <c>&lt;m:acc></c></description></item>
@@ -17142,7 +17142,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Paragraph : OpenXmlCompositeElement
     {
         /// <summary>
@@ -17180,9 +17180,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Revision Identifier for Paragraph Glyph Formatting</para>
         /// <para>Represents the following attribute in the schema: w:rsidRPr</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public HexBinaryValue? RsidParagraphMarkRevision
         {
             get => GetAttribute<HexBinaryValue>();
@@ -17193,9 +17193,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Revision Identifier for Paragraph</para>
         /// <para>Represents the following attribute in the schema: w:rsidR</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public HexBinaryValue? RsidParagraphAddition
         {
             get => GetAttribute<HexBinaryValue>();
@@ -17206,9 +17206,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Revision Identifier for Paragraph Deletion</para>
         /// <para>Represents the following attribute in the schema: w:rsidDel</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public HexBinaryValue? RsidParagraphDeletion
         {
             get => GetAttribute<HexBinaryValue>();
@@ -17219,9 +17219,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Revision Identifier for Paragraph Properties</para>
         /// <para>Represents the following attribute in the schema: w:rsidP</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public HexBinaryValue? RsidParagraphProperties
         {
             get => GetAttribute<HexBinaryValue>();
@@ -17232,9 +17232,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Default Revision Identifier for Runs</para>
         /// <para>Represents the following attribute in the schema: w:rsidRDefault</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public HexBinaryValue? RsidRunAdditionDefault
         {
             get => GetAttribute<HexBinaryValue>();
@@ -17245,9 +17245,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>paraId, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w14:paraId</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
-        /// </remark>
+        /// </remarks>
         public HexBinaryValue? ParagraphId
         {
             get => GetAttribute<HexBinaryValue>();
@@ -17258,9 +17258,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>textId, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w14:textId</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
-        /// </remark>
+        /// </remarks>
         public HexBinaryValue? TextId
         {
             get => GetAttribute<HexBinaryValue>();
@@ -17271,9 +17271,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>noSpellErr, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w14:noSpellErr</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
-        /// </remark>
+        /// </remarks>
         public OnOffValue? NoSpellError
         {
             get => GetAttribute<OnOffValue>();
@@ -17542,9 +17542,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Paragraph Properties.</para>
         /// <para>Represents the following element tag in the schema: w:pPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.ParagraphProperties? ParagraphProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.ParagraphProperties>();
@@ -17560,7 +17560,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:tbl.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.BookmarkStart" /> <c>&lt;w:bookmarkStart></c></description></item>
@@ -17599,7 +17599,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Table : OpenXmlCompositeElement
     {
         /// <summary>
@@ -17801,7 +17801,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:tr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.BookmarkStart" /> <c>&lt;w:bookmarkStart></c></description></item>
@@ -17840,7 +17840,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TableRowProperties" /> <c>&lt;w:trPr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TableRow : OpenXmlCompositeElement
     {
         /// <summary>
@@ -17878,9 +17878,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Revision Identifier for Table Row Glyph Formatting</para>
         /// <para>Represents the following attribute in the schema: w:rsidRPr</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public HexBinaryValue? RsidTableRowMarkRevision
         {
             get => GetAttribute<HexBinaryValue>();
@@ -17891,9 +17891,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Revision Identifier for Table Row</para>
         /// <para>Represents the following attribute in the schema: w:rsidR</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public HexBinaryValue? RsidTableRowAddition
         {
             get => GetAttribute<HexBinaryValue>();
@@ -17904,9 +17904,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Revision Identifier for Table Row Deletion</para>
         /// <para>Represents the following attribute in the schema: w:rsidDel</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public HexBinaryValue? RsidTableRowDeletion
         {
             get => GetAttribute<HexBinaryValue>();
@@ -17917,9 +17917,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Revision Identifier for Table Row Properties</para>
         /// <para>Represents the following attribute in the schema: w:rsidTr</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public HexBinaryValue? RsidTableRowProperties
         {
             get => GetAttribute<HexBinaryValue>();
@@ -17930,9 +17930,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>paraId, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w14:paraId</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
-        /// </remark>
+        /// </remarks>
         public HexBinaryValue? ParagraphId
         {
             get => GetAttribute<HexBinaryValue>();
@@ -17943,9 +17943,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>textId, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w14:textId</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
-        /// </remark>
+        /// </remarks>
         public HexBinaryValue? TextId
         {
             get => GetAttribute<HexBinaryValue>();
@@ -18106,9 +18106,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Table-Level Property Exceptions.</para>
         /// <para>Represents the following element tag in the schema: w:tblPrEx.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TablePropertyExceptions? TablePropertyExceptions
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TablePropertyExceptions>();
@@ -18119,9 +18119,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Table Row Properties.</para>
         /// <para>Represents the following element tag in the schema: w:trPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TableRowProperties? TableRowProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableRowProperties>();
@@ -18137,7 +18137,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:customXml.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.BookmarkStart" /> <c>&lt;w:bookmarkStart></c></description></item>
@@ -18175,7 +18175,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class CustomXmlRow : CustomXmlElement
     {
         /// <summary>
@@ -18337,7 +18337,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:sdt.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.BookmarkStart" /> <c>&lt;w:bookmarkStart></c></description></item>
@@ -18364,7 +18364,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SdtRow : SdtElement
     {
         /// <summary>
@@ -18475,9 +18475,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Row-Level Structured Document Tag Content.</para>
         /// <para>Represents the following element tag in the schema: w:sdtContent.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.SdtContentRow? SdtContentRow
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SdtContentRow>();
@@ -18493,7 +18493,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:tc.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.AltChunk" /> <c>&lt;w:altChunk></c></description></item>
@@ -18533,7 +18533,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TableCell : OpenXmlCompositeElement
     {
         /// <summary>
@@ -18718,9 +18718,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Table Cell Properties.</para>
         /// <para>Represents the following element tag in the schema: w:tcPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TableCellProperties? TableCellProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableCellProperties>();
@@ -18736,7 +18736,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:customXml.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.BookmarkStart" /> <c>&lt;w:bookmarkStart></c></description></item>
@@ -18774,7 +18774,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class CustomXmlCell : CustomXmlElement
     {
         /// <summary>
@@ -18936,7 +18936,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:sdt.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.BookmarkStart" /> <c>&lt;w:bookmarkStart></c></description></item>
@@ -18963,7 +18963,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SdtCell : SdtElement
     {
         /// <summary>
@@ -19074,9 +19074,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Cell-Level Structured Document Tag Content.</para>
         /// <para>Represents the following element tag in the schema: w:sdtContent.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.SdtContentCell? SdtContentCell
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SdtContentCell>();
@@ -19092,7 +19092,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:customXml.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Accent" /> <c>&lt;m:acc></c></description></item>
@@ -19157,7 +19157,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class CustomXmlRun : CustomXmlElement
     {
         /// <summary>
@@ -19421,7 +19421,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:fldSimple.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Accent" /> <c>&lt;m:acc></c></description></item>
@@ -19486,7 +19486,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SimpleField : OpenXmlCompositeElement
     {
         /// <summary>
@@ -19524,9 +19524,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Field Codes</para>
         /// <para>Represents the following attribute in the schema: w:instr</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Instruction
         {
             get => GetAttribute<StringValue>();
@@ -19537,9 +19537,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Field Should Not Be Recalculated</para>
         /// <para>Represents the following attribute in the schema: w:fldLock</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public OnOffValue? FieldLock
         {
             get => GetAttribute<OnOffValue>();
@@ -19550,9 +19550,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Field Result Invalidated</para>
         /// <para>Represents the following attribute in the schema: w:dirty</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public OnOffValue? Dirty
         {
             get => GetAttribute<OnOffValue>();
@@ -19791,9 +19791,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Custom Field Data.</para>
         /// <para>Represents the following element tag in the schema: w:fldData.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.FieldData? FieldData
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.FieldData>();
@@ -19809,7 +19809,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:hyperlink.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Accent" /> <c>&lt;m:acc></c></description></item>
@@ -19873,7 +19873,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Hyperlink : OpenXmlCompositeElement
     {
         /// <summary>
@@ -19911,9 +19911,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Hyperlink Target Frame</para>
         /// <para>Represents the following attribute in the schema: w:tgtFrame</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? TargetFrame
         {
             get => GetAttribute<StringValue>();
@@ -19924,9 +19924,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Associated String</para>
         /// <para>Represents the following attribute in the schema: w:tooltip</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Tooltip
         {
             get => GetAttribute<StringValue>();
@@ -19937,9 +19937,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Location in Target Document</para>
         /// <para>Represents the following attribute in the schema: w:docLocation</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? DocLocation
         {
             get => GetAttribute<StringValue>();
@@ -19950,9 +19950,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Add To Viewed Hyperlinks</para>
         /// <para>Represents the following attribute in the schema: w:history</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public OnOffValue? History
         {
             get => GetAttribute<OnOffValue>();
@@ -19963,9 +19963,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Hyperlink Anchor</para>
         /// <para>Represents the following attribute in the schema: w:anchor</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Anchor
         {
             get => GetAttribute<StringValue>();
@@ -19976,9 +19976,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Hyperlink Target</para>
         /// <para>Represents the following attribute in the schema: r:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -20230,7 +20230,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:bdo.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Accent" /> <c>&lt;m:acc></c></description></item>
@@ -20294,7 +20294,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class BidirectionalOverride : OpenXmlCompositeElement
     {
         /// <summary>
@@ -20332,9 +20332,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>val</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DirectionValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DirectionValues>>();
@@ -20569,7 +20569,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2010 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:dir.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Accent" /> <c>&lt;m:acc></c></description></item>
@@ -20633,7 +20633,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class BidirectionalEmbedding : OpenXmlCompositeElement
     {
         /// <summary>
@@ -20671,9 +20671,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>val</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DirectionValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DirectionValues>>();
@@ -21145,9 +21145,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Relationship to Part</para>
         /// <para>Represents the following attribute in the schema: r:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -21183,9 +21183,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Conditional Formatting Bit Mask</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -21196,9 +21196,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>firstRow, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w:firstRow</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public OnOffValue? FirstRow
         {
             get => GetAttribute<OnOffValue>();
@@ -21209,9 +21209,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>lastRow, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w:lastRow</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public OnOffValue? LastRow
         {
             get => GetAttribute<OnOffValue>();
@@ -21222,9 +21222,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>firstColumn, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w:firstColumn</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public OnOffValue? FirstColumn
         {
             get => GetAttribute<OnOffValue>();
@@ -21235,9 +21235,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>lastColumn, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w:lastColumn</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public OnOffValue? LastColumn
         {
             get => GetAttribute<OnOffValue>();
@@ -21248,9 +21248,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>oddVBand, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w:oddVBand</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public OnOffValue? OddVerticalBand
         {
             get => GetAttribute<OnOffValue>();
@@ -21261,9 +21261,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>evenVBand, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w:evenVBand</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public OnOffValue? EvenVerticalBand
         {
             get => GetAttribute<OnOffValue>();
@@ -21274,9 +21274,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>oddHBand, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w:oddHBand</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public OnOffValue? OddHorizontalBand
         {
             get => GetAttribute<OnOffValue>();
@@ -21287,9 +21287,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>evenHBand, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w:evenHBand</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public OnOffValue? EvenHorizontalBand
         {
             get => GetAttribute<OnOffValue>();
@@ -21300,9 +21300,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>firstRowFirstColumn, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w:firstRowFirstColumn</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public OnOffValue? FirstRowFirstColumn
         {
             get => GetAttribute<OnOffValue>();
@@ -21313,9 +21313,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>firstRowLastColumn, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w:firstRowLastColumn</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public OnOffValue? FirstRowLastColumn
         {
             get => GetAttribute<OnOffValue>();
@@ -21326,9 +21326,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>lastRowFirstColumn, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w:lastRowFirstColumn</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public OnOffValue? LastRowFirstColumn
         {
             get => GetAttribute<OnOffValue>();
@@ -21339,9 +21339,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>lastRowLastColumn, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w:lastRowLastColumn</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public OnOffValue? LastRowLastColumn
         {
             get => GetAttribute<OnOffValue>();
@@ -21700,9 +21700,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Table Width Value</para>
         /// <para>Represents the following attribute in the schema: w:w</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Width
         {
             get => GetAttribute<StringValue>();
@@ -21713,9 +21713,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Table Width Type</para>
         /// <para>Represents the following attribute in the schema: w:type</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableWidthUnitValues>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableWidthUnitValues>>();
@@ -21762,9 +21762,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Horizontal Merge Type</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.MergedCellValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.MergedCellValues>>();
@@ -21801,9 +21801,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Vertical Merge Type</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.MergedCellValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.MergedCellValues>>();
@@ -21827,7 +21827,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:tcBorders.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TopBorder" /> <c>&lt;w:top></c></description></item>
@@ -21841,7 +21841,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TopLeftToBottomRightCellBorder" /> <c>&lt;w:tl2br></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TopRightToBottomLeftCellBorder" /> <c>&lt;w:tr2bl></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TableCellBorders : OpenXmlCompositeElement
     {
         /// <summary>
@@ -21908,9 +21908,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Table Cell Top Border.</para>
         /// <para>Represents the following element tag in the schema: w:top.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TopBorder? TopBorder
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TopBorder>();
@@ -21921,9 +21921,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Table Cell Left Border.</para>
         /// <para>Represents the following element tag in the schema: w:left.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.LeftBorder? LeftBorder
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.LeftBorder>();
@@ -21934,9 +21934,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>StartBorder, this property is only available in Office 2010 and later..</para>
         /// <para>Represents the following element tag in the schema: w:start.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.StartBorder? StartBorder
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.StartBorder>();
@@ -21947,9 +21947,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Table Cell Bottom Border.</para>
         /// <para>Represents the following element tag in the schema: w:bottom.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.BottomBorder? BottomBorder
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.BottomBorder>();
@@ -21960,9 +21960,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Table Cell Right Border.</para>
         /// <para>Represents the following element tag in the schema: w:right.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.RightBorder? RightBorder
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.RightBorder>();
@@ -21973,9 +21973,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>EndBorder, this property is only available in Office 2010 and later..</para>
         /// <para>Represents the following element tag in the schema: w:end.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.EndBorder? EndBorder
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.EndBorder>();
@@ -21986,9 +21986,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Table Cell Inside Horizontal Edges Border.</para>
         /// <para>Represents the following element tag in the schema: w:insideH.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.InsideHorizontalBorder? InsideHorizontalBorder
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.InsideHorizontalBorder>();
@@ -21999,9 +21999,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Table Cell Inside Vertical Edges Border.</para>
         /// <para>Represents the following element tag in the schema: w:insideV.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.InsideVerticalBorder? InsideVerticalBorder
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.InsideVerticalBorder>();
@@ -22012,9 +22012,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Table Cell Top Left to Bottom Right Diagonal Border.</para>
         /// <para>Represents the following element tag in the schema: w:tl2br.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TopLeftToBottomRightCellBorder? TopLeftToBottomRightCellBorder
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TopLeftToBottomRightCellBorder>();
@@ -22025,9 +22025,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Table Cell Top Right to Bottom Left Diagonal Border.</para>
         /// <para>Represents the following element tag in the schema: w:tr2bl.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TopRightToBottomLeftCellBorder? TopRightToBottomLeftCellBorder
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TopRightToBottomLeftCellBorder>();
@@ -22512,9 +22512,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>val</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.OnOffOnlyValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.OnOffOnlyValues>>();
@@ -22534,7 +22534,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:tcMar.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TopMargin" /> <c>&lt;w:top></c></description></item>
@@ -22544,7 +22544,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.RightMargin" /> <c>&lt;w:right></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.EndMargin" /> <c>&lt;w:end></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TableCellMargin : OpenXmlCompositeElement
     {
         /// <summary>
@@ -22603,9 +22603,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Table Cell Top Margin Exception.</para>
         /// <para>Represents the following element tag in the schema: w:top.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TopMargin? TopMargin
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TopMargin>();
@@ -22616,9 +22616,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Table Cell Left Margin Exception.</para>
         /// <para>Represents the following element tag in the schema: w:left.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.LeftMargin? LeftMargin
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.LeftMargin>();
@@ -22629,9 +22629,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>StartMargin, this property is only available in Office 2010 and later..</para>
         /// <para>Represents the following element tag in the schema: w:start.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.StartMargin? StartMargin
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.StartMargin>();
@@ -22642,9 +22642,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Table Cell Bottom Margin Exception.</para>
         /// <para>Represents the following element tag in the schema: w:bottom.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.BottomMargin? BottomMargin
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.BottomMargin>();
@@ -22655,9 +22655,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Table Cell Right Margin Exception.</para>
         /// <para>Represents the following element tag in the schema: w:right.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.RightMargin? RightMargin
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.RightMargin>();
@@ -22668,9 +22668,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>EndMargin, this property is only available in Office 2010 and later..</para>
         /// <para>Represents the following element tag in the schema: w:end.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.EndMargin? EndMargin
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.EndMargin>();
@@ -22699,9 +22699,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>val</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableVerticalAlignmentValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableVerticalAlignmentValues>>();
@@ -22741,9 +22741,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>val</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -22789,9 +22789,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Table Row Height</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public UInt32Value? Val
         {
             get => GetAttribute<UInt32Value>();
@@ -22802,9 +22802,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Table Row Height Type</para>
         /// <para>Represents the following attribute in the schema: w:hRule</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.HeightRuleValues>? HeightType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.HeightRuleValues>>();
@@ -22845,9 +22845,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>val</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableRowAlignmentValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableRowAlignmentValues>>();
@@ -22887,9 +22887,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Distance From Left of Table to Text</para>
         /// <para>Represents the following attribute in the schema: w:leftFromText</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public Int16Value? LeftFromText
         {
             get => GetAttribute<Int16Value>();
@@ -22900,9 +22900,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>(Distance From Right of Table to Text</para>
         /// <para>Represents the following attribute in the schema: w:rightFromText</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public Int16Value? RightFromText
         {
             get => GetAttribute<Int16Value>();
@@ -22913,9 +22913,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Distance From Top of Table to Text</para>
         /// <para>Represents the following attribute in the schema: w:topFromText</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public Int16Value? TopFromText
         {
             get => GetAttribute<Int16Value>();
@@ -22926,9 +22926,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Distance From Bottom of Table to Text</para>
         /// <para>Represents the following attribute in the schema: w:bottomFromText</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public Int16Value? BottomFromText
         {
             get => GetAttribute<Int16Value>();
@@ -22939,9 +22939,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Table Vertical Anchor</para>
         /// <para>Represents the following attribute in the schema: w:vertAnchor</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalAnchorValues>? VerticalAnchor
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalAnchorValues>>();
@@ -22952,9 +22952,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Table Horizontal Anchor</para>
         /// <para>Represents the following attribute in the schema: w:horzAnchor</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.HorizontalAnchorValues>? HorizontalAnchor
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.HorizontalAnchorValues>>();
@@ -22965,9 +22965,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Relative Horizontal Alignment From Anchor</para>
         /// <para>Represents the following attribute in the schema: w:tblpXSpec</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.HorizontalAlignmentValues>? TablePositionXAlignment
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.HorizontalAlignmentValues>>();
@@ -22978,9 +22978,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Absolute Horizontal Distance From Anchor</para>
         /// <para>Represents the following attribute in the schema: w:tblpX</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public Int32Value? TablePositionX
         {
             get => GetAttribute<Int32Value>();
@@ -22991,9 +22991,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Relative Vertical Alignment from Anchor</para>
         /// <para>Represents the following attribute in the schema: w:tblpYSpec</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalAlignmentValues>? TablePositionYAlignment
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalAlignmentValues>>();
@@ -23004,9 +23004,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Absolute Vertical Distance From Anchor</para>
         /// <para>Represents the following attribute in the schema: w:tblpY</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public Int32Value? TablePositionY
         {
             get => GetAttribute<Int32Value>();
@@ -23070,9 +23070,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Floating Table Overlap Setting</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableOverlapValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableOverlapValues>>();
@@ -23160,9 +23160,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>val</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public Int32Value? Val
         {
             get => GetAttribute<Int32Value>();
@@ -23199,9 +23199,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>w</para>
         /// <para>Represents the following attribute in the schema: w:w</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public Int32Value? Width
         {
             get => GetAttribute<Int32Value>();
@@ -23212,9 +23212,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>type</para>
         /// <para>Represents the following attribute in the schema: w:type</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableWidthUnitValues>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableWidthUnitValues>>();
@@ -23239,7 +23239,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:tblBorders.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TopBorder" /> <c>&lt;w:top></c></description></item>
@@ -23251,7 +23251,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.InsideHorizontalBorder" /> <c>&lt;w:insideH></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.InsideVerticalBorder" /> <c>&lt;w:insideV></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TableBorders : OpenXmlCompositeElement
     {
         /// <summary>
@@ -23314,9 +23314,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Table Top Border.</para>
         /// <para>Represents the following element tag in the schema: w:top.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TopBorder? TopBorder
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TopBorder>();
@@ -23327,9 +23327,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Table Left Border.</para>
         /// <para>Represents the following element tag in the schema: w:left.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.LeftBorder? LeftBorder
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.LeftBorder>();
@@ -23340,9 +23340,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>StartBorder, this property is only available in Office 2010 and later..</para>
         /// <para>Represents the following element tag in the schema: w:start.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.StartBorder? StartBorder
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.StartBorder>();
@@ -23353,9 +23353,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Table Bottom Border.</para>
         /// <para>Represents the following element tag in the schema: w:bottom.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.BottomBorder? BottomBorder
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.BottomBorder>();
@@ -23366,9 +23366,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Table Right Border.</para>
         /// <para>Represents the following element tag in the schema: w:right.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.RightBorder? RightBorder
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.RightBorder>();
@@ -23379,9 +23379,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>EndBorder, this property is only available in Office 2010 and later..</para>
         /// <para>Represents the following element tag in the schema: w:end.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.EndBorder? EndBorder
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.EndBorder>();
@@ -23392,9 +23392,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Table Inside Horizontal Edges Border.</para>
         /// <para>Represents the following element tag in the schema: w:insideH.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.InsideHorizontalBorder? InsideHorizontalBorder
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.InsideHorizontalBorder>();
@@ -23405,9 +23405,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Table Inside Vertical Edges Border.</para>
         /// <para>Represents the following element tag in the schema: w:insideV.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.InsideVerticalBorder? InsideVerticalBorder
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.InsideVerticalBorder>();
@@ -23436,9 +23436,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Table Layout Setting</para>
         /// <para>Represents the following attribute in the schema: w:type</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableLayoutValues>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableLayoutValues>>();
@@ -23462,7 +23462,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:tblCellMar.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TopMargin" /> <c>&lt;w:top></c></description></item>
@@ -23472,7 +23472,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TableCellLeftMargin" /> <c>&lt;w:left></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TableCellRightMargin" /> <c>&lt;w:right></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TableCellMarginDefault : OpenXmlCompositeElement
     {
         /// <summary>
@@ -23531,9 +23531,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Table Cell Top Margin Default.</para>
         /// <para>Represents the following element tag in the schema: w:top.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TopMargin? TopMargin
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TopMargin>();
@@ -23544,9 +23544,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Table Cell Left Margin Default.</para>
         /// <para>Represents the following element tag in the schema: w:left.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TableCellLeftMargin? TableCellLeftMargin
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableCellLeftMargin>();
@@ -23557,9 +23557,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>StartMargin, this property is only available in Office 2010 and later..</para>
         /// <para>Represents the following element tag in the schema: w:start.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.StartMargin? StartMargin
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.StartMargin>();
@@ -23570,9 +23570,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Table Cell Bottom Margin Default.</para>
         /// <para>Represents the following element tag in the schema: w:bottom.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.BottomMargin? BottomMargin
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.BottomMargin>();
@@ -23583,9 +23583,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Table Cell Right Margin Default.</para>
         /// <para>Represents the following element tag in the schema: w:right.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TableCellRightMargin? TableCellRightMargin
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableCellRightMargin>();
@@ -23596,9 +23596,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>EndMargin, this property is only available in Office 2010 and later..</para>
         /// <para>Represents the following element tag in the schema: w:end.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.EndMargin? EndMargin
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.EndMargin>();
@@ -23627,9 +23627,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>val</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public UInt16Value? Val
         {
             get => GetAttribute<UInt16Value>();
@@ -23669,9 +23669,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Automatic Numbering Restart Value</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.RestartNumberValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.RestartNumberValues>>();
@@ -23698,12 +23698,12 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:altChunk.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.AltChunkProperties" /> <c>&lt;w:altChunkPr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class AltChunk : OpenXmlCompositeElement
     {
         /// <summary>
@@ -23741,9 +23741,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Relationship to Part</para>
         /// <para>Represents the following attribute in the schema: r:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -23769,9 +23769,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>External Content Import Properties.</para>
         /// <para>Represents the following element tag in the schema: w:altChunkPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.AltChunkProperties? AltChunkProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.AltChunkProperties>();
@@ -23800,9 +23800,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>val</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public HexBinaryValue? Val
         {
             get => GetAttribute<HexBinaryValue>();
@@ -23813,9 +23813,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>firstRow, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w:firstRow</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public OnOffValue? FirstRow
         {
             get => GetAttribute<OnOffValue>();
@@ -23826,9 +23826,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>lastRow, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w:lastRow</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public OnOffValue? LastRow
         {
             get => GetAttribute<OnOffValue>();
@@ -23839,9 +23839,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>firstColumn, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w:firstColumn</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public OnOffValue? FirstColumn
         {
             get => GetAttribute<OnOffValue>();
@@ -23852,9 +23852,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>lastColumn, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w:lastColumn</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public OnOffValue? LastColumn
         {
             get => GetAttribute<OnOffValue>();
@@ -23865,9 +23865,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>noHBand, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w:noHBand</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public OnOffValue? NoHorizontalBand
         {
             get => GetAttribute<OnOffValue>();
@@ -23878,9 +23878,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>noVBand, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w:noVBand</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public OnOffValue? NoVerticalBand
         {
             get => GetAttribute<OnOffValue>();
@@ -23931,7 +23931,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:footnotePr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.NumberingStart" /> <c>&lt;w:numStart></c></description></item>
@@ -23939,7 +23939,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.NumberingFormat" /> <c>&lt;w:numFmt></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.NumberingRestart" /> <c>&lt;w:numRestart></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class FootnoteProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -24000,9 +24000,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Footnote Placement.</para>
         /// <para>Represents the following element tag in the schema: w:pos.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.FootnotePosition? FootnotePosition
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.FootnotePosition>();
@@ -24013,9 +24013,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Footnote Numbering Format.</para>
         /// <para>Represents the following element tag in the schema: w:numFmt.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.NumberingFormat? NumberingFormat
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.NumberingFormat>();
@@ -24026,9 +24026,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Footnote and Endnote Numbering Starting Value.</para>
         /// <para>Represents the following element tag in the schema: w:numStart.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.NumberingStart? NumberingStart
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.NumberingStart>();
@@ -24039,9 +24039,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Footnote and Endnote Numbering Restart Location.</para>
         /// <para>Represents the following element tag in the schema: w:numRestart.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.NumberingRestart? NumberingRestart
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.NumberingRestart>();
@@ -24057,7 +24057,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:endnotePr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.EndnotePosition" /> <c>&lt;w:pos></c></description></item>
@@ -24065,7 +24065,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.NumberingFormat" /> <c>&lt;w:numFmt></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.NumberingRestart" /> <c>&lt;w:numRestart></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class EndnoteProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -24126,9 +24126,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Endnote Placement.</para>
         /// <para>Represents the following element tag in the schema: w:pos.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.EndnotePosition? EndnotePosition
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.EndnotePosition>();
@@ -24139,9 +24139,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Endnote Numbering Format.</para>
         /// <para>Represents the following element tag in the schema: w:numFmt.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.NumberingFormat? NumberingFormat
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.NumberingFormat>();
@@ -24152,9 +24152,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Footnote and Endnote Numbering Starting Value.</para>
         /// <para>Represents the following element tag in the schema: w:numStart.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.NumberingStart? NumberingStart
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.NumberingStart>();
@@ -24165,9 +24165,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Footnote and Endnote Numbering Restart Location.</para>
         /// <para>Represents the following element tag in the schema: w:numRestart.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.NumberingRestart? NumberingRestart
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.NumberingRestart>();
@@ -24196,9 +24196,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Section Type Setting</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.SectionMarkValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.SectionMarkValues>>();
@@ -24238,9 +24238,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Page Width</para>
         /// <para>Represents the following attribute in the schema: w:w</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public UInt32Value? Width
         {
             get => GetAttribute<UInt32Value>();
@@ -24251,9 +24251,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Page Height</para>
         /// <para>Represents the following attribute in the schema: w:h</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public UInt32Value? Height
         {
             get => GetAttribute<UInt32Value>();
@@ -24264,9 +24264,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Page Orientation</para>
         /// <para>Represents the following attribute in the schema: w:orient</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.PageOrientationValues>? Orient
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.PageOrientationValues>>();
@@ -24277,9 +24277,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Printer Paper Code</para>
         /// <para>Represents the following attribute in the schema: w:code</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public UInt16Value? Code
         {
             get => GetAttribute<UInt16Value>();
@@ -24325,9 +24325,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Top Margin Spacing</para>
         /// <para>Represents the following attribute in the schema: w:top</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public Int32Value? Top
         {
             get => GetAttribute<Int32Value>();
@@ -24338,9 +24338,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Right Margin Spacing</para>
         /// <para>Represents the following attribute in the schema: w:right</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public UInt32Value? Right
         {
             get => GetAttribute<UInt32Value>();
@@ -24351,9 +24351,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Page Bottom Spacing</para>
         /// <para>Represents the following attribute in the schema: w:bottom</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public Int32Value? Bottom
         {
             get => GetAttribute<Int32Value>();
@@ -24364,9 +24364,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Left Margin Spacing</para>
         /// <para>Represents the following attribute in the schema: w:left</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public UInt32Value? Left
         {
             get => GetAttribute<UInt32Value>();
@@ -24377,9 +24377,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Spacing to Top of Header</para>
         /// <para>Represents the following attribute in the schema: w:header</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public UInt32Value? Header
         {
             get => GetAttribute<UInt32Value>();
@@ -24390,9 +24390,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Spacing to Bottom of Footer</para>
         /// <para>Represents the following attribute in the schema: w:footer</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public UInt32Value? Footer
         {
             get => GetAttribute<UInt32Value>();
@@ -24403,9 +24403,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Page Gutter Spacing</para>
         /// <para>Represents the following attribute in the schema: w:gutter</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public UInt32Value? Gutter
         {
             get => GetAttribute<UInt32Value>();
@@ -24469,9 +24469,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>First Page Printer Tray Code</para>
         /// <para>Represents the following attribute in the schema: w:first</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public UInt16Value? First
         {
             get => GetAttribute<UInt16Value>();
@@ -24482,9 +24482,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Non-First Page Printer Tray Code</para>
         /// <para>Represents the following attribute in the schema: w:other</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public UInt16Value? Other
         {
             get => GetAttribute<UInt16Value>();
@@ -24509,7 +24509,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:pgBorders.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TopBorder" /> <c>&lt;w:top></c></description></item>
@@ -24517,7 +24517,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.BottomBorder" /> <c>&lt;w:bottom></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.RightBorder" /> <c>&lt;w:right></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PageBorders : OpenXmlCompositeElement
     {
         /// <summary>
@@ -24555,9 +24555,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Z-Ordering of Page Border</para>
         /// <para>Represents the following attribute in the schema: w:zOrder</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.PageBorderZOrderValues>? ZOrder
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.PageBorderZOrderValues>>();
@@ -24568,9 +24568,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Pages to Display Page Borders</para>
         /// <para>Represents the following attribute in the schema: w:display</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.PageBorderDisplayValues>? Display
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.PageBorderDisplayValues>>();
@@ -24581,9 +24581,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Page Border Positioning</para>
         /// <para>Represents the following attribute in the schema: w:offsetFrom</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.PageBorderOffsetValues>? OffsetFrom
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.PageBorderOffsetValues>>();
@@ -24615,9 +24615,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Top Border.</para>
         /// <para>Represents the following element tag in the schema: w:top.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TopBorder? TopBorder
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TopBorder>();
@@ -24628,9 +24628,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Left Border.</para>
         /// <para>Represents the following element tag in the schema: w:left.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.LeftBorder? LeftBorder
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.LeftBorder>();
@@ -24641,9 +24641,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Bottom Border.</para>
         /// <para>Represents the following element tag in the schema: w:bottom.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.BottomBorder? BottomBorder
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.BottomBorder>();
@@ -24654,9 +24654,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Right Border.</para>
         /// <para>Represents the following element tag in the schema: w:right.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.RightBorder? RightBorder
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.RightBorder>();
@@ -24685,9 +24685,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Line Number Increments to Display</para>
         /// <para>Represents the following attribute in the schema: w:countBy</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public Int16Value? CountBy
         {
             get => GetAttribute<Int16Value>();
@@ -24698,9 +24698,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Line Numbering Starting Value</para>
         /// <para>Represents the following attribute in the schema: w:start</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public Int16Value? Start
         {
             get => GetAttribute<Int16Value>();
@@ -24711,9 +24711,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Distance Between Text and Line Numbering</para>
         /// <para>Represents the following attribute in the schema: w:distance</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Distance
         {
             get => GetAttribute<StringValue>();
@@ -24724,9 +24724,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Line Numbering Restart Setting</para>
         /// <para>Represents the following attribute in the schema: w:restart</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.LineNumberRestartValues>? Restart
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.LineNumberRestartValues>>();
@@ -24780,9 +24780,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Page Number Format</para>
         /// <para>Represents the following attribute in the schema: w:fmt</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.NumberFormatValues>? Format
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.NumberFormatValues>>();
@@ -24793,9 +24793,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Starting Page Number</para>
         /// <para>Represents the following attribute in the schema: w:start</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public Int32Value? Start
         {
             get => GetAttribute<Int32Value>();
@@ -24806,9 +24806,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Chapter Heading Style</para>
         /// <para>Represents the following attribute in the schema: w:chapStyle</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public ByteValue? ChapterStyle
         {
             get => GetAttribute<ByteValue>();
@@ -24819,9 +24819,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Chapter Separator Character</para>
         /// <para>Represents the following attribute in the schema: w:chapSep</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ChapterSeparatorValues>? ChapterSeparator
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ChapterSeparatorValues>>();
@@ -24851,12 +24851,12 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:cols.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Column" /> <c>&lt;w:col></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Columns : OpenXmlCompositeElement
     {
         /// <summary>
@@ -24894,9 +24894,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Equal Column Widths</para>
         /// <para>Represents the following attribute in the schema: w:equalWidth</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public OnOffValue? EqualWidth
         {
             get => GetAttribute<OnOffValue>();
@@ -24907,9 +24907,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Spacing Between Equal Width Columns</para>
         /// <para>Represents the following attribute in the schema: w:space</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Space
         {
             get => GetAttribute<StringValue>();
@@ -24920,9 +24920,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Number of Equal Width Columns</para>
         /// <para>Represents the following attribute in the schema: w:num</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public Int16Value? ColumnCount
         {
             get => GetAttribute<Int16Value>();
@@ -24933,9 +24933,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Draw Line Between Columns</para>
         /// <para>Represents the following attribute in the schema: w:sep</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public OnOffValue? Separator
         {
             get => GetAttribute<OnOffValue>();
@@ -24991,9 +24991,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Vertical Alignment Setting</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalJustificationValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalJustificationValues>>();
@@ -25033,9 +25033,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Document Grid Type</para>
         /// <para>Represents the following attribute in the schema: w:type</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocGridValues>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocGridValues>>();
@@ -25046,9 +25046,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Document Grid Line Pitch</para>
         /// <para>Represents the following attribute in the schema: w:linePitch</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public Int32Value? LinePitch
         {
             get => GetAttribute<Int32Value>();
@@ -25059,9 +25059,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Document Grid Character Pitch</para>
         /// <para>Represents the following attribute in the schema: w:charSpace</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public Int32Value? CharacterSpace
         {
             get => GetAttribute<Int32Value>();
@@ -25087,12 +25087,12 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:recipients.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.RecipientData" /> <c>&lt;w:recipientData></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Recipients : OpenXmlPartRootElement
     {
         /// <summary>
@@ -25146,7 +25146,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:txbxContent.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.AltChunk" /> <c>&lt;w:altChunk></c></description></item>
@@ -25185,7 +25185,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TextBoxContent : OpenXmlCompositeElement
     {
         /// <summary>
@@ -25370,12 +25370,12 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:comments.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Comment" /> <c>&lt;w:comment></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Comments : OpenXmlPartRootElement
     {
         /// <summary>
@@ -25460,12 +25460,12 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:footnotes.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Footnote" /> <c>&lt;w:footnote></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Footnotes : OpenXmlPartRootElement
     {
         /// <summary>
@@ -25550,12 +25550,12 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:endnotes.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Endnote" /> <c>&lt;w:endnote></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Endnotes : OpenXmlPartRootElement
     {
         /// <summary>
@@ -25640,7 +25640,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:hdr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.AltChunk" /> <c>&lt;w:altChunk></c></description></item>
@@ -25679,7 +25679,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Header : OpenXmlPartRootElement
     {
         /// <summary>
@@ -25895,7 +25895,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:ftr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.AltChunk" /> <c>&lt;w:altChunk></c></description></item>
@@ -25934,7 +25934,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Footer : OpenXmlPartRootElement
     {
         /// <summary>
@@ -26150,7 +26150,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.AltChunk" /> <c>&lt;w:altChunk></c></description></item>
@@ -26189,7 +26189,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public abstract partial class HeaderFooterType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -26269,7 +26269,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:settings.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.MathProperties" /> <c>&lt;m:mathPr></c></description></item>
@@ -26376,7 +26376,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.ConflictMode" /> <c>&lt;w14:conflictMode></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Word.PersistentDocumentId" /> <c>&lt;w15:docId></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Settings : OpenXmlPartRootElement
     {
         /// <summary>
@@ -26629,9 +26629,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Write Protection.</para>
         /// <para>Represents the following element tag in the schema: w:writeProtection.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.WriteProtection? WriteProtection
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.WriteProtection>();
@@ -26642,9 +26642,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Document View Setting.</para>
         /// <para>Represents the following element tag in the schema: w:view.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.View? View
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.View>();
@@ -26655,9 +26655,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Magnification Setting.</para>
         /// <para>Represents the following element tag in the schema: w:zoom.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Zoom? Zoom
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Zoom>();
@@ -26668,9 +26668,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Remove Personal Information from Document Properties.</para>
         /// <para>Represents the following element tag in the schema: w:removePersonalInformation.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.RemovePersonalInformation? RemovePersonalInformation
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.RemovePersonalInformation>();
@@ -26681,9 +26681,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Remove Date and Time from Annotations.</para>
         /// <para>Represents the following element tag in the schema: w:removeDateAndTime.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.RemoveDateAndTime? RemoveDateAndTime
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.RemoveDateAndTime>();
@@ -26694,9 +26694,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Do Not Display Visual Boundary For Header/Footer or Between Pages.</para>
         /// <para>Represents the following element tag in the schema: w:doNotDisplayPageBoundaries.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.DoNotDisplayPageBoundaries? DoNotDisplayPageBoundaries
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DoNotDisplayPageBoundaries>();
@@ -26707,9 +26707,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Display Background Objects When Displaying Document.</para>
         /// <para>Represents the following element tag in the schema: w:displayBackgroundShape.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.DisplayBackgroundShape? DisplayBackgroundShape
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DisplayBackgroundShape>();
@@ -26720,9 +26720,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Print PostScript Codes With Document Text.</para>
         /// <para>Represents the following element tag in the schema: w:printPostScriptOverText.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.PrintPostScriptOverText? PrintPostScriptOverText
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.PrintPostScriptOverText>();
@@ -26733,9 +26733,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Print Fractional Character Widths.</para>
         /// <para>Represents the following element tag in the schema: w:printFractionalCharacterWidth.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.PrintFractionalCharacterWidth? PrintFractionalCharacterWidth
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.PrintFractionalCharacterWidth>();
@@ -26746,9 +26746,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Only Print Form Field Content.</para>
         /// <para>Represents the following element tag in the schema: w:printFormsData.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.PrintFormsData? PrintFormsData
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.PrintFormsData>();
@@ -26759,9 +26759,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Embed TrueType Fonts.</para>
         /// <para>Represents the following element tag in the schema: w:embedTrueTypeFonts.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.EmbedTrueTypeFonts? EmbedTrueTypeFonts
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.EmbedTrueTypeFonts>();
@@ -26772,9 +26772,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Embed Common System Fonts.</para>
         /// <para>Represents the following element tag in the schema: w:embedSystemFonts.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.EmbedSystemFonts? EmbedSystemFonts
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.EmbedSystemFonts>();
@@ -26785,9 +26785,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Subset Fonts When Embedding.</para>
         /// <para>Represents the following element tag in the schema: w:saveSubsetFonts.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.SaveSubsetFonts? SaveSubsetFonts
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SaveSubsetFonts>();
@@ -26798,9 +26798,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Only Save Form Field Content.</para>
         /// <para>Represents the following element tag in the schema: w:saveFormsData.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.SaveFormsData? SaveFormsData
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SaveFormsData>();
@@ -26811,9 +26811,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Mirror Page Margins.</para>
         /// <para>Represents the following element tag in the schema: w:mirrorMargins.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.MirrorMargins? MirrorMargins
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.MirrorMargins>();
@@ -26824,9 +26824,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Align Paragraph and Table Borders with Page Border.</para>
         /// <para>Represents the following element tag in the schema: w:alignBordersAndEdges.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.AlignBorderAndEdges? AlignBorderAndEdges
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.AlignBorderAndEdges>();
@@ -26837,9 +26837,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Page Border Excludes Header.</para>
         /// <para>Represents the following element tag in the schema: w:bordersDoNotSurroundHeader.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.BordersDoNotSurroundHeader? BordersDoNotSurroundHeader
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.BordersDoNotSurroundHeader>();
@@ -26850,9 +26850,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Page Border Excludes Footer.</para>
         /// <para>Represents the following element tag in the schema: w:bordersDoNotSurroundFooter.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.BordersDoNotSurroundFooter? BordersDoNotSurroundFooter
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.BordersDoNotSurroundFooter>();
@@ -26863,9 +26863,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Position Gutter At Top of Page.</para>
         /// <para>Represents the following element tag in the schema: w:gutterAtTop.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.GutterAtTop? GutterAtTop
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.GutterAtTop>();
@@ -26876,9 +26876,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Do Not Display Visual Indication of Spelling Errors.</para>
         /// <para>Represents the following element tag in the schema: w:hideSpellingErrors.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.HideSpellingErrors? HideSpellingErrors
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.HideSpellingErrors>();
@@ -26889,9 +26889,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Do Not Display Visual Indication of Grammatical Errors.</para>
         /// <para>Represents the following element tag in the schema: w:hideGrammaticalErrors.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.HideGrammaticalErrors? HideGrammaticalErrors
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.HideGrammaticalErrors>();
@@ -26938,7 +26938,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:webSettings.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.PixelsPerInch" /> <c>&lt;w:pixelsPerInch></c></description></item>
@@ -26954,7 +26954,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.WebPageEncoding" /> <c>&lt;w:encoding></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TargetScreenSize" /> <c>&lt;w:targetScreenSz></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class WebSettings : OpenXmlPartRootElement
     {
         /// <summary>
@@ -27025,9 +27025,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Frameset.</para>
         /// <para>Represents the following element tag in the schema: w:frameset.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Frameset? Frameset
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Frameset>();
@@ -27038,9 +27038,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Divs.</para>
         /// <para>Represents the following element tag in the schema: w:divs.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Divs? Divs
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Divs>();
@@ -27051,9 +27051,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>WebPageEncoding.</para>
         /// <para>Represents the following element tag in the schema: w:encoding.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.WebPageEncoding? WebPageEncoding
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.WebPageEncoding>();
@@ -27064,9 +27064,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>OptimizeForBrowser.</para>
         /// <para>Represents the following element tag in the schema: w:optimizeForBrowser.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.OptimizeForBrowser? OptimizeForBrowser
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.OptimizeForBrowser>();
@@ -27077,9 +27077,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>RelyOnVML.</para>
         /// <para>Represents the following element tag in the schema: w:relyOnVML.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.RelyOnVML? RelyOnVML
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.RelyOnVML>();
@@ -27090,9 +27090,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>AllowPNG.</para>
         /// <para>Represents the following element tag in the schema: w:allowPNG.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.AllowPNG? AllowPNG
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.AllowPNG>();
@@ -27103,9 +27103,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>DoNotRelyOnCSS.</para>
         /// <para>Represents the following element tag in the schema: w:doNotRelyOnCSS.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.DoNotRelyOnCSS? DoNotRelyOnCSS
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DoNotRelyOnCSS>();
@@ -27116,9 +27116,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>DoNotSaveAsSingleFile.</para>
         /// <para>Represents the following element tag in the schema: w:doNotSaveAsSingleFile.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.DoNotSaveAsSingleFile? DoNotSaveAsSingleFile
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DoNotSaveAsSingleFile>();
@@ -27129,9 +27129,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>DoNotOrganizeInFolder.</para>
         /// <para>Represents the following element tag in the schema: w:doNotOrganizeInFolder.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.DoNotOrganizeInFolder? DoNotOrganizeInFolder
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DoNotOrganizeInFolder>();
@@ -27142,9 +27142,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>DoNotUseLongFileNames.</para>
         /// <para>Represents the following element tag in the schema: w:doNotUseLongFileNames.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.DoNotUseLongFileNames? DoNotUseLongFileNames
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DoNotUseLongFileNames>();
@@ -27155,9 +27155,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>PixelsPerInch.</para>
         /// <para>Represents the following element tag in the schema: w:pixelsPerInch.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.PixelsPerInch? PixelsPerInch
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.PixelsPerInch>();
@@ -27168,9 +27168,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>TargetScreenSize.</para>
         /// <para>Represents the following element tag in the schema: w:targetScreenSz.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TargetScreenSize? TargetScreenSize
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TargetScreenSize>();
@@ -27217,12 +27217,12 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:fonts.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Font" /> <c>&lt;w:font></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Fonts : OpenXmlPartRootElement
     {
         /// <summary>
@@ -27307,7 +27307,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:numbering.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.AbstractNum" /> <c>&lt;w:abstractNum></c></description></item>
@@ -27315,7 +27315,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.NumberingInstance" /> <c>&lt;w:num></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.NumberingPictureBullet" /> <c>&lt;w:numPicBullet></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Numbering : OpenXmlPartRootElement
     {
         /// <summary>
@@ -27406,14 +27406,14 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:styles.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DocDefaults" /> <c>&lt;w:docDefaults></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.LatentStyles" /> <c>&lt;w:latentStyles></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Style" /> <c>&lt;w:style></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Styles : OpenXmlPartRootElement
     {
         /// <summary>
@@ -27466,9 +27466,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Document Default Paragraph and Run Properties.</para>
         /// <para>Represents the following element tag in the schema: w:docDefaults.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.DocDefaults? DocDefaults
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DocDefaults>();
@@ -27479,9 +27479,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Latent Style Information.</para>
         /// <para>Represents the following element tag in the schema: w:latentStyles.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.LatentStyles? LatentStyles
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.LatentStyles>();
@@ -27497,13 +27497,13 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:document.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DocumentBackground" /> <c>&lt;w:background></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Body" /> <c>&lt;w:body></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Document : OpenXmlPartRootElement
     {
         /// <summary>
@@ -27541,9 +27541,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>conformance</para>
         /// <para>Represents the following attribute in the schema: w:conformance</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocumentConformance>? Conformance
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocumentConformance>>();
@@ -27575,9 +27575,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Document Background.</para>
         /// <para>Represents the following element tag in the schema: w:background.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.DocumentBackground? DocumentBackground
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DocumentBackground>();
@@ -27588,9 +27588,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Body.</para>
         /// <para>Represents the following element tag in the schema: w:body.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Body? Body
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Body>();
@@ -27637,13 +27637,13 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:glossaryDocument.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DocumentBackground" /> <c>&lt;w:background></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DocParts" /> <c>&lt;w:docParts></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class GlossaryDocument : OpenXmlPartRootElement
     {
         /// <summary>
@@ -27700,9 +27700,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Document Background.</para>
         /// <para>Represents the following element tag in the schema: w:background.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.DocumentBackground? DocumentBackground
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DocumentBackground>();
@@ -27713,9 +27713,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>List of Glossary Document Entries.</para>
         /// <para>Represents the following element tag in the schema: w:docParts.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.DocParts? DocParts
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DocParts>();
@@ -27762,7 +27762,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:tblPrEx.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Shading" /> <c>&lt;w:shd></c></description></item>
@@ -27775,7 +27775,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TableCellSpacing" /> <c>&lt;w:tblCellSpacing></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TableIndentation" /> <c>&lt;w:tblInd></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PreviousTablePropertyExceptions : OpenXmlCompositeElement
     {
         /// <summary>
@@ -27840,9 +27840,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Preferred Table Width Exception.</para>
         /// <para>Represents the following element tag in the schema: w:tblW.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TableWidth? TableWidth
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableWidth>();
@@ -27853,9 +27853,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Table Alignment Exception.</para>
         /// <para>Represents the following element tag in the schema: w:jc.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TableJustification? TableJustification
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableJustification>();
@@ -27866,9 +27866,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Table Cell Spacing Exception.</para>
         /// <para>Represents the following element tag in the schema: w:tblCellSpacing.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TableCellSpacing? TableCellSpacing
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableCellSpacing>();
@@ -27879,9 +27879,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Table Indent from Leading Margin Exception.</para>
         /// <para>Represents the following element tag in the schema: w:tblInd.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TableIndentation? TableIndentation
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableIndentation>();
@@ -27892,9 +27892,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Table Borders Exceptions.</para>
         /// <para>Represents the following element tag in the schema: w:tblBorders.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TableBorders? TableBorders
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableBorders>();
@@ -27905,9 +27905,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Table Shading Exception.</para>
         /// <para>Represents the following element tag in the schema: w:shd.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Shading? Shading
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Shading>();
@@ -27918,9 +27918,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Table Layout Exception.</para>
         /// <para>Represents the following element tag in the schema: w:tblLayout.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TableLayout? TableLayout
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableLayout>();
@@ -27931,9 +27931,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Table Cell Margin Exceptions.</para>
         /// <para>Represents the following element tag in the schema: w:tblCellMar.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TableCellMarginDefault? TableCellMarginDefault
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableCellMarginDefault>();
@@ -27944,9 +27944,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Table Style Conditional Formatting Settings Exception.</para>
         /// <para>Represents the following element tag in the schema: w:tblLook.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TableLook? TableLook
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableLook>();
@@ -27962,7 +27962,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:tcPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CellMerge" /> <c>&lt;w:cellMerge></c></description></item>
@@ -27982,7 +27982,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TableCellVerticalAlignment" /> <c>&lt;w:vAlign></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.VerticalMerge" /> <c>&lt;w:vMerge></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PreviousTableCellProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -28109,9 +28109,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>ConditionalFormatStyle.</para>
         /// <para>Represents the following element tag in the schema: w:cnfStyle.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.ConditionalFormatStyle? ConditionalFormatStyle
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.ConditionalFormatStyle>();
@@ -28122,9 +28122,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>TableCellWidth.</para>
         /// <para>Represents the following element tag in the schema: w:tcW.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TableCellWidth? TableCellWidth
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableCellWidth>();
@@ -28135,9 +28135,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>GridSpan.</para>
         /// <para>Represents the following element tag in the schema: w:gridSpan.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.GridSpan? GridSpan
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.GridSpan>();
@@ -28148,9 +28148,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>HorizontalMerge.</para>
         /// <para>Represents the following element tag in the schema: w:hMerge.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.HorizontalMerge? HorizontalMerge
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.HorizontalMerge>();
@@ -28161,9 +28161,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>VerticalMerge.</para>
         /// <para>Represents the following element tag in the schema: w:vMerge.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.VerticalMerge? VerticalMerge
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.VerticalMerge>();
@@ -28174,9 +28174,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>TableCellBorders.</para>
         /// <para>Represents the following element tag in the schema: w:tcBorders.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TableCellBorders? TableCellBorders
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableCellBorders>();
@@ -28187,9 +28187,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Shading.</para>
         /// <para>Represents the following element tag in the schema: w:shd.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Shading? Shading
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Shading>();
@@ -28200,9 +28200,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>NoWrap.</para>
         /// <para>Represents the following element tag in the schema: w:noWrap.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.NoWrap? NoWrap
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.NoWrap>();
@@ -28213,9 +28213,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>TableCellMargin.</para>
         /// <para>Represents the following element tag in the schema: w:tcMar.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TableCellMargin? TableCellMargin
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableCellMargin>();
@@ -28226,9 +28226,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>TextDirection.</para>
         /// <para>Represents the following element tag in the schema: w:textDirection.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TextDirection? TextDirection
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TextDirection>();
@@ -28239,9 +28239,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>TableCellFitText.</para>
         /// <para>Represents the following element tag in the schema: w:tcFitText.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TableCellFitText? TableCellFitText
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableCellFitText>();
@@ -28252,9 +28252,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>TableCellVerticalAlignment.</para>
         /// <para>Represents the following element tag in the schema: w:vAlign.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TableCellVerticalAlignment? TableCellVerticalAlignment
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableCellVerticalAlignment>();
@@ -28265,9 +28265,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>HideMark.</para>
         /// <para>Represents the following element tag in the schema: w:hideMark.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.HideMark? HideMark
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.HideMark>();
@@ -28283,7 +28283,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:trPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.ConditionalFormatStyle" /> <c>&lt;w:cnfStyle></c></description></item>
@@ -28299,7 +28299,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.WidthAfterTableRow" /> <c>&lt;w:wAfter></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TableCellSpacing" /> <c>&lt;w:tblCellSpacing></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PreviousTableRowProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -28387,7 +28387,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:tblPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.BiDiVisual" /> <c>&lt;w:bidiVisual></c></description></item>
@@ -28406,7 +28406,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TableCellSpacing" /> <c>&lt;w:tblCellSpacing></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TableIndentation" /> <c>&lt;w:tblInd></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PreviousTableProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -28519,9 +28519,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>TableStyle.</para>
         /// <para>Represents the following element tag in the schema: w:tblStyle.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TableStyle? TableStyle
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableStyle>();
@@ -28532,9 +28532,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>TablePositionProperties.</para>
         /// <para>Represents the following element tag in the schema: w:tblpPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TablePositionProperties? TablePositionProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TablePositionProperties>();
@@ -28545,9 +28545,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>TableOverlap.</para>
         /// <para>Represents the following element tag in the schema: w:tblOverlap.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TableOverlap? TableOverlap
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableOverlap>();
@@ -28558,9 +28558,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>BiDiVisual.</para>
         /// <para>Represents the following element tag in the schema: w:bidiVisual.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.BiDiVisual? BiDiVisual
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.BiDiVisual>();
@@ -28571,9 +28571,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>TableWidth.</para>
         /// <para>Represents the following element tag in the schema: w:tblW.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TableWidth? TableWidth
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableWidth>();
@@ -28584,9 +28584,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>TableJustification.</para>
         /// <para>Represents the following element tag in the schema: w:jc.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TableJustification? TableJustification
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableJustification>();
@@ -28597,9 +28597,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>TableCellSpacing.</para>
         /// <para>Represents the following element tag in the schema: w:tblCellSpacing.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TableCellSpacing? TableCellSpacing
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableCellSpacing>();
@@ -28610,9 +28610,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>TableIndentation.</para>
         /// <para>Represents the following element tag in the schema: w:tblInd.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TableIndentation? TableIndentation
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableIndentation>();
@@ -28623,9 +28623,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>TableBorders.</para>
         /// <para>Represents the following element tag in the schema: w:tblBorders.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TableBorders? TableBorders
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableBorders>();
@@ -28636,9 +28636,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Shading.</para>
         /// <para>Represents the following element tag in the schema: w:shd.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Shading? Shading
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Shading>();
@@ -28649,9 +28649,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>TableLayout.</para>
         /// <para>Represents the following element tag in the schema: w:tblLayout.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TableLayout? TableLayout
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableLayout>();
@@ -28662,9 +28662,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>TableCellMarginDefault.</para>
         /// <para>Represents the following element tag in the schema: w:tblCellMar.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TableCellMarginDefault? TableCellMarginDefault
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableCellMarginDefault>();
@@ -28675,9 +28675,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>TableLook.</para>
         /// <para>Represents the following element tag in the schema: w:tblLook.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TableLook? TableLook
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableLook>();
@@ -28688,9 +28688,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>TableCaption, this property is only available in Office 2010 and later..</para>
         /// <para>Represents the following element tag in the schema: w:tblCaption.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TableCaption? TableCaption
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableCaption>();
@@ -28701,9 +28701,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>TableDescription, this property is only available in Office 2010 and later..</para>
         /// <para>Represents the following element tag in the schema: w:tblDescription.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TableDescription? TableDescription
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableDescription>();
@@ -28719,7 +28719,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:sectPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Columns" /> <c>&lt;w:cols></c></description></item>
@@ -28743,7 +28743,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TextDirection" /> <c>&lt;w:textDirection></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignmentOnPage" /> <c>&lt;w:vAlign></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PreviousSectionProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -28781,9 +28781,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Physical Section Mark Character Revision ID</para>
         /// <para>Represents the following attribute in the schema: w:rsidRPr</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public HexBinaryValue? RsidRPr
         {
             get => GetAttribute<HexBinaryValue>();
@@ -28794,9 +28794,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Section Deletion Revision ID</para>
         /// <para>Represents the following attribute in the schema: w:rsidDel</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public HexBinaryValue? RsidDel
         {
             get => GetAttribute<HexBinaryValue>();
@@ -28807,9 +28807,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Section Addition Revision ID</para>
         /// <para>Represents the following attribute in the schema: w:rsidR</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public HexBinaryValue? RsidR
         {
             get => GetAttribute<HexBinaryValue>();
@@ -28820,9 +28820,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Section Properties Revision ID</para>
         /// <para>Represents the following attribute in the schema: w:rsidSect</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public HexBinaryValue? RsidSect
         {
             get => GetAttribute<HexBinaryValue>();
@@ -28905,9 +28905,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>FootnoteProperties.</para>
         /// <para>Represents the following element tag in the schema: w:footnotePr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.FootnoteProperties? FootnoteProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.FootnoteProperties>();
@@ -28918,9 +28918,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>EndnoteProperties.</para>
         /// <para>Represents the following element tag in the schema: w:endnotePr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.EndnoteProperties? EndnoteProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.EndnoteProperties>();
@@ -28931,9 +28931,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>SectionType.</para>
         /// <para>Represents the following element tag in the schema: w:type.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.SectionType? SectionType
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SectionType>();
@@ -28944,9 +28944,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>PageSize.</para>
         /// <para>Represents the following element tag in the schema: w:pgSz.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.PageSize? PageSize
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.PageSize>();
@@ -28957,9 +28957,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>PageMargin.</para>
         /// <para>Represents the following element tag in the schema: w:pgMar.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.PageMargin? PageMargin
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.PageMargin>();
@@ -28970,9 +28970,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>PaperSource.</para>
         /// <para>Represents the following element tag in the schema: w:paperSrc.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.PaperSource? PaperSource
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.PaperSource>();
@@ -28983,9 +28983,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>PageBorders.</para>
         /// <para>Represents the following element tag in the schema: w:pgBorders.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.PageBorders? PageBorders
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.PageBorders>();
@@ -28996,9 +28996,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>LineNumberType.</para>
         /// <para>Represents the following element tag in the schema: w:lnNumType.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.LineNumberType? LineNumberType
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.LineNumberType>();
@@ -29009,9 +29009,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>PageNumberType.</para>
         /// <para>Represents the following element tag in the schema: w:pgNumType.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.PageNumberType? PageNumberType
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.PageNumberType>();
@@ -29022,9 +29022,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Columns.</para>
         /// <para>Represents the following element tag in the schema: w:cols.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Columns? Columns
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Columns>();
@@ -29035,9 +29035,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>FormProtection.</para>
         /// <para>Represents the following element tag in the schema: w:formProt.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.FormProtection? FormProtection
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.FormProtection>();
@@ -29048,9 +29048,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>VerticalTextAlignmentOnPage.</para>
         /// <para>Represents the following element tag in the schema: w:vAlign.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignmentOnPage? VerticalTextAlignmentOnPage
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignmentOnPage>();
@@ -29061,9 +29061,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>NoEndnote.</para>
         /// <para>Represents the following element tag in the schema: w:noEndnote.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.NoEndnote? NoEndnote
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.NoEndnote>();
@@ -29074,9 +29074,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>TitlePage.</para>
         /// <para>Represents the following element tag in the schema: w:titlePg.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TitlePage? TitlePage
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TitlePage>();
@@ -29087,9 +29087,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>TextDirection.</para>
         /// <para>Represents the following element tag in the schema: w:textDirection.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TextDirection? TextDirection
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TextDirection>();
@@ -29100,9 +29100,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>BiDi.</para>
         /// <para>Represents the following element tag in the schema: w:bidi.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.BiDi? BiDi
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.BiDi>();
@@ -29113,9 +29113,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>GutterOnRight.</para>
         /// <para>Represents the following element tag in the schema: w:rtlGutter.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.GutterOnRight? GutterOnRight
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.GutterOnRight>();
@@ -29126,9 +29126,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>DocGrid.</para>
         /// <para>Represents the following element tag in the schema: w:docGrid.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.DocGrid? DocGrid
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DocGrid>();
@@ -29139,9 +29139,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>PrinterSettingsReference.</para>
         /// <para>Represents the following element tag in the schema: w:printerSettings.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.PrinterSettingsReference? PrinterSettingsReference
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.PrinterSettingsReference>();
@@ -29152,9 +29152,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>FootnoteColumns, this property is only available in Office 2013 and later..</para>
         /// <para>Represents the following element tag in the schema: w15:footnoteColumns.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w15 = http://schemas.microsoft.com/office/word/2012/wordml
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2013.Word.FootnoteColumns? FootnoteColumns
         {
             get => GetElement<DocumentFormat.OpenXml.Office2013.Word.FootnoteColumns>();
@@ -29170,7 +29170,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:pPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.ConditionalFormatStyle" /> <c>&lt;w:cnfStyle></c></description></item>
@@ -29207,7 +29207,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TextBoxTightWrap" /> <c>&lt;w:textboxTightWrap></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TextDirection" /> <c>&lt;w:textDirection></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ParagraphPropertiesExtended : OpenXmlCompositeElement
     {
         /// <summary>
@@ -29338,9 +29338,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>ParagraphStyleId.</para>
         /// <para>Represents the following element tag in the schema: w:pStyle.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.ParagraphStyleId? ParagraphStyleId
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.ParagraphStyleId>();
@@ -29351,9 +29351,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>KeepNext.</para>
         /// <para>Represents the following element tag in the schema: w:keepNext.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.KeepNext? KeepNext
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.KeepNext>();
@@ -29364,9 +29364,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>KeepLines.</para>
         /// <para>Represents the following element tag in the schema: w:keepLines.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.KeepLines? KeepLines
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.KeepLines>();
@@ -29377,9 +29377,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>PageBreakBefore.</para>
         /// <para>Represents the following element tag in the schema: w:pageBreakBefore.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.PageBreakBefore? PageBreakBefore
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.PageBreakBefore>();
@@ -29390,9 +29390,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>FrameProperties.</para>
         /// <para>Represents the following element tag in the schema: w:framePr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.FrameProperties? FrameProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.FrameProperties>();
@@ -29403,9 +29403,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>WidowControl.</para>
         /// <para>Represents the following element tag in the schema: w:widowControl.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.WidowControl? WidowControl
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.WidowControl>();
@@ -29416,9 +29416,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>NumberingProperties.</para>
         /// <para>Represents the following element tag in the schema: w:numPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.NumberingProperties? NumberingProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.NumberingProperties>();
@@ -29429,9 +29429,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>SuppressLineNumbers.</para>
         /// <para>Represents the following element tag in the schema: w:suppressLineNumbers.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.SuppressLineNumbers? SuppressLineNumbers
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SuppressLineNumbers>();
@@ -29442,9 +29442,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>ParagraphBorders.</para>
         /// <para>Represents the following element tag in the schema: w:pBdr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.ParagraphBorders? ParagraphBorders
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.ParagraphBorders>();
@@ -29455,9 +29455,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Shading.</para>
         /// <para>Represents the following element tag in the schema: w:shd.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Shading? Shading
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Shading>();
@@ -29468,9 +29468,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Tabs.</para>
         /// <para>Represents the following element tag in the schema: w:tabs.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Tabs? Tabs
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Tabs>();
@@ -29481,9 +29481,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>SuppressAutoHyphens.</para>
         /// <para>Represents the following element tag in the schema: w:suppressAutoHyphens.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.SuppressAutoHyphens? SuppressAutoHyphens
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SuppressAutoHyphens>();
@@ -29494,9 +29494,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Kinsoku.</para>
         /// <para>Represents the following element tag in the schema: w:kinsoku.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Kinsoku? Kinsoku
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Kinsoku>();
@@ -29507,9 +29507,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>WordWrap.</para>
         /// <para>Represents the following element tag in the schema: w:wordWrap.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.WordWrap? WordWrap
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.WordWrap>();
@@ -29520,9 +29520,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>OverflowPunctuation.</para>
         /// <para>Represents the following element tag in the schema: w:overflowPunct.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.OverflowPunctuation? OverflowPunctuation
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.OverflowPunctuation>();
@@ -29533,9 +29533,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>TopLinePunctuation.</para>
         /// <para>Represents the following element tag in the schema: w:topLinePunct.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TopLinePunctuation? TopLinePunctuation
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TopLinePunctuation>();
@@ -29546,9 +29546,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>AutoSpaceDE.</para>
         /// <para>Represents the following element tag in the schema: w:autoSpaceDE.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.AutoSpaceDE? AutoSpaceDE
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.AutoSpaceDE>();
@@ -29559,9 +29559,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>AutoSpaceDN.</para>
         /// <para>Represents the following element tag in the schema: w:autoSpaceDN.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.AutoSpaceDN? AutoSpaceDN
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.AutoSpaceDN>();
@@ -29572,9 +29572,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>BiDi.</para>
         /// <para>Represents the following element tag in the schema: w:bidi.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.BiDi? BiDi
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.BiDi>();
@@ -29585,9 +29585,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>AdjustRightIndent.</para>
         /// <para>Represents the following element tag in the schema: w:adjustRightInd.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.AdjustRightIndent? AdjustRightIndent
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.AdjustRightIndent>();
@@ -29598,9 +29598,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>SnapToGrid.</para>
         /// <para>Represents the following element tag in the schema: w:snapToGrid.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.SnapToGrid? SnapToGrid
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SnapToGrid>();
@@ -29611,9 +29611,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>SpacingBetweenLines.</para>
         /// <para>Represents the following element tag in the schema: w:spacing.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.SpacingBetweenLines? SpacingBetweenLines
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SpacingBetweenLines>();
@@ -29624,9 +29624,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Indentation.</para>
         /// <para>Represents the following element tag in the schema: w:ind.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Indentation? Indentation
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Indentation>();
@@ -29637,9 +29637,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>ContextualSpacing.</para>
         /// <para>Represents the following element tag in the schema: w:contextualSpacing.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.ContextualSpacing? ContextualSpacing
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.ContextualSpacing>();
@@ -29650,9 +29650,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>MirrorIndents.</para>
         /// <para>Represents the following element tag in the schema: w:mirrorIndents.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.MirrorIndents? MirrorIndents
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.MirrorIndents>();
@@ -29663,9 +29663,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>SuppressOverlap.</para>
         /// <para>Represents the following element tag in the schema: w:suppressOverlap.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.SuppressOverlap? SuppressOverlap
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SuppressOverlap>();
@@ -29676,9 +29676,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Justification.</para>
         /// <para>Represents the following element tag in the schema: w:jc.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Justification? Justification
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Justification>();
@@ -29689,9 +29689,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>TextDirection.</para>
         /// <para>Represents the following element tag in the schema: w:textDirection.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TextDirection? TextDirection
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TextDirection>();
@@ -29702,9 +29702,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>TextAlignment.</para>
         /// <para>Represents the following element tag in the schema: w:textAlignment.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TextAlignment? TextAlignment
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TextAlignment>();
@@ -29715,9 +29715,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>TextBoxTightWrap.</para>
         /// <para>Represents the following element tag in the schema: w:textboxTightWrap.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TextBoxTightWrap? TextBoxTightWrap
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TextBoxTightWrap>();
@@ -29728,9 +29728,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>OutlineLevel.</para>
         /// <para>Represents the following element tag in the schema: w:outlineLvl.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.OutlineLevel? OutlineLevel
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.OutlineLevel>();
@@ -29741,9 +29741,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>DivId.</para>
         /// <para>Represents the following element tag in the schema: w:divId.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.DivId? DivId
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DivId>();
@@ -29754,9 +29754,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>ConditionalFormatStyle.</para>
         /// <para>Represents the following element tag in the schema: w:cnfStyle.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.ConditionalFormatStyle? ConditionalFormatStyle
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.ConditionalFormatStyle>();
@@ -29772,7 +29772,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:rPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Border" /> <c>&lt;w:bdr></c></description></item>
@@ -29826,7 +29826,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.StylisticSets" /> <c>&lt;w14:stylisticSets></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.TextOutlineEffect" /> <c>&lt;w14:textOutline></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PreviousRunProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -30032,7 +30032,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:rPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Border" /> <c>&lt;w:bdr></c></description></item>
@@ -30093,7 +30093,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.StylisticSets" /> <c>&lt;w14:stylisticSets></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.TextOutlineEffect" /> <c>&lt;w14:textOutline></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PreviousParagraphMarkRunProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -30326,9 +30326,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Inserted Paragraph.</para>
         /// <para>Represents the following element tag in the schema: w:ins.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Inserted? Inserted
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Inserted>();
@@ -30339,9 +30339,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Deleted Paragraph.</para>
         /// <para>Represents the following element tag in the schema: w:del.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Deleted? Deleted
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Deleted>();
@@ -30352,9 +30352,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Move Source Paragraph.</para>
         /// <para>Represents the following element tag in the schema: w:moveFrom.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.MoveFrom? MoveFrom
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.MoveFrom>();
@@ -30365,9 +30365,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Move Destination Paragraph.</para>
         /// <para>Represents the following element tag in the schema: w:moveTo.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.MoveTo? MoveTo
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.MoveTo>();
@@ -30396,9 +30396,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>val</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public Int32Value? Val
         {
             get => GetAttribute<Int32Value>();
@@ -30511,9 +30511,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>val</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public Int32Value? Val
         {
             get => GetAttribute<Int32Value>();
@@ -30550,9 +30550,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>original</para>
         /// <para>Represents the following attribute in the schema: w:original</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Original
         {
             get => GetAttribute<StringValue>();
@@ -30563,9 +30563,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>author</para>
         /// <para>Represents the following attribute in the schema: w:author</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Author
         {
             get => GetAttribute<StringValue>();
@@ -30576,9 +30576,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>date</para>
         /// <para>Represents the following attribute in the schema: w:date</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DateTimeValue? Date
         {
             get => GetAttribute<DateTimeValue>();
@@ -30589,9 +30589,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>dateUtc, this property is only available in Microsoft365 and later.</para>
         /// <para>Represents the following attribute in the schema: w16du:dateUtc</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w16du=http://schemas.microsoft.com/office/word/2023/wordml/word16du
-        /// </remark>
+        /// </remarks>
         public DateTimeValue? DateUtc
         {
             get => GetAttribute<DateTimeValue>();
@@ -30602,9 +30602,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Annotation Identifier</para>
         /// <para>Represents the following attribute in the schema: w:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -30662,9 +30662,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Tab Stop Type</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TabStopValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TabStopValues>>();
@@ -30675,9 +30675,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Tab Leader Character</para>
         /// <para>Represents the following attribute in the schema: w:leader</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TabStopLeaderCharValues>? Leader
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TabStopLeaderCharValues>>();
@@ -30688,9 +30688,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Tab Stop Position</para>
         /// <para>Represents the following attribute in the schema: w:pos</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public Int32Value? Position
         {
             get => GetAttribute<Int32Value>();
@@ -30723,7 +30723,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:rPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Border" /> <c>&lt;w:bdr></c></description></item>
@@ -30785,7 +30785,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.StylisticSets" /> <c>&lt;w14:stylisticSets></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.TextOutlineEffect" /> <c>&lt;w14:textOutline></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ParagraphMarkRunProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -31020,9 +31020,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Inserted Paragraph.</para>
         /// <para>Represents the following element tag in the schema: w:ins.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Inserted? Inserted
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Inserted>();
@@ -31033,9 +31033,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Deleted Paragraph.</para>
         /// <para>Represents the following element tag in the schema: w:del.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Deleted? Deleted
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Deleted>();
@@ -31046,9 +31046,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Move Source Paragraph.</para>
         /// <para>Represents the following element tag in the schema: w:moveFrom.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.MoveFrom? MoveFrom
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.MoveFrom>();
@@ -31059,9 +31059,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Move Destination Paragraph.</para>
         /// <para>Represents the following element tag in the schema: w:moveTo.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.MoveTo? MoveTo
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.MoveTo>();
@@ -31077,7 +31077,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:sectPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Columns" /> <c>&lt;w:cols></c></description></item>
@@ -31104,7 +31104,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TextDirection" /> <c>&lt;w:textDirection></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignmentOnPage" /> <c>&lt;w:vAlign></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SectionProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -31142,9 +31142,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Physical Section Mark Character Revision ID</para>
         /// <para>Represents the following attribute in the schema: w:rsidRPr</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public HexBinaryValue? RsidRPr
         {
             get => GetAttribute<HexBinaryValue>();
@@ -31155,9 +31155,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Section Deletion Revision ID</para>
         /// <para>Represents the following attribute in the schema: w:rsidDel</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public HexBinaryValue? RsidDel
         {
             get => GetAttribute<HexBinaryValue>();
@@ -31168,9 +31168,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Section Addition Revision ID</para>
         /// <para>Represents the following attribute in the schema: w:rsidR</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public HexBinaryValue? RsidR
         {
             get => GetAttribute<HexBinaryValue>();
@@ -31181,9 +31181,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Section Properties Revision ID</para>
         /// <para>Represents the following attribute in the schema: w:rsidSect</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public HexBinaryValue? RsidSect
         {
             get => GetAttribute<HexBinaryValue>();
@@ -31320,7 +31320,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:ffData.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CheckBox" /> <c>&lt;w:checkBox></c></description></item>
@@ -31334,7 +31334,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Enabled" /> <c>&lt;w:enabled></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CalculateOnExit" /> <c>&lt;w:calcOnExit></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class FormFieldData : OpenXmlCompositeElement
     {
         /// <summary>
@@ -31422,9 +31422,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Form Field Name Value</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -31513,9 +31513,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Name of Script Function</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -31552,9 +31552,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Help Text Type</para>
         /// <para>Represents the following attribute in the schema: w:type</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.InfoTextValues>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.InfoTextValues>>();
@@ -31565,9 +31565,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Help Text Value</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -31608,9 +31608,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Status Text Type</para>
         /// <para>Represents the following attribute in the schema: w:type</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.InfoTextValues>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.InfoTextValues>>();
@@ -31621,9 +31621,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Status Text Value</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -31652,7 +31652,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:checkBox.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.FormFieldSize" /> <c>&lt;w:size></c></description></item>
@@ -31660,7 +31660,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DefaultCheckBoxFormFieldState" /> <c>&lt;w:default></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Checked" /> <c>&lt;w:checked></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class CheckBox : OpenXmlCompositeElement
     {
         /// <summary>
@@ -31723,14 +31723,14 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:ddList.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DropDownListSelection" /> <c>&lt;w:result></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.ListEntryFormField" /> <c>&lt;w:listEntry></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DefaultDropDownListItemIndex" /> <c>&lt;w:default></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DropDownListFormField : OpenXmlCompositeElement
     {
         /// <summary>
@@ -31783,9 +31783,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Drop-Down List Selection.</para>
         /// <para>Represents the following element tag in the schema: w:result.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.DropDownListSelection? DropDownListSelection
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DropDownListSelection>();
@@ -31796,9 +31796,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Default Drop-Down List Item Index.</para>
         /// <para>Represents the following element tag in the schema: w:default.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.DefaultDropDownListItemIndex? DefaultDropDownListItemIndex
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DefaultDropDownListItemIndex>();
@@ -31814,7 +31814,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:textInput.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TextBoxFormFieldType" /> <c>&lt;w:type></c></description></item>
@@ -31822,7 +31822,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DefaultTextBoxFormFieldString" /> <c>&lt;w:default></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Format" /> <c>&lt;w:format></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TextInput : OpenXmlCompositeElement
     {
         /// <summary>
@@ -31877,9 +31877,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Text Box Form Field Type.</para>
         /// <para>Represents the following element tag in the schema: w:type.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TextBoxFormFieldType? TextBoxFormFieldType
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TextBoxFormFieldType>();
@@ -31890,9 +31890,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Default Text Box Form Field String.</para>
         /// <para>Represents the following element tag in the schema: w:default.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.DefaultTextBoxFormFieldString? DefaultTextBoxFormFieldString
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DefaultTextBoxFormFieldString>();
@@ -31903,9 +31903,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Text Box Form Field Maximum Length.</para>
         /// <para>Represents the following element tag in the schema: w:maxLength.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.MaxLength? MaxLength
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.MaxLength>();
@@ -31916,9 +31916,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Text Box Form Field Formatting.</para>
         /// <para>Represents the following element tag in the schema: w:format.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Format? Format
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Format>();
@@ -31947,9 +31947,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>val</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public Int32Value? Val
         {
             get => GetAttribute<Int32Value>();
@@ -32063,9 +32063,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>val</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -32102,9 +32102,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Text Box Form Field Type Values</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TextBoxFormFieldValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TextBoxFormFieldValues>>();
@@ -32144,9 +32144,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>val</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public Int16Value? Val
         {
             get => GetAttribute<Int16Value>();
@@ -32187,9 +32187,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>val</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -32230,9 +32230,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Column Width</para>
         /// <para>Represents the following attribute in the schema: w:w</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Width
         {
             get => GetAttribute<StringValue>();
@@ -32243,9 +32243,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Space Before Following Column</para>
         /// <para>Represents the following attribute in the schema: w:space</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Space
         {
             get => GetAttribute<StringValue>();
@@ -32286,12 +32286,12 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:sectPrChange.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.PreviousSectionProperties" /> <c>&lt;w:sectPr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SectionPropertiesChange : OpenXmlCompositeElement
     {
         /// <summary>
@@ -32329,9 +32329,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>author</para>
         /// <para>Represents the following attribute in the schema: w:author</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Author
         {
             get => GetAttribute<StringValue>();
@@ -32342,9 +32342,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>date</para>
         /// <para>Represents the following attribute in the schema: w:date</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DateTimeValue? Date
         {
             get => GetAttribute<DateTimeValue>();
@@ -32355,9 +32355,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>dateUtc, this property is only available in Microsoft365 and later.</para>
         /// <para>Represents the following attribute in the schema: w16du:dateUtc</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w16du=http://schemas.microsoft.com/office/word/2023/wordml/word16du
-        /// </remark>
+        /// </remarks>
         public DateTimeValue? DateUtc
         {
             get => GetAttribute<DateTimeValue>();
@@ -32368,9 +32368,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Annotation Identifier</para>
         /// <para>Represents the following attribute in the schema: w:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -32416,9 +32416,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Previous Section Properties.</para>
         /// <para>Represents the following element tag in the schema: w:sectPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.PreviousSectionProperties? PreviousSectionProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.PreviousSectionProperties>();
@@ -32434,12 +32434,12 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:rPrChange.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.PreviousParagraphMarkRunProperties" /> <c>&lt;w:rPr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ParagraphMarkRunPropertiesChange : OpenXmlCompositeElement
     {
         /// <summary>
@@ -32477,9 +32477,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>author</para>
         /// <para>Represents the following attribute in the schema: w:author</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Author
         {
             get => GetAttribute<StringValue>();
@@ -32490,9 +32490,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>date</para>
         /// <para>Represents the following attribute in the schema: w:date</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DateTimeValue? Date
         {
             get => GetAttribute<DateTimeValue>();
@@ -32503,9 +32503,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>dateUtc, this property is only available in Microsoft365 and later.</para>
         /// <para>Represents the following attribute in the schema: w16du:dateUtc</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w16du=http://schemas.microsoft.com/office/word/2023/wordml/word16du
-        /// </remark>
+        /// </remarks>
         public DateTimeValue? DateUtc
         {
             get => GetAttribute<DateTimeValue>();
@@ -32516,9 +32516,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Annotation Identifier</para>
         /// <para>Represents the following attribute in the schema: w:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -32564,9 +32564,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Previous Run Properties for the Paragraph Mark.</para>
         /// <para>Represents the following element tag in the schema: w:rPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.PreviousParagraphMarkRunProperties? PreviousParagraphMarkRunProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.PreviousParagraphMarkRunProperties>();
@@ -32582,12 +32582,12 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:altChunkPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MatchSource" /> <c>&lt;w:matchSrc></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class AltChunkProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -32636,9 +32636,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Keep Source Formatting on Import.</para>
         /// <para>Represents the following element tag in the schema: w:matchSrc.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.MatchSource? MatchSource
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.MatchSource>();
@@ -32667,9 +32667,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Phonetic Guide Text Alignment Value</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.RubyAlignValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.RubyAlignValues>>();
@@ -32709,9 +32709,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>val</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public Int16Value? Val
         {
             get => GetAttribute<Int16Value>();
@@ -32751,9 +32751,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Language Code</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -32781,7 +32781,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:rubyPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.PhoneticGuideTextFontSize" /> <c>&lt;w:hps></c></description></item>
@@ -32791,7 +32791,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Dirty" /> <c>&lt;w:dirty></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.RubyAlign" /> <c>&lt;w:rubyAlign></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class RubyProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -32850,9 +32850,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Phonetic Guide Text Alignment.</para>
         /// <para>Represents the following element tag in the schema: w:rubyAlign.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.RubyAlign? RubyAlign
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.RubyAlign>();
@@ -32863,9 +32863,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Phonetic Guide Text Font Size.</para>
         /// <para>Represents the following element tag in the schema: w:hps.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.PhoneticGuideTextFontSize? PhoneticGuideTextFontSize
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.PhoneticGuideTextFontSize>();
@@ -32876,9 +32876,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Distance Between Phonetic Guide Text and Phonetic Guide Base Text.</para>
         /// <para>Represents the following element tag in the schema: w:hpsRaise.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.PhoneticGuideRaise? PhoneticGuideRaise
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.PhoneticGuideRaise>();
@@ -32889,9 +32889,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Phonetic Guide Base Text Font Size.</para>
         /// <para>Represents the following element tag in the schema: w:hpsBaseText.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.PhoneticGuideBaseTextSize? PhoneticGuideBaseTextSize
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.PhoneticGuideBaseTextSize>();
@@ -32902,9 +32902,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Language ID for Phonetic Guide.</para>
         /// <para>Represents the following element tag in the schema: w:lid.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.LanguageId? LanguageId
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.LanguageId>();
@@ -32915,9 +32915,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Invalidated Field Cache.</para>
         /// <para>Represents the following element tag in the schema: w:dirty.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Dirty? Dirty
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Dirty>();
@@ -32933,7 +32933,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:rt.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Accent" /> <c>&lt;m:acc></c></description></item>
@@ -32994,7 +32994,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class RubyContent : RubyContentType
     {
         /// <summary>
@@ -33166,7 +33166,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:rubyBase.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Accent" /> <c>&lt;m:acc></c></description></item>
@@ -33227,7 +33227,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class RubyBase : RubyContentType
     {
         /// <summary>
@@ -33399,7 +33399,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Accent" /> <c>&lt;m:acc></c></description></item>
@@ -33460,7 +33460,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public abstract partial class RubyContentType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -33575,9 +33575,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Date Storage Type</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DateFormatValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DateFormatValues>>();
@@ -33614,9 +33614,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Calendar Type Value</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CalendarValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.CalendarValues>>();
@@ -33653,9 +33653,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>List Entry Display Text</para>
         /// <para>Represents the following attribute in the schema: w:displayText</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? DisplayText
         {
             get => GetAttribute<StringValue>();
@@ -33666,9 +33666,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>List Entry Value</para>
         /// <para>Represents the following attribute in the schema: w:value</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Value
         {
             get => GetAttribute<StringValue>();
@@ -33693,7 +33693,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:sdtPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Word.Color" /> <c>&lt;w15:color></c></description></item>
@@ -33727,7 +33727,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Word.Appearance" /> <c>&lt;w15:appearance></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.Word.SdtRepeatedSection" /> <c>&lt;w15:repeatingSection></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SdtProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -33845,12 +33845,12 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:sdtEndPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.RunProperties" /> <c>&lt;w:rPr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SdtEndCharProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -33904,7 +33904,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:sdtContent.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.BookmarkStart" /> <c>&lt;w:bookmarkStart></c></description></item>
@@ -33942,7 +33942,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SdtContentBlock : OpenXmlCompositeElement
     {
         /// <summary>
@@ -34107,7 +34107,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:sdtContent.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Accent" /> <c>&lt;m:acc></c></description></item>
@@ -34171,7 +34171,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SdtContentRun : OpenXmlCompositeElement
     {
         /// <summary>
@@ -34440,7 +34440,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:sdtContent.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Math.Accent" /> <c>&lt;m:acc></c></description></item>
@@ -34501,7 +34501,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SdtContentRunRuby : OpenXmlCompositeElement
     {
         /// <summary>
@@ -34730,7 +34730,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:sdtContent.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.BookmarkStart" /> <c>&lt;w:bookmarkStart></c></description></item>
@@ -34767,7 +34767,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SdtContentCell : OpenXmlCompositeElement
     {
         /// <summary>
@@ -34924,7 +34924,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:sdtContent.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.BookmarkStart" /> <c>&lt;w:bookmarkStart></c></description></item>
@@ -34961,7 +34961,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SdtContentRow : OpenXmlCompositeElement
     {
         /// <summary>
@@ -35118,13 +35118,13 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:customXmlPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlPlaceholder" /> <c>&lt;w:placeholder></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CustomXmlAttribute" /> <c>&lt;w:attr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class CustomXmlProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -35175,9 +35175,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Custom XML Element Placeholder Text.</para>
         /// <para>Represents the following element tag in the schema: w:placeholder.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.CustomXmlPlaceholder? CustomXmlPlaceholder
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.CustomXmlPlaceholder>();
@@ -35206,9 +35206,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>uri</para>
         /// <para>Represents the following attribute in the schema: w:uri</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
@@ -35219,9 +35219,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>name</para>
         /// <para>Represents the following attribute in the schema: w:name</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -35232,9 +35232,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>val</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -35280,9 +35280,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Grid Column Width</para>
         /// <para>Represents the following attribute in the schema: w:w</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Width
         {
             get => GetAttribute<StringValue>();
@@ -35314,12 +35314,12 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:tblGridChange.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.PreviousTableGrid" /> <c>&lt;w:tblGrid></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TableGridChange : OpenXmlCompositeElement
     {
         /// <summary>
@@ -35357,9 +35357,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Annotation Identifier</para>
         /// <para>Represents the following attribute in the schema: w:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -35396,9 +35396,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Previous Table Grid.</para>
         /// <para>Represents the following element tag in the schema: w:tblGrid.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.PreviousTableGrid? PreviousTableGrid
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.PreviousTableGrid>();
@@ -35414,12 +35414,12 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:tcPrChange.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.PreviousTableCellProperties" /> <c>&lt;w:tcPr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TableCellPropertiesChange : OpenXmlCompositeElement
     {
         /// <summary>
@@ -35457,9 +35457,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>author</para>
         /// <para>Represents the following attribute in the schema: w:author</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Author
         {
             get => GetAttribute<StringValue>();
@@ -35470,9 +35470,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>date</para>
         /// <para>Represents the following attribute in the schema: w:date</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DateTimeValue? Date
         {
             get => GetAttribute<DateTimeValue>();
@@ -35483,9 +35483,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>dateUtc, this property is only available in Microsoft365 and later.</para>
         /// <para>Represents the following attribute in the schema: w16du:dateUtc</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w16du=http://schemas.microsoft.com/office/word/2023/wordml/word16du
-        /// </remark>
+        /// </remarks>
         public DateTimeValue? DateUtc
         {
             get => GetAttribute<DateTimeValue>();
@@ -35496,9 +35496,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Annotation Identifier</para>
         /// <para>Represents the following attribute in the schema: w:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -35544,9 +35544,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Previous Table Cell Properties.</para>
         /// <para>Represents the following element tag in the schema: w:tcPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.PreviousTableCellProperties? PreviousTableCellProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.PreviousTableCellProperties>();
@@ -35562,7 +35562,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:tcPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CellMerge" /> <c>&lt;w:cellMerge></c></description></item>
@@ -35583,7 +35583,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TableCellVerticalAlignment" /> <c>&lt;w:vAlign></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.VerticalMerge" /> <c>&lt;w:vMerge></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TableCellProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -35718,9 +35718,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>ConditionalFormatStyle.</para>
         /// <para>Represents the following element tag in the schema: w:cnfStyle.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.ConditionalFormatStyle? ConditionalFormatStyle
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.ConditionalFormatStyle>();
@@ -35731,9 +35731,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>TableCellWidth.</para>
         /// <para>Represents the following element tag in the schema: w:tcW.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TableCellWidth? TableCellWidth
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableCellWidth>();
@@ -35744,9 +35744,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>GridSpan.</para>
         /// <para>Represents the following element tag in the schema: w:gridSpan.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.GridSpan? GridSpan
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.GridSpan>();
@@ -35757,9 +35757,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>HorizontalMerge.</para>
         /// <para>Represents the following element tag in the schema: w:hMerge.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.HorizontalMerge? HorizontalMerge
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.HorizontalMerge>();
@@ -35770,9 +35770,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>VerticalMerge.</para>
         /// <para>Represents the following element tag in the schema: w:vMerge.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.VerticalMerge? VerticalMerge
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.VerticalMerge>();
@@ -35783,9 +35783,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>TableCellBorders.</para>
         /// <para>Represents the following element tag in the schema: w:tcBorders.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TableCellBorders? TableCellBorders
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableCellBorders>();
@@ -35796,9 +35796,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Shading.</para>
         /// <para>Represents the following element tag in the schema: w:shd.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Shading? Shading
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Shading>();
@@ -35809,9 +35809,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>NoWrap.</para>
         /// <para>Represents the following element tag in the schema: w:noWrap.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.NoWrap? NoWrap
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.NoWrap>();
@@ -35822,9 +35822,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>TableCellMargin.</para>
         /// <para>Represents the following element tag in the schema: w:tcMar.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TableCellMargin? TableCellMargin
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableCellMargin>();
@@ -35835,9 +35835,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>TextDirection.</para>
         /// <para>Represents the following element tag in the schema: w:textDirection.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TextDirection? TextDirection
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TextDirection>();
@@ -35848,9 +35848,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>TableCellFitText.</para>
         /// <para>Represents the following element tag in the schema: w:tcFitText.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TableCellFitText? TableCellFitText
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableCellFitText>();
@@ -35861,9 +35861,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>TableCellVerticalAlignment.</para>
         /// <para>Represents the following element tag in the schema: w:vAlign.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TableCellVerticalAlignment? TableCellVerticalAlignment
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableCellVerticalAlignment>();
@@ -35874,9 +35874,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>HideMark.</para>
         /// <para>Represents the following element tag in the schema: w:hideMark.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.HideMark? HideMark
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.HideMark>();
@@ -35892,12 +35892,12 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:tblPrChange.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.PreviousTableProperties" /> <c>&lt;w:tblPr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TablePropertiesChange : OpenXmlCompositeElement
     {
         /// <summary>
@@ -35935,9 +35935,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>author</para>
         /// <para>Represents the following attribute in the schema: w:author</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Author
         {
             get => GetAttribute<StringValue>();
@@ -35948,9 +35948,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>date</para>
         /// <para>Represents the following attribute in the schema: w:date</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DateTimeValue? Date
         {
             get => GetAttribute<DateTimeValue>();
@@ -35961,9 +35961,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>dateUtc, this property is only available in Microsoft365 and later.</para>
         /// <para>Represents the following attribute in the schema: w16du:dateUtc</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w16du=http://schemas.microsoft.com/office/word/2023/wordml/word16du
-        /// </remark>
+        /// </remarks>
         public DateTimeValue? DateUtc
         {
             get => GetAttribute<DateTimeValue>();
@@ -35974,9 +35974,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Annotation Identifier</para>
         /// <para>Represents the following attribute in the schema: w:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -36022,9 +36022,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Previous Table Properties.</para>
         /// <para>Represents the following element tag in the schema: w:tblPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.PreviousTableProperties? PreviousTableProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.PreviousTableProperties>();
@@ -36040,12 +36040,12 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:tblPrExChange.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.PreviousTablePropertyExceptions" /> <c>&lt;w:tblPrEx></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TablePropertyExceptionsChange : OpenXmlCompositeElement
     {
         /// <summary>
@@ -36083,9 +36083,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>author</para>
         /// <para>Represents the following attribute in the schema: w:author</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Author
         {
             get => GetAttribute<StringValue>();
@@ -36096,9 +36096,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>date</para>
         /// <para>Represents the following attribute in the schema: w:date</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DateTimeValue? Date
         {
             get => GetAttribute<DateTimeValue>();
@@ -36109,9 +36109,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>dateUtc, this property is only available in Microsoft365 and later.</para>
         /// <para>Represents the following attribute in the schema: w16du:dateUtc</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w16du=http://schemas.microsoft.com/office/word/2023/wordml/word16du
-        /// </remark>
+        /// </remarks>
         public DateTimeValue? DateUtc
         {
             get => GetAttribute<DateTimeValue>();
@@ -36122,9 +36122,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Annotation Identifier</para>
         /// <para>Represents the following attribute in the schema: w:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -36170,9 +36170,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Previous Table-Level Property Exceptions.</para>
         /// <para>Represents the following element tag in the schema: w:tblPrEx.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.PreviousTablePropertyExceptions? PreviousTablePropertyExceptions
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.PreviousTablePropertyExceptions>();
@@ -36188,7 +36188,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:tblPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.BiDiVisual" /> <c>&lt;w:bidiVisual></c></description></item>
@@ -36208,7 +36208,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TableCellSpacing" /> <c>&lt;w:tblCellSpacing></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TableIndentation" /> <c>&lt;w:tblInd></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TableProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -36329,9 +36329,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>TableStyle.</para>
         /// <para>Represents the following element tag in the schema: w:tblStyle.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TableStyle? TableStyle
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableStyle>();
@@ -36342,9 +36342,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>TablePositionProperties.</para>
         /// <para>Represents the following element tag in the schema: w:tblpPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TablePositionProperties? TablePositionProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TablePositionProperties>();
@@ -36355,9 +36355,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>TableOverlap.</para>
         /// <para>Represents the following element tag in the schema: w:tblOverlap.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TableOverlap? TableOverlap
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableOverlap>();
@@ -36368,9 +36368,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>BiDiVisual.</para>
         /// <para>Represents the following element tag in the schema: w:bidiVisual.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.BiDiVisual? BiDiVisual
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.BiDiVisual>();
@@ -36381,9 +36381,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>TableWidth.</para>
         /// <para>Represents the following element tag in the schema: w:tblW.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TableWidth? TableWidth
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableWidth>();
@@ -36394,9 +36394,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>TableJustification.</para>
         /// <para>Represents the following element tag in the schema: w:jc.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TableJustification? TableJustification
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableJustification>();
@@ -36407,9 +36407,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>TableCellSpacing.</para>
         /// <para>Represents the following element tag in the schema: w:tblCellSpacing.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TableCellSpacing? TableCellSpacing
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableCellSpacing>();
@@ -36420,9 +36420,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>TableIndentation.</para>
         /// <para>Represents the following element tag in the schema: w:tblInd.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TableIndentation? TableIndentation
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableIndentation>();
@@ -36433,9 +36433,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>TableBorders.</para>
         /// <para>Represents the following element tag in the schema: w:tblBorders.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TableBorders? TableBorders
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableBorders>();
@@ -36446,9 +36446,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Shading.</para>
         /// <para>Represents the following element tag in the schema: w:shd.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Shading? Shading
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Shading>();
@@ -36459,9 +36459,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>TableLayout.</para>
         /// <para>Represents the following element tag in the schema: w:tblLayout.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TableLayout? TableLayout
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableLayout>();
@@ -36472,9 +36472,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>TableCellMarginDefault.</para>
         /// <para>Represents the following element tag in the schema: w:tblCellMar.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TableCellMarginDefault? TableCellMarginDefault
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableCellMarginDefault>();
@@ -36485,9 +36485,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>TableLook.</para>
         /// <para>Represents the following element tag in the schema: w:tblLook.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TableLook? TableLook
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableLook>();
@@ -36498,9 +36498,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>TableCaption, this property is only available in Office 2010 and later..</para>
         /// <para>Represents the following element tag in the schema: w:tblCaption.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TableCaption? TableCaption
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableCaption>();
@@ -36511,9 +36511,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>TableDescription, this property is only available in Office 2010 and later..</para>
         /// <para>Represents the following element tag in the schema: w:tblDescription.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TableDescription? TableDescription
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableDescription>();
@@ -36524,9 +36524,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Revision Information for Table Properties.</para>
         /// <para>Represents the following element tag in the schema: w:tblPrChange.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TablePropertiesChange? TablePropertiesChange
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TablePropertiesChange>();
@@ -36542,13 +36542,13 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:tblGrid.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TableGridChange" /> <c>&lt;w:tblGridChange></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.GridColumn" /> <c>&lt;w:gridCol></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TableGrid : OpenXmlCompositeElement
     {
         /// <summary>
@@ -36623,9 +36623,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Footnote Position Type</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.FootnotePositionValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.FootnotePositionValues>>();
@@ -36665,9 +36665,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Numbering Format Type</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.NumberFormatValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.NumberFormatValues>>();
@@ -36678,9 +36678,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>format, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w:format</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Format
         {
             get => GetAttribute<StringValue>();
@@ -36724,9 +36724,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Endnote Position Type</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.EndnotePositionValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.EndnotePositionValues>>();
@@ -36818,9 +36818,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Footnote/Endnote ID</para>
         /// <para>Represents the following attribute in the schema: w:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public IntegerValue? Id
         {
             get => GetAttribute<IntegerValue>();
@@ -36905,9 +36905,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>val</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public UInt32Value? Val
         {
             get => GetAttribute<UInt32Value>();
@@ -36943,9 +36943,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>val</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public Base64BinaryValue? Val
         {
             get => GetAttribute<Base64BinaryValue>();
@@ -36972,14 +36972,14 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:recipientData.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.UniqueTag" /> <c>&lt;w:uniqueTag></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Active" /> <c>&lt;w:active></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.ColumnIndex" /> <c>&lt;w:column></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class RecipientData : OpenXmlCompositeElement
     {
         /// <summary>
@@ -37033,9 +37033,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Record Is Included in Mail Merge.</para>
         /// <para>Represents the following element tag in the schema: w:active.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Active? Active
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Active>();
@@ -37046,9 +37046,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Index of Column Containing Unique Values for Record.</para>
         /// <para>Represents the following element tag in the schema: w:column.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.ColumnIndex? ColumnIndex
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.ColumnIndex>();
@@ -37059,9 +37059,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Unique Value for Record.</para>
         /// <para>Represents the following element tag in the schema: w:uniqueTag.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.UniqueTag? UniqueTag
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.UniqueTag>();
@@ -37090,9 +37090,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Merge Field Mapping Type</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.MailMergeOdsoFieldValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.MailMergeOdsoFieldValues>>();
@@ -37132,9 +37132,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Data Source Type Value</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.MailMergeSourceValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.MailMergeSourceValues>>();
@@ -37161,7 +37161,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:fieldMapData.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.LanguageId" /> <c>&lt;w:lid></c></description></item>
@@ -37171,7 +37171,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MappedName" /> <c>&lt;w:mappedName></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.ColumnIndex" /> <c>&lt;w:column></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class FieldMapData : OpenXmlCompositeElement
     {
         /// <summary>
@@ -37230,9 +37230,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Merge Field Mapping.</para>
         /// <para>Represents the following element tag in the schema: w:type.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.MailMergeFieldType? MailMergeFieldType
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.MailMergeFieldType>();
@@ -37243,9 +37243,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Data Source Name for Column.</para>
         /// <para>Represents the following element tag in the schema: w:name.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Name? Name
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Name>();
@@ -37256,9 +37256,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Predefined Merge Field Name.</para>
         /// <para>Represents the following element tag in the schema: w:mappedName.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.MappedName? MappedName
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.MappedName>();
@@ -37269,9 +37269,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Index of Column Being Mapped.</para>
         /// <para>Represents the following element tag in the schema: w:column.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.ColumnIndex? ColumnIndex
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.ColumnIndex>();
@@ -37282,9 +37282,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Merge Field Name Language ID.</para>
         /// <para>Represents the following element tag in the schema: w:lid.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.LanguageId? LanguageId
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.LanguageId>();
@@ -37295,9 +37295,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Use Country/Region-Based Address Field Ordering.</para>
         /// <para>Represents the following element tag in the schema: w:dynamicAddress.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.DynamicAddress? DynamicAddress
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DynamicAddress>();
@@ -37326,9 +37326,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Mail Merge Source Document Type</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.MailMergeDocumentValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.MailMergeDocumentValues>>();
@@ -37368,9 +37368,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Value</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.MailMergeDataValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.MailMergeDataValues>>();
@@ -37410,9 +37410,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Mail Merge Merged Document Type</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.MailMergeDestinationValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.MailMergeDestinationValues>>();
@@ -37439,7 +37439,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:odso.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MailMergeSource" /> <c>&lt;w:type></c></description></item>
@@ -37451,7 +37451,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DataSourceTableName" /> <c>&lt;w:table></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.ColumnDelimiter" /> <c>&lt;w:colDelim></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DataSourceObject : OpenXmlCompositeElement
     {
         /// <summary>
@@ -37514,9 +37514,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>UDL Connection String.</para>
         /// <para>Represents the following element tag in the schema: w:udl.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.UdlConnectionString? UdlConnectionString
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.UdlConnectionString>();
@@ -37527,9 +37527,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Data Source Table Name.</para>
         /// <para>Represents the following element tag in the schema: w:table.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.DataSourceTableName? DataSourceTableName
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DataSourceTableName>();
@@ -37540,9 +37540,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>ODSO Data Source File Path.</para>
         /// <para>Represents the following element tag in the schema: w:src.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.SourceReference? SourceReference
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SourceReference>();
@@ -37553,9 +37553,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Column Delimiter for Data Source.</para>
         /// <para>Represents the following element tag in the schema: w:colDelim.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.ColumnDelimiter? ColumnDelimiter
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.ColumnDelimiter>();
@@ -37566,9 +37566,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>ODSO Data Source Type.</para>
         /// <para>Represents the following element tag in the schema: w:type.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.MailMergeSource? MailMergeSource
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.MailMergeSource>();
@@ -37579,9 +37579,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>First Row of Data Source Contains Column Names.</para>
         /// <para>Represents the following element tag in the schema: w:fHdr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.FirstRowHeader? FirstRowHeader
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.FirstRowHeader>();
@@ -37610,9 +37610,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Document Variable Name</para>
         /// <para>Represents the following attribute in the schema: w:name</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -37623,9 +37623,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Document Variable Value</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -37767,9 +37767,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Long Hexadecimal Number Value</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public HexBinaryValue? Val
         {
             get => GetAttribute<HexBinaryValue>();
@@ -37793,7 +37793,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:rPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Border" /> <c>&lt;w:bdr></c></description></item>
@@ -37831,7 +37831,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Underline" /> <c>&lt;w:u></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignment" /> <c>&lt;w:vertAlign></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class RunPropertiesBaseStyle : OpenXmlCompositeElement
     {
         /// <summary>
@@ -37970,9 +37970,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>RunFonts.</para>
         /// <para>Represents the following element tag in the schema: w:rFonts.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.RunFonts? RunFonts
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.RunFonts>();
@@ -37983,9 +37983,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Bold.</para>
         /// <para>Represents the following element tag in the schema: w:b.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Bold? Bold
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Bold>();
@@ -37996,9 +37996,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>BoldComplexScript.</para>
         /// <para>Represents the following element tag in the schema: w:bCs.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.BoldComplexScript? BoldComplexScript
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.BoldComplexScript>();
@@ -38009,9 +38009,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Italic.</para>
         /// <para>Represents the following element tag in the schema: w:i.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Italic? Italic
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Italic>();
@@ -38022,9 +38022,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>ItalicComplexScript.</para>
         /// <para>Represents the following element tag in the schema: w:iCs.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.ItalicComplexScript? ItalicComplexScript
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.ItalicComplexScript>();
@@ -38035,9 +38035,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Caps.</para>
         /// <para>Represents the following element tag in the schema: w:caps.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Caps? Caps
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Caps>();
@@ -38048,9 +38048,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>SmallCaps.</para>
         /// <para>Represents the following element tag in the schema: w:smallCaps.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.SmallCaps? SmallCaps
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SmallCaps>();
@@ -38061,9 +38061,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Strike.</para>
         /// <para>Represents the following element tag in the schema: w:strike.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Strike? Strike
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Strike>();
@@ -38074,9 +38074,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>DoubleStrike.</para>
         /// <para>Represents the following element tag in the schema: w:dstrike.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.DoubleStrike? DoubleStrike
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DoubleStrike>();
@@ -38087,9 +38087,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Outline.</para>
         /// <para>Represents the following element tag in the schema: w:outline.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Outline? Outline
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Outline>();
@@ -38100,9 +38100,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Shadow.</para>
         /// <para>Represents the following element tag in the schema: w:shadow.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Shadow? Shadow
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Shadow>();
@@ -38113,9 +38113,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Emboss.</para>
         /// <para>Represents the following element tag in the schema: w:emboss.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Emboss? Emboss
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Emboss>();
@@ -38126,9 +38126,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Imprint.</para>
         /// <para>Represents the following element tag in the schema: w:imprint.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Imprint? Imprint
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Imprint>();
@@ -38139,9 +38139,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>NoProof.</para>
         /// <para>Represents the following element tag in the schema: w:noProof.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.NoProof? NoProof
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.NoProof>();
@@ -38152,9 +38152,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>SnapToGrid.</para>
         /// <para>Represents the following element tag in the schema: w:snapToGrid.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.SnapToGrid? SnapToGrid
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SnapToGrid>();
@@ -38165,9 +38165,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Vanish.</para>
         /// <para>Represents the following element tag in the schema: w:vanish.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Vanish? Vanish
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Vanish>();
@@ -38178,9 +38178,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>WebHidden.</para>
         /// <para>Represents the following element tag in the schema: w:webHidden.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.WebHidden? WebHidden
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.WebHidden>();
@@ -38191,9 +38191,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Color.</para>
         /// <para>Represents the following element tag in the schema: w:color.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Color? Color
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Color>();
@@ -38204,9 +38204,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Spacing.</para>
         /// <para>Represents the following element tag in the schema: w:spacing.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Spacing? Spacing
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Spacing>();
@@ -38217,9 +38217,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>CharacterScale.</para>
         /// <para>Represents the following element tag in the schema: w:w.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.CharacterScale? CharacterScale
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.CharacterScale>();
@@ -38230,9 +38230,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Kern.</para>
         /// <para>Represents the following element tag in the schema: w:kern.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Kern? Kern
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Kern>();
@@ -38243,9 +38243,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Position.</para>
         /// <para>Represents the following element tag in the schema: w:position.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Position? Position
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Position>();
@@ -38256,9 +38256,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>FontSize.</para>
         /// <para>Represents the following element tag in the schema: w:sz.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.FontSize? FontSize
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.FontSize>();
@@ -38269,9 +38269,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>FontSizeComplexScript.</para>
         /// <para>Represents the following element tag in the schema: w:szCs.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.FontSizeComplexScript? FontSizeComplexScript
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.FontSizeComplexScript>();
@@ -38282,9 +38282,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Underline.</para>
         /// <para>Represents the following element tag in the schema: w:u.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Underline? Underline
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Underline>();
@@ -38295,9 +38295,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>TextEffect.</para>
         /// <para>Represents the following element tag in the schema: w:effect.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TextEffect? TextEffect
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TextEffect>();
@@ -38308,9 +38308,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Border.</para>
         /// <para>Represents the following element tag in the schema: w:bdr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Border? Border
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Border>();
@@ -38321,9 +38321,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Shading.</para>
         /// <para>Represents the following element tag in the schema: w:shd.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Shading? Shading
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Shading>();
@@ -38334,9 +38334,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>FitText.</para>
         /// <para>Represents the following element tag in the schema: w:fitText.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.FitText? FitText
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.FitText>();
@@ -38347,9 +38347,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>VerticalTextAlignment.</para>
         /// <para>Represents the following element tag in the schema: w:vertAlign.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignment? VerticalTextAlignment
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignment>();
@@ -38360,9 +38360,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Emphasis.</para>
         /// <para>Represents the following element tag in the schema: w:em.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Emphasis? Emphasis
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Emphasis>();
@@ -38373,9 +38373,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Languages.</para>
         /// <para>Represents the following element tag in the schema: w:lang.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Languages? Languages
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Languages>();
@@ -38386,9 +38386,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>EastAsianLayout.</para>
         /// <para>Represents the following element tag in the schema: w:eastAsianLayout.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.EastAsianLayout? EastAsianLayout
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.EastAsianLayout>();
@@ -38399,9 +38399,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>SpecVanish.</para>
         /// <para>Represents the following element tag in the schema: w:specVanish.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.SpecVanish? SpecVanish
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SpecVanish>();
@@ -38417,7 +38417,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:pPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.OutlineLevel" /> <c>&lt;w:outlineLvl></c></description></item>
@@ -38451,7 +38451,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TextBoxTightWrap" /> <c>&lt;w:textboxTightWrap></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TextDirection" /> <c>&lt;w:textDirection></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ParagraphPropertiesBaseStyle : OpenXmlCompositeElement
     {
         /// <summary>
@@ -38564,9 +38564,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>KeepNext.</para>
         /// <para>Represents the following element tag in the schema: w:keepNext.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.KeepNext? KeepNext
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.KeepNext>();
@@ -38577,9 +38577,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>KeepLines.</para>
         /// <para>Represents the following element tag in the schema: w:keepLines.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.KeepLines? KeepLines
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.KeepLines>();
@@ -38590,9 +38590,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>PageBreakBefore.</para>
         /// <para>Represents the following element tag in the schema: w:pageBreakBefore.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.PageBreakBefore? PageBreakBefore
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.PageBreakBefore>();
@@ -38603,9 +38603,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>FrameProperties.</para>
         /// <para>Represents the following element tag in the schema: w:framePr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.FrameProperties? FrameProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.FrameProperties>();
@@ -38616,9 +38616,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>WidowControl.</para>
         /// <para>Represents the following element tag in the schema: w:widowControl.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.WidowControl? WidowControl
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.WidowControl>();
@@ -38629,9 +38629,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>NumberingProperties.</para>
         /// <para>Represents the following element tag in the schema: w:numPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.NumberingProperties? NumberingProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.NumberingProperties>();
@@ -38642,9 +38642,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>SuppressLineNumbers.</para>
         /// <para>Represents the following element tag in the schema: w:suppressLineNumbers.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.SuppressLineNumbers? SuppressLineNumbers
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SuppressLineNumbers>();
@@ -38655,9 +38655,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>ParagraphBorders.</para>
         /// <para>Represents the following element tag in the schema: w:pBdr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.ParagraphBorders? ParagraphBorders
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.ParagraphBorders>();
@@ -38668,9 +38668,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Shading.</para>
         /// <para>Represents the following element tag in the schema: w:shd.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Shading? Shading
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Shading>();
@@ -38681,9 +38681,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Tabs.</para>
         /// <para>Represents the following element tag in the schema: w:tabs.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Tabs? Tabs
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Tabs>();
@@ -38694,9 +38694,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>SuppressAutoHyphens.</para>
         /// <para>Represents the following element tag in the schema: w:suppressAutoHyphens.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.SuppressAutoHyphens? SuppressAutoHyphens
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SuppressAutoHyphens>();
@@ -38707,9 +38707,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Kinsoku.</para>
         /// <para>Represents the following element tag in the schema: w:kinsoku.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Kinsoku? Kinsoku
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Kinsoku>();
@@ -38720,9 +38720,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>WordWrap.</para>
         /// <para>Represents the following element tag in the schema: w:wordWrap.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.WordWrap? WordWrap
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.WordWrap>();
@@ -38733,9 +38733,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>OverflowPunctuation.</para>
         /// <para>Represents the following element tag in the schema: w:overflowPunct.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.OverflowPunctuation? OverflowPunctuation
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.OverflowPunctuation>();
@@ -38746,9 +38746,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>TopLinePunctuation.</para>
         /// <para>Represents the following element tag in the schema: w:topLinePunct.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TopLinePunctuation? TopLinePunctuation
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TopLinePunctuation>();
@@ -38759,9 +38759,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>AutoSpaceDE.</para>
         /// <para>Represents the following element tag in the schema: w:autoSpaceDE.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.AutoSpaceDE? AutoSpaceDE
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.AutoSpaceDE>();
@@ -38772,9 +38772,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>AutoSpaceDN.</para>
         /// <para>Represents the following element tag in the schema: w:autoSpaceDN.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.AutoSpaceDN? AutoSpaceDN
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.AutoSpaceDN>();
@@ -38785,9 +38785,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>BiDi.</para>
         /// <para>Represents the following element tag in the schema: w:bidi.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.BiDi? BiDi
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.BiDi>();
@@ -38798,9 +38798,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>AdjustRightIndent.</para>
         /// <para>Represents the following element tag in the schema: w:adjustRightInd.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.AdjustRightIndent? AdjustRightIndent
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.AdjustRightIndent>();
@@ -38811,9 +38811,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>SnapToGrid.</para>
         /// <para>Represents the following element tag in the schema: w:snapToGrid.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.SnapToGrid? SnapToGrid
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SnapToGrid>();
@@ -38824,9 +38824,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>SpacingBetweenLines.</para>
         /// <para>Represents the following element tag in the schema: w:spacing.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.SpacingBetweenLines? SpacingBetweenLines
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SpacingBetweenLines>();
@@ -38837,9 +38837,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Indentation.</para>
         /// <para>Represents the following element tag in the schema: w:ind.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Indentation? Indentation
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Indentation>();
@@ -38850,9 +38850,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>ContextualSpacing.</para>
         /// <para>Represents the following element tag in the schema: w:contextualSpacing.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.ContextualSpacing? ContextualSpacing
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.ContextualSpacing>();
@@ -38863,9 +38863,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>MirrorIndents.</para>
         /// <para>Represents the following element tag in the schema: w:mirrorIndents.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.MirrorIndents? MirrorIndents
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.MirrorIndents>();
@@ -38876,9 +38876,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>SuppressOverlap.</para>
         /// <para>Represents the following element tag in the schema: w:suppressOverlap.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.SuppressOverlap? SuppressOverlap
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SuppressOverlap>();
@@ -38889,9 +38889,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Justification.</para>
         /// <para>Represents the following element tag in the schema: w:jc.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Justification? Justification
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Justification>();
@@ -38902,9 +38902,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>TextDirection.</para>
         /// <para>Represents the following element tag in the schema: w:textDirection.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TextDirection? TextDirection
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TextDirection>();
@@ -38915,9 +38915,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>TextAlignment.</para>
         /// <para>Represents the following element tag in the schema: w:textAlignment.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TextAlignment? TextAlignment
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TextAlignment>();
@@ -38928,9 +38928,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>TextBoxTightWrap.</para>
         /// <para>Represents the following element tag in the schema: w:textboxTightWrap.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TextBoxTightWrap? TextBoxTightWrap
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TextBoxTightWrap>();
@@ -38941,9 +38941,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>OutlineLevel.</para>
         /// <para>Represents the following element tag in the schema: w:outlineLvl.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.OutlineLevel? OutlineLevel
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.OutlineLevel>();
@@ -38959,12 +38959,12 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:rPrDefault.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.RunPropertiesBaseStyle" /> <c>&lt;w:rPr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class RunPropertiesDefault : OpenXmlCompositeElement
     {
         /// <summary>
@@ -39013,9 +39013,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Run Properties.</para>
         /// <para>Represents the following element tag in the schema: w:rPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.RunPropertiesBaseStyle? RunPropertiesBaseStyle
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.RunPropertiesBaseStyle>();
@@ -39031,12 +39031,12 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:pPrDefault.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.ParagraphPropertiesBaseStyle" /> <c>&lt;w:pPr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ParagraphPropertiesDefault : OpenXmlCompositeElement
     {
         /// <summary>
@@ -39085,9 +39085,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Paragraph Properties.</para>
         /// <para>Represents the following element tag in the schema: w:pPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.ParagraphPropertiesBaseStyle? ParagraphPropertiesBaseStyle
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.ParagraphPropertiesBaseStyle>();
@@ -39164,9 +39164,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Measurement in Pixels</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public UInt32Value? Val
         {
             get => GetAttribute<UInt32Value>();
@@ -39202,9 +39202,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Scrollbar Display Option Value</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.FrameScrollbarVisibilityValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.FrameScrollbarVisibilityValues>>();
@@ -39388,9 +39388,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Measurement in Twentieths of a Point</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -39419,7 +39419,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:framesetSplitbar.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Color" /> <c>&lt;w:color></c></description></item>
@@ -39427,7 +39427,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.FlatBorders" /> <c>&lt;w:flatBorders></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Width" /> <c>&lt;w:w></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class FramesetSplitbar : OpenXmlCompositeElement
     {
         /// <summary>
@@ -39482,9 +39482,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Frameset Splitter Width.</para>
         /// <para>Represents the following element tag in the schema: w:w.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Width? Width
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Width>();
@@ -39495,9 +39495,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Frameset Splitter Color.</para>
         /// <para>Represents the following element tag in the schema: w:color.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Color? Color
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Color>();
@@ -39508,9 +39508,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Do Not Display Frameset Splitters.</para>
         /// <para>Represents the following element tag in the schema: w:noBorder.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.NoBorder? NoBorder
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.NoBorder>();
@@ -39521,9 +39521,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Frameset Splitter Border Style.</para>
         /// <para>Represents the following element tag in the schema: w:flatBorders.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.FlatBorders? FlatBorders
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.FlatBorders>();
@@ -39552,9 +39552,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Frameset Layout Value</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.FrameLayoutValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.FrameLayoutValues>>();
@@ -39581,7 +39581,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:frameset.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Frame" /> <c>&lt;w:frame></c></description></item>
@@ -39590,7 +39590,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.FramesetSplitbar" /> <c>&lt;w:framesetSplitbar></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.FrameSize" /> <c>&lt;w:sz></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Frameset : OpenXmlCompositeElement
     {
         /// <summary>
@@ -39653,9 +39653,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Nested Frameset Size.</para>
         /// <para>Represents the following element tag in the schema: w:sz.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.FrameSize? FrameSize
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.FrameSize>();
@@ -39666,9 +39666,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Frameset Splitter Properties.</para>
         /// <para>Represents the following element tag in the schema: w:framesetSplitbar.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.FramesetSplitbar? FramesetSplitbar
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.FramesetSplitbar>();
@@ -39679,9 +39679,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Frameset Layout.</para>
         /// <para>Represents the following element tag in the schema: w:frameLayout.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.FrameLayout? FrameLayout
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.FrameLayout>();
@@ -39697,7 +39697,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:frame.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.ScrollbarVisibility" /> <c>&lt;w:scrollbar></c></description></item>
@@ -39709,7 +39709,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.FrameSize" /> <c>&lt;w:sz></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.FrameName" /> <c>&lt;w:name></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Frame : OpenXmlCompositeElement
     {
         /// <summary>
@@ -39772,9 +39772,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Frame Size.</para>
         /// <para>Represents the following element tag in the schema: w:sz.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.FrameSize? FrameSize
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.FrameSize>();
@@ -39785,9 +39785,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Frame Name.</para>
         /// <para>Represents the following element tag in the schema: w:name.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.FrameName? FrameName
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.FrameName>();
@@ -39798,9 +39798,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Source File for Frame.</para>
         /// <para>Represents the following element tag in the schema: w:sourceFileName.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.SourceFileReference? SourceFileReference
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SourceFileReference>();
@@ -39811,9 +39811,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Left and Right Margin for Frame.</para>
         /// <para>Represents the following element tag in the schema: w:marW.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.MarginWidth? MarginWidth
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.MarginWidth>();
@@ -39824,9 +39824,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Top and Bottom Margin for Frame.</para>
         /// <para>Represents the following element tag in the schema: w:marH.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.MarginHeight? MarginHeight
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.MarginHeight>();
@@ -39837,9 +39837,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Scrollbar Display Option.</para>
         /// <para>Represents the following element tag in the schema: w:scrollbar.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.ScrollbarVisibility? ScrollbarVisibility
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.ScrollbarVisibility>();
@@ -39850,9 +39850,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Frame Cannot Be Resized.</para>
         /// <para>Represents the following element tag in the schema: w:noResizeAllowed.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.NoResizeAllowed? NoResizeAllowed
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.NoResizeAllowed>();
@@ -39863,9 +39863,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Maintain Link to Existing File.</para>
         /// <para>Represents the following element tag in the schema: w:linkedToFile.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.LinkedToFile? LinkedToFile
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.LinkedToFile>();
@@ -39894,9 +39894,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Character Type Between Numbering and Text</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.LevelSuffixValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.LevelSuffixValues>>();
@@ -39936,9 +39936,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Level Text</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -39949,9 +39949,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Level Text Is Null Character</para>
         /// <para>Represents the following attribute in the schema: w:null</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public OnOffValue? Null
         {
             get => GetAttribute<OnOffValue>();
@@ -39989,9 +39989,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Use Legacy Numbering Properties</para>
         /// <para>Represents the following attribute in the schema: w:legacy</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public OnOffValue? Legacy
         {
             get => GetAttribute<OnOffValue>();
@@ -40002,9 +40002,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Legacy Spacing</para>
         /// <para>Represents the following attribute in the schema: w:legacySpace</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? LegacySpace
         {
             get => GetAttribute<StringValue>();
@@ -40015,9 +40015,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Legacy Indent</para>
         /// <para>Represents the following attribute in the schema: w:legacyIndent</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? LegacyIndent
         {
             get => GetAttribute<StringValue>();
@@ -40072,9 +40072,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Alignment Type</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.LevelJustificationValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.LevelJustificationValues>>();
@@ -40101,7 +40101,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:pPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.OutlineLevel" /> <c>&lt;w:outlineLvl></c></description></item>
@@ -40136,7 +40136,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TextBoxTightWrap" /> <c>&lt;w:textboxTightWrap></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TextDirection" /> <c>&lt;w:textDirection></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PreviousParagraphProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -40257,9 +40257,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>ParagraphStyleId.</para>
         /// <para>Represents the following element tag in the schema: w:pStyle.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.ParagraphStyleId? ParagraphStyleId
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.ParagraphStyleId>();
@@ -40270,9 +40270,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>KeepNext.</para>
         /// <para>Represents the following element tag in the schema: w:keepNext.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.KeepNext? KeepNext
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.KeepNext>();
@@ -40283,9 +40283,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>KeepLines.</para>
         /// <para>Represents the following element tag in the schema: w:keepLines.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.KeepLines? KeepLines
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.KeepLines>();
@@ -40296,9 +40296,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>PageBreakBefore.</para>
         /// <para>Represents the following element tag in the schema: w:pageBreakBefore.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.PageBreakBefore? PageBreakBefore
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.PageBreakBefore>();
@@ -40309,9 +40309,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>FrameProperties.</para>
         /// <para>Represents the following element tag in the schema: w:framePr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.FrameProperties? FrameProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.FrameProperties>();
@@ -40322,9 +40322,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>WidowControl.</para>
         /// <para>Represents the following element tag in the schema: w:widowControl.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.WidowControl? WidowControl
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.WidowControl>();
@@ -40335,9 +40335,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>NumberingProperties.</para>
         /// <para>Represents the following element tag in the schema: w:numPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.NumberingProperties? NumberingProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.NumberingProperties>();
@@ -40348,9 +40348,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>SuppressLineNumbers.</para>
         /// <para>Represents the following element tag in the schema: w:suppressLineNumbers.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.SuppressLineNumbers? SuppressLineNumbers
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SuppressLineNumbers>();
@@ -40361,9 +40361,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>ParagraphBorders.</para>
         /// <para>Represents the following element tag in the schema: w:pBdr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.ParagraphBorders? ParagraphBorders
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.ParagraphBorders>();
@@ -40374,9 +40374,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Shading.</para>
         /// <para>Represents the following element tag in the schema: w:shd.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Shading? Shading
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Shading>();
@@ -40387,9 +40387,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Tabs.</para>
         /// <para>Represents the following element tag in the schema: w:tabs.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Tabs? Tabs
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Tabs>();
@@ -40400,9 +40400,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>SuppressAutoHyphens.</para>
         /// <para>Represents the following element tag in the schema: w:suppressAutoHyphens.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.SuppressAutoHyphens? SuppressAutoHyphens
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SuppressAutoHyphens>();
@@ -40413,9 +40413,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Kinsoku.</para>
         /// <para>Represents the following element tag in the schema: w:kinsoku.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Kinsoku? Kinsoku
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Kinsoku>();
@@ -40426,9 +40426,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>WordWrap.</para>
         /// <para>Represents the following element tag in the schema: w:wordWrap.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.WordWrap? WordWrap
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.WordWrap>();
@@ -40439,9 +40439,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>OverflowPunctuation.</para>
         /// <para>Represents the following element tag in the schema: w:overflowPunct.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.OverflowPunctuation? OverflowPunctuation
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.OverflowPunctuation>();
@@ -40452,9 +40452,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>TopLinePunctuation.</para>
         /// <para>Represents the following element tag in the schema: w:topLinePunct.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TopLinePunctuation? TopLinePunctuation
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TopLinePunctuation>();
@@ -40465,9 +40465,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>AutoSpaceDE.</para>
         /// <para>Represents the following element tag in the schema: w:autoSpaceDE.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.AutoSpaceDE? AutoSpaceDE
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.AutoSpaceDE>();
@@ -40478,9 +40478,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>AutoSpaceDN.</para>
         /// <para>Represents the following element tag in the schema: w:autoSpaceDN.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.AutoSpaceDN? AutoSpaceDN
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.AutoSpaceDN>();
@@ -40491,9 +40491,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>BiDi.</para>
         /// <para>Represents the following element tag in the schema: w:bidi.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.BiDi? BiDi
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.BiDi>();
@@ -40504,9 +40504,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>AdjustRightIndent.</para>
         /// <para>Represents the following element tag in the schema: w:adjustRightInd.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.AdjustRightIndent? AdjustRightIndent
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.AdjustRightIndent>();
@@ -40517,9 +40517,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>SnapToGrid.</para>
         /// <para>Represents the following element tag in the schema: w:snapToGrid.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.SnapToGrid? SnapToGrid
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SnapToGrid>();
@@ -40530,9 +40530,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>SpacingBetweenLines.</para>
         /// <para>Represents the following element tag in the schema: w:spacing.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.SpacingBetweenLines? SpacingBetweenLines
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SpacingBetweenLines>();
@@ -40543,9 +40543,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Indentation.</para>
         /// <para>Represents the following element tag in the schema: w:ind.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Indentation? Indentation
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Indentation>();
@@ -40556,9 +40556,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>ContextualSpacing.</para>
         /// <para>Represents the following element tag in the schema: w:contextualSpacing.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.ContextualSpacing? ContextualSpacing
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.ContextualSpacing>();
@@ -40569,9 +40569,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>MirrorIndents.</para>
         /// <para>Represents the following element tag in the schema: w:mirrorIndents.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.MirrorIndents? MirrorIndents
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.MirrorIndents>();
@@ -40582,9 +40582,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>SuppressOverlap.</para>
         /// <para>Represents the following element tag in the schema: w:suppressOverlap.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.SuppressOverlap? SuppressOverlap
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SuppressOverlap>();
@@ -40595,9 +40595,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Justification.</para>
         /// <para>Represents the following element tag in the schema: w:jc.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Justification? Justification
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Justification>();
@@ -40608,9 +40608,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>TextDirection.</para>
         /// <para>Represents the following element tag in the schema: w:textDirection.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TextDirection? TextDirection
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TextDirection>();
@@ -40621,9 +40621,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>TextAlignment.</para>
         /// <para>Represents the following element tag in the schema: w:textAlignment.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TextAlignment? TextAlignment
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TextAlignment>();
@@ -40634,9 +40634,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>TextBoxTightWrap.</para>
         /// <para>Represents the following element tag in the schema: w:textboxTightWrap.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TextBoxTightWrap? TextBoxTightWrap
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TextBoxTightWrap>();
@@ -40647,9 +40647,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>OutlineLevel.</para>
         /// <para>Represents the following element tag in the schema: w:outlineLvl.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.OutlineLevel? OutlineLevel
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.OutlineLevel>();
@@ -40665,7 +40665,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:rPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Border" /> <c>&lt;w:bdr></c></description></item>
@@ -40705,7 +40705,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Underline" /> <c>&lt;w:u></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignment" /> <c>&lt;w:vertAlign></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class NumberingSymbolRunProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -40848,9 +40848,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>RunFonts.</para>
         /// <para>Represents the following element tag in the schema: w:rFonts.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.RunFonts? RunFonts
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.RunFonts>();
@@ -40861,9 +40861,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Bold.</para>
         /// <para>Represents the following element tag in the schema: w:b.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Bold? Bold
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Bold>();
@@ -40874,9 +40874,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>BoldComplexScript.</para>
         /// <para>Represents the following element tag in the schema: w:bCs.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.BoldComplexScript? BoldComplexScript
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.BoldComplexScript>();
@@ -40887,9 +40887,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Italic.</para>
         /// <para>Represents the following element tag in the schema: w:i.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Italic? Italic
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Italic>();
@@ -40900,9 +40900,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>ItalicComplexScript.</para>
         /// <para>Represents the following element tag in the schema: w:iCs.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.ItalicComplexScript? ItalicComplexScript
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.ItalicComplexScript>();
@@ -40913,9 +40913,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Caps.</para>
         /// <para>Represents the following element tag in the schema: w:caps.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Caps? Caps
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Caps>();
@@ -40926,9 +40926,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>SmallCaps.</para>
         /// <para>Represents the following element tag in the schema: w:smallCaps.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.SmallCaps? SmallCaps
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SmallCaps>();
@@ -40939,9 +40939,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Strike.</para>
         /// <para>Represents the following element tag in the schema: w:strike.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Strike? Strike
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Strike>();
@@ -40952,9 +40952,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>DoubleStrike.</para>
         /// <para>Represents the following element tag in the schema: w:dstrike.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.DoubleStrike? DoubleStrike
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DoubleStrike>();
@@ -40965,9 +40965,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Outline.</para>
         /// <para>Represents the following element tag in the schema: w:outline.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Outline? Outline
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Outline>();
@@ -40978,9 +40978,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Shadow.</para>
         /// <para>Represents the following element tag in the schema: w:shadow.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Shadow? Shadow
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Shadow>();
@@ -40991,9 +40991,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Emboss.</para>
         /// <para>Represents the following element tag in the schema: w:emboss.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Emboss? Emboss
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Emboss>();
@@ -41004,9 +41004,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Imprint.</para>
         /// <para>Represents the following element tag in the schema: w:imprint.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Imprint? Imprint
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Imprint>();
@@ -41017,9 +41017,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>NoProof.</para>
         /// <para>Represents the following element tag in the schema: w:noProof.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.NoProof? NoProof
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.NoProof>();
@@ -41030,9 +41030,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>SnapToGrid.</para>
         /// <para>Represents the following element tag in the schema: w:snapToGrid.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.SnapToGrid? SnapToGrid
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SnapToGrid>();
@@ -41043,9 +41043,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Vanish.</para>
         /// <para>Represents the following element tag in the schema: w:vanish.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Vanish? Vanish
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Vanish>();
@@ -41056,9 +41056,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>WebHidden.</para>
         /// <para>Represents the following element tag in the schema: w:webHidden.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.WebHidden? WebHidden
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.WebHidden>();
@@ -41069,9 +41069,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Color.</para>
         /// <para>Represents the following element tag in the schema: w:color.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Color? Color
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Color>();
@@ -41082,9 +41082,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Spacing.</para>
         /// <para>Represents the following element tag in the schema: w:spacing.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Spacing? Spacing
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Spacing>();
@@ -41095,9 +41095,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>CharacterScale.</para>
         /// <para>Represents the following element tag in the schema: w:w.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.CharacterScale? CharacterScale
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.CharacterScale>();
@@ -41108,9 +41108,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Kern.</para>
         /// <para>Represents the following element tag in the schema: w:kern.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Kern? Kern
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Kern>();
@@ -41121,9 +41121,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Position.</para>
         /// <para>Represents the following element tag in the schema: w:position.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Position? Position
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Position>();
@@ -41134,9 +41134,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>FontSize.</para>
         /// <para>Represents the following element tag in the schema: w:sz.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.FontSize? FontSize
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.FontSize>();
@@ -41147,9 +41147,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>FontSizeComplexScript.</para>
         /// <para>Represents the following element tag in the schema: w:szCs.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.FontSizeComplexScript? FontSizeComplexScript
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.FontSizeComplexScript>();
@@ -41160,9 +41160,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Underline.</para>
         /// <para>Represents the following element tag in the schema: w:u.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Underline? Underline
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Underline>();
@@ -41173,9 +41173,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>TextEffect.</para>
         /// <para>Represents the following element tag in the schema: w:effect.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TextEffect? TextEffect
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TextEffect>();
@@ -41186,9 +41186,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Border.</para>
         /// <para>Represents the following element tag in the schema: w:bdr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Border? Border
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Border>();
@@ -41199,9 +41199,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Shading.</para>
         /// <para>Represents the following element tag in the schema: w:shd.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Shading? Shading
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Shading>();
@@ -41212,9 +41212,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>FitText.</para>
         /// <para>Represents the following element tag in the schema: w:fitText.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.FitText? FitText
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.FitText>();
@@ -41225,9 +41225,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>VerticalTextAlignment.</para>
         /// <para>Represents the following element tag in the schema: w:vertAlign.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignment? VerticalTextAlignment
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignment>();
@@ -41238,9 +41238,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>RightToLeftText.</para>
         /// <para>Represents the following element tag in the schema: w:rtl.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.RightToLeftText? RightToLeftText
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.RightToLeftText>();
@@ -41251,9 +41251,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>ComplexScript.</para>
         /// <para>Represents the following element tag in the schema: w:cs.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.ComplexScript? ComplexScript
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.ComplexScript>();
@@ -41264,9 +41264,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Emphasis.</para>
         /// <para>Represents the following element tag in the schema: w:em.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Emphasis? Emphasis
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Emphasis>();
@@ -41277,9 +41277,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Languages.</para>
         /// <para>Represents the following element tag in the schema: w:lang.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Languages? Languages
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Languages>();
@@ -41290,9 +41290,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>EastAsianLayout.</para>
         /// <para>Represents the following element tag in the schema: w:eastAsianLayout.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.EastAsianLayout? EastAsianLayout
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.EastAsianLayout>();
@@ -41303,9 +41303,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>SpecVanish.</para>
         /// <para>Represents the following element tag in the schema: w:specVanish.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.SpecVanish? SpecVanish
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SpecVanish>();
@@ -41334,9 +41334,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Abstract Numbering Definition Type</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.MultiLevelValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.MultiLevelValues>>();
@@ -41363,7 +41363,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:lvl.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.LevelRestart" /> <c>&lt;w:lvlRestart></c></description></item>
@@ -41379,7 +41379,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.NumberingSymbolRunProperties" /> <c>&lt;w:rPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.ParagraphStyleIdInLevel" /> <c>&lt;w:pStyle></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Level : OpenXmlCompositeElement
     {
         /// <summary>
@@ -41417,9 +41417,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Numbering Level</para>
         /// <para>Represents the following attribute in the schema: w:ilvl</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public Int32Value? LevelIndex
         {
             get => GetAttribute<Int32Value>();
@@ -41430,9 +41430,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Template Code</para>
         /// <para>Represents the following attribute in the schema: w:tplc</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public HexBinaryValue? TemplateCode
         {
             get => GetAttribute<HexBinaryValue>();
@@ -41443,9 +41443,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Tentative Numbering</para>
         /// <para>Represents the following attribute in the schema: w:tentative</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public OnOffValue? Tentative
         {
             get => GetAttribute<OnOffValue>();
@@ -41499,9 +41499,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Starting Value.</para>
         /// <para>Represents the following element tag in the schema: w:start.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.StartNumberingValue? StartNumberingValue
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.StartNumberingValue>();
@@ -41512,9 +41512,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Numbering Format.</para>
         /// <para>Represents the following element tag in the schema: w:numFmt.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.NumberingFormat? NumberingFormat
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.NumberingFormat>();
@@ -41525,9 +41525,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Restart Numbering Level Symbol.</para>
         /// <para>Represents the following element tag in the schema: w:lvlRestart.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.LevelRestart? LevelRestart
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.LevelRestart>();
@@ -41538,9 +41538,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Paragraph Style's Associated Numbering Level.</para>
         /// <para>Represents the following element tag in the schema: w:pStyle.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.ParagraphStyleIdInLevel? ParagraphStyleIdInLevel
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.ParagraphStyleIdInLevel>();
@@ -41551,9 +41551,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Display All Levels Using Arabic Numerals.</para>
         /// <para>Represents the following element tag in the schema: w:isLgl.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.IsLegalNumberingStyle? IsLegalNumberingStyle
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.IsLegalNumberingStyle>();
@@ -41564,9 +41564,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Content Between Numbering Symbol and Paragraph Text.</para>
         /// <para>Represents the following element tag in the schema: w:suff.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.LevelSuffix? LevelSuffix
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.LevelSuffix>();
@@ -41577,9 +41577,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Numbering Level Text.</para>
         /// <para>Represents the following element tag in the schema: w:lvlText.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.LevelText? LevelText
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.LevelText>();
@@ -41590,9 +41590,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Picture Numbering Symbol Definition Reference.</para>
         /// <para>Represents the following element tag in the schema: w:lvlPicBulletId.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.LevelPictureBulletId? LevelPictureBulletId
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.LevelPictureBulletId>();
@@ -41603,9 +41603,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Legacy Numbering Level Properties.</para>
         /// <para>Represents the following element tag in the schema: w:legacy.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.LegacyNumbering? LegacyNumbering
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.LegacyNumbering>();
@@ -41616,9 +41616,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Justification.</para>
         /// <para>Represents the following element tag in the schema: w:lvlJc.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.LevelJustification? LevelJustification
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.LevelJustification>();
@@ -41629,9 +41629,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Numbering Level Associated Paragraph Properties.</para>
         /// <para>Represents the following element tag in the schema: w:pPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.PreviousParagraphProperties? PreviousParagraphProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.PreviousParagraphProperties>();
@@ -41642,9 +41642,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Numbering Symbol Run Properties.</para>
         /// <para>Represents the following element tag in the schema: w:rPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.NumberingSymbolRunProperties? NumberingSymbolRunProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.NumberingSymbolRunProperties>();
@@ -41660,13 +41660,13 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:numPicBullet.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Drawing" /> <c>&lt;w:drawing></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.PictureBulletBase" /> <c>&lt;w:pict></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class NumberingPictureBullet : OpenXmlCompositeElement
     {
         /// <summary>
@@ -41704,9 +41704,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>numPicBulletId</para>
         /// <para>Represents the following attribute in the schema: w:numPicBulletId</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public Int32Value? NumberingPictureBulletId
         {
             get => GetAttribute<Int32Value>();
@@ -41739,9 +41739,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>PictureBulletBase.</para>
         /// <para>Represents the following element tag in the schema: w:pict.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.PictureBulletBase? PictureBulletBase
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.PictureBulletBase>();
@@ -41752,9 +41752,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Drawing.</para>
         /// <para>Represents the following element tag in the schema: w:drawing.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Drawing? Drawing
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Drawing>();
@@ -41770,7 +41770,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:abstractNum.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Nsid" /> <c>&lt;w:nsid></c></description></item>
@@ -41781,7 +41781,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.StyleLink" /> <c>&lt;w:styleLink></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.NumberingStyleLink" /> <c>&lt;w:numStyleLink></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class AbstractNum : OpenXmlCompositeElement
     {
         /// <summary>
@@ -41819,9 +41819,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Abstract Numbering Definition ID</para>
         /// <para>Represents the following attribute in the schema: w:abstractNumId</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public Int32Value? AbstractNumberId
         {
             get => GetAttribute<Int32Value>();
@@ -41862,9 +41862,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Abstract Numbering Definition Identifier.</para>
         /// <para>Represents the following element tag in the schema: w:nsid.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Nsid? Nsid
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Nsid>();
@@ -41875,9 +41875,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Abstract Numbering Definition Type.</para>
         /// <para>Represents the following element tag in the schema: w:multiLevelType.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.MultiLevelType? MultiLevelType
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.MultiLevelType>();
@@ -41888,9 +41888,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Numbering Template Code.</para>
         /// <para>Represents the following element tag in the schema: w:tmpl.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TemplateCode? TemplateCode
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TemplateCode>();
@@ -41901,9 +41901,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Abstract Numbering Definition Name.</para>
         /// <para>Represents the following element tag in the schema: w:name.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.AbstractNumDefinitionName? AbstractNumDefinitionName
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.AbstractNumDefinitionName>();
@@ -41914,9 +41914,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Numbering Style Definition.</para>
         /// <para>Represents the following element tag in the schema: w:styleLink.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.StyleLink? StyleLink
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.StyleLink>();
@@ -41927,9 +41927,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Numbering Style Reference.</para>
         /// <para>Represents the following element tag in the schema: w:numStyleLink.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.NumberingStyleLink? NumberingStyleLink
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.NumberingStyleLink>();
@@ -41945,13 +41945,13 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:num.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.AbstractNumId" /> <c>&lt;w:abstractNumId></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.LevelOverride" /> <c>&lt;w:lvlOverride></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class NumberingInstance : OpenXmlCompositeElement
     {
         /// <summary>
@@ -41989,9 +41989,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>numId</para>
         /// <para>Represents the following attribute in the schema: w:numId</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public Int32Value? NumberID
         {
             get => GetAttribute<Int32Value>();
@@ -42002,9 +42002,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>durableId</para>
         /// <para>Represents the following attribute in the schema: w:durableId</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public Int32Value? DurableId
         {
             get => GetAttribute<Int32Value>();
@@ -42035,9 +42035,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>AbstractNumId.</para>
         /// <para>Represents the following element tag in the schema: w:abstractNumId.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.AbstractNumId? AbstractNumId
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.AbstractNumId>();
@@ -42053,7 +42053,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:pPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.OutlineLevel" /> <c>&lt;w:outlineLvl></c></description></item>
@@ -42088,7 +42088,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TextBoxTightWrap" /> <c>&lt;w:textboxTightWrap></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TextDirection" /> <c>&lt;w:textDirection></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class StyleParagraphProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -42215,9 +42215,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>KeepNext.</para>
         /// <para>Represents the following element tag in the schema: w:keepNext.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.KeepNext? KeepNext
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.KeepNext>();
@@ -42228,9 +42228,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>KeepLines.</para>
         /// <para>Represents the following element tag in the schema: w:keepLines.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.KeepLines? KeepLines
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.KeepLines>();
@@ -42241,9 +42241,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>PageBreakBefore.</para>
         /// <para>Represents the following element tag in the schema: w:pageBreakBefore.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.PageBreakBefore? PageBreakBefore
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.PageBreakBefore>();
@@ -42254,9 +42254,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>FrameProperties.</para>
         /// <para>Represents the following element tag in the schema: w:framePr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.FrameProperties? FrameProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.FrameProperties>();
@@ -42267,9 +42267,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>WidowControl.</para>
         /// <para>Represents the following element tag in the schema: w:widowControl.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.WidowControl? WidowControl
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.WidowControl>();
@@ -42280,9 +42280,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>NumberingProperties.</para>
         /// <para>Represents the following element tag in the schema: w:numPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.NumberingProperties? NumberingProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.NumberingProperties>();
@@ -42293,9 +42293,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>SuppressLineNumbers.</para>
         /// <para>Represents the following element tag in the schema: w:suppressLineNumbers.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.SuppressLineNumbers? SuppressLineNumbers
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SuppressLineNumbers>();
@@ -42306,9 +42306,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>ParagraphBorders.</para>
         /// <para>Represents the following element tag in the schema: w:pBdr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.ParagraphBorders? ParagraphBorders
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.ParagraphBorders>();
@@ -42319,9 +42319,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Shading.</para>
         /// <para>Represents the following element tag in the schema: w:shd.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Shading? Shading
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Shading>();
@@ -42332,9 +42332,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Tabs.</para>
         /// <para>Represents the following element tag in the schema: w:tabs.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Tabs? Tabs
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Tabs>();
@@ -42345,9 +42345,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>SuppressAutoHyphens.</para>
         /// <para>Represents the following element tag in the schema: w:suppressAutoHyphens.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.SuppressAutoHyphens? SuppressAutoHyphens
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SuppressAutoHyphens>();
@@ -42358,9 +42358,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Kinsoku.</para>
         /// <para>Represents the following element tag in the schema: w:kinsoku.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Kinsoku? Kinsoku
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Kinsoku>();
@@ -42371,9 +42371,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>WordWrap.</para>
         /// <para>Represents the following element tag in the schema: w:wordWrap.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.WordWrap? WordWrap
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.WordWrap>();
@@ -42384,9 +42384,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>OverflowPunctuation.</para>
         /// <para>Represents the following element tag in the schema: w:overflowPunct.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.OverflowPunctuation? OverflowPunctuation
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.OverflowPunctuation>();
@@ -42397,9 +42397,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>TopLinePunctuation.</para>
         /// <para>Represents the following element tag in the schema: w:topLinePunct.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TopLinePunctuation? TopLinePunctuation
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TopLinePunctuation>();
@@ -42410,9 +42410,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>AutoSpaceDE.</para>
         /// <para>Represents the following element tag in the schema: w:autoSpaceDE.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.AutoSpaceDE? AutoSpaceDE
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.AutoSpaceDE>();
@@ -42423,9 +42423,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>AutoSpaceDN.</para>
         /// <para>Represents the following element tag in the schema: w:autoSpaceDN.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.AutoSpaceDN? AutoSpaceDN
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.AutoSpaceDN>();
@@ -42436,9 +42436,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>BiDi.</para>
         /// <para>Represents the following element tag in the schema: w:bidi.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.BiDi? BiDi
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.BiDi>();
@@ -42449,9 +42449,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>AdjustRightIndent.</para>
         /// <para>Represents the following element tag in the schema: w:adjustRightInd.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.AdjustRightIndent? AdjustRightIndent
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.AdjustRightIndent>();
@@ -42462,9 +42462,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>SnapToGrid.</para>
         /// <para>Represents the following element tag in the schema: w:snapToGrid.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.SnapToGrid? SnapToGrid
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SnapToGrid>();
@@ -42475,9 +42475,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>SpacingBetweenLines.</para>
         /// <para>Represents the following element tag in the schema: w:spacing.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.SpacingBetweenLines? SpacingBetweenLines
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SpacingBetweenLines>();
@@ -42488,9 +42488,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Indentation.</para>
         /// <para>Represents the following element tag in the schema: w:ind.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Indentation? Indentation
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Indentation>();
@@ -42501,9 +42501,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>ContextualSpacing.</para>
         /// <para>Represents the following element tag in the schema: w:contextualSpacing.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.ContextualSpacing? ContextualSpacing
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.ContextualSpacing>();
@@ -42514,9 +42514,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>MirrorIndents.</para>
         /// <para>Represents the following element tag in the schema: w:mirrorIndents.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.MirrorIndents? MirrorIndents
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.MirrorIndents>();
@@ -42527,9 +42527,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>SuppressOverlap.</para>
         /// <para>Represents the following element tag in the schema: w:suppressOverlap.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.SuppressOverlap? SuppressOverlap
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SuppressOverlap>();
@@ -42540,9 +42540,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Justification.</para>
         /// <para>Represents the following element tag in the schema: w:jc.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Justification? Justification
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Justification>();
@@ -42553,9 +42553,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>TextDirection.</para>
         /// <para>Represents the following element tag in the schema: w:textDirection.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TextDirection? TextDirection
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TextDirection>();
@@ -42566,9 +42566,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>TextAlignment.</para>
         /// <para>Represents the following element tag in the schema: w:textAlignment.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TextAlignment? TextAlignment
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TextAlignment>();
@@ -42579,9 +42579,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>TextBoxTightWrap.</para>
         /// <para>Represents the following element tag in the schema: w:textboxTightWrap.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TextBoxTightWrap? TextBoxTightWrap
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TextBoxTightWrap>();
@@ -42592,9 +42592,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>OutlineLevel.</para>
         /// <para>Represents the following element tag in the schema: w:outlineLvl.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.OutlineLevel? OutlineLevel
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.OutlineLevel>();
@@ -42605,9 +42605,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>ParagraphPropertiesChange.</para>
         /// <para>Represents the following element tag in the schema: w:pPrChange.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.ParagraphPropertiesChange? ParagraphPropertiesChange
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.ParagraphPropertiesChange>();
@@ -42623,7 +42623,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:tblPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Shading" /> <c>&lt;w:shd></c></description></item>
@@ -42633,7 +42633,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TableCellSpacing" /> <c>&lt;w:tblCellSpacing></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TableIndentation" /> <c>&lt;w:tblInd></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TableStyleConditionalFormattingTableProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -42704,9 +42704,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>TableJustification.</para>
         /// <para>Represents the following element tag in the schema: w:jc.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TableJustification? TableJustification
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableJustification>();
@@ -42717,9 +42717,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>TableCellSpacing.</para>
         /// <para>Represents the following element tag in the schema: w:tblCellSpacing.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TableCellSpacing? TableCellSpacing
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableCellSpacing>();
@@ -42730,9 +42730,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>TableIndentation.</para>
         /// <para>Represents the following element tag in the schema: w:tblInd.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TableIndentation? TableIndentation
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableIndentation>();
@@ -42743,9 +42743,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>TableBorders.</para>
         /// <para>Represents the following element tag in the schema: w:tblBorders.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TableBorders? TableBorders
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableBorders>();
@@ -42756,9 +42756,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Shading.</para>
         /// <para>Represents the following element tag in the schema: w:shd.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Shading? Shading
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Shading>();
@@ -42769,9 +42769,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>TableCellMarginDefault.</para>
         /// <para>Represents the following element tag in the schema: w:tblCellMar.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TableCellMarginDefault? TableCellMarginDefault
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableCellMarginDefault>();
@@ -42787,7 +42787,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:trPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Hidden" /> <c>&lt;w:hidden></c></description></item>
@@ -42796,7 +42796,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TableJustification" /> <c>&lt;w:jc></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TableCellSpacing" /> <c>&lt;w:tblCellSpacing></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TableStyleConditionalFormattingTableRowProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -42864,7 +42864,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:tcPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.NoWrap" /> <c>&lt;w:noWrap></c></description></item>
@@ -42873,7 +42873,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TableCellMargin" /> <c>&lt;w:tcMar></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TableCellVerticalAlignment" /> <c>&lt;w:vAlign></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TableStyleConditionalFormattingTableCellProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -42948,9 +42948,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>TableCellBorders.</para>
         /// <para>Represents the following element tag in the schema: w:tcBorders.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TableCellBorders? TableCellBorders
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableCellBorders>();
@@ -42961,9 +42961,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Shading.</para>
         /// <para>Represents the following element tag in the schema: w:shd.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Shading? Shading
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Shading>();
@@ -42974,9 +42974,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>NoWrap.</para>
         /// <para>Represents the following element tag in the schema: w:noWrap.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.NoWrap? NoWrap
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.NoWrap>();
@@ -42987,9 +42987,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>TableCellMargin.</para>
         /// <para>Represents the following element tag in the schema: w:tcMar.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TableCellMargin? TableCellMargin
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableCellMargin>();
@@ -43000,9 +43000,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>TableCellVerticalAlignment.</para>
         /// <para>Represents the following element tag in the schema: w:vAlign.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TableCellVerticalAlignment? TableCellVerticalAlignment
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableCellVerticalAlignment>();
@@ -43031,9 +43031,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>val</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -43075,9 +43075,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>val</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public Int32Value? Val
         {
             get => GetAttribute<Int32Value>();
@@ -43105,7 +43105,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:rPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Border" /> <c>&lt;w:bdr></c></description></item>
@@ -43144,7 +43144,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Underline" /> <c>&lt;w:u></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignment" /> <c>&lt;w:vertAlign></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class StyleRunProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -43297,9 +43297,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>RunFonts.</para>
         /// <para>Represents the following element tag in the schema: w:rFonts.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.RunFonts? RunFonts
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.RunFonts>();
@@ -43310,9 +43310,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Bold.</para>
         /// <para>Represents the following element tag in the schema: w:b.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Bold? Bold
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Bold>();
@@ -43323,9 +43323,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>BoldComplexScript.</para>
         /// <para>Represents the following element tag in the schema: w:bCs.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.BoldComplexScript? BoldComplexScript
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.BoldComplexScript>();
@@ -43336,9 +43336,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Italic.</para>
         /// <para>Represents the following element tag in the schema: w:i.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Italic? Italic
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Italic>();
@@ -43349,9 +43349,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>ItalicComplexScript.</para>
         /// <para>Represents the following element tag in the schema: w:iCs.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.ItalicComplexScript? ItalicComplexScript
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.ItalicComplexScript>();
@@ -43362,9 +43362,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Caps.</para>
         /// <para>Represents the following element tag in the schema: w:caps.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Caps? Caps
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Caps>();
@@ -43375,9 +43375,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>SmallCaps.</para>
         /// <para>Represents the following element tag in the schema: w:smallCaps.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.SmallCaps? SmallCaps
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SmallCaps>();
@@ -43388,9 +43388,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Strike.</para>
         /// <para>Represents the following element tag in the schema: w:strike.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Strike? Strike
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Strike>();
@@ -43401,9 +43401,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>DoubleStrike.</para>
         /// <para>Represents the following element tag in the schema: w:dstrike.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.DoubleStrike? DoubleStrike
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DoubleStrike>();
@@ -43414,9 +43414,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Outline.</para>
         /// <para>Represents the following element tag in the schema: w:outline.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Outline? Outline
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Outline>();
@@ -43427,9 +43427,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Shadow.</para>
         /// <para>Represents the following element tag in the schema: w:shadow.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Shadow? Shadow
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Shadow>();
@@ -43440,9 +43440,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Emboss.</para>
         /// <para>Represents the following element tag in the schema: w:emboss.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Emboss? Emboss
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Emboss>();
@@ -43453,9 +43453,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Imprint.</para>
         /// <para>Represents the following element tag in the schema: w:imprint.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Imprint? Imprint
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Imprint>();
@@ -43466,9 +43466,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>NoProof.</para>
         /// <para>Represents the following element tag in the schema: w:noProof.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.NoProof? NoProof
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.NoProof>();
@@ -43479,9 +43479,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>SnapToGrid.</para>
         /// <para>Represents the following element tag in the schema: w:snapToGrid.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.SnapToGrid? SnapToGrid
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SnapToGrid>();
@@ -43492,9 +43492,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Vanish.</para>
         /// <para>Represents the following element tag in the schema: w:vanish.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Vanish? Vanish
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Vanish>();
@@ -43505,9 +43505,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>WebHidden.</para>
         /// <para>Represents the following element tag in the schema: w:webHidden.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.WebHidden? WebHidden
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.WebHidden>();
@@ -43518,9 +43518,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Color.</para>
         /// <para>Represents the following element tag in the schema: w:color.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Color? Color
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Color>();
@@ -43531,9 +43531,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Spacing.</para>
         /// <para>Represents the following element tag in the schema: w:spacing.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Spacing? Spacing
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Spacing>();
@@ -43544,9 +43544,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>CharacterScale.</para>
         /// <para>Represents the following element tag in the schema: w:w.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.CharacterScale? CharacterScale
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.CharacterScale>();
@@ -43557,9 +43557,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Kern.</para>
         /// <para>Represents the following element tag in the schema: w:kern.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Kern? Kern
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Kern>();
@@ -43570,9 +43570,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Position.</para>
         /// <para>Represents the following element tag in the schema: w:position.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Position? Position
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Position>();
@@ -43583,9 +43583,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>FontSize.</para>
         /// <para>Represents the following element tag in the schema: w:sz.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.FontSize? FontSize
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.FontSize>();
@@ -43596,9 +43596,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>FontSizeComplexScript.</para>
         /// <para>Represents the following element tag in the schema: w:szCs.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.FontSizeComplexScript? FontSizeComplexScript
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.FontSizeComplexScript>();
@@ -43609,9 +43609,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Underline.</para>
         /// <para>Represents the following element tag in the schema: w:u.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Underline? Underline
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Underline>();
@@ -43622,9 +43622,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>TextEffect.</para>
         /// <para>Represents the following element tag in the schema: w:effect.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TextEffect? TextEffect
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TextEffect>();
@@ -43635,9 +43635,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Border.</para>
         /// <para>Represents the following element tag in the schema: w:bdr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Border? Border
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Border>();
@@ -43648,9 +43648,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Shading.</para>
         /// <para>Represents the following element tag in the schema: w:shd.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Shading? Shading
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Shading>();
@@ -43661,9 +43661,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>FitText.</para>
         /// <para>Represents the following element tag in the schema: w:fitText.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.FitText? FitText
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.FitText>();
@@ -43674,9 +43674,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>VerticalTextAlignment.</para>
         /// <para>Represents the following element tag in the schema: w:vertAlign.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignment? VerticalTextAlignment
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignment>();
@@ -43687,9 +43687,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Emphasis.</para>
         /// <para>Represents the following element tag in the schema: w:em.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Emphasis? Emphasis
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Emphasis>();
@@ -43700,9 +43700,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Languages.</para>
         /// <para>Represents the following element tag in the schema: w:lang.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Languages? Languages
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Languages>();
@@ -43713,9 +43713,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>EastAsianLayout.</para>
         /// <para>Represents the following element tag in the schema: w:eastAsianLayout.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.EastAsianLayout? EastAsianLayout
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.EastAsianLayout>();
@@ -43726,9 +43726,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>SpecVanish.</para>
         /// <para>Represents the following element tag in the schema: w:specVanish.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.SpecVanish? SpecVanish
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SpecVanish>();
@@ -43739,9 +43739,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>RunPropertiesChange.</para>
         /// <para>Represents the following element tag in the schema: w:rPrChange.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.RunPropertiesChange? RunPropertiesChange
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.RunPropertiesChange>();
@@ -43757,7 +43757,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:tblPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Shading" /> <c>&lt;w:shd></c></description></item>
@@ -43769,7 +43769,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TableStyleRowBandSize" /> <c>&lt;w:tblStyleRowBandSize></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TableStyleColumnBandSize" /> <c>&lt;w:tblStyleColBandSize></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class StyleTableProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -43850,9 +43850,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>TableStyleRowBandSize.</para>
         /// <para>Represents the following element tag in the schema: w:tblStyleRowBandSize.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TableStyleRowBandSize? TableStyleRowBandSize
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableStyleRowBandSize>();
@@ -43863,9 +43863,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>TableStyleColumnBandSize.</para>
         /// <para>Represents the following element tag in the schema: w:tblStyleColBandSize.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TableStyleColumnBandSize? TableStyleColumnBandSize
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableStyleColumnBandSize>();
@@ -43876,9 +43876,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>TableJustification.</para>
         /// <para>Represents the following element tag in the schema: w:jc.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TableJustification? TableJustification
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableJustification>();
@@ -43889,9 +43889,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>TableCellSpacing.</para>
         /// <para>Represents the following element tag in the schema: w:tblCellSpacing.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TableCellSpacing? TableCellSpacing
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableCellSpacing>();
@@ -43902,9 +43902,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>TableIndentation.</para>
         /// <para>Represents the following element tag in the schema: w:tblInd.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TableIndentation? TableIndentation
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableIndentation>();
@@ -43915,9 +43915,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>TableBorders.</para>
         /// <para>Represents the following element tag in the schema: w:tblBorders.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TableBorders? TableBorders
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableBorders>();
@@ -43928,9 +43928,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Shading.</para>
         /// <para>Represents the following element tag in the schema: w:shd.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Shading? Shading
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Shading>();
@@ -43941,9 +43941,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>TableCellMarginDefault.</para>
         /// <para>Represents the following element tag in the schema: w:tblCellMar.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TableCellMarginDefault? TableCellMarginDefault
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableCellMarginDefault>();
@@ -43959,7 +43959,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:tcPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.NoWrap" /> <c>&lt;w:noWrap></c></description></item>
@@ -43967,7 +43967,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TableCellMargin" /> <c>&lt;w:tcMar></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TableCellVerticalAlignment" /> <c>&lt;w:vAlign></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class StyleTableCellProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -44034,9 +44034,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Shading.</para>
         /// <para>Represents the following element tag in the schema: w:shd.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Shading? Shading
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Shading>();
@@ -44047,9 +44047,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>NoWrap.</para>
         /// <para>Represents the following element tag in the schema: w:noWrap.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.NoWrap? NoWrap
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.NoWrap>();
@@ -44060,9 +44060,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>TableCellMargin.</para>
         /// <para>Represents the following element tag in the schema: w:tcMar.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TableCellMargin? TableCellMargin
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableCellMargin>();
@@ -44073,9 +44073,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>TableCellVerticalAlignment.</para>
         /// <para>Represents the following element tag in the schema: w:vAlign.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TableCellVerticalAlignment? TableCellVerticalAlignment
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableCellVerticalAlignment>();
@@ -44091,7 +44091,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:tblStylePr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.StyleParagraphProperties" /> <c>&lt;w:pPr></c></description></item>
@@ -44100,7 +44100,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TableStyleConditionalFormattingTableCellProperties" /> <c>&lt;w:tcPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TableStyleConditionalFormattingTableRowProperties" /> <c>&lt;w:trPr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TableStyleProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -44138,9 +44138,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Table Style Conditional Formatting Type</para>
         /// <para>Represents the following attribute in the schema: w:type</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableStyleOverrideValues>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableStyleOverrideValues>>();
@@ -44175,9 +44175,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Table Style Conditional Formatting Paragraph Properties.</para>
         /// <para>Represents the following element tag in the schema: w:pPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.StyleParagraphProperties? StyleParagraphProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.StyleParagraphProperties>();
@@ -44188,9 +44188,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Table Style Conditional Formatting Run Properties.</para>
         /// <para>Represents the following element tag in the schema: w:rPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.RunPropertiesBaseStyle? RunPropertiesBaseStyle
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.RunPropertiesBaseStyle>();
@@ -44201,9 +44201,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Table Style Conditional Formatting Table Properties.</para>
         /// <para>Represents the following element tag in the schema: w:tblPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TableStyleConditionalFormattingTableProperties? TableStyleConditionalFormattingTableProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableStyleConditionalFormattingTableProperties>();
@@ -44214,9 +44214,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Table Style Conditional Formatting Table Row Properties.</para>
         /// <para>Represents the following element tag in the schema: w:trPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TableStyleConditionalFormattingTableRowProperties? TableStyleConditionalFormattingTableRowProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableStyleConditionalFormattingTableRowProperties>();
@@ -44227,9 +44227,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Table Style Conditional Formatting Table Cell Properties.</para>
         /// <para>Represents the following element tag in the schema: w:tcPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TableStyleConditionalFormattingTableCellProperties? TableStyleConditionalFormattingTableCellProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableStyleConditionalFormattingTableCellProperties>();
@@ -44258,9 +44258,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Primary Style Name</para>
         /// <para>Represents the following attribute in the schema: w:name</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -44271,9 +44271,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Latent Style Locking Setting</para>
         /// <para>Represents the following attribute in the schema: w:locked</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public OnOffValue? Locked
         {
             get => GetAttribute<OnOffValue>();
@@ -44284,9 +44284,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Override default sorting order</para>
         /// <para>Represents the following attribute in the schema: w:uiPriority</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public Int32Value? UiPriority
         {
             get => GetAttribute<Int32Value>();
@@ -44297,9 +44297,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Semi hidden text override</para>
         /// <para>Represents the following attribute in the schema: w:semiHidden</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public OnOffValue? SemiHidden
         {
             get => GetAttribute<OnOffValue>();
@@ -44310,9 +44310,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Unhide when used</para>
         /// <para>Represents the following attribute in the schema: w:unhideWhenUsed</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public OnOffValue? UnhideWhenUsed
         {
             get => GetAttribute<OnOffValue>();
@@ -44323,9 +44323,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Latent Style Primary Style Setting</para>
         /// <para>Represents the following attribute in the schema: w:qFormat</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public OnOffValue? PrimaryStyle
         {
             get => GetAttribute<OnOffValue>();
@@ -44360,13 +44360,13 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:docDefaults.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.ParagraphPropertiesDefault" /> <c>&lt;w:pPrDefault></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.RunPropertiesDefault" /> <c>&lt;w:rPrDefault></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DocDefaults : OpenXmlCompositeElement
     {
         /// <summary>
@@ -44417,9 +44417,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Default Run Properties.</para>
         /// <para>Represents the following element tag in the schema: w:rPrDefault.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.RunPropertiesDefault? RunPropertiesDefault
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.RunPropertiesDefault>();
@@ -44430,9 +44430,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Default Paragraph Properties.</para>
         /// <para>Represents the following element tag in the schema: w:pPrDefault.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.ParagraphPropertiesDefault? ParagraphPropertiesDefault
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.ParagraphPropertiesDefault>();
@@ -44448,12 +44448,12 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:latentStyles.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.LatentStyleExceptionInfo" /> <c>&lt;w:lsdException></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class LatentStyles : OpenXmlCompositeElement
     {
         /// <summary>
@@ -44491,9 +44491,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Default Style Locking Setting</para>
         /// <para>Represents the following attribute in the schema: w:defLockedState</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public OnOffValue? DefaultLockedState
         {
             get => GetAttribute<OnOffValue>();
@@ -44504,9 +44504,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Default User Interface Priority Setting</para>
         /// <para>Represents the following attribute in the schema: w:defUIPriority</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public Int32Value? DefaultUiPriority
         {
             get => GetAttribute<Int32Value>();
@@ -44517,9 +44517,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Default Semi-Hidden Setting</para>
         /// <para>Represents the following attribute in the schema: w:defSemiHidden</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public OnOffValue? DefaultSemiHidden
         {
             get => GetAttribute<OnOffValue>();
@@ -44530,9 +44530,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Default Hidden Until Used Setting</para>
         /// <para>Represents the following attribute in the schema: w:defUnhideWhenUsed</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public OnOffValue? DefaultUnhideWhenUsed
         {
             get => GetAttribute<OnOffValue>();
@@ -44543,9 +44543,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Default Primary Style Setting</para>
         /// <para>Represents the following attribute in the schema: w:defQFormat</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public OnOffValue? DefaultPrimaryStyle
         {
             get => GetAttribute<OnOffValue>();
@@ -44556,9 +44556,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Latent Style Count</para>
         /// <para>Represents the following attribute in the schema: w:count</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public Int32Value? Count
         {
             get => GetAttribute<Int32Value>();
@@ -44595,7 +44595,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:style.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Rsid" /> <c>&lt;w:rsid></c></description></item>
@@ -44621,7 +44621,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TableStyleConditionalFormattingTableRowProperties" /> <c>&lt;w:trPr></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.UIPriority" /> <c>&lt;w:uiPriority></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Style : OpenXmlCompositeElement
     {
         /// <summary>
@@ -44659,9 +44659,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Style Type</para>
         /// <para>Represents the following attribute in the schema: w:type</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.StyleValues>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.StyleValues>>();
@@ -44672,9 +44672,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Style ID</para>
         /// <para>Represents the following attribute in the schema: w:styleId</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? StyleId
         {
             get => GetAttribute<StringValue>();
@@ -44685,9 +44685,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Default Style</para>
         /// <para>Represents the following attribute in the schema: w:default</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public OnOffValue? Default
         {
             get => GetAttribute<OnOffValue>();
@@ -44698,9 +44698,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>User-Defined Style</para>
         /// <para>Represents the following attribute in the schema: w:customStyle</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public OnOffValue? CustomStyle
         {
             get => GetAttribute<OnOffValue>();
@@ -44773,9 +44773,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Primary Style Name.</para>
         /// <para>Represents the following element tag in the schema: w:name.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.StyleName? StyleName
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.StyleName>();
@@ -44786,9 +44786,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Alternate Style Names.</para>
         /// <para>Represents the following element tag in the schema: w:aliases.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Aliases? Aliases
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Aliases>();
@@ -44799,9 +44799,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Parent Style ID.</para>
         /// <para>Represents the following element tag in the schema: w:basedOn.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.BasedOn? BasedOn
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.BasedOn>();
@@ -44812,9 +44812,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Style For Next Paragraph.</para>
         /// <para>Represents the following element tag in the schema: w:next.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.NextParagraphStyle? NextParagraphStyle
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.NextParagraphStyle>();
@@ -44825,9 +44825,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Linked Style Reference.</para>
         /// <para>Represents the following element tag in the schema: w:link.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.LinkedStyle? LinkedStyle
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.LinkedStyle>();
@@ -44838,9 +44838,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Automatically Merge User Formatting Into Style Definition.</para>
         /// <para>Represents the following element tag in the schema: w:autoRedefine.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.AutoRedefine? AutoRedefine
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.AutoRedefine>();
@@ -44851,9 +44851,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Hide Style From User Interface.</para>
         /// <para>Represents the following element tag in the schema: w:hidden.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.StyleHidden? StyleHidden
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.StyleHidden>();
@@ -44864,9 +44864,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Optional User Interface Sorting Order.</para>
         /// <para>Represents the following element tag in the schema: w:uiPriority.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.UIPriority? UIPriority
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.UIPriority>();
@@ -44877,9 +44877,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Hide Style From Main User Interface.</para>
         /// <para>Represents the following element tag in the schema: w:semiHidden.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.SemiHidden? SemiHidden
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SemiHidden>();
@@ -44890,9 +44890,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Remove Semi-Hidden Property When Style Is Used.</para>
         /// <para>Represents the following element tag in the schema: w:unhideWhenUsed.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.UnhideWhenUsed? UnhideWhenUsed
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.UnhideWhenUsed>();
@@ -44903,9 +44903,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Primary Style.</para>
         /// <para>Represents the following element tag in the schema: w:qFormat.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.PrimaryStyle? PrimaryStyle
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.PrimaryStyle>();
@@ -44916,9 +44916,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Style Cannot Be Applied.</para>
         /// <para>Represents the following element tag in the schema: w:locked.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Locked? Locked
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Locked>();
@@ -44929,9 +44929,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>E-Mail Message Text Style.</para>
         /// <para>Represents the following element tag in the schema: w:personal.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Personal? Personal
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Personal>();
@@ -44942,9 +44942,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>E-Mail Message Composition Style.</para>
         /// <para>Represents the following element tag in the schema: w:personalCompose.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.PersonalCompose? PersonalCompose
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.PersonalCompose>();
@@ -44955,9 +44955,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>E-Mail Message Reply Style.</para>
         /// <para>Represents the following element tag in the schema: w:personalReply.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.PersonalReply? PersonalReply
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.PersonalReply>();
@@ -44968,9 +44968,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Revision Identifier for Style Definition.</para>
         /// <para>Represents the following element tag in the schema: w:rsid.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Rsid? Rsid
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Rsid>();
@@ -44981,9 +44981,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Style Paragraph Properties.</para>
         /// <para>Represents the following element tag in the schema: w:pPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.StyleParagraphProperties? StyleParagraphProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.StyleParagraphProperties>();
@@ -44994,9 +44994,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Run Properties.</para>
         /// <para>Represents the following element tag in the schema: w:rPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.StyleRunProperties? StyleRunProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.StyleRunProperties>();
@@ -45007,9 +45007,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Style Table Properties.</para>
         /// <para>Represents the following element tag in the schema: w:tblPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.StyleTableProperties? StyleTableProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.StyleTableProperties>();
@@ -45020,9 +45020,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Style Table Row Properties.</para>
         /// <para>Represents the following element tag in the schema: w:trPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TableStyleConditionalFormattingTableRowProperties? TableStyleConditionalFormattingTableRowProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableStyleConditionalFormattingTableRowProperties>();
@@ -45033,9 +45033,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Style Table Cell Properties.</para>
         /// <para>Represents the following element tag in the schema: w:tcPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.StyleTableCellProperties? StyleTableCellProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.StyleTableCellProperties>();
@@ -45051,7 +45051,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:font.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.FontCharSet" /> <c>&lt;w:charset></c></description></item>
@@ -45066,7 +45066,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Pitch" /> <c>&lt;w:pitch></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.AltName" /> <c>&lt;w:altName></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Font : OpenXmlCompositeElement
     {
         /// <summary>
@@ -45104,9 +45104,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>name</para>
         /// <para>Represents the following attribute in the schema: w:name</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -45153,9 +45153,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>AltName.</para>
         /// <para>Represents the following element tag in the schema: w:altName.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.AltName? AltName
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.AltName>();
@@ -45166,9 +45166,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Panose1Number.</para>
         /// <para>Represents the following element tag in the schema: w:panose1.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Panose1Number? Panose1Number
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Panose1Number>();
@@ -45179,9 +45179,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>FontCharSet.</para>
         /// <para>Represents the following element tag in the schema: w:charset.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.FontCharSet? FontCharSet
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.FontCharSet>();
@@ -45192,9 +45192,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>FontFamily.</para>
         /// <para>Represents the following element tag in the schema: w:family.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.FontFamily? FontFamily
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.FontFamily>();
@@ -45205,9 +45205,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>NotTrueType.</para>
         /// <para>Represents the following element tag in the schema: w:notTrueType.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.NotTrueType? NotTrueType
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.NotTrueType>();
@@ -45218,9 +45218,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Pitch.</para>
         /// <para>Represents the following element tag in the schema: w:pitch.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Pitch? Pitch
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Pitch>();
@@ -45231,9 +45231,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>FontSignature.</para>
         /// <para>Represents the following element tag in the schema: w:sig.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.FontSignature? FontSignature
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.FontSignature>();
@@ -45244,9 +45244,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>EmbedRegularFont.</para>
         /// <para>Represents the following element tag in the schema: w:embedRegular.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.EmbedRegularFont? EmbedRegularFont
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.EmbedRegularFont>();
@@ -45257,9 +45257,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>EmbedBoldFont.</para>
         /// <para>Represents the following element tag in the schema: w:embedBold.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.EmbedBoldFont? EmbedBoldFont
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.EmbedBoldFont>();
@@ -45270,9 +45270,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>EmbedItalicFont.</para>
         /// <para>Represents the following element tag in the schema: w:embedItalic.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.EmbedItalicFont? EmbedItalicFont
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.EmbedItalicFont>();
@@ -45283,9 +45283,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>EmbedBoldItalicFont.</para>
         /// <para>Represents the following element tag in the schema: w:embedBoldItalic.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.EmbedBoldItalicFont? EmbedBoldItalicFont
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.EmbedBoldItalicFont>();
@@ -45410,9 +45410,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Positive or Negative Value in Twentieths of a Point</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -45441,7 +45441,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:divBdr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TopBorder" /> <c>&lt;w:top></c></description></item>
@@ -45449,7 +45449,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.BottomBorder" /> <c>&lt;w:bottom></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.RightBorder" /> <c>&lt;w:right></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DivBorder : OpenXmlCompositeElement
     {
         /// <summary>
@@ -45504,9 +45504,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Top Border for HTML div.</para>
         /// <para>Represents the following element tag in the schema: w:top.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TopBorder? TopBorder
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TopBorder>();
@@ -45517,9 +45517,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Left Border for HTML div.</para>
         /// <para>Represents the following element tag in the schema: w:left.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.LeftBorder? LeftBorder
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.LeftBorder>();
@@ -45530,9 +45530,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Bottom Border for HTML div.</para>
         /// <para>Represents the following element tag in the schema: w:bottom.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.BottomBorder? BottomBorder
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.BottomBorder>();
@@ -45543,9 +45543,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Right Border for HTML div.</para>
         /// <para>Represents the following element tag in the schema: w:right.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.RightBorder? RightBorder
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.RightBorder>();
@@ -45561,12 +45561,12 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:divsChild.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Div" /> <c>&lt;w:div></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DivsChild : DivsType
     {
         /// <summary>
@@ -45619,12 +45619,12 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:divs.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Div" /> <c>&lt;w:div></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Divs : DivsType
     {
         /// <summary>
@@ -45677,12 +45677,12 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Div" /> <c>&lt;w:div></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public abstract partial class DivsType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -45728,7 +45728,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:div.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DivBorder" /> <c>&lt;w:divBdr></c></description></item>
@@ -45740,7 +45740,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TopMarginDiv" /> <c>&lt;w:marTop></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.BottomMarginDiv" /> <c>&lt;w:marBottom></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Div : OpenXmlCompositeElement
     {
         /// <summary>
@@ -45778,9 +45778,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>div Data ID</para>
         /// <para>Represents the following attribute in the schema: w:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -45827,9 +45827,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Data for HTML blockquote Element.</para>
         /// <para>Represents the following element tag in the schema: w:blockQuote.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.BlockQuote? BlockQuote
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.BlockQuote>();
@@ -45840,9 +45840,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Data for HTML body Element.</para>
         /// <para>Represents the following element tag in the schema: w:bodyDiv.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.BodyDiv? BodyDiv
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.BodyDiv>();
@@ -45853,9 +45853,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Left Margin for HTML div.</para>
         /// <para>Represents the following element tag in the schema: w:marLeft.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.LeftMarginDiv? LeftMarginDiv
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.LeftMarginDiv>();
@@ -45866,9 +45866,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Right Margin for HTML div.</para>
         /// <para>Represents the following element tag in the schema: w:marRight.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.RightMarginDiv? RightMarginDiv
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.RightMarginDiv>();
@@ -45879,9 +45879,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Top Margin for HTML div.</para>
         /// <para>Represents the following element tag in the schema: w:marTop.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TopMarginDiv? TopMarginDiv
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TopMarginDiv>();
@@ -45892,9 +45892,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Bottom Margin for HTML div.</para>
         /// <para>Represents the following element tag in the schema: w:marBottom.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.BottomMarginDiv? BottomMarginDiv
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.BottomMarginDiv>();
@@ -45905,9 +45905,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Set of Borders for HTML div.</para>
         /// <para>Represents the following element tag in the schema: w:divBdr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.DivBorder? DivBorder
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DivBorder>();
@@ -45923,7 +45923,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:comment.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.AltChunk" /> <c>&lt;w:altChunk></c></description></item>
@@ -45939,7 +45939,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.SdtBlock" /> <c>&lt;w:sdt></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Table" /> <c>&lt;w:tbl></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Comment : OpenXmlCompositeElement
     {
         /// <summary>
@@ -45977,9 +45977,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>initials</para>
         /// <para>Represents the following attribute in the schema: w:initials</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Initials
         {
             get => GetAttribute<StringValue>();
@@ -45990,9 +45990,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>author</para>
         /// <para>Represents the following attribute in the schema: w:author</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Author
         {
             get => GetAttribute<StringValue>();
@@ -46003,9 +46003,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>date</para>
         /// <para>Represents the following attribute in the schema: w:date</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DateTimeValue? Date
         {
             get => GetAttribute<DateTimeValue>();
@@ -46016,9 +46016,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>dateUtc, this property is only available in Microsoft365 and later.</para>
         /// <para>Represents the following attribute in the schema: w16du:dateUtc</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w16du=http://schemas.microsoft.com/office/word/2023/wordml/word16du
-        /// </remark>
+        /// </remarks>
         public DateTimeValue? DateUtc
         {
             get => GetAttribute<DateTimeValue>();
@@ -46029,9 +46029,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Annotation Identifier</para>
         /// <para>Represents the following attribute in the schema: w:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -46156,7 +46156,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:footnote.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.AltChunk" /> <c>&lt;w:altChunk></c></description></item>
@@ -46195,7 +46195,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Footnote : FootnoteEndnoteType
     {
         /// <summary>
@@ -46350,7 +46350,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:endnote.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.AltChunk" /> <c>&lt;w:altChunk></c></description></item>
@@ -46389,7 +46389,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Endnote : FootnoteEndnoteType
     {
         /// <summary>
@@ -46544,7 +46544,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.AltChunk" /> <c>&lt;w:altChunk></c></description></item>
@@ -46583,7 +46583,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public abstract partial class FootnoteEndnoteType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -46621,9 +46621,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Footnote/Endnote Type</para>
         /// <para>Represents the following attribute in the schema: w:type</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.FootnoteEndnoteValues>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.FootnoteEndnoteValues>>();
@@ -46634,9 +46634,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Footnote/Endnote ID</para>
         /// <para>Represents the following attribute in the schema: w:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public IntegerValue? Id
         {
             get => GetAttribute<IntegerValue>();
@@ -46709,9 +46709,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Insertion Behavior Value</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocPartBehaviorValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocPartBehaviorValues>>();
@@ -46751,9 +46751,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Type Value</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocPartValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocPartValues>>();
@@ -46793,9 +46793,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Gallery Value</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocPartGalleryValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocPartGalleryValues>>();
@@ -46835,9 +46835,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Identifier of Object to be Automatically Captioned</para>
         /// <para>Represents the following attribute in the schema: w:name</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -46848,9 +46848,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Caption Used for Automatic Captioning</para>
         /// <para>Represents the following attribute in the schema: w:caption</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Caption
         {
             get => GetAttribute<StringValue>();
@@ -46897,9 +46897,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Caption Type Name</para>
         /// <para>Represents the following attribute in the schema: w:name</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -46910,9 +46910,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Automatic Caption Placement</para>
         /// <para>Represents the following attribute in the schema: w:pos</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CaptionPositionValues>? Position
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.CaptionPositionValues>>();
@@ -46923,9 +46923,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Include Chapter Number in Field for Caption</para>
         /// <para>Represents the following attribute in the schema: w:chapNum</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public OnOffValue? ChapterNumber
         {
             get => GetAttribute<OnOffValue>();
@@ -46936,9 +46936,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Style for Chapter Headings</para>
         /// <para>Represents the following attribute in the schema: w:heading</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public Int32Value? Heading
         {
             get => GetAttribute<Int32Value>();
@@ -46949,9 +46949,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Do Not Include Name In Caption</para>
         /// <para>Represents the following attribute in the schema: w:noLabel</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public OnOffValue? NoLabel
         {
             get => GetAttribute<OnOffValue>();
@@ -46962,9 +46962,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Caption Numbering Format</para>
         /// <para>Represents the following attribute in the schema: w:numFmt</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.NumberFormatValues>? NumberFormat
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.NumberFormatValues>>();
@@ -46975,9 +46975,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Chapter Number/Item Index Separator</para>
         /// <para>Represents the following attribute in the schema: w:sep</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ChapterSeparatorValues>? Separator
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ChapterSeparatorValues>>();
@@ -47011,12 +47011,12 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:autoCaptions.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.AutoCaption" /> <c>&lt;w:autoCaption></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class AutoCaptions : OpenXmlCompositeElement
     {
         /// <summary>
@@ -47070,12 +47070,12 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:background.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Background" /> <c>&lt;v:background></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DocumentBackground : OpenXmlCompositeElement
     {
         /// <summary>
@@ -47113,9 +47113,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>color</para>
         /// <para>Represents the following attribute in the schema: w:color</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Color
         {
             get => GetAttribute<StringValue>();
@@ -47126,9 +47126,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>themeColor</para>
         /// <para>Represents the following attribute in the schema: w:themeColor</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues>? ThemeColor
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues>>();
@@ -47139,9 +47139,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>themeTint</para>
         /// <para>Represents the following attribute in the schema: w:themeTint</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? ThemeTint
         {
             get => GetAttribute<StringValue>();
@@ -47152,9 +47152,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>themeShade</para>
         /// <para>Represents the following attribute in the schema: w:themeShade</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? ThemeShade
         {
             get => GetAttribute<StringValue>();
@@ -47194,9 +47194,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Background.</para>
         /// <para>Represents the following element tag in the schema: v:background.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:v = urn:schemas-microsoft-com:vml
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Vml.Background? Background
         {
             get => GetElement<DocumentFormat.OpenXml.Vml.Background>();
@@ -47212,12 +47212,12 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:docParts.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DocPart" /> <c>&lt;w:docPart></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DocParts : OpenXmlCompositeElement
     {
         /// <summary>
@@ -47285,9 +47285,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Name Value</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -47298,9 +47298,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Built-In Entry</para>
         /// <para>Represents the following attribute in the schema: w:decorated</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public OnOffValue? Decorated
         {
             get => GetAttribute<OnOffValue>();
@@ -47329,13 +47329,13 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:category.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Gallery" /> <c>&lt;w:gallery></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Name" /> <c>&lt;w:name></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Category : OpenXmlCompositeElement
     {
         /// <summary>
@@ -47386,9 +47386,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Category Associated With Entry.</para>
         /// <para>Represents the following element tag in the schema: w:name.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Name? Name
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Name>();
@@ -47399,9 +47399,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Gallery Associated With Entry.</para>
         /// <para>Represents the following element tag in the schema: w:gallery.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Gallery? Gallery
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Gallery>();
@@ -47417,12 +47417,12 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:types.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DocPartType" /> <c>&lt;w:type></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DocPartTypes : OpenXmlCompositeElement
     {
         /// <summary>
@@ -47460,9 +47460,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Entry Is Of All Types</para>
         /// <para>Represents the following attribute in the schema: w:all</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public OnOffValue? All
         {
             get => GetAttribute<OnOffValue>();
@@ -47491,12 +47491,12 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:behaviors.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Behavior" /> <c>&lt;w:behavior></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Behaviors : OpenXmlCompositeElement
     {
         /// <summary>
@@ -47563,9 +47563,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>GUID Value</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -47593,7 +47593,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:docPartPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Behaviors" /> <c>&lt;w:behaviors></c></description></item>
@@ -47604,7 +47604,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.StyleId" /> <c>&lt;w:style></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Description" /> <c>&lt;w:description></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DocPartProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -47665,9 +47665,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Entry Name.</para>
         /// <para>Represents the following element tag in the schema: w:name.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.DocPartName? DocPartName
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DocPartName>();
@@ -47678,9 +47678,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Associated Paragraph Style Name.</para>
         /// <para>Represents the following element tag in the schema: w:style.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.StyleId? StyleId
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.StyleId>();
@@ -47691,9 +47691,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Entry Categorization.</para>
         /// <para>Represents the following element tag in the schema: w:category.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Category? Category
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Category>();
@@ -47704,9 +47704,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Entry Types.</para>
         /// <para>Represents the following element tag in the schema: w:types.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.DocPartTypes? DocPartTypes
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DocPartTypes>();
@@ -47717,9 +47717,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Entry Insertion Behaviors.</para>
         /// <para>Represents the following element tag in the schema: w:behaviors.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Behaviors? Behaviors
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Behaviors>();
@@ -47730,9 +47730,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Description for Entry.</para>
         /// <para>Represents the following element tag in the schema: w:description.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Description? Description
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Description>();
@@ -47743,9 +47743,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Entry ID.</para>
         /// <para>Represents the following element tag in the schema: w:guid.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.DocPartId? DocPartId
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DocPartId>();
@@ -47761,7 +47761,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:docPartBody.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.AltChunk" /> <c>&lt;w:altChunk></c></description></item>
@@ -47801,7 +47801,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DocPartBody : BodyType
     {
         /// <summary>
@@ -47955,7 +47955,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:body.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.AltChunk" /> <c>&lt;w:altChunk></c></description></item>
@@ -47995,7 +47995,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Body : BodyType
     {
         /// <summary>
@@ -48149,7 +48149,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.AltChunk" /> <c>&lt;w:altChunk></c></description></item>
@@ -48189,7 +48189,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart" /> <c>&lt;w14:customXmlConflictInsRangeStart></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart" /> <c>&lt;w14:customXmlConflictDelRangeStart></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public abstract partial class BodyType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -48270,13 +48270,13 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:docPart.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DocPartBody" /> <c>&lt;w:docPartBody></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DocPartProperties" /> <c>&lt;w:docPartPr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DocPart : OpenXmlCompositeElement
     {
         /// <summary>
@@ -48327,9 +48327,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Glossary Document Entry Properties.</para>
         /// <para>Represents the following element tag in the schema: w:docPartPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.DocPartProperties? DocPartProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DocPartProperties>();
@@ -48340,9 +48340,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Contents of Glossary Document Entry.</para>
         /// <para>Represents the following element tag in the schema: w:docPartBody.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.DocPartBody? DocPartBody
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DocPartBody>();
@@ -48371,9 +48371,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>name</para>
         /// <para>Represents the following attribute in the schema: w:name</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CompatSettingNameValues>? Name
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.CompatSettingNameValues>>();
@@ -48384,9 +48384,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>uri</para>
         /// <para>Represents the following attribute in the schema: w:uri</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Uri
         {
             get => GetAttribute<StringValue>();
@@ -48397,9 +48397,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>val</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -48496,9 +48496,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>w</para>
         /// <para>Represents the following attribute in the schema: w:w</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public Int16Value? Width
         {
             get => GetAttribute<Int16Value>();
@@ -48509,9 +48509,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>type</para>
         /// <para>Represents the following attribute in the schema: w:type</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableWidthValues>? Type
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableWidthValues>>();
@@ -48539,7 +48539,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:tblPrEx.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Shading" /> <c>&lt;w:shd></c></description></item>
@@ -48553,7 +48553,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TableCellSpacing" /> <c>&lt;w:tblCellSpacing></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TableIndentation" /> <c>&lt;w:tblInd></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TablePropertyExceptions : OpenXmlCompositeElement
     {
         /// <summary>
@@ -48626,9 +48626,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Preferred Table Width Exception.</para>
         /// <para>Represents the following element tag in the schema: w:tblW.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TableWidth? TableWidth
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableWidth>();
@@ -48639,9 +48639,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Table Alignment Exception.</para>
         /// <para>Represents the following element tag in the schema: w:jc.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TableJustification? TableJustification
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableJustification>();
@@ -48652,9 +48652,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Table Cell Spacing Exception.</para>
         /// <para>Represents the following element tag in the schema: w:tblCellSpacing.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TableCellSpacing? TableCellSpacing
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableCellSpacing>();
@@ -48665,9 +48665,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Table Indent from Leading Margin Exception.</para>
         /// <para>Represents the following element tag in the schema: w:tblInd.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TableIndentation? TableIndentation
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableIndentation>();
@@ -48678,9 +48678,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Table Borders Exceptions.</para>
         /// <para>Represents the following element tag in the schema: w:tblBorders.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TableBorders? TableBorders
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableBorders>();
@@ -48691,9 +48691,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Table Shading Exception.</para>
         /// <para>Represents the following element tag in the schema: w:shd.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Shading? Shading
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Shading>();
@@ -48704,9 +48704,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Table Layout Exception.</para>
         /// <para>Represents the following element tag in the schema: w:tblLayout.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TableLayout? TableLayout
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableLayout>();
@@ -48717,9 +48717,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Table Cell Margin Exceptions.</para>
         /// <para>Represents the following element tag in the schema: w:tblCellMar.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TableCellMarginDefault? TableCellMarginDefault
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableCellMarginDefault>();
@@ -48730,9 +48730,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Table Style Conditional Formatting Settings Exception.</para>
         /// <para>Represents the following element tag in the schema: w:tblLook.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TableLook? TableLook
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TableLook>();
@@ -48743,9 +48743,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Revision Information for Table-Level Property Exceptions.</para>
         /// <para>Represents the following element tag in the schema: w:tblPrExChange.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TablePropertyExceptionsChange? TablePropertyExceptionsChange
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TablePropertyExceptionsChange>();
@@ -48761,7 +48761,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:trPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.ConditionalFormatStyle" /> <c>&lt;w:cnfStyle></c></description></item>
@@ -48782,7 +48782,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2010.Word.ConflictDeletion" /> <c>&lt;w14:conflictDel></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TableRowPropertiesChange" /> <c>&lt;w:trPrChange></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TableRowProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -48892,12 +48892,12 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:trPrChange.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.PreviousTableRowProperties" /> <c>&lt;w:trPr></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class TableRowPropertiesChange : OpenXmlCompositeElement
     {
         /// <summary>
@@ -48935,9 +48935,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>author</para>
         /// <para>Represents the following attribute in the schema: w:author</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Author
         {
             get => GetAttribute<StringValue>();
@@ -48948,9 +48948,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>date</para>
         /// <para>Represents the following attribute in the schema: w:date</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DateTimeValue? Date
         {
             get => GetAttribute<DateTimeValue>();
@@ -48961,9 +48961,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>dateUtc, this property is only available in Microsoft365 and later.</para>
         /// <para>Represents the following attribute in the schema: w16du:dateUtc</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w16du=http://schemas.microsoft.com/office/word/2023/wordml/word16du
-        /// </remark>
+        /// </remarks>
         public DateTimeValue? DateUtc
         {
             get => GetAttribute<DateTimeValue>();
@@ -48974,9 +48974,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Annotation Identifier</para>
         /// <para>Represents the following attribute in the schema: w:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -49022,9 +49022,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Previous Table Row Properties.</para>
         /// <para>Represents the following element tag in the schema: w:trPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.PreviousTableRowProperties? PreviousTableRowProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.PreviousTableRowProperties>();
@@ -49040,7 +49040,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:pPr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.ConditionalFormatStyle" /> <c>&lt;w:cnfStyle></c></description></item>
@@ -49080,7 +49080,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TextBoxTightWrap" /> <c>&lt;w:textboxTightWrap></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.TextDirection" /> <c>&lt;w:textDirection></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ParagraphProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -49229,9 +49229,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>ParagraphStyleId.</para>
         /// <para>Represents the following element tag in the schema: w:pStyle.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.ParagraphStyleId? ParagraphStyleId
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.ParagraphStyleId>();
@@ -49242,9 +49242,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>KeepNext.</para>
         /// <para>Represents the following element tag in the schema: w:keepNext.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.KeepNext? KeepNext
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.KeepNext>();
@@ -49255,9 +49255,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>KeepLines.</para>
         /// <para>Represents the following element tag in the schema: w:keepLines.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.KeepLines? KeepLines
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.KeepLines>();
@@ -49268,9 +49268,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>PageBreakBefore.</para>
         /// <para>Represents the following element tag in the schema: w:pageBreakBefore.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.PageBreakBefore? PageBreakBefore
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.PageBreakBefore>();
@@ -49281,9 +49281,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>FrameProperties.</para>
         /// <para>Represents the following element tag in the schema: w:framePr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.FrameProperties? FrameProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.FrameProperties>();
@@ -49294,9 +49294,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>WidowControl.</para>
         /// <para>Represents the following element tag in the schema: w:widowControl.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.WidowControl? WidowControl
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.WidowControl>();
@@ -49307,9 +49307,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>NumberingProperties.</para>
         /// <para>Represents the following element tag in the schema: w:numPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.NumberingProperties? NumberingProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.NumberingProperties>();
@@ -49320,9 +49320,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>SuppressLineNumbers.</para>
         /// <para>Represents the following element tag in the schema: w:suppressLineNumbers.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.SuppressLineNumbers? SuppressLineNumbers
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SuppressLineNumbers>();
@@ -49333,9 +49333,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>ParagraphBorders.</para>
         /// <para>Represents the following element tag in the schema: w:pBdr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.ParagraphBorders? ParagraphBorders
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.ParagraphBorders>();
@@ -49346,9 +49346,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Shading.</para>
         /// <para>Represents the following element tag in the schema: w:shd.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Shading? Shading
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Shading>();
@@ -49359,9 +49359,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Tabs.</para>
         /// <para>Represents the following element tag in the schema: w:tabs.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Tabs? Tabs
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Tabs>();
@@ -49372,9 +49372,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>SuppressAutoHyphens.</para>
         /// <para>Represents the following element tag in the schema: w:suppressAutoHyphens.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.SuppressAutoHyphens? SuppressAutoHyphens
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SuppressAutoHyphens>();
@@ -49385,9 +49385,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Kinsoku.</para>
         /// <para>Represents the following element tag in the schema: w:kinsoku.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Kinsoku? Kinsoku
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Kinsoku>();
@@ -49398,9 +49398,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>WordWrap.</para>
         /// <para>Represents the following element tag in the schema: w:wordWrap.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.WordWrap? WordWrap
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.WordWrap>();
@@ -49411,9 +49411,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>OverflowPunctuation.</para>
         /// <para>Represents the following element tag in the schema: w:overflowPunct.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.OverflowPunctuation? OverflowPunctuation
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.OverflowPunctuation>();
@@ -49424,9 +49424,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>TopLinePunctuation.</para>
         /// <para>Represents the following element tag in the schema: w:topLinePunct.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TopLinePunctuation? TopLinePunctuation
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TopLinePunctuation>();
@@ -49437,9 +49437,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>AutoSpaceDE.</para>
         /// <para>Represents the following element tag in the schema: w:autoSpaceDE.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.AutoSpaceDE? AutoSpaceDE
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.AutoSpaceDE>();
@@ -49450,9 +49450,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>AutoSpaceDN.</para>
         /// <para>Represents the following element tag in the schema: w:autoSpaceDN.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.AutoSpaceDN? AutoSpaceDN
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.AutoSpaceDN>();
@@ -49463,9 +49463,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>BiDi.</para>
         /// <para>Represents the following element tag in the schema: w:bidi.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.BiDi? BiDi
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.BiDi>();
@@ -49476,9 +49476,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>AdjustRightIndent.</para>
         /// <para>Represents the following element tag in the schema: w:adjustRightInd.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.AdjustRightIndent? AdjustRightIndent
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.AdjustRightIndent>();
@@ -49489,9 +49489,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>SnapToGrid.</para>
         /// <para>Represents the following element tag in the schema: w:snapToGrid.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.SnapToGrid? SnapToGrid
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SnapToGrid>();
@@ -49502,9 +49502,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>SpacingBetweenLines.</para>
         /// <para>Represents the following element tag in the schema: w:spacing.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.SpacingBetweenLines? SpacingBetweenLines
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SpacingBetweenLines>();
@@ -49515,9 +49515,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Indentation.</para>
         /// <para>Represents the following element tag in the schema: w:ind.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Indentation? Indentation
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Indentation>();
@@ -49528,9 +49528,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>ContextualSpacing.</para>
         /// <para>Represents the following element tag in the schema: w:contextualSpacing.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.ContextualSpacing? ContextualSpacing
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.ContextualSpacing>();
@@ -49541,9 +49541,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>MirrorIndents.</para>
         /// <para>Represents the following element tag in the schema: w:mirrorIndents.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.MirrorIndents? MirrorIndents
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.MirrorIndents>();
@@ -49554,9 +49554,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>SuppressOverlap.</para>
         /// <para>Represents the following element tag in the schema: w:suppressOverlap.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.SuppressOverlap? SuppressOverlap
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SuppressOverlap>();
@@ -49567,9 +49567,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Justification.</para>
         /// <para>Represents the following element tag in the schema: w:jc.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Justification? Justification
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Justification>();
@@ -49580,9 +49580,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>TextDirection.</para>
         /// <para>Represents the following element tag in the schema: w:textDirection.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TextDirection? TextDirection
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TextDirection>();
@@ -49593,9 +49593,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>TextAlignment.</para>
         /// <para>Represents the following element tag in the schema: w:textAlignment.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TextAlignment? TextAlignment
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TextAlignment>();
@@ -49606,9 +49606,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>TextBoxTightWrap.</para>
         /// <para>Represents the following element tag in the schema: w:textboxTightWrap.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TextBoxTightWrap? TextBoxTightWrap
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TextBoxTightWrap>();
@@ -49619,9 +49619,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>OutlineLevel.</para>
         /// <para>Represents the following element tag in the schema: w:outlineLvl.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.OutlineLevel? OutlineLevel
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.OutlineLevel>();
@@ -49632,9 +49632,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>DivId.</para>
         /// <para>Represents the following element tag in the schema: w:divId.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.DivId? DivId
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DivId>();
@@ -49645,9 +49645,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>ConditionalFormatStyle.</para>
         /// <para>Represents the following element tag in the schema: w:cnfStyle.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.ConditionalFormatStyle? ConditionalFormatStyle
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.ConditionalFormatStyle>();
@@ -49658,9 +49658,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Run Properties for the Paragraph Mark.</para>
         /// <para>Represents the following element tag in the schema: w:rPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.ParagraphMarkRunProperties? ParagraphMarkRunProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.ParagraphMarkRunProperties>();
@@ -49671,9 +49671,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Section Properties.</para>
         /// <para>Represents the following element tag in the schema: w:sectPr.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.SectionProperties? SectionProperties
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SectionProperties>();
@@ -49684,9 +49684,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>ParagraphPropertiesChange.</para>
         /// <para>Represents the following element tag in the schema: w:pPrChange.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.ParagraphPropertiesChange? ParagraphPropertiesChange
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.ParagraphPropertiesChange>();
@@ -49715,9 +49715,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Unique Name for Embedded Control</para>
         /// <para>Represents the following attribute in the schema: w:name</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Name
         {
             get => GetAttribute<StringValue>();
@@ -49728,9 +49728,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Associated VML Data Reference</para>
         /// <para>Represents the following attribute in the schema: w:shapeid</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? ShapeId
         {
             get => GetAttribute<StringValue>();
@@ -49741,9 +49741,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Embedded Control Properties Relationship Reference</para>
         /// <para>Represents the following attribute in the schema: r:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -49774,12 +49774,12 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:tblGrid.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.GridColumn" /> <c>&lt;w:gridCol></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PreviousTableGrid : OpenXmlCompositeElement
     {
         /// <summary>
@@ -49846,9 +49846,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>drawAspect</para>
         /// <para>Represents the following attribute in the schema: w:drawAspect</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ObjectDrawAspect>? drawAspect
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ObjectDrawAspect>>();
@@ -49859,9 +49859,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: r:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -49872,9 +49872,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>progId</para>
         /// <para>Represents the following attribute in the schema: w:progId</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? ProgId
         {
             get => GetAttribute<StringValue>();
@@ -49885,9 +49885,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>shapeId</para>
         /// <para>Represents the following attribute in the schema: w:shapeId</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? ShapeId
         {
             get => GetAttribute<StringValue>();
@@ -49898,9 +49898,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>fieldCodes</para>
         /// <para>Represents the following attribute in the schema: w:fieldCodes</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? FieldCodes
         {
             get => GetAttribute<StringValue>();
@@ -49944,9 +49944,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>updateMode</para>
         /// <para>Represents the following attribute in the schema: w:updateMode</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ObjectUpdateMode>? UpdateMode
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ObjectUpdateMode>>();
@@ -49957,9 +49957,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>lockedField</para>
         /// <para>Represents the following attribute in the schema: w:lockedField</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public OnOffValue? LockedField
         {
             get => GetAttribute<OnOffValue>();
@@ -49970,9 +49970,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>drawAspect</para>
         /// <para>Represents the following attribute in the schema: w:drawAspect</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ObjectDrawAspect>? drawAspect
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ObjectDrawAspect>>();
@@ -49983,9 +49983,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>id</para>
         /// <para>Represents the following attribute in the schema: r:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -49996,9 +49996,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>progId</para>
         /// <para>Represents the following attribute in the schema: w:progId</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? ProgId
         {
             get => GetAttribute<StringValue>();
@@ -50009,9 +50009,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>shapeId</para>
         /// <para>Represents the following attribute in the schema: w:shapeId</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? ShapeId
         {
             get => GetAttribute<StringValue>();
@@ -50022,9 +50022,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>fieldCodes</para>
         /// <para>Represents the following attribute in the schema: w:fieldCodes</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? FieldCodes
         {
             get => GetAttribute<StringValue>();
@@ -50073,9 +50073,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Locking Type</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.LockingValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.LockingValues>>();
@@ -50099,12 +50099,12 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:placeholder.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DocPartReference" /> <c>&lt;w:docPart></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SdtPlaceholder : OpenXmlCompositeElement
     {
         /// <summary>
@@ -50153,9 +50153,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Document Part Reference.</para>
         /// <para>Represents the following element tag in the schema: w:docPart.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.DocPartReference? DocPartReference
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DocPartReference>();
@@ -50184,9 +50184,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>XML Namespace Prefix Mappings</para>
         /// <para>Represents the following attribute in the schema: w:prefixMappings</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? PrefixMappings
         {
             get => GetAttribute<StringValue>();
@@ -50197,9 +50197,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>XPath</para>
         /// <para>Represents the following attribute in the schema: w:xpath</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? XPath
         {
             get => GetAttribute<StringValue>();
@@ -50210,9 +50210,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Custom XML Data Storage ID</para>
         /// <para>Represents the following attribute in the schema: w:storeItemID</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? StoreItemId
         {
             get => GetAttribute<StringValue>();
@@ -50244,12 +50244,12 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:comboBox.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.ListItem" /> <c>&lt;w:listItem></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SdtContentComboBox : OpenXmlCompositeElement
     {
         /// <summary>
@@ -50287,9 +50287,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Combo Box Last Saved Value</para>
         /// <para>Represents the following attribute in the schema: w:lastValue</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? LastValue
         {
             get => GetAttribute<StringValue>();
@@ -50318,7 +50318,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:date.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Calendar" /> <c>&lt;w:calendar></c></description></item>
@@ -50326,7 +50326,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.SdtDateMappingType" /> <c>&lt;w:storeMappedDataAs></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DateFormat" /> <c>&lt;w:dateFormat></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SdtContentDate : OpenXmlCompositeElement
     {
         /// <summary>
@@ -50364,9 +50364,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Last Known Date in XML Schema DateTime Format</para>
         /// <para>Represents the following attribute in the schema: w:fullDate</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DateTimeValue? FullDate
         {
             get => GetAttribute<DateTimeValue>();
@@ -50396,9 +50396,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Date Display Mask.</para>
         /// <para>Represents the following element tag in the schema: w:dateFormat.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.DateFormat? DateFormat
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DateFormat>();
@@ -50409,9 +50409,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Date Picker Language ID.</para>
         /// <para>Represents the following element tag in the schema: w:lid.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.LanguageId? LanguageId
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.LanguageId>();
@@ -50422,9 +50422,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Custom XML Data Date Storage Format.</para>
         /// <para>Represents the following element tag in the schema: w:storeMappedDataAs.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.SdtDateMappingType? SdtDateMappingType
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SdtDateMappingType>();
@@ -50435,9 +50435,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Date Picker Calendar Type.</para>
         /// <para>Represents the following element tag in the schema: w:calendar.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Calendar? Calendar
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Calendar>();
@@ -50453,14 +50453,14 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:docPartObj.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DocPartUnique" /> <c>&lt;w:docPartUnique></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DocPartGallery" /> <c>&lt;w:docPartGallery></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DocPartCategory" /> <c>&lt;w:docPartCategory></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SdtContentDocPartObject : SdtDocPartType
     {
         /// <summary>
@@ -50515,14 +50515,14 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:docPartList.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DocPartUnique" /> <c>&lt;w:docPartUnique></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DocPartGallery" /> <c>&lt;w:docPartGallery></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DocPartCategory" /> <c>&lt;w:docPartCategory></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SdtContentDocPartList : SdtDocPartType
     {
         /// <summary>
@@ -50577,14 +50577,14 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DocPartUnique" /> <c>&lt;w:docPartUnique></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DocPartGallery" /> <c>&lt;w:docPartGallery></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DocPartCategory" /> <c>&lt;w:docPartCategory></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public abstract partial class SdtDocPartType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -50630,9 +50630,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Document Part Gallery Filter.</para>
         /// <para>Represents the following element tag in the schema: w:docPartGallery.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.DocPartGallery? DocPartGallery
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DocPartGallery>();
@@ -50643,9 +50643,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Document Part Category Filter.</para>
         /// <para>Represents the following element tag in the schema: w:docPartCategory.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.DocPartCategory? DocPartCategory
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DocPartCategory>();
@@ -50656,9 +50656,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Built-In Document Part.</para>
         /// <para>Represents the following element tag in the schema: w:docPartUnique.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.DocPartUnique? DocPartUnique
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DocPartUnique>();
@@ -50671,12 +50671,12 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:dropDownList.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.ListItem" /> <c>&lt;w:listItem></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SdtContentDropDownList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -50714,9 +50714,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Drop-down List Last Saved Value</para>
         /// <para>Represents the following attribute in the schema: w:lastValue</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? LastValue
         {
             get => GetAttribute<StringValue>();
@@ -50758,9 +50758,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Allow Soft Line Breaks</para>
         /// <para>Represents the following attribute in the schema: w:multiLine</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public OnOffValue? MultiLine
         {
             get => GetAttribute<OnOffValue>();
@@ -50797,9 +50797,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Recommend Write Protection in User Interface</para>
         /// <para>Represents the following attribute in the schema: w:recommended</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public OnOffValue? Recommended
         {
             get => GetAttribute<OnOffValue>();
@@ -50810,9 +50810,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Cryptographic Provider Type</para>
         /// <para>Represents the following attribute in the schema: w:cryptProviderType</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptProviderValues>? CryptographicProviderType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptProviderValues>>();
@@ -50823,9 +50823,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Cryptographic Algorithm Class</para>
         /// <para>Represents the following attribute in the schema: w:cryptAlgorithmClass</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptAlgorithmClassValues>? CryptographicAlgorithmClass
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptAlgorithmClassValues>>();
@@ -50836,9 +50836,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Cryptographic Algorithm Type</para>
         /// <para>Represents the following attribute in the schema: w:cryptAlgorithmType</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptAlgorithmValues>? CryptographicAlgorithmType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptAlgorithmValues>>();
@@ -50849,9 +50849,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Cryptographic Hashing Algorithm</para>
         /// <para>Represents the following attribute in the schema: w:cryptAlgorithmSid</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public Int32Value? CryptographicAlgorithmSid
         {
             get => GetAttribute<Int32Value>();
@@ -50862,9 +50862,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Iterations to Run Hashing Algorithm</para>
         /// <para>Represents the following attribute in the schema: w:cryptSpinCount</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public UInt32Value? CryptographicSpinCount
         {
             get => GetAttribute<UInt32Value>();
@@ -50875,9 +50875,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Cryptographic Provider</para>
         /// <para>Represents the following attribute in the schema: w:cryptProvider</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? CryptographicProvider
         {
             get => GetAttribute<StringValue>();
@@ -50888,9 +50888,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Cryptographic Algorithm Extensibility</para>
         /// <para>Represents the following attribute in the schema: w:algIdExt</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public HexBinaryValue? AlgorithmIdExtensibility
         {
             get => GetAttribute<HexBinaryValue>();
@@ -50901,9 +50901,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Algorithm Extensibility Source</para>
         /// <para>Represents the following attribute in the schema: w:algIdExtSource</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? AlgorithmIdExtensibilitySource
         {
             get => GetAttribute<StringValue>();
@@ -50914,9 +50914,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Cryptographic Provider Type Extensibility</para>
         /// <para>Represents the following attribute in the schema: w:cryptProviderTypeExt</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public HexBinaryValue? CryptographicProviderTypeExtensibility
         {
             get => GetAttribute<HexBinaryValue>();
@@ -50927,9 +50927,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Provider Type Extensibility Source</para>
         /// <para>Represents the following attribute in the schema: w:cryptProviderTypeExtSource</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? CryptographicProviderTypeExtSource
         {
             get => GetAttribute<StringValue>();
@@ -50940,9 +50940,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Password Hash</para>
         /// <para>Represents the following attribute in the schema: w:hash</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public Base64BinaryValue? Hash
         {
             get => GetAttribute<Base64BinaryValue>();
@@ -50953,9 +50953,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Salt for Password Verifier</para>
         /// <para>Represents the following attribute in the schema: w:salt</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public Base64BinaryValue? Salt
         {
             get => GetAttribute<Base64BinaryValue>();
@@ -50966,9 +50966,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>algorithmName, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w:algorithmName</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? AlgorithmName
         {
             get => GetAttribute<StringValue>();
@@ -50979,9 +50979,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>hashValue, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w:hashValue</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public Base64BinaryValue? HashValue
         {
             get => GetAttribute<Base64BinaryValue>();
@@ -50992,9 +50992,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>saltValue, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w:saltValue</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public Base64BinaryValue? SaltValue
         {
             get => GetAttribute<Base64BinaryValue>();
@@ -51005,9 +51005,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>spinCount, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w:spinCount</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public Int32Value? SpinCount
         {
             get => GetAttribute<Int32Value>();
@@ -51081,9 +51081,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Document View Setting  Value</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ViewValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ViewValues>>();
@@ -51123,9 +51123,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Zoom Type</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.PresetZoomValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.PresetZoomValues>>();
@@ -51136,9 +51136,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Zoom Percentage</para>
         /// <para>Represents the following attribute in the schema: w:percent</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Percent
         {
             get => GetAttribute<StringValue>();
@@ -51189,9 +51189,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Writing Style Language</para>
         /// <para>Represents the following attribute in the schema: w:lang</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Language
         {
             get => GetAttribute<StringValue>();
@@ -51202,9 +51202,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Grammatical Engine ID</para>
         /// <para>Represents the following attribute in the schema: w:vendorID</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public UInt16Value? VendorID
         {
             get => GetAttribute<UInt16Value>();
@@ -51215,9 +51215,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Grammatical Check Engine Version</para>
         /// <para>Represents the following attribute in the schema: w:dllVersion</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public Int32Value? DllVersion
         {
             get => GetAttribute<Int32Value>();
@@ -51228,9 +51228,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Natural Language Grammar Check</para>
         /// <para>Represents the following attribute in the schema: w:nlCheck</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public OnOffValue? NaturalLanguageGrammarCheck
         {
             get => GetAttribute<OnOffValue>();
@@ -51241,9 +51241,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Check Stylistic Rules With Grammar</para>
         /// <para>Represents the following attribute in the schema: w:checkStyle</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public OnOffValue? CheckStyle
         {
             get => GetAttribute<OnOffValue>();
@@ -51254,9 +51254,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Application Name</para>
         /// <para>Represents the following attribute in the schema: w:appName</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? ApplicationName
         {
             get => GetAttribute<StringValue>();
@@ -51315,9 +51315,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Spell Checking State</para>
         /// <para>Represents the following attribute in the schema: w:spelling</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ProofingStateValues>? Spelling
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ProofingStateValues>>();
@@ -51328,9 +51328,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Grammatical Checking State</para>
         /// <para>Represents the following attribute in the schema: w:grammar</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ProofingStateValues>? Grammar
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ProofingStateValues>>();
@@ -51368,9 +51368,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>val</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public HexBinaryValue? Val
         {
             get => GetAttribute<HexBinaryValue>();
@@ -51381,9 +51381,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>allStyles, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w:allStyles</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public OnOffValue? AllStyles
         {
             get => GetAttribute<OnOffValue>();
@@ -51394,9 +51394,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>customStyles, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w:customStyles</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public OnOffValue? CustomStyles
         {
             get => GetAttribute<OnOffValue>();
@@ -51407,9 +51407,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>latentStyles, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w:latentStyles</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public OnOffValue? LatentStyles
         {
             get => GetAttribute<OnOffValue>();
@@ -51420,9 +51420,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>stylesInUse, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w:stylesInUse</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public OnOffValue? StylesInUse
         {
             get => GetAttribute<OnOffValue>();
@@ -51433,9 +51433,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>headingStyles, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w:headingStyles</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public OnOffValue? HeadingStyles
         {
             get => GetAttribute<OnOffValue>();
@@ -51446,9 +51446,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>numberingStyles, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w:numberingStyles</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public OnOffValue? NumberingStyles
         {
             get => GetAttribute<OnOffValue>();
@@ -51459,9 +51459,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>tableStyles, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w:tableStyles</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public OnOffValue? TableStyles
         {
             get => GetAttribute<OnOffValue>();
@@ -51472,9 +51472,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>directFormattingOnRuns, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w:directFormattingOnRuns</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public OnOffValue? DirectFormattingOnRuns
         {
             get => GetAttribute<OnOffValue>();
@@ -51485,9 +51485,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>directFormattingOnParagraphs, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w:directFormattingOnParagraphs</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public OnOffValue? DirectFormattingOnParagraphs
         {
             get => GetAttribute<OnOffValue>();
@@ -51498,9 +51498,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>directFormattingOnNumbering, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w:directFormattingOnNumbering</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public OnOffValue? DirectFormattingOnNumbering
         {
             get => GetAttribute<OnOffValue>();
@@ -51511,9 +51511,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>directFormattingOnTables, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w:directFormattingOnTables</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public OnOffValue? DirectFormattingOnTables
         {
             get => GetAttribute<OnOffValue>();
@@ -51524,9 +51524,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>clearFormatting, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w:clearFormatting</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public OnOffValue? ClearFormatting
         {
             get => GetAttribute<OnOffValue>();
@@ -51537,9 +51537,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>top3HeadingStyles, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w:top3HeadingStyles</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public OnOffValue? Top3HeadingStyles
         {
             get => GetAttribute<OnOffValue>();
@@ -51550,9 +51550,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>visibleStyles, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w:visibleStyles</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public OnOffValue? VisibleStyles
         {
             get => GetAttribute<OnOffValue>();
@@ -51563,9 +51563,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>alternateStyleNames, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w:alternateStyleNames</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public OnOffValue? AlternateStyleNames
         {
             get => GetAttribute<OnOffValue>();
@@ -51666,9 +51666,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>val</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -51710,9 +51710,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Document Classification Value</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocumentTypeValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocumentTypeValues>>();
@@ -51739,7 +51739,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:mailMerge.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.ActiveRecord" /> <c>&lt;w:activeRecord></c></description></item>
@@ -51759,7 +51759,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.AddressFieldName" /> <c>&lt;w:addressFieldName></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.MailSubject" /> <c>&lt;w:mailSubject></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class MailMerge : OpenXmlCompositeElement
     {
         /// <summary>
@@ -51838,9 +51838,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Source Document Type.</para>
         /// <para>Represents the following element tag in the schema: w:mainDocumentType.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.MainDocumentType? MainDocumentType
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.MainDocumentType>();
@@ -51851,9 +51851,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Query Contains Link to External Query File.</para>
         /// <para>Represents the following element tag in the schema: w:linkToQuery.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.LinkToQuery? LinkToQuery
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.LinkToQuery>();
@@ -51864,9 +51864,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Data Source Type.</para>
         /// <para>Represents the following element tag in the schema: w:dataType.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.DataType? DataType
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DataType>();
@@ -51877,9 +51877,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Data Source Connection String.</para>
         /// <para>Represents the following element tag in the schema: w:connectString.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.ConnectString? ConnectString
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.ConnectString>();
@@ -51890,9 +51890,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Query For Data Source Records To Merge.</para>
         /// <para>Represents the following element tag in the schema: w:query.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Query? Query
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Query>();
@@ -51903,9 +51903,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Data Source File Path.</para>
         /// <para>Represents the following element tag in the schema: w:dataSource.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.DataSourceReference? DataSourceReference
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DataSourceReference>();
@@ -51916,9 +51916,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Header Definition File Path.</para>
         /// <para>Represents the following element tag in the schema: w:headerSource.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.HeaderSource? HeaderSource
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.HeaderSource>();
@@ -51929,9 +51929,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Remove Blank Lines from Merged Documents.</para>
         /// <para>Represents the following element tag in the schema: w:doNotSuppressBlankLines.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.DoNotSuppressBlankLines? DoNotSuppressBlankLines
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DoNotSuppressBlankLines>();
@@ -51942,9 +51942,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Merged Document Destination.</para>
         /// <para>Represents the following element tag in the schema: w:destination.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Destination? Destination
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Destination>();
@@ -51955,9 +51955,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Column Containing E-mail Address.</para>
         /// <para>Represents the following element tag in the schema: w:addressFieldName.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.AddressFieldName? AddressFieldName
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.AddressFieldName>();
@@ -51968,9 +51968,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Merged E-mail or Fax Subject Line.</para>
         /// <para>Represents the following element tag in the schema: w:mailSubject.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.MailSubject? MailSubject
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.MailSubject>();
@@ -51981,9 +51981,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Merged Document To E-Mail Attachment.</para>
         /// <para>Represents the following element tag in the schema: w:mailAsAttachment.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.MailAsAttachment? MailAsAttachment
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.MailAsAttachment>();
@@ -51994,9 +51994,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>View Merged Data Within Document.</para>
         /// <para>Represents the following element tag in the schema: w:viewMergedData.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.ViewMergedData? ViewMergedData
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.ViewMergedData>();
@@ -52007,9 +52007,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Record Currently Displayed In Merged Document.</para>
         /// <para>Represents the following element tag in the schema: w:activeRecord.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.ActiveRecord? ActiveRecord
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.ActiveRecord>();
@@ -52020,9 +52020,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Mail Merge Error Reporting Setting.</para>
         /// <para>Represents the following element tag in the schema: w:checkErrors.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.CheckErrors? CheckErrors
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.CheckErrors>();
@@ -52033,9 +52033,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Office Data Source Object Settings.</para>
         /// <para>Represents the following element tag in the schema: w:odso.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.DataSourceObject? DataSourceObject
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DataSourceObject>();
@@ -52064,9 +52064,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Display Visual Indicator Of Markup Area</para>
         /// <para>Represents the following attribute in the schema: w:markup</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public OnOffValue? Markup
         {
             get => GetAttribute<OnOffValue>();
@@ -52077,9 +52077,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Display Comments</para>
         /// <para>Represents the following attribute in the schema: w:comments</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public OnOffValue? Comments
         {
             get => GetAttribute<OnOffValue>();
@@ -52090,9 +52090,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Display Content Revisions</para>
         /// <para>Represents the following attribute in the schema: w:insDel</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public OnOffValue? DisplayRevision
         {
             get => GetAttribute<OnOffValue>();
@@ -52103,9 +52103,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Display Formatting Revisions</para>
         /// <para>Represents the following attribute in the schema: w:formatting</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public OnOffValue? Formatting
         {
             get => GetAttribute<OnOffValue>();
@@ -52116,9 +52116,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Display Ink Annotations</para>
         /// <para>Represents the following attribute in the schema: w:inkAnnotations</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public OnOffValue? InkAnnotations
         {
             get => GetAttribute<OnOffValue>();
@@ -52159,9 +52159,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Document Editing Restrictions</para>
         /// <para>Represents the following attribute in the schema: w:edit</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocumentProtectionValues>? Edit
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocumentProtectionValues>>();
@@ -52172,9 +52172,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Only Allow Formatting With Unlocked Styles</para>
         /// <para>Represents the following attribute in the schema: w:formatting</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public OnOffValue? Formatting
         {
             get => GetAttribute<OnOffValue>();
@@ -52185,9 +52185,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Enforce Document Protection Settings</para>
         /// <para>Represents the following attribute in the schema: w:enforcement</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public OnOffValue? Enforcement
         {
             get => GetAttribute<OnOffValue>();
@@ -52198,9 +52198,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Cryptographic Provider Type</para>
         /// <para>Represents the following attribute in the schema: w:cryptProviderType</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptProviderValues>? CryptographicProviderType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptProviderValues>>();
@@ -52211,9 +52211,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Cryptographic Algorithm Class</para>
         /// <para>Represents the following attribute in the schema: w:cryptAlgorithmClass</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptAlgorithmClassValues>? CryptographicAlgorithmClass
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptAlgorithmClassValues>>();
@@ -52224,9 +52224,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Cryptographic Algorithm Type</para>
         /// <para>Represents the following attribute in the schema: w:cryptAlgorithmType</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptAlgorithmValues>? CryptographicAlgorithmType
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptAlgorithmValues>>();
@@ -52237,9 +52237,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Cryptographic Hashing Algorithm</para>
         /// <para>Represents the following attribute in the schema: w:cryptAlgorithmSid</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public Int32Value? CryptographicAlgorithmSid
         {
             get => GetAttribute<Int32Value>();
@@ -52250,9 +52250,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Iterations to Run Hashing Algorithm</para>
         /// <para>Represents the following attribute in the schema: w:cryptSpinCount</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public UInt32Value? CryptographicSpinCount
         {
             get => GetAttribute<UInt32Value>();
@@ -52263,9 +52263,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Cryptographic Provider</para>
         /// <para>Represents the following attribute in the schema: w:cryptProvider</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? CryptographicProvider
         {
             get => GetAttribute<StringValue>();
@@ -52276,9 +52276,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Cryptographic Algorithm Extensibility</para>
         /// <para>Represents the following attribute in the schema: w:algIdExt</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public HexBinaryValue? AlgorithmIdExtensibility
         {
             get => GetAttribute<HexBinaryValue>();
@@ -52289,9 +52289,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Algorithm Extensibility Source</para>
         /// <para>Represents the following attribute in the schema: w:algIdExtSource</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? AlgorithmIdExtensibilitySource
         {
             get => GetAttribute<StringValue>();
@@ -52302,9 +52302,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Cryptographic Provider Type Extensibility</para>
         /// <para>Represents the following attribute in the schema: w:cryptProviderTypeExt</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public HexBinaryValue? CryptographicProviderTypeExtensibility
         {
             get => GetAttribute<HexBinaryValue>();
@@ -52315,9 +52315,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Provider Type Extensibility Source</para>
         /// <para>Represents the following attribute in the schema: w:cryptProviderTypeExtSource</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? CryptographicProviderTypeExtSource
         {
             get => GetAttribute<StringValue>();
@@ -52328,9 +52328,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Password Hash</para>
         /// <para>Represents the following attribute in the schema: w:hash</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public Base64BinaryValue? Hash
         {
             get => GetAttribute<Base64BinaryValue>();
@@ -52341,9 +52341,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Salt for Password Verifier</para>
         /// <para>Represents the following attribute in the schema: w:salt</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public Base64BinaryValue? Salt
         {
             get => GetAttribute<Base64BinaryValue>();
@@ -52354,9 +52354,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>algorithmName, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w:algorithmName</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? AlgorithmName
         {
             get => GetAttribute<StringValue>();
@@ -52367,9 +52367,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>hashValue, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w:hashValue</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public Base64BinaryValue? HashValue
         {
             get => GetAttribute<Base64BinaryValue>();
@@ -52380,9 +52380,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>saltValue, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w:saltValue</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public Base64BinaryValue? SaltValue
         {
             get => GetAttribute<Base64BinaryValue>();
@@ -52393,9 +52393,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>spinCount, this property is only available in Office 2010 and later.</para>
         /// <para>Represents the following attribute in the schema: w:spinCount</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public Int32Value? SpinCount
         {
             get => GetAttribute<Int32Value>();
@@ -52520,9 +52520,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>val</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public Int16Value? Val
         {
             get => GetAttribute<Int16Value>();
@@ -52559,9 +52559,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>val</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public UInt16Value? Val
         {
             get => GetAttribute<UInt16Value>();
@@ -52601,9 +52601,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>val</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public Int32Value? Val
         {
             get => GetAttribute<Int32Value>();
@@ -52692,9 +52692,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>val</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public Int32Value? Val
         {
             get => GetAttribute<Int32Value>();
@@ -52731,9 +52731,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Value</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CharacterSpacingValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.CharacterSpacingValues>>();
@@ -52773,9 +52773,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>lang</para>
         /// <para>Represents the following attribute in the schema: w:lang</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Language
         {
             get => GetAttribute<StringValue>();
@@ -52786,9 +52786,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>val</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -52834,9 +52834,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>lang</para>
         /// <para>Represents the following attribute in the schema: w:lang</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Language
         {
             get => GetAttribute<StringValue>();
@@ -52847,9 +52847,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>val</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -52895,9 +52895,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>XSL Transformation Location</para>
         /// <para>Represents the following attribute in the schema: r:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -52908,9 +52908,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Local Identifier for XSL Transform</para>
         /// <para>Represents the following attribute in the schema: w:solutionID</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? SolutionId
         {
             get => GetAttribute<StringValue>();
@@ -52936,13 +52936,13 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:hdrShapeDefaults.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.ShapeDefaults" /> <c>&lt;o:shapedefaults></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.ShapeLayout" /> <c>&lt;o:shapelayout></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class HeaderShapeDefaults : ShapeDefaultsType
     {
         /// <summary>
@@ -52996,13 +52996,13 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:shapeDefaults.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.ShapeDefaults" /> <c>&lt;o:shapedefaults></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.ShapeLayout" /> <c>&lt;o:shapelayout></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class ShapeDefaults : ShapeDefaultsType
     {
         /// <summary>
@@ -53056,13 +53056,13 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is :.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.ShapeDefaults" /> <c>&lt;o:shapedefaults></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Office.ShapeLayout" /> <c>&lt;o:shapelayout></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public abstract partial class ShapeDefaultsType : OpenXmlCompositeElement
     {
         /// <summary>
@@ -53109,7 +53109,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:footnotePr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.NumberingStart" /> <c>&lt;w:numStart></c></description></item>
@@ -53118,7 +53118,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.NumberingFormat" /> <c>&lt;w:numFmt></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.NumberingRestart" /> <c>&lt;w:numRestart></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class FootnoteDocumentWideProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -53187,9 +53187,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Footnote Placement.</para>
         /// <para>Represents the following element tag in the schema: w:pos.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.FootnotePosition? FootnotePosition
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.FootnotePosition>();
@@ -53200,9 +53200,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Footnote Numbering Format.</para>
         /// <para>Represents the following element tag in the schema: w:numFmt.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.NumberingFormat? NumberingFormat
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.NumberingFormat>();
@@ -53213,9 +53213,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Footnote and Endnote Numbering Starting Value.</para>
         /// <para>Represents the following element tag in the schema: w:numStart.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.NumberingStart? NumberingStart
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.NumberingStart>();
@@ -53226,9 +53226,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Footnote and Endnote Numbering Restart Location.</para>
         /// <para>Represents the following element tag in the schema: w:numRestart.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.NumberingRestart? NumberingRestart
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.NumberingRestart>();
@@ -53244,7 +53244,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:endnotePr.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.EndnotePosition" /> <c>&lt;w:pos></c></description></item>
@@ -53253,7 +53253,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.NumberingFormat" /> <c>&lt;w:numFmt></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.NumberingRestart" /> <c>&lt;w:numRestart></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class EndnoteDocumentWideProperties : OpenXmlCompositeElement
     {
         /// <summary>
@@ -53322,9 +53322,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Endnote Placement.</para>
         /// <para>Represents the following element tag in the schema: w:pos.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.EndnotePosition? EndnotePosition
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.EndnotePosition>();
@@ -53335,9 +53335,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Endnote Numbering Format.</para>
         /// <para>Represents the following element tag in the schema: w:numFmt.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.NumberingFormat? NumberingFormat
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.NumberingFormat>();
@@ -53348,9 +53348,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Footnote and Endnote Numbering Starting Value.</para>
         /// <para>Represents the following element tag in the schema: w:numStart.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.NumberingStart? NumberingStart
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.NumberingStart>();
@@ -53361,9 +53361,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Footnote and Endnote Numbering Restart Location.</para>
         /// <para>Represents the following element tag in the schema: w:numRestart.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.NumberingRestart? NumberingRestart
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.NumberingRestart>();
@@ -53379,7 +53379,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:compat.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CompatibilitySetting" /> <c>&lt;w:compatSetting></c></description></item>
@@ -53449,7 +53449,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.UseAnsiKerningPairs" /> <c>&lt;w:useAnsiKerningPairs></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.CachedColumnBalance" /> <c>&lt;w:cachedColBalance></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Compatibility : OpenXmlCompositeElement
     {
         /// <summary>
@@ -53628,9 +53628,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Use Simplified Rules For Table Border Conflicts.</para>
         /// <para>Represents the following element tag in the schema: w:useSingleBorderforContiguousCells.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.UseSingleBorderForContiguousCells? UseSingleBorderForContiguousCells
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.UseSingleBorderForContiguousCells>();
@@ -53641,9 +53641,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Emulate WordPerfect 6.x Paragraph Justification.</para>
         /// <para>Represents the following element tag in the schema: w:wpJustification.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.WordPerfectJustification? WordPerfectJustification
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.WordPerfectJustification>();
@@ -53654,9 +53654,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Do Not Create Custom Tab Stop for Hanging Indent.</para>
         /// <para>Represents the following element tag in the schema: w:noTabHangInd.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.NoTabHangIndent? NoTabHangIndent
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.NoTabHangIndent>();
@@ -53667,9 +53667,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Do Not Add Leading Between Lines of Text.</para>
         /// <para>Represents the following element tag in the schema: w:noLeading.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.NoLeading? NoLeading
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.NoLeading>();
@@ -53680,9 +53680,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Add Additional Space Below Baseline For Underlined East Asian Text.</para>
         /// <para>Represents the following element tag in the schema: w:spaceForUL.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.SpaceForUnderline? SpaceForUnderline
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SpaceForUnderline>();
@@ -53693,9 +53693,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Do Not Balance Text Columns within a Section.</para>
         /// <para>Represents the following element tag in the schema: w:noColumnBalance.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.NoColumnBalance? NoColumnBalance
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.NoColumnBalance>();
@@ -53706,9 +53706,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Balance Single Byte and Double Byte Characters.</para>
         /// <para>Represents the following element tag in the schema: w:balanceSingleByteDoubleByteWidth.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.BalanceSingleByteDoubleByteWidth? BalanceSingleByteDoubleByteWidth
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.BalanceSingleByteDoubleByteWidth>();
@@ -53719,9 +53719,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Do Not Center Content on Lines With Exact Line Height.</para>
         /// <para>Represents the following element tag in the schema: w:noExtraLineSpacing.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.NoExtraLineSpacing? NoExtraLineSpacing
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.NoExtraLineSpacing>();
@@ -53732,9 +53732,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Convert Backslash To Yen Sign When Entered.</para>
         /// <para>Represents the following element tag in the schema: w:doNotLeaveBackslashAlone.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.DoNotLeaveBackslashAlone? DoNotLeaveBackslashAlone
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DoNotLeaveBackslashAlone>();
@@ -53745,9 +53745,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Underline All Trailing Spaces.</para>
         /// <para>Represents the following element tag in the schema: w:ulTrailSpace.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.UnderlineTrailingSpaces? UnderlineTrailingSpaces
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.UnderlineTrailingSpaces>();
@@ -53758,9 +53758,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Don't Justify Lines Ending in Soft Line Break.</para>
         /// <para>Represents the following element tag in the schema: w:doNotExpandShiftReturn.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.DoNotExpandShiftReturn? DoNotExpandShiftReturn
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DoNotExpandShiftReturn>();
@@ -53771,9 +53771,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Only Expand/Condense Text By Whole Points.</para>
         /// <para>Represents the following element tag in the schema: w:spacingInWholePoints.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.SpacingInWholePoints? SpacingInWholePoints
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SpacingInWholePoints>();
@@ -53784,9 +53784,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Emulate Word 6.0 Line Wrapping for East Asian Text.</para>
         /// <para>Represents the following element tag in the schema: w:lineWrapLikeWord6.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.LineWrapLikeWord6? LineWrapLikeWord6
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.LineWrapLikeWord6>();
@@ -53797,9 +53797,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Print Body Text before Header/Footer Contents.</para>
         /// <para>Represents the following element tag in the schema: w:printBodyTextBeforeHeader.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.PrintBodyTextBeforeHeader? PrintBodyTextBeforeHeader
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.PrintBodyTextBeforeHeader>();
@@ -53810,9 +53810,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Print Colors as Black And White without Dithering.</para>
         /// <para>Represents the following element tag in the schema: w:printColBlack.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.PrintColorBlackWhite? PrintColorBlackWhite
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.PrintColorBlackWhite>();
@@ -53823,9 +53823,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Space width.</para>
         /// <para>Represents the following element tag in the schema: w:wpSpaceWidth.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.WordPerfectSpaceWidth? WordPerfectSpaceWidth
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.WordPerfectSpaceWidth>();
@@ -53836,9 +53836,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Display Page/Column Breaks Present in Frames.</para>
         /// <para>Represents the following element tag in the schema: w:showBreaksInFrames.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.ShowBreaksInFrames? ShowBreaksInFrames
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.ShowBreaksInFrames>();
@@ -53849,9 +53849,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Increase Priority Of Font Size During Font Substitution.</para>
         /// <para>Represents the following element tag in the schema: w:subFontBySize.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.SubFontBySize? SubFontBySize
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SubFontBySize>();
@@ -53862,9 +53862,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Ignore Exact Line Height for Last Line on Page.</para>
         /// <para>Represents the following element tag in the schema: w:suppressBottomSpacing.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.SuppressBottomSpacing? SuppressBottomSpacing
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SuppressBottomSpacing>();
@@ -53875,9 +53875,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Ignore Minimum and Exact Line Height for First Line on Page.</para>
         /// <para>Represents the following element tag in the schema: w:suppressTopSpacing.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.SuppressTopSpacing? SuppressTopSpacing
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SuppressTopSpacing>();
@@ -53888,9 +53888,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Ignore Minimum Line Height for First Line on Page.</para>
         /// <para>Represents the following element tag in the schema: w:suppressSpacingAtTopOfPage.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.SuppressSpacingAtTopOfPage? SuppressSpacingAtTopOfPage
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SuppressSpacingAtTopOfPage>();
@@ -53901,9 +53901,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Emulate WordPerfect 5.x Line Spacing.</para>
         /// <para>Represents the following element tag in the schema: w:suppressTopSpacingWP.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.SuppressTopSpacingWordPerfect? SuppressTopSpacingWordPerfect
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SuppressTopSpacingWordPerfect>();
@@ -53914,9 +53914,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Do Not Use Space Before On First Line After a Page Break.</para>
         /// <para>Represents the following element tag in the schema: w:suppressSpBfAfterPgBrk.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.SuppressSpacingBeforeAfterPageBreak? SuppressSpacingBeforeAfterPageBreak
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SuppressSpacingBeforeAfterPageBreak>();
@@ -53927,9 +53927,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Swap Paragraph Borders on Odd Numbered Pages.</para>
         /// <para>Represents the following element tag in the schema: w:swapBordersFacingPages.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.SwapBordersFacingPages? SwapBordersFacingPages
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SwapBordersFacingPages>();
@@ -53940,9 +53940,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Treat Backslash Quotation Delimiter as Two Quotation Marks.</para>
         /// <para>Represents the following element tag in the schema: w:convMailMergeEsc.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.ConvertMailMergeEscape? ConvertMailMergeEscape
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.ConvertMailMergeEscape>();
@@ -53953,9 +53953,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Emulate WordPerfect 6.x Font Height Calculation.</para>
         /// <para>Represents the following element tag in the schema: w:truncateFontHeightsLikeWP6.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.TruncateFontHeightsLikeWordPerfect? TruncateFontHeightsLikeWordPerfect
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.TruncateFontHeightsLikeWordPerfect>();
@@ -53966,9 +53966,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Emulate Word 5.x for the Macintosh Small Caps Formatting.</para>
         /// <para>Represents the following element tag in the schema: w:mwSmallCaps.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.MacWordSmallCaps? MacWordSmallCaps
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.MacWordSmallCaps>();
@@ -53979,9 +53979,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Use Printer Metrics To Display Documents.</para>
         /// <para>Represents the following element tag in the schema: w:usePrinterMetrics.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.UsePrinterMetrics? UsePrinterMetrics
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.UsePrinterMetrics>();
@@ -53992,9 +53992,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Do Not Suppress Paragraph Borders Next To Frames.</para>
         /// <para>Represents the following element tag in the schema: w:doNotSuppressParagraphBorders.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.DoNotSuppressParagraphBorders? DoNotSuppressParagraphBorders
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DoNotSuppressParagraphBorders>();
@@ -54005,9 +54005,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Line Wrap Trailing Spaces.</para>
         /// <para>Represents the following element tag in the schema: w:wrapTrailSpaces.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.WrapTrailSpaces? WrapTrailSpaces
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.WrapTrailSpaces>();
@@ -54018,9 +54018,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Emulate Word 6.x/95/97 Footnote Placement.</para>
         /// <para>Represents the following element tag in the schema: w:footnoteLayoutLikeWW8.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.FootnoteLayoutLikeWord8? FootnoteLayoutLikeWord8
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.FootnoteLayoutLikeWord8>();
@@ -54031,9 +54031,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Emulate Word 97 Text Wrapping Around Floating Objects.</para>
         /// <para>Represents the following element tag in the schema: w:shapeLayoutLikeWW8.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.ShapeLayoutLikeWord8? ShapeLayoutLikeWord8
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.ShapeLayoutLikeWord8>();
@@ -54044,9 +54044,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Align Table Rows Independently.</para>
         /// <para>Represents the following element tag in the schema: w:alignTablesRowByRow.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.AlignTablesRowByRow? AlignTablesRowByRow
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.AlignTablesRowByRow>();
@@ -54057,9 +54057,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Ignore Width of Last Tab Stop When Aligning Paragraph If It Is Not Left Aligned.</para>
         /// <para>Represents the following element tag in the schema: w:forgetLastTabAlignment.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.ForgetLastTabAlignment? ForgetLastTabAlignment
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.ForgetLastTabAlignment>();
@@ -54070,9 +54070,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Add Document Grid Line Pitch To Lines in Table Cells.</para>
         /// <para>Represents the following element tag in the schema: w:adjustLineHeightInTable.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.AdjustLineHeightInTable? AdjustLineHeightInTable
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.AdjustLineHeightInTable>();
@@ -54083,9 +54083,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Emulate Word 95 Full-Width Character Spacing.</para>
         /// <para>Represents the following element tag in the schema: w:autoSpaceLikeWord95.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.AutoSpaceLikeWord95? AutoSpaceLikeWord95
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.AutoSpaceLikeWord95>();
@@ -54096,9 +54096,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Do Not Increase Line Height for Raised/Lowered Text.</para>
         /// <para>Represents the following element tag in the schema: w:noSpaceRaiseLower.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.NoSpaceRaiseLower? NoSpaceRaiseLower
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.NoSpaceRaiseLower>();
@@ -54109,9 +54109,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Use Fixed Paragraph Spacing for HTML Auto Setting.</para>
         /// <para>Represents the following element tag in the schema: w:doNotUseHTMLParagraphAutoSpacing.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.DoNotUseHTMLParagraphAutoSpacing? DoNotUseHTMLParagraphAutoSpacing
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DoNotUseHTMLParagraphAutoSpacing>();
@@ -54122,9 +54122,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Ignore Space Before Table When Deciding If Table Should Wrap Floating Object.</para>
         /// <para>Represents the following element tag in the schema: w:layoutRawTableWidth.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.LayoutRawTableWidth? LayoutRawTableWidth
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.LayoutRawTableWidth>();
@@ -54135,9 +54135,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Allow Table Rows to Wrap Inline Objects Independently.</para>
         /// <para>Represents the following element tag in the schema: w:layoutTableRowsApart.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.LayoutTableRowsApart? LayoutTableRowsApart
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.LayoutTableRowsApart>();
@@ -54148,9 +54148,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Emulate Word 97 East Asian Line Breaking.</para>
         /// <para>Represents the following element tag in the schema: w:useWord97LineBreakRules.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.UseWord97LineBreakRules? UseWord97LineBreakRules
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.UseWord97LineBreakRules>();
@@ -54161,9 +54161,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Do Not Allow Floating Tables To Break Across Pages.</para>
         /// <para>Represents the following element tag in the schema: w:doNotBreakWrappedTables.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.DoNotBreakWrappedTables? DoNotBreakWrappedTables
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DoNotBreakWrappedTables>();
@@ -54174,9 +54174,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Do Not Snap to Document Grid in Table Cells with Objects.</para>
         /// <para>Represents the following element tag in the schema: w:doNotSnapToGridInCell.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.DoNotSnapToGridInCell? DoNotSnapToGridInCell
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DoNotSnapToGridInCell>();
@@ -54187,9 +54187,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Select Field When First or Last Character Is Selected.</para>
         /// <para>Represents the following element tag in the schema: w:selectFldWithFirstOrLastChar.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.SelectFieldWithFirstOrLastChar? SelectFieldWithFirstOrLastChar
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SelectFieldWithFirstOrLastChar>();
@@ -54200,9 +54200,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Use Legacy Ethiopic and Amharic Line Breaking Rules.</para>
         /// <para>Represents the following element tag in the schema: w:applyBreakingRules.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.ApplyBreakingRules? ApplyBreakingRules
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.ApplyBreakingRules>();
@@ -54213,9 +54213,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Do Not Allow Hanging Punctuation With Character Grid.</para>
         /// <para>Represents the following element tag in the schema: w:doNotWrapTextWithPunct.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.DoNotWrapTextWithPunctuation? DoNotWrapTextWithPunctuation
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DoNotWrapTextWithPunctuation>();
@@ -54226,9 +54226,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Do Not Compress Compressible Characters When Using Document Grid.</para>
         /// <para>Represents the following element tag in the schema: w:doNotUseEastAsianBreakRules.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.DoNotUseEastAsianBreakRules? DoNotUseEastAsianBreakRules
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DoNotUseEastAsianBreakRules>();
@@ -54239,9 +54239,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Emulate Word 2002 Table Style Rules.</para>
         /// <para>Represents the following element tag in the schema: w:useWord2002TableStyleRules.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.UseWord2002TableStyleRules? UseWord2002TableStyleRules
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.UseWord2002TableStyleRules>();
@@ -54252,9 +54252,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Allow Tables to AutoFit Into Page Margins.</para>
         /// <para>Represents the following element tag in the schema: w:growAutofit.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.GrowAutofit? GrowAutofit
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.GrowAutofit>();
@@ -54265,9 +54265,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Do Not Bypass East Asian/Complex Script Layout Code.</para>
         /// <para>Represents the following element tag in the schema: w:useFELayout.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.UseFarEastLayout? UseFarEastLayout
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.UseFarEastLayout>();
@@ -54278,9 +54278,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Do Not Automatically Apply List Paragraph Style To Bulleted/Numbered Text.</para>
         /// <para>Represents the following element tag in the schema: w:useNormalStyleForList.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.UseNormalStyleForList? UseNormalStyleForList
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.UseNormalStyleForList>();
@@ -54291,9 +54291,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Ignore Hanging Indent When Creating Tab Stop After Numbering.</para>
         /// <para>Represents the following element tag in the schema: w:doNotUseIndentAsNumberingTabStop.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.DoNotUseIndentAsNumberingTabStop? DoNotUseIndentAsNumberingTabStop
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DoNotUseIndentAsNumberingTabStop>();
@@ -54304,9 +54304,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Use Alternate Set of East Asian Line Breaking Rules.</para>
         /// <para>Represents the following element tag in the schema: w:useAltKinsokuLineBreakRules.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.UseAltKinsokuLineBreakRules? UseAltKinsokuLineBreakRules
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.UseAltKinsokuLineBreakRules>();
@@ -54317,9 +54317,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Allow Contextual Spacing of Paragraphs in Tables.</para>
         /// <para>Represents the following element tag in the schema: w:allowSpaceOfSameStyleInTable.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.AllowSpaceOfSameStyleInTable? AllowSpaceOfSameStyleInTable
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.AllowSpaceOfSameStyleInTable>();
@@ -54330,9 +54330,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Do Not Ignore Floating Objects When Calculating Paragraph Indentation.</para>
         /// <para>Represents the following element tag in the schema: w:doNotSuppressIndentation.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.DoNotSuppressIndentation? DoNotSuppressIndentation
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DoNotSuppressIndentation>();
@@ -54343,9 +54343,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Do Not AutoFit Tables To Fit Next To Wrapped Objects.</para>
         /// <para>Represents the following element tag in the schema: w:doNotAutofitConstrainedTables.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.DoNotAutofitConstrainedTables? DoNotAutofitConstrainedTables
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DoNotAutofitConstrainedTables>();
@@ -54356,9 +54356,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Allow Table Columns To Exceed Preferred Widths of Constituent Cells.</para>
         /// <para>Represents the following element tag in the schema: w:autofitToFirstFixedWidthCell.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.AutofitToFirstFixedWidthCell? AutofitToFirstFixedWidthCell
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.AutofitToFirstFixedWidthCell>();
@@ -54369,9 +54369,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Underline Following Character Following Numbering.</para>
         /// <para>Represents the following element tag in the schema: w:underlineTabInNumList.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.UnderlineTabInNumberingList? UnderlineTabInNumberingList
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.UnderlineTabInNumberingList>();
@@ -54382,9 +54382,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Always Use Fixed Width for Hangul Characters.</para>
         /// <para>Represents the following element tag in the schema: w:displayHangulFixedWidth.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.DisplayHangulFixedWidth? DisplayHangulFixedWidth
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DisplayHangulFixedWidth>();
@@ -54395,9 +54395,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Always Move Paragraph Mark to Page after a Page Break.</para>
         /// <para>Represents the following element tag in the schema: w:splitPgBreakAndParaMark.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.SplitPageBreakAndParagraphMark? SplitPageBreakAndParagraphMark
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.SplitPageBreakAndParagraphMark>();
@@ -54408,9 +54408,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Don't Vertically Align Cells Containing Floating Objects.</para>
         /// <para>Represents the following element tag in the schema: w:doNotVertAlignCellWithSp.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.DoNotVerticallyAlignCellWithShape? DoNotVerticallyAlignCellWithShape
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DoNotVerticallyAlignCellWithShape>();
@@ -54421,9 +54421,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Don't Break Table Rows Around Floating Tables.</para>
         /// <para>Represents the following element tag in the schema: w:doNotBreakConstrainedForcedTable.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.DoNotBreakConstrainedForcedTable? DoNotBreakConstrainedForcedTable
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DoNotBreakConstrainedForcedTable>();
@@ -54434,9 +54434,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Ignore Vertical Alignment in Textboxes.</para>
         /// <para>Represents the following element tag in the schema: w:doNotVertAlignInTxbx.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.DoNotVerticallyAlignInTextBox? DoNotVerticallyAlignInTextBox
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.DoNotVerticallyAlignInTextBox>();
@@ -54447,9 +54447,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Use ANSI Kerning Pairs from Fonts.</para>
         /// <para>Represents the following element tag in the schema: w:useAnsiKerningPairs.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.UseAnsiKerningPairs? UseAnsiKerningPairs
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.UseAnsiKerningPairs>();
@@ -54460,9 +54460,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Use Cached Paragraph Information for Column Balancing.</para>
         /// <para>Represents the following element tag in the schema: w:cachedColBalance.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.CachedColumnBalance? CachedColumnBalance
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.CachedColumnBalance>();
@@ -54478,12 +54478,12 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:docVars.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.DocumentVariable" /> <c>&lt;w:docVar></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class DocumentVariables : OpenXmlCompositeElement
     {
         /// <summary>
@@ -54537,13 +54537,13 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:rsids.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.RsidRoot" /> <c>&lt;w:rsidRoot></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Rsid" /> <c>&lt;w:rsid></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Rsids : OpenXmlCompositeElement
     {
         /// <summary>
@@ -54594,9 +54594,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Original Document Revision Save ID.</para>
         /// <para>Represents the following element tag in the schema: w:rsidRoot.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.RsidRoot? RsidRoot
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.RsidRoot>();
@@ -54625,9 +54625,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Background 1 Theme Color Mapping</para>
         /// <para>Represents the following attribute in the schema: w:bg1</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>? Background1
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>>();
@@ -54638,9 +54638,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Text 1 Theme Color Mapping</para>
         /// <para>Represents the following attribute in the schema: w:t1</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>? Text1
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>>();
@@ -54651,9 +54651,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Background 2 Theme Color Mapping</para>
         /// <para>Represents the following attribute in the schema: w:bg2</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>? Background2
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>>();
@@ -54664,9 +54664,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Text 2 Theme Color Mapping</para>
         /// <para>Represents the following attribute in the schema: w:t2</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>? Text2
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>>();
@@ -54677,9 +54677,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Accent 1 Theme Color Mapping</para>
         /// <para>Represents the following attribute in the schema: w:accent1</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>? Accent1
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>>();
@@ -54690,9 +54690,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Accent 2 Theme Color Mapping</para>
         /// <para>Represents the following attribute in the schema: w:accent2</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>? Accent2
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>>();
@@ -54703,9 +54703,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Accent3 Theme Color Mapping</para>
         /// <para>Represents the following attribute in the schema: w:accent3</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>? Accent3
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>>();
@@ -54716,9 +54716,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Accent4 Theme Color Mapping</para>
         /// <para>Represents the following attribute in the schema: w:accent4</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>? Accent4
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>>();
@@ -54729,9 +54729,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Accent5 Theme Color Mapping</para>
         /// <para>Represents the following attribute in the schema: w:accent5</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>? Accent5
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>>();
@@ -54742,9 +54742,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Accent6 Theme Color Mapping</para>
         /// <para>Represents the following attribute in the schema: w:accent6</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>? Accent6
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>>();
@@ -54755,9 +54755,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Hyperlink Theme Color Mapping</para>
         /// <para>Represents the following attribute in the schema: w:hyperlink</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>? Hyperlink
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>>();
@@ -54768,9 +54768,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Followed Hyperlink Theme Color Mapping</para>
         /// <para>Represents the following attribute in the schema: w:followedHyperlink</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>? FollowedHyperlink
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>>();
@@ -54805,13 +54805,13 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:captions.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.AutoCaptions" /> <c>&lt;w:autoCaptions></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Caption" /> <c>&lt;w:caption></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class Captions : OpenXmlCompositeElement
     {
         /// <summary>
@@ -54880,9 +54880,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Use Actual Pages, Not Virtual Pages</para>
         /// <para>Represents the following attribute in the schema: w:actualPg</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public OnOffValue? UseActualPages
         {
             get => GetAttribute<OnOffValue>();
@@ -54893,9 +54893,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Virtual Page Width</para>
         /// <para>Represents the following attribute in the schema: w:w</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public UInt32Value? Width
         {
             get => GetAttribute<UInt32Value>();
@@ -54906,9 +54906,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Virtual Page Height</para>
         /// <para>Represents the following attribute in the schema: w:h</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public UInt32Value? Height
         {
             get => GetAttribute<UInt32Value>();
@@ -54919,9 +54919,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Font Size Scaling</para>
         /// <para>Represents the following attribute in the schema: w:fontSz</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? FontSize
         {
             get => GetAttribute<StringValue>();
@@ -54981,9 +54981,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Target Screen Size Value</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TargetScreenSizeValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TargetScreenSizeValues>>();
@@ -55010,7 +55010,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:pict.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Group" /> <c>&lt;v:group></c></description></item>
@@ -55023,7 +55023,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Shape" /> <c>&lt;v:shape></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Vml.Shapetype" /> <c>&lt;v:shapetype></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class PictureBulletBase : OpenXmlCompositeElement
     {
         /// <summary>
@@ -55112,9 +55112,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Value</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public HexBinaryValue? Val
         {
             get => GetAttribute<HexBinaryValue>();
@@ -55155,9 +55155,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>val</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? Val
         {
             get => GetAttribute<StringValue>();
@@ -55168,9 +55168,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>characterSet</para>
         /// <para>Represents the following attribute in the schema: w:characterSet</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.StrictCharacterSet>? StrictCharacterSet
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.StrictCharacterSet>>();
@@ -55211,9 +55211,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Font Family Value</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.FontFamilyValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.FontFamilyValues>>();
@@ -55253,9 +55253,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Value</para>
         /// <para>Represents the following attribute in the schema: w:val</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public EnumValue<DocumentFormat.OpenXml.Wordprocessing.FontPitchValues>? Val
         {
             get => GetAttribute<EnumValue<DocumentFormat.OpenXml.Wordprocessing.FontPitchValues>>();
@@ -55295,9 +55295,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>First 32 Bits of Unicode Subset Bitfield</para>
         /// <para>Represents the following attribute in the schema: w:usb0</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public HexBinaryValue? UnicodeSignature0
         {
             get => GetAttribute<HexBinaryValue>();
@@ -55308,9 +55308,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Second 32 Bits of Unicode Subset Bitfield</para>
         /// <para>Represents the following attribute in the schema: w:usb1</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public HexBinaryValue? UnicodeSignature1
         {
             get => GetAttribute<HexBinaryValue>();
@@ -55321,9 +55321,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Third 32 Bits of Unicode Subset Bitfield</para>
         /// <para>Represents the following attribute in the schema: w:usb2</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public HexBinaryValue? UnicodeSignature2
         {
             get => GetAttribute<HexBinaryValue>();
@@ -55334,9 +55334,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Fourth 32 Bits of Unicode Subset Bitfield</para>
         /// <para>Represents the following attribute in the schema: w:usb3</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public HexBinaryValue? UnicodeSignature3
         {
             get => GetAttribute<HexBinaryValue>();
@@ -55347,9 +55347,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Lower 32 Bits of Code Page Bit Field</para>
         /// <para>Represents the following attribute in the schema: w:csb0</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public HexBinaryValue? CodePageSignature0
         {
             get => GetAttribute<HexBinaryValue>();
@@ -55360,9 +55360,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Upper 32 Bits of Code Page Bit Field</para>
         /// <para>Represents the following attribute in the schema: w:csb1</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public HexBinaryValue? CodePageSignature1
         {
             get => GetAttribute<HexBinaryValue>();
@@ -55531,9 +55531,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>fontKey</para>
         /// <para>Represents the following attribute in the schema: w:fontKey</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public StringValue? FontKey
         {
             get => GetAttribute<StringValue>();
@@ -55544,9 +55544,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>subsetted</para>
         /// <para>Represents the following attribute in the schema: w:subsetted</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public OnOffValue? Subsetted
         {
             get => GetAttribute<OnOffValue>();
@@ -55557,9 +55557,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Relationship to Part</para>
         /// <para>Represents the following attribute in the schema: r:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
@@ -55587,13 +55587,13 @@ namespace DocumentFormat.OpenXml.Wordprocessing
     /// <para>This class is available in Office 2007 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is w:lvlOverride.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.StartOverrideNumberingValue" /> <c>&lt;w:startOverride></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Wordprocessing.Level" /> <c>&lt;w:lvl></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class LevelOverride : OpenXmlCompositeElement
     {
         /// <summary>
@@ -55631,9 +55631,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Numbering Level ID</para>
         /// <para>Represents the following attribute in the schema: w:ilvl</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public Int32Value? LevelIndex
         {
             get => GetAttribute<Int32Value>();
@@ -55662,9 +55662,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Numbering Level Starting Value Override.</para>
         /// <para>Represents the following element tag in the schema: w:startOverride.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.StartOverrideNumberingValue? StartOverrideNumberingValue
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.StartOverrideNumberingValue>();
@@ -55675,9 +55675,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// <para>Numbering Level Override Definition.</para>
         /// <para>Represents the following element tag in the schema: w:lvl.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:w = http://schemas.openxmlformats.org/wordprocessingml/2006/main
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Wordprocessing.Level? Level
         {
             get => GetElement<DocumentFormat.OpenXml.Wordprocessing.Level>();

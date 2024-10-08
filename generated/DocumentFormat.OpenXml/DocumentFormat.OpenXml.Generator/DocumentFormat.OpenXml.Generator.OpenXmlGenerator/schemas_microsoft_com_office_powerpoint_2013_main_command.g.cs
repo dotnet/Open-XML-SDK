@@ -498,13 +498,13 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
     /// <para>This class is available in Office 2016 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is pc:sldMkLst.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Presentation.Command.DocumentMoniker" /> <c>&lt;pc:docMk></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2016.Presentation.Command.SlideMoniker" /> <c>&lt;pc:sldMk></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class SlideMonikerList : OpenXmlCompositeElement
     {
         /// <summary>
@@ -557,9 +557,9 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
         /// <para>DocumentMoniker.</para>
         /// <para>Represents the following element tag in the schema: pc:docMk.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:pc = http://schemas.microsoft.com/office/powerpoint/2013/main/command
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Presentation.Command.DocumentMoniker? DocumentMoniker
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Presentation.Command.DocumentMoniker>();
@@ -570,9 +570,9 @@ namespace DocumentFormat.OpenXml.Office2016.Presentation.Command
         /// <para>SlideMoniker.</para>
         /// <para>Represents the following element tag in the schema: pc:sldMk.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:pc = http://schemas.microsoft.com/office/powerpoint/2013/main/command
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2016.Presentation.Command.SlideMoniker? SlideMoniker
         {
             get => GetElement<DocumentFormat.OpenXml.Office2016.Presentation.Command.SlideMoniker>();

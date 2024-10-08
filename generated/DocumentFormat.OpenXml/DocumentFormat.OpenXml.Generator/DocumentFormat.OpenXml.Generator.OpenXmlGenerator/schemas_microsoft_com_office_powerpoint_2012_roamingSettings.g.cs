@@ -97,13 +97,13 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming
     /// <para>This class is available in Office 2013 and above.</para>
     /// <para>When the object is serialized out as xml, it's qualified name is pRoam:props.</para>
     /// </summary>
-    /// <remark>
+    /// <remarks>
     /// <para>The following table lists the possible child types:</para>
     /// <list type="bullet">
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming.Key" /> <c>&lt;pRoam:key></c></description></item>
     ///   <item><description><see cref="DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming.Value" /> <c>&lt;pRoam:value></c></description></item>
     /// </list>
-    /// </remark>
+    /// </remarks>
     public partial class RoamingProperty : OpenXmlCompositeElement
     {
         /// <summary>
@@ -155,9 +155,9 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming
         /// <para>Key.</para>
         /// <para>Represents the following element tag in the schema: pRoam:key.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:pRoam = http://schemas.microsoft.com/office/powerpoint/2012/roamingSettings
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming.Key? Key
         {
             get => GetElement<DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming.Key>();
@@ -168,9 +168,9 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming
         /// <para>Value.</para>
         /// <para>Represents the following element tag in the schema: pRoam:value.</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:pRoam = http://schemas.microsoft.com/office/powerpoint/2012/roamingSettings
-        /// </remark>
+        /// </remarks>
         public DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming.Value? Value
         {
             get => GetElement<DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming.Value>();

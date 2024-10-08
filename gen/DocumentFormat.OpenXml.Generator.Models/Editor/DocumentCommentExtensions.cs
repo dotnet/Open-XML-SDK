@@ -14,7 +14,7 @@ internal static class DocumentCommentExtensions
     public static void WriteDocumentationComment(this TextWriter writer, DocumentCommentOptions option)
     {
         AddParagraphs("summary", writer, option.Summary);
-        AddParagraphs("remark", writer, option.Remarks);
+        AddParagraphs("remarks", writer, option.Remarks);
 
         foreach (var parameter in option.Parameters)
         {
