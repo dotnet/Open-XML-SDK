@@ -2,7 +2,7 @@
 <Project>
   <ItemGroup>
     <PackageVersion Include="BenchmarkDotNet" Version="0.13.12" />
-    <PackageVersion Include="BenchmarkDotNet.Diagnostics.Windows" Version="0.13.12" />    
+    <PackageVersion Include="BenchmarkDotNet.Diagnostics.Windows" Version="0.13.12" />
     <PackageVersion Include="coverlet.collector" Version="6.0.2" />
     <PackageVersion Include="Microsoft.CodeAnalysis" Version="4.8.0" />
     <PackageVersion Include="Microsoft.CodeAnalysis.CSharp" Version="4.8.0" />
@@ -22,7 +22,7 @@
     <PackageVersion Include="StyleCop.Analyzers" Version="1.2.0-beta.556" />
     <PackageVersion Include="Svg" Version="3.4.7" />
     <PackageVersion Include="System.CodeDom" Version="8.0.0" />
-    <PackageVersion Include="System.IO.Packaging" Version="8.0.0" />
+    <PackageVersion Include="System.IO.Packaging" Version="8.0.1" />
     <PackageVersion Include="System.Collections.Immutable" Version="7.0.0" />
     <PackageVersion Include="System.Net.Http" Version="4.3.4" />
     <PackageVersion Include="System.Security.Cryptography.Algorithms" Version="4.3.1" />
