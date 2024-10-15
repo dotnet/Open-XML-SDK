@@ -5,6 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [3.1.1] - 2024-10-15
+
+### Fixed
+
+- Updated System.IO.Packaging and other dependencies (#1794, #1795, #1796, #1782, #1808)
+- Fixed add c16:uniqueId to several chart complex types (#1762)
+- Fixed <remarks> rather than <remark> in the documentation comments (#1775)
+
 ## [3.1.0] - 2024-07-30
 
 ### Added
