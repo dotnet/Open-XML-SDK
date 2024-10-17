@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project>
+
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)common/*.cs" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="$(MSBuildThisFileDirectory)..\src\DocumentFormat.OpenXml\DocumentFormat.OpenXml.csproj" />
+    <ProjectReference Include="$(MSBuildThisFileDirectory)..\src\DocumentFormat.OpenXml.Framework\DocumentFormat.OpenXml.Framework.csproj" />
+  </ItemGroup>
+
+  <Import Project="$(MSBuildThisFileDirectory)..\Directory.Build.targets" />
+</Project>
