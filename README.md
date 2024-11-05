@@ -61,16 +61,6 @@ The NuGet package for the latest builds of the Open XML SDK is available as a cu
 
 For latests changes, please see the [changelog](CHANGELOG.md)
 
-## Framework Support
-
-The package currently supports the following targets:
-
-- .NET Framework 3.5, 4.0, 4.6
-- .NET Standard 2.0
-- .NET 6.0
-
-For details on platform support, including other runtimes such as Mono and Unity, please see the docs at https://docs.microsoft.com/en-us/dotnet/standard/net-standard.
-
 # Known Issues
 
 - On .NET Core and .NET 5 and following, ZIP packages do not have a way to stream data. Thus, the working set can explode in certain situations. This is a [known issue](https://github.com/dotnet/runtime/issues/1544).
