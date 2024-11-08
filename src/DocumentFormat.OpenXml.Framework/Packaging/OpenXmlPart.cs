@@ -476,6 +476,9 @@ namespace DocumentFormat.OpenXml.Packaging
                 var events = Features.Get<IPartRootEventsFeature>();
                 events?.OnChange(EventType.Creating, this);
 
+                // Accessed before stream as it may cause the stream to reload
+                var strictRelationshipFound = OpenXmlPackage.StrictRelationshipFound;
+
                 using (Stream stream = GetStream(FileMode.OpenOrCreate, FileAccess.Read))
                 {
                     if (stream.Length < 4)
@@ -494,7 +497,7 @@ namespace DocumentFormat.OpenXml.Packaging
                         // OpenXmlReaderWriterTest.bug247883() unit test fails.
                         var rootElement = new T { OpenXmlPart = this };
 
-                        if (rootElement.LoadFromPart(this, stream))
+                        if (rootElement.LoadFromPart(this, stream, strictRelationshipFound))
                         {
                             // associate the root element with this part.
                             InternalRootElement = rootElement;

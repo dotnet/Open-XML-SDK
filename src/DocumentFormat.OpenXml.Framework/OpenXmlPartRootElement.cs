@@ -85,9 +85,12 @@ namespace DocumentFormat.OpenXml
                 throw new ArgumentNullException(nameof(openXmlPart));
             }
 
+            // Accessed before stream as it may cause the stream to reload
+            var strictRelationshipFound = openXmlPart.OpenXmlPackage.StrictRelationshipFound;
+
             using (Stream partStream = openXmlPart.GetStream(FileMode.Open))
             {
-                LoadFromPart(openXmlPart, partStream);
+                LoadFromPart(openXmlPart, partStream, strictRelationshipFound);
             }
         }
 
@@ -96,12 +99,13 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="openXmlPart">The part this root element to be loaded from.</param>
         /// <param name="partStream">The stream of the part.</param>
+        /// <param name="strictRelationshipFound">Whether a strict relationship was found.</param>
         /// <returns>
         /// Returns true when the part stream is loaded successfully into this root element.
         /// Returns false when the part stream does not contain any xml element.
         /// </returns>
         /// <exception cref="InvalidDataException">Thrown when the part stream contains an incorrect root element.</exception>
-        internal bool LoadFromPart(OpenXmlPart openXmlPart, Stream partStream)
+        internal bool LoadFromPart(OpenXmlPart openXmlPart, Stream partStream, bool strictRelationshipFound)
         {
             if (partStream.Length < 4)
             {
@@ -123,7 +127,7 @@ namespace DocumentFormat.OpenXml
             context.XmlReaderSettings.DtdProcessing = DtdProcessing.Prohibit; // set to prohibit explicitly for security fix
 #endif
 
-            using (var xmlReader = XmlConvertingReaderFactory.Create(partStream, Features.GetNamespaceResolver(), context.XmlReaderSettings, openXmlPart.OpenXmlPackage.StrictRelationshipFound))
+            using (var xmlReader = XmlConvertingReaderFactory.Create(partStream, Features.GetNamespaceResolver(), context.XmlReaderSettings, strictRelationshipFound))
             {
                 context.MCSettings = openXmlPart.MCSettings;
 
