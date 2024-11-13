@@ -54,9 +54,9 @@ namespace DocumentFormat.OpenXml.Office.SpreadSheetML.Y2022.PivotRichData
         /// <para>id, this property is only available in Microsoft365 and later.</para>
         /// <para>Represents the following attribute in the schema: r:id</para>
         /// </summary>
-        /// <remark>
+        /// <remarks>
         /// xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
-        /// </remark>
+        /// </remarks>
         public StringValue? Id
         {
             get => GetAttribute<StringValue>();
